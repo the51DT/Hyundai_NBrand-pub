@@ -344,7 +344,8 @@
   }
 
 
-  function tabEvent() {
+  function tabEvent() {    
+
     $(".tabs li").on("click", function(e){
       let target = e.target;
       let hash = target.dataset.hash;
@@ -355,9 +356,6 @@
         $(".tab-content").hide();
 
         $(this).addClass("on");
-        $(`${hash}`).show();
-        $(`${hash}`).addClass("on");
-      } else {
         $(`${hash}`).show();
         $(`${hash}`).addClass("on");
       }
