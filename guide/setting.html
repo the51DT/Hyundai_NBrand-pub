@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width" />
+  <meta name="format-detection" content="telephone=no" />
+  <title>N브랜드 | setting</title>
+  <link type="text/css" rel="stylesheet" href="./inc/css/shCoreDefault.css" />
+  <link type="text/css" rel="stylesheet" href="./inc/css/guide.css" />
+  <script type="text/javascript" src="./inc/js/jquery-1.12.4.min.js"></script>
+  <script type="text/javascript" src="./inc/js/shCore.js"></script>
+  <script type="text/javascript" src="./inc/js/shBrushJScript.js"></script>
+  <script type="text/javascript" src="./inc/js/guideUi.js"></script>
+</head>
+
+<body>
+  <div id="guideWrap">
+    <!-- Guide Header -->
+    <header>
+      <div id="guideHeader">
+        <h1>N브랜드<span> : Setting</span></h1>
+      </div>
+      <div class="nav-wrap">
+        <ul class="nav">
+          <li class="nav-item nav-item1"><a href="path.html">Path</a></li>
+          <li class="nav-item nav-item2"><a class="on">Setting</a></li>
+          <li class="nav-item nav-item3"><a href="ui-guide.html">Component</a></li>
+          <li class="nav-item nav-item4"><a href="#">Layout</a></li>
+          <li class="nav-item nav-item5"><a href="issue.html">Issue</a></li>
+        </ul>
+      </div>
+    </header>
+    <!-- //Guide Header -->
+    <!-- Guide Contents -->
+    <div id="guideContents" class="guide_cont_wrap">
+      <!-- Section -->
+      <div class="section">
+        <h2 class="guideTit">공통</h2>
+        <div class="info">
+          <div class="subSection">
+            <h3 class="guideSubTit">DOCTYPE</h3>
+            <div class="code">
+              <pre class="brush: js;">
+	&lt;!DOCTYPE html&gt;
+</pre>
+            </div>
+          </div>
+
+          <div class="subSection">
+            <h3 class="guideSubTit">인코딩</h3>
+            <ul class="listInfo">
+              <li>
+                <p class="listTit">HTML</p>
+                <div class="code">
+                  <pre class="brush: js;">
+	<meta charset="utf-8">
+</pre>
+                </div>
+              </li>
+              <li>
+                <p class="listTit">CSS</p>
+                <div class="code">
+                  <pre class="brush: js;">
+@charset "utf-8";
+</pre>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="subSection">
+            <h3 class="guideSubTit">language 속성</h3>
+            <div class="code">
+              <pre class="brush: js;">
+&lt;html lang="ko"&gt;
+&lt;html lang="en"&gt;
+</pre>
+            </div>
+          </div>
+          <div class="subSection">
+            <h3 class="guideSubTit">Images Naming</h3>
+            <p>이미지의 특성에 맞게 파일명 적용</p>
+            <ul class="listDot">
+              <li>백그라운드 - <em>bg_파일명</em></li>
+              <li>아이콘 - <em>icon_파일명</em></li>
+              <li>버튼 - <em>btn_파일명</em></li>
+              <li>기호 - <em>bul_파일명</em></li>
+              <li>이미지 - <em>img_파일명</em></li>
+            </ul>
+          </div>
+
+          <div class="subSection">
+            <h3 class="guideSubTit">CSS</h3>
+            <ul class="listDot">
+              <li>reset.css - 브라우저 별 속성 초기화</li>
+              <li>font.css - 폰트 설정</li>
+              <li>common.css - 공통 정의</li>
+              <li>layout.css - 공통 레이아웃 정의</li>
+              <li>component.css - 공통 컴포넌트 정의</li>
+              <li>pages.css - 페이지 css정의</li>
+            </ul>
+          </div>
+
+          <div class="subSection">
+            <h3 class="guideSubTit">JS 라이브러리</h3>
+            <ul class="listDot">
+              <li>jquery-1.12.4.min.js</li>
+              <li>swiper 11.1.1.js</li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- //Section -->
+
+      <!-- Section -->
+      <div class="section">
+        <h2 class="guideTit">웹</h2>
+        <div class="info">
+          <div class="subSection">
+            <h3 class="guideSubTit">Cross Browsing</h3>
+            <p>
+              Edge, Chrome, Safari 5년 전 버전까지 확인,<br />
+              Edge 2019년도 - v79.0.309.11<br />
+              Chrome 2019년도 - v74.0.3729<br />
+              Safari 2019년도 - Version 12.1 (14607.1.40)
+            </p>
+          </div>
+
+          <div class="subSection">
+            <h3 class="guideSubTit">IE 호환성</h3>
+            <div class="code">
+              <p class="discription">IE 최신버전(Edge) 지원을 위해 아래 메타 태그 작성</p>
+              <pre class="brush: js;">
+	<meta http-equiv="X-UA-Compatible" content="IE-Edge">
+</pre>
+            </div>
+          </div>
+
+          <div class="subSection">
+            <h3 class="guideSubTit">Font</h3>
+            <p>기본 폰트 사이즈<em>16px</em>기준 단위 <em>rem</em>사용</p>
+            <ul class="listDot">
+              <li>font-family: <em>"Hyundai Sans Head Office"</em>;</li>
+              <li>font-family: <em>"Hyundai Sans Text Office"</em>;</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- //Section -->
+
+      <!-- Section -->
+      <div class="section">
+        <h2 class="guideTit">모바일</h2>
+        <div class="info">
+          <div class="subSection">
+            <h3 class="guideSubTit">기준 사이즈 정의</h3>
+            <p>가로 최대 1023</p>
+            <p>가로 최소 360</p>
+          </div>
+
+          <div class="subSection">
+            <h3 class="guideSubTit">브라우저별 특화 설정</h3>
+            <ul class="listInfo">
+              <li>
+                <p class="listTit">공통</p>
+                <div class="code">
+                  <p class="discription">브라우저가 폰트 사이즈를 강제로 조정하는 것을 방지함</p>
+                  <pre class="brush: js;">
+	* {-webkit-text-size-adjust:none;}
+</pre>
+                </div>
+
+                <div class="code">
+                  <p class="discription">필요시 Form에 들어간 기본 웹킷 스타일 제거</p>
+                  <pre class="brush: js;">
+	input[type="text"], [type="password"], textarea {-webkit-border-radius:0;-webkit-appearance:none;}
+</pre>
+                </div>
+              </li>
+              <li>
+                <p class="listTit">Safari</p>
+                <div class="code">
+                  <p class="discription">format-detection 속성을 사용하여 연속된 숫자의 자동 링크(전화걸기) 기능을 제한함</p>
+                  <pre class="brush: js;">
+	<meta name="format-detection" content="telephone=no" />
+</pre>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="subSection">
+            <h3 class="guideSubTit">모바일 웹을 위한 텍스트 크기 설정</h3>
+            <p>다양한 해상도 대응을 위해 모바일 폰트 단위는 pt, in 등 절대적인 크기를 나타내는 속성값보다 px, em, rem, % 등의 상위 요소의 크기에 영향을 받는 상대적인 크기를 나타내는
+              속성을 사용</p>
+          </div>
+        </div>
+      </div>
+      <!-- //Section -->
+    </div>
+    <!-- //Guide Contents -->
+
+    <!-- Footer -->
+    <!-- <div id="footer">Media4th&amp;Company</div> -->
+    <!-- // Footer -->
+  </div>
+</body>
+
+</html>

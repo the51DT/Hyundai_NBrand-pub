@@ -1,0 +1,54 @@
+/*********************************
+모바일 css
+*********************************/
+
+@media screen and (max-width: 1023px) {
+  /*********
+    font
+  **********/
+
+  /* tit */
+  [class*="tit-type"] {
+    color: #000;
+    font-family: "Hyundai Sans Head Office";
+    font-style: normal;
+    font-weight: 600;
+  }
+  .tit-type01 {
+    font-size: 2.5rem;
+    line-height: 125%;
+  }
+  .tit-type02 {
+    font-size: 2.25rem;
+    line-height: 125%;
+  }
+  .tit-type03 {
+    font-size: 1.875rem;
+    line-height: 140%;
+  }
+  .tit-type04 {
+    font-size: 1.5rem;
+    line-height: 140%;
+  }
+  .tit-type05 {
+    font-size: 1rem;
+    line-height: 140%;
+  }
+
+  /* txt */
+  .txt-type01 {
+    font-size: 1.5rem;
+  }
+  .txt-type02 {
+    font-size: 1.25rem;
+  }
+  .txt-type03 {
+    font-size: 1rem;
+  }
+  .txt-type04 {
+    font-size: 0.875rem;
+  }
+  .txt-type05 {
+    font-size: 0.75rem;
+  }
+}

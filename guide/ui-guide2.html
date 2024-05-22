@@ -1,0 +1,2634 @@
+<section id="cont04" class="section">
+  <h2 class="guide-tit">Button, Link</h2>
+  <div class="cont-type">
+    <h3 class="guide-tit02">TYPE - 풀사이즈 버튼</h3>
+    <div class="ui-item">
+      <p class="guide-txt">Normal</p>
+      <div class="btn-wrap">
+        <button type="button" class="btn blue">확인</button>
+      </div>
+      <p class="guide-txt">Press</p>
+      <div class="btn-wrap">
+        <button type="button" class="btn press blue">확인</button>
+      </div>
+      <p class="guide-txt">Disabled</p>
+      <div class="btn-wrap">
+        <button type="button" class="btn blue" disabled>확인</button>
+      </div>
+      <p class="guide-txt">Floating</p>
+      <div class="fix-btn-wrap">
+        <button type="button" class="btn blue">확인</button>
+      </div>
+    </div>
+    <pre>
+&lt;div class="btn-wrap"&gt;
+    &lt;button type="button" class="btn blue"&gt;확인&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="btn-wrap"&gt;
+    &lt;button type="button" class="btn press blue"&gt;확인&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="btn-wrap"&gt;
+    &lt;button type="button" class="btn blue" disabled&gt;확인&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="fix-btn-wrap"&gt;
+    &lt;button type="button" class="btn blue"&gt;확인&lt;/button&gt;
+&lt;/div&gt;
+</pre>
+  </div>
+  <div class="cont-type">
+    <h3 class="guide-tit02">TYPE - 다중 버튼</h3>
+    <div class="ui-item">
+      <p class="guide-txt">Normal</p>
+      <div class="btn-wrap">
+        <button type="button" class="btn gray">취소</button>
+        <button type="button" class="btn blue">확인</button>
+      </div>
+      <p class="guide-txt">Press</p>
+      <div class="btn-wrap">
+        <button type="button" class="btn press gray">취소</button>
+        <button type="button" class="btn press blue">확인</button>
+      </div>
+      <p class="guide-txt">Disabled</p>
+      <div class="btn-wrap">
+        <button type="button" class="btn gray" disabled>취소</button>
+        <button type="button" class="btn blue" disabled>확인</button>
+      </div>
+      <p class="guide-txt">Floating</p>
+      <div class="fix-btn-wrap">
+        <button type="button" class="btn gray">취소</button>
+        <button type="button" class="btn blue">확인</button>
+      </div>
+      <div class="fix-btn-wrap">
+        <button type="button" class="btn gray small">취소</button>
+        <button type="button" class="btn blue">확인</button>
+      </div>
+    </div>
+    <pre>
+&lt;div class="btn-wrap"&gt;
+    &lt;button type="button" class="btn gray"&gt;취소&lt;/button&gt;
+    &lt;button type="button" class="btn blue"&gt;확인&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="btn-wrap"&gt;
+    &lt;button type="button" class="btn press gray"&gt;취소&lt;/button&gt;
+    &lt;button type="button" class="btn press blue"&gt;확인&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="btn-wrap"&gt;
+    &lt;button type="button" class="btn gray" disabled&gt;취소&lt;/button&gt;
+    &lt;button type="button" class="btn blue" disabled&gt;확인&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="fix-btn-wrap"&gt;
+    &lt;button type="button" class="btn gray"&gt;취소&lt;/button&gt;
+    &lt;button type="button" class="btn blue"&gt;확인&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class="fix-btn-wrap"&gt;
+    &lt;button type="button" class="btn gray small"&gt;취소&lt;/button&gt;
+    &lt;button type="button" class="btn blue"&gt;확인&lt;/button&gt;
+&lt;/div&gt;
+</pre>
+  </div>
+  <div class="cont-type">
+    <h3 class="guide-tit02">TYPE - 인라인 버튼</h3>
+    <div class="ui-item">
+      <p class="guide-txt">Normal</p>
+      <button type="button" class="inline-btn gray">상세조회</button>
+      <button type="button" class="inline-btn blue">인증요청</button>
+      <button type="button" class="inline-btn gray tel" title="앱실행">전화걸기</button>
+
+      <p class="guide-txt">Press</p>
+      <button type="button" class="inline-btn press gray">상세조회</button>
+      <button type="button" class="inline-btn press blue">인증요청</button>
+
+      <p class="guide-txt">Disabled</p>
+      <button type="button" class="inline-btn gray" disabled>상세조회</button>
+      <button type="button" class="inline-btn blue" disabled>인증요청</button>
+
+      <p class="guide-txt">Pop</p>
+      <button type="button" class="inline-btn blue open-pop" data-page="pop-page-01" title="팝업 열림">팝업</button>
+      <button type="button" class="inline-btn blue open-modal" data-page="pop-modal-01" title="팝업 열림">모달팝업</button>
+      <button type="button" class="inline-btn blue open-bottom" data-page="bottom-pop-01" title="팝업 열기">Bottom</button>
+      <button type="button" class="inline-btn blue open-bottomlist" data-page="bottom-pop-list"
+        title="팝업 열기">Bottompop</button>
+    </div>
+    <pre>
+&lt;button type="button" class="inline-btn gray"&gt;상세조회&lt;/button&gt;
+&lt;button type="button" class="inline-btn blue"&gt;인증요청&lt;/button&gt;
+
+&lt;button type="button" class="inline-btn press gray"&gt;상세조회&lt;/button&gt;
+&lt;button type="button" class="inline-btn press blue"&gt;인증요청&lt;/button&gt;
+
+&lt;button type="button" class="inline-btn gray" disabled&gt;상세조회&lt;/button&gt;
+&lt;button type="button" class="inline-btn blue" disabled&gt;인증요청&lt;/button&gt;
+
+&lt;button type="button" class="inline-btn blue open-pop" data-page="pop-page-01" title="팝업 열림"&gt;팝업&lt;/button&gt;
+&lt;button type="button" class="inline-btn blue open-modal" data-page="pop-modal-01" title="팝업 열림"&gt;모달팝업&lt;/button&gt;
+&lt;button type="button" class="inline-btn blue open-bottom" data-page="bottom-pop-01" title="팝업 열기"&gt;Bottom&lt;/button&gt;
+</pre>
+  </div>
+  <div class="cont-type">
+    <h3 class="guide-tit02">TYPE - 입력박스 버튼</h3>
+    <div class="ui-item">
+      <div class="input-btn-wrap">
+        <!-- 텍스트 입력 후 button에 클래스 on 추가 -->
+        <button type="button" class="input-btn">텍스트 입력</button>
+      </div>
+
+      <div class="input-btn-wrap">
+        <!-- 텍스트 입력 후 button에 클래스 on 추가 -->
+        <button type="button" class="input-btn on">텍스트 입력 완료</button>
+      </div>
+    </div>
+    <pre>
+&lt;div class="input-btn-wrap"&gt;
+    &lt;!-- 텍스트 입력 후 button에 클래스 on 추가 --&gt;
+    &lt;button type="button" class="input-btn"&gt;텍스트 입력&lt;/button&gt;
+&lt;/div&gt;
+</pre>
+  </div>
+  <div class="cont-type">
+    <h3 class="guide-tit02">TYPE - 보안키패드 버튼</h3>
+    <div class="ui-item">
+      <div class="security-wrap">
+        <!-- 입력후에 button에 on class 추가 button 태그 html 텍스트 겟수만큼 ● 추가 title -> aria-label로 변경 -->
+        <button type="button" class="security-btn" title="보안키패드 열림">숫자 13자리 입력</button>
+        <button type="button" class="security-btn on" data-page="pop-page-01"
+          aria-label="보안키패드 열림">●●●●●●●●●●●●●</button>
+      </div>
+    </div>
+    <pre>
+&lt;div class="security-wrap"&gt;
+    &lt;!-- 입력후에 button에 on class 추가 button 태그 html 텍스트 겟수만큼 ● 추가 title -> aria-label로 변경 --&gt;
+    &lt;button type="button" class="security-btn" title="보안키패드 열림"&gt;숫자 13자리 입력&lt;/button&gt;
+    &lt;button type="button" class="security-btn on" title="보안키패드 열림"&gt;●●●●●●●●●●●●●&lt;/button&gt;
+&lt;/div&gt;
+</pre>
+  </div>
+  <div class="cont-type">
+    <h3 class="guide-tit02">TYPE - 번호 버튼</h3>
+    <div class="ui-item">
+      <div class="number-btn-wrap">
+        <button type="button" class="number-btn" title="새창알림">
+          <em class="num">1</em>
+          <span class="tit">생활안정자금</span>
+          <span class="txt">서울보증보험과 협약체결한 기관의 재직자 중 사내대출을 받고자 하는 고객</span>
+          <span class="info">생활안정용 조회동의</span>
+        </button>
+      </div>
+      <div class="number-btn-wrap on">
+        <button type="button" class="number-btn" title="새창알림">
+          <em class="num">2</em>
+          <span class="tit">생활안정자금</span>
+          <span class="txt">서울보증보험과 협약체결한 기관의 재직자 중 사내대출을 받고자 하는 고객</span>
+          <span class="info">생활안정용 조회동의</span>
+        </button>
+      </div>
+    </div>
+    <pre>
+&lt;div class="number-btn-wrap"&gt;
+    &lt;button type="button" class="number-btn" title="새창알림"&gt;
+        &lt;em class="num"&gt;1&lt;/em&gt;
+        &lt;span class="tit"&gt;생활안정자금&lt;/span&gt;
+        &lt;span class="txt"&gt;서울보증보험과 협약체결한 기관의 재직자 중 사내대출을 받고자 하는 고객&lt;/span&gt;
+        &lt;span class="info"&gt;생활안정용 조회동의&lt;/span&gt;
+    &lt;/button&gt;
+&lt;/div&gt;
+&lt;div class="number-btn-wrap on"&gt;
+    &lt;button type="button" class="number-btn" title="새창알림"&gt;
+        &lt;em class="num"&gt;2&lt;/em&gt;
+        &lt;span class="tit"&gt;생활안정자금&lt;/span&gt;
+        &lt;span class="txt"&gt;서울보증보험과 협약체결한 기관의 재직자 중 사내대출을 받고자 하는 고객&lt;/span&gt;
+        &lt;span class="info"&gt;생활안정용 조회동의&lt;/span&gt;
+    &lt;/button&gt;
+&lt;/div&gt;
+</pre>
+  </div>
+</section>
+<section id="cont05" class="section">
+  <h2 class="guide-tit">입력박스</h2>
+  <div class="cont-type">
+    <h3 class="guide-tit02">TYPE - 텍스트</h3>
+    <div class="ui-item">
+      <p class="guide-txt">Default</p>
+      <div class="input">
+        <input type="text" title="타이틀" placeholder="텍스트 입력">
+      </div>
+      <p class="guide-txt">error</p>
+      <div class="from-item">
+        <div class="input error">
+          <input type="text" title="타이틀" placeholder="텍스트 입력" value="너는 바보다">
+        </div>
+        <div class="add-box">
+          <p class="error">다시 확인해 주세요.</p>
+        </div>
+      </div>
+      <p class="guide-txt">Disabled</p>
+      <div class="input">
+        <input type="text" title="타이틀" placeholder="텍스트 입력" value="입력내용" disabled>
+      </div>
+
+      <p class="guide-txt">readonly</p>
+      <div class="input">
+        <input type="text" title="타이틀" placeholder="텍스트 입력" readonly>
+      </div>
+    </div>
+    <pre>
+&lt;div class="input"&gt;
+    &lt;input type="text" title="" placeholder=""&gt;
+&lt;/div&gt;
+
+&lt;div class="from-item"&gt;
+    &lt;div class="input error"&gt;
+        &lt;input type="text" title="" placeholder=""&gt;
+    &lt;/div&gt;
+    &lt;div class="add-box"&gt;
+        &lt;p class="error"&gt;다시 확인해 주세요.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="input"&gt;
+    &lt;input type="text" title="" placeholder="" value="" disabled&gt;
+&lt;/div&gt;
+
+&lt;div class="input"&gt;
+    &lt;input type="text" title="타이틀" placeholder="텍스트 입력" value="입력내용" readonly&gt;
+&lt;/div&gt; 
+</pre>
+  </div>
+  <div class="cont-type">
+    <h3 class="guide-tit02">TYPE - 패스워드</h3>
+    <div class="ui-item">
+      <p class="guide-txt">Default</p>
+      <div class="input">
+        <input type="password" title="타이틀" placeholder="비밀번호 입력">
+      </div>
+
+      <p class="guide-txt">error</p>
+      <div class="from-item">
+        <div class="input error">
+          <input type="password" title="타이틀" placeholder="비밀번호 입력" value="너는 바보다">
+        </div>
+        <div class="add-box">
+          <p class="error">다시 확인해 주세요.</p>
+        </div>
+      </div>
+
+      <p class="guide-txt">Disabled</p>
+      <div class="input">
+        <input type="password" title="타이틀" placeholder="비밀번호 입력" value="입력내용" disabled>
+      </div>
+    </div>
+    <pre>
+&lt;div class="input"&gt;
+    &lt;input type="password" title="" placeholder=""&gt;
+&lt;/div&gt;
+
+&lt;div class="from-item"&gt;
+    &lt;div class="input error"&gt;
+        &lt;input type="password" title="" placeholder=""&gt;
+    &lt;/div&gt;
+    &lt;div class="add-box"&gt;
+        &lt;p class="error"&gt;다시 확인해 주세요.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="input"&gt;
+    &lt;input type="password" title="" placeholder="" value="" disabled&gt;
+&lt;/div&gt;
+</pre>
+  </div>
+  <div class="cont-type">
+    <h3 class="guide-tit02">TYPE - 넘버</h3>
+    <div class="ui-item">
+      <p class="guide-txt">Default</p>
+      <div class="input">
+        <input type="text" title="타이틀" placeholder="숫자 입력">
+      </div>
+
+      <p class="guide-txt">error</p>
+      <div class="from-item">
+        <div class="input error">
+          <input type="text" title="타이틀" placeholder="숫자 입력" value="1234123">
+        </div>
+        <div class="add-box">
+          <p class="error">다시 확인해 주세요.</p>
+        </div>
+      </div>
+
+      <p class="guide-txt">Disabled</p>
+      <div class="input">
+        <input type="text" title="타이틀" placeholder="숫자 입력" value="123123" disabled>
+      </div>
+    </div>
+    <pre>
+&lt;div class="input"&gt;
+    &lt;input type="number" title="" placeholder=""&gt;
+&lt;/div&gt;
+
+&lt;div class="from-item"&gt;
+    &lt;div class="input error"&gt;
+        &lt;input type="number" title="" placeholder=""&gt;
+    &lt;/div&gt;
+    &lt;div class="add-box"&gt;
+        &lt;p class="error"&gt;다시 확인해 주세요.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="input"&gt;
+    &lt;input type="number" title="" placeholder="" value="" disabled&gt;
+&lt;/div&gt;
+</pre>
+  </div>
+</section>
+<section id="cont06" class="section">
+  <h2 class="guide-tit">체크박스</h2>
+  <div class="cont-type">
+    <h3 class="guide-tit02">TYPE - 01</h3>
+    <div class="ui-item">
+      <p class="guide-txt">가로형</p>
+      <div class="chk-wrap basic">
+        <div class="chk">
+          <input type="checkbox" id="chk-01" name="chk" checked>
+          <label for="chk-01">동의</label>
+        </div>
+        <div class="chk">
+          <input type="checkbox" id="chk-02" name="chk">
+          <label for="chk-02">동의</label>
+        </div>
+        <div class="chk">
+          <input type="checkbox" id="chk-03" name="chk" disabled>
+          <label for="chk-03">동의</label>
+        </div>
+      </div>
+
+      <p class="guide-txt">세로형</p>
+      <div class="chk-wrap col">
+        <div class="chk">
+          <input type="checkbox" id="ssh-num-01" name="ssh-num" checked>
+          <label for="ssh-num-01">2019C-00123456 <span class="fc-01">(신규)</span></label>
+        </div>
+        <div class="chk">
+          <input type="checkbox" id="ssh-num-02" name="ssh-num">
+          <label for="ssh-num-02">2019-00123456 <span class="fc-03">(변경)</span></label>
+        </div>
+      </div>
+    </div>
+    <pre>
+&lt;div class="chk-wrap basic"&gt;
+    &lt;div class="chk"&gt;
+        &lt;input type="checkbox" id="chk-01" name="chk" checked&gt;
+        &lt;label for="chk-01"&gt;동의&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class="chk"&gt;
+        &lt;input type="checkbox" id="chk-02" name="chk"&gt;
+        &lt;label for="chk-02"&gt;동의&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class="chk"&gt;
+        &lt;input type="checkbox" id="chk-03" name="chk" disabled&gt;
+        &lt;label for="chk-03"&gt;동의&lt;/label&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="chk-wrap col"&gt;
+    &lt;div class="chk"&gt;
+        &lt;input type="checkbox" id="ssh-num-01" name="ssh-num" checked&gt;
+        &lt;label for="ssh-num-01"&gt;2019C-00123456 &lt;span class="fc-01"&gt;(신규)&lt;/span&gt;&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class="chk"&gt;
+        &lt;input type="checkbox" id="ssh-num-02" name="ssh-num"&gt;
+        &lt;label for="ssh-num-02"&gt;2019-00123456 &lt;span class="fc-03"&gt;(변경)&lt;/span&gt;&lt;/label&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+  </div>
+  <div class="cont-type">
+    <h3 class="guide-tit02">TYPE - titleChk</h3>
+    <div class="ui-item">
+      <div class="chk-wrap big">
+        <div class="chk">
+          <input type="checkbox" id="tit-chk-01" name="tit-chk" checked>
+          <label for="tit-chk-01">전체동의</label>
+        </div>
+      </div>
+    </div>
+    <pre>
+&lt;div class="chk-wrap big"&gt;
+    &lt;div class="chk"&gt;
+        &lt;input type="checkbox" id="chk-01" name="chk" checked&gt;
+        &lt;label for="chk-01"&gt;동의&lt;/label&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+  </div>
+
+  <div class="cont-type">
+    <h3 class="guide-tit02">TYPE - 하단 체크박스</h3>
+    <div class="ui-item">
+      <div class="chk-wrap center">
+        <div class="chk">
+          <input type="checkbox" id="chk-bottom" name="chkBottom" checked="">
+          <label for="chk-bottom">위의 사항을 확인하였습니다.</label>
+        </div>
+      </div>
+    </div>
+    <pre>
+&lt;div class="chk-wrap center"&gt;
+    &lt;div class="chk"&gt;
+        &lt;input type="checkbox" id="chk-bottom" name="chkBottom" checked=""&gt;
+        &lt;label for="chk-bottom"&gt;위의 사항을 확인하였습니다.&lt;/label&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+  </div>
+
+  <div class="cont-type">
+    <h3 class="guide-tit02">TYPE - switch</h3>
+    <div class="ui-item">
+      <div class="switch-wrap">
+        <input type="checkbox" id="switch-01" checked>
+        <label for="switch-01" aria-label="동의"></label>
+      </div>
+    </div>
+    <pre>
+&lt;div class="switch-wrap"&gt;
+    &lt;div class="chk"&gt;
+        &lt;input type="checkbox" id="switch-01"&gt;
+        &lt;label for="switch-01" aria-label="동의"&gt;&lt;/label&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+  </div>
+  <div class="cont-type">
+    <h3 class="guide-tit02">TYPE - 체크 리스트</h3>
+    <div class="ui-item">
+      <div class="number-chk-wrap">
+        <div class="chk">
+          <input type="checkbox" id="chk-list-01">
+          <label for="chk-list-01">
+            <span class="wrap">
+              <span class="tit">사업자등록증</span>
+              <span class="tit chan">사업자등록증</span>
+              <span class="txt">(정상) 홈택스</span>
+            </span>
+            <span class="con succ">완료</span>
+            <span class="con err">오류</span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <pre>
+&lt;div class="number-chk-wrap"&gt;
+    &lt;div class="chk"&gt;
+        &lt;input type="checkbox" id="chk-list-01"&gt;
+        &lt;label for="chk-list-01"&gt;
+            &lt;span class="wrap"&gt;
+                &lt;span class="tit"&gt;사업자등록증&lt;/span&gt;
+                &lt;span class="tit chan"&gt;사업자등록증&lt;/span&gt;
+                &lt;span class="txt"&gt;(정상) 홈택스&lt;/span&gt;
+            &lt;/span&gt;
+            &lt;span class="con succ"&gt;완료&lt;/span&gt;
+            &lt;!-- &lt;span class="con err"&gt;오류&lt;/span&gt; --&gt;
+        &lt;/label&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+  </div>
+</section>
+<section id="cont07" class="section">
+  <h2 class="guide-tit">라디오박스</h2>
+  <div class="cont-type">
+    <h3 class="guide-tit02">TYPE - 01</h3>
+    <div class="ui-item">
+      <p class="guide-txt">가로형</p>
+      <div class="radio-wrap basic">
+        <div class="radio">
+          <input type="radio" id="radio-01" name="radio" checked>
+          <label for="radio-01">라디오</label>
+        </div>
+        <div class="radio">
+          <input type="radio" id="radio-02" name="radio">
+          <label for="radio-02">라디오</label>
+        </div>
+        <div class="radio">
+          <input type="radio" id="radio-03" name="radio">
+          <label for="radio-03">라디오</label>
+        </div>
+      </div>
+      <p class="guide-txt">세로형</p>
+      <div class="radio-wrap col">
+        <div class="radio">
+          <input type="radio" id="radio02-01" name="radio02" checked>
+          <label for="radio02-01">라디오</label>
+        </div>
+        <div class="radio">
+          <input type="radio" id="radio02-02" name="radio02">
+          <label for="radio02-02">라디오</label>
+        </div>
+        <div class="radio">
+          <input type="radio" id="radio02-03" name="radio02">
+          <label for="radio02-03">라디오</label>
+        </div>
+      </div>
+    </div>
+    <pre>
+&lt;div class="radio-wrap basic"&gt;
+    &lt;div class="radio"&gt;
+        &lt;input type="radio" id="radio-01" name="radio" checked&gt;
+        &lt;label for="radio-01"&gt;라디오&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class="radio"&gt;
+        &lt;input type="radio" id="radio-02" name="radio"&gt;
+        &lt;label for="radio-02"&gt;라디오&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class="radio"&gt;
+        &lt;input type="radio" id="radio-03" name="radio"&gt;
+        &lt;label for="radio-03"&gt;라디오&lt;/label&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="radio-wrap col"&gt;
+    &lt;div class="radio"&gt;
+        &lt;input type="radio" id="radio02-01" name="radio02" checked&gt;
+        &lt;label for="radio02-01"&gt;라디오&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class="radio"&gt;
+        &lt;input type="radio" id="radio02-02" name="radio02"&gt;
+        &lt;label for="radio02-02"&gt;라디오&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class="radio"&gt;
+        &lt;input type="radio" id="radio02-03" name="radio02"&gt;
+        &lt;label for="radio02-03"&gt;라디오&lt;/label&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+  </div>
+  <div class="cont-type">
+    <h3 class="guide-tit02">TYPE - Basic</h3>
+    <div class="ui-item">
+      <p class="guide-txt">Default</p>
+      <div class="rdo-wrap basic">
+        <div class="rdo">
+          <input type="radio" id="rdo-01" name="rdo01" checked="true">
+          <label for="rdo-01">개인</label>
+        </div>
+        <div class="rdo">
+          <input type="radio" id="rdo-02" name="rdo01">
+          <label for="rdo-02">법인</label>
+        </div>
+      </div>
+      <p class="guide-txt">Disabled</p>
+      <div class="rdo-wrap basic">
+        <div class="rdo">
+          <input type="radio" id="rdo-03" name="rdo02" disabled>
+          <label for="rdo-03">개인</label>
+        </div>
+        <div class="rdo">
+          <input type="radio" id="rdo-04" name="rdo02" disabled checked>
+          <label for="rdo-04">법인</label>
+        </div>
+      </div>
+      <p class="guide-txt">Disabled</p>
+      <div class="rdo-wrap basic">
+        <div class="rdo">
+          <input type="radio" id="rdo-05" name="rdo02" disabled>
+          <label for="rdo-05">개인</label>
+        </div>
+        <div class="rdo">
+          <input type="radio" id="rdo-06" name="rdo02" disabled checked>
+          <label for="rdo-06">법인</label>
+        </div>
+      </div>
+    </div>
+    <pre>
+&lt;div class="rdo-wrap basic"&gt;
+    &lt;div class="rdo"&gt;
+        &lt;input type="radio" id="rdo-01" name="rdo01" checked&gt;
+        &lt;label for="rdo-01"&gt;개인&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class="rdo"&gt;
+        &lt;input type="radio" id="rdo-02" name="rdo01"&gt;
+        &lt;label for="rdo-02"&gt;법인&lt;/label&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="rdo-wrap basic"&gt;
+    &lt;div class="rdo"&gt;
+        &lt;input type="radio" id="rdo-03" name="rdo02" disabled&gt;
+        &lt;label for="rdo-03"&gt;개인&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class="rdo"&gt;
+        &lt;input type="radio" id="rdo-04" name="rdo02" disabled checked&gt;
+        &lt;label for="rdo-04"&gt;법인&lt;/label&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+  </div>
+  <div class="cont-type">
+    <h3 class="guide-tit02">TYPE - Date</h3>
+    <div class="ui-item">
+      <div class="rdo-wrap date">
+        <div class="rdo">
+          <input type="radio" id="date7" name="rdo01" checked>
+          <label for="date7">1주일</label>
+        </div>
+        <div class="rdo">
+          <input type="radio" id="date15" name="rdo01">
+          <label for="date15">1개월</label>
+        </div>
+        <div class="rdo">
+          <input type="radio" id="date30" name="rdo01">
+          <label for="date30">3개월</label>
+        </div>
+        <div class="inqu-btn-wrap">
+          <button type="button" class="inqu-btn" title="상세조회"></button>
+        </div>
+      </div>
+    </div>
+    <pre>
+&lt;div class="rdo-wrap date"&gt;
+    &lt;div class="rdo"&gt;
+        &lt;input type="radio" id="date7" name="rdo01" checked&gt;
+        &lt;label for="date7"&gt;1주일&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class="rdo"&gt;
+        &lt;input type="radio" id="date15" name="rdo01"&gt;
+        &lt;label for="date15"&gt;1개월&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class="rdo"&gt;
+        &lt;input type="radio" id="date30" name="rdo01"&gt;
+        &lt;label for="date30"&gt;3개월&lt;/label&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+  </div>
+  <div class="cont-type">
+    <h3 class="guide-tit02">TYPE - Date + 달력</h3>
+    <div class="ui-item">
+      <div class="rdo-wrap date">
+        <div class="rdo">
+          <input type="radio" id="date1" name="rdo01" checked>
+          <label for="date1">6개월</label>
+        </div>
+        <div class="rdo">
+          <input type="radio" id="date2" name="rdo01">
+          <label for="date2">1년</label>
+        </div>
+        <div class="rdo">
+          <input type="radio" id="date3" name="rdo01">
+          <label for="date3">3년</label>
+        </div>
+        <div class="inqu-btn-wrap date-deta-btn">
+          <button type="button" class="inqu-btn" title="상세조회"></button>
+        </div>
+      </div>
+      <div class="date-deta-wrap">
+        <div class="date-wrap">
+          <div class="datepicker" id="uiDatePicker1">
+            <div class="date-fild">
+              <input class="inp-base" type="text" title="날짜선택" id="lnd0060Cal1">
+              <!-- 최소/최대 선택값 필요시 data-min="2013-10-05" data-max="2020-12-01" -->
+              <button type="button" class="btn-base drop datepicker-btn" data-inp="lnd0060Cal1" id="uiDatePck1"
+                aria-expanded="false"><span>시작일 설정</span></button>
+            </div>
+          </div>
+          <span class="txt"> ~ </span>
+          <div class="datepicker" id="uiDatePicker2">
+            <div class="date-fild">
+              <input class="inp-base" type="text" title="날짜선택" id="lnd0060Cal2">
+              <!-- 최소/최대 선택값 필요시 data-min="2013-10-05" data-max="2020-12-01" -->
+              <button type="button" class="btn-base drop datepicker-btn" data-inp="lnd0060Cal2" id="uiDatePck2"
+                aria-expanded="false"><span>종료일 설정</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <pre>
+&lt;div class="rdo-wrap date"&gt;
+    &lt;div class="rdo"&gt;
+        &lt;input type="radio" id="date1" name="rdo01" checked&gt;
+        &lt;label for="date1"&gt;6개월&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class="rdo"&gt;
+        &lt;input type="radio" id="date2" name="rdo01"&gt;
+        &lt;label for="date2"&gt;1년&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class="rdo"&gt;
+        &lt;input type="radio" id="date3" name="rdo01"&gt;
+        &lt;label for="date3"&gt;3년&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class="inqu-btn-wrap date-deta-btn"&gt;
+        &lt;button type="button" class="inqu-btn" title="상세조회"&gt;&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="date-deta-wrap"&gt;
+    &lt;div class="date-wrap"&gt;
+        &lt;div class="datepicker" id="uiDatePicker1"&gt;
+            &lt;div class="date-fild"&gt;
+                &lt;input class="inp-base" type="text" title="날짜선택" id="lnd0060Cal1"&gt;
+                &lt;!-- 최소/최대 선택값 필요시 data-min="2013-10-05" data-max="2020-12-01" --&gt;
+                &lt;button type="button" class="btn-base drop datepicker-btn" data-inp="lnd0060Cal1" id="uiDatePck1" aria-expanded="false"&gt;&lt;span&gt;시작일 설정&lt;/span&gt;&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;span class="txt"&gt; ~ &lt;/span&gt;
+        &lt;div class="datepicker" id="uiDatePicker2"&gt;
+            &lt;div class="date-fild"&gt;
+                &lt;input class="inp-base" type="text" title="날짜선택" id="lnd0060Cal2"&gt;
+                &lt;!-- 최소/최대 선택값 필요시 data-min="2013-10-05" data-max="2020-12-01" --&gt;
+                &lt;button type="button" class="btn-base drop datepicker-btn" data-inp="lnd0060Cal2" id="uiDatePck2" aria-expanded="false"&gt;&lt;span&gt;종료일 설정&lt;/span&gt;&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+  </div>
+</section>
+<section id="cont08" class="section">
+  <h2 class="guide-tit">셀렉트박스</h2>
+  <div class="cont-type">
+    <h3 class="guide-tit02">TYPE - 01</h3>
+    <div class="ui-item">
+      <div class="select">
+        <select title="옵션">
+          <option>전체</option>
+          <option>옵션22222명1</option>
+          <option>옵션명2</option>
+          <option>옵션명3</option>
+        </select>
+      </div>
+    </div>
+    <pre>
+&lt;div class="select"&gt;
+    &lt;select title="옵션"&gt;
+        &lt;option&gt;전체&lt;/option&gt;
+        &lt;option&gt;옵션22222명1&lt;/option&gt;
+        &lt;option&gt;옵션명2&lt;/option&gt;
+        &lt;option&gt;옵션명3&lt;/option&gt;
+    &lt;/select&gt;
+&lt;/div&gt;
+</pre>
+  </div>
+</section>
+<section id="cont09" class="section">
+  <h2 class="guide-tit">검색박스</h2>
+  <div class="cont-type">
+    <h3 class="guide-tit02">TYPE - 01</h3>
+    <div class="ui-item">
+      <div class="srch-wrap">
+        <div class="inner-box">
+          <input type="text" title="검색어 입력">
+          <button type="button" class="srch-btn" title="검색"></button>
+        </div>
+      </div>
+    </div>
+    <pre>
+&lt;div class="srch-wrap"&gt;
+    &lt;div class="inner-box"&gt;
+        &lt;input type="text"&gt;
+        &lt;button type="button" class="srch-btn" title="검색"&gt;&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+  </div>
+</section>
+<section id="cont10" class="section">
+  <h2 class="guide-tit">파일찾기</h2>
+  <div class="cont-type">
+    <h3 class="guide-tit02">TYPE - 01</h3>
+    <div class="ui-item">
+      <div class="from-item">
+        <p class="write-title">임대차계약서</p>
+        <div class="file-wrap">
+          <div class="input">
+            <input type="text" title="첨부파일" placeholder="선택">
+            <button type="button" class="btn-del" title="첨부파일 삭제"></button>
+          </div>
+          <div class="file-btn">
+            <label for="file-select01" class="btn-file">파일선택</label>
+            <input type="file" id="file-select01" title="파일선택">
+          </div>
+        </div>
+      </div>
+    </div>
+    <pre></pre>
+  </div>
+</section>
+<section id="cont11" class="section">
+  <h2 class="guide-tit">달력</h2>
+  <div class="cont-type">
+    <h3 class="guide-tit02">TYPE - 01</h3>
+    <div class="ui-item">
+      <div class="date-wrap">
+        <div class="datepicker" id="uiDatePicker3">
+          <div class="date-fild">
+            <input class="inp-base" type="text" title="날짜선택" id="lnd0060Cal3">
+            <!-- 최소/최대 선택값 필요시 data-min="2013-10-05" data-max="2020-12-01" -->
+            <button type="button" class="btn-base drop datepicker-btn" data-inp="lnd0060Cal3" id="uiDatePck3"
+              aria-expanded="false"><span>시작일 설정</span></button>
+          </div>
+        </div>
+        <span class="txt"> ~ </span>
+        <div class="datepicker" id="uiDatePicker4">
+          <div class="date-fild">
+            <input class="inp-base" type="text" title="날짜선택" id="lnd0060Cal4">
+            <!-- 최소/최대 선택값 필요시 data-min="2013-10-05" data-max="2020-12-01" -->
+            <button type="button" class="btn-base drop datepicker-btn" data-inp="lnd0060Cal4" id="uiDatePck4"
+              aria-expanded="false"><span>종료일 설정</span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <pre>
+&lt;div class="date-wrap"&gt;
+    &lt;div class="datepicker" id="uiDatePicker3"&gt;
+        &lt;div class="date-fild"&gt;
+            &lt;input class="inp-base" type="text" title="날짜선택" id="lnd0060Cal3"&gt;
+            &lt;!-- 최소/최대 선택값 필요시 data-min="2013-10-05" data-max="2020-12-01" --&gt;
+            &lt;button type="button" class="btn-base drop datepicker-btn" data-inp="lnd0060Cal3" id="uiDatePck3"
+                aria-expanded="false"&gt;&lt;span&gt;시작일 설정&lt;/span&gt;&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;span class="txt"&gt; ~ &lt;/span&gt;
+    &lt;div class="datepicker" id="uiDatePicker4"&gt;
+        &lt;div class="date-fild"&gt;
+            &lt;input class="inp-base" type="text" title="날짜선택" id="lnd0060Cal4"&gt;
+            &lt;!-- 최소/최대 선택값 필요시 data-min="2013-10-05" data-max="2020-12-01" --&gt;
+            &lt;button type="button" class="btn-base drop datepicker-btn" data-inp="lnd0060Cal4" id="uiDatePck4"
+                aria-expanded="false"&gt;&lt;span&gt;종료일 설정&lt;/span&gt;&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+  </div>
+</section>
+<section id="cont12" class="section">
+  <h2 class="guide-tit">테이블</h2>
+  <div class="cont-type">
+    <h3 class="guide-tit02">TYPE - col</h3>
+    <div class="ui-item">
+      <!-- table -->
+      <div class="table-wrap">
+        <div class="info">
+          <span class="date">채무기준일 : 2019-07-20</span>
+        </div>
+        <table>
+          <colgroup>
+            <col style="width:33%;">
+            <col style="width:33%;">
+            <col>
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col">채권번호</th>
+              <th scope="col">주계약자</th>
+              <th scope="col">변제하실 금액</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a href="#" title="상세페이지 이동">218-069800</a></td>
+              <td>일이삼사오육</td>
+              <td class="txt-r">25,315,000</td>
+            </tr>
+            <tr>
+              <td><a href="#" title="상세페이지 이동">218-069800</a></td>
+              <td>(팡)도밤동금</td>
+              <td class="txt-r">25,315,000</td>
+            </tr>
+            <tr>
+              <td><a href="#" title="상세페이지 이동">218-069800</a></td>
+              <td>(팡)도밤동금</td>
+              <td class="txt-r">25,315,000</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="table-bu">
+          <p class="bu-txt circle gray">채권번호를 선택하시면 상세내용을 조회 및 담당자와 상담을 하실 수 있습니다.</p>
+        </div>
+      </div>
+      <!--// table  -->
+
+      <br>
+      <div class="table-wrap type03">
+        <table>
+          <colgroup>
+            <col style="width:33%;">
+            <col style="width:33%;">
+            <col>
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col">채권번호</th>
+              <th scope="col">주계약자</th>
+              <th scope="col">변제하실 금액</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a href="#" title="상세페이지 이동">218-069800</a></td>
+              <td>일이삼사오육</td>
+              <td class="txt-r">25,315,000</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <pre>
+&lt;div class="table-wrap"&gt;
+    &lt;div class="info"&gt;
+        &lt;span class="date"&gt;채무기준일 : 2019-07-20&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;table&gt;
+        &lt;colgroup&gt;
+            &lt;col style="width:;"&gt;
+            &lt;col style="width:;"&gt;
+            &lt;col style="width:;"&gt;
+        &lt;/colgroup&gt;
+        &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;th scope="col"&gt;채권번호&lt;/th&gt;
+                &lt;th scope="col"&gt;주계약자&lt;/th&gt;
+                &lt;th scope="col"&gt;변제하실 금액&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;td&gt;&lt;a href="#" title="상세페이지 이동">218-069800&lt;/a&gt;&lt;/td&gt;
+                &lt;td&gt;(팡)도밤동금&lt;/td&gt;
+                &lt;td class="txt-r"&gt;132,461,120&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+    &lt;div class="table-bu"&gt;
+        &lt;p class="bu-txt circle gray"&gt;채권번호를 선택하시면 상세내용을 조회 및 담당자와 상담을 하실 수 있습니다.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+  </div>
+
+  <div class="cont-type">
+    <h3 class="guide-tit02">TYPE - [tbody > th] shadow</h3>
+    <div class="ui-item">
+      <!-- table -->
+      <div class="table-wrap type02">
+        <table>
+          <colgroup>
+            <col style="width:27%;">
+            <col style="width:30%;">
+            <col>
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col" colspan="3">유효보증</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row"><a href="#" title="상세페이지 이동">218-069800</a></th>
+              <td>일이삼사오육</td>
+              <td class="txt-r">25,315,000</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!--// table  -->
+    </div>
+    <pre>
+&lt;div class="table-wrap type02"&gt;
+    &lt;table&gt;
+        &lt;colgroup&gt;
+            &lt;col style="width:27%;"&gt;
+            &lt;col style="width:30%;"&gt;
+            &lt;col&gt;
+        &lt;/colgroup&gt;
+        &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;th scope="col" colspan="3"&gt;유효보증&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;th scope="row"&gt;&lt;a href="#" title="상세페이지 이동"&gt;218-069800&lt;/a&gt;&lt;/th&gt;
+                &lt;td&gt;일이삼사오육&lt;/td&gt;
+                &lt;td class="txt-r"&gt;25,315,000&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/div&gt;
+</pre>
+  </div>
+
+  <div class="cont-type">
+    <h3 class="guide-tit02">TYPE - fixed(tab안에서만 실행 가능)</h3>
+    <div class="ui-item">
+
+      <!-- table -->
+      <div class="table-wrap">
+        <div class="info">
+          <span class="type">(원본)</span>
+          <span class="unit">(현금흐름 단위 : 백만원)</span>
+        </div>
+        <div class="table-fix-wrap">
+          <div class="scroll-cont">
+            <table>
+              <colgroup>
+                <col style="width:140px;">
+                <col style="width:100px;">
+                <col style="width:100px;">
+                <col style="width:100px;">
+                <col style="width:100px;">
+              </colgroup>
+              <thead>
+                <tr>
+                  <td> </td>
+                  <th scope="col">전전기(2016)</th>
+                  <th scope="col">전기(2017)</th>
+                  <th scope="col">당기(2018)</th>
+                  <th scope="col">업종평균</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">영업활동 후 현금흐름</th>
+                  <td>578,374</td>
+                  <td>465,888</td>
+                  <td>69,979</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">순자금조달비용 지급 후 현금흐름</th>
+                  <td>508,510</td>
+                  <td>40,589</td>
+                  <td>19,081</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">이자보상배율_영억이익 기준(배)</th>
+                  <td>8.16%</td>
+                  <td>12.87%</td>
+                  <td>10.69%</td>
+                  <td>9.44%</td>
+                </tr>
+                <tr>
+                  <th scope="row">금융비용/매출액</th>
+                  <td>0.59%</td>
+                  <td>0.42%</td>
+                  <td>0.39%</td>
+                  <td>1.21%</td>
+                </tr>
+                <tr>
+                  <th scope="row">매출영역이익률</th>
+                  <td>4.82%</td>
+                  <td>5.34%</td>
+                  <td>4.12%</td>
+                  <td>11.44%</td>
+                </tr>
+                <tr>
+                  <th scope="row">총자산순이익률</th>
+                  <td>2.52%</td>
+                  <td>2.52%</td>
+                  <td>2.52%</td>
+                  <td>2.52%</td>
+                </tr>
+                <tr>
+                  <th scope="row">매출채권회전율</th>
+                  <td>2.75회</td>
+                  <td>2.75회</td>
+                  <td>2.75회</td>
+                  <td>2.75회</td>
+                </tr>
+                <tr>
+                  <th scope="row">매출채권회전기간</th>
+                  <td>132.73일</td>
+                  <td>132.73일</td>
+                  <td>132.73일</td>
+                  <td>132.73일</td>
+                </tr>
+                <tr>
+                  <th scope="row">부채비율</th>
+                  <td>143.54%</td>
+                  <td>143.54%</td>
+                  <td>143.54%</td>
+                  <td>143.54%</td>
+                </tr>
+                <tr>
+                  <th scope="row">차입금의존도</th>
+                  <td>13.00%</td>
+                  <td>13.00%</td>
+                  <td>13.00%</td>
+                  <td>13.00%</td>
+                </tr>
+                <tr>
+                  <th scope="row">차입금총계</th>
+                  <td>1,623,184</td>
+                  <td>1,544,284</td>
+                  <td>1,271,445</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="table-bu">
+          <p class="bu-txt circle gray">채권번호를 선택하시면 상세내용을 조회 및 담당자와 상담을 하실 수 있습니다.</p>
+        </div>
+      </div>
+      <!--// table  -->
+
+    </div>
+    <pre>
+&lt;div class="table-wrap"&gt;
+    &lt;div class="info"&gt;
+        &lt;span class="type"&gt;(원본)&lt;/span&gt;
+        &lt;span class="unit"&gt;(현금흐름 단위 : 백만원)&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="table-fix-wrap"&gt;
+        &lt;div class="scroll-cont"&gt;
+            &lt;table&gt;
+                &lt;colgroup&gt;
+                    &lt;col style="width:;"&gt;
+                    &lt;col style="width:;"&gt;
+                    &lt;col style="width:;"&gt;
+                    &lt;col style="width:;"&gt;
+                    &lt;col style="width:;"&gt;
+                &lt;/colgroup&gt;
+                &lt;thead&gt;
+                    &lt;tr&gt;
+                        &lt;th scope="col"&gt;&lt;/th&gt;
+                        &lt;th scope="col"&gt;전전기(2016)&lt;/th&gt;
+                        &lt;th scope="col"&gt;전기(2017)&lt;/th&gt;
+                        &lt;th scope="col"&gt;당기(2017)&lt;/th&gt;
+                        &lt;th scope="col"&gt;업종평균&lt;/th&gt;
+                    &lt;/tr&gt;
+                &lt;/thead&gt;
+                &lt;tbody&gt;
+                    &lt;tr&gt;
+                        &lt;td scope="row"&gt;영업활동 후 현금흐름&lt;/td&gt;
+                        &lt;td&gt;578,374&lt;/td&gt;
+                        &lt;td&gt;465,888&lt;/td&gt;
+                        &lt;td&gt;69,979&lt;/td&gt;
+                        &lt;td&gt;-&lt;/td&gt;
+                    &lt;/tr&gt;
+                &lt;/tbody&gt;
+            &lt;/table&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="table-bu"&gt;
+        &lt;p class="bu-txt circle gray"&gt;채권번호를 선택하시면 상세내용을 조회 및 담당자와 상담을 하실 수 있습니다.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+</pre>
+  </div>
+</section>
+<section id="cont13" class="section">
+  <h2 class="guide-tit">리스트</h2>
+  <div class="cont-type">
+    <h3 class="guide-tit02">TYPE - 01</h3>
+    <div class="ui-item">
+      <ul class="bu-list gray">
+        <li>리스트형 텍스트가 들어갑니다</li>
+      </ul>
+      <ul class="bu-list gray circle">
+        <li>리스트형 텍스트가 들어갑니다</li>
+      </ul>
+      <ul class="bu-list blue">
+        <li>리스트형 텍스트가 들어갑니다</li>
+      </ul>
+      <ul class="bu-list blue circle">
+        <li>리스트형 텍스트가 들어갑니다</li>
+      </ul>
+      <ul class="bu-list hyphen">
+        <li>리스트형 텍스트가 들어갑니다</li>
+      </ul>
+      <p class="bu-txt rect gray">단일 문장 형 텍스트가 들어갑니다</p>
+      <p class="bu-txt circle gray">단일 문장 형 텍스트가 들어갑니다</p>
+      <p class="bu-txt rect blue">단일 문장 형 텍스트가 들어갑니다</p>
+      <p class="bu-txt circle blue">단일 문장 형 텍스트가 들어갑니다</p>
+      <p class="bu-txt hyphen">단일 문장 형 텍스트가 들어갑니다</p>
+    </div>
+    <pre>
+&lt;ul class="bu-list gray"&gt;
+    &lt;li&gt;리스트형 텍스트가 들어갑니다&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul class="bu-list gray circle"&gt;
+    &lt;li&gt;리스트형 텍스트가 들어갑니다&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul class="bu-list blue"&gt;
+    &lt;li&gt;리스트형 텍스트가 들어갑니다&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul class="bu-list blue circle"&gt;
+    &lt;li&gt;리스트형 텍스트가 들어갑니다&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul class="bu-list hyphen"&gt;
+    &lt;li&gt;리스트형 텍스트가 들어갑니다&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p class="bu-txt rect gray"&gt;단일 문장 형 텍스트가 들어갑니다&lt;/p&gt;
+&lt;p class="bu-txt circle gray"&gt;단일 문장 형 텍스트가 들어갑니다&lt;/p&gt;
+&lt;p class="bu-txt rect blue"&gt;단일 문장 형 텍스트가 들어갑니다&lt;/p&gt;
+&lt;p class="bu-txt circle blue"&gt;단일 문장 형 텍스트가 들어갑니다&lt;/p&gt;
+&lt;p class="bu-txt hyphen"&gt;단일 문장 형 텍스트가 들어갑니다&lt;/p&gt;
+</pre>
+  </div>
+  <div class="cont-type">
+    <h3 class="guide-tit02">TYPE - 02</h3>
+    <div class="ui-item">
+      <ul class="con-list">
+        <li><span class="n">1.</span><span class="t">리스트형 텍스트가 들어갑니다</span></li>
+        <li><span class="n">ⓐ</span><span class="t">리스트형 텍스트가 들어갑니다</span></li>
+        <li><span class="n">①</span><span class="t">리스트형 텍스트가 들어갑니다</span></li>
+      </ul>
+      <p class="con-txt">
+        <span class="n">※</span> <span class="t">내용이 들어갑니다</span>
+      </p>
+    </div>
+    <pre>
+&lt;ul class="con-list"&gt;
+    &lt;li&gt;&lt;span class="n"&gt;1.&lt;/span&gt;&lt;span class="t"&gt;리스트형 텍스트가 들어갑니다&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span class="n"&gt;ⓐ&lt;/span&gt;&lt;span class="t"&gt;리스트형 텍스트가 들어갑니다&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span class="n"&gt;①&lt;/span&gt;&lt;span class="t"&gt;리스트형 텍스트가 들어갑니다&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p class="con-txt"&gt;
+    &lt;span class="n"&gt;※&lt;/span&gt; &lt;span class="t"&gt;내용이 들어갑니다&lt;/span&gt;
+&lt;/p&gt;
+</pre>
+  </div>
+</section>
+<section id="cont14" class="section">
+  <h2 class="guide-tit">아코디언</h2>
+  <div class="cont-type">
+    <h3 class="guide-tit02">TYPE - 01</h3>
+    <div class="ui-item">
+      <ul class="accordion-wrap type-form">
+        <li class="accordion-item">
+          <button class="accordion-tit inner" type="button" title="펼쳐짐">보험계약자(보증서 신청자)</button>
+          <div class="accordion-docu inner">
+            <div class="from-item">
+              <p class="write-title">계약자 구분</p>
+              <div class="rdo-wrap basic">
+                <div class="rdo">
+                  <input type="radio" id="from01-rdo01" name="from-rdo" checked>
+                  <label for="from01-rdo01">개인</label>
+                </div>
+                <div class="rdo">
+                  <input type="radio" id="from01-rdo02" name="from-rdo">
+                  <label for="from01-rdo02">법인</label>
+                </div>
+              </div>
+            </div>
+            <div class="from-item">
+              <p class="write-title">상호</p>
+              <div class="input">
+                <input type="text" title="타이틀" placeholder="텍스트 입력">
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="accordion-item">
+          <button class="accordion-tit inner on" type="button" title="펼쳐짐">피보험자(보증서 제출처)</button>
+          <div class="accordion-docu inner">
+            <div class="from-item">
+              <p class="write-title">계약자 구분</p>
+              <div class="rdo-wrap basic">
+                <div class="rdo">
+                  <input type="radio" id="from02-rdo01" name="from-rdo" checked>
+                  <label for="from02-rdo01">개인</label>
+                </div>
+                <div class="rdo">
+                  <input type="radio" id="from02-rdo02" name="from-rdo">
+                  <label for="from02-rdo02">법인</label>
+                </div>
+              </div>
+            </div>
+            <div class="from-item">
+              <p class="write-title">상호</p>
+              <div class="input">
+                <input type="text" title="타이틀" placeholder="텍스트 입력">
+              </div>
+              <p class="bu-txt circle gray">하단 설명 문구</p>
+            </div>
+            <div class="from-item">
+              <p class="write-title">자택주소 (선택)</p>
+              <div class="input in-btn-wrap">
+                <input type="text" title="주소 입력창" placeholder="자택주소 입력">
+                <button type="button" class="inline-btn gray">찾기</button>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="accordion-item">
+          <button class="accordion-tit inner" type="button" title="펼쳐짐">피보험자(보증서 제출처)</button>
+          <div class="accordion-docu inner">
+            <div class="from-item">
+              <p class="write-title">계약자 구분</p>
+              <div class="rdo-wrap basic">
+                <div class="rdo">
+                  <input type="radio" id="from03-rdo01" name="from-rdo" checked>
+                  <label for="from03-rdo01">개인</label>
+                </div>
+                <div class="rdo">
+                  <input type="radio" id="from03-rdo02" name="from-rdo">
+                  <label for="from03-rdo02">법인</label>
+                </div>
+              </div>
+            </div>
+            <div class="from-item">
+              <p class="write-title">상호</p>
+              <div class="input">
+                <input type="text" title="타이틀" placeholder="텍스트 입력">
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <pre>
+&lt;ul class="accordion-wrap type-form"&gt;
+    &lt;li class="accordion-item"&gt;
+        &lt;button class="accordion-tit inner" type="button" title="펼쳐짐"&gt;보험계약자(보증서 신청자)&lt;/button&gt;
+        &lt;div class="accordion-docu inner"&gt;
+
+        &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li class="accordion-item"&gt;
+        &lt;button class="accordion-tit inner on" type="button" title="펼쳐짐"&gt;피보험자(보증서 제출처)&lt;/button&gt;
+        &lt;div class="accordion-docu inner"&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li class="accordion-item"&gt;
+        &lt;button class="accordion-tit inner" type="button" title="펼쳐짐"&gt;피보험자(보증서 제출처)&lt;/button&gt;
+        &lt;div class="accordion-docu inner"&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+  </div>
+  <div class="cont-type">
+    <h3 class="guide-tit02">TYPE - list</h3>
+    <div class="ui-item">
+      <ul class="accordion-wrap type-list">
+        <li class="accordion-item">
+          <button class="accordion-tit inner" type="button" title="펼쳐짐">보험계약자(보증서 신청자)</button>
+          <div class="accordion-docu inner">
+            <ul class="list-wrap">
+              <li class="list-item">
+                <strong class="list-tit">인헌가종류</strong>
+                <span class="list-txt">국내유료직업소개사의 허가</span>
+              </li>
+              <li class="list-item">
+                <strong class="list-tit">인허가조건</strong>
+                <span class="list-txt">직업안정법 제19조, 제34조의 2</span>
+              </li>
+              <li class="list-item">
+                <strong class="list-tit">인허가기간</strong>
+                <span class="list-txt">2019-10-01~2020-09-30(365일)</span>
+              </li>
+              <li class="list-item">
+                <strong class="list-tit">인허가번호</strong>
+                <span class="list-txt">0000000000</span>
+              </li>
+              <li class="list-item">
+                <strong class="list-tit">인허가면적평방미터</strong>
+                <span class="list-txt">1000</span>
+              </li>
+              <li class="list-item">
+                <strong class="list-tit">인허가가산기간적용구분</strong>
+                <span class="list-txt">3개월</span>
+              </li>
+              <li class="list-item">
+                <strong class="list-tit">소재지</strong>
+                <span class="list-txt">서울종로구 00동 00-0</span>
+              </li>
+              <li class="list-item">
+                <strong class="list-tit">인허가보증금액</strong>
+                <span class="list-txt">5,000,000원</span>
+              </li>
+              <li class="list-item">
+                <strong class="list-tit">연락처</strong>
+                <span class="list-txt">
+                  <a href="tel:02-000-0000" class="btn-call" title="전화 앱 실행">02-000-0000</a>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="accordion-item">
+          <button class="accordion-tit inner on" type="button" title="펼쳐짐">피보험자(보증서 제출처)</button>
+          <div class="accordion-docu inner">
+            <ul class="list-wrap">
+              <li class="list-item">
+                <strong class="list-tit">인헌가종류</strong>
+                <span class="list-txt">국내유료직업소개사의 허가</span>
+              </li>
+              <li class="list-item">
+                <strong class="list-tit">인허가조건</strong>
+                <span class="list-txt">직업안정법 제19조, 제34조의 2</span>
+              </li>
+              <li class="list-item">
+                <strong class="list-tit">인허가기간</strong>
+                <span class="list-txt">2019-10-01~2020-09-30(365일)</span>
+              </li>
+              <li class="list-item">
+                <strong class="list-tit">인허가번호</strong>
+                <span class="list-txt">0000000000</span>
+              </li>
+              <li class="list-item">
+                <strong class="list-tit">인허가면적평방미터</strong>
+                <span class="list-txt">1000</span>
+              </li>
+              <li class="list-item">
+                <strong class="list-tit">인허가가산기간적용구분인허가가산기간적용구분인허가가산기간적용구분인허가가산기간적용구분</strong>
+                <span class="list-txt">3개월</span>
+              </li>
+              <li class="list-item">
+                <strong class="list-tit">소재지</strong>
+                <span class="list-txt">서울종로구 00동 00-0</span>
+              </li>
+              <li class="list-item">
+                <strong class="list-tit">인허가보증금액</strong>
+                <span class="list-txt">5,000,000원</span>
+              </li>
+              <li class="list-item">
+                <strong class="list-tit">연락처</strong>
+                <span class="list-txt">
+                  <a href="tel:02-000-0000" class="btn-call" title="전화 앱 실행">02-000-0000</a>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="accordion-item">
+          <button class="accordion-tit inner" type="button" title="펼쳐짐">보험계약자, 피보험자, 연대보증인</button>
+          <div class="accordion-docu inner">
+            <div class="list-wrap02">
+              <ul class="list-inner-wrap">
+                <li class="list-item">
+                  <strong class="list-tit">구분</strong>
+                  <span class="list-txt">보험계약자</span>
+                </li>
+                <li class="list-item">
+                  <strong class="list-tit">성명(상호)</strong>
+                  <span class="list-txt">홍길동</span>
+                </li>
+                <li class="list-item">
+                  <strong class="list-tit">주민(법인)번호</strong>
+                  <span class="list-txt">810101-1******</span>
+                </li>
+                <li class="list-item">
+                  <strong class="list-tit">사업자등록번호</strong>
+                  <span class="list-txt">114-87-12345</span>
+                </li>
+              </ul>
+              <ul class="list-inner-wrap">
+                <li class="list-item">
+                  <strong class="list-tit">구분</strong>
+                  <span class="list-txt">피보험자</span>
+                </li>
+                <li class="list-item">
+                  <strong class="list-tit">성명(상호)</strong>
+                  <span class="list-txt">홍길동</span>
+                </li>
+                <li class="list-item">
+                  <strong class="list-tit">주민(법인)번호</strong>
+                  <span class="list-txt">810101-1******</span>
+                </li>
+                <li class="list-item">
+                  <strong class="list-tit">사업자등록번호</strong>
+                  <span class="list-txt">114-87-12345</span>
+                </li>
+              </ul>
+            </div>
+            <div class="list-wrap02">
+              <p class="tit">보험계약취소</p>
+              <ul class="list-inner-wrap">
+                <li class="list-item">
+                  <strong class="list-tit">변경전</strong>
+                  <span class="list-txt">-</span>
+                </li>
+                <li class="list-item">
+                  <strong class="list-tit fc-03">변경후</strong>
+                  <span class="list-txt">취소</span>
+                </li>
+              </ul>
+            </div>
+            <div class="list-wrap02">
+              <p class="tit">보험기간단축</p>
+              <ul class="list-inner-wrap">
+                <li class="list-item">
+                  <strong class="list-tit">변경전</strong>
+                  <span class="list-txt">2019-07-16~2020-07-14</span>
+                </li>
+                <li class="list-item">
+                  <strong class="list-tit fc-03">변경후</strong>
+                  <span class="list-txt fc-03">2019-07-16~2020-07-14</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <pre>
+&lt;ul class="accordion-wrap type-list"&gt;
+    &lt;li class="accordion-item"&gt;
+        &lt;button class="accordion-tit inner" type="button" title="펼쳐짐"&gt;보험계약자(보증서 신청자)&lt;/button&gt;
+        &lt;div class="accordion-docu inner"&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li class="accordion-item"&gt;
+        &lt;button class="accordion-tit inner on" type="button" title="펼쳐짐"&gt;피보험자(보증서 제출처)&lt;/button&gt;
+        &lt;div class="accordion-docu inner"&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li class="accordion-item"&gt;
+        &lt;button class="accordion-tit inner" type="button" title="펼쳐짐"&gt;피보험자(보증서 제출처)&lt;/button&gt;
+        &lt;div class="accordion-docu inner"&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+  </div>
+  <div class="cont-type">
+    <h3 class="guide-tit02">TYPE - product</h3>
+    <div class="ui-item">
+      <ul class="accordion-wrap type-prod">
+        <li class="accordion-item">
+          <button class="accordion-tit inner on" type="button" title="접힘">
+            <span class="html-top">
+              <strong class="wrap ellipsis">
+                <em class="tit">신원보증보험(체불임금담보용)</em>
+                <em class="state">에스케이아이이테크놀로dfsdfsdfsdf지</em>
+              </strong>
+              <em class="date">2019-07-08</em>
+              <i class="label-state02 purple">결제가능</i>
+              <em class="price">165,000,165,000,165원</em>
+            </span>
+          </button>
+          <div class="accordion-docu inner">
+            <ul class="list-wrap">
+              <li class="list-item">
+                <strong class="list-tit">증권번호</strong>
+                <span class="list-txt">100-000-201912036552</span>
+              </li>
+              <li class="list-item">
+                <strong class="list-tit">구분</strong>
+                <span class="list-txt">신규</span>
+              </li>
+              <li class="list-item">
+                <strong class="list-tit">공고(계약)명</strong>
+                <span class="list-txt">계약명</span>
+              </li>
+              <li class="list-item">
+                <strong class="list-tit">보험계약자</strong>
+                <span class="list-txt">조명순</span>
+              </li>
+              <li class="list-item">
+                <strong class="list-tit">피보험자</strong>
+                <span class="list-txt">에스케이아이이테크놀로지</span>
+              </li>
+              <li class="list-item">
+                <strong class="list-tit">진행상</strong>
+                <span class="list-txt">서명가능</span>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="accordion-item">
+          <button class="accordion-tit inner" type="button" title="접힘">
+            <span class="html-top">
+              <strong class="wrap ellipsis">
+                <em class="tit">신원보증보험(체불임금담보용)</em>
+                <em class="state">에스케이아이이테크놀로dfsdfsdfsdf지</em>
+              </strong>
+              <em class="date">2019-07-08</em>
+              <em class="price">165,000,165,000,165원</em>
+            </span>
+          </button>
+          <div class="accordion-docu inner">
+            <ul class="list-wrap">
+              <li class="list-item">
+                <strong class="list-tit">증권번호</strong>
+                <span class="list-txt">100-000-201912036552</span>
+              </li>
+              <li class="list-item">
+                <strong class="list-tit">구분</strong>
+                <span class="list-txt">신규</span>
+              </li>
+              <li class="list-item">
+                <strong class="list-tit">공고(계약)명</strong>
+                <span class="list-txt">계약명</span>
+              </li>
+              <li class="list-item">
+                <strong class="list-tit">보험계약자</strong>
+                <span class="list-txt">조명순</span>
+              </li>
+              <li class="list-item">
+                <strong class="list-tit">피보험자</strong>
+                <span class="list-txt">에스케이아이이테크놀로지</span>
+              </li>
+              <li class="list-item">
+                <strong class="list-tit">진행상</strong>
+                <span class="list-txt">서명가능</span>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="accordion-item">
+          <button class="accordion-tit inner" type="button" title="접힘">
+            <span class="html-top">
+              <strong class="wrap ellipsis">
+                <em class="tit">신원보증보험(체불임금담보용)</em>
+                <em class="state">에스케이아이이테크놀로dfsdfsdfsdf지</em>
+              </strong>
+              <em class="date">2019-07-08</em>
+              <em class="label-state02">서명가능</em>
+              <em class="price">165,000,165,000,165원</em>
+            </span>
+          </button>
+          <div class="accordion-docu inner">
+            <ul class="list-wrap">
+              <li class="list-item">
+                <strong class="list-tit">증권번호</strong>
+                <span class="list-txt">100-000-201912036552</span>
+              </li>
+              <li class="list-item">
+                <strong class="list-tit">구분</strong>
+                <span class="list-txt">신규</span>
+              </li>
+              <li class="list-item">
+                <strong class="list-tit">공고(계약)명</strong>
+                <span class="list-txt">계약명</span>
+              </li>
+              <li class="list-item">
+                <strong class="list-tit">보험계약자</strong>
+                <span class="list-txt">조명순</span>
+              </li>
+              <li class="list-item">
+                <strong class="list-tit">피보험자</strong>
+                <span class="list-txt">에스케이아이이테크놀로지</span>
+              </li>
+              <li class="list-item">
+                <strong class="list-tit">진행상</strong>
+                <span class="list-txt">서명가능</span>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <pre>
+&lt;ul class="accordion-wrap type-prod"&gt;
+    &lt;li class="accordion-item"&gt;
+        &lt;button class="accordion-tit inner on" type="button" title="접힘"&gt;
+            &lt;span class="html-top"&gt;
+                &lt;strong class="wrap ellipsis"&gt;
+                    &lt;em class="tit"&gt;신원보증보험(체불임금담보용)&lt;/em&gt;
+                    &lt;em class="state"&gt;에스케이아이이테크놀로dfsdfsdfsdf지&lt;/em&gt;
+                &lt;/strong&gt;
+                &lt;em class="date"&gt;2019-07-08&lt;/em&gt;
+                &lt;em class="price"&gt;165,000,165,000,165원&lt;/em&gt;
+            &lt;/span&gt;
+        &lt;/button&gt;
+        &lt;div class="accordion-docu inner"&gt;
+            &lt;ul class="list-wrap"&gt;
+                &lt;li class="list-item"&gt;
+                    &lt;strong class="list-tit"&gt;증권번호&lt;/strong&gt;
+                    &lt;span class="list-txt"&gt;100-000-201912036552&lt;/span&gt;
+                &lt;/li&gt;
+                &lt;li class="list-item"&gt;
+                    &lt;strong class="list-tit"&gt;구분&lt;/strong&gt;
+                    &lt;span class="list-txt"&gt;신규&lt;/span&gt;
+                &lt;/li&gt;
+                &lt;li class="list-item"&gt;
+                    &lt;strong class="list-tit"&gt;공고(계약)명&lt;/strong&gt;
+                    &lt;span class="list-txt"&gt;계약명&lt;/span&gt;
+                &lt;/li&gt;
+                &lt;li class="list-item"&gt;
+                    &lt;strong class="list-tit"&gt;보험계약자&lt;/strong&gt;
+                    &lt;span class="list-txt"&gt;조명순&lt;/span&gt;
+                &lt;/li&gt;
+                &lt;li class="list-item"&gt;
+                    &lt;strong class="list-tit"&gt;피보험자&lt;/strong&gt;
+                    &lt;span class="list-txt"&gt;에스케이아이이테크놀로지&lt;/span&gt;
+                &lt;/li&gt;
+                &lt;li class="list-item"&gt;
+                    &lt;strong class="list-tit"&gt;진행상&lt;/strong&gt;
+                    &lt;span class="list-txt"&gt;서명가능&lt;/span&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+  </div>
+  <div class="cont-type">
+    <h3 class="guide-tit02">TYPE - product(checkbox)</h3>
+    <div class="ui-item">
+      <ul class="accordion-wrap type-prod">
+        <li class="accordion-item">
+          <div class="chk-acco-wrap">
+            <div class="chk">
+              <input type="checkbox" id="chk-prod-01">
+              <label for="chk-prod-01">
+                <span class="wrap ellipsis">
+                  <span class="tit">신원보증보험(체불임금담보용)</span>
+                  <span class="state">에스케이아이이테크놀로dfsdfsdfsdf지</span>
+                </span>
+                <span class="date">2019-07-08</span>
+                <span class="label-state02">서명가능</span>
+                <span class="price"><em>165,000,165,000,165</em>원</span>
+              </label>
+            </div>
+            <button class="accordion-tit" type="button" title="접힘"></button>
+          </div>
+          <div class="accordion-docu inner">
+            <ul class="list-wrap">
+              <li class="list-item">
+                <strong class="list-tit">보험상품</strong>
+                <span class="list-txt">이행하자</span>
+              </li>
+              <li class="list-item">
+                <strong class="list-tit">증권번호</strong>
+                <span class="list-txt">100-000-201912036552</span>
+              </li>
+              <li class="list-item">
+                <strong class="list-tit">공고(계약)명</strong>
+                <span class="list-txt">계약명</span>
+              </li>
+              <li class="list-item">
+                <strong class="list-tit">영업지점</strong>
+                <span class="list-txt">고객지원센터</span>
+              </li>
+              <li class="list-item">
+                <strong class="list-tit">보험가입금액</strong>
+                <span class="list-txt">1,000,000원</span>
+              </li>
+              <li class="list-item">
+                <strong class="list-tit">보험료</strong>
+                <span class="list-txt">3,000원</span>
+              </li>
+              <li class="list-item">
+                <strong class="list-tit">가상계좌번호</strong>
+                <span class="list-txt">신한은행 561-00-00~701644860</span>
+              </li>
+            </ul>
+            <div class="in-btn-wrap">
+              <button type="button" class="inline-btn gray">상세조회</button>
+            </div>
+          </div>
+        </li>
+        <li class="accordion-item">
+          <div class="chk-acco-wrap">
+            <div class="chk">
+              <input type="checkbox" id="chk-prod-02">
+              <label for="chk-prod-02">
+                <span class="wrap ellipsis">
+                  <span class="tit">신원보증보험(체불임금담보용)</span>
+                  <span class="state">에스케이아이이테크놀로dfsdfsdfsdf지</span>
+                </span>
+                <span class="date">2019-07-08</span>
+                <span class="label-state02">서명가능</span>
+                <span class="price"><em>165,000,165,000,165</em>원</span>
+              </label>
+            </div>
+            <button class="accordion-tit" type="button" title="접힘"></button>
+          </div>
+          <div class="accordion-docu inner">
+          </div>
+        </li>
+        <li class="accordion-item">
+          <div class="chk-acco-wrap">
+            <div class="chk">
+              <input type="checkbox" id="chk-prod-03">
+              <label for="chk-prod-03">
+                <span class="wrap ellipsis">
+                  <span class="tit">신원보증보험(체불임금담보용)</span>
+                  <span class="state">에스케이아이이테크놀로dfsdfsdfsdf지</span>
+                </span>
+                <span class="date">2019-07-08</span>
+                <span class="label-state02">서명가능</span>
+                <span class="price"><em>165,000,165,000,165</em>원</span>
+              </label>
+            </div>
+            <button class="accordion-tit" type="button" title="접힘"></button>
+          </div>
+          <div class="accordion-docu inner">
+          </div>
+        </li>
+      </ul>
+    </div>
+    <pre>
+&lt;ul class="accordion-wrap type-prod"&gt;
+    &lt;li class="accordion-item"&gt;
+        &lt;div class="chk-acco-wrap"&gt;
+            &lt;div class="chk"&gt;
+                &lt;input type="checkbox" id="chk-prod-01"&gt;
+                &lt;label for="chk-prod-01"&gt;
+                    &lt;span class="wrap ellipsis"&gt;
+                        &lt;span class="tit"&gt;신원보증보험(체불임금담보용)&lt;/span&gt;
+                        &lt;span class="state"&gt;에스케이아이이테크놀로dfsdfsdfsdf지&lt;/span&gt;
+                    &lt;/span&gt;
+                    &lt;span class="date"&gt;2019-07-08&lt;/span&gt;
+                    &lt;span class="label-state02"&gt;서명가능&lt;/span&gt;
+                    &lt;span class="price"&gt;&lt;em&gt;165,000,165,000,165&lt;/em&gt;원&lt;/span&gt;
+                &lt;/label&gt;
+            &lt;/div&gt;
+            &lt;button class="accordion-tit" type="button" title="접힘"&gt;&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;div class="accordion-docu inner"&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+  </div>
+
+  <div class="cont-type">
+    <h3 class="guide-tit02">TYPE - product(btn-minus)</h3>
+    <div class="ui-item">
+      <ul class="accordion-wrap type-prod">
+        <li class="accordion-item">
+          <div class="minus-acco-wrap">
+            <button type="button" class="accordion-tit on" title="펼쳐짐">
+              <span class="wrap ellipsis">
+                <span class="tit">이행하자</span>
+                <span class="state">홍길동</span>
+              </span>
+              <span class="date">계약일자 2019-07-08</span>
+              <span class="price"><em>165,000,165,000,165</em>원</span>
+            </button>
+            <button type="button" class="btn-minus" title="해당 목록 삭제"></button>
+          </div>
+          <div class="accordion-docu inner">
+            <ul class="list-wrap">
+              <li class="list-item">
+                <strong class="list-tit">증권번호</strong>
+                <span class="list-txt">100-000-201912036552</span>
+              </li>
+              <li class="list-item">
+                <strong class="list-tit">계약명</strong>
+                <span class="list-txt">계약보증금</span>
+              </li>
+              <li class="list-item">
+                <strong class="list-tit">보험계약자</strong>
+                <span class="list-txt">홍길동</span>
+              </li>
+              <li class="list-item">
+                <strong class="list-tit">보증내용</strong>
+                <span class="list-txt">주계약보증내용</span>
+              </li>
+              <li class="list-item">
+                <strong class="list-tit">보험기간</strong>
+                <span class="list-txt">2019-07-01 ~ 2020-06-30</span>
+              </li>
+            </ul>
+            <div class="in-btn-wrap">
+              <button type="button" class="inline-btn gray">상세조회</button>
+            </div>
+          </div>
+        </li>
+        <li class="accordion-item">
+          <div class="minus-acco-wrap">
+            <button class="accordion-tit" type="button" title="접힘">
+              <span class="wrap ellipsis">
+                <span class="tit">이행하자</span>
+                <span class="state">홍길동</span>
+              </span>
+              <span class="date">계약일자 2019-07-08</span>
+              <span class="price"><em>165,000,165,000,165</em>원</span>
+            </button>
+            <button type="button" class="btn-minus" title="해당 목록 삭제"></button>
+          </div>
+          <div class="accordion-docu inner">
+            <ul class="list-wrap">
+              <li class="list-item">
+                <strong class="list-tit">증권번호</strong>
+                <span class="list-txt">100-000-201912036552</span>
+              </li>
+              <li class="list-item">
+                <strong class="list-tit">계약명</strong>
+                <span class="list-txt">계약보증금</span>
+              </li>
+              <li class="list-item">
+                <strong class="list-tit">보험계약자</strong>
+                <span class="list-txt">홍길동</span>
+              </li>
+              <li class="list-item">
+                <strong class="list-tit">보증내용</strong>
+                <span class="list-txt">주계약보증내용</span>
+              </li>
+              <li class="list-item">
+                <strong class="list-tit">보험기간</strong>
+                <span class="list-txt">2019-07-01 ~ 2020-06-30</span>
+              </li>
+            </ul>
+            <div class="in-btn-wrap">
+              <button type="button" class="inline-btn gray">상세조회</button>
+            </div>
+          </div>
+        </li>
+        <li class="accordion-item">
+          <div class="minus-acco-wrap">
+            <button class="accordion-tit" type="button" title="접힘">
+              <span class="wrap ellipsis">
+                <span class="tit">이행하자</span>
+                <span class="state">홍길동</span>
+              </span>
+              <span class="date">계약일자 2019-07-08</span>
+              <span class="price"><em>165,000,165,000,165</em>원</span>
+            </button>
+            <button type="button" class="btn-minus" title="해당 목록 삭제"></button>
+          </div>
+          <div class="accordion-docu inner">
+            <ul class="list-wrap">
+              <li class="list-item">
+                <strong class="list-tit">증권번호</strong>
+                <span class="list-txt">100-000-201912036552</span>
+              </li>
+              <li class="list-item">
+                <strong class="list-tit">계약명</strong>
+                <span class="list-txt">계약보증금</span>
+              </li>
+              <li class="list-item">
+                <strong class="list-tit">보험계약자</strong>
+                <span class="list-txt">홍길동</span>
+              </li>
+              <li class="list-item">
+                <strong class="list-tit">보증내용</strong>
+                <span class="list-txt">주계약보증내용</span>
+              </li>
+              <li class="list-item">
+                <strong class="list-tit">보험기간</strong>
+                <span class="list-txt">2019-07-01 ~ 2020-06-30</span>
+              </li>
+            </ul>
+            <div class="in-btn-wrap">
+              <button type="button" class="inline-btn gray">상세조회</button>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <pre>
+&lt;ul class="accordion-wrap type-prod"&gt;
+    &lt;li class="accordion-item"&gt;
+        &lt;div class="minus-acco-wrap"&gt;
+            &lt;button type="button" class="accordion-tit on" title="펼쳐짐"&gt;
+                &lt;span class="wrap ellipsis"&gt;
+                    &lt;span class="tit"&gt;이행하자&lt;/span&gt;
+                    &lt;span class="state"&gt;홍길동&lt;/span&gt;
+                &lt;/span&gt;
+                &lt;span class="date"&gt;계약일자 2019-07-08&lt;/span&gt;
+                &lt;span class="price"&gt;&lt;em&gt;165,000,165,000,165&lt;/em&gt;원&lt;/span&gt;
+            &lt;/button&gt;    
+            &lt;button type="button" class="btn-minus" title="해당 목록 삭제"&gt;&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;div class="accordion-docu inner"&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+  </div>
+
+  <div class="cont-type">
+    <h3 class="guide-tit02">TYPE - product-list</h3>
+    <div class="ui-item">
+      <div class="accordion-wrap type-prod-list">
+        <div class="accordion-item">
+          <button class="accordion-tit inner on" type="button" title="펼침">
+            <span class="num">213-069800</span>
+            <span class="date">계약일자 : 2019-07-08</span>
+            <span class="price"><em>165,000</em>원</span>
+          </button>
+          <div class="accordion-docu inner">
+            <ul class="list-wrap">
+              <li class="list-item">
+                <strong class="list-tit">증권번호</strong>
+                <span class="list-txt">100-000-201912036552</span>
+              </li>
+              <li class="list-item">
+                <strong class="list-tit">상품명</strong>
+                <span class="list-txt">이행하자</span>
+              </li>
+              <li class="list-item">
+                <strong class="list-tit">보험계약자</strong>
+                <span class="list-txt">홍길동</span>
+              </li>
+              <li class="list-item">
+                <strong class="list-tit">피보험자</strong>
+                <span class="list-txt">서울보증보험 주식회*</span>
+              </li>
+              <li class="list-item">
+                <strong class="list-tit">입금은행</strong>
+                <span class="list-txt">신한은행</span>
+              </li>
+              <li class="list-item">
+                <strong class="list-tit">입금계좌</strong>
+                <span class="list-txt">000-00-00000000</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <pre>
+&lt;div class="accordion-wrap type-prod-list"&gt;
+    &lt;div class="accordion-item"&gt;
+        &lt;button class="accordion-tit inner on" type="button" title="펼침"&gt;
+            &lt;span class="num"&gt;213-069800&lt;/span&gt;
+            &lt;span class="date"&gt;계약일자 : 2019-07-08&lt;/span&gt;
+            &lt;span class="price"&gt;&lt;em&gt;165,000&lt;/em&gt;&lt;/span&gt;
+        &lt;/button&gt;
+        &lt;div class="accordion-docu inner"&gt;
+            &lt;ul class="list-wrap"&gt;
+                &lt;li class="list-item"&gt;
+                    &lt;strongclass="list-tit"&gt;증권번호&lt;/strong&gt;
+                    &lt;span class="list-txt"&gt;100-000-201912036552&lt;/span&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+  </div>
+
+  <div class="cont-type">
+    <h3 class="guide-tit02">TYPE - message 01</h3>
+    <div class="ui-item">
+
+      <div class="accordion-wrap type-message-01">
+        <div class="accordion-item">
+          <button class="accordion-tit on" type="button" title="펼쳐짐">보험증권 사서함이란</button>
+          <div class="accordion-docu">
+            <ul class="bu-list gray circle">
+              <li>보험증권 사서함이란 증권번호와 사서함번호를 이용하여 보험증권 인쇄가 가능한 서비스입니다.</li>
+              <li>변제금액은 각 채권별 계좌번호를 송금하시기 바랍니다.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <pre>
+&lt;div class="accordion-wrap type-message-01"&gt;
+    &lt;div class="accordion-item"&gt;
+        &lt;button class="accordion-tit on" type="button" title="펼쳐짐"&gt;보험증권 사서함이란&lt;/button&gt;
+        &lt;div class="accordion-docu"&gt;
+            &lt;ul class="bu-list gray circle"&gt;
+                &lt;li&gt;보험증권 사서함이란 증권번호와 사서함번호를 이용하여 보험증권 인쇄가 가능한 서비스입니다.&lt;/li&gt;
+                &lt;li&gt;변제금액은 각 채권별 계좌번호를 송금하시기 바랍니다.&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+  </div>
+
+  <div class="cont-type">
+    <h3 class="guide-tit02">TYPE - message 02</h3>
+    <div class="ui-item">
+
+      <div class="accordion-wrap type-message-02">
+        <div class="accordion-item">
+          <button class="accordion-tit" type="button" title="접힘">계약상태안내</button>
+          <div class="accordion-docu">
+            <ul class="bu-list gray circle">
+              <li>보험증권 사서함이란 증권번호와 사서함번호를 이용하여 보험증권 인쇄가 가능한 서비스입니다.</li>
+              <li>변제금액은 각 채권별 계좌번호를 송금하시기 바랍니다.</li>
+              <li>보험증권 사서함이란 증권번호와 사서함번호를 이용하여 보험증권 인쇄가 가능한 서비스입니다.</li>
+              <li>변제금액은 각 채권별 계좌번호를 송금하시기 바랍니다.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <pre>
+&lt;div class="accordion-wrap type-message-02"&gt;
+    &lt;div class="accordion-item"&gt;
+        &lt;button class="accordion-tit" type="button" title="접힘"&gt;계약상태안내&lt;/button&gt;
+        &lt;div class="accordion-docu"&gt;
+            &lt;ul class="bu-list gray circle"&gt;
+                &lt;li&gt;보험증권 사서함이란 증권번호와 사서함번호를 이용하여 보험증권 인쇄가 가능한 서비스입니다.&lt;/li&gt;
+                &lt;li&gt;변제금액은 각 채권별 계좌번호를 송금하시기 바랍니다.&lt;/li&gt;
+                &lt;li&gt;보험증권 사서함이란 증권번호와 사서함번호를 이용하여 보험증권 인쇄가 가능한 서비스입니다.&lt;/li&gt;
+                &lt;li&gt;변제금액은 각 채권별 계좌번호를 송금하시기 바랍니다.&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+  </div>
+  <div class="cont-type">
+    <h3 class="guide-tit02">TYPE - number</h3>
+    <div class="ui-item">
+      <ul class="accordion-wrap type-number">
+        <li class="accordion-item number-btn-wrap">
+          <button type="button" class="number-btn accordion-tit" title="접힘">
+            <em class="num">1</em>
+            <span class="tit">생활안정자금</span>
+            <span class="txt">서울보증보험과 협약체결한 기관의 재직자 중 사내대출을 받고자 하는 고객</span>
+            <span class="info">생활안정용 조회동의</span>
+          </button>
+          <div class="accordion-docu">
+            <div class="btn-list-wrap">
+              <button type="button" class="number-btn-s">생활안정용 조회동의</button>
+              <button type="button" class="number-btn-s on">생활안정용(새마을금고) 조회동의</button>
+              <button type="button" class="number-btn-s">생활안정용(공무원연금공단용) 조회동의</button>
+              <button type="button" class="number-btn-s">교직원공제회 회원번호 등록</button>
+            </div>
+          </div>
+        </li>
+        <li class="accordion-item number-btn-wrap">
+          <button type="button" class="number-btn accordion-tit" title="접힘">
+            <em class="num">2</em>
+            <span class="tit">생활안정자금</span>
+            <span class="txt">서울보증보험과 협약체결한 기관의 재직자 중 사내대출을 받고자 하는 고객</span>
+            <span class="info">생활안정용 조회동의</span>
+          </button>
+          <div class="accordion-docu">
+            <div class="btn-list-wrap">
+              <button type="button" class="number-btn-s" title="새창알림">생활안정용 조회동의</button>
+              <button type="button" class="number-btn-s on" title="새창알림">생활안정용(새마을금고) 조회동의</button>
+              <button type="button" class="number-btn-s" title="새창알림">생활안정용(공무원연금공단용) 조회동의</button>
+              <button type="button" class="number-btn-s" title="새창알림">교직원공제회 회원번호 등록</button>
+            </div>
+          </div>
+        </li>
+        <li class="number-btn-wrap">
+          <button type="button" class="number-btn">
+            <em class="num">3</em>
+            <span class="tit">생활안정자금</span>
+            <span class="txt">서울보증보험과 협약체결한 기관의 재직자 중 사내대출을 받고자 하는 고객</span>
+            <span class="info">생활안정용 조회동의</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+    <pre>
+&lt;ul class="accordion-wrap type-number"&gt;
+    &lt;li class="accordion-item number-btn-wrap"&gt;
+        &lt;button type="button" class="number-btn accordion-tit"&gt;
+            &lt;em class="num"&gt;2&lt;/em&gt;
+            &lt;span class="tit"&gt;생활안정자금&lt;/span&gt;
+            &lt;span class="txt"&gt;서울보증보험과 협약체결한 기관의 재직자 중 사내대출을 받고자 하는 고객&lt;/span&gt;
+            &lt;span class="info"&gt;생활안정용 조회동의&lt;/span&gt;
+        &lt;/button&gt;
+        &lt;div class="accordion-docu"&gt;
+            &lt;div class="btn-list-wrap"&gt;
+                &lt;button type="button" class="number-btn-s" title="새창알림"&gt;생활안정용 조회동의&lt;/button&gt;
+                &lt;button type="button" class="number-btn-s on" title="새창알림"&gt;생활안정용(새마을금고) 조회동의&lt;/button&gt;
+                &lt;button type="button" class="number-btn-s" title="새창알림"&gt;생활안정용(공무원연금공단용) 조회동의&lt;/button&gt;
+                &lt;button type="button" class="number-btn-s" title="새창알림"&gt;교직원공제회 회원번호 등록&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+  </div>
+</section>
+<section id="cont15" class="section">
+  <h2 class="guide-tit">페이지TAB</h2>
+  <div class="cont-type">
+    <h3 class="guide-tit02">TYPE - 01</h3>
+    <div class="ui-item">
+      <ul class="tab-01">
+        <li><button type="button" class="on" title="선택됨">버튼1</button></li>
+        <li><button type="button">버튼2</button></li>
+        <li><button type="button">버튼3</button></li>
+      </ul>
+      <div class="tab-conts-01">
+        <div class="tab-cont on">내용1</div>
+        <div class="tab-cont">내용2</div>
+        <div class="tab-cont">내용3</div>
+      </div>
+    </div>
+    <pre>
+&lt;ul class="tab-01"&gt;
+    &lt;li&gt;&lt;button type="button" class="on" title="선택됨"&gt;버튼1&lt;/button&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;button type="button"&gt;버튼2&lt;/button&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;button type="button"&gt;버튼3&lt;/button&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="tab-conts-01"&gt;
+    &lt;div class="tab-cont on"&gt;내용1&lt;/div&gt;
+    &lt;div class="tab-cont"&gt;내용2&lt;/div&gt;
+    &lt;div class="tab-cont"&gt;내용3&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+  </div>
+  <div class="cont-type">
+    <h3 class="guide-tit02">TYPE - 스와이프</h3>
+    <div class="ui-item">
+      <div class="swiper-container swiper-tab-wrap">
+        <ul class="tab-02 swiper-wrapper">
+          <li class="swiper-slide"><button type="button" class="on" title="선택됨">버튼</button></li>
+          <li class="swiper-slide"><button type="button">길이가달라요</button></li>
+          <li class="swiper-slide"><button type="button">스크롤이있어요</button></li>
+          <li class="swiper-slide"><button type="button">그라데이션도</button></li>
+          <li class="swiper-slide"><button type="button">있네요</button></li>
+          <li class="swiper-slide"><button type="button">이건테스트에요</button></li>
+          <li class="swiper-slide"><button type="button">잘되네요</button></li>
+        </ul>
+      </div>
+      <div class="tab-conts-02">
+        <div class="tab-cont on">내용1</div>
+        <div class="tab-cont">내용2</div>
+        <div class="tab-cont">내용3</div>
+        <div class="tab-cont">내용4</div>
+        <div class="tab-cont">내용5</div>
+        <div class="tab-cont">내용6</div>
+        <div class="tab-cont">내용7</div>
+      </div>
+    </div>
+    <pre>
+&lt;div class="swiper-container swiper-tab-wrap"&gt;
+    &lt;ul class="tab-02 swiper-wrapper"&gt;
+        &lt;li class="swiper-slide"&gt;&lt;button type="button" class="on" title="선택됨"&gt;버튼&lt;/button&gt;&lt;/li&gt;
+        &lt;li class="swiper-slide"&gt;&lt;button type="button"&gt;길이가달라요&lt;/button&gt;&lt;/li&gt;
+        &lt;li class="swiper-slide"&gt;&lt;button type="button"&gt;스크롤이있어요&lt;/button&gt;&lt;/li&gt;
+        &lt;li class="swiper-slide"&gt;&lt;button type="button"&gt;그라데이션도&lt;/button&gt;&lt;/li&gt;
+        &lt;li class="swiper-slide"&gt;&lt;button type="button"&gt;있네요&lt;/button&gt;&lt;/li&gt;
+        &lt;li class="swiper-slide"&gt;&lt;button type="button"&gt;이건테스트에요&lt;/button&gt;&lt;/li&gt;
+        &lt;li class="swiper-slide"&gt;&lt;button type="button"&gt;잘되네요&lt;/button&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="tab-conts-02"&gt;
+    &lt;div class="tab-cont on"&gt;내용1&lt;/div&gt;
+    &lt;div class="tab-cont"&gt;내용2&lt;/div&gt;
+    &lt;div class="tab-cont"&gt;내용3&lt;/div&gt;
+    &lt;div class="tab-cont"&gt;내용4&lt;/div&gt;
+    &lt;div class="tab-cont"&gt;내용5&lt;/div&gt;
+    &lt;div class="tab-cont"&gt;내용6&lt;/div&gt;
+    &lt;div class="tab-cont"&gt;내용7&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+  </div>
+</section>
+<section id="cont16" class="section">
+  <h2 class="guide-tit">공통디자인</h2>
+  <div class="cont-type">
+    <h3 class="guide-tit02">TYPE - 타이틀(진행단계)</h3>
+    <div class="ui-item">
+      <div class="title-wrap inner">
+        <h2 class="tit02">타이틀</h2>
+        <!-- 현진행단계 표시 aria-label = "진행단계, 총 X단계 중 X단계" 진행단계 별로 수정 -->
+        <div class="step" role="img" aria-label="진행단계, 총 8단계 중 1단계">
+          <em class="pres-step">1</em><span class="symb"> / </span><em>8</em>
+        </div>
+      </div>
+    </div>
+    <pre>
+&lt;div class="title-wrap inner"&gt;
+    &lt;h2 class="tit02"&gt;타이틀&lt;/h2&gt;
+    &lt;!-- 현진행단계 표시 aria-label = "진행단계, 총 X단계 중 X단계" 진행단계 별로 수정 --&gt;
+    &lt;div class="step" role="img" aria-label="진행단계, 총 8단계 중 1단계"&gt;
+        &lt;em class="pres-step"&gt;1&lt;/em&gt;&lt;span class="symb"&gt; / &lt;/span&gt;&lt;em&gt;8&lt;/em&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+  </div>
+  <div class="cont-type">
+    <h3 class="guide-tit02">TYPE - 약관 박스</h3>
+    <div class="ui-item">
+      <div class="agree-box-wrap">
+        <dl class="agree-box">
+          <dt class="agree-tit">계약체결이행 등을 위한 필수 동의</dt>
+          <dd class="agree-item">
+            <div class="chk">
+              <input type="checkbox" id="chk-agree-01">
+              <label for="chk-agree-01">계약체결·이행 등을 위한 필수 동의서</label>
+            </div>
+            <!-- 전문 보기 완료 후 class="on" 추가, 버튼 문구 [확인]으로 변경, title="확인 완료" 추가 -->
+            <button type="button" class="inline-btn">보기</button>
+          </dd>
+        </dl>
+        <dl class="agree-box">
+          <dt class="agree-tit">개인정보이용 동의</dt>
+          <dd class="agree-item">
+            <div class="chk">
+              <input type="checkbox" id="chk-agree-02" checked="">
+              <label for="chk-agree-02">개인(신용)정보 수집·이용 동의</label>
+            </div>
+            <!-- 전문 보기 완료 후 class="on" 추가, 버튼 문구 [확인]으로 변경, title="확인 완료" 추가 -->
+            <button type="button" title="확인 완료" class="inline-btn on">확인</button>
+          </dd>
+          <dd class="agree-item">
+            <div class="chk">
+              <input type="checkbox" id="chk-agree-03" checked="">
+              <label for="chk-agree-03">개인(신용)정보 조회 동의</label>
+            </div>
+            <!-- 전문 보기 완료 후 class="on" 추가, 버튼 문구 [확인]으로 변경, title="확인 완료" 추가 -->
+            <button type="button" title="확인 완료" class="inline-btn on">확인</button>
+          </dd>
+          <dd class="agree-item">
+            <div class="chk">
+              <input type="checkbox" id="chk-agree-04">
+              <label for="chk-agree-04">개인(신용)정보 제공 동의</label>
+            </div>
+            <!-- 전문 보기 완료 후 class="on" 추가, 버튼 문구 [확인]으로 변경, title="확인 완료" 추가 -->
+            <button type="button" class="inline-btn gray">보기</button>
+          </dd>
+          <dd class="agree-item">
+            <div class="chk">
+              <input type="checkbox" id="chk-agree-05">
+              <label for="chk-agree-05">혜택 및 이벤트 수신동의</label>
+            </div>
+            <!-- 전문 보기 완료 후 class="on" 추가, 버튼 문구 [확인]으로 변경, title="확인 완료" 추가 -->
+            <button type="button" class="inline-btn gray">보기</button>
+          </dd>
+        </dl>
+      </div>
+    </div>
+    <pre>
+&lt;div class="agree-box-wrap"&gt;
+    &lt;dl class="agree-box"&gt;
+        &lt;dt class="agree-tit"&gt;계약체결이행 등을 위한 필수 동의&lt;/dt&gt;
+        &lt;dd class="agree-item"&gt;
+            &lt;div class="chk"&gt;
+                &lt;input type="checkbox" id="chk-agree-01"&gt;
+                &lt;label for="chk-agree-01"&gt;계약체결·이행 등을 위한 필수 동의서&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;!-- 전문 보기 완료 후 class="on" 추가,버튼 문구 [확인]으로 변경해주세요 --&gt;
+            &lt;button type="button" class="inline-btn"&gt;보기&lt;/button&gt;
+        &lt;/dd&gt;
+    &lt;/dl&gt;
+    &lt;dl class="agree-box"&gt;
+        &lt;dt class="agree-tit"&gt;개인정보이용 동의&lt;/dt&gt;
+        &lt;dd class="agree-item"&gt;
+            &lt;div class="chk"&gt;
+                &lt;input type="checkbox" id="chk-agree-02" checked=""&gt;
+                &lt;label for="chk-agree-02"&gt;개인(신용)정보 수집·이용 동의&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;!-- 전문 보기 완료 후 class="on" 추가,버튼 문구 [확인]으로 변경해주세요 --&gt;
+            &lt;button type="button" class="inline-btn on"&gt;확인&lt;/button&gt;
+        &lt;/dd&gt;
+        &lt;dd class="agree-item"&gt;
+            &lt;div class="chk"&gt;
+                &lt;input type="checkbox" id="chk-agree-03" checked=""&gt;
+                &lt;label for="chk-agree-03"&gt;개인(신용)정보 조회 동의&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;!-- 전문 보기 완료 후 class="on" 추가,버튼 문구 [확인]으로 변경해주세요 --&gt;
+            &lt;button type="button" class="inline-btn on"&gt;확인&lt;/button&gt;
+        &lt;/dd&gt;
+        &lt;dd class="agree-item"&gt;
+            &lt;div class="chk"&gt;
+                &lt;input type="checkbox" id="chk-agree-04"&gt;
+                &lt;label for="chk-agree-04"&gt;개인(신용)정보 제공 동의&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;!-- 전문 보기 완료 후 class="on" 추가,버튼 문구 [확인]으로 변경해주세요 --&gt;
+            &lt;button type="button" class="inline-btn gray"&gt;보기&lt;/button&gt;
+        &lt;/dd&gt;
+        &lt;dd class="agree-item"&gt;
+            &lt;div class="chk"&gt;
+                &lt;input type="checkbox" id="chk-agree-05"&gt;
+                &lt;label for="chk-agree-05"&gt;혜택 및 이벤트 수신동의&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;!-- 전문 보기 완료 후 class="on" 추가,버튼 문구 [확인]으로 변경해주세요 --&gt;
+            &lt;button type="button" class="inline-btn gray"&gt;보기&lt;/button&gt;
+        &lt;/dd&gt;
+    &lt;/dl&gt;
+&lt;/div&gt;
+</pre>
+  </div>
+  <div class="cont-type">
+    <h3 class="guide-tit02">TYPE - 상세리스트</h3>
+    <div class="ui-item">
+      <ul class="accordion-wrap type-list">
+        <li class="accordion-item">
+          <p class="deta-tit inner">보험계약자(보증서 신청자)</p>
+          <div class="deta-docu inner">
+            <ul class="list-wrap">
+              <li class="list-item">
+                <strong class="list-tit">증권번호</strong>
+                <span class="list-txt">100-000-201912036552</span>
+              </li>
+              <li class="list-item">
+                <strong class="list-tit">구분</strong>
+                <span class="list-txt">신규</span>
+              </li>
+              <li class="list-item">
+                <strong class="list-tit">공고(계약)명</strong>
+                <span class="list-txt">계약명</span>
+              </li>
+              <li class="list-item">
+                <strong class="list-tit">보험계약자</strong>
+                <span class="list-txt">조명순</span>
+              </li>
+              <li class="list-item">
+                <strong class="list-tit">피보험자</strong>
+                <span class="list-txt">에스케이아이이테크놀로지</span>
+              </li>
+              <li class="list-item">
+                <strong class="list-tit">진행상</strong>
+                <span class="list-txt">서명가능</span>
+              </li>
+            </ul>
+            <div class="in-btn-wrap">
+              <button type="button" class="inline-btn gray">상세조회</button>
+              <button type="button" class="inline-btn gray">전자서명</button>
+            </div>
+          </div>
+        </li>
+        <li class="accordion-item">
+          <button class="accordion-tit inner" type="button" title="펼쳐짐">보험계약자(보증서 신청자)</button>
+          <div class="accordion-docu inner">
+          </div>
+        </li>
+        <li class="accordion-item">
+          <button class="accordion-tit inner" type="button" title="펼쳐짐">피보험자(보증서 제출처)</button>
+          <div class="accordion-docu inner">
+          </div>
+        </li>
+        <li class="accordion-item">
+          <button class="accordion-tit inner" type="button" title="펼쳐짐">피보험자(보증서 제출처)</button>
+          <div class="accordion-docu inner">
+          </div>
+        </li>
+      </ul>
+
+      <div class="deta-tit02">아코디언 아닌 타이틀 영역</div>
+      <div class="deta-tit-inner">depth 2 타이틀</div>
+    </div>
+    <pre>
+
+</pre>
+  </div>
+
+  <div class="cont-type">
+    <h3 class="guide-tit02">TYPE - 계약상태</h3>
+    <div class="ui-item">
+      <div class="date-info-wrap">
+        <div class="date-txt">2019-09-27 ~ 2019-10-04 [<span>5</span>건]</div>
+        <div class="date-stat-wrap">
+          <span class="stat-txt">전체</span>
+          <button type="button" class="btn" title="계약상태 더보기"></button>
+          <div class="select-wrap">
+            <div class="item">
+              <input type="radio" id="stat-rdo01" name="stat-rdo">
+              <label for="stat-rdo01">전체</label>
+            </div>
+            <div class="item">
+              <input type="radio" id="stat-rdo02" name="stat-rdo">
+              <label for="stat-rdo02">계약유지</label>
+            </div>
+            <div class="item">
+              <input type="radio" id="stat-rdo03" name="stat-rdo">
+              <label for="stat-rdo03">해지</label>
+            </div>
+            <div class="item">
+              <input type="radio" id="stat-rdo04" name="stat-rdo">
+              <label for="stat-rdo04">보험금지급</label>
+            </div>
+            <div class="item">
+              <input type="radio" id="stat-rdo05" name="stat-rdo">
+              <label for="stat-rdo05">지급 심사중</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <pre>
+
+</pre>
+  </div>
+</section>
+<section id="cont17" class="section">
+  <h2 class="guide-tit">폼</h2>
+  <div class="cont-type">
+    <h3 class="guide-tit02">TYPE - 01</h3>
+    <div class="ui-item">
+      <div class="from-item">
+        <p class="write-title">계약자 구분</p>
+        <div class="rdo-wrap basic">
+          <div class="rdo">
+            <input type="radio" id="from-rdo01" name="from-rdo" checked>
+            <label for="from-rdo01">개인</label>
+          </div>
+          <div class="rdo">
+            <input type="radio" id="from-rdo02" name="from-rdo">
+            <label for="from-rdo02">법인</label>
+          </div>
+        </div>
+      </div>
+      <div class="from-item">
+        <p class="write-title">상호</p>
+        <div class="input">
+          <input type="text" title="타이틀" placeholder="텍스트 입력">
+        </div>
+      </div>
+      <div class="from-item">
+        <p class="write-title">자택주소 (선택)</p>
+        <div class="input in-btn-wrap">
+          <input type="text" title="주소 입력창" placeholder="자택주소 입력">
+          <button type="button" class="inline-btn gray">찾기</button>
+        </div>
+      </div>
+
+    </div>
+    <pre>
+&lt;div class="from-item"&gt;
+    &lt;p class="write-title"&gt;계약자 구분&lt;/p&gt;
+    &lt;div class="rdo-wrap basic"&gt;
+        &lt;div class="rdo"&gt;
+            &lt;input type="radio" id="from-rdo01" name="from-rdo" checked&gt;
+            &lt;label for="from-rdo01"&gt;개인&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class="rdo"&gt;
+            &lt;input type="radio" id="from-rdo02" name="from-rdo"&gt;
+            &lt;label for="from-rdo02"&gt;법인&lt;/label&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="from-item"&gt;
+    &lt;p class="write-title"&gt;상호&lt;/p&gt;
+    &lt;div class="input"&gt;
+        &lt;input type="text" title="타이틀" placeholder="텍스트 입력"&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+  </div>
+</section>
+<section id="cont18" class="section">
+  <h2 class="guide-tit">팝업</h2>
+  <div class="cont-type">
+    <h3 class="guide-tit02">TYPE - 모달</h3>
+    <pre>
+&lt;article class="pop-modal pop-modal-js-wrap" data-page="pop-modal-01"&gt;
+    &lt;div class="modal-head"&gt;
+        &lt;h2 class="modal-tit icon01"&gt;죄송합니다.&lt;/h2&gt;
+    &lt;/div&gt;
+    &lt;div class="modal-body"&gt;
+        &lt;p class="modal-txt"&gt;보험가입금액은 통상&lt;br&gt;
+            피보험자가 고객에게 요구하는 금액입니다.&lt;/p&gt;
+        &lt;p class="error-txt"&gt;오류코드 : SQL010&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;!-- &lt;button type="button" class="close-modal" title="팝업 종료"&gt;X&lt;/button&gt; --&gt;
+    &lt;div class="btn-wrap"&gt;
+        &lt;button type="button" class="btn gray small close-js"&gt;취소&lt;/button&gt;
+        &lt;button type="button" class="btn blue close-js"&gt;확인&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/article&gt;
+</pre>
+  </div>
+</section>
+<section id="cont19" class="section">
+  <h2 class="guide-tit">스와이프</h2>
+  <div class="cont-type">
+    <h3 class="guide-tit02">TYPE - default</h3>
+    <div class="ui-item">
+      <div class="test-swiper swiper-container">
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">1</div>
+          <div class="swiper-slide">2</div>
+          <div class="swiper-slide">3</div>
+          <div class="swiper-slide">4</div>
+          <div class="swiper-slide">5</div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    <pre></pre>
+  </div>
+  <div class="cont-type">
+    <h3 class="guide-tit02">TYPE - center</h3>
+    <div class="ui-item">
+      <div class="test-swiper-02 swiper-container">
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">1</div>
+          <div class="swiper-slide">2</div>
+          <div class="swiper-slide">3</div>
+          <div class="swiper-slide">4</div>
+          <div class="swiper-slide">5</div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    <pre></pre>
+  </div>
+</section>
+<section id="cont20" class="section">
+  <h2 class="guide-tit">스크롤 플로팅</h2>
+  <div class="cont-type">
+    <h3 class="guide-tit02">TYPE - 플로팅</h3>
+    <pre>
+&lt;!-- rollup-fix-data 클래스에 플로팅될 UI를 넣어주세용 --&gt;
+&lt;div class="rollup-fix-wrap"&gt;
+    &lt;div class="rollup-fix-data"&gt;
+        &lt;ul class="tab-01 nonlost-wrap"&gt;
+            &lt;li&gt;&lt;button type="button" class="on" title="선택됨"&gt;버튼1&lt;/button&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;button type="button"&gt;버튼2&lt;/button&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;button type="button"&gt;버튼3&lt;/button&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+  </div>
+</section>

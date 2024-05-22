@@ -1,0 +1,123 @@
+/*********
+    font
+  **********/
+/* tit */
+[class*="tit-type"] {
+  color: #000;
+  font-family: "Hyundai Sans Head Office";
+  font-weight: 600;
+}
+.tit-type01 {
+  font-size: 5rem;
+  line-height: 125%;
+}
+.tit-type02 {
+  font-size: 3.5rem;
+  line-height: 125%;
+}
+.tit-type03 {
+  font-size: 2rem;
+  line-height: 140%;
+}
+.tit-type04 {
+  font-size: 1.5rem;
+  line-height: 140%;
+}
+.tit-type05 {
+  font-size: 1.25rem;
+  line-height: 140%;
+}
+
+/* txt */
+[class*="txt-type"] {
+  color: #000;
+  font-family: "Hyundai Sans Text Office";
+  line-height: 140%;
+  font-weight: 400;
+}
+.txt-type01 {
+  font-size: 1.5rem;
+}
+.txt-type02 {
+  font-size: 1.25rem;
+}
+.txt-type03 {
+  font-size: 1rem;
+}
+.txt-type04 {
+  font-size: 0.875rem;
+}
+.txt-type05 {
+  font-size: 0.75rem;
+}
+
+/* weight */
+.fw-type01 {
+  font-weight: 400;
+}
+.fw-type02 {
+  font-weight: 500;
+}
+.fw-type03 {
+  font-weight: bold;
+}
+
+/* 말줄임 */
+.ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+  overflow: hidden;
+}
+.ellipsis2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  max-height: calc(2.8em);
+}
+.ellipsis3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  max-height: calc(4.2em);
+}
+
+/* 텍스트 가리기 */
+.hide-txt {
+  overflow: hidden;
+  color: transparent;
+  font-size: xx-small;
+}
+
+/*********
+    button, link
+  **********/
+
+/* 웹접근성 포커스 */
+input[type="checkbox"],
+input[type="radio"] {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 0;
+  opacity: 0;
+  -webkit-appearance: none;
+  z-index: -1;
+}
+input[type="checkbox"]:focus + label,
+input[type="radio"]:focus + label {
+  outline: 1px solid #3792ef;
+  z-index: 1;
+}
+
+/* checkbox */
+
+/* accodion */

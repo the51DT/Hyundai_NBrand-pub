@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+.wrap {
+}
+.wrap * {
+}
+
+.header-wrap {
+  width: 100%;
+  overflow: hidden;
+}
+.header-cont {
+  width: 100%;
+  display: flex;
+  align-items: center just;
+}

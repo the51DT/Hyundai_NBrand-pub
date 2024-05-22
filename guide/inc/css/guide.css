@@ -1,0 +1,789 @@
+@charset "utf-8";
+
+/* Font */
+@font-face {
+  font-family: "ng";
+  src: url("../font/NanumBarunGothic.eot");
+  src: local(※),
+    url("../font/NanumBarunGothic.eot?#iefix") format("embedded-opentype"),
+    url("../font/NanumBarunGothic.woff") format("woff"),
+    url("../font/NanumBarunGothic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ngB";
+  src: url("../font/NanumBarunGothicBold.eot");
+  src: local(※),
+    url("../font/NanumGothicBold.eot?#iefix") format("embedded-opentype"),
+    url("../font/NanumGothicBold.woff") format("woff"),
+    url("../font/NanumGothicBold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body {
+  font-family: ng, Arial, Dotum sans-serif;
+  font-size: 14px;
+  color: #666;
+}
+body {
+  line-height: 1.2;
+  word-break: break-all;
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+select,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+header,
+footer,
+section,
+article,
+aside,
+nav,
+hgroup,
+details,
+menu,
+figure,
+figcaption {
+  display: block;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+optgroup,
+strong {
+  font-weight: normal;
+}
+em,
+span,
+strong,
+i {
+  font-size: 100%;
+}
+img,
+legend,
+fieldset {
+  border: none;
+}
+em,
+address {
+  font-style: normal;
+}
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+caption,
+legend {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  font-size: 0;
+  line-height: 0;
+}
+ul,
+ol,
+li {
+  list-style-type: none;
+}
+hr {
+  display: none;
+}
+legend,
+caption,
+hr {
+  display: none;
+}
+br,
+p {
+  letter-spacing: normal;
+}
+a {
+  color: #777;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+
+/* Common */
+#guideWrap {
+  position: relative;
+  width: 100%;
+  overflow-y: auto;
+  height: 100vh;
+  font-family: ng, Arial, Dotum sans-serif;
+}
+header {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  bottom: auto;
+  left: auto;
+  right: auto;
+  background: #fff;
+  width: 100%;
+  border-bottom: 2px solid #999;
+  z-index: 10000;
+}
+#guideHeader {
+  width: 100%;
+  min-height: 50px;
+  background: #7a7166;
+  box-shadow: 0 2px 5px #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#guideHeader > div {
+  display: flex;
+  flex: 1;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+#guideHeader div .total {
+  color: #fff;
+  margin-right: 20px;
+}
+#guideHeader div .total strong {
+  margin-right: 5px;
+}
+
+#guideWrap #footer {
+  padding: 15px 0 10px;
+  border: 0;
+  background: #7a7166;
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+}
+
+/* Path */
+
+.nav-wrap {
+  margin: 50px 0 10px;
+  padding-right: 50px;
+  display: flex;
+  justify-content: flex-end;
+}
+.nav-wrap .nav {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  min-width: 480px;
+}
+.nav-wrap .nav li a {
+  font-size: 16px;
+  font-weight: 700;
+  color: #999;
+  padding: 5px 4px;
+  display: block;
+}
+.nav-wrap .nav li a:hover {
+  border-bottom: 2px solid #999;
+}
+.nav-wrap .nav li a.on {
+  color: #000;
+}
+.nav-wrap .nav li a.on {
+  border-bottom: 2px solid #000;
+}
+
+.naviMenu > ul {
+}
+.naviMenu > ul > li {
+  margin-bottom: 5px;
+  display: inline-block;
+  margin-right: 20px;
+  text-align: left;
+  position: relative;
+  padding-bottom: 5px;
+}
+.naviMenu > ul > li a:after {
+  display: block;
+  content: "";
+  position: absolute;
+  left: 0%;
+  bottom: 2px;
+  width: 0%;
+  height: 2px;
+  background: #ff0000;
+  transition: width 0s;
+}
+.naviMenu > ul > li a.on:after {
+  transition: width 1s;
+  width: 100%;
+}
+.naviMenu > ul > li a.on:hover:after {
+  transition: width 1s;
+  width: 100%;
+}
+.naviMenu > ul > li a:hover:after {
+  transition: width 1s;
+  width: 50%;
+  left: 0;
+  right: auto;
+}
+.naviMenu > ul > li:first-child {
+  margin-left: 0;
+  padding-left: 0;
+}
+.naviMenu .allMenu,
+.naviMenu .menu {
+  font-size: 14px;
+  font-family: ngB;
+  color: #000;
+}
+.naviMenu .menu .countWrap .progress {
+  font-size: 12px;
+  color: #777;
+}
+.pathList .pathTbl {
+  width: 100%;
+  border-bottom: 2px solid #7a7a7a;
+}
+.pathList .pathTbl thead tr th {
+  padding: 15px 0;
+  border-bottom: 1px solid #bfbfbf;
+  border-left: 1px solid #ddd;
+  font-size: 13px;
+  color: #000;
+}
+.pathList .pathTbl thead tr th:first-child {
+  border-left: 0;
+}
+.pathList .pathTbl tbody tr th,
+.pathList .pathTbl tbody tr td {
+  padding: 10px;
+  font-size: 12px;
+  color: #000;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+.pathList .pathTbl tbody th {
+  background: #f2f2f2;
+}
+.pathList .pathTbl tbody th > .txt,
+.pathList .pathTbl tbody td > .txt {
+  margin-top: 5px;
+  color: #888;
+}
+.pathList .pathTbl tr.on th,
+.pathList .pathTbl tr.on td {
+  background: #f2f2f2;
+}
+.pathList .pathTbl .url a {
+  color: #009e00;
+}
+.pathList .pathTbl .url a:hover {
+  text-decoration: underline;
+}
+.pathList .pathTbl .dep1 {
+  padding-top: 20px;
+  vertical-align: top;
+  font-family: ngB;
+}
+/* .pathList .pathTbl .dep2,
+.pathList .pathTbl .dep3,
+.pathList .pathTbl .dep4 {
+  vertical-align: top;
+} */
+.pathList .pathTbl .dep2,
+.pathList .pathTbl .dep3,
+.pathList .pathTbl .dep4,
+.pathList .pathTbl .dep5 {
+  padding-top: 15px;
+  word-break: keep-all;
+}
+.pathList .pathTbl .date {
+  font-size: 12px;
+}
+.pathList .pathTbl .date p {
+}
+.pathList .pathTbl .date a {
+  font-size: 10px;
+}
+.pathList .pathTbl .date a:hover {
+  color: #ff0000;
+}
+.pathList .pathTbl .txt {
+  border-right: 0;
+}
+.pathList .pathTbl .txt ul li {
+  margin-top: 5px;
+}
+.pathList .pathTbl .txt ul li:first-child {
+  margin-top: 0;
+}
+.pathList .pathTbl tbody tr td.check {
+  padding: 0;
+  font-size: 17px;
+  text-align: center;
+}
+.pathList .pathTbl tbody tr.del .tit,
+.pathList .pathTbl tbody tr.del .url a {
+  text-decoration: line-through;
+  color: #ff0000;
+}
+
+/* Guide */
+#guideHeader h1 {
+  margin-left: 30px;
+  font-family: ngB;
+  font-size: 20px;
+  color: #fff;
+}
+#guideHeader .left {
+  display: flex;
+  align-items: center;
+  margin: 0 0 0 10px;
+  padding-left: 10px;
+  border-left: 1px solid #fff;
+  font-size: 20px;
+  color: #fff;
+}
+#guideContents {
+  padding: 20px;
+}
+.guideTit {
+  padding-left: 15px;
+  font-family: ngB;
+  font-size: 26px;
+  color: #000;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  padding: 10px 0;
+  background: #fff;
+  z-index: 1;
+}
+.guideTit::before {
+  display: block;
+  width: 10px;
+  height: 10px;
+  content: "";
+  background: #7a7166;
+  margin-right: 10px;
+}
+.guideSubTit {
+  margin-bottom: 15px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  color: #666;
+  font-weight: 600;
+}
+.guideSubTit::before {
+  display: block;
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+  content: "";
+  background: #7a7166;
+  margin-right: 5px;
+}
+.section {
+  padding-bottom: 40px;
+  border-bottom: 1px dashed #000;
+}
+.section > .info {
+  margin: 0 0 0 10px;
+  font-size: 16px;
+  color: #333;
+}
+.section > .info em {
+  color: #ff0000;
+}
+.section > .info > .subSection {
+  margin: 20px 0;
+  border: 1px solid #7a7a7a;
+  padding: 10px;
+  border-radius: 5px;
+}
+.section > .info > .subSection:last-child {
+  margin-bottom: 0;
+}
+.subSection > p {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #666;
+}
+.subSection .code + .code {
+  margin-top: 18px;
+}
+.subSection .discription {
+  margin-bottom: 10px;
+  padding: 0;
+  font-size: 13px;
+  color: #0066cc;
+}
+.subSection .imgContainer {
+  margin: 10px 0;
+}
+.subSection .link {
+  font-size: 14px;
+  text-decoration: underline;
+  color: #0066cc;
+}
+
+.listDot {
+  margin: 15px 0 0 15px;
+}
+.listDot > li {
+  margin-top: 10px;
+  padding-left: 10px;
+  background: url(../images/bul_dot_small.gif) no-repeat 0 6px;
+}
+.listDot > li em {
+  color: #ff0000;
+}
+.listDot > li:first-child {
+  margin-top: 0;
+}
+.listInfo > li + li {
+  margin-top: 30px;
+}
+.listInfo > li .listTit {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+.listInfo > li .listTit:before {
+  display: inline-block;
+  content: "#";
+  margin-right: 5px;
+}
+.listInfo > li .listTxt {
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+.listInfo > li .listTxt + .listTxt {
+  color: #666;
+}
+.listNumber {
+  counter-reset: listCounter;
+}
+.listNumber li {
+  font-size: 13px;
+}
+.listNumber li:before {
+  float: left;
+  margin-right: 3px;
+  content: counters(listCounter, "") ".";
+  counter-increment: listCounter;
+}
+.listNumber li + li {
+  margin-top: 17px;
+}
+.icon-state {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  border: 1px solid #000;
+  margin: 0 auto;
+}
+
+.path-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 20px 0;
+}
+
+.mark-wrap {
+  display: flex;
+  flex: 0 350px;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+.mark-wrap li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.mark-wrap li .icon-state {
+  margin-left: 15px;
+  margin-right: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* .mark-wrap li .icon-state::after {
+  content: ":";
+  padding-left: 13px;
+} */
+
+.icon-state.comp {
+  background-color: #0142b3;
+  border-color: #0142b3;
+}
+.icon-state.wait {
+  background-color: #888;
+  border-color: #888;
+}
+.icon-state.retouch {
+  animation-name: retouchBg;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+}
+.icon-state.examine {
+  background-color: #845aea;
+  border-color: #845aea;
+}
+.icon-state.working {
+  background-color: #53b100;
+  border-color: #53b100;
+}
+
+@-webkit-keyframes retouchBg {
+  0% {
+    background-color: #ffbbbb;
+    border-color: #ffbbbb;
+  }
+  50% {
+    background-color: red;
+    border-color: red;
+  }
+  100% {
+    background-color: #ffbbbb;
+    border-color: #ffbbbb;
+  }
+}
+
+#guideContents.guide-content {
+  padding: 0;
+  display: flex;
+  width: 100vw;
+  height: calc(100vh - 145px);
+}
+.guide-content nav {
+  padding: 30px 0 0 20px;
+  background: #f9f9f9;
+  flex: 0 0 200px;
+}
+
+.ui-page.ui-page-active {
+  height: auto;
+  overflow: visible;
+  overflow-x: hidden;
+}
+
+pre {
+  margin: 0;
+  font-size: 13px;
+}
+
+nav .object-list li {
+  margin-top: 10px;
+}
+
+nav .object-list li:first-child {
+  margin-top: 0;
+}
+
+nav .object-list li a {
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  padding-bottom: 3px;
+}
+nav .object-list li a:hover {
+  color: #000;
+}
+
+nav .object-list li a.on {
+  color: #000;
+}
+
+nav .object-list li a::after {
+  display: block;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 0;
+  background: #000;
+  transition: width 0.5s;
+}
+
+nav .object-list li a.on::after {
+  display: block;
+  content: "";
+  width: 100%;
+}
+
+nav .title {
+  margin-top: 35px;
+  font-size: 16px;
+  color: #000;
+  font-weight: 700;
+}
+
+nav .layout-list {
+  margin-top: 15px;
+}
+
+nav .layout-list li {
+  margin-top: 15px;
+}
+
+nav .layout-list li:first-child {
+  margin-top: 10px;
+}
+
+nav .layout-list li a {
+  font-size: 14px;
+  color: blue;
+  border-bottom: 1px solid blue;
+}
+
+nav .layout-list li:first-child a {
+  margin-top: 0;
+}
+
+.contset-wrap {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.section {
+  padding: 20px 20px;
+}
+
+.section h2.guide-tit {
+  color: #000;
+  margin-top: 60px;
+  padding-left: 20px;
+  position: relative;
+  font-size: 25px;
+}
+
+.section h2.guide-tit:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background: #24abf7;
+}
+
+.section:first-of-type h2.guide-tit {
+  margin-top: 0;
+}
+
+.section .cont-type .ui-item {
+  position: relative;
+  border: 1px solid #e5e5e5;
+  min-height: 50px;
+  margin-top: 10px;
+  border: 1px solid #e5e5e5;
+  padding: 15px 10px;
+}
+
+.section .ui-item > * {
+  margin-top: 5px;
+}
+
+.section .cont-type .ui-item .guide-txt {
+  margin-top: 15px;
+  font-size: 15px;
+}
+
+.section .cont-type .ui-item > *:first-child {
+  margin-top: 0 !important;
+}
+
+.section .cont-type pre {
+  margin-top: 10px;
+  background: #efefef;
+  min-height: 50px;
+  padding: 10px;
+}
+
+.ui-item .fix-btn-wrap {
+  position: relative;
+}
+
+.ico-stat-wrap {
+  padding: 20px;
+}
+
+#guideContents.guide_cont_wrap {
+  height: calc(100vh - 144px);
+  overflow-y: auto;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+[class*="color-type"] {
+  display: inline-block;
+  padding: 10px 30px;
+  font-weight: bold;
+  color: #000;
+}
+.color-type01 {
+  background: #e63312;
+}
+.color-type02 {
+  background: #de3111;
+}
+.color-type03 {
+  background: #aacae6;
+}
+.color-type04 {
+  background: #ffffff;
+}
+.color-type05 {
+  background: #000000;
+  color: #fff;
+}
+.color-type06 {
+  background: #003777;
+}
