@@ -51,4 +51,19 @@
   .txt-type05 {
     font-size: 0.75rem;
   }
+
+  /*********
+    tab
+  **********/
+  .tab-head {
+    display: block;
+  }
+
+  .tabs-wrap .tabs {
+    margin-top: 28px;
+  }
+
+  .tab-content {
+    margin-top: 28px;
+  }
 }
