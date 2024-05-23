@@ -40,7 +40,7 @@
             <li><a data-scroll='cont01' class="on" title="내부링크">Color</a></li>
             <li><a data-scroll='cont02 ' title="내부링크">Font</a></li>
             <li><a data-scroll='cont03' title="내부링크">Button, Link</a></li>
-            <li><a data-scroll='cont04' title="내부링크">tab</a></li>
+            <li><a data-scroll='cont04' title="내부링크">Tab</a></li>
             <!-- <li><a data-scroll='cont05' title="내부링크">체크박스</a></li>
             <li><a data-scroll='cont06' title="내부링크">라디오박스</a></li>
             <li><a data-scroll='cont07' title="내부링크">셀렉트박스</a></li>
@@ -236,19 +236,19 @@
                   <h2 class="title">Event Schedule</h2>
                   <div class="tabs-wrap">
                     <ul class="tabs" data-contents="탭카테고리">
-                      <li class="on" data-text="탭 타이틀1">
-                        <a href="javascript:;" data-hash="#tab-1-01">탭 타이틀1</a>
+                      <li class="on" data-text="탭 타이틀1" id="tab1-01"  data-tab="1" >
+                        <a href="javascript:;">탭 타이틀1</a>
                       </li>
-                      <li data-text="탭 타이틀2">
-                        <a href="javascript:;" data-hash="#tab-1-02">탭 타이틀2</a>
+                      <li data-text="탭 타이틀2" id="tab1-02"  data-tab="2" >
+                        <a href="javascript:;">탭 타이틀2</a>
                       </li>
                     </ul>
                   </div>
                 </div>
-                <div id="tab-1-01" class="tab-content" aria-label="탭패널 열림" role="tabpanel">
+                <div class="tab-content on" aria-labelledby="tab1-01" role="tabpanel" data-panel="1">
                   <div>탭 컨텐츠1</div>
                 </div>
-                <div id="tab-1-02" class="tab-content" aria-label="탭패널 닫힘" style="display: none" role="tabpanel">
+                <div class="tab-content" aria-labelledby="tab1-02" role="tabpanel" data-panel="2">
                   <div>탭 컨텐츠2</div>
                 </div>
               </div>
@@ -345,21 +345,28 @@
 
 
   function tabEvent() {    
+    const tabs = document.querySelector(".tabs-wrap .tabs");
+    const tabList = document.querySelectorAll(".tabs li");
+    const tabConts = document.querySelectorAll(".tab-content");
 
-    $(".tabs li").on("click", function(e){
-      let target = e.target;
-      let hash = target.dataset.hash;
-            
-      if(!$(this).hasClass("on")) {
-        $(".tabs li").removeClass("on");
-        $(".tab-content").removeClass("on");
-        $(".tab-content").hide();
+    tabs.addEventListener("click", function(e){
+      const tabData = e.target.dataset.tab;
+      
+      tabList.forEach(function(e){
+        e.classList.remove("on");
+      })
+      e.target.classList.add("on");
 
-        $(this).addClass("on");
-        $(`${hash}`).show();
-        $(`${hash}`).addClass("on");
-      }
-    })
+      tabConts.forEach(function(evt){
+        const panelData = evt.dataset.panel;
+        evt.classList.remove("on");
+        if(panelData == tabData) {
+          evt.classList.add("on");
+        } else {
+          evt.classList.remove("on");
+        }
+      })
+    });
   }
 
   $(window).load(function () {
