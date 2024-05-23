@@ -236,11 +236,11 @@
                   <h2 class="title">Event Schedule</h2>
                   <div class="tabs-wrap">
                     <ul class="tabs" data-contents="탭카테고리">
-                      <li class="on" data-text="탭 타이틀1" id="tab1-01"  data-tab="1" >
-                        <a href="javascript:;">탭 타이틀1</a>
+                      <li class="on" id="tab1-01" >
+                        <a href="javascript:;" data-tab="1">탭 타이틀1</a>
                       </li>
-                      <li data-text="탭 타이틀2" id="tab1-02"  data-tab="2" >
-                        <a href="javascript:;">탭 타이틀2</a>
+                      <li id="tab1-02">
+                        <a href="javascript:;" data-tab="2">탭 타이틀2</a>
                       </li>
                     </ul>
                   </div>
@@ -251,42 +251,6 @@
                 <div class="tab-content" aria-labelledby="tab1-02" role="tabpanel" data-panel="2">
                   <div>탭 컨텐츠2</div>
                 </div>
-              </div>
-              <div class="code">
-                <pre class="brush: js;">
-</pre>
-              </div>
-            </div>
-            <!--  -->
-            <div class="subSection">
-              <h3 class="guideSubTit">Text</h3>
-              <div class="ui-item">
-                <p class="txt01">텍스트 타입1</p>
-                <p class="txt02">텍스트 타입2</p>
-                <p class="txt01 fc-01">컬러 타입1</p>
-                <p class="txt01 fc-02">컬러 타입2</p>
-                <p class="txt01 fc-03">컬러 타입3</p>
-                <p class="txt01-01 fw-01">두께 타입1</p>
-                <p class="txt01-02 fw-02">두께 타입2</p>
-                <p class="txt01-03 fw-03">두께 타입3</p>
-              </div>
-              <div class="code">
-                <pre class="brush: js;">
-</pre>
-              </div>
-            </div>
-            <!--  -->
-            <div class="subSection">
-              <h3 class="guideSubTit">말줄임</h3>
-              <div class="ui-item">
-                <p class="ellipsis">한줄 말줄임 입니다.한줄 말줄임 입니다.한줄 말줄임 입니다.한줄 말줄임 입니다.한줄 말줄임 입니다.한줄 말줄임 입니다.한줄 말줄임 입니다.한줄 말줄임
-                  입니다.한줄
-                  말줄임 입니다.한줄 말줄임 입니다.한줄 말줄임 입니다.한줄 말줄임 입니다.한줄 말줄임 입니다.한줄 말줄임 입니다.한줄 말줄임 입니다.한줄 말줄임 입니다.</p>
-                <p class="ellipsis2">두줄 말줄임 입니다.두줄 말줄임 입니다.두줄 말줄임 입니다.두줄 말줄임 입니다.두줄 말줄임 입니다.두줄 말줄임 입니다.두줄 말줄임 입니다.두줄 말줄임
-                  입니다.두줄 말줄임 입니다.두줄 말줄임 입니다.두줄 말줄임 입니다.두줄 말줄임 입니다.두줄 말줄임 입니다.두줄 말줄임 입니다.두줄 말줄임 입니다.두줄 말줄임 입니다.두줄 말줄임
-                  입니다.두줄
-                  말줄임 입니다.두줄 말줄임 입니다.두줄 말줄임 입니다.두줄 말줄임 입니다.두줄 말줄임 입니다.두줄 말줄임 입니다.두줄 말줄임 입니다.두줄 말줄임 입니다.두줄 말줄임 입니다.두줄 말줄임
-                  입니다.두줄 말줄임 입니다.두줄 말줄임 입니다.두줄 말줄임 입니다.두줄 말줄임 입니다.두줄 말줄임 입니다.두줄 말줄임 입니다.두줄 말줄임 입니다.</p>
               </div>
               <div class="code">
                 <pre class="brush: js;">
@@ -350,20 +314,22 @@
     const tabConts = document.querySelectorAll(".tab-content");
 
     tabs.addEventListener("click", function(e){
-      const tabData = e.target.dataset.tab;
+      e.preventDefault();
+      const target = e.target;
+      const tabData = target.dataset.tab;
       
-      tabList.forEach(function(e){
-        e.classList.remove("on");
+      tabList.forEach(function(el){
+        el.classList.remove("on");
       })
-      e.target.classList.add("on");
+      target.parentNode.classList.add("on");
 
-      tabConts.forEach(function(evt){
-        const panelData = evt.dataset.panel;
-        evt.classList.remove("on");
+      tabConts.forEach(function(el){
+        const panelData = el.dataset.panel;
+
         if(panelData == tabData) {
-          evt.classList.add("on");
+          el.classList.add("on");
         } else {
-          evt.classList.remove("on");
+          el.classList.remove("on");
         }
       })
     });

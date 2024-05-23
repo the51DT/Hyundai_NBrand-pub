@@ -136,7 +136,6 @@ input[type="radio"]:focus + label {
 }
 
 .tabs-wrap .tabs li {
-  padding: 10px 32px;
   border: 1px solid #555;
   background: #fff;
 }
@@ -152,6 +151,8 @@ input[type="radio"]:focus + label {
 }
 
 .tabs-wrap .tabs li a {
+  display: block;
+  padding: 10px 32px;
   color: #555;
 }
 
