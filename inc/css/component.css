@@ -165,6 +165,10 @@ input[type="radio"]:focus + label {
 
 .tab-content {
   margin-top: 40px;
+  display: none;
+}
+.tab-content.on {
+  display: block;
 }
 
 /* checkbox */
