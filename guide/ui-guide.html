@@ -169,17 +169,70 @@
             <div class="subSection">
               <h3 class="guideSubTit">Primary</h3>
               <div class="ui-item">
+                <!-- bg -->
                 <div class="btn-wrap">
-                  <button type="button" class="btn blue">Normal</button>
+                  <button type="button" class="btn btn-lg btn-bg01" aria-label="Cancel">
+                    Cancel
+                    <span class="btn-icon-right icon20" aria-hidden="true"></span>
+                  </button>
+                  <button type="button" class="btn btn-md01 btn-bg02" aria-label="Cancel">
+                    Cancel
+                    <span class="btn-icon-right-wh icon16" aria-hidden="true"></span>
+                  </button>
+                  <button type="button" class="btn btn-md01 btn-bg03" aria-label="Result">
+                    Result
+                    <span class="btn-icon-right-wh icon16" aria-hidden="true"></span>
+                  </button>
+                  <button type="button" class="btn btn-xs btn-bg02" aria-label="N Ticket">
+                    N Ticket
+                    <span class="btn-icon-link-wh icon16" aria-hidden="true"></span>
+                  </button>
+                </div>
+                <!-- border -->
+                <div class="btn-wrap">
+                  <button type="button" class="btn btn-lg btn-bd" aria-label="View all">
+                    View all
+                    <span class="btn-icon-right icon20" aria-hidden="true"></span>
+                  </button>
+                  <button type="button" class="btn btn-lg btn-bd" aria-label="View More">
+                    View More
+                    <span class="btn-paging">12/222</span>
+                    <span class="btn-icon-right icon20" aria-hidden="true"></span>
+                  </button>
+                  <button type="button" class="btn btn-md01 btn-bd" aria-label="View More">
+                    View More
+                    <span class="btn-icon-down icon16" aria-hidden="true"></span>
+                  </button>
+                </div>
+                
+                <!-- 한 박스에 버튼 1개만 : 모바일에서 너비 꽉차게 -->
+                <div class="btn-wrap btn-full">
+                  <button type="button" class="btn btn-md01 btn-bg03" aria-label="Result">
+                    Result
+                    <span class="btn-icon-right-wh icon16" aria-hidden="true"></span>
+                  </button>
+                </div>
+                <!-- 한 박스에 버튼 2개인 경우 :너비 반반 -->
+                <div class="btn-wrap btn-half">
+                  <button type="button" class="btn btn-md01 btn-bg03" aria-label="Result">
+                    Result
+                    <span class="btn-icon-right-wh icon16" aria-hidden="true"></span>
+                  </button>
+                  <button type="button" class="btn btn-md01 btn-bg02" aria-label="Learn More">
+                    Learn More
+                    <span class="btn-icon-right-wh icon16" aria-hidden="true"></span>
+                  </button>
                 </div>
                 <div class="btn-wrap">
-                  <button type="button" class="btn press blue">Press</button>
-                </div>
-                <div class="btn-wrap">
-                  <button type="button" class="btn blue" disabled>Disabled</button>
-                </div>
-                <div class="fix-btn-wrap">
-                  <button type="button" class="btn blue">Floating</button>
+                  <!-- 아이콘만 있는 a태그 버튼 -->
+                  <a href="#" class="btn btn-icon-only" aria-label="인스타그램">
+                    <span class="btn-icon-right icon16" aria-hidden="true"></span>
+                  </a>
+                  <!-- 아이콘 + 텍스트 a태그 버튼 -->
+                  <a href="#" class="btn">
+                    Learn More
+                    <span class="btn-icon-right icon16" aria-hidden="true"></span>
+                  </a>
                 </div>
               </div>
               <div class="code">
