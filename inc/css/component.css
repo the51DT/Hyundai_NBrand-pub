@@ -95,6 +95,17 @@
   font-size: xx-small;
 }
 
+/* text-align */
+.ta-ctr {
+  text-align: center !important;
+}
+.ta-left {
+  text-align: left !important;
+}
+.ta-right {
+  text-align: right !important;
+}
+
 /*********
     button, link
   **********/
@@ -171,10 +182,6 @@ input[type="radio"]:focus + label {
 .tab-content.on {
   display: block;
 }
-
-/* checkbox */
-
-/* accodion */
 
 /* btn */
 .visually-hidden {
@@ -311,3 +318,201 @@ input[type="radio"]:focus + label {
   font-weight: 700;
   line-height: 16px;
 }
+
+/*********
+    button, link
+  **********/
+
+/* 웹접근성 포커스 */
+input[type="checkbox"],
+input[type="radio"] {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 0;
+  opacity: 0;
+  -webkit-appearance: none;
+  z-index: -1;
+}
+input[type="checkbox"]:focus + label,
+input[type="radio"]:focus + label {
+  outline: 1px solid #3792ef;
+  z-index: 1;
+}
+
+/* tab */
+.tab-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+
+.tab-head.ty02 {
+  justify-content: center;
+}
+
+.tab-head .title {
+  font-size: 68px;
+  font-weight: 700;
+  line-height: 85px;
+}
+
+.tabs-wrap .tabs {
+  display: flex;
+}
+
+.tabs-wrap .tabs li {
+  border: 1px solid #555;
+  background: #fff;
+  border-right: 0;
+}
+
+.tabs-wrap .tabs li:last-child {
+  border-right: 1px solid #555;
+}
+
+.tabs-wrap .tabs li.on {
+  border: 1px solid #de3111;
+  background: #de3111;
+}
+
+.tabs-wrap .tabs.ty-blue li.on {
+  border: 1px solid #aacae6;
+  background: #aacae6;
+}
+
+.tabs-wrap .tabs li a {
+  display: block;
+  font-size: 16px;
+  line-height: 22px;
+  padding: 11px 32px;
+  color: #555;
+}
+
+.tabs-wrap .tabs li.on a {
+  color: #fff;
+}
+
+.tabs-wrap .tabs.ty-blue li.on a {
+  color: #000;
+}
+
+.tab-content {
+  margin-top: 40px;
+  display: none;
+}
+.tab-content.on {
+  display: block;
+}
+
+/* contents-box */
+.conts-box-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.conts-box-wrap.ty02 {
+  flex-direction: column;
+}
+
+.conts-box-wrap article {
+  padding: 80px 0;
+  border-bottom: 1px solid #bbb;
+}
+
+.conts-box-wrap article:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.conts-box-wrap article .tit {
+  text-align: left;
+}
+
+.conts-box-wrap .tit {
+  font-size: 68px;
+  font-weight: 700;
+  line-height: 70px;
+}
+
+.conts-box-wrap.ty02 .tit {
+  color: #000;
+  line-height: 85px;
+  padding-bottom: 40px;
+}
+
+.conts-box-wrap .bg-img-wrap {
+  background: url("../images/img/conts_bg_img01.svg") no-repeat 100%;
+  width: 100%;
+  max-width: 1440px;
+  min-height: 810px;
+  overflow: hidden;
+  padding: 60px 80px;
+  position: relative;
+  color: #fff;
+}
+
+.conts-box-wrap .img-area {
+  height: 810px;
+}
+.conts-box-wrap .img-area img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.conts-box-wrap .txt-area {
+  padding-top: 60px;
+}
+.conts-box-wrap .desc {
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 33.6px;
+}
+
+.conts-box-wrap .bg-img-wrap .more_btn {
+  position: absolute;
+  top: 348px;
+  left: 80px;
+  padding: 14px 24px;
+  background: #fff;
+  border-radius: 4px;
+}
+.conts-box-wrap .bg-img-wrap .more_btn .btn {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 16px;
+}
+.txt-list-wrap {
+  display: flex;
+  text-align: left;
+}
+.txt-list-wrap li {
+  margin-right: 24px;
+}
+
+.txt-list-wrap li:last-child {
+  margin-right: 0;
+}
+
+.txt-list-wrap li .num {
+  color: #de3111;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 50px;
+}
+
+.txt-list-wrap li .desc {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+  margin-top: 12px;
+}
+
+/* checkbox */
+
+/* accodion */

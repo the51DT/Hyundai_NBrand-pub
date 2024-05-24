@@ -21,7 +21,7 @@
     url("HyundaiSansTextOffice-Bold.woff2") format("woff2"),
     url("HyundaiSansTextOffice-Bold.woff") format("woff"),
     url("HyundaiSansTextOffice-Bold.ttf") format("truetype");
-  font-weight: bold;
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -76,7 +76,7 @@
     url("../font/HyundaiSansHeadOffice-Bold.woff2") format("woff2"),
     url("../font/HyundaiSansHeadOffice-Bold.woff") format("woff"),
     url("../font/HyundaiSansHeadOffice-Bold.ttf") format("truetype");
-  font-weight: bold;
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -117,6 +117,6 @@
     url("../font/HyundaiSansTextOffice-BoldItalic.woff2") format("woff2"),
     url("../font/HyundaiSansTextOffice-BoldItalic.woff") format("woff"),
     url("../font/HyundaiSansTextOffice-BoldItalic.ttf") format("truetype");
-  font-weight: bold;
+  font-weight: 700;
   font-style: italic;
 }
