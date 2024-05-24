@@ -250,4 +250,181 @@
     -webkit-line-clamp: 7;
     -webkit-box-orient: vertical;
   }
+
+  /*********
+    card
+  **********/
+  /* card layout */
+  .card_scroll {
+    justify-content: space-between;
+    gap: 0.75rem;
+    overflow-x: scroll;
+  }
+  .card_drop {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  /* card_type01 */
+  .card_type01 {
+    flex-shrink: 0;
+    width: 16.125rem;
+    height: 26.875rem;
+  }
+  .card_type01.card_swiper {
+    height: 16.3rem;
+  }
+  .card_type01 .card_top {
+    padding: 1rem 1.25rem 0;
+  }
+  .card_type01 .card_profile img {
+    width: 12.5rem;
+  }
+  .card_type01.card_team .card_profile {
+    padding-bottom: 15.81%;
+  }
+  .card_type01.card_team .card_profile img {
+    width: 77.51%;
+  }
+  .card_type01.card_swiper .card_profile img {
+    width: 8.9375rem;
+  }
+  .card_type01 .card_rank {
+    font-size: 2.5rem;
+  }
+  .card_type01 .card_num {
+    font-size: 2.25rem;
+  }
+  .card_type01 .card_bottom {
+    padding: 0.75rem 1.25rem;
+    height: 8.6875rem;
+  }
+  .card_type01.card_swiper .card_bottom {
+    height: 3.88rem;
+  }
+  .card_type01 .card_tit {
+    margin-bottom: 0;
+    font-size: 1.125rem;
+  }
+  .card_type01 .card_detail {
+    gap: 0;
+    margin-top: 1rem;
+  }
+  .card_type01 .card_detail li {
+    flex-direction: column;
+    align-items: normal;
+    padding: 0 0.75rem;
+  }
+  .card_type01 .card_detail li:first-of-type {
+    padding-left: 0;
+  }
+  .card_type01 .card_detail li:last-of-type {
+    padding-right: 0;
+  }
+  .card_type01 .card_detail li + li {
+    border-left: 0.0625rem solid #e6eff8;
+  }
+  .card_type01 .card_detail li span:first-of-type {
+    font-size: 0.75rem;
+    font-weight: 400;
+  }
+  .card_type01 .card_detail li span:last-of-type {
+    font-size: 1.125rem;
+  }
+
+  .card_drop .card_type01 {
+    width: 100%;
+    height: 20rem;
+    max-width: 100%;
+  }
+  .card_drop .card_type01 .card_profile img {
+    width: 10rem;
+    height: 10rem;
+  }
+  .card_drop .card_type01.card_team .card_profile img {
+    width: 12.5rem;
+  }
+  .card_drop .card_type01 .card_rank {
+    font-size: 1.875rem;
+  }
+  .card_drop .card_type01 .card_num {
+    font-size: 1.875rem;
+  }
+  .card_drop .card_type01:not(.card_swiper) .card_bottom {
+    height: 8.75rem;
+  }
+  .card_drop .card_type01 .card_tit {
+    margin-bottom: 0.25rem;
+  }
+  .card_drop .card_type01 .card_detail li {
+    max-width: 100%;
+    padding: 0 1.88rem;
+  }
+  .card_drop .card_type01 .card_detail li:first-of-type {
+    padding-left: 0;
+  }
+  .card_drop .card_type01 .card_detail li:last-of-type {
+    padding-right: 0;
+  }
+
+  /* card_type02 */
+  .card_type02 {
+    height: 31.25rem;
+    padding: 1.5rem 1.25rem 1.75rem;
+  }
+  .card_type02 .card-tit {
+    font-size: 1.25rem;
+  }
+  .card_type02 .card_img {
+    height: 13.4375rem;
+  }
+  .card_type02 .card_detail {
+    margin: 0.75rem 0 2.25rem;
+  }
+  .card_type02 .card_month {
+    font-size: 1.125rem;
+  }
+  .card_type02 .card_day {
+    font-size: 2.5rem;
+  }
+  .card_type02 .btn {
+    font-size: 0.875rem;
+  }
+
+  /* card_type03 */
+  .card_type03 {
+    height: 14rem;
+  }
+  .card_type03.card_ranker {
+    height: 17.5625rem;
+  }
+  .card_type03 .card_top {
+    padding: 1.44rem 1.31rem 0 1.25rem;
+  }
+  .card_type03.card_ranker .card_top {
+    padding: 1.31rem 1.31rem 0 1.25rem;
+    align-items: end;
+  }
+  .card_type03 .card_rank {
+    font-size: 2.25rem;
+  }
+  .card_type03.card_ranker .card_rank {
+    font-size: 2.5rem;
+  }
+  .card_type03 .card_top .card_detail {
+    gap: 0.25rem;
+  }
+  .card_type03 .card_point {
+    font-size: 1.25rem;
+  }
+  .card_type03 .card_bottom {
+    gap: 0.75rem;
+    height: 5rem;
+  }
+  .card_type03 .card_bottom .card_detail {
+    gap: 0.31rem;
+  }
+  .card_type03 .card_name {
+    font-size: 1.25rem;
+  }
 }

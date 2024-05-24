@@ -516,3 +516,371 @@ input[type="radio"]:focus + label {
 /* checkbox */
 
 /* accodion */
+
+/*********
+  card
+**********/
+/* card layout */
+.card_scroll {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  height: max-content;
+}
+.card_scroll li {
+  width: 100%;
+}
+.card_drop {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(auto, 29rem));
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 0 auto;
+}
+
+/* card_type01 */
+.card_type01 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 29rem;
+  height: 40vmax;
+  min-height: 28.5rem;
+  max-height: 40.25rem;
+  font-family: "Hyundai Sans Head Office";
+}
+.card_type01.card_swiper {
+  min-height: 16.3rem;
+  max-height: 23.1rem;
+}
+.card_type01 .card_top {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.25rem 1.5rem 0;
+  flex-grow: 1;
+}
+.card_type01.card_swiper .card_top {
+  justify-content: end;
+}
+.card_type01 .card_profile {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/N_Festival/driver/bg_driver-464x478.png");
+  background-position: center;
+  background-size: cover;
+  background-color: #aacae6;
+  z-index: -1;
+}
+.card_type01 .card_profile img {
+  width: 68.96%;
+}
+.card_type01.card_team .card_profile {
+  background-color: #e6eff8;
+  background-image: none;
+  padding-bottom: 15.48%;
+}
+.card_type01.card_white .card_profile {
+  background-image: none;
+  background-color: #fff;
+}
+.card_type01.card_swiper .card_profile {
+  background-image: none;
+}
+.card_type01.card_team .card_profile img {
+  width: 77.58%;
+}
+.card_type01.card_swiper .card_profile img {
+  width: 13rem;
+}
+.card_type01:hover .card_profile img {
+  margin-bottom: -0.75rem;
+}
+.card_type01 .card_rank {
+  color: #000;
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 125%;
+}
+.card_type01 .card_num {
+  color: #de3111;
+  text-align: right;
+  font-size: 4.25rem;
+  font-weight: 700;
+  line-height: 125%;
+  text-shadow: calc(0.125rem * 1) 0 0 #fff,
+    calc(0.125rem * 0.9239) calc(0.125rem * 0.3827) 0 #fff,
+    calc(0.125rem * 0.7071) calc(0.125rem * 0.7071) 0 #fff,
+    calc(0.125rem * 0.3827) calc(0.125rem * 0.9239) 0 #fff,
+    0 calc(0.125rem * 1) 0 #fff,
+    calc(0.125rem * -0.3827) calc(0.125rem * 0.9239) 0 #fff,
+    calc(0.125rem * -0.7071) calc(0.125rem * 0.7071) 0 #fff,
+    calc(0.125rem * -0.9239) calc(0.125rem * 0.3827) 0 #fff,
+    calc(0.125rem * -1) 0 0 #fff,
+    calc(0.125rem * -0.9239) calc(0.125rem * -0.3827) 0 #fff,
+    calc(0.125rem * -0.7071) calc(0.125rem * -0.7071) 0 #fff,
+    calc(0.125rem * -0.3827) calc(0.125rem * -0.9239) 0 #fff,
+    0 calc(0.125rem * -1) 0 #fff,
+    calc(0.125rem * 0.3827) calc(0.125rem * -0.9239) 0 #fff,
+    calc(0.125rem * 0.7071) calc(0.125rem * -0.7071) 0 #fff,
+    calc(0.125rem * 0.9239) calc(0.125rem * -0.3827) 0 #fff;
+}
+.card_type01 .card_bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  height: 10.375rem;
+  background-color: #003777;
+  color: #ffffff;
+}
+.card_type01.card_swiper .card_bottom {
+  height: 7.13rem;
+}
+.card_type01 .card_tit {
+  margin-bottom: 0.25rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 140%;
+}
+.card_type01 .card_subtit {
+  color: #aacae6;
+  font-family: "Hyundai Sans Text Office";
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 140%;
+}
+.card_type01 .card_detail {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.88rem;
+  margin-bottom: 0.5rem;
+}
+.card_type01 .card_detail li {
+  width: 100%;
+  max-width: 6.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+.card_type01 .card_detail li span:first-of-type {
+  font-family: "Hyundai Sans Text Office";
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 140%;
+}
+.card_type01 .card_detail li span:last-of-type {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 140%;
+  text-align: right;
+}
+.card_type01:hover .card_more {
+  display: flex;
+}
+.card_type01 .card_more {
+  /* 임시로 확인용 - 디스플레이 논 말고 다른거로 처리하기 */
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.81rem 1.5rem;
+  background-color: #de3111;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 140%;
+}
+.card_type01 .card_more::after {
+  content: "";
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  /* 아이콘 없어서 임시 */
+  background-color: #fff;
+  mask-image: url("../images/icon/icon-arrow02_right.svg");
+  mask-position: center;
+  mask-size: contain;
+}
+
+.card_drop .card_type01 {
+  height: 26.375rem;
+  min-height: 0;
+}
+.card_drop .card_type01 .card_profile {
+  background-image: none;
+}
+.card_drop .card_type01 .card_profile img {
+  width: 13rem;
+  height: 13rem;
+}
+.card_drop .card_type01:hover .card_profile img {
+  margin-bottom: -0.75rem;
+}
+.card_drop .card_type01.card_team .card_profile {
+  align-items: center;
+  padding-bottom: 0;
+}
+.card_drop .card_type01.card_team .card_profile img {
+  width: 17.5rem;
+}
+.card_drop .card_type01.card_team:hover .card_profile img {
+  margin-bottom: 0;
+}
+.card_drop .card_type01 .card_rank {
+  font-size: 3.5rem;
+}
+.card_drop .card_type01 .card_num {
+  font-size: 3.5rem;
+}
+
+/* card_type02 */
+.card_type02 {
+  width: 100%;
+  height: 38.6875rem;
+  padding: 1.5rem 1.5rem 2.5rem;
+  background-color: #ffffff;
+}
+.card_type02 .card_tit {
+  font-family: "Hyundai Sans Text Office";
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 140%;
+}
+.card_type02 .card_img {
+  width: 100%;
+  height: 13.9rem;
+  margin-top: 1.25rem;
+  background-color: #aacae6;
+  text-align: center;
+}
+.card_type02 .card_img img {
+  width: auto;
+  height: 100%;
+}
+.card_type02 .card_detail {
+  margin: 1.5rem 0 3.75rem;
+  font-family: "Hyundai Sans Head Office";
+  font-weight: 700;
+}
+.card_type02 .card_month {
+  font-size: 1.25rem;
+  line-height: 140%;
+}
+.card_type02 .card_day {
+  font-size: 5rem;
+  line-height: 125%;
+}
+.card_type02 .card_track {
+  font-family: "Hyundai Sans Text Office";
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 140%;
+}
+.card_type02 .btn {
+  padding: 0.87rem 0;
+  width: 100%;
+  font-family: "Hyundai Sans Text Office";
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 100%;
+}
+.card_type02 .btn:hover {
+  background: #de3111;
+}
+.card_type02 .btn span {
+  margin-left: 0.25rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-shrink: 0;
+}
+
+/* card_type03 */
+/* ranker 위드 깨지는 거 확인해서 고치기 */
+.card_type03 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 18.8rem;
+  background-color: #aacae6;
+}
+.card_type03.card_ranker {
+  height: 25.9rem;
+}
+.card_type03 .card_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  padding: 1.25rem 2.5rem 0;
+  font-family: "Hyundai Sans Head Office";
+  text-align: right;
+}
+.card_type03.card_ranker .card_top {
+  align-items: center;
+}
+.card_type03 .card_rank {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 125%;
+}
+.card_type03.card_ranker .card_rank {
+  font-size: 5rem;
+}
+.card_type03 .card_top .card_detail {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.card_type03 .card_point {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 140%;
+}
+.card_type03 .card_mission {
+  font-family: "Hyundai Sans Text Office";
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 140%;
+}
+.card_type03 .card_bottom {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  height: 8.75rem;
+  background-color: #000000;
+}
+.card_type03 .card_bottom img {
+  width: auto;
+  height: 100%;
+}
+.card_type03 .card_bottom .card_detail {
+  display: flex;
+  flex-direction: column;
+  gap: 0.62rem;
+  color: #ffffff;
+}
+.card_type03.card_ranker .card_bottom .card_detail {
+  gap: 0.25rem;
+}
+.card_type03 .card_name {
+  font-family: "Hyundai Sans Head Office";
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 140%;
+}
+.card_type03 .card_community {
+  font-family: "Hyundai Sans Text Office";
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 140%;
+  opacity: 0.8;
+}
