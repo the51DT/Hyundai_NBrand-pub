@@ -884,3 +884,269 @@ input[type="radio"]:focus + label {
   line-height: 140%;
   opacity: 0.8;
 }
+
+/* list */
+/**/
+
+.wrap-list,
+.wrap-list__planvisit {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
+.wrap-list * {
+  font-family: "Hyundai Sans Text Office";
+}
+
+.wrap-list .__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 160px;
+  margin-bottom: 40px;
+  display: grid;
+  grid-template-columns: 2fr auto;
+}
+
+.wrap-list .__top .wrap-list-tab li.active {
+  background-color: var(--ro);
+  color: var(--ff);
+}
+
+/* bottom list start */
+.wrap-list .__bottom {
+  border-top: 3px solid;
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+.wrap-list .__bottom .wrap-lists:first-child {
+  border-top: none;
+}
+
+.wrap-list .__bottom .wrap-lists p {
+  /*
+  font-size: 16px;
+  line-height: 22.4px;*/
+  padding: 0px 12px 0px 12px;
+  font-weight: 700;
+  margin-right: 24px;
+}
+
+.wrap-list .__bottom .wrap-lists p:last-child {
+  margin-right: 0;
+}
+
+.wrap-list .__bottom .wrap-lists h3.tit {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 33.6px;
+  text-align: left;
+
+  padding: 0px 12px 0px 12px;
+  gap: 10px;
+  margin-right: 24px;
+  max-width: 950px;
+  width: 100%;
+}
+
+.wrap-list .__bottom .wrap-lists {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: left;
+  border-bottom: 1px solid #bbb;
+  /* max-height: 92px; */
+  padding: 29px 0px 29px 0px;
+  gap: 0 12px;
+}
+
+.wrap-list .__bottom.list02 .wrap-lists {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: left;
+  gap: 0 24px;
+  display: grid;
+  grid-template-columns: 1fr 5fr 3fr;
+}
+
+.wrap-list .__bottom .wrap-lists .list-box:nth-child(1) {
+  width: 220px;
+}
+.wrap-list .__bottom .wrap-lists .list-box:nth-child(1) p,
+.wrap-list .__bottom .wrap-lists .list-box:nth-child(3) p {
+  font-weight: 700;
+}
+.wrap-list .__bottom .wrap-lists .list-box:nth-child(2) {
+  width: 100%;
+}
+
+.wrap-list .__bottom .wrap-lists .list-box:nth-child(2) p {
+  max-width: 100%;
+}
+
+.wrap-list .__bottom .wrap-lists .list-box:nth-child(3) {
+  width: 220px;
+  max-width: 100%;
+}
+
+.wrap-list .__bottom.list02 .wrap-lists .list-box:nth-child(3) {
+  width: 100%;
+}
+
+/* list 03 - track guide */
+
+section.wrap-list__trackguide {
+  /* padding: 163px 240px; */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e6eff8;
+}
+
+section.wrap-list__trackguide .left {
+  margin-right: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+section.wrap-list__trackguide .left img {
+  width: 100%;
+  max-width: 708px;
+  object-fit: contain;
+}
+
+section.wrap-list__trackguide .right {
+  max-width: 708px;
+  width: 100%;
+  padding: 0 20px;
+  padding: 0 20px;
+}
+section.wrap-list__trackguide .right .track-info .descwrap {
+  padding: 0 20px;
+  border: 1px solid;
+}
+
+section.wrap-list__trackguide .right.descwrap h2.tit {
+  font-size: 68px;
+  font-weight: 700;
+  line-height: 85px;
+  text-align: left;
+}
+
+section.wrap-list__trackguide .right.descwrap h2.sub-tit {
+  font-family: Hyundai Sans Head;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: left;
+}
+
+section.wrap-list__trackguide .right.descwrap .list-trackinfo {
+  margin-top: 60px;
+  border-top: 2px solid #787d80;
+}
+
+section.wrap-list__trackguide .right.descwrap .list-trackinfo .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0 28px;
+  border-bottom: 1px solid #787d80;
+}
+
+section.wrap-list__trackguide
+  .right.descwrap
+  .list-trackinfo
+  .inner:last-child {
+  border-bottom: none;
+}
+
+section.wrap-list__trackguide
+  .right.descwrap
+  .list-trackinfo
+  .inner
+  p:nth-child(1) {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+  text-align: left;
+}
+
+section.wrap-list__trackguide
+  .right.descwrap
+  .list-trackinfo
+  .inner
+  p:nth-child(2) {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 33.6px;
+  text-align: right;
+}
+
+/* list04  plan your guide */
+section.wrap-list__planvisit h3.tit {
+  font-size: 68px;
+  font-weight: 700;
+  /* line-height: 85px; */
+}
+section.wrap-list__planvisit .inner {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  border-top: 2px solid #787d80;
+}
+
+section.wrap-list__planvisit .inner .box {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  padding: 40px 0;
+}
+
+section.wrap-list__planvisit .inner .box.box01 {
+  border-bottom: 1px solid #bbb;
+}
+
+section.wrap-list__planvisit .inner .box .box-desc.right .desc-location {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+  text-align: left;
+  max-width: 706px;
+  width: 100%;
+  font-family: "Hyundai Sans Text Office";
+}
+
+section.wrap-list__planvisit .inner .box .box-desc.right .desc-note {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 19.6px;
+  text-align: left;
+}
+
+section.wrap-list__planvisit .inner .box.box02 {
+  flex-direction: column;
+  border-bottom: 1px solid #bbb;
+}
+
+section.wrap-list__planvisit .inner .box.box02 h3.tit.single {
+  width: 100%;
+  margin-bottom: 50px;
+  font-size: 32px;
+  padding: 0 20px;
+}
+
+section.wrap-list__planvisit .inner .box .box-desc {
+  padding: 0 20px;
+}
+
+section.wrap-list__planvisit .inner .box.box01 h3.tit {
+  font-size: 32px;
+}
+
+section.wrap-list__planvisit .inner .box.box02 .box-desc.left h3.tit {
+  font-size: 24px;
+}

@@ -427,4 +427,197 @@
   .card_type03 .card_name {
     font-size: 1.25rem;
   }
+
+  /* list */
+  /**/
+
+  /* list mobile */
+  .wrap-list .tabs-wrap .tabs li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .wrap-list .tab-head .title {
+    font-size: 36px;
+    line-height: 45px;
+  }
+
+  .wrap-list .__bottom {
+    display: flex;
+    flex-wrap: nowrap;
+    border-top: none;
+    overflow-x: auto;
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
+  }
+  .wrap-list .__bottom .wrap-lists {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    border: none;
+    background: #f0f0f0;
+    padding: 24px 16px;
+    margin-right: 12px;
+    max-height: 100%;
+    flex-direction: column;
+  }
+  .wrap-list .__bottom .wrap-lists .list-box:nth-child(1) {
+    margin-bottom: 60px;
+    margin-right: auto;
+    max-width: 168px;
+  }
+  .wrap-list .__bottom .wrap-lists .list-box:nth-child(2) p {
+    padding: 0;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 25.2px;
+    text-align: left;
+  }
+  .wrap-list .__bottom .wrap-lists .list-box:nth-child(3) {
+    text-align: left;
+    margin-top: 12px;
+    margin-bottom: 80px;
+  }
+
+  .wrap-list .__bottom .wrap-lists p {
+    padding: 0;
+  }
+
+  .wrap-list .__bottom.list02 .wrap-lists {
+    display: Flex;
+  }
+
+  /* list03 track map */
+  section.wrap-list__trackguide {
+    /* padding: 80px; */
+    display: block;
+  }
+
+  section.wrap-list__trackguide svg {
+    width: 237.71px;
+    height: 212.34px;
+  }
+  section.wrap-list__trackguide .right.descwrap h2 {
+  }
+
+  section.wrap-list__trackguide .right.descwrap h2.tit {
+    font-size: 2.25rem;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 45px;
+  }
+
+  section.wrap-list__trackguide .right.descwrap h2.sub-tit {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 25.2px;
+    text-align: left;
+    margin-top: 0;
+  }
+
+  section.wrap-list__trackguide .right.descwrap .list-trackinfo .inner {
+    /* padding: 26px 0; */
+  }
+
+  section.wrap-list__trackguide .left svg {
+    max-width: 280px;
+  }
+
+  section.wrap-list__trackguide
+    .right.descwrap
+    .list-trackinfo
+    .inner
+    p.txt-type03:nth-child(1) {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22.4px;
+    text-align: left;
+  }
+
+  section.wrap-list__trackguide .right {
+    margin-top: 36px;
+  }
+
+  section.wrap-list__trackguide .right.descwrap .list-trackinfo {
+    margin-top: 28px;
+  }
+
+  section.wrap-list__trackguide
+    .right.descwrap
+    .list-trackinfo
+    .inner
+    p:nth-child(2) {
+    font-size: 20px;
+  }
+
+  /* list 04 */
+  /* list04  plan your guide */
+
+  section.wrap-list__planvisit .inner .box .box-desc {
+    padding: 0;
+  }
+  section.wrap-list__planvisit h3.tit {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 45px;
+    /* line-height: 85px; */
+  }
+
+  section.wrap-list__planvisit .inner {
+    margin-top: 28px;
+  }
+
+  section.wrap-list__planvisit .inner .box {
+    padding: 28px 0 0;
+  }
+  /* 
+  section.wrap-list__planvisit .inner .box.wrap-multi-box:last-child {
+    padding: 28px 0;
+  } */
+
+  section.wrap-list__planvisit .inner .box.box01,
+  section.wrap-list__planvisit .inner .box.wrap-multi-box {
+    flex-direction: column;
+  }
+
+  section.wrap-list__planvisit .inner .box.box01 {
+    padding: 28px 0;
+  }
+  section.wrap-list__planvisit .inner .box .box-desc.right .desc-note {
+    margin-top: 8px;
+  }
+  section.wrap-list__planvisit .inner .box.box02 h3.tit:first-child {
+    margin-bottom: 24px;
+  }
+
+  section.wrap-list__planvisit .inner .box .box-desc.right .desc-location {
+    margin-top: 20px;
+  }
+
+  section.wrap-list__planvisit .inner .box.box02 h3.tit.single {
+    padding: 0;
+    margin-bottom: 0;
+    font-size: 20px;
+  }
+  section.wrap-list__planvisit .inner .box.box02 .box-desc.left h3.tit {
+    margin-bottom: 0;
+  }
+
+  section.wrap-list__planvisit .inner .box.wrap-multi-box:last-child {
+    margin-bottom: 29px;
+  }
+
+  section.wrap-list__planvisit .inner .box .box-desc.right .desc-location {
+    font-size: 17px;
+  }
+
+  section.wrap-list__planvisit .inner .box.box02 .box-desc.left h3.tit {
+    font-size: 18px;
+
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 25.2px;
+    text-align: left;
+  }
 }
