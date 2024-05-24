@@ -217,7 +217,7 @@ input[type="radio"]:focus + label {
   background: #de3111;
   color: #fff;
 }
-.btn-bd {
+.btn-bg04 {
   box-shadow: 0 0 0 2px #000 inset;
 }
 .btn-lg {
@@ -286,7 +286,7 @@ input[type="radio"]:focus + label {
   width: 20px;
   height: 20px;
 }
-.btn-bd.btn-lg .btn-paging {
+.btn-bg04.btn-lg .btn-paging {
   margin-left: 8px;
 }
 .btn-lg [class*="btn-icon"],
