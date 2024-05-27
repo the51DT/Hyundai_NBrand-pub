@@ -1099,6 +1099,9 @@ input[type="radio"]:focus + label {
   font-weight: 500;
   line-height: 140%;
 }
+.card_type02 .btn {
+  width: 100%;
+}
 
 /* card_type03 */
 .card_type03 {
