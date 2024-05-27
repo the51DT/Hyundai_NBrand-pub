@@ -112,6 +112,9 @@
   .btn-wrap-type2 > .btn {
     width: 50%;
   }
+  .btn-wrap-type3 {
+    flex-wrap: wrap;
+  }
   .btn-wrap-type3 > .btn {
     width: 100%;
   }
