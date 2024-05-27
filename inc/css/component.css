@@ -839,7 +839,7 @@ input[type="radio"]:focus + label {
   margin: 0 auto;
 }
 /* 트랙용 */
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1280px) and (min-width: 1023px) {
   .card_drop.track_list {
     grid-template-columns: repeat(2, minmax(0, 29rem));
   }
