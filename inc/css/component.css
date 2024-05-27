@@ -1423,6 +1423,30 @@ input[type="radio"]:focus + label {
   align-items: center;
 }
 
+@media screen and (min-width: 1025px) and (max-width: 1135px) {
+  .wrap-list .__bottom.list02 .wrap-lists {
+    gap: 0 1rem;
+  }
+
+  .wrap-list .__bottom.list01 .wrap-lists .list-box:nth-child(1) {
+    max-width: max-content;
+    width: 18rem;
+  }
+
+  .wrap-list.list02 .__bottom .wrap-lists {
+    grid-template-columns: 15% 45% 33%;
+  }
+
+  .wrap-list .__bottom .wrap-lists .list-box:nth-child(1) {
+    width: 14rem;
+  }
+
+  .wrap-list.list02 .__bottom .wrap-lists .list-box:nth-child(3) {
+    width: auto;
+    max-width: 100%;
+  }
+}
+
 /* list 03 - track guide */
 .wrap-list.list03 {
   width: 100%;
@@ -1683,27 +1707,4 @@ input[type="radio"]:focus + label {
 
 .dropdown-on {
   display: block;
-}
-@media screen and (min-width: 1025px) and (max-width: 1135px) {
-  .wrap-list .__bottom.list02 .wrap-lists {
-    gap: 0 1rem;
-  }
-
-  .wrap-list .__bottom.list01 .wrap-lists .list-box:nth-child(1) {
-    max-width: max-content;
-    width: 18rem;
-  }
-
-  .wrap-list.list02 .__bottom .wrap-lists {
-    grid-template-columns: 15% 45% 33%;
-  }
-
-  .wrap-list .__bottom .wrap-lists .list-box:nth-child(1) {
-    width: 14rem;
-  }
-
-  .wrap-list.list02 .__bottom .wrap-lists .list-box:nth-child(3) {
-    width: auto;
-    max-width: 100%;
-  }
 }
