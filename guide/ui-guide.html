@@ -9,6 +9,7 @@
   <title>N브랜드 | Component</title>
   <link type="text/css" rel="stylesheet" href="./inc/css/shCoreDefault.css" />
   <link type="text/css" rel="stylesheet" href="./inc/css/guide.css" />
+  <link type="text/css" rel="stylesheet" href="../inc/css/swiper.min.css" />
   <link type="text/css" rel="stylesheet" href="../inc/css/common.css" />
 </head>
 
@@ -501,24 +502,26 @@
             <div class="subSection">
               <h3 class="guideSubTit">TAB type 1 :: 기본케이스</h3>
               <div class="ui-item">
-                <div class="tab-head">
-                  <h2 class="title">Race Schedule</h2>
-                  <div class="tabs-wrap">
-                    <ul class="tabs ty-blue" data-contents="탭카테고리"> <!-- ty-blue : blue / 기본 디폴트 컬러 red-->
-                      <li class="on">
-                        <a href="javascript:;" id="tab1-01" role="tab" aria-selected="true" data-tab="1">Saturday</a>
-                      </li>
-                      <li>
-                        <a href="javascript:;" id="tab1-02" role="tab" aria-selected="false" data-tab="2">Sunday</a>
-                      </li>
-                    </ul>
+                <div class="tab-container">
+                  <div class="tab-head">
+                    <h2 class="title">Race Schedule</h2>
+                    <div class="tabs-wrap">
+                      <ul class="tabs ty-blue" data-contents="탭카테고리"> <!-- ty-blue : blue / 기본 디폴트 컬러 red-->
+                        <li class="on">
+                          <a href="javascript:;" aria-label="tab1-01" role="tab" aria-selected="true" data-tab="1">Saturday</a>
+                        </li>
+                        <li>
+                          <a href="javascript:;" aria-label="tab1-02" role="tab" aria-selected="false" data-tab="2">Sunday</a>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
-                </div>
-                <div class="tab-content on" aria-labelledby="tab1-01" role="tabpanel" data-panel="1">
-                  탭 컨텐츠1
-                </div>
-                <div class="tab-content" aria-labelledby="tab1-02" role="tabpanel" data-panel="2">
-                  탭 컨텐츠2
+                  <div class="tab-content on" id="tab1-01" role="tabpanel">
+                    탭 컨텐츠1
+                  </div>
+                  <div class="tab-content" id="tab1-02" role="tabpanel">
+                    탭 컨텐츠2
+                  </div>
                 </div>
               </div>
               <div class="code">
@@ -534,30 +537,30 @@
                   <div class="tabs-wrap">
                     <ul class="tabs" data-contents="탭카테고리">
                       <li class="on">
-                        <a href="javascript:;" id="tab2-01" role="tab" aria-selected="true" data-tab="4">eN1</a>
+                        <a href="javascript:;" aria-label="tab2-01" role="tab" aria-selected="true" data-tab="4">eN1</a>
                       </li>
                       <li>
-                        <a href="javascript:;" id="tab2-02" role="tab" aria-selected="false" data-tab="5">N1</a>
+                        <a href="javascript:;" aria-label="tab2-02" role="tab" aria-selected="false" data-tab="5">N1</a>
                       </li>
                       <li>
-                        <a href="javascript:;" id="tab2-03" role="tab" aria-selected="false" data-tab="6">N2</a>
+                        <a href="javascript:;" aria-label="tab2-03" role="tab" aria-selected="false" data-tab="6">N2</a>
                       </li>
                       <li>
-                        <a href="javascript:;" id="tab2-04" role="tab" aria-selected="false" data-tab="7">N2</a>
+                        <a href="javascript:;" aria-label="tab2-04" role="tab" aria-selected="false" data-tab="7">N2</a>
                       </li>
                     </ul>
                   </div>
                 </div>
-                <div class="tab-content on" aria-labelledby="tab2-01" role="tabpanel" data-panel="4">
+                <div class="tab-content on" id="tab2-01" role="tabpanel">
                   탭 컨텐츠1
                 </div>
-                <div class="tab-content" aria-labelledby="tab2-02" role="tabpanel" data-panel="5">
+                <div class="tab-content" id="tab2-02" role="tabpanel">
                   탭 컨텐츠2
                 </div>
-                <div class="tab-content" aria-labelledby="tab2-03" role="tabpanel" data-panel="6">
+                <div class="tab-content" id="tab2-03" role="tabpanel">
                   탭 컨텐츠3
                 </div>
-                <div class="tab-content" aria-labelledby="tab2-04" role="tabpanel" data-panel="7">
+                <div class="tab-content" id="tab2-04" role="tabpanel">
                   탭 컨텐츠4
                 </div>
               </div>
@@ -1542,6 +1545,7 @@
 <script type="text/javascript" src="./inc/js/shCore.js"></script>
 <script type="text/javascript" src="./inc/js/shBrushJScript.js"></script>
 <script type="text/javascript" src="./inc/js/guideUi.js"></script>
+<script type="text/javascript" src="../inc/js/pub-ui.js"></script>
 <script>
   function scrollEvent() {
     var scrollWrap = $('.contset-wrap'),
@@ -1579,34 +1583,6 @@
     })
   }
 
-
-  function tabEvent() {    
-    const tabs = document.querySelector(".tabs-wrap .tabs");
-    const tabList = document.querySelectorAll(".tabs li");
-    const tabConts = document.querySelectorAll(".tab-content");
-
-    tabs.addEventListener("click", function(e){
-      e.preventDefault();
-      const target = e.target;
-      const tabData = target.dataset.tab;
-      
-      tabList.forEach(function(el){
-        el.classList.remove("on");
-      })
-      target.parentNode.classList.add("on");
-
-      tabConts.forEach(function(el){
-        const panelData = el.dataset.panel;
-
-        if(panelData == tabData) {
-          el.classList.add("on");
-        } else {
-          el.classList.remove("on");
-        }
-      })
-    });
-  }
-
   $(window).load(function () {
     $('.section .subSection').each(function () {
       var uiCode = $(this).find('.ui-item').html();
@@ -1614,9 +1590,7 @@
     })
     setTimeout(function () {
       scrollEvent();
-    }, 500)
-
-    tabEvent();
+    }, 500)    
   })
 </script>
 

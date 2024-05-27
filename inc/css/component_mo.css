@@ -257,6 +257,7 @@
   **********/
   /* card layout */
   .card_scroll {
+    display: flex;
     justify-content: space-between;
     gap: 0.75rem;
     overflow-x: scroll;
@@ -268,8 +269,7 @@
 
   /* card_type01 */
   .card_type01 {
-    flex-shrink: 0;
-    width: 16.125rem;
+    min-width: 16.125rem;
     height: 26.875rem;
   }
   .card_type01.card_swiper {
