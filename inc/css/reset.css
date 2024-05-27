@@ -56,7 +56,7 @@ html,
 body {
   overflow: hidden;
   position: relative;
-  font-family: Hyundai Sans Text Office, Arial, Dotum, sans-serif;
+  font-family: Hyundai Sans Text, Arial, Dotum, sans-serif;
   font-size: 16px;
   color: #222;
   height: 100%;
@@ -70,7 +70,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Hyundai Sans Head Office, Arial, Dotum, sans-serif;
+  font-family: Hyundai Sans Head, Arial, Dotum, sans-serif;
   font-weight: normal;
 }
 img,
@@ -130,7 +130,7 @@ button {
   border: none;
   background: none;
   cursor: pointer;
-  font-family: Hyundai Sans Text Office, Arial, Dotum, sans-serif;
+  font-family: Hyundai Sans Text, Arial, Dotum, sans-serif;
 }
 input,
 select,
@@ -149,7 +149,7 @@ input[type="email"],
 select,
 textarea {
   border-radius: 3px;
-  font-family: Hyundai Sans Text Office, Arial, Dotum, sans-serif;
+  font-family: Hyundai Sans Text, Arial, Dotum, sans-serif;
   font-size: 17px;
   color: #222;
   word-break: break-all;
@@ -180,7 +180,7 @@ select::-ms-expand {
 }
 ::-webkit-input-placeholder,
 textarea::placeholder {
-  font-family: Hyundai Sans Text Office, Arial, Dotum, sans-serif;
+  font-family: Hyundai Sans Text, Arial, Dotum, sans-serif;
   font-size: 17px;
   font-weight: 400;
   color: #b2b2b2;

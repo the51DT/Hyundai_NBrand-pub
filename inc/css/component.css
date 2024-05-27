@@ -4,7 +4,7 @@
 /* tit */
 [class*="tit-type"] {
   color: #000;
-  font-family: "Hyundai Sans Head Office";
+  font-family: "Hyundai Sans Head";
   font-weight: 600;
 }
 .tit-type01 {
@@ -31,7 +31,7 @@
 /* txt */
 [class*="txt-type"] {
   color: #000;
-  font-family: "Hyundai Sans Text Office";
+  font-family: "Hyundai Sans Text";
   line-height: 140%;
   font-weight: 400;
 }

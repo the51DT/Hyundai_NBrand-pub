@@ -13,55 +13,180 @@
 </head>
 
 <body>
+  <div class="skip-navigation">
+    <a href="#container">본문 바로가기</a>
+  </div>
   <div class="wrap">
     <header class="header-wrap">
-      <!-- <div><button>본문바로가기</button></div> -->
       <div class="header-cont">
-        <button class="nav-btn" aria-label="전체 메뉴 열기">버튼</button>
-        <h1>해더</h1>
+        <h1 class="logo">
+          <a href="/"><img src="../inc/images/img/img_logo.svg" alt="N브랜드" /></a>
+        </h1>
+        <div class="sitemap-wrap">
+          <button class="nav-btn" aria-label="전체 메뉴 열기"></button>
+          <nav>
+            <!-- gnb 1dep -->
+            <ul class="gnb__tab-btn-wrap">
+              <li><button class="gnb__tab-btn01" role="tab" id="gnb-tab1" aria-selected="false">Brand</button></li>
+              <li><button class="gnb__tab-btn02" role="tab" id="gnb-tab2" aria-selected="false">Models</button></li>
+              <li><button class="gnb__tab-btn03" role="tab" id="gnb-tab3" aria-selected="false">Experience</button></li>
+              <li><a href="#" class="gnb__tab-btn04">Configurator</a></li>
+            </ul>
+            <!-- gnb 1dep panel -->
+            <div class="gnb__tab-cont-wrap">
+              <div class="gnb__tab-cont01" role="tabpanel" aria-labelledby="gnb-tab1">
+                <!-- gnb 2-1 dep-->
+                <ul class="gnb__tab02-wrap">
+                  <li><button class="gnb__tab02-btn01" role="tab" id="gnb-tab1-1" aria-selected="false">N Brand</button>
+                  </li>
+                  <li><button class="gnb__tab02-btn01" role="tab" id="gnb-tab1-2"
+                      aria-selected="false">Motorsports</button></li>
+                  <li><button class="gnb__tab02-btn01" role="tab" id="gnb-tab1-3" aria-selected="false">N Performance
+                      Parts</button></li>
+                  <li><button class="gnb__tab02-btn01" role="tab" id="gnb-tab1-4" aria-selected="false">N
+                      Merchandise</button></li>
+                  <li><button class="gnb__tab02-btn01" role="tab" id="gnb-tab1-5" aria-selected="false">Press</button>
+                  </li>
+                </ul>
+                <div class="gnb-content__dep2">
+                  <div class="img-area">
+                    <img src="../inc/images/img/img_gnb_dep2_content.png" alt="N Cup - Round 1">
+                  </div>
+                  <div class="text-area">
+                    <h3>N Cup - Round 1</h3>
+                    <p>Inje SPEEDIUM, 04.27 - 04.28</p>
+                    <div class="full-size__btn-wrap">
+                      <a class="full-size__btn">Learn More</a>
+                      <a class="full-size__btn-file">Co nfigrator</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="gnb__tab-cont02" role="tabpanel" aria-labelledby="gnb-tab2">
+                <!-- gnb 2-2dep-->
+                <ul class="gnb__tab02-wrap">
+                  <li><button class="gnb__tab02-btn01" role="tab" id="gnb-tab1-1" aria-selected="false">N Brand</button>
+                  </li>
+                  <li><button class="gnb__tab02-btn01" role="tab" id="gnb-tab1-2"
+                      aria-selected="false">Motorsports</button></li>
+                  <li><button class="gnb__tab02-btn01" role="tab" id="gnb-tab1-3" aria-selected="false">N Performance
+                      Parts</button></li>
+                  <li><button class="gnb__tab02-btn01" role="tab" id="gnb-tab1-4" aria-selected="false">N
+                      Merchandise</button></li>
+                  <li><button class="gnb__tab02-btn01" role="tab" id="gnb-tab1-5" aria-selected="false">Press</button>
+                  </li>
+                </ul>
+                <!-- gnb 2-2dep panel -->
+                <div class="gnb-content__dep2">
+                  <div class="img-area">
+                    <img src="../inc/images/img/img_gnb_dep2_content.png" alt="N Cup - Round 1">
+                  </div>
+                  <div class="text-area">
+                    <h3>N Cup - Round 1</h3>
+                    <p>Inje SPEEDIUM, 04.27 - 04.28</p>
+                    <div class="full-size__btn-wrap">
+                      <a class="full-size__btn">Learn More</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="gnb__tab-cont03" role="tabpanel" aria-labelledby="gnb-tab3">
+                <ul class="gnb__tab02-wrap">
+                  <li><button class="gnb__tab02-btn01" role="tab" id="gnb-tab1-1" aria-selected="false">N
+                      Brand</button>
+                  </li>
+                  <li><button class="gnb__tab02-btn01" role="tab" id="gnb-tab1-2"
+                      aria-selected="false">Motorsports</button></li>
+                  <li><button class="gnb__tab02-btn01" role="tab" id="gnb-tab1-3" aria-selected="false">N Performance
+                      Parts</button></li>
+                  <li><button class="gnb__tab02-btn01" role="tab" id="gnb-tab1-4" aria-selected="false">N
+                      Merchandise</button></li>
+                  <li><button class="gnb__tab02-btn01" role="tab" id="gnb-tab1-5" aria-selected="false">Press</button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+          <div class="header__event-wrap">
+            <ul class="header__event-area">
+              <li class="header__event-item01">
+                <div class="img-area">
+                  <img src="../inc/images/img/img_header-event01.png" alt="N Cup - Round 1" />
+                </div>
+                <div class="text-area">
+                  <h3>N Cup - Round 1</h3>
+                  <p>Inje SPEEDIUM, 04.27 - 04.28</p>
+                </div>
+                <div class="full-size__btn-wrap">
+                  <a class="full-size__btn">Learn More</a>
+                </div>
+              </li>
+              <li class="header__event-item02">
+                <div class="img-area">
+                  <img src="../inc/images/img/img_header-event02.png" alt="IONIQ 5 N" />
+                </div>
+                <div class="text-area">
+                  <h3>IONIQ 5 N</h3>
+                  <p>Electrifying Driving Passion</p>
+                </div>
+                <div class="full-size__btn-wrap">
+                  <a class="full-size__btn">Learn More</a>
+                </div>
+
+              </li>
+              <li class="header__event-item03">
+                <div class="img-area">
+                  <img src="../inc/images/img/img_header-event03 .png" alt="ELANTRA N" />
+                </div>
+                <div class="text-area">
+                  <h3>ELANTRA N</h3>
+                  <p>The Perfect Balance</p>
+                </div>
+                <div class="full-size__btn-wrap">
+                  <a class="full-size__btn">Learn More</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
         <div class="utile-wrap">
           <div class="utile-cont">
-            <ul class="nation-area">
-              <li class="nation-item"></li>
-              <li class="nation-item"></li>
-            </ul>
-            <button>로그인</button>
+            <div class="utile-item">
+              <div class="lang-btn toggle-chk">
+                <input type="checkbox" id="toggle-chk" name="toggleChk"></div>
+              <label for="toggle-chk" aria-label="언어 선택 현재 영문 선택하면 국문으로 변경됩니다." data-toggle="KR">EN</label>
+            </div>
+          </div>
+          <div class="utile-item02">
+            <button class="login-btn" title="로그인"></button>
+            <!-- 로그인 이후 -->
+            <!-- <button class="alarm-btn" title="미확인 알림"></button> -->
           </div>
         </div>
-
-        <!-- <nav>
-          <ul class="tab-btn-wrap">
-            <li><button class="tab-btn01" role="tab" title="선택됨">메뉴1</button></li>
-            <li><button class="tab-btn02" role="tab">메뉴2</button></li>
-            <li><button class="tab-btn03" role="tab">메뉴3</button></li>
-            <li><button class="tab-btn04" role="tab">메뉴4</button></li>
-          </ul>
-          <div class="tab-cont-wrap">
-            <div class="tab-cont01">콘텐츠1</div>
-            <div class="tab-cont02">콘텐츠2</div>
-            <div class="tab-cont03">콘텐츠3</div>
-            < class="tab-cont04">콘텐츠4</ div>
-          </div>
-        </nav> -->
       </div>
     </header>
-    <section class="content-wrap">
+    <!--  -->
+    <section id="container" class="content-wrap">
       <div class="content-area">
-        <div class="content-item01">
+        <!-- <div class="content-item01">
 
-        </div>
-        <div class="content-item02">
+      </div>
+      <div class="content-item02">
 
-        </div>
-        <div class="content-item03">
+      </div>
+      <div class="content-item03">
 
-        </div>
+      </div> -->
       </div>
     </section>
     <footer class="footer-wrap">
       <div class="footer-area">
       </div>
     </footer>
+    <article class="pop-wrap">
+
+    </article>
+    <!-- <aside></aside> -->
   </div>
 
   <script type="text/javascript" src="../inc/js/jquery-3.7.1.slim.min.js"></script>
