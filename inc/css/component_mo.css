@@ -69,35 +69,42 @@
   /*********
     btn 
   *********/
-  .btn-lg {
+  [class*="btn-lg"] {
     padding: 17px 20px;
     font-size: 16px;
     line-height: 16px;
   }
-  .btn-md01 {
+  [class*="lg-txt-btn"] {
+    font-size: 16px;
+    line-height: 16px;
+  }
+  [class*="btn-md"] {
     padding: 12px 16px;
     font-size: 14px;
     line-height: 14px;
   }
-  /* .btn-xs {
-    padding: 5px 12px;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 22.4px;
-  } */
+  [class*="md-txt-btn"] {
+    font-size: 14px;
+    line-height: 14px;
+  }
   [class*="btn-icon"] {
     display: inline-block;
-    margin-left: 4px;
+    background-repeat: no-repeat;
+    background-position: center;
   }
-  .btn-bg04.btn-lg .btn-paging {
-    margin-left: 4px;
-  }
-  .btn-lg [class*="btn-icon"] {
-    margin-left: 4px;
-  }
-  .btn-lg .icon20 {
+  [class*="btn-lg"] [class*="btn-icon20"],
+  [class*="lg-txt-btn"] [class*="btn-icon20"] {
     width: 16px;
     height: 16px;
+  }
+  .btn[class*="-primary"] [class*="btn-icon20"],
+  .btn[class*="-outline"] [class*="btn-icon20"] {
+    margin-left: 4px;
+  }
+  .btn[class*="btn-lg-outline"] .btn-paging ~ .btn-icon20 {
+    width: 20px;
+    height: 20px;
+    margin-left: 8px;
   }
   .btn-wrap-type1 > .btn {
     width: 100%;
@@ -108,12 +115,6 @@
   .btn-wrap-type3 > .btn {
     width: 100%;
   }
-  .link-btn {
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 14px;
-  }
-
   /*********
     tab
   **********/
@@ -524,11 +525,7 @@
     max-width: 280px;
   }
 
-  section.wrap-list__trackguide
-    .right.descwrap
-    .list-trackinfo
-    .inner
-    p.txt-type03:nth-child(1) {
+  section.wrap-list__trackguide .right.descwrap .list-trackinfo .inner p.txt-type03:nth-child(1) {
     font-size: 16px;
     font-weight: 500;
     line-height: 22.4px;
@@ -543,11 +540,7 @@
     margin-top: 28px;
   }
 
-  section.wrap-list__trackguide
-    .right.descwrap
-    .list-trackinfo
-    .inner
-    p:nth-child(2) {
+  section.wrap-list__trackguide .right.descwrap .list-trackinfo .inner p:nth-child(2) {
     font-size: 20px;
   }
 
