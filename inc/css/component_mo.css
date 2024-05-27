@@ -274,6 +274,7 @@
   .card_type01 {
     min-width: 16.125rem;
     height: 26.875rem;
+    min-height: 26.875rem;
   }
   .card_type01.card_swiper {
     height: 16.3rem;

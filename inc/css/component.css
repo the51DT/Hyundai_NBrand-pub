@@ -838,6 +838,12 @@ input[type="radio"]:focus + label {
   gap: 1.5rem;
   margin: 0 auto;
 }
+/* 트랙용 */
+@media screen and (max-width: 1280px) {
+  .card_drop.track_list {
+    grid-template-columns: repeat(2, minmax(0, 29rem));
+  }
+}
 
 /* card_type01 */
 .card_type01 {
@@ -845,7 +851,7 @@ input[type="radio"]:focus + label {
   flex-direction: column;
   width: 100%;
   max-width: 29rem;
-  height: 40vmax;
+  height: 40vw;
   min-height: 28.5rem;
   max-height: 40.25rem;
   font-family: "Hyundai Sans Head Office";
@@ -917,10 +923,22 @@ input[type="radio"]:focus + label {
   font-size: 4.25rem;
   font-weight: 700;
   line-height: 125%;
-  text-shadow: calc(0.125rem * 1) 0 0 #fff, calc(0.125rem * 0.9239) calc(0.125rem * 0.3827) 0 #fff, calc(0.125rem * 0.7071) calc(0.125rem * 0.7071) 0 #fff, calc(0.125rem * 0.3827) calc(0.125rem * 0.9239) 0 #fff, 0 calc(0.125rem * 1) 0 #fff,
-    calc(0.125rem * -0.3827) calc(0.125rem * 0.9239) 0 #fff, calc(0.125rem * -0.7071) calc(0.125rem * 0.7071) 0 #fff, calc(0.125rem * -0.9239) calc(0.125rem * 0.3827) 0 #fff, calc(0.125rem * -1) 0 0 #fff,
-    calc(0.125rem * -0.9239) calc(0.125rem * -0.3827) 0 #fff, calc(0.125rem * -0.7071) calc(0.125rem * -0.7071) 0 #fff, calc(0.125rem * -0.3827) calc(0.125rem * -0.9239) 0 #fff, 0 calc(0.125rem * -1) 0 #fff,
-    calc(0.125rem * 0.3827) calc(0.125rem * -0.9239) 0 #fff, calc(0.125rem * 0.7071) calc(0.125rem * -0.7071) 0 #fff, calc(0.125rem * 0.9239) calc(0.125rem * -0.3827) 0 #fff;
+  text-shadow: calc(0.125rem * 1) 0 0 #fff,
+    calc(0.125rem * 0.9239) calc(0.125rem * 0.3827) 0 #fff,
+    calc(0.125rem * 0.7071) calc(0.125rem * 0.7071) 0 #fff,
+    calc(0.125rem * 0.3827) calc(0.125rem * 0.9239) 0 #fff,
+    0 calc(0.125rem * 1) 0 #fff,
+    calc(0.125rem * -0.3827) calc(0.125rem * 0.9239) 0 #fff,
+    calc(0.125rem * -0.7071) calc(0.125rem * 0.7071) 0 #fff,
+    calc(0.125rem * -0.9239) calc(0.125rem * 0.3827) 0 #fff,
+    calc(0.125rem * -1) 0 0 #fff,
+    calc(0.125rem * -0.9239) calc(0.125rem * -0.3827) 0 #fff,
+    calc(0.125rem * -0.7071) calc(0.125rem * -0.7071) 0 #fff,
+    calc(0.125rem * -0.3827) calc(0.125rem * -0.9239) 0 #fff,
+    0 calc(0.125rem * -1) 0 #fff,
+    calc(0.125rem * 0.3827) calc(0.125rem * -0.9239) 0 #fff,
+    calc(0.125rem * 0.7071) calc(0.125rem * -0.7071) 0 #fff,
+    calc(0.125rem * 0.9239) calc(0.125rem * -0.3827) 0 #fff;
 }
 .card_type01 .card_bottom {
   display: flex;
@@ -950,7 +968,7 @@ input[type="radio"]:focus + label {
 .card_type01 .card_detail {
   display: flex;
   justify-content: space-between;
-  gap: 0.88rem;
+  gap: min(4.5%, 0.88rem);
   margin-bottom: 0.5rem;
 }
 .card_type01 .card_detail li {
@@ -1059,8 +1077,8 @@ input[type="radio"]:focus + label {
   text-align: center;
 }
 .card_type02 .card_img img {
-  width: auto;
-  height: 100%;
+  width: 100%;
+  max-width: 13.9rem;
 }
 .card_type02 .card_detail {
   margin: 1.5rem 0 3.75rem;
@@ -1105,11 +1123,12 @@ input[type="radio"]:focus + label {
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  height: 18.8rem;
+  height: auto;
+  aspect-ratio: 464 / 300;
   background-color: #aacae6;
 }
 .card_type03.card_ranker {
-  height: 25.9rem;
+  aspect-ratio: 464 / 414;
 }
 .card_type03 .card_top {
   display: flex;
@@ -1150,8 +1169,13 @@ input[type="radio"]:focus + label {
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  height: 8.75rem;
+  height: 47%;
+  min-height: 5rem;
+  max-height: 8.75rem;
   background-color: #000000;
+}
+.card_type03.card_ranker .card_bottom {
+  height: 34%;
 }
 .card_type03 .card_bottom img {
   width: auto;
