@@ -522,17 +522,18 @@ input[type="radio"]:focus + label {
 **********/
 /* card layout */
 .card_scroll {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 29rem));
   justify-content: center;
   gap: 1.5rem;
-  height: max-content;
 }
 .card_scroll li {
   width: 100%;
+  max-width: 29rem;
 }
 .card_drop {
   display: grid;
-  grid-template-columns: repeat(3, minmax(auto, 29rem));
+  grid-template-columns: repeat(3, minmax(0, 29rem));
   justify-content: center;
   gap: 1.5rem;
   margin: 0 auto;
@@ -601,7 +602,7 @@ input[type="radio"]:focus + label {
 .card_type01.card_swiper .card_profile img {
   width: 13rem;
 }
-.card_type01:hover .card_profile img {
+.card_type01.card_swiper:hover .card_profile img {
   margin-bottom: -0.75rem;
 }
 .card_type01 .card_rank {
@@ -685,19 +686,26 @@ input[type="radio"]:focus + label {
   text-align: right;
 }
 .card_type01:hover .card_more {
-  display: flex;
+  clip-path: none;
+  width: 100%;
+  height: auto;
+  padding: 0.81rem 1.5rem;
 }
 .card_type01 .card_more {
-  /* 임시로 확인용 - 디스플레이 논 말고 다른거로 처리하기 */
-  display: none;
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.81rem 1.5rem;
   background-color: #de3111;
   color: #fff;
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 140%;
+  overflow: hidden;
+  border: 0;
+  width: 0.063rem;
+  height: 0.063rem;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
 }
 .card_type01 .card_more::after {
   content: "";
@@ -804,7 +812,6 @@ input[type="radio"]:focus + label {
 }
 
 /* card_type03 */
-/* ranker 위드 깨지는 거 확인해서 고치기 */
 .card_type03 {
   display: flex;
   flex-direction: column;
