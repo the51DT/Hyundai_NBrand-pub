@@ -294,6 +294,9 @@
   .card_type01.card_swiper .card_profile img {
     width: 8.9375rem;
   }
+  .card_type01.card_swiper:hover .card_profile img {
+    margin-bottom: 0;
+  }
   .card_type01 .card_rank {
     font-size: 2.5rem;
   }
@@ -336,6 +339,12 @@
   .card_type01 .card_detail li span:last-of-type {
     font-size: 1.125rem;
   }
+  .card_type01:hover .card_more {
+    width: 0.063rem;
+    height: 0.063rem;
+    padding: 0;
+    clip-path: inset(50%);
+  }
 
   .card_drop .card_type01 {
     width: 100%;
@@ -345,6 +354,9 @@
   .card_drop .card_type01 .card_profile img {
     width: 10rem;
     height: 10rem;
+  }
+  .card_drop .card_type01:hover .card_profile img {
+    margin-bottom: 0;
   }
   .card_drop .card_type01.card_team .card_profile img {
     width: 12.5rem;
@@ -391,9 +403,6 @@
   }
   .card_type02 .card_day {
     font-size: 2.5rem;
-  }
-  .card_type02 .btn {
-    font-size: 0.875rem;
   }
 
   /* card_type03 */
