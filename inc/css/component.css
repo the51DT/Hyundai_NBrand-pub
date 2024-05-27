@@ -1099,23 +1099,6 @@ input[type="radio"]:focus + label {
   font-weight: 500;
   line-height: 140%;
 }
-.card_type02 .btn {
-  padding: 0.87rem 0;
-  width: 100%;
-  font-family: "Hyundai Sans Text Office";
-  font-weight: 700;
-  font-size: 1rem;
-  line-height: 100%;
-}
-.card_type02 .btn:hover {
-  background: #de3111;
-}
-.card_type02 .btn span {
-  margin-left: 0.25rem;
-  background-repeat: no-repeat;
-  background-position: center;
-  flex-shrink: 0;
-}
 
 /* card_type03 */
 .card_type03 {
