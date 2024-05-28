@@ -854,7 +854,7 @@ input[type="radio"]:focus + label {
   height: 40vw;
   min-height: 28.5rem;
   max-height: 40.25rem;
-  font-family: "Hyundai Sans Head Office";
+  font-family: "Hyundai Sans Head";
 }
 .card_type01.card_swiper {
   min-height: 16.3rem;
@@ -960,7 +960,7 @@ input[type="radio"]:focus + label {
 }
 .card_type01 .card_subtit {
   color: #aacae6;
-  font-family: "Hyundai Sans Text Office";
+  font-family: "Hyundai Sans Text";
   font-size: 0.875rem;
   font-weight: 500;
   line-height: 140%;
@@ -980,7 +980,7 @@ input[type="radio"]:focus + label {
   gap: 0.5rem;
 }
 .card_type01 .card_detail li span:first-of-type {
-  font-family: "Hyundai Sans Text Office";
+  font-family: "Hyundai Sans Text";
   font-size: 0.875rem;
   font-weight: 500;
   line-height: 140%;
@@ -1064,7 +1064,7 @@ input[type="radio"]:focus + label {
   background-color: #ffffff;
 }
 .card_type02 .card_tit {
-  font-family: "Hyundai Sans Text Office";
+  font-family: "Hyundai Sans Text";
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 140%;
@@ -1082,7 +1082,7 @@ input[type="radio"]:focus + label {
 }
 .card_type02 .card_detail {
   margin: 1.5rem 0 3.75rem;
-  font-family: "Hyundai Sans Head Office";
+  font-family: "Hyundai Sans Head";
   font-weight: 700;
 }
 .card_type02 .card_month {
@@ -1094,7 +1094,7 @@ input[type="radio"]:focus + label {
   line-height: 125%;
 }
 .card_type02 .card_track {
-  font-family: "Hyundai Sans Text Office";
+  font-family: "Hyundai Sans Text";
   font-size: 1rem;
   font-weight: 500;
   line-height: 140%;
@@ -1121,7 +1121,7 @@ input[type="radio"]:focus + label {
   justify-content: space-between;
   align-items: start;
   padding: 1.25rem 2.5rem 0;
-  font-family: "Hyundai Sans Head Office";
+  font-family: "Hyundai Sans Head";
   text-align: right;
 }
 .card_type03.card_ranker .card_top {
@@ -1146,7 +1146,7 @@ input[type="radio"]:focus + label {
   line-height: 140%;
 }
 .card_type03 .card_mission {
-  font-family: "Hyundai Sans Text Office";
+  font-family: "Hyundai Sans Text";
   font-size: 0.875rem;
   font-weight: 500;
   line-height: 140%;
@@ -1177,13 +1177,13 @@ input[type="radio"]:focus + label {
   gap: 0.25rem;
 }
 .card_type03 .card_name {
-  font-family: "Hyundai Sans Head Office";
+  font-family: "Hyundai Sans Head";
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 140%;
 }
 .card_type03 .card_community {
-  font-family: "Hyundai Sans Text Office";
+  font-family: "Hyundai Sans Text";
   font-size: 0.875rem;
   font-weight: 500;
   line-height: 140%;
@@ -1391,7 +1391,8 @@ input[type="radio"]:focus + label {
 }
 
 .wrap-list.list02 .__bottom .wrap-lists {
-  grid-template-columns: 15% 50% 33%;
+  /* grid-template-columns: 15% 50% 33%; */
+  grid-template-columns: 15% 52% 28%;
 }
 
 .wrap-list .__bottom .wrap-lists .list-box:nth-child(1) {
@@ -1418,12 +1419,23 @@ input[type="radio"]:focus + label {
 .wrap-list.list02 .__bottom .wrap-lists .list-box:nth-child(3) {
   width: 100%;
   max-width: 500px;
+  display: flex;
+  margin-left: -2rem;
 }
 
 .wrap-list.list01 .btn.btn-md-outline01 {
   margin: 0 auto;
   display: flex;
   align-items: center;
+}
+
+/* list01, list02 일부 반응형 */
+@media screen and (min-width: 1025px) and (max-width: 1400px) {
+  .wrap-list.list01 .__bottom .wrap-lists .list-box:nth-child(3) {
+    text-align: center;
+    max-width: 124px;
+    margin-right: 2rem;
+  }
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1135px) {
@@ -1560,7 +1572,7 @@ input[type="radio"]:focus + label {
   text-align: left;
   max-width: 44.125rem;
   width: 100%;
-  font-family: "Hyundai Sans Text Office";
+  font-family: "Hyundai Sans Text";
 }
 
 .wrap-list.list04 .inner .box .box-desc.right .desc-note {
@@ -1568,6 +1580,7 @@ input[type="radio"]:focus + label {
   font-weight: 500;
   line-height: 19.6px;
   text-align: left;
+  font-family: "Hyundai Sans Text";
 }
 
 .wrap-list.list04 .inner .box.box02 {
@@ -1601,6 +1614,7 @@ input[type="radio"]:focus + label {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .dropdown .wrap-dropdown-selected button.btn-only-icon-bg01-square .arrow-down {
@@ -1664,7 +1678,6 @@ input[type="radio"]:focus + label {
   display: flex;
   align-items: center;
   background-color: #aacae6;
-  font-family: "Hyundai Sans Text Office";
 }
 
 .dropdown-menu {
@@ -1693,10 +1706,10 @@ input[type="radio"]:focus + label {
 .dropdown-menu a {
   font-size: 1.25rem;
   line-height: 1.75rem;
-  font-family: "Hyundai Sans Text Office";
   font-weight: 500;
   margin-right: 0.25rem;
   cursor: pointer;
+  font-family: "Hyundai Sans Text";
 }
 
 .dropdown-menu li:hover {
