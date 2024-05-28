@@ -820,27 +820,22 @@ input[type="radio"]:focus + label {
 /*********
   card
 **********/
-/* card layout */
-.card_scroll {
+/* grid layout */
+.grid_2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 44.3rem));
+  justify-content: center;
+  gap: 1.5rem;
+}
+.grid_3 {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 29rem));
   justify-content: center;
   gap: 1.5rem;
-}
-.card_scroll li {
-  width: 100%;
-  max-width: 29rem;
-}
-.card_drop {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 29rem));
-  justify-content: center;
-  gap: 1.5rem;
-  margin: 0 auto;
 }
 /* 트랙용 */
 @media screen and (max-width: 1280px) and (min-width: 1023px) {
-  .card_drop.track_list {
+  .grid_3.track_list {
     grid-template-columns: repeat(2, minmax(0, 29rem));
   }
 }
@@ -1025,34 +1020,34 @@ input[type="radio"]:focus + label {
   mask-size: contain;
 }
 
-.card_drop .card_type01 {
+.grid_3 .card_type01 {
   height: 26.375rem;
   min-height: 0;
 }
-.card_drop .card_type01 .card_profile {
+.grid_3 .card_type01 .card_profile {
   background-image: none;
 }
-.card_drop .card_type01 .card_profile img {
+.grid_3 .card_type01 .card_profile img {
   width: 13rem;
   height: 13rem;
 }
-.card_drop .card_type01:hover .card_profile img {
+.grid_3 .card_type01:hover .card_profile img {
   margin-bottom: -0.75rem;
 }
-.card_drop .card_type01.card_team .card_profile {
+.grid_3 .card_type01.card_team .card_profile {
   align-items: center;
   padding-bottom: 0;
 }
-.card_drop .card_type01.card_team .card_profile img {
+.grid_3 .card_type01.card_team .card_profile img {
   width: 17.5rem;
 }
-.card_drop .card_type01.card_team:hover .card_profile img {
+.grid_3 .card_type01.card_team:hover .card_profile img {
   margin-bottom: 0;
 }
-.card_drop .card_type01 .card_rank {
+.grid_3 .card_type01 .card_rank {
   font-size: 3.5rem;
 }
-.card_drop .card_type01 .card_num {
+.grid_3 .card_type01 .card_num {
   font-size: 3.5rem;
 }
 
