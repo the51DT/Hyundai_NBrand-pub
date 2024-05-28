@@ -693,7 +693,8 @@
     overflow-x: scroll;
     display: flex;
   }
-  .table-type02 {
+  .table-type02,
+  .table-type03 {
     max-width: 100%;
     margin: 0;
   }
