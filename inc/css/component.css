@@ -1711,3 +1711,61 @@ input[type="radio"]:focus + label {
 .dropdown-on {
   display: block;
 }
+/* table */
+.txt-center {
+  text-align: center;
+}
+.txt-left {
+  text-align: left;
+}
+.txt-right {
+  text-align: right;
+}
+.roundresult-box {
+  display: none;
+}
+.table-type01 tbody tr td:first-child {
+  color: #de3111;
+}
+table {
+  border-collapse: collapse;
+}
+.table-type01 {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.table-type02 {
+  max-width: 1348px;
+  margin: 0 auto;
+}
+.table-type01 thead tr,
+.table-type02 thead tr {
+  border-bottom: 2px solid #787d80;
+}
+.table-type01 thead th {
+  padding: 22px 0 21px 0;
+}
+.table-type01 tbody tr,
+.table-type02 tbody tr {
+  border-bottom: 1px solid #bbbbbb;
+}
+.table-type01 tbody td,
+.table-type02 tbody td {
+  padding: 28px 0 27px 0;
+}
+.table-type01 tbody td.txt-left {
+  padding-left: 12px;
+}
+.table-type01 tbody td.txt-right {
+  padding-right: 12px;
+}
+.table-type02 thead tr {
+  border-bottom: 2px solid #787d80;
+}
+.table-type02 thead th {
+  padding: 12px 0 11px 0;
+}
+.table-type02 thead th:first-child,
+.table-type02 tbody tr td:first-child {
+  padding-left: 12px;
+}
