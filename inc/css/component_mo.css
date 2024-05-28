@@ -750,4 +750,71 @@
   .table-inner {
     width: 225%;
   }
+  /* seasonstats */
+  .seasonstats-box {
+    max-width: 100%;
+    margin: 0;
+  }
+  .seasonstats-box p {
+    padding: 12px 20px;
+    font-size: 18px;
+    line-height: 25.2px;
+  }
+  .seasonstats-box dl {
+    gap: 0;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .seasonstats-box .blue-box {
+    padding: 0;
+    gap: 0;
+  }
+  .seasonstats-box .skyblue-box {
+    padding: 0;
+    gap: 0;
+  }
+  .seasonstats-box dl.blue-box > div {
+    min-width: auto;
+  }
+  .seasonstats-box dl.skyblue-box > div {
+    min-width: auto;
+  }
+  .seasonstats-box dl dt {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22.4px;
+  }
+  .seasonstats-box dl dd {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 25.2px;
+  }
+  .seasonstats-box dl > div {
+    flex-direction: row;
+    gap: 0;
+    width: 50%;
+    justify-content: space-between;
+  }
+  .seasonstats-box .blue-box,
+  .seasonstats-box .skyblue-box {
+    padding: 0;
+  }
+  .seasonstats-box dl > div:first-child {
+    padding: 20px 25.5px 12px 20px;
+  }
+  .seasonstats-box dl > div:nth-child(2n + 1) {
+    padding: 20px 25.5px 12px 20px;
+  }
+  .seasonstats-box dl.blue-box > div:nth-child(2n) {
+    padding: 20px 23px 12px 25.5px;
+  }
+  .seasonstats-box dl.skyblue-box > div:nth-child(2n) {
+    padding: 20px 20px 12px 25.5px;
+  }
+  .seasonstats-box dl > div:not(:nth-child(5), :nth-child(6)) {
+    border-bottom: 1px solid #787d80;
+  }
+  .seasonstats-box.seasonstats-type2 p {
+    background-color: #000;
+  }
 }

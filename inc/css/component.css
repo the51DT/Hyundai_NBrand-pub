@@ -1782,3 +1782,52 @@ table {
 .table-type02 tbody tr td:first-child {
   padding-left: 12px;
 }
+/* seasonstats */
+.seasonstats-box {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.seasonstats-box p {
+  color: #fff;
+  background-color: #003777;
+  padding: 25px 0 25px 40px;
+  text-align: left;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 50px;
+}
+.seasonstats-box dl {
+  display: flex;
+}
+.seasonstats-box .blue-box {
+  background-color: #aacae6;
+  padding: 32px 0 40px 40px;
+  gap: 7.5%;
+}
+.seasonstats-box .skyblue-box {
+  background-color: #e6eff8;
+  padding: 32px 39px 40px 40px;
+  gap: 8%;
+}
+.seasonstats-box dl.blue-box > div {
+  min-width: 9.72%;
+}
+.seasonstats-box dl.skyblue-box > div {
+  min-width: 10%;
+}
+.seasonstats-box dl dt {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+}
+.seasonstats-box dl dd {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 44.8px;
+}
+.seasonstats-box dl > div {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: center;
+}
