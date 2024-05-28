@@ -53,6 +53,8 @@
             <li><a data-scroll='cont08' title="내부링크">Accordion</a></li>
             <li><a data-scroll='cont09' title="내부링크">Table</a></li>
             <li><a data-scroll='cont10' title="내부링크">Season stats</a></li>
+            <li><a data-scroll='cont11' title="내부링크">Form</a></li>
+
             <!--
             <li><a data-scroll='cont06' title="내부링크">라디오박스</a></li>
             <li><a data-scroll='cont07' title="내부링크">셀렉트박스</a></li>
@@ -2119,7 +2121,158 @@
             </div>
           </div>
         </section>
+        <!-- cont 10 end -->
+        <section id="cont11" class="section">
+          <h2 class="guideTit">Form elements</h2>
+          <div class="info">
+            <div class="subSection">
+              <h3 class="guideSubTit">Form Title</h3>
+              <div class="ui-item">
+                <div class="wrap-form label-tit-type01">
+                  <label for="username">
+                    <span>
+                      Title
+                    </span>
+                  </label>
+                </div>
 
+                <div class="wrap-form label-tit-type02">                
+                  <label for="username" class="required">
+                    <span>
+                      Title required
+                    </span>
+                  </label>
+                </div>
+
+              </div>
+              <div class="code">
+                <pre class="brush: js;">
+</pre>
+              </div>
+            </div>
+
+            <div class="subSection">
+              <h3 class="guideSubTit">comment / 해시태그 강조 색상: #de3111</h3>
+              <div class="ui-item">
+                <!-- comment-type01-->
+                <div class="wrap-form">
+                  <div class="wrap-form-bottom comment-type01">
+                    <span class="comment">
+                      You can enter at least 2 characters and up to 100 characters.
+                    </span>
+                  </div>
+                </div>
+
+                <!--  comment-type02-->
+                <div class="wrap-form">
+                  <div class="wrap-form-bottom comment-type02">
+                    <span class="text-comment">
+                      Administrator approval is required when modifying the N Community introduction.
+                    </span>  
+                    
+                    <p class="text-num-chk">
+                      <span>10 / 200</span>
+                    </p>
+                  </div>
+                </div>
+
+                <!--  comment-type03,상하 마진값 7px -->
+                <div class="wrap-form">
+                  <!-- .accent{ color: #de3111 } -->
+                  <div class="wrap-form-bottom comment-type03">
+                    <ul>
+                      <li>
+                        Missions Tag <span class="hashtag accent">#Beauty Shot</span> is automatically entered.
+                      </li>
+                      <li>
+                        Up to 10 tags can be entered.
+                      </li>
+                       <li>
+                        Tags that are unrelated to the content, obscene or illegal may be deleted without notice.
+                      </li>
+                    </ul>
+                  </div> 
+                </div>
+
+                <!-- comment-type04, 상하 마진값 15px -->
+                <div class="wrap-form">
+                 <div class="wrap-form-bottom comment-type04">
+                    <ul>
+                      <li>
+                        Missions Tag <span class="hashtag accent">#Beauty Shot</span> is automatically entered.
+                      </li>
+                      <li>
+                        Up to 10 tags can be entered.
+                      </li>
+                       <li>
+                        Tags that are unrelated to the content, obscene or illegal may be deleted without notice.
+                      </li>
+                    </ul>
+                  </div> 
+                 </div>
+              </div>
+              <div class="code">
+                <pre class="brush: js;">
+</pre>
+              </div>
+            </div>
+
+            <div class="subSection">
+              <h3 class="guideSubTit">Textarea</h3>
+              <div class="ui-item">
+            <div class="wrap-form textarea">                 
+              <!-- text area -->
+                  <textarea placeholder="* Please enter the reward information you wish to apply for. (OOO goods, size L, 1 piece, etc.) &#10; * Please enter your nickname, name, address, email, and mobile phone number."></textarea>
+
+                  <div class="wrap-form-bottom comment-type02">
+                    <span class="text-comment">
+                      Administrator approval is required when modifying the N Community introduction.
+                    </span>  
+                    
+                    <p class="text-num-chk">
+                      <span>0 / 500</span>
+                    </p>
+                  </div>
+                </div>                
+              </div>
+              <div class="code">
+                <pre class="brush: js;">
+</pre>
+              </div>
+            </div>
+
+            <!-- radio button-->
+            <div class="subSection">
+              <h3 class="guideSubTit">Radio button</h3>
+              <div class="ui-item">
+                <div class="wrap-form radio">                 
+                  <label class="label-radiobtn">
+                    <span class="wrap-radiobtn">
+                      <input type="radio" name="one"/>
+                    </span>
+
+                    <span class="txt">Sign up approved</span>
+                  </label>
+                </div>               
+                
+                 <div class="wrap-form radio">                 
+                  <label class="label-radiobtn">
+                    <span class="wrap-radiobtn">
+                      <input type="radio" name="one"/>
+                    </span>
+
+                    <span class="txt">Sign up now</span>
+                  </label>
+                </div>   
+              </div>
+              <div class="code">
+                <pre class="brush: js;">
+</pre>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- cont 11 end -->
     </section>
   </div>
   <!-- //Section -->
@@ -2181,7 +2334,8 @@
 
   // dropdown - js of cont 08 
   const dropdownBtn = document.querySelector(".wrap-dropdown-selected");
-  const btnRightArr = document.querySelector('.arrow-down');
+  const btnRightArr = document.querySelector(
+      '.dropdown .wrap-dropdown-selected button.btn-only-icon-bg01-square .arrow-down');
   const dropdownMenu = document.querySelector(".dropdown-menu");
 
   dropdownBtn.addEventListener("click", function () {
@@ -2201,8 +2355,6 @@
     event.preventDefault();
     const btnTxtWrap = document.querySelector(".dropdown-btn");
     const dropdownMenu = document.querySelector(".dropdown-menu");
-    const btnRightArr = document.querySelector(
-      '.dropdown .wrap-dropdown-selected button.btn-only-icon-bg01-square .arrow-down');
 
     btnTxtWrap.innerText = optionText;
     if (btnTxtWrap.innerText = optionText) {

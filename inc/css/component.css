@@ -1672,7 +1672,7 @@ input[type="radio"]:focus + label {
 
 .dropdown-menu li {
   display: flex;
-  align-items: start;
+  align-items: center;
   padding: 26px 0 26px 60px;
   border-bottom: 2px solid #d9d9d9;
   cursor: pointer;
@@ -1824,4 +1824,219 @@ table {
   flex-direction: column;
   gap: 12px;
   text-align: center;
+}
+
+/* cont 10 form element start*/
+/* 1) label start*/
+.wrap-form {
+  width: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrap-form.label-tit-type01 label,
+.wrap-form.label-tit-type02 label {
+  position: relative;
+  width: 100%;
+  font-family: "Hyundai Sans Head";
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.75rem;
+  text-align: left;
+}
+
+.wrap-form.label-tit-type01 label span,
+.wrap-form.label-tit-type02 label span {
+  position: relative;
+}
+
+.wrap-form.label-tit-type02 label.required span:after {
+  content: " *";
+  position: absolute;
+  right: -0.8rem;
+}
+/* 1) label end*/
+
+/* 2) input[type="text"], comment-type01~comment-type04 start*/
+.wrap-form input[type="text"] {
+  font-family: "Hyundai Sans Text";
+  margin-top: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.4rem;
+  padding: 10px 8px;
+  color: #000;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 4px solid #000;
+  width: 100%;
+}
+.wrap-form input.form-input-text::placeholder {
+  color: #777;
+}
+span.text-comment {
+  font-family: "Hyundai Sans Text";
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.225rem;
+  color: #777;
+}
+.wrap-form span.text-comment {
+  font-family: "Hyundai Sans Text";
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.225rem;
+  color: #777;
+}
+p.text-num-chk {
+  font-size: 0.75rem;
+  color: #777;
+}
+.wrap-form .wrap-form-bottom {
+  margin-top: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrap-form .wrap-form-bottom.comment-type01,
+.wrap-form .wrap-form-bottom.comment-type02,
+.wrap-form .wrap-form-bottom.comment-type03,
+.wrap-form .wrap-form-bottom.comment-type04 {
+  font-family: "Hyundai Sans Text";
+}
+.wrap-form .wrap-form-bottom.comment-type01 span.comment,
+.wrap-form .wrap-form-bottom.comment-type02 span.comment {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.225rem;
+  color: #777;
+}
+
+.wrap-form .wrap-form-bottom.comment-type02 {
+  align-items: baseline;
+}
+
+@media screen and (max-width: 375px) {
+  .wrap-form .wrap-form-bottom.comment-type02 span.text-comment {
+    max-width: 15rem;
+    width: 100%;
+  }
+}
+
+/* comment-type03, comment-type04 */
+.wrap-form .wrap-form-bottom.comment-type03 ul,
+.wrap-form .wrap-form-bottom.comment-type04 ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 0;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 1.5rem;
+}
+.wrap-form .wrap-form-bottom.comment-type03 ul li,
+.wrap-form .wrap-form-bottom.comment-type04 ul li {
+  color: #777;
+  list-style: disc;
+  display: list-item;
+  text-align: -webkit-match-parent;
+  unicode-bidi: isolate;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.225rem;
+}
+
+/* comment-type03 */
+.wrap-form .wrap-form-bottom.comment-type03 ul li {
+  margin: 7px 0;
+  font-family: "Hyundai Sans Text";
+}
+.wrap-form .wrap-form-bottom.comment-type03 ul li span.hashtag,
+.wrap-form .wrap-form-bottom.comment-type04 ul li span.hashtag {
+  color: #000;
+  text-decoration: underline;
+}
+.wrap-form .wrap-form-bottom.comment-type03 ul li span.hashtag.accent {
+  color: #de3111;
+  text-decoration: underline;
+}
+
+/* comment-type04 */
+.wrap-form .wrap-form-bottom.comment-type04 ul li {
+  margin: 15px 0;
+}
+
+/* textarea */
+.wrap-form textarea {
+  position: relative;
+  padding: 14px 12px;
+  font-family: "Hyundai Sans Text";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22.4px;
+  text-align: left;
+  border: 1px solid #000;
+  height: 10rem;
+}
+
+.wrap-form textarea::placeholder {
+  color: #333;
+  width: fit-content;
+  white-space: pre-line;
+}
+
+/* radio button */
+.wrap-form.radio {
+  padding: 10px 0;
+}
+.wrap-form label.label-radiobtn {
+  display: flex;
+  align-items: center;
+  max-height: 1.4rem;
+}
+.wrap-form input[type="radio"] {
+  opacity: 1;
+  position: static;
+  z-index: auto;
+  width: fit-content;
+  height: fit-content;
+  margin: 3px 3px 0px 5px;
+}
+.wrap-form input[type="radio" i] {
+  background-color: initial;
+  cursor: default;
+  appearance: none;
+  box-sizing: border-box;
+  margin: 3px 3px 0px 5px;
+  padding: initial;
+}
+.wrap-form input[type="radio"]:checked {
+  display: block;
+  background-color: #333;
+  border-radius: 50%;
+  margin: 0;
+  border: 3px solid #fff;
+  width: 19px;
+  padding: 0;
+  height: 19px;
+}
+.wrap-form .wrap-radiobtn {
+  border: 2px solid #000;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 8px;
+}
+.wrap-form .label-radiobtn {
+  cursor: pointer;
+}
+.wrap-form.radio .label-radiobtn span.txt {
+  font-weight: 400;
+  line-height: 1.4rem;
+  font-size: 1rem;
 }
