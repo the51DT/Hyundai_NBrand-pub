@@ -1999,7 +1999,7 @@ p.text-num-chk {
 /* radio button */
 .wrap-form .wrap-radio.vertical .radio {
   /* 시안이 없어서 임의로 값 지정하였음 */
-  margin: 0.5rem 0;
+  margin: 1rem 0;
 }
 .wrap-form.horizontal .wrap-radio {
   margin-right: 40px;
