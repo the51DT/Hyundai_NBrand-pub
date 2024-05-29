@@ -918,10 +918,22 @@ input[type="radio"]:focus + label {
   font-size: 4.25rem;
   font-weight: 700;
   line-height: 125%;
-  text-shadow: calc(0.125rem * 1) 0 0 #fff, calc(0.125rem * 0.9239) calc(0.125rem * 0.3827) 0 #fff, calc(0.125rem * 0.7071) calc(0.125rem * 0.7071) 0 #fff, calc(0.125rem * 0.3827) calc(0.125rem * 0.9239) 0 #fff, 0 calc(0.125rem * 1) 0 #fff,
-    calc(0.125rem * -0.3827) calc(0.125rem * 0.9239) 0 #fff, calc(0.125rem * -0.7071) calc(0.125rem * 0.7071) 0 #fff, calc(0.125rem * -0.9239) calc(0.125rem * 0.3827) 0 #fff, calc(0.125rem * -1) 0 0 #fff,
-    calc(0.125rem * -0.9239) calc(0.125rem * -0.3827) 0 #fff, calc(0.125rem * -0.7071) calc(0.125rem * -0.7071) 0 #fff, calc(0.125rem * -0.3827) calc(0.125rem * -0.9239) 0 #fff, 0 calc(0.125rem * -1) 0 #fff,
-    calc(0.125rem * 0.3827) calc(0.125rem * -0.9239) 0 #fff, calc(0.125rem * 0.7071) calc(0.125rem * -0.7071) 0 #fff, calc(0.125rem * 0.9239) calc(0.125rem * -0.3827) 0 #fff;
+  text-shadow: calc(0.125rem * 1) 0 0 #fff,
+    calc(0.125rem * 0.9239) calc(0.125rem * 0.3827) 0 #fff,
+    calc(0.125rem * 0.7071) calc(0.125rem * 0.7071) 0 #fff,
+    calc(0.125rem * 0.3827) calc(0.125rem * 0.9239) 0 #fff,
+    0 calc(0.125rem * 1) 0 #fff,
+    calc(0.125rem * -0.3827) calc(0.125rem * 0.9239) 0 #fff,
+    calc(0.125rem * -0.7071) calc(0.125rem * 0.7071) 0 #fff,
+    calc(0.125rem * -0.9239) calc(0.125rem * 0.3827) 0 #fff,
+    calc(0.125rem * -1) 0 0 #fff,
+    calc(0.125rem * -0.9239) calc(0.125rem * -0.3827) 0 #fff,
+    calc(0.125rem * -0.7071) calc(0.125rem * -0.7071) 0 #fff,
+    calc(0.125rem * -0.3827) calc(0.125rem * -0.9239) 0 #fff,
+    0 calc(0.125rem * -1) 0 #fff,
+    calc(0.125rem * 0.3827) calc(0.125rem * -0.9239) 0 #fff,
+    calc(0.125rem * 0.7071) calc(0.125rem * -0.7071) 0 #fff,
+    calc(0.125rem * 0.9239) calc(0.125rem * -0.3827) 0 #fff;
 }
 .card_type01 .card_bottom {
   display: flex;
@@ -1973,7 +1985,7 @@ p.text-num-chk {
   position: relative;
   padding: 14px 12px;
   font-family: "Hyundai Sans Text";
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 500;
   line-height: 22.4px;
   text-align: left;
@@ -1988,55 +2000,100 @@ p.text-num-chk {
 }
 
 /* radio button */
-.wrap-form.radio {
+
+.wrap-form .wrap-radio.vertical .radio {
+  /* 시안이 없어서 임의로 값 지정하였음 */
+  margin: 0.5rem 0;
+}
+.wrap-form.horizontal .wrap-radio {
+  margin-right: 40px;
+}
+.wrap-form.horizontal .wrap-radio:last-child {
+  margin-right: 0;
+}
+.wrap-radio {
   padding: 10px 0;
 }
-.wrap-form label.label-radiobtn {
+.wrap-radio.horizontal {
+  display: flex;
+  flex-direction: row;
+}
+.wrap-radio label.label-radiobtn {
   display: flex;
   align-items: center;
   max-height: 1.4rem;
 }
-.wrap-form input[type="radio"] {
+.wrap-radio input[type="radio"] {
   opacity: 1;
-  position: static;
-  z-index: auto;
-  width: fit-content;
-  height: fit-content;
-  margin: 3px 3px 0px 5px;
 }
-.wrap-form input[type="radio" i] {
-  background-color: initial;
-  cursor: default;
-  appearance: none;
-  box-sizing: border-box;
-  margin: 3px 3px 0px 5px;
-  padding: initial;
-}
-.wrap-form input[type="radio"]:checked {
-  display: block;
-  background-color: #333;
-  border-radius: 50%;
-  margin: 0;
-  border: 3px solid #fff;
-  width: 19px;
-  padding: 0;
-  height: 19px;
-}
-.wrap-form .wrap-radiobtn {
-  border: 2px solid #000;
-  border-radius: 50%;
-  width: 25px;
-  height: 25px;
+.radio {
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin-right: 8px;
 }
-.wrap-form .label-radiobtn {
+.radio input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+.radio input[type="radio"] + .radio-label:before {
+  content: "";
+  background: #fff;
+  border: 1px solid #000;
+  border-radius: 50%;
+  display: inline-block;
+  width: 1.4em;
+  height: 1.4em;
+  position: relative;
+  margin-right: 0;
+  vertical-align: top;
+  cursor: pointer;
+  text-align: center;
+  transition: all 250ms ease;
+}
+.radio input[type="radio"] + .radio-label {
+  display: flex;
+  align-items: center;
   cursor: pointer;
 }
-.wrap-form.radio .label-radiobtn span.txt {
+.wrap-radio.horizontal .radio input[type="radio"] + .radio-label {
+  margin-right: 40px;
+}
+.radio input[type="radio"]:checked + .radio-label:before {
+  background-color: #000;
+  box-shadow: inset 0 0 0 4px #fff;
+}
+.radio input[type="radio"]:checked + .radio-label {
+  box-shadow: none !important;
+  outline: none;
+  border: none;
+}
+
+.radio input[type="radio"] + .radio-label:focus + .radio-label:before {
+  outline: none;
+  border: none;
+}
+.radio label.radio-label span.txt {
+  margin-left: 8px;
   font-weight: 400;
   line-height: 1.4rem;
   font-size: 1rem;
+  font-family: "Hyundai Sans Text";
+}
+
+@media screen and (max-width: 450px) {
+  .wrap-radio.horizontal {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+/* wrap-form attach file */
+.wrap-form.attach .upload-btn {
+  display: inline-block;
+  cursor: pointer;
+}
+.wrap-form.attach .upload-btn img {
+  max-width: 5.875rem;
+}
+.wrap-form.attach input[type="file"] {
+  display: none;
 }

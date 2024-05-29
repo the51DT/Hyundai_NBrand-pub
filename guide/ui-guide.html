@@ -2171,7 +2171,7 @@
                     </span>  
                     
                     <p class="text-num-chk">
-                      <span>10 / 200</span>
+                      <span>0 / 200</span>
                     </p>
                   </div>
                 </div>
@@ -2220,7 +2220,7 @@
             <div class="subSection">
               <h3 class="guideSubTit">Textarea</h3>
               <div class="ui-item">
-            <div class="wrap-form textarea">                 
+                <div class="wrap-form textarea">                 
               <!-- text area -->
                   <textarea placeholder="* Please enter the reward information you wish to apply for. (OOO goods, size L, 1 piece, etc.) &#10; * Please enter your nickname, name, address, email, and mobile phone number."></textarea>
 
@@ -2245,25 +2245,54 @@
             <div class="subSection">
               <h3 class="guideSubTit">Radio button</h3>
               <div class="ui-item">
-                <div class="wrap-form radio">                 
-                  <label class="label-radiobtn">
-                    <span class="wrap-radiobtn">
-                      <input type="radio" name="one"/>
-                    </span>
+                <div class="wrap-form ">
+                  <div class="wrap-radio vertical">
+                    <div class="radio">
+                      <input id="radio-1" name="radio" type="radio" checked>
+                      <label for="radio-1" class="radio-label"><span class="txt">Sign up approved</span></label>
+                    </div>
 
-                    <span class="txt">Sign up approved</span>
-                  </label>
-                </div>               
-                
-                 <div class="wrap-form radio">                 
-                  <label class="label-radiobtn">
-                    <span class="wrap-radiobtn">
-                      <input type="radio" name="one"/>
-                    </span>
+                    <div class="radio">
+                      <input id="radio-2" name="radio" type="radio">
+                      <label  for="radio-2" class="radio-label"><span class="txt">Sign up now</span></label>
+                    </div>
 
-                    <span class="txt">Sign up now</span>
-                  </label>
-                </div>   
+                  </div>               
+                </div>
+
+
+                <div class="wrap-form">
+                  <div class="wrap-radio horizontal">
+                    <div class="radio">
+                      <input id="radio-3" name="radio" type="radio" checked>
+                      <label for="radio-3" class="radio-label"><span class="txt">Sign up approved</span> </label>
+                    </div>
+
+                    <div class="radio">
+                      <input id="radio-4" name="radio" type="radio">
+                      <label  for="radio-4" class="radio-label"> <span class="txt">now</span></label>
+                    </div>
+
+                  </div>  
+                </div>
+              </div>
+              <div class="code">
+                <pre class="brush: js;">
+</pre>
+              </div>
+            </div>
+
+            <!-- attach a file -->
+            <div class="subSection">
+              <h3 class="guideSubTit">attach a file</h3>
+              <div class="ui-item">
+                <div class="wrap-form attach">                 
+                    <input type="file" id="file" name="file">
+                      <label for="file" class="upload-btn">
+                        <img src="../inc/images/img/img_upload_image.png" alt="사진 파일 업로드 안내 이미지" />
+                      </label>
+                </div>
+
               </div>
               <div class="code">
                 <pre class="brush: js;">
