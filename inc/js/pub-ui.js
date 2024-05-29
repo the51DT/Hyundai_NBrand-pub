@@ -18,9 +18,6 @@
       // swiper 관련 변수
       self.$btnPlay = $(".btn-play");
       self.$btnSound = $(".btn-sound");
-
-      self.$swiperImgBox = $(".ty02Swiper .swiper-slide .img-area");
-      self.$swiperArrowBox = document.querySelector(".swiper-arrow-wrap");
     },
     bindEvents: function () {
       var self = this;
@@ -64,13 +61,6 @@
           self.$btnSound.addClass("on");
           self.$btnSound.find(".visually-hidden").text("소리 켜기");
         }
-      });
-
-      //창 리사이즈
-      window.addEventListener("resize", function () {
-        // var imgBoxSize = self.$swiperImgBox.css("width");
-        // self.$swiperArrowBox.style.setProperty("--size", imgBoxSize);
-        // console.log(imgBoxSize);
       });
     },
     swiperSlideEvent: function () {
@@ -244,7 +234,9 @@ $(".selectbox-trigger").click(function (event) {
   $options.toggle().attr("aria-hidden", function (i, attr) {
     return attr === "true" ? "false" : "true";
   });
-  $(".selectbox-wrap>div .selectbox-trigger").removeClass("active").attr("aria-expanded", "false");
+  $(".selectbox-wrap>div .selectbox-trigger")
+    .removeClass("active")
+    .attr("aria-expanded", "false");
   $(this)
     .toggleClass("active")
     .attr("aria-expanded", function () {
@@ -257,10 +249,23 @@ $(".selectbox-trigger").click(function (event) {
 $(".option").click(function (event) {
   event.stopPropagation();
   var selectedText = $(this).text();
-  $(this).closest(".selectbox-options").hide().attr("aria-hidden", "true").siblings(".selectbox-trigger").text(selectedText);
-  $(this).closest(".selectbox-options").find(".option").removeClass("active").attr("aria-selected", "false");
+  $(this)
+    .closest(".selectbox-options")
+    .hide()
+    .attr("aria-hidden", "true")
+    .siblings(".selectbox-trigger")
+    .text(selectedText);
+  $(this)
+    .closest(".selectbox-options")
+    .find(".option")
+    .removeClass("active")
+    .attr("aria-selected", "false");
   $(this).addClass("active").attr("aria-selected", "true");
-  $(this).closest(".selectbox-wrap>div").find(".selectbox-trigger").removeClass("active").attr("aria-expanded", "false");
+  $(this)
+    .closest(".selectbox-wrap>div")
+    .find(".selectbox-trigger")
+    .removeClass("active")
+    .attr("aria-expanded", "false");
 });
 
 $(window)
@@ -278,7 +283,10 @@ $(window)
       });
       $(".selectbox-options li.moclose-btn button").click(function (event) {
         event.stopPropagation();
-        $(this).closest(".selectbox-wrap>div").find(".selectbox-trigger").removeClass("active");
+        $(this)
+          .closest(".selectbox-wrap>div")
+          .find(".selectbox-trigger")
+          .removeClass("active");
         $(this).closest(".selectbox-options").hide();
         $(".selectbox-overlay").hide();
       });
