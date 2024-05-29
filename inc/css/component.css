@@ -1838,15 +1838,14 @@ table {
   text-align: center;
 }
 
-/* cont 10 form element start*/
-/* 1) label start*/
+/* cont 10 폼 요소 */
+/* 1) 폼 타이틀 제목 */
 .wrap-form {
   width: auto;
   position: relative;
   display: flex;
   flex-direction: column;
 }
-
 .wrap-form.label-tit-type01 label,
 .wrap-form.label-tit-type02 label {
   position: relative;
@@ -1857,20 +1856,17 @@ table {
   line-height: 1.75rem;
   text-align: left;
 }
-
 .wrap-form.label-tit-type01 label span,
 .wrap-form.label-tit-type02 label span {
   position: relative;
 }
-
 .wrap-form.label-tit-type02 label.required span:after {
   content: " *";
   position: absolute;
   right: -0.8rem;
 }
-/* 1) label end*/
 
-/* 2) input[type="text"], comment-type01~comment-type04 start*/
+/* 2) 폼 인풋 텍스트,  start*/
 .wrap-form input[type="text"] {
   font-family: "Hyundai Sans Text";
   margin-top: 8px;
@@ -1906,6 +1902,8 @@ p.text-num-chk {
   font-size: 0.75rem;
   color: #777;
 }
+
+/* comment-type01, comment-type02 */
 .wrap-form .wrap-form-bottom {
   margin-top: 8px;
   display: flex;
@@ -1925,11 +1923,11 @@ p.text-num-chk {
   line-height: 1.225rem;
   color: #777;
 }
-
 .wrap-form .wrap-form-bottom.comment-type02 {
   align-items: baseline;
 }
 
+/*  폼 하단 코멘트 일부 미디어쿼리 */
 @media screen and (max-width: 375px) {
   .wrap-form .wrap-form-bottom.comment-type02 span.text-comment {
     max-width: 15rem;
@@ -1992,15 +1990,13 @@ p.text-num-chk {
   border: 1px solid #000;
   height: 10rem;
 }
-
 .wrap-form textarea::placeholder {
-  color: #333;
+  color: #777;
   width: fit-content;
   white-space: pre-line;
 }
 
 /* radio button */
-
 .wrap-form .wrap-radio.vertical .radio {
   /* 시안이 없어서 임의로 값 지정하였음 */
   margin: 0.5rem 0;
@@ -2047,7 +2043,7 @@ p.text-num-chk {
   vertical-align: top;
   cursor: pointer;
   text-align: center;
-  transition: all 250ms ease;
+  /* transition: all 250ms ease; */
 }
 .radio input[type="radio"] + .radio-label {
   display: flex;
@@ -2066,7 +2062,6 @@ p.text-num-chk {
   outline: none;
   border: none;
 }
-
 .radio input[type="radio"] + .radio-label:focus + .radio-label:before {
   outline: none;
   border: none;
@@ -2078,7 +2073,7 @@ p.text-num-chk {
   font-size: 1rem;
   font-family: "Hyundai Sans Text";
 }
-
+/* 라디오 버튼 일부 미디어쿼리 */
 @media screen and (max-width: 450px) {
   .wrap-radio.horizontal {
     flex-direction: column;
@@ -2086,7 +2081,7 @@ p.text-num-chk {
   }
 }
 
-/* wrap-form attach file */
+/* cont 11 : 폼 인풋 - 파일 첨부 */
 .wrap-form.attach .upload-btn {
   display: inline-block;
   cursor: pointer;
