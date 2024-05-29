@@ -15,17 +15,15 @@
       self.$tabList = document.querySelectorAll(".tabs li");
       self.$tabConts = document.querySelectorAll(".tab-content");
 
-      // swiper 변수
+      // swiper 관련 변수
+      self.$btnPlay = $(".btn-play");
+      self.$btnSound = $(".btn-sound");
+
+      self.$swiperImgBox = $(".ty02Swiper .swiper-slide .img-area");
+      self.$swiperArrowBox = document.querySelector(".swiper-arrow-wrap");
     },
     bindEvents: function () {
       var self = this;
-
-      //문의하기
-      self.$container.on("click", function () {
-        var mode = self.$reqBtn.attr("data-name");
-        //console.log(mode);
-        self.requestQnaReadPop({ mode: mode });
-      });
 
       for (var i = 0; i < self.$tabList.length; i++) {
         self.$tabList[i].addEventListener("click", function (e) {
@@ -33,15 +31,58 @@
           pubUi.tabBtnEvent(e);
         });
       }
+
+      // 스와이퍼 재생 버튼 클릭시,
+      self.$btnPlay.on("click", function (e) {
+        e.preventDefault();
+        var targetSwiper = $(this).closest(".swiper");
+
+        if (self.$btnPlay.hasClass("on")) {
+          console.log("정지버튼 클릭!");
+          self.$btnPlay.removeClass("on");
+          targetSwiper[0].swiper.autoplay.stop();
+          self.$btnPlay.find(".visually-hidden").text("정지");
+        } else {
+          console.log("재생버튼 클릭!");
+          self.$btnPlay.addClass("on");
+          targetSwiper[0].swiper.autoplay.start();
+          self.$btnPlay.find(".visually-hidden").text("재생");
+        }
+      });
+
+      // 스와이퍼 소리 버튼 클릭시, (★ 추후, 재생,정지 기능 추가필요함)
+      self.$btnSound.on("click", function (e) {
+        e.preventDefault();
+        var targetSwiper = $(this).closest(".swiper");
+
+        if (self.$btnSound.hasClass("on")) {
+          console.log("소리 끄기 버튼 클릭!");
+          self.$btnSound.removeClass("on");
+          self.$btnSound.find(".visually-hidden").text("소리 끄기");
+        } else {
+          console.log("소리 켜기버튼 클릭!");
+          self.$btnSound.addClass("on");
+          self.$btnSound.find(".visually-hidden").text("소리 켜기");
+        }
+      });
+
+      //창 리사이즈
+      window.addEventListener("resize", function () {
+        // var imgBoxSize = self.$swiperImgBox.css("width");
+        // self.$swiperArrowBox.style.setProperty("--size", imgBoxSize);
+        // console.log(imgBoxSize);
+      });
     },
     swiperSlideEvent: function () {
-      const progressCircle = document.querySelector(".autoplay-progress svg");
-      const progressContent = document.querySelector(".autoplay-progress span");
-      var swiper = new Swiper(".ty01Swiper", {
-        spaceBetween: 30,
+      var self = this;
+      var slideInx = 0; // 현재 슬라이드 index 체크용 변수
+      const progressBar = document.querySelector(".autoplay-progress .bar");
+
+      self.swiper1 = new Swiper(".ty01Swiper", {
         centeredSlides: true,
+        watchOverflow: true, //pagination 1개 일 경우, 숨김
         autoplay: {
-          delay: 10000,
+          delay: 3000,
           disableOnInteraction: false,
         },
         pagination: {
@@ -49,13 +90,123 @@
           clickable: true,
         },
         navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+          nextEl: ".ty01Swiper .swiper-button-next",
+          prevEl: ".ty01Swiper .swiper-button-prev",
         },
         on: {
           autoplayTimeLeft(s, time, progress) {
-            progressCircle.style.setProperty("--progress", 1 - progress);
-            progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+            progressBar.style.setProperty("--progress", 1 - progress);
+          },
+        },
+      });
+
+      self.swiper2 = new Swiper(".ty02Swiper", {
+        slidesPerView: 1.5,
+        spaceBetween: 80,
+        centeredSlides: true,
+        loop: true,
+        initialSlide: slideInx,
+        watchOverflow: true,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".ty02Swiper .swiper-button-next",
+          prevEl: ".ty02Swiper .swiper-button-prev",
+        },
+        breakpoints: {
+          360: {
+            slidesPerView: 1.2,
+            spaceBetween: 12,
+          },
+          768: {
+            spaceBetween: 12,
+          },
+          1024: {
+            spaceBetween: 80,
+          },
+        },
+        on: {
+          autoplayTimeLeft(s, time, progress) {
+            progressBar.style.setProperty("--progress", 1 - progress);
+          },
+          activeIndexChange: function () {
+            slideInx = this.realIndex; //현재 슬라이드 index 갱신
+          },
+        },
+      });
+
+      self.swiper3 = new Swiper(".ty03Swiper", {
+        slidesPerView: 3,
+        spaceBetween: 24,
+        watchOverflow: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".ty03Swiper .swiper-button-next",
+          prevEl: ".ty03Swiper .swiper-button-prev",
+        },
+        breakpoints: {
+          360: {
+            slidesPerView: 1.2,
+            spaceBetween: 12,
+          },
+          768: {
+            slidesPerView: 1.5,
+            spaceBetween: 12,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 24,
+          },
+        },
+      });
+
+      self.swiper4 = new Swiper(".ty04Swiper", {
+        slidesPerView: 3.5,
+        spaceBetween: 24,
+        watchOverflow: true,
+        navigation: {
+          nextEl: ".ty04Swiper .swiper-button-next",
+          prevEl: ".ty04Swiper .swiper-button-prev",
+        },
+        breakpoints: {
+          360: {
+            slidesPerView: 1.2,
+            spaceBetween: 12,
+          },
+          768: {
+            slidesPerView: 1.5,
+            spaceBetween: 12,
+          },
+          1024: {
+            spaceBetween: 24,
+          },
+        },
+      });
+
+      self.swiper5 = new Swiper(".ty05Swiper", {
+        spaceBetween: 4,
+        watchOverflow: true,
+        navigation: {
+          nextEl: ".ty05Swiper .swiper-button-next",
+          prevEl: ".ty05Swiper .swiper-button-prev",
+        },
+        breakpoints: {
+          360: {
+            slidesPerView: 2.1,
+            spaceBetween: 4,
+          },
+          1024: {
+            slidesPerView: 5.5,
+            spaceBetween: 4,
           },
         },
       });
