@@ -1008,34 +1008,34 @@ input[type="radio"]:focus + label {
   mask-size: contain;
 }
 
-.grid_3 .card_type01 {
+.grid_mo_drop .card_type01 {
   height: 26.375rem;
   min-height: 0;
 }
-.grid_3 .card_type01 .card_profile {
+.grid_mo_drop .card_type01 .card_profile {
   background-image: none;
 }
-.grid_3 .card_type01 .card_profile img {
+.grid_mo_drop .card_type01 .card_profile img {
   width: 13rem;
   height: 13rem;
 }
-.grid_3 .card_type01:hover .card_profile img {
+.grid_mo_drop .card_type01:hover .card_profile img {
   margin-bottom: -0.75rem;
 }
-.grid_3 .card_type01.card_team .card_profile {
+.grid_mo_drop .card_type01.card_team .card_profile {
   align-items: center;
   padding-bottom: 0;
 }
-.grid_3 .card_type01.card_team .card_profile img {
+.grid_mo_drop .card_type01.card_team .card_profile img {
   width: 17.5rem;
 }
-.grid_3 .card_type01.card_team:hover .card_profile img {
+.grid_mo_drop .card_type01.card_team:hover .card_profile img {
   margin-bottom: 0;
 }
-.grid_3 .card_type01 .card_rank {
+.grid_mo_drop .card_type01 .card_rank {
   font-size: 3.5rem;
 }
-.grid_3 .card_type01 .card_num {
+.grid_mo_drop .card_type01 .card_num {
   font-size: 3.5rem;
 }
 
