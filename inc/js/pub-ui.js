@@ -236,3 +236,46 @@
     pubUi.init();
   });
 })();
+// selectbox 컴포넌트
+$(".selectbox-trigger").click(function (event) {
+  event.stopPropagation();
+  var $options = $(this).siblings(".selectbox-options");
+  $(".selectbox-options").not($options).hide().attr("aria-hidden", "true");
+  $options.toggle().attr("aria-hidden", function (i, attr) {
+    return attr === "true" ? "false" : "true";
+  });
+  $(".selectbox-wrap>div .selectbox-trigger").removeClass("active").attr("aria-expanded", "false");
+  $(this).toggleClass("active").attr("aria-expanded", $(this).hasClass("active"));
+  $options.css({ right: "0" }); // select-trigger 위치 동일하게 맞추기 위해
+});
+
+$(".option").click(function (event) {
+  event.stopPropagation();
+  var selectedText = $(this).text();
+  $(this).closest(".selectbox-options").hide().attr("aria-hidden", "true").siblings(".selectbox-trigger").text(selectedText);
+  $(this).closest(".selectbox-options").find(".option").removeClass("active").attr("aria-selected", "false");
+  $(this).addClass("active").attr("aria-selected", "true");
+  $(this).closest(".selectbox-wrap>div").find(".selectbox-trigger").removeClass("active").attr("aria-expanded", "false");
+});
+$(window)
+  .resize(function () {
+    if (window.innerWidth <= 1023) {
+      $(".selectbox-trigger").click(function (event) {
+        event.stopPropagation();
+        $(".selectbox-overlay").show();
+        $(".selectbox-options li.moclose-btn").show();
+      });
+      $(".option").click(function (event) {
+        event.stopPropagation();
+        $(".selectbox-overlay").hide();
+        $(".selectbox-options li.moclose-btn").hide();
+      });
+      $(".selectbox-options li.moclose-btn button").click(function (event) {
+        event.stopPropagation();
+        $(this).closest(".selectbox-wrap>div").find(".selectbox-trigger").removeClass("active");
+        $(this).closest(".selectbox-options").hide();
+        $(".selectbox-overlay").hide();
+      });
+    }
+  })
+  .resize();

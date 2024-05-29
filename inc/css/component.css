@@ -242,6 +242,10 @@ input[type="radio"]:focus + label {
 .btn[class*="btn-only-icon"]:active {
   background-color: #de3111;
 }
+.btn[class*="btn-only-icon-notbg"]:hover,
+.btn[class*="btn-only-icon-notbg"]:active {
+  background-color: transparent;
+}
 .btn:hover [class*="icon-down"],
 .btn:active [class*="icon-down"] {
   background: url(../../../inc/images/icon/icon-arrow01_down_white.svg);
@@ -383,6 +387,10 @@ input[type="radio"]:focus + label {
 [class*="btn-icon24"] {
   width: 24px;
   height: 24px;
+}
+[class*="btn-icon36"] {
+  width: 36px;
+  height: 36px;
 }
 .btn[class*="-primary"] [class*="btn-icon20"],
 .btn[class*="-outline"] [class*="btn-icon20"] {
@@ -608,6 +616,14 @@ input[type="radio"]:focus + label {
 .btn:hover [class*="icon-twitter"].icon-disabled,
 .btn:active [class*="icon-twitter"].icon-disabled {
   background: url(../../../inc/images/icon/icon-twitter_disabled.svg);
+  background-size: contain;
+}
+.icon-close {
+  background: url(../../../inc/images/icon/icon-close.svg);
+  background-size: contain;
+}
+.icon-close-wh {
+  background: url(../../../inc/images/icon/icon-close_white.svg);
   background-size: contain;
 }
 [class*="btn-only-icon"] {
@@ -2032,7 +2048,6 @@ table {
   max-width: 1348px;
   margin: 0 auto;
 }
-
 .table-type01 thead tr,
 .table-type02 thead tr {
   border-bottom: 2px solid #787d80;
@@ -2384,4 +2399,65 @@ p.text-num-chk {
   .swiper-arrow-wrap {
     display: block;
   }
+}
+/* select */
+.selectbox-wrap {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 24px;
+}
+.selectbox-wrap > div {
+  position: relative;
+  display: inline-block;
+}
+.selectbox-trigger {
+  padding: 9px 32px 9px 8px;
+  border-bottom: 4px solid #000;
+  cursor: pointer;
+  width: 124px;
+  display: inline-block;
+  position: relative;
+  text-align: left;
+}
+.selectbox-trigger::after {
+  position: absolute;
+  content: "";
+  background: url("../../inc/images/icon/icon-arrow01_down.svg") center no-repeat;
+  width: 16px;
+  height: 16px;
+  right: 8px;
+}
+.selectbox-trigger.active::after {
+  transform: rotate(180deg);
+}
+.selectbox-options {
+  position: absolute;
+  top: 52px;
+  background-color: white;
+  z-index: 3;
+}
+.selectbox-options .option {
+  padding: 10px 11px;
+  cursor: pointer;
+  border-top: 1px solid #000;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+  width: 272px;
+  display: inline-block;
+}
+.selectbox-options .option:last-child {
+  border-bottom: 1px solid #000;
+}
+.selectbox-options .option:hover {
+  background-color: #f0f0f0;
+  color: #de3111;
+}
+.selectbox-options .option.active {
+  background-color: #de3111;
+  color: #fff;
+}
+.selectbox-overlay,
+.moclose-btn {
+  display: none;
 }
