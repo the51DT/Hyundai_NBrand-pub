@@ -245,8 +245,13 @@ $(".selectbox-trigger").click(function (event) {
     return attr === "true" ? "false" : "true";
   });
   $(".selectbox-wrap>div .selectbox-trigger").removeClass("active").attr("aria-expanded", "false");
-  $(this).toggleClass("active").attr("aria-expanded", $(this).hasClass("active"));
+  $(this)
+    .toggleClass("active")
+    .attr("aria-expanded", function () {
+      return $(this).hasClass("active") ? "true" : "false";
+    });
   $options.css({ right: "0" }); // select-trigger 위치 동일하게 맞추기 위해
+  $(".selectbox-options li.moclose-btn").hide();
 });
 
 $(".option").click(function (event) {
@@ -257,6 +262,7 @@ $(".option").click(function (event) {
   $(this).addClass("active").attr("aria-selected", "true");
   $(this).closest(".selectbox-wrap>div").find(".selectbox-trigger").removeClass("active").attr("aria-expanded", "false");
 });
+
 $(window)
   .resize(function () {
     if (window.innerWidth <= 1023) {
@@ -275,6 +281,10 @@ $(window)
         $(this).closest(".selectbox-wrap>div").find(".selectbox-trigger").removeClass("active");
         $(this).closest(".selectbox-options").hide();
         $(".selectbox-overlay").hide();
+      });
+    } else {
+      $(".selectbox-trigger").click(function () {
+        $(".selectbox-options li.moclose-btn").hide();
       });
     }
   })
