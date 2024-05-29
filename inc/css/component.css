@@ -1883,6 +1883,7 @@ table {
 }
 .wrap-form input.form-input-text::placeholder {
   color: #777;
+  font-family: "Hyundai Sans Text";
 }
 span.text-comment {
   font-family: "Hyundai Sans Text";
