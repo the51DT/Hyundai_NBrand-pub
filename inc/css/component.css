@@ -2641,6 +2641,15 @@ input:checked + .slider:before {
   display: flex;
   align-items: center;
 }
+
+.tag-list-wrap [class^="tag-list"] li {
+  margin-bottom: 8px;
+}
+
+.tag-list-wrap [class^="tag-list"] li:not(:last-child) {
+  margin-right: 8px;
+}
+
 .tag-list-wrap [class^="tag-list"] li .tag-item {
   font-family: "Hyundai Sans Text";
   font-size: 17px;
@@ -2668,6 +2677,6 @@ input:checked + .slider:before {
   background-color: #000;
 }
 
-.tag-list-wrap [class^="tag-list"] li:not(:last-child) {
-  margin-right: 8px;
+.tag-list-wrap [class^="tag-list"][class*="multi"] {
+  flex-wrap: wrap;
 }
