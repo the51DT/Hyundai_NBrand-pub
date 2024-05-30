@@ -1251,48 +1251,6 @@ input[type="radio"]:focus + label {
   height: 100%;
   position: relative;
 }
-
-.swiper-container .btn-wrap {
-  padding-left: 24px;
-  display: flex;
-  flex: 1;
-}
-.swiper-container .btn-wrap .btn {
-  position: relative;
-  width: 24px;
-  height: 24px;
-  background: #000;
-  opacity: 0.5;
-  border-radius: 2px;
-}
-.swiper-container .btn-wrap .btn:not(:last-child) {
-  margin-right: 8px;
-}
-
-.swiper-container .btn-wrap .btn::before {
-  content: "";
-  display: inline-block;
-  width: 14px;
-  height: 14px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-size: contain;
-}
-
-.swiper-container .btn-wrap .btn-play::before {
-  background-image: url(../../inc/images/icon/icon-play_white.svg);
-}
-.swiper-container .btn-wrap .btn-play.on::before {
-  background-image: url(../../inc/images/icon/icon-pause_white.svg);
-}
-.swiper-container .btn-wrap .btn-sound::before {
-  background-image: url(../../inc/images/icon/icon-soundon_white.svg);
-}
-.swiper-container .btn-wrap .btn-sound.on::before {
-  background-image: url(../../inc/images/icon/icon-soundoff_white.svg);
-}
 .swiper-pagination-bullet {
   opacity: 0.5;
   width: 8px;
@@ -1348,6 +1306,48 @@ input[type="radio"]:focus + label {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.swiper-status-wrap .btn-wrap {
+  display: flex;
+  flex: 1;
+  padding-left: 24px;
+}
+.swiper-status-wrap .btn-wrap .btn {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  background: #000;
+  opacity: 0.5;
+  border-radius: 2px;
+}
+.swiper-status-wrap .btn-wrap .btn:not(:last-child) {
+  margin-right: 8px;
+}
+
+.swiper-status-wrap .btn-wrap .btn::before {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-size: contain;
+}
+
+.swiper-status-wrap .btn-wrap .btn-play::before {
+  background-image: url(../../inc/images/icon/icon-play_white.svg);
+}
+.swiper-status-wrap .btn-wrap .btn-play.on::before {
+  background-image: url(../../inc/images/icon/icon-pause_white.svg);
+}
+.swiper-status-wrap .btn-wrap .btn-sound::before {
+  background-image: url(../../inc/images/icon/icon-soundon_white.svg);
+}
+.swiper-status-wrap .btn-wrap .btn-sound.on::before {
+  background-image: url(../../inc/images/icon/icon-soundoff_white.svg);
 }
 
 .swiper-status-wrap .swiper-pagination {
