@@ -2635,7 +2635,7 @@ input:checked + .slider:before {
   display: inline-block;
   width: 24px;
   height: 24px;
-  background-image: url(../../images/icon/icon-reset.svg);
+  background-image: url(../images/icon/icon-reset.svg);
   background-size: contain;
 }
 
@@ -2644,7 +2644,7 @@ input:checked + .slider:before {
 }
 
 .search-wrap .search-input-box .btn-group .btn-reset:active::after {
-  background-image: url(../../images/icon/icon-reset_active.svg);
+  background-image: url(../images/icon/icon-reset_active.svg);
 }
 
 .search-wrap .search-input-box .btn-search {
