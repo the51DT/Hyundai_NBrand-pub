@@ -645,37 +645,39 @@
             <div class="subSection">
               <h3 class="guideSubTit">TAB type 2 :: 가운데 정렬 케이스</h3>
               <div class="ui-item">
-                <div class="tab-head ty02">
-                  <!--ty02 : 모바일 2줄노출 처리용-->
-                  <div class="tabs-wrap">
-                    <ul class="tabs" data-contents="탭카테고리">
-                      <li class="on">
-                        <a href="javascript:;" aria-label="tab2-01" role="tab" aria-selected="true" data-tab="4">eN1</a>
-                      </li>
-                      <li>
-                        <a href="javascript:;" aria-label="tab2-02" role="tab" aria-selected="false" data-tab="5">N1</a>
-                      </li>
-                      <li>
-                        <a href="javascript:;" aria-label="tab2-03" role="tab" aria-selected="false" data-tab="6">N2</a>
-                      </li>
-                      <li>
-                        <a href="javascript:;" aria-label="tab2-04" role="tab" aria-selected="false" data-tab="7">N2</a>
-                      </li>
-                    </ul>
+                <div class="tab-container">
+                  <div class="tab-head ty02">
+                    <!--ty02 : 모바일 2줄노출 처리용-->
+                    <div class="tabs-wrap">
+                      <ul class="tabs" data-contents="탭카테고리">
+                        <li class="on">
+                          <a href="javascript:;" aria-label="tab2-01" role="tab" aria-selected="true" data-tab="4">eN1</a>
+                        </li>
+                        <li>
+                          <a href="javascript:;" aria-label="tab2-02" role="tab" aria-selected="false" data-tab="5">N1</a>
+                        </li>
+                        <li>
+                          <a href="javascript:;" aria-label="tab2-03" role="tab" aria-selected="false" data-tab="6">N2</a>
+                        </li>
+                        <li>
+                          <a href="javascript:;" aria-label="tab2-04" role="tab" aria-selected="false" data-tab="7">N2</a>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
-                </div>
-                <div class="tab-content on" id="tab2-01" role="tabpanel">
-                  탭 컨텐츠1
-                </div>
-                <div class="tab-content" id="tab2-02" role="tabpanel">
-                  탭 컨텐츠2
-                </div>
-                <div class="tab-content" id="tab2-03" role="tabpanel">
-                  탭 컨텐츠3
-                </div>
-                <div class="tab-content" id="tab2-04" role="tabpanel">
-                  탭 컨텐츠4
-                </div>
+                  <div class="tab-content on" id="tab2-01" role="tabpanel">
+                    탭 컨텐츠1
+                  </div>
+                  <div class="tab-content" id="tab2-02" role="tabpanel">
+                    탭 컨텐츠2
+                  </div>
+                  <div class="tab-content" id="tab2-03" role="tabpanel">
+                    탭 컨텐츠3
+                  </div>
+                  <div class="tab-content" id="tab2-04" role="tabpanel">
+                    탭 컨텐츠4
+                  </div>
+                </div> <!--// tab-container -->
               </div>
               <div class="code">
                 <pre class="brush: js;">
@@ -3180,7 +3182,7 @@
               <h3 class="guideSubTit">case 1 :: 기본</h3>
               <div class="ui-item">
                 <div class="search-container">
-                  <div class="search-wrap" role="search">
+                  <div class="search-wrap" >
                     <div class="search-input-box">
                       <input type="text" name="searchInput01" value="" placeholder="Input Keyword" aria-label="검색 내용 입력"/>
                       
@@ -3198,13 +3200,13 @@
                   </div>
                   <div class="tag-list-wrap">
                     <ul class="tag-list">
-                      <li><a href="#" class="tag-item">#All</a></li>
-                      <li><a href="#" class="tag-item">#About_N</a></li>
-                      <li><a href="#" class="tag-item">#N</a></li>
-                      <li class="on"><a href="#" class="tag-item">#History</a></li>
-                      <li><a href="#" class="tag-item">#DNA</a></li>
-                      <li><a href="#" class="tag-item">#People</a></li>
-                      <li><a href="#" class="tag-item">#GWFoS</a></li>
+                      <li class="on"><a href="#" class="tag-item" aria-label="tag button" aria-selected="true">#All</a></li>
+                      <li><a href="#" class="tag-item" aria-label="tag button" aria-selected="false">#About_N</a></li>
+                      <li><a href="#" class="tag-item" aria-label="tag button" aria-selected="false">#N</a></li>
+                      <li><a href="#" class="tag-item" aria-label="tag button" aria-selected="false">#History</a></li>
+                      <li><a href="#" class="tag-item" aria-label="tag button" aria-selected="false">#DNA</a></li>
+                      <li><a href="#" class="tag-item" aria-label="tag button" aria-selected="false">#People</a></li>
+                      <li><a href="#" class="tag-item" aria-label="tag button" aria-selected="false">#GWFoS</a></li>
                     </ul>
                   </div>
                 </div>
@@ -3226,13 +3228,13 @@
               <div class="ui-item">
                 <div class="tag-list-wrap">
                   <ul class="tag-list">
-                    <li class="on"><a href="#" class="tag-item">#All</a></li>
-                    <li><a href="#" class="tag-item">#About_N</a></li>
-                    <li><a href="#" class="tag-item">#N</a></li>
-                    <li><a href="#" class="tag-item">#History</a></li>
-                    <li><a href="#" class="tag-item">#DNA</a></li>
-                    <li><a href="#" class="tag-item">#People</a></li>
-                    <li><a href="#" class="tag-item">#GWFoS</a></li>
+                    <li class="on"><a href="#" class="tag-item" aria-label="tag button" aria-selected="true">#All</a></li>
+                    <li><a href="#" class="tag-item" aria-label="tag button" aria-selected="false">#About_N</a></li>
+                    <li><a href="#" class="tag-item" aria-label="tag button" aria-selected="false">#N</a></li>
+                    <li><a href="#" class="tag-item" aria-label="tag button" aria-selected="false">#History</a></li>
+                    <li><a href="#" class="tag-item" aria-label="tag button" aria-selected="false">#DNA</a></li>
+                    <li><a href="#" class="tag-item" aria-label="tag button" aria-selected="false">#People</a></li>
+                    <li><a href="#" class="tag-item" aria-label="tag button" aria-selected="false">#GWFoS</a></li>
                   </ul>
                 </div>
               </div>
@@ -3246,13 +3248,33 @@
               <div class="ui-item">
                 <div class="tag-list-wrap">
                   <ul class="tag-list ty02"><!-- ty02 : 블랙타입 -->
-                    <li class="on"><a href="#" class="tag-item">#All</a></li>
-                    <li><a href="#" class="tag-item">#About_N</a></li>
-                    <li><a href="#" class="tag-item">#N</a></li>
-                    <li><a href="#" class="tag-item">#History</a></li>
-                    <li><a href="#" class="tag-item">#DNA</a></li>
-                    <li><a href="#" class="tag-item">#People</a></li>
-                    <li><a href="#" class="tag-item">#GWFoS</a></li>
+                    <li class="on"><a href="#" class="tag-item" aria-label="tag button" aria-selected="true">#All</a></li>
+                    <li><a href="#" class="tag-item" aria-label="tag button" aria-selected="false">#About_N</a></li>
+                    <li><a href="#" class="tag-item" aria-label="tag button" aria-selected="false">#N</a></li>
+                    <li><a href="#" class="tag-item" aria-label="tag button" aria-selected="false">#History</a></li>
+                    <li><a href="#" class="tag-item" aria-label="tag button" aria-selected="false">#DNA</a></li>
+                    <li><a href="#" class="tag-item" aria-label="tag button" aria-selected="false">#People</a></li>
+                    <li><a href="#" class="tag-item" aria-label="tag button" aria-selected="false">#GWFoS</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="code">
+                <pre class="brush: js;">
+</pre>
+              </div>
+            </div>
+            <div class="subSection">
+              <h3 class="guideSubTit">case 2 :: 복수 선택 (multi)</h3>
+              <div class="ui-item">
+                <div class="tag-list-wrap">
+                  <ul class="tag-list multi"><!-- multi : 다중 선택 -->
+                    <li class="on"><a href="#" class="tag-item" aria-label="tag button" aria-selected="true">#All</a></li>
+                    <li><a href="#" class="tag-item" aria-label="tag button" aria-selected="false">#About_N</a></li>
+                    <li><a href="#" class="tag-item" aria-label="tag button" aria-selected="false">#N</a></li>
+                    <li><a href="#" class="tag-item" aria-label="tag button" aria-selected="false">#History</a></li>
+                    <li><a href="#" class="tag-item" aria-label="tag button" aria-selected="false">#DNA</a></li>
+                    <li><a href="#" class="tag-item" aria-label="tag button" aria-selected="false">#People</a></li>
+                    <li><a href="#" class="tag-item" aria-label="tag button" aria-selected="false">#GWFoS</a></li>
                   </ul>
                 </div>
               </div>

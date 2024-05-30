@@ -13,7 +13,6 @@
       // tab 관련 변수
       self.$tabs = document.querySelectorAll(".tabs-wrap .tabs");
       self.$tabList = document.querySelectorAll(".tabs li");
-      self.$tabConts = document.querySelectorAll(".tab-content");
 
       // button
       self.$btnPlay = $(".btn-play");
@@ -21,15 +20,16 @@
       self.$btnReset = $(".btn-reset");
 
       // search
-      self.$searchInput = document.querySelector(".search-input-box input");
+      self.$searchBox = document.querySelector(".search-input-box");
     },
     bindEvents: function () {
       var self = this;
 
       for (var i = 0; i < self.$tabList.length; i++) {
         self.$tabList[i].addEventListener("click", function (e) {
+          var tabContainer = $(this).closest(".tab-container");
           e.preventDefault();
-          pubUi.tabBtnEvent(e);
+          pubUi.tabBtnEvent(e, tabContainer);
         });
       }
 
@@ -70,7 +70,13 @@
       // 리셋 버튼 클릭시,
       self.$btnReset.on("click", function (e) {
         e.preventDefault();
-        self.$searchInput.value = "";
+        self.$searchBox.querySelector("input").value = "";
+      });
+
+      // 태그 버튼 클릭시,
+      $(".tag-list li a").click(function (e) {
+        var tagList = $(this).closest(".tag-list-wrap").find(".tag-list");
+        self.tagBtnEvent(e.target, tagList);
       });
     },
     swiperSlideEvent: function () {
@@ -211,24 +217,55 @@
         },
       });
     },
-    tabBtnEvent: function (e) {
+    tabBtnEvent: function (e, tabContainer) {
       var self = this;
 
       const target = e.target;
-      const tabs = target.parentNode.parentElement;
-      const tabList = tabs.children;
       const tabLabel = target.ariaLabel;
+      const tabList = tabContainer.find(".tabs li");
+      const tabConts = tabContainer.find(".tab-content");
 
       for (let i = 0; i < tabList.length; i++) {
         tabList[i].classList.remove("on");
       }
       target.parentNode.classList.add("on");
 
-      self.$tabConts.forEach(function (el) {
-        el.classList.remove("on");
-      });
+      for (let i = 0; i < tabConts.length; i++) {
+        tabConts[i].classList.remove("on");
+      }
 
       document.querySelector("#" + tabLabel).classList.add("on");
+    },
+    tagBtnEvent: function (e, list) {
+      var self = this;
+      var targetAriaSelected = e.ariaSelected;
+      var targetList = e.parentElement;
+      var listItem = list.find("li");
+
+      if (list.hasClass("multi")) {
+        console.log("checkbox type!");
+
+        if (targetAriaSelected == "true") {
+          e.setAttribute("aria-selected", "false");
+          targetList.classList.remove("on");
+        } else {
+          e.setAttribute("aria-selected", "true");
+          targetList.classList.add("on");
+        }
+      } else {
+        for (var i = 0; i < listItem.length; i++) {
+          listItem[i].classList.remove("on");
+          listItem[i].childNodes[0].ariaSelected = "false";
+        }
+
+        if (targetAriaSelected == "false") {
+          e.setAttribute("aria-selected", "true");
+          targetList.classList.add("on");
+        } else {
+          e.setAttribute("aria-selected", "true");
+          targetList.classList.add("on");
+        }
+      }
     },
   };
 
