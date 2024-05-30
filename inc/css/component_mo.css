@@ -566,7 +566,11 @@
     max-width: 280px;
   }
 
-  .wrap-list.list03 .right.descwrap .list-trackinfo .inner p.txt-type03:nth-child(1) {
+  .wrap-list.list03
+    .right.descwrap
+    .list-trackinfo
+    .inner
+    p.txt-type03:nth-child(1) {
     font-size: 16px;
     font-weight: 500;
     line-height: 22.4px;
@@ -1089,8 +1093,12 @@
     margin-top: 20px;
   }
   /* tag */
-  .tag-list-wrap [class^="tag-list"] {
+  .tag-list-wrap [class^="tag-list"] li {
     flex-wrap: wrap;
+    margin-bottom: 4px;
+  }
+  .tag-list-wrap [class^="tag-list"] li:not(:last-child) {
+    margin-right: 4px;
   }
   .tag-list-wrap [class^="tag-list"] li .tag-item {
     font-size: 17px;
@@ -1098,7 +1106,8 @@
     line-height: 23.8px;
     padding: 6px 12px;
   }
-  .tag-list-wrap [class^="tag-list"] li:not(:last-child) {
-    margin-right: 4px;
+
+  .tag-list-wrap [class^="tag-list"][class*="multi"] li:not(:last-child) {
+    margin-right: 8px;
   }
 }

@@ -40,13 +40,17 @@
 
         if (self.$btnPlay.hasClass("on")) {
           console.log("정지버튼 클릭!");
-          self.$btnPlay.removeClass("on");
+          // targetSwiper.find(".btn-play").removeClass("on");
+          // targetSwiper.find(".btn-play .visually-hidden").text("정지");
           targetSwiper[0].swiper.autoplay.stop();
+          self.$btnPlay.removeClass("on");
           self.$btnPlay.find(".visually-hidden").text("정지");
         } else {
           console.log("재생버튼 클릭!");
-          self.$btnPlay.addClass("on");
+          // targetSwiper.find(".btn-play").addClass("on");
+          // targetSwiper.find(".btn-play .visually-hidden").text("재생");
           targetSwiper[0].swiper.autoplay.start();
+          self.$btnPlay.addClass("on");
           self.$btnPlay.find(".visually-hidden").text("재생");
         }
       });
@@ -218,8 +222,6 @@
       });
     },
     tabBtnEvent: function (e, tabContainer) {
-      var self = this;
-
       const target = e.target;
       const tabLabel = target.ariaLabel;
       const tabList = tabContainer.find(".tabs li");
@@ -237,14 +239,11 @@
       document.querySelector("#" + tabLabel).classList.add("on");
     },
     tagBtnEvent: function (e, list) {
-      var self = this;
       var targetAriaSelected = e.ariaSelected;
       var targetList = e.parentElement;
       var listItem = list.find("li");
 
       if (list.hasClass("multi")) {
-        console.log("checkbox type!");
-
         if (targetAriaSelected == "true") {
           e.setAttribute("aria-selected", "false");
           targetList.classList.remove("on");
