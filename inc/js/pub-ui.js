@@ -15,9 +15,13 @@
       self.$tabList = document.querySelectorAll(".tabs li");
       self.$tabConts = document.querySelectorAll(".tab-content");
 
-      // swiper 관련 변수
+      // button
       self.$btnPlay = $(".btn-play");
       self.$btnSound = $(".btn-sound");
+      self.$btnReset = $(".btn-reset");
+
+      // search
+      self.$searchInput = document.querySelector(".search-input-box input");
     },
     bindEvents: function () {
       var self = this;
@@ -61,6 +65,12 @@
           self.$btnSound.addClass("on");
           self.$btnSound.find(".visually-hidden").text("소리 켜기");
         }
+      });
+
+      // 리셋 버튼 클릭시,
+      self.$btnReset.on("click", function (e) {
+        e.preventDefault();
+        self.$searchInput.value = "";
       });
     },
     swiperSlideEvent: function () {

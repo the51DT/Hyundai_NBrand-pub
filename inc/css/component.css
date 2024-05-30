@@ -658,6 +658,14 @@ input[type="radio"]:focus + label {
   justify-content: center;
   gap: 10px;
 }
+.btn-group {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 24px;
+}
+.btn-group .btn:not(:last-child) {
+  margin-right: 8px;
+}
 /* tab */
 .tab-head {
   display: flex;
@@ -1619,6 +1627,12 @@ input[type="radio"]:focus + label {
   font-size: 24px;
   line-height: 33.6px;
 }
+/* swiper 반응형 예외 케이스 처리 */
+@media screen and (max-width: 1480px) {
+  .swiper-arrow-wrap {
+    display: block;
+  }
+}
 
 /* list */
 .wrap-list,
@@ -2394,12 +2408,6 @@ p.text-num-chk {
   display: none;
 }
 
-/* 반응형 예외 케이스 처리 */
-@media screen and (max-width: 1480px) {
-  .swiper-arrow-wrap {
-    display: block;
-  }
-}
 /* select */
 .selectbox-wrap {
   display: flex;
@@ -2423,7 +2431,8 @@ p.text-num-chk {
 .selectbox-trigger::after {
   position: absolute;
   content: "";
-  background: url("../../inc/images/icon/icon-arrow01_down.svg") center no-repeat;
+  background: url("../../inc/images/icon/icon-arrow01_down.svg") center
+    no-repeat;
   width: 16px;
   height: 16px;
   right: 8px;
@@ -2460,4 +2469,110 @@ p.text-num-chk {
 .selectbox-overlay,
 .moclose-btn {
   display: none;
+}
+
+/* search */
+.search-wrap {
+  overflow: hidden;
+  max-width: 708px;
+  margin: 0 auto;
+}
+
+.search-wrap::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: #000;
+}
+
+.search-wrap .search-input-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 4px 20px 8px;
+  color: #000;
+}
+
+.search-wrap .search-input-box input {
+  border: 0;
+  width: 100%;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 44.8px;
+}
+.search-wrap .search-input-box input::placeholder {
+  color: #999;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 44.8px;
+}
+
+.search-wrap .search-input-box .btn-wrap {
+  display: flex;
+}
+
+.search-wrap .search-input-box .btn-group .btn-txt {
+  font-family: "Hyundai Sans Text";
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+  margin-right: 8px;
+}
+
+.search-wrap .search-input-box .btn-group .btn-reset::after {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url(../../images/icon/icon-reset.svg);
+  background-size: contain;
+}
+
+.search-wrap .search-input-box .btn-group .btn-reset:active {
+  color: #de3111;
+}
+
+.search-wrap .search-input-box .btn-group .btn-reset:active::after {
+  background-image: url(../../images/icon/icon-reset_active.svg);
+}
+
+.search-wrap .search-input-box .btn-search {
+  width: 52px;
+  height: 52px;
+}
+
+.search-container .tag-list-wrap {
+  margin-top: 32px;
+}
+
+.search-container .tag-list {
+  justify-content: center;
+}
+
+/* tag */
+.tag-list-wrap [class^="tag-list"] {
+  display: flex;
+  align-items: center;
+}
+.tag-list-wrap [class^="tag-list"] li .tag-item {
+  font-family: "Hyundai Sans Text";
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 23.8px;
+  padding: 8px 16px;
+}
+
+.tag-list-wrap [class^="tag-list"] li.on .tag-item {
+  background-color: #de3111;
+  color: #fff;
+  border-radius: 22px;
+}
+
+.tag-list-wrap [class^="tag-list"][class*="ty02"] li.on .tag-item {
+  background-color: #000;
+}
+
+.tag-list-wrap [class^="tag-list"] li:not(:last-child) {
+  margin-right: 8px;
 }

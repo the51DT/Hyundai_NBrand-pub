@@ -1040,4 +1040,54 @@
   .selectbox-options .option:last-child {
     border-bottom: 0;
   }
+
+  /* search */
+  .search-wrap::after {
+    height: 3px;
+  }
+
+  .search-wrap .search-input-box {
+    padding: 12px 4px 9px 0;
+  }
+
+  .search-wrap .search-input-box input {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .search-wrap .search-input-box input::placeholder {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .search-wrap .search-input-box .btn-group {
+    margin-right: 12px;
+  }
+  .search-wrap .search-input-box .btn-group .btn-txt {
+    display: none;
+  }
+
+  .search-wrap .search-input-box .btn-search {
+    width: 36px;
+    height: 36px;
+  }
+  .search-wrap .search-input-box .btn-search [class*="btn-icon24"] {
+    width: 18px;
+    height: 18px;
+  }
+  .search-container .tag-list-wrap {
+    margin-top: 20px;
+  }
+  /* tag */
+  .tag-list-wrap [class^="tag-list"] {
+    flex-wrap: wrap;
+  }
+  .tag-list-wrap [class^="tag-list"] li .tag-item {
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 23.8px;
+    padding: 6px 12px;
+  }
+  .tag-list-wrap [class^="tag-list"] li:not(:last-child) {
+    margin-right: 4px;
+  }
 }
