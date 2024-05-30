@@ -226,48 +226,44 @@
     pubUi.init();
   });
 })();
-// selectbox 컴포넌트
+
+// [Start] : selectbox 컴포넌트
 $(".selectbox-trigger").click(function (event) {
   event.stopPropagation();
   var $options = $(this).siblings(".selectbox-options");
+  // 클릭된 트리거의 options 아닌 경우 숨기기
   $(".selectbox-options").not($options).hide().attr("aria-hidden", "true");
+  // 클릭된 트리거의 aria-hidden 상태 변경
   $options.toggle().attr("aria-hidden", function (i, attr) {
     return attr === "true" ? "false" : "true";
   });
-  $(".selectbox-wrap>div .selectbox-trigger")
-    .removeClass("active")
-    .attr("aria-expanded", "false");
+  // 클릭되지 않은 트리거 active 삭제
+  $(".selectbox-wrap>div .selectbox-trigger").not(this).removeClass("active").attr("aria-expanded", "false");
+  // 클릭된 트리거는 acitve 추가
   $(this)
     .toggleClass("active")
     .attr("aria-expanded", function () {
       return $(this).hasClass("active") ? "true" : "false";
     });
-  $options.css({ right: "0" }); // select-trigger 위치 동일하게 맞추기 위해
+  // select-trigger 위치 동일하게 맞추기
+  $options.css({ right: "0" });
+  // 모바일에서만 사용하므로 숨김
   $(".selectbox-options li.moclose-btn").hide();
 });
 
 $(".option").click(function (event) {
   event.stopPropagation();
   var selectedText = $(this).text();
-  $(this)
-    .closest(".selectbox-options")
-    .hide()
-    .attr("aria-hidden", "true")
-    .siblings(".selectbox-trigger")
-    .text(selectedText);
-  $(this)
-    .closest(".selectbox-options")
-    .find(".option")
-    .removeClass("active")
-    .attr("aria-selected", "false");
+  // option 클릭 시 trigger 문구 변경
+  $(this).closest(".selectbox-options").hide().attr("aria-hidden", "true").siblings(".selectbox-trigger").text(selectedText);
+  // 클릭되지 않은 option active 삭제 & aria-selected 상태 변경
+  $(this).closest(".selectbox-options").find(".option").not(this).removeClass("active").attr("aria-selected", "false");
+  // 클릭된 option active 추가
   $(this).addClass("active").attr("aria-selected", "true");
-  $(this)
-    .closest(".selectbox-wrap>div")
-    .find(".selectbox-trigger")
-    .removeClass("active")
-    .attr("aria-expanded", "false");
+  // 클릭된 option의 트리거의 actvie 제거 및 aria-expanded 상태 변경
+  $(this).closest(".selectbox-wrap>div").find(".selectbox-trigger").removeClass("active").attr("aria-expanded", "false");
 });
-
+// select box 모바일 (moclose-btn,selectbox-overlay 사용)
 $(window)
   .resize(function () {
     if (window.innerWidth <= 1023) {
@@ -283,10 +279,7 @@ $(window)
       });
       $(".selectbox-options li.moclose-btn button").click(function (event) {
         event.stopPropagation();
-        $(this)
-          .closest(".selectbox-wrap>div")
-          .find(".selectbox-trigger")
-          .removeClass("active");
+        $(this).closest(".selectbox-wrap>div").find(".selectbox-trigger").removeClass("active");
         $(this).closest(".selectbox-options").hide();
         $(".selectbox-overlay").hide();
       });
@@ -297,3 +290,4 @@ $(window)
     }
   })
   .resize();
+// [End] : selectbox 컴포넌트
