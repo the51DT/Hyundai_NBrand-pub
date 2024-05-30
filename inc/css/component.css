@@ -978,10 +978,22 @@ input[type="radio"]:focus + label {
   font-size: 4.25rem;
   font-weight: 700;
   line-height: 125%;
-  text-shadow: calc(0.125rem * 1) 0 0 #fff, calc(0.125rem * 0.9239) calc(0.125rem * 0.3827) 0 #fff, calc(0.125rem * 0.7071) calc(0.125rem * 0.7071) 0 #fff, calc(0.125rem * 0.3827) calc(0.125rem * 0.9239) 0 #fff, 0 calc(0.125rem * 1) 0 #fff,
-    calc(0.125rem * -0.3827) calc(0.125rem * 0.9239) 0 #fff, calc(0.125rem * -0.7071) calc(0.125rem * 0.7071) 0 #fff, calc(0.125rem * -0.9239) calc(0.125rem * 0.3827) 0 #fff, calc(0.125rem * -1) 0 0 #fff,
-    calc(0.125rem * -0.9239) calc(0.125rem * -0.3827) 0 #fff, calc(0.125rem * -0.7071) calc(0.125rem * -0.7071) 0 #fff, calc(0.125rem * -0.3827) calc(0.125rem * -0.9239) 0 #fff, 0 calc(0.125rem * -1) 0 #fff,
-    calc(0.125rem * 0.3827) calc(0.125rem * -0.9239) 0 #fff, calc(0.125rem * 0.7071) calc(0.125rem * -0.7071) 0 #fff, calc(0.125rem * 0.9239) calc(0.125rem * -0.3827) 0 #fff;
+  text-shadow: calc(0.125rem * 1) 0 0 #fff,
+    calc(0.125rem * 0.9239) calc(0.125rem * 0.3827) 0 #fff,
+    calc(0.125rem * 0.7071) calc(0.125rem * 0.7071) 0 #fff,
+    calc(0.125rem * 0.3827) calc(0.125rem * 0.9239) 0 #fff,
+    0 calc(0.125rem * 1) 0 #fff,
+    calc(0.125rem * -0.3827) calc(0.125rem * 0.9239) 0 #fff,
+    calc(0.125rem * -0.7071) calc(0.125rem * 0.7071) 0 #fff,
+    calc(0.125rem * -0.9239) calc(0.125rem * 0.3827) 0 #fff,
+    calc(0.125rem * -1) 0 0 #fff,
+    calc(0.125rem * -0.9239) calc(0.125rem * -0.3827) 0 #fff,
+    calc(0.125rem * -0.7071) calc(0.125rem * -0.7071) 0 #fff,
+    calc(0.125rem * -0.3827) calc(0.125rem * -0.9239) 0 #fff,
+    0 calc(0.125rem * -1) 0 #fff,
+    calc(0.125rem * 0.3827) calc(0.125rem * -0.9239) 0 #fff,
+    calc(0.125rem * 0.7071) calc(0.125rem * -0.7071) 0 #fff,
+    calc(0.125rem * 0.9239) calc(0.125rem * -0.3827) 0 #fff;
 }
 .card_type01 .card_bottom {
   display: flex;
@@ -2455,7 +2467,8 @@ p.text-num-chk {
 .selectbox-trigger::after {
   position: absolute;
   content: "";
-  background: url("../../inc/images/icon/icon-arrow01_down.svg") center no-repeat;
+  background: url("../../inc/images/icon/icon-arrow01_down.svg") center
+    no-repeat;
   width: 16px;
   height: 16px;
   right: 8px;
@@ -2634,15 +2647,24 @@ input:checked + .slider:before {
   font-weight: 500;
   line-height: 23.8px;
   padding: 8px 16px;
+  border-radius: 22px;
+}
+
+.tag-list-wrap [class^="tag-list"] li .tag-item:hover {
+  background-color: #de3111;
+  color: #fff;
 }
 
 .tag-list-wrap [class^="tag-list"] li.on .tag-item {
   background-color: #de3111;
   color: #fff;
-  border-radius: 22px;
 }
 
 .tag-list-wrap [class^="tag-list"][class*="ty02"] li.on .tag-item {
+  background-color: #000;
+}
+
+.tag-list-wrap [class^="tag-list"][class*="ty02"] li .tag-item:hover {
   background-color: #000;
 }
 
