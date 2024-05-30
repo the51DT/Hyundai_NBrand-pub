@@ -247,8 +247,30 @@ $(".selectbox-trigger").click(function (event) {
     });
   // select-trigger 위치 동일하게 맞추기
   $options.css({ right: "0" });
-  // 모바일에서만 사용하므로 숨김
-  $(".selectbox-options li.moclose-btn").hide();
+
+  // 모바일에서만 사용하는 overlay, moclose-btn 추가작업
+  $(window)
+    .resize(function () {
+      if (window.innerWidth <= 1023) {
+        if ($options.is(":visible")) {
+          $(".selectbox-options li.moclose-btn").show();
+          $(".selectbox-overlay").show();
+        } else {
+          $(".selectbox-overlay").hide();
+          $(".selectbox-options li.moclose-btn").hide();
+        }
+        $(".selectbox-options li.moclose-btn button").click(function (event) {
+          event.stopPropagation();
+          $(this).closest(".selectbox-wrap>div").find(".selectbox-trigger").removeClass("active"); // close 버튼 클릭 시 모든 tigger의 active가 제거
+          $(this).closest(".selectbox-options").hide();
+          $(".selectbox-overlay").hide();
+        });
+      } else {
+        $(".selectbox-options li.moclose-btn").hide();
+        $(".selectbox-overlay").hide();
+      }
+    })
+    .resize();
 });
 
 $(".option").click(function (event) {
@@ -262,32 +284,13 @@ $(".option").click(function (event) {
   $(this).addClass("active").attr("aria-selected", "true");
   // 클릭된 option의 트리거의 actvie 제거 및 aria-expanded 상태 변경
   $(this).closest(".selectbox-wrap>div").find(".selectbox-trigger").removeClass("active").attr("aria-expanded", "false");
+  $(window)
+    .resize(function () {
+      if (window.innerWidth <= 1023) {
+        $(".selectbox-overlay").hide();
+        $(".selectbox-options li.moclose-btn").hide();
+      }
+    })
+    .resize();
 });
-// select box 모바일 (moclose-btn,selectbox-overlay 사용)
-$(window)
-  .resize(function () {
-    if (window.innerWidth <= 1023) {
-      $(".selectbox-trigger").click(function (event) {
-        event.stopPropagation();
-        $(".selectbox-overlay").show();
-        $(".selectbox-options li.moclose-btn").show();
-      });
-      $(".option").click(function (event) {
-        event.stopPropagation();
-        $(".selectbox-overlay").hide();
-        $(".selectbox-options li.moclose-btn").hide();
-      });
-      $(".selectbox-options li.moclose-btn button").click(function (event) {
-        event.stopPropagation();
-        $(this).closest(".selectbox-wrap>div").find(".selectbox-trigger").removeClass("active");
-        $(this).closest(".selectbox-options").hide();
-        $(".selectbox-overlay").hide();
-      });
-    } else {
-      $(".selectbox-trigger").click(function () {
-        $(".selectbox-options li.moclose-btn").hide();
-      });
-    }
-  })
-  .resize();
 // [End] : selectbox 컴포넌트
