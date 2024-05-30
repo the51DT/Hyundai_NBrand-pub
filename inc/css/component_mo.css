@@ -118,6 +118,21 @@
   .btn-wrap-type3 > .btn {
     width: 100%;
   }
+  .btn-wrap-type4 {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 0;
+  }
+  .btn-wrap-type4 > .btn:not(:last-child) {
+    width: calc(50% - 6px);
+  }
+  .btn-wrap-type4 > .btn:first-child {
+    margin-right: 12px;
+  }
+  .btn-wrap-type4 > .btn:last-child {
+    width: 100%;
+    margin-top: 8px;
+  }
   /*********
     tab
   **********/
@@ -551,11 +566,7 @@
     max-width: 280px;
   }
 
-  .wrap-list.list03
-    .right.descwrap
-    .list-trackinfo
-    .inner
-    p.txt-type03:nth-child(1) {
+  .wrap-list.list03 .right.descwrap .list-trackinfo .inner p.txt-type03:nth-child(1) {
     font-size: 16px;
     font-weight: 500;
     line-height: 22.4px;

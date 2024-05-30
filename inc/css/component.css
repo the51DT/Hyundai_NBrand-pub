@@ -626,10 +626,30 @@ input[type="radio"]:focus + label {
   background: url(../../../inc/images/icon/icon-close_white.svg);
   background-size: contain;
 }
+.icon-heart {
+  background: url(../../../inc/images/icon/icon-heart.svg);
+  background-size: contain;
+}
+.icon-heart-red {
+  background: url(../../../inc/images/icon/icon-heart_red.svg);
+  background-size: contain;
+}
+.icon-share {
+  background: url(../../../inc/images/icon/icon-share.svg);
+  background-size: contain;
+}
+.icon-trans {
+  background: url(../../../inc/images/icon/icon-trans.svg);
+  background-size: contain;
+}
 [class*="btn-only-icon"] {
   display: inline-flex;
   width: 40px;
   height: 40px;
+}
+.btn[class*="btn-only-icon-notbg"] {
+  width: auto;
+  height: auto;
 }
 [class*="-square"] {
   border-radius: 0;
@@ -656,7 +676,23 @@ input[type="radio"]:focus + label {
 }
 .btn-wrap-type3 {
   justify-content: center;
-  gap: 10px;
+  gap: 8px;
+}
+.btn-wrap-type4 {
+  justify-content: center;
+  gap: 8px;
+}
+.btn-wrap-type5 {
+  justify-content: space-between;
+}
+.btn-wrap-type5 > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.btn-wrap-type5 > div:last-child {
+  display: flex;
+  gap: 12px;
 }
 .btn-group {
   display: inline-flex;
