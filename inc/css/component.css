@@ -1504,19 +1504,20 @@ input[type="radio"]:focus + label {
 }
 
 .ty02Swiper .swiper-slide .img-ico {
-  display: block;
+  display: none;
+  content: "";
   width: 240px;
   height: 240px;
   position: absolute;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+  background: url("../images/icon/icon-play-video.svg") no-repeat center top /
+    100%;
 }
 
-.ty02Swiper .swiper-slide .img-ico img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.ty02Swiper .swiper-slide a:hover .img-ico {
+  display: block;
 }
 
 .ty02Swiper .text-area {

@@ -923,6 +923,9 @@
   .ty02Swiper .text-area .list-box ul {
     flex-wrap: wrap;
   }
+  .ty02Swiper .text-area .list-box ul li {
+    padding-bottom: 4px;
+  }
   .ty02Swiper .swiper-slide .img-area {
     height: 234px;
   }
