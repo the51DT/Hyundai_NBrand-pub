@@ -206,9 +206,14 @@ textarea::placeholder {
 body {
   word-break: break-all;
 }
-body * {
+/* body * {
   outline: none;
 }
 body *:focus {
   outline: none;
+} */
+
+a,
+button {
+  cursor: pointer;
 }

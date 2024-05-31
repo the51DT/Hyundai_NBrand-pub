@@ -1,10 +1,13 @@
 @charset "utf-8";
-
+/* body {
+  background: #555;
+} */
 .wrap {
 }
 .wrap * {
 }
 
+/* 본문 바로가기 */
 .skip-navigation {
   width: 100%;
 }
@@ -26,25 +29,25 @@
   top: 0;
 }
 
+/* header */
 .header-wrap {
   width: 100%;
-  overflow: hidden;
+  height: 70px;
+  border-bottom: 1px solid #d9d9d9;
+  position: relative;
 }
 .header-cont {
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  align-items: center just;
 }
-.header-cont .nav-btn {
-  height: 70px;
-  width: 70px;
-  background: url(../images/icon/icon-menu_btn.svg) no-repeat center center;
-  order: 1;
-}
+
 .header-cont .logo {
   order: 2;
   height: 70px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .header-cont .logo a {
   display: flex;
@@ -53,19 +56,337 @@
 }
 .header-cont .utile-wrap {
   order: 3;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
 }
-.header-cont .login-btn {
+
+.header-cont .utile-wrap .lang-btn {
   height: 70px;
-  width: 70px;
+  width: 60px;
+  background: url(../images/icon/icon-language.svg) no-repeat;
+  background-position: center right 10px;
+  text-align: left;
+  padding: 10px;
+}
+.header-cont .utile-wrap .lang-btn span {
+  display: block;
+  padding-top: 2px;
+}
+
+.header-cont .utile-wrap .login-btn {
+  height: 70px;
+  width: 68px;
   background: url(../images/icon/icon-myinfo.svg) no-repeat center center;
 }
 
-.gnb__tab-btn-wrap {
+.header-cont .utile-cont {
+  display: flex;
+}
+
+.header-cont .nav-btn {
+  height: 70px;
+  width: 68px;
+  /* background: url(../images/icon/icon-menu_btn.svg) no-repeat center center; */
+  order: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5px;
+  transition: gap 0.2s;
+}
+.header-cont .nav-btn .line {
+  width: 15px;
+  height: 2.5px;
+  background: #000;
+  transition: all 0.2s;
+}
+.header-cont .nav-btn.on {
+  gap: 0;
+}
+.header-cont .nav-btn.on .line {
+  height: 2px;
+}
+.header-cont .nav-btn.on .line:nth-child(1) {
+  margin-top: 2px;
+  transform: rotateZ(45deg);
+}
+.header-cont .nav-btn.on .line:nth-child(2) {
   display: none;
 }
-.gnb__tab-cont-wrap {
-  display: none;
+.header-cont .nav-btn.on .line:nth-child(3) {
+  margin-top: -2px;
+  transform: rotateZ(-45deg);
 }
+
+/* nav pop */
+.nav-wrap {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  background: #fff;
+  width: 100vw;
+}
+/* nav event */
 .header__event-wrap {
+  padding: 48px 24px 60px;
+}
+.header__event-wrap.hide {
   display: none;
+}
+.header__event-wrap .header__event-area {
+  display: flex;
+  gap: 8px;
+}
+.header__event-wrap [class*="header__event-item"] {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+.header__event-wrap .img-area {
+  height: 534px;
+  position: relative;
+}
+.header__event-wrap .img-area img {
+  width: auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+}
+.header__event-wrap .text-area {
+  position: absolute;
+  bottom: -48px;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  transition: bottom 0.5s;
+}
+
+.header__event-wrap [class*="header__event-item"]:active .text-area,
+.header__event-wrap [class*="header__event-item"]:hover .text-area,
+.header__event-wrap [class*="header__event-item"]:focus .text-area {
+  bottom: 0;
+}
+
+.header__event-wrap .text-area h3 {
+  font-family: Hyundai Sans Head;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 39.2px;
+  padding: 0 24px;
+}
+.header__event-wrap .text-area p {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 19.6px;
+  text-align: left;
+  padding: 0 24px 24px;
+}
+.header__event-wrap .link-area {
+  display: flex;
+  width: 100%;
+  background: #de3111;
+  padding: 14px;
+  gap: 24px;
+  justify-content: center;
+}
+
+.header__event-wrap .link-area a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+.header__event-wrap .link-area a span {
+  width: 16px;
+  height: 16px;
+}
+.header__event-wrap .link-area a span.icon-link-wh {
+  margin-top: -3px;
+}
+
+/* gnb 1dep*/
+.gnb__tab-btn-wrap {
+  display: flex;
+  gap: 40px;
+  padding: 8px 24px 0;
+}
+
+.gnb__tab-btn-wrap [class*="gnb__tab-btn"] {
+  font-family: Hyundai Sans Head;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: left;
+  position: relative;
+  padding: 8px 24px 8px 0;
+  border-bottom: 4px solid #fff;
+  color: #555;
+}
+.gnb__tab-btn-wrap [class*="gnb__tab-btn"]::after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: url(../images/icon/icon-arrow01_down_gray.svg) no-repeat center;
+}
+
+.gnb__tab-btn-wrap a[class*="gnb__tab-btn"]::after {
+  background: url(../images/icon/icon-link_gray.svg) no-repeat center top 1px;
+}
+
+.gnb__tab-btn-wrap [class*="gnb__tab-btn"].on {
+  color: #de3111;
+  border-bottom: 4px solid #de3111;
+}
+
+.gnb__tab-btn-wrap [class*="gnb__tab-btn"].on::after {
+  background: url(../images/icon/icon-arrow01_down_red.svg) no-repeat center;
+}
+
+/* gnb 1dep cont*/
+.gnb__tab-cont-wrap [class*="gnb__tab-cont"] {
+  display: none;
+  width: 100vw;
+  padding: 48px 24px 60px;
+}
+.gnb__tab-cont-wrap [class*="gnb__tab-cont"].on {
+  display: flex;
+  gap: 30px;
+}
+.gnb__tab-cont-wrap [class*="gnb__tab-cont"] > * {
+  flex: 0 0 50%;
+}
+.gnb__tab-cont-wrap .gnb__tab02-btn {
+}
+.gnb__tab-cont-wrap .gnb-content__dep2 {
+  position: relative;
+  height: 524px;
+  overflow: hidden;
+}
+
+.gnb__tab-cont-wrap .img-area {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.gnb__tab-cont-wrap .img-area img {
+  width: auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+}
+
+.gnb__tab-cont-wrap .text-area {
+  position: absolute;
+  bottom: -48px;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  transition: bottom 0.5s;
+}
+
+.gnb__tab-cont-wrap .gnb-content__dep2:active .text-area,
+.gnb__tab-cont-wrap .gnb-content__dep2:hover .text-area,
+.gnb__tab-cont-wrap .gnb-content__dep2:focus .text-area {
+  bottom: 0;
+}
+
+.gnb__tab-cont-wrap .text-area h3 {
+  font-family: Hyundai Sans Head;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 39.2px;
+  padding: 0 24px;
+}
+.gnb__tab-cont-wrap .text-area p {
+  font-family: Hyundai Sans Text;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 19.6px;
+  text-align: left;
+  padding: 0 24px 24px;
+}
+.gnb__tab-cont-wrap .link-area {
+  display: flex;
+  width: 100%;
+  background: #de3111;
+  padding: 14px;
+  gap: 24px;
+  justify-content: center;
+}
+
+.gnb__tab-cont-wrap .link-area a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+.gnb__tab-cont-wrap .link-area a span {
+  width: 16px;
+  height: 16px;
+}
+.gnb__tab-cont-wrap .link-area a span.icon-link-wh {
+  margin-top: -3px;
+}
+
+.gnb__tab02-wrap {
+}
+
+.gnb__tab-cont {
+}
+.gnb__tab02-wrap {
+  display: flex;
+  flex: 0 0 50%;
+  gap: 30px;
+}
+.gnb__tab02-wrap .gnb__tab02 {
+  width: 50%;
+}
+.gnb__tab02-wrap [class*="gnb__tab02-btn"] {
+  width: 100%;
+  text-align: left;
+  height: 60px;
+  font-family: Hyundai Sans Head;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  color: #555;
+  border-top: 1px solid #d9d9d9;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.gnb__tab02-wrap [class*="gnb__tab02-btn"]::after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: url(../images/icon/icon-arrow01_right_gray.svg) no-repeat center;
+}
+.gnb__tab02-wrap [class*="gnb__tab02-btn"].on,
+.gnb__tab02-wrap [class*="gnb__tab02-btn"]:hover,
+.gnb__tab02-wrap [class*="gnb__tab02-btn"]:focus,
+.gnb__tab02-wrap [class*="gnb__tab02-btn"]:active {
+  color: #de3111;
+}
+.gnb__tab02-wrap [class*="gnb__tab02-btn"]:hover::after {
+  background: url(../images/icon/icon-arrow01_right_red.svg) no-repeat center;
+}
+.gnb__tab02-wrap [class*="gnb__tab02-btn"].on::after {
+  background: url(../images/icon/icon-circle_red.svg) no-repeat center;
 }

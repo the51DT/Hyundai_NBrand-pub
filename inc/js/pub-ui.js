@@ -255,6 +255,7 @@
 
       document.querySelector("#" + tabLabel).classList.add("on");
     },
+<<<<<<< Updated upstream
     tagBtnEvent: function (e, list) {
       var targetAriaSelected = e.ariaSelected;
       var targetList = e.parentElement;
@@ -293,6 +294,33 @@
           )}
         `;
       });
+=======
+
+    checkObj: function (obj) {
+      return $(obj).length == 0 ? false : true;
+    },
+
+    toggleBtn: function (obj) {
+      if (!self.checkObj(obj)) {
+        return;
+      }
+
+      const target = obj.target;
+      const tabs = target.parentNode.parentElement;
+      const tabList = tabs.children;
+      const tabLabel = target.ariaLabel;
+
+      for (let i = 0; i < tabList.length; i++) {
+        tabList[i].classList.remove("on");
+      }
+      target.parentNode.classList.add("on");
+
+      self.$tabConts.forEach(function (el) {
+        el.classList.remove("on");
+      });
+
+      document.querySelector("#" + tabLabel).classList.add("on");
+>>>>>>> Stashed changes
     },
   };
 
