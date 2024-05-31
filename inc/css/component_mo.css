@@ -184,6 +184,15 @@
   .tab-content {
     margin-top: 28px;
   }
+  .tab-head.ty03 .tabs-wrap .tabs {
+    width: 100%;
+  }
+  .tab-head.ty03 .tabs-wrap .tabs li {
+    width: 50%;
+  }
+  .tab-head.ty03 .tabs-wrap .tabs li a {
+    text-align: center;
+  }
 
   /***
     contents-box 
