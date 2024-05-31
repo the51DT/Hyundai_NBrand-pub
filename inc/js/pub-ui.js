@@ -34,24 +34,24 @@
       }
 
       // 스와이퍼 재생 버튼 클릭시,
-      self.$btnPlay.on("click", function (e) {
+      $(".btn-play").on("click", function (e) {
         e.preventDefault();
         var targetSwiper = $(this).closest(".swiper");
 
-        if (self.$btnPlay.hasClass("on")) {
+        if ($(this).hasClass("on")) {
           console.log("정지버튼 클릭!");
           // targetSwiper.find(".btn-play").removeClass("on");
           // targetSwiper.find(".btn-play .visually-hidden").text("정지");
           targetSwiper[0].swiper.autoplay.stop();
-          self.$btnPlay.removeClass("on");
-          self.$btnPlay.find(".visually-hidden").text("정지");
+          $(this).removeClass("on");
+          $(this).find(".visually-hidden").text("정지");
         } else {
           console.log("재생버튼 클릭!");
           // targetSwiper.find(".btn-play").addClass("on");
           // targetSwiper.find(".btn-play .visually-hidden").text("재생");
           targetSwiper[0].swiper.autoplay.start();
-          self.$btnPlay.addClass("on");
-          self.$btnPlay.find(".visually-hidden").text("재생");
+          $(this).addClass("on");
+          $(this).find(".visually-hidden").text("재생");
         }
       });
 
