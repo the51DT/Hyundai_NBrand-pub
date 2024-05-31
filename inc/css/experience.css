@@ -2,6 +2,9 @@
 .ranking-wrap {
   background: #f0f0f0;
 }
+body {
+  overflow: auto;
+}
 .ranking-top {
   padding: 139.5px 0;
   text-align: center;
@@ -10,11 +13,22 @@
 .ranking-center .tab-head {
   justify-content: flex-end;
   padding-top: 120px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.tab-graycont {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.tab-whitecont {
+  background-color: #fff;
+  padding: 80px 0 240px;
+}
+.tab-whitecont .btn-wrap {
+  margin-top: 80px;
 }
 .ranking-center .tab-container {
   position: relative;
-  max-width: 1440px;
-  margin: 0 auto;
 }
 .ranking-center .tab-container .ranking-tabcont {
   position: absolute;
