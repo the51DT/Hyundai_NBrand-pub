@@ -1275,6 +1275,16 @@ input[type="radio"]:focus + label {
 }
 
 .swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #de3111;
+}
+
+.swiper-pagination-custom .swiper-pagination-bullet {
+  transition: width 0.8s ease-out;
+}
+.swiper-pagination-custom .swiper-pagination-bullet-active {
+  --time: 0;
+  width: calc(84px * (1 - var(--time)));
   background: #de3111;
   opacity: 1;
 }
@@ -1372,7 +1382,8 @@ input[type="radio"]:focus + label {
   background-image: url(../../inc/images/icon/icon-soundoff_white.svg);
 }
 
-.swiper-status-wrap .swiper-pagination {
+.swiper-status-wrap .swiper-pagination,
+.swiper-status-wrap .swiper-pagination-custom {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1600,6 +1611,12 @@ input[type="radio"]:focus + label {
 
 .ty04Swiper .swiper-button-next {
   right: 0;
+}
+
+.ty04Swiper .card_type01 .card_more::after {
+  width: 17px;
+  height: 17px;
+  mask-image: url("../images/icon/icon-arrow01_right_white.svg");
 }
 
 .swiper-card-type .card_type01 {

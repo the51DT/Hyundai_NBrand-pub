@@ -88,8 +88,12 @@
       var self = this;
       var slideInx = 0; // 현재 슬라이드 index 체크용 변수
       const progressBar = document.querySelector(".autoplay-progress .bar");
+      const bulletActive = document.querySelector(
+        ".swiper-pagination-custom .swiper-pagination-bullet-active"
+      );
 
-      self.swiper1 = new Swiper(".ty01Swiper", {
+      var swiper1 = new Swiper(".ty01Swiper", {
+        slidesPerView: 1,
         centeredSlides: true,
         watchOverflow: true, //pagination 1개 일 경우, 숨김
         autoplay: {
@@ -111,7 +115,7 @@
         },
       });
 
-      self.swiper2 = new Swiper(".ty02Swiper", {
+      var swiper2 = new Swiper(".ty02Swiper", {
         slidesPerView: 1.5,
         spaceBetween: 80,
         centeredSlides: true,
@@ -123,7 +127,7 @@
           disableOnInteraction: false,
         },
         pagination: {
-          el: ".swiper-pagination",
+          el: ".swiper-pagination-custom",
           clickable: true,
         },
         navigation: {
@@ -144,7 +148,9 @@
         },
         on: {
           autoplayTimeLeft(s, time, progress) {
-            progressBar.style.setProperty("--progress", 1 - progress);
+            // console.log("타임 : " + time, "progress : " + progress);
+            bulletActive.style.setProperty("--time", progress);
+            // console.log(84 * (1 - progress));
           },
           activeIndexChange: function () {
             slideInx = this.realIndex; //현재 슬라이드 index 갱신
@@ -152,12 +158,16 @@
         },
       });
 
-      self.swiper3 = new Swiper(".ty03Swiper", {
+      var swiper3 = new Swiper(".ty03Swiper", {
         slidesPerView: 3,
         spaceBetween: 24,
         watchOverflow: true,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
         pagination: {
-          el: ".swiper-pagination",
+          el: ".swiper-pagination-custom",
           clickable: true,
         },
         navigation: {
@@ -178,9 +188,14 @@
             spaceBetween: 24,
           },
         },
+        on: {
+          autoplayTimeLeft(s, time, progress) {
+            bulletActive.style.setProperty("--time", progress);
+          },
+        },
       });
 
-      self.swiper4 = new Swiper(".ty04Swiper", {
+      var swiper4 = new Swiper(".ty04Swiper", {
         slidesPerView: 3.5,
         spaceBetween: 24,
         watchOverflow: true,
@@ -203,7 +218,7 @@
         },
       });
 
-      self.swiper5 = new Swiper(".ty05Swiper", {
+      var swiper5 = new Swiper(".ty05Swiper", {
         spaceBetween: 4,
         watchOverflow: true,
         navigation: {
