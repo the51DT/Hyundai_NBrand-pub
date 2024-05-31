@@ -101,7 +101,7 @@
           disableOnInteraction: false,
         },
         pagination: {
-          el: ".swiper-pagination",
+          el: ".swiper-pagination-custom",
           clickable: true,
         },
         navigation: {
@@ -110,7 +110,8 @@
         },
         on: {
           autoplayTimeLeft(s, time, progress) {
-            progressBar.style.setProperty("--progress", 1 - progress);
+            // progressBar.style.setProperty("--progress", 1 - progress);
+            bulletActive.style.setProperty("--time", progress);
           },
         },
       });
