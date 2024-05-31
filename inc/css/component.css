@@ -27,7 +27,14 @@
   font-size: 1.25rem;
   line-height: 140%;
 }
-
+.contitle-type01 {
+  font-size: 4.25rem;
+  line-height: 125%;
+}
+.contitle-type02 {
+  font-size: 2.5rem;
+  line-height: 125%;
+}
 /* txt */
 [class*="txt-type"] {
   color: #000;
