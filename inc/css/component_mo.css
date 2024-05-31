@@ -192,6 +192,7 @@
   }
   .tab-head.ty03 .tabs-wrap .tabs li a {
     text-align: center;
+    padding: 11px 0;
   }
 
   /***
@@ -433,9 +434,11 @@
   /* card_type03 */
   .card_type03 {
     height: 14rem;
+    aspect-ratio: 224 / 312;
   }
   .card_type03.card_ranker {
     height: 17.5625rem;
+    aspect-ratio: 281 / 312;
   }
   .card_type03 .card_top {
     padding: 1.44rem 1.31rem 0 1.25rem;
