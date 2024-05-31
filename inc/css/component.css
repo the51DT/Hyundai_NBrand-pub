@@ -670,6 +670,10 @@ input[type="radio"]:focus + label {
 [class*="btn-wrap-"] {
   display: flex;
 }
+.btn-wrap-default {
+  justify-content: center;
+  align-items: center;
+}
 .btn-wrap-type2 {
   justify-content: center;
   gap: 8px;
