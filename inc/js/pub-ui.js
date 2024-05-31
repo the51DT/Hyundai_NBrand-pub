@@ -267,12 +267,14 @@
         }
       }
     },
-    masonryLayout: function() {
+    masonryLayout: function () {
       const masonry_item = document.querySelectorAll(".masonry_item");
       const row_gap = 24;
       masonry_item.forEach((el) => {
         el.style.gridRowEnd = `
-          span ${Math.ceil(el.querySelector(".masonry_con").scrollHeight + row_gap)}
+          span ${Math.ceil(
+            el.querySelector(".masonry_con").scrollHeight + row_gap
+          )}
         `;
       });
     },
@@ -295,7 +297,10 @@ $(".selectbox-trigger").click(function (event) {
     return attr === "true" ? "false" : "true";
   });
   // 클릭되지 않은 트리거 active 삭제
-  $(".selectbox-wrap>div .selectbox-trigger").not(this).removeClass("active").attr("aria-expanded", "false");
+  $(".selectbox-wrap>div .selectbox-trigger")
+    .not(this)
+    .removeClass("active")
+    .attr("aria-expanded", "false");
   // 클릭된 트리거는 acitve 추가
   $(this)
     .toggleClass("active")
@@ -318,7 +323,10 @@ $(".selectbox-trigger").click(function (event) {
         }
         $(".selectbox-options li.moclose-btn button").click(function (event) {
           event.stopPropagation();
-          $(this).closest(".selectbox-wrap>div").find(".selectbox-trigger").removeClass("active"); // close 버튼 클릭 시 모든 tigger의 active가 제거
+          $(this)
+            .closest(".selectbox-wrap>div")
+            .find(".selectbox-trigger")
+            .removeClass("active"); // close 버튼 클릭 시 모든 tigger의 active가 제거
           $(this).closest(".selectbox-options").hide();
           $(".selectbox-overlay").hide();
         });
@@ -334,13 +342,27 @@ $(".option").click(function (event) {
   event.stopPropagation();
   var selectedText = $(this).text();
   // option 클릭 시 trigger 문구 변경
-  $(this).closest(".selectbox-options").hide().attr("aria-hidden", "true").siblings(".selectbox-trigger").text(selectedText);
+  $(this)
+    .closest(".selectbox-options")
+    .hide()
+    .attr("aria-hidden", "true")
+    .siblings(".selectbox-trigger")
+    .text(selectedText);
   // 클릭되지 않은 option active 삭제 & aria-selected 상태 변경
-  $(this).closest(".selectbox-options").find(".option").not(this).removeClass("active").attr("aria-selected", "false");
+  $(this)
+    .closest(".selectbox-options")
+    .find(".option")
+    .not(this)
+    .removeClass("active")
+    .attr("aria-selected", "false");
   // 클릭된 option active 추가
   $(this).addClass("active").attr("aria-selected", "true");
   // 클릭된 option의 트리거의 actvie 제거 및 aria-expanded 상태 변경
-  $(this).closest(".selectbox-wrap>div").find(".selectbox-trigger").removeClass("active").attr("aria-expanded", "false");
+  $(this)
+    .closest(".selectbox-wrap>div")
+    .find(".selectbox-trigger")
+    .removeClass("active")
+    .attr("aria-expanded", "false");
   $(window)
     .resize(function () {
       if (window.innerWidth <= 1023) {
@@ -351,3 +373,43 @@ $(".option").click(function (event) {
     .resize();
 });
 // [End] : selectbox 컴포넌트
+// dropdown - cont 08
+const dropdownBtns = document.querySelectorAll(".wrap-dropdown-selected");
+dropdownBtns.forEach((button) => {
+  button.addEventListener("click", function () {
+    const isExpanded = button.getAttribute("aria-expanded") === "true";
+    const dropdownMenu = button.nextElementSibling;
+    const btnRightArr = button
+      .closest(".dropdown")
+      .querySelector(".arrow-down");
+
+    button.setAttribute("aria-expanded", String(!isExpanded));
+    dropdownMenu.classList.toggle("dropdown-on", !isExpanded);
+    btnRightArr.classList.toggle("rotate", !isExpanded);
+
+    const dropdownCentered = button.closest(".dropdown");
+    const detectCase1 = dropdownMenu.classList.contains("dropdown-on");
+    const detectCase2 = dropdownCentered.classList.contains("centered");
+
+    if (!isExpanded) {
+      dropdownMenu.setAttribute("aria-hidden", "true");
+    }
+
+    if (detectCase1 && !detectCase2) {
+      dropdownMenu.addEventListener("click", function (event) {
+        dropdownMenu.classList.remove("dropdown-on");
+        btnRightArr.classList.remove("rotate", detectCase1);
+      });
+    }
+  });
+});
+
+// dropdown - cont 08 : 리스트를 클릭할 시 상단 버튼에 리스트 내의 텍스트를 반영
+function selectOption(event, optionText) {
+  event.preventDefault();
+  const btnTxtWrap = document.querySelector(".dropdown-btn");
+
+  btnTxtWrap.innerText = optionText;
+  if ((btnTxtWrap.innerText = optionText)) {
+  }
+}
