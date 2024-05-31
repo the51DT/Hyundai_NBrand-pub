@@ -1,56 +1,63 @@
 @charset "utf-8";
-.ranking-wrap {
-  background: #f0f0f0;
-}
+/* reset에서 hidden 되어있어서 */
 body {
   overflow: auto;
 }
-.ranking-top {
+/* Experience  common */
+.content-top {
   padding: 139.5px 0;
   text-align: center;
   background: #fff;
 }
-.ranking-top p {
-  font-family: Hyundai Sans Head;
-}
-.ranking-top p + p {
+.content-top p + p {
   margin-top: 16px;
+}
+.title-w1440 {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+/* EP040401 */
+.ranking-wrap {
+  background: #f0f0f0;
 }
 .ranking-center .tab-head {
   justify-content: flex-end;
-  padding-top: 120px;
-  max-width: 1440px;
+  padding: 120px 80px 0;
+  max-width: 1600px;
   margin: 0 auto;
 }
-.tab-graycont {
-  max-width: 1440px;
-  margin: 0 auto;
+.ranking-center .tabs-wrap .tabs {
+  position: relative;
+  z-index: 1;
 }
 .tab-whitecont {
   background-color: #fff;
-  padding: 80px 0 240px;
+  padding: 80px 80px 240px;
+}
+.tab-graycont {
+  position: relative;
+  padding: 0 80px;
+}
+.tab-whitecont .grid_3,
+.tab-graycont .grid_3 {
+  max-width: 1440px;
+  margin: 0 auto;
 }
 .tab-whitecont .btn-wrap-default {
   margin-top: 80px;
 }
-.ranking-center .tab-container {
-  position: relative;
-}
 .ranking-center .tab-container .ranking-tabcont {
-  position: absolute;
-  top: 99px;
+  max-width: 1440px;
+  display: block;
+  margin: 0 auto;
+  margin-top: -62px;
 }
 .ranking-center .tab-content {
   margin: 0;
 }
 .ranking-center .ranking-tabcont + ul {
   padding: 130px 0 120px;
-}
-.ranking-tabcont .ranking-inner1 {
-  font-size: 68px;
-  font-weight: 700;
-  line-height: 85px;
-  font-family: Hyundai Sans Head;
 }
 .ranking-center .ranking-inner2box {
   display: flex;
@@ -88,15 +95,145 @@ body {
 .ranking-center .ranking-inner2 > span {
   color: #de3111;
 }
+/* EP040101 */
+.mission-box {
+  background-color: #f0f0f0;
+  padding: 120px 80px 160px;
+}
+.card_type04 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #fff;
+  font-family: "Hyundai Sans Text";
+}
+.card_type04 .card_thumbnail {
+  width: 100%;
+}
+.card_type04 .card_thumbnail.h347 {
+  height: 21.6875rem;
+  aspect-ratio: 464 / 347;
+}
+.card_type04 .card_thumbnail.h464 {
+  height: 29rem;
+  aspect-ratio: 464 /464;
+}
+.card_type04 .card_thumbnail.h359 {
+  height: 22.4375rem;
+  aspect-ratio: 464 / 359;
+}
+.card_type04 .card_thumbnail.h823 {
+  height: 51.4375rem;
+  aspect-ratio: 464 / 823;
+}
+.card_type04 .card_thumbnail.h825 {
+  height: 51.5625rem;
+  aspect-ratio: 464 / 825;
+}
+.card_type04 .card_thumbnail.h618 {
+  height: 38.625rem;
+  aspect-ratio: 464 / 618;
+}
+.card_type04 .card_thumbnail.h261 {
+  height: 16.3125rem;
+  aspect-ratio: 464 / 261;
+}
+.card_type04 .card_thumbnail img {
+  height: 100%;
+  object-fit: cover;
+}
+.card_type04 .card_state {
+  padding: 1rem 0.875rem;
+  background-color: #de3111;
+  text-align: left;
+  color: #fff;
+}
+.card_type04 .card_step {
+  font-family: "Hyundai Sans Head";
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 140%;
+}
+.card_type04 .card_detail {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 140%;
+  margin-top: 0.25rem;
+}
+.card_type04 .card_entry {
+  font-weight: 700;
+}
+.card_type04 .card_state.compelete {
+  background-color: #aacae6;
+  color: #000000;
+}
+.card_type04 .card_state.end {
+  background-color: #000000;
+  color: #abb2b5;
+}
+.card_type04 .card_con {
+  padding: 20px 16px 0;
+  background-color: #fff;
+  text-align: left;
+}
+.card_type04 .card_tag {
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 140%;
+  color: #fff;
+  background-color: #000000;
+  display: inline-flex;
+  justify-content: flex-start;
+  margin-bottom: 16px;
+}
+.card_type04 .card_cont-des {
+  margin-top: 8px;
+}
+.card_type04 .card-hashtag {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.card_type04 .card_function {
+  padding: 40px 16px 38px;
+}
+.grid_masonry + .btn-wrap-default {
+  margin-top: 80px;
+}
+.banner-box {
+  padding: 0 80px;
+  background: linear-gradient(#f0f0f0 50%, #fff 50%);
+  margin-bottom: 160px;
+}
+.banner-box > div {
+  background: url(../images/img/img_nfluencer_banner01.png) center no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 400px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 40px 0 44px 60px;
+}
+.banner-box > div p {
+  color: #fff;
+}
+
 /* 모바일 */
 @media screen and (max-width: 1023px) {
-  .ranking-top {
+  /* Experience banner title common */
+  .content-top {
     padding: 153px 24px;
   }
-  .ranking-top p:last-child {
+  .content-top p:last-child {
     font-size: 20px;
     line-height: 28px;
   }
+  /* EP040401 */
   .ranking-center .tab-head {
     max-width: 100%;
     padding: 80px 24px 0;
@@ -107,7 +244,7 @@ body {
   .tab-graycont {
     max-width: 100%;
     padding: 0 24px;
-    margin-top: 60px;
+    margin-top: 104px;
   }
   .tab-whitecont {
     background-color: #fff;
@@ -119,10 +256,6 @@ body {
   }
   .ranking-center .ranking-tabcont + ul {
     padding: 36px 0 80px;
-  }
-  .ranking-tabcont .ranking-inner1 {
-    font-size: 36px;
-    line-height: 45px;
   }
   .ranking-center .ranking-inner2:not(:first-child)::after {
     display: none;
@@ -143,10 +276,6 @@ body {
   .ranking-center .ranking-inner2 {
     font-size: 20px;
     line-height: 28px;
-  }
-  .tab-whitecont > ul > li {
-    /* width: calc(100% - 24px); */
-    /* margin: 0 auto; */
   }
   .tab-whitecont .btn-wrap-default {
     margin-top: 44px;
