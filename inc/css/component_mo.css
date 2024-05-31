@@ -1105,8 +1105,10 @@
     margin-top: 20px;
   }
   /* tag */
-  .tag-list-wrap [class^="tag-list"] li {
+  .tag-list-wrap [class^="tag-list"] {
     flex-wrap: wrap;
+  }
+  .tag-list-wrap [class^="tag-list"] li {
     margin-bottom: 4px;
   }
   .tag-list-wrap [class^="tag-list"] li:not(:last-child) {
