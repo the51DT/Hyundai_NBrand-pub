@@ -5,6 +5,7 @@
       self.settings();
       self.bindEvents();
       self.swiperSlideEvent();
+      self.masonryLayout();
     },
     settings: function () {
       var self = this;
@@ -266,10 +267,20 @@
         }
       }
     },
+    masonryLayout: function() {
+      const masonry_item = document.querySelectorAll(".masonry_item");
+      const row_gap = 24;
+      masonry_item.forEach((el) => {
+        el.style.gridRowEnd = `
+          span ${Math.ceil(el.querySelector(".masonry_con").scrollHeight + row_gap)}
+        `;
+      });
+    },
   };
 
   $(document).ready(function () {
     pubUi.init();
+    $(window).on("resize", pubUi.masonryLayout);
   });
 })();
 

@@ -295,6 +295,12 @@
     grid-template-columns: 1fr;
     gap: 1.25rem;
   }
+  .grid_masonry {
+    display: block;
+  }
+  .grid_masonry .masonry_item + .masonry_item {
+    margin-top: 1.25rem;
+  }
 
   /* card_type01 */
   .card_type01 {

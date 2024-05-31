@@ -897,6 +897,14 @@ input[type="radio"]:focus + label {
   justify-content: center;
   gap: 1.5rem;
 }
+.grid_masonry {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 29rem));
+  justify-content: center;
+  row-gap: 0;
+  column-gap: 1.5rem;
+  grid-auto-rows: 1px;
+}
 /* 트랙용 */
 @media screen and (max-width: 1280px) and (min-width: 1023px) {
   .grid_3.track_list {
