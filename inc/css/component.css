@@ -30,10 +30,12 @@
 .contitle-type01 {
   font-size: 4.25rem;
   line-height: 125%;
+  font-family: "Hyundai Sans Head";
 }
 .contitle-type02 {
   font-size: 2.5rem;
   line-height: 125%;
+  font-family: "Hyundai Sans Head";
 }
 /* txt */
 [class*="txt-type"] {
@@ -649,6 +651,19 @@ input[type="radio"]:focus + label {
   background: url(../../../inc/images/icon/icon-trans.svg);
   background-size: contain;
 }
+.icon-download {
+  background: url(../../../inc/images/icon/icon-download.svg);
+  background-size: contain;
+}
+.btn:hover [class*="icon-download"],
+.btn:active [class*="icon-download"] {
+  /* 빨간색 다운로드 icon 없어서 css로 임시 */
+  background-image: none;
+  background-color: #de3111;
+  mask-image: url("../../../inc/images/icon/icon-download.svg");
+  mask-position: center;
+  mask-size: contain;
+}
 [class*="btn-only-icon"] {
   display: inline-flex;
   width: 40px;
@@ -779,7 +794,49 @@ input[type="radio"]:focus + label {
   display: block;
 }
 
+/* key-visual */
+.conts-key-visual {
+  position: relative;
+}
+
+.conts-key-visual .img-area {
+  height: 1080px;
+}
+.conts-key-visual .img-area img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.conts-key-visual .text-area {
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  color:#fff;
+}
+
+.conts-key-visual .text-area .tit {
+  font-family: "Hyundai Sans Head";
+  font-size: 80px;  
+  font-weight: 700;
+  line-height: 100px;
+  text-align: center;
+}
+.conts-key-visual .text-area .desc {
+  font-family: "Hyundai Sans Head";
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 44.8px;
+  margin-top:16px;
+  text-align: center;
+}
+
 /* contents-box */
+.content-area > section {
+  padding-left:240px;
+  padding-right: 240px;
+}
+
 .conts-box-wrap {
   display: flex;
   justify-content: center;
@@ -913,7 +970,7 @@ input[type="radio"]:focus + label {
   grid-auto-rows: 1px;
 }
 /* 트랙용 */
-@media screen and (max-width: 1280px) and (min-width: 1023px) {
+@media screen and (max-width: 1280px) and (min-width: 1024px) {
   .grid_3.track_list {
     grid-template-columns: repeat(2, minmax(0, 29rem));
   }

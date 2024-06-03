@@ -197,20 +197,48 @@ body {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
-  margin-top: 20px;
+  margin: 20px 0;
 }
 .card_type04 .card_function {
-  padding: 40px 16px 38px;
+  padding: 20px 16px 38px;
 }
 .grid_masonry + .btn-wrap-default {
   margin-top: 80px;
 }
-.banner-box {
-  padding: 0 80px;
-  background: linear-gradient(#f0f0f0 50%, #fff 50%);
-  margin-bottom: 160px;
+.card_type04 .card_profile {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 16px 0 16px 16px;
+  gap: 8px;
 }
-.banner-box > div {
+.card_type04 .card_profile .profile_img {
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+.card_type04 .card_profile .profile_img .club-mark {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 16px;
+  height: 16px;
+}
+.card_type04 .card_profile .profile_des {
+  display: flex;
+  flex-direction: column;
+}
+.card_type04 .card_profile .profile_des .profile_name {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 19.6px;
+}
+.card_type04 .card_profile .profile_des .profile_club {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16.8px;
+}
+.content-item03 .banner-box .banner-inner {
   background: url(../images/img/img_nfluencer_banner01.png) center no-repeat;
   background-size: 100% 400px;
   width: 100%;
@@ -220,13 +248,79 @@ body {
   padding: 40px 0 52px 60px;
   position: relative;
 }
-.banner-box > div p {
+.content-item03 .banner-box {
+  padding: 0 80px;
+  background: linear-gradient(#f0f0f0 50%, #fff 50%);
+  margin-bottom: 160px;
+}
+.content-item03 .banner-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+}
+/* .banner-box img {
+  width: 100%;
+  height: 400px;
+} */
+.content-item03 .banner-titbox {
+  position: absolute;
+  top: 40px;
+  left: 60px;
+  width: 48.9736vw;
+}
+.content-item03 .banner-box > .banner-inner p + p {
+  margin-top: 12px;
+}
+.content-item03 .banner-box > .banner-inner p {
   color: #fff;
 }
-.banner-box .btn-wrap {
+.content-item03 .banner-box .btn-wrap {
   position: absolute;
   bottom: 52px;
   left: 60px;
+}
+.content-item04 .mission-box.white-box {
+  background-color: #fff;
+}
+.content-item05.main-rank {
+  background: #f0f0f0;
+  padding: 120px 80px 160px;
+}
+.content-item05.main-rank .tab-container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.content-item05.main-rank .tab-head {
+  justify-content: flex-end;
+  margin-top: -100px;
+}
+.content-item05.main-rank .ranking-tabcont {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  align-items: center;
+}
+/* 테블릿 */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .banner-inner {
+    max-width: 864px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .banner-box .banner-inner {
+    background: url(../images/img/img_nfluencer_banner01_tablet.png) center no-repeat;
+    background-size: 100% 240px;
+    height: 240px;
+    max-width: 864px;
+  }
+  .banner-box > .banner-inner p:first-child {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .banner-box > .banner-inner p:last-child {
+    font-size: 20px;
+    line-height: 28px;
+  }
 }
 /* 모바일 */
 @media screen and (max-width: 1023px) {
@@ -237,6 +331,10 @@ body {
   .content-top p:last-child {
     font-size: 20px;
     line-height: 28px;
+  }
+  .title-w1440 {
+    max-width: 100%;
+    padding-bottom: 20px;
   }
   /* EP040401 */
   .ranking-center .tab-head {
@@ -284,5 +382,14 @@ body {
   }
   .tab-whitecont .btn-wrap-default {
     margin-top: 44px;
+  }
+  .content-item05.main-rank .tab-head {
+    margin-top: 0;
+  }
+  .content-item05.main-rank .tabs-wrap .tabs {
+    margin-top: 0;
+  }
+  .content-item05.main-rank .title-w1440 {
+    padding-bottom: 28px;
   }
 }
