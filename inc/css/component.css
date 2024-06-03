@@ -651,6 +651,19 @@ input[type="radio"]:focus + label {
   background: url(../../../inc/images/icon/icon-trans.svg);
   background-size: contain;
 }
+.icon-download {
+  background: url(../../../inc/images/icon/icon-download.svg);
+  background-size: contain;
+}
+.btn:hover [class*="icon-download"],
+.btn:active [class*="icon-download"] {
+  /* 빨간색 다운로드 icon 없어서 css로 임시 */
+  background-image: none;
+  background-color: #de3111;
+  mask-image: url("../../../inc/images/icon/icon-download.svg");
+  mask-position: center;
+  mask-size: contain;
+}
 [class*="btn-only-icon"] {
   display: inline-flex;
   width: 40px;
@@ -796,15 +809,15 @@ input[type="radio"]:focus + label {
 }
 .conts-key-visual .text-area {
   position: absolute;
-  top:50%;
-  left:50%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
-  color:#fff;
+  color: #fff;
 }
 
 .conts-key-visual .text-area .tit {
   font-family: "Hyundai Sans Head";
-  font-size: 80px;  
+  font-size: 80px;
   font-weight: 700;
   line-height: 100px;
   text-align: center;
@@ -814,13 +827,13 @@ input[type="radio"]:focus + label {
   font-size: 32px;
   font-weight: 700;
   line-height: 44.8px;
-  margin-top:16px;
+  margin-top: 16px;
   text-align: center;
 }
 
 /* contents-box */
 .content-area > section {
-  padding-left:240px;
+  padding-left: 240px;
   padding-right: 240px;
 }
 
@@ -957,7 +970,7 @@ input[type="radio"]:focus + label {
   grid-auto-rows: 1px;
 }
 /* 트랙용 */
-@media screen and (max-width: 1280px) and (min-width: 1023px) {
+@media screen and (max-width: 1280px) and (min-width: 1024px) {
   .grid_3.track_list {
     grid-template-columns: repeat(2, minmax(0, 29rem));
   }
@@ -1866,7 +1879,7 @@ input[type="radio"]:focus + label {
   background-color: var(--ro);
   color: var(--ff);
 }
-/* bottom list start */
+/* bottom list start (list01, list02, list05 only) */
 .wrap-list .__bottom {
   border-top: 3px solid;
   margin-top: 40px;
@@ -2085,6 +2098,190 @@ input[type="radio"]:focus + label {
   font-size: 1.5rem;
 }
 
+/* list 05 */
+.wrap-list.list05 .tit {
+  font-size: 3.5rem;
+  font-family: "Hyundai Sans Head";
+  font-weight: 700;
+  line-height: 4.375rem;
+}
+.wrap-list.list05 .__bottom.list05 {
+  margin-bottom: 1rem;
+}
+.wrap-list.list05
+  .inner
+  .__bottom.list05
+  .wrap-lists
+  .list-box:nth-child(1)
+  p.txt-type04 {
+  font-weight: 400;
+  line-height: 1.05rem;
+}
+.wrap-list.list05
+  .__bottom.list05
+  .wrap-lists
+  .list-box:nth-child(2)
+  p.txt-type05 {
+  font-weight: 400;
+  line-height: 1.05rem;
+  font-family: "Hyundai Sans Text";
+  margin-top: 0.5rem;
+}
+.wrap-list.list05
+  .__bottom.list05
+  .wrap-lists
+  .list-box:nth-child(3)
+  p.txt-type03 {
+  color: #777;
+  text-align: right;
+}
+.wrap-list.list05 .inner .btn-wrap,
+.wrap-list.list06 .inner .btn-wrap {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.wrap-list.list05 .inner .btn-wrap button.btn,
+.wrap-list.list06 .inner .btn-wrap button.btn {
+  padding: 14px 0 14px 24px;
+}
+.wrap-list.list05 .inner .btn-wrap button.btn .btn-icon20.icon-right,
+.wrap-list.list06 .inner .btn-wrap button.btn .btn-icon20.icon-right {
+  display: flex;
+  align-self: center;
+  align-items: center;
+}
+.wrap-list.list05
+  .inner
+  .btn-wrap
+  button.btn
+  .btn-icon20.icon-right:hover
+  svg
+  path {
+  fill: #fff !important;
+}
+/* list05 end */
+
+.wrap-list.list06 .__bottom.list06 .wrap-lists {
+  grid-template-columns: 1fr auto;
+}
+.wrap-list.list06 .__bottom.list06 .wrap-lists .list-box:first-child {
+  width: 100%;
+}
+.wrap-list.list06
+  .__bottom.list06
+  .wrap-lists
+  .list-box:first-child
+  p.txt-type05 {
+  font-weight: 400;
+  line-height: 1.05rem;
+  font-family: "Hyundai Sans Text";
+  margin-top: 0.5rem;
+}
+.wrap-list.list06 .__bottom.list06 .wrap-lists .list-box:last-child {
+  max-width: 198px;
+  width: 198px;
+  text-align: right;
+}
+.wrap-list.list06 .__bottom.list06 .wrap-lists .list-box:last-child p {
+  color: #777;
+}
+.wrap-list.list06 .__bottom.list06 .wrap-lists .list-box:last-child p.accent {
+  color: #de3111;
+}
+
+.wrap-list.list06 .__bottom.list06 .wrap-lists.list-only-single .list-box {
+  width: 100%;
+  max-width: 100%;
+  text-align: left;
+}
+.wrap-list.list06 .__bottom.list06 .wrap-lists.list-only-single .list-box p {
+  color: #000;
+}
+
+.wrap-list.list06 .__bottom.list06 .wrap-lists .list-box .btn-wrap button {
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/*list06 추가*/
+.wrap-list .__bottom.list06 .wrap-lists.btn-type {
+  grid-template-columns: 7fr 1fr;
+}
+.wrap-list .__bottom.list06 .wrap-lists.btn-type .list-box {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  width: 100%;
+  align-items: center;
+}
+.wrap-list .__bottom.list06 .wrap-lists.btn-type .list-box:nth-child(2) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 198px;
+}
+.wrap-list .__bottom.list06 .wrap-lists.btn-type .list-box:nth-child(2) div {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+.wrap-list .__bottom.list06 .wrap-lists.btn-type .list-box p.txt-type03 {
+  text-align: Right;
+  width: 100%;
+  color: #777;
+}
+
+.wrap-list .__bottom.list06 .wrap-lists.btn-type .list-box:nth-child(2) {
+  width: 100%;
+  max-width: 100%;
+  margin-right: 12px;
+}
+.wrap-list
+  .__bottom.list06
+  .wrap-lists.btn-type
+  .list-box:nth-child(2)
+  .btn-wrap
+  button {
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 700;
+}
+.wrap-list
+  .__bottom.list06
+  .wrap-lists.btn-type
+  .list-box:nth-child(2)
+  .btn-wrap
+  button:nth-child(1) {
+  margin-right: 8px;
+}
+.wrap-list
+  .__bottom.list06
+  .wrap-lists.btn-type
+  .list-box:nth-child(2)
+  .btn-wrap
+  button:nth-child(2) {
+  background: #000;
+  color: #fff;
+}
+/* list06 end */
+
+/* list title size */
+.wrap-list .tit.small {
+  font-size: 3.5rem;
+  font-family: "Hyundai Sans Head";
+  font-weight: 700;
+  line-height: 4.375rem;
+}
+
+.wrap-list .tit.large {
+  font-size: 4.25rem;
+  font-family: "Hyundai Sans Head";
+  font-weight: 700;
+}
+
+/* list end*/
+
 /* accordion */
 .wrap-dropdown-selected {
   background: none;
@@ -2218,10 +2415,10 @@ input[type="radio"]:focus + label {
 
 .dropdown.centered .dropdown-menu li {
   padding: 0 0;
-  margin-bottom: 10px;
   border-bottom: none;
 }
 
+/* 필터 셀렉트 박스 시작*/
 .dropdown.centered
   .dropdown-menu
   .wrap-filter
@@ -2258,10 +2455,11 @@ input[type="radio"]:focus + label {
   justify-content: center;
   background-color: transparent;
 }
+/* 필터 셀렉트 박스 끝 */
+
 .dropdown.centered .dropdown-menu {
   box-shadow: 0px 30px 20px -10px rgba(0, 0, 0, 0.15);
 }
-
 .dropdown.centered
   .dropdown-menu
   li
