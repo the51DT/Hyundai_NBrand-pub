@@ -3842,6 +3842,29 @@ input:checked + .slider:before {
   justify-content: center;
 }
 
+.search-small .search-input-box {
+  column-gap: 0.62rem;
+  padding: 0.625rem 0.5rem 0.375rem;
+}
+
+.search-small .search-input-box .btn-search {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.search-small .search-input-box input {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 140%;
+  background: none;
+}
+
+.search-small .search-input-box input::placeholder {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 140%;
+}
+
 /* tag */
 .tag-list-wrap [class^="tag-list"] {
   display: flex;
