@@ -651,6 +651,19 @@ input[type="radio"]:focus + label {
   background: url(../../../inc/images/icon/icon-trans.svg);
   background-size: contain;
 }
+.icon-download {
+  background: url(../../../inc/images/icon/icon-download.svg);
+  background-size: contain;
+}
+.btn:hover [class*="icon-download"],
+.btn:active [class*="icon-download"] {
+  /* 빨간색 다운로드 icon 없어서 css로 임시 */
+  background-image: none;
+  background-color: #de3111;
+  mask-image: url("../../../inc/images/icon/icon-download.svg");
+  mask-position: center;
+  mask-size: contain;
+}
 [class*="btn-only-icon"] {
   display: inline-flex;
   width: 40px;
@@ -957,7 +970,7 @@ input[type="radio"]:focus + label {
   grid-auto-rows: 1px;
 }
 /* 트랙용 */
-@media screen and (max-width: 1280px) and (min-width: 1023px) {
+@media screen and (max-width: 1280px) and (min-width: 1024px) {
   .grid_3.track_list {
     grid-template-columns: repeat(2, minmax(0, 29rem));
   }
