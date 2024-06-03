@@ -286,10 +286,6 @@ body {
   background: #f0f0f0;
   padding: 120px 80px 160px;
 }
-.tab-container {
-  max-width: 1440px;
-  margin: 0 auto;
-}
 .content-item05.main-rank .tab-head {
   justify-content: flex-end;
   margin-top: -100px;
