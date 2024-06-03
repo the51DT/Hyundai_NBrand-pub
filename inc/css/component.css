@@ -894,7 +894,7 @@ input[type="radio"]:focus + label {
 /* grid layout */
 .grid_2 {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 44.3rem));
+  grid-template-columns: repeat(2, minmax(0, 44.25rem));
   justify-content: center;
   gap: 1.5rem;
 }
@@ -959,15 +959,14 @@ input[type="radio"]:focus + label {
   background-position: center;
   background-size: cover;
   background-color: #aacae6;
-  z-index: -1;
 }
 .card_type01 .card_profile img {
   width: 68.96%;
 }
 .card_type01.card_team .card_profile {
+  align-items: center;
   background-color: #e6eff8;
   background-image: none;
-  padding-bottom: 15.48%;
 }
 .card_type01.card_white .card_profile {
   background-image: none;
@@ -990,6 +989,7 @@ input[type="radio"]:focus + label {
   font-size: 5rem;
   font-weight: 700;
   line-height: 125%;
+  z-index: 1;
 }
 .card_type01 .card_num {
   color: #de3111;
@@ -1013,6 +1013,7 @@ input[type="radio"]:focus + label {
     calc(0.125rem * 0.3827) calc(0.125rem * -0.9239) 0 #fff,
     calc(0.125rem * 0.7071) calc(0.125rem * -0.7071) 0 #fff,
     calc(0.125rem * 0.9239) calc(0.125rem * -0.3827) 0 #fff;
+  z-index: 1;
 }
 .card_type01 .card_bottom {
   display: flex;
@@ -1262,6 +1263,57 @@ input[type="radio"]:focus + label {
   font-weight: 500;
   line-height: 140%;
   opacity: 0.8;
+}
+
+/* card_type05 */
+.card_type05 {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.grid_2 .card_type05 .card_top {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 708 / 472;
+}
+.grid_3 .card_type05 .card_top {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 464 / 348;
+}
+.card_type05 .card_top img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card_type05 .card_bottom {
+  flex-grow: 1;
+  padding: 1.25rem 1.25rem 2.5rem;
+  background-color: #FFF;
+}
+.grid_2 .card_type05 .card_bottom {
+  min-height: 14.6rem;
+}
+.grid_3 .card_type05 .card_bottom {
+  min-height: 16.4rem;
+}
+.card_type05 .card_tit {
+  font-family: "Hyundai Sans Head";
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 125%;
+  color: #DE3111;
+}
+.card_type05 .card_detail {
+  max-width: 26rem;
+  margin: 0.75rem 0 1.5rem;
+  font-family: "Hyundai Sans Text";
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 140%;
+}
+.card_type05 .btn-wrap {
+  padding: 0.375rem 0;
 }
 
 /* swiper */
