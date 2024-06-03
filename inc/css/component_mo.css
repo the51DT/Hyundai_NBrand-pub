@@ -3,8 +3,8 @@ min-width : 1024 css
 *********************************/
 @media screen and (max-width: 1280px) and (min-width: 1024px) {
   .content-area > section {
-    padding-left:80px;
-    padding-right: 80px;    
+    padding-left: 80px;
+    padding-right: 80px;
   }
 }
 
@@ -215,7 +215,7 @@ min-width : 1024 css
   /***
     contents-box 
   ***/
-  .conts-key-visual .img-area{
+  .conts-key-visual .img-area {
     height: 640px;
   }
 
@@ -223,24 +223,24 @@ min-width : 1024 css
     display: block;
     position: static;
     transform: revert;
-    color:#000;
+    color: #000;
     padding: 40px 24px 100px;
   }
 
   .conts-key-visual .text-area .tit {
-    font-size: 24px;  
+    font-size: 24px;
     line-height: 33.6px;
   }
   .conts-key-visual .text-area .desc {
     font-size: 18px;
     line-height: 25.2px;
-    margin-top:12px;
+    margin-top: 12px;
   }
   .content-area > section {
     padding-left: 24px;
-    padding-right: 24px;    
+    padding-right: 24px;
   }
-  
+
   .conts-box-wrap {
     text-align: center;
   }
@@ -757,7 +757,7 @@ min-width : 1024 css
   .wrap-list .inner .__bottom.list05 .wrap-lists,
   .wrap-list .inner .__bottom.list06 .wrap-lists {
     background: none;
-    border-bottom: 1px solid;
+    border-bottom: 1px solid #bbb;
     padding: 27px 0 45px;
     margin-right: 0;
   }
@@ -785,6 +785,14 @@ min-width : 1024 css
   .wrap-list .inner .__bottom.list05 .wrap-lists .list-box:nth-child(3) {
     margin-top: -1.2rem;
     margin-bottom: 0;
+  }
+  .wrap-list.list05
+    .__bottom.list05
+    .wrap-lists
+    .list-box:nth-child(3)
+    p.txt-type03,
+  .wrap-list.list06 .__bottom .wrap-lists .list-box p.txt-type03 {
+    font-size: 1rem;
   }
   /**/
 
@@ -844,7 +852,6 @@ min-width : 1024 css
   /* 06 btntype */
   .wrap-list .inner .__bottom.list06 .wrap-lists.btn-type {
     background: none;
-    border-bottom: 1px solid;
     padding: 27px 0 45px;
     margin-right: 0;
     display: flex;

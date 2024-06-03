@@ -809,15 +809,15 @@ input[type="radio"]:focus + label {
 }
 .conts-key-visual .text-area {
   position: absolute;
-  top:50%;
-  left:50%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
-  color:#fff;
+  color: #fff;
 }
 
 .conts-key-visual .text-area .tit {
   font-family: "Hyundai Sans Head";
-  font-size: 80px;  
+  font-size: 80px;
   font-weight: 700;
   line-height: 100px;
   text-align: center;
@@ -827,13 +827,13 @@ input[type="radio"]:focus + label {
   font-size: 32px;
   font-weight: 700;
   line-height: 44.8px;
-  margin-top:16px;
+  margin-top: 16px;
   text-align: center;
 }
 
 /* contents-box */
 .content-area > section {
-  padding-left:240px;
+  padding-left: 240px;
   padding-right: 240px;
 }
 
@@ -2254,6 +2254,15 @@ input[type="radio"]:focus + label {
   .btn-wrap
   button:nth-child(1) {
   margin-right: 8px;
+}
+.wrap-list
+  .__bottom.list06
+  .wrap-lists.btn-type
+  .list-box:nth-child(2)
+  .btn-wrap
+  button:nth-child(2) {
+  background: #000;
+  color: #fff;
 }
 /* list06 end */
 
