@@ -389,7 +389,7 @@ $(".option").click(function (event) {
     .resize();
 });
 // [End] : selectbox 컴포넌트
-// dropdown - cont 08
+// 드롭다운(아코디언), 필터 컴포넌트 시작
 const dropdownBtns = document.querySelectorAll(".wrap-dropdown-selected");
 dropdownBtns.forEach((button) => {
   button.addEventListener("click", function () {
@@ -404,15 +404,15 @@ dropdownBtns.forEach((button) => {
     btnRightArr.classList.toggle("rotate", !isExpanded);
 
     const dropdownCentered = button.closest(".dropdown");
-    const detectCase1 = dropdownMenu.classList.contains("dropdown-on");
-    const detectCase2 = dropdownCentered.classList.contains("centered");
+    const detectCase1 = dropdownMenu.classList.contains("dropdown-on"); // 필터, 드롭다운 공통
+    const detectCase2 = dropdownCentered.classList.contains("centered"); // 필터 컴포넌트만
 
     if (!isExpanded) {
       dropdownMenu.setAttribute("aria-hidden", "true");
     }
 
     if (detectCase1 && !detectCase2) {
-      dropdownMenu.addEventListener("click", function (event) {
+      dropdownMenu.addEventListener("click", function () {
         dropdownMenu.classList.remove("dropdown-on");
         btnRightArr.classList.remove("rotate", detectCase1);
       });
@@ -420,7 +420,7 @@ dropdownBtns.forEach((button) => {
   });
 });
 
-// dropdown - cont 08 : 리스트를 클릭할 시 상단 버튼에 리스트 내의 텍스트를 반영
+// 드롭다운(아코디언), 필터 컴포넌트: 리스트를 클릭할 시 상단 버튼에 클릭한 리스트의 텍스트를 반영
 function selectOption(event, optionText) {
   event.preventDefault();
   const btnTxtWrap = document.querySelector(".dropdown-btn");
@@ -429,3 +429,4 @@ function selectOption(event, optionText) {
   if ((btnTxtWrap.innerText = optionText)) {
   }
 }
+// 드롭다운(아코디언), 필터 컴포넌트 끝

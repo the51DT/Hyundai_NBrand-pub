@@ -781,7 +781,49 @@ input[type="radio"]:focus + label {
   display: block;
 }
 
+/* key-visual */
+.conts-key-visual {
+  position: relative;
+}
+
+.conts-key-visual .img-area {
+  height: 1080px;
+}
+.conts-key-visual .img-area img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.conts-key-visual .text-area {
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  color:#fff;
+}
+
+.conts-key-visual .text-area .tit {
+  font-family: "Hyundai Sans Head";
+  font-size: 80px;  
+  font-weight: 700;
+  line-height: 100px;
+  text-align: center;
+}
+.conts-key-visual .text-area .desc {
+  font-family: "Hyundai Sans Head";
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 44.8px;
+  margin-top:16px;
+  text-align: center;
+}
+
 /* contents-box */
+.content-area > section {
+  padding-left:240px;
+  padding-right: 240px;
+}
+
 .conts-box-wrap {
   display: flex;
   justify-content: center;
@@ -1291,7 +1333,7 @@ input[type="radio"]:focus + label {
 .card_type05 .card_bottom {
   flex-grow: 1;
   padding: 1.25rem 1.25rem 2.5rem;
-  background-color: #FFF;
+  background-color: #fff;
 }
 .grid_2 .card_type05 .card_bottom {
   min-height: 14.6rem;
@@ -1304,7 +1346,7 @@ input[type="radio"]:focus + label {
   font-size: 2.5rem;
   font-weight: 700;
   line-height: 125%;
-  color: #DE3111;
+  color: #de3111;
 }
 .card_type05 .card_detail {
   max-width: 26rem;
@@ -2095,7 +2137,8 @@ input[type="radio"]:focus + label {
 .dropdown.centered .dropdown-menu ul.wrap-filter {
   padding: 0 40px;
   overflow-y: auto;
-  max-height: 40rem;
+  /* max-height: 40rem; */
+  max-height: 34rem;
 }
 .dropdown.centered .dropdown-menu li .wrap-category {
   align-items: center;
@@ -2150,7 +2193,6 @@ input[type="radio"]:focus + label {
   font-size: 1rem;
   padding: 10px 4px 10px 0;
 }
-
 .dropdown.centered
   .dropdown-menu
   li
@@ -2163,7 +2205,6 @@ input[type="radio"]:focus + label {
   line-height: 22.4px;
   padding-left: 10px;
 }
-
 .dropdown.centered
   .dropdown-menu
   li
@@ -2764,6 +2805,9 @@ input[type="radio"]:focus + label {
     padding: 0 24px;
     max-height: 400px;
   }
+  .dropdown.centered .dropdown-menu li {
+    margin-bottom: 0;
+  }
   .dropdown.centered .dropdown-menu li .wrap-category .wrap-inner-category {
     flex-direction: column;
     margin-left: 0;
@@ -2828,6 +2872,35 @@ input[type="radio"]:focus + label {
     .txt-type03 {
     padding: 6px 0 0;
   }
+  .dropdown.centered
+    .dropdown-menu
+    li
+    .wrap-category.cart-type02
+    .wrap-inner-category
+    .small-category
+    .tag-list-wrap
+    .tag-list {
+    margin-bottom: 14px;
+  }
+  .dropdown.centered
+    .dropdown-menu
+    li
+    .wrap-category.cart-type02
+    .wrap-inner-category
+    .small-category
+    .tag-list-wrap
+    .tag-list:last-child,
+  .dropdown.centered
+    .dropdown-menu
+    li
+    .wrap-category.cart-type02
+    .wrap-inner-category
+    .small-category
+    .tag-list-wrap
+    .tag-list
+    li:last-child {
+    margin-bottom: 0;
+  }
 
   /* filter add */
   .dropdown.centered
@@ -2873,9 +2946,15 @@ input[type="radio"]:focus + label {
     .wrap-inner-category
     .inner {
     flex-direction: column;
-    margin: 0 0 14px;
   }
-
+  .dropdown.centered
+    .dropdown-menu
+    li
+    .wrap-category.cart-type02
+    .wrap-inner-category
+    .inner:last-child {
+    margin: 0;
+  }
   .dropdown.centered
     .dropdown-menu
     li
@@ -2932,12 +3011,10 @@ input[type="radio"]:focus + label {
     width: 100%;
   }
 }
-
 @media screen and (max-width: 849px) {
   .dropdown.centered .dropdown-menu li .wrap-category .major-category {
     max-width: 100%;
   }
-
   .dropdown.centered .dropdown-menu li .wrap-category .major-category {
     margin-bottom: 1rem;
   }
