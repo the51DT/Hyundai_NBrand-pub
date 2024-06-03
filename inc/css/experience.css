@@ -202,7 +202,8 @@ body {
 .card_type04 .card_function {
   padding: 20px 16px 38px;
 }
-.grid_masonry + .btn-wrap-default {
+.content-item02 .grid_masonry + .btn-wrap-default,
+.content-item04 .grid_masonry + .btn-wrap-default {
   margin-top: 80px;
 }
 .card_type04 .card_profile {
@@ -281,6 +282,7 @@ body {
 }
 .content-item04 .mission-box.white-box {
   background-color: #fff;
+  padding: 0 80px 160px;
 }
 .content-item05.main-rank {
   background: #f0f0f0;
@@ -302,24 +304,52 @@ body {
 }
 /* 테블릿 */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-  .banner-inner {
+  .content-item03 .banner-inner {
     max-width: 864px;
     margin: 0 auto;
     position: relative;
   }
-  .banner-box .banner-inner {
+  .content-item03 .banner-box .banner-inner {
     background: url(../images/img/img_nfluencer_banner01_tablet.png) center no-repeat;
     background-size: 100% 240px;
     height: 240px;
     max-width: 864px;
   }
-  .banner-box > .banner-inner p:first-child {
+  .content-item03 .banner-box > .banner-inner p:first-child {
     font-size: 40px;
     line-height: 50px;
   }
-  .banner-box > .banner-inner p:last-child {
+  .content-item03 .banner-box > .banner-inner p:last-child {
     font-size: 20px;
     line-height: 28px;
+  }
+  .content-item02 .grid_masonry,
+  .content-item04 .grid_masonry {
+    display: grid;
+  }
+  .content-item02 .grid_masonry .masonry_item + .masonry_item,
+  .content-item04 .grid_masonry .masonry_item + .masonry_item {
+    margin-top: 0;
+  }
+  .card_type04 .card_thumbnail.h347 {
+    height: 12.75rem;
+    aspect-ratio: 272 / 204;
+  }
+  .card_type04 .card_thumbnail.h464 {
+    height: 15.125rem;
+    aspect-ratio: 272 / 272;
+  }
+  .card_type04 .card_thumbnail.h359 {
+    height: 12.75rem;
+    aspect-ratio: 272/204;
+  }
+  .card_type04 .card_thumbnail.h823 {
+    height: 30.18755rem;
+    aspect-ratio: 272 / 483;
+  }
+  .card_type04 .card_thumbnail.h261 {
+    height: 9.5625rem;
+    aspect-ratio: 272 / 153;
   }
 }
 /* 모바일 */
