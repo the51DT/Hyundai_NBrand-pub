@@ -1,43 +1,5 @@
-/* 실행함수 */
-// $(document).on("pageshow", function () {
 $(document).ready(function () {
   NbrandUI.toggleBtn(".toggle-btn");
-  // NbrandUI.accordion(".nb-accordion-wrap");
-  // NbrandUI.chkAccordion(".nb-chk-accordion-wrap");
-  // NbrandUI.tab(".tab-01", ".tab-conts-01");
-  // NbrandUI.tab(".tab-02", ".tab-conts-02");
-  // NbrandUI.tab(".tab-03", ".tab-conts-03");
-  // NbrandUI.tab(".tab-04", ".tab-conts-04");
-  // NbrandUI.btomSheet(".sheet-wrap");
-  // NbrandUI.modalOpen(".open-modal");
-  // NbrandUI.modalClose(".close-js");
-  // NbrandUI.bottomOpen(".open-bottom");
-  // NbrandUI.bottomClose(".close-bottom");
-  // NbrandUI.bottomPopOpen(".open-bottomlist");
-  // NbrandUI.bottomPopClose(".close-bottomlist");
-  // NbrandUI.rollUpFix(
-  //   ".ui-page-active .rollup-fix-data",
-  //   ".ui-page-active .content, .ui-page-active .pop-content"
-  // );
-  // NbrandUI.dateStat(".date-stat-wrap .btn");
-  // NbrandUI.tableFix(".table-fix-wrap");
-  // NbrandUI.fileSelect(".nb-file-wrap");
-  // NbrandUI.switchLabel(".nb-switch-wrap");
-  // NbrandUI.chkboxCheck(".nb-chk-wrap");
-  // NbrandUI.addrDetail(".addr-list-wrap");
-  // NbrandUI.bookMarkToggle(".btn-book-mark");
-  // NbrandUI.dateToggle(".date-deta-btn");
-  // NbrandUI.accordionSelf(".acco-btn-item");
-  // NbrandUI.starrev(".star-item");
-  // NbrandUI.moreList(".nb-btn-more");
-  // NbrandUI.headerFix(".header-fixed");
-  // NbrandUI.accoFix(".acco-top-fixed");
-  // NbrandUI.allMenuOpen(".btn-menu-open");
-  // NbrandUI.addDatePicker(".nb-datepicker");
-  // NbrandUI.dataPickerInput();
-  // //NbrandUI.mainMoreList('.nb-main-more');
-  // //NbrandUI.addFrom('.btn-add-from');
-  // NbrandUI.datelistSort(".sort-btn-wrap");
 });
 let $win_W = $(window).width();
 $(window).resize(function () {

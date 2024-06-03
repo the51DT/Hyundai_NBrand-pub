@@ -894,7 +894,7 @@ input[type="radio"]:focus + label {
 /* grid layout */
 .grid_2 {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 44.3rem));
+  grid-template-columns: repeat(2, minmax(0, 44.25rem));
   justify-content: center;
   gap: 1.5rem;
 }
@@ -959,15 +959,14 @@ input[type="radio"]:focus + label {
   background-position: center;
   background-size: cover;
   background-color: #aacae6;
-  z-index: -1;
 }
 .card_type01 .card_profile img {
   width: 68.96%;
 }
 .card_type01.card_team .card_profile {
+  align-items: center;
   background-color: #e6eff8;
   background-image: none;
-  padding-bottom: 15.48%;
 }
 .card_type01.card_white .card_profile {
   background-image: none;
@@ -990,6 +989,7 @@ input[type="radio"]:focus + label {
   font-size: 5rem;
   font-weight: 700;
   line-height: 125%;
+  z-index: 1;
 }
 .card_type01 .card_num {
   color: #de3111;
@@ -1013,6 +1013,7 @@ input[type="radio"]:focus + label {
     calc(0.125rem * 0.3827) calc(0.125rem * -0.9239) 0 #fff,
     calc(0.125rem * 0.7071) calc(0.125rem * -0.7071) 0 #fff,
     calc(0.125rem * 0.9239) calc(0.125rem * -0.3827) 0 #fff;
+  z-index: 1;
 }
 .card_type01 .card_bottom {
   display: flex;
@@ -1262,6 +1263,57 @@ input[type="radio"]:focus + label {
   font-weight: 500;
   line-height: 140%;
   opacity: 0.8;
+}
+
+/* card_type05 */
+.card_type05 {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.grid_2 .card_type05 .card_top {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 708 / 472;
+}
+.grid_3 .card_type05 .card_top {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 464 / 348;
+}
+.card_type05 .card_top img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card_type05 .card_bottom {
+  flex-grow: 1;
+  padding: 1.25rem 1.25rem 2.5rem;
+  background-color: #FFF;
+}
+.grid_2 .card_type05 .card_bottom {
+  min-height: 14.6rem;
+}
+.grid_3 .card_type05 .card_bottom {
+  min-height: 16.4rem;
+}
+.card_type05 .card_tit {
+  font-family: "Hyundai Sans Head";
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 125%;
+  color: #DE3111;
+}
+.card_type05 .card_detail {
+  max-width: 26rem;
+  margin: 0.75rem 0 1.5rem;
+  font-family: "Hyundai Sans Text";
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 140%;
+}
+.card_type05 .btn-wrap {
+  padding: 0.375rem 0;
 }
 
 /* swiper */
@@ -2029,6 +2081,7 @@ input[type="radio"]:focus + label {
   .arrow-down {
   margin-right: 1rem;
 }
+
 .dropdown
   .wrap-dropdown-selected
   button.btn-only-icon-bg01-square
@@ -2036,7 +2089,12 @@ input[type="radio"]:focus + label {
   transform: rotate(180deg);
 }
 
-/* accordion 02: centered */
+/* 필터(.dropdown.centered) */
+.dropdown.centered .dropdown-menu ul.wrap-filter {
+  padding: 0 40px;
+  overflow-y: auto;
+  max-height: 40rem;
+}
 .dropdown.centered .dropdown-menu li .wrap-category {
   align-items: center;
   display: inline-flex;
@@ -2064,13 +2122,21 @@ input[type="radio"]:focus + label {
   justify-content: stretch;
   margin-left: 16px;
 }
-
 .dropdown.centered .dropdown-menu li .wrap-category .search-wrap {
   /* max-width: 1200px; */
   max-width: 100%;
   width: 100%;
   margin: 0;
   display: block;
+}
+.dropdown.centered
+  .dropdown-menu
+  li
+  .wrap-category
+  .search-wrap
+  .search-input-box
+  .btn-wrap {
+  margin-right: 10px;
 }
 .dropdown.centered
   .dropdown-menu
@@ -2112,6 +2178,22 @@ input[type="radio"]:focus + label {
   margin-bottom: 10px;
   border-bottom: none;
 }
+
+.dropdown.centered
+  .dropdown-menu
+  .wrap-filter
+  li
+  .wrap-category.cart-type00
+  .select-type01
+  .temp-wrap
+  .selectbox-options
+  li {
+  margin: 0;
+  margin: 0;
+  padding: 10px 11px;
+  width: 272px;
+  border-bottom: 1px solid #000;
+}
 .dropdown.centered .wrap-dropdown-selected {
   background-color: #de3111;
   padding: 17px 0;
@@ -2135,7 +2217,6 @@ input[type="radio"]:focus + label {
 }
 .dropdown.centered .dropdown-menu {
   box-shadow: 0px 30px 20px -10px rgba(0, 0, 0, 0.15);
-  padding: 0 40px;
 }
 
 .dropdown.centered
@@ -2147,6 +2228,16 @@ input[type="radio"]:focus + label {
   .btn-search {
   width: 24px;
   height: 24px;
+}
+.dropdown.centered
+  .dropdown-menu
+  li
+  .wrap-category.cart-type00
+  .select-type01
+  .temp-wrap
+  .selectbox-options {
+  left: 0;
+  width: fit-content;
 }
 .dropdown.centered .dropdown-menu li .wrap-category {
   display: flex;
@@ -2203,6 +2294,18 @@ input[type="radio"]:focus + label {
 .dropdown.centered
   .dropdown-menu
   li
+  .wrap-category.cart-type02
+  .wrap-inner-category
+  .middle-category {
+  align-items: center;
+}
+.dropdown.centered .dropdown-menu li .wrap-category.cart-type03 {
+  align-items: baseline;
+  margin-bottom: 46px;
+}
+.dropdown.centered
+  .dropdown-menu
+  li
   .wrap-category
   .wrap-inner-category
   .middle-category
@@ -2216,9 +2319,29 @@ input[type="radio"]:focus + label {
   li
   .wrap-category
   .wrap-inner-category
+  .middle-category
+  .txt-type03:first-child {
+  padding: 0 12px 0;
+}
+.dropdown.centered
+  .dropdown-menu
+  li
+  .wrap-category
+  .wrap-inner-category
   .small-category {
   display: flex;
   align-items: baseline;
+}
+.dropdown.centered
+  .dropdown-menu
+  li
+  .wrap-category
+  .wrap-inner-category
+  .small-category
+  .tag-list-wrap
+  .tag-list
+  li {
+  margin-bottom: 0;
 }
 .dropdown.centered
   .dropdown-menu
@@ -2351,6 +2474,33 @@ input[type="radio"]:focus + label {
   margin: 0px 0;
   height: 100%;
 }
+.dropdown.centered .dropdown-menu li .wrap-category.cart-type01 {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.dropdown.centered
+  .dropdown-menu
+  li
+  .wrap-category.cart-type01
+  .major-category {
+  justify-content: start;
+  height: 100%;
+}
+.dropdown.centered .dropdown-menu li .wrap-category.cart-type02 {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  width: 100%;
+}
+.dropdown.centered
+  .dropdown-menu
+  li
+  .wrap-category.cart-type02
+  .wrap-inner-category
+  .inner {
+  margin: 0 0 10px;
+}
 .dropdown.centered
   .dropdown-menu
   li
@@ -2358,7 +2508,8 @@ input[type="radio"]:focus + label {
   .wrap-inner-category
   .inner
   .small-category {
-  height: 152px;
+  /* height: 152px; */
+  height: 100%;
   overflow-y: auto;
 }
 .dropdown.centered
@@ -2377,17 +2528,23 @@ input[type="radio"]:focus + label {
   font-weight: 700;
   font-family: "Hyundai Sans head";
 }
-.dropdown.centered .dropdown-menu li .wrap-category-result {
-  display: flex;
-  justify-content: space-between;
+.dropdown.centered .dropdown-menu .wrap-category-result {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  justify-content: stretch;
   width: 100%;
   align-items: center;
-  margin: 25px 0;
+  padding: 25px 40px;
+  border-top: 1px solid #000;
 }
-.dropdown.centered .dropdown-menu li .wrap-category-result p {
+.dropdown.centered .dropdown-menu .wrap-category-result .wrap-result-nums {
+  display: flex;
+  width: 100%;
+}
+.dropdown.centered .dropdown-menu .wrap-category-result .wrap-result-nums p {
   font-weight: 500;
   font-family: "Hyundai Sans Text";
-  margin: 20px 0;
+  margin: 20px auto 20px 0;
 }
 .dropdown.centered
   .dropdown-menu
@@ -2398,8 +2555,11 @@ input[type="radio"]:focus + label {
   margin-left: 0;
   margin-right: 8px;
 }
-.dropdown.centered .dropdown-menu li .wrap-category-result span.accent {
+.dropdown.centered .dropdown-menu .wrap-category-result span.accent {
   color: #de3111;
+}
+.dropdown.centered .dropdown-menu .wrap-category-result .wrap-result-button {
+  margin-left: auto;
 }
 .dropdown.centered
   .dropdown-menu
@@ -2411,7 +2571,40 @@ input[type="radio"]:focus + label {
   display: flex;
   align-items: center;
 }
-/* dropdown centered end */
+.dropdown.centered
+  .dropdown-menu
+  li
+  .wrap-category-result
+  .wrap-result-nums
+  button.btn
+  span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown.centered
+  .dropdown-menu
+  .wrap-category-result
+  .wrap-result-button
+  .btn-icon20.icon-right-wh {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown.centered
+  .dropdown-menu
+  .wrap-category-result
+  .wrap-result-nums
+  button.btn[class*="-primary"]
+  [class*="btn-icon20"] {
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* 필터(.dropdown.centered) end */
 
 .dropdown-btn {
   background: none;
@@ -2464,12 +2657,29 @@ input[type="radio"]:focus + label {
 .dropdown-on {
   display: block;
 }
+
 /* filter 미디어쿼리 */
 @media screen and (max-width: 1023px) {
   .dropdown.centered .dropdown-menu li .wrap-category .wrap-inner-category {
     flex-direction: column;
     overflow-x: auto;
-    bottom: 1px solid red;
+  }
+  .dropdown.centered
+    .dropdown-menu
+    li
+    .wrap-category.cart-type02
+    .wrap-inner-category
+    .inner {
+    margin: 0 0 14px;
+  }
+  .dropdown.centered
+    .dropdown-menu
+    li
+    .wrap-category.cart-type02
+    .wrap-inner-category
+    .inner
+    .small-category {
+    margin-left: 8px;
   }
   .dropdown.centered
     .dropdown-menu
@@ -2482,11 +2692,23 @@ input[type="radio"]:focus + label {
   .dropdown.centered
     .dropdown-menu
     li
+    .wrap-category.cart-type03
+    .wrap-inner-category
+    .inner
+    .small-category {
+    height: 100%;
+  }
+  .dropdown.centered .dropdown-menu li .wrap-category.cart-type03 {
+    margin-bottom: 80px;
+  }
+  .dropdown.centered
+    .dropdown-menu
+    li
     .wrap-category
     .wrap-inner-category
     .middle-category {
     text-align: left;
-    margin-bottom: 1rem;
+    margin-bottom: 0;
   }
   .dropdown.centered
     .dropdown-menu
@@ -2509,31 +2731,60 @@ input[type="radio"]:focus + label {
     width: 100%;
     overflow-x: auto;
   }
+
+  .dropdown.centered
+    .dropdown-menu
+    li
+    .wrap-category.cart-type00
+    .select-type01
+    .temp-wrap
+    .selectbox-options {
+    width: 100%;
+  }
+  .dropdown.centered
+    .dropdown-menu
+    .wrap-filter
+    li
+    .wrap-category.cart-type00
+    .select-type01
+    .temp-wrap
+    .selectbox-options
+    li {
+    margin: 0;
+    padding: 19px 48px 19px 24px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
 }
 @media screen and (max-width: 850px) {
+  .dropdown.centered .dropdown-menu ul.wrap-filter {
+    padding: 0 24px;
+    max-height: 400px;
+  }
   .dropdown.centered .dropdown-menu li .wrap-category .wrap-inner-category {
     flex-direction: column;
     margin-left: 0;
   }
-
   .dropdown.centered .dropdown-menu li .wrap-category .major-category {
     max-width: 183px;
     display: flex;
     width: 100%;
   }
-
   .dropdown.centered
     .dropdown-menu
     li
     .wrap-category
     .major-category
     .tit-type05 {
-    font-size: 1rem;
-    line-height: 140%;
     max-width: 183px;
     width: 110px;
-  }
 
+    font-family: Hyundai Sans Head;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 25.2px;
+  }
   .dropdown.centered
     .dropdown-menu
     li
@@ -2543,6 +2794,7 @@ input[type="radio"]:focus + label {
     width: 100%;
     flex-shrink: 0;
     margin-left: 0;
+    overflow: inherit;
   }
   .dropdown.centered
     .dropdown-menu
@@ -2552,17 +2804,6 @@ input[type="radio"]:focus + label {
     .inner
     .small-category {
     max-width: 100%;
-  }
-  .dropdown.centered .dropdown-menu li .wrap-category-result {
-    flex-direction: column;
-  }
-  .dropdown.centered
-    .dropdown-menu
-    li
-    .wrap-category
-    .wrap-inner-category
-    .inner {
-    margin: 15px 0 0;
   }
   .dropdown.centered .dropdown-menu li .wrap-category {
     display: block;
@@ -2585,11 +2826,118 @@ input[type="radio"]:focus + label {
     .txt-type03 {
     padding: 6px 0 0;
   }
+
+  /* filter add */
+  .dropdown.centered
+    .dropdown-menu
+    li
+    .wrap-category
+    .major-category.selectbox-wrap.select-type01 {
+    margin-bottom: 20px;
+  }
+  .dropdown.centered
+    .dropdown-menu
+    li
+    .wrap-category.cart-type00
+    .search-wrap
+    .search-input-box
+    input,
+  .dropdown.centered
+    .dropdown-menu
+    li
+    .wrap-category.cart-type00
+    .search-wrap
+    .search-input-box
+    input::placeholder {
+    font-size: 20px;
+  }
+  .dropdown.centered .dropdown-menu li .wrap-category {
+    margin: 40px 0;
+  }
+  .dropdown.centered .dropdown-menu li .wrap-category.cart-type00 {
+    margin-top: 40px;
+  }
+  .dropdown.centered .dropdown-menu li .wrap-category:first-child {
+    margin: 40px 0 0;
+  }
+  .dropdown.centered .dropdown-menu li .wrap-category:last-child {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .dropdown.centered
+    .dropdown-menu
+    li
+    .wrap-category.cart-type02
+    .wrap-inner-category
+    .inner {
+    flex-direction: column;
+    margin: 0 0 14px;
+  }
+
+  .dropdown.centered
+    .dropdown-menu
+    li
+    .wrap-category
+    .wrap-inner-category
+    .middle-category
+    .txt-type03:first-child {
+    padding: 0;
+    color: #777;
+    font-weight: 500;
+  }
+
+  .dropdown.centered
+    .dropdown-menu
+    li
+    .wrap-category.cart-type02
+    .wrap-inner-category
+    .middle-category,
+  .dropdown.centered
+    .dropdown-menu
+    li
+    .wrap-category.cart-type03
+    .wrap-inner-category
+    .middle-category {
+    margin-bottom: 14px;
+  }
+
+  .dropdown.centered .dropdown-menu .wrap-category-result {
+    display: flex;
+    padding: 0 24px 24px 24px;
+    flex-direction: column;
+  }
+
+  .dropdown.centered .dropdown-menu .wrap-category-result .wrap-result-nums p {
+    margin: 1rem auto 20px 0;
+  }
+
+  .dropdown.centered .dropdown-menu .wrap-category-result .wrap-result-nums {
+    width: 100%;
+  }
+
+  .dropdown.centered .dropdown-menu .wrap-category-result .wrap-result-button {
+    margin-left: 0;
+    width: 100%;
+  }
+  .dropdown.centered
+    .dropdown-menu
+    .wrap-category-result
+    .wrap-result-button
+    button {
+    margin: 0;
+    display: flex;
+    padding: 17px 100px;
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 849px) {
   .dropdown.centered .dropdown-menu li .wrap-category .major-category {
     max-width: 100%;
+  }
+
+  .dropdown.centered .dropdown-menu li .wrap-category .major-category {
+    margin-bottom: 1rem;
   }
 }
 @media screen and (max-width: 500px) {
@@ -2597,7 +2945,7 @@ input[type="radio"]:focus + label {
     padding: 0;
   }
   .dropdown.centered .dropdown-menu li .wrap-category,
-  .dropdown.centered .dropdown-menu li .wrap-category-result {
+  .dropdown.centered .dropdown-menu .wrap-category-result {
     flex-direction: column;
   }
 }

@@ -293,6 +293,10 @@
     gap: 0.75rem;
     overflow-x: scroll;
   }
+  .grid_mo_scroll > * {
+    flex-shrink: 0;
+    width: 71.67vw;
+  }
   .grid_mo_drop {
     display: grid;
     grid-template-columns: 1fr;
@@ -307,6 +311,7 @@
 
   /* card_type01 */
   .card_type01 {
+    max-width: 100%;
     min-width: 16.125rem;
     height: 26.875rem;
     min-height: 26.875rem;
@@ -320,11 +325,8 @@
   .card_type01 .card_profile img {
     width: 12.5rem;
   }
-  .card_type01.card_team .card_profile {
-    padding-bottom: 15.81%;
-  }
   .card_type01.card_team .card_profile img {
-    width: 77.51%;
+    width: 12.5rem;
   }
   .card_type01.card_swiper .card_profile img {
     width: 8.9375rem;
@@ -477,6 +479,40 @@
   }
   .card_type03 .card_name {
     font-size: 1.25rem;
+  }
+
+  /* card_type05 */
+  .grid_mo_scroll .card_type05 {
+    width: 100%;
+    min-width: 16.125rem;
+  }
+  .grid_mo_drop .card_type05 .card_top {
+    aspect-ratio: 312 / 208;
+  }
+  .grid_mo_scroll .card_type05 .card_top {
+    aspect-ratio: 312 / 208;
+  }
+  .card_type05 .card_bottom {
+    padding: 1.25rem 1.25rem 1.75rem;
+  }
+  .grid_2 .card_type05 .card_bottom {
+    min-height: 0;
+  }
+  .grid_3 .card_type05 .card_bottom {
+    height: 14.9rem;
+    min-height: 0;
+  }
+  .card_type05 .card_tit {
+    font-size: 1.5rem;
+    line-height: 140%;
+  }
+  .card_type05 .card_detail {
+    max-width: max-content;
+    margin: 0.75rem 0 1rem;
+    font-size: 1.0625rem;
+  }
+  .card_type05 .btn-wrap {
+    padding: 0.438rem 0;
   }
 
   /* list */
