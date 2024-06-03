@@ -212,17 +212,22 @@ body {
 }
 .banner-box > div {
   background: url(../images/img/img_nfluencer_banner01.png) center no-repeat;
-  background-size: contain;
+  background-size: 100% 400px;
   width: 100%;
   height: 400px;
   max-width: 1440px;
   margin: 0 auto;
-  padding: 40px 0 44px 60px;
+  padding: 40px 0 52px 60px;
+  position: relative;
 }
 .banner-box > div p {
   color: #fff;
 }
-
+.banner-box .btn-wrap {
+  position: absolute;
+  bottom: 52px;
+  left: 60px;
+}
 /* 모바일 */
 @media screen and (max-width: 1023px) {
   /* Experience banner title common */
