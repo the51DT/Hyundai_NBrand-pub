@@ -801,22 +801,16 @@ min-width : 1024 css
   }
 
   /* list06 */
-  .nav-wrap {
-    display: none; /* 지워 */
-  }
-
   .wrap-list .inner .__bottom.list06 {
     flex-direction: column;
     margin-bottom: 1rem;
     margin-top: 24px;
   }
-
   .wrap-list .inner .__bottom.list06 .wrap-lists {
     display: grid;
     width: 100%;
     grid-template-columns: 1fr auto;
   }
-
   .wrap-list .inner .__bottom.list06 .wrap-lists .list-box:first-child {
     margin: 0 0;
     width: 100%;
@@ -824,7 +818,6 @@ min-width : 1024 css
     display: flex;
     flex-direction: column;
   }
-
   .wrap-list .inner .__bottom.list06 .wrap-lists .list-box:last-child {
     max-width: 100%;
     width: 100%;
@@ -971,55 +964,46 @@ min-width : 1024 css
   .wrap-dropdown-selected {
     padding: 1.25rem 1.5rem;
   }
-
   .dropdown-btn {
     font-size: 1.063rem;
     line-height: 1.488rem;
-    /* 20px 24px 28px 24px; */
   }
-
   .wrap-dropdown-selected .arrow-r {
     display: none;
   }
-
   .dropdown-menu {
     display: none;
     margin: 0;
     padding: 0;
   }
-
   .dropdown-menu li {
     display: flex;
     align-items: center;
     padding: 1.25rem 1.5rem 1.75rem 1.5rem; /* 20px 24px 28px 24px; */
     border-bottom: 2px solid #d9d9d9;
   }
-
   .dropdown-btn .arrow-r {
     display: none;
-  }
-
-  .arrow-r {
     max-width: 1.5rem;
   }
-
+  /* .arrow-r {
+    max-width: 1.5rem;
+  } */
   .arrow-down {
     max-width: 2.5rem;
     margin-left: 0;
   }
-
   .dropdown-menu a {
     font-size: 1.063rem;
     line-height: 1.488rem;
   }
-
   .dropdown-menu li:hover {
     background: #e6eff8;
   }
-
   .dropdown-on {
     display: block;
   }
+
   /* table */
   .table-type01 {
     display: none;
