@@ -30,10 +30,12 @@
 .contitle-type01 {
   font-size: 4.25rem;
   line-height: 125%;
+  font-family: "Hyundai Sans Head";
 }
 .contitle-type02 {
   font-size: 2.5rem;
   line-height: 125%;
+  font-family: "Hyundai Sans Head";
 }
 /* txt */
 [class*="txt-type"] {
