@@ -2603,7 +2603,8 @@ input[type="radio"]:focus + label {
   .search-input-box {
   width: 100%;
   font-size: 1rem;
-  padding: 10px 4px 10px 0;
+  padding: 0;
+  /* padding: 10px 4px 10px 0; */
 }
 .dropdown.centered
   .dropdown-menu
@@ -2615,7 +2616,8 @@ input[type="radio"]:focus + label {
   font-size: 1rem;
   font-weight: 500;
   line-height: 22.4px;
-  padding-left: 10px;
+  padding: 10px 4px 10px 10px;
+  font-family: "Hyundai Sans Text";
 }
 .dropdown.centered
   .dropdown-menu
@@ -2722,6 +2724,7 @@ input[type="radio"]:focus + label {
   .selectbox-trigger {
   padding: 10px 32px 10px 8px;
 }
+
 .dropdown.centered
   .dropdown-menu
   li
@@ -3062,6 +3065,52 @@ input[type="radio"]:focus + label {
 }
 /* 필터(.dropdown.centered) end */
 
+/* accordion 02(푸터 모바일 대응) 시작 */
+.dropdown.inMobile .wrap-dropdown-selected button.btn {
+}
+
+.dropdown.inMobile {
+  display: flex;
+  justify-content: space-between;
+}
+.dropdown.inMobile .accor02-wrap .accor02-header button {
+  display: none;
+}
+.dropdown.inMobile .accor02-wrap {
+  width: 100%;
+  background: #000;
+  color: #fff;
+}
+
+.dropdown.inMobile .accor02-wrap .accor02-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.dropdown.inMobile .accor02-wrap ul li {
+  margin: 1rem 0;
+}
+.dropdown.inMobile .accor02-wrap ul li a {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 19.6px;
+  text-align: left;
+}
+
+.dropdown.inMobile .accor02-wrap ul li a {
+  font-weight: 500;
+  color: #b3b3b3;
+  font-family: "Hyundai Sans Text";
+}
+
+.dropdown.inMobile .accor02-wrap ul li a span.btn-icon20 {
+  margin-left: 10px;
+}
+
+/* accordion 02(푸터 모바일 대응) 끝  */
+
 .dropdown-btn {
   background: none;
   border: none;
@@ -3113,12 +3162,25 @@ input[type="radio"]:focus + label {
 .dropdown-on {
   display: block;
 }
+.dropdown.inMobile .dropdown-on {
+  display: none;
+}
+.dropdown.inMobile .accor02-wrap .accor02-header p {
+  font-family: "Hyundai Sans Text";
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+  text-align: left;
+}
 
 /* filter 미디어쿼리 */
 @media screen and (max-width: 1023px) {
   .dropdown.centered .dropdown-menu li .wrap-category .wrap-inner-category {
     flex-direction: column;
     overflow-x: auto;
+  }
+  .dropdown.centered .dropdown-menu li .wrap-category .search-wrap::after {
+    height: 4px;
   }
   .dropdown.centered
     .dropdown-menu

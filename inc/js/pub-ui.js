@@ -424,9 +424,43 @@ dropdownBtns.forEach((button) => {
 function selectOption(event, optionText) {
   event.preventDefault();
   const btnTxtWrap = document.querySelector(".dropdown-btn");
-
   btnTxtWrap.innerText = optionText;
-  if ((btnTxtWrap.innerText = optionText)) {
-  }
 }
 // 드롭다운(아코디언), 필터 컴포넌트 끝
+
+// 드롭다운(아코디언) 02 시작
+const accor02Btn = document.querySelectorAll(
+  ".dropdown.inMobile .accor02-wrap .accor02-header"
+);
+const accor02List = document.querySelectorAll(
+  ".dropdown.inMobile .accor02-wrap ul"
+);
+
+// 각각의 .accor02-wrap 요소에 대한 클릭 이벤트 리스너 추가
+document
+  .querySelectorAll(".dropdown.inMobile .accor02-wrap")
+  .forEach((wrapper) => {
+    wrapper.addEventListener("click", function (event) {
+      const button = this.querySelector(".accor02-header button");
+      const dropdownMenu = this.querySelector("ul");
+
+      const isExpanded = button.getAttribute("aria-expanded") === "true";
+
+      button.setAttribute("aria-expanded", String(!isExpanded));
+      dropdownMenu.classList.toggle("dropdown-on", !isExpanded);
+      button.classList.toggle("rotate", !isExpanded);
+
+      // 다른 .accor02-wrap 요소에 대한 .rotate 클래스 제거
+      document
+        .querySelectorAll(".dropdown.inMobile .accor02-wrap")
+        .forEach((otherWrapper) => {
+          if (otherWrapper !== wrapper) {
+            otherWrapper
+              .querySelector(".accor02-header button")
+              .classList.remove("rotate");
+          }
+        });
+    });
+  });
+
+// 드롭다운(아코디언) 02 끝
