@@ -797,6 +797,10 @@ input[type="radio"]:focus + label {
   border-bottom: 1px solid #bbb;
 }
 
+.conts-box-wrap article:first-child {
+  padding-top:40px;
+}
+
 .conts-box-wrap article:last-child {
   border-bottom: 0;
   padding-bottom: 0;

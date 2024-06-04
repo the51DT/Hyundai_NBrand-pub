@@ -237,6 +237,10 @@ min-width : 1024 css
     padding: 60px 0;
   }
 
+  .conts-box-wrap article:first-child {
+    padding-top:16px;
+  }
+
   .conts-box-wrap .bg-img-wrap {
     background: url("../images/img/conts_bg_img01.svg") no-repeat 100%;
     min-height: 509px;
