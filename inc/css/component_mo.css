@@ -70,20 +70,6 @@ min-width : 1024 css
   }
 
   /*********
-    tab
-  **********/
-  .tab-head {
-    display: block;
-  }
-
-  .tabs-wrap .tabs {
-    margin-top: 28px;
-  }
-
-  .tab-content {
-    margin-top: 28px;
-  }
-  /*********
     btn 
   *********/
   [class*="btn-lg"] {
@@ -157,12 +143,21 @@ min-width : 1024 css
     display: block;
   }
 
+  .tabs-wrap .tabs {
+    margin-top: 28px;
+  }
+
+  .tab-content {
+    margin-top: 28px;
+  }
+
   .tab-head.ty02 {
     display: flex;
     justify-content: center;
   }
   .tab-head.ty02 .tabs-wrap {
     flex-grow: 1;
+    width: 100%;
   }
   .tab-head.ty02 .tabs {
     display: block;
@@ -193,14 +188,7 @@ min-width : 1024 css
   .tab-head.ty02 .tabs.ty-blue li:nth-last-child(n + 4) ~ li.on:nth-child(2n) {
     border-right: 1px solid #aacae6;
   }
-
-  .tabs-wrap .tabs {
-    margin-top: 28px;
-  }
-
-  .tab-content {
-    margin-top: 28px;
-  }
+  
   .tab-head.ty03 .tabs-wrap .tabs {
     width: 100%;
   }
@@ -241,18 +229,19 @@ min-width : 1024 css
     padding-right: 24px;
   }
 
-  .conts-box-wrap {
-    text-align: center;
-  }
-
   .conts-box-wrap article {
     padding: 60px 0;
+  }
+
+  .conts-box-wrap article:first-child {
+    padding-top:16px;
   }
 
   .conts-box-wrap .bg-img-wrap {
     background: url("../images/img/conts_bg_img01.svg") no-repeat 100%;
     min-height: 509px;
     padding: 64px 20px;
+    text-align: center;
   }
 
   .conts-box-wrap .tit {
@@ -275,6 +264,7 @@ min-width : 1024 css
   .conts-box-wrap .desc {
     font-size: 18px;
     line-height: 25.2px;
+    margin-top: 12px;
   }
 
   .conts-box-wrap .bg-img-wrap .more_btn {

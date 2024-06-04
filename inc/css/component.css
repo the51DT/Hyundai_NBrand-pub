@@ -138,60 +138,6 @@ input[type="radio"]:focus + label {
   z-index: 1;
 }
 
-/* tab */
-.tab-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.tab-head .title {
-  font-size: 68px;
-  font-weight: 700;
-  line-height: 85px;
-}
-
-.tabs-wrap .tabs {
-  display: flex;
-}
-
-.tabs-wrap .tabs li {
-  border: 1px solid #555;
-  background: #fff;
-}
-
-.tabs-wrap .tabs li.on {
-  border: 1px solid #de3111;
-  background: #de3111;
-}
-
-.tabs-wrap .tabs.ty02 li.on {
-  border: 1px solid #aacae6;
-  background: #aacae6;
-}
-
-.tabs-wrap .tabs li a {
-  display: block;
-  padding: 10px 32px;
-  color: #555;
-}
-
-.tabs-wrap .tabs li.on a {
-  color: #fff;
-}
-
-.tabs-wrap .tabs.ty02 li.on a {
-  color: #000;
-}
-
-.tab-content {
-  margin-top: 40px;
-  display: none;
-}
-.tab-content.on {
-  display: block;
-}
-
 /* btn */
 .visually-hidden {
   position: absolute;
@@ -849,6 +795,10 @@ input[type="radio"]:focus + label {
 .conts-box-wrap article {
   padding: 80px 0;
   border-bottom: 1px solid #bbb;
+}
+
+.conts-box-wrap article:first-child {
+  padding-top:40px;
 }
 
 .conts-box-wrap article:last-child {
