@@ -524,7 +524,7 @@ min-width : 1024 css
     line-height: 25.2px;
   }
   .card_type04 .card-hashtag {
-    margin: 20px 0 32px;
+    margin: 20px 0 12px;
   }
   .card_type04 .card_thumbnail.h347 {
     aspect-ratio: 312 / 312;
@@ -538,8 +538,18 @@ min-width : 1024 css
   .card_type04 .card_thumbnail.h823 {
     aspect-ratio: 312 / 552;
   }
+  .card_type04 .card_thumbnail.h825 {
+    aspect-ratio: 312 / 552;
+  }
+  .card_type04 .card_thumbnail.h618 {
+    aspect-ratio: 312 / 415;
+  }
   .card_type04 .card_thumbnail.h261 {
     aspect-ratio: 312 / 190;
+  }
+  .card_type04 .card_con p.tit-type03 {
+    font-size: 1.5rem;
+    line-height: 140%;
   }
 
   /* card_type05 */
