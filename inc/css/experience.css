@@ -17,6 +17,9 @@ body {
   margin: 0 auto;
   padding-bottom: 40px;
 }
+.mo-only {
+  display: none;
+}
 /* EP040401 */
 .ranking-wrap {
   background: #f0f0f0;
@@ -53,7 +56,8 @@ body {
   margin: 0 auto;
   margin-top: -62px;
 }
-.ranking-wrap .ranking-center .tab-content {
+.ranking-wrap .ranking-center .tab-content,
+.nflmain_wrap .content-item05.main-rank .tab-content {
   margin: 0;
 }
 .ranking-wrap .ranking-center .ranking-tabcont + ul {
@@ -106,13 +110,12 @@ body {
 }
 .nflmain_wrap .content-item03 .banner-box .banner-inner {
   background: url(../images/img/img_nfluencer_banner01.png) center no-repeat;
-  background-size: 100% 400px;
+  background-size: 100%;
   width: 100%;
-  height: 400px;
   max-width: 1440px;
   margin: 0 auto;
-  padding: 40px 0 52px 60px;
   position: relative;
+  aspect-ratio: 1440 / 400;
 }
 .nflmain_wrap .content-item03 .banner-box {
   padding: 0 80px;
@@ -124,10 +127,6 @@ body {
   margin: 0 auto;
   position: relative;
 }
-/* .nflmain_wrap .banner-box img {
-  width: 100%;
-  height: 400px;
-} */
 .nflmain_wrap .content-item03 .banner-titbox {
   position: absolute;
   top: 40px;
@@ -160,6 +159,7 @@ body {
 .nflmain_wrap .content-item05.main-rank .tab-head {
   justify-content: flex-end;
   margin-top: -100px;
+  padding-bottom: 60px;
 }
 .nflmain_wrap .content-item05.main-rank .ranking-tabcont {
   display: flex;
@@ -167,14 +167,6 @@ body {
   margin-bottom: 40px;
   align-items: center;
 }
-.nflmain_wrap .content-item05.main-rank .ty01Swiper .swiper-wrapper .swiper-slide {
-  padding-bottom: 70px;
-}
-/* .nflmain_wrap .content-item05.main-rank .swiper-flx {
-  display: flex;
-  min-width: 1440px;
-  gap: 24px;
-} */
 .nflmain_wrap .content-item06 .rewards-box {
   padding: 160px 80px 240px;
 }
@@ -194,7 +186,7 @@ body {
 }
 /* 모바일 */
 @media screen and (max-width: 1023px) {
-  /* Experience banner title common */
+  /* Experience  common */
   .content-top {
     padding: 153px 24px;
   }
@@ -204,7 +196,10 @@ body {
   }
   .title-w1440 {
     max-width: 100%;
-    padding-bottom: 20px;
+    padding-bottom: 28px;
+  }
+  .mo-only {
+    display: block;
   }
   /* EP040401 */
   .ranking-wrap .ranking-center .tab-head {
@@ -268,17 +263,13 @@ body {
   }
   .nflmain_wrap .content-item02 .grid_masonry + .btn-wrap-default,
   .nflmain_wrap .content-item04 .grid_masonry + .btn-wrap-default {
-    margin-top: 40px;
+    margin-top: 44px;
   }
   .nflmain_wrap .content-item03 .banner-box .banner-inner {
     background: url(../images/img/img_nfluencer_banner01_mo.png) center no-repeat;
-    background-size: 100% 400px;
-    width: 100%;
-    height: 400px;
+    aspect-ratio: 312 / 400;
     max-width: 100%;
-    margin: 0 auto;
-    padding: 32px 24px 0;
-    position: relative;
+    background-size: 100%;
   }
   .nflmain_wrap .content-item03 .banner-box {
     padding: 0 24px;
@@ -297,38 +288,63 @@ body {
     margin-top: 8px;
   }
   .nflmain_wrap .content-item03 .banner-box .btn-wrap {
-    position: absolute;
-    bottom: 200px;
+    top: 185px;
     left: 24px;
   }
   .nflmain_wrap .content-item03 .banner-box .banner-tit {
     font-size: 24px;
-    line-height: 33.6px;
   }
   .nflmain_wrap .content-item03 .banner-box .banner-des {
     font-size: 18px;
-    line-height: 25.2px;
   }
   .nflmain_wrap .content-item04 .mission-box.white-box {
     padding: 0 24px 100px;
   }
   .nflmain_wrap .content-item05.main-rank {
-    padding: 80px 24px 100px;
+    padding: 80px 24px 176px;
+    position: relative;
   }
   .nflmain_wrap .content-item05.main-rank .tab-container {
     max-width: 100%;
   }
   .nflmain_wrap .content-item05.main-rank .tab-head {
     justify-content: flex-end;
-    margin-top: -100px;
+    margin-top: 0;
+    padding-bottom: 28px;
+  }
+  .nflmain_wrap .content-item05.main-rank .tab-head .tabs-wrap .tabs {
+    margin-top: 0;
   }
   .nflmain_wrap .content-item05.main-rank .ranking-tabcont {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 40px;
-    align-items: center;
+    display: block;
+    margin-bottom: 0;
   }
-  .nflmain_wrap .content-item05.main-rank .ty01Swiper .swiper-wrapper .swiper-slide {
-    padding-bottom: 70px;
+  .nflmain_wrap .content-item05.main-rank .ranking-tabcont .btn-wrap {
+    position: absolute;
+    bottom: 108px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .nflmain_wrap .content-item05.main-rank .ty03Swiper {
+    padding: 12px 0 48px;
+  }
+  .nflmain_wrap .content-item05.main-rank .ty03Swiper .swiper-slide {
+    max-width: 100%;
+  }
+  .nflmain_wrap .content-item06 .rewards-box {
+    padding: 80px 24px 160px;
+  }
+  .nflmain_wrap .content-item06 .rewards-box .grid_masonry {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    column-gap: 0;
+    max-width: 100%;
+  }
+  .nflmain_wrap .content-item06 .rewards-box .grid_masonry .masonry_item {
+    width: 100%;
+  }
+  .content-item06 .rewards-box .grid_masonry + .btn-wrap-default {
+    margin-top: 44px;
   }
 }
