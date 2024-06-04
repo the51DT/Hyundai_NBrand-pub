@@ -798,6 +798,7 @@ min-width : 1024 css
 
   .wrap-list .tit.small {
     font-size: 1.875rem;
+    line-height: 2.625rem;
   }
 
   /* list06 */
@@ -933,36 +934,38 @@ min-width : 1024 css
     width: 100%;
   }
 
-  @media screen and (max-width: 850px) {
-    .wrap-list
-      .inner
-      .__bottom.list06
-      .wrap-lists.btn-type
-      .list-box:nth-child(1) {
-      display: Grid;
-      justify-content: space-between;
-    }
-    .wrap-list
-      .inner
-      .__bottom.list06
-      .wrap-lists.btn-type
-      .list-box:nth-child(1)
-      div:last-child {
-      align-items: end;
-    }
-    .wrap-list
-      .inner
-      .__bottom.list06
-      .wrap-lists.btn-type
-      .list-box:nth-child(1)
-      p.txt-type01 {
-      font-size: 20px;
-    }
+  /* list07*/
+  .wrap-list.list07 .__bottom.list07 {
+    display: block;
+    margin-top: 0;
+  }
+  .wrap-list .__bottom.list07 .wrap-lists .list-box:nth-child(1) {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 8px;
+  }
+  .wrap-list .__bottom.list07 .wrap-lists .list-box:nth-child(1) svg {
+    width: 24px;
+    height: 24px;
+  }
+  .wrap-list .__bottom.list07 .wrap-lists .list-box:nth-child(2) {
+    margin-bottom: 0;
+  }
+  .wrap-list .__bottom.list07 .wrap-lists .list-box:nth-child(2) p.txt-type01 {
+    font-size: 20px;
+    margin-right: 0;
+  }
+  .wrap-list .__bottom.list07 .wrap-lists .list-box:nth-child(3) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0;
   }
 
   /* cont08 accordion */
   .wrap-dropdown-selected {
     padding: 1.25rem 1.5rem;
+    gap: 0 1.5rem;
   }
   .dropdown-btn {
     font-size: 1.063rem;
@@ -970,6 +973,10 @@ min-width : 1024 css
   }
   .wrap-dropdown-selected .arrow-r {
     display: none;
+  }
+  .wrap-dropdown-selected .btn.btn-only-icon-bg01-square {
+    width: 1.5rem;
+    height: 1.5rem;
   }
   .dropdown-menu {
     display: none;
@@ -981,14 +988,16 @@ min-width : 1024 css
     align-items: center;
     padding: 1.25rem 1.5rem 1.75rem 1.5rem; /* 20px 24px 28px 24px; */
     border-bottom: 2px solid #d9d9d9;
+    gap: 0 1.5rem;
+  }
+  .dropdown-menu li svg.arrow-r {
+    width: 1.5rem;
+    height: 1.5rem;
   }
   .dropdown-btn .arrow-r {
     display: none;
     max-width: 1.5rem;
   }
-  /* .arrow-r {
-    max-width: 1.5rem;
-  } */
   .arrow-down {
     max-width: 2.5rem;
     margin-left: 0;
