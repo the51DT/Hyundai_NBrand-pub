@@ -229,10 +229,6 @@ min-width : 1024 css
     padding-right: 24px;
   }
 
-  .conts-box-wrap {
-    text-align: center;
-  }
-
   .conts-box-wrap article {
     padding: 60px 0;
   }
@@ -245,6 +241,7 @@ min-width : 1024 css
     background: url("../images/img/conts_bg_img01.svg") no-repeat 100%;
     min-height: 509px;
     padding: 64px 20px;
+    text-align: center;
   }
 
   .conts-box-wrap .tit {
