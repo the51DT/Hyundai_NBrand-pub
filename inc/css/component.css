@@ -411,6 +411,10 @@ input[type="radio"]:focus + label {
   background: url(../../../inc/images/icon/icon-arrow01_down.svg);
   background-size: contain;
 }
+.icon-down-wh {
+  background: url(../../../inc/images/icon/icon-arrow01_down_white.svg);
+  background-size: contain;
+}
 .icon-down.icon-disabled {
   background: url(../../../inc/images/icon/icon-arrow01_down_disabled.svg);
   background-size: contain;

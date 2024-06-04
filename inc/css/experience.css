@@ -42,11 +42,6 @@ body {
   position: relative;
   padding: 0 80px;
 }
-.ranking-wrap .tab-whitecont .grid_3,
-.ranking-wrap .tab-graycont .grid_3 {
-  max-width: 1440px;
-  margin: 0 auto;
-}
 .ranking-wrap .tab-whitecont .btn-wrap-default {
   margin-top: 80px;
 }
@@ -183,6 +178,18 @@ body {
 }
 .content-item06 .rewards-box .grid_masonry + .btn-wrap-default {
   margin-top: 80px;
+}
+/* EP040301 */
+.mission_wrap .mission-box {
+  background-color: #f0f0f0;
+  padding: 120px 80px 240px;
+}
+.mission_wrap .dropdown {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.mission_wrap .grid_masonry {
+  margin-top: 40px;
 }
 /* 모바일 */
 @media screen and (max-width: 1023px) {
