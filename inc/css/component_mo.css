@@ -1065,10 +1065,6 @@ min-width : 1024 css
     transform: rotate(180deg);
   }
 
-  .nav-wrap {
-    display: none;
-  }
-
   .dropdown.inMobile .dropdown-menu {
     display: none;
   }

@@ -442,7 +442,9 @@ dropdownBtns.forEach((button) => {
     const dropdownCentered = button.closest(".dropdown");
     const detectCase1 = dropdownMenu.classList.contains("dropdown-on"); // 필터, 드롭다운 공통
     const detectCase2 = dropdownCentered.classList.contains("centered"); // 필터 컴포넌트만
-
+    const detectCase2_selectBtn = document.querySelector(
+      ".dropdown.centered .wrap-dropdown-selected"
+    ); // 필터 컴포넌트: 선택 버튼
     if (!isExpanded) {
       dropdownMenu.setAttribute("aria-hidden", "true");
     }
@@ -452,6 +454,10 @@ dropdownBtns.forEach((button) => {
         dropdownMenu.classList.remove("dropdown-on");
         btnRightArr.classList.remove("rotate", detectCase1);
       });
+    }
+
+    if (detectCase2) {
+      detectCase2_selectBtn.classList.toggle("toggled");
     }
   });
 });
@@ -472,7 +478,6 @@ const accor02List = document.querySelectorAll(
   ".dropdown.inMobile .accor02-wrap ul"
 );
 
-// 각각의 .accor02-wrap 요소에 대한 클릭 이벤트 리스너 추가
 document
   .querySelectorAll(".dropdown.inMobile .accor02-wrap")
   .forEach((wrapper) => {
