@@ -70,20 +70,6 @@ min-width : 1024 css
   }
 
   /*********
-    tab
-  **********/
-  .tab-head {
-    display: block;
-  }
-
-  .tabs-wrap .tabs {
-    margin-top: 28px;
-  }
-
-  .tab-content {
-    margin-top: 28px;
-  }
-  /*********
     btn 
   *********/
   [class*="btn-lg"] {
@@ -157,6 +143,14 @@ min-width : 1024 css
     display: block;
   }
 
+  .tabs-wrap .tabs {
+    margin-top: 28px;
+  }
+
+  .tab-content {
+    margin-top: 28px;
+  }
+
   .tab-head.ty02 {
     display: flex;
     justify-content: center;
@@ -194,14 +188,7 @@ min-width : 1024 css
   .tab-head.ty02 .tabs.ty-blue li:nth-last-child(n + 4) ~ li.on:nth-child(2n) {
     border-right: 1px solid #aacae6;
   }
-
-  .tabs-wrap .tabs {
-    margin-top: 28px;
-  }
-
-  .tab-content {
-    margin-top: 28px;
-  }
+  
   .tab-head.ty03 .tabs-wrap .tabs {
     width: 100%;
   }
