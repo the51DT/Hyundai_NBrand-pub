@@ -21,67 +21,67 @@ body {
 .ranking-wrap {
   background: #f0f0f0;
 }
-.ranking-center .tab-head {
+.ranking-wrap .ranking-center .tab-head {
   justify-content: flex-end;
   padding: 120px 80px 0;
   max-width: 1600px;
   margin: 0 auto;
 }
-.ranking-center .tabs-wrap .tabs {
+.ranking-wrap .ranking-center .tabs-wrap .tabs {
   position: relative;
   z-index: 1;
 }
-.tab-whitecont {
+.ranking-wrap .tab-whitecont {
   background-color: #fff;
   padding: 80px 80px 240px;
 }
-.tab-graycont {
+.ranking-wrap .tab-graycont {
   position: relative;
   padding: 0 80px;
 }
-.tab-whitecont .grid_3,
-.tab-graycont .grid_3 {
+.ranking-wrap .tab-whitecont .grid_3,
+.ranking-wrap .tab-graycont .grid_3 {
   max-width: 1440px;
   margin: 0 auto;
 }
-.tab-whitecont .btn-wrap-default {
+.ranking-wrap .tab-whitecont .btn-wrap-default {
   margin-top: 80px;
 }
-.ranking-center .tab-container .ranking-tabcont {
+.ranking-wrap .ranking-center .tab-container .ranking-tabcont {
   max-width: 1440px;
   display: block;
   margin: 0 auto;
   margin-top: -62px;
 }
-.ranking-center .tab-content {
+.ranking-wrap .ranking-center .tab-content {
   margin: 0;
 }
-.ranking-center .ranking-tabcont + ul {
+.ranking-wrap .ranking-center .ranking-tabcont + ul {
   padding: 130px 0 120px;
 }
-.ranking-center .ranking-inner2box {
+.ranking-wrap .ranking-center .ranking-inner2box {
   display: flex;
   gap: 33px;
   margin-top: 16px;
 }
-.ranking-center .ranking-inner2.community-profile {
+.ranking-wrap .ranking-center .ranking-inner2.community-profile {
   display: flex;
   gap: 10px;
   align-items: center;
 }
-.ranking-center .ranking-inner2.community-profile img {
+.ranking-wrap .ranking-center .ranking-inner2.community-profile img {
   width: 32px;
   height: 32px;
 }
-.ranking-center .ranking-inner2 {
+.ranking-wrap .ranking-center .ranking-inner2 {
   font-size: 24px;
   font-weight: 700;
   line-height: 33.6px;
 }
-.ranking-center .ranking-inner2:not(:first-child) {
+.ranking-wrap .ranking-center .ranking-inner2:not(:first-child) {
   position: relative;
 }
-.ranking-center .ranking-inner2:not(:first-child)::after {
+.ranking-wrap .ranking-center .ranking-inner2:not(:first-child)::after {
   position: absolute;
   content: "";
   width: 1px;
@@ -92,154 +92,19 @@ body {
   left: -16px;
   transform: translateY(-50%);
 }
-.ranking-center .ranking-inner2 > span {
+.ranking-wrap .ranking-center .ranking-inner2 > span {
   color: #de3111;
 }
 /* EP040101 */
-.mission-box {
+.nflmain_wrap .mission-box {
   background-color: #f0f0f0;
   padding: 120px 80px 160px;
 }
-.card_type04 {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  background-color: #fff;
-  font-family: "Hyundai Sans Text";
-}
-.card_type04 .card_thumbnail {
-  width: 100%;
-}
-.card_type04 .card_thumbnail.h347 {
-  height: 21.6875rem;
-  aspect-ratio: 464 / 347;
-}
-.card_type04 .card_thumbnail.h464 {
-  height: 29rem;
-  aspect-ratio: 464 /464;
-}
-.card_type04 .card_thumbnail.h359 {
-  height: 22.4375rem;
-  aspect-ratio: 464 / 359;
-}
-.card_type04 .card_thumbnail.h823 {
-  height: 51.4375rem;
-  aspect-ratio: 464 / 823;
-}
-.card_type04 .card_thumbnail.h825 {
-  height: 51.5625rem;
-  aspect-ratio: 464 / 825;
-}
-.card_type04 .card_thumbnail.h618 {
-  height: 38.625rem;
-  aspect-ratio: 464 / 618;
-}
-.card_type04 .card_thumbnail.h261 {
-  height: 16.3125rem;
-  aspect-ratio: 464 / 261;
-}
-.card_type04 .card_thumbnail img {
-  height: 100%;
-  object-fit: cover;
-}
-.card_type04 .card_state {
-  padding: 1rem 0.875rem;
-  background-color: #de3111;
-  text-align: left;
-  color: #fff;
-}
-.card_type04 .card_step {
-  font-family: "Hyundai Sans Head";
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 140%;
-}
-.card_type04 .card_detail {
-  display: flex;
-  justify-content: space-between;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 140%;
-  margin-top: 0.25rem;
-}
-.card_type04 .card_entry {
-  font-weight: 700;
-}
-.card_type04 .card_state.compelete {
-  background-color: #aacae6;
-  color: #000000;
-}
-.card_type04 .card_state.end {
-  background-color: #000000;
-  color: #abb2b5;
-}
-.card_type04 .card_con {
-  padding: 20px 16px 0;
-  background-color: #fff;
-  text-align: left;
-}
-.card_type04 .card_tag {
-  padding: 4px 12px;
-  border-radius: 15px;
-  font-size: 1rem;
-  font-weight: 700;
-  line-height: 140%;
-  color: #fff;
-  background-color: #000000;
-  display: inline-flex;
-  justify-content: flex-start;
-  margin-bottom: 16px;
-}
-.card_type04 .card_cont-des {
-  margin-top: 8px;
-}
-.card_type04 .card-hashtag {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin: 20px 0;
-}
-.card_type04 .card_function {
-  padding: 20px 16px 38px;
-}
-.content-item02 .grid_masonry + .btn-wrap-default,
-.content-item04 .grid_masonry + .btn-wrap-default {
+.nflmain_wrap .content-item02 .grid_masonry + .btn-wrap-default,
+.nflmain_wrap .content-item04 .grid_masonry + .btn-wrap-default {
   margin-top: 80px;
 }
-.card_type04 .card_profile {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 16px 0 16px 16px;
-  gap: 8px;
-}
-.card_type04 .card_profile .profile_img {
-  width: 40px;
-  height: 40px;
-  position: relative;
-}
-.card_type04 .card_profile .profile_img .club-mark {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 16px;
-  height: 16px;
-}
-.card_type04 .card_profile .profile_des {
-  display: flex;
-  flex-direction: column;
-}
-.card_type04 .card_profile .profile_des .profile_name {
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 19.6px;
-}
-.card_type04 .card_profile .profile_des .profile_club {
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 16.8px;
-}
-.content-item03 .banner-box .banner-inner {
+.nflmain_wrap .content-item03 .banner-box .banner-inner {
   background: url(../images/img/img_nfluencer_banner01.png) center no-repeat;
   background-size: 100% 400px;
   width: 100%;
@@ -249,108 +114,83 @@ body {
   padding: 40px 0 52px 60px;
   position: relative;
 }
-.content-item03 .banner-box {
+.nflmain_wrap .content-item03 .banner-box {
   padding: 0 80px;
   background: linear-gradient(#f0f0f0 50%, #fff 50%);
   margin-bottom: 160px;
 }
-.content-item03 .banner-inner {
+.nflmain_wrap .content-item03 .banner-inner {
   max-width: 1440px;
   margin: 0 auto;
   position: relative;
 }
-/* .banner-box img {
+/* .nflmain_wrap .banner-box img {
   width: 100%;
   height: 400px;
 } */
-.content-item03 .banner-titbox {
+.nflmain_wrap .content-item03 .banner-titbox {
   position: absolute;
   top: 40px;
   left: 60px;
   width: 48.9736vw;
 }
-.content-item03 .banner-box > .banner-inner p + p {
+.nflmain_wrap .content-item03 .banner-box > .banner-inner p + p {
   margin-top: 12px;
 }
-.content-item03 .banner-box > .banner-inner p {
+.nflmain_wrap .content-item03 .banner-box > .banner-inner p {
   color: #fff;
 }
-.content-item03 .banner-box .btn-wrap {
+.nflmain_wrap .content-item03 .banner-box .btn-wrap {
   position: absolute;
   bottom: 52px;
   left: 60px;
 }
-.content-item04 .mission-box.white-box {
+.nflmain_wrap .content-item04 .mission-box.white-box {
   background-color: #fff;
   padding: 0 80px 160px;
 }
-.content-item05.main-rank {
+.nflmain_wrap .content-item05.main-rank {
   background: #f0f0f0;
   padding: 120px 80px 160px;
 }
-.content-item05.main-rank .tab-container {
+.nflmain_wrap .content-item05.main-rank .tab-container {
   max-width: 1440px;
   margin: 0 auto;
 }
-.content-item05.main-rank .tab-head {
+.nflmain_wrap .content-item05.main-rank .tab-head {
   justify-content: flex-end;
   margin-top: -100px;
 }
-.content-item05.main-rank .ranking-tabcont {
+.nflmain_wrap .content-item05.main-rank .ranking-tabcont {
   display: flex;
   justify-content: space-between;
   margin-bottom: 40px;
   align-items: center;
 }
-/* 테블릿 */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .content-item03 .banner-inner {
-    max-width: 864px;
-    margin: 0 auto;
-    position: relative;
-  }
-  .content-item03 .banner-box .banner-inner {
-    background: url(../images/img/img_nfluencer_banner01_tablet.png) center no-repeat;
-    background-size: 100% 240px;
-    height: 240px;
-    max-width: 864px;
-  }
-  .content-item03 .banner-box > .banner-inner p:first-child {
-    font-size: 40px;
-    line-height: 50px;
-  }
-  .content-item03 .banner-box > .banner-inner p:last-child {
-    font-size: 20px;
-    line-height: 28px;
-  }
-  .content-item02 .grid_masonry,
-  .content-item04 .grid_masonry {
-    display: grid;
-  }
-  .content-item02 .grid_masonry .masonry_item + .masonry_item,
-  .content-item04 .grid_masonry .masonry_item + .masonry_item {
-    margin-top: 0;
-  }
-  .card_type04 .card_thumbnail.h347 {
-    height: 12.75rem;
-    aspect-ratio: 272 / 204;
-  }
-  .card_type04 .card_thumbnail.h464 {
-    height: 15.125rem;
-    aspect-ratio: 272 / 272;
-  }
-  .card_type04 .card_thumbnail.h359 {
-    height: 12.75rem;
-    aspect-ratio: 272/204;
-  }
-  .card_type04 .card_thumbnail.h823 {
-    height: 30.18755rem;
-    aspect-ratio: 272 / 483;
-  }
-  .card_type04 .card_thumbnail.h261 {
-    height: 9.5625rem;
-    aspect-ratio: 272 / 153;
-  }
+.nflmain_wrap .content-item05.main-rank .ty01Swiper .swiper-wrapper .swiper-slide {
+  padding-bottom: 70px;
+}
+/* .nflmain_wrap .content-item05.main-rank .swiper-flx {
+  display: flex;
+  min-width: 1440px;
+  gap: 24px;
+} */
+.nflmain_wrap .content-item06 .rewards-box {
+  padding: 160px 80px 240px;
+}
+.nflmain_wrap .content-item06 .rewards-box .grid_masonry {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  column-gap: 24px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.nflmain_wrap .content-item06 .rewards-box .grid_masonry .masonry_item {
+  width: calc(100% / 3 - 16px);
+}
+.content-item06 .rewards-box .grid_masonry + .btn-wrap-default {
+  margin-top: 80px;
 }
 /* 모바일 */
 @media screen and (max-width: 1023px) {
@@ -367,59 +207,213 @@ body {
     padding-bottom: 20px;
   }
   /* EP040401 */
-  .ranking-center .tab-head {
+  .ranking-wrap .ranking-center .tab-head {
     max-width: 100%;
     padding: 80px 24px 0;
   }
-  .ranking-center .tabs-wrap .tabs {
+  .ranking-wrap .ranking-center .tabs-wrap .tabs {
     margin-top: 0;
   }
-  .tab-graycont {
+  .ranking-wrap .tab-graycont {
     max-width: 100%;
     padding: 0 24px;
     margin-top: 104px;
   }
-  .tab-whitecont {
+  .ranking-wrap .tab-whitecont {
     background-color: #fff;
     padding: 44px 24px 160px;
   }
-  .ranking-center .tab-container .ranking-tabcont {
+  .ranking-wrap .ranking-center .tab-container .ranking-tabcont {
     position: static;
     text-align: center;
   }
-  .ranking-center .ranking-tabcont + ul {
+  .ranking-wrap .ranking-center .ranking-tabcont + ul {
     padding: 36px 0 80px;
   }
-  .ranking-center .ranking-inner2:not(:first-child)::after {
+  .ranking-wrap .ranking-center .ranking-inner2:not(:first-child)::after {
     display: none;
   }
-  .ranking-center .ranking-inner2box {
+  .ranking-wrap .ranking-center .ranking-inner2box {
     display: flex;
     gap: 12px;
     flex-direction: column;
     margin-top: 20px;
     align-items: center;
   }
-  .ranking-center .ranking-inner2box.community-box {
+  .ranking-wrap .ranking-center .ranking-inner2box.community-box {
     gap: 8px;
   }
-  .ranking-center .ranking-inner2.community-profile {
+  .ranking-wrap .ranking-center .ranking-inner2.community-profile {
     gap: 4px;
   }
-  .ranking-center .ranking-inner2 {
+  .ranking-wrap .ranking-center .ranking-inner2 {
     font-size: 20px;
     line-height: 28px;
   }
-  .tab-whitecont .btn-wrap-default {
+  .ranking-wrap .tab-whitecont .btn-wrap-default {
     margin-top: 44px;
   }
-  .content-item05.main-rank .tab-head {
+  .ranking-wrap .content-item05.main-rank .tab-head {
     margin-top: 0;
   }
-  .content-item05.main-rank .tabs-wrap .tabs {
+  .ranking-wrap .content-item05.main-rank .tabs-wrap .tabs {
     margin-top: 0;
   }
-  .content-item05.main-rank .title-w1440 {
+  .ranking-wrap .content-item05.main-rank .title-w1440 {
     padding-bottom: 28px;
+  }
+  /* EP040101 */
+  .nflmain_wrap .mission-box {
+    padding: 80px 24px 100px;
+  }
+  .nflmain_wrap .content-item02 .grid_masonry + .btn-wrap-default,
+  .nflmain_wrap .content-item04 .grid_masonry + .btn-wrap-default {
+    margin-top: 40px;
+  }
+  .nflmain_wrap .content-item03 .banner-box .banner-inner {
+    background: url(../images/img/img_nfluencer_banner01_mo.png) center no-repeat;
+    background-size: 100% 400px;
+    width: 100%;
+    height: 400px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 32px 24px 0;
+    position: relative;
+  }
+  .nflmain_wrap .content-item03 .banner-box {
+    padding: 0 24px;
+    margin-bottom: 100px;
+  }
+  .nflmain_wrap .content-item03 .banner-inner {
+    max-width: 100%;
+  }
+  .nflmain_wrap .content-item03 .banner-titbox {
+    position: absolute;
+    top: 32px;
+    left: 24px;
+    width: calc(100% - 48px);
+  }
+  .nflmain_wrap .content-item03 .banner-box > .banner-inner p + p {
+    margin-top: 8px;
+  }
+  .nflmain_wrap .content-item03 .banner-box .btn-wrap {
+    position: absolute;
+    bottom: 200px;
+    left: 24px;
+  }
+  .nflmain_wrap .content-item03 .banner-box .banner-tit {
+    font-size: 24px;
+    line-height: 33.6px;
+  }
+  .nflmain_wrap .content-item03 .banner-box .banner-des {
+    font-size: 18px;
+    line-height: 25.2px;
+  }
+  .nflmain_wrap .content-item04 .mission-box.white-box {
+    padding: 0 24px 100px;
+  }
+  .nflmain_wrap .content-item05.main-rank {
+    padding: 80px 24px 100px;
+  }
+  .nflmain_wrap .content-item05.main-rank .tab-container {
+    max-width: 100%;
+  }
+  .nflmain_wrap .content-item05.main-rank .tab-head {
+    justify-content: flex-end;
+    margin-top: -100px;
+  }
+  .nflmain_wrap .content-item05.main-rank .ranking-tabcont {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    align-items: center;
+  }
+  .nflmain_wrap .content-item05.main-rank .ty01Swiper .swiper-wrapper .swiper-slide {
+    padding-bottom: 70px;
+  }
+}
+/* 테블릿 */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .title-w1440 {
+    max-width: 864px;
+    padding-bottom: 40px;
+  }
+  .nflmain_wrap .contitle-type01 {
+    font-size: 68px;
+    line-height: 85px;
+  }
+  .nflmain_wrap .contitle-type02 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  /* EP040101 */
+  .nflmain_wrap .mission-box {
+    padding: 120px 80px 160px;
+  }
+  .nflmain_wrap .content-item03 .banner-inner {
+    max-width: 864px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .nflmain_wrap .content-item03 .banner-box .banner-inner {
+    background: url(../images/img/img_nfluencer_banner01_tablet.png) center no-repeat;
+    background-size: 100% 240px;
+    height: 240px;
+    max-width: 864px;
+  }
+  .nflmain_wrap .content-item03 .banner-box > .banner-inner p:first-child {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .nflmain_wrap .content-item03 .banner-box > .banner-inner p:last-child {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .nflmain_wrap .content-item03 .banner-box {
+    padding: 0 80px;
+    background: linear-gradient(#f0f0f0 50%, #fff 50%);
+    margin-bottom: 160px;
+  }
+  .nflmain_wrap .content-item02 .grid_masonry,
+  .nflmain_wrap .content-item04 .grid_masonry {
+    display: grid;
+  }
+  .nflmain_wrap .content-item02 .grid_masonry .masonry_item + .masonry_item,
+  .nflmain_wrap .content-item04 .grid_masonry .masonry_item + .masonry_item {
+    margin-top: 0;
+  }
+  .nflmain_wrap .content-item04 .mission-box.white-box {
+    padding: 0 80px 160px;
+  }
+  .nflmain_wrap .content-item05.main-rank {
+    background: #f0f0f0;
+    padding: 120px 80px 160px;
+  }
+  .nflmain_wrap .content-item05.main-rank .tab-container {
+    max-width: 864px;
+    margin: 0 auto;
+  }
+  .nflmain_wrap .content-item05.main-rank .tab-head {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -100px;
+  }
+  .nflmain_wrap .content-item05.main-rank .tab-head.ty03 .tabs-wrap .tabs li a {
+    padding: 11px 32px;
+  }
+  .nflmain_wrap .content-item05.main-rank .tab-head.ty03 .tabs-wrap .tabs li {
+    width: auto;
+  }
+  .nflmain_wrap .content-item05.main-rank .ranking-tabcont {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    align-items: center;
+  }
+  .nflmain_wrap .content-item05.main-rank .ty01Swiper .swiper-wrapper .swiper-slide {
+    padding-bottom: 70px;
+  }
+  .nflmain_wrap .content-item06 .rewards-box .grid_masonry {
+    align-items: baseline;
   }
 }
