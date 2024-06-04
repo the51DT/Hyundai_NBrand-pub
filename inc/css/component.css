@@ -1272,6 +1272,147 @@ input[type="radio"]:focus + label {
   opacity: 0.8;
 }
 
+/* card_type04 */
+.card_type04 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #fff;
+  font-family: "Hyundai Sans Text";
+}
+.card_type04 .card_thumbnail {
+  width: 100%;
+}
+.card_type04 .card_thumbnail.h347 {
+  height: 21.6875rem;
+  aspect-ratio: 464 / 347;
+}
+.card_type04 .card_thumbnail.h464 {
+  height: 29rem;
+  aspect-ratio: 464 /464;
+}
+.card_type04 .card_thumbnail.h359 {
+  height: 22.4375rem;
+  aspect-ratio: 464 / 359;
+}
+.card_type04 .card_thumbnail.h823 {
+  height: 51.4375rem;
+  aspect-ratio: 464 / 823;
+}
+.card_type04 .card_thumbnail.h825 {
+  height: 51.5625rem;
+  aspect-ratio: 464 / 825;
+}
+.card_type04 .card_thumbnail.h618 {
+  height: 38.625rem;
+  aspect-ratio: 464 / 618;
+}
+.card_type04 .card_thumbnail.h261 {
+  height: 16.3125rem;
+  aspect-ratio: 464 / 261;
+}
+.card_type04 .card_thumbnail img {
+  height: 100%;
+  object-fit: cover;
+}
+.card_type04 .card_state {
+  padding: 1rem 0.875rem;
+  background-color: #de3111;
+  text-align: left;
+  color: #fff;
+}
+.card_type04 .card_step {
+  font-family: "Hyundai Sans Head";
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 140%;
+}
+.card_type04 .card_detail {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 140%;
+  margin-top: 0.25rem;
+}
+.card_type04 .card_entry {
+  font-weight: 700;
+}
+.card_type04 .card_state.compelete {
+  background-color: #aacae6;
+  color: #000000;
+}
+.card_type04 .card_state.end {
+  background-color: #000000;
+  color: #abb2b5;
+}
+.card_type04 .card_con {
+  padding: 20px 16px 0;
+  background-color: #fff;
+  text-align: left;
+}
+.card_type04 .card_tag {
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 140%;
+  color: #fff;
+  background-color: #000000;
+  display: inline-flex;
+  justify-content: flex-start;
+  margin-bottom: 16px;
+}
+.card_type04 .card_cont-des {
+  margin-top: 8px;
+}
+.card_type04 .card-hashtag {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+.card_type04 .card_function {
+  padding: 20px 16px 38px;
+}
+.content-item02 .grid_masonry + .btn-wrap-default,
+.content-item04 .grid_masonry + .btn-wrap-default {
+  margin-top: 80px;
+}
+.card_type04 .card_profile {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 16px;
+  gap: 8px;
+}
+.card_type04 .card_profile .profile_img {
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+.card_type04 .card_profile .profile_img .club-mark {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 16px;
+  height: 16px;
+}
+.card_type04 .card_profile .profile_des {
+  display: flex;
+  flex-direction: column;
+}
+.card_type04 .card_profile .profile_des .profile_name {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 19.6px;
+}
+.card_type04 .card_profile .profile_des .profile_club {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16.8px;
+}
+
 /* card_type05 */
 .card_type05 {
   display: flex;

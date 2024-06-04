@@ -512,6 +512,41 @@ min-width : 1024 css
     font-size: 1.25rem;
   }
 
+  /* card_type04 */
+  .card_type04 .card_state {
+    padding: 14px 16px 13px;
+    background-color: #de3111;
+    text-align: left;
+    color: #fff;
+  }
+  .card_type04 .card_step {
+    font-size: 18px;
+    line-height: 25.2px;
+  }
+  .card_type04 .card-hashtag {
+    margin: 20px 0 32px;
+  }
+  .card_type04 .card_thumbnail.h347 {
+    height: 19.5rem;
+    aspect-ratio: 312 / 312;
+  }
+  .card_type04 .card_thumbnail.h464 {
+    height: 19.5rem;
+    aspect-ratio: 312 /312;
+  }
+  .card_type04 .card_thumbnail.h359 {
+    height: 14.6875rem;
+    aspect-ratio: 312 / 235;
+  }
+  .card_type04 .card_thumbnail.h823 {
+    height: 34.5rem;
+    aspect-ratio: 312 / 552;
+  }
+  .card_type04 .card_thumbnail.h261 {
+    height: 11.875rem;
+    aspect-ratio: 312 / 190;
+  }
+
   /* card_type05 */
   .grid_mo_scroll .card_type05 {
     width: 100%;
