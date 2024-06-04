@@ -605,6 +605,14 @@ input[type="radio"]:focus + label {
   background: url(../../../inc/images/icon/icon-download.svg);
   background-size: contain;
 }
+.icon-refresh {
+  background: url(../../../inc/images/icon/icon-refresh.svg);
+  background-size: contain;
+}
+.icon-control-bar {
+  background: url(../../../inc/images/icon/icon-control-bar.svg);
+  background-size: contain;
+}
 .btn:hover [class*="icon-download"],
 .btn:active [class*="icon-download"] {
   /* 빨간색 다운로드 icon 없어서 css로 임시 */
@@ -2542,10 +2550,7 @@ input[type="radio"]:focus + label {
   margin-right: 1rem;
 }
 
-.dropdown
-  .wrap-dropdown-selected
-  button.btn-only-icon-bg01-square
-  .arrow-down.rotate {
+.dropdown .wrap-dropdown-selected span.icon-down-wh.rotate {
   transform: rotate(180deg);
 }
 
@@ -2658,12 +2663,15 @@ input[type="radio"]:focus + label {
 }
 .dropdown.centered .wrap-dropdown-selected {
   background-color: #000;
-  padding: 17px 0;
+  padding: 17px 16px;
   border-radius: 4px;
 }
 .dropdown.centered .toggled {
   background-color: #de3111;
-  padding: 17px 0;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 .dropdown.centered .wrap-dropdown-selected .dropdown-selected-inner {
   display: flex;
@@ -2672,7 +2680,10 @@ input[type="radio"]:focus + label {
   width: 100%;
   background-color: transparent;
 }
-.dropdown.centered .wrap-dropdown-selected .dropdown-selected-inner svg {
+.dropdown.centered
+  .wrap-dropdown-selected
+  .dropdown-selected-inner
+  .icon-control-bar {
   margin-right: 8px;
 }
 .dropdown.centered .wrap-dropdown-selected button.btn-only-icon-bg01-square {

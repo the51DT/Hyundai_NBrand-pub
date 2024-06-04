@@ -431,9 +431,12 @@ dropdownBtns.forEach((button) => {
   button.addEventListener("click", function () {
     const isExpanded = button.getAttribute("aria-expanded") === "true";
     const dropdownMenu = button.nextElementSibling;
+    // const btnRightArr = button
+    //   .closest(".dropdown")
+    //   .querySelector(".arrow-down");
     const btnRightArr = button
       .closest(".dropdown")
-      .querySelector(".arrow-down");
+      .querySelector(".icon-down-wh");
 
     button.setAttribute("aria-expanded", String(!isExpanded));
     dropdownMenu.classList.toggle("dropdown-on", !isExpanded);
