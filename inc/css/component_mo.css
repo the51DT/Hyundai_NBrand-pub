@@ -188,7 +188,7 @@ min-width : 1024 css
   .tab-head.ty02 .tabs.ty-blue li:nth-last-child(n + 4) ~ li.on:nth-child(2n) {
     border-right: 1px solid #aacae6;
   }
-  
+
   .tab-head.ty03 .tabs-wrap .tabs {
     width: 100%;
   }
@@ -234,7 +234,7 @@ min-width : 1024 css
   }
 
   .conts-box-wrap article:first-child {
-    padding-top:16px;
+    padding-top: 16px;
   }
 
   .conts-box-wrap .bg-img-wrap {
@@ -547,7 +547,7 @@ min-width : 1024 css
   }
 
   /* list */
-  .wrap-list.list01 .btn.btn-lg.btn-bg04 {
+  .wrap-list.list01 .btn.btn-md-outline01 {
     display: none;
   }
   .wrap-list .tabs-wrap .tabs li {

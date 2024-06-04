@@ -798,7 +798,7 @@ input[type="radio"]:focus + label {
 }
 
 .conts-box-wrap article:first-child {
-  padding-top:40px;
+  padding-top: 40px;
 }
 
 .conts-box-wrap article:last-child {
@@ -1829,6 +1829,7 @@ input[type="radio"]:focus + label {
   background-color: var(--ro);
   color: var(--ff);
 }
+
 /* bottom list start (list01, list02, list05 only) */
 .wrap-list .__bottom {
   border-top: 3px solid;
@@ -2251,9 +2252,13 @@ input[type="radio"]:focus + label {
   padding: 29px 20px;
   margin: 12px 0;
   background-color: #f0f0f0;
+  border-bottom: none;
 }
 .wrap-list .__bottom.list07 .wrap-lists:hover {
   background: #aacae6;
+}
+.wrap-list .__bottom.list07 .wrap-lists:nth-child(1) {
+  margin: 0;
 }
 
 .wrap-list .__bottom.list07 .wrap-lists .list-box {
