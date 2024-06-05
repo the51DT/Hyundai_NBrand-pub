@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name=" format-detection" content="telephone=no" />
+    <title>N브랜드 | Experience_Nfestival_Team_detail</title>
+    <link type="text/css" rel="stylesheet" href="../../../../guide/inc/css/shCoreDefault.css" />
+    <link type="text/css" rel="stylesheet" href="../../../../guide/inc/css/guide.css" />
+    <link type="text/css" rel="stylesheet" href="../../../../inc/css/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="../../../../inc/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="../../../../inc/css/experience.css" />
+    <style>
+      .br_mo {
+        display: none;
+      }
+      .team_top {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        background-color: #E6EFF8;
+        aspect-ratio: 1920 / 694;
+      }
+      .team_top img {
+        width: 41.67%;
+      }
+      .team_bottom {
+        padding: 7.5rem 5rem 15rem;
+      }
+      .coment_wrap {
+        max-width: 90rem;
+        margin: 0 auto;
+        padding-bottom: 3.75rem;
+        border-bottom: 2px solid #787D80;
+        text-align: center;
+      }
+      .coment_wrap .contitle-type01 {
+        margin-bottom: 0.75rem;
+        font-weight: 700;
+      }
+      .team_coment {
+        padding: 0 7.6rem;
+        font-size: 2rem;
+        font-style: italic;
+        font-weight: 700;
+        line-height: 140%;
+      }
+      .team_wrap {
+        max-width: 90rem;
+        margin: 0 auto;
+        padding: 5rem 0;
+        border-bottom: 1px solid #BBBBBB;
+      }
+      .team_wrap:last-of-type {
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+      .title_flex {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto 2.5rem;
+        max-width: 90rem;
+      }
+      .team_detail {
+        position: relative;
+        column-count: 2;
+        padding-bottom: 4rem;
+      }
+      .team_detail li {
+        width: 100%;
+        max-width: 38.25rem;
+        font-size: 1.25rem;
+        font-weight: 500;
+        line-height: 140%;
+      }
+      .team_detail li + li {
+        margin-top: 1.5rem;
+      }
+      .team_detail li:nth-of-type(2) {
+        margin-bottom: 5rem;
+      }
+      .team_detail li:last-of-type {
+        position: absolute;
+        left: 0;
+        top: 12.5rem;
+      }
+      .team_detail li p + p {
+        margin-top: 0.75rem;
+        font-family: "Hyundai Sans Head";
+        font-size: 2.5rem;
+        font-weight: 700;
+        line-height: 125%;
+      }
+      .team_wrap .ty03Swiper {
+        padding-top: 0;
+      }
+      .career_list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        row-gap: 1rem;
+        padding-top: 2.5rem;
+      }
+      .career_list li {
+        width: calc(50% - 0.75rem);
+        position: relative;
+        padding-left: 1rem;
+        font-size: 1.25rem;
+        font-weight: 500;
+        line-height: 140%;
+      }
+      .career_list li::before {
+        position: absolute;
+        left: 0;
+        top: 0.75rem;
+        content: '';
+        display: block;
+        width: 0.25rem;
+        height: 0.25rem;
+        background-color: #777777;
+      }
+      .career_list li:nth-of-type(2n) {
+        margin-left: 0.75rem;
+      }
+      @media screen and (max-width: 1023px) {
+        .br_mo {
+          display: block;
+        }
+        .team_top {
+          background-color: #F0F0F0;
+          aspect-ratio: 360 / 240;
+        }
+        .team_top img {
+          width: 60.28%;
+        }
+        .team_bottom {
+          padding: 5rem 1.5rem 10rem;
+        }
+        .coment_wrap {
+          padding-bottom: 2.25rem;
+          text-align: left;
+        }
+        .coment_wrap .contitle-type01 {
+          margin-bottom: 0.75rem;
+          font-weight: 700;
+        }
+        .team_coment {
+          padding: 0;
+          font-size: 1.25rem;
+        }
+        .team_wrap {
+          padding: 2.75rem 0;
+        }
+        .title_flex {
+          flex-direction: column;
+          row-gap: 0.5rem;
+          margin-bottom: 1.75rem;
+        }
+        .team_detail {
+          column-count: unset;
+          padding-bottom: 0;
+        }
+        .team_detail li {
+          width: 100%;
+          font-size: 1.0625rem;
+        }
+        .team_detail li + li {
+          margin-top: 1rem;
+        }
+        .team_detail li:nth-of-type(2) {
+          margin-bottom: 0;
+        }
+        .team_detail li:last-of-type {
+          position: static;
+        }
+        .team_detail li p + p {
+          margin-top: 0.37rem;
+          font-size: 1.5rem;
+        }
+        .career_list {
+          row-gap: 0.75rem;
+          padding-top: 1.25rem;
+        }
+        .career_list li {
+          width: 100%;
+          font-size: 1.0625rem;
+        }
+        .career_list li::before {
+          top: 0.56rem;
+        }
+        .career_list li:nth-of-type(2n) {
+          margin-left: 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrap">
+      <section class="content-wrap">
+        <div class="content-area">
+          <div class="content-item01">
+            <div class="team_top">
+              <img src="../../../../inc/images/N_Festival/team_logo/img_ERACINGXVITESSE-768x512.png" alt="팀로고사진">
+            </div>
+          </div>
+          <div class="content-item02">
+            <div class="team_bottom">
+              <div class="coment_wrap">
+                <p class="contitle-type01">ERACING X VITESSE</p>
+                <p class="team_coment">Korea's Best Professional Racing Team</p>
+              </div>
+              <div class="team_wrap">
+                <ul class="team_detail">
+                  <li>
+                    <p>Director</p>
+                    <p>Kim Jae woo</p>
+                  </li>
+                  <li>
+                    <p>Chief Mechanic</p>
+                    <p>Lee Jinhee</p>
+                  </li>
+                  <li>
+                    <p>Mechanic</p>
+                    <p>Lee Jin young, <br class="br_mo">Han Joon young, <br class="br_mo">Kwak Dong joo</p>
+                  </li>
+                  <li>
+                    <p>Manager</p>
+                    <p>Kang Sung mi</p>
+                  </li>
+                  <li>
+                    <p>Year of debut</p>
+                    <p>2024</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="team_wrap">
+                <div class="title_flex">
+                  <p class="contitle-type01 fw-type03">Drivers</p>
+                  <div class="selectbox-wrap select-type01">
+                    <div>
+                      <button class="selectbox-trigger txt-type03 fw-type03 color-white" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="yearSelect">2024</button>
+                      <ul class="selectbox-options 02" role="listbox" id="yearSelect" aria-hidden="true" style="display: none;">
+                        <li class="moclose-btn" style="display: none;">
+                          <button type="button" class="btn btn-only-icon" aria-label="play button">
+                            <span class="visually-hidden">close button</span>
+                            <span class="btn-icon24 icon-close" aria-hidden="true"></span>
+                          </button>
+                        </li>
+                        <li class="option txt-type03 fw-type03 active" role="option" aria-selected="true">2024</li>
+                        <li class="option txt-type03 fw-type03" role="option">2023</li>
+                        <li class="option txt-type03 fw-type03" role="option">2022</li>
+                        <li class="option txt-type03 fw-type03" role="option">2021</li>
+                        <li class="option txt-type03 fw-type03" role="option">2020</li>
+                        <li class="option txt-type03 fw-type03" role="option">2019</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="selectbox-overlay" style="display: none;"></div>
+                </div>
+                <div class="swiper-container">
+                  <!-- Swiper -->
+                  <div class="swiper ty03Swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <a class="card_type01 card_swiper" href="#" title="선수 상세페이지 이동">
+                          <div class="card_top">
+                            <div class="card_profile"><img src="../../../../inc/images/N_Festival/driver/img_N1_09_박동섭-512.png" alt="선수 프로필사진"></div>
+                            <p class="card_num">02</p>
+                          </div>
+                          <div class="card_bottom">
+                            <div class="card_info">
+                              <p class="card_tit">Park Dong sup</p>
+                              <p class="card_subtit">N1</p>
+                            </div>
+                          </div>
+                          <div class="card_more">
+                            <span>Learn More</span>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="swiper-slide">
+                        <a class="card_type01 card_swiper" href="#" title="선수 상세페이지 이동">
+                          <div class="card_top">
+                            <div class="card_profile"><img src="../../../../inc/images/N_Festival/driver/img_profile_default-512.png" alt="선수 프로필사진"></div>
+                            <p class="card_num">90</p>
+                          </div>
+                          <div class="card_bottom">
+                            <div class="card_info">
+                              <p class="card_tit">Le Du hee</p>
+                              <p class="card_subtit">N1</p>
+                            </div>
+                          </div>
+                          <div class="card_more">
+                            <span>Learn More</span>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="swiper-slide">
+                        <a class="card_type01 card_swiper" href="#" title="선수 상세페이지 이동">
+                          <div class="card_top">
+                            <div class="card_profile"><img src="../../../../inc/images/N_Festival/driver/img_N1_08_이정웅-512.png" alt="선수 프로필사진"></div>
+                            <p class="card_num">44</p>
+                          </div>
+                          <div class="card_bottom">
+                            <div class="card_info">
+                              <p class="card_tit">Lee Jung woong</p>
+                              <p class="card_subtit">N1</p>
+                            </div>
+                          </div>
+                          <div class="card_more">
+                            <span>Learn More</span>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="swiper-slide">
+                        <a class="card_type01 card_swiper" href="#" title="선수 상세페이지 이동">
+                          <div class="card_top">
+                            <div class="card_profile"><img src="../../../../inc/images/N_Festival/driver/img_N1_09_박동섭-512.png" alt="선수 프로필사진"></div>
+                            <p class="card_num">02</p>
+                          </div>
+                          <div class="card_bottom">
+                            <div class="card_info">
+                              <p class="card_tit">Park Dong sup</p>
+                              <p class="card_subtit">N1</p>
+                            </div>
+                          </div>
+                          <div class="card_more">
+                            <span>Learn More</span>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="swiper-slide">
+                        <a class="card_type01 card_swiper" href="#" title="선수 상세페이지 이동">
+                          <div class="card_top">
+                            <div class="card_profile"><img src="../../../../inc/images/N_Festival/driver/img_profile_default-512.png" alt="선수 프로필사진"></div>
+                            <p class="card_num">90</p>
+                          </div>
+                          <div class="card_bottom">
+                            <div class="card_info">
+                              <p class="card_tit">Le Du hee</p>
+                              <p class="card_subtit">N1</p>
+                            </div>
+                          </div>
+                          <div class="card_more">
+                            <span>Learn More</span>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="swiper-slide">
+                        <a class="card_type01 card_swiper" href="#" title="선수 상세페이지 이동">
+                          <div class="card_top">
+                            <div class="card_profile"><img src="../../../../inc/images/N_Festival/driver/img_N1_08_이정웅-512.png" alt="선수 프로필사진"></div>
+                            <p class="card_num">44</p>
+                          </div>
+                          <div class="card_bottom">
+                            <div class="card_info">
+                              <p class="card_tit">Lee Jung woong</p>
+                              <p class="card_subtit">N1</p>
+                            </div>
+                          </div>
+                          <div class="card_more">
+                            <span>Learn More</span>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="swiper-slide">
+                        <a class="card_type01 card_swiper" href="#" title="선수 상세페이지 이동">
+                          <div class="card_top">
+                            <div class="card_profile"><img src="../../../../inc/images/N_Festival/driver/img_profile_default-512.png" alt="선수 프로필사진"></div>
+                            <p class="card_num">90</p>
+                          </div>
+                          <div class="card_bottom">
+                            <div class="card_info">
+                              <p class="card_tit">Le Du hee</p>
+                              <p class="card_subtit">N1</p>
+                            </div>
+                          </div>
+                          <div class="card_more">
+                            <span>Learn More</span>
+                          </div>
+                        </a>
+                      </div>
+                    </div> <!-- //swiper-wrapper -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-status-wrap">
+                      <div class="swiper-pagination-custom">
+                        <span class="swiper-pagination-bullet-active"></span>
+                      </div>
+                    </div>
+                  </div> <!-- //swiper -->
+                </div>
+              </div>
+              <div class="team_wrap">
+                <div class="title_flex">
+                  <p class="contitle-type01 fw-type03">Season stats</p>
+                  <div class="selectbox-wrap select-type02">
+                    <div>
+                      <button class="selectbox-trigger txt-type03 fw-type03 color-white" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="yearSelect">2024</button>
+                      <ul class="selectbox-options 02" role="listbox" id="yearSelect" aria-hidden="true" style="display: none;">
+                        <li class="moclose-btn" style="display: none;">
+                          <button type="button" class="btn btn-only-icon" aria-label="play button">
+                            <span class="visually-hidden">close button</span>
+                            <span class="btn-icon24 icon-close" aria-hidden="true"></span>
+                          </button>
+                        </li>
+                        <li class="option txt-type03 fw-type03 active" role="option" aria-selected="true">2024</li>
+                        <li class="option txt-type03 fw-type03" role="option">2023</li>
+                        <li class="option txt-type03 fw-type03" role="option">2022</li>
+                        <li class="option txt-type03 fw-type03" role="option">2021</li>
+                        <li class="option txt-type03 fw-type03" role="option">2020</li>
+                        <li class="option txt-type03 fw-type03" role="option">2019</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <button class="selectbox-trigger txt-type03 fw-type03 color-white" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="classSelect">eN1</button>
+                      <ul class="selectbox-options 04" role="listbox" id="classSelect" aria-hidden="true" style="display: none;">
+                        <li class="moclose-btn" style="display: none;">
+                          <button type="button" class="btn btn-only-icon" aria-label="play button">
+                            <span class="visually-hidden">close button</span>
+                            <span class="btn-icon24 icon-close" aria-hidden="true"></span>
+                          </button>
+                        </li>
+                        <li class="option txt-type03 fw-type03 active" role="option" aria-selected="true">eN1</li>
+                        <li class="option txt-type03 fw-type03" role="option">N 1</li>
+                        <li class="option txt-type03 fw-type03" role="option">N 2</li>
+                        <li class="option txt-type03 fw-type03" role="option">N TT</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="selectbox-overlay" style="display: none;"></div>
+                </div>
+                <div class="seasonstats-box seasonstats-type2">
+                  <p>2024 eN1</p>
+                  <dl class="blue-box">
+                    <div>
+                      <dt>Rank</dt>
+                      <dd>1st</dd>
+                    </div>
+                    <div>
+                      <dt>Point</dt>
+                      <dd>999</dd>
+                    </div>
+                    <div>
+                      <dt>Wins</dt>
+                      <dd>9</dd>
+                    </div>
+                    <div>
+                      <dt>Podiums</dt>
+                      <dd>1</dd>
+                    </div>
+                    <div>
+                      <dt>Poles</dt>
+                      <dd>3</dd>
+                    </div>
+                  </dl>
+                </div>
+              </div>
+              <div class="team_wrap">
+                <p class="contitle-type01 fw-type03">Career Highlights </p>
+                <ul class="career_list">
+                  <li>2023 [N1] AVANTE N Cup Season Champion</li>
+                  <li>2022 [N1] AVANTE N Cup Season 2nd Place</li>
+                  <li>2021 [N2] Veloster N Cup Season 3rd Place</li>
+                  <li>2020 [N1] AVANTE N Cup Season Champion</li>
+                  <li>2020 [N1] AVANTE N Cup Season Champion</li>
+                  <li>2029 [N1] AVANTE N Cup Season 2nd Place</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script type="text/javascript" src="../../../../inc/js/jquery-3.7.1.slim.min.js"></script>
+    <script type="text/javascript" src="../../../../inc/js/swiper.min.js"></script>
+    <script type="text/javascript" src="../../../../inc/js/pub-ui.js"></script>
+  </body>
+</html>
