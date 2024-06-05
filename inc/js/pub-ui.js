@@ -425,6 +425,7 @@ $(".option").click(function (event) {
     .resize();
 });
 // [End] : selectbox 컴포넌트
+
 // 드롭다운(아코디언), 필터 컴포넌트 시작
 const dropdownBtns = document.querySelectorAll(".wrap-dropdown-selected");
 dropdownBtns.forEach((button) => {
@@ -448,6 +449,7 @@ dropdownBtns.forEach((button) => {
     const detectCase2_selectBtn = document.querySelector(
       ".dropdown.centered .wrap-dropdown-selected"
     ); // 필터 컴포넌트: 선택 버튼
+
     if (!isExpanded) {
       dropdownMenu.setAttribute("aria-hidden", "true");
     }
@@ -459,8 +461,40 @@ dropdownBtns.forEach((button) => {
       });
     }
 
+    // 필터 모바일 대응
+    const backgroundEl = document.querySelector(
+      ".dropdown.centered .wrap-dropdown-selected .icon-down-wh"
+    );
+    const filterBtn_icn1 = document.querySelector(
+      ".dropdown.centered .wrap-dropdown-selected .dropdown-selected-inner .icon-control-bar"
+    );
+
     if (detectCase2) {
       detectCase2_selectBtn.classList.toggle("toggled");
+
+      if (detectCase2_selectBtn.classList.contains("toggled")) {
+        backgroundEl.style.backgroundImage =
+          "url(../../../inc/images/icon/icon-close.svg)";
+        document.querySelector(
+          ".dropdown.centered .wrap-dropdown-selected"
+        ).style.background = "#fff";
+        document.querySelector(
+          ".dropdown.centered .wrap-dropdown-selected .dropdown-btn"
+        ).style.color = "#000";
+
+        filterBtn_icn1.style.display = "none";
+      } else {
+        backgroundEl.style.backgroundImage =
+          "url(../../../inc/images/icon/icon-arrow01_down_white.svg)";
+
+        document.querySelector(
+          ".dropdown.centered .wrap-dropdown-selected"
+        ).style.background = "#000";
+        document.querySelector(
+          ".dropdown.centered .wrap-dropdown-selected .dropdown-btn"
+        ).style.color = "#fff";
+        filterBtn_icn1.style.display = "block";
+      }
     }
   });
 });
@@ -507,21 +541,20 @@ function DropdownFooter() {
           });
       });
     });
-
-  console.log("low");
 }
 
 function checkScreenSize() {
-  var screenWidth = window.innerWidth;
+  const screenWidth = window.innerWidth;
 
   if (screenWidth < 1024) {
     DropdownFooter();
   } else {
-    console.log("x");
+    document
+      .querySelector(".dropdown.inMobile .accor02-wrap ul.dropdown-on")
+      .classList.remove("dropdown-on");
   }
 }
 
-// Call checkScreenSize() when the page loads or when the window is resized
 window.onload = checkScreenSize;
 window.onresize = checkScreenSize;
 

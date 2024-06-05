@@ -1075,8 +1075,9 @@ min-width : 1024 css
   }
 
   .dropdown.inMobile .accor02-wrap ul {
-    /* display: none; */
+    display: none;
   }
+
   .dropdown.inMobile .accor02-wrap ul.dropdown-on {
     display: block;
   }
@@ -1520,4 +1521,8 @@ min-width : 1024 css
   .tag-list-wrap [class^="tag-list"][class*="multi"] li:not(:last-child) {
     margin-right: 8px;
   }
+}
+
+.nav-wrap {
+  display: none;
 }
