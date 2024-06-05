@@ -3605,13 +3605,6 @@ input[type="radio"]:focus + label {
   .dropdown.centered .wrap-dropdown-selected .dropdown-btn {
   }
 
-  .dropdown.centered
-    .wrap-dropdown-selected
-    .dropdown-selected-inner
-    .icon-control-bar {
-    /* display: none; */
-  }
-
   .dropdown.centered .wrap-dropdown-selected .icon-down-wh {
     background: url(../../../inc/images/icon/icon-arrow01_down_white.svg);
     background-size: contain;

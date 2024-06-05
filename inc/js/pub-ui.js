@@ -468,6 +468,12 @@ dropdownBtns.forEach((button) => {
     const filterBtn_icn1 = document.querySelector(
       ".dropdown.centered .wrap-dropdown-selected .dropdown-selected-inner .icon-control-bar"
     );
+    const filterBtn_forDisplay = document.querySelector(
+      ".dropdown.centered .wrap-dropdown-selected"
+    );
+    const filterBtn_forDisplayText = document.querySelector(
+      ".dropdown.centered .wrap-dropdown-selected .dropdown-btn"
+    );
 
     if (detectCase2) {
       detectCase2_selectBtn.classList.toggle("toggled");
@@ -475,25 +481,16 @@ dropdownBtns.forEach((button) => {
       if (detectCase2_selectBtn.classList.contains("toggled")) {
         backgroundEl.style.backgroundImage =
           "url(../../../inc/images/icon/icon-close.svg)";
-        document.querySelector(
-          ".dropdown.centered .wrap-dropdown-selected"
-        ).style.background = "#fff";
-        document.querySelector(
-          ".dropdown.centered .wrap-dropdown-selected .dropdown-btn"
-        ).style.color = "#000";
-
+        filterBtn_forDisplay.style.background = "#fff";
+        filterBtn_forDisplayText.style.color = "#000";
         filterBtn_icn1.style.display = "none";
       } else {
         backgroundEl.style.backgroundImage =
           "url(../../../inc/images/icon/icon-arrow01_down_white.svg)";
 
-        document.querySelector(
-          ".dropdown.centered .wrap-dropdown-selected"
-        ).style.background = "#000";
-        document.querySelector(
-          ".dropdown.centered .wrap-dropdown-selected .dropdown-btn"
-        ).style.color = "#fff";
-        filterBtn_icn1.style.display = "block";
+        filterBtn_forDisplay.style.background = "#000";
+        filterBtn_forDisplayText.style.color = "#fff";
+        filterBtn_icn1.style.display = "inline-block";
       }
     }
   });
