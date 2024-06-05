@@ -995,11 +995,15 @@ min-width : 1024 css
   /* cont08 accordion */
   .wrap-dropdown-selected {
     padding: 1.25rem 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
     gap: 0 1.5rem;
   }
   .dropdown-btn {
-    font-size: 1.063rem;
+    /* font-size: 1.063rem; */
+    font-size: 17px;
     line-height: 1.488rem;
+    width: 100%;
   }
   .wrap-dropdown-selected .arrow-r {
     display: none;
@@ -1071,7 +1075,7 @@ min-width : 1024 css
   }
 
   .dropdown.inMobile .accor02-wrap ul {
-    display: none;
+    /* display: none; */
   }
   .dropdown.inMobile .accor02-wrap ul.dropdown-on {
     display: block;
@@ -1089,6 +1093,13 @@ min-width : 1024 css
   .dropdown.centered .dropdown-menu .selectbox-options .option {
     border-bottom: none;
     padding: 19px 48px 19px 24px;
+  }
+  .dropdown-menu li:not(.dropdown-menu .moclose-btn, .dropdown-menu .option) {
+    padding: 1.25rem 1.5rem;
+  }
+  .wrap-dropdown-selected span.icon-right {
+    border: 1px solid red;
+    display: none;
   }
   .dropdown.centered
     .dropdown-menu

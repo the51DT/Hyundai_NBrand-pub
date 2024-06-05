@@ -2520,6 +2520,7 @@ input[type="radio"]:focus + label {
   background-color: #aacae6;
   padding: 26px 60px 26px 60px;
 }
+
 .dropdown .wrap-dropdown-selected .dropdown-selected-inner {
   display: flex;
   align-items: center;
@@ -3182,6 +3183,11 @@ input[type="radio"]:focus + label {
   padding: 26px 0 26px 60px;
   border-bottom: 2px solid #d9d9d9;
   cursor: pointer;
+}
+.dropdown-menu
+  li:not(.dropdown-menu .moclose-btn, .dropdown-menu .option)
+  span.icon-right {
+  border: 1px solid red;
 }
 .dropdown-menu a {
   font-size: 1.25rem;
