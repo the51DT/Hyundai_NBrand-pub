@@ -330,11 +330,26 @@
         `;
       });
     },
+    textReset: function (el) {
+      const btn = el.target.nextElementSibling;
+      if (0 < el.target.value.length) {
+        btn.classList.remove("visually-hidden");
+        btn.addEventListener("click", () => {
+          el.target.value = "";
+          btn.classList.add("visually-hidden");
+        });
+      } else {
+        btn.classList.add("visually-hidden");
+      }
+    },
   };
 
   $(document).ready(function () {
     pubUi.init();
     $(window).on("resize", pubUi.masonryLayout);
+    $(".clear-text")
+      .siblings('input[type="text"]')
+      .on("propertychange change keyup paste input", pubUi.textReset);
   });
 })();
 
