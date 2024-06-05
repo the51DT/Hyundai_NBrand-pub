@@ -790,6 +790,7 @@ input[type="radio"]:focus + label {
 .conts-box-wrap {
   display: flex;
   justify-content: center;
+  overflow: auto;
 }
 
 .conts-box-wrap.ty02 {

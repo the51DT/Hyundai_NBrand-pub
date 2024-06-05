@@ -136,6 +136,10 @@
   order:1;
 }
 
+.history-box .history-list li > div {
+  flex : 1 1 586px;
+}
+
 /* intro-race-box */
 .intro-race-box {
   padding-top:120px;
@@ -317,12 +321,6 @@
     left: 0;
     transform: revert;
   }  
-  .history-box .history-list li > div:first-child {
-    padding-right: 0;
-  }
-  .history-box .history-list li > div:last-child {  
-    padding-left: 0;
-  }
 
   .history-box .history-list li .text-area {
     padding:0 0 40px 50px !important;
