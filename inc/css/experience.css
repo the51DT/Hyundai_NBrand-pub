@@ -180,15 +180,15 @@ body {
   margin-top: 80px;
 }
 /* EP040301 */
-.mission_wrap .mission-box {
+.subfilter_wrap .content-item02 {
   background-color: #f0f0f0;
   padding: 120px 80px 240px;
 }
-.mission_wrap .dropdown {
+.subfilter_wrap .dropdown {
   max-width: 1440px;
   margin: 0 auto;
 }
-.mission_wrap .grid_masonry {
+.subfilter_wrap .grid_masonry {
   margin-top: 40px;
 }
 /* 모바일 */
@@ -352,6 +352,16 @@ body {
     width: 100%;
   }
   .content-item06 .rewards-box .grid_masonry + .btn-wrap-default {
+    margin-top: 44px;
+  }
+  /* EP040301 */
+  .subfilter_wrap .content-item02 {
+    padding: 80px 24px 160px;
+  }
+  .subfilter_wrap .dropdown {
+    max-width: 100%;
+  }
+  .subfilter_wrap .grid_masonry {
     margin-top: 44px;
   }
 }
