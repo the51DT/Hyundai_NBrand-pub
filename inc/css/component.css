@@ -3187,7 +3187,6 @@ input[type="radio"]:focus + label {
 .dropdown-menu
   li:not(.dropdown-menu .moclose-btn, .dropdown-menu .option)
   span.icon-right {
-  border: 1px solid red;
 }
 .dropdown-menu a {
   font-size: 1.25rem;
@@ -3197,10 +3196,45 @@ input[type="radio"]:focus + label {
   cursor: pointer;
   font-family: "Hyundai Sans Text";
 }
+.dropdown-menu a[class*="txt-btn01"] {
+  color: #555;
+}
 .dropdown-menu li:hover {
   background: #e6eff8;
   color: #000;
 }
+
+.dropdown-menu.dropdown-on li:hover .btn-wrap a span.icon-disabled {
+  background: url(../../../inc/images/icon/icon-arrow01_right.svg);
+  background-size: contain;
+}
+
+.dropdown-menu.dropdown-on li:hover .btn-wrap a {
+  color: #000;
+}
+
+.dropdown-menu
+  li:not(.dropdown-menu .moclose-btn, .dropdown-menu .option):hover
+  .btn[class*="md-txt-btn"]:hover::after,
+.dropdown-menu
+  li:not(.dropdown-menu .moclose-btn, .dropdown-menu .option):hover
+  .btn[class*="md-txt-btn"]:active::after {
+  width: 100%;
+  background-color: transparent;
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.dropdown-menu
+  li:not(.dropdown-menu .moclose-btn, .dropdown-menu .option):hover
+  .btn[class*="txt-btn"]:hover,
+.dropdown-menu
+  li:not(.dropdown-menu .moclose-btn, .dropdown-menu .option):hover
+  .btn[class*="txt-btn"]:active {
+  color: #000;
+}
+
 .dropdown.centered .dropdown-menu li:hover {
   background: transparent;
   cursor: default;
