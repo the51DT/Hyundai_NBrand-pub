@@ -3168,6 +3168,7 @@ input[type="radio"]:focus + label {
 .dropdown.centered .wrap-dropdown-selected .dropdown-btn {
   background-color: transparent;
   color: #fff;
+  width: auto;
 }
 .dropdown-menu {
   display: none;
@@ -3376,7 +3377,7 @@ input[type="radio"]:focus + label {
 }
 @media screen and (max-width: 850px) {
   .dropdown.centered .dropdown-menu ul.wrap-filter {
-    padding: 0 24px;
+    padding: 0 24px 40px;
     max-height: 400px;
   }
   .dropdown.centered .dropdown-menu li {
@@ -3515,6 +3516,7 @@ input[type="radio"]:focus + label {
     .wrap-inner-category
     .inner {
     flex-direction: column;
+    margin: 0 0 8px;
   }
   .dropdown.centered
     .dropdown-menu
@@ -3548,7 +3550,7 @@ input[type="radio"]:focus + label {
     .wrap-category.cart-type03
     .wrap-inner-category
     .middle-category {
-    margin-bottom: 14px;
+    margin-bottom: 8px;
   }
 
   .dropdown.centered .dropdown-menu .wrap-category-result {
@@ -3597,15 +3599,12 @@ input[type="radio"]:focus + label {
   .dropdown.centered .dropdown-menu .wrap-category-result {
     flex-direction: column;
   }
-
   .dropdown.centered .dropdown-menu ul.wrap-filter {
-    padding: 0;
+    padding: 0 0 40px;
   }
-
   .dropdown.centered .wrap-dropdown-selected {
     padding: 18px 0;
   }
-
   .dropdown.centered .wrap-dropdown-selected .icon-down-wh {
     background: url(../../../inc/images/icon/icon-arrow01_down_white.svg);
     background-size: contain;
