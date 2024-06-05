@@ -479,6 +479,7 @@ dropdownBtns.forEach((button) => {
     if (detectCase2) {
       detectCase2_selectBtn.classList.toggle("toggled");
 
+      // 스크린 사이즈 대응
       if (
         detectCase2_selectBtn.classList.contains("toggled") &&
         screenWidth < 1024
@@ -496,10 +497,9 @@ dropdownBtns.forEach((button) => {
         filterBtn_forDisplayText.style.color = "#fff";
         filterBtn_icn1.style.display = "inline-block";
       }
-
       if (
         detectCase2_selectBtn.classList.contains("toggled") &&
-        screenWidth > 1024
+        screenWidth > 1023
       ) {
         filterBtn_forDisplay.style.background = "#de3111";
       }
@@ -565,5 +565,5 @@ function checkScreenSize() {
 
 window.onload = checkScreenSize;
 window.onresize = checkScreenSize;
-
 // 드롭다운(아코디언) 02 끝
+// 드롭다운(아코디언), 필터 컴포넌트 끝

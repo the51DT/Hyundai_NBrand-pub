@@ -3576,6 +3576,10 @@ input[type="radio"]:focus + label {
     button {
     width: 100%;
   }
+
+  .dropdown.centered .dropdown-menu li .wrap-category.cart-type01 {
+    flex-direction: column;
+  }
 }
 @media screen and (max-width: 849px) {
   .dropdown.centered .dropdown-menu li .wrap-category .major-category {
@@ -3599,10 +3603,7 @@ input[type="radio"]:focus + label {
   }
 
   .dropdown.centered .wrap-dropdown-selected {
-    padding: 18px 24px;
-  }
-
-  .dropdown.centered .wrap-dropdown-selected .dropdown-btn {
+    padding: 18px 0;
   }
 
   .dropdown.centered .wrap-dropdown-selected .icon-down-wh {
