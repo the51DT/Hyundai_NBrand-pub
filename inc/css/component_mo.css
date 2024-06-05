@@ -390,6 +390,7 @@ min-width : 1024 css
     flex-direction: column;
     align-items: normal;
     padding: 0 0.75rem;
+    max-width: 100%;
   }
   .card_type01 .card_detail li:first-of-type {
     padding-left: 0;
