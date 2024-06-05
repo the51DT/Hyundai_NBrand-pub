@@ -481,30 +481,48 @@ const accor02List = document.querySelectorAll(
   ".dropdown.inMobile .accor02-wrap ul"
 );
 
-document
-  .querySelectorAll(".dropdown.inMobile .accor02-wrap")
-  .forEach((wrapper) => {
-    wrapper.addEventListener("click", function (event) {
-      const button = this.querySelector(".accor02-header button");
-      const dropdownMenu = this.querySelector("ul");
+function DropdownFooter() {
+  document
+    .querySelectorAll(".dropdown.inMobile .accor02-wrap")
+    .forEach((wrapper) => {
+      wrapper.addEventListener("click", function (event) {
+        const button = this.querySelector(".accor02-header button");
+        const dropdownMenu = this.querySelector("ul");
 
-      const isExpanded = button.getAttribute("aria-expanded") === "true";
+        const isExpanded = button.getAttribute("aria-expanded") === "true";
 
-      button.setAttribute("aria-expanded", String(!isExpanded));
-      dropdownMenu.classList.toggle("dropdown-on", !isExpanded);
-      button.classList.toggle("rotate", !isExpanded);
+        button.setAttribute("aria-expanded", String(!isExpanded));
+        dropdownMenu.classList.toggle("dropdown-on", !isExpanded);
+        button.classList.toggle("rotate", !isExpanded);
 
-      // 다른 .accor02-wrap 요소에 대한 .rotate 클래스 제거
-      document
-        .querySelectorAll(".dropdown.inMobile .accor02-wrap")
-        .forEach((otherWrapper) => {
-          if (otherWrapper !== wrapper) {
-            otherWrapper
-              .querySelector(".accor02-header button")
-              .classList.remove("rotate");
-          }
-        });
+        // 다른 .accor02-wrap 요소에 대한 .rotate 클래스 제거
+        document
+          .querySelectorAll(".dropdown.inMobile .accor02-wrap")
+          .forEach((otherWrapper) => {
+            if (otherWrapper !== wrapper) {
+              otherWrapper
+                .querySelector(".accor02-header button")
+                .classList.remove("rotate");
+            }
+          });
+      });
     });
-  });
+
+  console.log("low");
+}
+
+function checkScreenSize() {
+  var screenWidth = window.innerWidth;
+
+  if (screenWidth < 1024) {
+    DropdownFooter();
+  } else {
+    console.log("x");
+  }
+}
+
+// Call checkScreenSize() when the page loads or when the window is resized
+window.onload = checkScreenSize;
+window.onresize = checkScreenSize;
 
 // 드롭다운(아코디언) 02 끝

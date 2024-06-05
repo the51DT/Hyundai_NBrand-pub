@@ -1073,13 +1073,29 @@ min-width : 1024 css
   .dropdown.inMobile .accor02-wrap ul {
     display: none;
   }
+  .dropdown.inMobile .accor02-wrap ul.dropdown-on {
+    display: block;
+  }
+
   .dropdown.inMobile .accor02-wrap ul li {
     margin-bottom: 0;
     padding: 1rem 0;
   }
 
-  .dropdown.inMobile .accor02-wrap ul.dropdown-on {
-    display: block;
+  /* dropdown add */
+  .wrap-dropdown-selected {
+    justify-content: space-between;
+  }
+  .dropdown.centered .dropdown-menu .selectbox-options .option {
+    border-bottom: none;
+    padding: 19px 48px 19px 24px;
+  }
+  .dropdown.centered
+    .dropdown-menu
+    .selectbox-options
+    .option:not(.txt-type03.fw-type03.active) {
+    border-bottom: 1px solid #d9d9d9;
+    background: #fff;
   }
 
   /* table */
