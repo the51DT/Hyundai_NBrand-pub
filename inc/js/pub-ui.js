@@ -507,7 +507,8 @@ dropdownBtns.forEach((button) => {
         filterBtn_icn1.style.display = "none";
       } else {
         backgroundEl.style.backgroundImage =
-          "url(../../../inc/images/icon/icon-arrow01_down_white.svg)";
+          // "url(../../../inc/images/icon/icon-arrow01_down_white.svg)";
+          "none";
 
         filterBtn_forDisplay.style.background = "#000";
         filterBtn_forDisplayText.style.color = "#fff";
