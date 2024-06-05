@@ -1375,9 +1375,11 @@ input[type="radio"]:focus + label {
 }
 .card_type04 .card-hashtag {
   display: flex;
-  column-gap: 12px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  width: calc(100% + 13px);
   margin: 20px 0;
+  column-gap: 12px;
+  overflow: hidden;
 }
 .card_type04 .card_function {
   padding: 20px 16px 38px;
@@ -3758,6 +3760,12 @@ table {
 }
 
 /* 2) 폼 인풋 텍스트,  start*/
+.wrap-form.text {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 4px solid #000;
+  padding-right: 8px;
+}
 .wrap-form input[type="text"] {
   font-family: "Hyundai Sans Text";
   margin-top: 8px;
@@ -3769,7 +3777,7 @@ table {
   border-top: none;
   border-left: none;
   border-right: none;
-  border-bottom: 4px solid #000;
+  border-bottom: none;
   width: 100%;
 }
 .wrap-form input.form-input-text::placeholder {
@@ -3793,6 +3801,24 @@ span.text-comment {
 p.text-num-chk {
   font-size: 0.75rem;
   color: #777;
+}
+.clear-text {
+  display: inline-flex;
+  align-items: center;
+}
+.wrap-form.text .clear-text {
+  margin-left: 2px;
+}
+.clear-text .btn {
+  width: 20px;
+  height: 20px;
+  padding: 5.13px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+.clear-text .icon-close-wh {
+  width: 10px;
+  height: 10px;
 }
 
 /* comment-type01, comment-type02 */

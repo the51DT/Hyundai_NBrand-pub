@@ -330,11 +330,26 @@
         `;
       });
     },
+    textReset: function (el) {
+      const btn = el.target.nextElementSibling;
+      if (0 < el.target.value.length) {
+        btn.classList.remove("visually-hidden");
+        btn.addEventListener("click", () => {
+          el.target.value = "";
+          btn.classList.add("visually-hidden");
+        });
+      } else {
+        btn.classList.add("visually-hidden");
+      }
+    },
   };
 
   $(document).ready(function () {
     pubUi.init();
     $(window).on("resize", pubUi.masonryLayout);
+    $(".clear-text")
+      .siblings('input[type="text"]')
+      .on("propertychange change keyup paste input", pubUi.textReset);
   });
 })();
 
@@ -570,3 +585,21 @@ window.onload = checkScreenSize;
 window.onresize = checkScreenSize;
 // 드롭다운(아코디언) 02 끝
 // 드롭다운(아코디언), 필터 컴포넌트 끝
+
+// [Start] : hashTag 말줄임
+$(".card_type04 .card_con").each(function () {
+  var $set = $(this).children("ul.card-hashtag").children("li");
+  var $setUl = $(this).children("ul.card-hashtag");
+
+  $set.each(function () {
+    var cardConRightEdge = $setUl.offset().left + $setUl.outerWidth();
+    var liRightEdge = $(this).offset().left + $(this).outerWidth(true);
+    if (liRightEdge >= cardConRightEdge) {
+      $(this).addClass("ellipsis");
+      // $("ul.card-hashtag li.ellipsis").first().css({ minWidth: 50 });
+    }
+  });
+
+  $set.siblings(".ellipsis").first().show();
+  $set.siblings(".ellipsis").nextAll().hide(); // EP040501 - Pony Magazine 제목 참고 (안하면 li.ellipsis 뒤에 li들 다 살아있음 - 그래서 li.ellipsis 너비 줄어듦)
+});

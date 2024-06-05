@@ -135,18 +135,20 @@
                 <div class="selectbox-overlay" style="display: none;"></div>
                 <div class="search-container">
                   <div class="search-wrap search-small" role="search">
-                    <div class="search-input-box">                          
+                    <div class="search-input-box">
                       <div class="btn-wrap">
-                        <button type="button" class="btn btn-only-icon-circle btn-search" aria-label="검색 버튼">
+                        <button type="button" class="btn btn-search" aria-label="검색 버튼">
                           <span class="visually-hidden">search button</span>
-                          <span class="btn-icon24 icon-search-wh" aria-hidden="true">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M21.315 19.1846L16.335 14.2046C17.16 12.9896 17.64 11.5196 17.64 9.94465C17.64 5.69965 14.19 2.26465 9.96 2.26465C5.73 2.26465 2.25 5.69965 2.25 9.92965C2.25 14.1596 5.7 17.6096 9.93 17.6096C11.505 17.6096 12.975 17.1296 14.19 16.3046L19.17 21.2846L21.285 19.1696L21.315 19.1846ZM5.25 9.92965C5.25 7.34965 7.35 5.24965 9.93 5.24965C12.51 5.24965 14.61 7.34965 14.61 9.92965C14.61 12.5096 12.51 14.6096 9.93 14.6096C7.35 14.6096 5.25 12.5096 5.25 9.92965Z" fill="black"/>
-                            </svg>
-                          </span>
+                          <span class="btn-icon24 icon-search" aria-hidden="true"></span>
                         </button>
                       </div>
-                      <input type="text" name="searchInput01" value="" placeholder="Placeholder" aria-label="검색 내용 입력">
+                      <input type="text" name="searchInput01" value="" placeholder="Input Keyword" aria-label="검색 내용 입력"/>
+                      <div class="clear-text visually-hidden">
+                        <button type="button" class="btn btn-reset" aria-label="검색 내용 리셋 버튼">
+                          <span class="visually-hidden">Reset</span>
+                          <span class="btn-icon icon-close-wh" aria-hidden="true"></span>
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
