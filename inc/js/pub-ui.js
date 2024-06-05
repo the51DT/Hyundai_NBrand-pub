@@ -462,6 +462,7 @@ dropdownBtns.forEach((button) => {
     }
 
     // 필터 모바일 대응
+    const screenWidth = window.innerWidth;
     const backgroundEl = document.querySelector(
       ".dropdown.centered .wrap-dropdown-selected .icon-down-wh"
     );
@@ -478,7 +479,10 @@ dropdownBtns.forEach((button) => {
     if (detectCase2) {
       detectCase2_selectBtn.classList.toggle("toggled");
 
-      if (detectCase2_selectBtn.classList.contains("toggled")) {
+      if (
+        detectCase2_selectBtn.classList.contains("toggled") &&
+        screenWidth < 1024
+      ) {
         backgroundEl.style.backgroundImage =
           "url(../../../inc/images/icon/icon-close.svg)";
         filterBtn_forDisplay.style.background = "#fff";
@@ -491,6 +495,13 @@ dropdownBtns.forEach((button) => {
         filterBtn_forDisplay.style.background = "#000";
         filterBtn_forDisplayText.style.color = "#fff";
         filterBtn_icn1.style.display = "inline-block";
+      }
+
+      if (
+        detectCase2_selectBtn.classList.contains("toggled") &&
+        screenWidth > 1024
+      ) {
+        filterBtn_forDisplay.style.background = "#de3111";
       }
     }
   });
