@@ -1442,9 +1442,11 @@ input[type="radio"]:focus + label {
 }
 .card_type04 .card-hashtag {
   display: flex;
-  column-gap: 12px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  width: calc(100% + 13px);
   margin: 20px 0;
+  column-gap: 12px;
+  overflow: hidden;
 }
 .card_type04 .card_function {
   padding: 20px 16px 38px;
