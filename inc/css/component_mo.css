@@ -1020,6 +1020,7 @@ min-width : 1024 css
     border-bottom: 2px solid #d9d9d9;
     gap: 0 1.5rem;
   }
+
   .dropdown-menu li svg.arrow-r {
     width: 1.5rem;
     height: 1.5rem;
