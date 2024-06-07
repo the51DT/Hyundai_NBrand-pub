@@ -3,16 +3,31 @@
   .header-cont .logo a img {
     height: 24px;
   }
-  .utile-wrap .utile-item:first-child {
-    display: none;
+  /* 모바일 메뉴 오픈 1dep */
+  .header-wrap {
+    z-index: 1000;
   }
-  .nav-wrap {
+  .header-cont {
+    justify-content: flex-start;
+  }
+  .header-wrap.menu-on .logo {
+    animation: fadeout 0.3s;
+    animation-fill-mode: forwards;
+  }
+
+  .header-cont .nav-wrap {
     position: absolute;
     height: calc(100vh - 70px);
     background: #fff;
     width: 100vw;
+    left: auto;
+    right: 100%;
+    transition: right 0.3s;
   }
-
+  .header-wrap.menu-on .nav-wrap {
+    height: calc(100vh - 70px);
+    right: 0;
+  }
   .gnb__tab-btn-wrap {
     flex-direction: column;
     gap: 0px;

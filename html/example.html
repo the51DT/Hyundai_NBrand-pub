@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name=" format-detection" content="telephone=no">
+  <title>N브랜드 | Component</title>
+  <link type="text/css" rel="stylesheet" href="../inc/css/common.css" />
+  <script type="text/javascript" src="../inc/js/jquery-3.7.1.slim.min.js"></script>
+  <style>
+    .container {
+      background-color: #fff;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <button class="enterFullscreenBtn">Fullscreen</button>
+    <button class="exitFullscreenBtn">Cancel Fullscreen</button>
+    <button class="toggleFullscreenBtn">Toggle Fullscreen</button>
+  </div>
+  <script>
+    const enterFullscreenBtn = document.querySelector('.enterFullscreenBtn')
+    const exitFullscreenBtn = document.querySelector('.exitFullscreenBtn')
+    const toggleFullscreenBtn = document.querySelector('.toggleFullscreenBtn')
+
+    const container = document.querySelector('.container')
+
+    enterFullscreenBtn.addEventListener('click', e => {
+      fullscreen(container)
+    })
+    // 전체화면에서 나가기
+    exitFullscreenBtn.addEventListener('click', e => {
+      exitFullScreen()
+    })
+
+    toggleFullscreenBtn.addEventListener('click', e => {
+      toggleFullScreen(container)
+    })
+
+    const fullscreen = element => {
+      if (element.requestFullscreen) return element.requestFullscreen()
+      if (element.webkitRequestFullscreen) return element.webkitRequestFullscreen()
+      if (element.mozRequestFullScreen) return element.mozRequestFullScreen()
+      if (element.msRequestFullscreen) return element.msRequestFullscreen()
+    }
+
+    const exitFullScreen = () => {
+      if (document.exitFullscreen) return document.exitFullscreen()
+      if (document.webkitCancelFullscreen) return document.webkitCancelFullscreen()
+      if (document.mozCancelFullScreen) return document.mozCancelFullScreen()
+      if (document.msExitFullscreen) return document.msExitFullscreen()
+    }
+
+    function toggleFullScreen(element) {
+      if (!document.fullscreenElement) {
+        if (element.requestFullscreen) return element.requestFullscreen()
+        if (element.webkitRequestFullscreen)
+          return element.webkitRequestFullscreen()
+        if (element.mozRequestFullScreen) return element.mozRequestFullScreen()
+        if (element.msRequestFullscreen) return element.msRequestFullscreen()
+      } else {
+        if (document.exitFullscreen) return document.exitFullscreen()
+        if (document.webkitCancelFullscreen)
+          return document.webkitCancelFullscreen()
+        if (document.mozCancelFullScreen) return document.mozCancelFullScreen()
+        if (document.msExitFullscreen) return document.msExitFullscreen()
+      }
+    }
+
+    // 자식요소 클릭 시 부모요소 이벤트 실행되는 문제
+    //=> e.stopPropagation();
+  </script>
+
+
+</body>
+
+</html>

@@ -22,13 +22,14 @@
           <a href="/"><img src="../inc/images/img/img_logo.svg" loading="lazy" alt="N브랜드" /></a>
         </h1>
         <div class="sitemap-wrap">
-          <button class="nav-btn toggle-btn" data-label="전체 메뉴 닫기" aria-label="전체 메뉴 열기" aria-expanded="true"
+          <button class="nav-btn" data-label="전체 메뉴 닫기" aria-label="전체 메뉴 열기" aria-expanded="true"
             aria-controls="navWrap">
             <span class="line"></span>
             <span class="line"></span>
             <span class="line"></span>
           </button>
-          <div class="nav-wrap" id="navWrap">
+          <button title="이전 메뉴" aria-controls="navWrap"></button>
+          <div class="nav-wrap" id="navWrap" aria-hidden="true">
             <nav>
               <!-- gnb 1dep -->
               <script>
@@ -56,12 +57,16 @@
               <ul class="gnb__tab-btn-wrap">
                 <li><button class="gnb__tab-btn01" role="tab" id="gnb-tab1" aria-selected="false">Brand</button></li>
                 <li><button class="gnb__tab-btn02" role="tab" id="gnb-tab2" aria-selected="false">Models</button></li>
-                <li><button class="gnb__tab-btn03" role="tab" id="gnb-tab3" aria-selected="false">Experience</button>
+                <li><button class="gnb__tab-btn     03" role="tab" id="gnb-tab3"
+                    aria-selected="false">Experience</button>
                 </li>
                 <li><a href="#" class="gnb__tab-btn04">Configurator</a></li>
               </ul>
               <!-- g nb 1dep panel -->
               <div class="gnb__tab-cont-wrap">
+                <div class="dep1_mo-control">
+
+                </div>
                 <div class="gnb__tab-cont01" role="tabpanel" aria-labelledby="gnb-tab1">
                   <!-- gnb 2-1 dep-->
                   <div class="gnb__tab02-wrap">
@@ -73,13 +78,6 @@
                       <li><a href="#" class="gnb__tab02-btn04">N Merchandise</a></li>
                       <li><a href="#" class="gnb__tab02-btn05">Press</a></li>
                     </ul>
-                    <!-- <ul class="gnb__tab02">
-                      <li><a href="#" class="gnb__tab02-btn01 on">N Brand</a></li>
-                      <li><a href="#" class="gnb__tab02-btn02">Motorsports</a></li>
-                      <li><a href="#" class="gnb__tab02-btn03">N Performance Parts</a></li>
-                      <li><a href="#" class="gnb__tab02-btn04">N Merchandise</a></li>
-                      <li><a href="#" class="gnb__tab02-btn05">Press</a></li>
-                    </ul> -->
                   </div>
                   <div class="gnb-content__dep2">
                     <div class="img-area">
@@ -97,28 +95,127 @@
                 </div>
                 <div class="gnb__tab-cont02" role="tabpanel" aria-labelledby="gnb-tab2">
                   <!-- gnb 2-2dep-->
-                  <div class="gnb__tab02-wrap">
+                  <div class="gnb__tab02-wrap dep3_on">
+                    <div class="dep2_mo-control">
+
+                    </div>
                     <ul class="gnb__tab02">
                       <!-- 현재 페이지 dep버튼에 on class 삽입. -->
-                      <li><button href="#" class="gnb__tab02-btn01" role="tab" id="gnb-tab2_2_1"
-                          aria-selected="false">N</button></li>
-                      <li><button href="#" class="gnb__tab02-btn02" role="tab" id="gnb-tab2_2_2"
-                          aria-selected="false">Motorsports</button></li>
-                      <li><button href="#" class="gnb__tab02-btn03" role="tab" id="gnb-tab2_2_3"
-                          aria-selected="false">Rolling Lab</button></li>
-                      <li><button href="#" class="gnb__tab02-btn04" role="tab" id="gnb-tab2_2_4"
-                          aria-selected="false">Concept</button></li>
-                      <li><button href="#" class="gnb__tab02-btn05" role="tab" id="gnb-tab2_2_5"
-                          aria-selected="false">Legacy</button></li>
+                      <li>
+                        <button href="#" class="gnb__tab02-btn01" role="tab" id="gnb-tab2_2_1"
+                          aria-selected="false">N</button>
+                      </li>
+                      <li>
+                        <button href="#" class="gnb__tab02-btn02" role="tab" id="gnb-tab2_2_2"
+                          aria-selected="false">Motorsports</button>
+                      </li>
+                      <li>
+                        <button href="#" class="gnb__tab02-btn03" role="tab" id="gnb-tab2_2_3"
+                          aria-selected="false">Rolling Lab</button>
+                      </li>
+                      <li>
+                        <button href="#" class="gnb__tab02-btn04" role="tab" id="gnb-tab2_2_4"
+                          aria-selected="false">Concept</button>
+                      </li>
+                      <li>
+                        <button href="#" class="gnb__tab02-btn05" role="tab" id="gnb-tab2_2_5"
+                          aria-selected="false">Legacy</button>
+                      </li>
                     </ul>
                     <div class="gnb__panel02">
-                      <div role="tabpanel" aria-labelledby="gnb-tab2">
-                        <ul class="gnb__tab02">
-                          <li><a href="#">N Brand</a></li>
-                          <li><a href="#">Motorsports</a></li>
-                          <li><a href="#">N Performance Parts</a></li>
-                          <li><a href="#">N Merchandise</a></li>
-                          <li><a href="#">Press</a></li>
+                      <div role="tabpanel" aria-labelledby="gnb-tab2_2_1">
+                        <ul class="gnb__tab02_2">
+                          <li class="dep3_item">
+                            <div>
+                              <div class="img-area">
+                                <img src="../inc/images/img/img_gnb_dep3.png" loading="lazy" alt="IONIQ 5 N 차량 이미지">
+                              </div>
+                              <div class="text-area">
+                                <h3>IONIQ 5 N</h3>
+                                <p>Electrifying Driving Passion</p>
+                                <div class="link-area">
+                                  <a href="#" class="link-btn">Learn More<span class="icon-right"></span></a>
+                                  <a href="#" class="link-btn">Configrator <span class="icon-link"></span></a>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="dep3_item">
+                            <div>
+                              <div class="img-area">
+                                <img src="../inc/images/img/img_gnb_dep3.png" loading="lazy" alt="IONIQ 5 N 차량 이미지">
+                              </div>
+                              <div class="text-area">
+                                <h3>IONIQ 5 N</h3>
+                                <p>Electrifying Driving Passion</p>
+                                <div class="link-area">
+                                  <a href="#" class="link-btn">Learn More<span class="icon-right"></span></a>
+                                  <a href="#" class="link-btn">Configrator <span class="icon-link"></span></a>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="dep3_item">
+                            <div>
+                              <div class="img-area">
+                                <img src="../inc/images/img/img_gnb_dep3.png" loading="lazy" alt="IONIQ 5 N 차량 이미지">
+                              </div>
+                              <div class="text-area">
+                                <h3>IONIQ 5 N</h3>
+                                <p>Electrifying Driving Passion</p>
+                                <div class="link-area">
+                                  <a href="#" class="link-btn">Learn More<span class="icon-right"></span></a>
+                                  <a href="#" class="link-btn">Configrator <span class="icon-link"></span></a>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="dep3_item">
+                            <div>
+                              <div class="img-area">
+                                <img src="../inc/images/img/img_gnb_dep3.png" loading="lazy" alt="IONIQ 5 N 차량 이미지">
+                              </div>
+                              <div class="text-area">
+                                <h3>IONIQ 5 N</h3>
+                                <p>Electrifying Driving Passion</p>
+                                <div class="link-area">
+                                  <a href="#" class="link-btn">Learn More<span class="icon-right"></span></a>
+                                  <a href="#" class="link-btn">Configrator <span class="icon-link"></span></a>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="dep3_item">
+                            <div>
+                              <div class="img-area">
+                                <img src="../inc/images/img/img_gnb_dep3.png" loading="lazy" alt="IONIQ 5 N 차량 이미지">
+                              </div>
+                              <div class="text-area">
+                                <h3>IONIQ 5 N</h3>
+                                <p>Electrifying Driving Passion</p>
+                                <div class="link-area">
+                                  <a href="#" class="link-btn">Learn More<span class="icon-right"></span></a>
+                                  <a href="#" class="link-btn">Configrator <span class="icon-link"></span></a>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="dep3_item">
+                            <div>
+                              <div class="img-area">
+                                <img src="../inc/images/img/img_gnb_dep3.png" loading="lazy" alt="IONIQ 5 N 차량 이미지">
+                              </div>
+
+                              <div class="text-area">
+                                <h3>IONIQ 5 N</h3>
+                                <p>Electrifying Driving Passion</p>
+                                <div class="link-area">
+                                  <a href="#" class="link-btn">Learn More<span class="icon-right"></span></a>
+                                  <a href="#" class="link-btn">Configrator <span class="icon-link"></span></a>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
                         </ul>
                       </div>
                     </div>
@@ -219,6 +316,7 @@
             </div>
           </div>
         </div>
+
         <div class="utile-wrap">
           <div class="utile-cont">
             <div class="utile-item">
@@ -227,6 +325,7 @@
             </div>
             <div class="utile-item02">
               <button class="login-btn" title="로그인"></button>
+
               <!-- 로그인 이후 -->
               <!-- <button class="alarm-btn" title="미확인 알림"></button> -->
             </div>
@@ -260,7 +359,9 @@
 
 
   <!-- <script type="text/javascript" src="../inc/js/swiper.min.js"></script> -->
+  <script type="text/javascript" src="../inc/js/plugins.js"></script>
   <script type="text/javascript" src="../inc/js/com-ui.js"></script>
+
   <script>
     // alert('d')
   </script>
