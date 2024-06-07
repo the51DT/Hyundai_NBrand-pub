@@ -92,7 +92,7 @@ min-width : 1024 css
   }
   [class*="btn-icon"] {
     display: inline-block;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat !important;
     background-position: center;
   }
   [class*="btn-lg"] [class*="btn-icon20"],

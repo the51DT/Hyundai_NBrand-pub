@@ -1362,6 +1362,25 @@ input[type="radio"]:focus + label {
   background-color: #fff;
   text-align: left;
 }
+/* 기획서 v1.0 : p.41, p.43 p.45 제목 최대 2줄 / 내용 최대 3줄  */
+.card_type04 .card_con p.tit-type03.fw-type03 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  max-height: calc(2.8em);
+}
+.card_type04 .card_con p.card_cont-des {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  max-height: calc(4.2em);
+}
 .card_type04 .card_tag {
   padding: 4px 12px;
   border-radius: 15px;
