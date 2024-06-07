@@ -268,11 +268,100 @@
   margin-top: 60px;
 }
 
-/* min-width : 1024 css */
-@media screen and (max-width: 1280px) and (min-width: 1024px) {
-  
+/* swiper - key-visual-wrap */
+.key-visual-wrap {
+  background-color: #1c1c1c;
+}
+.next-race-box {
+  padding:160px 0 200px;
+}
+.conts-head {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1440px;;
+  margin:0 auto 40px;
 }
 
+.conts-head.ty02 { 
+  max-width: none;
+}
+
+.next-race-box .conts-head .selectbox-wrap {
+  margin-right: 240px;
+}
+
+.next-race-box .conts-body .swiper-container {
+  /* max-width: 1440px;
+  margin:0 auto; */
+}
+
+.subMain .content-item04 {
+  padding:160px 0;
+}
+
+.subMain .content-item05 {
+  padding: 160px 0 240px;
+} 
+
+.evtGuide .content-item02 {
+  padding:0;
+  position: relative;
+}
+
+.evtGuide .content-item03, .evtGuide .content-item04 {
+  padding:120px 0 160px; 
+}
+
+.evtGuide .content-item05 {
+  padding:160px 0 200px;
+}
+
+
+.n-race-box {
+  padding: 60px 0 0;
+  max-width: 1800px;
+  margin: 0 auto;
+}
+.n-race-box::before {
+  content:'';
+  display: block;
+  width:100%;
+  height:407px;
+  background: #e6eff8;
+  position: absolute;
+  top:0;
+  left:0;
+  z-index: -1;
+}
+.n-race-box::after {
+  content:'';
+  display: block;
+  width:100%;
+  height:100px;
+  background: #fff;
+  position: absolute;
+  bottom:0;
+  left:0;
+  z-index: -1;
+}
+.n-race-box .conts-head {
+  margin:0 -60px 40px 60px;
+}
+.n-race-box .conts-body .swiper-container {
+  margin-left: 60px;
+}
+
+/* min-width : 1024 css */
+@media screen and (max-width: 1280px) and (min-width: 1024px) {
+  .next-race-box .conts-head .selectbox-wrap {
+    margin-right: 80px;
+  }
+}
+@media screen and (max-width:1800px) {  
+  .n-race-box .conts-head {
+    margin-right:60px;
+  }
+}
 /* mobile */
 @media screen and (max-width:1023px) {
   .about .content-top {
@@ -323,7 +412,7 @@
   }  
 
   .history-box .history-list li .text-area {
-    padding:0 0 40px 50px !important;
+    padding:0 0 40px 46px !important;
     max-width:revert;
   }
 
@@ -341,7 +430,7 @@
     line-height: 23.8px;
   }
   .history-box .history-list li .img-box {
-    padding-left: 50px !important;
+    padding-left: 46px !important;
   }
   .history-box .history-list li .img-wrap {
     min-width:  258px;
@@ -453,9 +542,21 @@
   .info-car-box .text-area [class^=btn-wrap] {
     margin-top: 36px;
   }
+
+  .next-race-box .conts-head .selectbox-wrap {
+    margin-right: 0;
+  }
+
+  .n-race-box {
+    padding: 36px 0 0;
+  }  
+  .n-race-box .conts-body .swiper-container {
+    margin-left:24px;
+  }
+  .n-race-box .conts-head {
+    margin:0 24px 28px;
+  }
 }
-
-
 
 /* component.css */
 .sub-text-list li {
