@@ -1415,6 +1415,9 @@ min-width : 1024 css
     flex-wrap: wrap;
     gap: 20px 12px;
   }
+  .selectbox-trigger2 + .selectbox-options {
+    top: auto;
+  }
   .selectbox-overlay {
     position: fixed;
     top: 0;
