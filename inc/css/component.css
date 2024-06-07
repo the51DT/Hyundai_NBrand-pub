@@ -4185,6 +4185,7 @@ p.text-num-chk {
   border-right: 1px solid #000;
   width: 272px;
   display: inline-block;
+  background-color: #fff;
 }
 .selectbox-options .option:last-child {
   border-bottom: 1px solid #000;
