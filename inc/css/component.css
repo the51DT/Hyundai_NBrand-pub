@@ -2568,7 +2568,6 @@ input[type="radio"]:focus + label {
   max-height: 34rem;
   background-color: #fff;
 }
-
 .dropdown.centered
   .dropdown-menu
   li:not(.dropdown-menu .moclose-btn, .dropdown-menu .option) {
@@ -2580,14 +2579,9 @@ input[type="radio"]:focus + label {
   display: inline-flex;
   margin: 32px 0;
 }
-
 .dropdown.centered .dropdown-menu li .wrap-category .temp-wrap {
   width: 100%;
-  /* width: 100%;
-  display: flex;
-  justify-content: stretch; */
 }
-
 .dropdown.centered .dropdown-menu li .wrap-category .search-container {
   width: 100%;
   display: flex;
@@ -2620,7 +2614,6 @@ input[type="radio"]:focus + label {
   width: 100%;
   font-size: 1rem;
   padding: 0;
-  /* padding: 10px 4px 10px 0; */
 }
 .dropdown.centered
   .dropdown-menu
@@ -2648,32 +2641,9 @@ input[type="radio"]:focus + label {
 
 .dropdown.centered .dropdown-menu li:not(.moclose-btn, .option.fw-type03) {
   padding: 0 0;
-  border-bottom: none;
-}
-.dropdown.centered
-  .dropdown-menu
-  .selectbox-options
-  .option:not(.txt-type03.fw-type03.active) {
-  border-bottom: none;
-  background: #fff;
 }
 
 /* 필터 셀렉트 박스 시작*/
-.dropdown.centered
-  .dropdown-menu
-  .wrap-filter
-  li
-  .wrap-category.cart-type00
-  .select-type01
-  .temp-wrap
-  .selectbox-options
-  li {
-  /* margin: 0;
-  margin: 0;
-  padding: 10px 11px;
-  width: 272px;
-  border-bottom: 1px solid #000; */
-}
 .dropdown.centered
   .dropdown-menu
   li
@@ -2731,16 +2701,6 @@ input[type="radio"]:focus + label {
   width: 24px;
   height: 24px;
 }
-.dropdown.centered
-  .dropdown-menu
-  li
-  .wrap-category.cart-type00
-  .select-type01
-  .temp-wrap
-  .selectbox-options {
-  /* left: 0;
-  width: fit-content; */
-}
 .dropdown.centered .dropdown-menu li .wrap-category {
   display: flex;
   align-items: stretch;
@@ -2759,7 +2719,6 @@ input[type="radio"]:focus + label {
   .wrap-category
   .major-category.selectbox-wrap.select-type01 {
   padding: 0;
-  /* width: fit-content; */
 }
 .dropdown.centered
   .dropdown-menu
@@ -2767,10 +2726,8 @@ input[type="radio"]:focus + label {
   .wrap-category
   .major-category.selectbox-wrap.select-type01
   .selectbox-trigger {
-  /* padding: 10px 32px 10px 8px; */
   width: 100%;
 }
-
 .dropdown.centered
   .dropdown-menu
   li
@@ -3167,7 +3124,6 @@ input[type="radio"]:focus + label {
 .dropdown.inMobile .accor02-wrap ul li a span.btn-icon20 {
   margin-left: 10px;
 }
-
 /* accordion 02(푸터 모바일 대응) 끝  */
 
 .dropdown-btn {
@@ -3200,10 +3156,6 @@ input[type="radio"]:focus + label {
   border-bottom: 2px solid #d9d9d9;
   cursor: pointer;
 }
-.dropdown-menu
-  li:not(.dropdown-menu .moclose-btn, .dropdown-menu .option)
-  span.icon-right {
-}
 .dropdown-menu a {
   font-size: 1.25rem;
   line-height: 1.75rem;
@@ -3219,7 +3171,13 @@ input[type="radio"]:focus + label {
   background: #e6eff8;
   color: #000;
 }
-
+.dropdown.centered .dropdown-menu li:not(.moclose-btn, .option):hover {
+  background: none;
+}
+.dropdown.centered .dropdown-menu li.moclose-btn:hover,
+.dropdown.centered .dropdown-menu li.option:hover {
+  cursor: pointer;
+}
 .dropdown-menu.dropdown-on li .btn-wrap a span.icon-right {
   background: url(../../../inc/images/icon/icon-arrow01_right_disabled.svg);
   background-size: contain;
@@ -3257,7 +3215,6 @@ input[type="radio"]:focus + label {
 }
 
 .dropdown.centered .dropdown-menu li:hover {
-  background: transparent;
   cursor: default;
 }
 .dropdown-menu li:hover > svg.arrow-r path {
@@ -3266,7 +3223,6 @@ input[type="radio"]:focus + label {
 .dropdown-on {
   display: block;
 }
-
 .dropdown.inMobile .accor02-wrap .accor02-header p {
   font-family: "Hyundai Sans Text";
   font-size: 20px;
@@ -3346,14 +3302,6 @@ input[type="radio"]:focus + label {
   .dropdown.centered
     .dropdown-menu
     li
-    .wrap-category
-    .wrap-inner-category
-    .middle-category
-    .txt-type03:first-child {
-  }
-  .dropdown.centered
-    .dropdown-menu
-    li
     .wrap-category.cart-type02
     .wrap-inner-category
     .middle-category
@@ -3389,7 +3337,6 @@ input[type="radio"]:focus + label {
     overflow-y: auto;
     width: 100vw;
   }
-
   .dropdown.centered
     .dropdown-menu
     li
@@ -3397,10 +3344,6 @@ input[type="radio"]:focus + label {
     .wrap-inner-category
     .small-category {
     max-width: 500px;
-  }
-
-  .dropdown.centered .wrap-dropdown-selected .icon-down-wh {
-    /* background: none; */
   }
   .dropdown.centered .wrap-dropdown-selected .dropdown-btn {
     font-size: 20px;
@@ -3431,7 +3374,6 @@ input[type="radio"]:focus + label {
     .tit-type05 {
     max-width: 183px;
     width: 110px;
-
     font-family: Hyundai Sans Head;
     font-size: 18px;
     font-weight: 700;
@@ -3679,6 +3621,10 @@ input[type="radio"]:focus + label {
     li
     .tag-item {
     white-space: pre-line;
+  }
+  .dropdown.centered .dropdown-menu ul.wrap-filter .wrap-forFilterScroll {
+    overflow-y: visible;
+    max-height: 100%;
   }
 }
 
