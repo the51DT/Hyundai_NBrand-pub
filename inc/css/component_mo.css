@@ -326,7 +326,9 @@ min-width : 1024 css
   }
   .grid_mo_scroll > * {
     flex-shrink: 0;
-    width: 71.67vw;
+    width: 100%;
+    min-width: 16.1rem;
+    max-width: calc(33.3% - 0.75rem);
   }
   .grid_mo_drop {
     display: grid;
@@ -390,6 +392,7 @@ min-width : 1024 css
     flex-direction: column;
     align-items: normal;
     padding: 0 0.75rem;
+    max-width: 100%;
   }
   .card_type01 .card_detail li:first-of-type {
     padding-left: 0;
