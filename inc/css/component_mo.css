@@ -327,7 +327,7 @@ min-width : 1024 css
   .grid_mo_scroll > * {
     flex-shrink: 0;
     width: 100%;
-    min-width: 16.1rem;
+    min-width: 16.125rem;
     max-width: calc(33.3% - 0.75rem);
   }
   .grid_mo_drop {
@@ -622,6 +622,9 @@ min-width : 1024 css
     margin-right: 12px;
     max-height: 100%;
     flex-direction: column;
+  }
+  .wrap-list .__bottom .wrap-lists:last-child {
+    margin-right: 0;
   }
   .wrap-list .__bottom .wrap-lists .list-box:nth-child(1) {
     margin-bottom: 60px;
