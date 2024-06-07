@@ -24,6 +24,17 @@
       .drivers_box .grid_3 {
         margin-bottom: 5rem;
       }
+      .search_result {
+        padding: 8.75rem 0 3.5rem;
+        font-family: "Hyundai Sans Head";
+        font-size: 2.5rem;
+        font-weight: 700;
+        line-height: 125%;
+        text-align: center;
+      }
+      .search_result span {
+        color: #DE3111;
+      }
       @media screen and (max-width: 1023px) {
         .drivers_box {
           padding: 5rem 1.5rem 10rem;
@@ -35,6 +46,11 @@
         }
         .drivers_box .grid_3 {
           margin-bottom: 2.75rem;
+        }
+        .search_result {
+          padding: 4.75rem 0 0rem;
+          font-size: 1.5rem;
+          line-height: 140%;
         }
       }
     </style>
@@ -124,7 +140,7 @@
                           <span class="btn-icon24 icon-search" aria-hidden="true"></span>
                         </button>
                       </div>
-                      <input type="text" name="searchInput01" value="" placeholder="Input Keyword" aria-label="검색 내용 입력"/>
+                      <input type="text" name="searchInput01" value="" placeholder="Placeholder" aria-label="검색 내용 입력"/>
                       <div class="clear-text visually-hidden">
                         <button type="button" class="btn btn-reset" aria-label="검색 내용 리셋 버튼">
                           <span class="visually-hidden">Reset</span>
@@ -135,6 +151,8 @@
                   </div>
                 </div>
               </div>
+              <!-- *** 검색 결과 없을 때 노출되는 문구 *** -->
+              <p class="search_result">Your search for <span>“HNF”</span><br>returned 0 results.</p>
               <ul class="grid_3 grid_mo_drop">
                 <li>
                   <a class="card_type01 card_team card_white" href="#" title="팀 상세페이지 이동">

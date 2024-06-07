@@ -6,7 +6,17 @@
 }
 .wrap * {
 }
-
+/* dimmed */
+.dimmed {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  background: #000;
+  opacity: 0.5;
+  width: 100vh;
+  height: 100vh;
+}
 /* 본문 바로가기 */
 .skip-navigation {
   width: 100%;
@@ -35,6 +45,7 @@
   height: 70px;
   border-bottom: 1px solid #d9d9d9;
   position: relative;
+  background-color: #fff;
 }
 .header-cont {
   width: 100%;
@@ -59,7 +70,9 @@
   position: absolute;
   top: 50%;
   right: 0;
+  height: 70px;
   transform: translate(0, -50%);
+  overflow: hidden;
 }
 
 .header-cont .utile-wrap .lang-btn {
@@ -67,8 +80,10 @@
   width: 60px;
   background: url(../images/icon/icon-language.svg) no-repeat;
   background-position: center right 10px;
+  background-size: 17px 17px;
   text-align: left;
   padding: 10px;
+  font-size: 14px;
 }
 .header-cont .utile-wrap .lang-btn span {
   display: block;
@@ -122,12 +137,18 @@
 }
 
 /* nav pop */
-.nav-wrap {
+.header-wrap .nav-wrap {
   position: absolute;
   top: 70px;
   left: 0;
   background: #fff;
   width: 100vw;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s;
+}
+.header-wrap.menu-on .nav-wrap {
+  height: 698px;
 }
 /* nav event */
 .header__event-wrap {
@@ -273,12 +294,12 @@
   overflow: hidden;
 }
 
-.gnb__tab-cont-wrap .img-area {
+.gnb-content__dep2 .img-area {
   height: 100%;
   position: relative;
   overflow: hidden;
 }
-.gnb__tab-cont-wrap .img-area img {
+.gnb-content__dep2 .img-area img {
   width: auto;
   position: absolute;
   left: 50%;
@@ -287,7 +308,7 @@
   height: 100%;
 }
 
-.gnb__tab-cont-wrap .text-area {
+.gnb-content__dep2 .text-area {
   position: absolute;
   bottom: -48px;
   left: 0;
@@ -296,20 +317,20 @@
   transition: bottom 0.5s;
 }
 
-.gnb__tab-cont-wrap .gnb-content__dep2:active .text-area,
-.gnb__tab-cont-wrap .gnb-content__dep2:hover .text-area,
-.gnb__tab-cont-wrap .gnb-content__dep2:focus .text-area {
+.gnb-content__dep2 .gnb-content__dep2:active .text-area,
+.gnb-content__dep2 .gnb-content__dep2:hover .text-area,
+.gnb-content__dep2 .gnb-content__dep2:focus .text-area {
   bottom: 0;
 }
 
-.gnb__tab-cont-wrap .text-area h3 {
+.gnb-content__dep2 .text-area h3 {
   font-family: Hyundai Sans Head;
   font-size: 28px;
   font-weight: 500;
   line-height: 39.2px;
   padding: 0 24px;
 }
-.gnb__tab-cont-wrap .text-area p {
+.gnb-content__dep2 .text-area p {
   font-family: Hyundai Sans Text;
   font-size: 14px;
   font-weight: 500;
@@ -317,7 +338,7 @@
   text-align: left;
   padding: 0 24px 24px;
 }
-.gnb__tab-cont-wrap .link-area {
+.gnb-content__dep2 .link-area {
   display: flex;
   width: 100%;
   background: #de3111;
@@ -326,17 +347,17 @@
   justify-content: center;
 }
 
-.gnb__tab-cont-wrap .link-area a {
+.gnb-content__dep2 .link-area a {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 4px;
 }
-.gnb__tab-cont-wrap .link-area a span {
+.gnb-content__dep2 .link-area a span {
   width: 16px;
   height: 16px;
 }
-.gnb__tab-cont-wrap .link-area a span.icon-link-wh {
+.gnb-content__dep2 .link-area a span.icon-link-wh {
   margin-top: -3px;
 }
 
@@ -384,9 +405,140 @@
 .gnb__tab02-wrap [class*="gnb__tab02-btn"]:active {
   color: #de3111;
 }
-.gnb__tab02-wrap [class*="gnb__tab02-btn"]:hover::after {
+.gnb__tab02-wrap [class*="gnb__tab02-btn"]:hover::after,
+.gnb__tab02-wrap [class*="gnb__tab02-btn"]:focus::after,
+.gnb__tab02-wrap [class*="gnb__tab02-btn"]:active::after {
   background: url(../images/icon/icon-arrow01_right_red.svg) no-repeat center;
 }
 .gnb__tab02-wrap [class*="gnb__tab02-btn"].on::after {
   background: url(../images/icon/icon-circle_red.svg) no-repeat center;
+}
+
+.gnb__tab02-wrap.dep3_on {
+  flex: 1;
+}
+.gnb__tab02-wrap.dep3_on + .gnb-content__dep2 {
+  display: none;
+}
+.gnb__tab02-wrap.dep3_on .gnb__tab02 {
+  width: 25%;
+}
+.gnb__panel02 {
+  width: 75%;
+}
+.gnb__panel02 .gnb__tab02_2 {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.gnb__panel02 .dep3_item {
+  width: calc(100% / 3 - 8px);
+  background: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 12px;
+}
+.gnb__panel02 .img-area {
+  width: 136px;
+  height: 102px;
+  margin: 0 auto;
+}
+.gnb__panel02 .img-area img {
+}
+.gnb__panel02 .text-area {
+  margin-top: 16px;
+}
+.gnb__panel02 .text-area h3 {
+  font-family: Hyundai Sans Head;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: center;
+}
+.gnb__panel02 .text-area p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19.6px;
+  text-align: center;
+  margin-top: 4px;
+}
+.gnb__panel02 .link-area {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+.gnb__panel02 .link-area .link-btn {
+  font-size: 16px;
+  font-weight: 700;
+  text-align: left;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+}
+
+.gnb__panel02 .link-area .link-btn span {
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+.gnb__panel02 .link-area .link-btn .icon-link {
+  background: url(../../../inc/images/icon/icon-link.svg);
+  margin-top: -2px;
+}
+
+@media screen and (max-width: 1200px) and (min-width: 1024px) {
+  .gnb__panel02 .link-area {
+    flex-direction: column;
+    gap: 0;
+    margin-top: 20px;
+  }
+}
+
+@keyframes fadein {
+  /* 효과를 동작시간 동안 0 ~ 1까지 */
+  0% {
+    display: block;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeout {
+  /* 효과를 동작시간 동안 0 ~ 1까지 */
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+@keyframes gnb {
+  /* 효과를 동작시간 동안 0 ~ 1까지 */
+  0% {
+    display: block;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeout {
+  /* 효과를 동작시간 동안 0 ~ 1까지 */
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
 }

@@ -92,7 +92,7 @@ min-width : 1024 css
   }
   [class*="btn-icon"] {
     display: inline-block;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat !important;
     background-position: center;
   }
   [class*="btn-lg"] [class*="btn-icon20"],
@@ -1563,6 +1563,12 @@ min-width : 1024 css
   /* search */
   .search-wrap::after {
     height: 3px;
+  }
+  .search-wrap.search-small {
+    max-width: 100%;
+  }
+  .search-small .search-input-box {
+    width: 100%;
   }
 
   .search-wrap .search-input-box {
