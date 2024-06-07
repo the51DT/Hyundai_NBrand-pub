@@ -1415,6 +1415,9 @@ min-width : 1024 css
     flex-wrap: wrap;
     gap: 20px 12px;
   }
+  .selectbox-trigger2 + .selectbox-options {
+    top: auto;
+  }
   .selectbox-overlay {
     position: fixed;
     top: 0;
@@ -1441,7 +1444,8 @@ min-width : 1024 css
   .moclose-btn .btn[class*="btn-only-icon"]:active {
     background-color: transparent;
   }
-  .selectbox-wrap.select-type01 > div {
+  .selectbox-wrap.select-type01,
+  .selectbox-wrap.select-type03 > div {
     width: 100%;
   }
   .selectbox-wrap.select-type02 > div {
@@ -1469,6 +1473,21 @@ min-width : 1024 css
   }
   .selectbox-options .option:last-child {
     border-bottom: 0;
+  }
+  .selectbox-trigger2 {
+    padding: 12px 16px 8px 4px;
+    width: 100%;
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .selectbox-trigger2::after {
+    position: absolute;
+    content: "";
+    background: url("../../inc/images/icon/icon-arrow01_down.svg") center no-repeat;
+    width: 16px;
+    height: 16px;
+    right: 8px;
+    background-size: 100%;
   }
 
   /* search */

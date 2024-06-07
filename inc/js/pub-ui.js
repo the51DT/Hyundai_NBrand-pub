@@ -6,6 +6,7 @@
       self.bindEvents();
       self.swiperSlideEvent();
       self.masonryLayout();
+      // self.videoControlerChk("");
     },
     settings: function () {
       var self = this;
@@ -38,6 +39,8 @@
       $(".btn-play").on("click", function (e) {
         e.preventDefault();
         var targetSwiper = $(this).closest(".swiper");
+
+        self.videoControlerChk(targetSwiper);
 
         if ($(this).hasClass("on")) {
           console.log("정지버튼 클릭!");
@@ -87,7 +90,7 @@
     swiperSlideEvent: function () {
       var self = this;
       var slideInx = 0; // 현재 슬라이드 index 체크용 변수
-      const progressBar = document.querySelector(".autoplay-progress .bar");
+      //const progressBar = document.querySelector(".autoplay-progress .bar");
       const bulletActive = document.querySelector(
         ".swiper-pagination-custom .swiper-pagination-bullet-active"
       );
@@ -109,9 +112,28 @@
           prevEl: ".ty01Swiper .swiper-button-prev",
         },
         on: {
-          autoplayTimeLeft(s, time, progress) {
-            // progressBar.style.setProperty("--progress", 1 - progress);
-            bulletActive.style.setProperty("--time", progress);
+          // autoplayTimeLeft(s, time, progress) {
+          //   // progressBar.style.setProperty("--progress", 1 - progress);
+          // },
+          slideChange: function () {
+            //pubUi.videoControlerChk(".ty01Swiper");
+            var swiperActiveVideo = $(".ty01Swiper").find(
+              ".swiper-slide-active .kv-video-area video"
+            );
+            var targetBulletActive = $(
+              ".ty01Swiper .swiper-pagination-custom .swiper-pagination-bullet-active"
+            );
+            if (swiperActiveVideo.length > 0) {
+              var curTime = swiperActiveVideo[0].currentTime;
+              var duration = swiperActiveVideo[0].duration;
+              var range = (curTime / duration) * 84;
+
+              targetBulletActive.css("--time", `${range}px`);
+              // console.log(range);
+            } else {
+              console.log("이미지");
+              targetBulletActive.css("--time", "84px");
+            }
           },
         },
       });
@@ -273,6 +295,47 @@
           },
         },
       });
+    },
+    videoBulletChk: function (targetSwiper) {
+      var swiperActiveVideo = targetSwiper.find(
+        ".swiper-slide-active .kv-video-area video"
+      );
+      var testWidth = swiperActiveVideo[0].currentTime;
+
+      if (swiperActiveVideo[0].currentTime == 0) {
+      } else {
+        targetBulletActive.css("--time", testWidth);
+      }
+    },
+    videoControlerChk: function (targetSwiper) {
+      var swiperActiveVideo = targetSwiper.find(
+        ".swiper-slide-active .kv-video-area video"
+      );
+      var targetBulletActive = targetSwiper.find(
+        ".swiper-pagination-custom .swiper-pagination-bullet-active"
+      );
+
+      //targetBulletActive.css("--time", range);
+
+      if (swiperActiveVideo.length > 0) {
+        var curTime = swiperActiveVideo[0].currentTime;
+        var duration = swiperActiveVideo[0].duration;
+        var range = (curTime / duration) * 84;
+        const playBtnOn = targetSwiper.find(".btn-play").hasClass("on");
+        const soundBtnOn = targetSwiper.find(".btn-sound").hasClass("on");
+
+        if (playBtnOn == true) {
+          swiperActiveVideo[0].curTime = 0;
+          swiperActiveVideo[0].pause();
+        } else {
+          swiperActiveVideo[0].play();
+          console.log("영상 재생!!!!!!!", range);
+          // targetBulletActive.css("--time", range);
+          console.dir(swiperActiveVideo[0]);
+        }
+      } else {
+        console.log("이미지");
+      }
     },
     tabBtnEvent: function (e, tabContainer) {
       const target = e.target;
@@ -440,7 +503,6 @@ $(".option").click(function (event) {
     .resize();
 });
 // [End] : selectbox 컴포넌트
-
 // 드롭다운(아코디언), 필터 컴포넌트 시작
 const dropdownBtns = document.querySelectorAll(".wrap-dropdown-selected");
 dropdownBtns.forEach((button) => {
@@ -586,7 +648,6 @@ function checkScreenSize() {
       .classList.remove("dropdown-on");
   }
 }
-
 window.onload = checkScreenSize;
 window.onresize = checkScreenSize;
 // 드롭다운(아코디언) 02 끝

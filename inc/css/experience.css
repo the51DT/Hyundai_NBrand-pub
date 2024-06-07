@@ -5,7 +5,7 @@ body {
 }
 /* Experience  common */
 .content-top {
-  padding: 139.5px 0;
+  padding: 140px 0;
   text-align: center;
   background: #fff;
 }
@@ -184,6 +184,50 @@ body {
 .subfilter_wrap .grid_masonry {
   margin-top: 40px;
 }
+/* EP040601 */
+.subnotice_wrap .content-item02 {
+  padding: 40px 80px 240px;
+}
+.subnotice_wrap .noti-topbox {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 16px;
+  max-width: 964px;
+  margin: 0 auto;
+}
+.subnotice_wrap .noti-topbox .search-container {
+  flex: 0 0 calc(100% - 256px);
+}
+.subnotice_wrap .noti-topbox .search-container .search-wrap::after {
+  display: none;
+}
+.subnotice_wrap .noti-topbox .search-container .search-wrap .search-input-box {
+  border-bottom: 4px solid #000;
+}
+.subnotice_wrap .noti-listbox {
+  margin-top: 100px;
+  border-top: 3px solid #787d80;
+  max-width: 1440px;
+  margin: 100px auto 0;
+}
+.subnotice_wrap .noti-listbox li {
+  display: flex;
+  padding: 29px 12px;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #bbb;
+}
+.subnotice_wrap .noti-listbox li button {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 33.6px;
+}
+.subnotice_wrap .noti-listbox li span.notice-date {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22.4px;
+}
 /* 모바일 */
 @media screen and (max-width: 1023px) {
   /* Experience  common */
@@ -350,5 +394,47 @@ body {
   /* EP040201, EP040301, EP040501 */
   .subfilter_wrap .content-item02 {
     padding: 80px 24px 160px;
+  }
+
+  /* EP040601 */
+  .subnotice_wrap .content-item01 {
+    padding: 133px 0;
+  }
+  .subnotice_wrap .content-item02 {
+    padding: 40px 24px 160px;
+  }
+  .subnotice_wrap .noti-topbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 100%;
+  }
+  .subnotice_wrap .noti-topbox .selectbox-wrap {
+    width: 100%;
+  }
+  .subnotice_wrap .noti-topbox .search-container {
+    flex: 1;
+    width: 100%;
+  }
+  .subnotice_wrap .noti-topbox .search-wrap {
+    max-width: 100%;
+  }
+  .subnotice_wrap .noti-listbox {
+    max-width: 100%;
+  }
+  .subnotice_wrap .noti-listbox li {
+    display: flex;
+    flex-direction: column;
+    padding: 29px 12px;
+    align-items: flex-start;
+    gap: 24px;
+  }
+  .subnotice_wrap .noti-listbox li button {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+    text-align: left;
   }
 }

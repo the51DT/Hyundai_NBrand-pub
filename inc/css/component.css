@@ -347,6 +347,10 @@ input[type="radio"]:focus + label {
   width: 36px;
   height: 36px;
 }
+[class*="btn-icon52"] {
+  width: 52px;
+  height: 52px;
+}
 .btn[class*="-primary"] [class*="btn-icon20"],
 .btn[class*="-outline"] [class*="btn-icon20"] {
   margin-left: 8px;
@@ -1490,15 +1494,19 @@ input[type="radio"]:focus + label {
 
 .swiper-pagination-bullet-active {
   opacity: 1;
-  background: #de3111;
+  width: 84px;
+  background-color: #de3111;
 }
 
 .swiper-pagination-custom .swiper-pagination-bullet {
-  transition: width 0.8s ease-out;
+  transition: width 0.5s ease-in;
 }
+
 .swiper-pagination-custom .swiper-pagination-bullet-active {
   --time: 0;
   width: calc(84px * (1 - var(--time)));
+  /* width: calc(84px * (1 - var(--time))); */
+  width:calc(var(--time));
   background: #de3111;
   opacity: 1;
 }
@@ -1699,8 +1707,8 @@ input[type="radio"]:focus + label {
 
 .ty01Swiper .swiper-button-prev:after,
 .ty01Swiper .swiper-button-next:after {
-  width: 16px;
-  height: 25px;
+  width: 100%;
+  height: 100%;
 }
 
 .ty01Swiper .swiper-button-prev:after {
@@ -4114,14 +4122,29 @@ p.text-num-chk {
   position: relative;
   text-align: left;
 }
+.selectbox-trigger2 {
+  padding: 27px 8px 23px;
+  width: 240px;
+  font-size: 32px;
+  line-height: 44.8px;
+}
 .selectbox-trigger::after {
   position: absolute;
   content: "";
-  background: url("../../inc/images/icon/icon-arrow01_down.svg") center
-    no-repeat;
+  background: url("../../inc/images/icon/icon-arrow01_down.svg") center no-repeat;
   width: 16px;
   height: 16px;
   right: 8px;
+  background-size: 100%;
+}
+.selectbox-trigger2::after {
+  position: absolute;
+  content: "";
+  background: url("../../inc/images/icon/icon-arrow01_down.svg") center no-repeat;
+  width: 36px;
+  height: 36px;
+  right: 8px;
+  background-size: 100%;
 }
 .selectbox-trigger.active::after {
   transform: rotate(180deg);
@@ -4131,6 +4154,9 @@ p.text-num-chk {
   top: 52px;
   background-color: white;
   z-index: 3;
+}
+.selectbox-trigger2 + .selectbox-options {
+  top: 87px;
 }
 .selectbox-options .option {
   padding: 10px 11px;
