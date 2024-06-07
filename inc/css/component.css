@@ -1452,10 +1452,6 @@ input[type="radio"]:focus + label {
 .card_type04 .card_function {
   padding: 20px 16px 38px;
 }
-.content-item02 .grid_masonry + .btn-wrap-default,
-.content-item04 .grid_masonry + .btn-wrap-default {
-  margin-top: 80px;
-}
 .card_type04 .card_profile {
   display: flex;
   justify-content: flex-start;
