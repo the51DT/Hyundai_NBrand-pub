@@ -296,12 +296,14 @@
 }
 
 .subMain .content-item04 {
-  padding:160px 0;
+  padding-top:160px;
+  padding-bottom:160px;
 }
 
 .subMain .content-item05 {
-  padding: 160px 0 240px;
-} 
+  padding-top:160px;
+  padding-bottom:240px;
+}  
 
 .evtGuide .content-item02 {
   padding:0;
@@ -546,7 +548,13 @@
   .next-race-box .conts-head .selectbox-wrap {
     margin-right: 0;
   }
-
+  .standing-box .grid_mo_scroll {
+    padding:0;
+    margin-right: -24px;
+  }
+  .standing-box .grid_mo_scroll li:last-child {
+    margin-right: 24px;
+  }
   .n-race-box {
     padding: 36px 0 0;
   }  
