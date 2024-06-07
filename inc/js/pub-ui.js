@@ -440,15 +440,19 @@ $(".option").click(function (event) {
     .resize();
 });
 // [End] : selectbox 컴포넌트
+
 // 드롭다운(아코디언), 필터 컴포넌트 시작
 const dropdownBtns = document.querySelectorAll(".wrap-dropdown-selected");
 dropdownBtns.forEach((button) => {
   button.addEventListener("click", function () {
     const isExpanded = button.getAttribute("aria-expanded") === "true";
     const dropdownMenu = button.nextElementSibling;
+    // const btnRightArr = button
+    //   .closest(".dropdown")
+    //   .querySelector(".arrow-down");
     const btnRightArr = button
       .closest(".dropdown")
-      .querySelector(".arrow-down");
+      .querySelector(".icon-down-wh");
 
     button.setAttribute("aria-expanded", String(!isExpanded));
     dropdownMenu.classList.toggle("dropdown-on", !isExpanded);
@@ -457,6 +461,9 @@ dropdownBtns.forEach((button) => {
     const dropdownCentered = button.closest(".dropdown");
     const detectCase1 = dropdownMenu.classList.contains("dropdown-on"); // 필터, 드롭다운 공통
     const detectCase2 = dropdownCentered.classList.contains("centered"); // 필터 컴포넌트만
+    const detectCase2_selectBtn = document.querySelector(
+      ".dropdown.centered .wrap-dropdown-selected"
+    ); // 필터 컴포넌트: 선택 버튼
 
     if (!isExpanded) {
       dropdownMenu.setAttribute("aria-hidden", "true");
@@ -468,6 +475,59 @@ dropdownBtns.forEach((button) => {
         btnRightArr.classList.remove("rotate", detectCase1);
       });
     }
+
+    // 필터 모바일 대응
+    const screenWidth = window.innerWidth;
+    const backgroundEl = document.querySelector(
+      ".dropdown.centered .wrap-dropdown-selected .icon-down-wh"
+    );
+    const filterBtn_icn1 = document.querySelector(
+      ".dropdown.centered .wrap-dropdown-selected .dropdown-selected-inner .icon-control-bar"
+    );
+    const filterBtn_forDisplay = document.querySelector(
+      ".dropdown.centered .wrap-dropdown-selected"
+    );
+    const filterBtn_forDisplayText = document.querySelector(
+      ".dropdown.centered .wrap-dropdown-selected .dropdown-btn"
+    );
+
+    if (detectCase2) {
+      detectCase2_selectBtn.classList.toggle("toggled");
+
+      // 필터: 스크린 사이즈 대응
+      if (
+        detectCase2_selectBtn.classList.contains("toggled") &&
+        screenWidth < 500
+      ) {
+        // backgroundEl.style.background =
+        //   "url(../../../inc/images/icon/icon-close.svg)";
+        filterBtn_forDisplay.style.background = "#fff";
+        filterBtn_forDisplayText.style.color = "#000";
+        filterBtn_forDisplayText.style.width = "100%";
+        filterBtn_forDisplay.style.padding = "17px 40px";
+        filterBtn_icn1.style.display = "none";
+      } else {
+        filterBtn_forDisplay.style.background = "#000";
+        filterBtn_forDisplayText.style.color = "#fff";
+        filterBtn_forDisplayText.style.width = "auto";
+        filterBtn_icn1.style.display = "inline-block";
+      }
+
+      if (
+        detectCase2_selectBtn.classList.contains("toggled") &&
+        screenWidth > 500
+      ) {
+        filterBtn_forDisplay.style.background = "#de3111";
+        // backgroundEl.style.background =
+        //   "url(../../../inc/images/icon/icon-arrow01_down_white.svg)";
+      } else if (
+        screenWidth > 1024 &&
+        !detectCase2_selectBtn.classList.contains("toggled")
+      ) {
+        // backgroundEl.style.background =
+        //   "url(../../../inc/images/icon/icon-arrow01_down_white.svg)";
+      }
+    }
   });
 });
 
@@ -475,11 +535,61 @@ dropdownBtns.forEach((button) => {
 function selectOption(event, optionText) {
   event.preventDefault();
   const btnTxtWrap = document.querySelector(".dropdown-btn");
-
   btnTxtWrap.innerText = optionText;
-  if ((btnTxtWrap.innerText = optionText)) {
+}
+// 드롭다운(아코디언), 필터 컴포넌트 끝
+
+// 드롭다운(아코디언) 02 시작
+const accor02Btn = document.querySelectorAll(
+  ".dropdown.inMobile .accor02-wrap .accor02-header"
+);
+const accor02List = document.querySelectorAll(
+  ".dropdown.inMobile .accor02-wrap ul"
+);
+
+function DropdownFooter() {
+  document
+    .querySelectorAll(".dropdown.inMobile .accor02-wrap")
+    .forEach((wrapper) => {
+      wrapper.addEventListener("click", function (event) {
+        const button = this.querySelector(".accor02-header button");
+        const dropdownMenu = this.querySelector("ul");
+
+        const isExpanded = button.getAttribute("aria-expanded") === "true";
+
+        button.setAttribute("aria-expanded", String(!isExpanded));
+        dropdownMenu.classList.toggle("dropdown-on", !isExpanded);
+        button.classList.toggle("rotate", !isExpanded);
+
+        // 다른 .accor02-wrap 요소에 대한 .rotate 클래스 제거
+        document
+          .querySelectorAll(".dropdown.inMobile .accor02-wrap")
+          .forEach((otherWrapper) => {
+            if (otherWrapper !== wrapper) {
+              otherWrapper
+                .querySelector(".accor02-header button")
+                .classList.remove("rotate");
+            }
+          });
+      });
+    });
+}
+
+function checkScreenSize() {
+  const screenWidth = window.innerWidth;
+
+  if (screenWidth < 1024) {
+    DropdownFooter();
+  } else {
+    document
+      .querySelector(".dropdown.inMobile .accor02-wrap ul.dropdown-on")
+      .classList.remove("dropdown-on");
   }
 }
+
+window.onload = checkScreenSize;
+window.onresize = checkScreenSize;
+// 드롭다운(아코디언) 02 끝
 // 드롭다운(아코디언), 필터 컴포넌트 끝
 
 // [Start] : hashTag 말줄임
