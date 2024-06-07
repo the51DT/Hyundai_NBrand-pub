@@ -3223,10 +3223,12 @@ input[type="radio"]:focus + label {
 .dropdown-menu.dropdown-on li .btn-wrap a span.icon-right {
   background: url(../../../inc/images/icon/icon-arrow01_right_disabled.svg);
   background-size: contain;
+  background-repeat: no-repeat;
 }
 .dropdown-menu.dropdown-on li:hover .btn-wrap a span.icon-right {
   background: url(../../../inc/images/icon/icon-arrow01_right.svg);
   background-size: contain;
+  background-repeat: no-repeat;
 }
 .dropdown-menu.dropdown-on li:hover .btn-wrap a {
   color: #000;
