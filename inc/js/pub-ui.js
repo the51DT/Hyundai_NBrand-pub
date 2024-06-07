@@ -497,19 +497,16 @@ dropdownBtns.forEach((button) => {
       // 필터: 스크린 사이즈 대응
       if (
         detectCase2_selectBtn.classList.contains("toggled") &&
-        screenWidth < 1024
+        screenWidth < 500
       ) {
-        backgroundEl.style.backgroundImage =
-          "url(../../../inc/images/icon/icon-close.svg)";
+        // backgroundEl.style.background =
+        //   "url(../../../inc/images/icon/icon-close.svg)";
         filterBtn_forDisplay.style.background = "#fff";
         filterBtn_forDisplayText.style.color = "#000";
         filterBtn_forDisplayText.style.width = "100%";
+        filterBtn_forDisplay.style.padding = "17px 40px";
         filterBtn_icn1.style.display = "none";
       } else {
-        backgroundEl.style.backgroundImage =
-          // "url(../../../inc/images/icon/icon-arrow01_down_white.svg)";
-          "none";
-
         filterBtn_forDisplay.style.background = "#000";
         filterBtn_forDisplayText.style.color = "#fff";
         filterBtn_forDisplayText.style.width = "auto";
@@ -518,9 +515,17 @@ dropdownBtns.forEach((button) => {
 
       if (
         detectCase2_selectBtn.classList.contains("toggled") &&
-        screenWidth > 1024
+        screenWidth > 500
       ) {
         filterBtn_forDisplay.style.background = "#de3111";
+        // backgroundEl.style.background =
+        //   "url(../../../inc/images/icon/icon-arrow01_down_white.svg)";
+      } else if (
+        screenWidth > 1024 &&
+        !detectCase2_selectBtn.classList.contains("toggled")
+      ) {
+        // backgroundEl.style.background =
+        //   "url(../../../inc/images/icon/icon-arrow01_down_white.svg)";
       }
     }
   });
