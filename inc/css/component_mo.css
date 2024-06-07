@@ -998,11 +998,15 @@ min-width : 1024 css
   /* cont08 accordion */
   .wrap-dropdown-selected {
     padding: 1.25rem 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
     gap: 0 1.5rem;
   }
   .dropdown-btn {
-    font-size: 1.063rem;
+    /* font-size: 1.063rem; */
+    font-size: 17px;
     line-height: 1.488rem;
+    width: 100%;
   }
   .wrap-dropdown-selected .arrow-r {
     display: none;
@@ -1023,6 +1027,7 @@ min-width : 1024 css
     border-bottom: 2px solid #d9d9d9;
     gap: 0 1.5rem;
   }
+
   .dropdown-menu li svg.arrow-r {
     width: 1.5rem;
     height: 1.5rem;
@@ -1044,6 +1049,68 @@ min-width : 1024 css
   }
   .dropdown-on {
     display: block;
+  }
+
+  .dropdown.inMobile {
+    display: block;
+  }
+
+  .dropdown.inMobile .accor02-wrap .accor02-header {
+    margin-bottom: 0;
+    padding: 1rem 0;
+    border-bottom: 1px solid #333;
+  }
+
+  .dropdown.inMobile .accor02-wrap .accor02-header button {
+    display: flex;
+  }
+  .dropdown.inMobile .accor02-wrap .accor02-header button .arrow-down {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .dropdown.inMobile .accor02-wrap .accor02-header button.rotate {
+    transform: rotate(180deg);
+  }
+
+  .dropdown.inMobile .dropdown-menu {
+    display: none;
+  }
+
+  .dropdown.inMobile .accor02-wrap ul {
+    display: none;
+  }
+
+  .dropdown.inMobile .accor02-wrap ul.dropdown-on {
+    display: block;
+  }
+
+  .dropdown.inMobile .accor02-wrap ul li {
+    margin-bottom: 0;
+    padding: 1rem 0;
+  }
+
+  /* dropdown add */
+  .wrap-dropdown-selected {
+    justify-content: space-between;
+  }
+  .dropdown.centered .dropdown-menu .selectbox-options .option {
+    border-bottom: none;
+    padding: 19px 48px 19px 24px;
+  }
+  .dropdown-menu li:not(.dropdown-menu .moclose-btn, .dropdown-menu .option) {
+    padding: 1.25rem 1.5rem;
+  }
+  .wrap-dropdown-selected span.icon-right {
+    border: 1px solid red;
+    display: none;
+  }
+  .dropdown.centered
+    .dropdown-menu
+    .selectbox-options
+    .option:not(.txt-type03.fw-type03.active) {
+    border-bottom: 1px solid #d9d9d9;
+    background: #fff;
   }
 
   /* table */
