@@ -3274,13 +3274,12 @@ input[type="radio"]:focus + label {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  width: 24px;
-  height: 24px;
 }
 .dropdown-menu.dropdown-on li:hover .btn-wrap a span.icon-right {
   background: url(../../../inc/images/icon/icon-arrow01_right.svg);
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: center;
 }
 .dropdown-menu.dropdown-on li:hover .btn-wrap a {
   color: #000;
