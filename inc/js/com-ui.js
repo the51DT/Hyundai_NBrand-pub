@@ -1,9 +1,17 @@
+if ($.isFunction("checkCommonJs")) {
+  checkCommonJs("com.ui.js");
+}
+
+/* 퍼블리셔 JS 셋팅 */
 $(document).ready(function () {
-  NbrandUI.toggleBtn(".toggle-btn");
+  $("body").data("lastTag", "true");
+  NbrandUI.headerNav(".nav-btn", ".nav-wrap", ".header-wrap");
 });
+
 let $win_W = $(window).width();
 $(window).resize(function () {
   $win_W = $(window).width();
+  location.reload(true);
 });
 
 var NbrandUI = {
@@ -12,57 +20,70 @@ var NbrandUI = {
   },
 
   windowSize: function () {
-    console.log($win_W);
     return $win_W >= 1024 ? false : true;
   },
 
-  /* ToggleBtn */
-  headerNav: function (obj) {},
-
-  /* ToggleBtn */
-  toggleBtn: function (obj) {
+  /* headerNav */
+  headerNav: function (obj, com, par) {
     if (!NbrandUI.checkObj(obj)) {
       return;
     }
-    var toggleBtn = null;
-    var dataTxt = "";
-    var dataLabel = "";
-    var htmTxt = "";
-    var ariaLabel = "";
 
-    function init(obj) {
-      toggleBtn = $(obj);
-    }
+    eventCont = $(com);
+    eventParent = $(par);
+    tparent = eventParent.find(".sitemap-wrap");
+    Nbrand.uiFocusTab({
+      selector: tparent,
+      type: "hold",
+    });
 
     function event() {
-      toggleBtn.off("click").on("click", function () {
-        eventItem = $(this);
-        dataTxt = eventItem.attr("data-txt");
-        dataLabel = eventItem.attr("data-label");
-
-        if (eventItem.hasClass("on")) {
-          eventItem.attr("aria-label", ariaLabel).find("span").html(htmTxt);
-        } else {
-          htmTxt = eventItem.find("span").html();
-          ariaLabel = eventItem.attr("aria-label");
-          eventItem.attr("aria-label", dataLabel).find("span").html(dataTxt);
-        }
-        eventItem.toggleClass("on");
-      });
+      $(obj)
+        .off("click")
+        .on("click", function () {
+          eventItem = $(this);
+          eventParent.toggleClass("menu-on");
+          NbrandUI.toggleBtn();
+          if (eventItem.hasClass("on")) {
+            eventCont.attr("aria-hidden", "false");
+            if (NbrandUI.windowSize()) {
+              NbrandUI.dimdOn();
+            }
+          } else {
+            eventCont.attr("aria-hidden", "true");
+            if (NbrandUI.windowSize()) {
+              NbrandUI.dimdOff();
+            }
+          }
+        });
     }
-
-    init(obj);
     event();
   },
+
+  /* ToggleBtn */
+  toggleBtn: function () {
+    dataTxt = eventItem.attr("data-txt");
+    dataLabel = eventItem.attr("data-label");
+
+    if (eventItem.hasClass("on")) {
+      eventItem.attr("aria-label", ariaLabel).find("span").html(htmTxt);
+    } else {
+      htmTxt = eventItem.find("span").html();
+      ariaLabel = eventItem.attr("aria-label");
+      eventItem.attr("aria-label", dataLabel).find("span").html(dataTxt);
+    }
+    eventItem.toggleClass("on");
+  },
+
   // 모달팝업 실행
   modalOpen: function (obj) {
-    if (!KedUI.checkObj(obj)) {
+    if (!NbrandUI.checkObj(obj)) {
       return;
     }
 
-    var openmodal = null;
-    var openmodalData = null;
-    var openWrap = null;
+    var openmodal = null,
+      openmodalData = null,
+      openWrap = null;
 
     function init(obj) {
       openmodal = $(obj);
@@ -85,7 +106,7 @@ var NbrandUI = {
             openWrap.addClass("on").fadeIn(200);
             break;
         }
-        KedUI.dimdOn();
+        NbrandUI.dimdOn();
         $(".dimmed").stop().fadeIn(300).addClass(openmodalData);
         openWrap.find(".pop-close").addClass(openmodalData);
       });
@@ -96,13 +117,13 @@ var NbrandUI = {
   },
   // 모달팝업 종료
   modalClose: function (obj) {
-    if (!KedUI.checkObj(obj)) {
+    if (!NbrandUI.checkObj(obj)) {
       return;
     }
 
-    var closemodal = null;
-    var closeWrap = null;
-    var closemodalData = null;
+    var closemodal = null,
+      closeWrap = null,
+      closemodalData = null;
 
     function init(obj) {
       closemodal = $(obj);
@@ -123,7 +144,7 @@ var NbrandUI = {
 
         $(".dimmed").stop().fadeOut(300);
         setTimeout(function () {
-          KedUI.dimdOff();
+          NbrandUI.dimdOff();
         }, 300);
       });
     }
