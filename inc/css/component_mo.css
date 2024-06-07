@@ -1494,6 +1494,12 @@ min-width : 1024 css
   .search-wrap::after {
     height: 3px;
   }
+  .search-wrap.search-small {
+    max-width: 100%;
+  }
+  .search-small .search-input-box {
+    width: 100%;
+  }
 
   .search-wrap .search-input-box {
     padding: 12px 4px 9px 0;
