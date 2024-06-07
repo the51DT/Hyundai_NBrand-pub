@@ -1441,7 +1441,7 @@ input[type="radio"]:focus + label {
 }
 .card_type05 .card_bottom {
   flex-grow: 1;
-  padding: 1.25rem 1.25rem 2.5rem;
+  padding: 1.25rem 0.75rem 2.5rem 1.25rem;
   background-color: #fff;
 }
 .grid_2 .card_type05 .card_bottom {
@@ -1455,6 +1455,8 @@ input[type="radio"]:focus + label {
   font-size: 2.5rem;
   font-weight: 700;
   line-height: 125%;
+}
+.card_type05 .card_tit.color-red {
   color: #de3111;
 }
 .card_type05 .card_detail {
