@@ -2607,7 +2607,7 @@ input[type="radio"]:focus + label {
   button.btn-only-icon-bg01-square
   span.icon-down-wh.rotate {
   transform: rotate(180deg);
-  background: url(../../../inc/images/icon/icon-arrow01_down_white.svg);
+  /* background: url(../../../inc/images/icon/icon-arrow01_down_white.svg); */
   width: 20px;
   height: 20px;
 }
@@ -3653,7 +3653,6 @@ input[type="radio"]:focus + label {
   }
   .dropdown .wrap-dropdown-selected span.icon-down-wh.rotate {
     transform: rotate(180deg);
-    background: url(../../../inc/images/icon/icon-close.svg);
     background-position: center;
     width: 24px;
     height: 24px;
