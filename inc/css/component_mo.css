@@ -658,15 +658,21 @@ min-width : 1024 css
 
   /* list03 track map */
   .wrap-list.list03 {
-    /* padding: 80px; */
     flex-direction: column;
   }
 
-  .wrap-list.list03 svg {
-    width: 237.71px;
-    height: 212.34px;
+  .wrap-list.list03 .left img {
+    max-width: 237px;
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
   }
-  .wrap-list.list03 .right.descwrap h2 {
+
+  .wrap-list.list03 .left.imgwrap {
+    padding: 37px 50px;
+    max-width: 312px;
+    margin-top: 0;
+    margin-right: 0;
   }
 
   .wrap-list.list03 .right.descwrap h2.tit {
@@ -684,16 +690,6 @@ min-width : 1024 css
     margin-top: 0;
   }
 
-  .wrap-list.list03 .left {
-    width: 100%;
-    /* margin-bottom: 5.354rem;
-    padding-top: 3.125rem; */
-  }
-
-  .wrap-list.list03 .left img {
-    max-width: 280px;
-  }
-
   .wrap-list.list03
     .right.descwrap
     .list-trackinfo
@@ -705,17 +701,23 @@ min-width : 1024 css
     text-align: left;
   }
 
+  .wrap-list.list03 .right.descwrap .list-trackinfo .inner p:nth-child(2) {
+    font-size: 20px;
+  }
+
   .wrap-list.list03 .right {
+    padding: 0;
     margin-top: 36px;
     width: 100%;
   }
-
   .wrap-list.list03 .right.descwrap .list-trackinfo {
+    display: flex;
+    flex-direction: column;
     margin-top: 28px;
   }
 
-  .wrap-list.list03 .right.descwrap .list-trackinfo .inner p:nth-child(2) {
-    font-size: 20px;
+  .wrap-list.list03 .right.descwrap .list-trackinfo .inner {
+    padding: 24px 0;
   }
 
   /* list 04 */

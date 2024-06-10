@@ -2126,7 +2126,7 @@ input[type="radio"]:focus + label {
   width: 708px;
 }
 .wrap-list.list03 .left img {
-  width: 404px;
+  max-width: 432px;
   object-fit: contain;
 }
 .wrap-list.list03 .right {
@@ -2176,16 +2176,10 @@ input[type="radio"]:focus + label {
 
 @media screen and (min-width: 1024px) and (max-width: 1366px) {
   .wrap-list.list03 .left {
-    padding: 60px;
+    padding: 80px 60px 72px;
     margin-right: 40px;
     width: 420px;
   }
-
-  .wrap-list.list03 .left img {
-    width: 300px;
-    height: 268px;
-    flex-shrink: 0;
-  }
   .wrap-list.list03 .right {
     padding: 0 16px;
     width: 420px;
@@ -2194,45 +2188,6 @@ input[type="radio"]:focus + label {
     display: flex;
     flex-direction: column;
   }
-}
-
-@media screen and (max-width: 1023px) {
-  .wrap-list.list03 .left {
-    padding: 60px;
-    margin-top: 0;
-    margin-right: 0;
-  }
-
-  .wrap-list.list03 .left img {
-    width: 300px;
-    height: 268px;
-    flex-shrink: 0;
-  }
-  .wrap-list.list03 .right {
-    padding: 0 16px;
-  }
-  .wrap-list.list03 .right.descwrap .list-trackinfo {
-    display: flex;
-    /* width: 420px; */
-    flex-direction: column;
-  }
-
-  .wrap-list.list03 .left img {
-    width: 237.714px;
-    height: 212.338px;
-    flex-shrink: 0;
-  }
-  .wrap-list.list03 .right {
-    width: 100%;
-  }
-
-  .wrap-list.list03 .right.descwrap .list-trackinfo .inner {
-    padding: 24px 0;
-  }
-}
-
-.code {
-  display: none;
 }
 
 /* list04  plan your guide */
@@ -3261,11 +3216,19 @@ input[type="radio"]:focus + label {
 .dropdown-menu
   li:not(.dropdown-menu .moclose-btn, .dropdown-menu .option)
   .btn-wrap
+  a.md-txt-btn01 {
+  width: 100%;
+  justify-content: start;
+}
+.dropdown-menu
+  li:not(.dropdown-menu .moclose-btn, .dropdown-menu .option)
+  .btn-wrap
   button.btn-only-icon-bg01-square {
-  margin-left: auto;
+  margin-left: 0;
   background: none;
   width: 24px;
   height: 24px;
+  flex-shrink: 0;
 }
 .dropdown-menu a {
   font-size: 1.25rem;
@@ -3295,6 +3258,7 @@ input[type="radio"]:focus + label {
   background-repeat: no-repeat;
   background-position: center;
 }
+
 .dropdown-menu.dropdown-on li:hover .btn-wrap a span.icon-right {
   background: url(../../../inc/images/icon/icon-arrow01_right.svg);
   background-size: contain;
