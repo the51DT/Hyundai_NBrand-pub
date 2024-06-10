@@ -3224,7 +3224,7 @@ input[type="radio"]:focus + label {
   li:not(.dropdown-menu .moclose-btn, .dropdown-menu .option)
   .btn-wrap
   button.btn-only-icon-bg01-square {
-  margin-left: 0;
+  margin-left: 4px;
   background: none;
   width: 24px;
   height: 24px;
@@ -3257,6 +3257,7 @@ input[type="radio"]:focus + label {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  margin-left: 0;
 }
 
 .dropdown-menu.dropdown-on li:hover .btn-wrap a span.icon-right {
