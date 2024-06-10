@@ -2656,6 +2656,7 @@ input[type="radio"]:focus + label {
   .search-input-box
   .btn-wrap {
   margin-right: 10px;
+  max-width: 24px;
 }
 .dropdown.centered
   .dropdown-menu
