@@ -24,6 +24,26 @@ body {
 .grid_masonry + .btn-wrap-default {
   margin-top: 80px;
 }
+.title_flex {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto 2.5rem;
+  max-width: 90rem;
+}
+.title_flex .color-white {
+  color: #fff;
+  border-color: #FFF;
+}
+.title_flex .selectbox-trigger.color-white::after {
+  background-image: url("../../../../inc/images/icon/icon-arrow01_down_white.svg");
+}
+.sort_flex {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto 3.75rem;
+  max-width: 90rem;
+}
+
 /* EP040401 */
 .ranking-wrap {
   background: #f0f0f0;
@@ -228,6 +248,544 @@ body {
   font-weight: 400;
   line-height: 22.4px;
 }
+
+/* EP010301 */
+.calender_box {
+  padding: 7.5rem 5rem 15rem;
+  background-color: #E6EFF8;
+}
+.calender_wrap {
+  margin: 0 auto;
+  padding: 7.5rem 0;
+  max-width: 90rem;
+}
+.calender_wrap + .calender_wrap {
+  border-top: 1px solid #BBBBBB;
+}
+.calender_wrap:first-of-type {
+  padding-top: 0;
+}
+.calender_wrap:last-of-type {
+  padding-bottom: 0;
+}
+
+/* EP010302 */
+.result_top {
+  padding: 7.5rem 5rem;
+  background-color: #000000;
+}
+.result_bottom {
+  padding: 5rem 5rem 15rem;
+}
+.result_wrap {
+  margin: 0 auto;
+  max-width: 90rem;
+}
+.result_wrap .contitle-type01 {
+  margin-bottom: 2.5rem;
+}
+.result_wrap .roundresult-wrap {
+  margin-bottom: 3.75rem;
+}
+.result_wrap + .result_wrap {
+  margin-top: 7.5rem;
+}
+.detail_list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 1rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid #BBBBBB;
+}
+.detail_list li {
+  width: calc(50% - 0.75rem);
+  position: relative;
+  padding-left: 1rem;
+}
+.detail_list li::before {
+  position: absolute;
+  left: 0;
+  top: 0.75rem;
+  content: '';
+  display: block;
+  width: 0.25rem;
+  height: 0.25rem;
+  background-color: #777777;
+}
+.detail_list li:nth-of-type(2n) {
+  margin-left: 0.75rem;
+}
+.detail_list .btn {
+  gap: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 140%;
+}
+.detail_list .btn-icon20 {
+  flex-shrink: 0;
+}
+
+/* EP010303 */
+.issue_wrap {
+  padding: 12.5rem 5rem 12.5rem;
+}
+.issue_wrap .contitle-type01 {
+  text-align: center;
+}
+.issue_wrap .contitle-type01 span {
+  color: #DE3111;
+}
+.issue_wrap .tit-type04 {
+  margin: 1.5rem auto 3.75rem;
+  width: 49.48vw;
+  min-width: 35.5rem;
+  max-width: 59.375rem;
+  text-align: center;
+}
+.issue_wrap .txt-list-wrap {
+  justify-content: center;
+  padding: 1.5rem;
+}
+.issue_wrap .txt-list-wrap li {
+  width: 17rem;
+}
+.info_wrap {
+  padding: 7.5rem 5rem 10em;
+  background-color: #AACAE6;
+}
+.info_wrap .contitle-type01 {
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+.standing_wrap {
+  padding: 10rem 5rem 12.5rem;
+  background-color: #000000;
+}
+.standing_wrap .title_flex {
+  align-items: end;
+}
+.standing_wrap .title_flex .selectbox-wrap {
+  margin-bottom: 1.37rem;
+}
+.info_more {
+  margin: 3rem auto 0;
+  max-width: 90rem;
+  text-align: right;
+}
+.schedule_wrap {
+  padding: 10rem 5rem 12.5rem;
+}
+.guide_wrap {
+  padding: 5rem;
+  background-color: #E6EFF8;
+}
+.visit_wrap {
+  padding: 10rem 5rem 15rem;
+}
+
+/* EP010401 */
+.standing_top {
+  padding: 7.5rem 5rem;
+  background-color: #000000;
+}
+.standing_top .color-white {
+  color: #fff;
+  border-color: #FFF;
+}
+.standing_top .color-white::after {
+  background-image: url("../../../../inc/images/icon/icon-arrow01_down_white.svg");
+}
+.standing_bottom {
+  padding: 5rem 5rem 15rem;
+}
+.standing_bottom .btn-wrap-default {
+  margin-top: 5rem;
+}
+
+/* EP010501 */
+.drivers_box {
+  padding: 7.5rem 5rem 15rem;
+  background-color: #E6EFF8;
+}
+.drivers_box .grid_3 {
+  margin-bottom: 5rem;
+}
+.search_result {
+  padding: 8.75rem 0 3.5rem;
+  font-family: "Hyundai Sans Head";
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 125%;
+  text-align: center;
+}
+.search_result span {
+  color: #DE3111;
+}
+
+/* EP010501P01 */
+.driver_top {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  width: 100%;
+  height: auto;
+  background-image: url('../../../../inc/images/N_Festival/driver/bg_driver-1920x694.png');
+  background-position: center;
+  background-size: cover;
+  aspect-ratio: 1920 / 694;
+}
+.driver_top img {
+  width: 31.98%;
+}
+.driver_top .driver_num {
+  position: absolute;
+  right: 12.6%;
+  bottom: 1.25rem;
+  color: #de3111;
+  text-align: right;
+  font-family: "Hyundai Sans Head";
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 125%;
+  text-shadow: calc(0.125rem * 1) 0 0 #fff,
+    calc(0.125rem * 0.9239) calc(0.125rem * 0.3827) 0 #fff,
+    calc(0.125rem * 0.7071) calc(0.125rem * 0.7071) 0 #fff,
+    calc(0.125rem * 0.3827) calc(0.125rem * 0.9239) 0 #fff,
+    0 calc(0.125rem * 1) 0 #fff,
+    calc(0.125rem * -0.3827) calc(0.125rem * 0.9239) 0 #fff,
+    calc(0.125rem * -0.7071) calc(0.125rem * 0.7071) 0 #fff,
+    calc(0.125rem * -0.9239) calc(0.125rem * 0.3827) 0 #fff,
+    calc(0.125rem * -1) 0 0 #fff,
+    calc(0.125rem * -0.9239) calc(0.125rem * -0.3827) 0 #fff,
+    calc(0.125rem * -0.7071) calc(0.125rem * -0.7071) 0 #fff,
+    calc(0.125rem * -0.3827) calc(0.125rem * -0.9239) 0 #fff,
+    0 calc(0.125rem * -1) 0 #fff,
+    calc(0.125rem * 0.3827) calc(0.125rem * -0.9239) 0 #fff,
+    calc(0.125rem * 0.7071) calc(0.125rem * -0.7071) 0 #fff,
+    calc(0.125rem * 0.9239) calc(0.125rem * -0.3827) 0 #fff;
+}
+.driver_bottom {
+  padding: 7.5rem 5rem 15rem;
+}
+.coment_wrap {
+  max-width: 90rem;
+  margin: 0 auto;
+  padding-bottom: 3.75rem;
+  border-bottom: 2px solid #787D80;
+  text-align: center;
+}
+.coment_wrap .contitle-type01 {
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+}
+.driver_coment {
+  padding: 0 7.6rem;
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 140%;
+}
+.driver_wrap {
+  max-width: 90rem;
+  margin: 0 auto;
+  padding: 5rem 0;
+  border-bottom: 1px solid #BBBBBB;
+}
+.driver_wrap:last-of-type {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+.driver_detail {
+  column-count: 2;
+}
+.driver_detail li {
+  width: 38.25rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 140%;
+}
+.driver_detail li + li {
+  margin-top: 1.5rem;
+}
+.driver_detail li p + p {
+  margin-top: 0.75rem;
+  font-family: "Hyundai Sans Head";
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 125%;
+}
+.career_list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 1rem;
+  padding-top: 2.5rem;
+}
+.career_list li {
+  width: calc(50% - 0.75rem);
+  position: relative;
+  padding-left: 1rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 140%;
+}
+.career_list li::before {
+  position: absolute;
+  left: 0;
+  top: 0.75rem;
+  content: '';
+  display: block;
+  width: 0.25rem;
+  height: 0.25rem;
+  background-color: #777777;
+}
+.career_list li:nth-of-type(2n) {
+  margin-left: 0.75rem;
+}
+
+/* EP010601 */
+.drivers_box {
+  padding: 7.5rem 5rem 15rem;
+  background-color: #E6EFF8;
+}
+.drivers_box .grid_3 {
+  margin-bottom: 5rem;
+}
+.search_result {
+  padding: 8.75rem 0 3.5rem;
+  font-family: "Hyundai Sans Head";
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 125%;
+  text-align: center;
+}
+.search_result span {
+  color: #DE3111;
+}
+
+/* EP010601P01 */
+.team_top {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  background-color: #E6EFF8;
+  aspect-ratio: 1920 / 694;
+}
+.team_top img {
+  width: 41.67%;
+}
+.team_bottom {
+  padding: 7.5rem 5rem 15rem;
+}
+.coment_wrap {
+  max-width: 90rem;
+  margin: 0 auto;
+  padding-bottom: 3.75rem;
+  border-bottom: 2px solid #787D80;
+  text-align: center;
+}
+.coment_wrap .contitle-type01 {
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+}
+.team_coment {
+  padding: 0 7.6rem;
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 140%;
+}
+.team_wrap {
+  max-width: 90rem;
+  margin: 0 auto;
+  padding: 5rem 0;
+  border-bottom: 1px solid #BBBBBB;
+}
+.team_wrap:last-of-type {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+.team_detail {
+  position: relative;
+  column-count: 2;
+  padding-bottom: 4rem;
+}
+.team_detail li {
+  width: 100%;
+  max-width: 38.25rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 140%;
+}
+.team_detail li + li {
+  margin-top: 1.5rem;
+}
+.team_detail li:nth-of-type(2) {
+  margin-bottom: 5rem;
+}
+.team_detail li:last-of-type {
+  position: absolute;
+  left: 0;
+  top: 12.5rem;
+}
+.team_detail li p + p {
+  margin-top: 0.75rem;
+  font-family: "Hyundai Sans Head";
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 125%;
+}
+.team_wrap .ty03Swiper {
+  padding-top: 0;
+}
+.career_list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 1rem;
+  padding-top: 2.5rem;
+}
+.career_list li {
+  width: calc(50% - 0.75rem);
+  position: relative;
+  padding-left: 1rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 140%;
+}
+.career_list li::before {
+  position: absolute;
+  left: 0;
+  top: 0.75rem;
+  content: '';
+  display: block;
+  width: 0.25rem;
+  height: 0.25rem;
+  background-color: #777777;
+}
+.career_list li:nth-of-type(2n) {
+  margin-left: 0.75rem;
+}
+
+/* EP010801 */
+.featured_wrap {
+  padding: 7.5rem 0;
+  background-color: #E6EFF8;
+}
+.featured_wrap .title_flex {
+  box-sizing: content-box;
+  padding: 0 5rem;
+}
+.title_flex_sub {
+  display: flex;
+  gap: 1.5rem;
+}
+.video_wrap {
+  padding: 7.5rem 5rem 15rem;
+}
+.video_list:first-of-type {
+  padding-bottom: 10rem;
+}
+.video_list:last-of-type {
+  padding-top: 10rem;
+  border-top: 2px solid #BBB;
+}
+.video_list .grid_2,
+.video_list .grid_3 {
+  row-gap: 5rem;
+}
+.video_list .btn-wrap-default {
+  margin-top: 5rem
+}
+
+/* EP010802 */
+.video_thumnail_wrap {
+  position: relative;
+  text-align: center;
+  color: #FFF;
+}
+.video_thumnail_wrap .img_mo {
+  display: none;
+}
+.video_thumnail_wrap .video_tit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0 5rem;
+  width: 100%;
+  font-family: "Hyundai Sans Head";
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 125%;
+}
+.video_thumnail_wrap .video_date {
+  position: absolute;
+  left: 50%;
+  bottom: 6.5rem;
+  transform: translateX(-50%);
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 140%;
+}
+.video_thumnail_wrap .video_tag {
+  position: absolute;
+  left: 50%;
+  bottom: 3.75rem;
+  transform: translateX(-50%);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 140%
+}
+.video_detail_wrap {
+  padding: 10rem 5rem 15rem;
+}
+.video_detail_wrap .card_video {
+  display: block;
+  margin: 0 auto;
+  max-width: 90rem;
+}
+.video_detail_wrap .card_video .card_title {
+  padding: 0 7.62rem;
+}
+.video_detail_wrap .card_video .card_detail {
+  padding: 0 7.62rem;
+}
+.video_detail_wrap .btn-wrap-default {
+  margin-top: 3.75rem;
+}
+.video_detail_wrap .btn-wrap-default.sns_wrap {
+  gap: 2rem;
+  margin-top: 12.5rem;
+}
+.video_detail_wrap .lg-txt-btn01 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 100%
+}
+.related_wrap {
+  padding: 5rem 5rem 7.5rem;
+  background-color: #E6EFF8;
+}
+.related_wrap .related_tit {
+  margin: 0 auto 4.06rem;
+  max-width: 90rem;
+  font-family: "Hyundai Sans Head";
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 125%;
+}
+.related_wrap .card_video .card_date {
+  margin-top: 1.25rem;
+}
 /* 모바일 */
 @media screen and (max-width: 1023px) {
   /* Experience  common */
@@ -249,6 +807,22 @@ body {
   .grid_masonry + .btn-wrap-default {
     margin-top: 44px;
   }
+  .title_flex {
+    flex-direction: column;
+    row-gap: 1.75rem;
+  }
+  .title_flex.tilte_padding {
+    padding: 0 1.5rem;
+  }
+  .title_flex.gap8 {
+    row-gap: 0.5rem;
+  }
+  .sort_flex {
+    flex-direction: column;
+    row-gap: 1.25rem;
+    margin-bottom: 2.75rem;
+  }
+
   /* EP040401 */
   .ranking-wrap .ranking-center .tab-head {
     max-width: 100%;
@@ -436,5 +1010,375 @@ body {
     font-weight: 700;
     line-height: 28px;
     text-align: left;
+  }
+
+  /* EP010301 */
+  .calender_box {
+    padding: 5rem 1.5rem 10rem;
+  }
+  .calender_wrap {
+    padding: 5rem 0;
+  }
+
+  /* EP010302 */
+  .result_top {
+    padding: 5rem 0;
+  }
+  .result_bottom {
+    padding: 2.75rem 0rem 10rem;
+  }
+  .result_wrap .contitle-type01 {
+    padding:  0 1.5rem;
+    margin-bottom: 1.75rem;
+  }
+  .result_wrap .roundresult-wrap {
+    padding: 0 1.5rem;
+  }
+  .result_wrap > .btn-wrap {
+    display: none;
+  }
+  .detail_list {
+    padding-top: 1.75rem;
+    margin: 0 1.5rem;
+  }
+  .detail_list li {
+    width: 100%;
+  }
+  .detail_list li::before {
+    top: 0.56rem;
+  }
+  .detail_list li:nth-of-type(2n) {
+    margin-left: 0;
+  }
+  .detail_list .btn {
+    justify-content: space-between;
+    width: 100%;
+    padding-right: 0.62rem;
+  }
+  .detail_list .btn::after {
+    width: calc(100% - 0.62rem) !important;
+    left: auto !important;
+    right: 0.62rem;
+  }
+  .detail_list .btn-icon20 {
+    width: 1.25rem;
+    height: 1.25rem;
+    flex-shrink: 0;
+  }
+
+  /* EP010303 */
+  .issue_wrap {
+    padding: 7.5rem 0 7.5rem;
+  }
+  .issue_wrap .tit-type04 {
+    margin: 1rem auto 2.25rem;
+    font-size: 1.125rem;
+    width: calc(100% - 3rem);
+    min-width: 0;
+    max-width: 49.875rem;
+  }
+  .issue_wrap .txt-list-wrap {
+    justify-content: start;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 52.875rem;
+    padding: 1.5rem;
+  }
+  .issue_wrap .txt-list-wrap li {
+    width: fit-content;
+  }
+  .info_wrap {
+    padding: 5rem 0 6.25rem;
+  }
+  .info_wrap .contitle-type01 {
+    margin: 0 0 1.75rem 1.5rem;
+    text-align: left;
+  }
+  .standing_wrap {
+    padding: 6.25rem 0 5.13rem;
+  }
+  .standing_wrap .title_flex {
+    align-items: normal;
+  }
+  .standing_wrap .title_flex .selectbox-wrap {
+    margin-bottom: 0;
+  }
+  .info_more {
+    margin-top: 1.75rem;
+    text-align: center;
+  }
+  .schedule_wrap {
+    padding: 6.25rem 0 7.5rem;
+  }
+  .schedule_wrap .tab-head,
+  .schedule_wrap .__bottom {
+    padding: 0 1.5rem;
+  }
+  .guide_wrap {
+    padding: 6.25rem 1.5rem;
+  }
+  .visit_wrap {
+    padding: 6.25rem 1.5rem 10rem;
+  }
+
+  /* EP010401 */
+  .standing_top {
+    padding: 5rem 0;
+  }
+  .standing_bottom {
+    padding: 2.75rem 1.5rem 10rem;
+  }
+  .standing_bottom .btn-wrap-default {
+    margin-top: 2.75rem;
+  }
+
+  /* EP010501 */
+  .drivers_box {
+    padding: 5rem 1.5rem 10rem;
+  }
+  .drivers_box .grid_3 {
+    margin-bottom: 2.75rem;
+  }
+  .search_result {
+    padding: 4.75rem 0 0rem;
+    font-size: 1.5rem;
+    line-height: 140%;
+  }
+
+  /* EP010501P01 */
+  .driver_top {
+    background-image: url('../../../../inc/images/N_Festival/driver/bg_driver-1440x960.png');
+    aspect-ratio: 360 / 240;
+  }
+  .driver_top img {
+    width: 60.28%;
+  }
+  .driver_top .driver_num {
+    right: 6.67%;
+    bottom: 1rem;
+    font-size: 2.5rem;
+  }
+  .driver_bottom {
+    padding: 5rem 1.5rem 10rem;
+  }
+  .coment_wrap {
+    padding-bottom: 2.25rem;
+    text-align: left;
+  }
+  .coment_wrap .contitle-type01 {
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+  }
+  .driver_coment {
+    padding: 0;
+    font-size: 1.25rem;
+  }
+  .driver_wrap {
+    padding: 2.75rem 0;
+  }
+  .driver_wrap .seasonstats-box {
+    margin-top: 1.75rem;
+  }
+  .driver_detail {
+    column-count: unset;
+  }
+  .driver_detail li {
+    width: 100%;
+    font-size: 1.0625rem;
+  }
+  .driver_detail li + li {
+    margin-top: 1rem;
+  }
+  .driver_detail li p + p {
+    margin-top: 0.37rem;
+    font-size: 1.5rem;
+  }
+  .career_list {
+    row-gap: 0.75rem;
+    padding-top: 1.25rem;
+  }
+  .career_list li {
+    width: 100%;
+    font-size: 1.0625rem;
+  }
+  .career_list li::before {
+    top: 0.56rem;
+  }
+  .career_list li:nth-of-type(2n) {
+    margin-left: 0;
+  }
+
+  /* EP010601 */
+  .drivers_box {
+    padding: 5rem 1.5rem 10rem;
+  }
+  .drivers_box .grid_3 {
+    margin-bottom: 2.75rem;
+  }
+  .search_result {
+    padding: 4.75rem 0 0rem;
+    font-size: 1.5rem;
+    line-height: 140%;
+  }
+
+  /* EP010601P01 */
+  .team_top {
+    background-color: #F0F0F0;
+    aspect-ratio: 360 / 240;
+  }
+  .team_top img {
+    width: 60.28%;
+  }
+  .team_bottom {
+    padding: 5rem 1.5rem 10rem;
+  }
+  .coment_wrap {
+    padding-bottom: 2.25rem;
+    text-align: left;
+  }
+  .coment_wrap .contitle-type01 {
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+  }
+  .team_coment {
+    padding: 0;
+    font-size: 1.25rem;
+  }
+  .team_wrap {
+    padding: 2.75rem 0;
+  }
+  .team_wrap .seasonstats-box {
+    margin-top: 1.75rem;
+  }
+  .team_wrap .swiper-container {
+    margin-top: 1.75rem;
+  }
+  .team_detail {
+    column-count: unset;
+    padding-bottom: 0;
+  }
+  .team_detail li {
+    width: 100%;
+    font-size: 1.0625rem;
+  }
+  .team_detail li + li {
+    margin-top: 1rem;
+  }
+  .team_detail li:nth-of-type(2) {
+    margin-bottom: 0;
+  }
+  .team_detail li:last-of-type {
+    position: static;
+  }
+  .team_detail li p + p {
+    margin-top: 0.37rem;
+    font-size: 1.5rem;
+  }
+  .career_list {
+    row-gap: 0.75rem;
+    padding-top: 1.25rem;
+  }
+  .career_list li {
+    width: 100%;
+    font-size: 1.0625rem;
+  }
+  .career_list li::before {
+    top: 0.56rem;
+  }
+  .career_list li:nth-of-type(2n) {
+    margin-left: 0;
+  }
+
+  /* EP010801 */
+  .title_flex_sub {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  .featured_wrap {
+    padding: 5rem 0;
+  }
+  .featured_wrap .title_flex {
+    padding: 0 1.5rem;
+  }
+  .video_wrap {
+    padding: 5rem 1.5rem 10rem;
+  }
+  .video_list:first-of-type {
+    padding-bottom: 6.25rem;
+  }
+  .video_list:last-of-type {
+    padding-top: 6.25rem;
+  }
+  .video_list .grid_2,
+  .video_list .grid_3 {
+    row-gap: 2.75rem;
+  }
+
+  /* EP010802 */
+  .video_thumnail_wrap {
+    color: #000;
+  }
+  .video_thumnail_wrap::after {
+    content: '';
+    display: block;
+    width: 6rem;
+    margin: 0 auto;
+    border-bottom: 1px solid #595C5F;
+  }
+  .video_thumnail_wrap .img_pc {
+    display: none;
+  }
+  .video_thumnail_wrap .img_mo {
+    display: block;
+  }
+  .video_thumnail_wrap .video_tit {
+    position: static;
+    transform: translate(0, 0);
+    margin: 2.5rem 0 1.25rem;
+    padding: 0 1.5rem;
+    font-size: 1.5rem;
+    line-height: 140%;
+  }
+  .video_thumnail_wrap .video_date {
+    position: static;
+    transform: translateX(0);
+  }
+  .video_thumnail_wrap .video_tag {
+    position: static;
+    transform: translateX(0);
+    justify-content: center;
+    gap: 1rem;
+    margin: 2.25rem 0 2.5rem;
+    padding: 0 2.87rem;
+  }
+  .video_detail_wrap {
+    padding: 6.25rem 1.5rem 10rem;
+  }
+  .video_detail_wrap .card_video .card_title {
+    padding: 0;
+  }
+  .video_detail_wrap .card_video .card_detail {
+    padding: 0;
+  }
+  .video_detail_wrap .btn-wrap-default {
+    margin-top: 2.25rem;
+  }
+  .video_detail_wrap .btn-wrap-default.sns_wrap {
+    gap: 1.25rem;
+    margin-top: 7.5rem;
+  }
+  .video_detail_wrap .lg-txt-btn01 {
+    font-size: 1rem;
+  }
+  .related_wrap {
+    padding: 5rem 0rem 7.5rem;
+  }
+  .related_wrap .related_tit {
+    margin: 0 auto 2.25rem;
+    padding: 0 1.5rem;
+    font-size: 1.875rem;
+  }
+  .related_wrap .card_video .card_date {
+    margin-top: 0.75rem;
   }
 }
