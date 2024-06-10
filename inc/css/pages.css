@@ -365,12 +365,10 @@
   max-width: 1440px;
   margin: 0 auto;
 }
+
 .event-box .conts-body {
   overflow: hidden;
   position: relative;
-}
-.event-box .selectbox-trigger {
-  width: 100%;
 }
 
 .event-box .evt-map-wrap {
