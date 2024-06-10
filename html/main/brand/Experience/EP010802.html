@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name=" format-detection" content="telephone=no" />
+    <title>N브랜드 | Experience_Nfestival_Video Detail</title>
+    <link type="text/css" rel="stylesheet" href="../../../../guide/inc/css/shCoreDefault.css" />
+    <link type="text/css" rel="stylesheet" href="../../../../guide/inc/css/guide.css" />
+    <link type="text/css" rel="stylesheet" href="../../../../inc/css/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="../../../../inc/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="../../../../inc/css/experience.css" />
+    <style>
+      .video_thumnail_wrap {
+        position: relative;
+        text-align: center;
+        color: #FFF;
+      }
+      .video_thumnail_wrap .img_mo {
+        display: none;
+      }
+      .video_thumnail_wrap .video_tit {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 0 5rem;
+        width: 100%;
+        font-family: "Hyundai Sans Head";
+        font-size: 5rem;
+        font-weight: 700;
+        line-height: 125%;
+      }
+      .video_thumnail_wrap .video_date {
+        position: absolute;
+        left: 50%;
+        bottom: 6.5rem;
+        transform: translateX(-50%);
+        font-size: 0.75rem;
+        font-weight: 400;
+        line-height: 140%;
+      }
+      .video_thumnail_wrap .video_tag {
+        position: absolute;
+        left: 50%;
+        bottom: 3.75rem;
+        transform: translateX(-50%);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        font-size: 0.875rem;
+        font-weight: 700;
+        line-height: 140%
+      }
+      .video_detail_wrap {
+        padding: 10rem 5rem 15rem;
+      }
+      .video_detail_wrap .card_video {
+        display: block;
+        margin: 0 auto;
+        max-width: 90rem;
+      }
+      .video_detail_wrap .card_video .card_title {
+        padding: 0 7.62rem;
+      }
+      .video_detail_wrap .card_video .card_detail {
+        padding: 0 7.62rem;
+      }
+      .video_detail_wrap .btn-wrap-default {
+        margin-top: 3.75rem;
+      }
+      .video_detail_wrap .btn-wrap-default.sns_wrap {
+        gap: 2rem;
+        margin-top: 12.5rem;
+      }
+      .video_detail_wrap .lg-txt-btn01 {
+        font-size: 1.25rem;
+        font-weight: 700;
+        line-height: 100%
+      }
+      .related_wrap {
+        padding: 5rem 5rem 7.5rem;
+        background-color: #E6EFF8;
+      }
+      .related_wrap .related_tit {
+        margin: 0 auto 4.06rem;
+        max-width: 90rem;
+        font-family: "Hyundai Sans Head";
+        font-size: 3.5rem;
+        font-weight: 700;
+        line-height: 125%;
+      }
+      .related_wrap .card_video .card_date {
+        margin-top: 1.25rem;
+      }
+      @media screen and (max-width: 1023px) {
+        .video_thumnail_wrap {
+          color: #000;
+        }
+        .video_thumnail_wrap::after {
+          content: '';
+          display: block;
+          width: 6rem;
+          margin: 0 auto;
+          border-bottom: 1px solid #595C5F;
+        }
+        .video_thumnail_wrap .img_pc {
+          display: none;
+        }
+        .video_thumnail_wrap .img_mo {
+          display: block;
+        }
+        .video_thumnail_wrap .video_tit {
+          position: static;
+          transform: translate(0, 0);
+          margin: 2.5rem 0 1.25rem;
+          padding: 0 1.5rem;
+          font-size: 1.5rem;
+          line-height: 140%;
+        }
+        .video_thumnail_wrap .video_date {
+          position: static;
+          transform: translateX(0);
+        }
+        .video_thumnail_wrap .video_tag {
+          position: static;
+          transform: translateX(0);
+          justify-content: center;
+          gap: 1rem;
+          margin: 2.25rem 0 2.5rem;
+          padding: 0 2.87rem;
+        }
+        .video_detail_wrap {
+          padding: 6.25rem 1.5rem 10rem;
+        }
+        .video_detail_wrap .card_video .card_title {
+          padding: 0;
+        }
+        .video_detail_wrap .card_video .card_detail {
+          padding: 0;
+        }
+        .video_detail_wrap .btn-wrap-default {
+          margin-top: 2.25rem;
+        }
+        .video_detail_wrap .btn-wrap-default.sns_wrap {
+          gap: 1.25rem;
+          margin-top: 7.5rem;
+        }
+        .video_detail_wrap .lg-txt-btn01 {
+          font-size: 1rem;
+        }
+        .related_wrap {
+          padding: 5rem 0rem 7.5rem;
+        }
+        .related_wrap .related_tit {
+          margin: 0 auto 2.25rem;
+          padding: 0 1.5rem;
+          font-size: 1.875rem;
+        }
+        .related_wrap .card_video .card_date {
+          margin-top: 0.75rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrap">
+      <section class="content-wrap">
+        <div class="content-area">
+          <div class="content-item01">
+            <div class="video_thumnail_wrap">
+              <div class="video_thumnail_img">
+                <img class="img_pc" src="../../../../inc/images/img/img_video_detail_pc.png" aria-hidden="true">
+                <img class="img_mo" src="../../../../inc/images/img/img_video_detail_mo.png" aria-hidden="true">
+              </div>
+              <p class="video_tit">Hyundai N Festival N Cup Round 1<br>LIVE STREAMING</p>
+              <p class="video_date">04.30. 2024</p>
+              <ul class="video_tag">
+                <li>#Ncommunity</li>
+                <li>#Drive</li>
+                <li>#ShowN</li>
+                <li>#Neverjustdrive</li>
+                <li>#NBrand</li>
+              </ul>
+            </div>
+          </div>
+          <div class="content-item02">
+            <div class="video_detail_wrap">
+              <a class="card_video" href="#" title="영상 상세페이지 이동">
+                <div class="card_img">
+                  <img src="../../../../inc/images/img/img_video_detail_thumnail.png" alt="영상 썸네일 이미지">
+                  <span class="card_play" aria-hidden="true"></span>
+                </div>
+                <p class="card_title">Gergo baldi and isaac gillissen join</p>
+                <p class="card_detail">2023 HNF In-depth Ep.2 [The Crown's Weight]<br>
+                  "Stop DCT's victory"<br>
+                  Kim Kyu-min, who won Round 3 despite being given a 400 RPM limited handicap for winning the previous round, and who is the amateur player who makes professional players nervous by ranking fourth overall Check out the HNF In-depth Ep.2 [The Crown's Weight] video right now!</p>
+              </a>
+              <div class="btn-wrap-default sns_wrap">
+                <button type="button" class="btn btn-only-icon-bg01-circle" aria-label="copy link button">
+                  <span class="visually-hidden">copy link button</span>
+                  <span class="btn-icon20 icon-copylink-wh" aria-hidden="true"></span>
+                </button>
+                <a href="https://www.facebook.com/" class="btn btn-only-icon-bg01-circle" aria-label="facebook link button">
+                  <span class="visually-hidden">facebook link button</span>
+                  <span class="btn-icon20 icon-facebook-wh" aria-hidden="true"></span>
+                </a>
+                <a href="https://www.instagram.com/" class="btn btn-only-icon-bg01-circle" aria-label="instagram link button">
+                  <span class="visually-hidden">instagram link button</span>
+                  <span class="btn-icon20 icon-instagram-wh" aria-hidden="true"></span>
+                </a>
+                <a href="https://x.com/" class="btn btn-only-icon-bg01-circle" aria-label="twitter link button">
+                  <span class="visually-hidden">twitter link button</span>
+                  <span class="btn-icon20 icon-twitter-wh" aria-hidden="true"></span>
+                </a>
+              </div>
+              <div class="btn-wrap-default">
+                <a href="#" class="btn lg-txt-btn01">
+                  <span class="btn-icon20 icon-left" aria-hidden="true"></span>
+                  Back to List
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="content-item03">
+            <div class="related_wrap">
+              <p class="related_tit fw-type03">Related Video</p>
+              <ul class="grid_3 grid_mo_scroll">
+                <li>
+                  <a class="card_video" href="#" title="영상 상세페이지 이동">
+                    <div class="card_img">
+                      <img src="../../../../inc/images/img/img_video_related01.png" alt="영상 썸네일 이미지">
+                    </div>
+                    <p class="card_title">Techniques for Faster, Smoother Braking</p>
+                    <p class="card_date">03.28.2024</p>
+                  </a>
+                </li>
+                <li>
+                  <a class="card_video" href="#" title="영상 상세페이지 이동">
+                    <div class="card_img">
+                      <img src="../../../../inc/images/img/img_video_related02.png" alt="영상 썸네일 이미지">
+                    </div>
+                    <p class="card_title">Tips on Buying a New Car</p>
+                    <p class="card_date">03.28.2024</p>
+                  </a>
+                </li>
+                <li>
+                  <a class="card_video" href="#" title="영상 상세페이지 이동">
+                    <div class="card_img">
+                      <img src="../../../../inc/images/img/img_video_related03.png" alt="영상 썸네일 이미지">
+                    </div>
+                    <p class="card_title">How to Remove Scratches on Your Car</p>
+                    <p class="card_date">03.28.2024</p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script type="text/javascript" src="../../../../inc/js/jquery-3.7.1.slim.min.js"></script>
+    <script type="text/javascript" src="../../../../inc/js/swiper.min.js"></script>
+    <script type="text/javascript" src="../../../../inc/js/pub-ui.js"></script>
+  </body>
+</html>
