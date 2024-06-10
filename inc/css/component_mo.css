@@ -1137,14 +1137,14 @@ min-width : 1024 css
     .wrap-dropdown-selected
     button.btn-only-icon-bg01-square
     span.icon-down-wh.rotate {
-    width: 20px;
-    height: 20px;
+    /* width: 20px;
+    height: 20px; */
+    width: 14.4px;
+    height: 14.4px;
+    background-position: center;
   }
 
   .wrap-dropdown-selected span.icon-right {
-    border: 1px solid red;
-    display: none;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1163,8 +1163,8 @@ min-width : 1024 css
     .wrap-dropdown-selected
     button.btn-only-icon-bg01-square
     span.icon-down-wh {
-    width: 24px;
-    height: 24px;
+    width: 14.4px;
+    height: 14.4px;
   }
 
   .dropdown-menu.dropdown-on li .btn-wrap a span.icon-right {
