@@ -1595,7 +1595,6 @@ input[type="radio"]:focus + label {
 
 .swiper-pagination-custom .swiper-pagination-bullet-active {
   --time: 0;
-  width: calc(84px * (1 - var(--time)));
   /* width: calc(84px * (1 - var(--time))); */
   width: calc(var(--time));
   background: #de3111;
@@ -2024,6 +2023,7 @@ input[type="radio"]:focus + label {
 .swiper-card-type .card-list-wrap li {
   position: relative;
   width: 140px !important;
+  transition: width 0.5s ease-out;
 }
 .swiper-card-type .card-list-wrap li:not(:last-child) {
   margin-right: 4px;

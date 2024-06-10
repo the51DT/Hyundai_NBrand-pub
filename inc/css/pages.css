@@ -156,7 +156,13 @@
   padding-top:160px;
   padding-bottom: 200px;
 }
-
+.class-info-box .conts-card-wrap {
+  padding-left:80px;
+  padding-right:80px;
+}
+.class-info-box .conts-card-wrap .card_tit {
+  color:#DE3111;
+}
 .class-info-box .tab-container {
   max-width: 1440px;
   margin: 0 auto;
@@ -290,17 +296,16 @@
   margin-right: 240px;
 }
 
-.next-race-box .conts-body .swiper-container {
-  /* max-width: 1440px;
-  margin:0 auto; */
+.evtGuide {
+  overflow: hidden;
 }
 
-.subMain .content-item04 {
+.subMain .content-item04, .evtGuide .content-item08 {
   padding-top:160px;
   padding-bottom:160px;
 }
 
-.subMain .content-item05 {
+.subMain .content-item05, .evtGuide .content-item06,.evtGuide .content-item09 {
   padding-top:160px;
   padding-bottom:240px;
 }  
@@ -310,12 +315,16 @@
   position: relative;
 }
 
-.evtGuide .content-item03, .evtGuide .content-item04 {
-  padding:120px 0 160px; 
+.evtGuide .content-item03 {
+  padding-top:120px;
+  padding-bottom: 160px;
+  padding-left:80px;
+  padding-right: 80px;
 }
 
-.evtGuide .content-item05 {
-  padding:160px 0 200px;
+.evtGuide .content-item05, .evtGuide .content-item06, .evtGuide .content-item07 {
+  padding-top:160px;
+  padding-bottom:200px;
 }
 
 
@@ -352,6 +361,124 @@
 .n-race-box .conts-body .swiper-container {
   margin-left: 60px;
 }
+.event-box {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.event-box .conts-body {
+  overflow: hidden;
+  position: relative;
+}
+.event-box .selectbox-trigger {
+  width: 100%;
+}
+
+.event-box .evt-map-wrap {
+  position:relative; 
+  overflow: auto;
+  background: url('../../inc/images/content/event-map_img.svg') no-repeat;
+  width: 100%;
+  min-height: 810px;
+}
+
+.event-box .btn-area {
+  position: absolute;
+  top:40px;
+  right:40px;
+  z-index: 10;
+}
+
+.event-box .btn-area .btn-wrap {
+  background: #000;
+  opacity: 0.3;
+  width: 60px;
+  height: 60px;
+  position: relative;
+}
+.event-box .btn-area .btn-wrap:not(:last-child) {
+  margin-bottom:12px;
+}
+.event-box .btn-area .btn-wrap::after {
+  content: '';
+  width: 36px;
+  height: 36px;
+  display: inline-block;  
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  background-size: contain;
+}
+
+.event-box .btn-area .btn-wrap.plus::after {  
+  background-image: url('../images/icon/icon-plus.svg');
+}
+
+.event-box .btn-area .btn-wrap.minus::after {  
+  background-image: url('../images/icon/icon-minus.svg');
+}
+
+.evt-map-area li {
+  position: absolute;
+  box-shadow:8px 8px 8px rgba(0, 0, 0, 0.25);
+}
+
+.evt-map-area li:nth-child(1) {
+  top: 254px;
+  left: 444px;
+}
+.evt-map-area li:nth-child(2) {
+  top: 214px;
+  left: 783px;
+}
+.evt-map-area li:nth-child(3) {
+  top: 189px;
+  left: 443px;
+}
+.evt-map-area li:nth-child(4) {
+  top: 435px;
+  left: 847px;
+}
+.evt-map-area li:nth-child(5) {
+  top: 431px;
+  left: 378px;
+} 
+
+.evt-map-area li a {  
+  display: flex;
+  align-items: center;
+}
+
+.evt-map-area li a .num {
+  width: 53px;
+  height: 53px;
+  color: #fff;
+  background-color: #DE3111;
+  padding:10px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  text-align: center;
+}
+
+.evt-map-area li a .tit {
+  background: #fff;
+  padding: 16px;
+  color: #000;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 20px;
+  white-space: nowrap;
+}
+
+.evt-map-area li a .tit .icon-right {
+  margin:-4px 0;
+}
+
+.track-guide-box .descwrap .sub-tit {
+  margin-top: 4px;
+}
+
 
 /* min-width : 1024 css */
 @media screen and (max-width: 1280px) and (min-width: 1024px) {
@@ -363,9 +490,47 @@
   .n-race-box .conts-head {
     margin-right:60px;
   }
+  .evtGuide .content-item05 .tab-head,
+  .evtGuide .content-item07 .tab-head {
+    padding: 0 80px;
+  }
+  .evtGuide .content-item05 .tab-content,
+  .evtGuide .content-item07 .tab-content {
+    padding-left:80px;
+    padding-right:80px;
+  }  
 }
 /* mobile */
 @media screen and (max-width:1023px) {
+  .evtGuide .content-item03 {
+    padding: 80px 24px 100px 24px;
+  }
+
+  .evtGuide .content-item05, .evtGuide .content-item06, .evtGuide .content-item07 {
+    padding-top:100px;
+    padding-bottom:120px;
+  }
+  .evtGuide .content-item09 {
+    padding-top: 100px;
+    padding-bottom: 160px;
+  }
+  .evtGuide .content-item05 .tab-head,
+  .evtGuide .content-item07 .tab-head {
+    padding: 0 24px;
+  }
+  .evtGuide .content-item05 .tab-content,
+  .evtGuide .content-item07 .tab-content {
+    padding-left:24px;
+    padding-right: 0;
+  }
+  .evtGuide .wrap-list .__bottom .wrap-lists:last-child {
+    margin-right: 24px;
+  }
+
+  .evtGuide .wrap-list.list04 .inner .box .box-desc {
+    width: 100%;
+  }
+
   .about .content-top {
     padding: 139px 24px
   }
@@ -455,10 +620,18 @@
     padding-top:80px;
     padding-bottom: 100px;
   } 
+  .intro-race-box .conts-head .tit {
+    text-align: center;
+  }
 
   .class-info-box {
     padding-top:100px;
     padding-bottom: 120px;
+  }
+
+  .class-info-box .conts-card-wrap { 
+    padding-left:0;
+    padding-right: 0;
   }
 
   .class-info-box .tab-head.ty02 .tabs {
@@ -563,6 +736,77 @@
   }
   .n-race-box .conts-head {
     margin:0 24px 28px;
+  }
+  .n-race-box::before {
+    height: 332px;
+  }
+  .conts-head { 
+    display: block;
+  }  
+  .conts-head .selectbox-wrap {
+    margin-top:8px;
+  }
+  .conts-head .selectbox-wrap.select-type01 > div {
+    width: 100%;
+  }
+
+  .track-guide-box .wrap-list.list03 .right {
+    max-width: revert;
+  }
+  
+  .event-box .btn-area {
+    top:24px;
+    right:16px;
+  }
+  .event-box .btn-area .btn-wrap {
+    width: 48px;
+    height: 48px;
+  }
+
+  .event-box .btn-area .btn-wrap::after {
+    width: 28.8px;
+    height: 28.8px;
+  }
+
+  .event-box .evt-map-wrap {
+    min-height: 600px;
+  }
+  
+  .evt-map-area li:nth-child(1) {
+    top: 193px;
+    left: 60px;
+  }
+  .evt-map-area li:nth-child(2) {
+    top: 244px;
+    left: 620px;
+  }
+  .evt-map-area li:nth-child(3) {
+    top: 128px;
+    left: 60px;
+  }
+  .evt-map-area li:nth-child(4) {
+    top: 435px;
+    left: 680px;
+  }
+  .evt-map-area li:nth-child(5) {
+    top: 358px;
+    left: 30px;
+  } 
+
+  .evt-map-area li a .num {
+    width: 40px;
+    height: 40px;
+    padding:5px;
+  }
+
+  .evt-map-area li a .tit {
+    padding: 12px 16px;
+    font-size: 16px;
+    line-height: 16px;
+  }
+  .evt-map-area li a .tit .icon-right {
+    width: 16px;
+    height: 16px;
   }
 }
 

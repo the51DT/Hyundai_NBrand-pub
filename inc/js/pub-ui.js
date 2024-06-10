@@ -86,6 +86,32 @@
         var tagList = $(this).closest(".tag-list-wrap").find(".tag-list");
         self.tagBtnEvent(e.target, tagList);
       });
+
+      $(".ty05Swiper .card-list-wrap li").click(function (e) {
+        e.preventDefault();
+        $(".card-list-wrap li").removeClass("active");
+        if (!$(this).hasClass("active")) {
+          $(this).addClass("active");
+        }
+      });
+
+      $(".btn-wrap.plus").click(function () {
+        var evtImg = $(".evt-map-wrap");
+        var tVal = 1;
+
+        tVal = tVal + 0.2;
+
+        evtImg.css("transform", `scale(${tVal})`);
+        console.log(tVal, "테스트");
+      });
+
+      $(".btn-wrap.minus").click(function (e) {
+        pubUi.evtZoomInOut("minus");
+      });
+
+      $(".btn-wrap.plus").click(function (e) {
+        pubUi.evtZoomInOut("plus");
+      });
     },
     swiperSlideEvent: function () {
       var self = this;
@@ -405,6 +431,27 @@
         btn.classList.add("visually-hidden");
       }
     },
+    // 수정 필요, 이벤트 레이아웃 구조 변경 예정
+    evtZoomInOut: function (param) {
+      const evtImg = $(".evt-map-wrap");
+      let result = 1;
+
+      switch (param) {
+        case "plus":
+          result = result + 0.2;
+          console.log("plus", result);
+          evtImg.css("transform", `scale(${result})`);
+          break;
+        case "minus":
+          result = result - 0.2;
+          console.log("minus", result);
+          evtImg.css("transform", `scale(${result})`);
+          break;
+        default:
+          console.log("data is not plus and minus");
+          break;
+      }
+    },
   };
 
   $(document).ready(function () {
@@ -648,8 +695,8 @@ function checkScreenSize() {
       .classList.remove("dropdown-on");
   }
 }
-window.onload = checkScreenSize;
-window.onresize = checkScreenSize;
+//window.onload = checkScreenSize;
+//window.onresize = checkScreenSize;
 // 드롭다운(아코디언) 02 끝
 // 드롭다운(아코디언), 필터 컴포넌트 끝
 
