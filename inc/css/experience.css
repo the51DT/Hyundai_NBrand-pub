@@ -688,6 +688,10 @@ body {
 .video_wrap {
   padding: 7.5rem 5rem 15rem;
 }
+.video_list {
+  margin: 0 auto;
+  max-width: 90rem;
+}
 .video_list:first-of-type {
   padding-bottom: 10rem;
 }
