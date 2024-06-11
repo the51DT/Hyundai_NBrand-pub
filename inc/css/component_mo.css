@@ -589,7 +589,7 @@ min-width : 1024 css
   }
 
   /* card_video */
-  .card_video .card_img  {
+  .card_video .card_img {
     margin-bottom: 1rem;
   }
   .card_video .card_play {
@@ -1033,6 +1033,14 @@ min-width : 1024 css
     justify-content: space-between;
     align-items: center;
     margin-bottom: 0;
+  }
+
+  .wrap-list
+    .__bottom.list07
+    .wrap-lists
+    .list-box:nth-child(3)
+    .box-listChkRead {
+    align-items: start;
   }
 
   /* cont08 accordion */
