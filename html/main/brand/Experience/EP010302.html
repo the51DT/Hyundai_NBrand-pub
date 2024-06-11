@@ -10,127 +10,6 @@
     <link type="text/css" rel="stylesheet" href="../../../../guide/inc/css/guide.css" />
     <link type="text/css" rel="stylesheet" href="../../../../inc/css/common.css" />
     <link type="text/css" rel="stylesheet" href="../../../../inc/css/experience.css" />
-    <style>
-      .result_top {
-        padding: 7.5rem 5rem;
-        background-color: #000000;
-      }
-      .title_flex {
-        display: flex;
-        justify-content: space-between;
-        margin: 0 auto 2.5rem;
-        max-width: 90rem;
-      }
-      .title_flex .color-white {
-        color: #fff;
-        border-color: #FFF;
-      }
-      .title_flex .color-white::after {
-        background-image: url("../../../../inc/images/icon/icon-arrow01_down_white.svg");
-      }
-      .result_bottom {
-        padding: 5rem 5rem 15rem;
-      }
-      .result_wrap {
-        margin: 0 auto;
-        max-width: 90rem;
-      }
-      .result_wrap .contitle-type01 {
-        margin-bottom: 2.5rem;
-      }
-      .result_wrap .roundresult-wrap {
-        margin-bottom: 3.75rem;
-      }
-      .result_wrap + .result_wrap {
-        margin-top: 7.5rem;
-      }
-      .detail_list {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        row-gap: 1rem;
-        padding-top: 2.5rem;
-        border-top: 1px solid #BBBBBB;
-      }
-      .detail_list li {
-        width: calc(50% - 0.75rem);
-        position: relative;
-        padding-left: 1rem;
-      }
-      .detail_list li::before {
-        position: absolute;
-        left: 0;
-        top: 0.75rem;
-        content: '';
-        display: block;
-        width: 0.25rem;
-        height: 0.25rem;
-        background-color: #777777;
-      }
-      .detail_list li:nth-of-type(2n) {
-        margin-left: 0.75rem;
-      }
-      .detail_list .btn {
-        gap: 0.75rem;
-        font-size: 1.25rem;
-        font-weight: 500;
-        line-height: 140%;
-      }
-      .detail_list .btn-icon20 {
-        flex-shrink: 0;
-      }
-      @media screen and (max-width: 1023px) {
-        .result_top {
-          padding: 5rem 0;
-        }
-        .title_flex {
-          padding: 0 1.5rem;
-          flex-direction: column;
-          row-gap: 1.75rem;
-        }
-        .result_bottom {
-          padding: 2.75rem 0rem 10rem;
-        }
-        .result_wrap .contitle-type01 {
-          padding:  0 1.5rem;
-          margin-bottom: 1.75rem;
-        }
-        .result_wrap .roundresult-wrap {
-          padding: 0 1.5rem;
-        }
-        .result_wrap > .btn-wrap {
-          display: none;
-        }
-        .detail_list {
-          padding-top: 1.75rem;
-          margin: 0 1.5rem;
-        }
-        .detail_list li {
-          width: 100%;
-        }
-        .detail_list li::before {
-          top: 0.56rem;
-        }
-        .detail_list li:nth-of-type(2n) {
-          margin-left: 0;
-        }
-        .detail_list .btn {
-          justify-content: space-between;
-          width: 100%;
-          padding-right: 0.62rem;
-        }
-        .detail_list .btn::after {
-          width: calc(100% - 0.62rem) !important;
-          left: auto !important;
-          right: 0.62rem;
-        }
-        .detail_list .btn-icon20 {
-          width: 1.25rem;
-          height: 1.25rem;
-          flex-shrink: 0;
-        }
-      }
-    </style>
   </head>
 
   <body>
@@ -143,7 +22,7 @@
           </div>
           <div class="content-item02">
             <div class="result_top">
-              <div class="title_flex">
+              <div class="title_flex tilte_padding">
                 <p class="contitle-type01 fw-type03 color-white">Top 3</p>
                 <div class="selectbox-wrap select-type02">
                   <div>

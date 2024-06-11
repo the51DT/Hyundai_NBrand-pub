@@ -11,140 +11,6 @@
     <link type="text/css" rel="stylesheet" href="../../../../inc/css/swiper.min.css" />
     <link type="text/css" rel="stylesheet" href="../../../../inc/css/common.css" />
     <link type="text/css" rel="stylesheet" href="../../../../inc/css/experience.css" />
-    <style>
-      .br_mo {
-        display: none;
-      }
-      .issue_wrap {
-        padding: 12.5rem 5rem 12.5rem;
-      }
-      .issue_wrap .contitle-type01 {
-        text-align: center;
-      }
-      .issue_wrap .contitle-type01 span {
-        color: #DE3111;
-      }
-      .issue_wrap .tit-type04 {
-        margin: 1.5rem auto 3.75rem;
-        width: 49.48vw;
-        min-width: 35.5rem;
-        max-width: 59.375rem;
-        text-align: center;
-      }
-      .issue_wrap .txt-list-wrap {
-        justify-content: center;
-        padding: 1.5rem;
-      }
-      .issue_wrap .txt-list-wrap li {
-        width: 17rem;
-      }
-      .info_wrap {
-        padding: 7.5rem 5rem 10em;
-        background-color: #AACAE6;
-      }
-      .info_wrap .contitle-type01 {
-        margin-bottom: 2.5rem;
-        text-align: center;
-      }
-      .standing_wrap {
-        padding: 10rem 5rem 12.5rem;
-        background-color: #000000;
-      }
-      .title_flex {
-        display: flex;
-        justify-content: space-between;
-        margin: 0 auto 2.5rem;
-        max-width: 90rem;
-      }
-      .title_flex .color-white {
-        color: #fff;
-        border-color: #FFF;
-      }
-      .title_flex .color-white::after {
-        background-image: url("../../../../inc/images/icon/icon-arrow01_down_white.svg");
-      }
-      .standing_wrap .title_flex {
-        align-items: end;
-      }
-      .standing_wrap .title_flex .selectbox-wrap {
-        margin-bottom: 1.37rem;
-      }
-      .info_more {
-        margin: 3rem auto 0;
-        max-width: 90rem;
-        text-align: right;
-      }
-      .schedule_wrap {
-        padding: 10rem 5rem 12.5rem;
-      }
-      .guide_wrap {
-        padding: 5rem;
-        background-color: #E6EFF8;
-      }
-      .visit_wrap {
-        padding: 10rem 5rem 15rem;
-      }
-      @media screen and (max-width: 1023px) {
-        .br_mo {
-          display: block;
-        }
-        .issue_wrap {
-          padding: 7.5rem 0 7.5rem;
-        }
-        .issue_wrap .tit-type04 {
-          margin: 1rem auto 2.25rem;
-          font-size: 1.125rem;
-          width: calc(100% - 3rem);
-          min-width: 0;
-          max-width: 49.875rem;
-        }
-        .issue_wrap .txt-list-wrap {
-          justify-content: start;
-          margin: 0 auto;
-          width: 100%;
-          max-width: 52.875rem;
-          padding: 1.5rem;
-        }
-        .issue_wrap .txt-list-wrap li {
-          width: fit-content;
-        }
-        .info_wrap {
-          padding: 5rem 0 6.25rem;
-        }
-        .info_wrap .contitle-type01 {
-          margin: 0 0 1.75rem 1.5rem;
-          text-align: left;
-        }
-        .standing_wrap {
-          padding: 6.25rem 0 5.13rem;
-        }
-        .title_flex {
-          padding: 0 1.5rem;
-          flex-direction: column;
-          row-gap: 1.75rem;
-        }
-        .standing_wrap .title_flex {
-          align-items: normal;
-        }
-        .standing_wrap .title_flex .selectbox-wrap {
-          margin-bottom: 0;
-        }
-        .info_more {
-          margin-top: 1.75rem;
-          text-align: center;
-        }
-        .schedule_wrap {
-          padding: 6.25rem 0 7.5rem;
-        }
-        .schedule_wrap .tab-head,
-        .schedule_wrap .__bottom {
-          padding: 0 1.5rem;
-        }
-        .visit_wrap {
-          padding: 6.25rem 1.5rem 10rem;
-        }
-      }
-    </style>
   </head>
 
   <body>
@@ -219,17 +85,19 @@
             <div class="dropdown">
               <div class="wrap-dropdown-selected" aria-haspopup="true" aria-expanded="false">
                 <button class="dropdown-btn">IONIQ 5 N 2024 World Performance Car Award Winner</button>
-                <span class="btn-icon20 icon-right" aria-hidden="true"></span>
+                <!-- <span class="btn-icon20 icon-right" aria-hidden="true"></span> -->
                   <button type="button" class="btn btn-only-icon-bg01-square" aria-label="expand down button">
                     <span class="btn-icon20 icon-down-wh" aria-hidden="true"></span>
                   </button>
               </div>
               <ul class="dropdown-menu" role="menu" aria-hidden="true">
-                  <li role="menuitem" onclick="selectOption(event, '2024 Hyundai N Festival - ROUND 1 | 04.27.2024 1')">
+                <li role="menuitem" onclick="selectOption(event, '2024 Hyundai N Festival - ROUND 1 | 04.27.2024 1')">
                   <div class="btn-wrap">
                     <a href="https://www.hyundai.com/worldwide/ko/brand-journal/mobility-solution/n-story" class="btn md-txt-btn01" aria-disabled="true">
                       2024 Hyundai N Festival - ROUND 1 | 04.27.2024   1
-                      <span class="btn-icon24 icon-right" aria-hidden="true"></span>
+                      <button type="button" class="btn btn-only-icon-bg01-square" aria-label="right arrow button">
+                        <span class="btn-icon24 icon-right" aria-hidden="true"></span>
+                      </button>
                     </a>
                   </div>
                 </li>
@@ -237,7 +105,9 @@
                   <div class="btn-wrap">
                     <a href="https://www.hyundai.com/worldwide/ko/brand-journal/mobility-solution/n-story" class="btn md-txt-btn01" aria-disabled="true">
                       2024 Hyundai N Festival - ROUND 1 | 04.27.2024  2
-                      <span class="btn-icon24 icon-right" aria-hidden="true"></span>
+                      <button type="button" class="btn btn-only-icon-bg01-square" aria-label="right arrow button">
+                        <span class="btn-icon24 icon-right" aria-hidden="true"></span>
+                      </button>                     
                     </a>
                   </div>
                 </li>
@@ -245,7 +115,9 @@
                   <div class="btn-wrap">
                     <a href="https://www.hyundai.com/worldwide/ko/brand-journal/mobility-solution/n-story" class="btn md-txt-btn01" aria-disabled="true">
                       Third place for Neuville and Wydaeghe at Croatia Rally
-                      <span class="btn-icon24 icon-right" aria-hidden="true"></span>
+                      <button type="button" class="btn btn-only-icon-bg01-square" aria-label="right arrow button">
+                        <span class="btn-icon24 icon-right" aria-hidden="true"></span>
+                      </button>                     
                     </a>
                   </div>
                 </li>
@@ -253,7 +125,9 @@
                   <div class="btn-wrap">
                     <a href="https://www.hyundai.com/worldwide/ko/brand-journal/mobility-solution/n-story" class="btn md-txt-btn01" aria-disabled="true">
                       IONIQ 5 N 2024 World Performance Car Award Winner
-                      <span class="btn-icon24 icon-right " aria-hidden="true"></span>
+                      <button type="button" class="btn btn-only-icon-bg01-square" aria-label="right arrow button">
+                        <span class="btn-icon24 icon-right" aria-hidden="true"></span>
+                      </button>                     
                     </a>
                   </div>
                 </li>
@@ -262,7 +136,7 @@
           </div>
           <div class="content-item03">
             <div class="issue_wrap">
-              <p class="contitle-type01 fw-type03"><span>Round 1</span> <br class="br_mo">Hot Issue</p>
+              <p class="contitle-type01 fw-type03"><span>Round 1</span> <br class="mo-only">Hot Issue</p>
               <p class="tit-type04">Grand opening of the new Hyundai N Festival season at Inje SPEEDIUM. Don’t miss  the debut of an electrifying new class and vehicle!</p>
               <ul class="txt-list-wrap">
                 <li>
@@ -346,7 +220,7 @@
           </div>
           <div class="content-item05">
             <div class="standing_wrap">
-              <div class="title_flex">
+              <div class="title_flex tilte_padding">
                 <p class="contitle-type01 fw-type03 color-white">Standing<br>Top 3</p>
                 <div class="selectbox-wrap select-type02">
                   <div>

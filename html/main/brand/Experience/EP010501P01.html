@@ -10,199 +10,6 @@
     <link type="text/css" rel="stylesheet" href="../../../../guide/inc/css/guide.css" />
     <link type="text/css" rel="stylesheet" href="../../../../inc/css/common.css" />
     <link type="text/css" rel="stylesheet" href="../../../../inc/css/experience.css" />
-    <style>
-      .driver_top {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: end;
-        width: 100%;
-        height: auto;
-        background-image: url('../../../../inc/images/N_Festival/driver/bg_driver-1920x694.png');
-        background-position: center;
-        background-size: cover;
-        aspect-ratio: 1920 / 694;
-      }
-      .driver_top img {
-        width: 31.98%;
-      }
-      .driver_top .driver_num {
-        position: absolute;
-        right: 12.6%;
-        bottom: 1.25rem;
-        color: #de3111;
-        text-align: right;
-        font-family: "Hyundai Sans Head";
-        font-size: 5rem;
-        font-weight: 700;
-        line-height: 125%;
-        text-shadow: calc(0.125rem * 1) 0 0 #fff,
-          calc(0.125rem * 0.9239) calc(0.125rem * 0.3827) 0 #fff,
-          calc(0.125rem * 0.7071) calc(0.125rem * 0.7071) 0 #fff,
-          calc(0.125rem * 0.3827) calc(0.125rem * 0.9239) 0 #fff,
-          0 calc(0.125rem * 1) 0 #fff,
-          calc(0.125rem * -0.3827) calc(0.125rem * 0.9239) 0 #fff,
-          calc(0.125rem * -0.7071) calc(0.125rem * 0.7071) 0 #fff,
-          calc(0.125rem * -0.9239) calc(0.125rem * 0.3827) 0 #fff,
-          calc(0.125rem * -1) 0 0 #fff,
-          calc(0.125rem * -0.9239) calc(0.125rem * -0.3827) 0 #fff,
-          calc(0.125rem * -0.7071) calc(0.125rem * -0.7071) 0 #fff,
-          calc(0.125rem * -0.3827) calc(0.125rem * -0.9239) 0 #fff,
-          0 calc(0.125rem * -1) 0 #fff,
-          calc(0.125rem * 0.3827) calc(0.125rem * -0.9239) 0 #fff,
-          calc(0.125rem * 0.7071) calc(0.125rem * -0.7071) 0 #fff,
-          calc(0.125rem * 0.9239) calc(0.125rem * -0.3827) 0 #fff;
-      }
-      .driver_bottom {
-        padding: 7.5rem 5rem 15rem;
-      }
-      .coment_wrap {
-        max-width: 90rem;
-        margin: 0 auto;
-        padding-bottom: 3.75rem;
-        border-bottom: 2px solid #787D80;
-        text-align: center;
-      }
-      .coment_wrap .contitle-type01 {
-        margin-bottom: 0.75rem;
-        font-weight: 700;
-      }
-      .driver_coment {
-        padding: 0 7.6rem;
-        font-size: 2rem;
-        font-style: italic;
-        font-weight: 700;
-        line-height: 140%;
-      }
-      .driver_wrap {
-        max-width: 90rem;
-        margin: 0 auto;
-        padding: 5rem 0;
-        border-bottom: 1px solid #BBBBBB;
-      }
-      .driver_wrap:last-of-type {
-        padding-bottom: 0;
-        border-bottom: none;
-      }
-      .title_flex {
-        display: flex;
-        justify-content: space-between;
-        margin: 0 auto 2.5rem;
-        max-width: 90rem;
-      }
-      .driver_detail {
-        column-count: 2;
-      }
-      .driver_detail li {
-        width: 38.25rem;
-        font-size: 1.25rem;
-        font-weight: 500;
-        line-height: 140%;
-      }
-      .driver_detail li + li {
-        margin-top: 1.5rem;
-      }
-      .driver_detail li p + p {
-        margin-top: 0.75rem;
-        font-family: "Hyundai Sans Head";
-        font-size: 2.5rem;
-        font-weight: 700;
-        line-height: 125%;
-      }
-      .career_list {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        row-gap: 1rem;
-        padding-top: 2.5rem;
-      }
-      .career_list li {
-        width: calc(50% - 0.75rem);
-        position: relative;
-        padding-left: 1rem;
-        font-size: 1.25rem;
-        font-weight: 500;
-        line-height: 140%;
-      }
-      .career_list li::before {
-        position: absolute;
-        left: 0;
-        top: 0.75rem;
-        content: '';
-        display: block;
-        width: 0.25rem;
-        height: 0.25rem;
-        background-color: #777777;
-      }
-      .career_list li:nth-of-type(2n) {
-        margin-left: 0.75rem;
-      }
-      @media screen and (max-width: 1023px) {
-        .driver_top {
-          background-image: url('../../../../inc/images/N_Festival/driver/bg_driver-1440x960.png');
-          aspect-ratio: 360 / 240;
-        }
-        .driver_top img {
-          width: 60.28%;
-        }
-        .driver_top .driver_num {
-          right: 6.67%;
-          bottom: 1rem;
-          font-size: 2.5rem;
-        }
-        .driver_bottom {
-          padding: 5rem 1.5rem 10rem;
-        }
-        .coment_wrap {
-          padding-bottom: 2.25rem;
-          text-align: left;
-        }
-        .coment_wrap .contitle-type01 {
-          margin-bottom: 0.75rem;
-          font-weight: 700;
-        }
-        .driver_coment {
-          padding: 0;
-          font-size: 1.25rem;
-        }
-        .driver_wrap {
-          padding: 2.75rem 0;
-        }
-        .title_flex {
-          flex-direction: column;
-          row-gap: 0.5rem;
-          margin-bottom: 1.75rem;
-        }
-        .driver_detail {
-          column-count: unset;
-        }
-        .driver_detail li {
-          width: 100%;
-          font-size: 1.0625rem;
-        }
-        .driver_detail li + li {
-          margin-top: 1rem;
-        }
-        .driver_detail li p + p {
-          margin-top: 0.37rem;
-          font-size: 1.5rem;
-        }
-        .career_list {
-          row-gap: 0.75rem;
-          padding-top: 1.25rem;
-        }
-        .career_list li {
-          width: 100%;
-          font-size: 1.0625rem;
-        }
-        .career_list li::before {
-          top: 0.56rem;
-        }
-        .career_list li:nth-of-type(2n) {
-          margin-left: 0;
-        }
-      }
-    </style>
   </head>
 
   <body>
@@ -242,11 +49,11 @@
                 </ul>
               </div>
               <div class="driver_wrap">
-                <div class="title_flex">
+                <div class="title_flex gap8">
                   <p class="contitle-type01 fw-type03">Season stats</p>
                   <div class="selectbox-wrap select-type02">
                     <div>
-                      <button class="selectbox-trigger txt-type03 fw-type03 color-white" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="yearSelect">2024</button>
+                      <button class="selectbox-trigger txt-type03 fw-type03" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="yearSelect">2024</button>
                       <ul class="selectbox-options 02" role="listbox" id="yearSelect" aria-hidden="true" style="display: none;">
                         <li class="moclose-btn" style="display: none;">
                           <button type="button" class="btn btn-only-icon" aria-label="play button">
@@ -263,7 +70,7 @@
                       </ul>
                     </div>
                     <div>
-                      <button class="selectbox-trigger txt-type03 fw-type03 color-white" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="classSelect">eN1</button>
+                      <button class="selectbox-trigger txt-type03 fw-type03" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="classSelect">eN1</button>
                       <ul class="selectbox-options 04" role="listbox" id="classSelect" aria-hidden="true" style="display: none;">
                         <li class="moclose-btn" style="display: none;">
                           <button type="button" class="btn btn-only-icon" aria-label="play button">
