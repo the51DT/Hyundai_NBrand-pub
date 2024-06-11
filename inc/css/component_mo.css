@@ -268,7 +268,6 @@ min-width : 1024 css
   }
 
   .conts-box-wrap .bg-img-wrap .more_btn {
-    display: block;
     top: revert;
     width: calc(100% - 72px);
     left: 50%;
