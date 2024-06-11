@@ -4266,7 +4266,7 @@ p.text-num-chk {
 .selectbox-wrap > div {
   position: relative;
   display: inline-block;
-  width: 100%;
+  /* width: 100%; */
 }
 .selectbox-trigger {
   padding: 9px 32px 9px 8px;
@@ -4313,7 +4313,7 @@ p.text-num-chk {
   z-index: 3;
 }
 .selectbox-trigger2 + .selectbox-options {
-  top: 87px;
+  top: 105px;
 }
 .selectbox-options .option {
   padding: 10px 11px;
@@ -4321,7 +4321,8 @@ p.text-num-chk {
   border-top: 1px solid #000;
   border-left: 1px solid #000;
   border-right: 1px solid #000;
-  width: 272px;
+  min-width: 272px;
+  width: 100%;
   display: inline-block;
   background-color: #fff;
 }
