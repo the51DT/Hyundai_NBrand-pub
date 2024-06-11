@@ -1521,6 +1521,8 @@ min-width : 1024 css
     gap: 20px 12px;
   }
   .selectbox-wrap > div {
+    width: 100%;
+  }
   .selectbox-trigger2 + .selectbox-options {
     top: auto;
   }
