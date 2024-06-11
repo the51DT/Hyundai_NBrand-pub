@@ -1583,6 +1583,12 @@ input[type="radio"]:focus + label {
   margin-right: 6px !important;
 }
 
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  width: 84px;
+  background-color: #de3111;
+}
+
 .swiper-pagination-custom .swiper-pagination-bullet {
   transition: width 0.5s ease-in;
 }
@@ -1593,12 +1599,6 @@ input[type="radio"]:focus + label {
   width: calc(var(--time));
   background: #de3111;
   opacity: 1;
-}
-
-.swiper-pagination-bullet-active {
-  opacity: 1;
-  width: 84px;
-  background-color: #de3111;
 }
 
 .swiper-button-next,
@@ -1733,11 +1733,6 @@ input[type="radio"]:focus + label {
 
 .ty02Swiper .autoplay-progress {
   background: #73787c;
-}
-
-.swiper {
-  max-width: 1920px;
-  margin: 0 auto;
 }
 
 .ty01Swiper .swiper-slide {
