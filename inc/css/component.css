@@ -3147,6 +3147,7 @@ input[type="radio"]:focus + label {
 .dropdown.centered .dropdown-menu .wrap-category-result .wrap-result-nums {
   display: flex;
   width: 100%;
+  padding-right: 8px;
 }
 .dropdown.centered .dropdown-menu .wrap-category-result .wrap-result-nums p {
   font-weight: 500;
@@ -3200,13 +3201,8 @@ input[type="radio"]:focus + label {
   justify-content: center;
 }
 
-.dropdown.centered
-  .dropdown-menu
-  .wrap-category-result
-  .wrap-result-nums
-  button.btn[class*="-primary"]
-  [class*="btn-icon20"] {
-  margin-right: 8px;
+.dropdown.centered .dropdown-menu .wrap-category-result .wrap-result-nums button.btn[class*="-primary"] [class*="btn-icon20"] {
+  margin: 0 8px 0 0;
   display: flex;
   align-items: center;
   justify-content: center;
