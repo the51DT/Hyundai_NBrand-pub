@@ -881,6 +881,9 @@ input[type="radio"]:focus + label {
   font-weight: 700;
   line-height: 16px;
 }
+.conts-box-wrap .bg-img-wrap .more_btn:hover {
+  background: #de3111;
+}
 .txt-list-wrap {
   display: flex;
   text-align: left;
