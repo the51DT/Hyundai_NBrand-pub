@@ -204,6 +204,10 @@ body {
 .subfilter_wrap .grid_masonry {
   margin-top: 40px;
 }
+.subfilter_wrap .content-item02 .dropdown.centered {
+  max-width: 1440px;
+  margin: 0 auto;
+}
 /* EP040601 */
 .subnotice_wrap .content-item02 {
   padding: 40px 80px 240px;
@@ -683,6 +687,7 @@ body {
 }
 .title_flex_sub {
   display: flex;
+  align-items: center;
   gap: 1.5rem;
 }
 .video_wrap {
@@ -1288,6 +1293,9 @@ body {
   .subfilter_wrap .content-item02 {
     padding: 80px 24px 160px;
   }
+  .subfilter_wrap .content-item02 .dropdown.centered {
+    max-width: 100%;
+  }
 
   /* EP040601 */
   .subnotice_wrap .content-item01 {
@@ -1611,6 +1619,7 @@ body {
   /* EP010801 */
   .title_flex_sub {
     flex-direction: column;
+    align-items: normal;
     gap: 1.25rem;
   }
   .featured_wrap {

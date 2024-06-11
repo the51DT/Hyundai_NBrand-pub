@@ -268,7 +268,6 @@ min-width : 1024 css
   }
 
   .conts-box-wrap .bg-img-wrap .more_btn {
-    display: block;
     top: revert;
     width: calc(100% - 72px);
     left: 50%;
@@ -1519,6 +1518,9 @@ min-width : 1024 css
     display: flex;
     flex-wrap: wrap;
     gap: 20px 12px;
+  }
+  .selectbox-wrap > div {
+    width: 100%;
   }
   .selectbox-trigger2 + .selectbox-options {
     top: auto;
