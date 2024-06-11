@@ -321,11 +321,31 @@
           },
         },
       });
+      var swiper6 = new Swiper(".onlyOneSwiper", {
+        slidesPerView: 1,
+        spaceBetween: 80,
+        centeredSlides: true,
+        touchRatio: 0,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          360: {
+            slidesPerView: 1,
+            spaceBetween: 12,
+          },
+          768: {
+            spaceBetween: 12,
+          },
+          1024: {
+            spaceBetween: 80,
+          },
+        },
+      });
     },
     videoBulletChk: function (targetSwiper) {
-      var swiperActiveVideo = targetSwiper.find(
-        ".swiper-slide-active .kv-video-area video"
-      );
+      var swiperActiveVideo = targetSwiper.find(".swiper-slide-active .kv-video-area video");
       var testWidth = swiperActiveVideo[0].currentTime;
 
       if (swiperActiveVideo[0].currentTime == 0) {
