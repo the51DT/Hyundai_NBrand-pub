@@ -687,6 +687,7 @@ body {
 }
 .title_flex_sub {
   display: flex;
+  align-items: center;
   gap: 1.5rem;
 }
 .video_wrap {
@@ -1595,6 +1596,7 @@ body {
   /* EP010801 */
   .title_flex_sub {
     flex-direction: column;
+    align-items: normal;
     gap: 1.25rem;
   }
   .featured_wrap {
