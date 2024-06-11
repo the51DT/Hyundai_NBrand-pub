@@ -204,6 +204,10 @@ body {
 .subfilter_wrap .grid_masonry {
   margin-top: 40px;
 }
+.subfilter_wrap .content-item02 .dropdown.centered {
+  max-width: 1440px;
+  margin: 0 auto;
+}
 /* EP040601 */
 .subnotice_wrap .content-item02 {
   padding: 40px 80px 240px;
@@ -972,6 +976,9 @@ body {
   /* EP040201, EP040301, EP040501 */
   .subfilter_wrap .content-item02 {
     padding: 80px 24px 160px;
+  }
+  .subfilter_wrap .content-item02 .dropdown.centered {
+    max-width: 100%;
   }
 
   /* EP040601 */
