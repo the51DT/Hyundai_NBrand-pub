@@ -467,27 +467,18 @@
 $(".selectbox-trigger").click(function (event) {
   event.stopPropagation();
   var $options = $(this).siblings(".selectbox-options");
-  // 클릭된 트리거의 options 아닌 경우 숨기기
   $(".selectbox-options").not($options).hide().attr("aria-hidden", "true");
-  // 클릭된 트리거의 aria-hidden 상태 변경
   $options.toggle().attr("aria-hidden", function (i, attr) {
     return attr === "true" ? "false" : "true";
   });
-  // 클릭되지 않은 트리거 active 삭제
-  $(".selectbox-wrap>div .selectbox-trigger")
-    .not(this)
-    .removeClass("active")
-    .attr("aria-expanded", "false");
-  // 클릭된 트리거는 acitve 추가
+  $(".selectbox-wrap>div .selectbox-trigger").not(this).removeClass("active").attr("aria-expanded", "false");
   $(this)
     .toggleClass("active")
     .attr("aria-expanded", function () {
       return $(this).hasClass("active") ? "true" : "false";
     });
-  // select-trigger 위치 동일하게 맞추기
   $options.css({ right: "0" });
 
-  // 모바일에서만 사용하는 overlay, moclose-btn 추가작업
   $(window)
     .resize(function () {
       if (window.innerWidth <= 1023) {
@@ -500,10 +491,7 @@ $(".selectbox-trigger").click(function (event) {
         }
         $(".selectbox-options li.moclose-btn button").click(function (event) {
           event.stopPropagation();
-          $(this)
-            .closest(".selectbox-wrap>div")
-            .find(".selectbox-trigger")
-            .removeClass("active"); // close 버튼 클릭 시 모든 tigger의 active가 제거
+          $(this).closest(".selectbox-wrap>div").find(".selectbox-trigger").removeClass("active"); // close 버튼 클릭 시 모든 tigger의 active가 제거
           $(this).closest(".selectbox-options").hide();
           $(".selectbox-overlay").hide();
         });
@@ -518,28 +506,10 @@ $(".selectbox-trigger").click(function (event) {
 $(".option").click(function (event) {
   event.stopPropagation();
   var selectedText = $(this).text();
-  // option 클릭 시 trigger 문구 변경
-  $(this)
-    .closest(".selectbox-options")
-    .hide()
-    .attr("aria-hidden", "true")
-    .siblings(".selectbox-trigger")
-    .text(selectedText);
-  // 클릭되지 않은 option active 삭제 & aria-selected 상태 변경
-  $(this)
-    .closest(".selectbox-options")
-    .find(".option")
-    .not(this)
-    .removeClass("active")
-    .attr("aria-selected", "false");
-  // 클릭된 option active 추가
+  $(this).closest(".selectbox-options").hide().attr("aria-hidden", "true").siblings(".selectbox-trigger").text(selectedText);
+  $(this).closest(".selectbox-options").find(".option").not(this).removeClass("active").attr("aria-selected", "false");
   $(this).addClass("active").attr("aria-selected", "true");
-  // 클릭된 option의 트리거의 actvie 제거 및 aria-expanded 상태 변경
-  $(this)
-    .closest(".selectbox-wrap>div")
-    .find(".selectbox-trigger")
-    .removeClass("active")
-    .attr("aria-expanded", "false");
+  $(this).closest(".selectbox-wrap>div").find(".selectbox-trigger").removeClass("active").attr("aria-expanded", "false");
   $(window)
     .resize(function () {
       if (window.innerWidth <= 1023) {
@@ -719,8 +689,8 @@ $(".card_type04 .card_con").each(function () {
 });
 // [End] : hashTag 말줄임
 
-// [Start] : 하트 버튼 토글
-$(".btn-only-icon-notbg").click(function (event) {
+// [Start] : 하트 버튼 토글 (EP040101, EP040201, EP040301, EP040501)
+$(".card_function.btn-wrap-type5 .btn-only-icon-notbg").click(function (event) {
   $(this).find(".btn-icon20").toggleClass("icon-heart icon-heart-red");
 });
-// [End] : 하트 버튼 토글
+// [End] : 하트 버튼 토글 (EP040101, EP040201, EP040301, EP040501)
