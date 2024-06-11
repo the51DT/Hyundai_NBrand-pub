@@ -805,7 +805,6 @@ body {
 
 .popup-wrapper .popup-header {
   display: flex;
-  height: 100px;
   padding: 32px 40px;
   justify-content: space-between;
   align-items: center;
@@ -833,6 +832,18 @@ body {
   justify-content: flex-end;
   align-items: center;
   align-self: stretch;
+}
+
+.popup-wrapper .popup-footer .btn-wrap {
+  /* default: class="btn btn-lg- */
+  display: flex;
+  gap: 0 8px;
+}
+
+.popup-wrapper .popup-footer .btn-wrap.md {
+  /* for class="btn btn-md- */
+  display: flex;
+  gap: 0 10px;
 }
 
 .popup-wrapper .label-box p {
@@ -943,6 +954,10 @@ body {
   font-weight: 500;
 }
 
+.popup-wrapper.onlyTxt .popup-body .popup-body-innerbox .txt-type03.inquiry {
+  margin-top: 28px;
+}
+
 .popup-wrapper.onlyTxt .popup-body .popup-body-innerbox .txt-type03.accent,
 .popup-wrapper.onlyTxt
   .popup-body
@@ -994,11 +1009,11 @@ body {
 .popup-wrapper.modal {
   position: relative;
 }
-.popup-wrapper.confirm.modal {
+.popup-wrapper.confirm {
   position: absolute;
   background: #fff;
   display: flex;
-  width: 500px;
+  width: 100%;
   min-width: 500px;
   min-height: 300px;
   flex-direction: column;
@@ -1009,7 +1024,7 @@ body {
   border-radius: 4px;
 }
 
-.popup-wrapper.onlyTxt.modal:before {
+.popup-wrapper.modal:before {
   content: "";
   background: rgba(0, 0, 0, 0.5);
   width: 100%;
@@ -1020,26 +1035,43 @@ body {
   top: 0;
 }
 
-.popup-wrapper.confirm.modal .popup-body p.tit-type05 {
+.popup-wrapper.confirm .popup-body p.tit-type05 {
   margin-bottom: 20px;
 }
 
-.popup-wrapper.confirm.modal .popup-body-innerbox ul {
-  list-style: none;
+.popup-wrapper.confirm .popup-body-innerbox ul {
+  width: calc(100% - 40px);
   padding: 0;
-  margin-left: 0;
+  margin: 0 auto;
+}
+.popup-wrapper.confirm.modal .popup-body-innerbox ul li {
+  margin-bottom: 10px;
+
+  font-family: "Hyundai Sans Text";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%; /* 22.4px */
 }
 
-.popup-wrapper.confirm.modal .popup-body-innerbox ul li {
-  list-style: disc;
-  list-style-position: inside;
+.popup-wrapper.confirm .popup-body-innerbox ul.li-aparted {
+  width: 100%;
+  margin: 0 0 0 20px;
 }
-.popup-wrapper.confirm.modal .popup-body-innerbox ul li::marker {
+
+.popup-wrapper.confirm .popup-body-innerbox ul.li-aparted li {
+  margin-bottom: 22px;
+}
+
+.popup-wrapper.confirm .popup-body-innerbox ul li {
+  list-style: disc;
+}
+.popup-wrapper.confirm .popup-body-innerbox ul li::marker {
   margin: 0;
   padding: 0;
 }
 
-.popup-wrapper.confirm.modal .popup-body-innerbox ul li p.tit-type05 {
+.popup-wrapper.confirm .popup-body-innerbox ul li p.tit-type05 {
   font-family: "Hyundai Sans Text";
   font-size: 14px;
   font-style: normal;
@@ -1047,24 +1079,15 @@ body {
   line-height: 140%;
 }
 
-.popup-wrapper.confirm.modal
-  .popup-body-innerbox
-  ul
-  li
-  p.tit-type05:last-child {
+.popup-wrapper.confirm .popup-body-innerbox ul li p.tit-type05:last-child {
   margin: 0;
 }
 
-.popup-wrapper.confirm.modal .popup-con:last-child {
+.popup-wrapper.confirm .popup-con:last-child {
   margin-bottom: 40px;
 }
 
-.popup-wrapper.confirm.modal
-  .popup-body-innerbox
-  ul
-  li
-  p.tit-type05
-  span.accent {
+.popup-wrapper.confirm .popup-body-innerbox ul li p.tit-type05 span.accent {
   font-family: "Hyundai Sans Text";
   font-size: 14px;
   font-style: normal;
@@ -1755,21 +1778,29 @@ body {
     margin-bottom: 20px;
   }
 
-  .popup-wrapper.confirm.modal {
+  .popup-wrapper.confirm {
     width: 100%;
     min-width: 100%;
   }
 
-  .popup-wrapper.confirm.modal .popup-body {
+  .popup-wrapper.confirm .popup-body {
     padding: 0 40px;
   }
 
-  .popup-wrapper.confirm.modal .popup-footer {
+  .popup-wrapper.confirm .popup-body-innerbox p.tit-type05 {
+    font-size: 18px;
+  }
+
+  .popup-wrapper.confirm .popup-body-innerbox ul.li-aparted {
+    width: calc(100% - 40px);
+  }
+
+  .popup-wrapper.confirm .popup-footer {
     padding: 0 40px 40px;
     border-top: 0;
   }
 
-  .popup-wrapper.confirm.modal .popup-footer .btn-wrap {
+  .popup-wrapper.confirm .popup-footer .btn-wrap {
     width: 100%;
     display: flex;
     flex-direction: column;

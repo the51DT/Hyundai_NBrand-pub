@@ -1499,7 +1499,7 @@ input[type="radio"]:focus + label {
 .card_video {
   width: 100%;
 }
-.card_video .card_img  {
+.card_video .card_img {
   position: relative;
   width: 100%;
   height: auto;
@@ -1563,7 +1563,7 @@ input[type="radio"]:focus + label {
   margin-top: 1.25rem;
   font-size: 1rem;
   font-weight: 500;
-  line-height: 140%
+  line-height: 140%;
 }
 
 /* swiper */
@@ -4069,7 +4069,7 @@ p.text-num-chk {
 
 /* comment-type04 */
 .wrap-form .wrap-form-bottom.comment-type04 ul li {
-  margin: 15px 0;
+  margin: 0 0 15px;
 }
 
 /* textarea */
@@ -4242,6 +4242,9 @@ p.text-num-chk {
 }
 
 /* cont 11 : 폼 인풋 - 파일 첨부 */
+.wrap-form.attach {
+  margin-top: 8px;
+}
 .wrap-form.attach .upload-btn {
   cursor: pointer;
   display: flex;
