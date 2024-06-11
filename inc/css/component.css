@@ -617,6 +617,11 @@ input[type="radio"]:focus + label {
   background: url(../../../inc/images/icon/icon-control-bar.svg);
   background-size: contain;
 }
+.icon-check {
+  background: url(../../../inc/images/icon/icon-check.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 .btn:hover [class*="icon-download"],
 .btn:active [class*="icon-download"] {
   /* 빨간색 다운로드 icon 없어서 css로 임시 */
@@ -1572,7 +1577,7 @@ input[type="radio"]:focus + label {
 /* swiper */
 .swiper {
   max-width: 1920px;
-  margin:0 auto;
+  margin: 0 auto;
 }
 .swiper-container {
   width: 100%;
