@@ -522,7 +522,7 @@
   .evtGuide .content-item03 {
     padding: 80px 24px 100px 24px;
   }
-  .subMain .content-item04 {
+  .subMain .content-item04, .evtGuide .content-item08 {
     padding-top: 100px;
     padding-bottom: 100px;
   }

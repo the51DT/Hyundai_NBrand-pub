@@ -4286,14 +4286,14 @@ p.text-num-chk {
   padding: 9px 32px 9px 8px;
   border-bottom: 4px solid #000;
   cursor: pointer;
-  width: 124px;
+  min-width: 124px;
   display: inline-block;
   position: relative;
   text-align: left;
 }
 .selectbox-trigger2 {
   padding: 27px 8px 23px;
-  width: 240px;
+  min-width: 240px;
   font-size: 32px;
   line-height: 44.8px;
 }
