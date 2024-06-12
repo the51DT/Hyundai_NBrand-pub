@@ -193,8 +193,8 @@ input[type="radio"]:focus + label {
   bottom: -5px;
   left: 0;
 }
-.btn[class*="btn-only-icon"]:hover,
-.btn[class*="btn-only-icon"]:active {
+.btn:not(.btn-only-icon-notbg):hover,
+.btn:not(.btn-only-icon-notbg):active {
   background-color: #de3111;
 }
 .btn[class*="btn-only-icon-notbg"]:hover,
@@ -221,48 +221,48 @@ input[type="radio"]:focus + label {
   background: url(../../../inc/images/icon/icon-arrow01_left_red.svg);
   background-size: contain;
 }
-.btn[class*="btn-only-icon"]:hover [class*="icon-play"],
-.btn[class*="btn-only-icon"]:active [class*="icon-play"] {
+.btn:not(.btn-only-icon-notbg):hover [class*="icon-play"],
+.btn:not(.btn-only-icon-notbg):active [class*="icon-play"] {
   background: url(../../../inc/images/icon/icon-play_white.svg);
   background-size: contain;
 }
-.btn[class*="btn-only-icon"]:hover [class*="icon-pause"],
-.btn[class*="btn-only-icon"]:active [class*="icon-pause"] {
+.btn:not(.btn-only-icon-notbg):hover [class*="icon-pause"],
+.btn:not(.btn-only-icon-notbg):active [class*="icon-pause"] {
   background: url(../../../inc/images/icon/icon-pause_white.svg);
   background-size: contain;
 }
-.btn[class*="btn-only-icon"]:hover [class*="icon-soundon"],
-.btn[class*="btn-only-icon"]:active [class*="icon-soundon"] {
+.btn:not(.btn-only-icon-notbg):hover [class*="icon-soundon"],
+.btn:not(.btn-only-icon-notbg):active [class*="icon-soundon"] {
   background: url(../../../inc/images/icon/icon-soundon_white.svg);
   background-size: contain;
 }
-.btn[class*="btn-only-icon"]:hover [class*="icon-soundoff"],
-.btn[class*="btn-only-icon"]:active [class*="icon-soundoff"] {
+.btn:not(.btn-only-icon-notbg):hover [class*="icon-soundoff"],
+.btn:not(.btn-only-icon-notbg):active [class*="icon-soundoff"] {
   background: url(../../../inc/images/icon/icon-soundoff_white.svg);
   background-size: contain;
 }
-.btn[class*="btn-only-icon"]:hover [class*="icon-search"],
-.btn[class*="btn-only-icon"]:active [class*="icon-search"] {
+.btn:not(.btn-only-icon-notbg):hover [class*="icon-search"],
+.btn:not(.btn-only-icon-notbg):active [class*="icon-search"] {
   background: url(../../../inc/images/icon/icon-search_white.svg);
   background-size: contain;
 }
-.btn[class*="btn-only-icon"]:hover [class*="icon-copylink"],
-.btn[class*="btn-only-icon"]:active [class*="icon-copylink"] {
+.btn:not(.btn-only-icon-notbg):hover [class*="icon-copylink"],
+.btn:not(.btn-only-icon-notbg):active [class*="icon-copylink"] {
   background: url(../../../inc/images/icon/icon-copylink_white.svg);
   background-size: contain;
 }
-.btn[class*="btn-only-icon"]:hover [class*="icon-facebook"],
-.btn[class*="btn-only-icon"]:active [class*="icon-facebook"] {
+.btn:not(.btn-only-icon-notbg):hover [class*="icon-facebook"],
+.btn:not(.btn-only-icon-notbg):active [class*="icon-facebook"] {
   background: url(../../../inc/images/icon/icon-facebook_white.svg);
   background-size: contain;
 }
-.btn[class*="btn-only-icon"]:hover [class*="icon-instagram"],
-.btn[class*="btn-only-icon"]:active [class*="icon-instagram"] {
+.btn:not(.btn-only-icon-notbg):hover [class*="icon-instagram"],
+.btn:not(.btn-only-icon-notbg):active [class*="icon-instagram"] {
   background: url(../../../inc/images/icon/icon-instagram_white.svg);
   background-size: contain;
 }
-.btn[class*="btn-only-icon"]:hover [class*="icon-twitter"],
-.btn[class*="btn-only-icon"]:active [class*="icon-twitter"] {
+.btn:not(.btn-only-icon-notbg):hover [class*="icon-twitter"],
+.btn:not(.btn-only-icon-notbg):active [class*="icon-twitter"] {
   background: url(../../../inc/images/icon/icon-twitter_white.svg);
   background-size: contain;
 }
