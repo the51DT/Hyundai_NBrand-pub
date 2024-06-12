@@ -614,13 +614,13 @@ dropdownBtns.forEach((button) => {
       ".dropdown.centered .wrap-dropdown-selected .icon-down-wh"
     );
     const filterBtn_icn1 = document.querySelector(
-      ".dropdown.centered .wrap-dropdown-selected .dropdown-selected-inner .icon-control-bar"
+      ".dropdown.centered .wrap-dropdown-selected span:nth-child(1) span.icon-control-bar"
     );
     const filterBtn_forDisplay = document.querySelector(
       ".dropdown.centered .wrap-dropdown-selected"
     );
     const filterBtn_forDisplayText = document.querySelector(
-      ".dropdown.centered .wrap-dropdown-selected .dropdown-btn"
+      ".dropdown.centered span.txt-type02"
     );
 
     if (detectCase2) {
@@ -640,9 +640,11 @@ dropdownBtns.forEach((button) => {
       } else {
         // filterBtn_forDisplay.style.background = "#000";
         filterBtn_forDisplay.classList.toggle("bgred");
+        filterBtn_forDisplay.style.background = "#000";
 
         filterBtn_forDisplayText.style.color = "#fff";
         filterBtn_forDisplayText.style.width = "auto";
+        filterBtn_icn1.style.display = "flex";
       }
 
       if (
