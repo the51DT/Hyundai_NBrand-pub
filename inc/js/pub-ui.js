@@ -709,7 +709,6 @@ function DropdownFooter() {
 
 function checkScreenSize() {
   const screenWidth = window.innerWidth;
-
   if (screenWidth < 1024) {
     DropdownFooter();
   } else {
@@ -718,8 +717,10 @@ function checkScreenSize() {
       .classList.remove("dropdown-on");
   }
 }
-//window.onload = checkScreenSize;
-//window.onresize = checkScreenSize;
+checkScreenSize();
+
+// window.onload = checkScreenSize;
+// window.onresize = checkScreenSize;
 // 드롭다운(아코디언) 02 끝
 // 드롭다운(아코디언), 필터 컴포넌트 끝
 
