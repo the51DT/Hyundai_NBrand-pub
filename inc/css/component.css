@@ -2882,7 +2882,7 @@ input[type="radio"]:focus + label {
   padding: 17px 16px;
   border-radius: 4px;
 }
-.dropdown.centered .toggled {
+.dropdown.centered .bgred {
   background-color: #de3111;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;

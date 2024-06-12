@@ -622,11 +622,11 @@ dropdownBtns.forEach((button) => {
     );
 
     if (detectCase2) {
-      // detectCase2_selectBtn.classList.toggle("toggled");
+      detectCase2_selectBtn.classList.toggle("dropdown-on");
 
       // 필터: 스크린 사이즈 대응
       if (
-        detectCase2_selectBtn.classList.contains("toggled") &&
+        detectCase2_selectBtn.classList.contains("dropdown-on") &&
         screenWidth < 500
       ) {
         // backgroundEl.style.background =
@@ -637,14 +637,16 @@ dropdownBtns.forEach((button) => {
         filterBtn_forDisplay.style.padding = "17px 40px";
         filterBtn_icn1.style.display = "none";
       } else {
-        filterBtn_forDisplay.style.background = "#000";
+        // filterBtn_forDisplay.style.background = "#000";
+        filterBtn_forDisplay.classList.toggle("bgred");
+
         filterBtn_forDisplayText.style.color = "#fff";
         filterBtn_forDisplayText.style.width = "auto";
         // filterBtn_icn1.style.display = "inline-block";
       }
 
       if (
-        detectCase2_selectBtn.classList.contains("toggled") &&
+        detectCase2_selectBtn.classList.contains("dropdown-on") &&
         screenWidth > 500
       ) {
         filterBtn_forDisplay.style.background = "#de3111";
@@ -652,7 +654,7 @@ dropdownBtns.forEach((button) => {
         //   "url(../../../inc/images/icon/icon-arrow01_down_white.svg)";
       } else if (
         screenWidth > 1024 &&
-        !detectCase2_selectBtn.classList.contains("toggled")
+        !detectCase2_selectBtn.classList.contains("dropdown-on")
       ) {
         // backgroundEl.style.background =
         //   "url(../../../inc/images/icon/icon-arrow01_down_white.svg)";
