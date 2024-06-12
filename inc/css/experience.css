@@ -17,6 +17,9 @@ body {
   margin: 0 auto;
   padding-bottom: 40px;
 }
+.pc-only {
+  display: block;
+}
 .mo-only {
   display: none;
 }
@@ -1211,6 +1214,9 @@ body {
   .title-w1440 {
     max-width: 100%;
     padding-bottom: 28px;
+  }
+  .pc-only {
+    display: none;
   }
   .mo-only {
     display: block;
