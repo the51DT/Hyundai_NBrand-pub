@@ -193,8 +193,8 @@ input[type="radio"]:focus + label {
   bottom: -5px;
   left: 0;
 }
-.btn[class*="btn-only-icon"]:hover,
-.btn[class*="btn-only-icon"]:active {
+.btn:not(.btn-only-icon-notbg):hover,
+.btn:not(.btn-only-icon-notbg):active {
   background-color: #de3111;
 }
 .btn[class*="btn-only-icon-notbg"]:hover,
@@ -221,48 +221,48 @@ input[type="radio"]:focus + label {
   background: url(../../../inc/images/icon/icon-arrow01_left_red.svg);
   background-size: contain;
 }
-.btn[class*="btn-only-icon"]:hover [class*="icon-play"],
-.btn[class*="btn-only-icon"]:active [class*="icon-play"] {
+.btn:not(.btn-only-icon-notbg):hover [class*="icon-play"],
+.btn:not(.btn-only-icon-notbg):active [class*="icon-play"] {
   background: url(../../../inc/images/icon/icon-play_white.svg);
   background-size: contain;
 }
-.btn[class*="btn-only-icon"]:hover [class*="icon-pause"],
-.btn[class*="btn-only-icon"]:active [class*="icon-pause"] {
+.btn:not(.btn-only-icon-notbg):hover [class*="icon-pause"],
+.btn:not(.btn-only-icon-notbg):active [class*="icon-pause"] {
   background: url(../../../inc/images/icon/icon-pause_white.svg);
   background-size: contain;
 }
-.btn[class*="btn-only-icon"]:hover [class*="icon-soundon"],
-.btn[class*="btn-only-icon"]:active [class*="icon-soundon"] {
+.btn:not(.btn-only-icon-notbg):hover [class*="icon-soundon"],
+.btn:not(.btn-only-icon-notbg):active [class*="icon-soundon"] {
   background: url(../../../inc/images/icon/icon-soundon_white.svg);
   background-size: contain;
 }
-.btn[class*="btn-only-icon"]:hover [class*="icon-soundoff"],
-.btn[class*="btn-only-icon"]:active [class*="icon-soundoff"] {
+.btn:not(.btn-only-icon-notbg):hover [class*="icon-soundoff"],
+.btn:not(.btn-only-icon-notbg):active [class*="icon-soundoff"] {
   background: url(../../../inc/images/icon/icon-soundoff_white.svg);
   background-size: contain;
 }
-.btn[class*="btn-only-icon"]:hover [class*="icon-search"],
-.btn[class*="btn-only-icon"]:active [class*="icon-search"] {
+.btn:not(.btn-only-icon-notbg):hover [class*="icon-search"],
+.btn:not(.btn-only-icon-notbg):active [class*="icon-search"] {
   background: url(../../../inc/images/icon/icon-search_white.svg);
   background-size: contain;
 }
-.btn[class*="btn-only-icon"]:hover [class*="icon-copylink"],
-.btn[class*="btn-only-icon"]:active [class*="icon-copylink"] {
+.btn:not(.btn-only-icon-notbg):hover [class*="icon-copylink"],
+.btn:not(.btn-only-icon-notbg):active [class*="icon-copylink"] {
   background: url(../../../inc/images/icon/icon-copylink_white.svg);
   background-size: contain;
 }
-.btn[class*="btn-only-icon"]:hover [class*="icon-facebook"],
-.btn[class*="btn-only-icon"]:active [class*="icon-facebook"] {
+.btn:not(.btn-only-icon-notbg):hover [class*="icon-facebook"],
+.btn:not(.btn-only-icon-notbg):active [class*="icon-facebook"] {
   background: url(../../../inc/images/icon/icon-facebook_white.svg);
   background-size: contain;
 }
-.btn[class*="btn-only-icon"]:hover [class*="icon-instagram"],
-.btn[class*="btn-only-icon"]:active [class*="icon-instagram"] {
+.btn:not(.btn-only-icon-notbg):hover [class*="icon-instagram"],
+.btn:not(.btn-only-icon-notbg):active [class*="icon-instagram"] {
   background: url(../../../inc/images/icon/icon-instagram_white.svg);
   background-size: contain;
 }
-.btn[class*="btn-only-icon"]:hover [class*="icon-twitter"],
-.btn[class*="btn-only-icon"]:active [class*="icon-twitter"] {
+.btn:not(.btn-only-icon-notbg):hover [class*="icon-twitter"],
+.btn:not(.btn-only-icon-notbg):active [class*="icon-twitter"] {
   background: url(../../../inc/images/icon/icon-twitter_white.svg);
   background-size: contain;
 }
@@ -1437,11 +1437,22 @@ input[type="radio"]:focus + label {
 .card_type04 .card_profile .profile_des {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  width: calc(100% - 48px);
 }
 .card_type04 .card_profile .profile_des .profile_name {
   font-size: 14px;
   font-weight: 700;
   line-height: 19.6px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  max-height: calc(2.8em);
+  text-align: left;
+  width: 100%;
 }
 .card_type04 .card_profile .profile_des .profile_club {
   font-size: 12px;
@@ -4381,14 +4392,14 @@ p.text-num-chk {
   padding: 9px 32px 9px 8px;
   border-bottom: 4px solid #000;
   cursor: pointer;
-  width: 124px;
+  min-width: 124px;
   display: inline-block;
   position: relative;
   text-align: left;
 }
 .selectbox-trigger2 {
   padding: 27px 8px 23px;
-  width: 240px;
+  min-width: 240px;
   font-size: 32px;
   line-height: 44.8px;
 }
