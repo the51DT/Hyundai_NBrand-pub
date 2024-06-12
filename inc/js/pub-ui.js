@@ -345,7 +345,9 @@
       });
     },
     videoBulletChk: function (targetSwiper) {
-      var swiperActiveVideo = targetSwiper.find(".swiper-slide-active .kv-video-area video");
+      var swiperActiveVideo = targetSwiper.find(
+        ".swiper-slide-active .kv-video-area video"
+      );
       var testWidth = swiperActiveVideo[0].currentTime;
 
       if (swiperActiveVideo[0].currentTime == 0) {
@@ -491,7 +493,10 @@ $(".selectbox-trigger").click(function (event) {
   $options.toggle().attr("aria-hidden", function (i, attr) {
     return attr === "true" ? "false" : "true";
   });
-  $(".selectbox-wrap>div .selectbox-trigger").not(this).removeClass("active").attr("aria-expanded", "false");
+  $(".selectbox-wrap>div .selectbox-trigger")
+    .not(this)
+    .removeClass("active")
+    .attr("aria-expanded", "false");
   $(this)
     .toggleClass("active")
     .attr("aria-expanded", function () {
@@ -511,7 +516,10 @@ $(".selectbox-trigger").click(function (event) {
         }
         $(".selectbox-options li.moclose-btn button").click(function (event) {
           event.stopPropagation();
-          $(this).closest(".selectbox-wrap>div").find(".selectbox-trigger").removeClass("active"); // close 버튼 클릭 시 모든 tigger의 active가 제거
+          $(this)
+            .closest(".selectbox-wrap>div")
+            .find(".selectbox-trigger")
+            .removeClass("active"); // close 버튼 클릭 시 모든 tigger의 active가 제거
           $(this).closest(".selectbox-options").hide();
           $(".selectbox-overlay").hide();
         });
@@ -526,10 +534,24 @@ $(".selectbox-trigger").click(function (event) {
 $(".option").click(function (event) {
   event.stopPropagation();
   var selectedText = $(this).text();
-  $(this).closest(".selectbox-options").hide().attr("aria-hidden", "true").siblings(".selectbox-trigger").text(selectedText);
-  $(this).closest(".selectbox-options").find(".option").not(this).removeClass("active").attr("aria-selected", "false");
+  $(this)
+    .closest(".selectbox-options")
+    .hide()
+    .attr("aria-hidden", "true")
+    .siblings(".selectbox-trigger")
+    .text(selectedText);
+  $(this)
+    .closest(".selectbox-options")
+    .find(".option")
+    .not(this)
+    .removeClass("active")
+    .attr("aria-selected", "false");
   $(this).addClass("active").attr("aria-selected", "true");
-  $(this).closest(".selectbox-wrap>div").find(".selectbox-trigger").removeClass("active").attr("aria-expanded", "false");
+  $(this)
+    .closest(".selectbox-wrap>div")
+    .find(".selectbox-trigger")
+    .removeClass("active")
+    .attr("aria-expanded", "false");
   $(window)
     .resize(function () {
       if (window.innerWidth <= 1023) {
@@ -546,12 +568,17 @@ dropdownBtns.forEach((button) => {
   button.addEventListener("click", function () {
     const isExpanded = button.getAttribute("aria-expanded") === "true";
     const dropdownMenu = button.nextElementSibling;
+    const dropdownFilterBtn = button.parentElement;
+    const dropdownMenuFilter =
+      button.parentElement.parentElement.querySelector("dropdown-menu");
     // const btnRightArr = button
     //   .closest(".dropdown")
     //   .querySelector(".arrow-down");
     const btnRightArr = button
       .closest(".dropdown")
       .querySelector(".icon-down-wh");
+    const btnRightArrFilter =
+      button.parentElement.querySelector(".icon-down-wh");
 
     button.setAttribute("aria-expanded", String(!isExpanded));
     dropdownMenu.classList.toggle("dropdown-on", !isExpanded);
@@ -559,7 +586,7 @@ dropdownBtns.forEach((button) => {
 
     const dropdownCentered = button.closest(".dropdown");
     const detectCase1 = dropdownMenu.classList.contains("dropdown-on"); // 필터, 드롭다운 공통
-    const detectCase2 = dropdownCentered.classList.contains("centered"); // 필터 컴포넌트만
+    const detectCase2 = dropdownFilterBtn.classList.contains("centered"); // 필터 컴포넌트만
     const detectCase2_selectBtn = document.querySelector(
       ".dropdown.centered .wrap-dropdown-selected"
     ); // 필터 컴포넌트: 선택 버튼
@@ -573,6 +600,10 @@ dropdownBtns.forEach((button) => {
         dropdownMenu.classList.remove("dropdown-on");
         btnRightArr.classList.remove("rotate", detectCase1);
       });
+    }
+
+    if (detectCase2) {
+      btnRightArrFilter.classList.toggle("rotate", !isExpanded);
     }
 
     // 필터 모바일 대응
@@ -591,7 +622,7 @@ dropdownBtns.forEach((button) => {
     );
 
     if (detectCase2) {
-      detectCase2_selectBtn.classList.toggle("toggled");
+      // detectCase2_selectBtn.classList.toggle("toggled");
 
       // 필터: 스크린 사이즈 대응
       if (
@@ -609,7 +640,7 @@ dropdownBtns.forEach((button) => {
         filterBtn_forDisplay.style.background = "#000";
         filterBtn_forDisplayText.style.color = "#fff";
         filterBtn_forDisplayText.style.width = "auto";
-        filterBtn_icn1.style.display = "inline-block";
+        // filterBtn_icn1.style.display = "inline-block";
       }
 
       if (

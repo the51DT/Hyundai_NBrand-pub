@@ -1062,6 +1062,11 @@ min-width : 1024 css
   .wrap-dropdown-selected .btn.btn-only-icon-bg01-square {
     width: 1.5rem;
     height: 1.5rem;
+    display: flex;
+  }
+  .wrap-dropdown-selected .btn.btn-only-icon-bg01-square .icon-down-wh {
+    width: 14.4px;
+    height: 14.4px;
   }
   .dropdown-menu {
     display: none;
