@@ -617,6 +617,11 @@ input[type="radio"]:focus + label {
   background: url(../../../inc/images/icon/icon-control-bar.svg);
   background-size: contain;
 }
+.icon-check {
+  background: url(../../../inc/images/icon/icon-check.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 .btn:hover [class*="icon-download"],
 .btn:active [class*="icon-download"] {
   /* 빨간색 다운로드 icon 없어서 css로 임시 */
@@ -1513,7 +1518,7 @@ input[type="radio"]:focus + label {
 .card_video {
   width: 100%;
 }
-.card_video .card_img  {
+.card_video .card_img {
   position: relative;
   width: 100%;
   height: auto;
@@ -1577,13 +1582,13 @@ input[type="radio"]:focus + label {
   margin-top: 1.25rem;
   font-size: 1rem;
   font-weight: 500;
-  line-height: 140%
+  line-height: 140%;
 }
 
 /* swiper */
 .swiper {
   max-width: 1920px;
-  margin:0 auto;
+  margin: 0 auto;
 }
 .swiper-container {
   width: 100%;
@@ -2600,6 +2605,8 @@ input[type="radio"]:focus + label {
   .box-listChkRead {
   display: grid;
   grid-template-columns: auto 1fr;
+  align-items: center;
+  justify-content: center;
 }
 
 .wrap-list
@@ -2607,12 +2614,55 @@ input[type="radio"]:focus + label {
   .wrap-lists
   .list-box:nth-child(3)
   .box-listChkRead
-  svg {
-  width: 1rem;
-  height: 1rem;
+  span.icon-check {
   margin-right: 4px;
 }
 /* list07 ed */
+
+/* .wrap-list.list08 {
+  max-width: 326px;
+}
+
+.wrap-list.list08 .wrap-side-nav {
+  margin-top: 25px;
+}
+
+.wrap-list.list08 ul li {
+  border-top: 1px solid #d9d9d9;
+}
+
+.wrap-list.list08 ul li:last-child {
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.wrap-list.list08 ul li .box-side-nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 8px;
+}
+
+.wrap-list.list08 ul li .box-side-nav .tit-type05 {
+  color: #555;
+}
+
+.wrap-list.list08 .wrap-side-nav a.btn {
+  margin: 24px auto;
+  padding: 0 8px;
+  display: flex;
+  font-family: "Hyundai Sans Text";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+}
+
+.wrap-list.list08 .wrap-side-nav a.btn span.icon-right {
+  margin-left: 4px;
+} */
+
+/* list08 end*/
 
 .wrap-list .inner .btn-wrap.list-outerBtnWrap {
   display: flex;
@@ -2702,6 +2752,27 @@ input[type="radio"]:focus + label {
   height: 20px;
 }
 
+/* new dropdown btn start */
+.dropdown .wrap-dropdown-selected.dropdown-btn span.btn-only-icon-bg01-square {
+  margin-left: auto;
+  /* width: 20px;
+  height: 20px;
+  background: url(../../../inc/images/icon/icon-arrow01_down_white.svg)
+    rgba(0, 0, 0, 0.2); */
+  background: rgba(0, 0, 0, 0.2);
+}
+.dropdown
+  .wrap-dropdown-selected.dropdown-btn
+  span.btn-only-icon-bg01-square
+  span.icon-down-wh.rotate {
+  transform: rotate(180deg);
+}
+.dropdown .wrap-dropdown-selected.dropdown-btn .dropdown-btn-title {
+  display: flex;
+  align-items: center;
+}
+/* new dropdown btn end*/
+
 /* 필터(.dropdown.centered) */
 .dropdown.centered .dropdown-menu ul.wrap-filter {
   padding: 0 40px;
@@ -2786,6 +2857,31 @@ input[type="radio"]:focus + label {
   padding: 0 0;
 }
 
+.dropdown.centered {
+  width: 100%;
+}
+
+.dropdown.centered .wrap-dropdown-selected {
+  display: flex;
+  justify-content: center;
+}
+
+.dropdown.centered .wrap-dropdown-selected span:nth-child(1) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.dropdown.centered span.txt-type02 {
+  color: #fff;
+  margin-left: 8px;
+}
+
+.dropdown.centered .wrap-dropdown-selected .icon-down-wh.rotate {
+  transform: rotate(180deg);
+}
+
 /* 필터 셀렉트 박스 시작*/
 .dropdown.centered
   .dropdown-menu
@@ -2801,7 +2897,7 @@ input[type="radio"]:focus + label {
   padding: 17px 16px;
   border-radius: 4px;
 }
-.dropdown.centered .toggled {
+.dropdown.centered .bgred {
   background-color: #de3111;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
@@ -3212,7 +3308,12 @@ input[type="radio"]:focus + label {
   justify-content: center;
 }
 
-.dropdown.centered .dropdown-menu .wrap-category-result .wrap-result-nums button.btn[class*="-primary"] [class*="btn-icon20"] {
+.dropdown.centered
+  .dropdown-menu
+  .wrap-category-result
+  .wrap-result-nums
+  button.btn[class*="-primary"]
+  [class*="btn-icon20"] {
   margin: 0 8px 0 0;
   display: flex;
   align-items: center;
@@ -3227,6 +3328,7 @@ input[type="radio"]:focus + label {
 .dropdown.inMobile {
   display: flex;
   justify-content: space-between;
+  background: transparent;
 }
 .dropdown.inMobile .accor02-wrap .accor02-header button {
   display: none;
@@ -3235,6 +3337,7 @@ input[type="radio"]:focus + label {
   width: 100%;
   background: #000;
   color: #fff;
+  border: none;
 }
 
 .dropdown.inMobile .accor02-wrap .accor02-header {
@@ -3740,8 +3843,8 @@ input[type="radio"]:focus + label {
   .dropdown .wrap-dropdown-selected span.icon-down-wh.rotate {
     transform: rotate(180deg);
     background-position: center;
-    width: 24px;
-    height: 24px;
+    /* width: 24px;
+    height: 24px; */
     background-size: contain;
   }
   .dropdown.centered .dropdown-menu li .wrap-category,
@@ -4083,7 +4186,7 @@ p.text-num-chk {
 
 /* comment-type04 */
 .wrap-form .wrap-form-bottom.comment-type04 ul li {
-  margin: 15px 0;
+  margin: 0 0 15px;
 }
 
 /* textarea */
@@ -4256,6 +4359,9 @@ p.text-num-chk {
 }
 
 /* cont 11 : 폼 인풋 - 파일 첨부 */
+.wrap-form.attach {
+  margin-top: 8px;
+}
 .wrap-form.attach .upload-btn {
   cursor: pointer;
   display: flex;

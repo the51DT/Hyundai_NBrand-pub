@@ -345,7 +345,9 @@
       });
     },
     videoBulletChk: function (targetSwiper) {
-      var swiperActiveVideo = targetSwiper.find(".swiper-slide-active .kv-video-area video");
+      var swiperActiveVideo = targetSwiper.find(
+        ".swiper-slide-active .kv-video-area video"
+      );
       var testWidth = swiperActiveVideo[0].currentTime;
 
       if (swiperActiveVideo[0].currentTime == 0) {
@@ -491,7 +493,10 @@ $(".selectbox-trigger").click(function (event) {
   $options.toggle().attr("aria-hidden", function (i, attr) {
     return attr === "true" ? "false" : "true";
   });
-  $(".selectbox-wrap>div .selectbox-trigger").not(this).removeClass("active").attr("aria-expanded", "false");
+  $(".selectbox-wrap>div .selectbox-trigger")
+    .not(this)
+    .removeClass("active")
+    .attr("aria-expanded", "false");
   $(this)
     .toggleClass("active")
     .attr("aria-expanded", function () {
@@ -511,7 +516,10 @@ $(".selectbox-trigger").click(function (event) {
         }
         $(".selectbox-options li.moclose-btn button").click(function (event) {
           event.stopPropagation();
-          $(this).closest(".selectbox-wrap>div").find(".selectbox-trigger").removeClass("active"); // close 버튼 클릭 시 모든 tigger의 active가 제거
+          $(this)
+            .closest(".selectbox-wrap>div")
+            .find(".selectbox-trigger")
+            .removeClass("active"); // close 버튼 클릭 시 모든 tigger의 active가 제거
           $(this).closest(".selectbox-options").hide();
           $(".selectbox-overlay").hide();
         });
@@ -526,10 +534,24 @@ $(".selectbox-trigger").click(function (event) {
 $(".option").click(function (event) {
   event.stopPropagation();
   var selectedText = $(this).text();
-  $(this).closest(".selectbox-options").hide().attr("aria-hidden", "true").siblings(".selectbox-trigger").text(selectedText);
-  $(this).closest(".selectbox-options").find(".option").not(this).removeClass("active").attr("aria-selected", "false");
+  $(this)
+    .closest(".selectbox-options")
+    .hide()
+    .attr("aria-hidden", "true")
+    .siblings(".selectbox-trigger")
+    .text(selectedText);
+  $(this)
+    .closest(".selectbox-options")
+    .find(".option")
+    .not(this)
+    .removeClass("active")
+    .attr("aria-selected", "false");
   $(this).addClass("active").attr("aria-selected", "true");
-  $(this).closest(".selectbox-wrap>div").find(".selectbox-trigger").removeClass("active").attr("aria-expanded", "false");
+  $(this)
+    .closest(".selectbox-wrap>div")
+    .find(".selectbox-trigger")
+    .removeClass("active")
+    .attr("aria-expanded", "false");
   $(window)
     .resize(function () {
       if (window.innerWidth <= 1023) {
@@ -546,12 +568,17 @@ dropdownBtns.forEach((button) => {
   button.addEventListener("click", function () {
     const isExpanded = button.getAttribute("aria-expanded") === "true";
     const dropdownMenu = button.nextElementSibling;
+    const dropdownFilterBtn = button.parentElement;
+    const dropdownMenuFilter =
+      button.parentElement.parentElement.querySelector("dropdown-menu");
     // const btnRightArr = button
     //   .closest(".dropdown")
     //   .querySelector(".arrow-down");
     const btnRightArr = button
       .closest(".dropdown")
       .querySelector(".icon-down-wh");
+    const btnRightArrFilter =
+      button.parentElement.querySelector(".icon-down-wh");
 
     button.setAttribute("aria-expanded", String(!isExpanded));
     dropdownMenu.classList.toggle("dropdown-on", !isExpanded);
@@ -559,7 +586,7 @@ dropdownBtns.forEach((button) => {
 
     const dropdownCentered = button.closest(".dropdown");
     const detectCase1 = dropdownMenu.classList.contains("dropdown-on"); // 필터, 드롭다운 공통
-    const detectCase2 = dropdownCentered.classList.contains("centered"); // 필터 컴포넌트만
+    const detectCase2 = dropdownFilterBtn.classList.contains("centered"); // 필터 컴포넌트만
     const detectCase2_selectBtn = document.querySelector(
       ".dropdown.centered .wrap-dropdown-selected"
     ); // 필터 컴포넌트: 선택 버튼
@@ -571,8 +598,14 @@ dropdownBtns.forEach((button) => {
     if (detectCase1 && !detectCase2) {
       dropdownMenu.addEventListener("click", function () {
         dropdownMenu.classList.remove("dropdown-on");
+        dropdownMenu.setAttribute("aria-hidden", "true");
+        button.setAttribute("aria-expanded", "false");
         btnRightArr.classList.remove("rotate", detectCase1);
       });
+    }
+
+    if (detectCase2) {
+      btnRightArrFilter.classList.toggle("rotate", !isExpanded);
     }
 
     // 필터 모바일 대응
@@ -581,21 +614,20 @@ dropdownBtns.forEach((button) => {
       ".dropdown.centered .wrap-dropdown-selected .icon-down-wh"
     );
     const filterBtn_icn1 = document.querySelector(
-      ".dropdown.centered .wrap-dropdown-selected .dropdown-selected-inner .icon-control-bar"
+      ".dropdown.centered .wrap-dropdown-selected span:nth-child(1) span.icon-control-bar"
     );
     const filterBtn_forDisplay = document.querySelector(
       ".dropdown.centered .wrap-dropdown-selected"
     );
     const filterBtn_forDisplayText = document.querySelector(
-      ".dropdown.centered .wrap-dropdown-selected .dropdown-btn"
+      ".dropdown.centered span.txt-type02"
     );
 
     if (detectCase2) {
-      detectCase2_selectBtn.classList.toggle("toggled");
-
+      detectCase2_selectBtn.classList.toggle("dropdown-on");
       // 필터: 스크린 사이즈 대응
       if (
-        detectCase2_selectBtn.classList.contains("toggled") &&
+        detectCase2_selectBtn.classList.contains("dropdown-on") &&
         screenWidth < 500
       ) {
         // backgroundEl.style.background =
@@ -606,25 +638,24 @@ dropdownBtns.forEach((button) => {
         filterBtn_forDisplay.style.padding = "17px 40px";
         filterBtn_icn1.style.display = "none";
       } else {
+        // filterBtn_forDisplay.style.background = "#000";
+        filterBtn_forDisplay.classList.toggle("bgred");
         filterBtn_forDisplay.style.background = "#000";
+
         filterBtn_forDisplayText.style.color = "#fff";
         filterBtn_forDisplayText.style.width = "auto";
-        filterBtn_icn1.style.display = "inline-block";
+        filterBtn_icn1.style.display = "flex";
       }
 
       if (
-        detectCase2_selectBtn.classList.contains("toggled") &&
+        detectCase2_selectBtn.classList.contains("dropdown-on") &&
         screenWidth > 500
       ) {
         filterBtn_forDisplay.style.background = "#de3111";
-        // backgroundEl.style.background =
-        //   "url(../../../inc/images/icon/icon-arrow01_down_white.svg)";
       } else if (
         screenWidth > 1024 &&
-        !detectCase2_selectBtn.classList.contains("toggled")
+        !detectCase2_selectBtn.classList.contains("dropdown-on")
       ) {
-        // backgroundEl.style.background =
-        //   "url(../../../inc/images/icon/icon-arrow01_down_white.svg)";
       }
     }
   });
@@ -633,7 +664,9 @@ dropdownBtns.forEach((button) => {
 // 드롭다운(아코디언), 필터 컴포넌트: 리스트를 클릭할 시 상단 버튼에 클릭한 리스트의 텍스트를 반영
 function selectOption(event, optionText) {
   event.preventDefault();
-  const btnTxtWrap = document.querySelector(".dropdown-btn");
+  const btnTxtWrap = document.querySelector(
+    ".dropdown .wrap-dropdown-selected.dropdown-btn .dropdown-btn-title span.text"
+  );
   btnTxtWrap.innerText = optionText;
 }
 // 드롭다운(아코디언), 필터 컴포넌트 끝
@@ -646,11 +679,12 @@ const accor02List = document.querySelectorAll(
   ".dropdown.inMobile .accor02-wrap ul"
 );
 
+// 기획서, 시안에 없어 임의로 다중 토글 적용
 function DropdownFooter() {
   document
     .querySelectorAll(".dropdown.inMobile .accor02-wrap")
     .forEach((wrapper) => {
-      wrapper.addEventListener("click", function (event) {
+      wrapper.addEventListener("click", function () {
         const button = this.querySelector(".accor02-header button");
         const dropdownMenu = this.querySelector("ul");
 
@@ -676,7 +710,6 @@ function DropdownFooter() {
 
 function checkScreenSize() {
   const screenWidth = window.innerWidth;
-
   if (screenWidth < 1024) {
     DropdownFooter();
   } else {
@@ -685,8 +718,10 @@ function checkScreenSize() {
       .classList.remove("dropdown-on");
   }
 }
-//window.onload = checkScreenSize;
-//window.onresize = checkScreenSize;
+checkScreenSize();
+
+// window.onload = checkScreenSize;
+// window.onresize = checkScreenSize;
 // 드롭다운(아코디언) 02 끝
 // 드롭다운(아코디언), 필터 컴포넌트 끝
 
