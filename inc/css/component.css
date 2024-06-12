@@ -2756,6 +2756,10 @@ input[type="radio"]:focus + label {
   span.icon-down-wh.rotate {
   transform: rotate(180deg);
 }
+.dropdown .wrap-dropdown-selected.dropdown-btn .dropdown-btn-title {
+  display: flex;
+  align-items: center;
+}
 /* new dropdown btn end*/
 
 /* 필터(.dropdown.centered) */
@@ -3313,6 +3317,7 @@ input[type="radio"]:focus + label {
 .dropdown.inMobile {
   display: flex;
   justify-content: space-between;
+  background: transparent;
 }
 .dropdown.inMobile .accor02-wrap .accor02-header button {
   display: none;
@@ -3321,6 +3326,7 @@ input[type="radio"]:focus + label {
   width: 100%;
   background: #000;
   color: #fff;
+  border: none;
 }
 
 .dropdown.inMobile .accor02-wrap .accor02-header {
@@ -3826,8 +3832,8 @@ input[type="radio"]:focus + label {
   .dropdown .wrap-dropdown-selected span.icon-down-wh.rotate {
     transform: rotate(180deg);
     background-position: center;
-    width: 24px;
-    height: 24px;
+    /* width: 24px;
+    height: 24px; */
     background-size: contain;
   }
   .dropdown.centered .dropdown-menu li .wrap-category,

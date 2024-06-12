@@ -598,6 +598,8 @@ dropdownBtns.forEach((button) => {
     if (detectCase1 && !detectCase2) {
       dropdownMenu.addEventListener("click", function () {
         dropdownMenu.classList.remove("dropdown-on");
+        dropdownMenu.setAttribute("aria-hidden", "true");
+        button.setAttribute("aria-expanded", "false");
         btnRightArr.classList.remove("rotate", detectCase1);
       });
     }
@@ -623,7 +625,6 @@ dropdownBtns.forEach((button) => {
 
     if (detectCase2) {
       detectCase2_selectBtn.classList.toggle("dropdown-on");
-
       // 필터: 스크린 사이즈 대응
       if (
         detectCase2_selectBtn.classList.contains("dropdown-on") &&
@@ -642,7 +643,6 @@ dropdownBtns.forEach((button) => {
 
         filterBtn_forDisplayText.style.color = "#fff";
         filterBtn_forDisplayText.style.width = "auto";
-        // filterBtn_icn1.style.display = "inline-block";
       }
 
       if (
@@ -650,14 +650,10 @@ dropdownBtns.forEach((button) => {
         screenWidth > 500
       ) {
         filterBtn_forDisplay.style.background = "#de3111";
-        // backgroundEl.style.background =
-        //   "url(../../../inc/images/icon/icon-arrow01_down_white.svg)";
       } else if (
         screenWidth > 1024 &&
         !detectCase2_selectBtn.classList.contains("dropdown-on")
       ) {
-        // backgroundEl.style.background =
-        //   "url(../../../inc/images/icon/icon-arrow01_down_white.svg)";
       }
     }
   });
@@ -666,7 +662,9 @@ dropdownBtns.forEach((button) => {
 // 드롭다운(아코디언), 필터 컴포넌트: 리스트를 클릭할 시 상단 버튼에 클릭한 리스트의 텍스트를 반영
 function selectOption(event, optionText) {
   event.preventDefault();
-  const btnTxtWrap = document.querySelector(".dropdown-btn");
+  const btnTxtWrap = document.querySelector(
+    ".dropdown .wrap-dropdown-selected.dropdown-btn .dropdown-btn-title span.text"
+  );
   btnTxtWrap.innerText = optionText;
 }
 // 드롭다운(아코디언), 필터 컴포넌트 끝
@@ -679,11 +677,12 @@ const accor02List = document.querySelectorAll(
   ".dropdown.inMobile .accor02-wrap ul"
 );
 
+// 기획서, 시안에 없어 임의로 다중 토글 적용
 function DropdownFooter() {
   document
     .querySelectorAll(".dropdown.inMobile .accor02-wrap")
     .forEach((wrapper) => {
-      wrapper.addEventListener("click", function (event) {
+      wrapper.addEventListener("click", function () {
         const button = this.querySelector(".accor02-header button");
         const dropdownMenu = this.querySelector("ul");
 

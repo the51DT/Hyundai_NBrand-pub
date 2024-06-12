@@ -1117,6 +1117,10 @@ min-width : 1024 css
   .dropdown.inMobile .accor02-wrap .accor02-header button {
     display: flex;
   }
+  .dropdown.inMobile .accor02-wrap .accor02-header button:hover,
+  .dropdown.inMobile .accor02-wrap .accor02-header button:active {
+    background-color: transparent;
+  }
   .dropdown.inMobile .accor02-wrap .accor02-header button .arrow-down {
     display: flex;
     align-items: center;
@@ -1146,6 +1150,9 @@ min-width : 1024 css
   /* dropdown add */
   .wrap-dropdown-selected {
     justify-content: space-between;
+  }
+  .wrap-dropdown-selected .dropdown-btn-title span.icon-right {
+    display: none;
   }
   .dropdown.centered .dropdown-menu .selectbox-options .option {
     border-bottom: none;
