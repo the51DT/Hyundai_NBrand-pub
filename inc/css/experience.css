@@ -1,8 +1,4 @@
 @charset "utf-8";
-/* reset에서 hidden 되어있어서 */
-body {
-  overflow: auto;
-}
 /* Experience  common */
 .content-top {
   padding: 140px 0;
