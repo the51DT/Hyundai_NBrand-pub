@@ -981,6 +981,7 @@ input[type="radio"]:focus + label {
   min-height: 28.5rem;
   max-height: 40.25rem;
   font-family: "Hyundai Sans Head";
+  overflow: hidden;
 }
 .card_type01.card_swiper {
   min-height: 16.3rem;
@@ -1033,7 +1034,9 @@ input[type="radio"]:focus + label {
 .card_type01.card_swiper .card_profile img {
   width: 13rem;
 }
-.card_type01.card_swiper:hover .card_profile img {
+.card_type01.card_swiper:hover .card_profile img,
+.card_type01.card_swiper:active .card_profile img,
+.card_type01.card_swiper:focus .card_profile img {
   margin-bottom: -0.75rem;
 }
 .card_type01 .card_rank {
@@ -1119,7 +1122,9 @@ input[type="radio"]:focus + label {
   line-height: 140%;
   text-align: right;
 }
-.card_type01:hover .card_more {
+.card_type01:hover .card_more,
+.card_type01:active .card_more,
+.card_type01:focus .card_more {
   clip-path: none;
   width: 100%;
   height: auto;
@@ -1164,7 +1169,9 @@ input[type="radio"]:focus + label {
   width: 13rem;
   height: 13rem;
 }
-.grid_mo_drop .card_type01:hover .card_profile img {
+.grid_mo_drop .card_type01:hover .card_profile img,
+.grid_mo_drop .card_type01:active .card_profile img,
+.grid_mo_drop .card_type01:focus .card_profile img {
   margin-bottom: -0.75rem;
 }
 .grid_mo_drop .card_type01.card_team .card_profile {
@@ -1174,7 +1181,9 @@ input[type="radio"]:focus + label {
 .grid_mo_drop .card_type01.card_team .card_profile img {
   width: 17.5rem;
 }
-.grid_mo_drop .card_type01.card_team:hover .card_profile img {
+.grid_mo_drop .card_type01.card_team:hover .card_profile img,
+.grid_mo_drop .card_type01.card_team:active .card_profile img,
+.grid_mo_drop .card_type01.card_team:focus .card_profile img {
   margin-bottom: 0;
 }
 .grid_mo_drop .card_type01 .card_rank {
@@ -1565,7 +1574,9 @@ input[type="radio"]:focus + label {
   width: 7.5rem;
   height: 7.5rem;
 }
-.card_video:hover .card_play {
+.card_video:hover .card_play,
+.card_video:active .card_play,
+.card_video:focus .card_play {
   background-image: url("../../inc/images/icon/icon-play-video-hover.svg");
 }
 .grid_2 .card_video .card_img {
@@ -4657,10 +4668,15 @@ input:checked + .slider:before {
 }
 
 .search-small .search-input-box input {
+  order: 1;
   font-size: 1rem;
   font-weight: 500;
   line-height: 140%;
   background: none;
+}
+
+.search-small .search-input-box .clear-text {
+  order: 2;
 }
 
 .search-small .search-input-box input::placeholder {
