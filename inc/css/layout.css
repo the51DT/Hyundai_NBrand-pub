@@ -1,8 +1,13 @@
 @charset "utf-8";
-/* body {
-  background: #555;
-} */
+body {
+  overflow-y: auto;
+  height: 100vh;
+  width: 100vw;
+}
 .wrap {
+}
+body:-webkit-scrollbar {
+  opacity: 0;
 }
 .wrap * {
 }
@@ -11,11 +16,22 @@
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 999;
+  z-index: 1000;
   background: #000;
   opacity: 0.5;
-  width: 100vh;
+  width: 100vw;
   height: 100vh;
+}
+.ani-dimmed {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  background: #000;
+  opacity: 0.5;
+  width: 100vw;
+  height: 100vh;
+  transition: width 0.3s;
 }
 /* 본문 바로가기 */
 .skip-navigation {
@@ -276,21 +292,20 @@
 /* gnb 1dep cont*/
 .gnb__tab-cont-wrap [class*="gnb__tab-cont"] {
   display: none;
-  width: 100vw;
-  padding: 48px 24px 60px;
+  width: 100%;
+  padding: 48px 24px 60px 24px;
 }
 .gnb__tab-cont-wrap [class*="gnb__tab-cont"].on {
   display: flex;
   gap: 30px;
 }
 .gnb__tab-cont-wrap [class*="gnb__tab-cont"] > * {
-  flex: 0 0 50%;
+  flex: 1;
 }
 .gnb__tab-cont-wrap .gnb__tab02-btn {
 }
 .gnb__tab-cont-wrap .gnb-content__dep2 {
   position: relative;
-  height: 524px;
   overflow: hidden;
 }
 
@@ -301,7 +316,7 @@
 }
 .gnb-content__dep2 .img-area img {
   width: auto;
-  position: absolute;
+  position: relative;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -491,6 +506,50 @@
   margin-top: -2px;
 }
 
+/* -popup */
+.popup {
+  position: absolute;
+}
+
+/* bottom-popup */
+.bottom-popup {
+  top: 50%;
+  left: 50%;
+  background: #fff;
+  width: calc(100% - 40px);
+  max-width: 500px;
+  z-index: 1001;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+/* model-popup */
+.model-popup {
+  top: 50%;
+  left: 50%;
+  background: #fff;
+  width: calc(100% - 40px);
+  max-width: 960px;
+  z-index: 1001;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+/* side-popup */
+.side-popup {
+  right: 100%;
+  top: 0;
+  width: 100px;
+  height: 100vh;
+  background: #fff;
+  display: none;
+  transition: right 0.2s 1s;
+  z-index: 1001;
+}
+
+.side-popup.on {
+  right: 0;
+}
+
 @media screen and (max-width: 1200px) and (min-width: 1024px) {
   .gnb__panel02 .link-area {
     flex-direction: column;
@@ -500,7 +559,6 @@
 }
 
 @keyframes fadein {
-  /* 효과를 동작시간 동안 0 ~ 1까지 */
   0% {
     display: block;
     opacity: 0;
@@ -511,7 +569,6 @@
 }
 
 @keyframes fadeout {
-  /* 효과를 동작시간 동안 0 ~ 1까지 */
   0% {
     opacity: 1;
   }
@@ -520,9 +577,26 @@
     display: none;
   }
 }
+@keyframes bottomSlideDown {
+  0% {
+    bottom: -100%;
+  }
+  100% {
+    bottom: 0%;
+  }
+}
+
+@keyframes bottomSlideUp {
+  0% {
+    bottom: 0;
+  }
+  100% {
+    bottom: -100%;
+    display: none;
+  }
+}
 
 @keyframes gnb {
-  /* 효과를 동작시간 동안 0 ~ 1까지 */
   0% {
     display: block;
     opacity: 0;
@@ -533,7 +607,6 @@
 }
 
 @keyframes fadeout {
-  /* 효과를 동작시간 동안 0 ~ 1까지 */
   0% {
     opacity: 1;
   }

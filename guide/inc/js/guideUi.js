@@ -258,4 +258,14 @@ $(function () {
   pathApp.$pathTbl = pathApp.$body.find(".pathTbl");
   pathApp.$dep1 = pathApp.$pathTbl.find(".dep1");
   pathApp.initPath();
+  // $(".mark-wrap li").click(function () {
+  //   dataClickClass = $(this).find("span").attr("class");
+  //   $(".pathTbl tbody tr").hide();
+  //   $(".check span").each(function () {
+  //     dataClass = $(this).attr("class");
+  //     if (dataClass == dataClickClass) {
+  //       $(this).parents("tr").show();
+  //     }
+  //   });
+  // });
 });
