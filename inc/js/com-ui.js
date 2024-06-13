@@ -5,6 +5,7 @@ if ($.isFunction("checkCommonJs")) {
 /* 퍼블리셔 JS 셋팅 */
 $(document).ready(function () {
   NbrandUI.headerNav(".nav-btn", ".nav-wrap", ".header-wrap");
+  NbrandUI.headerNav(".nav-btn", ".nav-wrap", ".header-wrap");
   NbrandUI.modalOpen(".pop-open");
   NbrandUI.modalClose(".pop-close");
   // NbrandUI.inputClear(".input-del");
@@ -14,9 +15,9 @@ let $win_W = $(window).width();
 $(window).resize(function () {
   $win_W = $(window).width();
   // location.reload(true);
-  if (NbrandUI.windowSize() && $(".dimmed").length) {
-    $("body").find(".dimmed").remove();
-  }
+  // if (NbrandUI.windowSize() && $(".dimmed").length) {
+  //   $("body").find(".dimmed").remove();
+  // }
 });
 
 var NbrandUI = {
@@ -43,10 +44,6 @@ var NbrandUI = {
     eventCont = $(com);
     eventParent = $(par);
     tparent = eventParent.find(".sitemap-wrap");
-    Nbrand.uiFocusTab({
-      selector: tparent,
-      type: "hold",
-    });
 
     function event() {
       $(obj)
@@ -56,11 +53,50 @@ var NbrandUI = {
           eventParent.toggleClass("menu-on");
           NbrandUI.toggleBtn();
           if (eventItem.hasClass("on")) {
-            eventCont.attr("aria-hidden", "false");
+            Nbrand.uiFocusTab({
+              selector: tparent,
+              type: "hold",
+            });
           } else {
             eventCont.attr("aria-hidden", "true");
+            tparent.children(".ui-fctab-s").remove();
+            tparent.children(".ui-fctab-e").remove();
           }
         });
+    }
+    event();
+  },
+  headerNav2Dep: function (obj, com, par) {
+    if (!NbrandUI.checkObj(obj)) {
+      return;
+    }
+
+    eventCont = $(com);
+    eventParent = $(par);
+    tparent = eventParent.find(".sitemap-wrap");
+
+    function event() {
+      $(obj)
+        .off("click")
+        .on("click", function () {});
+      // depth2
+      $(".gnb__tab-btn-wrap button").click(function () {
+        gnbButton = $(this);
+        gnbButtonData = $(this).attr("aria-controls");
+        gnbPanel = $(".gnb__tab-cont-wrap");
+        gnbPanelTarget = gnbPanel.find(
+          '[class*="gnb__tab-cont"]#' + gnbButtonData + '"]'
+        );
+        gnbEventArea = $(".header__event-wrap");
+        gnbButton.parent().siblings().find("button").removeClass("on");
+        gnbButton.toggleClass("on");
+        gnbPanelTarget.toggleClass("on").siblings().removeClass("on");
+        if (!gnbButton.hasClass("on")) {
+          gnbEventArea.removeClass("hide");
+        } else {
+          gnbEventArea.addClass("hide");
+        }
+      });
     }
     event();
   },
@@ -208,6 +244,7 @@ var NbrandUI = {
               }, 300);
               break;
             default:
+              closeWrap.removeClass("on").stop().fadeOut(300);
               $(".dimmed").stop().fadeOut(300);
               setTimeout(function () {
                 NbrandUI.dimdOff();

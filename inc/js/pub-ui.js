@@ -156,6 +156,10 @@ var pubUi = {
             targetBulletActive.css("--time", `${range}px`);
             // console.log(range);
           } else {
+<<<<<<< Updated upstream
+=======
+            console.log("이미지");
+>>>>>>> Stashed changes
             targetBulletActive.css("--time", "84px");
           }
         },
@@ -379,6 +383,11 @@ var pubUi = {
         // targetBulletActive.css("--time", range);
         console.dir(swiperActiveVideo[0]);
       }
+<<<<<<< Updated upstream
+=======
+    } else {
+      console.log("이미지");
+>>>>>>> Stashed changes
     }
   },
   tabBtnEvent: function (e, tabContainer) {
