@@ -266,23 +266,18 @@
           <div class="content-item03">
             <div class="popup-wrapper modal">
               <div class="dropdown centered">
-                <div
-                  class="wrap-dropdown-selected"
+                <button
+                  class="wrap-dropdown-selected dropdown-btn"
                   aria-haspopup="true"
                   aria-expanded="false"
                 >
-                  <div class="dropdown-selected-inner">
-                    <span
-                      class="btn-icon24 icon-control-bar"
-                      aria-hidden="true"
-                    ></span>
-                    <button class="dropdown-btn">Search Filter</button>
-                  </div>
+                  <i class="btn-icon24 icon-control-bar" aria-hidden="true"></i>
+                  <span class="txt-type02">Search Filter</span>
                   <span
                     class="btn-icon20 icon-down-wh"
                     aria-hidden="true"
                   ></span>
-                </div>
+                </button>
                 <div class="dropdown-menu" role="menu" aria-hidden="true">
                   <ul class="wrap-filter">
                     <!-- 상단영역 시작  -->
@@ -2643,6 +2638,17 @@
                 </div>
               </div>
               <div class="popup-body">
+                <!---->
+                <div class="wrap-popup-profile">
+                  <div class="box-profile-img">
+                    <img
+                      src="../../../../inc/images/img/img_hub_profile_manager.png"
+                      alt="프로필 이미지"
+                    />
+                  </div>
+                  <p class="txt-type04">Hyundai N</p>
+                </div>
+                <!---->
                 <div class="wrap-label-reward">
                   <div class="label-box">
                     <p class="txt-type02">N Community Master</p>
@@ -2665,9 +2671,9 @@
 
                   <div class="wrap-hashtag-reward">
                     <div class="hashtags">
-                      <p class="txt-type04">#testminiature</p>
-                      <p class="txt-type04">#newcar</p>
-                      <p class="txt-type04">#ceremony</p>
+                      <a href="" class="txt-type04">#testminiature</a>
+                      <a href="" class="txt-type04">#newcar</a>
+                      <a href="" class="txt-type04">#ceremony</a>
                     </div>
 
                     <p class="txt-type04 wrap-date">03.28.2024</p>
@@ -2676,6 +2682,9 @@
 
                 <!-- 하단 코멘트 시작 -->
                 <div class="wrap-form textarea">
+                  <p class="title-comment">
+                    Comments <span class="num-comments">1,234</span>
+                  </p>
                   <div class="inner-textarea-comment">
                     <textarea
                       placeholder="Please enter comment content"
@@ -2683,9 +2692,9 @@
                     <button
                       type="button"
                       class="btn btn-lg-primary01"
-                      aria-label="Label Name Button"
+                      aria-label="Register Button"
                     >
-                      comment
+                      Register
                     </button>
                   </div>
                   <div class="wrap-form-bottom comment-type02">
@@ -2705,7 +2714,6 @@
                         </span>
                       </p>
                     </div>
-
                     <p class="text-num-chk">
                       <span>0 / 500</span>
                     </p>
@@ -2714,25 +2722,110 @@
                 <!-- 하단 코멘트 끝 -->
 
                 <div class="wrap-comment">
-                  <div class="box-comment">
-                    <img />
-                    <div>
-                      <p>1</p>
-                      <p>2</p>
+                  <div class="box-userinfo">
+                    <div class="wrap-popup-profile">
+                      <div class="box-profile-img">
+                        <img
+                          src="../../../../inc/images/img/img_hub_profile_manager.png"
+                          alt="프로필 이미지"
+                        />
+                      </div>
+                      <div class="box-profile-txt">
+                        <div>
+                          <p class="txt-type04">i20n.mrs1step</p>
+                          <button
+                            type="button"
+                            class="btn btn-only-icon-bg01-circle"
+                            aria-label="close button"
+                          >
+                            <span class="visually-hidden">close button</span>
+                            <span
+                              class="btn-icon16 icon-close-wh"
+                              aria-hidden="true"
+                            ></span>
+                          </button>
+                        </div>
+                        <p class="txt-type04 light">i30N_Club</p>
+                      </div>
                     </div>
-                    <p>close btn</p>
+                  </div>
+
+                  <div class="box-comment">
+                    <p>blah</p>
+                  </div>
+
+                  <div class="box-date">
+                    <p class="txt-type05">03.13.2024</p>
+
+                    <span
+                      class="btn-icon20 icon-trans"
+                      aria-hidden="true"
+                    ></span>
+                  </div>
+                </div>
+
+                <div class="wrap-comment">
+                  <div class="box-userinfo">
+                    <div class="wrap-popup-profile">
+                      <div class="box-profile-img">
+                        <img
+                          src="../../../../inc/images/img/img_hub_profile_manager.png"
+                          alt="프로필 이미지"
+                        />
+                      </div>
+                      <div class="box-profile-txt">
+                        <div>
+                          <p class="txt-type04">i20n.mrs1step</p>
+                          <button
+                            type="button"
+                            class="btn btn-only-icon-bg01-circle"
+                            aria-label="close button"
+                          >
+                            <span class="visually-hidden">close button</span>
+                            <span
+                              class="btn-icon16 icon-close-wh"
+                              aria-hidden="true"
+                            ></span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="box-comment">
+                    <p>
+                      Okay hear me out!!! Hyundai release an N version of the
+                      sonata that’s AWD beautiful dual exhaust tips like an RS7
+                      and produces at least 450HP twin turbo V6 or an 2.5L
+                      turbocharged tuned right? The sonata N-line is cool but I
+                      feel like a Sonata N needs to make face. Okay hear me
+                      out!!! Hyundai release an N version of the sonata that’s
+                      AWD beautiful dual exhaust tips like an RS7 and produces
+                      at least 450HP twin turbo V6 or an 2.5L turbocharged tuned
+                      right? The sonata N-line is cool but I feel like a Sonata
+                      N needs to make face.
+                    </p>
+                  </div>
+
+                  <div class="box-date">
+                    <p class="txt-type05">03.13.2024</p>
+
+                    <span
+                      class="btn-icon20 icon-trans"
+                      aria-hidden="true"
+                    ></span>
                   </div>
                 </div>
               </div>
 
               <!-- 고정 푸터 시작 -->
               <div class="popup-footer">
-                <div class="result-reward">
+                <div class="box-result">
                   <p class="popup-tit-lg">300p</p>
                   <p class="txt-type03">03.24.2024 ~ 03.31.2024</p>
                 </div>
 
-                <div class="confirm-reward">
+                <div class="box-confirm">
                   <div class="wrap-reaction-icon">
                     <div>
                       <button
@@ -2798,6 +2891,298 @@
                     aria-label=" Claim your reward Button"
                   >
                     Claim your reward
+                    <span
+                      class="btn-icon20 icon-right-wh"
+                      aria-hidden="true"
+                    ></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!---->
+          <div class="content-item12">
+            <div class="popup-wrapper reward">
+              <p class="temp-header">N Fluencer Rewards - ID : EP040501P01</p>
+
+              <div class="popup-header">
+                <p class="tit-type03">Missions</p>
+                <div class="btn-wrap">
+                  <button
+                    type="button"
+                    class="btn btn-only-icon-notbg"
+                    aria-label="close button"
+                  >
+                    <span class="visually-hidden">close button</span>
+                    <span
+                      class="btn-icon36 icon-close"
+                      aria-hidden="true"
+                    ></span>
+                  </button>
+                </div>
+              </div>
+              <div class="popup-body">
+                <!---->
+                <div class="wrap-popup-profile">
+                  <div class="box-profile-img">
+                    <img
+                      src="../../../../inc/images/img/img_hub_profile_manager.png"
+                      alt="프로필 이미지"
+                    />
+                  </div>
+                  <p class="txt-type04">Hyundai N</p>
+                </div>
+                <!---->
+                <div class="wrap-label-reward">
+                  <div class="label-box">
+                    <p class="txt-type02">N Community Master</p>
+                  </div>
+
+                  <p class="tit-type04">Multi lanturn</p>
+                </div>
+
+                <div class="wrap-image-reward">
+                  <img
+                    src="../../../../inc/images/img/img_popup_mission.png"
+                    alt="팝업 내 리워드 이미지"
+                  />
+                  <p class="txt-type03">
+                    This is an outdoor collection for those who need your own
+                    healing time outside of their daily lives. Enjoy emotional
+                    life with a variety of products with practical and sturdy
+                    recycling materials.
+                  </p>
+
+                  <div class="wrap-hashtag-reward">
+                    <div class="hashtags">
+                      <a href="" class="txt-type04">#testminiature</a>
+                      <a href="" class="txt-type04">#newcar</a>
+                      <a href="" class="txt-type04">#ceremony</a>
+                    </div>
+
+                    <p class="txt-type04 wrap-date">03.28.2024</p>
+                  </div>
+                </div>
+
+                <!-- 하단 코멘트 시작 -->
+                <div class="wrap-form textarea">
+                  <p class="title-comment">
+                    Comments <span class="num-comments">1,234</span>
+                  </p>
+                  <div class="inner-textarea-comment">
+                    <textarea
+                      placeholder="Please enter comment content"
+                    ></textarea>
+                    <button
+                      type="button"
+                      class="btn btn-lg-primary01"
+                      aria-label="Register Button"
+                    >
+                      Register
+                    </button>
+                  </div>
+                  <div class="wrap-form-bottom comment-type02">
+                    <div class="comment-type02-1">
+                      <p>
+                        <span class="text-comment">
+                          * You are legally responsible for the comments you
+                          write.
+                        </span>
+                      </p>
+                      <p>
+                        <span class="text-comment">
+                          * If you post content that infringes on rights, is
+                          abusive, disparaging, defamatory, hateful, etc., you
+                          may be subject to sanctions in accordance with the
+                          operating policy and related laws.
+                        </span>
+                      </p>
+                    </div>
+                    <p class="text-num-chk">
+                      <span>0 / 500</span>
+                    </p>
+                  </div>
+                </div>
+                <!-- 하단 코멘트 끝 -->
+
+                <div class="wrap-comment">
+                  <div class="box-userinfo">
+                    <div class="wrap-popup-profile">
+                      <div class="box-profile-img">
+                        <img
+                          src="../../../../inc/images/img/img_hub_profile_manager.png"
+                          alt="프로필 이미지"
+                        />
+                      </div>
+                      <div class="box-profile-txt">
+                        <div>
+                          <p class="txt-type04">i20n.mrs1step</p>
+                          <button
+                            type="button"
+                            class="btn btn-only-icon-bg01-circle"
+                            aria-label="close button"
+                          >
+                            <span class="visually-hidden">close button</span>
+                            <span
+                              class="btn-icon16 icon-close-wh"
+                              aria-hidden="true"
+                            ></span>
+                          </button>
+                        </div>
+                        <p class="txt-type04 light">i30N_Club</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="box-comment">
+                    <p>blah</p>
+                  </div>
+
+                  <div class="box-date">
+                    <p class="txt-type05">03.13.2024</p>
+
+                    <span
+                      class="btn-icon20 icon-trans"
+                      aria-hidden="true"
+                    ></span>
+                  </div>
+                </div>
+
+                <div class="wrap-comment">
+                  <div class="box-userinfo">
+                    <div class="wrap-popup-profile">
+                      <div class="box-profile-img">
+                        <img
+                          src="../../../../inc/images/img/img_hub_profile_manager.png"
+                          alt="프로필 이미지"
+                        />
+                      </div>
+                      <div class="box-profile-txt">
+                        <div>
+                          <p class="txt-type04">i20n.mrs1step</p>
+                          <button
+                            type="button"
+                            class="btn btn-only-icon-bg01-circle"
+                            aria-label="close button"
+                          >
+                            <span class="visually-hidden">close button</span>
+                            <span
+                              class="btn-icon16 icon-close-wh"
+                              aria-hidden="true"
+                            ></span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="box-comment">
+                    <p>
+                      Okay hear me out!!! Hyundai release an N version of the
+                      sonata that’s AWD beautiful dual exhaust tips like an RS7
+                      and produces at least 450HP twin turbo V6 or an 2.5L
+                      turbocharged tuned right? The sonata N-line is cool but I
+                      feel like a Sonata N needs to make face. Okay hear me
+                      out!!! Hyundai release an N version of the sonata that’s
+                      AWD beautiful dual exhaust tips like an RS7 and produces
+                      at least 450HP twin turbo V6 or an 2.5L turbocharged tuned
+                      right? The sonata N-line is cool but I feel like a Sonata
+                      N needs to make face.
+                    </p>
+                  </div>
+
+                  <div class="box-date">
+                    <p class="txt-type05">03.13.2024</p>
+
+                    <span
+                      class="btn-icon20 icon-trans"
+                      aria-hidden="true"
+                    ></span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 고정 푸터 시작 -->
+              <div class="popup-footer">
+                <div class="box-result">
+                  <p class="popup-tit-lg">
+                    Progress
+                    <span class="num-check-progress" aria-label="1/3">1/3</span>
+                  </p>
+
+                  <div class="bottom">
+                    <p class="txt-type03">Paticipants</p>
+                    <p class="txt-type03">333,333,333</p>
+                  </div>
+                </div>
+
+                <div class="box-confirm">
+                  <div class="wrap-reaction-icon">
+                    <div>
+                      <button
+                        type="button"
+                        class="btn btn-only-icon-notbg"
+                        aria-label="heart button"
+                      >
+                        <span class="visually-hidden">heart button</span>
+                        <span
+                          class="btn-icon20 icon-heart"
+                          aria-hidden="true"
+                        ></span>
+                      </button>
+                      <p class="txt-type03 fw-type03">98</p>
+                    </div>
+                    <div>
+                      <button
+                        type="button"
+                        class="btn btn-only-icon-notbg"
+                        aria-label="search button"
+                      >
+                        <span class="visually-hidden">search button</span>
+                        <span
+                          class="btn-icon20 icon-search"
+                          aria-hidden="true"
+                        ></span>
+                      </button>
+                      <p class="txt-type03 fw-type03">1,234</p>
+                    </div>
+
+                    <div>
+                      <button
+                        type="button"
+                        class="btn btn-only-icon-notbg"
+                        aria-label="share button"
+                      >
+                        <span class="visually-hidden">share button</span>
+                        <span
+                          class="btn-icon20 icon-share"
+                          aria-hidden="true"
+                        ></span>
+                      </button>
+                    </div>
+
+                    <div>
+                      <button
+                        type="button"
+                        class="btn btn-only-icon-notbg"
+                        aria-label="Translation button"
+                      >
+                        <span class="visually-hidden">Translation button</span>
+                        <span
+                          class="btn-icon20 icon-trans"
+                          aria-hidden="true"
+                        ></span>
+                      </button>
+                    </div>
+                  </div>
+
+                  <button
+                    type="button"
+                    class="btn btn-lg-primary01"
+                    aria-label="Participate in mission"
+                  >
+                    Participate in mission
                     <span
                       class="btn-icon20 icon-right-wh"
                       aria-hidden="true"
