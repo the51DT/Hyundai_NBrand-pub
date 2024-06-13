@@ -809,6 +809,13 @@ body {
 .popup-wrapper {
   max-width: 880px;
   margin: 0 auto;
+  position: relative;
+}
+
+.popup-wrapper button.btn-only-icon-notbg.pop-close.pop-page {
+  position: absolute;
+  top: 32px;
+  right: 0;
 }
 
 .popup-wrapper .popup-header {
@@ -818,6 +825,10 @@ body {
   align-items: center;
   align-self: stretch;
   border-bottom: 1px solid #787d80;
+}
+
+.popup-wrapper .popup-header h3 {
+  font-size: 2rem; /* 32px */
 }
 
 .popup-wrapper .popup-body {
@@ -1116,6 +1127,50 @@ body {
   justify-content: space-between;
 }
 
+/* profile area in popup */
+.popup-wrapper .wrap-popup-profile {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 0 8px;
+  width: 100%;
+}
+
+.popup-wrapper .wrap-popup-profile .box-profile-img {
+  width: 40px;
+  height: 40px;
+}
+
+.popup-wrapper .wrap-popup-profile .box-profile-img img {
+  width: 100%;
+}
+
+.popup-wrapper .wrap-popup-profile p.txt-type04 {
+  font-weight: 700;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
+}
+
+.popup-wrapper .wrap-popup-profile p.txt-type04.light {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+.popup-wrapper .wrap-popup-profile .box-profile-txt {
+  width: 100%;
+}
+
+.popup-wrapper .wrap-popup-profile .box-profile-txt div {
+  width: 100%;
+  display: grid;
+  align-items: center;
+  justify-content: space-between;
+  grid-template-columns: auto 1fr;
+}
+
 /* popup reward */
 .popup-wrapper.reward {
   position: relative;
@@ -1123,6 +1178,7 @@ body {
 .popup-wrapper.reward .popup-body {
   /* max-height: 500px; */
   overflow-y: auto;
+  padding: 40px;
 }
 .popup-wrapper.reward .popup-body .wrap-label-reward {
   margin-top: 40px;
@@ -1150,7 +1206,59 @@ body {
 .popup-wrapper.reward .popup-body .wrap-image-reward .wrap-date {
   margin-bottom: 40px;
 }
+.popup-wrapper .wrap-form.textarea {
+  margin-top: 0;
+}
+.popup-wrapper .wrap-form.textarea p.title-comment {
+  font-family: "Hyundai Sans Text";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
+  margin-bottom: 20px;
+}
+.popup-wrapper .wrap-comment {
+  display: grid;
+  gap: 20px;
+  margin: 40px 0;
+}
+.popup-wrapper .wrap-comment:last-child {
+  margin: 40px 0 0;
+}
+.popup-wrapper .wrap-comment .box-userinfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.popup-wrapper .wrap-comment .box-userinfo button.btn-only-icon-bg01-circle {
+  width: 16px;
+  height: 16px;
+  margin-left: auto;
+}
 
+.popup-wrapper .wrap-comment .box-comment {
+}
+
+.popup-wrapper .wrap-comment .box-comment p {
+  font-family: "Hyundai Sans Text";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+}
+
+.popup-wrapper .wrap-comment .box-date {
+  display: flex;
+  gap: 20px;
+  align-items: end;
+}
+.popup-wrapper
+  .wrap-comment
+  .box-userinfo
+  button.btn-only-icon-bg01-circle
+  span.icon-close-wh {
+  width: 100%;
+}
 .popup-wrapper.reward .popup-footer {
   position: sticky;
   bottom: 0;
@@ -1158,20 +1266,35 @@ body {
   padding: 0;
 }
 
-.popup-wrapper.reward .popup-footer .result-reward {
+.popup-wrapper.reward .popup-footer .box-result {
   padding: 14px 40px;
   background: #de3111;
   width: 100%;
 }
 
-.popup-wrapper.reward .popup-footer .result-reward p {
+.popup-wrapper.reward .popup-footer .box-result p {
   color: #fff;
 }
-.popup-wrapper.reward .popup-footer .result-reward p.txt-type03:last-child {
+.popup-wrapper.reward .popup-footer .box-result p.txt-type03:last-child {
   margin-top: 8px;
 }
 
-.popup-wrapper.reward .popup-footer .confirm-reward {
+.popup-wrapper.reward .popup-footer .box-result .bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+.popup-wrapper.reward
+  .popup-footer
+  .box-result
+  .bottom
+  p.txt-type03:last-child {
+  margin-top: 0;
+  font-weight: 500;
+}
+
+.popup-wrapper.reward .popup-footer .box-confirm {
   padding: 24px 40px;
   background: #fff;
   width: 100%;
@@ -1181,24 +1304,32 @@ body {
   border-top: 1px solid #000;
 }
 
-.popup-wrapper.reward .popup-footer .confirm-reward .wrap-reaction-icon {
+.popup-wrapper.reward .popup-footer .box-confirm .wrap-reaction-icon {
   display: flex;
   gap: 10px;
 }
 
-.popup-wrapper.reward .popup-footer .confirm-reward .wrap-reaction-icon div {
+.popup-wrapper.reward .popup-footer .box-confirm .wrap-reaction-icon div {
   display: flex;
   align-items: flex-start;
   justify-content: center;
   gap: 0 8px;
   cursor: pointer;
 }
+.popup-wrapper.reward
+  .popup-footer
+  .box-confirm
+  .wrap-reaction-icon
+  div:nth-child(1) {
+  /* 시안에서 마진 간격 계산 안된 부분 추가 */
+  margin-right: 10px;
+}
 
 .popup-wrapper p.popup-tit-lg {
   font-size: 24px;
   color: #000;
   font-family: "Hyundai Sans Head";
-  font-weight: 600;
+  font-weight: 700;
 }
 
 /* 모바일 */
@@ -1813,10 +1944,22 @@ body {
   .popup-wrapper .popup-header {
     padding: 32px 24px;
   }
+  .popup-wrapper button.btn-only-icon-notbg.pop-close.pop-page {
+    right: 24px;
+    width: 24px;
+    height: 24px;
+  }
+  .popup-wrapper button.btn-only-icon-notbg.pop-close.pop-page span.icon-close {
+    width: 100%;
+  }
   .popup-wrapper .popup-body {
     padding: 0 24px;
+    max-height: 696px;
+    overflow-y: auto;
   }
-
+  .popup-wrapper .popup-header h3 {
+    font-size: 20px;
+  }
   .popup-wrapper.invite {
     width: 100%;
     min-width: 100%;
@@ -1909,33 +2052,41 @@ body {
   .popup-wrapper.reward .popup-body {
     max-height: 696px;
   }
-  .popup-wrapper.reward .popup-footer .result-reward {
+
+  .popup-wrapper.reward .popup-body .wrap-label-reward {
+    gap: 24px 0;
+  }
+  .popup-wrapper.reward .popup-footer .box-result {
     padding: 14px 24px;
   }
-  .popup-wrapper.reward .popup-footer .result-reward p.popup-tit-lg {
+  .popup-wrapper.reward .popup-footer .box-result p.popup-tit-lg {
     font-size: 18px;
   }
 
-  .popup-wrapper.reward .popup-footer .confirm-reward {
+  .popup-wrapper.reward .popup-footer .box-confirm {
     flex-direction: column;
     width: 100%;
     padding: 16px 24px;
     gap: 20px;
   }
 
-  .popup-wrapper.reward .popup-footer .confirm-reward .wrap-reaction-icon {
+  .popup-wrapper.reward .popup-footer .box-confirm .wrap-reaction-icon {
     width: 100%;
   }
 
   .popup-wrapper.reward
     .popup-footer
-    .confirm-reward
+    .box-confirm
     .wrap-reaction-icon
     div:nth-child(3) {
     margin-left: auto;
   }
 
-  .popup-wrapper.reward .popup-footer .confirm-reward button.btn {
+  .popup-wrapper.reward .popup-footer .box-confirm button.btn {
     width: 100%;
+  }
+
+  .popup-wrapper.reward .popup-body .wrap-image-reward .wrap-date {
+    margin-bottom: 44px;
   }
 }

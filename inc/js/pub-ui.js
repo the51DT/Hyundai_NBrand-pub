@@ -682,44 +682,35 @@ const accor02List = document.querySelectorAll(
 
 // 기획서, 시안에 없어 임의로 다중 토글 적용
 function DropdownFooter() {
-  document
-    .querySelectorAll(".dropdown.inMobile .accor02-wrap")
-    .forEach((wrapper) => {
-      wrapper.addEventListener("click", function () {
-        const button = this.querySelector(".accor02-header button");
-        const dropdownMenu = this.querySelector("ul");
+  const dropdowns = document.querySelectorAll(
+    ".dropdown.inMobile .accor02-wrap"
+  );
 
-        const isExpanded = button.getAttribute("aria-expanded") === "true";
+  dropdowns.forEach(function (dropdown) {
+    const header = dropdown.querySelector(".accor02-header");
+    const ul = dropdown.querySelector(".dropdown.inMobile .accor02-wrap ul");
+    const isMobile = window.matchMedia("(max-width: 1024px)");
 
-        button.setAttribute("aria-expanded", String(!isExpanded));
-        dropdownMenu.classList.toggle("dropdown-on", !isExpanded);
-        button.classList.toggle("rotate", !isExpanded);
-
-        // 다른 .accor02-wrap 요소에 대한 .rotate 클래스 제거
-        document
-          .querySelectorAll(".dropdown.inMobile .accor02-wrap")
-          .forEach((otherWrapper) => {
-            if (otherWrapper !== wrapper) {
-              otherWrapper
-                .querySelector(".accor02-header button")
-                .classList.remove("rotate");
-            }
-          });
+    if (isMobile.matches) {
+      header.addEventListener("click", function () {
+        ul.classList.toggle("dropdown-on");
       });
-    });
+    }
+  });
 }
 
-function checkScreenSize() {
-  const screenWidth = window.innerWidth;
-  if (screenWidth < 1024) {
-    DropdownFooter();
-  } else {
-    document
-      .querySelector(".dropdown.inMobile .accor02-wrap ul.dropdown-on")
-      .classList.remove("dropdown-on");
-  }
-}
-checkScreenSize();
+DropdownFooter();
+
+// function checkScreenSize() {
+//   const screenWidth = window.innerWidth;
+//   const checkFooterDropdown = document.querySelector(
+//     ".dropdown.inMobile .accor02-wrap ul"
+//   );
+//   if (screenWidth < 1024) {
+//     DropdownFooter();
+//   }
+// }
+// checkScreenSize();
 
 // window.onload = checkScreenSize;
 // window.onresize = checkScreenSize;
