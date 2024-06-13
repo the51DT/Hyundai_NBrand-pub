@@ -172,6 +172,7 @@ input[type="radio"]:focus + label {
 .btn[class*="txt-btn"]:active {
   color: #de3111;
   position: relative;
+  background-color: transparent !important;
 }
 .btn[class*="lg-txt-btn"]:hover::after,
 .btn[class*="lg-txt-btn"]:active::after {
