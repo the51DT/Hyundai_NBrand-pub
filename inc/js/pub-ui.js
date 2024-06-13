@@ -610,10 +610,10 @@ dropdownBtns.forEach((button) => {
       ".dropdown.centered .wrap-dropdown-selected .icon-down-wh"
     );
     const filterBtn_icn1 = document.querySelector(
-      ".dropdown.centered .wrap-dropdown-selected span:nth-child(1) span.icon-control-bar"
+      ".dropdown.centered .wrap-dropdown-selected i.icon-control-bar"
     );
     const filterBtn_forDisplay = document.querySelector(
-      ".dropdown.centered .wrap-dropdown-selected"
+      ".dropdown.centered .wrap-dropdown-selected.dropdown-btn"
     );
     const filterBtn_forDisplayText = document.querySelector(
       ".dropdown.centered span.txt-type02"
@@ -626,32 +626,25 @@ dropdownBtns.forEach((button) => {
         detectCase2_selectBtn.classList.contains("dropdown-on") &&
         screenWidth < 500
       ) {
-        // backgroundEl.style.background =
-        //   "url(../../../inc/images/icon/icon-close.svg)";
-        filterBtn_forDisplay.style.background = "#fff";
-        filterBtn_forDisplayText.style.color = "#000";
+        // < 500
         filterBtn_forDisplayText.style.width = "100%";
         filterBtn_forDisplay.style.padding = "17px 40px";
+
+        filterBtn_forDisplay.classList.toggle("bgwhite");
         filterBtn_icn1.style.display = "none";
-      } else {
-        // filterBtn_forDisplay.style.background = "#000";
-        filterBtn_forDisplay.classList.toggle("bgred");
-        filterBtn_forDisplay.style.background = "#000";
-
-        filterBtn_forDisplayText.style.color = "#fff";
-        filterBtn_forDisplayText.style.width = "auto";
-        filterBtn_icn1.style.display = "flex";
       }
-
       if (
         detectCase2_selectBtn.classList.contains("dropdown-on") &&
         screenWidth > 500
       ) {
-        filterBtn_forDisplay.style.background = "#de3111";
-      } else if (
-        screenWidth > 1024 &&
-        !detectCase2_selectBtn.classList.contains("dropdown-on")
-      ) {
+        filterBtn_forDisplay.classList.toggle("bgred");
+      }
+
+      if (!detectCase2_selectBtn.classList.contains("dropdown-on")) {
+        filterBtn_forDisplay.classList.remove("bgred");
+        filterBtn_forDisplay.classList.remove("bgwhite");
+        filterBtn_forDisplayText.style.width = "auto";
+        filterBtn_icn1.style.display = "flex";
       }
     }
   });
