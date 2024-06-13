@@ -1,4 +1,3 @@
-(function () {
   var pubUi = {
     init: function () {
       var self = this;
@@ -157,7 +156,6 @@
               targetBulletActive.css("--time", `${range}px`);
               // console.log(range);
             } else {
-              console.log("이미지");
               targetBulletActive.css("--time", "84px");
             }
           },
@@ -381,8 +379,6 @@
           // targetBulletActive.css("--time", range);
           console.dir(swiperActiveVideo[0]);
         }
-      } else {
-        console.log("이미지");
       }
     },
     tabBtnEvent: function (e, tabContainer) {
@@ -484,7 +480,6 @@
       .siblings('input[type="text"]')
       .on("propertychange change keyup paste input", pubUi.textReset);
   });
-})();
 
 // [Start] : selectbox 컴포넌트
 $(".selectbox-trigger").click(function (event) {
