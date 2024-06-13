@@ -188,17 +188,6 @@ body {
 .nflmain_wrap .content-item06 .rewards-box {
   padding: 160px 80px 240px;
 }
-.nflmain_wrap .content-item06 .rewards-box .grid_masonry {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-  column-gap: 24px;
-  max-width: 1440px;
-  margin: 0 auto;
-}
-.nflmain_wrap .content-item06 .rewards-box .grid_masonry .masonry_item {
-  width: calc(100% / 3 - 16px);
-}
 /* EP040201, EP040301, EP040501 */
 .subfilter_wrap .content-item02 {
   background-color: #f0f0f0;
@@ -1501,16 +1490,6 @@ body {
   }
   .nflmain_wrap .content-item06 .rewards-box {
     padding: 80px 24px 160px;
-  }
-  .nflmain_wrap .content-item06 .rewards-box .grid_masonry {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0;
-    column-gap: 0;
-    max-width: 100%;
-  }
-  .nflmain_wrap .content-item06 .rewards-box .grid_masonry .masonry_item {
-    width: 100%;
   }
   .content-item06 .rewards-box .grid_masonry + .btn-wrap-default {
     margin-top: 44px;

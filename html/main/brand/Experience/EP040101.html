@@ -26,6 +26,7 @@
           <div class="content-item02">
             <div class="mission-box">
               <p class="title-w1440 contitle-type01 fw-type03">Missions</p>
+              <!-- 레이아웃 구성 후 pubUi.masonrtLayout 함수 실행해주세요 -->
               <div class="grid_masonry">
                 <div class="masonry_item">
                   <div class="masonry_con">
@@ -42,6 +43,15 @@
                           <span class="card_entry">13,724</span>
                         </p>
                       </div>
+                      <!-- v.101 기획서 p.40 : 프로필 [01.닉네임] -->
+                      <div class="card_profile">
+                        <div class="profile_img">
+                          <img src="../../../../inc/images/img/img_Nful_profile_default.png" alt="프로필 기본 이미지" />
+                        </div>
+                        <p class="profile_des">
+                          <span class="profile_name">Madison</span>
+                        </p>
+                      </div>
                       <div class="card_con">
                         <p class="card_tag">Nthusiasts</p>
                         <p class="tit-type03 fw-type03">Beauty shot!</p>
@@ -49,11 +59,12 @@
                           Please upload interior and exterior beauty shots of all N vehicles. If you take a high-sensitivity beauty shot from a different angle and apply to participate in the mission, you will receive points depending on the number
                           of photos taken...
                         </p>
-                        <ul class="card-hashtag">
-                          <li class="txt-type04">#beautyshots</li>
-                          <li class="txt-type04">#Mission</li>
-                          <li class="txt-type04">#Point</li>
-                        </ul>
+                        <!-- v.101 기획서 p.40 : Tag 클릭 시 해당 메뉴 화면에서 해당 Tag 소팅되어 노출 -->
+                        <div class="card-hashtag">
+                          <button class="txt-type04">#beautyshots</button>
+                          <button class="txt-type04">#Mission</button>
+                          <button class="txt-type04">#Point</button>
+                        </div>
                       </div>
                       <div class="card_function btn-wrap-type5">
                         <div>
@@ -92,14 +103,25 @@
                           <span class="card_entry">1,313,724</span>
                         </p>
                       </div>
+                      <!-- v.101 기획서 p.40 : 프로필 [02.N Community 가입 한 경우] > 레이어 나옴(EP040401M01) -->
+                      <div class="card_profile">
+                        <button class="profile_img">
+                          <img src="../../../../inc/images/img/img_Nful_profile_01.png" alt="N Community가입자의 프로필 이미지" />
+                        </button>
+                        <p class="profile_des">
+                          <span class="profile_name">Madison</span>
+                          <span class="profile_club">i30N_Club</span>
+                        </p>
+                      </div>
                       <div class="card_con">
                         <p class="card_tag">N Community Member</p>
                         <p class="tit-type03 fw-type03">F1 Esports event 2:a win, tow podiums and plenty of points for the team</p>
                         <p class="txt-type03 fw-type02 card_cont-des">The three days of the second round of the six-race F1 Sim Racing world championship, held in Stockholm, Sweden were a real rollercoaster for the Scuderia Esports Team.</p>
-                        <ul class="card-hashtag">
-                          <li class="txt-type04">#F1SimRacingworld</li>
-                          <li class="txt-type04">#Sweden</li>
-                        </ul>
+                        <!-- v.101 기획서 p.40 : Tag 클릭 시 해당 메뉴 화면에서 해당 Tag 소팅되어 노출 -->
+                        <div class="card-hashtag">
+                          <button class="txt-type04">#F1SimRacingworld</button>
+                          <button class="txt-type04">#Sweden</button>
+                        </div>
                       </div>
                       <div class="card_function btn-wrap-type5">
                         <div>
@@ -138,15 +160,25 @@
                           <span class="card_entry">6,724</span>
                         </p>
                       </div>
+                      <!-- v.101 기획서 p.40 : 프로필 [03.N Brand 관리자] -->
+                      <div class="card_profile">
+                        <div class="profile_img">
+                          <img src="../../../../inc/images/img/img_Nful_profile_manager.png" alt="N Community가입자의 프로필 이미지" />
+                        </div>
+                        <p class="profile_des">
+                          <span class="profile_name">Madison</span>
+                        </p>
+                      </div>
                       <div class="card_con">
                         <p class="card_tag">N Community Master</p>
                         <p class="tit-type03 fw-type03">Cheers to the Nü rburgring 24H Race!</p>
                         <p class="txt-type03 fw-type02 card_cont-des">Please support the Nürburgring 24H Race. A live link will be shared before the game. Cheering posts during the game and N’s performance after the game</p>
-                        <ul class="card-hashtag">
-                          <li class="txt-type04">#Nürburgring</li>
-                          <li class="txt-type04">#24hoursrace</li>
-                          <li class="txt-type04">#ElantraNTCR</li>
-                        </ul>
+                        <!-- v.101 기획서 p.40 : Tag 클릭 시 해당 메뉴 화면에서 해당 Tag 소팅되어 노출 -->
+                        <div class="card-hashtag">
+                          <button class="txt-type04">#Nürburgring</button>
+                          <button class="txt-type04">#24hoursrace</button>
+                          <button class="txt-type04">#ElantraNTCR</button>
+                        </div>
                       </div>
                       <div class="card_function btn-wrap-type5">
                         <div>
@@ -202,6 +234,7 @@
           <div class="content-item04">
             <div class="mission-box white-box">
               <p class="title-w1440 contitle-type01 fw-type03">Hub</p>
+              <!-- 레이아웃 구성 후 pubUi.masonrtLayout 함수 실행해주세요 -->
               <div class="grid_masonry">
                 <div class="masonry_item">
                   <div class="masonry_con">
@@ -211,10 +244,10 @@
                           <img src="../../../../inc/images/img/img_hub_thumnail01.png" alt="썸네일 이미지" />
                         </div>
                       </button>
-                      <!-- hub 프로필 : 닉네임 -->
+                      <!-- v.101 기획서 p.40 : 프로필 [01.닉네임] -->
                       <div class="card_profile">
                         <div class="profile_img">
-                          <img src="../../../../inc/images/img/img_hub_profile_01.png" alt="프로필 이미지" />
+                          <img src="../../../../inc/images/img/img_Nful_profile_default.png" alt="프로필 기본 이미지" />
                         </div>
                         <p class="profile_des">
                           <span class="profile_name">Madison</span>
@@ -223,11 +256,12 @@
                       <div class="card_con">
                         <p class="tit-type03 fw-type03">Maranello 13 March 2024</p>
                         <p class="txt-type03 fw-type02 card_cont-des">Born on 13 June 1995 in Hungary a great show of strength and, with two races to go, the Ferrari crew are favourite to take the LMP2 title.</p>
-                        <ul class="card-hashtag">
-                          <li class="txt-type04">#Opportunity</li>
-                          <li class="txt-type04">#IsaacGillisen</li>
-                          <li class="txt-type04">#Drive</li>
-                        </ul>
+                        <!-- v.101 기획서 p.40 : Tag 클릭 시 해당 메뉴 화면에서 해당 Tag 소팅되어 노출 -->
+                        <div class="card-hashtag">
+                          <button class="txt-type04">#Opportunity</button>
+                          <button class="txt-type04">#IsaacGillisen</button>
+                          <button class="txt-type04">#Drive</button>
+                        </div>
                       </div>
                       <div class="card_function btn-wrap-type5">
                         <div>
@@ -259,12 +293,11 @@
                           <img src="../../../../inc/images/img/img_hub_thumnail02.png" alt="썸네일 이미지" />
                         </div>
                       </button>
-                      <!-- hub 프로필 : N 차량 보유 인증 한 경우 -->
+                      <!-- v.101 기획서 p.40 : 프로필 [02.N Community 가입 한 경우] > 레이어 나옴(EP040401M01) -->
                       <div class="card_profile">
-                        <div class="profile_img">
-                          <img src="../../../../inc/images/img/img_hub_profile_01.png" alt="프로필 이미지" />
-                          <img src="../../../../inc/images/img/img_hub_profile_club_mark.png" alt="N 브랜드 차량 구매 인증자 이미지" class="club-mark" />
-                        </div>
+                        <button class="profile_img">
+                          <img src="../../../../inc/images/img/img_Nful_profile_01.png" alt="N Community가입자의 프로필 이미지" />
+                        </button>
                         <p class="profile_des">
                           <span class="profile_name">Madison</span>
                           <span class="profile_club">i30N_Club</span>
@@ -273,12 +306,13 @@
                       <div class="card_con">
                         <p class="tit-type03 fw-type03">Scuderia Ferrari Esports Team triumphs at Sebring</p>
                         <p class="txt-type03 fw-type02 card_cont-des">A fifth consecutive win for the Scuderia Ferrari Esports Team in the Virtual Endurance Championship,</p>
-                        <ul class="card-hashtag">
-                          <li class="txt-type04">#FormulaSim_Racing</li>
-                          <li class="txt-type04">#DTMEsports</li>
-                          <li class="txt-type04">#VEMdebut</li>
-                          <li class="txt-type04">#Drive</li>
-                        </ul>
+                        <!-- v.101 기획서 p.40 : Tag 클릭 시 해당 메뉴 화면에서 해당 Tag 소팅되어 노출 -->
+                        <div class="card-hashtag">
+                          <button class="txt-type04">#FormulaSim_Racing</button>
+                          <button class="txt-type04">#DTMEsports</button>
+                          <button class="txt-type04">#VEMdebut</button>
+                          <button class="txt-type04">#Drive</button>
+                        </div>
                       </div>
                       <div class="card_function btn-wrap-type5">
                         <div>
@@ -310,24 +344,24 @@
                           <img src="../../../../inc/images/img/img_hub_thumnail03.png" alt="썸네일 이미지" />
                         </div>
                       </button>
-                      <!-- hub 프로필 : N Community 가입 한 경우 -->
+                      <!-- v.101 기획서 p.40 : 프로필 [03.N Brand 관리자] -->
                       <div class="card_profile">
                         <div class="profile_img">
-                          <img src="../../../../inc/images/img/img_hub_profile_01.png" alt="프로필 이미지" />
+                          <img src="../../../../inc/images/img/img_Nful_profile_manager.png" alt="N Community가입자의 프로필 이미지" />
                         </div>
                         <p class="profile_des">
-                          <span class="profile_name">Abbey</span>
-                          <span class="profile_club">i30N_Club</span>
+                          <span class="profile_name">Madison</span>
                         </p>
                       </div>
                       <div class="card_con">
                         <p class="tit-type03 fw-type03">Gergo baldi and isaac gillissen join</p>
                         <p class="txt-type03 fw-type02 card_cont-des">Wins in America and elsewhere North America and Asian Pacific regions for a chance to race in the grand final on 12 October.</p>
-                        <ul class="card-hashtag">
-                          <li class="txt-type04">#DennisJordan</li>
-                          <li class="txt-type04">#ShowN</li>
-                          <li class="txt-type04">#AlexSiebel</li>
-                        </ul>
+                        <!-- v.101 기획서 p.40 : Tag 클릭 시 해당 메뉴 화면에서 해당 Tag 소팅되어 노출 -->
+                        <div class="card-hashtag">
+                          <button class="txt-type04">#DennisJordan</button>
+                          <button class="txt-type04">#ShowN</button>
+                          <button class="txt-type04">#AlexSiebel</button>
+                        </div>
                       </div>
                       <div class="card_function btn-wrap-type5">
                         <div>
@@ -359,11 +393,11 @@
                           <img src="../../../../inc/images/img/img_hub_thumnail05.png" alt="썸네일 이미지" />
                         </div>
                       </button>
-                      <!-- hub 프로필 : N 차량 보유 인증 한 경우 -->
+                      <!-- v.101 기획서 p.40 : 프로필 [04. N Community 탈퇴 한 경우] > 레이어 나옴(EP040401M01) / 이미지 변경될 예정 -->
                       <div class="card_profile">
-                        <div class="profile_img">
-                          <img src="../../../../inc/images/img/img_hub_profile_default.png" alt="프로필 이미지" />
-                        </div>
+                        <button class="profile_img">
+                          <img src="../../../../inc/images/img/img_Nful_profile_exit.png" alt="N Community가입자의 프로필 이미지" />
+                        </button>
                         <p class="profile_des">
                           <span class="profile_name">Madison</span>
                         </p>
@@ -371,10 +405,11 @@
                       <div class="card_con">
                         <p class="tit-type03 fw-type03">Realated news</p>
                         <p class="txt-type03 fw-type02 card_cont-des">Hyundai ESPORTS SERIES 2023 APPROACHES THE ALL-IMPORTANT GRAND REGIONAL FINAL ON 14 OCTOBER</p>
-                        <ul class="card-hashtag">
-                          <li class="txt-type04">#Twitch</li>
-                          <li class="txt-type04">#NBrand</li>
-                        </ul>
+                        <!-- v.101 기획서 p.40 : Tag 클릭 시 해당 메뉴 화면에서 해당 Tag 소팅되어 노출 -->
+                        <div class="card-hashtag">
+                          <button class="txt-type04">#Twitch</button>
+                          <button class="txt-type04">#NBrand</button>
+                        </div>
                       </div>
                       <div class="card_function btn-wrap-type5">
                         <div>
@@ -406,10 +441,10 @@
                           <img src="../../../../inc/images/img/img_hub_thumnail04.png" alt="썸네일 이미지" />
                         </div>
                       </button>
-                      <!-- hub 프로필 : N Brand 관리자 -->
+                      <!-- v.101 기획서 p.40 : 프로필 [05. N Community 폐쇄 된 경우] -->
                       <div class="card_profile">
                         <div class="profile_img">
-                          <img src="../../../../inc/images/img/img_hub_profile_manager.png" alt="프로필 이미지" />
+                          <img src="../../../../inc/images/img/img_Nful_profile_close.png" alt="N Community가입자의 프로필 이미지" />
                         </div>
                         <p class="profile_des">
                           <span class="profile_name">Madison</span>
@@ -420,11 +455,12 @@
                         <p class="txt-type03 fw-type02 card_cont-des">
                           The Hyundai Series is a six-month racing tournament bringing together sim racers from Europe, North America and Asian Pacific regions for a chance to race in the grand final on 12 October.
                         </p>
-                        <ul class="card-hashtag">
-                          <li class="txt-type04">#DennisJordan</li>
-                          <li class="txt-type04">#ShowN</li>
-                          <li class="txt-type04">#AlexSiebel</li>
-                        </ul>
+                        <!-- v.101 기획서 p.40 : Tag 클릭 시 해당 메뉴 화면에서 해당 Tag 소팅되어 노출 -->
+                        <div class="card-hashtag">
+                          <button class="txt-type04">#DennisJordan</button>
+                          <button class="txt-type04">#ShowN</button>
+                          <button class="txt-type04">#AlexSiebel</button>
+                        </div>
                       </div>
                       <div class="card_function btn-wrap-type5">
                         <div>
@@ -456,22 +492,20 @@
                           <img src="../../../../inc/images/img/img_hub_thumnail06.png" alt="썸네일 이미지" />
                         </div>
                       </button>
-                      <!-- hub 프로필 : N Community 폐쇄된 경우 -->
+                      <!-- v.101 기획서 p.40 : 프로필 [06. 서비스 이용약관 철회 및 현대자동차 회원 탈퇴 한 경우 ] -->
                       <div class="card_profile">
-                        <div class="profile_img">
-                          <img src="../../../../inc/images/img/img_hub_profile_close.png" alt="프로필 이미지" />
-                        </div>
                         <p class="profile_des">
-                          <span class="profile_name">Madison</span>
+                          <span class="profile_name">_nthused</span>
                         </p>
                       </div>
                       <div class="card_con">
                         <p class="tit-type03 fw-type03">Realated news</p>
                         <p class="txt-type03 fw-type02 card_cont-des">Hyundai ESPORTS SERIES 2023 APPROACHES THE ALL-IMPORTANT GRAND REGIONAL FINAL ON 14 OCTOBER</p>
-                        <ul class="card-hashtag">
-                          <li class="txt-type04">#Twitch</li>
-                          <li class="txt-type04">#NBrand</li>
-                        </ul>
+                        <!-- v.101 기획서 p.40 : Tag 클릭 시 해당 메뉴 화면에서 해당 Tag 소팅되어 노출 -->
+                        <div class="card-hashtag">
+                          <button class="txt-type04">#Twitch</button>
+                          <button class="txt-type04">#NBrand</button>
+                        </div>
                       </div>
                       <div class="card_function btn-wrap-type5">
                         <div>
@@ -526,7 +560,7 @@
                     <p class="contitle-type02 fw-type03 ranking-inner1">Nthusiast</p>
                     <div class="btn-wrap">
                       <a href="#" class="btn lg-txt-btn01">
-                        View More
+                        View all
                         <span class="btn-icon20 icon-right" aria-hidden="true"></span>
                       </a>
                     </div>
@@ -952,6 +986,7 @@
           <div class="content-item06">
             <div class="rewards-box">
               <p class="title-w1440 contitle-type01 fw-type03">Rewards</p>
+              <!-- 레이아웃 구성 후 pubUi.masonrtLayout 함수 실행해주세요 -->
               <div class="grid_masonry">
                 <div class="masonry_item">
                   <div class="masonry_con">
@@ -965,6 +1000,15 @@
                         <p class="card_step">End</p>
                         <p class="card_detail">03.24.2024 - 04.31.2024</p>
                       </div>
+                      <!-- v.101 기획서 p.40 : 프로필 [01.닉네임] -->
+                      <div class="card_profile">
+                        <div class="profile_img">
+                          <img src="../../../../inc/images/img/img_Nful_profile_default.png" alt="프로필 기본 이미지" />
+                        </div>
+                        <p class="profile_des">
+                          <span class="profile_name">Madison</span>
+                        </p>
+                      </div>
                       <div class="card_con">
                         <p class="card_tag">Nthusiasts</p>
                         <p class="tit-type03 fw-type03">RETRACE Magazine - Pony</p>
@@ -972,11 +1016,12 @@
                           There are widespread ESG-related trends. There are also movements that unfaThis is a heritage collection that lets you feel the sensibility of Pony. The Heritage Collection, inspired by the Pony that dominated the 1970s and
                           1980s, brings back memories of the Pony, Korea's first mass-produced unique model and our family's first car
                         </p>
-                        <ul class="card-hashtag">
-                          <li class="txt-type04">#Heritage</li>
-                          <li class="txt-type04">#SensibilityofPony</li>
-                          <li class="txt-type04">#widespread</li>
-                        </ul>
+                        <!-- v.101 기획서 p.40 : Tag 클릭 시 해당 메뉴 화면에서 해당 Tag 소팅되어 노출 -->
+                        <div class="card-hashtag">
+                          <button class="txt-type04">#Heritage</button>
+                          <button class="txt-type04">#SensibilityofPony</button>
+                          <button class="txt-type04">#widespread</button>
+                        </div>
                       </div>
                       <div class="card_function btn-wrap-type5">
                         <div>
@@ -1012,15 +1057,26 @@
                         <p class="card_step">20,300,300P</p>
                         <p class="card_detail">03.24.2024 - 04.31.2024</p>
                       </div>
+                      <!-- v.101 기획서 p.40 : 프로필 [02.N Community 가입 한 경우] > 레이어 나옴(EP040401M01) -->
+                      <div class="card_profile">
+                        <button class="profile_img">
+                          <img src="../../../../inc/images/img/img_Nful_profile_01.png" alt="N Community가입자의 프로필 이미지" />
+                        </button>
+                        <p class="profile_des">
+                          <span class="profile_name">Madison</span>
+                          <span class="profile_club">i30N_Club</span>
+                        </p>
+                      </div>
                       <div class="card_con">
                         <p class="card_tag">N Community Master</p>
                         <p class="tit-type03 fw-type03">New car test miniature</p>
                         <p class="txt-type03 fw-type02 card_cont-des">This miniature reinterprets the custom of holding a new car ceremony in the 1970s when the family got their first car, praying for no accidents and safety.</p>
-                        <ul class="card-hashtag">
-                          <li class="txt-type04">#testminiature</li>
-                          <li class="txt-type04">#newcar</li>
-                          <li class="txt-type04">#ceremony</li>
-                        </ul>
+                        <!-- v.101 기획서 p.40 : Tag 클릭 시 해당 메뉴 화면에서 해당 Tag 소팅되어 노출 -->
+                        <div class="card-hashtag">
+                          <button class="txt-type04">#testminiature</button>
+                          <button class="txt-type04">#newcar</button>
+                          <button class="txt-type04">#ceremony</button>
+                        </div>
                       </div>
                       <div class="card_function btn-wrap-type5">
                         <div>
@@ -1056,14 +1112,24 @@
                         <p class="card_step">40,000,000P</p>
                         <p class="card_detail">03.24.2024 - 04.31.2024</p>
                       </div>
+                      <!-- v.101 기획서 p.40 : 프로필 [03.N Brand 관리자] -->
+                      <div class="card_profile">
+                        <div class="profile_img">
+                          <img src="../../../../inc/images/img/img_Nful_profile_manager.png" alt="N Community가입자의 프로필 이미지" />
+                        </div>
+                        <p class="profile_des">
+                          <span class="profile_name">Madison</span>
+                        </p>
+                      </div>
                       <div class="card_con">
                         <p class="card_tag">N Community Master</p>
                         <p class="tit-type03 fw-type03">Pony 3-door miniature 1:24</p>
                         <p class="txt-type03 fw-type02 card_cont-des">It is Korea's first three-door passenger car that adds a sporty sensibility to the pony that started the car era.</p>
-                        <ul class="card-hashtag">
-                          <li class="txt-type04">#Pony3-door</li>
-                          <li class="txt-type04">#1:24miniature</li>
-                        </ul>
+                        <!-- v.101 기획서 p.40 : Tag 클릭 시 해당 메뉴 화면에서 해당 Tag 소팅되어 노출 -->
+                        <div class="card-hashtag">
+                          <button class="txt-type04">#Pony3-door</button>
+                          <button class="txt-type04">#1:24miniature</button>
+                        </div>
                       </div>
                       <div class="card_function btn-wrap-type5">
                         <div>
@@ -1099,14 +1165,24 @@
                         <p class="card_step">End</p>
                         <p class="card_detail">03.24.2024 - 04.31.2024</p>
                       </div>
+                      <!-- v.101 기획서 p.40 : 프로필 [04. N Community 탈퇴 한 경우] > 레이어 나옴(EP040401M01) / 이미지 변경될 예정 -->
+                      <div class="card_profile">
+                        <div class="profile_img">
+                          <img src="../../../../inc/images/img/img_Nful_profile_exit.png" alt="N Community가입자의 프로필 이미지" />
+                        </div>
+                        <p class="profile_des">
+                          <span class="profile_name">Madison</span>
+                        </p>
+                      </div>
                       <div class="card_con">
                         <p class="card_tag">N Community Master</p>
                         <p class="tit-type03 fw-type03">Kids Nexo electric Car</p>
                         <p class="txt-type03 fw-type02 card_cont-des">The first car for my child who loves cars. Experience Kids Nexo for your child.</p>
-                        <ul class="card-hashtag">
-                          <li class="txt-type04">#ElectricCar</li>
-                          <li class="txt-type04">#Kidstoy</li>
-                        </ul>
+                        <!-- v.101 기획서 p.40 : Tag 클릭 시 해당 메뉴 화면에서 해당 Tag 소팅되어 노출 -->
+                        <div class="card-hashtag">
+                          <button class="txt-type04">#ElectricCar</button>
+                          <button class="txt-type04">#Kidstoy</button>
+                        </div>
                       </div>
                       <div class="card_function btn-wrap-type5">
                         <div>
@@ -1142,14 +1218,24 @@
                         <p class="card_step">End</p>
                         <p class="card_detail">03.24.2024 - 04.31.2024</p>
                       </div>
+                      <!-- v.101 기획서 p.40 : 프로필 [05. N Community 폐쇄 된 경우] -->
+                      <div class="card_profile">
+                        <div class="profile_img">
+                          <img src="../../../../inc/images/img/img_Nful_profile_close.png" alt="N Community가입자의 프로필 이미지" />
+                        </div>
+                        <p class="profile_des">
+                          <span class="profile_name">Madison</span>
+                        </p>
+                      </div>
                       <div class="card_con">
                         <p class="card_tag">Nthusiasts</p>
                         <p class="tit-type03 fw-type03">Restyle T-shirt</p>
                         <p class="txt-type03 fw-type02 card_cont-des">Made with organic cotton fabric made from sustainable materials Check out the t-shirts we made.</p>
-                        <ul class="card-hashtag">
-                          <li class="txt-type04">#organiccotton</li>
-                          <li class="txt-type04">#fabric</li>
-                        </ul>
+                        <!-- v.101 기획서 p.40 : Tag 클릭 시 해당 메뉴 화면에서 해당 Tag 소팅되어 노출 -->
+                        <div class="card-hashtag">
+                          <button class="txt-type04">#organiccotton</button>
+                          <button class="txt-type04">#fabric</button>
+                        </div>
                       </div>
                       <div class="card_function btn-wrap-type5">
                         <div>
@@ -1185,15 +1271,22 @@
                         <p class="card_step">5,000,000P</p>
                         <p class="card_detail">03.24.2024 - 04.31.2024</p>
                       </div>
+                      <!-- v.101 기획서 p.40 : 프로필 [06. 서비스 이용약관 철회 및 현대자동차 회원 탈퇴 한 경우 ] -->
+                      <div class="card_profile">
+                        <p class="profile_des">
+                          <span class="profile_name">_nthused</span>
+                        </p>
+                      </div>
                       <div class="card_con">
                         <p class="card_tag">N Community Master</p>
                         <p class="tit-type03 fw-type03">Restyle micro mini bage</p>
                         <p class="txt-type03 fw-type02 card_cont-des">Restyle micro mini bag Made from recycled leather and fabric Introducing a small but stylish it bag</p>
-                        <ul class="card-hashtag">
-                          <li class="txt-type04">#stylelishbag</li>
-                          <li class="txt-type04">#newcar</li>
-                          <li class="txt-type04">#microminibag</li>
-                        </ul>
+                        <!-- v.101 기획서 p.40 : Tag 클릭 시 해당 메뉴 화면에서 해당 Tag 소팅되어 노출 -->
+                        <div class="card-hashtag">
+                          <button class="txt-type04">#stylelishbag</button>
+                          <button class="txt-type04">#newcar</button>
+                          <button class="txt-type04">#microminibag</button>
+                        </div>
                       </div>
                       <div class="card_function btn-wrap-type5">
                         <div>
