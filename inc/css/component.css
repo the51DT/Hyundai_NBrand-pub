@@ -1402,7 +1402,7 @@ input[type="radio"]:focus + label {
   justify-content: flex-start;
   margin-bottom: 16px;
 }
-.card_type04 .card_cont-des {
+.card_type04 .card_con p.tit-type03.fw-type03 + .card_cont-des {
   margin-top: 8px;
 }
 .card_type04 .card-hashtag {
