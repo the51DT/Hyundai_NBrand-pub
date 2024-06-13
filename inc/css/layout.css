@@ -31,7 +31,11 @@ body:-webkit-scrollbar {
   opacity: 0.5;
   width: 100vw;
   height: 100vh;
-  transition: width 0.3s;
+  /* transition: width 0.3s; */
+}
+.ani-dimmed.on {
+  animation: aniDimmed 0.3s;
+  animation-fill-mode: forwards;
 }
 /* 본문 바로가기 */
 .skip-navigation {
@@ -518,7 +522,7 @@ body:-webkit-scrollbar {
   background: #fff;
   width: calc(100% - 40px);
   max-width: 500px;
-  z-index: 1001;
+  z-index: 1003;
   transform: translate(-50%, -50%);
   display: none;
 }
@@ -536,18 +540,20 @@ body:-webkit-scrollbar {
 }
 /* side-popup */
 .side-popup {
-  right: 100%;
+  right: -100%;
   top: 0;
-  width: 100px;
+  width: 720px;
   height: 100vh;
   background: #fff;
   display: none;
-  transition: right 0.2s 1s;
+  /* transition: right 2s 1s; */
   z-index: 1001;
 }
 
 .side-popup.on {
-  right: 0;
+  display: block;
+  animation: sideAni 0.3s;
+  animation-fill-mode: forwards;
 }
 
 @media screen and (max-width: 1200px) and (min-width: 1024px) {
@@ -613,5 +619,47 @@ body:-webkit-scrollbar {
   100% {
     opacity: 0;
     display: none;
+  }
+}
+
+@keyframes aniDimmed {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100vw;
+  }
+}
+
+@keyframes aniDimmedClose {
+  0% {
+    width: 100vw;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes sideAni {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 0px;
+  }
+}
+
+@keyframes sideAniClose {
+  0% {
+    display: block;
+    right: 0%;
+  }
+  99% {
+    display: block;
+    right: -100%;
+  }
+  100% {
+    display: none;
+    right: -100%;
   }
 }
