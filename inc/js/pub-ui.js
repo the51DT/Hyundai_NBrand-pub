@@ -727,8 +727,8 @@ checkScreenSize();
 
 // [Start] : hashTag 말줄임
 $(".card_type04 .card_con").each(function () {
-  var $set = $(this).children("ul.card-hashtag").children("li");
-  var $setUl = $(this).children("ul.card-hashtag");
+  var $set = $(this).children("div.card-hashtag").children("button");
+  var $setUl = $(this).children("div.card-hashtag");
 
   $set.each(function () {
     var cardConRightEdge = $setUl.offset().left + $setUl.outerWidth();
@@ -740,7 +740,7 @@ $(".card_type04 .card_con").each(function () {
   });
 
   $set.siblings(".ellipsis").first().show();
-  $set.siblings(".ellipsis").nextAll().hide(); // EP040501 - Pony Magazine 제목 참고 (안하면 li.ellipsis 뒤에 li들 다 살아있음 - 그래서 li.ellipsis 너비 줄어듦)
+  $set.siblings(".ellipsis").nextAll().hide(); // EP040501 - Pony Magazine 제목 참고 (안하면 button.ellipsis 뒤에 li들 다 살아있음 - 그래서 button.ellipsis 너비 줄어듦)
 });
 // [End] : hashTag 말줄임
 
