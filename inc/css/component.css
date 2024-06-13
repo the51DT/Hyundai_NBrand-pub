@@ -267,6 +267,21 @@ input[type="radio"]:focus + label {
   background: url(../../../inc/images/icon/icon-twitter_white.svg);
   background-size: contain;
 }
+.btn[class*="txt-btn"]:hover [class*="icon-right"],
+.btn[class*="txt-btn"]:active [class*="icon-right"] {
+  background: url(../../../inc/images/icon/icon-arrow01_right_red.svg);
+  background-size: contain;
+}
+.btn[class*="txt-btn"]:hover [class*="icon-left"],
+.btn[class*="txt-btn"]:active [class*="icon-left"] {
+  background: url(../../../inc/images/icon/icon-arrow01_left_red.svg);
+  background-size: contain;
+}
+.btn[class*="txt-btn"]:hover [class*="icon-copylink"],
+.btn[class*="txt-btn"]:active [class*="icon-copylink"] {
+  background: url(../../../inc/images/icon/icon-copylink_red.svg);
+  background-size: contain;
+}
 [class*="btn-lg"] {
   padding: 20px 32px;
   font-size: 20px;
@@ -288,6 +303,11 @@ input[type="radio"]:focus + label {
   font-size: 16px;
   font-weight: 700;
   line-height: 16px;
+}
+[class*="sm-txt-btn"] {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 19.6px;
 }
 [class*="-primary01"] {
   background: #000;
