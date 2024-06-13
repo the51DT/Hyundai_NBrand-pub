@@ -9,6 +9,79 @@
     <link type="text/css" rel="stylesheet" href="../../../../inc/css/swiper.min.css" />
     <link type="text/css" rel="stylesheet" href="../../../../inc/css/common.css" />
     <link type="text/css" rel="stylesheet" href="../../../../inc/css/experience.css" />
+    <style>
+      /* club-popup */
+      .club-popup {
+        position: absolute;
+        background: #fff;
+        width: 100%;
+        z-index: 1001;
+        top: 60px;
+        left: 0;
+        border: 1px solid #000;
+        border-radius: 4px;
+        display: none;
+      }
+      .popup.club-popup .popup-wrapper {
+        max-width: 100%;
+      }
+      .popup.club-popup .popup-wrapper .popup-header.pop-profile {
+        padding: 16px;
+        gap: 8px;
+        justify-content: flex-start;
+        border-bottom: 0;
+      }
+      .popup.club-popup .popup-wrapper .popup-header.pop-profile img {
+        width: 40px;
+        height: 40px;
+      }
+      .pop-profile_club {
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 19.6px;
+      }
+      .popup.club-popup .popup-wrapper .popup-body {
+        padding: 0;
+      }
+      .popup.club-popup .popup-wrapper .popup-body .pop-gray {
+        padding: 24px;
+        display: flex;
+        gap: 24px;
+        background-color: #f0f0f0;
+      }
+      .popup.club-popup .popup-wrapper .popup-body .pop-gray > div {
+        width: calc(100% / 3);
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .popup.club-popup .popup-wrapper .popup-body .pop-gray dt {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 19.6px;
+      }
+      .popup.club-popup .popup-wrapper .popup-body .pop-gray dd {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 28px;
+      }
+      .popup.club-popup .popup-wrapper .popup-body .pop-des {
+        padding: 20px 16px;
+      }
+      .popup.club-popup .popup-wrapper .popup-body .pop-des p {
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 19.6px;
+      }
+      .popup.club-popup .popup-wrapper .popup-body .btn-wrap {
+        padding: 0 16px;
+        margin-bottom: 26px;
+      }
+      .popup.club-popup .popup-wrapper .popup-footer {
+        border-top: 0;
+        padding: 16px 0;
+      }
+    </style>
   </head>
 
   <body>
@@ -101,9 +174,69 @@
                       </div>
                       <!-- v.101 기획서 p.40 : 프로필 [02.N Community 가입 한 경우] > 레이어 나옴(EP040401M01) -->
                       <div class="card_profile">
-                        <button class="profile_img">
+                        <button class="profile_img pop-open" aria-controls="pop-page" aria-haspopup="true" aria-expanded="false" title="팝업오픈">
                           <img src="../../../../inc/images/img/img_Nful_profile_01.png" alt="N Community가입자의 프로필 이미지" />
                         </button>
+                        <div class="popup club-popup" id="pop-page" role="dialog" aria-modal="true" aria-labelledby="tit-type04" data-pop="pop-page">
+                          <div class="popup-wrapper">
+                            <div class="popup-header pop-profile">
+                              <img src="../../../../inc/images/img/img_Nful_profile_01.png" alt="N Community가입자의 프로필 이미지" />
+                              <p class="pop-profile_club">i30N_Club</p>
+                            </div>
+                            <div class="popup-body">
+                              <dl class="pop-gray">
+                                <div>
+                                  <dt class="txt-left">Rank</dt>
+                                  <dd class="txt-right">1</dd>
+                                </div>
+                                <div>
+                                  <dt class="txt-left">Point</dt>
+                                  <dd class="txt-right">3,000</dd>
+                                </div>
+                                <div>
+                                  <dt class="txt-left">Members</dt>
+                                  <!-- 툴팁으로 만들어야함 -->
+                                  <dd class="txt-right">1,234</dd>
+                                </div>
+                              </dl>
+                              <div class="pop-des">
+                                <p>Welcome!</p>
+                                <p>Hyundai i30 N Performance</p>
+                                <p>You can join immediately</p>
+                                <p>Actively participate in club missions</p>
+                                <p>Club cafe in operation</p>
+                              </div>
+                              <div class="btn-wrap">
+                                <a href="#" target="_blank" class="btn sm-txt-btn01">
+                                  <span class="btn-icon16 icon-copylink" aria-hidden="true"></span>
+                                  N Community
+                                </a>
+                              </div>
+                            </div>
+                            <div class="popup-footer">
+                              <div class="btn-wrap">
+                                <button type="button" class="btn btn-md-primary01" aria-label="Request Button">
+                                  Sign Up
+                                  <span class="btn-icon20 icon-right-wh" aria-hidden="true"></span>
+                                </button>
+                                <!-- Master(생성자)인 경우 [가입하기] 버튼 → [관리하기] 버튼으로 노출 
+                                1. 클릭 시 마이페이지 > N Community 메뉴 이동 (a태그로 변경했는데 페이지 이동인지 확인 필요)
+                                (※※※※※※※※※※영문 받아야함) -->
+                                <a class="btn btn-md-primary01">
+                                  관리하기
+                                  <span class="btn-icon20 icon-right-wh" aria-hidden="true"></span>
+                                </a>
+                              </div>
+                            </div>
+                            <div class="btn-wrap">
+                              <!-- pop-close 해당 팝업 닫기 -->
+                              <button type="button" class="btn btn-only-icon-notbg pop-close" aria-label="close button">
+                                <span class="visually-hidden">close button</span>
+                                <span class="btn-icon20 icon-close" aria-hidden="true"></span>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
                         <p class="profile_des">
                           <span class="profile_name">Madison</span>
                           <span class="profile_club">i30N_Club</span>
@@ -1296,5 +1429,6 @@
     <script type="text/javascript" src="../../../../inc/js/jquery-3.7.1.slim.min.js"></script>
     <script type="text/javascript" src="../../../../inc/js/swiper.min.js"></script>
     <script type="text/javascript" src="../../../../inc/js/pub-ui.js"></script>
+    <script type="text/javascript" src="../../../../inc/js/com-ui.js"></script>
   </body>
 </html>
