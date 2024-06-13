@@ -796,15 +796,15 @@ body {
 }
 
 .popup-wrapper {
-  max-width: 880px;
+  width: 100%;
   margin: 0 auto;
   position: relative;
 }
 
 .popup-wrapper button.btn-only-icon-notbg.pop-close.pop-page {
   position: absolute;
-  top: 32px;
-  right: 0;
+  top: 34px;
+  right: 35px;
 }
 
 .popup-wrapper .popup-header {
@@ -813,7 +813,7 @@ body {
   justify-content: space-between;
   align-items: center;
   align-self: stretch;
-  border-bottom: 1px solid #787d80;
+  /* border-bottom: 1px solid #787d80; */
 }
 
 .popup-wrapper .popup-header h3 {
@@ -821,11 +821,16 @@ body {
 }
 
 .popup-wrapper .popup-body {
-  padding: 0 40px;
+  padding: 40px 40px 60px;
+  display: grid;
+  gap: 40px 0;
+  overflow-y: auto;
+  max-height: 600px;
+  border-top: 1px solid #787d80;
 }
 
 .popup-wrapper .popup-body-innerbox {
-  margin: 40px 0;
+  /* margin: 40px 0; */
 }
 
 .popup-wrapper .popup-con:last-child {
@@ -840,6 +845,11 @@ body {
   justify-content: flex-end;
   align-items: center;
   align-self: stretch;
+
+  /* position: fixed;
+  bottom: -84px; */
+  width: 100%;
+  background: #fff;
 }
 
 .popup-wrapper .popup-footer .btn-wrap {
@@ -1170,7 +1180,7 @@ body {
   padding: 40px;
 }
 .popup-wrapper.reward .popup-body .wrap-label-reward {
-  margin-top: 40px;
+  /* margin-top: 40px; */
   display: flex;
   gap: 16px 0;
   flex-direction: column;
@@ -1918,10 +1928,11 @@ body {
   /* popup temp */
   .popup-wrapper {
     margin: 0 auto;
-    padding: 0 0;
+    padding: 0;
   }
   .popup-wrapper .popup-header {
-    padding: 32px 24px;
+    /* padding: 32px 24px; */
+    padding: 16px 24px;
   }
   .popup-wrapper button.btn-only-icon-notbg.pop-close.pop-page {
     right: 24px;
@@ -1932,9 +1943,21 @@ body {
     width: 100%;
   }
   .popup-wrapper .popup-body {
-    padding: 0 24px;
+    padding: 40px 24px 60px;
     max-height: 696px;
     overflow-y: auto;
+    display: grid;
+    gap: 40px 0;
+  }
+
+  .popup-wrapper .popup-footer {
+    padding: 18px 24px;
+    bottom: 0%;
+    position: fixed;
+    width: 100%;
+  }
+  .popup-wrapper .popup-body-innerbox {
+    margin: 0;
   }
   .popup-wrapper .popup-header h3 {
     font-size: 20px;
