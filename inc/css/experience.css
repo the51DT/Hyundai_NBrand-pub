@@ -43,6 +43,31 @@
   max-width: 90rem;
 }
 
+/* 디자인 없어서 임시 작업 - 공용 */
+.page_wrap {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.page_wrap > button {
+  width: 3rem;
+  height: 3rem;
+  background-color: #595c5f;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.page_wrap .page_prev_btn {
+  background-image: url("../images/icon/icon-arrow01_left_white.svg");
+}
+.page_wrap .page_next_btn {
+  background-image: url("../images/icon/icon-arrow01_right_white.svg");
+}
+.page_wrap .page_list {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 /* EP040401 */
 .ranking-wrap {
   background: #f0f0f0;
@@ -391,7 +416,7 @@
 .standing_bottom {
   padding: 5rem 5rem 15rem;
 }
-.standing_bottom .btn-wrap-default {
+.standing_bottom .page_wrap {
   margin-top: 5rem;
 }
 

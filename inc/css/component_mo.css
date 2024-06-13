@@ -363,7 +363,9 @@ min-width : 1024 css
   .card_type01.card_swiper .card_profile img {
     width: 8.9375rem;
   }
-  .card_type01.card_swiper:hover .card_profile img {
+  .card_type01.card_swiper:hover .card_profile img,
+  .card_type01.card_swiper:active .card_profile img,
+  .card_type01.card_swiper:focus .card_profile img {
     margin-bottom: 0;
   }
   .card_type01 .card_rank {
@@ -424,7 +426,9 @@ min-width : 1024 css
     width: 10rem;
     height: 10rem;
   }
-  .grid_mo_drop .card_type01:hover .card_profile img {
+  .grid_mo_drop .card_type01:hover .card_profile img,
+  .grid_mo_drop .card_type01:active .card_profile img,
+  .grid_mo_drop .card_type01:focus .card_profile img {
     margin-bottom: 0;
   }
   .grid_mo_drop .card_type01.card_team .card_profile img {
