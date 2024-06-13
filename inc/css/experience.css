@@ -1932,6 +1932,7 @@
   }
   .popup-wrapper button.btn-only-icon-notbg.pop-close.pop-page {
     right: 24px;
+    top: 24px;
     width: 24px;
     height: 24px;
   }
@@ -1946,12 +1947,24 @@
     gap: 40px 0;
   }
 
+  .popup-wrapper.onlyTxt .popup-body {
+  }
+
   .popup-wrapper .popup-footer {
     padding: 18px 24px;
     bottom: 0%;
     position: fixed;
     width: 100%;
   }
+  .popup-wrapper .popup-footer .btn-wrap {
+    flex: 1;
+  }
+  .popup-wrapper .popup-footer .btn-wrap button[class*="btn-lg"] {
+    padding: 17px 20px;
+    align-self: stretch;
+    font-size: 16px;
+  }
+
   .popup-wrapper .popup-body-innerbox {
     margin: 0;
   }
