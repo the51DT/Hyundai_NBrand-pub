@@ -447,6 +447,7 @@
         btn.classList.remove("visually-hidden");
         btn.addEventListener("click", () => {
           el.target.value = "";
+          el.target.focus();
           btn.classList.add("visually-hidden");
         });
       } else {

@@ -116,4 +116,22 @@
   .header__event-wrap .link-area {
     display: none;
   }
+
+  .model-popup {
+    width: 100%;
+    height: 100vh;
+  }
+
+  /* bottom-popup */
+  .bottom-popup {
+    top: auto;
+    left: auto;
+    bottom: 0;
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    transform: translate(0);
+    z-index: 1001;
+    display: none;
+  }
 }

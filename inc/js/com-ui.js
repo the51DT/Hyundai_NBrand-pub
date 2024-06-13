@@ -4,14 +4,16 @@ if ($.isFunction("checkCommonJs")) {
 
 /* 퍼블리셔 JS 셋팅 */
 $(document).ready(function () {
-  $("body").data("lastTag", "true");
   NbrandUI.headerNav(".nav-btn", ".nav-wrap", ".header-wrap");
+  NbrandUI.modalOpen(".pop-open");
+  NbrandUI.modalClose(".pop-close");
+  // NbrandUI.inputClear(".input-del");
 });
 
 let $win_W = $(window).width();
 $(window).resize(function () {
   $win_W = $(window).width();
-  location.reload(true);
+  // location.reload(true);
 });
 
 var NbrandUI = {
@@ -46,14 +48,8 @@ var NbrandUI = {
           NbrandUI.toggleBtn();
           if (eventItem.hasClass("on")) {
             eventCont.attr("aria-hidden", "false");
-            if (NbrandUI.windowSize()) {
-              NbrandUI.dimdOn();
-            }
           } else {
             eventCont.attr("aria-hidden", "true");
-            if (NbrandUI.windowSize()) {
-              NbrandUI.dimdOff();
-            }
           }
         });
     }
@@ -92,23 +88,53 @@ var NbrandUI = {
 
     function event() {
       openmodal.on("click", function () {
-        openmodalData = $(this).data("pop");
-        openWrap = $('.popup[data-pop="' + openmodalData + '"]');
+        openmodalData = $(this).attr("aria-controls");
+        openWrap = $(".popup#" + openmodalData);
         var popClass = openWrap.attr("class");
-        switch (popClass) {
-          case "popup model-popup":
-            openWrap.addClass("on").fadeIn(200);
-            break;
-          case "popup bottom-popup":
-            openWrap.addClass("on").slideDown(200);
-            break;
-          default:
-            openWrap.addClass("on").fadeIn(200);
-            break;
+
+        if (NbrandUI.windowSize()) {
+          switch (popClass) {
+            case "popup model-popup":
+              openWrap.addClass("on").fadeIn(200);
+              break;
+            case "popup bottom-popup":
+              openWrap.addClass("on").slideDown(200);
+              break;
+            case "popup side-popup":
+              openWrap.addClass("on").fadeIn(200);
+              break;
+            default:
+              openWrap.addClass("on").fadeIn(200);
+              break;
+          }
+        } else {
+          switch (popClass) {
+            case "popup model-popup":
+              openWrap.addClass("on").fadeIn(200);
+              NbrandUI.dimdOn();
+              $(".dimmed").addClass(openmodalData);
+              break;
+            case "popup bottom-popup":
+              openWrap.addClass("on").fadeIn(200);
+              NbrandUI.dimdOn();
+              $(".dimmed").addClass(openmodalData);
+              break;
+            case "popup side-popup":
+              openWrap.addClass("on").stop().animate({ right: "0px" }, 100);
+              NbrandUI.anidimdOn();
+              $(".ani-dimmed").addClass(openmodalData);
+              break;
+            default:
+              openWrap.addClass("on").fadeIn(200);
+              break;
+          }
         }
-        NbrandUI.dimdOn();
-        $(".dimmed").stop().fadeIn(300).addClass(openmodalData);
         openWrap.find(".pop-close").addClass(openmodalData);
+        tparent = openWrap;
+        Nbrand.uiFocusTab({
+          selector: tparent,
+          type: "hold",
+        });
       });
     }
 
@@ -131,8 +157,8 @@ var NbrandUI = {
 
     function event() {
       closemodal.on("click", function (e) {
-        closeWrap = $(this).parents("article");
-        closemodalData = closeWrap.data("pop");
+        closeWrap = $(this).parents(".popup");
+        closemodalData = closeWrap.attr("id");
         closeWrap.siblings().each(function () {
           if ($(this).attr("data-ariahide") == "on") {
             $(this).removeAttr("data-ariahide");
@@ -152,14 +178,80 @@ var NbrandUI = {
     init(obj);
     event();
   },
+  /* Input data clear */
+  // inputClear: function (obj) {
+  //   if (!NbrandUI.checkObj(obj)) {
+  //     return;
+  //   }
 
+  //   var input = null;
+  //   var clearBtn = null;
+
+  //   function init(obj) {
+  //     input = $(obj);
+  //     inputLength = input.length;
+  //     clearBtn =
+  //       '<button type="button" class="del"><span>입력필드 삭제</span></button>';
+  //     input.find(".del").remove();
+  //     for (var i = 0; i < inputLength; i++) {
+  //       input.eq(i).find("input").after(clearBtn);
+  //       if (
+  //         input.eq(i).find("input").val() == "" ||
+  //         input.eq(i).find("input").prop("disabled") == true
+  //       ) {
+  //         input.eq(i).find("input").parent().find(".del").hide();
+  //       } else {
+  //         input.eq(i).find("input").parent(".input-del").addClass("on-del");
+  //         input.eq(i).find("input").show();
+  //       }
+  //     }
+  //   }
+
+  //   function event(obj) {
+  //     input.on("input", "input", function () {
+  //       $(this).parent().find(".del").hide();
+  //       $(this).parent().addClass("on-del");
+  //       $(this).parent().find(".del").show();
+  //       if ($(this).parent().hasClass("error")) {
+  //         $(this).parent().removeClass("error");
+  //       }
+  //       if ($(this).val() == "") {
+  //         $(this).parent().find(".del").hide();
+  //       }
+  //     });
+  //     clear(obj);
+  //   }
+  //   function clear(obj) {
+  //     $(obj).on("click", ".del", function () {
+  //       $(this).parent(".input-del").removeClass("on-del");
+  //       $(this).parent().find("input").val("").focus();
+  //       if ($(this).parent().hasClass("error")) {
+  //         $(this).parent().removeClass("error");
+  //       }
+  //       $(this).hide();
+  //     });
+  //   }
+  //   init(obj);
+  //   event(obj);
+  // },
   /* Dimmed */
   dimdOn: function () {
     if (!$("body").children(".dimmed").length) {
       $("body").append("<div class='dimmed' aria-hidden='true'></div>");
+    } else {
+      // $(".dimmed").css("z-index", 1002);
     }
   },
   dimdOff: function () {
     $("body").find(".dimmed").remove();
+  },
+  /* aniDimmed */
+  anidimdOn: function () {
+    if (!$("body").children(".ani-dimmed").length) {
+      $("body").append("<div class='ani-dimmed' aria-hidden='true'></div>");
+    }
+  },
+  anidimdOff: function () {
+    $("body").find(".ani-dimmed").remove();
   },
 };
