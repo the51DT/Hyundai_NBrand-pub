@@ -1410,18 +1410,18 @@
   flex-direction: column;
   gap: 20px;
 }
-.club-popup .popup-wrapper .popup-body .pop-gray dt {
+.club-popup .popup-wrapper .popup-body .pop-gray > div p:first-child {
   font-size: 14px;
   font-weight: 500;
   line-height: 19.6px;
 }
-.club-popup .popup-wrapper .popup-body .pop-gray dd {
+.club-popup .popup-wrapper .popup-body .pop-gray > div p:last-child {
   font-size: 20px;
   font-weight: 700;
   line-height: 28px;
   padding-bottom: 24px; /* tooltip 호버영역 잡기 위해 */
 }
-.club-popup .popup-wrapper .popup-body .pop-gray .tooltip_wrap dt {
+.club-popup .popup-wrapper .popup-body .pop-gray .tooltip_wrap p:first-child {
   padding-right: 24px; /* tooltip 호버영역 잡기 위해 */
 }
 .club-popup .popup-wrapper .popup-body .pop-gray .tooltip {
