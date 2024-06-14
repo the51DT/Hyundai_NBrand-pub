@@ -28,45 +28,22 @@
             <span class="line"></span>
             <span class="line"></span>
           </button>
-          <button title="이전 메뉴" aria-controls="navWrap"></button>
           <div class="nav-wrap" id="navWrap" aria-hidden="true">
             <nav>
               <!-- gnb 1dep -->
-              <script>
-                $(function () {
-                  $('.gnb__tab-btn-wrap button').click(function () {
-                    gnbButton = $(this);
-                    gnbButtonData = $(this).attr('id');
-                    gnbPanel = $('.gnb__tab-cont-wrap');
-                    gnbPanelTarget = gnbPanel.find('[class*="gnb__tab-cont"][aria-labelledby="' +
-                      gnbButtonData +
-                      '"]');
-                    gnbEventArea = $('.header__event-wrap')
-                    gnbButton.parent().siblings().find('button').removeClass('on');
-                    gnbButton.toggleClass('on');
-                    gnbPanelTarget.toggleClass('on').siblings().removeClass('on');
-                    if (!gnbButton.hasClass("on")) {
-                      gnbEventArea.removeClass('hide');
-                    } else {
-                      gnbEventArea.addClass('hide');
-                    }
-                  });
-                })
-              </script>
               <ul class="gnb__tab-btn-wrap">
-                <li><button class="gnb__tab-btn01" role="tab" id="gnb-tab1" aria-selected="false">Brand</button></li>
-                <li><button class="gnb__tab-btn02" role="tab" id="gnb-tab2" aria-selected="false">Models</button></li>
-                <li><button class="gnb__tab-btn     03" role="tab" id="gnb-tab3"
+                <li><button class="gnb__tab-btn01" role="tab" aria-controls="gnbTab1"
+                    aria-selected="false">Brand</button></li>
+                <li><button class="gnb__tab-btn02" role="tab" aria-controls="gnbTab2"
+                    aria-selected="false">Models</button></li>
+                <li><button class="gnb__tab-btn     03" role="tab" aria-controls="gnbTab3"
                     aria-selected="false">Experience</button>
                 </li>
                 <li><a href="#" class="gnb__tab-btn04">Configurator</a></li>
               </ul>
               <!-- g nb 1dep panel -->
               <div class="gnb__tab-cont-wrap">
-                <div class="dep1_mo-control">
-
-                </div>
-                <div class="gnb__tab-cont01" role="tabpanel" aria-labelledby="gnb-tab1">
+                <div class="gnb__tab-cont01" id="gnbTab1" role="tabpanel" aria-labelledby="gnb__tab02-btn01">
                   <!-- gnb 2-1 dep-->
                   <div class="gnb__tab02-wrap">
                     <ul class="gnb__tab02">
@@ -92,12 +69,9 @@
                     </div>
                   </div>
                 </div>
-                <div class="gnb__tab-cont02" role="tabpanel" aria-labelledby="gnb-tab2">
+                <div class="gnb__tab-cont02" id="gnbTab2" role="tabpanel" aria-labelledby="gnb__tab02-btn01">
                   <!-- gnb 2-2dep-->
                   <div class="gnb__tab02-wrap dep3_on">
-                    <div class="dep2_mo-control">
-
-                    </div>
                     <ul class="gnb__tab02">
                       <!-- 현재 페이지 dep버튼에 on class 삽입. -->
                       <li>
@@ -233,7 +207,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="gnb__tab-cont03" role="tabpanel" aria-labelledby="gnb-tab3">
+                <div class="gnb__tab-cont03" id="gnbTab3" role="tabpanel" aria-labelledby="gnb__tab02-btn01">
                   <div class="gnb__tab02-wrap">
                     <ul class="gnb__tab02">
                       <!-- 현재 페이지 dep버튼에 on class 삽입. -->
