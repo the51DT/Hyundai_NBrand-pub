@@ -825,7 +825,7 @@
 
 .popup-wrapper .btn-wrap button.btn-only-icon-notbg.pop-close.pop-page {
   position: absolute;
-  top: 34px;
+  top: 28px;
   right: 35px;
 }
 
@@ -2096,6 +2096,9 @@
     /* padding: 32px 24px; */
     padding: 16px 24px;
   }
+  .popup-wrapper .btn-wrap button.btn-only-icon-notbg.pop-close.pop-page {
+    top: 23px;
+  }
   .popup-wrapper button.btn-only-icon-notbg.pop-close.pop-page {
     right: 24px;
     top: 24px;
@@ -2345,10 +2348,30 @@
     gap: 20px;
   }
 
-  .club-popup .popup-wrapper .popup-body .pop-gray .tooltip:hover + .tooltip-box,
-  .club-popup .popup-wrapper .popup-body .pop-gray .tooltip:active + .tooltip-box,
-  .club-popup .popup-wrapper .popup-body .pop-gray .tooltip:focus + .tooltip-box,
-  .club-popup .popup-wrapper .popup-body .pop-gray .tooltip + .tooltip-box:hover {
+  .club-popup
+    .popup-wrapper
+    .popup-body
+    .pop-gray
+    .tooltip:hover
+    + .tooltip-box,
+  .club-popup
+    .popup-wrapper
+    .popup-body
+    .pop-gray
+    .tooltip:active
+    + .tooltip-box,
+  .club-popup
+    .popup-wrapper
+    .popup-body
+    .pop-gray
+    .tooltip:focus
+    + .tooltip-box,
+  .club-popup
+    .popup-wrapper
+    .popup-body
+    .pop-gray
+    .tooltip
+    + .tooltip-box:hover {
     position: absolute;
     top: 37%;
     right: 2%;
