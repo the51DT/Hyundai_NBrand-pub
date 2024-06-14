@@ -156,6 +156,7 @@ input[type="radio"]:focus + label {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  font-family: "Hyundai Sans Text";
 }
 .btn[class*="-primary"]:hover,
 .btn[class*="-primary"]:active {
@@ -1628,15 +1629,6 @@ input[type="radio"]:focus + label {
 }
 
 /* swiper */
-.swiper {
-  max-width: 1920px;
-  margin: 0 auto;
-}
-.swiper-container {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
 .swiper-pagination-bullet {
   opacity: 0.5;
   width: 8px;
@@ -1646,12 +1638,6 @@ input[type="radio"]:focus + label {
 
 .swiper-pagination-bullet:not(:last-child) {
   margin-right: 6px !important;
-}
-
-.swiper-pagination-bullet-active {
-  opacity: 1;
-  width: 84px;
-  background-color: #de3111;
 }
 
 .swiper-pagination-custom .swiper-pagination-bullet {
@@ -1769,29 +1755,13 @@ input[type="radio"]:focus + label {
   margin-left: 6px;
   flex: 0;
 }
-
-.autoplay-progress {
-  display: block;
-  width: 84px;
-  height: 4px;
-  background: #808080;
-}
-.autoplay-progress .bar {
-  --prograss: 0;
-  position: absolute;
-  left: 0;
-  bottom: 10px;
-  display: block;
-  /* 감소 형식으로 표현할 경우, 1에서 계산값을 빼준다. : calc(지정할 길이너비값 * (1 - var(--progress))) * */
-  width: calc(84px * var(--progress));
-  height: 4px;
-  z-index: 15;
-  background: #de3111;
-}
 .swiper-arrow-wrap {
   display: none;
 }
-
+.ty01Swiper {
+  max-width: 1920px;
+  margin:0 auto;
+}
 .ty01Swiper .autoplay-progress {
   background: #888a8b;
 }
@@ -1995,7 +1965,23 @@ input[type="radio"]:focus + label {
   height: 17px;
   mask-image: url("../images/icon/icon-arrow01_right_white.svg");
 }
+.swiper-card-type {
+  /* width: 100%; */
+  /* max-width: none; */
+}
 
+.swiper-card-type .swiper-wrapper {
+  max-width: 1800px;
+}
+.swiper-card-type .swiper-slide:first-child {
+  margin-left:60px;
+}
+.swiper-card-type.ty04Swiper .swiper-slide:first-child {
+  margin-left:0;
+}
+.swiper-card-type.ty04Swiper .swiper-wrapper {
+  max-width: 1440px;
+}
 .swiper-card-type .card_type01 {
   color: #fff;
   height: 618px;
@@ -2114,10 +2100,26 @@ input[type="radio"]:focus + label {
   line-height: 33.6px;
 }
 
+.swiper-card-type .swiper-button-prev { 
+  left:60px;
+}
+
+.swiper-card-type .swiper-button-next { 
+  right:60px;
+}
+
 /* swiper 반응형 예외 케이스 처리 */
 @media screen and (max-width: 1480px) {
   .swiper-arrow-wrap {
     display: block;
+  }
+
+  .ty04Swiper .swiper-button-prev { 
+    left:80px;
+  }
+
+  .ty04Swiper .swiper-button-next { 
+    right:80px;
   }
 }
 
@@ -4045,6 +4047,7 @@ table {
   font-size: 40px;
   font-weight: 700;
   line-height: 50px;
+  font-family: "Hyundai Sans Head";
 }
 .seasonstats-box dl {
   display: flex;
@@ -4069,11 +4072,13 @@ table {
   font-size: 20px;
   font-weight: 500;
   line-height: 28px;
+  font-family: "Hyundai Sans Text";
 }
 .seasonstats-box dl dd {
   font-size: 32px;
   font-weight: 700;
   line-height: 44.8px;
+  font-family: "Hyundai Sans Head";
 }
 .seasonstats-box dl > div {
   display: flex;

@@ -1487,6 +1487,10 @@ min-width : 1024 css
     max-width: 258px;
   }
 
+  .swiper-card-type .swiper-slide:first-child {
+    margin-left:0;
+  }
+
   .swiper-card-type .card_type01 {
     max-height: 400px;
     min-width: revert;
