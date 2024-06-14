@@ -5,7 +5,7 @@ if ($.isFunction("checkCommonJs")) {
 /* 퍼블리셔 JS 셋팅 */
 $(document).ready(function () {
   NbrandUI.headerNav(".nav-btn", ".nav-wrap", ".header-wrap");
-  NbrandUI.headerNav(".nav-btn", ".nav-wrap", ".header-wrap");
+  NbrandUI.headerNav2dep(".gnb__tab-btn-wrap", ".gnb__tab-cont-wrap");
   NbrandUI.modalOpen(".pop-open");
   NbrandUI.modalClose(".pop-close");
   // NbrandUI.inputClear(".input-del");
@@ -14,6 +14,10 @@ $(document).ready(function () {
 let $win_W = $(window).width();
 $(window).resize(function () {
   $win_W = $(window).width();
+  if (NbrandUI.windowSize()) {
+    // if()
+  } else {
+  }
   // location.reload(true);
   // if (NbrandUI.windowSize() && $(".dimmed").length) {
   //   $("body").find(".dimmed").remove();
@@ -66,38 +70,55 @@ var NbrandUI = {
     }
     event();
   },
-  headerNav2Dep: function (obj, com, par) {
+  headerNav2dep: function (obj, com) {
     if (!NbrandUI.checkObj(obj)) {
       return;
     }
-
-    eventCont = $(com);
-    eventParent = $(par);
-    tparent = eventParent.find(".sitemap-wrap");
-
+    function init() {
+      eventBtn = $(obj).find("[class*='gnb__tab-btn']");
+      gnbPanel = $(com);
+      // gnbPanel.each(function (e) {
+      //   e.style.gridRowEnd = `
+      //     height ${Math.ceil(el.scrollHeight + row_gap)}
+      //   `;
+      // });
+      // masonry_item.forEach((el) => {
+      //   el.style.gridRowEnd = `
+      //     span ${Math.ceil(
+      //       el.querySelector(".masonry_con").scrollHeight + row_gap
+      //     )}
+      //   `;
+      // });
+    }
     function event() {
-      $(obj)
-        .off("click")
-        .on("click", function () {});
       // depth2
-      $(".gnb__tab-btn-wrap button").click(function () {
-        gnbButton = $(this);
-        gnbButtonData = $(this).attr("aria-controls");
-        gnbPanel = $(".gnb__tab-cont-wrap");
-        gnbPanelTarget = gnbPanel.find(
-          '[class*="gnb__tab-cont"]#' + gnbButtonData + '"]'
-        );
-        gnbEventArea = $(".header__event-wrap");
-        gnbButton.parent().siblings().find("button").removeClass("on");
-        gnbButton.toggleClass("on");
-        gnbPanelTarget.toggleClass("on").siblings().removeClass("on");
-        if (!gnbButton.hasClass("on")) {
-          gnbEventArea.removeClass("hide");
-        } else {
-          gnbEventArea.addClass("hide");
-        }
+      eventBtn.off("click").on("click", function () {
+        gnb2depBtn = $(this);
+        gnb2depData = $(this).attr("aria-controls");
+        gnb2depTarget = gnbPanel.find("#" + gnb2depData);
+        // gnb2depArea = $(".header__event-wrap");
+        gnb2depBtn
+          .toggleClass("on")
+          .parent()
+          .siblings()
+          .find("button")
+          .removeClass("on");
+        gnb2depBtn;
+        gnb2depTarget.toggleClass("on").siblings().removeClass("on");
+        // if (NbrandUI.windowSize()) {
+        //   gnb2depPanelTarget.css(
+        //     "height",
+        //     gnb2depPanelTarget.scrollHeight
+        //   );
+        // }
+        // if (!gnb2depBtn.hasClass("on")) {
+        //   gnb2depArea.removeClass("hide");
+        // } else {
+        //   gnb2depArea.addClass("hide");
+        // }
       });
     }
+    init();
     event();
   },
 
@@ -152,8 +173,8 @@ var NbrandUI = {
               openWrap.addClass("on").fadeIn(200);
               break;
             case "popup club-popup":
-              openWrap.addClass("on").fadeIn(200);
-              NbrandUI.dimdOn();
+              openWrap.addClass("on").slideDown(200);
+              NbrandUI.mdimdOn();
               break;
             default:
               openWrap.addClass("on").fadeIn(200);
@@ -233,6 +254,7 @@ var NbrandUI = {
               $(".dimmed").stop().fadeOut(300);
               setTimeout(function () {
                 NbrandUI.dimdOff();
+                NbrandUI.mdimdOff();
               }, 300);
               break;
           }
@@ -254,6 +276,7 @@ var NbrandUI = {
               $(".dimmed").stop().fadeOut(300);
               setTimeout(function () {
                 NbrandUI.dimdOff();
+                NbrandUI.mdimdOff();
               }, 300);
               break;
           }
@@ -339,5 +362,15 @@ var NbrandUI = {
   },
   anidimdOff: function () {
     $("body").find(".ani-dimmed").remove();
+  },
+  mdimdOn: function () {
+    if (!$("body").children(".dimmed").length) {
+      $("body").append("<div class='m-dimmed' aria-hidden='true'></div>");
+    } else {
+      // $(".dimmed").css("z-index", 1002);
+    }
+  },
+  mdimdOff: function () {
+    $("body").find(".m-dimmed").remove();
   },
 };
