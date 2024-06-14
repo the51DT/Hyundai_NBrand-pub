@@ -110,6 +110,7 @@
   display: flex;
   gap: 33px;
   margin-top: 16px;
+  font-family: "Hyundai Sans Text";
 }
 .ranking-wrap .ranking-center .ranking-inner2.community-profile {
   display: flex;
@@ -247,6 +248,7 @@
   border-top: 3px solid #787d80;
   max-width: 1440px;
   margin: 100px auto 0;
+  font-family: "Hyundai Sans Text";
 }
 .subnotice_wrap .noti-listbox li {
   display: flex;
