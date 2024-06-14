@@ -1575,7 +1575,7 @@
   .ranking-wrap .content-item05.main-rank .title-w1440 {
     padding-bottom: 28px;
   }
-  .ranking-wrap .card_type03 .card_bottom > button.pop-open {
+  .ranking-wrap .card_type03 .card_bottom > button {
     width: auto;
     height: 100%;
   }
