@@ -140,6 +140,9 @@ var pubUi = {
         // autoplayTimeLeft(s, time, progress) {
         //   // progressBar.style.setProperty("--progress", 1 - progress);
         // },
+        init: function () {
+          //초기 세팅값 이미지 로딩슬라이드,
+        },
         slideChange: function () {
           //pubUi.videoControlerChk(".ty01Swiper");
           var swiperActiveVideo = $(".ty01Swiper").find(
@@ -245,7 +248,7 @@ var pubUi = {
     var swiper4 = new Swiper(".ty04Swiper", {
       slidesPerView: 3.5,
       spaceBetween: 24,
-      watchOverflow: true,
+      freeMode: true,
       navigation: {
         nextEl: ".ty04Swiper .swiper-button-next",
         prevEl: ".ty04Swiper .swiper-button-prev",
@@ -266,11 +269,16 @@ var pubUi = {
     });
 
     var swiper5 = new Swiper(".ty05Swiper", {
+      slidesPerView: 4,
       spaceBetween: 4,
-      watchOverflow: true,
+      freeMode: true,
       navigation: {
         nextEl: ".ty05Swiper .swiper-button-next",
         prevEl: ".ty05Swiper .swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination-custom",
+        clickable: true,
       },
       breakpoints: {
         360: {

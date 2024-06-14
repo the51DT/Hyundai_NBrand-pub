@@ -278,9 +278,6 @@
 .key-visual-wrap {
   background-color: #1c1c1c;
 }
-.next-race-box {
-  padding: 160px 0 200px;
-}
 .conts-head {
   display: flex;
   justify-content: space-between;
@@ -292,14 +289,16 @@
   max-width: none;
 }
 
+.conts-head.ty03 {
+  max-width: 1800px;
+}
+.next-race-box {
+  padding: 160px 0 200px;
+}
+
 .next-race-box .conts-head .selectbox-wrap {
   margin-right: 240px;
 }
-
-.next-race-box .conts-body .swiper-container {
-  margin: 0 0 0 240px;
-}
-
 .evtGuide {
   overflow: hidden;
 }
@@ -371,9 +370,9 @@
   /* margin:0 -60px 40px 60px; */
   padding: 0 60px;
 }
-.n-race-box .conts-body .swiper-container {
+/* .n-race-box .conts-body .swiper-container {
   margin-left: 60px;
-}
+} */
 .event-box {
   max-width: 1440px;
   margin: 0 auto;
@@ -497,6 +496,9 @@
   .next-race-box .conts-body .swiper-container {
     margin: 0;
   }
+  .next-race-box .swiper-card-type .swiper-button-prev {
+    left:80px;
+  }
 }
 
 /* min-width : 1024 css */
@@ -506,6 +508,9 @@
   }
   .next-race-box {
     padding-left: 80px;
+  }
+  .next-race-box .swiper-card-type .swiper-button-prev {
+    left:80px;
   }
 }
 @media screen and (max-width: 1800px) {
