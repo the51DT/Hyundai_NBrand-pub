@@ -1455,7 +1455,7 @@
   margin-bottom: 0;
 }
 .card_profile .popup-wrapper .popup-body .pop-des {
-  padding: 20px 16px;
+  padding: 20px 16px 0;
 }
 .card_profile .popup-wrapper .popup-body .pop-des p {
   font-size: 14px;
@@ -1463,12 +1463,12 @@
   line-height: 19.6px;
 }
 .card_profile .popup-wrapper .popup-body .btn-wrap {
-  padding: 0 16px;
-  margin-bottom: 26px;
+  padding: 20px 16px 0;
 }
 .card_profile .popup-wrapper .popup-footer {
   border-top: 0;
   padding: 16px 0;
+  margin-top: 42px;
 }
 .card_profile .popup-wrapper .popup-footer .btn:not(.pop-close) {
   order: 1;
@@ -2274,10 +2274,6 @@
     font-size: 14px;
     line-height: 28px;
   }
-  .card_profile .popup-wrapper .popup-body .btn-wrap {
-    padding: 0 16px;
-    margin-bottom: 26px;
-  }
   .card_profile .popup-wrapper .popup-footer {
     position: static;
     display: flex;
@@ -2286,11 +2282,5 @@
   }
   .card_profile .popup-wrapper .popup-footer .btn-wrap {
     flex: 0 0 auto;
-  }
-  .card_profile .popup-wrapper .popup-footer .btn:not(.pop-close) {
-    order: 1;
-  }
-  .card_profile .popup-wrapper .popup-footer .btn.pop-close {
-    order: 0;
   }
 }
