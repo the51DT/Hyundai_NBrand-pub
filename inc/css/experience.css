@@ -976,6 +976,10 @@
 }
 
 /*popup signup */
+
+.popup-wrapper.onlyTxt .popup-body {
+  padding: 40px;
+}
 .popup-wrapper.onlyTxt .popup-body .popup-body-innerbox p.popup-tit-lg {
   font-family: "Hyundai Sans Head";
   font-size: 40px;
@@ -1055,7 +1059,7 @@
   position: relative;
 }
 .popup-wrapper.confirm {
-  position: absolute;
+  /* position: absolute;
   background: #fff;
   display: flex;
   min-width: 500px;
@@ -1065,7 +1069,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border-radius: 4px;
+  border-radius: 4px; */
 }
 
 .popup-wrapper.modal:before {
@@ -1079,16 +1083,16 @@
   top: 0;
 }
 
-.popup-wrapper.confirm .popup-body p.tit-type05 {
-  margin-bottom: 20px;
+.popup-wrapper.onlyTxt .popup-body p.tit-type05 {
+  /* margin-bottom: 20px; */
 }
 
-.popup-wrapper.confirm .popup-body-innerbox ul {
+.popup-wrapper.onlyTxt .popup-body-innerbox ul {
   width: calc(100% - 40px);
   padding: 0;
   margin: 0 auto;
 }
-.popup-wrapper.confirm.modal .popup-body-innerbox ul li {
+.popup-wrapper.onlyTxt.modal .popup-body-innerbox ul li {
   margin-bottom: 10px;
 
   font-family: "Hyundai Sans Text";
@@ -1098,24 +1102,25 @@
   line-height: 140%; /* 22.4px */
 }
 
-.popup-wrapper.confirm .popup-body-innerbox ul.li-aparted {
+.popup-wrapper.onlyTxt .popup-body-innerbox ul.li-aparted {
   width: 100%;
   margin: 0 0 0 20px;
 }
 
-.popup-wrapper.confirm .popup-body-innerbox ul.li-aparted li {
+.popup-wrapper.onlyTxt .popup-body-innerbox ul.li-aparted li {
   margin-bottom: 22px;
 }
 
-.popup-wrapper.confirm .popup-body-innerbox ul li {
+.popup-wrapper.onlyTxt .popup-body-innerbox ul li {
   list-style: disc;
 }
-.popup-wrapper.confirm .popup-body-innerbox ul li::marker {
+
+.popup-wrapper.onlyTxt .popup-body-innerbox ul li::marker {
   margin: 0;
   padding: 0;
 }
 
-.popup-wrapper.confirm .popup-body-innerbox ul li p.tit-type05 {
+.popup-wrapper.onlyTxt .popup-body-innerbox ul li p.tit-type05 {
   font-family: "Hyundai Sans Text";
   font-size: 14px;
   font-style: normal;
@@ -1123,15 +1128,15 @@
   line-height: 140%;
 }
 
-.popup-wrapper.confirm .popup-body-innerbox ul li p.tit-type05:last-child {
+.popup-wrapper.onlyTxt .popup-body-innerbox ul li p.tit-type05:last-child {
   margin: 0;
 }
 
-.popup-wrapper.confirm .popup-con:last-child {
+.popup-wrapper.onlyTxt .popup-con:last-child {
   margin-bottom: 40px;
 }
 
-.popup-wrapper.confirm .popup-body-innerbox ul li p.tit-type05 span.accent {
+.popup-wrapper.onlyTxt .popup-body-innerbox ul li p.tit-type05 span.accent {
   font-family: "Hyundai Sans Text";
   font-size: 14px;
   font-style: normal;
@@ -1140,12 +1145,30 @@
   color: #de3111;
 }
 
+.popup-wrapper.onlyTxt .popup-body-innerbox .popup-footer {
+  padding: 0;
+  border-top: none;
+  position: relative;
+}
+
 .popup-wrapper .popup-body-innerbox .wrap-checkmail {
   background: #f0f0f0;
   padding: 30px;
   margin: 8px 0 0;
   display: flex;
   justify-content: space-between;
+}
+
+.popup-wrapper .popup-body-innerbox .wrap-checkmail p:nth-child(1) {
+  font-family: "Hyundai Sans Text";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+}
+
+.popup-wrapper .popup-body-innerbox .wrap-checkmail .btn-wrap {
+  padding: 8px 0;
 }
 
 /* profile area in popup */
@@ -1960,9 +1983,13 @@
   .popup-wrapper button.btn-only-icon-notbg.pop-close.pop-page span.icon-close {
     width: 100%;
   }
+
+  .popup-wrapper .label-box h1 {
+    font-size: 24px;
+  }
   .popup-wrapper .popup-body {
     padding: 40px 24px 60px;
-    max-height: 696px;
+    max-height: calc(100vh - 116px);
     overflow-y: auto;
     display: grid;
     gap: 40px 0;
@@ -1972,7 +1999,7 @@
   }
 
   .popup-wrapper .popup-footer {
-    padding: 18px 24px;
+    padding: 16px 24px;
     bottom: 0%;
     position: fixed;
     width: 100%;
@@ -2051,35 +2078,62 @@
     margin-bottom: 20px;
   }
 
-  .popup-wrapper.confirm {
+  .popup-wrapper.onlyTxt {
     width: 100%;
     min-width: 100%;
   }
 
-  .popup-wrapper.confirm .popup-body {
-    padding: 0 40px;
+  .popup-wrapper.onlyTxt .popup-body {
+    padding: 40px;
   }
 
-  .popup-wrapper.confirm .popup-body-innerbox p.tit-type05 {
+  .popup-wrapper.onlyTxt .popup-body p.tit-type05 {
+    margin-bottom: 0;
+  }
+
+  .popup-wrapper.onlyTxt .popup-body-innerbox p.tit-type05 {
     font-size: 18px;
   }
 
-  .popup-wrapper.confirm .popup-body-innerbox ul.li-aparted {
+  .popup-wrapper.onlyTxt .popup-body-innerbox ul.li-aparted {
     width: calc(100% - 40px);
   }
 
-  .popup-wrapper.confirm .popup-footer {
-    padding: 0 40px 40px;
-    border-top: 0;
+  .popup-wrapper.onlyTxt .popup-body-innerbox ul.li-aparted li:last-child {
+    margin-bottom: 0;
   }
 
-  .popup-wrapper.confirm .popup-footer .btn-wrap {
-    width: 100%;
+  .popup-wrapper.onlyTxt .popup-footer {
+    padding: 0 40px 40px;
+    border-top: 0;
+    left: 0;
+  }
+
+  .popup-wrapper.onlyTxt .popup-footer .btn-wrap {
+    width: calc(100% - 40px);
     display: flex;
     flex-direction: column;
     gap: 8px 0;
   }
 
+  .popup-wrapper .popup-body-innerbox .wrap-checkmail {
+    padding: 40px 24px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .popup-wrapper .popup-body-innerbox .wrap-checkmail .btn-wrap {
+  }
+
+  .popup-wrapper .popup-body-innerbox .wrap-checkmail p:nth-child(1) {
+    font-family: "Hyundai Sans Text";
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+  }
   /*reward mobile */
   .popup-wrapper.reward .popup-body {
     max-height: 696px;

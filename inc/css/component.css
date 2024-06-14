@@ -4101,6 +4101,31 @@ table {
   color: #e63312;
 }
 
+/* 유효성 검사 문구 시작 */
+.popup-wrapper p.validation-txt,
+.wrap-form p.validation-txt {
+  font-family: "Hyundai Sans Text";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  margin-top: 8px;
+}
+
+.popup-wrapper p.validation-txt span,
+.wrap-form p.validation-txt span {
+  margin-right: 4px;
+}
+
+.popup-wrapper p.validation-txt.success {
+  color: #003777;
+}
+
+.popup-wrapper p.validation-txt.fail {
+  color: #bd5818;
+}
+/* 유효성 검사 문구 끝 */
+
 /* 2) 폼 인풋 텍스트,  start*/
 .wrap-form.text {
   display: flex;
