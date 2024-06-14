@@ -823,7 +823,7 @@
   position: relative;
 }
 
-.popup-wrapper button.btn-only-icon-notbg.pop-close.pop-page {
+.popup-wrapper .btn-wrap button.btn-only-icon-notbg.pop-close.pop-page {
   position: absolute;
   top: 34px;
   right: 35px;
@@ -847,12 +847,14 @@
   display: grid;
   gap: 40px 0;
   overflow-y: auto;
-  max-height: 600px;
-  border-top: 1px solid #787d80;
+  /* max-height: 600px; */
+  max-height: calc(100vh - 350px);
 }
 
-.popup-wrapper .popup-body-innerbox {
-  /* margin: 40px 0; */
+.popup-wrapper .popup-body .m20 {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
 }
 
 .popup-wrapper .popup-con:last-child {
@@ -872,6 +874,11 @@
   bottom: -84px; */
   width: 100%;
   background: #fff;
+}
+
+.popup-wrapper .popup-footer.footer-no-pd {
+  padding: 0;
+  border-top: none;
 }
 
 .popup-wrapper .popup-footer .btn-wrap {
@@ -976,6 +983,10 @@
 }
 
 /*popup signup */
+
+.popup-wrapper.onlyTxt .popup-body {
+  padding: 40px;
+}
 .popup-wrapper.onlyTxt .popup-body .popup-body-innerbox p.popup-tit-lg {
   font-family: "Hyundai Sans Head";
   font-size: 40px;
@@ -995,6 +1006,7 @@
 
 .popup-wrapper.onlyTxt .popup-body .popup-body-innerbox .tit-type03 {
   margin-bottom: 10px;
+  font-size: 20px;
 }
 
 .popup-wrapper.onlyTxt .popup-body .popup-body-innerbox .txt-type03 {
@@ -1055,7 +1067,7 @@
   position: relative;
 }
 .popup-wrapper.confirm {
-  position: absolute;
+  /* position: absolute;
   background: #fff;
   display: flex;
   min-width: 500px;
@@ -1065,7 +1077,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border-radius: 4px;
+  border-radius: 4px; */
 }
 
 .popup-wrapper.modal:before {
@@ -1079,16 +1091,16 @@
   top: 0;
 }
 
-.popup-wrapper.confirm .popup-body p.tit-type05 {
-  margin-bottom: 20px;
+.popup-wrapper.onlyTxt .popup-body p.tit-type05 {
+  /* margin-bottom: 20px; */
 }
 
-.popup-wrapper.confirm .popup-body-innerbox ul {
+.popup-wrapper.onlyTxt .popup-body-innerbox ul {
   width: calc(100% - 40px);
   padding: 0;
   margin: 0 auto;
 }
-.popup-wrapper.confirm.modal .popup-body-innerbox ul li {
+.popup-wrapper.onlyTxt.modal .popup-body-innerbox ul li {
   margin-bottom: 10px;
 
   font-family: "Hyundai Sans Text";
@@ -1098,24 +1110,25 @@
   line-height: 140%; /* 22.4px */
 }
 
-.popup-wrapper.confirm .popup-body-innerbox ul.li-aparted {
+.popup-wrapper.onlyTxt .popup-body-innerbox ul.li-aparted {
   width: 100%;
   margin: 0 0 0 20px;
 }
 
-.popup-wrapper.confirm .popup-body-innerbox ul.li-aparted li {
+.popup-wrapper.onlyTxt .popup-body-innerbox ul.li-aparted li {
   margin-bottom: 22px;
 }
 
-.popup-wrapper.confirm .popup-body-innerbox ul li {
+.popup-wrapper.onlyTxt .popup-body-innerbox ul li {
   list-style: disc;
 }
-.popup-wrapper.confirm .popup-body-innerbox ul li::marker {
+
+.popup-wrapper.onlyTxt .popup-body-innerbox ul li::marker {
   margin: 0;
   padding: 0;
 }
 
-.popup-wrapper.confirm .popup-body-innerbox ul li p.tit-type05 {
+.popup-wrapper.onlyTxt .popup-body-innerbox ul li p.tit-type05 {
   font-family: "Hyundai Sans Text";
   font-size: 14px;
   font-style: normal;
@@ -1123,15 +1136,15 @@
   line-height: 140%;
 }
 
-.popup-wrapper.confirm .popup-body-innerbox ul li p.tit-type05:last-child {
+.popup-wrapper.onlyTxt .popup-body-innerbox ul li p.tit-type05:last-child {
   margin: 0;
 }
 
-.popup-wrapper.confirm .popup-con:last-child {
+.popup-wrapper.onlyTxt .popup-con:last-child {
   margin-bottom: 40px;
 }
 
-.popup-wrapper.confirm .popup-body-innerbox ul li p.tit-type05 span.accent {
+.popup-wrapper.onlyTxt .popup-body-innerbox ul li p.tit-type05 span.accent {
   font-family: "Hyundai Sans Text";
   font-size: 14px;
   font-style: normal;
@@ -1140,12 +1153,30 @@
   color: #de3111;
 }
 
+.popup-wrapper.onlyTxt .popup-body-innerbox .popup-footer {
+  padding: 0;
+  border-top: none;
+  position: relative;
+}
+
 .popup-wrapper .popup-body-innerbox .wrap-checkmail {
   background: #f0f0f0;
   padding: 30px;
   margin: 8px 0 0;
   display: flex;
   justify-content: space-between;
+}
+
+.popup-wrapper .popup-body-innerbox .wrap-checkmail p:nth-child(1) {
+  font-family: "Hyundai Sans Text";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+}
+
+.popup-wrapper .popup-body-innerbox .wrap-checkmail .btn-wrap {
+  padding: 8px 0;
 }
 
 /* profile area in popup */
@@ -1192,20 +1223,21 @@
   grid-template-columns: auto 1fr;
 }
 
-/* popup reward */
-.popup-wrapper.reward {
-  position: relative;
+/* popup reward, mission */
+
+.popup-wrapper .popup-body .m20 .wrap-desc .txt-type03 {
+  font-weight: 500;
 }
-.popup-wrapper.reward .popup-body {
-  /* max-height: 500px; */
-  overflow-y: auto;
-  padding: 40px;
-}
-.popup-wrapper.reward .popup-body .wrap-label-reward {
-  /* margin-top: 40px; */
+.popup-wrapper .popup-body .m20 .wrap-label-reward {
   display: flex;
   gap: 16px 0;
   flex-direction: column;
+}
+
+.popup-wrapper .popup-body .m20 .wrap-hashtag .hashtags {
+  margin-bottom: 40px;
+  display: flex;
+  gap: 12px;
 }
 .popup-wrapper.reward .popup-body .wrap-image-reward {
   display: flex;
@@ -1228,7 +1260,7 @@
   margin-bottom: 40px;
 }
 .popup-wrapper .wrap-form.textarea {
-  margin-top: 0;
+  /* margin-top: 0; */
 }
 .popup-wrapper .wrap-form.textarea p.title-comment {
   font-family: "Hyundai Sans Text";
@@ -1257,9 +1289,6 @@
   margin-left: auto;
 }
 
-.popup-wrapper .wrap-comment .box-comment {
-}
-
 .popup-wrapper .wrap-comment .box-comment p {
   font-family: "Hyundai Sans Text";
   font-size: 14px;
@@ -1280,42 +1309,32 @@
   span.icon-close-wh {
   width: 100%;
 }
-.popup-wrapper.reward .popup-footer {
-  position: sticky;
-  bottom: 0;
-  width: 100%;
-  padding: 0;
-}
 
-.popup-wrapper.reward .popup-footer .box-result {
+.popup-wrapper .popup-footer .box-result {
   padding: 14px 40px;
   background: #de3111;
   width: 100%;
 }
 
-.popup-wrapper.reward .popup-footer .box-result p {
+.popup-wrapper .popup-footer .box-result p {
   color: #fff;
 }
-.popup-wrapper.reward .popup-footer .box-result p.txt-type03:last-child {
+.popup-wrapper .popup-footer .box-result p.txt-type03:last-child {
   margin-top: 8px;
 }
 
-.popup-wrapper.reward .popup-footer .box-result .bottom {
+.popup-wrapper .popup-footer .box-result .bottom {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: 8px;
 }
-.popup-wrapper.reward
-  .popup-footer
-  .box-result
-  .bottom
-  p.txt-type03:last-child {
+.popup-wrapper .popup-footer .box-result .bottom p.txt-type03:last-child {
   margin-top: 0;
   font-weight: 500;
 }
 
-.popup-wrapper.reward .popup-footer .box-confirm {
+.popup-wrapper .popup-footer .box-confirm {
   padding: 24px 40px;
   background: #fff;
   width: 100%;
@@ -1325,23 +1344,19 @@
   border-top: 1px solid #000;
 }
 
-.popup-wrapper.reward .popup-footer .box-confirm .wrap-reaction-icon {
+.popup-wrapper .popup-footer .box-confirm .wrap-reaction-icon {
   display: flex;
   gap: 10px;
 }
 
-.popup-wrapper.reward .popup-footer .box-confirm .wrap-reaction-icon div {
+.popup-wrapper .popup-footer .box-confirm .wrap-reaction-icon div {
   display: flex;
   align-items: flex-start;
   justify-content: center;
   gap: 0 8px;
   cursor: pointer;
 }
-.popup-wrapper.reward
-  .popup-footer
-  .box-confirm
-  .wrap-reaction-icon
-  div:nth-child(1) {
+.popup-wrapper .popup-footer .box-confirm .wrap-reaction-icon div:nth-child(1) {
   /* 시안에서 마진 간격 계산 안된 부분 추가 */
   margin-right: 10px;
 }
@@ -2090,9 +2105,13 @@
   .popup-wrapper button.btn-only-icon-notbg.pop-close.pop-page span.icon-close {
     width: 100%;
   }
+
+  .popup-wrapper .label-box h1 {
+    font-size: 24px;
+  }
   .popup-wrapper .popup-body {
     padding: 40px 24px 60px;
-    max-height: 696px;
+    max-height: calc(100vh - 116px);
     overflow-y: auto;
     display: grid;
     gap: 40px 0;
@@ -2102,18 +2121,22 @@
   }
 
   .popup-wrapper .popup-footer {
-    padding: 18px 24px;
+    padding: 16px 24px;
     bottom: 0%;
     position: fixed;
     width: 100%;
   }
+
   .popup-wrapper .popup-footer .btn-wrap {
     flex: 1;
+    width: 100%;
   }
-  .popup-wrapper .popup-footer .btn-wrap button[class*="btn-lg"] {
+  .popup-wrapper .popup-footer .btn-wrap button[class*="btn-lg"],
+  .popup-wrapper .popup-footer .btn-wrap button[class*="btn-md"] {
     padding: 17px 20px;
     align-self: stretch;
     font-size: 16px;
+    width: 100%;
   }
 
   .popup-wrapper .popup-body-innerbox {
@@ -2181,62 +2204,115 @@
     margin-bottom: 20px;
   }
 
-  .popup-wrapper.confirm {
+  .popup-wrapper.onlyTxt {
     width: 100%;
     min-width: 100%;
   }
 
-  .popup-wrapper.confirm .popup-body {
-    padding: 0 40px;
+  .popup-wrapper.onlyTxt .popup-body {
+    padding: 40px 24px;
   }
 
-  .popup-wrapper.confirm .popup-body-innerbox p.tit-type05 {
+  .popup-wrapper.onlyTxt .popup-body p.tit-type05 {
+    margin-bottom: 0;
+  }
+
+  .popup-wrapper.onlyTxt .popup-body-innerbox p.tit-type05 {
     font-size: 18px;
   }
 
-  .popup-wrapper.confirm .popup-body-innerbox ul.li-aparted {
+  .popup-wrapper.onlyTxt .popup-body-innerbox ul.li-aparted {
     width: calc(100% - 40px);
   }
 
-  .popup-wrapper.confirm .popup-footer {
-    padding: 0 40px 40px;
-    border-top: 0;
+  .popup-wrapper.onlyTxt .popup-body-innerbox ul.li-aparted li:last-child {
+    margin-bottom: 0;
   }
 
-  .popup-wrapper.confirm .popup-footer .btn-wrap {
-    width: 100%;
+  .popup-wrapper.onlyTxt .popup-footer {
+    padding: 0 40px 40px;
+    border-top: 0;
+    left: 0;
+  }
+
+  .popup-wrapper.onlyTxt .popup-footer .btn-wrap {
+    width: calc(100% - 40px);
     display: flex;
     flex-direction: column;
     gap: 8px 0;
   }
 
+  .popup-wrapper.onlyTxt .popup-footer.with-multi-btn {
+    padding: 16px 24px;
+    display: flex;
+  }
+
+  .popup-wrapper.onlyTxt .popup-footer.with-multi-btn .btn-wrap.multi-btn {
+    width: 100%;
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  .popup-wrapper.onlyTxt
+    .popup-footer.with-multi-btn
+    .btn-wrap.multi-btn
+    button[class*="btn-lg"],
+  .popup-wrapper.onlyTxt
+    .popup-footer.with-multi-btn
+    .btn-wrap.multi-btn
+    button[class*="btn-md"] {
+    width: 100%;
+  }
+
+  .popup-wrapper .popup-body-innerbox .wrap-checkmail {
+    padding: 40px 24px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .popup-wrapper .popup-body-innerbox .wrap-checkmail .btn-wrap {
+  }
+
+  .popup-wrapper .popup-body-innerbox .wrap-checkmail p:nth-child(1) {
+    font-family: "Hyundai Sans Text";
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+  }
+
+  .popup-wrapper .popup-body-innerbox .wrap-checkmail .btn-wrap {
+    padding: 8px 0;
+  }
   /*reward mobile */
-  .popup-wrapper.reward .popup-body {
+  /* .popup-wrapper.reward .popup-body {
     max-height: 696px;
   }
 
   .popup-wrapper.reward .popup-body .wrap-label-reward {
     gap: 24px 0;
-  }
-  .popup-wrapper.reward .popup-footer .box-result {
+  } */
+  .popup-wrapper .popup-footer .box-result {
     padding: 14px 24px;
   }
-  .popup-wrapper.reward .popup-footer .box-result p.popup-tit-lg {
+  .popup-wrapper .popup-footer .box-result p.popup-tit-lg {
     font-size: 18px;
   }
 
-  .popup-wrapper.reward .popup-footer .box-confirm {
+  .popup-wrapper .popup-footer .box-confirm {
     flex-direction: column;
     width: 100%;
     padding: 16px 24px;
     gap: 20px;
   }
 
-  .popup-wrapper.reward .popup-footer .box-confirm .wrap-reaction-icon {
+  .popup-wrapper .popup-footer .box-confirm .wrap-reaction-icon {
     width: 100%;
   }
 
-  .popup-wrapper.reward
+  .popup-wrapper
     .popup-footer
     .box-confirm
     .wrap-reaction-icon
@@ -2244,11 +2320,11 @@
     margin-left: auto;
   }
 
-  .popup-wrapper.reward .popup-footer .box-confirm button.btn {
+  .popup-wrapper .popup-footer .box-confirm button.btn {
     width: 100%;
   }
 
-  .popup-wrapper.reward .popup-body .wrap-image-reward .wrap-date {
+  .popup-wrapper .popup-body .wrap-image-reward .wrap-date {
     margin-bottom: 44px;
   }
   /* EP040401M01 (프로필 [02.N Community 가입 한 경우], [05. N Community 폐쇄 된 경우] > 레이어 나오도록 ) */
