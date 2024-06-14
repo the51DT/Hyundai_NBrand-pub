@@ -9,92 +9,6 @@
     <link type="text/css" rel="stylesheet" href="../../../inc/css/swiper.min.css" />
     <link type="text/css" rel="stylesheet" href="../../../inc/css/common.css" />
     <link type="text/css" rel="stylesheet" href="../../../inc/css/experience.css" />
-    <style>
-      /* club-popup */
-      .club-popup {
-        position: absolute;
-        background: #fff;
-        width: 100%;
-        z-index: 1001;
-        top: 60px;
-        left: 0;
-        border: 1px solid #000;
-        border-radius: 4px;
-        display: none;
-      }
-
-      .popup.club-popup .popup-wrapper {
-        max-width: 100%;
-      }
-
-      .popup.club-popup .popup-wrapper .popup-header.pop-profile {
-        padding: 16px;
-        gap: 8px;
-        justify-content: flex-start;
-        border-bottom: 0;
-      }
-
-      .popup.club-popup .popup-wrapper .popup-header.pop-profile img {
-        width: 40px;
-        height: 40px;
-      }
-
-      .pop-profile_club {
-        font-size: 14px;
-        font-weight: 700;
-        line-height: 19.6px;
-      }
-
-      .popup.club-popup .popup-wrapper .popup-body {
-        padding: 0;
-      }
-
-      .popup.club-popup .popup-wrapper .popup-body .pop-gray {
-        padding: 24px;
-        display: flex;
-        gap: 24px;
-        background-color: #f0f0f0;
-      }
-
-      .popup.club-popup .popup-wrapper .popup-body .pop-gray > div {
-        width: calc(100% / 3);
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-      }
-
-      .popup.club-popup .popup-wrapper .popup-body .pop-gray dt {
-        font-size: 14px;
-        font-weight: 500;
-        line-height: 19.6px;
-      }
-
-      .popup.club-popup .popup-wrapper .popup-body .pop-gray dd {
-        font-size: 20px;
-        font-weight: 700;
-        line-height: 28px;
-      }
-
-      .popup.club-popup .popup-wrapper .popup-body .pop-des {
-        padding: 20px 16px;
-      }
-
-      .popup.club-popup .popup-wrapper .popup-body .pop-des p {
-        font-size: 14px;
-        font-weight: 700;
-        line-height: 19.6px;
-      }
-
-      .popup.club-popup .popup-wrapper .popup-body .btn-wrap {
-        padding: 0 16px;
-        margin-bottom: 26px;
-      }
-
-      .popup.club-popup .popup-wrapper .popup-footer {
-        border-top: 0;
-        padding: 16px 0;
-      }
-    </style>
   </head>
 
   <body>
@@ -192,26 +106,42 @@
                         </button>
                         <div class="popup club-popup" id="pop-page" role="dialog" aria-modal="true" aria-labelledby="tit-type04" data-pop="pop-page">
                           <div class="popup-wrapper">
-                            <div class="popup-header pop-profile">
-                              <img src="../../../inc/images/img/img_Nful_profile_01.png" alt="N Community가입자의 프로필 이미지" />
-                              <p class="pop-profile_club">i30N_Club</p>
+                            <div class="popup-header pop-profile_wrap">
+                              <div class="pop-profile">
+                                <img src="../../../inc/images/img/img_Nful_profile_01.png" alt="N Community가입자의 프로필 이미지" />
+                                <p class="pop-profile_club">i30N_Club</p>
+                              </div>
+                              <a href="#" class="btn btn-only-icon-notbg" aria-label="커뮤니티 홈페이지 이동하기 버튼">
+                                <span class="visually-hidden">Go to the community homepage button</span>
+                                <span class="btn-icon20 icon-right" aria-hidden="true"></span>
+                              </a>
                             </div>
                             <div class="popup-body">
-                              <dl class="pop-gray">
+                              <div class="pop-gray">
                                 <div>
-                                  <dt class="txt-left">Rank</dt>
-                                  <dd class="txt-right">1</dd>
+                                  <p class="txt-left">Rank</p>
+                                  <p class="txt-right">1</p>
                                 </div>
                                 <div>
-                                  <dt class="txt-left">Point</dt>
-                                  <dd class="txt-right">3,000</dd>
+                                  <p class="txt-left">Point</p>
+                                  <p class="txt-right">3,000</p>
                                 </div>
-                                <div>
-                                  <dt class="txt-left">Members</dt>
-                                  <!-- 툴팁으로 만들어야함 -->
-                                  <dd class="txt-right">1,234</dd>
+                                <div class="tooltip_wrap">
+                                  <p class="txt-left">Members</p>
+                                  <!-- v.101 기획서 p.35 : 툴팁 , 호버(클릭 아님 / 0613 기획과 상의함) 시 리스트 나타나도록 -->
+                                  <p class="txt-right tooltip">1,234</p>
+                                  <ul class="tooltip-box">
+                                    <li>_nthused<span class="card_tag">Master</span></li>
+                                    <li>O22_driver</li>
+                                    <li>Super N</li>
+                                    <li>Perfblue_n</li>
+                                    <li>Pixels.ro</li>
+                                    <li>Youngbizzi_</li>
+                                    <li>i30sedann</li>
+                                    <li>Marco_i30n400</li>
+                                  </ul>
                                 </div>
-                              </dl>
+                              </div>
                               <div class="pop-des">
                                 <p>Welcome!</p>
                                 <p>Hyundai i30 N Performance</p>
@@ -228,25 +158,19 @@
                             </div>
                             <div class="popup-footer">
                               <div class="btn-wrap">
-                                <button type="button" class="btn btn-md-primary01" aria-label="Request Button">
+                                <button type="button" class="btn btn-md-primary01" aria-label="Sign Up Button">
                                   Sign Up
                                   <span class="btn-icon20 icon-right-wh" aria-hidden="true"></span>
                                 </button>
+                                <button type="button" class="btn btn-md-outline01 pop-close" aria-label="close Button">Close</button>
                                 <!-- Master(생성자)인 경우 [가입하기] 버튼 → [관리하기] 버튼으로 노출 
                                 1. 클릭 시 마이페이지 > N Community 메뉴 이동 (a태그로 변경했는데 페이지 이동인지 확인 필요)
                                 (※※※※※※※※※※영문 받아야함) -->
-                                <a class="btn btn-md-primary01">
+                                <!-- <a class="btn btn-md-primary01">
                                   관리하기
                                   <span class="btn-icon20 icon-right-wh" aria-hidden="true"></span>
-                                </a>
+                                </a> -->
                               </div>
-                            </div>
-                            <div class="btn-wrap">
-                              <!-- pop-close 해당 팝업 닫기 -->
-                              <button type="button" class="btn btn-only-icon-notbg pop-close" aria-label="close button">
-                                <span class="visually-hidden">close button</span>
-                                <span class="btn-icon20 icon-close" aria-hidden="true"></span>
-                              </button>
                             </div>
                           </div>
                         </div>

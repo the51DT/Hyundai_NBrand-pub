@@ -151,6 +151,10 @@ var NbrandUI = {
             case "popup side-popup":
               openWrap.addClass("on").fadeIn(200);
               break;
+            case "popup club-popup":
+              openWrap.addClass("on").fadeIn(200);
+              NbrandUI.dimdOn();
+              break;
             default:
               openWrap.addClass("on").fadeIn(200);
               break;
@@ -173,7 +177,9 @@ var NbrandUI = {
               setTimeout(function () {
                 openWrap.addClass("on"); //.animate({ right: "0px" }, 100);
               }, 200);
-
+              break;
+            case "popup club-popup":
+              openWrap.addClass("on").fadeIn(200);
               break;
             default:
               openWrap.addClass("on").fadeIn(200);
