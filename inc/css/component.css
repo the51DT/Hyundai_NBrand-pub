@@ -212,6 +212,16 @@ input[type="radio"]:focus + label {
   background: url(../../../inc/images/icon/icon-arrow01_right_white.svg);
   background-size: contain;
 }
+.btn[class*="btn-only-icon-notbg"]:hover [class*="icon-right"],
+.btn[class*="btn-only-icon-notbg"]:active [class*="icon-right"] {
+  background: url(../../../inc/images/icon/icon-arrow01_right_red.svg);
+  background-size: contain;
+}
+.btn[class*="btn-only-icon-notbg"]:hover [class*="icon-left"],
+.btn[class*="btn-only-icon-notbg"]:active [class*="icon-left"] {
+  background: url(../../../inc/images/icon/icon-arrow01_left_red.svg);
+  background-size: contain;
+}
 .btn[class*="txt-btn"]:hover [class*="icon-right"],
 .btn[class*="txt-btn"]:active [class*="icon-right"] {
   background: url(../../../inc/images/icon/icon-arrow01_right_red.svg);
