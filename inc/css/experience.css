@@ -859,6 +859,10 @@
   flex-direction: column;
 }
 
+.popup-wrapper .popup-body .m20 .wrap-label-reward .tit-type04 {
+  font-size: 40px;
+}
+
 .popup-wrapper .popup-con:last-child {
   margin-bottom: 60px;
 }
@@ -931,21 +935,19 @@
 }
 
 .popup-wrapper.invite .popup-body p {
-  margin: 40px 0;
   font-family: "Hyundai Sans Text";
   font-style: normal;
   font-weight: 500;
   line-height: 140%; /* 28px */
 }
+
 .popup-wrapper .popup-body.invite p:first-child {
   margin: 0 0 40px;
 }
 
+/* EP040301M01 이중 팝업 (.popup-wrapper.invite) */
 .popup-wrapper.invite {
   display: flex;
-  width: 500px;
-  min-width: 500px;
-  min-height: 300px;
   padding: 40px;
   flex-direction: column;
   align-items: center;
@@ -965,6 +967,10 @@
   font-weight: 500;
 }
 
+.popup-wrapper.invite .popup-body p.tit-type05 {
+  font-weight: 600;
+}
+
 .popup-wrapper.invite .popup-body p span.accent {
   color: #de3111;
   font-family: "Hyundai Sans Head";
@@ -974,7 +980,7 @@
   line-height: 140%;
 }
 
-.popup-wrapper.invite .popup-body .popup-body-innerbox .btn-wrap {
+.popup-wrapper.invite .popup-body .btn-wrap {
   gap: 0 8px;
   display: flex;
   justify-content: center;
@@ -984,8 +990,9 @@
   padding: 0;
 }
 
-/*popup signup */
-
+/*popup onlyTxt 
+EP040401C01, EP040401C02, EP040401M02, EP040401M03
+*/
 .popup-wrapper.onlyTxt .popup-body {
   padding: 40px;
 }
@@ -1064,35 +1071,6 @@
   margin-block-end: 0;
 }
 
-/* 이중 팝업 */
-.popup-wrapper.modal {
-  position: relative;
-}
-.popup-wrapper.confirm {
-  /* position: absolute;
-  background: #fff;
-  display: flex;
-  min-width: 500px;
-  min-height: 300px;
-  flex-direction: column;
-  align-items: center;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 4px; */
-}
-
-.popup-wrapper.modal:before {
-  content: "";
-  background: rgba(0, 0, 0, 0.5);
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  display: block;
-  position: absolute;
-  top: 0;
-}
-
 .popup-wrapper.onlyTxt .popup-body p.tit-type05 {
   /* margin-bottom: 20px; */
 }
@@ -1101,15 +1079,6 @@
   width: calc(100% - 40px);
   padding: 0;
   margin: 0 auto;
-}
-.popup-wrapper.onlyTxt.modal .popup-body-innerbox ul li {
-  margin-bottom: 10px;
-
-  font-family: "Hyundai Sans Text";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 140%; /* 22.4px */
 }
 
 .popup-wrapper.onlyTxt .popup-body-innerbox ul.li-aparted {
@@ -1225,11 +1194,13 @@
   grid-template-columns: auto 1fr;
 }
 
-/* popup reward, mission */
-
+/* popup reward, mission
+    .m20이 추가(gap:20px)
+*/
 .popup-wrapper .popup-body .m20 .wrap-desc .txt-type03 {
   font-weight: 500;
 }
+
 .popup-wrapper .popup-body .m20 .wrap-label-reward {
   display: flex;
   gap: 16px 0;
@@ -1240,26 +1211,6 @@
   margin-bottom: 40px;
   display: flex;
   gap: 12px;
-}
-.popup-wrapper.reward .popup-body .wrap-image-reward {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-.popup-wrapper.reward .popup-body .wrap-image-reward img {
-  margin-top: 20px;
-}
-.popup-wrapper.reward .popup-body .wrap-image-reward .txt-type03 {
-  font-weight: 500;
-}
-.popup-wrapper.reward .popup-body .wrap-image-reward .hashtags {
-  display: flex;
-  margin-bottom: 40px;
-  gap: 0 12px;
-  align-items: center;
-}
-.popup-wrapper.reward .popup-body .wrap-image-reward .wrap-date {
-  margin-bottom: 40px;
 }
 .popup-wrapper .wrap-form.textarea {
   /* margin-top: 0; */
@@ -2122,7 +2073,12 @@
     gap: 40px 0;
   }
 
-  .popup-wrapper.onlyTxt .popup-body {
+  .popup-wrapper .popup-body.same-h-pc {
+    max-height: calc(100vh - 300px);
+  }
+
+  .popup-wrapper .popup-body .m20 .wrap-label-reward .tit-type04 {
+    font-size: 24px;
   }
 
   .popup-wrapper .popup-footer {
@@ -2164,16 +2120,20 @@
   .popup-wrapper.invite .popup-header p.tit-type05 {
     font-size: 18px;
   }
-  .popup-wrapper.invite .popup-body .popup-body-innerbox p.txt-type02 {
+
+  .popup-wrapper.invite .popup-body {
+    width: 100%;
+  }
+  .popup-wrapper.invite .popup-body p.txt-type02 {
     font-size: 17px;
   }
-  .popup-wrapper.invite .popup-body .popup-body-innerbox .btn-wrap {
+  .popup-wrapper.invite .popup-body .btn-wrap {
     flex-direction: column;
     width: 100%;
     gap: 8px 0;
     padding: 0;
   }
-  .popup-wrapper.invite .popup-body .popup-body-innerbox .btn-wrap button {
+  .popup-wrapper.invite .popup-body .btn-wrap button {
     width: 100%;
     padding: 14px 27px;
     font-size: 1rem;
@@ -2181,6 +2141,9 @@
   .popup-wrapper.invite .popup-footer .btn-wrap button {
     padding: 14px 24px;
     font-size: 1rem;
+  }
+  .popup-wrapper.invite .popup-footer {
+    position: relative;
   }
 
   .popup-wrapper.onlyTxt .popup-body .popup-body-innerbox p.popup-tit-lg {
@@ -2275,9 +2238,6 @@
     justify-content: center;
     align-items: center;
     gap: 8px;
-  }
-
-  .popup-wrapper .popup-body-innerbox .wrap-checkmail .btn-wrap {
   }
 
   .popup-wrapper .popup-body-innerbox .wrap-checkmail p:nth-child(1) {
