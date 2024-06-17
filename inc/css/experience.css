@@ -983,7 +983,7 @@
 }
 
 .popup-wrapper.invite .popup-body p.tit-type05 {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .popup-wrapper.invite .popup-body p span.accent {
@@ -2282,7 +2282,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
 
   .popup-wrapper .popup-body {
     padding: 40px 24px 60px;
-    max-height: calc(100vh - 116px);
+    max-height: calc(100vh - 150px);
     overflow-y: auto;
     display: grid;
     gap: 40px 0;
