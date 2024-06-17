@@ -1,15 +1,6 @@
 @charset "utf-8";
 
 /* component.css */
-.ty02Swiper {
-  width: 100%;
-  max-width: 1920px;
-}
-
-.ty02Swiper .swiper-slide:last-child {
-  margin-right: 0;
-  padding-right: 0;
-}
 
 
 .kv-video-area {
