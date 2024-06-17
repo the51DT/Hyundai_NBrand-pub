@@ -320,6 +320,9 @@ body:-webkit-scrollbar {
 .gnb__tab-cont-wrap .gnb__tab-cont02 > * {
   width: 100%;
 }
+.gnb__tab-cont-wrap .gnb__tab-cont02 .gnb__tab02 {
+  width: 25%;
+}
 
 .gnb__tab-cont-wrap .gnb__tab-cont01 {
 }

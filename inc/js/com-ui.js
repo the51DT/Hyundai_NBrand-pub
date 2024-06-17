@@ -75,7 +75,7 @@ var NbrandUI = {
       return;
     }
     function init() {
-      eventBtn = $(obj).find("[class*='gnb__tab-btn']");
+      eventBtn = $(obj).find("button[class*='gnb__tab-btn']");
       gnbPanel = $(com);
       // gnbPanel.each(function (e) {
       //   e.style.gridRowEnd = `
