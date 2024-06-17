@@ -1181,6 +1181,13 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
 
 .popup-wrapper .wrap-popup-profile .box-profile-img img {
   width: 100%;
+  z-index: -1;
+  position: relative;
+}
+
+.popup-wrapper .wrap-form.textarea .inner-textarea-comment button {
+  z-index: -1;
+  position: relative;
 }
 
 .popup-wrapper .wrap-popup-profile p.txt-type04 {
