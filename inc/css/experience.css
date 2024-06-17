@@ -824,6 +824,7 @@
   top: 0;
   right: 35px;
   bottom: calc(100% - 105px);
+  z-index: 100;
 }
 
 /* 좌우 슬라이드 버튼  */
@@ -851,8 +852,7 @@
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #787d80;
-  position: relative;
-  z-index: 2;
+  background: #fff;
 }
 
 .popup-wrapper .popup-header h3 {
@@ -1308,7 +1308,41 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
   gap: 20px;
   align-items: end;
 }
+
+.popup-wrapper .popup-body .wrap-reject-msg {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #000;
+}
+
+.popup-wrapper .popup-body .wrap-reject-msg p.txt-type03 {
+  font-weight: 500;
+}
+
+.popup-wrapper .popup-body .wrap-reject-msg .box-msg-summary {
+  background: #f0f0f0;
+  border-left: 4px solid #bd5818;
+  padding: 32px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.popup-wrapper .popup-body .wrap-reject-msg .box-msg-summary p.tit-type05 {
+  color: #bd5818;
+  font-size: 20px;
+}
+
+.popup-wrapper .popup-body .wrap-reject-msg .box-msg-summary p.txt-type02 {
+  font-weight: 500;
+}
+
 .popup-wrapper
+  .popup-body
+  .wrap-reject-msg
+  .popup-wrapper
   .wrap-comment
   .box-userinfo
   button.btn-only-icon-bg01-circle
@@ -1363,7 +1397,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
 }
 
 .popup-wrapper .popup-footer .box-result.bg-blk p.popup-tit-lg {
-  color: #fff;
+  color: #abb2b5;
   font-weight: 700;
 }
 
@@ -1388,7 +1422,15 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
 .popup-wrapper .popup-footer .box-result p.txt-type03:last-child {
   /* margin-top: 8px; */
 }
-
+.popup-wrapper .popup-body .wrap-reject-msg .box-msg-summary {
+  padding: 20px 24px;
+}
+.popup-wrapper .popup-body .wrap-reject-msg .box-msg-summary p.tit-type05 {
+  font-size: 18px;
+}
+.popup-wrapper .popup-body .wrap-reject-msg .box-msg-summary p.txt-type02 {
+  font-size: 17px;
+}
 .popup-wrapper .popup-footer .box-paticipants {
   display: flex;
   justify-content: space-between;
@@ -2346,7 +2388,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
 
   .popup-wrapper .popup-body {
     padding: 40px 24px 60px;
-    max-height: calc(100vh - 1px);
+    max-height: calc(100vh - 200px);
     overflow-y: auto;
     display: grid;
     gap: 40px 0;
