@@ -443,6 +443,15 @@ input[type="radio"]:focus + label {
   background: url(../../../inc/images/icon/icon-link.svg);
   background-size: contain;
 }
+.btn:hover [class*="icon-link"],
+.btn:active [class*="icon-link"] {
+  /* 아이콘 없어서 임시 */
+  background-image: none;
+  background-color: #fff;
+  mask-image: url(../../../inc/images/icon/icon-link.svg);
+  mask-position: center;
+  mask-size: contain;
+}
 .btn[class*="txt-btn"]:hover [class*="icon-link"],
 .btn[class*="txt-btn"]:active [class*="icon-link"] {
   /* 아이콘 없어서 임시 */
