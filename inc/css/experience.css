@@ -1344,13 +1344,37 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
   background: #f0f0f0;
 }
 
+.popup-wrapper .popup-footer .box-result.bg-blk {
+  background: #000;
+}
+
 .popup-wrapper .popup-footer .box-result.bg-gray p.txt-type03 {
+  color: #000;
+  font-weight: 700;
+}
+
+.popup-wrapper .popup-footer .box-result.bg-blue p.popup-tit-lg {
   color: #000;
   font-weight: 700;
 }
 
 .popup-wrapper .popup-footer .box-result.bg-brown {
   background: #bd5818;
+}
+
+.popup-wrapper .popup-footer .box-result.bg-blk p.popup-tit-lg {
+  color: #fff;
+  font-weight: 700;
+}
+
+.popup-wrapper .popup-footer .box-result.bg-blk p.popup-tit-lg.no-action {
+  color: #de3111;
+  font-weight: 700;
+}
+
+.popup-wrapper .popup-footer .box-result.bg-brown p.popup-tit-lg {
+  color: #fff;
+  font-weight: 700;
 }
 
 .popup-wrapper .popup-footer .box-result .btn-wrap a.btn {
