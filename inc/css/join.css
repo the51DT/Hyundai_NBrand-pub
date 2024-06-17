@@ -113,6 +113,27 @@
   flex: 0 0 calc(100% - 488px);
 }
 
+/* 로그인 팝업 */
+.bottom-popup:has(.logout_popup_wrap) {
+  padding: 2.5rem;
+  width: fit-content;
+  min-width: 25rem;
+  border-radius: 0.25rem;
+}
+.logout_popup_wrap .logout_popup_text {
+  margin-bottom: 6.63rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 140%;
+}
+.logout_popup_wrap .logout_popup_text span {
+  color: #DE3111;
+}
+.logout_popup_wrap .btn-wrap-type2,
+.logout_popup_wrap .btn-wrap-type3 {
+  gap: 0.625rem;
+}
+
 /* 회원가입 공통 */
 .pc-only {
   display: block;
@@ -343,6 +364,20 @@
   }
   .mypage-wrap .mypage-content {
     flex: 1;
+  }
+
+  /* 로그인 팝업 */
+  .bottom-popup:has(.logout_popup_wrap) {
+    padding: 2.5rem;
+    width: 100%;
+    min-width: 0;
+    border-radius: 0.25rem 0.25rem 0 0;
+  }
+  .logout_popup_wrap .logout_popup_text {
+    margin-bottom: 9.88rem;
+  }
+  .logout_popup_wrap:has(.btn-wrap-type2) .logout_popup_text {
+    font-size: 1rem;
   }
 
   /* 회원가입 공통 */
