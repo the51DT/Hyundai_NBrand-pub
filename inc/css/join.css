@@ -8,6 +8,12 @@
   max-width: 1440px;
   margin: 0 auto;
 }
+.mypage-wrap h4 {
+  font-family: "Hyundai Sans Head";
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 70px;
+}
 .mypage-wrap .mypage-profile {
   display: flex;
   gap: 40px;
@@ -73,6 +79,40 @@
   line-height: 50px;
   text-align: right;
 }
+.mypage-wrap .content-item02 {
+  display: flex;
+  gap: 146px;
+  max-width: 1440px;
+  margin: 120px auto 240px;
+}
+.mypage-wrap .mypage-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 342px;
+  padding-bottom: 24px;
+}
+.mypage-wrap .mypage-nav > ul li {
+  padding: 16px 8px;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.mypage-wrap .mypage-nav > ul li button {
+  width: 100%;
+  justify-content: space-between;
+}
+.mypage-wrap .mypage-nav .btn:hover::after,
+.mypage-wrap .mypage-nav .btn:active::after {
+  display: none !important;
+}
+.mypage-wrap .mypage-nav .btn-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.mypage-wrap .mypage-content {
+  flex: 0 0 calc(100% - 488px);
+}
 /* 모바일 */
 @media screen and (max-width: 1023px) {
   .mypage-wrap .content-item01 {
@@ -125,5 +165,39 @@
   .mypage-wrap .mypage-info dd {
     font-size: 24px;
     line-height: 33.6px;
+  }
+  .mypage-wrap .content-item02 {
+    display: flex;
+    gap: 0;
+    max-width: 100%;
+    margin: 34px 0 160px;
+    padding: 0 24px;
+  }
+  .mypage-wrap .mypage-nav {
+    display: none;
+    /* flex-direction: column;
+    gap: 24px;
+    width: 342px; */
+  }
+  .mypage-wrap .mypage-nav > ul li {
+    padding: 16px 8px;
+    border-bottom: 1px solid #d9d9d9;
+  }
+
+  .mypage-wrap .mypage-nav > ul li button {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .mypage-wrap .mypage-nav .btn:hover::after,
+  .mypage-wrap .mypage-nav .btn:active::after {
+    display: none !important;
+  }
+  .mypage-wrap .mypage-nav .btn-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .mypage-wrap .mypage-content {
+    flex: 1;
   }
 }
