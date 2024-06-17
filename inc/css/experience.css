@@ -1415,6 +1415,84 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
 .popup-wrapper .popup-footer .box-confirm button.btn {
   width: auto;
 }
+/* 일반 모달 팝업 끝*/
+
+/* 사이드 팝업 시작*/
+.side-popup .pop-wrap .popup-header {
+  padding: 24px 40px;
+}
+
+.side-popup .pop-wrap .popup-header .tit-type03 {
+  font-size: 2rem;
+}
+
+.side-popup .pop-wrap .btn-wrap button.btn-only-icon-notbg.pop-close {
+  position: absolute;
+  top: 0;
+  right: 35px;
+  bottom: calc(100% - 90px);
+}
+
+.side-popup .pop-wrap .popup-body {
+  padding: 40px;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+}
+
+.side-popup .pop-wrap .popup-body .wrap-popup-title {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.side-popup .pop-wrap .popup-body .wrap-popup-title .tit-type04 {
+  font-weight: 700;
+}
+
+.side-popup .pop-wrap .popup-body .wrap-popup-title .wrap-desc .txt-type03 {
+  font-weight: 500;
+}
+
+.side-popup .pop-wrap .popup-body .wrap-zone-info {
+  width: 100%;
+  display: grid;
+  gap: 40px 28px;
+  margin-top: 60px;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+}
+
+.side-popup .pop-wrap .popup-body .wrap-zone-info .box-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.side-popup .pop-wrap .popup-body .wrap-zone-info .box-info .tit-type05 {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.side-popup .pop-wrap .popup-body .wrap-zone-info .box-info .txt-type02 {
+  font-family: "Hyundai Sans Text";
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+}
+
+.side-popup
+  .pop-wrap
+  .popup-body
+  .wrap-zone-info
+  .box-info
+  .txt-type02.cutoff-desc {
+  max-width: 172px;
+}
+/* 사이드 팝업 끝*/
 
 /* EP040401M01 (프로필 [02.N Community 가입 한 경우], [05. N Community 폐쇄 된 경우] > 레이어 나오도록 ) */
 /* club-popup */
@@ -2418,6 +2496,60 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
   .popup-wrapper .popup-body .wrap-image-reward .wrap-date {
     margin-bottom: 44px;
   }
+
+  /* 사이드 팝업 모바일 */
+  .side-popup .pop-wrap .popup-header {
+    padding: 16px 24px;
+  }
+  .side-popup .pop-wrap .popup-header .tit-type03 {
+    font-size: 1.25rem;
+  }
+  .side-popup .pop-wrap .popup-body {
+    max-height: calc(100vh - 40px);
+  }
+  .side-popup .pop-wrap .popup-body .wrap-popup-title .tit-type04 {
+    font-size: 1.125rem; /* 18px */
+  }
+
+  .side-popup .pop-wrap .popup-body .wrap-zone-info {
+    margin-top: 36px;
+    gap: 28px 0;
+    grid-template-columns: auto;
+    justify-content: start;
+  }
+  .side-popup .pop-wrap .popup-body .wrap-zone-info .box-info {
+    width: 100%;
+  }
+  .side-popup .pop-wrap .popup-body .wrap-zone-info .box-info .txt-type02 {
+    font-size: 17px;
+  }
+  .side-popup .pop-wrap .popup-body .wrap-zone-info .box-info .tit-type05 {
+    font-size: 1.125rem; /* 18px */
+  }
+  .side-popup
+    .pop-wrap
+    .popup-body
+    .wrap-zone-info
+    .box-info
+    .txt-type02.cutoff-desc {
+    max-width: 100%;
+  }
+  .side-popup .pop-wrap .btn-wrap button.btn-only-icon-notbg.pop-close {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    bottom: calc(100% - 55px);
+  }
+
+  .side-popup
+    .pop-wrap
+    .btn-wrap
+    button.btn-only-icon-notbg.pop-close
+    span.icon-close {
+    width: 24px;
+    height: 24px;
+  }
+
   /* EP040401M01 (프로필 [02.N Community 가입 한 경우], [05. N Community 폐쇄 된 경우] > 레이어 나오도록 ) */
   /* club-popup */
   .club-popup {
