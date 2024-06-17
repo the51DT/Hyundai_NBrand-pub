@@ -6,7 +6,7 @@ if ($.isFunction("checkCommonJs")) {
 $(document).ready(function () {
   NbrandUI.headerNav(".nav-btn", ".nav-wrap", ".header-wrap");
   NbrandUI.headerNav2dep(".gnb__tab-btn-wrap", ".gnb__tab-cont-wrap");
-  NbrandUI.headerNav3dep(".gnb__tab02-wrap", ".gnb__panel02");
+  // NbrandUI.headerNav3dep(".gnb__tab02-wrap", ".gnb__panel02");
   NbrandUI.modalOpen(".pop-open");
   NbrandUI.modalClose(".pop-close");
   // NbrandUI.inputClear(".input-del");
