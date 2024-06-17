@@ -1706,4 +1706,44 @@ min-width : 1024 css
   .tag-list-wrap [class^="tag-list"][class*="multi"] li:not(:last-child) {
     margin-right: 8px;
   }
+  /* EP040401M01 (프로필 [02.N Community 가입 한 경우], [05. N Community 폐쇄 된 경우] > 레이어 나오도록 ) ,
+  CM040101 (커뮤니티 가입 : 클럽 아이콘 클릭 시 N Community 레이어 노출)
+  */
+  /* club-popup */
+  .club-popup {
+    position: fixed;
+    background: #fff;
+    width: 100%;
+    z-index: 1001;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    border: 0;
+    border-radius: 4px 4px 0 0;
+    display: none;
+  }
+  .club-popup .popup-wrapper .popup-body .pop-gray {
+    gap: 20px;
+  }
+  .club-popup .popup-wrapper .popup-body .pop-gray .tooltip:hover + .tooltip-box,
+  .club-popup .popup-wrapper .popup-body .pop-gray .tooltip:active + .tooltip-box,
+  .club-popup .popup-wrapper .popup-body .pop-gray .tooltip:focus + .tooltip-box,
+  .club-popup .popup-wrapper .popup-body .pop-gray .tooltip + .tooltip-box:hover {
+    position: absolute;
+    top: 37%;
+    right: 2%;
+  }
+  .club-popup .popup-wrapper .popup-body .pop-gray .tooltip-box li {
+    font-size: 14px;
+    line-height: 28px;
+  }
+  .club-popup .popup-wrapper .popup-footer {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .club-popup .popup-wrapper .popup-footer .btn-wrap {
+    flex: 0 0 auto;
+  }
 }

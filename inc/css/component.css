@@ -4769,3 +4769,133 @@ input:checked + .slider:before {
 .tag-list-wrap [class^="tag-list"][class*="multi"] {
   flex-wrap: wrap;
 }
+/* EP040401M01 (프로필 [02.N Community 가입 한 경우], [05. N Community 폐쇄 된 경우] > 레이어 나오도록 ) ,
+  CM040101 (커뮤니티 가입 : 클럽 아이콘 클릭 시 N Community 레이어 노출)
+*/
+/* club-popup */
+.card_type04 .card_profile {
+  position: relative;
+}
+.ranking-wrap .card_type03 .card_bottom {
+  position: relative;
+}
+.club-popup {
+  position: absolute;
+  background: #fff;
+  width: calc(100% - 62px);
+  z-index: 1001;
+  top: 60px;
+  left: 16px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  display: none;
+}
+.club-popup .popup-wrapper {
+  max-width: 100%;
+}
+.club-popup .popup-wrapper .popup-header.pop-profile_wrap {
+  padding: 16px;
+  justify-content: space-between;
+  border-bottom: 0;
+}
+.club-popup .popup-wrapper .popup-header.pop-profile_wrap .pop-profile {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.club-popup .popup-wrapper .popup-header.pop-profile_wrap .pop-profile img {
+  width: 40px;
+  height: 40px;
+}
+.club-popup .pop-profile_club {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 19.6px;
+}
+.club-popup .popup-wrapper .popup-body {
+  padding: 0;
+  border-top: 0;
+  display: block;
+  max-height: 100%;
+}
+.club-popup .popup-wrapper .popup-body .pop-gray {
+  padding: 24px 0 0 24px; /* tooltip 호버영역 잡기 위해 */
+  display: flex;
+  gap: 24px;
+  background-color: #f0f0f0;
+}
+.club-popup .popup-wrapper .popup-body .pop-gray > div {
+  width: calc(100% / 3);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.club-popup .popup-wrapper .popup-body .pop-gray > div p:first-child {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 19.6px;
+}
+.club-popup .popup-wrapper .popup-body .pop-gray > div p:nth-child(2) {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  padding-bottom: 24px; /* tooltip 호버영역 잡기 위해 */
+}
+.club-popup .popup-wrapper .popup-body .pop-gray .tooltip_wrap p:first-child {
+  padding-right: 24px; /* tooltip 호버영역 잡기 위해 */
+}
+.club-popup .popup-wrapper .popup-body .pop-gray .tooltip {
+  padding-right: 24px; /* tooltip 호버영역 잡기 위해 */
+  text-decoration: underline;
+  cursor: pointer;
+}
+.club-popup .popup-body .pop-gray .tooltip:not(:hover) + .tooltip-box {
+  display: none;
+}
+.club-popup .popup-wrapper .popup-body .pop-gray .tooltip:hover + .tooltip-box,
+.club-popup .popup-wrapper .popup-body .pop-gray .tooltip:active + .tooltip-box,
+.club-popup .popup-wrapper .popup-body .pop-gray .tooltip:focus + .tooltip-box,
+.club-popup .popup-wrapper .popup-body .pop-gray .tooltip + .tooltip-box:hover {
+  display: block !important;
+  position: absolute;
+  top: 37%;
+  right: -36%;
+  min-width: 240px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  background-color: #f0f0f0;
+  height: 260px;
+  overflow-y: auto;
+  padding: 15px;
+}
+.club-popup .popup-wrapper .popup-body .pop-gray .tooltip-box li {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 32px;
+}
+.club-popup .popup-wrapper .popup-body .pop-gray .tooltip-box li > span {
+  margin-left: 4px;
+  margin-bottom: 0;
+}
+.club-popup .popup-wrapper .popup-body .pop-des {
+  padding: 20px 16px 0;
+}
+.club-popup .popup-wrapper .popup-body .pop-des p {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 19.6px;
+}
+.club-popup .popup-wrapper .popup-body .btn-wrap {
+  padding: 20px 16px 0;
+}
+.club-popup .popup-wrapper .popup-footer {
+  border-top: 0;
+  padding: 16px 0;
+  margin-top: 42px;
+}
+.club-popup .popup-wrapper .popup-footer .btn:not(.pop-close) {
+  order: 1;
+}
+.club-popup .popup-wrapper .popup-footer .btn.pop-close {
+  order: 0;
+}
