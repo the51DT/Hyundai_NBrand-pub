@@ -96,8 +96,7 @@
   padding: 16px 8px;
   border-bottom: 1px solid #d9d9d9;
 }
-
-.mypage-wrap .mypage-nav > ul li button {
+.mypage-wrap .mypage-nav > ul li a {
   width: 100%;
   justify-content: space-between;
 }
