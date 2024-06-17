@@ -1,4 +1,7 @@
 /* mypage common */
+.mypage-wrap {
+  font-family: "Hyundai Sans Text";
+}
 .mypage-wrap .content-item01 {
   background-color: #aacae6;
   padding: 0 80px;
@@ -80,6 +83,9 @@
   text-align: right;
 }
 .mypage-wrap .content-item02 {
+  padding: 0 80px;
+}
+.mypage-box {
   display: flex;
   gap: 146px;
   max-width: 1440px;
@@ -109,10 +115,19 @@
   display: flex;
   justify-content: center;
 }
-.mypage-wrap .mypage-content {
+.mypage-wrap .mypage-content h4 {
+  margin-bottom: 24px;
+}
+.mypage-wrap .mypage-content.mypage-allbox {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
   flex: 0 0 calc(100% - 488px);
 }
-
+.mypage-wrap .mypage-content .move-wrap {
+  margin-top: 16px;
+  text-align: end;
+}
 /* 로그인 팝업 */
 .bottom-popup:has(.logout_popup_wrap) {
   padding: 2.5rem;
@@ -127,7 +142,7 @@
   line-height: 140%;
 }
 .logout_popup_wrap .logout_popup_text span {
-  color: #DE3111;
+  color: #de3111;
 }
 .logout_popup_wrap .btn-wrap-type2,
 .logout_popup_wrap .btn-wrap-type3 {
@@ -175,7 +190,7 @@
 }
 .join_form_wrap {
   width: 100%;
-  border-top: 1px solid #595C5F;
+  border-top: 1px solid #595c5f;
 }
 .join_wrap .btn-wrap-default {
   margin-top: 3.75rem;
@@ -183,7 +198,7 @@
 .join_form {
   padding: 2.5rem 0;
   width: 100%;
-  border-bottom: 1px solid #D9D9D9;
+  border-bottom: 1px solid #d9d9d9;
 }
 .join_text_tit {
   font-family: "Hyundai Sans Head";
@@ -195,7 +210,7 @@
   margin-top: 0.75rem;
   font-size: 1rem;
   font-weight: 500;
-  line-height: 140%
+  line-height: 140%;
 }
 .join_form .wrap-form input[type="text"] {
   margin-top: 0.75rem;
@@ -216,7 +231,7 @@
   gap: 0.75rem;
 }
 .join_form_checkbox input + label::before {
-  content: '';
+  content: "";
   display: block;
   width: 2rem;
   height: 2rem;
@@ -278,6 +293,143 @@
   font-weight: 700;
 }
 
+/* CM040101 */
+.mynotice-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.mynotice-wrap .mynotice-box {
+  background-color: #f0f0f0;
+  padding: 29px 20px;
+  border-radius: 4px;
+  position: relative;
+}
+.mynotice-wrap .mynotice-box.unread-box {
+  background-color: #aacae6;
+}
+.mynotice-wrap .mynotice-type {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19.6px;
+  margin-bottom: 8px;
+}
+.mynotice-wrap .mynotice-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 33.6px;
+  font-family: "Hyundai Sans Text";
+  text-align: left;
+  width: auto;
+}
+.mynotice-wrap .mynotice-date {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16.8px;
+}
+.mynotice-wrap .mynotice-btm {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.mynotice-wrap .mynotice-btm .btn {
+  font-weight: 400 !important;
+}
+.mynotice-wrap .mynotice-btm .btn .icon-check {
+  margin-right: 4px;
+}
+.mynotice-wrap .mynotice-btm .mynotice-read {
+  display: flex;
+  gap: 4px;
+  align-items: flex-start;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19.6px;
+}
+.mynotice-wrap .mynotice-box .btn-only-icon-notbg .icon-close {
+  position: absolute;
+  top: 29px;
+  right: 20px;
+}
+.mypost-wrap {
+  display: flex;
+  column-gap: 12px;
+}
+.mypost-wrap .mypost-box {
+  width: 20%;
+  background-color: #aacae6;
+  border-radius: 4px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+.mypost-wrap .mypost-box a {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 19.6px;
+}
+.mypost-wrap .mypost-box p {
+  font-family: "Hyundai Sans Head";
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 44.8px;
+  text-align: end;
+}
+.mymsission-wrap {
+  border-top: 1px solid #787d80;
+}
+.mymsission-wrap li {
+  padding: 28px 0;
+  border-bottom: 1px solid #bbb;
+  width: 100%;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  justify-content: space-between;
+}
+.mymsission-type {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19.6px;
+  width: 128px;
+  padding-left: 12px;
+}
+.mymsission-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 33.6px;
+  width: auto;
+  text-align: left;
+}
+.mymsission-date {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16.8px;
+}
+.mymsission-status,
+.mypoint-minus,
+.mypoint-plus {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22.4px;
+  width: auto;
+  padding-right: 12px;
+  text-align: end;
+  color: #777777;
+}
+.mypoint-plus {
+  color: #de3111;
+}
+.mymsission-col {
+  display: flex;
+  flex-direction: column;
+  /* flex: 0 0 calc(100% - 352px); */
+  flex: auto;
+  align-items: flex-start;
+  gap: 8px;
+}
+
 /* 모바일 */
 @media screen and (max-width: 1023px) {
   .mypage-wrap .content-item01 {
@@ -332,20 +484,19 @@
     line-height: 33.6px;
   }
   .mypage-wrap .content-item02 {
-    display: flex;
-    gap: 0;
+    padding: 0;
+  }
+  .mypage-box {
+    display: block;
     max-width: 100%;
-    margin: 34px 0 160px;
-    padding: 0 24px;
+    margin: 80px 0 160px;
+    padding: 0;
   }
   .mypage-wrap .mypage-nav {
-    display: none;
-    /* flex-direction: column;
-    gap: 24px;
-    width: 342px; */
+    width: 100%;
   }
   .mypage-wrap .mypage-nav > ul li {
-    padding: 16px 8px;
+    padding: 16px 24px;
     border-bottom: 1px solid #d9d9d9;
   }
 
@@ -363,9 +514,96 @@
     justify-content: center;
   }
   .mypage-wrap .mypage-content {
-    flex: 1;
+    display: block;
+    padding: 0 24px;
   }
-
+  .mypage-wrap .mypage-content.mypage-allbox {
+    display: none !important;
+  }
+  /* CM040101 아닌경우 .mypage-allbox 삭제 */
+  /* CM040101 */
+  .mynotice-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .mynotice-wrap .mynotice-box {
+    padding: 24px 20px;
+  }
+  .mynotice-wrap .mynotice-title {
+    font-size: 20px;
+    line-height: 28px;
+    text-align: left;
+  }
+  .mynotice-wrap .mynotice-date {
+    font-size: 14px;
+    line-height: 19.6px;
+  }
+  .mynotice-wrap .mynotice-box .btn-only-icon-notbg .icon-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+  }
+  .mypost-wrap {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .mypost-wrap .mypost-box {
+    width: calc(50% - 6px);
+    gap: 0;
+    justify-content: space-between;
+    height: 144px;
+  }
+  .mypost-wrap .mypost-box a {
+    font-size: 14px;
+    line-height: 19.6px;
+  }
+  .mypost-wrap .mypost-box p {
+    font-size: 20px;
+    line-height: 28px;
+    text-align: left;
+  }
+  .mymsission-wrap {
+    border-top: 0;
+  }
+  .mymsission-wrap li {
+    padding: 28px 0;
+    border-bottom: 1px solid #bbb;
+    width: 100%;
+    display: block;
+    text-align: left;
+    position: relative;
+  }
+  .mymsission-wrap li:first-child {
+    padding-top: 0;
+  }
+  .mymsission-type {
+    font-size: 16px;
+    line-height: 22.4px;
+    width: 100%;
+    padding-left: 0;
+  }
+  .mymsission-title {
+    font-size: 20px;
+    line-height: 28px;
+    width: auto;
+    text-align: left;
+    margin-top: 8px;
+  }
+  .mymsission-date {
+    margin-top: 8px;
+  }
+  .mymsission-status {
+    position: absolute;
+    width: auto;
+    padding-right: 0;
+    bottom: 28px;
+    right: 0;
+  }
+  .mymsission-col {
+    display: block;
+  }
   /* 로그인 팝업 */
   .bottom-popup:has(.logout_popup_wrap) {
     padding: 2.5rem;
