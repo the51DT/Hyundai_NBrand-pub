@@ -1382,6 +1382,10 @@ min-width : 1024 css
   .wrap-form label {
     font-size: 1.125rem;
   }
+  .wrap-form.label-tit-type01 label,
+  .wrap-form.label-tit-type02 label {
+    font-size: 1.125rem;
+  }
   .wrap-form .wrap-form-bottom.comment-type02 {
     display: grid;
     grid-template-columns: 2fr auto;
