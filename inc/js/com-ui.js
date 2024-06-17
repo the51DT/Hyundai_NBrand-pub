@@ -6,6 +6,7 @@ if ($.isFunction("checkCommonJs")) {
 $(document).ready(function () {
   NbrandUI.headerNav(".nav-btn", ".nav-wrap", ".header-wrap");
   NbrandUI.headerNav2dep(".gnb__tab-btn-wrap", ".gnb__tab-cont-wrap");
+  // NbrandUI.headerNav3dep(".gnb__tab02-wrap", ".gnb__panel02");
   NbrandUI.modalOpen(".pop-open");
   NbrandUI.modalClose(".pop-close");
   // NbrandUI.inputClear(".input-del");
@@ -39,6 +40,13 @@ var NbrandUI = {
       obj.attr("aria-expanded", "false");
     }
   },
+  selectedAria: function (obj) {
+    if (obj.attr("aria-expanded") == "false") {
+      obj.attr("aria-expanded", "true");
+    } else {
+      obj.attr("aria-expanded", "false");
+    }
+  },
   /* headerNav */
   headerNav: function (obj, com, par) {
     if (!NbrandUI.checkObj(obj)) {
@@ -56,6 +64,7 @@ var NbrandUI = {
           eventItem = $(this);
           eventParent.toggleClass("menu-on");
           NbrandUI.toggleBtn();
+          NbrandUI.selectedAria();
           if (eventItem.hasClass("on")) {
             Nbrand.uiFocusTab({
               selector: tparent,
@@ -77,18 +86,6 @@ var NbrandUI = {
     function init() {
       eventBtn = $(obj).find("button[class*='gnb__tab-btn']");
       gnbPanel = $(com);
-      // gnbPanel.each(function (e) {
-      //   e.style.gridRowEnd = `
-      //     height ${Math.ceil(el.scrollHeight + row_gap)}
-      //   `;
-      // });
-      // masonry_item.forEach((el) => {
-      //   el.style.gridRowEnd = `
-      //     span ${Math.ceil(
-      //       el.querySelector(".masonry_con").scrollHeight + row_gap
-      //     )}
-      //   `;
-      // });
     }
     function event() {
       // depth2
@@ -105,17 +102,6 @@ var NbrandUI = {
           .removeClass("on");
         gnb2depBtn;
         gnb2depTarget.toggleClass("on").siblings().removeClass("on");
-        // if (NbrandUI.windowSize()) {
-        //   gnb2depPanelTarget.css(
-        //     "height",
-        //     gnb2depPanelTarget.scrollHeight
-        //   );
-        // }
-        // if (!gnb2depBtn.hasClass("on")) {
-        //   gnb2depArea.removeClass("hide");
-        // } else {
-        //   gnb2depArea.addClass("hide");
-        // }
       });
     }
     init();

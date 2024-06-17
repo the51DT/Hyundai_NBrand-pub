@@ -1,0 +1,285 @@
+@charset "utf-8";
+
+.main_summery_wrap {
+  position: relative;
+  padding: 10rem 5rem;
+}
+.main_summery_text {
+  position: absolute;
+  left: 50%;
+  top: 10rem;
+  transform: translateX(-50%);
+  width: calc(100% - 10rem);
+  max-width: 90rem;
+  z-index: -1;
+}
+.main_summery_tit {
+  font-family: "Hyundai Sans Head";
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 125%;
+}
+.main_summery_subtit {
+  margin-top: 0.5rem;
+  font-family: "Hyundai Sans Head";
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 140%;
+}
+.main_summery_list {
+  grid-template-areas: 
+    ". . brand"
+    "history people img"
+    ". lab press";
+}
+.main_summery_list li:nth-of-type(1) {
+  grid-area: brand;
+}
+.main_summery_list li:nth-of-type(2) {
+  grid-area: history;
+}
+.main_summery_list li:nth-of-type(3) {
+  grid-area: people;
+}
+.main_summery_list li:nth-of-type(4) {
+  grid-area: img;
+  align-self: center;
+  padding: 0 0.5rem;
+}
+.main_summery_list li:nth-of-type(5) {
+  grid-area: lab;
+}
+.main_summery_list li:nth-of-type(6) {
+  grid-area: press;
+}
+.main_summery_img {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 22.8rem;
+  height: auto;
+  aspect-ratio: 365 / 231;
+  background-image: url(../../inc/images/img/img_IONIQ_5-365x231.png);
+  background-size: contain;
+}
+.main_summery_card img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 465 / 365;
+}
+.main_summery_card div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 0.75rem 0 0;
+  font-family: "Hyundai Sans Head";
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 140%;
+}
+.main_summery_card div::after {
+  content: '';
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url(../../inc/images/icon/icon-arrow01_right.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.main_summery_card:hover div,
+.main_summery_card:focus div,
+.main_summery_card:active div {
+  padding: 0.63rem 0.5rem;
+  background-color: #AACAE6;
+}
+
+.swiper-title {
+  position: absolute;
+  left: 3.75rem;
+  top: 2.69rem;
+  font-family: "Hyundai Sans Head";
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 140%;
+  color: #FFF;
+  z-index: 2;
+}
+
+.main_model_swiper .swiper,
+.main_Nfestival_wrap .swiper {
+  height: 46.5rem;
+}
+
+.main_model_wrap {
+  padding: 7.5rem 5rem 10rem;
+  background-color: #E6EFF8;
+}
+.main_model_wrap .grid_3 li:first-of-type {
+  grid-column: 1 / 3;
+}
+.main_model_card {
+  position: relative;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 464 / 618;
+}
+.main_model_wrap .grid_3 li:first-of-type .main_model_card {
+  aspect-ratio: 952 / 618;
+}
+.main_model_card img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.main_model_card .model_tit {
+  position: absolute;
+  top: 2.5rem;
+  width: 100%;
+  font-family: "Hyundai Sans Head";
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 140%;
+  color: #FFF;
+  text-align: center;
+}
+.main_model_card .model_copy {
+  position: absolute;
+  top: 5.81rem;
+  width: 100%;
+  font-family: "Hyundai Sans Head";
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 140%;
+  color: #FFF;
+  text-align: center;
+}
+.main_model_card .btn-wrap {
+  position: absolute;
+  bottom: 2.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.main_model_card .btn-wrap a {
+  flex-shrink: 0;
+}
+
+.main_Nfluencer_wrap {
+  padding: 10rem 5rem 15rem;
+}
+.main_Nfluencer_wrap .fw-type03 {
+  margin: 0 auto;
+  max-width: 90rem;
+}
+.main_Nfluencer_wrap .tit-type04 {
+  margin: 0.5rem auto 2.5rem;
+}
+
+@media screen and (max-width: 1023px) {
+  .main_summery_wrap {
+    padding: 6.25rem 0;
+  }
+  .main_summery_text {
+    position: static;
+    padding: 0 1.5rem;
+    margin-bottom: 4rem;
+    transform: translateX(0);
+    width: 100%;
+  }
+  .main_summery_tit {
+    font-size: 2.5rem;
+  }
+  .main_summery_subtit {
+    margin-top: 0.75rem;
+    font-size: 1.25rem;
+  }
+  .main_summery_list li:nth-of-type(4) {
+    display: none;
+  }
+  .main_summery_card div {
+    padding: 1rem 0.5rem 0 0;
+    font-size: 1.25rem;
+  }
+  .main_summery_card div::after {
+    width: 1rem;
+    height: 1rem;
+  }
+  .main_summery_card:hover div,
+  .main_summery_card:focus div,
+  .main_summery_card:active div {
+    padding: 1rem 0.5rem 0 0;
+    background-color: transparent;
+  }
+
+  .swiper-title {
+    left: 1.5rem;
+    top: 2.88rem;
+    font-size: 1.25rem;
+  }
+
+  .main_model_swiper .swiper,
+  .main_Nfestival_wrap .swiper {
+    height: 35rem;
+  }
+
+  .main_model_wrap {
+    padding: 5rem 1.5rem 6.25rem;
+  }
+  .main_model_wrap .grid_3 li:first-of-type {
+    grid-column: 1 / 2;
+  }
+  .main_model_card {
+    height: 26rem;
+  }
+  .main_model_wrap .grid_3 li:first-of-type .main_model_card {
+    aspect-ratio: auto;
+  }
+  .main_model_card .model_tit {
+    position: absolute;
+    top: 2.5rem;
+    width: 100%;
+    font-family: "Hyundai Sans Head";
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 140%;
+    color: #FFF;
+    text-align: center;
+  }
+  .main_model_card .model_copy {
+    position: absolute;
+    top: 5.81rem;
+    width: 100%;
+    font-family: "Hyundai Sans Head";
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 140%;
+    color: #FFF;
+    text-align: center;
+  }
+  .main_model_card .btn-wrap {
+    position: absolute;
+    left: 50%;
+    bottom: 2.5rem;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  .main_model_card .btn-wrap a {
+    flex-shrink: 0;
+  }
+
+  .main_Nfluencer_wrap {
+    padding: 6.25rem 1.5rem 9.5rem;
+  }
+  .main_Nfluencer_wrap .contitle-type01 {
+    font-size: 2.5rem;
+  }
+  .main_Nfluencer_wrap .tit-type04 {
+    margin: 0.5rem auto 1.75rem;
+    font-size: 1.125rem;
+  }
+}

@@ -34,7 +34,7 @@
   border-color: #fff;
 }
 .title_flex .selectbox-trigger.color-white::after {
-  background-image: url("../../../../inc/images/icon/icon-arrow01_down_white.svg");
+  background-image: url("../../../inc/images/icon/icon-arrow01_down_white.svg");
 }
 .sort_flex {
   display: flex;
@@ -413,7 +413,7 @@
   border-color: #fff;
 }
 .standing_top .color-white::after {
-  background-image: url("../../../../inc/images/icon/icon-arrow01_down_white.svg");
+  background-image: url("../../../inc/images/icon/icon-arrow01_down_white.svg");
 }
 .standing_bottom {
   padding: 5rem 5rem 15rem;
@@ -450,7 +450,7 @@
   align-items: end;
   width: 100%;
   height: auto;
-  background-image: url("../../../../inc/images/N_Festival/driver/bg_driver-1920x694.png");
+  background-image: url("../../../inc/images/N_Festival/driver/bg_driver-1920x694.png");
   background-position: center;
   background-size: cover;
   aspect-ratio: 1920 / 694;
@@ -1731,7 +1731,7 @@
 
   /* EP010501P01 */
   .driver_top {
-    background-image: url("../../../../inc/images/N_Festival/driver/bg_driver-1440x960.png");
+    background-image: url("../../../inc/images/N_Festival/driver/bg_driver-1440x960.png");
     aspect-ratio: 360 / 240;
   }
   .driver_top img {
