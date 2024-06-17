@@ -1777,16 +1777,8 @@ input[type="radio"]:focus + label {
 }
 .ty01Swiper {
   max-width: 1920px;
-  margin: 0 auto;
+  margin:0 auto;
 }
-.ty01Swiper .autoplay-progress {
-  background: #888a8b;
-}
-
-.ty02Swiper .autoplay-progress {
-  background: #73787c;
-}
-
 .ty01Swiper .swiper-slide {
   display: flex;
   justify-content: center;
@@ -1982,19 +1974,15 @@ input[type="radio"]:focus + label {
   height: 17px;
   mask-image: url("../images/icon/icon-arrow01_right_white.svg");
 }
-.swiper-card-type {
-  /* width: 100%; */
-  /* max-width: none; */
-}
-
-.swiper-card-type .swiper-wrapper {
+.swiper-card-type {  
   max-width: 1800px;
 }
+
 .swiper-card-type .swiper-slide:first-child {
-  margin-left: 60px;
+  margin-left:60px;
 }
 .swiper-card-type.ty04Swiper .swiper-slide:first-child {
-  margin-left: 0;
+  margin-left:0;
 }
 .swiper-card-type.ty04Swiper .swiper-wrapper {
   max-width: 1440px;
@@ -2031,8 +2019,9 @@ input[type="radio"]:focus + label {
 .swiper-card-type .card_type01.bg-black .card_bottom {
   color: #fff;
 }
+
 .swiper-card-type .swiper-slide {
-  max-width: 468px;
+  /* max-width: 468px; */
 }
 
 .swiper-card-type .card_cover {
@@ -2088,41 +2077,33 @@ input[type="radio"]:focus + label {
 .swiper-card-type .card-list-wrap .card_bottom {
   padding: 32px 20px;
 }
-.swiper-card-type .card-list-wrap li {
+
+.swiper-card-type .card-list-wrap .swiper-slide {
   position: relative;
-  width: 140px !important;
-  transition: width 0.5s ease-out;
+  /* width: 140px !important; */
+  transition: width 0.5s ease-out;  
 }
-.swiper-card-type .card-list-wrap li:not(:last-child) {
-  margin-right: 4px;
-}
-.swiper-card-type .card-list-wrap li.active .card_type01 {
-  width: 360px !important;
-}
-.swiper-card-type .card-list-wrap li.active {
-  width: 360px !important;
-}
-.swiper-card-type .card-list-wrap li.active .card_cover {
-  max-width: 360px !important;
+.swiper-card-type .card-list-wrap .swiper-slide.active {
+  /* width: 360px !important; */
 }
 
-.swiper-card-type .card-list-wrap li .card_type01 {
+.swiper-card-type .card-list-wrap .swiper-slide .card_type01 {
   height: 320px;
   min-height: revert;
   max-height: revert;
 }
 
-.swiper-card-type .card-list-wrap li .card_bottom .card_info .card_tit {
+.swiper-card-type .card-list-wrap .swiper-slide .card_bottom .card_info .card_tit {
   font-size: 24px;
   line-height: 33.6px;
 }
 
-.swiper-card-type .swiper-button-prev {
-  left: 60px;
+.swiper-card-type .swiper-button-prev { 
+  left:60px;
 }
 
-.swiper-card-type .swiper-button-next {
-  right: 60px;
+.swiper-card-type .swiper-button-next { 
+  right:60px;
 }
 
 /* swiper 반응형 예외 케이스 처리 */
@@ -2131,12 +2112,12 @@ input[type="radio"]:focus + label {
     display: block;
   }
 
-  .ty04Swiper .swiper-button-prev {
-    left: 80px;
+  .ty04Swiper .swiper-button-prev { 
+    left:80px;
   }
 
-  .ty04Swiper .swiper-button-next {
-    right: 80px;
+  .ty04Swiper .swiper-button-next { 
+    right:80px;
   }
 }
 
