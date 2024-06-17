@@ -7,6 +7,7 @@ body {
 .wrap {
 }
 body:-webkit-scrollbar {
+  display: block;
   opacity: 0;
 }
 .wrap * {
@@ -168,10 +169,11 @@ body:-webkit-scrollbar {
   width: 100vw;
   height: 0;
   overflow: hidden;
-  transition: height 0.3s;
+  background-color: #d9d9d9;
+  min-height: 464px;
+  max-height: calc(100vh - 70px);
 }
 .header-wrap.menu-on .nav-wrap {
-  height: 698px;
 }
 /* nav event */
 .header__event-wrap {
@@ -260,7 +262,7 @@ body:-webkit-scrollbar {
   padding: 8px 24px 0;
 }
 
-.gnb__tab-btn-wrap [class*="gnb__tab-btn"] {
+.gnb__tab-btn-wrap [class^="gnb__tab-btn"] {
   font-family: Hyundai Sans Head;
   font-size: 20px;
   font-weight: 700;
@@ -272,7 +274,7 @@ body:-webkit-scrollbar {
   color: #555;
   transition: border-color 1s;
 }
-.gnb__tab-btn-wrap [class*="gnb__tab-btn"]::after {
+.gnb__tab-btn-wrap [class^="gnb__tab-btn"]::after {
   content: "";
   display: block;
   width: 20px;
@@ -284,7 +286,7 @@ body:-webkit-scrollbar {
   background: url(../images/icon/icon-arrow01_down_gray.svg) no-repeat center;
 }
 
-.gnb__tab-btn-wrap a[class*="gnb__tab-btn"]::after {
+.gnb__tab-btn-wrap a[class^="gnb__tab-btn"]::after {
   background: url(../images/icon/icon-link_gray.svg) no-repeat center top 1px;
 }
 
@@ -293,7 +295,7 @@ body:-webkit-scrollbar {
   border-bottom: 4px solid #de3111;
 }
 
-.gnb__tab-btn-wrap [class*="gnb__tab-btn"].on::after {
+.gnb__tab-btn-wrap [class^="gnb__tab-btn"].on::after {
   background: url(../images/icon/icon-arrow01_down_red.svg) no-repeat center;
 }
 
@@ -309,7 +311,7 @@ body:-webkit-scrollbar {
 .gnb__tab-cont-wrap [class*="gnb__tab-cont"].on {
   gap: 30px;
   display: block;
-  animation: fadein 1.3s;
+  animation: fadein 0.3s;
   animation-fill-mode: forwards;
 }
 .gnb__tab-cont-wrap [class*="gnb__tab-cont"] > * {
@@ -464,13 +466,15 @@ body:-webkit-scrollbar {
 }
 .gnb__panel02 {
   width: 75%;
+  max-height: calc(100vh - 234px);
+  overflow-y: auto;
 }
 .gnb__panel02 [class*="panel2_2"] {
   display: none;
 }
 .gnb__panel02 [class*="panel2_2"].on {
   display: block;
-  animation: fadein 1.3s;
+  animation: fadein 0.3s;
   animation-fill-mode: forwards;
 }
 

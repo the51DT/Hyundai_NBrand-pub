@@ -865,7 +865,7 @@
   gap: 40px 0;
   overflow-y: auto;
   /* max-height: 600px; */
-  max-height: calc(100vh - 350px);
+  max-height: calc(100vh - 349px);
 }
 
 .popup-wrapper .popup-body .m20 {
