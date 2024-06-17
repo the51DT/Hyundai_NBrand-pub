@@ -1470,6 +1470,11 @@ input[type="radio"]:focus + label {
   column-gap: 12px;
   overflow: hidden;
 }
+.card_type04 .card_date {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16.8px;
+}
 .card_type04 .card_function {
   padding: 20px 16px 38px;
 }
@@ -1858,24 +1863,39 @@ input[type="radio"]:focus + label {
   padding-bottom: 60px;
 }
 
-.ty02Swiper .swiper-slide {
+.ty02Swiper {
   width: 100%;
 }
 
+.ty02Swiper .swiper-slide:last-child {
+  margin-right: 0;
+  padding-right: 0;
+}
+
+.ty02Swiper .swiper-slide {
+  max-width:952px;
+}
 .ty02Swiper .swiper-slide .img-area {
-  display: block;
-  width: 100%;
   height: 536px;
+}
+.ty02Swiper .swiper-slide-active  {
+  max-width: 1196px;
+  position:relative;
+}
+
+.ty02Swiper .swiper-slide-active .img-area {
+  height: 673px;
+}
+
+.ty02Swiper .swiper-slide:last-child {
+  margin-right: 0;
+  padding-right: 0;
 }
 
 .ty02Swiper .swiper-slide .img-area img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.ty02Swiper .swiper-slide-active .img-area {
-  height: 673px;
 }
 
 .ty02Swiper .swiper-slide .img-ico {
@@ -1936,12 +1956,12 @@ input[type="radio"]:focus + label {
   top: 35%;
 }
 .ty02Swiper .swiper-button-prev {
-  left: 17.5%;
+  left: 17%;
   right: auto;
 }
 .ty02Swiper .swiper-button-next {
   left: auto;
-  right: 17.5%;
+  right: 17%;
 }
 
 .ty03Swiper {

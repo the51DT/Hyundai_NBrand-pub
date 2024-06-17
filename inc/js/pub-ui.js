@@ -162,7 +162,7 @@ var pubUi = {
     }
 
     var swiper2 = new Swiper(".ty02Swiper", {
-      slidesPerView: 1.2,
+      slidesPerView:'auto',
       centeredSlides: true,
       loop: loopVal,
       initialSlide: slideInx,
@@ -181,7 +181,7 @@ var pubUi = {
       },
       breakpoints: {
         360: {
-          slidesPerView: 1.2,
+          slidesPerView: 1.5,
           spaceBetween: 12,
         },
         768: {
