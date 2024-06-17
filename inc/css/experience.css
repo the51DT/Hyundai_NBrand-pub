@@ -1180,9 +1180,10 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
 }
 
 .popup-wrapper .wrap-popup-profile .box-profile-img img {
-  width: 100%;
   z-index: -1;
   position: relative;
+  width: 40px;
+  height: 40px;
 }
 
 .popup-wrapper .wrap-form.textarea .inner-textarea-comment button {
@@ -1190,14 +1191,21 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
   position: relative;
 }
 
-.popup-wrapper .wrap-popup-profile p.txt-type04 {
-  font-weight: 700;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 140%;
+.popup-wrapper .wrap-popup-profile .box-profile-txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
 }
 
-.popup-wrapper .wrap-popup-profile p.txt-type04.light {
+.popup-wrapper .wrap-popup-profile .box-profile-txt p.txt-type04.nickname {
+  font-family: "Hyundai Sans Text";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.popup-wrapper .wrap-popup-profile .box-profile-txt p.txt-type04.groupname {
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
@@ -1268,10 +1276,25 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
   align-items: center;
   justify-content: space-between;
 }
+
+.popup-wrapper
+  .wrap-comment
+  .box-userinfo
+  .wrap-popup-profile
+  .box-profile-txt {
+  position: relative;
+}
+
+.popup-wrapper .wrap-popup-profile .box-profile-txt div {
+  display: block;
+}
 .popup-wrapper .wrap-comment .box-userinfo button.btn-only-icon-bg01-circle {
   width: 16px;
   height: 16px;
   margin-left: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 .popup-wrapper .wrap-comment .box-comment p {
