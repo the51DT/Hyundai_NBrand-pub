@@ -1528,21 +1528,21 @@ min-width : 1024 css
     line-height: 50px;
   }
 
-  .swiper-card-type .card-list-wrap li {
+  .swiper-card-type .card-list-wrap .swiper-slide {
     position: relative;
-    width: 96px !important;
+    /* width: 96px !important; */
   }
-  .swiper-card-type .card-list-wrap li .card_type01 {
+  .swiper-card-type .card-list-wrap .swiper-slide .card_type01 {
     height: 265px;
   }
-  .swiper-card-type .card-list-wrap li.active {
-    width: 204px !important;
+  .swiper-card-type .card-list-wrap .swiper-slide.active {
+    /* width: 204px !important; */
   }
-  .swiper-card-type .card-list-wrap li.active .card_type01 {
-    width: 204px !important;
+  .swiper-card-type .card-list-wrap .swiper-slide.active .card_type01 {
+    /* width: 204px !important; */
   }
-  .swiper-card-type .card-list-wrap li.active .card_cover {
-    max-width: 204px !important;
+  .swiper-card-type .card-list-wrap .swiper-slide.active .card_cover {
+    /* max-width: 204px !important; */
   }
   /* select */
   .selectbox-wrap {

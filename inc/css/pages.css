@@ -1,5 +1,20 @@
 @charset "utf-8";
 
+/* component.css */
+.ty02Swiper {
+  width: 100%;
+  max-width: 1920px;
+}
+
+.ty02Swiper .swiper-slide:last-child {
+  margin-right: 0;
+  padding-right: 0;
+}
+
+
+.kv-video-area {
+  max-width: 1920px;
+}
 /* common */
 .bg-lightblue {
   background-color: #aacae6;
@@ -213,10 +228,11 @@
 }
 .card-wrap-list .card-list {
   display: flex;
-  gap: 4px;
+  gap:4px;
   overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
-
 .card-wrap-list .card-list li a {
   min-width: 237px;
   height: 320px;

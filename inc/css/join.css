@@ -415,6 +415,9 @@
   .join_form {
     padding: 1.75rem 0;
   }
+  .join_text_tit {
+    font-size: 1.125rem;
+  }
 
   /* CM050101 */
   .join_form_wrap .join_form:has(.join_form_checkbox) {

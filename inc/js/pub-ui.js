@@ -86,22 +86,12 @@ var pubUi = {
       self.tagBtnEvent(e.target, tagList);
     });
 
-    $(".ty05Swiper .card-list-wrap li").click(function (e) {
+    $(".ty05Swiper .card-list-wrap .swiper-slide").click(function (e) {
       e.preventDefault();
-      $(".card-list-wrap li").removeClass("active");
+      $(".card-list-wrap .swiper-slide").removeClass("active");
       if (!$(this).hasClass("active")) {
         $(this).addClass("active");
       }
-    });
-
-    $(".btn-wrap.plus").click(function () {
-      var evtImg = $(".evt-map-wrap");
-      var tVal = 1;
-
-      tVal = tVal + 0.2;
-
-      evtImg.css("transform", `scale(${tVal})`);
-      console.log(tVal, "테스트");
     });
 
     $(".btn-wrap.minus").click(function (e) {
@@ -114,7 +104,8 @@ var pubUi = {
   },
   swiperSlideEvent: function () {
     var self = this;
-    var slideInx = 0; // 현재 슬라이드 index 체크용 변수
+    var slideInx = 1; // 현재 슬라이드 index 체크용 변수
+    var loopVal = "";
     //const progressBar = document.querySelector(".autoplay-progress .bar");
     const bulletActive = document.querySelector(
       ".swiper-pagination-custom .swiper-pagination-bullet-active"
@@ -122,7 +113,6 @@ var pubUi = {
 
     var swiper1 = new Swiper(".ty01Swiper", {
       slidesPerView: 1,
-      centeredSlides: true,
       watchOverflow: true, //pagination 1개 일 경우, 숨김
       autoplay: {
         delay: 3000,
@@ -165,11 +155,16 @@ var pubUi = {
       },
     });
 
+    if ($(".ty02Swiper .swiper-slide").length > 3) {
+      loopVal = true;
+    } else {
+      loopVal = false;
+    }
+
     var swiper2 = new Swiper(".ty02Swiper", {
-      slidesPerView: 1.5,
-      spaceBetween: 80,
+      slidesPerView: 1.2,
       centeredSlides: true,
-      loop: true,
+      loop: loopVal,
       initialSlide: slideInx,
       watchOverflow: true,
       autoplay: {
@@ -246,32 +241,37 @@ var pubUi = {
     });
 
     var swiper4 = new Swiper(".ty04Swiper", {
-      slidesPerView: 3.5,
+      slidesPerView: 4.5,
       spaceBetween: 24,
+      observer: true,
+      observerParents: true,
       freeMode: true,
+      slidesOffsetAfter: 240,
       navigation: {
         nextEl: ".ty04Swiper .swiper-button-next",
         prevEl: ".ty04Swiper .swiper-button-prev",
       },
       breakpoints: {
         360: {
-          slidesPerView: 1.2,
-          spaceBetween: 12,
-        },
-        768: {
           slidesPerView: 1.5,
           spaceBetween: 12,
+          slidesOffsetAfter: 24,
         },
-        1024: {
-          spaceBetween: 24,
+        768: {
+          slidesPerView: 3.5,
+          spaceBetween: 12,
+          slidesOffsetAfter: 24,
         },
       },
     });
 
     var swiper5 = new Swiper(".ty05Swiper", {
-      slidesPerView: 4,
+      slidesPerView: "auto",
       spaceBetween: 4,
+      observer: true,
+      observerParents: true,
       freeMode: true,
+      slidesOffsetAfter: 200,
       navigation: {
         nextEl: ".ty05Swiper .swiper-button-next",
         prevEl: ".ty05Swiper .swiper-button-prev",
@@ -281,13 +281,35 @@ var pubUi = {
         clickable: true,
       },
       breakpoints: {
-        360: {
-          slidesPerView: 2.1,
-          spaceBetween: 4,
+        344: {
+          // fold
+          slidesPerView: 2.2,
+          slidesOffsetAfter: 24,
         },
-        1024: {
-          slidesPerView: 5.5,
+        360: {
+          slidesPerView: 2.2,
           spaceBetween: 4,
+          slidesOffsetAfter: 24,
+        },
+        1124: {
+          slidesPerView: 6.5,
+          spaceBetween: 4,
+          slidesOffsetAfter: 120,
+        },
+      },
+      on: {
+        init: function () {
+          // $(window).resize(function(){
+          //   swiper5.update();
+          // })
+        },
+        activeIndexChange: function () {
+          // const realIndex = swiper5.realIndex;
+          // const totalIndex = swiper5.slidesLength;
+          // if (realIndex === totalIndex - 1) {
+          //   console.log(realIndex, totalIndex);
+          //   $(".ty05Swiper .swiper-slide").css("margin-right", "200px");
+          // }
         },
       },
     });
