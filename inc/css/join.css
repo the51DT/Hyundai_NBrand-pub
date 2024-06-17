@@ -8,6 +8,12 @@
   max-width: 1440px;
   margin: 0 auto;
 }
+.mypage-wrap h4 {
+  font-family: "Hyundai Sans Head";
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 70px;
+}
 .mypage-wrap .mypage-profile {
   display: flex;
   gap: 40px;
@@ -73,6 +79,184 @@
   line-height: 50px;
   text-align: right;
 }
+.mypage-wrap .content-item02 {
+  display: flex;
+  gap: 146px;
+  max-width: 1440px;
+  margin: 120px auto 240px;
+}
+.mypage-wrap .mypage-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 342px;
+  padding-bottom: 24px;
+}
+.mypage-wrap .mypage-nav > ul li {
+  padding: 16px 8px;
+  border-bottom: 1px solid #d9d9d9;
+}
+.mypage-wrap .mypage-nav > ul li a {
+  width: 100%;
+  justify-content: space-between;
+}
+.mypage-wrap .mypage-nav .btn:hover::after,
+.mypage-wrap .mypage-nav .btn:active::after {
+  display: none !important;
+}
+.mypage-wrap .mypage-nav .btn-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.mypage-wrap .mypage-content {
+  flex: 0 0 calc(100% - 488px);
+}
+
+/* 회원가입 공통 */
+.pc-only {
+  display: block;
+}
+.mo-only {
+  display: none;
+}
+
+.content-top {
+  padding: 140px 0;
+  text-align: center;
+  background: #fff;
+}
+.content-top p + p {
+  margin-top: 16px;
+}
+.join_con1_subtit {
+  font-family: "Hyundai Sans Head";
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 140%;
+}
+.join_wrap {
+  margin: 0 auto;
+  padding: 0 5rem 15rem;
+  max-width: 60rem;
+}
+.join_wrap .join_step {
+  margin: 0 auto;
+  width: 5.25rem;
+}
+.join_wrap .join_tit {
+  margin: 0.75rem 0 3.75rem;
+  font-family: "Hyundai Sans Head";
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 125%;
+  text-align: center;
+}
+.join_form_wrap {
+  width: 100%;
+  border-top: 1px solid #595C5F;
+}
+.join_wrap .btn-wrap-default {
+  margin-top: 3.75rem;
+}
+.join_form {
+  padding: 2.5rem 0;
+  width: 100%;
+  border-bottom: 1px solid #D9D9D9;
+}
+.join_text_tit {
+  font-family: "Hyundai Sans Head";
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 140%;
+}
+.join_text_sub {
+  margin-top: 0.75rem;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 140%
+}
+.join_form .wrap-form input[type="text"] {
+  margin-top: 0.75rem;
+}
+
+/* CM050101 */
+.join_form_wrap .join_form:has(.join_form_checkbox) {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.join_form_wrap.wrap-form.label-tit-type02 label.required span:after {
+  content: "*";
+  right: unset;
+}
+.join_form_checkbox label {
+  display: flex;
+  gap: 0.75rem;
+}
+.join_form_checkbox input + label::before {
+  content: '';
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  background-image: url(../images/icon/icon-checkbox.svg);
+}
+.join_form_checkbox input:checked + label::before {
+  background-image: url(../images/icon/icon-checkbox-checked.svg);
+}
+.join_form_wrap .join_form_checkbox + p {
+  margin-left: 2.75rem;
+  font-family: "Hyundai Sans Text";
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 140%;
+}
+.join_form_sub {
+  padding: 1rem;
+  width: calc(100% - 2.75rem);
+  max-width: 57.3rem;
+  border: 1px solid #000;
+  color: #777;
+}
+
+/* CM050102 */
+.join_form_wrap.wrap-form .wrap-form-bottom.comment-type03 ul {
+  margin-bottom: 0;
+}
+.join_form_wrap.wrap-form .wrap-form-bottom.comment-type03 ul li span.hashtag {
+  text-decoration: none;
+}
+.join_form .wrap-form.text + p {
+  font-weight: 400;
+  line-height: 140%;
+}
+.join_form .text-num-chk {
+  margin-top: 0.63rem;
+  text-align: right;
+}
+.join_form .wrap-form-bottom {
+  margin-top: 0.313rem;
+}
+
+/* CM050104 */
+.join_complete_tit {
+  font-family: "Hyundai Sans Head";
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 125%;
+  text-align: center;
+}
+.join_complete_text {
+  margin-top: 3.75rem;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 140%;
+  text-align: center;
+}
+.join_complete_text span {
+  font-weight: 700;
+}
+
 /* 모바일 */
 @media screen and (max-width: 1023px) {
   .mypage-wrap .content-item01 {
@@ -125,5 +309,103 @@
   .mypage-wrap .mypage-info dd {
     font-size: 24px;
     line-height: 33.6px;
+  }
+  .mypage-wrap .content-item02 {
+    display: flex;
+    gap: 0;
+    max-width: 100%;
+    margin: 34px 0 160px;
+    padding: 0 24px;
+  }
+  .mypage-wrap .mypage-nav {
+    display: none;
+    /* flex-direction: column;
+    gap: 24px;
+    width: 342px; */
+  }
+  .mypage-wrap .mypage-nav > ul li {
+    padding: 16px 8px;
+    border-bottom: 1px solid #d9d9d9;
+  }
+
+  .mypage-wrap .mypage-nav > ul li button {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .mypage-wrap .mypage-nav .btn:hover::after,
+  .mypage-wrap .mypage-nav .btn:active::after {
+    display: none !important;
+  }
+  .mypage-wrap .mypage-nav .btn-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .mypage-wrap .mypage-content {
+    flex: 1;
+  }
+
+  /* 회원가입 공통 */
+  .pc-only {
+    display: none;
+  }
+  .mo-only {
+    display: block;
+  }
+
+  .content-top {
+    padding: 153px 24px;
+  }
+  .content-top p:last-child {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .join_con1_subtit {
+    font-size: 1.25rem;
+  }
+  .join_wrap {
+    padding: 0 1.5rem 9.5rem;
+  }
+  .join_wrap .join_step {
+    width: 4.5rem;
+  }
+  .join_wrap .join_tit {
+    margin: 0.75rem 0 2.25rem;
+    font-size: 1.875rem;
+    line-height: 140%;
+  }
+  .join_wrap .btn-wrap-default {
+    margin-top: 2.25rem;
+  }
+  .join_form {
+    padding: 1.75rem 0;
+  }
+
+  /* CM050101 */
+  .join_form_wrap .join_form:has(.join_form_checkbox) {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  /* CM050102 */
+  .join_form .wrap-form.text + p {
+    font-weight: 400;
+    line-height: 140%;
+  }
+  .join_form .text-num-chk {
+    margin-top: 0.63rem;
+  }
+  .join_form .wrap-form-bottom {
+    margin-top: 0.313rem;
+  }
+
+  /* CM050104 */
+  .join_complete_tit {
+    font-size: 1.875rem;
+    line-height: 140%;
+  }
+  .join_complete_text {
+    margin-top: 2.25rem;
   }
 }
