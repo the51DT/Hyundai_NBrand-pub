@@ -2320,6 +2320,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
     bottom: 0%;
     position: fixed;
     width: 100%;
+    z-index: 2;
   }
 
   .popup-wrapper .popup-footer .btn-wrap {
