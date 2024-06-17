@@ -306,6 +306,7 @@ var NbrandUI = {
               setTimeout(function () {
                 NbrandUI.dimdOff();
                 NbrandUI.mdimdOff();
+                NbrandUI.anidimdOff();
               }, 300);
               break;
           }

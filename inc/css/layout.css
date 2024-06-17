@@ -170,7 +170,7 @@ body:-webkit-scrollbar {
   height: 0;
   overflow: hidden;
   background-color: #d9d9d9;
-  min-height: 464px;
+  /* min-height: 464px; */
   max-height: calc(100vh - 70px);
 }
 .header-wrap.menu-on .nav-wrap {
