@@ -812,13 +812,7 @@
   margin-top: 1.25rem;
 }
 
-/* 팝업 임시 */
-.popup-wrapper .temp-header {
-  /* 확정시 해당 클래스 삭제 예정 */
-  font-size: 2.4rem;
-  color: palevioletred;
-}
-
+/* 팝업  */
 .popup-wrapper {
   width: 100%;
   margin: 0 auto;
@@ -827,17 +821,38 @@
 
 .popup-wrapper .btn-wrap button.btn-only-icon-notbg.pop-close.pop-page {
   position: absolute;
-  top: 28px;
+  top: 0;
   right: 35px;
+  bottom: calc(100% - 105px);
 }
+
+/* 좌우 슬라이드 버튼  */
+.popup-wrapper .wrap-navigation {
+  display: none;
+}
+
+.popup-wrapper a.modal-btn.left {
+  position: absolute;
+  left: -70px;
+  top: 50%;
+}
+
+.popup-wrapper a.modal-btn.right {
+  position: absolute;
+  right: -70px;
+  top: 50%;
+}
+
+/*  */
 
 .popup-wrapper .popup-header {
   display: flex;
   padding: 32px 40px;
   justify-content: space-between;
   align-items: center;
-  align-self: stretch;
-  /* border-bottom: 1px solid #787d80; */
+  border-bottom: 1px solid #787d80;
+  position: relative;
+  z-index: 2;
 }
 
 .popup-wrapper .popup-header h3 {
@@ -857,6 +872,10 @@
   display: flex;
   gap: 20px;
   flex-direction: column;
+}
+
+.popup-wrapper .popup-body .m20 .wrap-label-reward .tit-type04 {
+  font-size: 40px;
 }
 
 .popup-wrapper .popup-con:last-child {
@@ -931,21 +950,19 @@
 }
 
 .popup-wrapper.invite .popup-body p {
-  margin: 40px 0;
   font-family: "Hyundai Sans Text";
   font-style: normal;
   font-weight: 500;
   line-height: 140%; /* 28px */
 }
+
 .popup-wrapper .popup-body.invite p:first-child {
   margin: 0 0 40px;
 }
 
+/* EP040301M01 이중 팝업 (.popup-wrapper.invite) */
 .popup-wrapper.invite {
   display: flex;
-  width: 500px;
-  min-width: 500px;
-  min-height: 300px;
   padding: 40px;
   flex-direction: column;
   align-items: center;
@@ -965,6 +982,10 @@
   font-weight: 500;
 }
 
+.popup-wrapper.invite .popup-body p.tit-type05 {
+  font-weight: 700;
+}
+
 .popup-wrapper.invite .popup-body p span.accent {
   color: #de3111;
   font-family: "Hyundai Sans Head";
@@ -974,7 +995,7 @@
   line-height: 140%;
 }
 
-.popup-wrapper.invite .popup-body .popup-body-innerbox .btn-wrap {
+.popup-wrapper.invite .popup-body .btn-wrap {
   gap: 0 8px;
   display: flex;
   justify-content: center;
@@ -984,8 +1005,9 @@
   padding: 0;
 }
 
-/*popup signup */
-
+/*popup onlyTxt 
+EP040401C01, EP040401C02, EP040401M02, EP040401M03
+*/
 .popup-wrapper.onlyTxt .popup-body {
   padding: 40px;
 }
@@ -1064,35 +1086,6 @@
   margin-block-end: 0;
 }
 
-/* 이중 팝업 */
-.popup-wrapper.modal {
-  position: relative;
-}
-.popup-wrapper.confirm {
-  /* position: absolute;
-  background: #fff;
-  display: flex;
-  min-width: 500px;
-  min-height: 300px;
-  flex-direction: column;
-  align-items: center;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 4px; */
-}
-
-.popup-wrapper.modal:before {
-  content: "";
-  background: rgba(0, 0, 0, 0.5);
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  display: block;
-  position: absolute;
-  top: 0;
-}
-
 .popup-wrapper.onlyTxt .popup-body p.tit-type05 {
   /* margin-bottom: 20px; */
 }
@@ -1101,15 +1094,6 @@
   width: calc(100% - 40px);
   padding: 0;
   margin: 0 auto;
-}
-.popup-wrapper.onlyTxt.modal .popup-body-innerbox ul li {
-  margin-bottom: 10px;
-
-  font-family: "Hyundai Sans Text";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 140%; /* 22.4px */
 }
 
 .popup-wrapper.onlyTxt .popup-body-innerbox ul.li-aparted {
@@ -1196,17 +1180,31 @@
 }
 
 .popup-wrapper .wrap-popup-profile .box-profile-img img {
-  width: 100%;
+  z-index: -1;
+  position: relative;
+  width: 40px;
+  height: 40px;
 }
 
-.popup-wrapper .wrap-popup-profile p.txt-type04 {
-  font-weight: 700;
+.popup-wrapper .wrap-form.textarea .inner-textarea-comment button {
+  position: relative;
+}
+
+.popup-wrapper .wrap-popup-profile .box-profile-txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+
+.popup-wrapper .wrap-popup-profile .box-profile-txt p.txt-type04.nickname {
+  font-family: "Hyundai Sans Text";
+  font-size: 14px;
   font-style: normal;
   font-weight: 700;
-  line-height: 140%;
 }
 
-.popup-wrapper .wrap-popup-profile p.txt-type04.light {
+.popup-wrapper .wrap-popup-profile .box-profile-txt p.txt-type04.groupname {
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
@@ -1225,11 +1223,13 @@
   grid-template-columns: auto 1fr;
 }
 
-/* popup reward, mission */
-
+/* popup reward, mission
+    .m20이 추가(gap:20px)
+*/
 .popup-wrapper .popup-body .m20 .wrap-desc .txt-type03 {
   font-weight: 500;
 }
+
 .popup-wrapper .popup-body .m20 .wrap-label-reward {
   display: flex;
   gap: 16px 0;
@@ -1241,27 +1241,7 @@
   display: flex;
   gap: 12px;
 }
-.popup-wrapper.reward .popup-body .wrap-image-reward {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-.popup-wrapper.reward .popup-body .wrap-image-reward img {
-  margin-top: 20px;
-}
-.popup-wrapper.reward .popup-body .wrap-image-reward .txt-type03 {
-  font-weight: 500;
-}
-.popup-wrapper.reward .popup-body .wrap-image-reward .hashtags {
-  display: flex;
-  margin-bottom: 40px;
-  gap: 0 12px;
-  align-items: center;
-}
-.popup-wrapper.reward .popup-body .wrap-image-reward .wrap-date {
-  margin-bottom: 40px;
-}
-.popup-wrapper .wrap-form.textarea {
+.popup-wrapper .wrap-form.textarea textarea {
   /* margin-top: 0; */
 }
 .popup-wrapper .wrap-form.textarea p.title-comment {
@@ -1272,23 +1252,47 @@
   line-height: 140%;
   margin-bottom: 20px;
 }
+.popup-wrapper .wrap-bottom-comment {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
 .popup-wrapper .wrap-comment {
   display: grid;
   gap: 20px;
-  margin: 40px 0;
+  margin: 40px 0 0;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #bbb;
 }
 .popup-wrapper .wrap-comment:last-child {
   margin: 40px 0 0;
+  padding-bottom: 0;
+  border-bottom: 0;
 }
 .popup-wrapper .wrap-comment .box-userinfo {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
+.popup-wrapper
+  .wrap-comment
+  .box-userinfo
+  .wrap-popup-profile
+  .box-profile-txt {
+  position: relative;
+}
+
+.popup-wrapper .wrap-popup-profile .box-profile-txt div {
+  display: block;
+}
 .popup-wrapper .wrap-comment .box-userinfo button.btn-only-icon-bg01-circle {
   width: 16px;
   height: 16px;
   margin-left: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 .popup-wrapper .wrap-comment .box-comment p {
@@ -1309,20 +1313,62 @@
   .box-userinfo
   button.btn-only-icon-bg01-circle
   span.icon-close-wh {
-  width: 100%;
+  width: 14px;
+  height: 14px;
 }
 
 .popup-wrapper .popup-footer .box-result {
-  padding: 14px 40px;
-  background: #de3111;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
+.popup-wrapper .popup-footer .box-result.pd-sm {
+  padding: 14px 40px;
+}
+
+.popup-wrapper .popup-footer .box-result.pd-lg {
+  padding: 22px 40px;
+}
+
+.popup-wrapper .popup-footer .box-result.bg-red {
+  background: #de3111;
+}
+
+.popup-wrapper .popup-footer .box-result.bg-blue {
+  background: #aacae6;
+}
+
+.popup-wrapper .popup-footer .box-result.bg-gray {
+  background: #f0f0f0;
+}
+
+.popup-wrapper .popup-footer .box-result.bg-gray p.txt-type03 {
+  color: #000;
+  font-weight: 700;
+}
+
+.popup-wrapper .popup-footer .box-result.bg-brown {
+  background: #bd5818;
+}
+
+.popup-wrapper .popup-footer .box-result .btn-wrap a.btn {
+  display: flex;
+  gap: 8px;
+  padding: 8px 0;
+}
 .popup-wrapper .popup-footer .box-result p {
   color: #fff;
 }
 .popup-wrapper .popup-footer .box-result p.txt-type03:last-child {
-  margin-top: 8px;
+  /* margin-top: 8px; */
+}
+
+.popup-wrapper .popup-footer .box-paticipants {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .popup-wrapper .popup-footer .box-result .bottom {
@@ -1368,6 +1414,254 @@
   color: #000;
   font-family: "Hyundai Sans Head";
   font-weight: 700;
+}
+
+/* wrap-reaction-icon 내 아이콘이 양쪽에 치우치는 경우 */
+.popup-wrapper .popup-footer .box-confirm .wrap-reaction-icon.divided {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  width: 100%;
+  gap: 20px;
+}
+
+.popup-wrapper
+  .popup-footer
+  .box-confirm
+  .wrap-reaction-icon.divided
+  div:nth-child(1) {
+  justify-content: start;
+  margin-right: 0;
+}
+
+.popup-wrapper .popup-footer .box-confirm button.btn {
+  width: auto;
+}
+
+/* mypage 팝업 시작*/
+.popup-wrapper .popup-body .wrap-switch {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.popup-wrapper .popup-body .wrap-switch.all p {
+  font-family: "Hyundai Sans Head";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+}
+.popup-wrapper .popup-body .wrap-switch p {
+  font-family: "Hyundai Sans Head";
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* mypage 팝업 끝*/
+/* 일반 모달 팝업 끝*/
+
+/* 사이드 팝업 시작*/
+.side-popup .pop-wrap .popup-header {
+  padding: 24px 40px;
+}
+
+.side-popup .pop-wrap .popup-header .tit-type03 {
+  font-size: 2rem;
+}
+
+.side-popup .pop-wrap .btn-wrap button.btn-only-icon-notbg.pop-close {
+  position: absolute;
+  top: 0;
+  right: 35px;
+  bottom: calc(100% - 90px);
+}
+
+.side-popup .pop-wrap .popup-body {
+  padding: 40px;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+}
+
+.side-popup .pop-wrap .popup-body .wrap-popup-title {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.side-popup .pop-wrap .popup-body .wrap-popup-title .tit-type04 {
+  font-weight: 700;
+}
+
+.side-popup .pop-wrap .popup-body .wrap-popup-title .wrap-desc .txt-type03 {
+  font-weight: 500;
+}
+
+.side-popup .pop-wrap .popup-body .wrap-zone-info {
+  width: 100%;
+  display: grid;
+  gap: 40px 28px;
+  margin-top: 60px;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+}
+
+.side-popup .pop-wrap .popup-body .wrap-zone-info .box-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.side-popup .pop-wrap .popup-body .wrap-zone-info .box-info .tit-type05 {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.side-popup .pop-wrap .popup-body .wrap-zone-info .box-info .txt-type02 {
+  font-family: "Hyundai Sans Text";
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+}
+
+.side-popup
+  .pop-wrap
+  .popup-body
+  .wrap-zone-info
+  .box-info
+  .txt-type02.cutoff-desc {
+  max-width: 172px;
+}
+/* 사이드 팝업 끝*/
+
+/* EP040401M01 (프로필 [02.N Community 가입 한 경우], [05. N Community 폐쇄 된 경우] > 레이어 나오도록 ) */
+/* club-popup */
+.card_type04 .card_profile {
+  position: relative;
+}
+.ranking-wrap .card_type03 .card_bottom {
+  position: relative;
+}
+.club-popup {
+  position: absolute;
+  background: #fff;
+  width: calc(100% - 62px);
+  z-index: 1001;
+  top: 60px;
+  left: 16px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  display: none;
+}
+.club-popup .popup-wrapper {
+  max-width: 100%;
+}
+.club-popup .popup-wrapper .popup-header.pop-profile_wrap {
+  padding: 16px;
+  justify-content: space-between;
+  border-bottom: 0;
+}
+.club-popup .popup-wrapper .popup-header.pop-profile_wrap .pop-profile {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.club-popup .popup-wrapper .popup-header.pop-profile_wrap .pop-profile img {
+  width: 40px;
+  height: 40px;
+}
+.club-popup .pop-profile_club {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 19.6px;
+}
+.club-popup .popup-wrapper .popup-body {
+  padding: 0;
+  border-top: 0;
+  display: block;
+}
+.club-popup .popup-wrapper .popup-body .pop-gray {
+  padding: 24px 0 0 24px; /* tooltip 호버영역 잡기 위해 */
+  display: flex;
+  gap: 24px;
+  background-color: #f0f0f0;
+}
+.club-popup .popup-wrapper .popup-body .pop-gray > div {
+  width: calc(100% / 3);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.club-popup .popup-wrapper .popup-body .pop-gray > div p:first-child {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 19.6px;
+}
+.club-popup .popup-wrapper .popup-body .pop-gray > div p:nth-child(2) {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  padding-bottom: 24px; /* tooltip 호버영역 잡기 위해 */
+}
+.club-popup .popup-wrapper .popup-body .pop-gray .tooltip_wrap p:first-child {
+  padding-right: 24px; /* tooltip 호버영역 잡기 위해 */
+}
+.club-popup .popup-wrapper .popup-body .pop-gray .tooltip {
+  padding-right: 24px; /* tooltip 호버영역 잡기 위해 */
+  text-decoration: underline;
+  cursor: pointer;
+}
+.club-popup .popup-body .pop-gray .tooltip:not(:hover) + .tooltip-box {
+  display: none;
+}
+.club-popup .popup-wrapper .popup-body .pop-gray .tooltip:hover + .tooltip-box,
+.club-popup .popup-wrapper .popup-body .pop-gray .tooltip:active + .tooltip-box,
+.club-popup .popup-wrapper .popup-body .pop-gray .tooltip:focus + .tooltip-box,
+.club-popup .popup-wrapper .popup-body .pop-gray .tooltip + .tooltip-box:hover {
+  display: block !important;
+  position: absolute;
+  top: 37%;
+  right: -36%;
+  min-width: 240px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  background-color: #f0f0f0;
+  height: 260px;
+  overflow-y: auto;
+  padding: 15px;
+}
+.club-popup .popup-wrapper .popup-body .pop-gray .tooltip-box li {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 32px;
+}
+.club-popup .popup-wrapper .popup-body .pop-gray .tooltip-box li > span {
+  margin-left: 4px;
+  margin-bottom: 0;
+}
+.club-popup .popup-wrapper .popup-body .pop-des {
+  padding: 20px 16px 0;
+}
+.club-popup .popup-wrapper .popup-body .pop-des p {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 19.6px;
+}
+.club-popup .popup-wrapper .popup-body .btn-wrap {
+  padding: 20px 16px 0;
+}
+.club-popup .popup-wrapper .popup-footer {
+  border-top: 0;
+  padding: 16px 0;
+  margin-top: 42px;
+}
+.club-popup .popup-wrapper .popup-footer .btn:not(.pop-close) {
+  order: 1;
+}
+.club-popup .popup-wrapper .popup-footer .btn.pop-close {
+  order: 0;
 }
 /* 모바일 */
 @media screen and (max-width: 1023px) {
@@ -1962,7 +2256,7 @@
     margin-top: 0.75rem;
   }
 
-  /* popup temp */
+  /* popup  */
   .popup-wrapper {
     margin: 0 auto;
     padding: 0;
@@ -1971,6 +2265,23 @@
     /* padding: 32px 24px; */
     padding: 16px 24px;
   }
+  .popup-wrapper .wrap-navigation {
+    display: flex;
+  }
+  .popup-wrapper .wrap-navigation a.modal-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 0;
+    opacity: 0.5;
+  }
+  .popup-wrapper .wrap-navigation a.modal-btn.left {
+    left: 0;
+  }
+
+  .popup-wrapper .wrap-navigation a.modal-btn.right {
+    right: 0;
+  }
+
   .popup-wrapper .btn-wrap button.btn-only-icon-notbg.pop-close.pop-page {
     top: 23px;
   }
@@ -1987,15 +2298,21 @@
   .popup-wrapper .label-box h1 {
     font-size: 24px;
   }
+
   .popup-wrapper .popup-body {
     padding: 40px 24px 60px;
-    max-height: calc(100vh - 116px);
+    max-height: calc(100vh - 1px);
     overflow-y: auto;
     display: grid;
     gap: 40px 0;
   }
 
-  .popup-wrapper.onlyTxt .popup-body {
+  .popup-wrapper .popup-body.same-h-pc {
+    max-height: calc(100vh - 280px);
+  }
+
+  .popup-wrapper .popup-body .m20 .wrap-label-reward .tit-type04 {
+    font-size: 24px;
   }
 
   .popup-wrapper .popup-footer {
@@ -2003,6 +2320,7 @@
     bottom: 0%;
     position: fixed;
     width: 100%;
+    z-index: 2;
   }
 
   .popup-wrapper .popup-footer .btn-wrap {
@@ -2037,16 +2355,20 @@
   .popup-wrapper.invite .popup-header p.tit-type05 {
     font-size: 18px;
   }
-  .popup-wrapper.invite .popup-body .popup-body-innerbox p.txt-type02 {
+
+  .popup-wrapper.invite .popup-body {
+    width: 100%;
+  }
+  .popup-wrapper.invite .popup-body p.txt-type02 {
     font-size: 17px;
   }
-  .popup-wrapper.invite .popup-body .popup-body-innerbox .btn-wrap {
+  .popup-wrapper.invite .popup-body .btn-wrap {
     flex-direction: column;
     width: 100%;
     gap: 8px 0;
     padding: 0;
   }
-  .popup-wrapper.invite .popup-body .popup-body-innerbox .btn-wrap button {
+  .popup-wrapper.invite .popup-body .btn-wrap button {
     width: 100%;
     padding: 14px 27px;
     font-size: 1rem;
@@ -2054,6 +2376,9 @@
   .popup-wrapper.invite .popup-footer .btn-wrap button {
     padding: 14px 24px;
     font-size: 1rem;
+  }
+  .popup-wrapper.invite .popup-footer {
+    position: relative;
   }
 
   .popup-wrapper.onlyTxt .popup-body .popup-body-innerbox p.popup-tit-lg {
@@ -2150,9 +2475,6 @@
     gap: 8px;
   }
 
-  .popup-wrapper .popup-body-innerbox .wrap-checkmail .btn-wrap {
-  }
-
   .popup-wrapper .popup-body-innerbox .wrap-checkmail p:nth-child(1) {
     font-family: "Hyundai Sans Text";
     font-size: 17px;
@@ -2202,9 +2524,75 @@
     width: 100%;
   }
 
+  .popup-wrapper
+    .popup-footer
+    .box-confirm
+    .wrap-reaction-icon.divided
+    button.btn {
+    width: auto;
+  }
+
+  .popup-wrapper .popup-body .wrap-image-reward {
+    z-index: -1;
+  }
+
   .popup-wrapper .popup-body .wrap-image-reward .wrap-date {
     margin-bottom: 44px;
   }
+
+  /* 사이드 팝업 모바일 */
+  .side-popup .pop-wrap .popup-header {
+    padding: 16px 24px;
+  }
+  .side-popup .pop-wrap .popup-header .tit-type03 {
+    font-size: 1.25rem;
+  }
+  .side-popup .pop-wrap .popup-body {
+    max-height: calc(100vh - 40px);
+  }
+  .side-popup .pop-wrap .popup-body .wrap-popup-title .tit-type04 {
+    font-size: 1.125rem; /* 18px */
+  }
+
+  .side-popup .pop-wrap .popup-body .wrap-zone-info {
+    margin-top: 36px;
+    gap: 28px 0;
+    grid-template-columns: auto;
+    justify-content: start;
+  }
+  .side-popup .pop-wrap .popup-body .wrap-zone-info .box-info {
+    width: 100%;
+  }
+  .side-popup .pop-wrap .popup-body .wrap-zone-info .box-info .txt-type02 {
+    font-size: 17px;
+  }
+  .side-popup .pop-wrap .popup-body .wrap-zone-info .box-info .tit-type05 {
+    font-size: 1.125rem; /* 18px */
+  }
+  .side-popup
+    .pop-wrap
+    .popup-body
+    .wrap-zone-info
+    .box-info
+    .txt-type02.cutoff-desc {
+    max-width: 100%;
+  }
+  .side-popup .pop-wrap .btn-wrap button.btn-only-icon-notbg.pop-close {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    bottom: calc(100% - 55px);
+  }
+
+  .side-popup
+    .pop-wrap
+    .btn-wrap
+    button.btn-only-icon-notbg.pop-close
+    span.icon-close {
+    width: 24px;
+    height: 24px;
+  }
+
   /* EP040401M01 (프로필 [02.N Community 가입 한 경우], [05. N Community 폐쇄 된 경우] > 레이어 나오도록 ) */
   /* club-popup */
   .club-popup {

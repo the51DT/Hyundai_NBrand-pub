@@ -1777,7 +1777,7 @@ input[type="radio"]:focus + label {
 }
 .ty01Swiper {
   max-width: 1920px;
-  margin:0 auto;
+  margin: 0 auto;
 }
 .ty01Swiper .autoplay-progress {
   background: #888a8b;
@@ -1991,10 +1991,10 @@ input[type="radio"]:focus + label {
   max-width: 1800px;
 }
 .swiper-card-type .swiper-slide:first-child {
-  margin-left:60px;
+  margin-left: 60px;
 }
 .swiper-card-type.ty04Swiper .swiper-slide:first-child {
-  margin-left:0;
+  margin-left: 0;
 }
 .swiper-card-type.ty04Swiper .swiper-wrapper {
   max-width: 1440px;
@@ -2117,12 +2117,12 @@ input[type="radio"]:focus + label {
   line-height: 33.6px;
 }
 
-.swiper-card-type .swiper-button-prev { 
-  left:60px;
+.swiper-card-type .swiper-button-prev {
+  left: 60px;
 }
 
-.swiper-card-type .swiper-button-next { 
-  right:60px;
+.swiper-card-type .swiper-button-next {
+  right: 60px;
 }
 
 /* swiper 반응형 예외 케이스 처리 */
@@ -2131,12 +2131,12 @@ input[type="radio"]:focus + label {
     display: block;
   }
 
-  .ty04Swiper .swiper-button-prev { 
-    left:80px;
+  .ty04Swiper .swiper-button-prev {
+    left: 80px;
   }
 
-  .ty04Swiper .swiper-button-next { 
-    right:80px;
+  .ty04Swiper .swiper-button-next {
+    right: 80px;
   }
 }
 
@@ -4134,8 +4134,8 @@ table {
 }
 
 /* 유효성 검사 문구 시작 */
-.popup-wrapper p.validation-txt,
-.wrap-form p.validation-txt {
+.popup-wrapper .validation-txt,
+.wrap-form .validation-txt {
   font-family: "Hyundai Sans Text";
   font-size: 12px;
   font-style: normal;
@@ -4144,16 +4144,16 @@ table {
   margin-top: 8px;
 }
 
-.popup-wrapper p.validation-txt span,
-.wrap-form p.validation-txt span {
+.popup-wrapper .validation-txt span,
+.wrap-form .validation-txt span {
   margin-right: 4px;
 }
 
-.popup-wrapper p.validation-txt.success {
+.popup-wrapper .validation-txt.success {
   color: #003777;
 }
 
-.popup-wrapper p.validation-txt.fail {
+.popup-wrapper .validation-txt.error {
   color: #bd5818;
 }
 /* 유효성 검사 문구 끝 */
