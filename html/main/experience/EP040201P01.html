@@ -53,9 +53,8 @@
     <section id="container" class="content-wrap">
       <div class="content-area">
         <!-- 팝업 버튼 조건 .pop-open 가 있으면 동작 aria-controls 값과 동일한 id값 호출-->
-        <button id="popOpenBtn" onclick="NbrandUI.popOpen(this);" aria-controls="pop-page" aria-haspopup="true"
-          aria-expanded="false" title="팝업오픈">
-          EP040501P01 팝업 열기
+        <button class="pop-open" aria-controls="pop-page" aria-haspopup="true" aria-expanded="false" title="팝업오픈">
+          EP040301P01 팝업 열기
         </button>
       </div>
     </section>
@@ -64,7 +63,8 @@
     </footer>
   </div>
   <!-- .popup가 있을시 종류에따라 클래스네이밍 변경 .model-popup .bottom-popup .side-popup -->
-  <div class="popup model-popup" id="pop-page" role="dialog" aria-modal="true" aria-labelledby="tit-type03">
+  <div class="popup model-popup" id="pop-page" role="dialog" aria-modal="true" aria-labelledby="tit-type04"
+    data-pop="pop-page">
     <div class="popup-wrapper">
       <!-- <p class="temp-header">Hub_Write a post ID : EP040201P02</p> -->
 
@@ -94,7 +94,7 @@
           </div>
 
           <div class="wrap-image-reward">
-            <img src="../../../inc/images/img/img_popup_reward.png" alt="팝업 내 리워드 이미지" />
+            <img src="../../../inc/images/img/img_popup_mission.png" alt="팝업 내 미션 이미지" />
           </div>
 
           <div class="wrap-desc">
@@ -123,7 +123,9 @@
             </p>
             <div class="inner-textarea-comment">
               <textarea placeholder="Please enter comment content"></textarea>
-              <button type="button" class="btn btn-lg-primary01">Register</button>
+              <button type="button" class="btn btn-lg-primary01" aria-label="Register Button">
+                Register
+              </button>
             </div>
             <div class="wrap-form-bottom comment-type02">
               <div class="comment-type02-1">
@@ -228,7 +230,11 @@
       <div class="popup-footer footer-no-pd">
         <div class="box-result pd-sm bg-red">
           <p class="popup-tit-lg">300p</p>
-          <p class="txt-type03">03.24.2024 ~ 03.31.2024</p>
+
+          <div class="box-paticipants">
+            <p class="txt-type03">Paticipants</p>
+            <p class="txt-type03">333,333,333</p>
+          </div>
         </div>
 
         <div class="box-confirm">
@@ -240,6 +246,7 @@
               </button>
               <p class="txt-type03 fw-type03">98</p>
             </div>
+            <!--  -->
             <div>
               <button type="button" class="btn btn-only-icon-notbg">
                 <span class="visually-hidden">search button</span>
@@ -264,7 +271,7 @@
           </div>
 
           <button type="button" class="btn btn-lg-primary01">
-            Claim your reward
+            Participate in mission
             <span class="btn-icon20 icon-right-wh" aria-hidden="true"></span>
           </button>
         </div>
@@ -285,9 +292,6 @@
   <script type="text/javascript" src="../../../inc/js/plugins.js"></script>
   <script type="text/javascript" src="../../../inc/js/com-ui.js"></script>
   <script type="text/javascript" src="../../../inc/js/pub-ui.js"></script>
-  <script>
-
-  </script>
 </body>
 
 </html>

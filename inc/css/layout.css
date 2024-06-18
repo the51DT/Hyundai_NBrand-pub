@@ -571,6 +571,16 @@ body:-webkit-scrollbar {
   transform: translate(-50%, -50%);
   display: none;
 }
+.ajax-popup {
+  top: 50%;
+  left: 50%;
+  background: #fff;
+  width: calc(100% - 40px);
+  max-width: 960px;
+  z-index: 1001;
+  transform: translate(-50%, -50%);
+  display: none;
+}
 /* side-popup */
 .side-popup {
   right: -100%;
