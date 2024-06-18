@@ -43,6 +43,9 @@
   font-weight: 500;
   line-height: 140%;
 }
+.dropdown.inMobile .accor02-wrap .accor02-header.footer-list-tit.mo-only {
+  display: none;
+}
 .footer-list .icon-link-footer {
   vertical-align: middle;
   margin-left: 0.5rem;
@@ -132,7 +135,13 @@
     row-gap: 2rem;
   }
   .footer-list-tit {
+    display: none;
     font-size: 1.0625rem;
+  }
+  .dropdown.inMobile .accor02-wrap .accor02-header.footer-list-tit.mo-only {
+    display: flex;
+    width: 100%;
+    color: #FFF;
   }
   .footer-list-area:first-of-type .footer-list-tit {
     padding-top: 0 !important;
