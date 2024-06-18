@@ -545,7 +545,7 @@ body:-webkit-scrollbar {
 
 /* -popup */
 .popup {
-  position: absolute;
+  position: fixed;
 }
 
 /* bottom-popup */

@@ -77,11 +77,14 @@ var pubUi = {
     // 리셋 버튼 클릭시,
     self.$btnReset.on("click", function (e) {
       e.preventDefault();
+      var tagList = $(this).closest(".search-container").find(".tag-list-wrap .tag-list");
       self.$searchBox.querySelector("input").value = "";
+      self.tagBtnEvent("", tagList, "reset");
     });
 
     // 태그 버튼 클릭시,
-    $(".tag-list li a").click(function (e) {
+    $(".tag-list li label").click(function (e) {
+      e.preventDefault();
       var tagList = $(this).closest(".tag-list-wrap").find(".tag-list");
       self.tagBtnEvent(e.target, tagList);
     });
@@ -428,32 +431,48 @@ var pubUi = {
 
     document.querySelector("#" + tabLabel).classList.add("on");
   },
-  tagBtnEvent: function (e, list) {
-    var targetAriaSelected = e.ariaSelected;
-    var targetList = e.parentElement;
+  tagBtnEvent: function (e, list, param) {    
     var listItem = list.find("li");
 
-    if (list.hasClass("multi")) {
-      if (targetAriaSelected == "true") {
-        e.setAttribute("aria-selected", "false");
-        targetList.classList.remove("on");
-      } else {
-        e.setAttribute("aria-selected", "true");
-        targetList.classList.add("on");
-      }
-    } else {
+    //search input reset 클릭시, 하단 태그 초기화
+    if(param == "reset") {
       for (var i = 0; i < listItem.length; i++) {
         listItem[i].classList.remove("on");
-        listItem[i].childNodes[0].ariaSelected = "false";
+        listItem[i].children[0].checked = "false";
+        listItem[i].children[1].dataset.check = false;
       }
+    } else {
+      var targetisChecked = e.dataset.check;
+      var targetList = e.parentElement;
 
-      if (targetAriaSelected == "false") {
-        e.setAttribute("aria-selected", "true");
-        targetList.classList.add("on");
+      if (list.hasClass("multi")) {
+        if (targetisChecked == "true") {
+          e.dataset.check = false;
+          targetList.firstElementChild.checked = false;
+          targetList.classList.remove("on");
+        } else {
+          e.dataset.check = true;
+          targetList.firstElementChild.checked = true;
+          targetList.classList.add("on");
+        }
       } else {
-        e.setAttribute("aria-selected", "true");
-        targetList.classList.add("on");
+        for (var i = 0; i < listItem.length; i++) {
+          listItem[i].classList.remove("on");
+          listItem[i].children[0].checked = "false";
+          listItem[i].children[1].dataset.check = false;
+        }
+
+        if (targetisChecked == "false") {
+          targetList.classList.add("on");
+          targetList.children[0].checked = true;
+          targetList.children[1].dataset.check = true;
+        } else {
+          targetList.classList.add("on");
+          targetList.children[0].checked = true;
+          targetList.children[1].dataset.check = true;
+        }
       }
+      
     }
   },
   masonryLayout: function () {

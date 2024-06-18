@@ -18,16 +18,17 @@ $(document).ready(function () {
 });
 
 let $win_W = $(window).width();
-$(window).resize(function () {
-  $win_W = $(window).width();
+var delta = 100;
+var timer = null;
+function resizeDone() {
   if (NbrandUI.windowSize()) {
-    // if()
   } else {
   }
-  // location.reload(true);
-  // if (NbrandUI.windowSize() && $(".dimmed").length) {
-  //   $("body").find(".dimmed").remove();
-  // }
+}
+$(window).resize(function () {
+  $win_W = $(window).width();
+  clearTimeout(timer);
+  timer = setTimeout(resizeDone, delta);
 });
 
 var NbrandUI = {

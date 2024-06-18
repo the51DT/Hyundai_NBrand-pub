@@ -1,0 +1,1438 @@
+/**
+ * @project        N-Brand
+ * @author         
+ * @description    Sass to Css
+ * @build          Thu, Mar 28, 2019 5:43 PM ET
+ * @copyright      Copyright (c) 2019, 
+ */
+.footer {
+	margin-top: 0;
+}
+
+#article-content {
+	padding-bottom: 16.67vw;
+}
+
+@media all and (min-width: 1024px) {
+	#article-content {
+		padding-bottom: 7.81vw;
+	}
+}
+
+@media all and (min-width: 1280px) {
+	#article-content {
+		padding-bottom: 100px;
+	}
+}
+
+.press-list {
+	background: #f5f5f5;
+}
+
+.press-list__area {
+	padding-top: 125px;
+	padding-left: 6.94vw;
+	padding-right: 6.94vw;
+}
+
+@media all and (min-width: 1024px) {
+	.press-list__area {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+@media all and (min-width: 1280px) {
+	.press-list__area {
+		padding-top: 118px;
+		padding-bottom: 160px;
+	}
+}
+
+.press-list__visual {
+	margin-top: 8.33vw;
+}
+
+@media all and (min-width: 1024px) {
+	.press-list__visual {
+		margin-top: 2.81vw;
+	}
+}
+
+@media all and (min-width: 1280px) {
+	.press-list__visual {
+		margin-top: 36px;
+	}
+}
+
+.press-list .swiper-area {
+	position: relative;
+	padding-left: 6.94vw;
+	padding-right: 6.94vw;
+	margin-left: -6.94vw;
+	margin-right: -6.94vw;
+}
+
+@media all and (min-width: 1024px) {
+	.press-list .swiper-area {
+		padding: 0;
+		margin: 0;
+	}
+}
+
+.press-list .swiper-slide {
+	margin: 0;
+	background: #fff;
+	/* 59 - 41 */
+}
+
+.press-list .swiper-slide .thumb__link {
+	display: block;
+}
+
+.press-list .swiper-slide .thumb__content {
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+
+.press-list .swiper-slide .thumb__content:after {
+	content: '';
+	clear: both;
+	display: block;
+}
+
+.press-list .swiper-slide .thumb__image img {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+@media all and (min-width: 1024px) {
+	.press-list .swiper-slide .thumb__image {
+		max-width: 59%;
+	}
+}
+
+.press-list .swiper-slide .thumb__text {
+	background-color: #fff;
+	padding-top: 8.33vw;
+	padding-bottom: 8.33vw;
+	padding-left: 5.56vw;
+	padding-right: 5.56vw;
+	height: 50.69vw;
+	font-size: 6.11vw;
+}
+
+@media all and (min-width: 1024px) {
+	.press-list .swiper-slide .thumb__text {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 41%;
+		height: 100%;
+		padding-top: 3.75vw;
+		padding-bottom: 3.75vw;
+		padding-left: 3.91vw;
+		padding-right: 3.91vw;
+		font-size: 2.81vw;
+	}
+}
+
+@media all and (min-width: 1280px) {
+	.press-list .swiper-slide .thumb__text {
+		padding-top: 48px;
+		padding-bottom: 48px;
+		padding-left: 50px;
+		padding-right: 50px;
+		font-size: 36px;
+	}
+}
+
+.press-list .swiper-slide .thumb__title {
+	font-family: "Hyundai Sans Medium", "Malgun Gothic", sans-serif;
+}
+
+@media all and (min-width: 1024px) {
+	.press-list .swiper-slide .thumb__title {
+		font-size: 2.81vw;
+	}
+}
+
+@media all and (min-width: 1280px) {
+	.press-list .swiper-slide .thumb__title {
+		font-size: 36px;
+	}
+}
+
+.press-list .swiper-slide .thumb__date {
+	position: absolute;
+	color: #999;
+	bottom: 8.33vw;
+	left: 5.56vw;
+	font-size: 3.89vw;
+	font-family: "Hyundai Sans Medium", "Malgun Gothic", sans-serif;
+}
+
+@media all and (min-width: 1024px) {
+	.press-list .swiper-slide .thumb__date {
+		bottom: 3.75vw;
+		left: 3.91vw;
+		font-size: 1.25vw;
+	}
+}
+
+@media all and (min-width: 1280px) {
+	.press-list .swiper-slide .thumb__date {
+		bottom: 48px;
+		left: 50px;
+		font-size: 16px;
+	}
+}
+
+@media all and (min-width: 1024px) {
+	.press-list .search__area {
+		position: relative;
+	}
+}
+
+.press-list .search__area .button__type--reset {
+	display: block;
+	width: 100%;
+	color: #000;
+	text-align: center;
+	margin-top: 8.33vw;
+}
+
+.press-list .search__area .button__type--reset * {
+	vertical-align: middle;
+}
+
+@media all and (min-width: 1024px) {
+	.press-list .search__area .button__type--reset {
+		position: absolute;
+		top: 50%;
+		right: 30px;
+		-webkit-transform: translateY(-50%);
+				transform: translateY(-50%);
+		margin: 0;
+		padding: 0;
+		width: auto;
+		text-align: left;
+		font-size: 1.56vw;
+	}
+}
+
+@media all and (min-width: 1280px) {
+	.press-list .search__area .button__type--reset {
+		font-size: 20px;
+	}
+}
+
+.press-list .search__area .button__type--reset span {
+	display: inline-block;
+	position: relative;
+	margin-right: 1.67vw;
+	font-size: 4.44vw;
+}
+
+@media all and (min-width: 1024px) {
+	.press-list .search__area .button__type--reset span {
+		margin-right: 0.47vw;
+		font-size: 1.56vw;
+	}
+}
+
+@media all and (min-width: 1280px) {
+	.press-list .search__area .button__type--reset span {
+		margin-right: 6px;
+		font-size: 20px;
+	}
+}
+
+.press-list .search__area .button__type--reset .icon-return_btn {
+	font-size: 4.17vw;
+}
+
+@media all and (min-width: 1024px) {
+	.press-list .search__area .button__type--reset .icon-return_btn {
+		font-size: 1.17vw;
+	}
+}
+
+@media all and (min-width: 1280px) {
+	.press-list .search__area .button__type--reset .icon-return_btn {
+		font-size: 15px;
+	}
+}
+
+.press-list .search__form {
+	background: #fff url("/images/en/common/icon_search_bar.gif") no-repeat 20px center;
+	height: 22.22vw;
+	padding-top: 6.94vw;
+	padding-bottom: 6.94vw;
+	padding-right: 8.33vw;
+	padding-left: 18.06vw;
+	background-size: 8.33vw;
+	margin-top: 16.11vw;
+}
+
+@media all and (min-width: 1024px) {
+	.press-list .search__form {
+		height: auto;
+		background-repeat: no-repeat;
+		background-position-y: center;
+		background-size: 30px;
+		margin-top: 7.27vw;
+		padding-top: 2.34vw;
+		padding-bottom: 2.34vw;
+		padding-left: 8.59vw;
+		padding-right: 10.16vw;
+		background-position-x: 2.34vw;
+	}
+}
+
+@media all and (min-width: 1280px) {
+	.press-list .search__form {
+		margin-top: 93px;
+		padding-top: 30px;
+		padding-bottom: 30px;
+		padding-left: 110px;
+		padding-right: 130px;
+		background-position-x: 30px;
+	}
+}
+
+.press-list .search__form .form__inner {
+	position: relative;
+	z-index: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.press-list .search__form .form__inner * {
+	vertical-align: middle;
+}
+
+.press-list .search__form .placeholder__text {
+	z-index: -1;
+	position: absolute;
+	color: #aaa;
+	line-height: 1.6;
+	font-family: "Hyundai Sans Bold", "Malgun Gothic", sans-serif;
+	font-size: 5.56vw;
+}
+
+@media all and (min-width: 1024px) {
+	.press-list .search__form .placeholder__text {
+		line-height: 1;
+		font-size: 2.19vw;
+	}
+}
+
+@media all and (min-width: 1280px) {
+	.press-list .search__form .placeholder__text {
+		font-size: 28px;
+	}
+}
+
+.press-list .search__form .search__input {
+	display: block;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	background: transparent;
+	vertical-align: middle;
+	font-family: "Hyundai Sans Medium", "Malgun Gothic", sans-serif;
+	font-size: 5.56vw;
+}
+
+@media all and (min-width: 1024px) {
+	.press-list .search__form .search__input {
+		height: 2.58vw;
+		font-size: 1.56vw;
+	}
+}
+
+@media all and (min-width: 1280px) {
+	.press-list .search__form .search__input {
+		height: 33px;
+		font-size: 20px;
+	}
+}
+
+.press-list__nodata {
+	position: relative;
+	color: #999;
+	text-align: center;
+	margin-top: 17.22vw;
+	font-size: 4.44vw;
+}
+
+@media all and (min-width: 1024px) {
+	.press-list__nodata {
+		margin-top: 0;
+		padding-top: 18.98vw;
+		padding-bottom: 18.75vw;
+		font-size: 1.95vw;
+	}
+}
+
+@media all and (min-width: 1280px) {
+	.press-list__nodata {
+		padding-top: 243px;
+		padding-bottom: 240px;
+		font-size: 25px;
+	}
+}
+
+.press-list__nodata:before {
+	content: '\e906';
+	color: #ccc;
+	font-family: 'nbrand-icon' !important;
+	font-size: 13.89vw;
+}
+
+@media all and (min-width: 1024px) {
+	.press-list__nodata:before {
+		font-size: 7.81vw;
+	}
+}
+
+@media all and (min-width: 1280px) {
+	.press-list__nodata:before {
+		font-size: 100px;
+	}
+}
+
+.press-list__nodata strong {
+	display: inline-block;
+	padding-top: 32px;
+	color: #000;
+	font-family: "Hyundai Sans Medium", "Malgun Gothic", sans-serif;
+}
+
+.press-list .o-btn__area {
+	margin-top: 11.11vw;
+}
+
+@media all and (min-width: 1024px) {
+	.press-list .o-btn__area {
+		margin-top: 6.25vw;
+	}
+}
+
+@media all and (min-width: 1280px) {
+	.press-list .o-btn__area {
+		margin-top: 80px;
+	}
+}
+
+.press-list .o-btn__area span {
+	font-family: "Hyundai Sans Medium", "Malgun Gothic", sans-serif;
+}
+
+[data-animation] > section:first-child {
+	margin-top: 0;
+}
+
+.press-view {
+	background: #fff;
+}
+
+.press-view__header {
+	position: relative;
+	z-index: 1;
+}
+
+.press-view__header .visual__image {
+	width: 100%;
+	padding-top: 100%;
+}
+
+@media all and (min-width: 1024px) {
+	.press-view__header .visual__image {
+		padding-top: 56.25%;
+	}
+	.press-view__header .visual__image:after {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgba(0, 0, 0, 0.2);
+	}
+}
+
+.press-view__head {
+	position: relative;
+	left: 0;
+	-webkit-transform: none;
+			transform: none;
+	padding-top: 8.33vw;
+	padding-left: 6.94vw;
+	padding-right: 6.94vw;
+}
+
+@media all and (min-width: 1024px) {
+	.press-view__head {
+		z-index: 10;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		-webkit-transform: translate(-50%, -50%);
+				transform: translate(-50%, -50%);
+		padding: 0 4%;
+		width: 100%;
+		max-width: 1680px;
+	}
+}
+
+@media all and (min-width: 1024px) {
+	.press-view__info {
+		max-width: 63.67vw;
+	}
+}
+
+@media all and (min-width: 1280px) {
+	.press-view__info {
+		max-width: 815px;
+	}
+}
+
+.press-view__title {
+	display: block;
+	color: #000;
+	font-family: "Hyundai Sans Bold", "Malgun Gothic", sans-serif;
+	font-size: 7.22vw;
+}
+
+@media all and (min-width: 1024px) {
+	.press-view__title {
+		color: #fff;
+		line-height: 1;
+		font-size: 5.47vw;
+	}
+}
+
+@media all and (min-width: 1280px) {
+	.press-view__title {
+		font-size: 70px;
+	}
+}
+
+.press-view__date {
+	display: block;
+	color: #999;
+	margin-top: 5.83vw;
+	font-size: 3.89vw;
+}
+
+@media all and (min-width: 1024px) {
+	.press-view__date {
+		color: #fff;
+		margin-top: 3.75vw;
+		font-size: 1.25vw;
+	}
+}
+
+@media all and (min-width: 1280px) {
+	.press-view__date {
+		margin-top: 48px;
+		font-size: 16px;
+	}
+}
+
+@media all and (min-width: 1024px) {
+	.press-view__content {
+		padding-top: 7.81vw;
+	}
+}
+
+@media all and (min-width: 1280px) {
+	.press-view__content {
+		padding-top: 100px;
+	}
+}
+
+.press-view__body {
+	display: block;
+	width: 100%;
+	padding-bottom: 15.83vw;
+}
+
+@media all and (min-width: 1024px) {
+	.press-view__body {
+		display: table;
+		table-layout: fixed;
+		margin: 0 auto;
+		padding-bottom: 5.94vw;
+		max-width: 66.72vw;
+	}
+	.press-view__body:after {
+		content: '';
+		clear: both;
+		display: block;
+	}
+}
+
+@media all and (min-width: 1280px) {
+	.press-view__body {
+		max-width: 854px;
+		padding-bottom: 76px;
+	}
+}
+
+.press-view__editor {
+	color: #000;
+	margin-top: 15vw;
+	padding-left: 6.94vw;
+	padding-right: 6.94vw;
+	font-size: 4.44vw;
+}
+
+@media all and (min-width: 1024px) {
+	.press-view__editor {
+		margin-top: 0;
+		padding-left: 1.88vw;
+		padding-right: 1.88vw;
+		font-size: 1.41vw;
+	}
+}
+
+@media all and (min-width: 1280px) {
+	.press-view__editor {
+		padding-left: 24px;
+		padding-right: 24px;
+		font-size: 18px;
+	}
+}
+
+.press-view__editor .press__paragraph, .press-view__editor .press__summary, .press-view__editor .press__subtitle {
+	line-height: 1.75;
+	padding-left: 2.78vw;
+	padding-right: 2.78vw;
+}
+
+@media all and (min-width: 1024px) {
+	.press-view__editor .press__paragraph, .press-view__editor .press__summary, .press-view__editor .press__subtitle {
+		padding-left: 1.56vw;
+		padding-right: 1.56vw;
+	}
+}
+
+@media all and (min-width: 1280px) {
+	.press-view__editor .press__paragraph, .press-view__editor .press__summary, .press-view__editor .press__subtitle {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
+.press-view__editor .press__paragraph {
+	margin-bottom: 9.86vw;
+}
+
+.press-view__editor .press__paragraph:nth-last-child(1) {
+	margin-bottom: 0;
+}
+
+@media all and (min-width: 1024px) {
+	.press-view__editor .press__paragraph {
+		margin-bottom: 6.25vw;
+	}
+}
+
+@media all and (min-width: 1280px) {
+	.press-view__editor .press__paragraph {
+		margin-bottom: 41px;
+	}
+}
+
+.press-view__editor .press__summary {
+	margin-bottom: 10.56vw;
+	font-size: 4.44vw;
+}
+
+.press-view__editor * + .press__summary {
+	margin-top: 15vw;
+}
+
+@media all and (min-width: 1024px) {
+	.press-view__editor * + .press__summary {
+		margin-top: 7.03vw;
+	}
+}
+
+@media all and (min-width: 1280px) {
+	.press-view__editor * + .press__summary {
+		margin-top: 90px;
+	}
+}
+
+@media all and (min-width: 1024px) {
+	.press-view__editor .press__summary {
+		margin-bottom: 6.25vw;
+		font-size: 1.41vw;
+	}
+}
+
+@media all and (min-width: 1280px) {
+	.press-view__editor .press__summary {
+		margin-bottom: 41px;
+		font-size: 18px;
+	}
+}
+
+.press-view__editor .press__summary strong {
+	font-family: inherit;
+	font-family: "Hyundai Sans Bold", "Malgun Gothic", sans-serif;
+}
+
+.press-view__editor .press__subtitle {
+	font-family: "Hyundai Sans Bold", "Malgun Gothic", sans-serif;
+	margin-top: 15vw;
+	font-size: 5.56vw;
+}
+
+@media all and (min-width: 1024px) {
+	.press-view__editor .press__subtitle {
+		margin-top: 7.03vw;
+		font-size: 1.41vw;
+	}
+}
+
+@media all and (min-width: 1280px) {
+	.press-view__editor .press__subtitle {
+		margin-top: 90px;
+		font-size: 18px;
+	}
+}
+
+.press-view__editor .press__subtitle + * {
+	margin-top: 6.94vw;
+}
+
+@media all and (min-width: 1024px) {
+	.press-view__editor .press__subtitle + * {
+		margin-top: 1.02vw;
+	}
+}
+
+@media all and (min-width: 1280px) {
+	.press-view__editor .press__subtitle + * {
+		margin-top: 13px;
+	}
+}
+
+.press-view__editor .press__image {
+	margin-top: 15.28vw;
+	margin-bottom: 15.28vw;
+}
+
+@media all and (min-width: 1024px) {
+	.press-view__editor .press__image {
+		margin-top: 7.81vw;
+		margin-bottom: 7.81vw;
+	}
+}
+
+@media all and (min-width: 1280px) {
+	.press-view__editor .press__image {
+		margin-top: 100px;
+		margin-bottom: 100px;
+	}
+}
+
+.press-view__editor .press__image .press__figure {
+	padding: 0;
+	margin: 0;
+}
+
+.press-view__editor .press__image .press__figure img {
+	width: 100%;
+	max-width: 100%;
+}
+
+.press-view__editor .press__table {
+	overflow: auto;
+	margin-bottom: 9.86vw;
+}
+
+@media all and (min-width: 1024px) {
+	.press-view__editor .press__table {
+		margin-bottom: 6.25vw;
+	}
+}
+
+@media all and (min-width: 1280px) {
+	.press-view__editor .press__table {
+		margin-bottom: 41px;
+	}
+}
+
+.press-view__editor .press__table table {
+	width: 100%;
+}
+
+.press-view__editor .press__table th, .press-view__editor .press__table td {
+	padding: 10px;
+	text-align: center;
+	word-break: keep-all;
+}
+
+.press-view__editor .press__table strong {
+	font-family: "Hyundai Sans Bold", "Malgun Gothic", sans-serif;
+}
+
+.press-view__editor .press__table .point {
+	background: #f1f1f1;
+}
+
+.press-view__editor .press__table .point td {
+	font-family: "Hyundai Sans Bold", "Malgun Gothic", sans-serif;
+}
+
+.press-view__editor .youtube-screen {
+	margin-top: 15vw;
+	margin-bottom: 15vw;
+}
+
+@media all and (min-width: 1024px) {
+	.press-view__editor .youtube-screen {
+		margin-top: 7.81vw;
+		margin-bottom: 7.81vw;
+	}
+}
+
+@media all and (min-width: 1280px) {
+	.press-view__editor .youtube-screen {
+		margin-top: 100px;
+		margin-bottom: 100px;
+	}
+}
+
+.press-view__editor .quotation__area {
+	margin-top: 21.11vw;
+	margin-bottom: 15.28vw;
+}
+
+@media all and (min-width: 1024px) {
+	.press-view__editor .quotation__area {
+		margin-top: 7.19vw;
+		margin-bottom: 7.19vw;
+	}
+}
+
+@media all and (min-width: 1280px) {
+	.press-view__editor .quotation__area {
+		margin-top: 92px;
+		margin-bottom: 92px;
+	}
+}
+
+.press-view__editor .quotation__area > div:after {
+	display: none;
+}
+
+.press-view__editor .quotation__caption {
+	color: #999;
+}
+
+.press-view__editor .text-list {
+	padding-left: 2.78vw;
+	padding-right: 2.78vw;
+}
+
+@media all and (min-width: 1024px) {
+	.press-view__editor .text-list {
+		padding-left: 1.56vw;
+		padding-right: 1.56vw;
+	}
+}
+
+@media all and (min-width: 1280px) {
+	.press-view__editor .text-list {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
+.press-view__editor .text-list li {
+	margin-top: 6.25vw;
+}
+
+.press-view__editor .text-list li:before {
+	top: 1.67vw;
+	width: 1.11vw;
+	height: 1.11vw;
+}
+
+@media all and (min-width: 1024px) {
+	.press-view__editor .text-list li:before {
+		top: 0.47vw;
+		width: 0.47vw;
+		height: 0.47vw;
+	}
+}
+
+@media all and (min-width: 1280px) {
+	.press-view__editor .text-list li:before {
+		top: 6px;
+		width: 6px;
+		height: 6px;
+	}
+}
+
+@media all and (min-width: 1024px) {
+	.press-view__editor .text-list li {
+		margin-top: 2.89vw;
+	}
+}
+
+@media all and (min-width: 1280px) {
+	.press-view__editor .text-list li {
+		margin-top: 37px;
+	}
+}
+
+.press-view .relevant__area {
+	border-top: 1px solid #e0e0e0;
+	border-bottom: 1px solid #e0e0e0;
+	padding-top: 13.89vw;
+	padding-bottom: 13.89vw;
+	margin-left: 6.94vw;
+	margin-right: 6.94vw;
+}
+
+@media all and (min-width: 1024px) {
+	.press-view .relevant__area {
+		display: table;
+		width: 100%;
+		margin-left: 0;
+		margin-right: 0;
+		padding-top: 7.81vw;
+		padding-bottom: 7.81vw;
+	}
+}
+
+@media all and (min-width: 1280px) {
+	.press-view .relevant__area {
+		padding-top: 100px;
+		padding-bottom: 100px;
+	}
+}
+
+.press-view .relevant__box {
+	display: block;
+	width: 100%;
+	margin-top: 16.11vw;
+}
+
+.press-view .relevant__box:nth-child(1) {
+	margin-top: 0;
+}
+
+@media all and (min-width: 1024px) {
+	.press-view .relevant__box {
+		display: table-cell;
+		width: 50%;
+		margin-top: 0;
+	}
+}
+
+.press-view .relevant__title {
+	font-family: "Hyundai Sans Bold", "Malgun Gothic", sans-serif;
+	font-size: 5.56vw;
+}
+
+@media all and (min-width: 1024px) {
+	.press-view .relevant__title {
+		font-size: 1.88vw;
+	}
+}
+
+@media all and (min-width: 1280px) {
+	.press-view .relevant__title {
+		font-size: 24px;
+	}
+}
+
+.press-view .relevant__title strong {
+	font-family: inherit;
+}
+
+.press-view .relevant__content {
+	margin-top: 6.25vw;
+}
+
+@media all and (min-width: 1024px) {
+	.press-view .relevant__content {
+		margin-top: 1.56vw;
+	}
+}
+
+@media all and (min-width: 1280px) {
+	.press-view .relevant__content {
+		margin-top: 20px;
+	}
+}
+
+.press-view .tag__list {
+	margin-top: -8.33vw;
+}
+
+@media all and (min-width: 1024px) {
+	.press-view .tag__list {
+		margin-top: 0;
+		padding-right: 15%;
+	}
+}
+
+.press-view .tag__list:after {
+	content: '';
+	clear: both;
+	display: block;
+}
+
+.press-view .tag__list li {
+	float: left;
+	margin-top: 8.33vw;
+	margin-right: 8.33vw;
+}
+
+@media all and (min-width: 1024px) {
+	.press-view .tag__list li {
+		margin-top: 1.56vw;
+		margin-right: 2.34vw;
+	}
+}
+
+@media all and (min-width: 1280px) {
+	.press-view .tag__list li {
+		margin-top: 20px;
+		margin-right: 30px;
+	}
+}
+
+.press-view .tag__item {
+	position: relative;
+	color: #555;
+	line-height: 1;
+	font-size: 4.44vw;
+}
+
+@media all and (min-width: 1024px) {
+	.press-view .tag__item {
+		font-size: 1.41vw;
+	}
+}
+
+@media all and (min-width: 1280px) {
+	.press-view .tag__item {
+		font-size: 18px;
+	}
+}
+
+.press-view .tag__item:before {
+	content: '';
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background: #000;
+}
+
+.press-view .attachment__area {
+	overflow-y: auto;
+	width: 100%;
+	height: 54.17vw;
+	padding-right: 4.86vw;
+}
+
+@media all and (min-width: 1024px) {
+	.press-view .attachment__area {
+		padding-right: 50px;
+		height: 14.84vw;
+	}
+}
+
+@media all and (min-width: 1280px) {
+	.press-view .attachment__area {
+		height: 190px;
+	}
+}
+
+.press-view .attachment__item {
+	font-size: 4.44vw;
+	margin-top: 7.64vw;
+}
+
+.press-view .attachment__item:first-child {
+	margin-top: 0;
+}
+
+@media all and (min-width: 1024px) {
+	.press-view .attachment__item {
+		margin-top: 1.48vw;
+		font-size: 1.41vw;
+	}
+}
+
+@media all and (min-width: 1280px) {
+	.press-view .attachment__item {
+		margin-top: 16px;
+		font-size: 18px;
+	}
+}
+
+.press-view .attachment__item a {
+	overflow: hidden;
+	display: block;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	color: #555;
+	font-family: "Hyundai Sans Medium", "Malgun Gothic", sans-serif;
+}
+
+.press-view .attachment__item a span {
+	display: inline-block;
+	position: relative;
+	padding-bottom: 2px;
+	font-family: inherit;
+}
+
+.press-view .attachment__item a span:before {
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 1px;
+	background: #555;
+}
+
+@media all and (min-width: 1280px) {
+	.press-view .attachment__item a {
+		display: inline-block;
+	}
+	.press-view .attachment__item a:hover, .press-view .attachment__item a:focus, .press-view .attachment__item a:active {
+		color: #e63312;
+	}
+	.press-view .attachment__item a:hover span:before, .press-view .attachment__item a:focus span:before, .press-view .attachment__item a:active span:before {
+		background: #e63312;
+	}
+}
+
+.press-view .o-btn__area {
+	margin-top: 8.06vw;
+}
+
+@media all and (min-width: 1024px) {
+	.press-view .o-btn__area {
+		margin-top: 2.73vw;
+	}
+}
+
+@media all and (min-width: 1280px) {
+	.press-view .o-btn__area {
+		margin-top: 35px;
+	}
+}
+
+.press-view .press-paging {
+	background: #f5f5f5;
+	margin-top: 16.53vw;
+	padding-top: 9.17vw;
+	padding-bottom: 9.17vw;
+	padding-left: 6.94vw;
+	padding-right: 6.94vw;
+}
+
+@media all and (min-width: 1024px) {
+	.press-view .press-paging {
+		padding-left: 10px;
+		padding-right: 10px;
+		margin-top: 7.81vw;
+		padding-top: 4.69vw;
+		padding-bottom: 5.39vw;
+	}
+}
+
+@media all and (min-width: 1280px) {
+	.press-view .press-paging {
+		margin-top: 100px;
+		padding-top: 60px;
+		padding-bottom: 69px;
+	}
+}
+
+.press-view .press-paging__wrap {
+	display: table;
+	table-layout: fixed;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1440px;
+}
+
+.press-view .press-paging__box {
+	display: table-cell;
+	width: 50%;
+	vertical-align: middle;
+}
+
+@media all and (min-width: 1024px) {
+	.press-view .press-paging__box {
+		vertical-align: top;
+	}
+}
+
+.press-view .press-paging .box--left * {
+	text-align: left;
+}
+
+.press-view .press-paging .box--right * {
+	text-align: right;
+}
+
+.press-view .press-paging__link {
+	display: block;
+}
+
+.press-view .press-paging__direction {
+	position: relative;
+	display: block;
+	color: #000;
+	font-family: "Hyundai Sans Bold", "Malgun Gothic", sans-serif;
+	font-size: 5.56vw;
+}
+
+@media all and (min-width: 1024px) {
+	.press-view .press-paging__direction {
+		font-size: 1.88vw;
+	}
+}
+
+@media all and (min-width: 1280px) {
+	.press-view .press-paging__direction {
+		font-size: 24px;
+	}
+}
+
+.press-view .press-paging .direction__type--prev {
+	padding-left: 6.94vw;
+}
+
+.press-view .press-paging .direction__type--prev:before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	border-left: 3px solid #000;
+	border-bottom: 3px solid #000;
+	border-top: 0;
+	border-right: 0;
+	-webkit-transform: translateY(-50%) rotate(45deg);
+			transform: translateY(-50%) rotate(45deg);
+	width: 2.29vw;
+	height: 2.29vw;
+	margin-top: -0.14vw;
+}
+
+@media all and (min-width: 1024px) {
+	.press-view .press-paging .direction__type--prev {
+		padding-left: 2.34vw;
+	}
+	.press-view .press-paging .direction__type--prev:before {
+		width: 0.63vw;
+		height: 0.63vw;
+		margin-top: -0.08vw;
+		border-left-width: 0.23vw;
+		border-bottom-width: 0.23vw;
+	}
+}
+
+@media all and (min-width: 1280px) {
+	.press-view .press-paging .direction__type--prev {
+		padding-left: 30px;
+	}
+	.press-view .press-paging .direction__type--prev:before {
+		margin-top: -1px;
+		width: 8px;
+		height: 8px;
+		border-left: 3px solid #000;
+		border-bottom: 3px solid #000;
+	}
+}
+
+.press-view .press-paging .direction__type--next {
+	padding-right: 6.94vw;
+}
+
+.press-view .press-paging .direction__type--next:before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 50%;
+	right: 0;
+	border-right: 3px solid #000;
+	border-top: 3px solid #000;
+	border-bottom: 0;
+	border-left: 0;
+	-webkit-transform: translateY(-50%) rotate(45deg);
+			transform: translateY(-50%) rotate(45deg);
+	width: 2.29vw;
+	height: 2.29vw;
+	margin-top: -0.14vw;
+}
+
+@media all and (min-width: 1024px) {
+	.press-view .press-paging .direction__type--next {
+		padding-right: 2.34vw;
+	}
+	.press-view .press-paging .direction__type--next:before {
+		width: 0.63vw;
+		height: 0.63vw;
+		border-right-width: 0.23vw;
+		border-top-width: 0.23vw;
+	}
+}
+
+@media all and (min-width: 1280px) {
+	.press-view .press-paging .direction__type--next {
+		padding-right: 30px;
+	}
+	.press-view .press-paging .direction__type--next:before {
+		margin-top: -1px;
+		width: 8px;
+		height: 8px;
+		border-right: 3px solid #000;
+		border-top: 3px solid #000;
+	}
+}
+/* s:190821 edit */
+.press-view .press-paging__title {
+	position:absolute;
+	top: -99999%;
+	font-size:0;
+}
+
+@media all and (min-width: 1024px) {
+	.press-view .press-paging__title {
+		position:relative;
+		top:auto;
+		display:inline-block;
+		width:60%;
+		padding-top:2.27vw;
+		padding-right:2.27vw;
+		padding-bottom:2.27vw;
+		padding-left:2.27vw;
+		font-size:18px;
+	}
+}
+/* e:190821 edit */
+@media all and (min-width: 1280px) {
+	.press-view .press-paging__title {
+		padding-top: 29px;
+		padding-bottom: 29px;
+		padding-left: 29px;
+		padding-right: 29px;
+	}
+}
+
+.press-view .layout__c-typeE[data-name="press-view__section3"] {
+	position: relative;
+}
+
+.press-view .layout__c-typeE[data-name="press-view__section3"] .list__length--4 .thumb__title {
+	text-align: left;
+}
+
+.press-view [data-name="press-view__section4"] .o-btn__area {
+	margin-top: 16.11vw;
+}
+
+@media all and (min-width: 1024px) {
+	.press-view [data-name="press-view__section4"] .o-btn__area {
+		margin-top: 3.91vw;
+	}
+}
+
+@media all and (min-width: 1280px) {
+	.press-view [data-name="press-view__section4"] .o-btn__area {
+		margin-top: 50px;
+	}
+}
+
+/* s:190528 add */
+.sns-list {background:#f5f5f5;}
+.sns-list .o-btn__area {margin-top:11.11vw;}
+.sns-list .o-btn__area span {font-family:"Hyundai Sans Medium", "Malgun Gothic", sans-serif;}
+.sns-list__area {padding-top:125px;padding-right:6.94vw;padding-left:6.94vw;}
+[data-name="sns-list__visual"] {position:relative;}
+[data-name="sns-list__visual"] .heading__area {margin-bottom:5.56vw;}
+[data-name="sns-list__visual"] .content__area {background-color:#f5f5f5;}
+[data-name="sns-list__visual"] .content__1680 {padding-top:19.44vw;padding-right:7.14vw;padding-bottom:16.22vw;padding-left:7.14vw;}
+[data-name="sns-list__visual"] .box-model__area {overflow:hidden;position:relative;width:100%;}
+[data-name="sns-list__visual"] .btn__area {margin-top:8.33vw;}
+/* s:190916 edit */
+[data-name="sns-list__visual"] .box__txt {position:absolute; width:1px; height:1px; opacity:0; text-indent:-9999em;}
+/* e:190916 edit */
+[data-name="sns-list__visual"] .box__txt .heading__color--white {display:table-cell;background:rgba(0,0,0,.8);font-size:1.72vw;vertical-align:middle;}
+[data-name="sns-list__visual"] .box-model__area li {overflow:hidden;float:left;position:relative;width:32.59%;height:32.59%;margin-left:0.7%;}
+[data-name="sns-list__visual"] .box-model__area li:nth-child(n+4) {margin-top:0.75%;}
+[data-name="sns-list__visual"] .box__txt p {font-family:"Hyundai Sans Bold", "Malgun Gothic", sans-serif;}
+[data-name="sns-list__visual"] .box__txt i {position:absolute;right:24px;bottom:24px;font-size:1.9vw;color:#fff;}
+[data-name="sns-list__visual"] li img {width:100%;height:100%;}
+[data-name="sns-list__visual"] .heading__align--left {text-align:center;}
+[data-name="sns-list__visual"] .thumbnail__list:after {display:block;clear:both;content:"";}
+
+@media all and (min-width: 1024px) {.sns-list__area {padding-right:0;padding-left:0;}
+	.sns-list .o-btn__area {margin-top:6.25vw;}
+	/* s:190916 edit */
+	[data-name="sns-list__visual"] .box__txt {display:none; position:absolute; top:0; width:100%; height:100%; opacity:0;text-indent:0; text-align:center;}
+	[data-name="sns-list__visual"] li:hover .box__txt {display:block; opacity:1;}
+	/* e:190916 edit */
+	[data-name="sns-list__visual"] .heading__align--left {text-align:left;}
+	[data-name="sns-list__visual"] .thumbnail__list {height:100%;margin-left:-1.8vw;}
+	[data-name="sns-list__visual"] .thumbnail__list .list__link {display:block;overflow:hidden;width:100%;height:100%;}
+	[data-name="sns-list__visual"] .thumbnail__list .list__image {width:100%;height:100%;}
+	[data-name="sns-list__visual"] .box__txt .box__dim {display:table;width:100%;height:100%;}
+	[data-name="sns-list__visual"] .thumbnail__list .txt__tit {padding:0 14%;word-break:break-word;}}
+
+@media all and (min-width: 1280px) {.sns-list__area {padding-top:118px;padding-bottom:160px;}
+	.sns-list .o-btn__area {margin-top:80px;}
+	[data-name="sns-list__visual"] .heading__area {margin-bottom:40px;}
+	[data-name="sns-list__visual"] .content__1680 {padding-top:150px;padding-bottom:127px;}
+	[data-name="sns-list__visual"] .btn__area {margin-top:70px;}
+	[data-name="sns-list__visual"] .thumbnail__list {margin-left:-0.7%;}}
+
+@media all and (min-width: 1680px) {[data-name="sns-list__visual"] .content__1680 {padding-right:110px;padding-left:120px;}
+	[data-name="sns-list__visual"] .thumbnail__list {height:1440px;}
+	[data-name="sns-list__visual"] .box-model__area .list__item {height:32.8%;}}
+/* e:190528 add */
+
+/* 210322 : main KV admin */
+.press-view__header .visual__image img.type_mo {
+	position: absolute !important;
+	width: auto !important;
+	height: 100% !important;
+	top: 0 !important;
+	left: 50% !important;
+	transform: translateX(-50%) !important;
+}
+
+/* 	210715 : table style add .press__table--type2 
+	https://www.hyundai-n.com/en/media/press/hyundai-motors-elantra-n-debuts-delivers-highest-level-of-n-performance-yet.do */
+.press__table--type2 table td, 
+.press__table--type2 table th {border: 1.0px solid rgb(228,220,211)}
+.press__table--type2 thead th {font-family: "Hyundai Sans Bold", "Malgun Gothic", sans-serif;}
+.press__table--type2 thead tr:last-child th {border-bottom:none;}
+.press__table--type2 table td.text-align--left {text-align:left;}
+.press__table--type2 .point--bg {background-color: rgb(191,191,191);}

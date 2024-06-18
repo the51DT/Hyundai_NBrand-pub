@@ -491,6 +491,10 @@ input[type="radio"]:focus + label {
   background: url(../../../inc/images/icon/icon-arrow01_down_disabled.svg);
   background-size: contain;
 }
+.icon-up-wh {
+  background: url(../../../inc/images/icon/icon-arrow01_up_white.svg);
+  background-size: contain;
+}
 .icon-play {
   background: url(../../../inc/images/icon/icon-play.svg);
   background-size: contain;
@@ -642,6 +646,10 @@ input[type="radio"]:focus + label {
 .btn:hover [class*="icon-twitter"].icon-disabled,
 .btn:active [class*="icon-twitter"].icon-disabled {
   background: url(../../../inc/images/icon/icon-twitter_disabled.svg);
+  background-size: contain;
+}
+.icon-youtube-wh {
+  background: url(../../../inc/images/icon/icon-youtube_white.svg);
   background-size: contain;
 }
 .icon-close {
@@ -1667,16 +1675,8 @@ input[type="radio"]:focus + label {
   font-weight: 700;
   line-height: 140%;
 }
-.card_video .card_tag {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin: 1.25rem 0;
-  font-size: 0.875rem;
-  font-weight: 400;
-  line-height: 140%;
-}
 .card_video .card_date {
+  margin-top: 1.25rem;
   font-size: 0.75rem;
   font-weight: 400;
   line-height: 140%;
@@ -1937,7 +1937,7 @@ input[type="radio"]:focus + label {
 }
 
 .ty02Swiper .swiper-slide .img-ico {
-  display: none;
+  display: block;
   content: "";
   width: 240px;
   height: 240px;
@@ -1950,7 +1950,7 @@ input[type="radio"]:focus + label {
 }
 
 .ty02Swiper .swiper-slide a:hover .img-ico {
-  display: block;
+  background-image: url("../images/icon/icon-play-video-hover.svg");
 }
 
 .ty02Swiper .text-area {
@@ -4746,6 +4746,9 @@ input:checked + .slider:before {
   background-image: url(../images/icon/icon-reset.svg);
   background-size: contain;
 }
+.search-wrap .search-input-box .btn-group .btn-reset:hover {
+  background-color: transparent;
+}
 
 .search-wrap .search-input-box .btn-group .btn-reset:active {
   color: #de3111;
@@ -4818,6 +4821,8 @@ input:checked + .slider:before {
   line-height: 23.8px;
   padding: 8px 16px;
   border-radius: 22px;
+  display: block;
+  cursor: pointer;
 }
 
 .tag-list-wrap [class^="tag-list"] li .tag-item:hover {
@@ -4827,7 +4832,7 @@ input:checked + .slider:before {
 
 .tag-list-wrap [class^="tag-list"] li.on .tag-item {
   background-color: #de3111;
-  color: #fff;
+  color: #fff;  
 }
 
 .tag-list-wrap [class^="tag-list"][class*="ty02"] li.on .tag-item {

@@ -752,23 +752,33 @@
 .video_thumnail_wrap .video_date {
   position: absolute;
   left: 50%;
-  bottom: 6.5rem;
+  bottom: 104px;
   transform: translateX(-50%);
   font-size: 0.75rem;
   font-weight: 400;
   line-height: 140%;
 }
-.video_thumnail_wrap .video_tag {
-  position: absolute;
-  left: 50%;
-  bottom: 3.75rem;
+.video_thumnail_wrap .tag_list_wrap {
+  position:absolute;
+  left:50%;
+  bottom: 60px;
   transform: translateX(-50%);
+}
+.video_thumnail_wrap .tag_list_wrap .tag_list {
   display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  font-size: 0.875rem;
+}
+.video_thumnail_wrap .tag_list_wrap .tag_list li:not(:last-child) {
+  margin-right: 32px;
+}
+.video_thumnail_wrap .tag_list_wrap .tag_list li a {
+  font-family: "Hyundai Sans Text";
+  font-size: 14px;
   font-weight: 700;
-  line-height: 140%;
+  line-height: 19.6px;
+  color:#fff;
+}
+.video_thumnail_wrap .tag_list_wrap .tag_list li a:hover {
+  text-decoration: underline;
 }
 .video_detail_wrap {
   padding: 10rem 5rem 15rem;
@@ -2216,14 +2226,25 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
   .video_thumnail_wrap .video_date {
     position: static;
     transform: translateX(0);
+    margin-bottom: 2.5rem;
   }
-  .video_thumnail_wrap .video_tag {
-    position: static;
+  .video_thumnail_wrap .tag_list_wrap {
+    position: static;    
     transform: translateX(0);
+  }
+  .video_thumnail_wrap .tag_list_wrap .tag_list {
     justify-content: center;
-    gap: 1rem;
-    margin: 2.25rem 0 2.5rem;
-    padding: 0 2.87rem;
+    margin: 36px auto 40px;
+    flex-wrap: wrap;
+  }
+  .video_thumnail_wrap .tag_list_wrap .tag_list li {
+    margin-bottom: 12px;
+  }
+  .video_thumnail_wrap .tag_list_wrap .tag_list li:not(:last-child) {
+    margin-right: 16px;
+  }
+  .video_thumnail_wrap .tag_list_wrap .tag_list li a {
+    color:#000;
   }
   .video_detail_wrap {
     padding: 6.25rem 1.5rem 10rem;
