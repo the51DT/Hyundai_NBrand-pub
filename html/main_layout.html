@@ -47,8 +47,8 @@
                   <!-- gnb 2-1 dep-->
                   <div class="gnb__tab02-wrap">
                     <ul class="gnb__tab02">
-                      <!-- 현재 페이지 dep버튼에 on class 삽입. -->
-                      <li><a href="#" class="gnb__tab02-btn01 on">N Brand</a></li>
+                      <!-- 현재 페이지 dep버튼에 active class 삽입. -->
+                      <li><a href="#" class="gnb__tab02-btn01 active">N Brand</a></li>
                       <li><a href="#" class="gnb__tab02-btn02">Motorsports</a></li>
                       <li><a href="#" class="gnb__tab02-btn03">N Performance Parts</a></li>
                       <li><a href="#" class="gnb__tab02-btn04">N Merchandise</a></li>
@@ -73,25 +73,25 @@
                   <!-- gnb 2-2dep-->
                   <div class="gnb__tab02-wrap">
                     <ul class="gnb__tab02">
-                      <!-- 현재 페이지 dep버튼에 active class 삽입. -->
+                      <!-- 현재 페이지 dep버튼에 active class 삽입.  gnb__tab02 첫번째 메뉴는 항상오픈-->
                       <li>
                         <button href="#" class="gnb__tab02-btn01 on active " role="tab" id="gnb-tab2_2_1"
-                          aria-selected="true">N</button>
+                          aria-controls="gnbTab2_1" aria-selected="true">N</button>
                       </li>
                       <li>
-                        <button href="#" class="gnb__tab02-btn02" role="tab" id="gnb-tab2_2_2"
+                        <button href="#" class="gnb__tab02-btn02" role="tab" id="gnb-tab2_2_2" aria-controls="gnbTab2_2"
                           aria-selected="false">Motorsports</button>
                       </li>
                       <li>
-                        <button href="#" class="gnb__tab02-btn03" role="tab" id="gnb-tab2_2_3"
+                        <button href="#" class="gnb__tab02-btn03" role="tab" id="gnb-tab2_2_3" aria-controls="gnbTab2_3"
                           aria-selected="false">Rolling Lab</button>
                       </li>
                       <li>
-                        <button href="#" class="gnb__tab02-btn04" role="tab" id="gnb-tab2_2_4"
+                        <button href="#" class="gnb__tab02-btn04" role="tab" id="gnb-tab2_2_4" aria-controls="gnbTab2_4"
                           aria-selected="false">Concept</button>
                       </li>
                       <li>
-                        <button href="#" class="gnb__tab02-btn05" role="tab" id="gnb-tab2_2_5"
+                        <button href="#" class="gnb__tab02-btn05" role="tab" id="gnb-tab2_2_5" aria-controls="gnbTab2_5"
                           aria-selected="false">Legacy</button>
                       </li>
                     </ul>
@@ -456,8 +456,8 @@
                 <div class="gnb__tab-cont03" id="gnbTab3" role="tabpanel" aria-labelledby="gnb-tab2_2_1">
                   <div class="gnb__tab02-wrap">
                     <ul class="gnb__tab02">
-                      <!-- 현재 페이지 dep버튼에 on class 삽입. -->
-                      <li><a href="#" class="gnb__tab02-btn01 on">N Festival</a></li>
+                      <!-- 현재 페이지 dep버튼에 active class 삽입. -->
+                      <li><a href="#" class="gnb__tab02-btn01 active">N Festival</a></li>
                       <li><a href="#" class="gnb__tab02-btn02">N Space</a></li>
                       <li><a href="#" class="gnb__tab02-btn03">N e-Festival</a></li>
                       <li><a href="#" class="gnb__tab02-btn04">NFluencer</a></li>

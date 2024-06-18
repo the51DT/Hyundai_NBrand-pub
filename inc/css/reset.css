@@ -200,9 +200,9 @@ textarea::placeholder {
   -webkit-box-shadow: 0 0 0 1000px #fff inset;
   box-shadow: 0 0 0 1000px #fff inset;
 }
-/* ::-webkit-scrollbar {
+::-webkit-scrollbar {
   display: none;
-} */
+}
 body {
   word-break: break-all;
 }
