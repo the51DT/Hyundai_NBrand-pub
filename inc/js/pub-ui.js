@@ -739,9 +739,8 @@ function DropdownFooter() {
     .on("click", function () {
         const accor02List = $(this).siblings("ul");
         accor02List.toggleClass("dropdown-on");
-        const accor02Wrap = $(this).closest(".accor02-wrap");
         const expanded = accor02List.hasClass("dropdown-on") ? "true" : "false";
-        accor02Wrap.attr("aria-expanded", expanded);
+        $(this).attr("aria-expanded", expanded);
       });
   }
 }
