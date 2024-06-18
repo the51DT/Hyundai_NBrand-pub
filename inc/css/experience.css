@@ -752,22 +752,10 @@
 .video_thumnail_wrap .video_date {
   position: absolute;
   left: 50%;
-  bottom: 6.5rem;
+  bottom: 3.75rem;
   transform: translateX(-50%);
   font-size: 0.75rem;
   font-weight: 400;
-  line-height: 140%;
-}
-.video_thumnail_wrap .video_tag {
-  position: absolute;
-  left: 50%;
-  bottom: 3.75rem;
-  transform: translateX(-50%);
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  font-size: 0.875rem;
-  font-weight: 700;
   line-height: 140%;
 }
 .video_detail_wrap {
@@ -2216,14 +2204,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
   .video_thumnail_wrap .video_date {
     position: static;
     transform: translateX(0);
-  }
-  .video_thumnail_wrap .video_tag {
-    position: static;
-    transform: translateX(0);
-    justify-content: center;
-    gap: 1rem;
-    margin: 2.25rem 0 2.5rem;
-    padding: 0 2.87rem;
+    margin-bottom: 2.5rem;
   }
   .video_detail_wrap {
     padding: 6.25rem 1.5rem 10rem;
