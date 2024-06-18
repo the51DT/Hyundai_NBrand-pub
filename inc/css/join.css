@@ -379,6 +379,9 @@
 .mypost-wrap .mypost-box.width3 {
   width: calc(100% / 3);
 }
+.mypost-wrap .mypost-box.width4 {
+  width: calc(100% / 4);
+}
 .mypost-wrap .mypost-box a,
 .mypost-wrap .mypost-box button,
 .mypost-wrap .mypost-box p:first-child {
@@ -686,7 +689,8 @@
     flex-wrap: wrap;
   }
   .mypost-wrap .mypost-box,
-  .mypost-wrap .mypost-box.width3 {
+  .mypost-wrap .mypost-box.width3,
+  .mypost-wrap .mypost-box.width4 {
     width: calc(50% - 6px);
     gap: 0;
     justify-content: space-between;
