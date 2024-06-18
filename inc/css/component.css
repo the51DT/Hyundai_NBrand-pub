@@ -2169,6 +2169,14 @@ input[type="radio"]:focus + label {
   right: 60px;
 }
 
+.swiper-full {
+  max-width: 100%;
+}
+.swiper-full .img-area {
+  width: 100%;
+  max-height: 100vh;
+}
+
 /* swiper 반응형 예외 케이스 처리 */
 @media screen and (max-width: 1480px) {
   .swiper-arrow-wrap {
