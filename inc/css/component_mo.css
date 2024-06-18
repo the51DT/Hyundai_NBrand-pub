@@ -1627,7 +1627,7 @@ min-width : 1024 css
   .selectbox-trigger2::after {
     position: absolute;
     content: "";
-    background: url("../inc/images/icon/icon-arrow01_down.svg") center no-repeat;
+    background: url("../../inc/images/icon/icon-arrow01_down.svg") center no-repeat;
     width: 16px;
     height: 16px;
     right: 8px;

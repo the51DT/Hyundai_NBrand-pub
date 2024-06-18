@@ -392,7 +392,7 @@
 .event-box .evt-map-wrap {
   position: relative;
   overflow: auto;
-  background: url("../inc/images/content/event-map_img.svg") no-repeat;
+  background: url("../../inc/images/content/event-map_img.svg") no-repeat;
   width: 100%;
   min-height: 810px;
 }
