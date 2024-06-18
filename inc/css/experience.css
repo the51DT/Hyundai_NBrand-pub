@@ -834,23 +834,32 @@
   top: 0;
   right: 35px;
   bottom: calc(100% - 105px);
+  z-index: 1000;
 }
 
 /* 좌우 슬라이드 버튼  */
 .popup-wrapper .wrap-navigation {
-  display: none;
+  display: flex;
 }
 
-.popup-wrapper a.modal-btn.left {
+.popup-wrapper .wrap-navigation .modal-btn {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 0;
+}
+
+.popup-wrapper .modal-btn.left {
   position: absolute;
-  left: -70px;
+  left: -339px;
   top: 50%;
 }
 
-.popup-wrapper a.modal-btn.right {
+.popup-wrapper .modal-btn.right {
   position: absolute;
-  right: -70px;
+  right: -346px;
   top: 50%;
+}
+
+.popup-wrapper a.modal-btn span.icon-left {
 }
 
 /*  */
@@ -861,8 +870,9 @@
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #787d80;
+  background: #fff;
+  z-index: 200;
   position: relative;
-  z-index: 2;
 }
 
 .popup-wrapper .popup-header h3 {
@@ -878,13 +888,29 @@
   max-height: calc(100vh - 349px);
 }
 
+.popup-wrapper .popup-body .m10 {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
 .popup-wrapper .popup-body .m20 {
   display: flex;
   gap: 20px;
   flex-direction: column;
 }
 
+.popup-wrapper .popup-body .m40 {
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+}
+
 .popup-wrapper .popup-body .m20 .wrap-label-reward .tit-type04 {
+  font-size: 40px;
+}
+
+.popup-wrapper .popup-body .tit-type04.main-header {
   font-size: 40px;
 }
 
@@ -905,11 +931,12 @@
   bottom: -84px; */
   width: 100%;
   background: #fff;
+  z-index: 200;
 }
-
 .popup-wrapper .popup-footer.footer-no-pd {
   padding: 0;
   border-top: none;
+  position: relative;
 }
 
 .popup-wrapper .popup-footer .btn-wrap {
@@ -994,6 +1021,7 @@
 
 .popup-wrapper.invite .popup-body p.tit-type05 {
   font-weight: 700;
+  font-family: "Hyundai Sans Head";
 }
 
 .popup-wrapper.invite .popup-body p span.accent {
@@ -1030,6 +1058,15 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
   text-transform: capitalize;
   margin-bottom: 40px;
 }
+.popup-wrapper.onlyTxt .popup-body .popup-body-innerbox p.popup-tit-lg.no-mb {
+  font-family: "Hyundai Sans Head";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 125%; /* 50px */
+  text-transform: capitalize;
+  margin-bottom: 0;
+}
 .popup-wrapper.onlyTxt .popup-body .popup-body-innerbox p.txt-type01 {
   font-family: "Hyundai Sans Head";
   font-size: 24px;
@@ -1059,10 +1096,25 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
   span.accent {
   color: #de3111;
 }
+.popup-wrapper.onlyTxt .popup-body .txt-type03 .accent {
+  color: #de3111;
+  font-weight: 700;
+}
 
-.popup-wrapper.onlyTxt .popup-body .popup-body-innerbox .txt-type03 a.accent {
+.popup-wrapper.onlyTxt .popup-body .popup-body-innerbox .txt-type03 .accent {
   color: #de3111;
   text-decoration: underline;
+}
+
+.popup-wrapper.onlyTxt .popup-body .popup-body-innerbox .selectbox-wrap {
+  justify-content: start;
+}
+
+.popup-wrapper.onlyTxt .popup-body .popup-body-innerbox .selectbox-wrap ul {
+  width: 100%;
+}
+.popup-wrapper.onlyTxt .popup-body .popup-body-innerbox .selectbox-options {
+  left: 0;
 }
 
 /*popup attach */
@@ -1175,6 +1227,23 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
   padding: 8px 0;
 }
 
+.popup-wrapper .popup-body-innerbox .inner-textarea-comment {
+  border-radius: 0;
+}
+
+.popup-wrapper
+  .popup-body-innerbox
+  .inner-textarea-comment
+  button.btn-lg-primary01 {
+  background: #e6e6e6;
+  color: #a1a1a1;
+  border-radius: 0;
+}
+
+.popup-wrapper .wrap-form.textarea textarea:focus + .btn.btn-lg-primary01 {
+  background: #000;
+  color: #fff;
+}
 /* profile area in popup */
 .popup-wrapper .wrap-popup-profile {
   display: flex;
@@ -1253,6 +1322,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
 }
 .popup-wrapper .wrap-form.textarea textarea {
   /* margin-top: 0; */
+  z-index: 1;
 }
 .popup-wrapper .wrap-form.textarea p.title-comment {
   font-family: "Hyundai Sans Text";
@@ -1318,7 +1388,46 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
   gap: 20px;
   align-items: end;
 }
+
+.popup-wrapper .popup-body .wrap-requested-msg {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #000;
+}
+
+.popup-wrapper .popup-body .wrap-requested-msg p.txt-type03 {
+  font-weight: 500;
+}
+
+.popup-wrapper .popup-body .wrap-requested-msg .box-msg-summary {
+  background: #f0f0f0;
+  border-left: 4px solid #bd5818;
+  padding: 32px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.popup-wrapper .popup-body .wrap-requested-msg .box-msg-summary p.tit-type05 {
+  color: #bd5818;
+  font-size: 20px;
+}
+
+.popup-wrapper .popup-body .wrap-requested-msg .box-msg-summary p.txt-type02 {
+  font-weight: 500;
+}
+
+.popup-wrapper .popup-body .wrap-requested-msg .box-msg p.txt-type03 .accent {
+  color: #de3111;
+  font-weight: 700;
+}
+
 .popup-wrapper
+  .popup-body
+  .wrap-requested-msg
+  .popup-wrapper
   .wrap-comment
   .box-userinfo
   button.btn-only-icon-bg01-circle
@@ -1354,13 +1463,37 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
   background: #f0f0f0;
 }
 
+.popup-wrapper .popup-footer .box-result.bg-blk {
+  background: #000;
+}
+
 .popup-wrapper .popup-footer .box-result.bg-gray p.txt-type03 {
+  color: #000;
+  font-weight: 700;
+}
+
+.popup-wrapper .popup-footer .box-result.bg-blue p.popup-tit-lg {
   color: #000;
   font-weight: 700;
 }
 
 .popup-wrapper .popup-footer .box-result.bg-brown {
   background: #bd5818;
+}
+
+.popup-wrapper .popup-footer .box-result.bg-blk p.popup-tit-lg {
+  color: #abb2b5;
+  font-weight: 700;
+}
+
+.popup-wrapper .popup-footer .box-result.bg-blk p.popup-tit-lg.no-action {
+  color: #de3111;
+  font-weight: 700;
+}
+
+.popup-wrapper .popup-footer .box-result.bg-brown p.popup-tit-lg {
+  color: #fff;
+  font-weight: 700;
 }
 
 .popup-wrapper .popup-footer .box-result .btn-wrap a.btn {
@@ -1373,6 +1506,15 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
 }
 .popup-wrapper .popup-footer .box-result p.txt-type03:last-child {
   /* margin-top: 8px; */
+}
+.popup-wrapper .popup-body .wrap-requested-msg .box-msg-summary {
+  padding: 20px 24px;
+}
+.popup-wrapper .popup-body .wrap-requested-msg .box-msg-summary p.tit-type05 {
+  font-size: 18px;
+}
+.popup-wrapper .popup-body .wrap-requested-msg .box-msg-summary p.txt-type02 {
+  font-size: 17px;
 }
 
 .popup-wrapper .popup-footer .box-paticipants {
@@ -1401,7 +1543,9 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
   justify-content: space-between;
   border-top: 1px solid #000;
 }
-
+.popup-wrapper .popup-footer .box-confirm.center {
+  justify-content: center;
+}
 .popup-wrapper .popup-footer .box-confirm .wrap-reaction-icon {
   display: flex;
   gap: 10px;
@@ -1448,24 +1592,76 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
 }
 
 /* mypage 팝업 시작*/
-.popup-wrapper .popup-body .wrap-switch {
+.popup-wrapper .popup-body.for-switch {
+  max-height: 100%;
+}
+.popup-wrapper .popup-body.for-switch .wrap-switch {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
-.popup-wrapper .popup-body .wrap-switch.all p {
+.popup-wrapper .popup-body.for-switch .wrap-switch.all {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #000;
+}
+.popup-wrapper .popup-body.for-switch .wrap-switch.all p {
   font-family: "Hyundai Sans Head";
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
 }
-.popup-wrapper .popup-body .wrap-switch p {
+.popup-wrapper .popup-body.for-switch .wrap-switch p {
   font-family: "Hyundai Sans Head";
   font-size: 20px;
   font-weight: 700;
+  line-height: 140%;
 }
 
+.popup-wrapper .popup-body.for-switch .switch-to-select {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.popup-wrapper
+  .popup-body.for-switch
+  .switch-to-select
+  .wrap-switch:first-child {
+  margin-top: 32px;
+}
+
+/*CM040701P01 popup s*/
+.popup-wrapper .popup-body .wrap-review-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.popup-wrapper .popup-body .wrap-review-info img.img-uploaded {
+  max-width: 94px;
+}
+
+.popup-wrapper .popup-body .wrap-review-info .wrap-radio {
+  padding: 0;
+  margin: 0;
+}
+.popup-wrapper.onlyTxt .popup-body .popup-body-innerbox p.tit-type05.desc {
+  font-weight: 500;
+}
+/*CM040701P01 popup e*/
+
+.popup-wrapper textarea::placeholder {
+  color: #777;
+  width: fit-content;
+  white-space: pre-line;
+}
+
+.popup-wrapper .popup-body .wrap-notice-info .box-infotxt .txt-type03 {
+  font-weight: 500;
+}
+
+.popup-wrapper .popup-body .tit-type04.main-header {
+  font-size: 24px;
+}
 /* mypage 팝업 끝*/
 /* 일반 모달 팝업 끝*/
 
@@ -2195,14 +2391,14 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
 
   .popup-wrapper .popup-body {
     padding: 40px 24px 60px;
-    max-height: calc(100vh - 1px);
+    max-height: calc(100vh - 124px);
     overflow-y: auto;
     display: grid;
     gap: 40px 0;
   }
 
   .popup-wrapper .popup-body.same-h-pc {
-    max-height: calc(100vh - 280px);
+    max-height: calc(100vh - 200px);
   }
 
   .popup-wrapper .popup-body .m20 .wrap-label-reward .tit-type04 {
@@ -2215,6 +2411,10 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
     position: fixed;
     width: 100%;
     z-index: 2;
+  }
+
+  .popup-wrapper .popup-footer.footer-no-pd {
+    position: fixed;
   }
 
   .popup-wrapper .popup-footer .btn-wrap {
@@ -2279,6 +2479,11 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
     font-size: 24px;
   }
 
+  .popup-wrapper.onlyTxt .popup-body .popup-body-innerbox p.popup-tit-lg.no-mb {
+    font-size: 24px;
+    margin-bottom: 0;
+  }
+
   .popup-wrapper.onlyTxt .popup-body .popup-body-innerbox p.txt-type01,
   .popup-wrapper.onlyTxt .popup-body .popup-body-innerbox .tit-type03 {
     font-size: 18px;
@@ -2307,7 +2512,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
   }
 
   .popup-wrapper.onlyTxt .popup-body {
-    padding: 40px 24px;
+    padding: 40px;
   }
 
   .popup-wrapper.onlyTxt .popup-body p.tit-type05 {
@@ -2326,10 +2531,26 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
     margin-bottom: 0;
   }
 
+  /* CM040701P01 popup3-2 이중팝업 시작 */
+
+  .popup-wrapper.onlyTxt .popup-body.pd-24 {
+    padding: 40px 24px;
+  }
+  .popup-wrapper.onlyTxt .popup-body .popup-body-innerbox p.tit-type05.desc {
+    font-weight: 500;
+    font-size: 14px;
+  }
+
   .popup-wrapper.onlyTxt .popup-footer {
     padding: 0 40px 40px;
     border-top: 0;
     left: 0;
+  }
+
+  .popup-wrapper.onlyTxt .popup-footer.type01 {
+    /*  */
+    padding: 16px 24px;
+    border-top: 1px solid #000;
   }
 
   .popup-wrapper.onlyTxt .popup-footer .btn-wrap {
@@ -2432,6 +2653,31 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
 
   .popup-wrapper .popup-body .wrap-image-reward .wrap-date {
     margin-bottom: 44px;
+  }
+
+  /* */
+  .popup-wrapper .popup-body.for-switch .wrap-switch {
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+    grid-template-columns: 60% auto;
+  }
+
+  .popup-wrapper .popup-body.for-switch .wrap-switch p {
+    font-size: 18px;
+  }
+
+  /* mypage notice s */
+  .popup-wrapper .popup-body .tit-type04.notice-header {
+    font-size: 24px;
+  }
+
+  .popup-wrapper .popup-body .tit-type04 {
+    font-size: 18px;
+  }
+
+  .popup-wrapper .popup-body .wrap-notice-info .tit-type05 {
+    font-size: 18px;
   }
 
   /* 사이드 팝업 모바일 */

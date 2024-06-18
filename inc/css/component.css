@@ -1820,7 +1820,7 @@ input[type="radio"]:focus + label {
 }
 .ty01Swiper {
   max-width: 1920px;
-  margin:0 auto;
+  margin: 0 auto;
 }
 .ty01Swiper .swiper-slide {
   display: flex;
@@ -1911,14 +1911,14 @@ input[type="radio"]:focus + label {
 }
 
 .ty02Swiper .swiper-slide {
-  max-width:952px;
+  max-width: 952px;
 }
 .ty02Swiper .swiper-slide .img-area {
   height: 536px;
 }
-.ty02Swiper .swiper-slide-active  {
+.ty02Swiper .swiper-slide-active {
   max-width: 1196px;
-  position:relative;
+  position: relative;
 }
 
 .ty02Swiper .swiper-slide-active .img-area {
@@ -2032,15 +2032,15 @@ input[type="radio"]:focus + label {
   height: 17px;
   mask-image: url("../images/icon/icon-arrow01_right_white.svg");
 }
-.swiper-card-type {  
+.swiper-card-type {
   max-width: 1800px;
 }
 
 .swiper-card-type .swiper-slide:first-child {
-  margin-left:60px;
+  margin-left: 60px;
 }
 .swiper-card-type.ty04Swiper .swiper-slide:first-child {
-  margin-left:0;
+  margin-left: 0;
 }
 .swiper-card-type.ty04Swiper .swiper-wrapper {
   max-width: 1440px;
@@ -2139,7 +2139,7 @@ input[type="radio"]:focus + label {
 .swiper-card-type .card-list-wrap .swiper-slide {
   position: relative;
   /* width: 140px !important; */
-  transition: width 0.5s ease-out;  
+  transition: width 0.5s ease-out;
 }
 .swiper-card-type .card-list-wrap .swiper-slide.active {
   /* width: 360px !important; */
@@ -2151,17 +2151,22 @@ input[type="radio"]:focus + label {
   max-height: revert;
 }
 
-.swiper-card-type .card-list-wrap .swiper-slide .card_bottom .card_info .card_tit {
+.swiper-card-type
+  .card-list-wrap
+  .swiper-slide
+  .card_bottom
+  .card_info
+  .card_tit {
   font-size: 24px;
   line-height: 33.6px;
 }
 
-.swiper-card-type .swiper-button-prev { 
-  left:60px;
+.swiper-card-type .swiper-button-prev {
+  left: 60px;
 }
 
-.swiper-card-type .swiper-button-next { 
-  right:60px;
+.swiper-card-type .swiper-button-next {
+  right: 60px;
 }
 
 /* swiper 반응형 예외 케이스 처리 */
@@ -2170,12 +2175,12 @@ input[type="radio"]:focus + label {
     display: block;
   }
 
-  .ty04Swiper .swiper-button-prev { 
-    left:80px;
+  .ty04Swiper .swiper-button-prev {
+    left: 80px;
   }
 
-  .ty04Swiper .swiper-button-next { 
-    right:80px;
+  .ty04Swiper .swiper-button-next {
+    right: 80px;
   }
 }
 
@@ -3168,7 +3173,7 @@ input[type="radio"]:focus + label {
   .tag-list-wrap
   .tag-list
   li {
-  margin-bottom: 0;
+  margin-bottom: 2px;
 }
 .dropdown.centered
   .dropdown-menu
@@ -4272,6 +4277,9 @@ p.text-num-chk {
 .wrap-form .wrap-form-bottom.comment-type04 {
   font-family: "Hyundai Sans Text";
 }
+.wrap-form .wrap-form-bottom.comment-type05 {
+  justify-content: end;
+}
 .wrap-form .wrap-form-bottom.comment-type01 span.comment,
 .wrap-form .wrap-form-bottom.comment-type02 span.comment {
   font-size: 0.875rem;
@@ -4463,15 +4471,29 @@ p.text-num-chk {
   border: 1px solid #000;
   border-radius: 50%;
   display: inline-block;
-  width: 1.4em;
-  height: 1.4em;
+  width: 22px;
+  height: 22px;
   position: relative;
   margin-right: 0;
-  vertical-align: top;
   cursor: pointer;
-  text-align: center;
   /* transition: all 250ms ease; */
 }
+/* 
+.radio input[type="radio"] + .radio-label:after {
+  content: "";
+  background: #000;
+  border: none;
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  margin-right: 0;
+  cursor: pointer;
+  text-align: center;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  display: block;
+} */
 .radio input[type="radio"] + .radio-label {
   display: flex;
   align-items: center;
@@ -4479,16 +4501,51 @@ p.text-num-chk {
 }
 .wrap-radio.horizontal .radio input[type="radio"] + .radio-label {
   margin-right: 40px;
+  position: relative;
 }
 .radio input[type="radio"]:checked + .radio-label:before {
-  background-color: #000;
-  box-shadow: inset 0 0 0 4px #fff;
+  background-color: #fff;
+  /* box-shadow: inset 0 0 0 4px #fff; */
+  border: 1px solid #000;
 }
+
 .radio input[type="radio"]:checked + .radio-label {
   box-shadow: none !important;
   outline: none;
   border: none;
+  position: relative;
 }
+
+.radio input[type="radio"]:checked + .radio-label:before {
+  content: "";
+  background: #fff;
+  border: 1px solid #000;
+  border-radius: 50%;
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  position: relative;
+  margin-right: 0;
+  cursor: pointer;
+  /* transition: all 250ms ease; */
+}
+
+.radio input[type="radio"]:checked + .radio-label:after {
+  content: "";
+  background: #000;
+  border: none;
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  margin-right: 0;
+  cursor: pointer;
+  text-align: center;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  display: block;
+}
+
 .radio input[type="radio"] + .radio-label:focus + .radio-label:before {
   outline: none;
   border: none;
@@ -4832,7 +4889,7 @@ input:checked + .slider:before {
 
 .tag-list-wrap [class^="tag-list"] li.on .tag-item {
   background-color: #de3111;
-  color: #fff;  
+  color: #fff;
 }
 
 .tag-list-wrap [class^="tag-list"][class*="ty02"] li.on .tag-item {
