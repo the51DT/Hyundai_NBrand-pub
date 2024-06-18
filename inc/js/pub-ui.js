@@ -559,25 +559,17 @@ $(".selectbox-trigger").click(function (event) {
 
 $(".option").click(function (event) {
   event.stopPropagation();
+  var $selectboxWrap = $(this).closest(".selectbox-wrap");
   var selectedText = $(this).text();
-  $(this)
-    .closest(".selectbox-options")
-    .hide()
-    .attr("aria-hidden", "true")
-    .siblings(".selectbox-trigger")
-    .text(selectedText);
-  $(this)
-    .closest(".selectbox-options")
-    .find(".option")
-    .not(this)
-    .removeClass("active")
-    .attr("aria-selected", "false");
+  // select-type04 클래스(아이콘만 존재하는 경우의 타입)가 없는 경우에만 버튼 텍스트 변경
+  if (!$selectboxWrap.hasClass("select-type04")) {
+    $(this).closest(".selectbox-options").hide().attr("aria-hidden", "true").siblings(".selectbox-trigger").text(selectedText);
+  } else {
+    $(this).closest(".selectbox-options").hide().attr("aria-hidden", "true");
+  }
+  $(this).closest(".selectbox-options").find(".option").not(this).removeClass("active").attr("aria-selected", "false");
   $(this).addClass("active").attr("aria-selected", "true");
-  $(this)
-    .closest(".selectbox-wrap>div")
-    .find(".selectbox-trigger")
-    .removeClass("active")
-    .attr("aria-expanded", "false");
+  $(this).closest(".selectbox-wrap>div").find(".selectbox-trigger").removeClass("active").attr("aria-expanded", "false");
   $(window)
     .resize(function () {
       if (window.innerWidth <= 1023) {
