@@ -4896,7 +4896,7 @@ input:checked + .slider:before {
   max-height: 100%;
 }
 .club-popup .popup-wrapper .popup-body .pop-gray {
-  padding: 24px 0 0 24px; /* tooltip 호버영역 잡기 위해 */
+  padding: 24px; /* tooltip 호버영역 잡기 위해 */
   display: flex;
   gap: 24px;
   background-color: #f0f0f0;

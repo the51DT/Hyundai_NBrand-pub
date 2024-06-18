@@ -1742,18 +1742,6 @@ min-width : 1024 css
   .club-popup .popup-wrapper .popup-body .pop-gray {
     gap: 20px;
   }
-  .club-popup .popup-wrapper .popup-body .pop-gray .tooltip:hover + .tooltip-box,
-  .club-popup .popup-wrapper .popup-body .pop-gray .tooltip:active + .tooltip-box,
-  .club-popup .popup-wrapper .popup-body .pop-gray .tooltip:focus + .tooltip-box,
-  .club-popup .popup-wrapper .popup-body .pop-gray .tooltip + .tooltip-box:hover {
-    position: absolute;
-    top: 37%;
-    right: 2%;
-  }
-  .club-popup .popup-wrapper .popup-body .pop-gray .tooltip-box li {
-    font-size: 14px;
-    line-height: 28px;
-  }
   .club-popup .popup-wrapper .popup-footer {
     position: static;
     display: flex;
