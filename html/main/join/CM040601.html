@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name=" format-detection" content="telephone=no" />
-    <title>N브랜드 | Join_MyPage_Notice</title>
+    <title>N브랜드 | Join_MyPage_Point</title>
     <link type="text/css" rel="stylesheet" href="../../../../inc/css/swiper.min.css" />
     <link type="text/css" rel="stylesheet" href="../../../../inc/css/common.css" />
     <link type="text/css" rel="stylesheet" href="../../../../inc/css/join.css" />
@@ -70,10 +70,10 @@
                 <h4>Mypage</h4>
                 <ul>
                   <li>
-                    <a class="btn lg-txt-btn01 active" href="./CM040201.html">
+                    <a class="btn lg-txt-btn01" href="./CM040201.html">
                       Notice
-                      <span class="btn-icon16 icon-right-red" aria-hidden="true"></span></a
-                    ><!-- 활성화 시 a태그 active 클래스 추가 & icon-right → icon-right-red 변경 -->
+                      <span class="btn-icon16 icon-right" aria-hidden="true"></span
+                    ></a>
                   </li>
                   <li>
                     <a class="btn lg-txt-btn01" href="./CM040301.html">
@@ -94,10 +94,10 @@
                     </a>
                   </li>
                   <li>
-                    <a class="btn lg-txt-btn01" href="./CM040601.html">
+                    <a class="btn lg-txt-btn01 active" href="./CM040601.html">
                       Point
-                      <span class="btn-icon16 icon-right" aria-hidden="true"></span>
-                    </a>
+                      <span class="btn-icon16 icon-right-red" aria-hidden="true"></span> </a
+                    ><!-- 활성화 시 a태그 active 클래스 추가 & icon-right → icon-right-red 변경 -->
                   </li>
                   <li>
                     <a class="btn lg-txt-btn01" href="./CM040701.html">
@@ -132,57 +132,33 @@
                 </div>
               </div>
               <div class="mypage-content mypage-eachbox">
-                <!-- 타이틀 + 세팅 셀렉트 박스 -->
-                <div class="mypage-eachbox-top">
-                  <h4>Notice</h4>
-                  <div class="selectbox-wrap select-type04">
-                    <div>
-                      <button class="selectbox-trigger txt-type03 fw-type03" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="알림 설정 버튼">
-                        <i><img src="../../../inc/images/icon/icon-setting.svg" alt="알림 설정 톱니바퀴 이미지" /></i>
-                      </button>
-                      <ul class="selectbox-options" role="listbox" id="countrySelect" aria-hidden="true" style="display: none">
-                        <li class="moclose-btn" style="display: none">
-                          <button type="button" class="btn btn-only-icon">
-                            <span class="visually-hidden">close button</span>
-                            <span class="btn-icon24 icon-close" aria-hidden="true"></span>
-                          </button>
-                        </li>
-                        <li class="option txt-type03 fw-type03 active" role="option" aria-selected="true">Notification settings</li>
-                        <li class="option txt-type03 fw-type03" role="option" aria-selected="true">Delete all notifications</li>
-                        <li class="option txt-type03 fw-type03" role="option">
-                          Notification Process all read<br />
-                          receipts
-                        </li>
-                      </ul>
+                <h4 class="mypage-eachbox-top">Point</h4>
+                <div class="mypage-eachbox-point">
+                  <div class="point-total">
+                    <h5>Total Points</h5>
+                    <p>2,220P</p>
+                  </div>
+                  <div class="mypost-wrap">
+                    <div class="mypost-box width3">
+                      <!-- v1.02 p.63 승인 상태별 클릭 시 : 참여 Missions 목록에 해당 승인 상태 값으로 정렬하여 최신순 노출 -->
+                      <button>Application completed</button>
+                      <p>10</p>
+                    </div>
+                    <div class="mypost-box width3">
+                      <!-- v1.02 p.44 승인 상태별 클릭 시 : 참여 Missions 목록에 해당 승인 상태 값으로 정렬하여 최신순 노출 -->
+                      <button>Under review</button>
+                      <p>16</p>
+                    </div>
+                    <div class="mypost-box width3">
+                      <!-- v1.02 p.44 승인 상태별 클릭 시 : 참여 Missions 목록에 해당 승인 상태 값으로 정렬하여 최신순 노출 -->
+                      <button>Companion</button>
+                      <p>1</p>
                     </div>
                   </div>
-                  <div class="selectbox-overlay" style="display: none"></div>
                 </div>
-                <div>
-                  <h5>Notifications received today</h5>
-                  <ul class="mynotice-wrap">
-                    <!-- 안읽음 경우 -->
-                    <li class="mynotice-box unread-box">
-                      <p class="mynotice-type">Missions - Nthusiasts</p>
-                      <button class="mynotice-title ellipsis3">Beauty shot! Participation was [rejected].</button>
-                      <div class="mynotice-btm">
-                        <p class="mynotice-date">03.28.2024</p>
-                        <button class="btn sm-txt-btn01">
-                          <span class="btn-icon16 icon-check" aria-hidden="true"></span>
-                          unRead
-                        </button>
-                      </div>
-                      <!-- 삭제 버튼 -->
-                      <button type="button" class="btn btn-only-icon-notbg">
-                        <span class="visually-hidden">close button</span>
-                        <span class="btn-icon20 icon-close" aria-hidden="true"></span>
-                      </button>
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <div class="mypage-subtit-box">
-                    <h5>Previous notification</h5>
+                <div class="mypost-contents type3">
+                  <div class="mypage-subtit-box type3">
+                    <h5>Points Details</h5>
                     <div class="selectbox-wrap select-type01">
                       <div>
                         <button class="selectbox-trigger txt-type03 fw-type03" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="정렬버튼">All</button>
@@ -194,59 +170,49 @@
                             </button>
                           </li>
                           <li class="option txt-type03 fw-type03 active" role="option" aria-selected="true">All</li>
-                          <li class="option txt-type03 fw-type03" role="option">Post</li>
-                          <li class="option txt-type03 fw-type03" role="option">Missions</li>
-                          <li class="option txt-type03 fw-type03" role="option">Rewards</li>
-                          <li class="option txt-type03 fw-type03" role="option">N Community</li>
-                          <li class="option txt-type03 fw-type03" role="option">Point</li>
-                          <li class="option txt-type03 fw-type03" role="option">Hyundai N</li>
+                          <li class="option txt-type03 fw-type03" role="option">Nthusiasts</li>
+                          <li class="option txt-type03 fw-type03" role="option">N Community – Master</li>
                         </ul>
                       </div>
                     </div>
                     <div class="selectbox-overlay" style="display: none"></div>
                   </div>
-                  <ul class="mynotice-wrap">
-                    <li class="mynotice-box read-box">
-                      <p class="mynotice-type">Missions - Nthusiasts</p>
-                      <button class="mynotice-title ellipsis3">Beauty shot! Participation was.</button>
-                      <div class="mynotice-btm">
-                        <p class="mynotice-date">03.28.2024</p>
-                        <p class="mynotice-read"><i class="btn-icon16 icon-check" aria-hidden="true"></i>Read</p>
+                  <ul class="mymsission-wrap">
+                    <li>
+                      <p class="mymsission-type">Missions – N Community (Member)</p>
+                      <div class="mymsission-col">
+                        <p class="mymsission-title">Cheers to the Nürburgring 24H Race!</p>
+                        <p class="mymsission-date">04.01.2024</p>
                       </div>
-                      <button type="button" class="btn btn-only-icon-notbg">
-                        <span class="visually-hidden">close button</span>
-                        <span class="btn-icon20 icon-close" aria-hidden="true"></span>
-                      </button>
+                      <p class="mypoint-minus">-500</p>
                     </li>
-                    <li class="mynotice-box read-box">
-                      <p class="mynotice-type">Missions - Nthusiasts</p>
-                      <button class="mynotice-title ellipsis3">If there is no Master transfer application by May 5th, it will be closed. You can apply for transfer at [My Page > N Community > Settings Menu].</button>
-                      <div class="mynotice-btm">
-                        <p class="mynotice-date">03.28.2024</p>
-                        <p class="mynotice-read"><i class="btn-icon16 icon-check" aria-hidden="true"></i>Read</p>
+                    <li>
+                      <p class="mymsission-type">Missions - Nthusiasts</p>
+                      <div class="mymsission-col">
+                        <p class="mymsission-title">Beauty shot!</p>
+                        <p class="mymsission-date">04.01.2024</p>
                       </div>
-                      <button type="button" class="btn btn-only-icon-notbg">
-                        <span class="visually-hidden">close button</span>
-                        <span class="btn-icon20 icon-close" aria-hidden="true"></span>
-                      </button>
+                      <p class="mypoint-plus">+300</p>
                     </li>
-                    <li class="mynotice-box read-box">
-                      <p class="mynotice-type">Missions - Nthusiasts</p>
-                      <button class="mynotice-title ellipsis3">The post has been approved.</button>
-                      <div class="mynotice-btm">
-                        <p class="mynotice-date">03.28.2024</p>
-                        <p class="mynotice-read"><i class="btn-icon16 icon-check" aria-hidden="true"></i>Read</p>
+                    <li>
+                      <p class="mymsission-type">Rewards – N Community (Master)</p>
+                      <div class="mymsission-col">
+                        <p class="mymsission-title">Korea invitation ticket!</p>
+                        <p class="mymsission-date">04.01.2024</p>
                       </div>
-                      <button type="button" class="btn btn-only-icon-notbg">
-                        <span class="visually-hidden">close button</span>
-                        <span class="btn-icon20 icon-close" aria-hidden="true"></span>
-                      </button>
+                      <p class="mypoint-minus">-3,000</p>
                     </li>
                   </ul>
                 </div>
-                <!-- 알림 없을 경우 문구 노출 -->
-                <div class="mypage-nodata-onlytext">
-                  <p>There are no notifications.</p>
+                <!-- 참여 미션이 없을 경우 -->
+                <div class="mypage-nodata-box">
+                  <p>You don't have any points!<br class="pc-only" /><span class="color-red">Points can be collected</span> by participating in missions.</p>
+                  <div class="btn-wrap-type1">
+                    <a href="../../main/experience/EP040301.html" class="btn btn-md-outline01">
+                      Go to Missions
+                      <span class="btn-icon16 icon-right" aria-hidden="true"></span>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>

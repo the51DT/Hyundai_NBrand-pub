@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name=" format-detection" content="telephone=no" />
-    <title>N브랜드 | Join_MyPage_Notice</title>
+    <title>N브랜드 | Join_MyPage_Post</title>
     <link type="text/css" rel="stylesheet" href="../../../../inc/css/swiper.min.css" />
     <link type="text/css" rel="stylesheet" href="../../../../inc/css/common.css" />
     <link type="text/css" rel="stylesheet" href="../../../../inc/css/join.css" />
@@ -135,28 +135,33 @@
                 <h4 class="mypage-eachbox-top">Post</h4>
                 <div class="mypost-wrap">
                   <div class="mypost-box">
-                    <a href="./CM040301.html">Approved</a>
+                    <!-- v1.02 p.44 승인 상태별 클릭 시 : 작성 Post 목록에 해당 승인 상태 값으로 정렬하여 최신순 노출 -->
+                    <button>Approved</button>
                     <p>10</p>
                   </div>
                   <div class="mypost-box">
-                    <a href="./CM040301.html">Waiting for approval</a>
+                    <!-- v1.02 p.44 승인 상태별 클릭 시 : 작성 Post 목록에 해당 승인 상태 값으로 정렬하여 최신순 노출 -->
+                    <button>Waiting for approval</button>
                     <p>3</p>
                   </div>
                   <div class="mypost-box">
-                    <a href="./CM040301.html">Under review</a>
+                    <!-- v1.02 p.44 승인 상태별 클릭 시 : 작성 Post 목록에 해당 승인 상태 값으로 정렬하여 최신순 노출 -->
+                    <button>Under review</button>
                     <p>3</p>
                   </div>
                   <div class="mypost-box">
-                    <a href="./CM040301.html">Companion</a>
+                    <!-- v1.02 p.44 승인 상태별 클릭 시 : 작성 Post 목록에 해당 승인 상태 값으로 정렬하여 최신순 노출 -->
+                    <button>Companion</button>
                     <p>1</p>
                   </div>
                   <div class="mypost-box">
-                    <a href="./CM040301.html">non-disclosure action</a>
+                    <!-- v1.02 p.44 승인 상태별 클릭 시 : 작성 Post 목록에 해당 승인 상태 값으로 정렬하여 최신순 노출 -->
+                    <button>non-disclosure action</button>
                     <p>1</p>
                   </div>
                 </div>
-                <div class="mypost-contents">
-                  <div class="mypage-subtit-box">
+                <div class="mypost-contents type2">
+                  <div class="mypage-subtit-box type2">
                     <h5>Write post</h5>
                     <div class="selectbox-wrap select-type01">
                       <div>
@@ -344,16 +349,15 @@
                     </div>
                   </div>
                 </div>
-                <div class="mypage-nodata-wrap line-wrap">
-                  <div class="mypage-nodata-box">
-                    <p>There are no posts you wrote!<br /><span class="color-red">Write a post</span> and communicate with N Brand members.</p>
-                    <div class="btn-wrap">
-                      <a href="../../main/experience/EP040201.html" class="btn btn-md-outline01">
-                        See Hub
-                        <span class="btn-icon16 icon-right" aria-hidden="true"></span>
-                      </a>
-                      <a href="../../main/experience/EP040201P02.html" class="btn btn-md-outline01">+ Post</a>
-                    </div>
+                <!-- 작성한 Post 게시글 없을 경우 -->
+                <div class="mypage-nodata-box">
+                  <p>There are no posts you wrote!<br class="pc-only" /><span class="color-red"> Write a post</span> and communicate with N Brand members.</p>
+                  <div class="btn-wrap-type2">
+                    <a href="../../main/experience/EP040201.html" class="btn btn-md-outline01">
+                      See Hub
+                      <span class="btn-icon16 icon-right" aria-hidden="true"></span>
+                    </a>
+                    <a href="../../main/experience/EP040201P02.html" class="btn btn-md-outline01">+ Post</a>
                   </div>
                 </div>
               </div>

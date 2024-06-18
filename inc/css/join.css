@@ -375,10 +375,15 @@
   gap: 60px;
   justify-content: space-between;
 }
-.mypost-wrap .mypost-box a {
+.mypost-wrap .mypost-box.width3 {
+  width: calc(100% / 3);
+}
+.mypost-wrap .mypost-box a,
+button {
   font-size: 14px;
   font-weight: 500;
   line-height: 19.6px;
+  text-align: left;
 }
 .mypost-wrap .mypost-box p {
   font-family: "Hyundai Sans Head";
@@ -469,18 +474,21 @@
   align-items: flex-start;
   gap: 8px;
 }
-.mypage-nodata-wrap p {
+.mypage-nodata-box p,
+.mypage-nodata-onlytext p {
   font-family: "Hyundai Sans Head";
   font-size: 20px;
   font-weight: 700;
   line-height: 28px;
   text-align: center;
 }
-.mypage-nodata-wrap p.only-text {
-  text-align: center;
+.mypage-nodata-onlytext h4 {
+  text-align: left;
+}
+.mypage-nodata-onlytext p {
   padding: 106px 0;
 }
-.mypage-eachbox-top + .mypage-nodata-wrap p.only-text {
+.mypage-eachbox-top + .mypage-nodata-onlytext p {
   padding-top: 66px;
 }
 .mypage-nodata-box {
@@ -523,6 +531,19 @@
 .mypost-wrap + .mypost-contents {
   margin-top: 40px;
 }
+/* CM040601 */
+.mypage-wrap .point-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 24px;
+}
+.mypage-wrap .point-total p {
+  font-family: "Hyundai Sans Head";
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 50px;
+}
 /* 모바일 */
 @media screen and (max-width: 1023px) {
   .mypage-wrap h4 {
@@ -535,7 +556,6 @@
     font-size: 24px;
     font-weight: 700;
     line-height: 33.6px;
-    padding-bottom: 16px;
   }
   .mypage-wrap .content-item01 {
     padding: 24px;
@@ -621,6 +641,9 @@
     padding: 0 24px;
     gap: 60px;
   }
+  .mypage-wrap .mypage-content.type2 {
+    gap: 28px;
+  }
   .mypage-wrap .mypage-content.mypage-allbox {
     display: none !important;
   }
@@ -652,7 +675,8 @@
     gap: 12px;
     flex-wrap: wrap;
   }
-  .mypost-wrap .mypost-box {
+  .mypost-wrap .mypost-box,
+  .mypost-wrap .mypost-box.width3 {
     width: calc(50% - 6px);
     gap: 0;
     justify-content: space-between;
@@ -800,7 +824,47 @@
     flex-direction: column;
     gap: 24px;
   }
-  .mypage-eachbox-top + .mypage-nodata-wrap p.only-text {
+  .mypage-subtit-box h5 {
+    padding-bottom: 0;
+  }
+  .mypage-eachbox-top + .mypage-nodata-onlytext p {
     padding-top: 86px;
+  }
+  .mypage-nodata-box {
+    gap: 20px;
+  }
+  .mypage-eachbox-top + .mypage-nodata-box {
+    padding: 12px 0 0;
+  }
+  .mypost-wrap + .mypost-contents.type2 {
+    margin-top: 16px;
+  }
+  .mypage-subtit-box.type2,
+  .mypage-subtit-box.type3 {
+    gap: 8px;
+    padding-bottom: 28px;
+  }
+  .mypost-wrap + .mypost-contents.type3 {
+    margin-top: 32px;
+  }
+
+  /* CM040401 */
+  .mypage-subtit-box + .mymsission-wrap {
+    margin-top: 4px;
+  }
+  .btn-wrap-type1,
+  .btn-wrap-type2 {
+    width: 100%;
+  }
+
+  /* CM040601 */
+  .mypage-wrap .point-total {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 16px;
+  }
+  .mypage-wrap .point-total p {
+    font-size: 24px;
+    line-height: 33.6px;
   }
 }
