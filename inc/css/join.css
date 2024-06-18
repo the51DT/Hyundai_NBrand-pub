@@ -87,6 +87,7 @@
 }
 .mypage-box {
   display: flex;
+  /* gap: 7.6042vw; */
   gap: 146px;
   max-width: 1440px;
   margin: 120px auto 240px;
@@ -96,6 +97,7 @@
   flex-direction: column;
   gap: 24px;
   width: 342px;
+  /* width: 17.8125vw; */
   padding-bottom: 24px;
 }
 .mypage-wrap .mypage-nav > ul li {
@@ -123,6 +125,7 @@
   flex-direction: column;
   gap: 80px;
   flex: 0 0 calc(100% - 488px);
+  /* flex: 0 0 calc(100% - 25.4167vw); */
 }
 .mypage-wrap .mypage-content .move-wrap {
   margin-top: 16px;
@@ -363,6 +366,7 @@
   display: flex;
   flex-direction: column;
   gap: 60px;
+  justify-content: space-between;
 }
 .mypost-wrap .mypost-box a {
   font-size: 14px;
@@ -387,6 +391,9 @@
   gap: 24px;
   align-items: center;
   justify-content: space-between;
+}
+.tab-container.mycommunity-wrap .tab-head {
+  justify-content: end;
 }
 .mymsission-type {
   font-size: 14px;
@@ -429,7 +436,6 @@
   align-items: flex-start;
   gap: 8px;
 }
-
 /* 모바일 */
 @media screen and (max-width: 1023px) {
   .mypage-wrap .content-item01 {
@@ -603,6 +609,9 @@
   }
   .mymsission-col {
     display: block;
+  }
+  .mymsission-status + .btn-wrap-type2 {
+    margin-top: 20px;
   }
   /* 로그인 팝업 */
   .bottom-popup:has(.logout_popup_wrap) {
