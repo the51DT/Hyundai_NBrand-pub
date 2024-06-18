@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name=" format-detection" content="telephone=no" />
-    <title>N브랜드 | CM040301P01-popup</title>
+    <title>N브랜드 | CM040701P01</title>
     <link
       type="text/css"
       rel="stylesheet"
@@ -81,24 +81,12 @@
       </header>
       <!--  -->
       <section id="container" class="content-wrap">
-        <div class="content-area">
-          <!-- 팝업 버튼 조건 .pop-open 가 있으면 동작 aria-controls 값과 동일한 id값 호출-->
-          <button
-            class="pop-open"
-            aria-controls="pop-page"
-            aria-haspopup="true"
-            aria-expanded="false"
-            title="팝업오픈"
-          >
-            CM040301P01-popup 팝업 열기
-          </button>
-        </div>
+        <div class="content-area"></div>
       </section>
       <footer class="footer-wrap">
         <div class="footer-area"></div>
       </footer>
     </div>
-    <!-- .popup가 있을시 종류에따라 클래스네이밍 변경 .model-popup .bottom-popup .side-popup -->
     <div
       class="popup model-popup"
       id="pop-page"
@@ -106,95 +94,84 @@
       aria-modal="true"
       aria-labelledby="tit-type04"
       data-pop="pop-page"
+      style="display: block"
     >
       <div class="popup-wrapper">
         <!-- <p class="temp-header">Hub_Write a post ID : EP040201P02</p> -->
 
         <div class="popup-header">
-          <h3 class="tit-type03">My Post</h3>
+          <h3 class="tit-type04">Write a post</h3>
         </div>
 
-        <div class="popup-body same-h-pc">
-          <!---->
-          <div class="m20">
-            <div class="wrap-label-reward">
-              <p class="tit-type04">You’ll see me in hindsight</p>
-            </div>
-
-            <div class="wrap-image-reward">
-              <img
-                src="../../../../inc/images/img/img_mypage_popup.png"
-                alt="팝업 내 이미지"
-              />
-            </div>
-
-            <div class="wrap-desc">
-              <p class="txt-type03">
-                You’ll see me in hindsight Tangled up with you all night Burning
-                it down Someday when you leave me You’ll see me in hindsight
-                Tangled up with you all night Burning it down Someday when you
-                leave me
-              </p>
-            </div>
-            <div class="wrap-hashtag">
-              <div class="hashtags">
-                <a href="" class="txt-type04">#testminiature</a>
-                <a href="" class="txt-type04">#newcar</a>
-                <a href="" class="txt-type04">#ceremony</a>
-              </div>
-
-              <p class="txt-type04 wrap-date">03.28.2024</p>
-            </div>
-          </div>
-          <!-- // .m20 -->
-        </div>
-
-        <div class="popup-footer footer-no-pd">
-          <div class="box-result pd-lg bg-blue">
-            <p class="popup-tit-lg">Waiting to participate</p>
-          </div>
-
-          <div class="box-confirm center">
-            <div class="btn-wrap multi-btn">
-              <button
-                type="button"
-                class="btn btn-lg-outline01 btn-lg-primary02"
-              >
-                Cancel
-                <span class="btn-icon20 icon-right" aria-hidden="true"></span>
-              </button>
-              <button type="button" class="btn btn-lg-primary01">
-                Request
-                <span
-                  class="btn-icon20 icon-right-wh"
-                  aria-hidden="true"
-                ></span>
-              </button>
-            </div>
+        <div class="popup-body">
+          <div class="popup-body-innerbox">
+            <button
+              class="pop-open"
+              aria-controls="pop-bottom"
+              aria-haspopup="true"
+              aria-expanded="false"
+              title="팝업오픈"
+            >
+              하단 팝업 열기
+            </button>
           </div>
         </div>
 
+        <div class="popup-footer"></div>
         <div class="btn-wrap">
           <!-- pop-close 해당 팝업 닫기 -->
           <button type="button" class="btn btn-only-icon-notbg pop-close">
             <span class="visually-hidden">close button</span>
-            <span class="btn-icon36 icon-close" aria-hidden="true"></span>
+            <span class="btn-icon20 icon-close" aria-hidden="true"></span>
           </button>
-        </div>
-
-        <div class="wrap-navigation">
-          <a href="" class="btn btn-only-icon modal-btn left">
-            <span class="visually-hidden">instagram link button</span>
-            <span class="btn-icon24 icon-left" aria-hidden="true"></span>
-          </a>
-
-          <a href="" class="btn btn-only-icon modal-btn right">
-            <span class="visually-hidden">instagram link button</span>
-            <span class="btn-icon24 icon-right" aria-hidden="true"></span>
-          </a>
         </div>
       </div>
     </div>
+    <!-- //model-popup -->
+    <div
+      id="pop-bottom"
+      class="popup bottom-popup"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="tit"
+    >
+      <div class="pop-wrap">
+        <div class="popup-wrapper onlyTxt">
+          <div class="popup-body">
+            <div class="m40">
+              <div class="popup-body-innerbox">
+                <p class="tit-type05 header">
+                  N Community closure application has been completed
+                </p>
+              </div>
+
+              <div class="popup-body-innerbox">
+                <p class="tit-type05 desc">
+                  If you enter the referral code when signing up, you and your
+                  friends can receive points!
+                </p>
+              </div>
+            </div>
+
+            <div class="popup-body-innerbox">
+              <div class="popup-footer">
+                <div class="btn-wrap md">
+                  <button type="button" class="btn btn-md-primary01">
+                    Confirmation
+                    <span
+                      class="btn-icon20 icon-right-wh"
+                      aria-hidden="true"
+                    ></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- // .popup-wrapper -->
+      </div>
+    </div>
+    <div class="dimmed" aria-hidden="true"></div>
     <!-- //model-popup -->
 
     <script

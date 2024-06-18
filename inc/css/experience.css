@@ -829,19 +829,27 @@
 
 /* 좌우 슬라이드 버튼  */
 .popup-wrapper .wrap-navigation {
-  display: none;
+  display: flex;
+}
+
+.popup-wrapper .wrap-navigation a.modal-btn {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 0;
 }
 
 .popup-wrapper a.modal-btn.left {
   position: absolute;
-  left: -70px;
+  left: -339px;
   top: 50%;
 }
 
 .popup-wrapper a.modal-btn.right {
   position: absolute;
-  right: -70px;
+  right: -346px;
   top: 50%;
+}
+
+.popup-wrapper a.modal-btn span.icon-left {
 }
 
 /*  */
@@ -868,13 +876,29 @@
   max-height: calc(100vh - 350px);
 }
 
+.popup-wrapper .popup-body .m10 {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
 .popup-wrapper .popup-body .m20 {
   display: flex;
   gap: 20px;
   flex-direction: column;
 }
 
+.popup-wrapper .popup-body .m40 {
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+}
+
 .popup-wrapper .popup-body .m20 .wrap-label-reward .tit-type04 {
+  font-size: 40px;
+}
+
+.popup-wrapper .popup-body .tit-type04.main-header {
   font-size: 40px;
 }
 
@@ -1049,8 +1073,12 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
   span.accent {
   color: #de3111;
 }
+.popup-wrapper.onlyTxt .popup-body .txt-type03 .accent {
+  color: #de3111;
+  font-weight: 700;
+}
 
-.popup-wrapper.onlyTxt .popup-body .popup-body-innerbox .txt-type03 a.accent {
+.popup-wrapper.onlyTxt .popup-body .popup-body-innerbox .txt-type03 .accent {
   color: #de3111;
   text-decoration: underline;
 }
@@ -1163,6 +1191,19 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
 
 .popup-wrapper .popup-body-innerbox .wrap-checkmail .btn-wrap {
   padding: 8px 0;
+}
+
+.popup-wrapper .popup-body-innerbox .inner-textarea-comment {
+  border-radius: 0;
+}
+
+.popup-wrapper
+  .popup-body-innerbox
+  .inner-textarea-comment
+  button.btn-lg-primary01 {
+  background: #000;
+  color: #fff;
+  border-radius: 0;
 }
 
 /* profile area in popup */
@@ -1309,7 +1350,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
   align-items: end;
 }
 
-.popup-wrapper .popup-body .wrap-reject-msg {
+.popup-wrapper .popup-body .wrap-requested-msg {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -1317,11 +1358,11 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
   border-bottom: 1px solid #000;
 }
 
-.popup-wrapper .popup-body .wrap-reject-msg p.txt-type03 {
+.popup-wrapper .popup-body .wrap-requested-msg p.txt-type03 {
   font-weight: 500;
 }
 
-.popup-wrapper .popup-body .wrap-reject-msg .box-msg-summary {
+.popup-wrapper .popup-body .wrap-requested-msg .box-msg-summary {
   background: #f0f0f0;
   border-left: 4px solid #bd5818;
   padding: 32px 40px;
@@ -1330,18 +1371,23 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
   gap: 8px;
 }
 
-.popup-wrapper .popup-body .wrap-reject-msg .box-msg-summary p.tit-type05 {
+.popup-wrapper .popup-body .wrap-requested-msg .box-msg-summary p.tit-type05 {
   color: #bd5818;
   font-size: 20px;
 }
 
-.popup-wrapper .popup-body .wrap-reject-msg .box-msg-summary p.txt-type02 {
+.popup-wrapper .popup-body .wrap-requested-msg .box-msg-summary p.txt-type02 {
   font-weight: 500;
+}
+
+.popup-wrapper .popup-body .wrap-requested-msg .box-msg p.txt-type03 .accent {
+  color: #de3111;
+  font-weight: 700;
 }
 
 .popup-wrapper
   .popup-body
-  .wrap-reject-msg
+  .wrap-requested-msg
   .popup-wrapper
   .wrap-comment
   .box-userinfo
@@ -1422,15 +1468,16 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
 .popup-wrapper .popup-footer .box-result p.txt-type03:last-child {
   /* margin-top: 8px; */
 }
-.popup-wrapper .popup-body .wrap-reject-msg .box-msg-summary {
+.popup-wrapper .popup-body .wrap-requested-msg .box-msg-summary {
   padding: 20px 24px;
 }
-.popup-wrapper .popup-body .wrap-reject-msg .box-msg-summary p.tit-type05 {
+.popup-wrapper .popup-body .wrap-requested-msg .box-msg-summary p.tit-type05 {
   font-size: 18px;
 }
-.popup-wrapper .popup-body .wrap-reject-msg .box-msg-summary p.txt-type02 {
+.popup-wrapper .popup-body .wrap-requested-msg .box-msg-summary p.txt-type02 {
   font-size: 17px;
 }
+
 .popup-wrapper .popup-footer .box-paticipants {
   display: flex;
   justify-content: space-between;
@@ -1543,6 +1590,39 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
   margin-top: 32px;
 }
 
+/*CM040701P01 popup s*/
+.popup-wrapper .popup-body .wrap-review-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.popup-wrapper .popup-body .wrap-review-info img.img-uploaded {
+  max-width: 94px;
+}
+
+.popup-wrapper .popup-body .wrap-review-info .wrap-radio {
+  padding: 0;
+  margin: 0;
+}
+.popup-wrapper.onlyTxt .popup-body .popup-body-innerbox p.tit-type05.desc {
+  font-weight: 500;
+}
+/*CM040701P01 popup e*/
+
+.popup-wrapper textarea::placeholder {
+  color: #777;
+  width: fit-content;
+  white-space: pre-line;
+}
+
+.popup-wrapper .popup-body .wrap-notice-info .box-infotxt .txt-type03 {
+  font-weight: 500;
+}
+
+.popup-wrapper .popup-body .tit-type04.main-header {
+  font-size: 24px;
+}
 /* mypage 팝업 끝*/
 /* 일반 모달 팝업 끝*/
 
@@ -2388,7 +2468,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
 
   .popup-wrapper .popup-body {
     padding: 40px 24px 60px;
-    max-height: calc(100vh - 200px);
+    max-height: calc(100vh - 124px);
     overflow-y: auto;
     display: grid;
     gap: 40px 0;
@@ -2500,7 +2580,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
   }
 
   .popup-wrapper.onlyTxt .popup-body {
-    padding: 40px 24px;
+    padding: 40px;
   }
 
   .popup-wrapper.onlyTxt .popup-body p.tit-type05 {
@@ -2517,6 +2597,16 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
 
   .popup-wrapper.onlyTxt .popup-body-innerbox ul.li-aparted li:last-child {
     margin-bottom: 0;
+  }
+
+  /* CM040701P01 popup3-2 이중팝업 시작 */
+
+  .popup-wrapper.onlyTxt .popup-body.pd-24 {
+    padding: 40px 24px;
+  }
+  .popup-wrapper.onlyTxt .popup-body .popup-body-innerbox p.tit-type05.desc {
+    font-weight: 500;
+    font-size: 14px;
   }
 
   .popup-wrapper.onlyTxt .popup-footer {
@@ -2636,6 +2726,19 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
   }
 
   .popup-wrapper .popup-body.for-switch .wrap-switch p {
+    font-size: 18px;
+  }
+
+  /* mypage notice s */
+  .popup-wrapper .popup-body .tit-type04.notice-header {
+    font-size: 24px;
+  }
+
+  .popup-wrapper .popup-body .tit-type04 {
+    font-size: 18px;
+  }
+
+  .popup-wrapper .popup-body .wrap-notice-info .tit-type05 {
     font-size: 18px;
   }
 
