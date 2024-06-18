@@ -1879,14 +1879,14 @@ input[type="radio"]:focus + label {
 }
 
 .ty02Swiper .swiper-slide {
-  max-width:952px;
+  max-width: 952px;
 }
 .ty02Swiper .swiper-slide .img-area {
   height: 536px;
 }
-.ty02Swiper .swiper-slide-active  {
+.ty02Swiper .swiper-slide-active {
   max-width: 1196px;
-  position:relative;
+  position: relative;
 }
 
 .ty02Swiper .swiper-slide-active .img-area {
@@ -3141,7 +3141,7 @@ input[type="radio"]:focus + label {
   .tag-list-wrap
   .tag-list
   li {
-  margin-bottom: 0;
+  margin-bottom: 2px;
 }
 .dropdown.centered
   .dropdown-menu
@@ -4840,7 +4840,7 @@ input:checked + .slider:before {
 
 .tag-list-wrap [class^="tag-list"] li.on .tag-item {
   background-color: #de3111;
-  color: #fff;  
+  color: #fff;
 }
 
 .tag-list-wrap [class^="tag-list"][class*="ty02"] li.on .tag-item {
