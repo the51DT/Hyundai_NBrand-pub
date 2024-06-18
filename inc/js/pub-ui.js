@@ -77,7 +77,9 @@ var pubUi = {
     // 리셋 버튼 클릭시,
     self.$btnReset.on("click", function (e) {
       e.preventDefault();
+      var tagList = $(this).closest(".search-container").find(".tag-list-wrap .tag-list");
       self.$searchBox.querySelector("input").value = "";
+      self.tagBtnEvent("", tagList, "reset");
     });
 
     // 태그 버튼 클릭시,
@@ -372,6 +374,32 @@ var pubUi = {
         },
       },
     });
+    var swiper7 = new Swiper(".editor-box-wrap .swiper-container", {
+      slidesPerView: 1,
+      spaceBetween: 80,
+      centeredSlides: true,
+      touchRatio: 0,
+      pagination: {
+        el: ".editor-box-wrap .swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".editor-box-wrap .swiper-button-next",
+        prevEl: ".editor-box-wrap .swiper-button-prev",
+      },
+      breakpoints: {
+        360: {
+          slidesPerView: 1,
+          spaceBetween: 12,
+        },
+        768: {
+          spaceBetween: 12,
+        },
+        1024: {
+          spaceBetween: 80,
+        },
+      },
+    });
   },
   videoBulletChk: function (targetSwiper) {
     var swiperActiveVideo = targetSwiper.find(
@@ -429,37 +457,48 @@ var pubUi = {
 
     document.querySelector("#" + tabLabel).classList.add("on");
   },
-  tagBtnEvent: function (e, list) {
-    var targetisChecked = e.dataset.check;
-    var targetList = e.parentElement;
+  tagBtnEvent: function (e, list, param) {    
     var listItem = list.find("li");
 
-    if (list.hasClass("multi")) {
-      if (targetisChecked == "true") {
-        e.dataset.check = false;
-        targetList.firstElementChild.checked = false;
-        targetList.classList.remove("on");
-      } else {
-        e.dataset.check = true;
-        targetList.firstElementChild.checked = true;
-        targetList.classList.add("on");
-      }
-    } else {
+    //search input reset 클릭시, 하단 태그 초기화
+    if(param == "reset") {
       for (var i = 0; i < listItem.length; i++) {
         listItem[i].classList.remove("on");
         listItem[i].children[0].checked = "false";
         listItem[i].children[1].dataset.check = false;
       }
+    } else {
+      var targetisChecked = e.dataset.check;
+      var targetList = e.parentElement;
 
-      if (targetisChecked == "false") {
-        targetList.classList.add("on");
-        targetList.children[0].checked = true;
-        targetList.children[1].dataset.check = true;
+      if (list.hasClass("multi")) {
+        if (targetisChecked == "true") {
+          e.dataset.check = false;
+          targetList.firstElementChild.checked = false;
+          targetList.classList.remove("on");
+        } else {
+          e.dataset.check = true;
+          targetList.firstElementChild.checked = true;
+          targetList.classList.add("on");
+        }
       } else {
-        targetList.classList.add("on");
-        targetList.children[0].checked = true;
-        targetList.children[1].dataset.check = true;
+        for (var i = 0; i < listItem.length; i++) {
+          listItem[i].classList.remove("on");
+          listItem[i].children[0].checked = "false";
+          listItem[i].children[1].dataset.check = false;
+        }
+
+        if (targetisChecked == "false") {
+          targetList.classList.add("on");
+          targetList.children[0].checked = true;
+          targetList.children[1].dataset.check = true;
+        } else {
+          targetList.classList.add("on");
+          targetList.children[0].checked = true;
+          targetList.children[1].dataset.check = true;
+        }
       }
+      
     }
   },
   masonryLayout: function () {
@@ -512,6 +551,8 @@ var pubUi = {
 $(document).ready(function () {
   pubUi.init();
   $(window).on("resize", pubUi.masonryLayout);
+  $(window).resize(() => DropdownFooter());
+  DropdownFooter();
   $(".clear-text")
     .siblings('input[type="text"]')
     .on("propertychange change keyup paste input", pubUi.textReset);
@@ -565,25 +606,17 @@ $(".selectbox-trigger").click(function (event) {
 
 $(".option").click(function (event) {
   event.stopPropagation();
+  var $selectboxWrap = $(this).closest(".selectbox-wrap");
   var selectedText = $(this).text();
-  $(this)
-    .closest(".selectbox-options")
-    .hide()
-    .attr("aria-hidden", "true")
-    .siblings(".selectbox-trigger")
-    .text(selectedText);
-  $(this)
-    .closest(".selectbox-options")
-    .find(".option")
-    .not(this)
-    .removeClass("active")
-    .attr("aria-selected", "false");
+  // select-type04 클래스(아이콘만 존재하는 경우의 타입)가 없는 경우에만 버튼 텍스트 변경
+  if (!$selectboxWrap.hasClass("select-type04")) {
+    $(this).closest(".selectbox-options").hide().attr("aria-hidden", "true").siblings(".selectbox-trigger").text(selectedText);
+  } else {
+    $(this).closest(".selectbox-options").hide().attr("aria-hidden", "true");
+  }
+  $(this).closest(".selectbox-options").find(".option").not(this).removeClass("active").attr("aria-selected", "false");
   $(this).addClass("active").attr("aria-selected", "true");
-  $(this)
-    .closest(".selectbox-wrap>div")
-    .find(".selectbox-trigger")
-    .removeClass("active")
-    .attr("aria-expanded", "false");
+  $(this).closest(".selectbox-wrap>div").find(".selectbox-trigger").removeClass("active").attr("aria-expanded", "false");
   $(window)
     .resize(function () {
       if (window.innerWidth <= 1023) {
@@ -700,29 +733,26 @@ function selectOption(event, optionText) {
 
 // 기획서, 시안에 없어 임의로 다중 토글 적용
 function DropdownFooter() {
-  const dropdowns = document.querySelectorAll(
-    ".dropdown.inMobile .accor02-wrap"
-  );
-
-  dropdowns.forEach(function (dropdown) {
-    const footerBtn = dropdown.querySelector(".accor02-header");
-    const accor02List = dropdown.querySelector(
-      ".dropdown.inMobile .accor02-wrap ul"
-    );
-    const isMobile = window.matchMedia("(max-width: 1024px)");
-    const screenWidth = window.innerWidth;
-    if (screenWidth < 1024) {
-      footerBtn.addEventListener("click", function () {
-        accor02List.classList.toggle("dropdown-on");
+  if (window.innerWidth < 1024) {
+    // resize 때문에 off 한 번 해주고 click 이벤트
+    $(".dropdown.inMobile .accor02-wrap .accor02-header").off("click")
+    .on("click", function () {
+        const accor02List = $(this).siblings("ul");
+        accor02List.toggleClass("dropdown-on");
+        const accor02Wrap = $(this).closest(".accor02-wrap");
+        const expanded = accor02List.hasClass("dropdown-on") ? "true" : "false";
+        accor02Wrap.attr("aria-expanded", expanded);
       });
-    }
-  });
+  }
 }
-
-DropdownFooter();
 
 // 드롭다운(아코디언) 02 끝
 // 드롭다운(아코디언), 필터 컴포넌트 끝
+
+// 푸터 스크롤 탑
+$(".footer-top-btn").click(() => {
+  $("html, body").animate({ scrollTop: 0 }, 500);
+});
 
 // [Start] : hashTag 말줄임
 $(".card_type04 .card_con").each(function () {

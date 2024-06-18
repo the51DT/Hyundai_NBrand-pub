@@ -16,6 +16,13 @@
   font-size: 56px;
   font-weight: 700;
   line-height: 70px;
+  padding-bottom: 24px;
+}
+.mypage-wrap h5 {
+  font-family: "Hyundai Sans Head";
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 50px;
 }
 .mypage-wrap .mypage-profile {
   display: flex;
@@ -117,15 +124,15 @@
   display: flex;
   justify-content: center;
 }
-.mypage-wrap .mypage-content h4 {
-  margin-bottom: 24px;
-}
-.mypage-wrap .mypage-content.mypage-allbox {
+.mypage-wrap .mypage-content {
   display: flex;
   flex-direction: column;
   gap: 80px;
   flex: 0 0 calc(100% - 488px);
   /* flex: 0 0 calc(100% - 25.4167vw); */
+}
+.mypage-wrap .mypage-content.type2 {
+  gap: 40px;
 }
 .mypage-wrap .mypage-content .move-wrap {
   margin-top: 16px;
@@ -368,10 +375,15 @@
   gap: 60px;
   justify-content: space-between;
 }
-.mypost-wrap .mypost-box a {
+.mypost-wrap .mypost-box.width3 {
+  width: calc(100% / 3);
+}
+.mypost-wrap .mypost-box a,
+button {
   font-size: 14px;
   font-weight: 500;
   line-height: 19.6px;
+  text-align: left;
 }
 .mypost-wrap .mypost-box p {
   font-family: "Hyundai Sans Head";
@@ -384,7 +396,7 @@
   border-top: 1px solid #787d80;
 }
 .mymsission-wrap li {
-  padding: 28px 0;
+  padding: 29px 0 28px;
   border-bottom: 1px solid #bbb;
   width: 100%;
   display: flex;
@@ -392,8 +404,14 @@
   align-items: center;
   justify-content: space-between;
 }
+.tab-container.mycommunity-wrap .tab-head h4 {
+  padding-bottom: 0;
+}
 .tab-container.mycommunity-wrap .tab-head {
-  justify-content: end;
+  margin-bottom: 24px;
+}
+.tab-container.mycommunity-wrap .tab-content {
+  margin-top: 0;
 }
 .mymsission-type {
   font-size: 14px;
@@ -428,6 +446,26 @@
 .mypoint-plus {
   color: #de3111;
 }
+.mymsission-flag {
+  /* 디자인 없어서 임의로 함 */
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22.4px;
+  padding-right: 12px;
+  color: #fff;
+  background-color: #000;
+  border-radius: 15px;
+  padding: 4px 12px;
+  text-align: center;
+  margin-right: 12px;
+  width: fit-content;
+}
+.mymsission-flag.gray-flag {
+  background-color: #777; /* 디자인 없어서 임의로 함 */
+}
+.mymsission-wrap .btn-wrap-type2 {
+  margin-right: 12px;
+}
 .mymsission-col {
   display: flex;
   flex-direction: column;
@@ -436,8 +474,89 @@
   align-items: flex-start;
   gap: 8px;
 }
+.mypage-nodata-box p,
+.mypage-nodata-onlytext p {
+  font-family: "Hyundai Sans Head";
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: center;
+}
+.mypage-nodata-onlytext h4 {
+  text-align: left;
+}
+.mypage-nodata-onlytext p {
+  padding: 106px 0;
+}
+.mypage-eachbox-top + .mypage-nodata-onlytext p {
+  padding-top: 66px;
+}
+.mypage-nodata-box {
+  padding: 60px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+}
+.mypage-nodata-box .color-red {
+  color: #de3111;
+}
+.mypage-nodata-box .btn-wrap {
+  display: flex;
+  gap: 8px;
+}
+/* CM040201 */
+.mypage-content > div > h5 {
+  padding-bottom: 24px;
+}
+.mypage-eachbox-top {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid #787d80;
+}
+.mypage-eachbox-top.type2 {
+  display: block;
+  border-bottom: 0;
+}
+.mypage-eachbox-top.type2 h4 {
+  border-bottom: 2px solid #787d80;
+  padding-bottom: 24px;
+  margin-bottom: 40px;
+}
+.mypage-subtit-box {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 24px;
+}
+.mypost-wrap + .mypost-contents {
+  margin-top: 40px;
+}
+/* CM040601 */
+.mypage-wrap .point-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 24px;
+}
+.mypage-wrap .point-total p {
+  font-family: "Hyundai Sans Head";
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 50px;
+}
 /* 모바일 */
 @media screen and (max-width: 1023px) {
+  .mypage-wrap h4 {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 42px;
+    padding-bottom: 16px;
+  }
+  .mypage-wrap h5 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 33.6px;
+  }
   .mypage-wrap .content-item01 {
     padding: 24px;
   }
@@ -495,7 +614,7 @@
   .mypage-box {
     display: block;
     max-width: 100%;
-    margin: 80px 0 160px;
+    margin: 44px 0 160px;
     padding: 0;
   }
   .mypage-wrap .mypage-nav {
@@ -505,7 +624,6 @@
     padding: 16px 24px;
     border-bottom: 1px solid #d9d9d9;
   }
-
   .mypage-wrap .mypage-nav > ul li button {
     width: 100%;
     justify-content: space-between;
@@ -520,13 +638,15 @@
     justify-content: center;
   }
   .mypage-wrap .mypage-content {
-    display: block;
     padding: 0 24px;
+    gap: 60px;
+  }
+  .mypage-wrap .mypage-content.type2 {
+    gap: 28px;
   }
   .mypage-wrap .mypage-content.mypage-allbox {
     display: none !important;
   }
-  /* CM040101 아닌경우 .mypage-allbox 삭제 */
   /* CM040101 */
   .mynotice-wrap {
     display: flex;
@@ -555,7 +675,8 @@
     gap: 12px;
     flex-wrap: wrap;
   }
-  .mypost-wrap .mypost-box {
+  .mypost-wrap .mypost-box,
+  .mypost-wrap .mypost-box.width3 {
     width: calc(50% - 6px);
     gap: 0;
     justify-content: space-between;
@@ -692,5 +813,58 @@
   }
   .join_complete_text {
     margin-top: 2.25rem;
+  }
+
+  /* CM040201 */
+  .mypage-wrap .mypage-nav-type2 {
+    display: none !important;
+  }
+  .mypage-subtit-box {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .mypage-subtit-box h5 {
+    padding-bottom: 0;
+  }
+  .mypage-eachbox-top + .mypage-nodata-onlytext p {
+    padding-top: 86px;
+  }
+  .mypage-nodata-box {
+    gap: 20px;
+  }
+  .mypage-eachbox-top + .mypage-nodata-box {
+    padding: 12px 0 0;
+  }
+  .mypost-wrap + .mypost-contents.type2 {
+    margin-top: 16px;
+  }
+  .mypage-subtit-box.type2,
+  .mypage-subtit-box.type3 {
+    gap: 8px;
+    padding-bottom: 28px;
+  }
+  .mypost-wrap + .mypost-contents.type3 {
+    margin-top: 32px;
+  }
+
+  /* CM040401 */
+  .mypage-subtit-box + .mymsission-wrap {
+    margin-top: 4px;
+  }
+  .btn-wrap-type1,
+  .btn-wrap-type2 {
+    width: 100%;
+  }
+
+  /* CM040601 */
+  .mypage-wrap .point-total {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 16px;
+  }
+  .mypage-wrap .point-total p {
+    font-size: 24px;
+    line-height: 33.6px;
   }
 }

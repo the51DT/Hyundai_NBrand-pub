@@ -174,12 +174,24 @@
                 </div>
               </div>
               <div class="tag-list-wrap">
-                <ul class="tag-list">
-                  <li class="on"><a href="#" class="tag-item"  aria-selected="true">#All</a></li>
-                  <li><a href="#" class="tag-item"  aria-selected="false">#WRC</a></li>
-                  <li><a href="#" class="tag-item"  aria-selected="false">#TCR</a></li>
-                  <li><a href="#" class="tag-item"  aria-selected="false">#N</a></li>                  
-                  <li><a href="#" class="tag-item"  aria-selected="false">#Nürburgring_24_Hours</a></li>
+                <ul class="tag-list multi"> <!-- checkbox일때, multi 클래스 추가 -->
+                  <!-- multi : 체크박스 값 다중 선택 -->
+                  <li class="on">
+                    <input type="checkbox" id="checkbox2-1" name="checkbox2-1" checked>
+                    <label for="checkbox2-1" class="checkbox-label tag-item" data-check="true">#All</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="checkbox2-2" name="checkbox2-2">
+                    <label for="checkbox2-2" class="checkbox-label tag-item" data-check="false">#WRC</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="checkbox2-3" name="checkbox2-3">
+                    <label for="checkbox2-3" class="checkbox-label tag-item" data-check="false">#TCR</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="checkbox2-4" name="checkbox2-4">
+                    <label for="checkbox2-4" class="checkbox-label tag-item" data-check="false">#N</label>
+                  </li>
                 </ul>
               </div>
             </div>
