@@ -374,18 +374,20 @@
   flex-direction: column;
   gap: 60px;
   justify-content: space-between;
+  height: 170px;
 }
 .mypost-wrap .mypost-box.width3 {
   width: calc(100% / 3);
 }
 .mypost-wrap .mypost-box a,
-button {
+.mypost-wrap .mypost-box button,
+.mypost-wrap .mypost-box p:first-child {
   font-size: 14px;
   font-weight: 500;
   line-height: 19.6px;
   text-align: left;
 }
-.mypost-wrap .mypost-box p {
+.mypost-wrap .mypost-box p:last-child {
   font-family: "Hyundai Sans Head";
   font-size: 32px;
   font-weight: 700;
@@ -408,7 +410,15 @@ button {
   padding-bottom: 0;
 }
 .tab-container.mycommunity-wrap .tab-head {
-  margin-bottom: 24px;
+  padding-bottom: 24px;
+}
+.tab-container.mypoint-tabwrap .tab-head {
+  padding-bottom: 24px;
+  border-bottom: 2px solid #787d80;
+  margin-bottom: 80px;
+}
+.tab-container.mypoint-tabwrap .mypost-contents.type3 {
+  margin-top: 80px;
 }
 .tab-container.mycommunity-wrap .tab-content {
   margin-top: 0;
@@ -695,7 +705,7 @@ button {
     border-top: 0;
   }
   .mymsission-wrap li {
-    padding: 28px 0;
+    padding: 20px 0;
     border-bottom: 1px solid #bbb;
     width: 100%;
     display: block;
@@ -721,11 +731,13 @@ button {
   .mymsission-date {
     margin-top: 8px;
   }
-  .mymsission-status {
+  .mymsission-status,
+  .mypoint-minus,
+  .mypoint-plus {
     position: absolute;
     width: auto;
     padding-right: 0;
-    bottom: 28px;
+    bottom: 20px;
     right: 0;
   }
   .mymsission-col {
@@ -866,5 +878,14 @@ button {
   .mypage-wrap .point-total p {
     font-size: 24px;
     line-height: 33.6px;
+  }
+  .tab-container.mypoint-tabwrap .tab-head {
+    margin-bottom: 60px;
+  }
+  .tab-container.mypoint-tabwrap .tab-head h4 {
+    padding-bottom: 0;
+  }
+  .tab-container.mypoint-tabwrap .mypost-contents.type3 {
+    margin-top: 60px;
   }
 }
