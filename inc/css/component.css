@@ -4774,6 +4774,7 @@ input:checked + .slider:before {
   padding: 8px 16px;
   border-radius: 22px;
   display: block;
+  cursor: pointer;
 }
 
 .tag-list-wrap [class^="tag-list"] li .tag-item:hover {
