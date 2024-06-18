@@ -3985,18 +3985,38 @@
           <h2 class="guideTit">Tag</h2>
           <div class="info">
             <div class="subSection">
-              <h3 class="guideSubTit">case 1 :: 컬러 - 기본(레드) </h3>
+              <h3 class="guideSubTit">case 1 :: 라디오, 컬러 - 기본(레드) </h3>
               <div class="ui-item">
                 <div class="tag-list-wrap">
-                  <ul class="tag-list">
-                    <li class="on"><a href="#" class="tag-item" aria-selected="true">#All</a>
+                  <ul class="tag-list"> 
+                    <li class="on">
+                      <input type="radio" id="radio1-1" name="radio1" checked>
+                      <label for="radio1-1" class="radio-label tag-item" data-check="true">#All</label>
                     </li>
-                    <li><a href="#" class="tag-item" aria-selected="false">#About_N</a></li>
-                    <li><a href="#" class="tag-item" aria-selected="false">#N</a></li>
-                    <li><a href="#" class="tag-item" aria-selected="false">#History</a></li>
-                    <li><a href="#" class="tag-item" aria-selected="false">#DNA</a></li>
-                    <li><a href="#" class="tag-item" aria-selected="false">#People</a></li>
-                    <li><a href="#" class="tag-item" aria-selected="false">#GWFoS</a></li>
+                    <li>
+                      <input type="radio" id="radio1-2" name="radio1">
+                      <label for="radio1-2" class="radio-label tag-item" data-check="false">#About_N</label>
+                    </li>
+                    <li>
+                      <input type="radio" id="radio1-3" name="radio1">
+                      <label for="radio1-3" class="radio-label tag-item" data-check="false">#N</label>
+                    </li>
+                    <li>
+                      <input type="radio" id="radio1-4" name="radio1">
+                      <label for="radio1-4" class="radio-label tag-item" data-check="false">#History</label>
+                    </li>
+                    <li>
+                      <input type="radio" id="radio1-5" name="radio1">
+                      <label for="radio1-5" class="radio-label tag-item" data-check="false">#DNA</label>
+                    </li>
+                    <li>
+                      <input type="radio" id="radio1-6" name="radio1">
+                      <label for="radio1-6" class="radio-label tag-item" data-check="false">#People</label>
+                    </li>
+                    <li>
+                      <input type="radio" id="radio1-7" name="radio1">
+                      <label for="radio1-7" class="radio-label tag-item" data-check="false">#GWFoS</label>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -4006,19 +4026,39 @@
               </div>
             </div>
             <div class="subSection">
-              <h3 class="guideSubTit">case 1 :: 컬러 - ty02(블랙) </h3>
+              <h3 class="guideSubTit">case 1 :: 라디오, 컬러 - ty02(블랙) </h3>
               <div class="ui-item">
                 <div class="tag-list-wrap">
                   <ul class="tag-list ty02">
                     <!-- ty02 : 블랙타입 -->
-                    <li class="on"><a href="#" class="tag-item" aria-selected="true">#All</a>
+                    <li class="on">
+                      <input type="radio" id="radio2-1" name="radio2" checked>
+                      <label for="radio2-1" class="radio-label tag-item" data-check="true">#All</label>
                     </li>
-                    <li><a href="#" class="tag-item" aria-selected="false">#About_N</a></li>
-                    <li><a href="#" class="tag-item" aria-selected="false">#N</a></li>
-                    <li><a href="#" class="tag-item" aria-selected="false">#History</a></li>
-                    <li><a href="#" class="tag-item" aria-selected="false">#DNA</a></li>
-                    <li><a href="#" class="tag-item" aria-selected="false">#People</a></li>
-                    <li><a href="#" class="tag-item" aria-selected="false">#GWFoS</a></li>
+                    <li>
+                      <input type="radio" id="radio2-2" name="radio2">
+                      <label for="radio2-2" class="radio-label tag-item" data-check="false">#About_N</label>
+                    </li>
+                    <li>
+                      <input type="radio" id="radio2-3" name="radio2">
+                      <label for="radio2-3" class="radio-label tag-item" data-check="false">#N</label>
+                    </li>
+                    <li>
+                      <input type="radio" id="radio2-4" name="radio2">
+                      <label for="radio2-4" class="radio-label tag-item" data-check="false">#History</label>
+                    </li>
+                    <li>
+                      <input type="radio" id="radio2-5" name="radio2">
+                      <label for="radio2-5" class="radio-label tag-item" data-check="false">#DNA</label>
+                    </li>
+                    <li>
+                      <input type="radio" id="radio2-6" name="radio2">
+                      <label for="radio2-6" class="radio-label tag-item" data-check="false">#People</label>
+                    </li>
+                    <li>
+                      <input type="radio" id="radio2-7" name="radio2">
+                      <label for="radio2-7" class="radio-label tag-item" data-check="false">#GWFoS</label>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -4031,34 +4071,52 @@
               <h3 class="guideSubTit">case 2 :: 복수 선택 (multi) _ 검색 필터</h3>
               <div class="ui-item">
                 <div class="tag-list-wrap">
-                  <ul class="tag-list multi">
+                  <ul class="tag-list multi"> <!-- checkbox일때, multi 클래스 추가 -->
                     <!-- multi : 체크박스 값 다중 선택 -->
-                    <li class="on"><a href="#" class="tag-item" aria-selected="true">#All</a>
+                    <li class="on">
+                      <input type="checkbox" id="checkbox1-1" name="checkbox1-1" checked>
+                      <label for="checkbox1-1" class="checkbox-label tag-item" data-check="true">#All</label>
                     </li>
-                    <li><a href="#" class="tag-item" aria-selected="false">#About_N</a></li>
-                    <li><a href="#" class="tag-item" aria-selected="false">#N</a></li>
-                    <li><a href="#" class="tag-item" aria-selected="false">#History</a></li>
-                    <li><a href="#" class="tag-item" aria-selected="false">#DNA</a></li>
-                    <li><a href="#" class="tag-item" aria-selected="false">#People</a></li>
-                    <li><a href="#" class="tag-item" aria-selected="false">#GWFoS</a></li>
-                    <li><a href="#" class="tag-item" aria-selected="false">#About_N</a></li>
-                    <li><a href="#" class="tag-item" aria-selected="false">#N</a></li>
-                    <li><a href="#" class="tag-item" aria-selected="false">#History</a></li>
-                    <li><a href="#" class="tag-item" aria-selected="false">#DNA</a></li>
-                    <li><a href="#" class="tag-item" aria-selected="false">#People</a></li>
-                    <li><a href="#" class="tag-item" aria-selected="false">#GWFoS</a></li>
-                    <li><a href="#" class="tag-item" aria-selected="false">#About_N</a></li>
-                    <li><a href="#" class="tag-item" aria-selected="false">#N</a></li>
-                    <li><a href="#" class="tag-item" aria-selected="false">#History</a></li>
-                    <li><a href="#" class="tag-item" aria-selected="false">#DNA</a></li>
-                    <li><a href="#" class="tag-item" aria-selected="false">#People</a></li>
-                    <li><a href="#" class="tag-item" aria-selected="false">#GWFoS</a></li>
-                    <li><a href="#" class="tag-item" aria-selected="false">#About_N</a></li>
-                    <li><a href="#" class="tag-item" aria-selected="false">#N</a></li>
-                    <li><a href="#" class="tag-item" aria-selected="false">#History</a></li>
-                    <li><a href="#" class="tag-item" aria-selected="false">#DNA</a></li>
-                    <li><a href="#" class="tag-item" aria-selected="false">#People</a></li>
-                    <li><a href="#" class="tag-item" aria-selected="false">#GWFoS</a></li>
+                    <li>
+                      <input type="checkbox" id="checkbox1-2" name="checkbox1-2">
+                      <label for="checkbox1-2" class="checkbox-label tag-item" data-check="false">#About_N</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" id="checkbox1-3" name="checkbox1-3">
+                      <label for="checkbox1-3" class="checkbox-label tag-item" data-check="false">#N</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" id="checkbox1-4" name="checkbox1-4">
+                      <label for="checkbox1-4" class="checkbox-label tag-item" data-check="false">#History</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" id="checkbox1-5" name="checkbox1-5">
+                      <label for="checkbox1-5" class="checkbox-label tag-item" data-check="false">#DNA</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" id="checkbox1-6" name="checkbox1-6">
+                      <label for="checkbox1-6" class="checkbox-label tag-item" data-check="false">#People</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" id="checkbox1-7" name="checkbox1-7">
+                      <label for="checkbox1-7" class="checkbox-label tag-item" data-check="false">#GWFoS</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" id="checkbox1-8" name="checkbox1-8">
+                      <label for="checkbox1-8" class="checkbox-label tag-item" data-check="false">#History</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" id="checkbox1-9" name="checkbox1-9">
+                      <label for="checkbox1-9" class="checkbox-label tag-item" data-check="false">#DNA</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" id="checkbox1-10" name="checkbox1-10">
+                      <label for="checkbox1-10" class="checkbox-label tag-item" data-check="false">#People</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" id="checkbox1-11" name="checkbox1-11">
+                      <label for="checkbox1-11" class="checkbox-label tag-item" data-check="false">#GWFoS</label>
+                    </li>
                   </ul>
                 </div>
               </div>

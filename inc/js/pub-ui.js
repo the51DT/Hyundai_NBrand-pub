@@ -81,7 +81,8 @@ var pubUi = {
     });
 
     // 태그 버튼 클릭시,
-    $(".tag-list li a").click(function (e) {
+    $(".tag-list li label").click(function (e) {
+      e.preventDefault();
       var tagList = $(this).closest(".tag-list-wrap").find(".tag-list");
       self.tagBtnEvent(e.target, tagList);
     });
@@ -429,30 +430,35 @@ var pubUi = {
     document.querySelector("#" + tabLabel).classList.add("on");
   },
   tagBtnEvent: function (e, list) {
-    var targetAriaSelected = e.ariaSelected;
+    var targetisChecked = e.dataset.check;
     var targetList = e.parentElement;
     var listItem = list.find("li");
 
     if (list.hasClass("multi")) {
-      if (targetAriaSelected == "true") {
-        e.setAttribute("aria-selected", "false");
+      if (targetisChecked == "true") {
+        e.dataset.check = false;
+        targetList.firstElementChild.checked = false;
         targetList.classList.remove("on");
       } else {
-        e.setAttribute("aria-selected", "true");
+        e.dataset.check = true;
+        targetList.firstElementChild.checked = true;
         targetList.classList.add("on");
       }
     } else {
       for (var i = 0; i < listItem.length; i++) {
         listItem[i].classList.remove("on");
-        listItem[i].childNodes[0].ariaSelected = "false";
+        listItem[i].children[0].checked = "false";
+        listItem[i].children[1].dataset.check = false;
       }
 
-      if (targetAriaSelected == "false") {
-        e.setAttribute("aria-selected", "true");
+      if (targetisChecked == "false") {
         targetList.classList.add("on");
+        targetList.children[0].checked = true;
+        targetList.children[1].dataset.check = true;
       } else {
-        e.setAttribute("aria-selected", "true");
         targetList.classList.add("on");
+        targetList.children[0].checked = true;
+        targetList.children[1].dataset.check = true;
       }
     }
   },

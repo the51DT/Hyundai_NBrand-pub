@@ -4698,6 +4698,9 @@ input:checked + .slider:before {
   background-image: url(../images/icon/icon-reset.svg);
   background-size: contain;
 }
+.search-wrap .search-input-box .btn-group .btn-reset:hover {
+  background-color: transparent;
+}
 
 .search-wrap .search-input-box .btn-group .btn-reset:active {
   color: #de3111;
@@ -4770,6 +4773,7 @@ input:checked + .slider:before {
   line-height: 23.8px;
   padding: 8px 16px;
   border-radius: 22px;
+  display: block;
 }
 
 .tag-list-wrap [class^="tag-list"] li .tag-item:hover {
@@ -4779,7 +4783,7 @@ input:checked + .slider:before {
 
 .tag-list-wrap [class^="tag-list"] li.on .tag-item {
   background-color: #de3111;
-  color: #fff;
+  color: #fff;  
 }
 
 .tag-list-wrap [class^="tag-list"][class*="ty02"] li.on .tag-item {
