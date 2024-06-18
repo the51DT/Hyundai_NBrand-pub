@@ -374,6 +374,32 @@ var pubUi = {
         },
       },
     });
+    var swiper7 = new Swiper(".editor-box-wrap .swiper-container", {
+      slidesPerView: 1,
+      spaceBetween: 80,
+      centeredSlides: true,
+      touchRatio: 0,
+      pagination: {
+        el: ".editor-box-wrap .swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".editor-box-wrap .swiper-button-next",
+        prevEl: ".editor-box-wrap .swiper-button-prev",
+      },
+      breakpoints: {
+        360: {
+          slidesPerView: 1,
+          spaceBetween: 12,
+        },
+        768: {
+          spaceBetween: 12,
+        },
+        1024: {
+          spaceBetween: 80,
+        },
+      },
+    });
   },
   videoBulletChk: function (targetSwiper) {
     var swiperActiveVideo = targetSwiper.find(
@@ -525,6 +551,8 @@ var pubUi = {
 $(document).ready(function () {
   pubUi.init();
   $(window).on("resize", pubUi.masonryLayout);
+  $(window).resize(() => DropdownFooter());
+  DropdownFooter();
   $(".clear-text")
     .siblings('input[type="text"]')
     .on("propertychange change keyup paste input", pubUi.textReset);
@@ -705,29 +733,26 @@ function selectOption(event, optionText) {
 
 // 기획서, 시안에 없어 임의로 다중 토글 적용
 function DropdownFooter() {
-  const dropdowns = document.querySelectorAll(
-    ".dropdown.inMobile .accor02-wrap"
-  );
-
-  dropdowns.forEach(function (dropdown) {
-    const footerBtn = dropdown.querySelector(".accor02-header");
-    const accor02List = dropdown.querySelector(
-      ".dropdown.inMobile .accor02-wrap ul"
-    );
-    const isMobile = window.matchMedia("(max-width: 1024px)");
-    const screenWidth = window.innerWidth;
-    if (screenWidth < 1024) {
-      footerBtn.addEventListener("click", function () {
-        accor02List.classList.toggle("dropdown-on");
+  if (window.innerWidth < 1024) {
+    // resize 때문에 off 한 번 해주고 click 이벤트
+    $(".dropdown.inMobile .accor02-wrap .accor02-header").off("click")
+    .on("click", function () {
+        const accor02List = $(this).siblings("ul");
+        accor02List.toggleClass("dropdown-on");
+        const accor02Wrap = $(this).closest(".accor02-wrap");
+        const expanded = accor02List.hasClass("dropdown-on") ? "true" : "false";
+        accor02Wrap.attr("aria-expanded", expanded);
       });
-    }
-  });
+  }
 }
-
-DropdownFooter();
 
 // 드롭다운(아코디언) 02 끝
 // 드롭다운(아코디언), 필터 컴포넌트 끝
+
+// 푸터 스크롤 탑
+$(".footer-top-btn").click(() => {
+  $("html, body").animate({ scrollTop: 0 }, 500);
+});
 
 // [Start] : hashTag 말줄임
 $(".card_type04 .card_con").each(function () {
