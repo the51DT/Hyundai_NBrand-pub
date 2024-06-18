@@ -1,38 +1,9 @@
 @charset "utf-8";
-/* 230814 add */
-@font-face {
-    font-family:'Hyundai Sans Light'; 
-    font-style:normal; 
-    font-weight:300; 
-    src:url("/dependency/fonts/HyundaiSansHeadKRLight.eot"); 
-    src:local("※"), url("/dependency/fonts/HyundaiSansHeadKRLight.eot?#iefix") format("embedded-opentype"), url("/dependency/fonts/HyundaiSansHeadKRLight.woff2") format("woff2"), url("/dependency/fonts/HyundaiSansHeadKRLight.woff") format("woff"), url("/dependency/fonts/HyundaiSansHeadKRLight.ttf") format("truetype"); 
-}
-/* //230814 add */
-@font-face {
-    font-family:'Hyundai Sans Regular'; 
-    font-style:normal; 
-    font-weight:300; 
-    src:url("/dependency/fonts/HyundaiSansHeadKRRegular.eot"); 
-    src:local("※"), url("/dependency/fonts/HyundaiSansHeadKRRegular.eot?#iefix") format("embedded-opentype"), url("/dependency/fonts/HyundaiSansHeadKRRegular.woff2") format("woff2"), url("/dependency/fonts/HyundaiSansHeadKRRegular.woff") format("woff"), url("/dependency/fonts/HyundaiSansHeadKRRegular.ttf") format("truetype"); 
-}
-@font-face {
-    font-family:'Hyundai Sans Medium'; 
-    font-style:normal; 
-    font-weight:400; 
-    src:url("/dependency/fonts/HyundaiSansHeadKRMedium.eot"); 
-    src:local("※"), url("/dependency/fonts/HyundaiSansHeadKRMedium.eot?#iefix") format("embedded-opentype"), url("/dependency/fonts/HyundaiSansHeadKRMedium.woff2") format("woff2"), url("/dependency/fonts/HyundaiSansHeadKRMedium.woff") format("woff"), url("/dependency/fonts/HyundaiSansHeadKRMedium.ttf") format("truetype"); 
-}
-@font-face {
-    font-family:'Hyundai Sans Bold'; 
-    font-style:normal; 
-    font-weight:600; 
-    src:url("/dependency/fonts/HyundaiSansHeadKRBold.eot"); 
-    src:local("※"), url("/dependency/fonts/HyundaiSansHeadKRBold.eot?#iefix") format("embedded-opentype"), url("/dependency/fonts/HyundaiSansHeadKRBold.woff2") format("woff2"), url("/dependency/fonts/HyundaiSansHeadKRBold.woff") format("woff"), url("/dependency/fonts/HyundaiSansHeadKRBold.ttf") format("truetype"); 
-}
+
 * {
     word-break:keep-all; 
     word-wrap:break-word; 
-    font-family:"Hyundai Sans Regular", "Malgun Gothic", sans-serif; 
+    font-family:"Hyundai Sans Text", Arial, Dotum, sans-serif; 
     -webkit-box-sizing:border-box; 
     -moz-box-sizing:border-box; 
     box-sizing:border-box; 
@@ -45,7 +16,7 @@ html, body, div, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, p, form, fields
 body {
     margin:0; 
     padding:0; 
-    font-family:"Hyundai Sans Regular", "Malgun Gothic", sans-serif; 
+    font-family:"Hyundai Sans Text", Arial, Dotum, sans-serif; 
     font-size:14px; 
     line-height:1.2; 
     color:#333; 
@@ -69,14 +40,14 @@ em, u, cite {font-style:normal;}
 a {color:#333; text-decoration:none;}
 a:hover, 
 a:focus {color:#333; text-decoration:none;}
-input {font-family:"Hyundai Sans Regular", "Malgun Gothic", sans-serif;}
+input {font-family:"Hyundai Sans Text", Arial, Dotum, sans-serif}
 label {font-weight:normal; margin:0;}
 strong {font-weight:normal;}
 button {
     background:transparent; 
     cursor:pointer; 
     vertical-align:middle; 
-    font-family:"Hyundai Sans Regular", "Malgun Gothic", sans-serif; 
+    font-family:"Hyundai Sans Head", Arial, Dotum, sans-serif; 
     font-size:14px; 
     line-height:1.2; 
     color:#333; 
@@ -637,10 +608,10 @@ sup {font-family:inherit; font-weight:inherit;}
     font-family:"Hyundai Sans Bold", "Malgun Gothic", sans-serif; 
     line-height:1.5; 
 }
-.quotation__quote--regular {font-family:"Hyundai Sans Regular", "Malgun Gothic", sans-serif;}/* 200924 add */
+.quotation__quote--regular {font-family:"Hyundai Sans Text", Arial, Dotum, sans-serif}/* 200924 add */
 .quotation__caption {margin-bottom:3.06vw; font-size:3.89vw; font-weight:normal;}
 .quotation__caption--item {display:block;}
-.quotation__author {font-size:3.89vw; font-family:"Hyundai Sans Bold", "Malgun Gothic", sans-serif;}
+.quotation__author {font-size:3.89vw; font-family:"Hyundai Sans Head", Arial, Dotum, sans-serif}
 @media all and (min-width: 1024px) {
     .quotation__quote {margin-bottom:4.14vw;}
     .quotation__quote {font-size:1.56vw;}
@@ -1624,7 +1595,7 @@ html, body, .container,
     border-radius:0; 
     background-color:#000; 
 }
-.swiper-pagination-bullet-active {opacity:1; background-color:#e63312;}
+.swiper-pagination-bullet-active {opacity:1; background-color:#e63312 !important;}
 .swiper-button-prev, 
 .swiper-button-next {
     z-index:9999; width:12.5vw; 

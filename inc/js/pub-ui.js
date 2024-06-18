@@ -374,6 +374,32 @@ var pubUi = {
         },
       },
     });
+    var swiper7 = new Swiper(".editor-box-wrap .swiper-container", {
+      slidesPerView: 1,
+      spaceBetween: 80,
+      centeredSlides: true,
+      touchRatio: 0,
+      pagination: {
+        el: ".editor-box-wrap .swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".editor-box-wrap .swiper-button-next",
+        prevEl: ".editor-box-wrap .swiper-button-prev",
+      },
+      breakpoints: {
+        360: {
+          slidesPerView: 1,
+          spaceBetween: 12,
+        },
+        768: {
+          spaceBetween: 12,
+        },
+        1024: {
+          spaceBetween: 80,
+        },
+      },
+    });
   },
   videoBulletChk: function (targetSwiper) {
     var swiperActiveVideo = targetSwiper.find(
