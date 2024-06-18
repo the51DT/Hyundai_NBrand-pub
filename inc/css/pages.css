@@ -2,7 +2,6 @@
 
 /* component.css */
 
-
 .kv-video-area {
   max-width: 1920px;
 }
@@ -219,7 +218,7 @@
 }
 .card-wrap-list .card-list {
   display: flex;
-  gap:4px;
+  gap: 4px;
   overflow-x: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -461,12 +460,12 @@
   left: 378px;
 }
 
-.evt-map-area li a {
+.evt-map-area li button {
   display: flex;
   align-items: center;
 }
 
-.evt-map-area li a .num {
+.evt-map-area li button .num {
   width: 53px;
   height: 53px;
   color: #fff;
@@ -478,7 +477,7 @@
   text-align: center;
 }
 
-.evt-map-area li a .tit {
+.evt-map-area li button .tit {
   background: #fff;
   padding: 16px;
   color: #000;
@@ -504,7 +503,7 @@
     margin: 0;
   }
   .next-race-box .swiper-card-type .swiper-button-prev {
-    left:80px;
+    left: 80px;
   }
 }
 
@@ -517,7 +516,7 @@
     padding-left: 80px;
   }
   .next-race-box .swiper-card-type .swiper-button-prev {
-    left:80px;
+    left: 80px;
   }
 }
 @media screen and (max-width: 1800px) {
@@ -854,18 +853,18 @@
     left: 30px;
   }
 
-  .evt-map-area li a .num {
+  .evt-map-area li button .num {
     width: 40px;
     height: 40px;
     padding: 5px;
   }
 
-  .evt-map-area li a .tit {
+  .evt-map-area li button .tit {
     padding: 12px 16px;
     font-size: 16px;
     line-height: 16px;
   }
-  .evt-map-area li a .tit .icon-right {
+  .evt-map-area li button .tit .icon-right {
     width: 16px;
     height: 16px;
   }
