@@ -354,6 +354,10 @@ input[type="radio"]:focus + label {
 [class*="txt-btn01"] {
   color: #000;
 }
+/* active 클래스 추가 시, 폰트 색상 변경 */
+[class*="txt-btn01 active"] {
+  color: #de3111;
+}
 [class*="txt-btn02"] {
   color: #fff;
 }
@@ -417,6 +421,10 @@ input[type="radio"]:focus + label {
 }
 .icon-right-wh {
   background: url(../../../inc/images/icon/icon-arrow01_right_white.svg);
+  background-size: contain;
+}
+.icon-right-red {
+  background: url(../../../inc/images/icon/icon-arrow01_right_red.svg);
   background-size: contain;
 }
 .icon-right.icon-disabled {
@@ -998,6 +1006,14 @@ input[type="radio"]:focus + label {
   column-gap: 1.5rem;
   grid-auto-rows: 1px;
 }
+.grid_masonry2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 44.25rem));
+  justify-content: center;
+  row-gap: 0;
+  column-gap: 1.5rem;
+  grid-auto-rows: 1px;
+}
 /* 트랙용 */
 @media screen and (max-width: 1280px) and (min-width: 1024px) {
   .grid_3.track_list {
@@ -1433,6 +1449,22 @@ input[type="radio"]:focus + label {
   padding: 20px 16px 0;
   background-color: #fff;
   text-align: left;
+}
+.card_type04 .card_state.card_mypage {
+  padding: 16px;
+}
+.card_type04 .card_state.card_mypage p {
+  font-family: "Hyundai Sans Head";
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  color: #fff;
+}
+.card_type04 .card_state.card_mypage.compelete p {
+  color: #000;
+}
+.card_type04 .card_state.card_mypage.end p {
+  color: #abb2b5;
 }
 /* 기획서 v1.0 : p.41, p.43 p.45 제목 최대 2줄 / 내용 최대 3줄  */
 .card_type04 .card_con p.tit-type03.fw-type03 {
@@ -4589,6 +4621,22 @@ p.text-num-chk {
 }
 .select-large .selectbox-trigger {
   width: 300px;
+}
+.select-type04 .selectbox-trigger {
+  padding: 0;
+  border-bottom: 0;
+  text-align: right;
+  min-width: auto;
+}
+.select-type04 .selectbox-trigger i > img {
+  width: 26px;
+  height: 26px;
+}
+.select-type04 .selectbox-trigger::after {
+  display: none;
+}
+.select-type04 .selectbox-options {
+  top: 36px;
 }
 /* toggle */
 .switch {

@@ -1637,6 +1637,13 @@ min-width : 1024 css
   .select-large .selectbox-trigger {
     width: 100%;
   }
+  .select-type04 .selectbox-trigger i > img {
+    width: 24px;
+    height: 24px;
+  }
+  .select-type04 .selectbox-options {
+    top: auto;
+  }
 
   /* search */
   .search-wrap::after {
