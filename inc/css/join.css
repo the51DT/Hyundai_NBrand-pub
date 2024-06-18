@@ -554,6 +554,60 @@
   font-weight: 700;
   line-height: 50px;
 }
+
+/* CM040802 */
+.mypage-inquiry-wrap .mypage-inquiry-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1.75rem;
+  border-bottom: 1px solid #BBBBBB;
+}
+.mypage-inquiry-wrap .mypage-inquiry-tit {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 140%
+}
+.mypage-inquiry-wrap .mypage-inquiry-date {
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 140%;
+}
+.mypage-inquiry-wrap .mypage-inquiry-state {
+  padding-right: 0.75rem;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 140%;
+  color: #777777;
+}
+.mypage-inquiry-wrap .mypage-inquiry-answer {
+  padding: 2.5rem;
+  background-color: #F0F0F0;
+}
+.mypage-inquiry-wrap .mypage-inquiry-qna {
+  margin-bottom: 1.25rem;
+  font-family: "Hyundai Sans Head";
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 140%;
+}
+.mypage-inquiry-wrap .mypage-inquiry-text {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 140%;
+}
+.mypage-inquiry-wrap .mypage-inquiry-area {
+  padding: 2.5rem;
+  border-bottom: 1px solid #000;
+}
+.mypage-inquiry-wrap .mypage-inquiry-btn {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
 /* 모바일 */
 @media screen and (max-width: 1023px) {
   .mypage-wrap h4 {
@@ -887,5 +941,36 @@
   }
   .tab-container.mypoint-tabwrap .mypost-contents.type3 {
     margin-top: 60px;
+  }
+
+  /* CM040802 */
+  .mypage-inquiry-wrap .mypage-inquiry-top {
+    align-items: end;
+    padding-bottom: 1.31rem;
+  }
+  .mypage-inquiry-wrap .mypage-inquiry-tit {
+    margin-bottom: 0.66rem;
+    font-size: 1.25rem;
+  }
+  .mypage-inquiry-wrap .mypage-inquiry-state {
+    padding-right: 0;
+  }
+  .mypage-inquiry-wrap .mypage-inquiry-answer {
+    padding: 1.75rem;
+  }
+  .mypage-inquiry-wrap .mypage-inquiry-qna {
+    margin-bottom: 0.5rem;
+  }
+  .mypage-inquiry-wrap .mypage-inquiry-area {
+    padding: 1.25rem 1.75rem 1.75rem 1.75rem;
+  }
+  .mypage-inquiry-wrap .mypage-inquiry-btn {
+    flex-wrap: wrap;
+  }
+  .mypage-inquiry-wrap .mypage-inquiry-btn button, a {
+    width: calc(50% - 0.25rem);
+  }
+  .mypage-inquiry-wrap .mypage-inquiry-btn .mypage-inquiry-btn-full {
+    width: 100%;
   }
 }
