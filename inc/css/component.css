@@ -1791,16 +1791,16 @@ input[type="radio"]:focus + label {
 }
 
 .swiper-status-wrap .btn-wrap .btn-play::before {
-  background-image: url(../inc/images/icon/icon-play_white.svg);
+  background-image: url(../../inc/images/icon/icon-play_white.svg);
 }
 .swiper-status-wrap .btn-wrap .btn-play.on::before {
-  background-image: url(../inc/images/icon/icon-pause_white.svg);
+  background-image: url(../../inc/images/icon/icon-pause_white.svg);
 }
 .swiper-status-wrap .btn-wrap .btn-sound::before {
-  background-image: url(../inc/images/icon/icon-soundon_white.svg);
+  background-image: url(../../inc/images/icon/icon-soundon_white.svg);
 }
 .swiper-status-wrap .btn-wrap .btn-sound.on::before {
-  background-image: url(../inc/images/icon/icon-soundoff_white.svg);
+  background-image: url(../../inc/images/icon/icon-soundoff_white.svg);
 }
 
 .swiper-status-wrap .swiper-pagination,
