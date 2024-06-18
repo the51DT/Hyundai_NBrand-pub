@@ -413,7 +413,7 @@ var pubUi = {
   },
   tabBtnEvent: function (e, tabContainer) {
     const target = e.target;
-    const tabLabel = target.ariaLabel;
+    const tabLabel = target.getAttribute("aria-controls");
     const tabList = tabContainer.find(".tabs li");
     const tabConts = tabContainer.find(".tab-content");
 
