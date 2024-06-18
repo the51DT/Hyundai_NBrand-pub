@@ -315,6 +315,12 @@ input[type="radio"]:focus + label {
   font-weight: 700;
   line-height: 16px;
 }
+[class*="btn-xs"] {
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+}
 [class*="sm-txt-btn"] {
   font-size: 14px;
   font-weight: 700;
