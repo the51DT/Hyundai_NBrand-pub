@@ -396,6 +396,7 @@
   font-weight: 500;
   line-height: 19.6px;
   text-align: left;
+  width: auto;
 }
 .mypost-wrap .mypost-box p:last-child {
   font-family: "Hyundai Sans Head";
@@ -929,9 +930,6 @@ td {
   }
   .mypage-wrap .tab-head .tabs-wrap .tabs li a {
     width: auto;
-  }
-  .mypage-wrap .tab-head .tabs-wrap .tabs li {
-    height: fit-content;
   }
   .tabs-wrap .tabs {
     margin-top: 0;
