@@ -1675,6 +1675,15 @@ input[type="radio"]:focus + label {
   font-weight: 700;
   line-height: 140%;
 }
+.card_video .card_tag {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1.25rem 0;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 140%;
+}
 .card_video .card_date {
   margin-top: 1.25rem;
   font-size: 0.75rem;
@@ -1701,12 +1710,11 @@ input[type="radio"]:focus + label {
 }
 
 .swiper-pagination-custom .swiper-pagination-bullet {
-  transition: width 0.5s ease-in;
+  transition: width 0.5s ease-in-out;
 }
 
 .swiper-pagination-custom .swiper-pagination-bullet-active {
   --time: 0;
-  /* width: calc(84px * (1 - var(--time))); */
   width: calc(var(--time));
   background: #de3111;
   opacity: 1;
