@@ -837,19 +837,19 @@
   z-index: 1000;
 }
 
-/* 좌우 슬라이드 버튼  */
+/* 팝업 좌우 슬라이드 버튼 (mypage)  */
 .popup-wrapper .wrap-navigation {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: calc(1765px - 160px);
+  max-width: calc(1765px - 40px);
   width: 100vw;
   margin: 0 auto;
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
-  top: 0;
-  height: 100vh;
+  height: auto;
+  top: 50%;
 }
 
 .popup-wrapper .wrap-navigation .modal-btn {
@@ -859,14 +859,14 @@
 
 .popup-wrapper .modal-btn.left {
   position: absolute;
-  left: 0;
+  left: 3%;
   top: 50%;
   transform: translateY(-50%);
 }
 
 .popup-wrapper .modal-btn.right {
   position: absolute;
-  right: 0;
+  right: 3%;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -877,15 +877,17 @@
   background-size: contain;
 }
 
-@media screen and (max-width: 1700px) {
-  .popup-wrapper .wrap-navigation {
-    max-width: calc(1440px - 160px);
-  }
-}
-
 @media screen and (max-width: 1280px) {
   .popup-wrapper .wrap-navigation {
-    max-width: calc(1200px - 160px);
+    max-width: 1200px;
+  }
+
+  .popup-wrapper .modal-btn.left {
+    left: 16px;
+  }
+
+  .popup-wrapper .modal-btn.right {
+    right: 16px;
   }
 }
 /*  */
@@ -945,7 +947,8 @@
 }
 
 .popup-wrapper .popup-footer {
-  border-top: 1px solid #787d80;
+  /* border-top: 1px solid #787d80; */
+  border-top: 1px solid #000;
   display: flex;
   padding: 24px 0px;
   flex-direction: column;
@@ -958,6 +961,7 @@
   width: 100%;
   background: #fff;
   z-index: 200;
+  position: relative;
 }
 .popup-wrapper .popup-footer.footer-no-pd {
   padding: 0;
@@ -2384,6 +2388,10 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
   }
   .popup-wrapper .wrap-navigation {
     display: flex;
+    width: 100%;
+    height: 100px;
+    top: 50%;
+    z-index: 5;
   }
   .popup-wrapper .wrap-navigation .modal-btn {
     width: 48px;
@@ -2433,14 +2441,18 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
 
   .popup-wrapper .popup-body {
     padding: 40px 24px 60px;
-    max-height: calc(100vh - 124px);
+    /* max-height: calc(100vh - 124px); */
+    max-height: calc(100vh - 130px);
     overflow-y: auto;
     display: grid;
     gap: 40px 0;
+    position: relative;
+    z-index: 2;
   }
 
   .popup-wrapper .popup-body.same-h-pc {
-    max-height: calc(100vh - 200px);
+    /* mission, reward popup in nfluencer */
+    max-height: calc(100vh - 256px);
   }
 
   .popup-wrapper .popup-body .m20 .wrap-label-reward .tit-type04 {
@@ -2645,14 +2657,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
   .popup-wrapper .popup-body-innerbox .wrap-checkmail .btn-wrap {
     padding: 8px 0;
   }
-  /*reward mobile */
-  /* .popup-wrapper.reward .popup-body {
-    max-height: 696px;
-  }
 
-  .popup-wrapper.reward .popup-body .wrap-label-reward {
-    gap: 24px 0;
-  } */
   .popup-wrapper .popup-footer .box-result {
     padding: 14px 24px;
   }
@@ -2699,7 +2704,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
     margin-bottom: 44px;
   }
 
-  /* */
+  /* 마이페이지 스위치 팝업*/
   .popup-wrapper .popup-body.for-switch .wrap-switch {
     display: grid;
     align-items: center;
@@ -2722,6 +2727,55 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
 
   .popup-wrapper .popup-body .wrap-notice-info .tit-type05 {
     font-size: 18px;
+  }
+
+  /* 마이페이지 팝업 셀렉트박스 */
+  .popup-wrapper
+    .popup-body
+    .popup-body-innerbox
+    .selectbox-wrap
+    .selectbox-trigger {
+    position: relative;
+  }
+
+  .popup-wrapper
+    .popup-body
+    .popup-body-innerbox
+    .selectbox-wrap
+    ul.selectbox-options {
+    position: fixed;
+    top: auto;
+    z-index: 3;
+    overflow-y: auto;
+    max-height: 300px;
+    bottom: 5.5rem;
+  }
+
+  .popup-wrapper
+    .popup-body
+    .popup-body-innerbox
+    .selectbox-wrap
+    ul.selectbox-options
+    li.moclose-btn {
+    padding: 18px 24px 18px 0;
+    border-bottom: 1px solid #d9d9d9;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .popup-wrapper
+    .popup-body
+    .popup-body-innerbox
+    .selectbox-wrap
+    ul.selectbox-options
+    li.option {
+    padding: 19px 48px 19px 24px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid #d9d9d9;
+    width: 100%;
   }
 
   /* 사이드 팝업 모바일 */
