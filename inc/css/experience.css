@@ -560,7 +560,7 @@
   align-items: center;
   width: 100%;
   height: auto;
-  background-color: #e6eff8;
+  background-color: #f0f0f0;
   aspect-ratio: 1920 / 694;
 }
 .team_top img {
@@ -2071,7 +2071,6 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
 
   /* EP010501P01 */
   .driver_top {
-    background-image: url("../../inc/images/N_Festival/driver/bg_driver-1440x960.png");
     aspect-ratio: 360 / 240;
   }
   .driver_top img {
