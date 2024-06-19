@@ -294,7 +294,7 @@ min-width : 1024 css
   .txt-list-wrap li .txt-box {
     width: 258px;
     height: 266px;
-    background-color: #e6eff8;
+    background-color: #F0F0F0;
     padding: 24px 16px 28px;
   }
   .txt-list-wrap li .num {
@@ -615,6 +615,9 @@ min-width : 1024 css
   }
   .card_video .card_title {
     font-size: 1.25rem;
+  }
+  .card_video .card_tag {
+    margin: 1rem 0;
   }
   .card_video .card_date {
     margin-top: 1rem;
@@ -1627,8 +1630,7 @@ min-width : 1024 css
   .selectbox-trigger2::after {
     position: absolute;
     content: "";
-    background: url("../../inc/images/icon/icon-arrow01_down.svg") center
-      no-repeat;
+    background: url("../../inc/images/icon/icon-arrow01_down.svg") center no-repeat;
     width: 16px;
     height: 16px;
     right: 8px;

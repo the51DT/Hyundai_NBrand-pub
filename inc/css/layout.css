@@ -539,7 +539,7 @@ body:-webkit-scrollbar {
   height: 16px;
 }
 .gnb__panel02 .link-area .link-btn .icon-link {
-  background: url(../../../inc/images/icon/icon-link.svg);
+  background: url(../../inc/images/icon/icon-link.svg);
   margin-top: -2px;
 }
 
@@ -562,6 +562,16 @@ body:-webkit-scrollbar {
 
 /* model-popup */
 .model-popup {
+  top: 50%;
+  left: 50%;
+  background: #fff;
+  width: calc(100% - 40px);
+  max-width: 960px;
+  z-index: 1001;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+.ajax-popup {
   top: 50%;
   left: 50%;
   background: #fff;
