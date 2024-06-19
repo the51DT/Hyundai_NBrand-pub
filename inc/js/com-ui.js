@@ -193,9 +193,12 @@ var NbrandUI = {
           $(".header__event-wrap").hide();
           $(".nav-wrap")
             .stop()
-            .animate({
-              height: gnb2depTarget.prop("scrollHeight") + 50,
-            });
+            .animate(
+              {
+                height: gnb2depTarget.prop("scrollHeight") + 50,
+              },
+              100
+            );
           setTimeout(function () {
             $(".nav-wrap")
               .stop()

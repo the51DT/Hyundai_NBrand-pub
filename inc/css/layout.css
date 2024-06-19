@@ -406,7 +406,8 @@ body:-webkit-scrollbar {
   flex: 0 0 50%;
   gap: 30px;
 }
-.gnb__tab02-wrap .gnb__tab02 {
+.gnb__tab02-wrap .gnb__tab02,
+.gnb__tab-cont03 .gnb__tab02-wrap .gnb__panel02 {
   width: 50%;
 }
 .gnb__tab02-wrap [class*="gnb__tab02-btn"] {
@@ -469,10 +470,18 @@ body:-webkit-scrollbar {
   max-height: calc(100vh - 234px);
   overflow-y: auto;
 }
-.gnb__panel02 [class*="panel2_2"] {
+.gnb__panel02 [class*="panel2_2"],
+.gnb__panel02 [class*="panel2_3"] {
   display: none;
 }
-.gnb__panel02 [class*="panel2_2"].on {
+.gnb__tab-cont01,
+.gnb__tab-cont03,
+.gnb__panel02 [class*="panel2_3"] {
+  min-height: 524px;
+}
+
+.gnb__panel02 [class*="panel2_2"].on,
+.gnb__panel02 [class*="panel2_3"].on {
   display: block;
   animation: fadein 0.3s;
   animation-fill-mode: forwards;
