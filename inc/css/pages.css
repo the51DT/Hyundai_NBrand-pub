@@ -5,7 +5,7 @@
   max-width: 100%;
 }
 .kv-video-area {
-  max-width: 1920px;
+  width: 100%;
 }
 /* common */
 .bg-lightblue {
@@ -16,6 +16,9 @@
 }
 .bg-gray {
   background-color: #f0f0f0;
+}
+.bg-black {
+  background-color: #000;
 }
 
 /* press - 공통 활용 */
@@ -63,6 +66,59 @@
 }
 
 /* about */
+.about .content-top {
+  padding-top: 99px;
+  padding-bottom: 99px;
+}
+
+.tit-btn-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 32px;
+}
+.tit-btn-wrap .tit {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 44.8px;
+  color: #555;
+  font-family: "Hyundai Sans Head";
+}
+.tit-btn-wrap .tit.on {
+  color: #de3111;
+}
+.tit-btn-wrap .tit:after {
+  content: '';
+  width: 100%;
+  height: 4px;
+  background-color: transparent;
+  display: block;
+}
+.tit-btn-wrap .tit.on:after { 
+  background-color: #de3111;
+}
+.tit-btn-wrap .tit:not(:last-child) {
+  margin-right: 40px;
+}
+
+.conts-key-visual.ty02 .text-area {
+  left: 60px;
+  bottom: 136px;
+  top:revert;
+  transform: translate(0,0);
+}
+.conts-key-visual.ty02 .text-area .tit {
+  text-align: left;
+}
+.conts-key-visual.ty02 .text-area .desc {
+  text-align: left;
+  font-family: "Hyundai Sans Head";
+}
+.conts-key-visual.ty02 .text-area button {
+  margin-top: 32px;
+}
+
+
 .about .history-box-wrap {
   padding-top: 160px;
   max-width: 1440px;
@@ -191,6 +247,13 @@
   flex: 1 1 586px;
 }
 
+.swiper-card-type .card_type01.bg-gray .card_rank,
+.swiper-card-type .card_type01.bg-gray .card_tit,
+.swiper-card-type .card_type01.bg-gray .card_info,
+.swiper-card-type .card_type01.bg-gray .card_subtit {
+  color:#000;
+}
+
 /* intro-race-box */
 .intro-race-box {
   padding-top: 120px;
@@ -221,6 +284,9 @@
 
 .info-table-box .info-head {
   padding: 40px;
+  background-color: #000;
+  color: #fff;
+
 }
 
 .info-table-box .info-head .title {
@@ -286,8 +352,8 @@
 }
 
 .info-car-box {
-  padding-top: 200px;
-  padding-bottom: 240px;
+  padding-top: 240px;
+  padding-bottom:  240px;
 }
 
 .info-car-box .img-area {
@@ -306,6 +372,7 @@
 }
 .info-car-box .wrap-list {
   max-width: 864px;
+  padding: 0 44px;
 }
 .info-car-box .wrap-list .__bottom .wrap-lists {
   padding: 32px 0;
@@ -581,6 +648,11 @@
 }
 /* mobile */
 @media screen and (max-width: 1023px) {
+  /* component : start */
+  .kv-video-area video {
+    max-height: 640px;
+  }
+  /* component : end */
   .evtGuide .content-item03 {
     padding: 80px 24px 100px 24px;
   }
@@ -619,7 +691,23 @@
   }
 
   .about .content-top {
-    padding: 139px 24px;
+    padding: 107px 24px;
+  }
+  .conts-key-visual.ty02 .text-area {
+    position: absolute;
+    left: 0;
+    bottom: 80px;
+    color: #fff;
+    padding: 0;
+    margin:0 24px;
+  }
+  .conts-key-visual.ty02 .text-area .desc {
+    font-family: "Hyundai Sans Text";
+  }
+
+  .tit-btn-wrap .tit {
+    font-size: 20px;
+    line-height: 28px;
   }
 
   .about .history-box-wrap {
@@ -776,8 +864,8 @@
   }
 
   .info-car-box {
-    padding-top: 120px;
-    padding-bottom: 160px;
+    padding-top: 152px;
+    padding-bottom: 152px;
   }
   .info-car-box .img-area {
     margin-top: 8px;
@@ -786,6 +874,9 @@
   .info-car-box .text-area {
     margin-top: 12px;
   }
+  .info-car-box .wrap-list {
+    padding:0;
+  } 
   .info-car-box .wrap-list .__bottom .wrap-lists {
     padding: 20px 0 !important;
   }
