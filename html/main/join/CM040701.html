@@ -131,7 +131,7 @@
                   </a>
                 </div>
               </div>
-              <div class="mypage-content mypage-eachbox type2">
+              <div class="mypage-content mypage-eachbox">
                 <!-- 타이틀 + 세팅 셀렉트 박스 -->
                 <div class="mypage-eachbox-top">
                   <h4>N Community</h4>
@@ -154,6 +154,53 @@
                   </div>
                   <div class="selectbox-overlay" style="display: none"></div>
                 </div>
+                <!-- 커뮤니티 기본 정보 -->
+                <div class="mypage-community-info">
+                  <div class="info-black">
+                    <div class="info-top">
+                      <img src="../../../inc/images/img/img_Nful_profile_manager.png" alt="커뮤니티 이미지" />
+                      <p class="community-name ellipsis2">i30N_Club Perfomance</p>
+                      <!-- 커뮤니티 링크 있을 경우 영역 노출 / 클릭 시 해당 링크 새창 연결 -->
+                      <a class="btn btn-only-icon-bg02-circle" href="#" target="_blank">
+                        <span class="visually-hidden">링크 이동 버튼</span>
+                        <span class="btn-icon20 icon-copylink" aria-hidden="true"></span>
+                      </a>
+                      <div class="btn-wrap mo-only">
+                        <a href="#" class="btn md-txt-btn02" target="_blank">
+                          N Community Rink
+                          <span class="btn-icon16 icon-right-wh" aria-hidden="true"></span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="info-btm">
+                      <dl>
+                        <div>
+                          <dt>Rank</dt>
+                          <dd>10</dd>
+                        </div>
+                        <div>
+                          <dt>Members</dt>
+                          <dd>2,830</dd>
+                        </div>
+                      </dl>
+                    </div>
+                  </div>
+                  <!-- 아코디언 -->
+                  <div class="mypage-community-des">
+                    <p class="des-toggle">
+                      Welcome!<br />
+                      aaaa i30 N Performance<br />
+                      You can join immediately<br />
+                      Actively participate in clubmissions<br />
+                      Club cafe in operation
+                    </p>
+                    <button type="button" class="btn btn-only-icon-bg03-square" id="ToggleDesBtn">
+                      <span class="visually-hidden">아코디언 버튼</span>
+                      <span class="btn-icon24 icon-down" aria-hidden="true"></span>
+                    </button>
+                  </div>
+                </div>
+                <!-- total points -->
                 <div class="mypage-eachbox-point">
                   <div class="point-total">
                     <h5>Total Points</h5>
@@ -178,19 +225,125 @@
                     </div>
                   </div>
                 </div>
+                <!-- tab -->
+                <div class="tab-container mypage-community-tab">
+                  <div class="tab-head ty03">
+                    <div class="tabs-wrap">
+                      <ul class="tabs" data-contents="탭카테고리">
+                        <li class="on">
+                          <a href="javascript:;" aria-controls="tab1-01" role="tab" aria-selected="true">Subscription status</a>
+                        </li>
+                        <li>
+                          <a href="javascript:;" aria-controls="tab1-02" role="tab" aria-selected="false">Activity status</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="tab-content on" id="tab1-01" role="tabpanel">
+                    <div class="selectbox-wrap select-type01">
+                      <div>
+                        <button class="selectbox-trigger txt-type03 fw-type03" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="정렬버튼">All</button>
+                        <ul class="selectbox-options" role="listbox" id="countrySelect" aria-hidden="true" style="display: none">
+                          <li class="moclose-btn" style="display: none">
+                            <button type="button" class="btn btn-only-icon">
+                              <span class="visually-hidden">close button</span>
+                              <span class="btn-icon24 icon-close" aria-hidden="true"></span>
+                            </button>
+                          </li>
+                          <li class="option txt-type03 fw-type03 active" role="option" aria-selected="true">All</li>
+                          <li class="option txt-type03 fw-type03" role="option">가입</li>
+                          <li class="option txt-type03 fw-type03" role="option">탈퇴</li>
+                          <li class="option txt-type03 fw-type03" role="option">가입 요청</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <ul class="mymsission-wrap">
+                      <li>
+                        <div class="mymsission-col">
+                          <p class="mymsission-title">Youngbizzi</p>
+                          <p class="mymsission-date">04.01.2024</p>
+                        </div>
+                        <p class="mymsission-flag">Master</p>
+                      </li>
+                      <li>
+                        <div class="mymsission-col">
+                          <p class="mymsission-title">i20n.mrs1step</p>
+                          <p class="mymsission-date">04.01.2024</p>
+                        </div>
+                        <p class="mymsission-flag gray-flag">Master</p>
+                      </li>
+                      <li>
+                        <div class="mymsission-col">
+                          <p class="mymsission-title">i20n.mrs1step</p>
+                          <p class="mymsission-date">04.01.2024</p>
+                        </div>
+                      </li>
+                    </ul>
+                    <!-- 정령 항목 알림 없을 경우 문구 -->
+                    <p class="tab-content-nodata">There is no history.</p>
+                  </div>
+                  <div class="tab-content" id="tab1-02" role="tabpanel">
+                    <div class="selectbox-wrap select-type01">
+                      <div>
+                        <button class="selectbox-trigger txt-type03 fw-type03" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="정렬버튼">All</button>
+                        <ul class="selectbox-options" role="listbox" id="countrySelect" aria-hidden="true" style="display: none">
+                          <li class="moclose-btn" style="display: none">
+                            <button type="button" class="btn btn-only-icon">
+                              <span class="visually-hidden">close button</span>
+                              <span class="btn-icon24 icon-close" aria-hidden="true"></span>
+                            </button>
+                          </li>
+                          <li class="option txt-type03 fw-type03 active" role="option" aria-selected="true">All</li>
+                          <li class="option txt-type03 fw-type03" role="option">일반 – N Community</li>
+                          <li class="option txt-type03 fw-type03" role="option">Missions - Nthusiasts</li>
+                          <li class="option txt-type03 fw-type03" role="option">Missions - N Community(회원)</li>
+                          <li class="option txt-type03 fw-type03" role="option">Missions - N Community(Master)</li>
+                          <li class="option txt-type03 fw-type03" role="option">Rewards - Nthusiasts</li>
+                          <li class="option txt-type03 fw-type03" role="option">Rewards - N Community(Master)</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <ul class="mymsission-wrap">
+                      <li>
+                        <p class="mymsission-type">Missions – N Community (Member)</p>
+                        <div class="mymsission-col">
+                          <p class="mymsission-title">Cheers to the Nürburgring 24H Race!</p>
+                          <p class="mymsission-date">04.01.2024</p>
+                        </div>
+                        <p class="mypoint-minus">-500</p>
+                      </li>
+                      <li>
+                        <p class="mymsission-type">Missions - Nthusiasts</p>
+                        <div class="mymsission-col">
+                          <p class="mymsission-title">Beauty shot!</p>
+                          <p class="mymsission-date">04.01.2024</p>
+                        </div>
+                        <p class="mypoint-plus">+300</p>
+                      </li>
+                      <li>
+                        <p class="mymsission-type">Rewards – N Community (Master)</p>
+                        <div class="mymsission-col">
+                          <p class="mymsission-title">Korea invitation ticket!</p>
+                          <p class="mymsission-date">04.01.2024</p>
+                        </div>
+                        <p class="mypoint-minus">-3,000</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
                 <!-- N Community 생성, 가입하지 않은 케이스 -->
                 <div class="mypage-nodata-box">
                   <p>
                     There is no N Community you have created or joined!<br class="pc-only" />Participate in various activities and missions unique to N Community.<br class="pc-only" />ou can also
                     <span class="color-red">receive rewards</span> exclusive to N Community.
                   </p>
-                  <div class="btn-wrap-type2">
+                  <div class="btn-wrap-type3">
                     <a href="../../main/experience/EP040401.html" class="btn btn-md-outline01">
-                      See N Community
+                      Go N Community
                       <span class="btn-icon16 icon-right" aria-hidden="true"></span>
                     </a>
                     <a href="../../main/experience/EP040401P01.html" class="btn btn-md-outline01">
-                      Go to N Community
+                      Create N Community
                       <span class="btn-icon16 icon-right" aria-hidden="true"></span>
                     </a>
                   </div>

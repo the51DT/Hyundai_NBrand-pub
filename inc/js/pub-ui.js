@@ -784,3 +784,10 @@ $(".unread-box .mynotice-btm>button.sm-txt-btn01").click(function () {
   $(this).replaceWith("<p class='mynotice-read'>" + "<i class='btn-icon16 icon-check' aria-hidden='true'>" + "</i>" + "Read" + "</p>");
 });
 // [End] : CM040101 > unread 버튼 클릭 시 배경색, read 문구 변경
+
+//[Start] : CM040701 > 아코디언 토글
+$("#ToggleDesBtn").click(function () {
+  $(".des-toggle").toggleClass("rotate");
+  $("#ToggleDesBtn").children(".icon-down").toggleClass("rotate");
+});
+//[End] : CM040701 > 아코디언 토글

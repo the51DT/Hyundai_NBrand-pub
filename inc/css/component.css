@@ -723,6 +723,9 @@ input[type="radio"]:focus + label {
 [class*="only-icon-bg02"] {
   background-color: #fff;
 }
+[class*="only-icon-bg03"] {
+  background-color: rgba(0, 0, 0, 0.2);
+}
 [class*="only-icon-bg01"].disabled {
   background-color: #000 !important;
   opacity: 50% !important;

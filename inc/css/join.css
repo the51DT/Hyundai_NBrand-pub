@@ -416,9 +416,7 @@
   padding-bottom: 24px;
 }
 .tab-container.mypoint-tabwrap .tab-head {
-  padding-bottom: 24px;
   border-bottom: 2px solid #787d80;
-  margin-bottom: 80px;
 }
 .tab-container.mypoint-tabwrap .mypost-contents.type3 {
   margin-top: 80px;
@@ -610,7 +608,94 @@
   gap: 0.5rem;
   margin-top: 1.5rem;
 }
-
+/* CM040701 */
+.mypage-community-info {
+  margin-top: -40px;
+}
+.mypage-community-info .info-black {
+  background-color: #000;
+}
+.mypage-community-info .info-top {
+  padding: 24px;
+  display: flex;
+  gap: 16px;
+  justify-content: flex-start;
+  align-items: center;
+}
+.mypage-community-info .community-name {
+  font-family: "Hyundai Sans Head";
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 50px;
+  color: #fff;
+}
+.mypage-community-info .info-top img {
+  width: 100px;
+  height: 100px;
+}
+.mypage-community-info .info-btm > dl {
+  display: flex;
+}
+.mypage-community-info .info-btm > dl > div {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 24px;
+}
+.mypage-community-info .info-btm > dl dt {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+  text-align: left;
+  color: #fff;
+}
+.mypage-community-info .info-btm > dl dd {
+  font-family: "Hyundai Sans Head";
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 50px;
+  text-align: right;
+  color: #fff;
+}
+.mypage-community-des {
+  padding: 24px;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: space-between;
+}
+.mypage-community-des .des-toggle {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22.4px;
+  max-height: 44px;
+  overflow: hidden;
+}
+.mypage-community-des .des-toggle.rotate {
+  max-height: 100%;
+  overflow: auto;
+}
+.mypage-community-des #ToggleDesBtn .icon-down.rotate {
+  transform: rotate(180deg);
+}
+.mypage-community-tab {
+  position: relative;
+}
+.mypage-community-tab .selectbox-wrap {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.mypage-wrap .tab-content-nodata {
+  font-family: "Hyundai Sans Head";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 25.2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 63.5px 0;
+}
 /* 모바일 */
 @media screen and (max-width: 1023px) {
   .mypage-wrap h4 {
@@ -675,6 +760,9 @@
     font-size: 24px;
     line-height: 33.6px;
   }
+  .mypage-wrap .mypage-info .btn.md-txt-btn01 {
+    width: fit-content;
+  }
   .mypage-wrap .content-item02 {
     padding: 0;
   }
@@ -713,6 +801,15 @@
   }
   .mypage-wrap .mypage-content.mypage-allbox {
     display: none !important;
+  }
+  .mypage-wrap .tab-head .tabs-wrap .tabs li a {
+    width: auto;
+  }
+  .mypage-wrap .tab-head .tabs-wrap .tabs li {
+    height: fit-content;
+  }
+  .tabs-wrap .tabs {
+    margin-top: 0;
   }
   /* CM040101 */
   .mynotice-wrap {
@@ -976,5 +1073,51 @@
   }
   .mypage-inquiry-wrap .mypage-inquiry-btn .mypage-inquiry-btn-full {
     width: 100%;
+  }
+  /* CM040701 */
+  .mypage-community-info .info-top a.btn-only-icon-bg02-circle {
+    display: none;
+  }
+  .mypage-community-info .btn.md-txt-btn02 {
+    width: fit-content;
+  }
+  .mypage-community-info {
+    margin-top: -32px;
+  }
+  .mypage-community-info .info-top {
+    padding: 20px 24px;
+    gap: 12px 16px;
+    flex-wrap: wrap;
+  }
+  .mypage-community-info .community-name {
+    font-family: "Hyundai Sans Head";
+    font-size: 24px;
+    line-height: 33.6px;
+    flex: 0 0 calc(100% - 80px);
+  }
+  .mypage-community-info .info-top img {
+    width: 64px;
+    height: 64px;
+  }
+  .mypage-community-info .info-btm > dl > div {
+    gap: 16px;
+    padding: 16px 24px;
+  }
+  .mypage-community-info .info-btm > dl dt {
+    font-size: 17px;
+    line-height: 23.88px;
+  }
+  .mypage-community-info .info-btm > dl dd {
+    font-size: 24px;
+    line-height: 33.6px;
+  }
+  .mypage-community-tab {
+    position: relative;
+  }
+  .mypage-community-tab .selectbox-wrap {
+    position: static;
+  }
+  .mypage-community-tab .mymsission-wrap {
+    margin-top: 20px;
   }
 }
