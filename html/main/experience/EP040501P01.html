@@ -1,18 +1,57 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name=" format-detection" content="telephone=no" />
+    <title>N브랜드 | Experience_Nfluencer_Hub</title>
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="../../../inc/css/swiper.min.css"
+    />
+    <link type="text/css" rel="stylesheet" href="../../../inc/css/common.css" />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="../../../inc/css/component.css"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="../../../inc/css/experience.css"
+    />
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name=" format-detection" content="telephone=no" />
-  <title>N브랜드 | Experience_Nfluencer_Hub</title>
-  <link type="text/css" rel="stylesheet" href="../../../inc/css/swiper.min.css" />
-  <link type="text/css" rel="stylesheet" href="../../../inc/css/common.css" />
-  <link type="text/css" rel="stylesheet" href="../../../inc/css/component.css" />
-  <link type="text/css" rel="stylesheet" href="../../../inc/css/experience.css" />
-</head>
-
+  <body>
+    <div class="skip-navigation">
+      <a href="#container">본문 바로가기</a>
+    </div>
+    <div class="wrap">
+      <header class="header-wrap">
+        <div class="header-cont">
+          <h1 class="logo">
+            <a href="/"
+              ><img
+                src="../inc/images/img/img_logo.svg"
+                loading="lazy"
+                alt="N브랜드"
+            /></a>
+          </h1>
+          <div class="sitemap-wrap">
+            <button
+              class="nav-btn"
+              data-label="전체 메뉴 닫기"
+              aria-label="전체 메뉴 열기"
+              aria-expanded="true"
+              aria-controls="navWrap"
+            >
+              <span class="line"></span>
+              <span class="line"></span>
+              <span class="line"></span>
+            </button>
+          </div>
 <body>
   <div class="skip-navigation">
     <a href="#container">본문 바로가기</a>
@@ -32,262 +71,319 @@
           </button>
         </div>
 
-        <div class="utile-wrap">
-          <div class="utile-cont">
-            <div class="utile-item">
-              <button class="lang-btn" data-txt="KR" data-label="현재 국문, 영문로 변경하기" aria-label="현재 영문, 국문으로 변경하기">
-                <span>EU</span>
-              </button>
-            </div>
-            <div class="utile-item02">
-              <button class="login-btn" title="로그인"></button>
+          <div class="utile-wrap">
+            <div class="utile-cont">
+              <div class="utile-item">
+                <button
+                  class="lang-btn"
+                  data-txt="KR"
+                  data-label="현재 국문, 영문로 변경하기"
+                  aria-label="현재 영문, 국문으로 변경하기"
+                >
+                  <span>EU</span>
+                </button>
+              </div>
+              <div class="utile-item02">
+                <button class="login-btn" title="로그인"></button>
 
-              <!-- 로그인 이후 -->
-              <!-- <button class="alarm-btn" title="미확인 알림"></button> -->
+                <!-- 로그인 이후 -->
+                <!-- <button class="alarm-btn" title="미확인 알림"></button> -->
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </header>
-    <!--  -->
-    <section id="container" class="content-wrap">
-      <div class="content-area">
-        <!-- 팝업 버튼 조건 .pop-open 가 있으면 동작 aria-controls 값과 동일한 id값 호출-->
-        <button id="popOpenBtn" onclick="NbrandUI.popOpen(this);" aria-controls="pop-page" aria-haspopup="true"
-          aria-expanded="false" title="팝업오픈">
-          EP040501P01 팝업 열기
-        </button>
-      </div>
-    </section>
-    <footer class="footer-wrap">
-      <div class="footer-area"></div>
-    </footer>
-  </div>
-  <!-- .popup가 있을시 종류에따라 클래스네이밍 변경 .model-popup .bottom-popup .side-popup -->
-  <div class="popup model-popup" id="pop-page" role="dialog" aria-modal="true" aria-labelledby="tit-type03">
-    <div class="popup-wrapper">
-      <!-- <p class="temp-header">Hub_Write a post ID : EP040201P02</p> -->
+      </header>
+      <!--  -->
+      <section id="container" class="content-wrap">
+        <div class="content-area">
+          <!-- 팝업 버튼 조건 .pop-open 가 있으면 동작 aria-controls 값과 동일한 id값 호출-->
+          <button
+            class="pop-open"
+            aria-controls="pop-page"
+            aria-haspopup="true"
+            aria-expanded="false"
+            title="팝업오픈"
+          >
+            EP040501P01 팝업 열기
+          </button>
+        </div>
+      </section>
+      <footer class="footer-wrap">
+        <div class="footer-area"></div>
+      </footer>
+    </div>
+    <!-- .popup가 있을시 종류에따라 클래스네이밍 변경 .model-popup .bottom-popup .side-popup -->
+    <div
+      class="popup model-popup"
+      id="pop-page"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="tit-type04"
+      data-pop="pop-page"
+    >
+      <div class="popup-wrapper">
+        <!-- <p class="temp-header">Hub_Write a post ID : EP040201P02</p> -->
 
-      <div class="popup-header">
-        <h3 class="tit-type03">Rewards</h3>
-      </div>
+        <div class="popup-header">
+          <h3 class="tit-type03">Rewards</h3>
+        </div>
 
-      <div class="popup-body same-h-pc">
-        <div class="wrap-popup-profile">
-          <div class="box-profile-img">
-            <img src="../../../inc/images/img/img_Nful_profile_manager.png" alt="프로필 이미지" />
-          </div>
-          <div class="box-profile-txt">
-            <p class="txt-type04 nickname">Hyundai N</p>
-            <!-- 
+        <div class="popup-body same-h-pc">
+          <div class="wrap-popup-profile">
+            <div class="box-profile-img">
+              <img
+                src="../../../inc/images/img/img_Nful_profile_manager.png"
+                alt="프로필 이미지"
+              />
+            </div>
+            <div class="box-profile-txt">
+              <p class="txt-type04 nickname">Hyundai N</p>
+              <!-- 
                 소속 그룹 텍스트
                 <p class="txt-type04 groupname">Hyundai N</p> -->
-          </div>
-        </div>
-        <!---->
-        <div class="m20">
-          <div class="wrap-label-reward">
-            <div class="label-box">
-              <p class="txt-type02">N Community Master</p>
             </div>
-            <p class="tit-type04">Multi lanturn</p>
           </div>
-
-          <div class="wrap-image-reward">
-            <img src="../../../inc/images/img/img_popup_reward.png" alt="팝업 내 리워드 이미지" />
-          </div>
-
-          <div class="wrap-desc">
-            <p class="txt-type03">
-              This is an outdoor collection for those who need your own
-              healing time outside of their daily lives. Enjoy emotional life
-              with a variety of products with practical and sturdy recycling
-              materials.
-            </p>
-          </div>
-
-          <div class="wrap-hashtag">
-            <div class="hashtags">
-              <a href="" class="txt-type04">#testminiature</a>
-              <a href="" class="txt-type04">#newcar</a>
-              <a href="" class="txt-type04">#ceremony</a>
-            </div>
-
-            <p class="txt-type04 wrap-date">03.28.2024</p>
-          </div>
-
-          <!-- 코멘트, 바텀시트 시작: 사용자 모드에서는 노출 (관리자 모드 노출 x) -->
-          <div class="wrap-form textarea">
-            <p class="title-comment">
-              Comments <span class="num-comments">1,234</span>
-            </p>
-            <div class="inner-textarea-comment">
-              <textarea placeholder="Please enter comment content"></textarea>
-              <button type="button" class="btn btn-lg-primary01">Register</button>
-            </div>
-            <div class="wrap-form-bottom comment-type02">
-              <div class="comment-type02-1">
-                <p>
-                  <span class="text-comment">
-                    * You are legally responsible for the comments you write.
-                  </span>
-                </p>
-                <p>
-                  <span class="text-comment">
-                    * If you post content that infringes on rights, is
-                    abusive, disparaging, defamatory, hateful, etc., you may
-                    be subject to sanctions in accordance with the operating
-                    policy and related laws.
-                  </span>
-                </p>
+          <!---->
+          <div class="m20">
+            <div class="wrap-label-reward">
+              <div class="label-box">
+                <p class="txt-type02">N Community Master</p>
               </div>
-              <p class="text-num-chk">
-                <span>0 / 500</span>
+              <p class="tit-type04">Multi lanturn</p>
+            </div>
+
+            <div class="wrap-image-reward">
+              <img
+                src="../../../inc/images/img/img_popup_reward.png"
+                alt="팝업 내 리워드 이미지"
+              />
+            </div>
+
+            <div class="wrap-desc">
+              <p class="txt-type03">
+                This is an outdoor collection for those who need your own
+                healing time outside of their daily lives. Enjoy emotional life
+                with a variety of products with practical and sturdy recycling
+                materials.
               </p>
             </div>
-          </div>
-          <div class="wrap-bottom-comment">
-            <div class="wrap-comment">
-              <div class="box-userinfo">
-                <div class="wrap-popup-profile">
-                  <div class="box-profile-img">
-                    <img src="../../../inc/images/img/img_Nful_profile_manager.png" alt="프로필 이미지" />
-                  </div>
-                  <div class="box-profile-txt">
-                    <div>
-                      <p class="txt-type04 nickname">i20n.mrs1step</p>
-                      <p class="txt-type04 groupname">i30N_Club</p>
-                    </div>
 
-                    <button type="button" class="btn btn-only-icon-bg01-circle">
-                      <span class="visually-hidden">close button</span>
-                      <span class="btn-icon16 icon-close-wh" aria-hidden="true"></span>
-                    </button>
+            <div class="wrap-hashtag">
+              <div class="hashtags">
+                <a href="" class="txt-type04">#testminiature</a>
+                <a href="" class="txt-type04">#newcar</a>
+                <a href="" class="txt-type04">#ceremony</a>
+              </div>
+
+              <p class="txt-type04 wrap-date">03.28.2024</p>
+            </div>
+
+            <!-- 코멘트, 바텀시트 시작: 사용자 모드에서는 노출 (관리자 모드 노출 x) -->
+            <div class="wrap-form textarea">
+              <p class="title-comment">
+                Comments <span class="num-comments">1,234</span>
+              </p>
+              <div class="inner-textarea-comment">
+                <textarea placeholder="Please enter comment content"></textarea>
+                <button type="button" class="btn btn-lg-primary01">
+                  Register
+                </button>
+              </div>
+              <div class="wrap-form-bottom comment-type02">
+                <div class="comment-type02-1">
+                  <p>
+                    <span class="text-comment">
+                      * You are legally responsible for the comments you write.
+                    </span>
+                  </p>
+                  <p>
+                    <span class="text-comment">
+                      * If you post content that infringes on rights, is
+                      abusive, disparaging, defamatory, hateful, etc., you may
+                      be subject to sanctions in accordance with the operating
+                      policy and related laws.
+                    </span>
+                  </p>
+                </div>
+                <p class="text-num-chk">
+                  <span>0 / 500</span>
+                </p>
+              </div>
+            </div>
+            <div class="wrap-bottom-comment">
+              <div class="wrap-comment">
+                <div class="box-userinfo">
+                  <div class="wrap-popup-profile">
+                    <div class="box-profile-img">
+                      <img
+                        src="../../../inc/images/img/img_Nful_profile_manager.png"
+                        alt="프로필 이미지"
+                      />
+                    </div>
+                    <div class="box-profile-txt">
+                      <div>
+                        <p class="txt-type04 nickname">i20n.mrs1step</p>
+                        <p class="txt-type04 groupname">i30N_Club</p>
+                      </div>
+
+                      <button
+                        type="button"
+                        class="btn btn-only-icon-bg01-circle"
+                      >
+                        <span class="visually-hidden">close button</span>
+                        <span
+                          class="btn-icon16 icon-close-wh"
+                          aria-hidden="true"
+                        ></span>
+                      </button>
+                    </div>
                   </div>
+                </div>
+
+                <div class="box-comment">
+                  <p>
+                    Hyundai Motor Company passes the extreme rally with ease.
+                  </p>
+                </div>
+
+                <div class="box-date">
+                  <p class="txt-type05">03.13.2024</p>
+
+                  <span class="btn-icon20 icon-trans" aria-hidden="true"></span>
                 </div>
               </div>
 
-              <div class="box-comment">
-                <p>
-                  Hyundai Motor Company passes the extreme rally with ease.
-                </p>
-              </div>
-
-              <div class="box-date">
-                <p class="txt-type05">03.13.2024</p>
-
-                <span class="btn-icon20 icon-trans" aria-hidden="true"></span>
-              </div>
-            </div>
-
-            <div class="wrap-comment">
-              <div class="box-userinfo">
-                <div class="wrap-popup-profile">
-                  <div class="box-profile-img">
-                    <img src="../../../inc/images/img/img_Nful_profile_manager.png" alt="프로필 이미지" />
-                  </div>
-                  <div class="box-profile-txt">
-                    <div>
-                      <p class="txt-type04 nickname">i20n.mrs1step</p>
+              <div class="wrap-comment">
+                <div class="box-userinfo">
+                  <div class="wrap-popup-profile">
+                    <div class="box-profile-img">
+                      <img
+                        src="../../../inc/images/img/img_Nful_profile_manager.png"
+                        alt="프로필 이미지"
+                      />
                     </div>
+                    <div class="box-profile-txt">
+                      <div>
+                        <p class="txt-type04 nickname">i20n.mrs1step</p>
+                      </div>
 
-                    <button type="button" class="btn btn-only-icon-bg01-circle">
-                      <span class="visually-hidden">close button</span>
-                      <span class="btn-icon16 icon-close-wh" aria-hidden="true"></span>
-                    </button>
+                      <button
+                        type="button"
+                        class="btn btn-only-icon-bg01-circle"
+                      >
+                        <span class="visually-hidden">close button</span>
+                        <span
+                          class="btn-icon16 icon-close-wh"
+                          aria-hidden="true"
+                        ></span>
+                      </button>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <div class="box-comment">
-                <p>
-                  Okay hear me out!!! Hyundai release an N version of the
-                  sonata that’s AWD beautiful dual exhaust tips like an RS7
-                  and produces at least 450HP twin turbo V6 or an 2.5L
-                  turbocharged tuned right? The sonata N-line is cool but I
-                  feel like a Sonata N needs to make face. Okay hear me out!!!
-                  Hyundai release an N version of the sonata that’s AWD
-                  beautiful dual exhaust tips like an RS7 and produces at
-                  least 450HP twin turbo V6 or an 2.5L turbocharged tuned
-                  right? The sonata N-line is cool but I feel like a Sonata N
-                  needs to make face.
-                </p>
-              </div>
+                <div class="box-comment">
+                  <p>
+                    Okay hear me out!!! Hyundai release an N version of the
+                    sonata that’s AWD beautiful dual exhaust tips like an RS7
+                    and produces at least 450HP twin turbo V6 or an 2.5L
+                    turbocharged tuned right? The sonata N-line is cool but I
+                    feel like a Sonata N needs to make face. Okay hear me out!!!
+                    Hyundai release an N version of the sonata that’s AWD
+                    beautiful dual exhaust tips like an RS7 and produces at
+                    least 450HP twin turbo V6 or an 2.5L turbocharged tuned
+                    right? The sonata N-line is cool but I feel like a Sonata N
+                    needs to make face.
+                  </p>
+                </div>
 
-              <div class="box-date">
-                <p class="txt-type05">03.13.2024</p>
+                <div class="box-date">
+                  <p class="txt-type05">03.13.2024</p>
 
-                <span class="btn-icon20 icon-trans" aria-hidden="true"></span>
+                  <span class="btn-icon20 icon-trans" aria-hidden="true"></span>
+                </div>
               </div>
             </div>
+            <!-- // .m20 -->
           </div>
-          <!-- // .m20 -->
-        </div>
-      </div>
-
-      <div class="popup-footer footer-no-pd">
-        <div class="box-result pd-sm bg-red">
-          <p class="popup-tit-lg">300p</p>
-          <p class="txt-type03">03.24.2024 ~ 03.31.2024</p>
         </div>
 
-        <div class="box-confirm">
-          <div class="wrap-reaction-icon">
-            <div>
-              <button type="button" class="btn btn-only-icon-notbg">
-                <span class="visually-hidden">heart button</span>
-                <span class="btn-icon20 icon-heart" aria-hidden="true"></span>
-              </button>
-              <p class="txt-type03 fw-type03">98</p>
-            </div>
-            <div>
-              <button type="button" class="btn btn-only-icon-notbg">
-                <span class="visually-hidden">search button</span>
-                <span class="btn-icon20 icon-search" aria-hidden="true"></span>
-              </button>
-              <p class="txt-type03 fw-type03">1,234</p>
-            </div>
-
-            <div>
-              <button type="button" class="btn btn-only-icon-notbg">
-                <span class="visually-hidden">share button</span>
-                <span class="btn-icon20 icon-share" aria-hidden="true"></span>
-              </button>
-            </div>
-
-            <div>
-              <button type="button" class="btn btn-only-icon-notbg">
-                <span class="visually-hidden">Translation button</span>
-                <span class="btn-icon20 icon-trans" aria-hidden="true"></span>
-              </button>
-            </div>
+        <div class="popup-footer footer-no-pd">
+          <div class="box-result pd-sm bg-red">
+            <p class="popup-tit-lg">300p</p>
+            <p class="txt-type03">03.24.2024 ~ 03.31.2024</p>
           </div>
 
-          <button type="button" class="btn btn-lg-primary01">
-            Claim your reward
-            <span class="btn-icon20 icon-right-wh" aria-hidden="true"></span>
+          <div class="box-confirm">
+            <div class="wrap-reaction-icon">
+              <div>
+                <button type="button" class="btn btn-only-icon-notbg">
+                  <span class="visually-hidden">heart button</span>
+                  <span class="btn-icon20 icon-heart" aria-hidden="true"></span>
+                </button>
+                <p class="txt-type03 fw-type03">98</p>
+              </div>
+              <div>
+                <button type="button" class="btn btn-only-icon-notbg">
+                  <span class="visually-hidden">search button</span>
+                  <span
+                    class="btn-icon20 icon-search"
+                    aria-hidden="true"
+                  ></span>
+                </button>
+                <p class="txt-type03 fw-type03">1,234</p>
+              </div>
+
+              <div>
+                <button type="button" class="btn btn-only-icon-notbg">
+                  <span class="visually-hidden">share button</span>
+                  <span class="btn-icon20 icon-share" aria-hidden="true"></span>
+                </button>
+              </div>
+
+              <div>
+                <button type="button" class="btn btn-only-icon-notbg">
+                  <span class="visually-hidden">Translation button</span>
+                  <span class="btn-icon20 icon-trans" aria-hidden="true"></span>
+                </button>
+              </div>
+            </div>
+
+            <button type="button" class="btn btn-lg-primary01">
+              Claim your reward
+              <span class="btn-icon20 icon-right-wh" aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+        <!-- 팝업 좌우 슬라이드 버튼 -->
+        <div class="wrap-navigation">
+          <button type="button" class="btn btn-only-icon modal-btn left">
+            <span class="visually-hidden">popup left button</span>
+            <span class="btn-icon36 icon-left" aria-hidden="true"></span>
+          </button>
+
+          <button type="button" class="btn btn-only-icon modal-btn right">
+            <span class="visually-hidden">popup right button</span>
+            <span class="btn-icon36 icon-right" aria-hidden="true"></span>
+          </button>
+        </div>
+        <div class="btn-wrap">
+          <!-- pop-close 해당 팝업 닫기 -->
+          <button type="button" class="btn btn-only-icon-notbg pop-close">
+            <span class="visually-hidden">close button</span>
+            <span class="btn-icon36 icon-close" aria-hidden="true"></span>
           </button>
         </div>
       </div>
-      <div class="btn-wrap">
-        <!-- pop-close 해당 팝업 닫기 -->
-        <button type="button" class="btn btn-only-icon-notbg pop-close">
-          <span class="visually-hidden">close button</span>
-          <span class="btn-icon36 icon-close" aria-hidden="true"></span>
-        </button>
-      </div>
     </div>
-  </div>
-  <!-- //model-popup -->
+    <!-- //model-popup -->
 
-  <script type="text/javascript" src="../../../inc/js/jquery-3.7.1.slim.min.js"></script>
-  <script type="text/javascript" src="../../../inc/js/swiper.min.js"></script>
-  <script type="text/javascript" src="../../../inc/js/plugins.js"></script>
-  <script type="text/javascript" src="../../../inc/js/com-ui.js"></script>
-  <script type="text/javascript" src="../../../inc/js/pub-ui.js"></script>
-  <script>
-
-  </script>
-</body>
-
+    <script
+      type="text/javascript"
+      src="../../../inc/js/jquery-3.7.1.slim.min.js"
+    ></script>
+    <script type="text/javascript" src="../../../inc/js/swiper.min.js"></script>
+    <script type="text/javascript" src="../../../inc/js/plugins.js"></script>
+    <script type="text/javascript" src="../../../inc/js/com-ui.js"></script>
+    <script type="text/javascript" src="../../../inc/js/pub-ui.js"></script>
+  </body>
 </html>
