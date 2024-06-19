@@ -2512,8 +2512,14 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
     min-width: 100%;
   }
 
+  /*
+  .popup-wrapper.onlyTxt .popup-body.pd-24: 모바일 팝업 패딩(40px 24px),
+  .popup-wrapper.onlyTxt .popup-body: 모바일 이중팝업의 패딩(40px) */
   .popup-wrapper.onlyTxt .popup-body {
     padding: 40px;
+  }
+  .popup-wrapper.onlyTxt .popup-body.pd-24 {
+    padding: 40px 24px;
   }
 
   .popup-wrapper.onlyTxt .popup-body p.tit-type05 {
@@ -2532,24 +2538,19 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
     margin-bottom: 0;
   }
 
-  /* CM040701P01 popup3-2 이중팝업 시작 */
-
-  .popup-wrapper.onlyTxt .popup-body.pd-24 {
-    padding: 40px 24px;
-  }
   .popup-wrapper.onlyTxt .popup-body .popup-body-innerbox p.tit-type05.desc {
     font-weight: 500;
     font-size: 14px;
   }
 
+  /* .onlyTxt 내의 푸터는 기볹 */
   .popup-wrapper.onlyTxt .popup-footer {
-    padding: 0 40px 40px;
-    border-top: 0;
+    /* padding: 0 40px 40px;
+    border-top: 0; */
     left: 0;
   }
 
-  .popup-wrapper.onlyTxt .popup-footer.type01 {
-    /*  */
+  .popup-wrapper.onlyTxt .popup-footer.borderline {
     padding: 16px 24px;
     border-top: 1px solid #000;
   }
@@ -2561,23 +2562,24 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
     gap: 8px 0;
   }
 
-  .popup-wrapper.onlyTxt .popup-footer.with-multi-btn {
+  /* 폼 요소가 없는 팝업: 푸터의 버튼이 2개일 때 */
+  .popup-wrapper.onlyTxt .popup-footer.wrap-multi-btn {
     padding: 16px 24px;
     display: flex;
   }
 
-  .popup-wrapper.onlyTxt .popup-footer.with-multi-btn .btn-wrap.multi-btn {
+  .popup-wrapper.onlyTxt .popup-footer.wrap-multi-btn .btn-wrap.multi-btn {
     width: 100%;
     flex-direction: row;
     gap: 8px;
   }
 
   .popup-wrapper.onlyTxt
-    .popup-footer.with-multi-btn
+    .popup-footer.wrap-multi-btn
     .btn-wrap.multi-btn
     button[class*="btn-lg"],
   .popup-wrapper.onlyTxt
-    .popup-footer.with-multi-btn
+    .popup-footer.wrap-multi-btn
     .btn-wrap.multi-btn
     button[class*="btn-md"] {
     width: 100%;
