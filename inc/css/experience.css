@@ -840,6 +840,16 @@
 /* 좌우 슬라이드 버튼  */
 .popup-wrapper .wrap-navigation {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: calc(1765px - 160px);
+  width: 100vw;
+  margin: 0 auto;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  height: 100vh;
 }
 
 .popup-wrapper .wrap-navigation .modal-btn {
@@ -849,19 +859,35 @@
 
 .popup-wrapper .modal-btn.left {
   position: absolute;
-  left: -339px;
+  left: 0;
   top: 50%;
+  transform: translateY(-50%);
 }
 
 .popup-wrapper .modal-btn.right {
   position: absolute;
-  right: -346px;
+  right: 0;
   top: 50%;
+  transform: translateY(-50%);
 }
 
-.popup-wrapper a.modal-btn span.icon-left {
+.popup-wrapper .modal-btn.left:hover [class*="icon-left"],
+.popup-wrapper .modal-btn.left:active [class*="icon-left"] {
+  background: url(../../../inc/images/icon/icon-arrow01_left_white.svg);
+  background-size: contain;
 }
 
+@media screen and (max-width: 1700px) {
+  .popup-wrapper .wrap-navigation {
+    max-width: calc(1440px - 160px);
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .popup-wrapper .wrap-navigation {
+    max-width: calc(1200px - 160px);
+  }
+}
 /*  */
 
 .popup-wrapper .popup-header {
@@ -2359,18 +2385,33 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
   .popup-wrapper .wrap-navigation {
     display: flex;
   }
-  .popup-wrapper .wrap-navigation a.modal-btn {
+  .popup-wrapper .wrap-navigation .modal-btn {
     width: 48px;
     height: 48px;
     border-radius: 0;
-    opacity: 0.5;
+    background: rgba(0, 0, 0, 0.5);
   }
-  .popup-wrapper .wrap-navigation a.modal-btn.left {
+  .popup-wrapper .wrap-navigation .modal-btn.left {
     left: 0;
   }
 
-  .popup-wrapper .wrap-navigation a.modal-btn.right {
+  .popup-wrapper .wrap-navigation .modal-btn.right {
     right: 0;
+  }
+  .popup-wrapper .wrap-navigation .modal-btn .icon-left,
+  .popup-wrapper .wrap-navigation .modal-btn .icon-right {
+    width: 24px;
+    height: 24px;
+  }
+
+  .popup-wrapper .wrap-navigation .modal-btn .icon-left {
+    background: url(../../../inc/images/icon/icon-arrow01_left_white.svg);
+    background-size: contain;
+  }
+
+  .popup-wrapper .wrap-navigation .modal-btn .icon-right {
+    background: url(../../../inc/images/icon/icon-arrow01_right_white.svg);
+    background-size: contain;
   }
 
   .popup-wrapper .btn-wrap button.btn-only-icon-notbg.pop-close.pop-page {
