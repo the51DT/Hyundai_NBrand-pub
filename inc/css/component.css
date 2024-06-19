@@ -427,7 +427,7 @@ input[type="radio"]:focus + label {
   background: url(../../inc/images/icon/icon-arrow01_right_red.svg);
   background-size: contain;
 }
-.icon-right.icon-disabled {
+[class*="icon-right"].icon-disabled {
   background: url(../../inc/images/icon/icon-arrow01_right_disabled.svg);
   background-size: contain;
 }

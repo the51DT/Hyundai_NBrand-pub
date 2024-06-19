@@ -225,6 +225,10 @@
 .join_form .wrap-form input[type="text"] {
   margin-top: 0.75rem;
 }
+.join_form_wrap .btn.disabled {
+    background-color: #e6e6e6;
+    color: #a1a1a1;
+  }
 
 /* CM050101 */
 .join_form_wrap .join_form:has(.join_form_checkbox) {
