@@ -559,22 +559,22 @@ $(document).ready(function () {
 });
 
 // [Start] : selectbox 컴포넌트
-$(".selectbox-trigger").click(function (event) {
+function handleSelectboxClick(event) {
   event.stopPropagation();
-  var $options = $(this).siblings(".selectbox-options");
+  var $trigger = $(event.target).closest(".selectbox-trigger");
+  var $options = $trigger.siblings(".selectbox-options");
+
   $(".selectbox-options").not($options).hide().attr("aria-hidden", "true");
+  $(".selectbox-trigger").not($trigger).removeClass("active").attr("aria-expanded", "false");
+
   $options.toggle().attr("aria-hidden", function (i, attr) {
     return attr === "true" ? "false" : "true";
   });
-  $(".selectbox-wrap>div .selectbox-trigger")
-    .not(this)
-    .removeClass("active")
-    .attr("aria-expanded", "false");
-  $(this)
-    .toggleClass("active")
-    .attr("aria-expanded", function () {
+
+  $trigger.toggleClass("active").attr("aria-expanded", function () {
       return $(this).hasClass("active") ? "true" : "false";
     });
+
   $options.css({ right: "0" });
 
   $(window)
@@ -589,10 +589,7 @@ $(".selectbox-trigger").click(function (event) {
         }
         $(".selectbox-options li.moclose-btn button").click(function (event) {
           event.stopPropagation();
-          $(this)
-            .closest(".selectbox-wrap>div")
-            .find(".selectbox-trigger")
-            .removeClass("active"); // close 버튼 클릭 시 모든 tigger의 active가 제거
+          $(this).closest(".selectbox-wrap>div").find(".selectbox-trigger").removeClass("active"); // close 버튼 클릭 시 모든 trigger의 active가 제거
           $(this).closest(".selectbox-options").hide();
           $(".selectbox-overlay").hide();
         });
@@ -602,21 +599,21 @@ $(".selectbox-trigger").click(function (event) {
       }
     })
     .resize();
-});
+}
 
-$(".option").click(function (event) {
+function handleOptionClick(event) {
   event.stopPropagation();
-  var $selectboxWrap = $(this).closest(".selectbox-wrap");
-  var selectedText = $(this).text();
+  var $selectboxWrap = $(event.target).closest(".selectbox-wrap");
+  var selectedText = $(event.target).text();
   // select-type04 클래스(아이콘만 존재하는 경우의 타입)가 없는 경우에만 버튼 텍스트 변경
   if (!$selectboxWrap.hasClass("select-type04")) {
-    $(this).closest(".selectbox-options").hide().attr("aria-hidden", "true").siblings(".selectbox-trigger").text(selectedText);
+    $(event.target).closest(".selectbox-options").hide().attr("aria-hidden", "true").siblings(".selectbox-trigger").text(selectedText);
   } else {
-    $(this).closest(".selectbox-options").hide().attr("aria-hidden", "true");
+    $(event.target).closest(".selectbox-options").hide().attr("aria-hidden", "true");
   }
-  $(this).closest(".selectbox-options").find(".option").not(this).removeClass("active").attr("aria-selected", "false");
-  $(this).addClass("active").attr("aria-selected", "true");
-  $(this).closest(".selectbox-wrap>div").find(".selectbox-trigger").removeClass("active").attr("aria-expanded", "false");
+  $(event.target).closest(".selectbox-options").find(".option").not(event.target).removeClass("active").attr("aria-selected", "false");
+  $(event.target).addClass("active").attr("aria-selected", "true");
+  $(event.target).closest(".selectbox-wrap>div").find(".selectbox-trigger").removeClass("active").attr("aria-expanded", "false");
   $(window)
     .resize(function () {
       if (window.innerWidth <= 1023) {
@@ -625,7 +622,7 @@ $(".option").click(function (event) {
       }
     })
     .resize();
-});
+}
 // [End] : selectbox 컴포넌트
 // 드롭다운(아코디언), 필터 컴포넌트 시작
 const dropdownBtns = document.querySelectorAll(".wrap-dropdown-selected");
