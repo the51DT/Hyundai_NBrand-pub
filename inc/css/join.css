@@ -615,6 +615,120 @@
   gap: 0.5rem;
   margin-top: 1.5rem;
 }
+
+/* CM041001 */
+.mypage-withdrawal-tit {
+  font-family: "Hyundai Sans Head";
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 125%;
+}
+.mypage-withdrawal-subtit {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 140%;
+}
+.mypage-withdrawal-list {
+  margin-top: 2rem;
+}
+.mypage-withdrawal-list li + li {
+  margin-top: 2rem;
+}
+.mypage-withdrawal-li-tit {
+  position: relative;
+  padding-left: 1.88rem;
+  font-family: "Hyundai Sans Head";
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 140%;
+}
+.mypage-withdrawal-li-tit::before {
+  content: "";
+  position: absolute;
+  left: 0.75rem;
+  top: 0.688rem;
+  width: 0.375rem;
+  height: 0.375rem;
+  background-color: #000;
+  border-radius: 100rem;
+}
+.mypage-withdrawal-li-text {
+  margin-top: 0.5rem;
+  padding-left: 1.88rem;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 140%;
+}
+.mypage-withdrawal-table {
+  position: relative;
+  margin-top: 2rem;
+  border-top: 2px solid #787d80;
+}
+.mypage-withdrawal-table thead {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: polygon(0 0, 0 0, 0 0);
+}
+.mypage-withdrawal-table tbody tr {
+  border-bottom: 1px solid #bbbbbb;
+}
+.mypage-withdrawal-table tbody tr th,
+td {
+  padding: 1.81rem 0.75rem;
+}
+.mypage-withdrawal-table tbody tr th {
+  font-family: "Hyundai Sans Head";
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 140%;
+}
+.mypage-withdrawal-table tbody tr td {
+  padding-left: 2.25rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 140%;
+}
+.mypage-withdrawal-checkbox-wrap {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid #000;
+  font-family: "Hyundai Sans Head";
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 140%;
+}
+.mypage-withdrawal-checkbox {
+  position: relative;
+}
+.mypage-withdrawal-checkbox label {
+  display: flex;
+  gap: 0.5rem;
+}
+.mypage-withdrawal-checkbox input + label::before {
+  content: "";
+  display: block;
+  flex-shrink: 0;
+  padding-top: 0.12rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url(../images/icon/icon-checkbox.svg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.mypage-withdrawal-checkbox input:checked + label::before {
+  background-image: url(../images/icon/icon-checkbox-checked-black.svg);
+}
+.mypage-withdrawal-wrap .btn-wrap-default {
+  margin-top: 1.5rem;
+}
+
 /* CM040701 */
 .mypage-community-info {
   margin-top: -40px;
@@ -1082,6 +1196,44 @@
   .mypage-inquiry-wrap .mypage-inquiry-btn .mypage-inquiry-btn-full {
     width: 100%;
   }
+
+  /* CM041001 */
+  .mypage-withdrawal-tit {
+    font-size: 1.5rem;
+    line-height: 140%;
+  }
+  .mypage-withdrawal-li-tit {
+    padding-left: 0.75rem;
+    font-size: 1.125rem;
+  }
+  .mypage-withdrawal-li-tit::before {
+    left: 0;
+    top: 0.56rem;
+    width: 0.25rem;
+    height: 0.25rem;
+    border-radius: 0;
+  }
+  .mypage-withdrawal-li-text {
+    padding-left: 0.75rem;
+  }
+  .mypage-withdrawal-table tbody tr th {
+    display: block;
+    margin-bottom: 0.5rem;
+    padding: 1.75rem 0.75rem 0;
+    font-size: 1.125rem;
+  }
+  .mypage-withdrawal-table tbody tr td {
+    display: block;
+    padding: 0 0.75rem 1.75rem;
+    font-size: 1.0625rem;
+  }
+  .mypage-withdrawal-checkbox-wrap {
+    font-size: 1.125rem;
+  }
+  .mypage-withdrawal-checkbox input + label::before {
+    padding-top: 0;
+  }
+
   /* CM040701 */
   .mypage-community-info .info-top a.btn-only-icon-bg02-circle {
     display: none;
