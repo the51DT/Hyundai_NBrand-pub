@@ -363,7 +363,7 @@
   font-weight: 400;
   line-height: 19.6px;
 }
-.mynotice-wrap .mynotice-box .btn-only-icon-notbg .icon-close {
+.mynotice-wrap .mynotice-box .btn-only-icon-notbg {
   position: absolute;
   top: 29px;
   right: 20px;
@@ -822,6 +822,9 @@ td {
 .mypage-mt40 {
   margin-top: 40px;
 }
+.mypage-wrap .grid_masonry + .btn-wrap-default {
+  margin-top: 80px;
+}
 /* 모바일 */
 @media screen and (max-width: 1023px) {
   .mypage-wrap h4 {
@@ -952,7 +955,7 @@ td {
     font-size: 14px;
     line-height: 19.6px;
   }
-  .mynotice-wrap .mynotice-box .btn-only-icon-notbg .icon-close {
+  .mynotice-wrap .mynotice-box .btn-only-icon-notbg {
     position: absolute;
     top: 16px;
     right: 16px;
@@ -1295,5 +1298,8 @@ td {
   }
   .mypage-mt40 .mymsission-wrap li:first-child {
     padding-top: 20px;
+  }
+  .mypage-wrap .grid_masonry + .btn-wrap-default {
+    margin-top: 44px;
   }
 }
