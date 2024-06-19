@@ -412,6 +412,26 @@ var pubUi = {
         },
       },
     });
+    var swiper8 = new Swiper(".configurator_list_swiper", {
+      slidesPerView: "auto",
+      spaceBetween: 322,
+      centeredSlides: true,
+      navigation: {
+        nextEl: ".configurator_list_swiper .swiper-button-next",
+        prevEl: ".configurator_list_swiper .swiper-button-prev",
+      },
+      breakpoints: {
+        360: {
+          slidesPerView: 1,
+        },
+        768: {
+          spaceBetween: 12,
+        },
+        1024: {
+          spaceBetween: 80,
+        },
+      },
+    });
   },
   videoBulletChk: function (targetSwiper) {
     var swiperActiveVideo = targetSwiper.find(
