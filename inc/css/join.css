@@ -546,7 +546,7 @@
 .mypage-subtit-box {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 24px;
+  margin-bottom: 24px;
 }
 .mypost-wrap + .mypost-contents {
   margin-top: 40px;
@@ -822,7 +822,9 @@ td {
 .mypage-mt40 {
   margin-top: 40px;
 }
-.mypage-wrap .grid_masonry + .btn-wrap-default {
+.mypage-wrap .grid_masonry + .btn-wrap-default,
+.mymsission-wrap + .btn-wrap-default,
+.mynotice-wrap + .btn-wrap-default {
   margin-top: 80px;
 }
 /* 모바일 */
@@ -1299,7 +1301,9 @@ td {
   .mypage-mt40 .mymsission-wrap li:first-child {
     padding-top: 20px;
   }
-  .mypage-wrap .grid_masonry + .btn-wrap-default {
+  .mypage-wrap .grid_masonry + .btn-wrap-default,
+  .mymsission-wrap + .btn-wrap-default,
+  .mynotice-wrap + .btn-wrap-default {
     margin-top: 44px;
   }
 }
