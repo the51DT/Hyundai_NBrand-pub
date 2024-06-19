@@ -444,6 +444,7 @@
   line-height: 33.6px;
   width: auto;
   text-align: left;
+  word-break: break-all;
 }
 .mymsission-date {
   font-size: 12px;
@@ -807,7 +808,7 @@ td {
   top: 0;
   right: 0;
 }
-.mypage-wrap .tab-content-nodata {
+.mypage-wrap .mypage-content-nodata {
   font-family: "Hyundai Sans Head";
   font-size: 18px;
   font-weight: 700;
@@ -816,6 +817,9 @@ td {
   justify-content: center;
   align-items: center;
   margin: 63.5px 0;
+}
+.mypage-mt40 {
+  margin-top: 40px;
 }
 /* 모바일 */
 @media screen and (max-width: 1023px) {
@@ -1002,6 +1006,8 @@ td {
     line-height: 28px;
     width: auto;
     text-align: left;
+  }
+  .mymsission-type + .mymsission-col .mymsission-title {
     margin-top: 8px;
   }
   .mymsission-date {
@@ -1121,8 +1127,14 @@ td {
   .mypage-nodata-box {
     gap: 20px;
   }
-  .mypage-eachbox-top + .mypage-nodata-box {
+  .mypage-content.mypage-eachbox .mypage-eachbox-top + .mypage-nodata-box {
+    padding: 4px 0 0;
+  }
+  .mypage-content.mypage-eachbox.type2 .mypage-eachbox-top + .mypage-nodata-box {
     padding: 12px 0 0;
+  }
+  .mypage-content.mypage-eachbox.type2 .mypage-eachbox-top + .inquiry-nodata {
+    padding: 50.5px 0 10.5px;
   }
   .mypost-wrap + .mypost-contents.type2 {
     margin-top: 16px;
@@ -1279,5 +1291,11 @@ td {
   }
   .mypage-community-tab .mymsission-wrap {
     margin-top: 20px;
+  }
+  .mypage-mt40 .mymsission-wrap {
+    border-top: 1px solid #787d80;
+  }
+  .mypage-mt40 .mymsission-wrap li:first-child {
+    padding-top: 20px;
   }
 }
