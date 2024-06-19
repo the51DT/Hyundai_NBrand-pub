@@ -616,6 +616,9 @@ min-width : 1024 css
   .card_video .card_title {
     font-size: 1.25rem;
   }
+  .card_video .card_tag {
+    margin: 1rem 0;
+  }
   .card_video .card_date {
     margin-top: 1rem;
   }

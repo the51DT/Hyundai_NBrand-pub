@@ -225,6 +225,10 @@
 .join_form .wrap-form input[type="text"] {
   margin-top: 0.75rem;
 }
+.join_form_wrap .btn.disabled {
+  background-color: #e6e6e6;
+  color: #a1a1a1;
+}
 
 /* CM050101 */
 .join_form_wrap .join_form:has(.join_form_checkbox) {
@@ -235,6 +239,9 @@
 .join_form_wrap.wrap-form.label-tit-type02 label.required span:after {
   content: "*";
   right: unset;
+}
+.join_form_checkbox {
+  position: relative;
 }
 .join_form_checkbox label {
   display: flex;
@@ -562,13 +569,13 @@
   justify-content: space-between;
   align-items: center;
   padding-bottom: 1.75rem;
-  border-bottom: 1px solid #BBBBBB;
+  border-bottom: 1px solid #bbbbbb;
 }
 .mypage-inquiry-wrap .mypage-inquiry-tit {
   margin-bottom: 0.5rem;
   font-size: 1.5rem;
   font-weight: 700;
-  line-height: 140%
+  line-height: 140%;
 }
 .mypage-inquiry-wrap .mypage-inquiry-date {
   font-size: 0.75rem;
@@ -584,7 +591,7 @@
 }
 .mypage-inquiry-wrap .mypage-inquiry-answer {
   padding: 2.5rem;
-  background-color: #F0F0F0;
+  background-color: #f0f0f0;
 }
 .mypage-inquiry-wrap .mypage-inquiry-qna {
   margin-bottom: 1.25rem;
@@ -1068,7 +1075,8 @@
   .mypage-inquiry-wrap .mypage-inquiry-btn {
     flex-wrap: wrap;
   }
-  .mypage-inquiry-wrap .mypage-inquiry-btn button, a {
+  .mypage-inquiry-wrap .mypage-inquiry-btn button,
+  a {
     width: calc(50% - 0.25rem);
   }
   .mypage-inquiry-wrap .mypage-inquiry-btn .mypage-inquiry-btn-full {

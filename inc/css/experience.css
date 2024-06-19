@@ -740,6 +740,14 @@
   font-weight: 700;
   line-height: 125%;
 }
+.video_thumnail_wrap .video_desc {
+  position: static;
+  transform: translateX(0);
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 25.2px;
+}
 .video_thumnail_wrap .video_date {
   position: absolute;
   left: 50%;
@@ -2276,6 +2284,17 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
     font-size: 1.5rem;
     line-height: 140%;
   }
+
+  .video_thumnail_wrap .video_desc {
+    position: absolute;
+    top:60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 44.8px;
+  }
+
   .video_thumnail_wrap .video_date {
     position: static;
     transform: translateX(0);

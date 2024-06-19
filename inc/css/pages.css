@@ -1,7 +1,9 @@
 @charset "utf-8";
 
 /* component.css */
-
+.swiper-card-type.ty04Swiper {
+  max-width: 100%;
+}
 .kv-video-area {
   max-width: 1920px;
 }
@@ -14,6 +16,50 @@
 }
 .bg-gray {
   background-color: #f0f0f0;
+}
+
+/* press - 공통 활용 */
+.conts-box-wrap.ty03 {
+  display: block;
+}
+.conts-box-wrap.ty03 article {
+  padding-top:160px;
+  padding-bottom: 0;
+  max-width: 1440px;
+  margin:0 auto;
+  border-bottom: 0;
+}
+.conts-box-wrap.ty03 article.mg0 {
+  max-width: 100%;
+}
+
+.conts-box-wrap.ty03 article.mg0 .txt-wrap {
+  max-width: 1440px;
+  margin:0 auto;
+}
+
+.conts-box-wrap.ty03 article .txt-wrap.ty02 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.conts-box-wrap.ty03 .txt-wrap .tit {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 70px;
+}
+.conts-box-wrap.ty03 .txt-wrap .desc {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+.conts-box-wrap.ty03 .txt-wrap.ty02 .desc {
+  margin-top: 0;
+}
+
+.conts-box-wrap.ty03 article .img-wrap {
+  margin-top:60px;
 }
 
 /* about */
