@@ -104,6 +104,18 @@ var pubUi = {
     $(".btn-wrap.plus").click(function (e) {
       pubUi.evtZoomInOut("plus");
     });
+
+    $(".tit-btn-wrap button").click(function (e) {
+      $(".tit-btn-wrap button").attr("aria-selected", "false");
+      $(".tit-btn-wrap button").removeClass("on");
+      
+      $(this).addClass("on");
+      if ($(this).attr("aria-selected") == "false") {
+        $(this).attr("aria-selected", "true");
+      } else {
+        $(this).attr("aria-selected", "false");
+      }
+    });
   },
   swiperSlideEvent: function () {
     var self = this;

@@ -10,7 +10,6 @@
 
   <link type="text/css" rel="stylesheet" href="../../../inc/css/swiper.min.css" />
   <link type="text/css" rel="stylesheet" href="../../../inc/css/common.css" />
-  <link type="text/css" rel="stylesheet" href="../../../inc/css/experience.css" />
 </head>
 
 <body>
@@ -22,6 +21,11 @@
           <p class="tit-type03 fw-type03">
             The biggest one-make race in Korea
           </p>
+          <div class="tit-btn-wrap">
+            <button type="button" aria-selected="true" class="tit on">KOREA</button>
+            <button type="button" aria-selected="false" class="tit">CHINA</button>
+            <button type="button" aria-selected="false" class="tit">USA</button>
+          </div>
         </section>
         <div class="dropdown">
           <button class="wrap-dropdown-selected dropdown-btn" aria-haspopup="true" aria-expanded="false">
@@ -82,60 +86,23 @@
           </ul>
         </div>
 
-        <div class="conts-key-visual">
+        <div class="conts-key-visual ty02">
           <div class="img-area">
-            <img src="../../../inc/images/content/key-visual-about01.svg" alt="키비주얼 이미지" />
+            <img class="img_pc pc-only" alt="pc 비주얼 이미지" src="../../../inc/images/content/key-visual-about01.svg" aria-hidden="true">
+            <img class="img_mo mo-only" alt="mobile 비주얼 이미지" src="../../../inc/images/content/key-visual-about01.svg" aria-hidden="true">
           </div>
-          <!-- <div class="text-area align-ctr">
-              <h3 class="tit">KOREA<br>Hyundai N Festival</h3>
-              <p class="desc">Korea's largest one-make race that overcomes speed limitations and challenges new possibilities.</p>
-            </div> -->
+          <div class="text-area">
+            <h3 class="tit">KOREA<br>Hyundai N Festival</h3>
+            <p class="desc">Korea's largest one-make race that overcomes speed limitations and challenges new possibilities.</p>
+            <button type="button" class="btn btn-md-primary02">
+              Learn More
+              <span class="btn-icon16 icon-right" aria-hidden="true"></span>
+            </button>
+          </div>
+          
         </div>
 
-        <section class="content-item02">
-          <div class="intro-box">
-            <div class="tab-container">
-              <div class="tab-head ty03">
-                <!--ty02 : 모바일 2줄노출 처리용-->
-                <div class="tabs-wrap">
-                  <ul class="tabs" data-contents="탭카테고리">
-                    <li class="on">
-                        <a href="javascript:;" aria-controls="tab2-01" role="tab" aria-selected="true">KOREA</a>
-                    </li>
-                    <li>
-                        <a href="javascript:;" aria-controls="tab2-02" role="tab" aria-selected="false">CHINA</a>
-                    </li>
-                    <li>
-                        <a href="javascript:;" aria-controls="tab2-03" role="tab" aria-selected="false">USA</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="tab-content on" id="tab2-01" role="tabpanel">
-                <div class="conts-box-wrap">
-                  <div class="bg-img-wrap">
-                    <h3 class="tit">KOREA<br />Hyundai N Festival</h3>
-                    <p class="desc">
-                      Korea's largest one-make race that overcomes speed
-                      limitations and challenges new possibilities.
-                    </p>
-                    <div class="more_btn">
-                      <button type="button" class="btn">Learn More</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="tab-content" id="tab2-02" role="tabpanel">
-                <div class="conts-box-wrap">CHINA 탭 컨텐츠 수급필요</div>
-              </div>
-              <div class="tab-content" id="tab2-03" role="tabpanel">
-                <div class="conts-box-wrap">USA 탭 컨텐츠 수급필요</div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="content-item03 bg-skyblue">
+        <section class="content-item02 bg-gray">
           <div class="conts-box-wrap ty02">
             <div class="history-box-wrap">
               <h2 class="tit contitle-type01 fw-type03">
