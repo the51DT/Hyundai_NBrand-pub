@@ -20,12 +20,12 @@
 }
 .configurator_header_left {
   display: flex;
-  gap: 2.02rem;
 }
 .configurator_header_left img {
+  margin-right: 2.02rem;
   height: 2rem;
 }
-.configurator_header_left p {
+.configurator_header_tit {
   flex-shrink: 0;
   font-size: 1.5rem;
   font-weight: 700;
@@ -150,13 +150,11 @@
   .configurator_header {
     padding: 1rem 1.5rem 0.94rem;
   }
-  .configurator_header_left {
-    gap: 1.27rem;
-  }
   .configurator_header_left img {
+    margin-right: 1.27rem;
     height: 1.50019rem;
   }
-  .configurator_header_left p {
+  .configurator_header_tit {
     font-size: 1.25rem;
   }
   .configurator_swiper_wrap {
