@@ -1155,8 +1155,8 @@ td {
   .mypage-subtit-box + .mymsission-wrap {
     margin-top: 4px;
   }
-  .btn-wrap-type1,
-  .btn-wrap-type2 {
+  .mypage-nodata-box .btn-wrap-type1,
+  .mypage-nodata-box .btn-wrap-type2 {
     width: 100%;
   }
 
