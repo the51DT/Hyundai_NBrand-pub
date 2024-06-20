@@ -413,22 +413,15 @@ var pubUi = {
       },
     });
     var swiper8 = new Swiper(".configurator_list_swiper", {
-      slidesPerView: "auto",
-      spaceBetween: 322,
+      slidesPerView: 1,
       centeredSlides: true,
       navigation: {
         nextEl: ".configurator_list_swiper .swiper-button-next",
         prevEl: ".configurator_list_swiper .swiper-button-prev",
       },
       breakpoints: {
-        360: {
-          slidesPerView: 1,
-        },
-        768: {
-          spaceBetween: 12,
-        },
         1024: {
-          spaceBetween: 80,
+          slidesPerView: 1.8,
         },
       },
     });
@@ -585,9 +578,13 @@ $(document).ready(function () {
   $(window).on("resize", pubUi.masonryLayout);
   $(window).resize(() => DropdownFooter());
   DropdownFooter();
-  $(".clear-text")
-    .siblings('input[type="text"]')
-    .on("propertychange change keyup paste input", pubUi.textReset);
+  $(".clear-text").siblings('input[type="text"]').on("propertychange change keyup paste input", pubUi.textReset);
+  $(".selectbox-js").click(function () {
+    handleSelectboxClick(event);
+  });
+  $(".option-click").click(function () {
+    handleOptionClick(event);
+  });
 });
 
 // [Start] : selectbox 컴포넌트

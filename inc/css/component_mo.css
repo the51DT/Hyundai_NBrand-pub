@@ -1497,10 +1497,6 @@ min-width : 1024 css
     margin-top: 16px;
   }
 
-  .ty03Swiper .swiper-slide {
-    max-width: 258px;
-  }
-
   .swiper-card-type .swiper-slide:first-child {
     margin-left:0;
   }

@@ -20,60 +20,14 @@
           <p class="tit-type01 fw-type03">Round Result</p>
           <p class="tit-type03 fw-type03">The best winners of the moment</p>
         </div>
-        <div class="content-item02">
-          <div class="result_top">
-            <div class="title_flex tilte_padding">
-              <p class="contitle-type01 fw-type03 color-white">Top 3</p>
-              <div class="selectbox-wrap select-type02">
-                <div>
-                  <button class="selectbox-trigger txt-type03 fw-type03 color-white" aria-haspopup="listbox"
-                    aria-expanded="false" aria-labelledby="countrySelect"
-                    onclick="handleSelectboxClick(event)">Korea</button>
-                  <ul class="selectbox-options" role="listbox" id="countrySelect" aria-hidden="true"
-                    style="display: none">
-                    <li class="moclose-btn" style="display: none">
-                      <button type="button" class="btn btn-only-icon">
-                        <span class="visually-hidden">close button</span>
-                        <span class="btn-icon24 icon-close" aria-hidden="true"></span>
-                      </button>
-                    </li>
-                      <li class="option txt-type03 fw-type03 active" role="option" aria-selected="true" onclick="handleOptionClick(event)">Korea</li>
-                      <li class="option txt-type03 fw-type03" role="option" onclick="handleOptionClick(event)">China</li>
-                      <li class="option txt-type03 fw-type03" role="option" onclick="handleOptionClick(event)">USA</li>
-                  </ul>
-                </div>
-                <div>
-                    <button class="selectbox-trigger txt-type03 fw-type03 color-white" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="yearSelect" onclick="handleSelectboxClick(event)">2024</button>
-                    <ul class="selectbox-options 02" role="listbox" id="yearSelect" aria-hidden="true" style="display: none">
-                    <li class="moclose-btn" style="display: none">
-                      <button type="button" class="btn btn-only-icon">
-                        <span class="visually-hidden">close button</span>
-                        <span class="btn-icon24 icon-close" aria-hidden="true"></span>
-                      </button>
-                    </li>
-                      <li class="option txt-type03 fw-type03 active" role="option" aria-selected="true" onclick="handleOptionClick(event)">2024</li>
-                      <li class="option txt-type03 fw-type03" role="option" onclick="handleOptionClick(event)">2023</li>
-                      <li class="option txt-type03 fw-type03" role="option" onclick="handleOptionClick(event)">2022</li>
-                      <li class="option txt-type03 fw-type03" role="option" onclick="handleOptionClick(event)">2021</li>
-                      <li class="option txt-type03 fw-type03" role="option" onclick="handleOptionClick(event)">2020</li>
-                      <li class="option txt-type03 fw-type03" role="option" onclick="handleOptionClick(event)">2019</li>
-                  </ul>
-                </div>
-                <div>
-                    <button class="selectbox-trigger txt-type03 fw-type03 color-white" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="kindSelect" onclick="handleSelectboxClick(event)">Drivers</button>
-                    <ul class="selectbox-options 03" role="listbox" id="kindSelect" aria-hidden="true" style="display: none">
-                    <li class="moclose-btn" style="display: none">
-                      <button type="button" class="btn btn-only-icon">
-                        <span class="visually-hidden">close button</span>
-                        <span class="btn-icon24 icon-close" aria-hidden="true"></span>
-                      </button>
-                    </li>
-                      <li class="option txt-type03 fw-type03 active" role="option" aria-selected="true" onclick="handleOptionClick(event)">Drivers</li>
-                      <li class="option txt-type03 fw-type03" role="option" onclick="handleOptionClick(event)">Teams</li>
-                  </ul>
-                </div>
-                <div>
-                    <button class="selectbox-trigger txt-type03 fw-type03 color-white" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="classSelect" onclick="handleSelectboxClick(event)">eN1</button>
+        <div class="content-item02 bg-gray">
+          <div class="result_bottom">
+            <div class="result_wrap">
+              <div class="title_flex tilte_padding">
+                <p class="contitle-type01 fw-type03">eN1-Race1</p>
+                <div class="selectbox-wrap select-type02">
+                  <div>
+                      <button class="selectbox-trigger selectbox-js txt-type03 fw-type03" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="classSelect">eN1</button>
                     <ul class="selectbox-options 04" role="listbox" id="classSelect" aria-hidden="true" style="display: none">
                     <li class="moclose-btn" style="display: none">
                       <button type="button" class="btn btn-only-icon">
@@ -81,265 +35,468 @@
                         <span class="btn-icon24 icon-close" aria-hidden="true"></span>
                       </button>
                     </li>
-                      <li class="option txt-type03 fw-type03 active" role="option" aria-selected="true" onclick="handleOptionClick(event)">eN1</li>
-                      <li class="option txt-type03 fw-type03" role="option" onclick="handleOptionClick(event)">N1</li>
-                      <li class="option txt-type03 fw-type03" role="option" onclick="handleOptionClick(event)">N2</li>
-                      <li class="option txt-type03 fw-type03" role="option">Nonclick="handleOptionClick(event)" TT</li>
+                        <li class="option option-click fw-type03 active" role="option" aria-selected="true">eN1</li>
+                        <li class="option option-click fw-type03" role="option">N1</li>
+                        <li class="option option-click fw-type03" role="option">N2</li>
+                        <li class="option option-click fw-type03" role="option">N TT</li>
                   </ul>
                 </div>
-              </div>
+                  <div>
+                      <button class="selectbox-trigger selectbox-js txt-type03 fw-type03" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="kindSelect">Race1</button>
+                      <ul class="selectbox-options 03" role="listbox" id="kindSelect" aria-hidden="true" style="display: none">
+                      <li class="moclose-btn" style="display: none">
+                        <button type="button" class="btn btn-only-icon">
+                          <span class="visually-hidden">close button</span>
+                          <span class="btn-icon24 icon-close" aria-hidden="true"></span>
+                        </button>
+                      </li>
+                        <li class="option option-click fw-type03 active" role="option" aria-selected="true">Drivers</li>
+                        <li class="option option-click fw-type03" role="option">Teams</li>
+                    </ul>
+                  </div>
+                </div> 
                 <div class="selectbox-overlay" style="display: none"></div>
+              </div>
+              <div class="section-table-wrap">
+                  <p class="contitle-type01 fw-type03">1st Preliminary Round</p>
+                  <table summary="1st Preliminary Round 테이블" class="table-type01">
+                    <caption>Round Result</caption>
+                    <colgroup>
+                      <col width="122px">
+                      <col width="122px">
+                      <col width="342px">
+                      <col width="244px">
+                      <col width="122px">
+                      <col width="122px">
+                      <col width="122px">
+                      <col width="122px">
+                      <col width="122px">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th id="pic" scope="col" class="txt-type04 fw-type02 txt-center">Pic</th>
+                        <th id="no" scope="col" class="txt-type04 fw-type02 txt-center">No</th>
+                        <th id="driver" scope="col" class="txt-type04 fw-type02 txt-center">Driver</th>
+                        <th id="team" scope="col" class="txt-type04 fw-type02 txt-center">Team</th>
+                        <th id="total-time" scope="col" class="txt-type04 fw-type02 txt-center">Total Time</th>
+                        <th id="best-time" scope="col" class="txt-type04 fw-type02 txt-center">Best Time</th>
+                        <th id="lap" scope="col" class="txt-type04 fw-type02 txt-center">Lap</th>
+                        <th id="in-lap" scope="col" class="txt-type04 fw-type02 txt-center">In Lap</th>
+                        <th id="gap" scope="col" class="txt-type04 fw-type02 txt-center">Gap</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td headers="pic" scope="row" class="txt-type03 fw-type03 txt-center">01</td>
+                        <td headers="no" class="txt-type03 fw-type03 txt-center">23</td>
+                        <td headers="driver" class="txt-type01 fw-type03 txt-left">Kim Gyu min</td>
+                        <td headers="team" class="txt-type03 fw-type03 txt-left">SOLITE INDIGO RACING</td>
+                        <td headers="total-time" class="txt-type03 fw-type03 txt-right">27:04.201</td>
+                        <td headers="best-time" class="txt-type03 fw-type03 txt-right">1:24.669</td>
+                        <td headers="lap" class="txt-type03 fw-type03 txt-right">19</td>
+                        <td headers="in-lap" class="txt-type03 fw-type03 txt-right">2</td>
+                        <td headers="gap" class="txt-type03 fw-type03 txt-right">-</td>
+                      </tr>
+                      <tr>
+                        <td headers="pic" scope="row" class="txt-type03 fw-type03 txt-center">02</td>
+                        <td headers="no" class="txt-type03 fw-type03 txt-center">87</td>
+                        <td headers="driver" class="txt-type01 fw-type03 txt-left">Jang Jun ho</td>
+                        <td headers="team" class="txt-type03 fw-type03 txt-left">SEOHAN GP</td>
+                        <td headers="total-time" class="txt-type03 fw-type03 txt-right">27:22.413</td>
+                        <td headers="best-time" class="txt-type03 fw-type03 txt-right">1:25.611</td>
+                        <td headers="lap" class="txt-type03 fw-type03 txt-right">19</td>
+                        <td headers="in-lap" class="txt-type03 fw-type03 txt-right">4</td>
+                        <td headers="gap" class="txt-type03 fw-type03 txt-right">18.212</td>
+                      </tr>
+                      <tr>
+                        <td headers="pic" scope="row" class="txt-type03 fw-type03 txt-center">03</td>
+                        <td headers="no" class="txt-type03 fw-type03 txt-center">88</td>
+                        <td headers="driver" class="txt-type01 fw-type03 txt-left">Jeon Tae yeon</td>
+                        <td headers="team" class="txt-type03 fw-type03 txt-left">DCT RACING</td>
+                        <td headers="total-time" class="txt-type03 fw-type03 txt-right">27:25.085</td>
+                        <td headers="best-time" class="txt-type03 fw-type03 txt-right">1:25.447</td>
+                        <td headers="lap" class="txt-type03 fw-type03 txt-right">19</td>
+                        <td headers="in-lap" class="txt-type03 fw-type03 txt-right">2</td>
+                        <td headers="gap" class="txt-type03 fw-type03 txt-right">21.212</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <!-- mo ) table 없어짐 -->
+                  <div class="roundresult-wrap">
+                    <div class="roundresult-box">
+                      <div class="roundresult-top">
+                        <p class="color-red fw-type03">01</p>
+                        <p class="fw-type03">23</p>
+                        <p class="fw-type03">Kim Gyu min</p>
+                        <p class="txt-type03 fw-type02">SOLITE INDIGO RACING</p>
+                      </div>
+                      <dl>
+                        <dt class="txt-type04 fw-type02">Total Time</dt>
+                        <dd class="txt-type03 fw-type03">27:04.201</dd>
+                        <dt class="txt-type04 fw-type02">Best Time</dt>
+                        <dd class="txt-type03 fw-type03">1:24.669</dd>
+                        <dt class="txt-type04 fw-type02">Lap</dt>
+                        <dd class="txt-type03 fw-type03">19</dd>
+                        <dt class="txt-type04 fw-type02">In Lap</dt>
+                        <dd class="txt-type03 fw-type03">2</dd>
+                        <dt class="txt-type04 fw-type02">Gap</dt>
+                        <dd class="txt-type03 fw-type03">-</dd>
+                      </dl>
+                    </div>
+                    <div class="roundresult-box">
+                      <div class="roundresult-top">
+                        <p class="color-red fw-type03">02</p>
+                        <p class="fw-type03">87</p>
+                        <p class="fw-type03">Jang Jun ho</p>
+                        <p class="txt-type03 fw-type02">SEOHAN GP</p>
+                      </div>
+                      <dl>
+                        <dt class="txt-type04 fw-type02">Total Time</dt>
+                        <dd class="txt-type03 fw-type03">27:22.413</dd>
+                        <dt class="txt-type04 fw-type02">Best Time</dt>
+                        <dd class="txt-type03 fw-type03">1:25.611</dd>
+                        <dt class="txt-type04 fw-type02">Lap</dt>
+                        <dd class="txt-type03 fw-type03">19</dd>
+                        <dt class="txt-type04 fw-type02">In Lap</dt>
+                        <dd class="txt-type03 fw-type03">4</dd>
+                        <dt class="txt-type04 fw-type02">Gap</dt>
+                        <dd class="txt-type03 fw-type03">18.212</dd>
+                      </dl>
+                    </div>
+                    <div class="roundresult-box">
+                      <div class="roundresult-top">
+                        <p class="color-red fw-type03">03</p>
+                        <p class="fw-type03">88</p>
+                        <p class="fw-type03">Jeon Tae yeon</p>
+                        <p class="txt-type03 fw-type02">DCT RACING</p>
+                      </div>
+                      <dl>
+                        <dt class="txt-type04 fw-type02">Total Time</dt>
+                        <dd class="txt-type03 fw-type03">27:25.085</dd>
+                        <dt class="txt-type04 fw-type02">Best Time</dt>
+                        <dd class="txt-type03 fw-type03">1:25.447</dd>
+                        <dt class="txt-type04 fw-type02">Lap</dt>
+                        <dd class="txt-type03 fw-type03">19</dd>
+                        <dt class="txt-type04 fw-type02">In Lap</dt>
+                        <dd class="txt-type03 fw-type03">2</dd>
+                        <dt class="txt-type04 fw-type02">Gap</dt>
+                        <dd class="txt-type03 fw-type03">21.212</dd>
+                      </dl>
+                    </div>
+                  </div>
+                  <!-- 디자인 없어서 임시 작업 -->
+                  <div class="page_wrap">
+                    <button class="page_prev_btn disabled"><span class="visually-hidden">prev page</span></button>
+                    <ul class="page_list">
+                      <li class="on"><button>1</button></li>
+                      <li><button>2</button></li>
+                      <li><button>3</button></li>
+                      <li><button>4</button></li>
+                      <li><button>5</button></li>
+                      <li><button>6</button></li>
+                      <li><button>7</button></li>
+                      <li><button>8</button></li>
+                      <li><button>9</button></li>
+                      <li><button>10</button></li>
+                    </ul>
+                    <button class="page_next_btn"><span class="visually-hidden">next page</span></button>
+                  </div>
+              </div>
+              <div class="section-table-wrap">
+                <p class="contitle-type01 fw-type03">2st Preliminary Round</p>
+                <table summary="1st Preliminary Round 테이블" class="table-type01">
+                  <caption>Round Result</caption>
+                  <colgroup>
+                    <col width="122px">
+                    <col width="122px">
+                    <col width="342px">
+                    <col width="244px">
+                    <col width="122px">
+                    <col width="122px">
+                    <col width="122px">
+                    <col width="122px">
+                    <col width="122px">
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th id="pic" scope="col" class="txt-type04 fw-type02 txt-center">Pic</th>
+                      <th id="no" scope="col" class="txt-type04 fw-type02 txt-center">No</th>
+                      <th id="driver" scope="col" class="txt-type04 fw-type02 txt-center">Driver</th>
+                      <th id="team" scope="col" class="txt-type04 fw-type02 txt-center">Team</th>
+                      <th id="total-time" scope="col" class="txt-type04 fw-type02 txt-center">Total Time</th>
+                      <th id="best-time" scope="col" class="txt-type04 fw-type02 txt-center">Best Time</th>
+                      <th id="lap" scope="col" class="txt-type04 fw-type02 txt-center">Lap</th>
+                      <th id="in-lap" scope="col" class="txt-type04 fw-type02 txt-center">In Lap</th>
+                      <th id="gap" scope="col" class="txt-type04 fw-type02 txt-center">Gap</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td headers="pic" scope="row" class="txt-type03 fw-type03 txt-center">01</td>
+                      <td headers="no" class="txt-type03 fw-type03 txt-center">23</td>
+                      <td headers="driver" class="txt-type01 fw-type03 txt-left">Kim Gyu min</td>
+                      <td headers="team" class="txt-type03 fw-type03 txt-left">SOLITE INDIGO RACING</td>
+                      <td headers="total-time" class="txt-type03 fw-type03 txt-right">27:04.201</td>
+                      <td headers="best-time" class="txt-type03 fw-type03 txt-right">1:24.669</td>
+                      <td headers="lap" class="txt-type03 fw-type03 txt-right">19</td>
+                      <td headers="in-lap" class="txt-type03 fw-type03 txt-right">2</td>
+                      <td headers="gap" class="txt-type03 fw-type03 txt-right">-</td>
+                    </tr>
+                    <tr>
+                      <td headers="pic" scope="row" class="txt-type03 fw-type03 txt-center">02</td>
+                      <td headers="no" class="txt-type03 fw-type03 txt-center">87</td>
+                      <td headers="driver" class="txt-type01 fw-type03 txt-left">Jang Jun ho</td>
+                      <td headers="team" class="txt-type03 fw-type03 txt-left">SEOHAN GP</td>
+                      <td headers="total-time" class="txt-type03 fw-type03 txt-right">27:22.413</td>
+                      <td headers="best-time" class="txt-type03 fw-type03 txt-right">1:25.611</td>
+                      <td headers="lap" class="txt-type03 fw-type03 txt-right">19</td>
+                      <td headers="in-lap" class="txt-type03 fw-type03 txt-right">4</td>
+                      <td headers="gap" class="txt-type03 fw-type03 txt-right">18.212</td>
+                    </tr>
+                    <tr>
+                      <td headers="pic" scope="row" class="txt-type03 fw-type03 txt-center">03</td>
+                      <td headers="no" class="txt-type03 fw-type03 txt-center">88</td>
+                      <td headers="driver" class="txt-type01 fw-type03 txt-left">Jeon Tae yeon</td>
+                      <td headers="team" class="txt-type03 fw-type03 txt-left">DCT RACING</td>
+                      <td headers="total-time" class="txt-type03 fw-type03 txt-right">27:25.085</td>
+                      <td headers="best-time" class="txt-type03 fw-type03 txt-right">1:25.447</td>
+                      <td headers="lap" class="txt-type03 fw-type03 txt-right">19</td>
+                      <td headers="in-lap" class="txt-type03 fw-type03 txt-right">2</td>
+                      <td headers="gap" class="txt-type03 fw-type03 txt-right">21.212</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <!-- mo ) table 없어짐 -->
+                <div class="roundresult-wrap">
+                  <div class="roundresult-box">
+                    <div class="roundresult-top">
+                      <p class="color-red fw-type03">01</p>
+                      <p class="fw-type03">23</p>
+                      <p class="fw-type03">Kim Gyu min</p>
+                      <p class="txt-type03 fw-type02">SOLITE INDIGO RACING</p>
+                    </div>
+                    <dl>
+                      <dt class="txt-type04 fw-type02">Total Time</dt>
+                      <dd class="txt-type03 fw-type03">27:04.201</dd>
+                      <dt class="txt-type04 fw-type02">Best Time</dt>
+                      <dd class="txt-type03 fw-type03">1:24.669</dd>
+                      <dt class="txt-type04 fw-type02">Lap</dt>
+                      <dd class="txt-type03 fw-type03">19</dd>
+                      <dt class="txt-type04 fw-type02">In Lap</dt>
+                      <dd class="txt-type03 fw-type03">2</dd>
+                      <dt class="txt-type04 fw-type02">Gap</dt>
+                      <dd class="txt-type03 fw-type03">-</dd>
+                    </dl>
+                  </div>
+                  <div class="roundresult-box">
+                    <div class="roundresult-top">
+                      <p class="color-red fw-type03">02</p>
+                      <p class="fw-type03">87</p>
+                      <p class="fw-type03">Jang Jun ho</p>
+                      <p class="txt-type03 fw-type02">SEOHAN GP</p>
+                    </div>
+                    <dl>
+                      <dt class="txt-type04 fw-type02">Total Time</dt>
+                      <dd class="txt-type03 fw-type03">27:22.413</dd>
+                      <dt class="txt-type04 fw-type02">Best Time</dt>
+                      <dd class="txt-type03 fw-type03">1:25.611</dd>
+                      <dt class="txt-type04 fw-type02">Lap</dt>
+                      <dd class="txt-type03 fw-type03">19</dd>
+                      <dt class="txt-type04 fw-type02">In Lap</dt>
+                      <dd class="txt-type03 fw-type03">4</dd>
+                      <dt class="txt-type04 fw-type02">Gap</dt>
+                      <dd class="txt-type03 fw-type03">18.212</dd>
+                    </dl>
+                  </div>
+                  <div class="roundresult-box">
+                    <div class="roundresult-top">
+                      <p class="color-red fw-type03">03</p>
+                      <p class="fw-type03">88</p>
+                      <p class="fw-type03">Jeon Tae yeon</p>
+                      <p class="txt-type03 fw-type02">DCT RACING</p>
+                    </div>
+                    <dl>
+                      <dt class="txt-type04 fw-type02">Total Time</dt>
+                      <dd class="txt-type03 fw-type03">27:25.085</dd>
+                      <dt class="txt-type04 fw-type02">Best Time</dt>
+                      <dd class="txt-type03 fw-type03">1:25.447</dd>
+                      <dt class="txt-type04 fw-type02">Lap</dt>
+                      <dd class="txt-type03 fw-type03">19</dd>
+                      <dt class="txt-type04 fw-type02">In Lap</dt>
+                      <dd class="txt-type03 fw-type03">2</dd>
+                      <dt class="txt-type04 fw-type02">Gap</dt>
+                      <dd class="txt-type03 fw-type03">21.212</dd>
+                    </dl>
+                  </div>
+                </div>
+                <!-- 디자인 없어서 임시 작업 -->
+                <div class="page_wrap">
+                  <button class="page_prev_btn disabled"><span class="visually-hidden">prev page</span></button>
+                  <ul class="page_list">
+                    <li class="on"><button>1</button></li>
+                    <li><button>2</button></li>
+                    <li><button>3</button></li>
+                    <li><button>4</button></li>
+                    <li><button>5</button></li>
+                    <li><button>6</button></li>
+                    <li><button>7</button></li>
+                    <li><button>8</button></li>
+                    <li><button>9</button></li>
+                    <li><button>10</button></li>
+                  </ul>
+                  <button class="page_next_btn"><span class="visually-hidden">next page</span></button>
+                </div>
+              </div>
+              <div class="section-table-wrap">
+                <p class="contitle-type01 fw-type03">3st Preliminary Round</p>
+                <table summary="3st Preliminary Round 테이블" class="table-type01">
+                  <caption>Round Result</caption>
+                  <colgroup>
+                    <col width="122px">
+                    <col width="122px">
+                    <col width="342px">
+                    <col width="244px">
+                    <col width="122px">
+                    <col width="122px">
+                    <col width="122px">
+                    <col width="122px">
+                    <col width="122px">
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th id="pic" scope="col" class="txt-type04 fw-type02 txt-center">Pic</th>
+                      <th id="no" scope="col" class="txt-type04 fw-type02 txt-center">No</th>
+                      <th id="driver" scope="col" class="txt-type04 fw-type02 txt-center">Driver</th>
+                      <th id="team" scope="col" class="txt-type04 fw-type02 txt-center">Team</th>
+                      <th id="total-time" scope="col" class="txt-type04 fw-type02 txt-center">Total Time</th>
+                      <th id="best-time" scope="col" class="txt-type04 fw-type02 txt-center">Best Time</th>
+                      <th id="lap" scope="col" class="txt-type04 fw-type02 txt-center">Lap</th>
+                      <th id="in-lap" scope="col" class="txt-type04 fw-type02 txt-center">In Lap</th>
+                      <th id="gap" scope="col" class="txt-type04 fw-type02 txt-center">Gap</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td headers="pic" scope="row" class="txt-type03 fw-type03 txt-center">01</td>
+                      <td headers="no" class="txt-type03 fw-type03 txt-center">23</td>
+                      <td headers="driver" class="txt-type01 fw-type03 txt-left">Kim Gyu min</td>
+                      <td headers="team" class="txt-type03 fw-type03 txt-left">SOLITE INDIGO RACING</td>
+                      <td headers="total-time" class="txt-type03 fw-type03 txt-right">27:04.201</td>
+                      <td headers="best-time" class="txt-type03 fw-type03 txt-right">1:24.669</td>
+                      <td headers="lap" class="txt-type03 fw-type03 txt-right">19</td>
+                      <td headers="in-lap" class="txt-type03 fw-type03 txt-right">2</td>
+                      <td headers="gap" class="txt-type03 fw-type03 txt-right">-</td>
+                    </tr>
+                    <tr>
+                      <td headers="pic" scope="row" class="txt-type03 fw-type03 txt-center">02</td>
+                      <td headers="no" class="txt-type03 fw-type03 txt-center">87</td>
+                      <td headers="driver" class="txt-type01 fw-type03 txt-left">Jang Jun ho</td>
+                      <td headers="team" class="txt-type03 fw-type03 txt-left">SEOHAN GP</td>
+                      <td headers="total-time" class="txt-type03 fw-type03 txt-right">27:22.413</td>
+                      <td headers="best-time" class="txt-type03 fw-type03 txt-right">1:25.611</td>
+                      <td headers="lap" class="txt-type03 fw-type03 txt-right">19</td>
+                      <td headers="in-lap" class="txt-type03 fw-type03 txt-right">4</td>
+                      <td headers="gap" class="txt-type03 fw-type03 txt-right">18.212</td>
+                    </tr>
+                    <tr>
+                      <td headers="pic" scope="row" class="txt-type03 fw-type03 txt-center">03</td>
+                      <td headers="no" class="txt-type03 fw-type03 txt-center">88</td>
+                      <td headers="driver" class="txt-type01 fw-type03 txt-left">Jeon Tae yeon</td>
+                      <td headers="team" class="txt-type03 fw-type03 txt-left">DCT RACING</td>
+                      <td headers="total-time" class="txt-type03 fw-type03 txt-right">27:25.085</td>
+                      <td headers="best-time" class="txt-type03 fw-type03 txt-right">1:25.447</td>
+                      <td headers="lap" class="txt-type03 fw-type03 txt-right">19</td>
+                      <td headers="in-lap" class="txt-type03 fw-type03 txt-right">2</td>
+                      <td headers="gap" class="txt-type03 fw-type03 txt-right">21.212</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <!-- mo ) table 없어짐 -->
+                <div class="roundresult-wrap">
+                  <div class="roundresult-box">
+                    <div class="roundresult-top">
+                      <p class="color-red fw-type03">01</p>
+                      <p class="fw-type03">23</p>
+                      <p class="fw-type03">Kim Gyu min</p>
+                      <p class="txt-type03 fw-type02">SOLITE INDIGO RACING</p>
+                    </div>
+                    <dl>
+                      <dt class="txt-type04 fw-type02">Total Time</dt>
+                      <dd class="txt-type03 fw-type03">27:04.201</dd>
+                      <dt class="txt-type04 fw-type02">Best Time</dt>
+                      <dd class="txt-type03 fw-type03">1:24.669</dd>
+                      <dt class="txt-type04 fw-type02">Lap</dt>
+                      <dd class="txt-type03 fw-type03">19</dd>
+                      <dt class="txt-type04 fw-type02">In Lap</dt>
+                      <dd class="txt-type03 fw-type03">2</dd>
+                      <dt class="txt-type04 fw-type02">Gap</dt>
+                      <dd class="txt-type03 fw-type03">-</dd>
+                    </dl>
+                  </div>
+                  <div class="roundresult-box">
+                    <div class="roundresult-top">
+                      <p class="color-red fw-type03">02</p>
+                      <p class="fw-type03">87</p>
+                      <p class="fw-type03">Jang Jun ho</p>
+                      <p class="txt-type03 fw-type02">SEOHAN GP</p>
+                    </div>
+                    <dl>
+                      <dt class="txt-type04 fw-type02">Total Time</dt>
+                      <dd class="txt-type03 fw-type03">27:22.413</dd>
+                      <dt class="txt-type04 fw-type02">Best Time</dt>
+                      <dd class="txt-type03 fw-type03">1:25.611</dd>
+                      <dt class="txt-type04 fw-type02">Lap</dt>
+                      <dd class="txt-type03 fw-type03">19</dd>
+                      <dt class="txt-type04 fw-type02">In Lap</dt>
+                      <dd class="txt-type03 fw-type03">4</dd>
+                      <dt class="txt-type04 fw-type02">Gap</dt>
+                      <dd class="txt-type03 fw-type03">18.212</dd>
+                    </dl>
+                  </div>
+                  <div class="roundresult-box">
+                    <div class="roundresult-top">
+                      <p class="color-red fw-type03">03</p>
+                      <p class="fw-type03">88</p>
+                      <p class="fw-type03">Jeon Tae yeon</p>
+                      <p class="txt-type03 fw-type02">DCT RACING</p>
+                    </div>
+                    <dl>
+                      <dt class="txt-type04 fw-type02">Total Time</dt>
+                      <dd class="txt-type03 fw-type03">27:25.085</dd>
+                      <dt class="txt-type04 fw-type02">Best Time</dt>
+                      <dd class="txt-type03 fw-type03">1:25.447</dd>
+                      <dt class="txt-type04 fw-type02">Lap</dt>
+                      <dd class="txt-type03 fw-type03">19</dd>
+                      <dt class="txt-type04 fw-type02">In Lap</dt>
+                      <dd class="txt-type03 fw-type03">2</dd>
+                      <dt class="txt-type04 fw-type02">Gap</dt>
+                      <dd class="txt-type03 fw-type03">21.212</dd>
+                    </dl>
+                  </div>
+                </div>
+                <!-- 디자인 없어서 임시 작업 -->
+                <div class="page_wrap">
+                  <button class="page_prev_btn disabled"><span class="visually-hidden">prev page</span></button>
+                  <ul class="page_list">
+                    <li class="on"><button>1</button></li>
+                    <li><button>2</button></li>
+                    <li><button>3</button></li>
+                    <li><button>4</button></li>
+                    <li><button>5</button></li>
+                    <li><button>6</button></li>
+                    <li><button>7</button></li>
+                    <li><button>8</button></li>
+                    <li><button>9</button></li>
+                    <li><button>10</button></li>
+                  </ul>
+                  <button class="page_next_btn"><span class="visually-hidden">next page</span></button>
+                </div>
+              </div>
             </div>
-            <ul class="grid_3 grid_mo_scroll">
-              <li>
-                <a class="card_type01" href="#" title="선수 상세페이지 이동">
-                  <div class="card_top">
-                    <p class="card_rank">1</p>
-                    <div class="card_profile"><img src="../../inc/images/N_Festival/driver/img_N1_01_김규민-512.png"
-                        alt="선수 프로필사진"></div>
-                    <p class="card_num">72</p>
-                  </div>
-                  <div class="card_bottom">
-                    <div class="card_info">
-                      <p class="card_tit">Kim Gyu min</p>
-                      <p class="card_subtit">SEOHAN GP</p>
-                    </div>
-                    <ul class="card_detail">
-                      <li>
-                        <span>Point</span>
-                        <span>99</span>
-                      </li>
-                      <li>
-                        <span>Wins</span>
-                        <span>0</span>
-                      </li>
-                      <li>
-                        <span>Podiums</span>
-                        <span>3</span>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="card_more">
-                    <span>Learn More</span>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="card_type01" href="#" title="선수 상세페이지 이동">
-                  <div class="card_top">
-                    <p class="card_rank">2</p>
-                    <div class="card_profile"><img src="../../inc/images/N_Festival/driver/img_N1_10_장준호-512.png"
-                        alt="선수 프로필사진"></div>
-                    <p class="card_num">22</p>
-                  </div>
-                  <div class="card_bottom">
-                    <div class="card_info">
-                      <p class="card_tit">Jang Jun ho</p>
-                      <p class="card_subtit">SEOHAN GP</p>
-                    </div>
-                    <ul class="card_detail">
-                      <li>
-                        <span>Point</span>
-                        <span>99</span>
-                      </li>
-                      <li>
-                        <span>Wins</span>
-                        <span>0</span>
-                      </li>
-                      <li>
-                        <span>Podiums</span>
-                        <span>3</span>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="card_more">
-                    <span>Learn More</span>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="card_type01" href="#" title="선수 상세페이지 이동">
-                  <div class="card_top">
-                    <p class="card_rank">3</p>
-                    <div class="card_profile"><img src="../../inc/images/N_Festival/driver/img_N1_03_신우진-512.png"
-                        alt="선수 프로필사진"></div>
-                    <p class="card_num">42</p>
-                  </div>
-                  <div class="card_bottom">
-                    <div class="card_info">
-                      <p class="card_tit">Jeon Tae yeon</p>
-                      <p class="card_subtit">DCT RACING</p>
-                    </div>
-                    <ul class="card_detail">
-                      <li>
-                        <span>Point</span>
-                        <span>99</span>
-                      </li>
-                      <li>
-                        <span>Wins</span>
-                        <span>0</span>
-                      </li>
-                      <li>
-                        <span>Podiums</span>
-                        <span>3</span>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="card_more">
-                    <span>Learn More</span>
-                  </div>
-                </a>
-              </li>
-            </ul>
           </div>
         </div>
         <div class="content-item03">
           <div class="result_bottom">
-            <div class="result_wrap">
-              <p class="contitle-type01 fw-type03">Round Result</p>
-              <table summary="Round Result 테이블" class="table-type01">
-                <caption>Round Result</caption>
-                <colgroup>
-                  <col width="122px">
-                  <col width="122px">
-                  <col width="342px">
-                  <col width="244px">
-                  <col width="122px">
-                  <col width="122px">
-                  <col width="122px">
-                  <col width="122px">
-                  <col width="122px">
-                </colgroup>
-                <thead>
-                  <tr>
-                    <th id="pic" scope="col" class="txt-type04 fw-type02 txt-center">Pic</th>
-                    <th id="no" scope="col" class="txt-type04 fw-type02 txt-center">No</th>
-                    <th id="driver" scope="col" class="txt-type04 fw-type02 txt-center">Driver</th>
-                    <th id="team" scope="col" class="txt-type04 fw-type02 txt-center">Team</th>
-                    <th id="total-time" scope="col" class="txt-type04 fw-type02 txt-center">Total Time</th>
-                    <th id="best-time" scope="col" class="txt-type04 fw-type02 txt-center">Best Time</th>
-                    <th id="lap" scope="col" class="txt-type04 fw-type02 txt-center">Lap</th>
-                    <th id="in-lap" scope="col" class="txt-type04 fw-type02 txt-center">In Lap</th>
-                    <th id="gap" scope="col" class="txt-type04 fw-type02 txt-center">Gap</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td headers="pic" scope="row" class="txt-type03 fw-type03 txt-center">01</td>
-                    <td headers="no" class="txt-type03 fw-type03 txt-center">23</td>
-                    <td headers="driver" class="txt-type01 fw-type03 txt-left">Kim Gyu min</td>
-                    <td headers="team" class="txt-type03 fw-type03 txt-left">SOLITE INDIGO RACING</td>
-                    <td headers="total-time" class="txt-type03 fw-type03 txt-right">27:04.201</td>
-                    <td headers="best-time" class="txt-type03 fw-type03 txt-right">1:24.669</td>
-                    <td headers="lap" class="txt-type03 fw-type03 txt-right">19</td>
-                    <td headers="in-lap" class="txt-type03 fw-type03 txt-right">2</td>
-                    <td headers="gap" class="txt-type03 fw-type03 txt-right">-</td>
-                  </tr>
-                  <tr>
-                    <td headers="pic" scope="row" class="txt-type03 fw-type03 txt-center">02</td>
-                    <td headers="no" class="txt-type03 fw-type03 txt-center">87</td>
-                    <td headers="driver" class="txt-type01 fw-type03 txt-left">Jang Jun ho</td>
-                    <td headers="team" class="txt-type03 fw-type03 txt-left">SEOHAN GP</td>
-                    <td headers="total-time" class="txt-type03 fw-type03 txt-right">27:22.413</td>
-                    <td headers="best-time" class="txt-type03 fw-type03 txt-right">1:25.611</td>
-                    <td headers="lap" class="txt-type03 fw-type03 txt-right">19</td>
-                    <td headers="in-lap" class="txt-type03 fw-type03 txt-right">4</td>
-                    <td headers="gap" class="txt-type03 fw-type03 txt-right">18.212</td>
-                  </tr>
-                  <tr>
-                    <td headers="pic" scope="row" class="txt-type03 fw-type03 txt-center">03</td>
-                    <td headers="no" class="txt-type03 fw-type03 txt-center">88</td>
-                    <td headers="driver" class="txt-type01 fw-type03 txt-left">Jeon Tae yeon</td>
-                    <td headers="team" class="txt-type03 fw-type03 txt-left">DCT RACING</td>
-                    <td headers="total-time" class="txt-type03 fw-type03 txt-right">27:25.085</td>
-                    <td headers="best-time" class="txt-type03 fw-type03 txt-right">1:25.447</td>
-                    <td headers="lap" class="txt-type03 fw-type03 txt-right">19</td>
-                    <td headers="in-lap" class="txt-type03 fw-type03 txt-right">2</td>
-                    <td headers="gap" class="txt-type03 fw-type03 txt-right">21.212</td>
-                  </tr>
-                </tbody>
-              </table>
-              <!-- mo ) table 없어짐 -->
-              <div class="roundresult-wrap">
-                <div class="roundresult-box">
-                  <div class="roundresult-top">
-                    <p class="color-red fw-type03">1</p>
-                    <p class="fw-type03">23.</p>
-                    <p class="fw-type03">Kim Gyu min</p>
-                    <p class="txt-type03 fw-type02">SOLITE INDIGO RACING</p>
-                  </div>
-                  <dl>
-                    <dt class="txt-type04 fw-type02">Total Time</dt>
-                    <dd class="txt-type03 fw-type03">27:04.201</dd>
-                    <dt class="txt-type04 fw-type02">Best Time</dt>
-                    <dd class="txt-type03 fw-type03">1:24.669</dd>
-                    <dt class="txt-type04 fw-type02">Lap</dt>
-                    <dd class="txt-type03 fw-type03">19</dd>
-                    <dt class="txt-type04 fw-type02">In Lap</dt>
-                    <dd class="txt-type03 fw-type03">2</dd>
-                    <dt class="txt-type04 fw-type02">Gap</dt>
-                    <dd class="txt-type03 fw-type03">-</dd>
-                  </dl>
-                </div>
-                <div class="roundresult-box">
-                  <div class="roundresult-top">
-                    <p class="color-red fw-type03">2</p>
-                    <p class="fw-type03">87.</p>
-                    <p class="fw-type03">Jang Jun ho</p>
-                    <p class="txt-type03 fw-type02">SEOHAN GP</p>
-                  </div>
-                  <dl>
-                    <dt class="txt-type04 fw-type02">Total Time</dt>
-                    <dd class="txt-type03 fw-type03">27:22.413</dd>
-                    <dt class="txt-type04 fw-type02">Best Time</dt>
-                    <dd class="txt-type03 fw-type03">1:25.611</dd>
-                    <dt class="txt-type04 fw-type02">Lap</dt>
-                    <dd class="txt-type03 fw-type03">19</dd>
-                    <dt class="txt-type04 fw-type02">In Lap</dt>
-                    <dd class="txt-type03 fw-type03">4</dd>
-                    <dt class="txt-type04 fw-type02">Gap</dt>
-                    <dd class="txt-type03 fw-type03">18.212</dd>
-                  </dl>
-                </div>
-                <div class="roundresult-box">
-                  <div class="roundresult-top">
-                    <p class="color-red fw-type03">3</p>
-                    <p class="fw-type03">88.</p>
-                    <p class="fw-type03">Jeon Tae yeon</p>
-                    <p class="txt-type03 fw-type02">DCT RACING</p>
-                  </div>
-                  <dl>
-                    <dt class="txt-type04 fw-type02">Total Time</dt>
-                    <dd class="txt-type03 fw-type03">27:25.085</dd>
-                    <dt class="txt-type04 fw-type02">Best Time</dt>
-                    <dd class="txt-type03 fw-type03">1:25.447</dd>
-                    <dt class="txt-type04 fw-type02">Lap</dt>
-                    <dd class="txt-type03 fw-type03">19</dd>
-                    <dt class="txt-type04 fw-type02">In Lap</dt>
-                    <dd class="txt-type03 fw-type03">2</dd>
-                    <dt class="txt-type04 fw-type02">Gap</dt>
-                    <dd class="txt-type03 fw-type03">21.212</dd>
-                  </dl>
-                </div>
-              </div>
-              <!-- 디자인 없어서 임시 작업 -->
-              <div class="page_wrap">
-                <button class="page_prev_btn"><span class="visually-hidden">prev page</span></button>
-                <ul class="page_list">
-                  <li><button>1</button></li>
-                  <li><button>2</button></li>
-                  <li><button>3</button></li>
-                </ul>
-                <button class="page_next_btn"><span class="visually-hidden">next page</span></button>
-              </div>
-              <!-- <div class="btn-wrap-default">
-                  <button type="button" class="btn btn-lg-outline01">
-                    View More
-                    <span class="btn-paging">1/3</span>
-                    <span class="btn-icon20 icon-down" aria-hidden="true"></span>
-                  </button>
-                </div> -->
-            </div>
             <div class="result_wrap">
               <p class="contitle-type01 fw-type03">Attachment</p>
               <ul class="detail_list">

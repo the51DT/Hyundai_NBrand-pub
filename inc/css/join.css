@@ -679,7 +679,7 @@
   border-bottom: 1px solid #bbbbbb;
 }
 .mypage-withdrawal-table tbody tr th,
-td {
+.mypage-withdrawal-table tbody tr td {
   padding: 1.81rem 0.75rem;
 }
 .mypage-withdrawal-table tbody tr th {

@@ -3,22 +3,21 @@
 .models-wrap {
   font-family: "Hyundai Sans Text";
 }
-.models-wrap .content-item03,
-.models-wrap .content-item04,
-.models-wrap .content-item05,
-.models-wrap .content-item06,
-.models-wrap .content-item07,
-.models-wrap .content-item08 {
+.models-wrap .content-item03 {
   padding: 240px 80px 0;
   margin-bottom: 240px;
 }
-.models-wrap .max1440 {
+.models-wrap [class*="max1440"] {
   max-width: 1440px;
   margin: 0 auto;
   display: flex;
   gap: 80px;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+}
+.models-wrap .max1440.type2 {
+  gap: 200px;
 }
 .models-wrap .content-item02 {
   position: relative;
@@ -30,9 +29,6 @@
 }
 .models-wrap .content-item02 img {
   height: 1080px;
-}
-.models-wrap .overview-wrap .max1440 {
-  text-align: center;
 }
 .models-wrap .blue-title {
   font-size: 20px;
@@ -74,36 +70,83 @@
   font-weight: 700;
   line-height: 85px;
 }
+.models-wrap .text-strong-xs {
+  font-family: "Hyundai Sans Head";
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 44.8px;
+}
 .models-wrap .text-normal {
   font-family: "Hyundai Sans Head";
   font-size: 24px;
   font-weight: 700;
   line-height: 33.6px;
 }
-.models-wrap .text-strong + .text-normal {
+.models-wrap .text-normal-xs {
+  font-family: "Hyundai Sans Head";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22.4px;
+}
+.models-wrap .text-col .text-strong + .text-normal {
   margin-top: 20px;
+}
+.models-wrap .text-col .text-strong-xs + .text-normal-xs {
+  margin-top: 4px;
+}
+.models-wrap dt.text-strong-xs + dd.text-normal-xs {
+  margin-top: 8px;
+}
+.models-wrap .models-full {
+  padding: 240px 80px;
+}
+/* bg 에 맞는 배경 및 높이 조절은 클래스 변경하기 */
+.models-wrap .full-1938 {
+  aspect-ratio: 1920 / 1938;
+}
+.models-wrap .full-1440 {
+  aspect-ratio: 1920 / 1440;
+}
+.models-wrap .full-1920 {
+  aspect-ratio: 1920 / 1920;
+}
+.models-wrap .full-1600 {
+  aspect-ratio: 1920 / 1600;
+}
+.models-wrap .perfor-wrap .models-full.icon20 {
+  background: url(../../inc/images/Models/i20N/i20N_performance_bg.png) center no-repeat;
+  background-size: cover;
+}
+.models-wrap .models-full .text-strong,
+.models-wrap .models-full .text-normal {
+  color: #fff;
+}
+.models-wrap .spec-eachbox {
+  position: relative;
+  min-width: 240px;
 }
 .models-wrap .spec-eachbox p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
-  min-width: 240px;
   font-family: "Hyundai Sans Head";
   font-size: 80px;
   font-weight: 700;
   line-height: 100px;
+  color: #aacae6;
 }
 .models-wrap .unit {
   font-family: "Hyundai Sans Head";
   font-size: 32px;
   font-weight: 700;
   line-height: 44.8px;
+  color: #fff;
 }
 .models-wrap .unit-des {
   font-size: 16px;
   font-weight: 500;
   line-height: 22.4px;
+  color: #fff;
 }
 .perfor-spec {
   display: flex;
@@ -115,4 +158,107 @@
   height: 150px;
   background-color: #595c5f;
   content: "";
+  left: -28px;
+  top: 8.5px;
+}
+.models-wrap .models-nofull {
+  padding: 200px 80px 0;
+  margin-bottom: 240px;
+}
+.models-wrap .models-nofull.type2 {
+  padding: 80px 80px 0;
+  margin-bottom: 240px;
+}
+.models-wrap .models-nofull .max1440 {
+  display: flex;
+  flex-direction: column;
+  gap: 200px;
+}
+.models-wrap .models-nofull [class*="type-col"] {
+  display: flex;
+  flex-direction: column;
+}
+.models-wrap .models-nofull [class*="type-col"] > div + img,
+.models-wrap .models-nofull [class*="type-col"] > img + div,
+.models-wrap .models-nofull [class*="type-col"] > .models-cardbox {
+  margin-top: 80px;
+}
+.models-wrap .models-nofull [class*="type-row"] {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: space-between;
+}
+.models-wrap .models-nofull .type-row80 {
+  gap: 80px;
+}
+.models-wrap .models-nofull .type-row24 {
+  gap: 24px;
+}
+.models-wrap .models-nofull .type-col2 > div {
+  display: flex;
+  justify-content: space-between;
+}
+.models-wrap .models-nofull .type-col2 > div p:first-child {
+  width: 45%;
+}
+.models-wrap .models-nofull .type-col2 > div p:last-child {
+  width: 55%;
+}
+.models-wrap .models-nofull .type-col3 > div + img {
+  margin-top: 80px;
+}
+.models-wrap .models-nofull .type-col3 > div + img + div {
+  margin-top: 40px;
+}
+.models-wrap .models-cardbox {
+  display: flex;
+  gap: 24px;
+}
+.models-wrap .models-cardbox > div {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  flex: 0 0 calc(50% - 12px);
+}
+.models-wrap .models-cardbox > div p {
+  padding: 0 16px;
+}
+.models-wrap .models-cardbox.w30 > div {
+  gap: 24px;
+  flex: 0 0 calc(100% / 3 - 16px);
+}
+.models-wrap .models-cardbox > div img {
+  height: 531px;
+}
+.models-wrap .models-cardbox.w30 > div img {
+  height: auto;
+}
+.models-wrap .models-cardbox.w30 + .btn-wrap {
+  margin-top: 80px;
+}
+.models-wrap .text-strong + .models-cardbox,
+.models-wrap .text-col + .models-cardbox {
+  margin-top: 80px;
+}
+.models-wrap .desgin-wrap .models-full.icon20 {
+  background: url(../../inc/images/Models/i20N/i20N_desgin_bg.png) center no-repeat;
+  background-size: cover;
+}
+.models-wrap .tech-wrap .models-full.icon20 {
+  background: url(../../inc/images/Models/i20N/i20N_technology_bg.png) center no-repeat;
+  background-size: cover;
+}
+.tech-des {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.tech-des > div {
+  flex: 0 0 calc(50% - 20px);
+  padding: 0 16px;
+}
+.specification-wrap {
+  background-color: #f0f0f0;
+  padding: 240px 80px;
 }
