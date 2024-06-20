@@ -29,7 +29,8 @@
             <div class="selectbox-wrap select-type03">
               <div>
                 <button class="selectbox-trigger txt-type03 fw-type03 selectbox-trigger2" aria-haspopup="listbox"
-                  aria-expanded="false" aria-labelledby="countrySelect">All</button>
+                  aria-expanded="false" aria-labelledby="countrySelect"
+                  onclick="handleSelectboxClick(event)">All</button>
                 <ul class="selectbox-options" role="listbox" id="countrySelect" aria-hidden="true"
                   style="display: none">
                   <li class="moclose-btn" style="display: none">
@@ -38,9 +39,10 @@
                       <span class="btn-icon24 icon-close" aria-hidden="true"></span>
                     </button>
                   </li>
-                  <li class="option txt-type03 fw-type03 active" role="option" aria-selected="true">전체</li>
-                  <li class="option txt-type03 fw-type03" role="option">제목</li>
-                  <li class="option txt-type03 fw-type03" role="option">내용</li>
+                  <li class="option txt-type03 fw-type03 active" role="option" onclick="handleOptionClick(event(this))"
+                    aria-selected="true">전체</li>
+                  <li class="option txt-type03 fw-type03" role="option" onclick="handleOptionClick(event(this))">제목</li>
+                  <li class="option txt-type03 fw-type03" role="option" onclick="handleOptionClick(event(this))">내용</li>
                 </ul>
               </div>
             </div>

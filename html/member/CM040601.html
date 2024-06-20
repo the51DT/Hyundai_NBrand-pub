@@ -164,7 +164,7 @@
                   <div class="selectbox-wrap select-type01">
                     <div>
                       <button class="selectbox-trigger txt-type03 fw-type03" aria-haspopup="listbox"
-                        aria-expanded="false" aria-labelledby="정렬버튼">All</button>
+                        aria-expanded="false" aria-labelledby="정렬버튼" onclick="handleSelectboxClick(event)">All</button>
                       <ul class="selectbox-options" role="listbox" id="countrySelect" aria-hidden="true"
                         style="display: none">
                         <li class="moclose-btn" style="display: none">
@@ -173,14 +173,22 @@
                             <span class="btn-icon24 icon-close" aria-hidden="true"></span>
                           </button>
                         </li>
-                        <li class="option txt-type03 fw-type03 active" role="option" aria-selected="true">All</li>
-                        <li class="option txt-type03 fw-type03" role="option">일반</li>
-                        <li class="option txt-type03 fw-type03" role="option">일반 – N Community</li>
-                        <li class="option txt-type03 fw-type03" role="option">Missions - Nthusiasts</li>
-                        <li class="option txt-type03 fw-type03" role="option">Missions - N Community(Member)</li>
-                        <li class="option txt-type03 fw-type03" role="option">Missions - N Community(Master)</li>
-                        <li class="option txt-type03 fw-type03" role="option">Rewards - Nthusiasts</li>
-                        <li class="option txt-type03 fw-type03" role="option">Rewards - N Community(Master)</li>
+                        <li class="option txt-type03 fw-type03 active" role="option"
+                          onclick="handleOptionClick(event(this))" aria-selected="true">All</li>
+                        <li class="option txt-type03 fw-type03" role="option" onclick="handleOptionClick(event(this))">
+                          일반</li>
+                        <li class="option txt-type03 fw-type03" role="option" onclick="handleOptionClick(event(this))">
+                          일반 – N Community</li>
+                        <li class="option txt-type03 fw-type03" role="option" onclick="handleOptionClick(event(this))">
+                          Missions - Nthusiasts</li>
+                        <li class="option txt-type03 fw-type03" role="option" onclick="handleOptionClick(event(this))">
+                          Missions - N Community(Member)</li>
+                        <li class="option txt-type03 fw-type03" role="option" onclick="handleOptionClick(event(this))">
+                          Missions - N Community(Master)</li>
+                        <li class="option txt-type03 fw-type03" role="option" onclick="handleOptionClick(event(this))">
+                          Rewards - Nthusiasts</li>
+                        <li class="option txt-type03 fw-type03" role="option" onclick="handleOptionClick(event(this))">
+                          Rewards - N Community(Master)</li>
                       </ul>
                     </div>
                   </div>
@@ -273,7 +281,9 @@
                         <h5>Points Details</h5>
                         <div class="selectbox-wrap select-type01">
                           <div>
-                            <button class="selectbox-trigger txt-type03 fw-type03" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="정렬버튼">All</button>
+                            <button class="selectbox-trigger txt-type03 fw-type03" aria-haspopup="listbox"
+                              aria-expanded="false" aria-labelledby="정렬버튼"
+                              onclick="handleSelectboxClick(event)">All</button>
                             <ul class="selectbox-options" role="listbox" id="countrySelect" aria-hidden="true" style="display: none">
                               <li class="moclose-btn" style="display: none">
                                 <button type="button" class="btn btn-only-icon">
@@ -281,14 +291,14 @@
                                   <span class="btn-icon24 icon-close" aria-hidden="true"></span>
                                 </button>
                               </li>
-                              <li class="option txt-type03 fw-type03 active" role="option" aria-selected="true">All</li>
-                              <li class="option txt-type03 fw-type03" role="option">일반</li>
-                              <li class="option txt-type03 fw-type03" role="option">일반 – N Community</li>
-                              <li class="option txt-type03 fw-type03" role="option">Missions - Nthusiasts</li>
-                              <li class="option txt-type03 fw-type03" role="option">Missions - N Community(Member)</li>
-                              <li class="option txt-type03 fw-type03" role="option">Missions - N Community(Master)</li>
-                              <li class="option txt-type03 fw-type03" role="option">Rewards - Nthusiasts</li>
-                              <li class="option txt-type03 fw-type03" role="option">Rewards - N Community(Master)</li>
+                              <li class="option txt-type03 fw-type03 active" role="option"onclick="handleOptionClick(event(this))" aria-selected="true">All</li>
+                              <li class="option txt-type03 fw-type03" role="option"onclick="handleOptionClick(event(this))">일반</li>
+                              <li class="option txt-type03 fw-type03" role="option"onclick="handleOptionClick(event(this))">일반 – N Community</li>
+                              <li class="option txt-type03 fw-type03" role="option"onclick="handleOptionClick(event(this))">Missions - Nthusiasts</li>
+                              <li class="option txt-type03 fw-type03" role="option"onclick="handleOptionClick(event(this))">Missions - N Community(Member)</li>
+                              <li class="option txt-type03 fw-type03" role="option"onclick="handleOptionClick(event(this))">Missions - N Community(Master)</li>
+                              <li class="option txt-type03 fw-type03" role="option"onclick="handleOptionClick(event(this))">Rewards - Nthusiasts</li>
+                              <li class="option txt-type03 fw-type03" role="option"onclick="handleOptionClick(event(this))">Rewards - N Community(Master)</li>
                             </ul>
                           </div>
                         </div>
@@ -359,7 +369,9 @@
                         <h5>Points Details</h5>
                         <div class="selectbox-wrap select-type01">
                           <div>
-                            <button class="selectbox-trigger txt-type03 fw-type03" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="정렬버튼">All</button>
+                            <button class="selectbox-trigger txt-type03 fw-type03" aria-haspopup="listbox"
+                              aria-expanded="false" aria-labelledby="정렬버튼"
+                              onclick="handleSelectboxClick(event)">All</button>
                             <ul class="selectbox-options" role="listbox" id="countrySelect" aria-hidden="true" style="display: none">
                               <li class="moclose-btn" style="display: none">
                                 <button type="button" class="btn btn-only-icon">
@@ -367,14 +379,14 @@
                                   <span class="btn-icon24 icon-close" aria-hidden="true"></span>
                                 </button>
                               </li>
-                              <li class="option txt-type03 fw-type03 active" role="option" aria-selected="true">All</li>
-                              <li class="option txt-type03 fw-type03" role="option">일반</li>
-                              <li class="option txt-type03 fw-type03" role="option">일반 – N Community</li>
-                              <li class="option txt-type03 fw-type03" role="option">Missions - Nthusiasts</li>
-                              <li class="option txt-type03 fw-type03" role="option">Missions - N Community(Member)</li>
-                              <li class="option txt-type03 fw-type03" role="option">Missions - N Community(Master)</li>
-                              <li class="option txt-type03 fw-type03" role="option">Rewards - Nthusiasts</li>
-                              <li class="option txt-type03 fw-type03" role="option">Rewards - N Community(Master)</li>
+                              <li class="option txt-type03 fw-type03 active" role="option"onclick="handleOptionClick(event(this))" aria-selected="true">All</li>
+                              <li class="option txt-type03 fw-type03" role="option"onclick="handleOptionClick(event(this))">일반</li>
+                              <li class="option txt-type03 fw-type03" role="option"onclick="handleOptionClick(event(this))">일반 – N Community</li>
+                              <li class="option txt-type03 fw-type03" role="option"onclick="handleOptionClick(event(this))">Missions - Nthusiasts</li>
+                              <li class="option txt-type03 fw-type03" role="option"onclick="handleOptionClick(event(this))">Missions - N Community(Member)</li>
+                              <li class="option txt-type03 fw-type03" role="option"onclick="handleOptionClick(event(this))">Missions - N Community(Master)</li>
+                              <li class="option txt-type03 fw-type03" role="option"onclick="handleOptionClick(event(this))">Rewards - Nthusiasts</li>
+                              <li class="option txt-type03 fw-type03" role="option"onclick="handleOptionClick(event(this))">Rewards - N Community(Master)</li>
                             </ul>
                           </div>
                         </div>

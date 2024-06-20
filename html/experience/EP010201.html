@@ -88,7 +88,7 @@
               <div class="selectbox-wrap select-type02">
                 <div>
                   <button class="selectbox-trigger txt-type03 fw-type03" aria-haspopup="listbox" aria-expanded="false"
-                    aria-labelledby="countrySelect">
+                    aria-labelledby="countrySelect" onclick="handleSelectboxClick(event)">
                     Korea
                   </button>
                   <ul class="selectbox-options" role="listbox" id="countrySelect" aria-hidden="true"
@@ -99,20 +99,21 @@
                         <span class="btn-icon24 icon-close" aria-hidden="true"></span>
                       </button>
                     </li>
-                    <li class="option txt-type03 fw-type03 active" role="option" aria-selected="true">
+                    <li class="option txt-type03 fw-type03 active" role="option" aria-selected="true"
+                      onclick="handleOptionClick(event(this))">
                       Korea
                     </li>
-                    <li class="option txt-type03 fw-type03" role="option">
+                    <li class="option txt-type03 fw-type03" role="option" onclick="handleOptionClick(event(this))">
                       China
                     </li>
-                    <li class="option txt-type03 fw-type03" role="option">
+                    <li class="option txt-type03 fw-type03" role="option" onclick="handleOptionClick(event(this))">
                       USA
                     </li>
                   </ul>
                 </div>
                 <div>
                   <button class="selectbox-trigger txt-type03 fw-type03" aria-haspopup="listbox" aria-expanded="false"
-                    aria-labelledby="yearSelect">
+                    aria-labelledby="yearSelect" onclick="handleSelectboxClick(event)">
                     2024
                   </button>
                   <ul class="selectbox-options 02" role="listbox" id="yearSelect" aria-hidden="true"
@@ -123,22 +124,23 @@
                         <span class="btn-icon24 icon-close" aria-hidden="true"></span>
                       </button>
                     </li>
-                    <li class="option txt-type03 fw-type03 active" role="option" aria-selected="true">
+                    <li class="option txt-type03 fw-type03 active" role="option" aria-selected="true"
+                      onclick="handleOptionClick(event(this))">
                       2024
                     </li>
-                    <li class="option txt-type03 fw-type03" role="option">
+                    <li class="option txt-type03 fw-type03" role="option" onclick="handleOptionClick(event(this))">
                       2023
                     </li>
-                    <li class="option txt-type03 fw-type03" role="option">
+                    <li class="option txt-type03 fw-type03" role="option" onclick="handleOptionClick(event(this))">
                       2022
                     </li>
-                    <li class="option txt-type03 fw-type03" role="option">
+                    <li class="option txt-type03 fw-type03" role="option" onclick="handleOptionClick(event(this))">
                       2021
                     </li>
-                    <li class="option txt-type03 fw-type03" role="option">
+                    <li class="option txt-type03 fw-type03" role="option" onclick="handleOptionClick(event(this))">
                       2020
                     </li>
-                    <li class="option txt-type03 fw-type03" role="option">
+                    <li class="option txt-type03 fw-type03" role="option" onclick="handleOptionClick(event(this))">
                       2019
                     </li>
                   </ul>
@@ -166,7 +168,7 @@
                     </div>
                     <div class="swiper-slide item active">
                       <a href="" class="card_type01">
-                        <div class="card_cover"><img src="../../inc/images/img/img_card-content.svg"></div>
+                        <div class="card_cover"><img src="../../inc/images/img/img_card-content.svg" alt="N CUP"></div>
                         <div class="card_top">
                           <p class="card_rank">Round 2<br />N CUP</p>
                         </div>
@@ -575,7 +577,7 @@
               <div class="selectbox-wrap select-type02">
                 <div>
                   <button class="selectbox-trigger txt-type03 fw-type03" aria-haspopup="listbox" aria-expanded="false"
-                    aria-labelledby="countrySelect">
+                    aria-labelledby="countrySelect" onclick="handleSelectboxClick(event)">
                     A Paddock
                   </button>
                   <ul class="selectbox-options" role="listbox" id="countrySelect" aria-hidden="true"
@@ -586,17 +588,18 @@
                         <span class="btn-icon24 icon-close" aria-hidden="true"></span>
                       </button>
                     </li>
-                    <li class="option txt-type03 fw-type03 active" role="option" aria-selected="true">
+                    <li class="option txt-type03 fw-type03 active" role="option" aria-selected="true"
+                      onclick="handleOptionClick(event(this))">
                       A Paddock
                     </li>
-                    <li class="option txt-type03 fw-type03" role="option">
+                    <li class="option txt-type03 fw-type03" role="option" onclick="handleOptionClick(event(this))">
                       B Paddock
                     </li>
                   </ul>
                 </div>
                 <div>
                   <button class="selectbox-trigger txt-type03 fw-type03" aria-haspopup="listbox" aria-expanded="false"
-                    aria-labelledby="yearSelect">
+                    aria-labelledby="yearSelect" onclick="handleSelectboxClick(event)">
                     N Zone
                   </button>
                   <ul class="selectbox-options 02" role="listbox" id="yearSelect" aria-hidden="true"
@@ -607,10 +610,11 @@
                         <span class="btn-icon24 icon-close" aria-hidden="true"></span>
                       </button>
                     </li>
-                    <li class="option txt-type03 fw-type03 active" role="option" aria-selected="true">
+                    <li class="option txt-type03 fw-type03 active" role="option" aria-selected="true"
+                      onclick="handleOptionClick(event(this))">
                       N Zone
                     </li>
-                    <li class="option txt-type03 fw-type03" role="option">
+                    <li class="option txt-type03 fw-type03" role="option" onclick="handleOptionClick(event(this))">
                       N Experience Zone
                     </li>
                   </ul>

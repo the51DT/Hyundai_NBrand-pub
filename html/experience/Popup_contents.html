@@ -210,7 +210,7 @@
                       <div class="major-category selectbox-wrap select-type01">
                         <div class="temp-wrap">
                           <button class="selectbox-trigger txt-type03 fw-type03" aria-haspopup="listbox"
-                            aria-expanded="false" aria-labelledby="countrySelect">
+                            aria-expanded="false" aria-labelledby="countrySelect" onclick="handleSelectboxClick(event)">
                             All
                           </button>
                           <ul class="selectbox-options" role="listbox" id="countrySelect" aria-hidden="true"
@@ -221,19 +221,24 @@
                                 <span class="btn-icon24 icon-close" aria-hidden="true"></span>
                               </button>
                             </li>
-                            <li class="option txt-type03 fw-type03 active" role="option" aria-selected="true">
+                            <li class="option txt-type03 fw-type03 active" role="option"
+                              onclick="handleOptionClick(event(this))" aria-selected="true">
                               All
                             </li>
-                            <li class="option txt-type03 fw-type03" role="option">
+                            <li class="option txt-type03 fw-type03" role="option"
+                              onclick="handleOptionClick(event(this))">
                               내용
                             </li>
-                            <li class="option txt-type03 fw-type03" role="option">
+                            <li class="option txt-type03 fw-type03" role="option"
+                              onclick="handleOptionClick(event(this))">
                               Tag
                             </li>
-                            <li class="option txt-type03 fw-type03" role="option">
+                            <li class="option txt-type03 fw-type03" role="option"
+                              onclick="handleOptionClick(event(this))">
                               작성자
                             </li>
-                            <li class="option txt-type03 fw-type03" role="option">
+                            <li class="option txt-type03 fw-type03" role="option"
+                              onclick="handleOptionClick(event(this))">
                               N Community명
                             </li>
                           </ul>
