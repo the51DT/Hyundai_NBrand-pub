@@ -2469,7 +2469,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
   .popup-wrapper .popup-footer + .btn-wrap {
     width: 100%;
     height: 100vh;
-    top: 18px;
+    top: 17.5px;
     position: absolute;
     z-index: 5;
     padding: 0 24px 18px 0;
@@ -2750,7 +2750,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
     z-index: 3;
     overflow-y: auto;
     max-height: 100vh;
-    bottom: 5;
+    padding-bottom: 100px;
   }
 
   .popup-wrapper
@@ -2759,14 +2759,14 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
     .selectbox-wrap
     ul.selectbox-options
     li.moclose-btn {
-    padding: 19px 24px 19px 0;
+    padding: 18px 24px 18px 0;
     border-bottom: 1px solid #d9d9d9;
     width: 100%;
     height: fit-content;
     display: flex;
     justify-content: flex-end;
     position: fixed;
-    top: -0.05px;
+    top: -0.5px;
     background: #fff;
     z-index: 1;
   }
@@ -2778,7 +2778,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
     ul.selectbox-options
     li:nth-child(2) {
     position: relative;
-    margin-top: 62px;
+    margin-top: 60px;
   }
 
   .popup-wrapper
@@ -2787,7 +2787,6 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
     .selectbox-wrap
     ul.selectbox-options
     li.option {
-    padding: 19px 48px 19px 24px;
     border-top: 0;
     border-left: 0;
     border-right: 0;
