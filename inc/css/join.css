@@ -1205,7 +1205,7 @@ td {
     flex-wrap: wrap;
   }
   .mypage-inquiry-wrap .mypage-inquiry-btn button,
-  a {
+  .mypage-inquiry-wrap .mypage-inquiry-btn a {
     width: calc(50% - 0.25rem);
   }
   .mypage-inquiry-wrap .mypage-inquiry-btn .mypage-inquiry-btn-full {
