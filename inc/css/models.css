@@ -1,0 +1,118 @@
+@charset "utf-8";
+/* models common */
+.models-wrap {
+  font-family: "Hyundai Sans Text";
+}
+.models-wrap .content-item03,
+.models-wrap .content-item04,
+.models-wrap .content-item05,
+.models-wrap .content-item06,
+.models-wrap .content-item07,
+.models-wrap .content-item08 {
+  padding: 240px 80px 0;
+  margin-bottom: 240px;
+}
+.models-wrap .max1440 {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  gap: 80px;
+  flex-direction: column;
+  align-items: center;
+}
+.models-wrap .content-item02 {
+  position: relative;
+}
+.models-wrap .content-item02 video + .btn {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+.models-wrap .content-item02 img {
+  height: 1080px;
+}
+.models-wrap .overview-wrap .max1440 {
+  text-align: center;
+}
+.models-wrap .blue-title {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+  height: 40px;
+  background-color: #aacae6;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.models-wrap .blue-title::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 40px 15px;
+  border-color: transparent transparent #aacae6 transparent;
+  left: -30px;
+  top: 0;
+}
+.models-wrap .blue-title::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 0;
+  border-style: solid;
+  border-width: 40px 15px 0 0;
+  border-color: #aacae6 transparent #aacae6 transparent;
+  right: -30px;
+  top: 0;
+}
+.models-wrap .text-strong {
+  font-family: "Hyundai Sans Head";
+  font-size: 68px;
+  font-weight: 700;
+  line-height: 85px;
+}
+.models-wrap .text-normal {
+  font-family: "Hyundai Sans Head";
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 33.6px;
+}
+.models-wrap .text-strong + .text-normal {
+  margin-top: 20px;
+}
+.models-wrap .spec-eachbox p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  min-width: 240px;
+  font-family: "Hyundai Sans Head";
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 100px;
+}
+.models-wrap .unit {
+  font-family: "Hyundai Sans Head";
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 44.8px;
+}
+.models-wrap .unit-des {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22.4px;
+}
+.perfor-spec {
+  display: flex;
+  gap: 57px;
+}
+.models-wrap .spec-eachbox + .spec-eachbox::before {
+  position: absolute;
+  width: 1px;
+  height: 150px;
+  background-color: #595c5f;
+  content: "";
+}

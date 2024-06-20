@@ -936,7 +936,7 @@ td {
   .mypage-wrap .tab-head .tabs-wrap .tabs li a {
     width: auto;
   }
-  .tabs-wrap .tabs {
+  .mypage-wrap .tabs-wrap .tabs {
     margin-top: 0;
   }
   /* CM040101 */
@@ -1155,8 +1155,8 @@ td {
   .mypage-subtit-box + .mymsission-wrap {
     margin-top: 4px;
   }
-  .btn-wrap-type1,
-  .btn-wrap-type2 {
+  .mypage-nodata-box .btn-wrap-type1,
+  .mypage-nodata-box .btn-wrap-type2 {
     width: 100%;
   }
 
@@ -1205,7 +1205,7 @@ td {
     flex-wrap: wrap;
   }
   .mypage-inquiry-wrap .mypage-inquiry-btn button,
-  a {
+  .mypage-inquiry-wrap .mypage-inquiry-btn a {
     width: calc(50% - 0.25rem);
   }
   .mypage-inquiry-wrap .mypage-inquiry-btn .mypage-inquiry-btn-full {
