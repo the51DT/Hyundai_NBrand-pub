@@ -31,6 +31,9 @@
   font-weight: 700;
   line-height: 140%;
 }
+.configurator_header_tit .icon-right {
+  margin-left: 0.75rem;
+}
 .configurator_con_wrap {
   flex-grow: 1;
 }
@@ -122,12 +125,15 @@
 }
 .configurator_list_swiper .swiper-slide-active .configurator_tit_wrap {
   opacity: 1;
+  transition: opacity 0.8s ease-in-out;
 }
 .configurator_list_swiper .swiper-slide-active .configurator_car_wrap {
   opacity: 1;
+  transition: opacity 0.8s ease-in-out;
 }
 .configurator_list_swiper .swiper-slide-active .configurator_detail_wrap {
   opacity: 1;
+  transition: opacity 0.8s ease-in-out;
 }
 .configurator_list_swiper .swiper-bottom-wrap {
   left: 0;
