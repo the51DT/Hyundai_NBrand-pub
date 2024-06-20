@@ -1,231 +1,215 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name=" format-detection" content="telephone=no" />
+    <title>N브랜드 | Experience_Nfluencer_Rewards</title>
+    <link type="text/css" rel="stylesheet" href="../../inc/css/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="../../inc/css/common.css" />
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name=" format-detection" content="telephone=no" />
-  <title>N브랜드 | Experience_Nfluencer_Rewards</title>
-  <link type="text/css" rel="stylesheet" href="../../inc/css/swiper.min.css" />
-  <link type="text/css" rel="stylesheet" href="../../inc/css/common.css" />
-
-</head>
-
-<body>
-  <div class="wrap">
-    <section class="content-wrap subfilter_wrap">
-      <div class="content-area">
-        <div class="content-item01 content-top">
-          <p class="tit-type01 fw-type03">Rewards</p>
-          <p class="tit-type03 fw-type03">
-            The moment you<br class="mo-only" />
-            become one with N
-          </p>
-        </div>
-        <!-- missions -->
-        <div class="content-item02">
-          <div class="dropdown centered">
-            <button class="wrap-dropdown-selected dropdown-btn" aria-haspopup="true" aria-expanded="false">
-              <i class="btn-icon24 icon-control-bar" aria-hidden="true"></i>
-              <span class="txt-type02">Search Filter</span>
-              <span class="btn-icon20 icon-down-wh" aria-hidden="true"></span>
-            </button>
-            <div class="dropdown-menu" role="menu" aria-hidden="true">
-              <ul class="wrap-filter">
-                <!-- 상단영역 시작  -->
-                <li>
-                  <div class="wrap-category cart-type00">
-                    <div class="major-category selectbox-wrap select-type01">
-                      <div class="temp-wrap">
-                        <button class="selectbox-trigger txt-type03 fw-type03" aria-haspopup="listbox"
-                          aria-expanded="false" aria-labelledby="countrySelect"
-                          onclick="handleSelectboxClick(event)">All</button>
-                        <ul class="selectbox-options" role="listbox" id="countrySelect" aria-hidden="true"
-                          style="display: none">
-                          <li class="moclose-btn" style="display: none">
-                            <button type="button" class="btn btn-only-icon">
-                              <span class="visually-hidden">close button</span>
-                              <span class="btn-icon24 icon-close" aria-hidden="true"></span>
-                            </button>
-                          </li>
-                            <li class="option txt-type03 fw-type03 active" role="option" onclick="handleOptionClick(event)" aria-selected="true">1</li>
-                            <li class="option txt-type03 fw-type03" role="option" onclick="handleOptionClick(event)">2</li>
-                            <li class="option txt-type03 fw-type03" role="option" onclick="handleOptionClick(event)">3</li>
-                        </ul>
+  <body>
+    <div class="wrap">
+      <section class="content-wrap subfilter_wrap">
+        <div class="content-area">
+          <div class="content-item01 content-top">
+            <p class="tit-type01 fw-type03">Rewards</p>
+            <p class="tit-type03 fw-type03">
+              The moment you<br class="mo-only" />
+              become one with N
+            </p>
+          </div>
+          <!-- missions -->
+          <div class="content-item02">
+            <div class="dropdown centered">
+              <button class="wrap-dropdown-selected dropdown-btn" aria-haspopup="true" aria-expanded="false">
+                <i class="btn-icon24 icon-control-bar" aria-hidden="true"></i>
+                <span class="txt-type02">Search Filter</span>
+                <span class="btn-icon20 icon-down-wh" aria-hidden="true"></span>
+              </button>
+              <div class="dropdown-menu" role="menu" aria-hidden="true">
+                <ul class="wrap-filter">
+                  <!-- 상단영역 시작  -->
+                  <li>
+                    <div class="wrap-category cart-type00">
+                      <div class="major-category selectbox-wrap select-type01">
+                        <div class="temp-wrap">
+                          <button class="selectbox-trigger selectbox-js txt-type03 fw-type03" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="countrySelect">All</button>
+                          <ul class="selectbox-options" role="listbox" id="countrySelect" aria-hidden="true" style="display: none">
+                            <li class="moclose-btn" style="display: none">
+                              <button type="button" class="btn btn-only-icon">
+                                <span class="visually-hidden">close button</span>
+                                <span class="btn-icon24 icon-close" aria-hidden="true"></span>
+                              </button>
+                            </li>
+                            <li class="option option-click txt-type03 fw-type03 active" role="option" aria-selected="true">1</li>
+                            <li class="option option-click txt-type03 fw-type03" role="option">2</li>
+                            <li class="option option-click txt-type03 fw-type03" role="option">3</li>
+                          </ul>
+                        </div>
                       </div>
-                    </div>
-                    <div class="selectbox-overlay" style="display: none"></div>
-                    <div class="search-container">
-                      <div class="search-wrap" role="search">
-                        <div class="search-input-box">
-                          <input type="text" name="searchInput01" value="" placeholder="Search your Items" />
-                          <div class="btn-wrap">
-                            <button type="button" class="btn btn-only-icon-circle btn-search">
-                              <span class="visually-hidden">search button</span>
-                              <span class="btn-icon24 icon-search-wh" aria-hidden="true">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                  xmlns="http://www.w3.org/2000/svg">
-                                  <path
-                                    d="M21.315 19.1846L16.335 14.2046C17.16 12.9896 17.64 11.5196 17.64 9.94465C17.64 5.69965 14.19 2.26465 9.96 2.26465C5.73 2.26465 2.25 5.69965 2.25 9.92965C2.25 14.1596 5.7 17.6096 9.93 17.6096C11.505 17.6096 12.975 17.1296 14.19 16.3046L19.17 21.2846L21.285 19.1696L21.315 19.1846ZM5.25 9.92965C5.25 7.34965 7.35 5.24965 9.93 5.24965C12.51 5.24965 14.61 7.34965 14.61 9.92965C14.61 12.5096 12.51 14.6096 9.93 14.6096C7.35 14.6096 5.25 12.5096 5.25 9.92965Z"
-                                    fill="black" />
-                                </svg>
-                              </span>
-                            </button>
+                      <div class="selectbox-overlay" style="display: none"></div>
+                      <div class="search-container">
+                        <div class="search-wrap" role="search">
+                          <div class="search-input-box">
+                            <input type="text" name="searchInput01" value="" placeholder="Search your Items" />
+                            <div class="btn-wrap">
+                              <button type="button" class="btn btn-only-icon-circle btn-search">
+                                <span class="visually-hidden">search button</span>
+                                <span class="btn-icon24 icon-search-wh" aria-hidden="true">
+                                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                      d="M21.315 19.1846L16.335 14.2046C17.16 12.9896 17.64 11.5196 17.64 9.94465C17.64 5.69965 14.19 2.26465 9.96 2.26465C5.73 2.26465 2.25 5.69965 2.25 9.92965C2.25 14.1596 5.7 17.6096 9.93 17.6096C11.505 17.6096 12.975 17.1296 14.19 16.3046L19.17 21.2846L21.285 19.1696L21.315 19.1846ZM5.25 9.92965C5.25 7.34965 7.35 5.24965 9.93 5.24965C12.51 5.24965 14.61 7.34965 14.61 9.92965C14.61 12.5096 12.51 14.6096 9.93 14.6096C7.35 14.6096 5.25 12.5096 5.25 9.92965Z"
+                                      fill="black"
+                                    />
+                                  </svg>
+                                </span>
+                              </button>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                </li>
-                <!-- 상단영역 끝  -->
-                <li>
-                  <ul class="wrap-forFilterScroll">
-                    <!-- row: 첫번째 줄 시작-->
-                    <li>
-                      <div class="wrap-category cart-type01">
-                        <div class="major-category">
-                          <p class="tit-type05">Sort by</p>
-                        </div>
-                        <div class="wrap-inner-category">
-                          <div class="inner">
-                            <div class="small-category">
-                              <div class="tag-list-wrap">
-                                <ul class="tag-list ty02">
-                                  <div class="tag-list-wrap">
-                                    <ul class="tag-list ty02">
-                                      <li class="on">
-                                        <input type="radio" id="radio1-1" name="radio1" checked />
-                                        <label for="radio1-1" class="radio-label tag-item"
-                                          data-check="true">Newest</label>
-                                      </li>
-                                      <li>
-                                        <input type="radio" id="radio1-2" name="radio1" />
-                                        <label for="radio1-2" class="radio-label tag-item"
-                                          data-check="false">#About_N</label>
-                                      </li>
-                                    </ul>
-                                  </div>
-                                </ul>
+                  </li>
+                  <!-- 상단영역 끝  -->
+                  <li>
+                    <ul class="wrap-forFilterScroll">
+                      <!-- row: 첫번째 줄 시작-->
+                      <li>
+                        <div class="wrap-category cart-type01">
+                          <div class="major-category">
+                            <p class="tit-type05">Sort by</p>
+                          </div>
+                          <div class="wrap-inner-category">
+                            <div class="inner">
+                              <div class="small-category">
+                                <div class="tag-list-wrap">
+                                  <ul class="tag-list ty02">
+                                    <div class="tag-list-wrap">
+                                      <ul class="tag-list ty02">
+                                        <li class="on">
+                                          <input type="radio" id="radio1-1" name="radio1" checked />
+                                          <label for="radio1-1" class="radio-label tag-item" data-check="true">Newest</label>
+                                        </li>
+                                        <li>
+                                          <input type="radio" id="radio1-2" name="radio1" />
+                                          <label for="radio1-2" class="radio-label tag-item" data-check="false">#About_N</label>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </ul>
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                    </li>
-                    <!-- row: 첫번째 줄 끝-->
-                    <!-- row: 두번째 줄 시작-->
-                    <li>
-                      <div class="wrap-category cart-type02">
-                        <div class="major-category">
-                          <p class="tit-type05">
-                            All
-                            <span class="accent"> 4 </span>
-                          </p>
-                        </div>
-                        <div class="wrap-inner-category">
-                          <div class="inner">
-                            <div class="middle-category">
-                              <p class="txt-type03">Post</p>
-                            </div>
-                            <div class="small-category">
-                              <div class="tag-list-wrap">
-                                <ul class="tag-list ty02 multi">
-                                  <li class="on">
-                                    <input type="checkbox" id="checkbox0-1" name="checkbox0-1" checked />
-                                    <label for="checkbox0-1" class="checkbox-label tag-item"
-                                      data-check="true">All</label>
-                                  </li>
-                                </ul>
+                      </li>
+                      <!-- row: 첫번째 줄 끝-->
+                      <!-- row: 두번째 줄 시작-->
+                      <li>
+                        <div class="wrap-category cart-type02">
+                          <div class="major-category">
+                            <p class="tit-type05">
+                              All
+                              <span class="accent"> 4 </span>
+                            </p>
+                          </div>
+                          <div class="wrap-inner-category">
+                            <div class="inner">
+                              <div class="middle-category">
+                                <p class="txt-type03">Post</p>
+                              </div>
+                              <div class="small-category">
+                                <div class="tag-list-wrap">
+                                  <ul class="tag-list ty02 multi">
+                                    <li class="on">
+                                      <input type="checkbox" id="checkbox0-1" name="checkbox0-1" checked />
+                                      <label for="checkbox0-1" class="checkbox-label tag-item" data-check="true">All</label>
+                                    </li>
+                                  </ul>
+                                </div>
                               </div>
                             </div>
-                          </div>
-                          <div class="inner">
-                            <div class="middle-category">
-                              <p class="txt-type03">Misson</p>
-                            </div>
-                            <div class="small-category">
-                              <div class="tag-list-wrap">
-                                <ul class="tag-list ty02 multi">
-                                  <!-- checkbox일때, multi 클래스 추가 -->
-                                  <li class="on">
-                                    <input type="checkbox" id="checkbox1-1" name="checkbox1-1" checked />
-                                    <label for="checkbox1-1" class="checkbox-label tag-item"
-                                      data-check="true">All</label>
-                                  </li>
-                                  <li>
-                                    <input type="checkbox" id="checkbox1-2" name="checkbox1-2" />
-                                    <label for="checkbox1-2" class="checkbox-label tag-item"
-                                      data-check="false">Nthusiasts</label>
-                                  </li>
-                                  <li>
-                                    <input type="checkbox" id="checkbox1-3" name="checkbox1-3" />
-                                    <label for="checkbox1-3" class="checkbox-label tag-item" data-check="false">N
-                                      Community Community Community Member</label>
-                                  </li>
-                                  <li>
-                                    <input type="checkbox" id="checkbox1-4" name="checkbox1-4" />
-                                    <label for="checkbox1-4" class="checkbox-label tag-item" data-check="false">N
-                                      Community Master</label>
-                                  </li>
-                                </ul>
+                            <div class="inner">
+                              <div class="middle-category">
+                                <p class="txt-type03">Misson</p>
+                              </div>
+                              <div class="small-category">
+                                <div class="tag-list-wrap">
+                                  <ul class="tag-list ty02 multi">
+                                    <!-- checkbox일때, multi 클래스 추가 -->
+                                    <li class="on">
+                                      <input type="checkbox" id="checkbox1-1" name="checkbox1-1" checked />
+                                      <label for="checkbox1-1" class="checkbox-label tag-item" data-check="true">All</label>
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" id="checkbox1-2" name="checkbox1-2" />
+                                      <label for="checkbox1-2" class="checkbox-label tag-item" data-check="false">Nthusiasts</label>
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" id="checkbox1-3" name="checkbox1-3" />
+                                      <label for="checkbox1-3" class="checkbox-label tag-item" data-check="false">N Community Community Community Member</label>
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" id="checkbox1-4" name="checkbox1-4" />
+                                      <label for="checkbox1-4" class="checkbox-label tag-item" data-check="false">N Community Master</label>
+                                    </li>
+                                  </ul>
+                                </div>
                               </div>
                             </div>
-                          </div>
-                          <div class="inner">
-                            <div class="middle-category">
-                              <p class="txt-type03">Rewards</p>
-                            </div>
-                            <div class="small-category">
-                              <div class="tag-list-wrap">
-                                <ul class="tag-list ty02 multi">
-                                  <!-- checkbox일때, multi 클래스 추가 -->
-                                  <li class="on">
-                                    <input type="checkbox" id="checkbox2-1" name="checkbox2-1" checked />
-                                    <label for="checkbox2-1" class="checkbox-label tag-item"
-                                      data-check="true">All</label>
-                                  </li>
-                                  <li>
-                                    <input type="checkbox" id="checkbox2-2" name="checkbox2-2" />
-                                    <label for="checkbox2-2" class="checkbox-label tag-item"
-                                      data-check="false">Nthusiasts</label>
-                                  </li>
-                                  <li>
-                                    <input type="checkbox" id="checkbox2-3" name="checkbox2-3" />
-                                    <label for="checkbox2-3" class="checkbox-label tag-item" data-check="false">N
-                                      Community</label>
-                                  </li>
-                                </ul>
+                            <div class="inner">
+                              <div class="middle-category">
+                                <p class="txt-type03">Rewards</p>
+                              </div>
+                              <div class="small-category">
+                                <div class="tag-list-wrap">
+                                  <ul class="tag-list ty02 multi">
+                                    <!-- checkbox일때, multi 클래스 추가 -->
+                                    <li class="on">
+                                      <input type="checkbox" id="checkbox2-1" name="checkbox2-1" checked />
+                                      <label for="checkbox2-1" class="checkbox-label tag-item" data-check="true">All</label>
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" id="checkbox2-2" name="checkbox2-2" />
+                                      <label for="checkbox2-2" class="checkbox-label tag-item" data-check="false">Nthusiasts</label>
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" id="checkbox2-3" name="checkbox2-3" />
+                                      <label for="checkbox2-3" class="checkbox-label tag-item" data-check="false">N Community</label>
+                                    </li>
+                                  </ul>
+                                </div>
                               </div>
                             </div>
-                          </div>
-                          <div class="inner">
-                            <div class="middle-category">
-                              <p class="txt-type03">Mission</p>
-                            </div>
-                            <div class="small-category">
-                              <div class="tag-list-wrap">
-                                <ul class="tag-list ty02 multi">
-                                  <!-- checkbox일때, multi 클래스 추가 -->
-                                  <li class="on">
-                                    <input type="checkbox" id="checkbox3-1" name="checkbox3-1" checked />
-                                    <label for="checkbox3-1" class="checkbox-label tag-item"
-                                      data-check="true">All</label>
-                                  </li>
-                                </ul>
+                            <div class="inner">
+                              <div class="middle-category">
+                                <p class="txt-type03">Mission</p>
+                              </div>
+                              <div class="small-category">
+                                <div class="tag-list-wrap">
+                                  <ul class="tag-list ty02 multi">
+                                    <!-- checkbox일때, multi 클래스 추가 -->
+                                    <li class="on">
+                                      <input type="checkbox" id="checkbox3-1" name="checkbox3-1" checked />
+                                      <label for="checkbox3-1" class="checkbox-label tag-item" data-check="true">All</label>
+                                    </li>
+                                  </ul>
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                    </li>
+                      </li>
 
-                    <!-- row: 두번째 줄 끝-->
-                  </ul>
-                </li>
+                      <!-- row: 두번째 줄 끝-->
+                    </ul>
+                  </li>
 
-                <!-- row: 세번째 줄 시작-->
-                <!-- <li>
+                  <!-- row: 세번째 줄 시작-->
+                  <!-- <li>
                           <div class="wrap-category cart-type03">
                             <div class="major-category">
                               <p class="tit-type05">Popular
@@ -266,623 +250,606 @@
                             </div>
                           </div>
                         </li> -->
-                <!-- row: 세번째 줄 끝-->
-              </ul>
-              <!-- 하단 영역 시작 -->
-              <div class="wrap-category-result">
-                <div class="wrap-result-nums">
-                  <p>
-                    <span class="accent">9</span>
-                    items selected
-                  </p>
-                  <button type="button" class="btn btn-lg-primary02">
-                    <span class="btn-icon20 icon-refresh" aria-hidden="true"></span>
-                    Reset
-                  </button>
-                </div>
+                  <!-- row: 세번째 줄 끝-->
+                </ul>
+                <!-- 하단 영역 시작 -->
+                <div class="wrap-category-result">
+                  <div class="wrap-result-nums">
+                    <p>
+                      <span class="accent">9</span>
+                      items selected
+                    </p>
+                    <button type="button" class="btn btn-lg-primary02">
+                      <span class="btn-icon20 icon-refresh" aria-hidden="true"></span>
+                      Reset
+                    </button>
+                  </div>
 
-                <div class="wrap-result-button">
-                  <button type="button" class="btn btn-lg-primary01">
-                    Show Result
-                    <span class="btn-icon20 icon-right-wh" aria-hidden="true"></span>
-                    <!-- <span class="btn-icon20 icon-right-wh" aria-hidden="true">
+                  <div class="wrap-result-button">
+                    <button type="button" class="btn btn-lg-primary01">
+                      Show Result
+                      <span class="btn-icon20 icon-right-wh" aria-hidden="true"></span>
+                      <!-- <span class="btn-icon20 icon-right-wh" aria-hidden="true">
                                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M6.20906 13.7091L4.78906 12.2891L9.08906 7.99906L4.78906 3.70906L6.20906 2.28906L11.9091 7.99906L6.20906 13.7091Z" fill="#ffffff"/>
                                   </svg>
                                 </span> -->
-                  </button>
-                </div>
-              </div>
-              <!-- 하단 영역 끝 -->
-            </div>
-          </div>
-          <!-- 레이아웃 구성 후 pubUi.masonrtLayout 함수 실행해주세요 -->
-          <div class="grid_masonry">
-            <div class="masonry_item">
-              <div class="masonry_con">
-                <div class="card_type04">
-                  <button class="card_thumbnail h347">
-                    <img src="../../inc/images/img/img__sub_rewards_thumnail01.png" alt="썸네일 이미지" />
-                  </button>
-                  <div class="card_state end">
-                    <p class="card_step">End</p>
-                    <p class="card_detail">03.24.2024 - 04.31.2024</p>
-                  </div>
-                  <!-- v.101 기획서 p.40 : 프로필 [01.닉네임] -->
-                  <div class="card_profile">
-                    <div class="profile_img">
-                      <img src="../../inc/images/img/img_Nful_profile_default.png" alt="프로필 기본 이미지" />
-                    </div>
-                    <p class="profile_des">
-                      <span class="profile_name">Madison</span>
-                    </p>
-                  </div>
-                  <div class="card_con">
-                    <p class="card_tag">Nthusiasts</p>
-                    <p class="tit-type03 fw-type03">Reestyle Mini Bag</p>
-                    <p class="txt-type03 fw-type02 card_cont-des">Made with organic cotton fabric made from sustainable
-                      materials Check out the t-shirts we made.</p>
-                    <!-- v.101 기획서 p.40 : Tag 클릭 시 해당 메뉴 화면에서 해당 Tag 소팅되어 노출 -->
-                    <div class="card-hashtag">
-                      <button class="txt-type04">#Heritage</button>
-                      <button class="txt-type04">#SensibilityofPony</button>
-                      <button class="txt-type04">#widespread</button>
-                    </div>
-                  </div>
-                  <div class="card_function btn-wrap-type5">
-                    <div>
-                      <button type="button" class="btn btn-only-icon-notbg">
-                        <span class="visually-hidden">heart button</span>
-                        <span class="btn-icon20 icon-heart" aria-hidden="true"></span>
-                      </button>
-                      <p class="txt-type03 fw-type03">1,724</p>
-                    </div>
-                    <div>
-                      <button type="button" class="btn btn-only-icon-notbg">
-                        <span class="visually-hidden">share button</span>
-                        <span class="btn-icon20 icon-share" aria-hidden="true"></span>
-                      </button>
-                      <button type="button" class="btn btn-only-icon-notbg">
-                        <span class="visually-hidden">Translation button</span>
-                        <span class="btn-icon20 icon-trans" aria-hidden="true"></span>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="masonry_item">
-              <div class="masonry_con">
-                <div class="card_type04">
-                  <button class="card_thumbnail h464">
-                    <img src="../../inc/images/img/img__sub_rewards_thumnail02.png" alt="썸네일 이미지" />
-                  </button>
-                  <div class="card_state">
-                    <p class="card_step">40,000,000P</p>
-                    <p class="card_detail">03.24.2024 - 04.31.2024</p>
-                  </div>
-                  <!-- v.101 기획서 p.40 : 프로필 [02.N Community 가입 한 경우] > 레이어 나옴(EP040401M01) -->
-                  <div class="card_profile">
-                    <button class="profile_img pop-open" aria-controls="pop-page" aria-haspopup="true"
-                      aria-expanded="false" title="팝업오픈">
-                      <img src="../../inc/images/img/img_Nful_profile_01.png" alt="N Community가입자의 프로필 이미지" />
                     </button>
-                    <div class="popup club-popup" id="pop-page" role="dialog" aria-modal="true"
-                      aria-labelledby="tit-type04" data-pop="pop-page">
-                      <div class="popup-wrapper">
-                        <div class="popup-header pop-profile_wrap">
-                          <div class="pop-profile">
-                            <img src="../../inc/images/img/img_Nful_profile_01.png" alt="N Community가입자의 프로필 이미지" />
-                            <p class="pop-profile_club">i30N_Club</p>
-                          </div>
-                          <a href="#" class="btn btn-only-icon-notbg">
-                            <span class="visually-hidden">Go to the community homepage button</span>
-                            <span class="btn-icon20 icon-right" aria-hidden="true"></span>
-                          </a>
-                        </div>
-                        <div class="popup-body">
-                          <div class="pop-gray">
-                            <div>
-                              <p class="txt-left">Rank</p>
-                              <p class="txt-right">1</p>
+                  </div>
+                </div>
+                <!-- 하단 영역 끝 -->
+              </div>
+            </div>
+            <!-- 레이아웃 구성 후 pubUi.masonrtLayout 함수 실행해주세요 -->
+            <div class="grid_masonry">
+              <div class="masonry_item">
+                <div class="masonry_con">
+                  <div class="card_type04">
+                    <button class="card_thumbnail h347">
+                      <img src="../../inc/images/img/img__sub_rewards_thumnail01.png" alt="썸네일 이미지" />
+                    </button>
+                    <div class="card_state end">
+                      <p class="card_step">End</p>
+                      <p class="card_detail">03.24.2024 - 04.31.2024</p>
+                    </div>
+                    <!-- v.101 기획서 p.40 : 프로필 [01.닉네임] -->
+                    <div class="card_profile">
+                      <div class="profile_img">
+                        <img src="../../inc/images/img/img_Nful_profile_default.png" alt="프로필 기본 이미지" />
+                      </div>
+                      <p class="profile_des">
+                        <span class="profile_name">Madison</span>
+                      </p>
+                    </div>
+                    <div class="card_con">
+                      <p class="card_tag">Nthusiasts</p>
+                      <p class="tit-type03 fw-type03">Reestyle Mini Bag</p>
+                      <p class="txt-type03 fw-type02 card_cont-des">Made with organic cotton fabric made from sustainable materials Check out the t-shirts we made.</p>
+                      <!-- v.101 기획서 p.40 : Tag 클릭 시 해당 메뉴 화면에서 해당 Tag 소팅되어 노출 -->
+                      <div class="card-hashtag">
+                        <button class="txt-type04">#Heritage</button>
+                        <button class="txt-type04">#SensibilityofPony</button>
+                        <button class="txt-type04">#widespread</button>
+                      </div>
+                    </div>
+                    <div class="card_function btn-wrap-type5">
+                      <div>
+                        <button type="button" class="btn btn-only-icon-notbg">
+                          <span class="visually-hidden">heart button</span>
+                          <span class="btn-icon20 icon-heart" aria-hidden="true"></span>
+                        </button>
+                        <p class="txt-type03 fw-type03">1,724</p>
+                      </div>
+                      <div>
+                        <button type="button" class="btn btn-only-icon-notbg">
+                          <span class="visually-hidden">share button</span>
+                          <span class="btn-icon20 icon-share" aria-hidden="true"></span>
+                        </button>
+                        <button type="button" class="btn btn-only-icon-notbg">
+                          <span class="visually-hidden">Translation button</span>
+                          <span class="btn-icon20 icon-trans" aria-hidden="true"></span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="masonry_item">
+                <div class="masonry_con">
+                  <div class="card_type04">
+                    <button class="card_thumbnail h464">
+                      <img src="../../inc/images/img/img__sub_rewards_thumnail02.png" alt="썸네일 이미지" />
+                    </button>
+                    <div class="card_state">
+                      <p class="card_step">40,000,000P</p>
+                      <p class="card_detail">03.24.2024 - 04.31.2024</p>
+                    </div>
+                    <!-- v.101 기획서 p.40 : 프로필 [02.N Community 가입 한 경우] > 레이어 나옴(EP040401M01) -->
+                    <div class="card_profile">
+                      <button class="profile_img pop-open" aria-controls="pop-page" aria-haspopup="true" aria-expanded="false" title="팝업오픈">
+                        <img src="../../inc/images/img/img_Nful_profile_01.png" alt="N Community가입자의 프로필 이미지" />
+                      </button>
+                      <div class="popup club-popup" id="pop-page" role="dialog" aria-modal="true" aria-labelledby="tit-type04" data-pop="pop-page">
+                        <div class="popup-wrapper">
+                          <div class="popup-header pop-profile_wrap">
+                            <div class="pop-profile">
+                              <img src="../../inc/images/img/img_Nful_profile_01.png" alt="N Community가입자의 프로필 이미지" />
+                              <p class="pop-profile_club">i30N_Club</p>
                             </div>
-                            <div>
-                              <p class="txt-left">Point</p>
-                              <p class="txt-right">3,000</p>
-                            </div>
-                            <div class="tooltip_wrap">
-                              <p class="txt-left">Members</p>
-                            </div>
-                          </div>
-                          <div class="pop-des">
-                            <p>Welcome!</p>
-                            <p>Hyundai i30 N Performance</p>
-                            <p>You can join immediately</p>
-                            <p>Actively participate in club missions</p>
-                            <p>Club cafe in operation</p>
-                          </div>
-                          <div class="btn-wrap">
-                            <a href="#" target="_blank" class="btn sm-txt-btn01">
-                              <span class="btn-icon16 icon-copylink" aria-hidden="true"></span>
-                              N Community
+                            <a href="#" class="btn btn-only-icon-notbg">
+                              <span class="visually-hidden">Go to the community homepage button</span>
+                              <span class="btn-icon20 icon-right" aria-hidden="true"></span>
                             </a>
                           </div>
-                        </div>
-                        <div class="popup-footer">
-                          <div class="btn-wrap">
-                            <button type="button" class="btn btn-md-primary01">
-                              Sign Up
-                              <span class="btn-icon20 icon-right-wh" aria-hidden="true"></span>
-                            </button>
-                            <button type="button" class="btn btn-md-outline01 pop-close">Close</button>
-                            <!-- Master(생성자)인 경우 [가입하기] 버튼 → [관리하기] 버튼으로 노출 
+                          <div class="popup-body">
+                            <div class="pop-gray">
+                              <div>
+                                <p class="txt-left">Rank</p>
+                                <p class="txt-right">1</p>
+                              </div>
+                              <div>
+                                <p class="txt-left">Point</p>
+                                <p class="txt-right">3,000</p>
+                              </div>
+                              <div class="tooltip_wrap">
+                                <p class="txt-left">Members</p>
+                              </div>
+                            </div>
+                            <div class="pop-des">
+                              <p>Welcome!</p>
+                              <p>Hyundai i30 N Performance</p>
+                              <p>You can join immediately</p>
+                              <p>Actively participate in club missions</p>
+                              <p>Club cafe in operation</p>
+                            </div>
+                            <div class="btn-wrap">
+                              <a href="#" target="_blank" class="btn sm-txt-btn01">
+                                <span class="btn-icon16 icon-copylink" aria-hidden="true"></span>
+                                N Community
+                              </a>
+                            </div>
+                          </div>
+                          <div class="popup-footer">
+                            <div class="btn-wrap">
+                              <button type="button" class="btn btn-md-primary01">
+                                Sign Up
+                                <span class="btn-icon20 icon-right-wh" aria-hidden="true"></span>
+                              </button>
+                              <button type="button" class="btn btn-md-outline01 pop-close">Close</button>
+                              <!-- Master(생성자)인 경우 [가입하기] 버튼 → [관리하기] 버튼으로 노출 
                                 1. 클릭 시 마이페이지 > N Community 메뉴 이동 (a태그로 변경했는데 페이지 이동인지 확인 필요)
                                 (※※※※※※※※※※영문 받아야함) -->
-                            <!-- <a class="btn btn-md-primary01">
+                              <!-- <a class="btn btn-md-primary01">
                                   관리하기
                                   <span class="btn-icon20 icon-right-wh" aria-hidden="true"></span>
                                 </a> -->
+                            </div>
                           </div>
                         </div>
                       </div>
+                      <p class="profile_des">
+                        <span class="profile_name">Madison</span>
+                        <span class="profile_club">i30N_Club</span>
+                      </p>
                     </div>
-                    <p class="profile_des">
-                      <span class="profile_name">Madison</span>
-                      <span class="profile_club">i30N_Club</span>
-                    </p>
-                  </div>
-                  <div class="card_con">
-                    <p class="card_tag">N Community Member</p>
-                    <p class="tit-type03 fw-type03">Pony 3-door miniature 1:24</p>
-                    <p class="txt-type03 fw-type02 card_cont-des">It is Korea's first three-door passenger car that adds
-                      a sporty sensibility to the pony that started the car era.</p>
-                    <!-- v.101 기획서 p.40 : Tag 클릭 시 해당 메뉴 화면에서 해당 Tag 소팅되어 노출 -->
-                    <div class="card-hashtag">
-                      <button class="txt-type04">#Heritage</button>
-                      <button class="txt-type04">#SensibilityofPony</button>
-                      <button class="txt-type04">#widespread</button>
+                    <div class="card_con">
+                      <p class="card_tag">N Community Member</p>
+                      <p class="tit-type03 fw-type03">Pony 3-door miniature 1:24</p>
+                      <p class="txt-type03 fw-type02 card_cont-des">It is Korea's first three-door passenger car that adds a sporty sensibility to the pony that started the car era.</p>
+                      <!-- v.101 기획서 p.40 : Tag 클릭 시 해당 메뉴 화면에서 해당 Tag 소팅되어 노출 -->
+                      <div class="card-hashtag">
+                        <button class="txt-type04">#Heritage</button>
+                        <button class="txt-type04">#SensibilityofPony</button>
+                        <button class="txt-type04">#widespread</button>
+                      </div>
                     </div>
-                  </div>
-                  <div class="card_function btn-wrap-type5">
-                    <div>
-                      <button type="button" class="btn btn-only-icon-notbg">
-                        <span class="visually-hidden">heart button</span>
-                        <span class="btn-icon20 icon-heart" aria-hidden="true"></span>
-                      </button>
-                      <p class="txt-type03 fw-type03">1,724</p>
-                    </div>
-                    <div>
-                      <button type="button" class="btn btn-only-icon-notbg">
-                        <span class="visually-hidden">share button</span>
-                        <span class="btn-icon20 icon-share" aria-hidden="true"></span>
-                      </button>
-                      <button type="button" class="btn btn-only-icon-notbg">
-                        <span class="visually-hidden">Translation button</span>
-                        <span class="btn-icon20 icon-trans" aria-hidden="true"></span>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="masonry_item">
-              <div class="masonry_con">
-                <div class="card_type04">
-                  <button class="card_thumbnail h825">
-                    <img src="../../inc/images/img/img__sub_rewards_thumnail03.png" alt="썸네일 이미지" />
-                  </button>
-                  <div class="card_state">
-                    <p class="card_step">200,000P</p>
-                    <p class="card_detail">03.24.2024 - 04.31.2024</p>
-                  </div>
-                  <!-- v.101 기획서 p.40 : 프로필 [03.N Brand 관리자] -->
-                  <div class="card_profile">
-                    <div class="profile_img">
-                      <img src="../../inc/images/img/img_Nful_profile_manager.png" alt="N Community가입자의 프로필 이미지" />
-                    </div>
-                    <p class="profile_des">
-                      <span class="profile_name">Madison</span>
-                    </p>
-                  </div>
-                  <div class="card_con">
-                    <p class="card_tag">Nthusiasts</p>
-                    <p class="tit-type03 fw-type03">Play sticker</p>
-                    <p class="txt-type03 fw-type02 card_cont-des">It is a life collection of essential items in everyday
-                      life. Enjoy a variety of products that give you vitality in your daily life.</p>
-                    <!-- v.101 기획서 p.40 : Tag 클릭 시 해당 메뉴 화면에서 해당 Tag 소팅되어 노출 -->
-                    <div class="card-hashtag">
-                      <button class="txt-type04">#testminiature</button>
-                      <button class="txt-type04">#newcar</button>
-                      <button class="txt-type04">#ceremony</button>
-                    </div>
-                  </div>
-                  <div class="card_function btn-wrap-type5">
-                    <div>
-                      <button type="button" class="btn btn-only-icon-notbg">
-                        <span class="visually-hidden">heart button</span>
-                        <span class="btn-icon20 icon-heart" aria-hidden="true"></span>
-                      </button>
-                      <p class="txt-type03 fw-type03">54</p>
-                    </div>
-                    <div>
-                      <button type="button" class="btn btn-only-icon-notbg">
-                        <span class="visually-hidden">share button</span>
-                        <span class="btn-icon20 icon-share" aria-hidden="true"></span>
-                      </button>
-                      <button type="button" class="btn btn-only-icon-notbg">
-                        <span class="visually-hidden">Translation button</span>
-                        <span class="btn-icon20 icon-trans" aria-hidden="true"></span>
-                      </button>
+                    <div class="card_function btn-wrap-type5">
+                      <div>
+                        <button type="button" class="btn btn-only-icon-notbg">
+                          <span class="visually-hidden">heart button</span>
+                          <span class="btn-icon20 icon-heart" aria-hidden="true"></span>
+                        </button>
+                        <p class="txt-type03 fw-type03">1,724</p>
+                      </div>
+                      <div>
+                        <button type="button" class="btn btn-only-icon-notbg">
+                          <span class="visually-hidden">share button</span>
+                          <span class="btn-icon20 icon-share" aria-hidden="true"></span>
+                        </button>
+                        <button type="button" class="btn btn-only-icon-notbg">
+                          <span class="visually-hidden">Translation button</span>
+                          <span class="btn-icon20 icon-trans" aria-hidden="true"></span>
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="masonry_item">
-              <div class="masonry_con">
-                <div class="card_type04">
-                  <button class="card_thumbnail h464">
-                    <img src="../../inc/images/img/img__sub_rewards_thumnail04.png" alt="썸네일 이미지" />
-                  </button>
-                  <div class="card_state end">
-                    <p class="card_step">End</p>
-                    <p class="card_detail">03.24.2024 - 04.31.2024</p>
-                  </div>
-                  <!-- v.101 기획서 p.40 : 프로필 [04. N Community 탈퇴 한 경우] > 레이어 나옴(EP040401M01) / 이미지 변경될 예정 -->
-                  <div class="card_profile">
-                    <button class="profile_img">
-                      <img src="../../inc/images/img/img_Nful_profile_exit.png" alt="N Community가입자의 프로필 이미지" />
+              <div class="masonry_item">
+                <div class="masonry_con">
+                  <div class="card_type04">
+                    <button class="card_thumbnail h825">
+                      <img src="../../inc/images/img/img__sub_rewards_thumnail03.png" alt="썸네일 이미지" />
                     </button>
-                    <p class="profile_des">
-                      <span class="profile_name">Madison</span>
-                    </p>
-                  </div>
-                  <div class="card_con">
-                    <p class="card_tag">Nthusiasts</p>
-                    <p class="tit-type03 fw-type03">Restyle micro mini bag</p>
-                    <p class="txt-type03 fw-type02 card_cont-des">Restyle micro mini bag Made from recycled leather and
-                      fabric Introducing a small but stylish it bag</p>
-                    <!-- v.101 기획서 p.40 : Tag 클릭 시 해당 메뉴 화면에서 해당 Tag 소팅되어 노출 -->
-                    <div class="card-hashtag">
-                      <button class="txt-type04">#Heritage</button>
-                      <button class="txt-type04">#SensibilityofPony</button>
-                      <button class="txt-type04">#widespread</button>
+                    <div class="card_state">
+                      <p class="card_step">200,000P</p>
+                      <p class="card_detail">03.24.2024 - 04.31.2024</p>
+                    </div>
+                    <!-- v.101 기획서 p.40 : 프로필 [03.N Brand 관리자] -->
+                    <div class="card_profile">
+                      <div class="profile_img">
+                        <img src="../../inc/images/img/img_Nful_profile_manager.png" alt="N Community가입자의 프로필 이미지" />
+                      </div>
+                      <p class="profile_des">
+                        <span class="profile_name">Madison</span>
+                      </p>
+                    </div>
+                    <div class="card_con">
+                      <p class="card_tag">Nthusiasts</p>
+                      <p class="tit-type03 fw-type03">Play sticker</p>
+                      <p class="txt-type03 fw-type02 card_cont-des">It is a life collection of essential items in everyday life. Enjoy a variety of products that give you vitality in your daily life.</p>
+                      <!-- v.101 기획서 p.40 : Tag 클릭 시 해당 메뉴 화면에서 해당 Tag 소팅되어 노출 -->
+                      <div class="card-hashtag">
+                        <button class="txt-type04">#testminiature</button>
+                        <button class="txt-type04">#newcar</button>
+                        <button class="txt-type04">#ceremony</button>
+                      </div>
+                    </div>
+                    <div class="card_function btn-wrap-type5">
+                      <div>
+                        <button type="button" class="btn btn-only-icon-notbg">
+                          <span class="visually-hidden">heart button</span>
+                          <span class="btn-icon20 icon-heart" aria-hidden="true"></span>
+                        </button>
+                        <p class="txt-type03 fw-type03">54</p>
+                      </div>
+                      <div>
+                        <button type="button" class="btn btn-only-icon-notbg">
+                          <span class="visually-hidden">share button</span>
+                          <span class="btn-icon20 icon-share" aria-hidden="true"></span>
+                        </button>
+                        <button type="button" class="btn btn-only-icon-notbg">
+                          <span class="visually-hidden">Translation button</span>
+                          <span class="btn-icon20 icon-trans" aria-hidden="true"></span>
+                        </button>
+                      </div>
                     </div>
                   </div>
-                  <div class="card_function btn-wrap-type5">
-                    <div>
-                      <button type="button" class="btn btn-only-icon-notbg">
-                        <span class="visually-hidden">heart button</span>
-                        <span class="btn-icon20 icon-heart" aria-hidden="true"></span>
-                      </button>
-                      <p class="txt-type03 fw-type03">1,724</p>
+                </div>
+              </div>
+              <div class="masonry_item">
+                <div class="masonry_con">
+                  <div class="card_type04">
+                    <button class="card_thumbnail h464">
+                      <img src="../../inc/images/img/img__sub_rewards_thumnail04.png" alt="썸네일 이미지" />
+                    </button>
+                    <div class="card_state end">
+                      <p class="card_step">End</p>
+                      <p class="card_detail">03.24.2024 - 04.31.2024</p>
                     </div>
-                    <div>
-                      <button type="button" class="btn btn-only-icon-notbg">
-                        <span class="visually-hidden">share button</span>
-                        <span class="btn-icon20 icon-share" aria-hidden="true"></span>
+                    <!-- v.101 기획서 p.40 : 프로필 [04. N Community 탈퇴 한 경우] > 레이어 나옴(EP040401M01) / 이미지 변경될 예정 -->
+                    <div class="card_profile">
+                      <button class="profile_img">
+                        <img src="../../inc/images/img/img_Nful_profile_exit.png" alt="N Community가입자의 프로필 이미지" />
                       </button>
-                      <button type="button" class="btn btn-only-icon-notbg">
-                        <span class="visually-hidden">Translation button</span>
-                        <span class="btn-icon20 icon-trans" aria-hidden="true"></span>
-                      </button>
+                      <p class="profile_des">
+                        <span class="profile_name">Madison</span>
+                      </p>
+                    </div>
+                    <div class="card_con">
+                      <p class="card_tag">Nthusiasts</p>
+                      <p class="tit-type03 fw-type03">Restyle micro mini bag</p>
+                      <p class="txt-type03 fw-type02 card_cont-des">Restyle micro mini bag Made from recycled leather and fabric Introducing a small but stylish it bag</p>
+                      <!-- v.101 기획서 p.40 : Tag 클릭 시 해당 메뉴 화면에서 해당 Tag 소팅되어 노출 -->
+                      <div class="card-hashtag">
+                        <button class="txt-type04">#Heritage</button>
+                        <button class="txt-type04">#SensibilityofPony</button>
+                        <button class="txt-type04">#widespread</button>
+                      </div>
+                    </div>
+                    <div class="card_function btn-wrap-type5">
+                      <div>
+                        <button type="button" class="btn btn-only-icon-notbg">
+                          <span class="visually-hidden">heart button</span>
+                          <span class="btn-icon20 icon-heart" aria-hidden="true"></span>
+                        </button>
+                        <p class="txt-type03 fw-type03">1,724</p>
+                      </div>
+                      <div>
+                        <button type="button" class="btn btn-only-icon-notbg">
+                          <span class="visually-hidden">share button</span>
+                          <span class="btn-icon20 icon-share" aria-hidden="true"></span>
+                        </button>
+                        <button type="button" class="btn btn-only-icon-notbg">
+                          <span class="visually-hidden">Translation button</span>
+                          <span class="btn-icon20 icon-trans" aria-hidden="true"></span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="masonry_item">
+                <div class="masonry_con">
+                  <div class="card_type04">
+                    <button class="card_thumbnail h825">
+                      <img src="../../inc/images/img/img__sub_rewards_thumnail05.png" alt="썸네일 이미지" />
+                    </button>
+                    <div class="card_state end">
+                      <p class="card_step">End</p>
+                      <p class="card_detail">03.24.2024 - 04.31.2024</p>
+                    </div>
+                    <!-- v.101 기획서 p.40 : 프로필 [05. N Community 폐쇄 된 경우] -->
+                    <div class="card_profile">
+                      <div class="profile_img">
+                        <img src="../../inc/images/img/img_Nful_profile_close.png" alt="N Community가입자의 프로필 이미지" />
+                      </div>
+                      <p class="profile_des">
+                        <span class="profile_name">Madison</span>
+                      </p>
+                    </div>
+                    <div class="card_con">
+                      <p class="card_tag">Nthusiasts</p>
+                      <p class="tit-type03 fw-type03">Restyle T-shirt</p>
+                      <p class="txt-type03 fw-type02 card_cont-des">Made with organic cotton fabric made from sustainable materials Check out the t-shirts we made.</p>
+                      <!-- v.101 기획서 p.40 : Tag 클릭 시 해당 메뉴 화면에서 해당 Tag 소팅되어 노출 -->
+                      <div class="card-hashtag">
+                        <button class="txt-type04">#organiccotton</button>
+                        <button class="txt-type04">#fabric</button>
+                      </div>
+                    </div>
+                    <div class="card_function btn-wrap-type5">
+                      <div>
+                        <button type="button" class="btn btn-only-icon-notbg">
+                          <span class="visually-hidden">heart button</span>
+                          <span class="btn-icon20 icon-heart" aria-hidden="true"></span>
+                        </button>
+                        <p class="txt-type03 fw-type03">13,724</p>
+                      </div>
+                      <div>
+                        <button type="button" class="btn btn-only-icon-notbg">
+                          <span class="visually-hidden">share button</span>
+                          <span class="btn-icon20 icon-share" aria-hidden="true"></span>
+                        </button>
+                        <button type="button" class="btn btn-only-icon-notbg">
+                          <span class="visually-hidden">Translation button</span>
+                          <span class="btn-icon20 icon-trans" aria-hidden="true"></span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="masonry_item">
+                <div class="masonry_con">
+                  <div class="card_type04">
+                    <button class="card_thumbnail h618">
+                      <img src="../../inc/images/img/img__sub_rewards_thumnail06.png" alt="썸네일 이미지" />
+                    </button>
+                    <div class="card_state">
+                      <p class="card_step">5,000,000P</p>
+                      <p class="card_detail">03.24.2024 - 04.31.2024</p>
+                    </div>
+                    <!-- v.101 기획서 p.40 : 프로필 [06. 서비스 이용약관 철회 및 현대자동차 회원 탈퇴 한 경우 ] -->
+                    <div class="card_profile">
+                      <p class="profile_des">
+                        <span class="profile_name">_nthused</span>
+                      </p>
+                    </div>
+                    <div class="card_con">
+                      <p class="card_tag">N Community Master</p>
+                      <p class="tit-type03 fw-type03">Restyle micro mini bage</p>
+                      <p class="txt-type03 fw-type02 card_cont-des">Restyle micro mini bag Made from recycled leather and fabric Introducing a small but stylish it bag</p>
+                      <!-- v.101 기획서 p.40 : Tag 클릭 시 해당 메뉴 화면에서 해당 Tag 소팅되어 노출 -->
+                      <div class="card-hashtag">
+                        <button class="txt-type04">#stylelishbag</button>
+                        <button class="txt-type04">#stylelishbag</button>
+                        <button class="txt-type04">#stylelishbag</button>
+                        <button class="txt-type04">#stylelishbag</button>
+                        <button class="txt-type04">#stylelishbag</button>
+                        <button class="txt-type04">#stylelishbag</button>
+                        <button class="txt-type04">#newcar</button>
+                        <button class="txt-type04">#newcar</button>
+                        <button class="txt-type04">#newcar</button>
+                        <button class="txt-type04">#newcar</button>
+                        <button class="txt-type04">#newcar</button>
+                        <button class="txt-type04">#microminibag</button>
+                        <button class="txt-type04">#microminibag</button>
+                        <button class="txt-type04">#microminibag</button>
+                        <button class="txt-type04">#microminibag</button>
+                        <button class="txt-type04">#microminibag</button>
+                        <button class="txt-type04">#microminibag</button>
+                        <button class="txt-type04">#microminibag</button>
+                        <button class="txt-type04">#microminibag</button>
+                      </div>
+                    </div>
+                    <div class="card_function btn-wrap-type5">
+                      <div>
+                        <button type="button" class="btn btn-only-icon-notbg">
+                          <span class="visually-hidden">heart button</span>
+                          <span class="btn-icon20 icon-heart" aria-hidden="true"></span>
+                        </button>
+                        <p class="txt-type03 fw-type03">54</p>
+                      </div>
+                      <div>
+                        <button type="button" class="btn btn-only-icon-notbg">
+                          <span class="visually-hidden">share button</span>
+                          <span class="btn-icon20 icon-share" aria-hidden="true"></span>
+                        </button>
+                        <button type="button" class="btn btn-only-icon-notbg">
+                          <span class="visually-hidden">Translation button</span>
+                          <span class="btn-icon20 icon-trans" aria-hidden="true"></span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="masonry_item">
+                <div class="masonry_con">
+                  <div class="card_type04">
+                    <button class="card_thumbnail h618">
+                      <img src="../../inc/images/img/img__sub_rewards_thumnail07.png" alt="썸네일 이미지" />
+                    </button>
+                    <div class="card_state end">
+                      <p class="card_step">End</p>
+                      <p class="card_detail">03.24.2024 - 04.31.2024</p>
+                    </div>
+                    <!-- v.101 기획서 p.40 : 프로필 [01.닉네임] -->
+                    <div class="card_profile">
+                      <div class="profile_img">
+                        <img src="../../inc/images/img/img_Nful_profile_default.png" alt="프로필 기본 이미지" />
+                      </div>
+                      <p class="profile_des">
+                        <span class="profile_name">Madison</span>
+                      </p>
+                    </div>
+                    <div class="card_con">
+                      <p class="card_tag">Nthusiasts</p>
+                      <p class="tit-type03 fw-type03">RETRACE Magazine - Pony</p>
+                      <p class="txt-type03 fw-type02 card_cont-des">
+                        There are widespread ESG-related trends. There are also movements that unfaThis is a heritage collection that lets you feel the sensibility of Pony. The Heritage Collection, inspired by the Pony that dominated the 1970s and
+                        1980s, brings back memories of the Pony, Korea's first mass-produced unique model and our family's first car
+                      </p>
+                      <!-- v.101 기획서 p.40 : Tag 클릭 시 해당 메뉴 화면에서 해당 Tag 소팅되어 노출 -->
+                      <div class="card-hashtag">
+                        <button class="txt-type04">#Heritage</button>
+                        <button class="txt-type04">#SensibilityofPony</button>
+                        <button class="txt-type04">#widespreadwidespreadwidespreadwidespreadwidespreadwidespreadwidespreadwidespreadwidespreadwidespreadwidespread</button>
+                      </div>
+                    </div>
+                    <div class="card_function btn-wrap-type5">
+                      <div>
+                        <button type="button" class="btn btn-only-icon-notbg">
+                          <span class="visually-hidden">heart button</span>
+                          <span class="btn-icon20 icon-heart" aria-hidden="true"></span>
+                        </button>
+                        <p class="txt-type03 fw-type03">1,724</p>
+                      </div>
+                      <div>
+                        <button type="button" class="btn btn-only-icon-notbg">
+                          <span class="visually-hidden">share button</span>
+                          <span class="btn-icon20 icon-share" aria-hidden="true"></span>
+                        </button>
+                        <button type="button" class="btn btn-only-icon-notbg">
+                          <span class="visually-hidden">Translation button</span>
+                          <span class="btn-icon20 icon-trans" aria-hidden="true"></span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="masonry_item">
+                <div class="masonry_con">
+                  <div class="card_type04">
+                    <button class="card_thumbnail h464">
+                      <img src="../../inc/images/img/img__sub_rewards_thumnail08.png" alt="썸네일 이미지" />
+                    </button>
+                    <div class="card_state">
+                      <p class="card_step">40,000,000P</p>
+                      <p class="card_detail">03.24.2024 - 04.31.2024</p>
+                    </div>
+                    <!-- v.101 기획서 p.40 : 프로필 [01.닉네임] -->
+                    <div class="card_profile">
+                      <div class="profile_img">
+                        <img src="../../inc/images/img/img_Nful_profile_default.png" alt="프로필 기본 이미지" />
+                      </div>
+                      <p class="profile_des">
+                        <span class="profile_name">Madison</span>
+                      </p>
+                    </div>
+                    <div class="card_con">
+                      <p class="card_tag">N Community Member</p>
+                      <p class="tit-type03 fw-type03">Pony Magazine</p>
+                      <p class="txt-type03 fw-type02 card_cont-des">
+                        Silicone bowl wheat box that doesn't have to worry about spilling with packing structure It's safe to shake, and it's easy to carry It's a simple silicone bowl mill box that's easy to clean Please prepare a pet lunch box.
+                      </p>
+                      <!-- v.101 기획서 p.40 : Tag 클릭 시 해당 메뉴 화면에서 해당 Tag 소팅되어 노출 -->
+                      <div class="card-hashtag">
+                        <button class="txt-type04">#Heritage</button>
+                        <button class="txt-type04">#SensibilityofPonySensibilityofPonySensibilityofPonySensibilityofPonySensibilityofPonySensibilityofPony</button>
+                        <button class="txt-type04">#SensibilityofPony</button>
+                        <button class="txt-type04">#widespread</button>
+                        <button class="txt-type04">#widespread</button>
+                        <button class="txt-type04">#widespread</button>
+                      </div>
+                    </div>
+                    <div class="card_function btn-wrap-type5">
+                      <div>
+                        <button type="button" class="btn btn-only-icon-notbg">
+                          <span class="visually-hidden">heart button</span>
+                          <span class="btn-icon20 icon-heart" aria-hidden="true"></span>
+                        </button>
+                        <p class="txt-type03 fw-type03">1,724</p>
+                      </div>
+                      <div>
+                        <button type="button" class="btn btn-only-icon-notbg">
+                          <span class="visually-hidden">share button</span>
+                          <span class="btn-icon20 icon-share" aria-hidden="true"></span>
+                        </button>
+                        <button type="button" class="btn btn-only-icon-notbg">
+                          <span class="visually-hidden">Translation button</span>
+                          <span class="btn-icon20 icon-trans" aria-hidden="true"></span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="masonry_item">
+                <div class="masonry_con">
+                  <div class="card_type04">
+                    <button class="card_thumbnail h261">
+                      <img src="../../inc/images/img/img__sub_rewards_thumnail09.png" alt="썸네일 이미지" />
+                    </button>
+                    <div class="card_state end">
+                      <p class="card_step">End</p>
+                      <p class="card_detail">03.24.2024 - 04.31.2024</p>
+                    </div>
+                    <!-- v.101 기획서 p.40 : 프로필 [01.닉네임] -->
+                    <div class="card_profile">
+                      <div class="profile_img">
+                        <img src="../../inc/images/img/img_Nful_profile_default.png" alt="프로필 기본 이미지" />
+                      </div>
+                      <p class="profile_des">
+                        <span class="profile_name">Madison</span>
+                      </p>
+                    </div>
+                    <div class="card_con">
+                      <p class="card_tag">N Community Master</p>
+                      <p class="tit-type03 fw-type03">New car test miniature</p>
+                      <p class="txt-type03 fw-type02 card_cont-des">This miniature reinterprets the custom of holding a new car ceremony in the 1970s when the family got their first car.</p>
+                      <!-- v.101 기획서 p.40 : Tag 클릭 시 해당 메뉴 화면에서 해당 Tag 소팅되어 노출 -->
+                      <div class="card-hashtag">
+                        <button class="txt-type04">#testminiature</button>
+                        <button class="txt-type04">#testminiature</button>
+                        <button class="txt-type04">#newcar</button>
+                        <button class="txt-type04">#newcar</button>
+                        <button class="txt-type04">#newcar</button>
+                        <button class="txt-type04">#newcar</button>
+                        <button class="txt-type04">#cereny</button>
+                      </div>
+                    </div>
+                    <div class="card_function btn-wrap-type5">
+                      <div>
+                        <button type="button" class="btn btn-only-icon-notbg">
+                          <span class="visually-hidden">heart button</span>
+                          <span class="btn-icon20 icon-heart" aria-hidden="true"></span>
+                        </button>
+                        <p class="txt-type03 fw-type03">54</p>
+                      </div>
+                      <div>
+                        <button type="button" class="btn btn-only-icon-notbg">
+                          <span class="visually-hidden">share button</span>
+                          <span class="btn-icon20 icon-share" aria-hidden="true"></span>
+                        </button>
+                        <button type="button" class="btn btn-only-icon-notbg">
+                          <span class="visually-hidden">Translation button</span>
+                          <span class="btn-icon20 icon-trans" aria-hidden="true"></span>
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="masonry_item">
-              <div class="masonry_con">
-                <div class="card_type04">
-                  <button class="card_thumbnail h825">
-                    <img src="../../inc/images/img/img__sub_rewards_thumnail05.png" alt="썸네일 이미지" />
-                  </button>
-                  <div class="card_state end">
-                    <p class="card_step">End</p>
-                    <p class="card_detail">03.24.2024 - 04.31.2024</p>
-                  </div>
-                  <!-- v.101 기획서 p.40 : 프로필 [05. N Community 폐쇄 된 경우] -->
-                  <div class="card_profile">
-                    <div class="profile_img">
-                      <img src="../../inc/images/img/img_Nful_profile_close.png" alt="N Community가입자의 프로필 이미지" />
-                    </div>
-                    <p class="profile_des">
-                      <span class="profile_name">Madison</span>
-                    </p>
-                  </div>
-                  <div class="card_con">
-                    <p class="card_tag">Nthusiasts</p>
-                    <p class="tit-type03 fw-type03">Restyle T-shirt</p>
-                    <p class="txt-type03 fw-type02 card_cont-des">Made with organic cotton fabric made from sustainable
-                      materials Check out the t-shirts we made.</p>
-                    <!-- v.101 기획서 p.40 : Tag 클릭 시 해당 메뉴 화면에서 해당 Tag 소팅되어 노출 -->
-                    <div class="card-hashtag">
-                      <button class="txt-type04">#organiccotton</button>
-                      <button class="txt-type04">#fabric</button>
-                    </div>
-                  </div>
-                  <div class="card_function btn-wrap-type5">
-                    <div>
-                      <button type="button" class="btn btn-only-icon-notbg">
-                        <span class="visually-hidden">heart button</span>
-                        <span class="btn-icon20 icon-heart" aria-hidden="true"></span>
-                      </button>
-                      <p class="txt-type03 fw-type03">13,724</p>
-                    </div>
-                    <div>
-                      <button type="button" class="btn btn-only-icon-notbg">
-                        <span class="visually-hidden">share button</span>
-                        <span class="btn-icon20 icon-share" aria-hidden="true"></span>
-                      </button>
-                      <button type="button" class="btn btn-only-icon-notbg">
-                        <span class="visually-hidden">Translation button</span>
-                        <span class="btn-icon20 icon-trans" aria-hidden="true"></span>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div class="btn-wrap-default">
+              <button type="button" class="btn btn-lg-outline01">
+                View More
+                <span class="btn-paging">12/222</span>
+                <span class="btn-icon20 icon-down" aria-hidden="true"></span>
+              </button>
             </div>
-            <div class="masonry_item">
-              <div class="masonry_con">
-                <div class="card_type04">
-                  <button class="card_thumbnail h618">
-                    <img src="../../inc/images/img/img__sub_rewards_thumnail06.png" alt="썸네일 이미지" />
-                  </button>
-                  <div class="card_state">
-                    <p class="card_step">5,000,000P</p>
-                    <p class="card_detail">03.24.2024 - 04.31.2024</p>
-                  </div>
-                  <!-- v.101 기획서 p.40 : 프로필 [06. 서비스 이용약관 철회 및 현대자동차 회원 탈퇴 한 경우 ] -->
-                  <div class="card_profile">
-                    <p class="profile_des">
-                      <span class="profile_name">_nthused</span>
-                    </p>
-                  </div>
-                  <div class="card_con">
-                    <p class="card_tag">N Community Master</p>
-                    <p class="tit-type03 fw-type03">Restyle micro mini bage</p>
-                    <p class="txt-type03 fw-type02 card_cont-des">Restyle micro mini bag Made from recycled leather and
-                      fabric Introducing a small but stylish it bag</p>
-                    <!-- v.101 기획서 p.40 : Tag 클릭 시 해당 메뉴 화면에서 해당 Tag 소팅되어 노출 -->
-                    <div class="card-hashtag">
-                      <button class="txt-type04">#stylelishbag</button>
-                      <button class="txt-type04">#stylelishbag</button>
-                      <button class="txt-type04">#stylelishbag</button>
-                      <button class="txt-type04">#stylelishbag</button>
-                      <button class="txt-type04">#stylelishbag</button>
-                      <button class="txt-type04">#stylelishbag</button>
-                      <button class="txt-type04">#newcar</button>
-                      <button class="txt-type04">#newcar</button>
-                      <button class="txt-type04">#newcar</button>
-                      <button class="txt-type04">#newcar</button>
-                      <button class="txt-type04">#newcar</button>
-                      <button class="txt-type04">#microminibag</button>
-                      <button class="txt-type04">#microminibag</button>
-                      <button class="txt-type04">#microminibag</button>
-                      <button class="txt-type04">#microminibag</button>
-                      <button class="txt-type04">#microminibag</button>
-                      <button class="txt-type04">#microminibag</button>
-                      <button class="txt-type04">#microminibag</button>
-                      <button class="txt-type04">#microminibag</button>
-                    </div>
-                  </div>
-                  <div class="card_function btn-wrap-type5">
-                    <div>
-                      <button type="button" class="btn btn-only-icon-notbg">
-                        <span class="visually-hidden">heart button</span>
-                        <span class="btn-icon20 icon-heart" aria-hidden="true"></span>
-                      </button>
-                      <p class="txt-type03 fw-type03">54</p>
-                    </div>
-                    <div>
-                      <button type="button" class="btn btn-only-icon-notbg">
-                        <span class="visually-hidden">share button</span>
-                        <span class="btn-icon20 icon-share" aria-hidden="true"></span>
-                      </button>
-                      <button type="button" class="btn btn-only-icon-notbg">
-                        <span class="visually-hidden">Translation button</span>
-                        <span class="btn-icon20 icon-trans" aria-hidden="true"></span>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="masonry_item">
-              <div class="masonry_con">
-                <div class="card_type04">
-                  <button class="card_thumbnail h618">
-                    <img src="../../inc/images/img/img__sub_rewards_thumnail07.png" alt="썸네일 이미지" />
-                  </button>
-                  <div class="card_state end">
-                    <p class="card_step">End</p>
-                    <p class="card_detail">03.24.2024 - 04.31.2024</p>
-                  </div>
-                  <!-- v.101 기획서 p.40 : 프로필 [01.닉네임] -->
-                  <div class="card_profile">
-                    <div class="profile_img">
-                      <img src="../../inc/images/img/img_Nful_profile_default.png" alt="프로필 기본 이미지" />
-                    </div>
-                    <p class="profile_des">
-                      <span class="profile_name">Madison</span>
-                    </p>
-                  </div>
-                  <div class="card_con">
-                    <p class="card_tag">Nthusiasts</p>
-                    <p class="tit-type03 fw-type03">RETRACE Magazine - Pony</p>
-                    <p class="txt-type03 fw-type02 card_cont-des">
-                      There are widespread ESG-related trends. There are also movements that unfaThis is a heritage
-                      collection that lets you feel the sensibility of Pony. The Heritage Collection, inspired by the
-                      Pony that dominated the 1970s and
-                      1980s, brings back memories of the Pony, Korea's first mass-produced unique model and our family's
-                      first car
-                    </p>
-                    <!-- v.101 기획서 p.40 : Tag 클릭 시 해당 메뉴 화면에서 해당 Tag 소팅되어 노출 -->
-                    <div class="card-hashtag">
-                      <button class="txt-type04">#Heritage</button>
-                      <button class="txt-type04">#SensibilityofPony</button>
-                      <button
-                        class="txt-type04">#widespreadwidespreadwidespreadwidespreadwidespreadwidespreadwidespreadwidespreadwidespreadwidespreadwidespread</button>
-                    </div>
-                  </div>
-                  <div class="card_function btn-wrap-type5">
-                    <div>
-                      <button type="button" class="btn btn-only-icon-notbg">
-                        <span class="visually-hidden">heart button</span>
-                        <span class="btn-icon20 icon-heart" aria-hidden="true"></span>
-                      </button>
-                      <p class="txt-type03 fw-type03">1,724</p>
-                    </div>
-                    <div>
-                      <button type="button" class="btn btn-only-icon-notbg">
-                        <span class="visually-hidden">share button</span>
-                        <span class="btn-icon20 icon-share" aria-hidden="true"></span>
-                      </button>
-                      <button type="button" class="btn btn-only-icon-notbg">
-                        <span class="visually-hidden">Translation button</span>
-                        <span class="btn-icon20 icon-trans" aria-hidden="true"></span>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="masonry_item">
-              <div class="masonry_con">
-                <div class="card_type04">
-                  <button class="card_thumbnail h464">
-                    <img src="../../inc/images/img/img__sub_rewards_thumnail08.png" alt="썸네일 이미지" />
-                  </button>
-                  <div class="card_state">
-                    <p class="card_step">40,000,000P</p>
-                    <p class="card_detail">03.24.2024 - 04.31.2024</p>
-                  </div>
-                  <!-- v.101 기획서 p.40 : 프로필 [01.닉네임] -->
-                  <div class="card_profile">
-                    <div class="profile_img">
-                      <img src="../../inc/images/img/img_Nful_profile_default.png" alt="프로필 기본 이미지" />
-                    </div>
-                    <p class="profile_des">
-                      <span class="profile_name">Madison</span>
-                    </p>
-                  </div>
-                  <div class="card_con">
-                    <p class="card_tag">N Community Member</p>
-                    <p class="tit-type03 fw-type03">Pony Magazine</p>
-                    <p class="txt-type03 fw-type02 card_cont-des">
-                      Silicone bowl wheat box that doesn't have to worry about spilling with packing structure It's safe
-                      to shake, and it's easy to carry It's a simple silicone bowl mill box that's easy to clean Please
-                      prepare a pet lunch box.
-                    </p>
-                    <!-- v.101 기획서 p.40 : Tag 클릭 시 해당 메뉴 화면에서 해당 Tag 소팅되어 노출 -->
-                    <div class="card-hashtag">
-                      <button class="txt-type04">#Heritage</button>
-                      <button
-                        class="txt-type04">#SensibilityofPonySensibilityofPonySensibilityofPonySensibilityofPonySensibilityofPonySensibilityofPony</button>
-                      <button class="txt-type04">#SensibilityofPony</button>
-                      <button class="txt-type04">#widespread</button>
-                      <button class="txt-type04">#widespread</button>
-                      <button class="txt-type04">#widespread</button>
-                    </div>
-                  </div>
-                  <div class="card_function btn-wrap-type5">
-                    <div>
-                      <button type="button" class="btn btn-only-icon-notbg">
-                        <span class="visually-hidden">heart button</span>
-                        <span class="btn-icon20 icon-heart" aria-hidden="true"></span>
-                      </button>
-                      <p class="txt-type03 fw-type03">1,724</p>
-                    </div>
-                    <div>
-                      <button type="button" class="btn btn-only-icon-notbg">
-                        <span class="visually-hidden">share button</span>
-                        <span class="btn-icon20 icon-share" aria-hidden="true"></span>
-                      </button>
-                      <button type="button" class="btn btn-only-icon-notbg">
-                        <span class="visually-hidden">Translation button</span>
-                        <span class="btn-icon20 icon-trans" aria-hidden="true"></span>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="masonry_item">
-              <div class="masonry_con">
-                <div class="card_type04">
-                  <button class="card_thumbnail h261">
-                    <img src="../../inc/images/img/img__sub_rewards_thumnail09.png" alt="썸네일 이미지" />
-                  </button>
-                  <div class="card_state end">
-                    <p class="card_step">End</p>
-                    <p class="card_detail">03.24.2024 - 04.31.2024</p>
-                  </div>
-                  <!-- v.101 기획서 p.40 : 프로필 [01.닉네임] -->
-                  <div class="card_profile">
-                    <div class="profile_img">
-                      <img src="../../inc/images/img/img_Nful_profile_default.png" alt="프로필 기본 이미지" />
-                    </div>
-                    <p class="profile_des">
-                      <span class="profile_name">Madison</span>
-                    </p>
-                  </div>
-                  <div class="card_con">
-                    <p class="card_tag">N Community Master</p>
-                    <p class="tit-type03 fw-type03">New car test miniature</p>
-                    <p class="txt-type03 fw-type02 card_cont-des">This miniature reinterprets the custom of holding a
-                      new car ceremony in the 1970s when the family got their first car.</p>
-                    <!-- v.101 기획서 p.40 : Tag 클릭 시 해당 메뉴 화면에서 해당 Tag 소팅되어 노출 -->
-                    <div class="card-hashtag">
-                      <button class="txt-type04">#testminiature</button>
-                      <button class="txt-type04">#testminiature</button>
-                      <button class="txt-type04">#newcar</button>
-                      <button class="txt-type04">#newcar</button>
-                      <button class="txt-type04">#newcar</button>
-                      <button class="txt-type04">#newcar</button>
-                      <button class="txt-type04">#cereny</button>
-                    </div>
-                  </div>
-                  <div class="card_function btn-wrap-type5">
-                    <div>
-                      <button type="button" class="btn btn-only-icon-notbg">
-                        <span class="visually-hidden">heart button</span>
-                        <span class="btn-icon20 icon-heart" aria-hidden="true"></span>
-                      </button>
-                      <p class="txt-type03 fw-type03">54</p>
-                    </div>
-                    <div>
-                      <button type="button" class="btn btn-only-icon-notbg">
-                        <span class="visually-hidden">share button</span>
-                        <span class="btn-icon20 icon-share" aria-hidden="true"></span>
-                      </button>
-                      <button type="button" class="btn btn-only-icon-notbg">
-                        <span class="visually-hidden">Translation button</span>
-                        <span class="btn-icon20 icon-trans" aria-hidden="true"></span>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="btn-wrap-default">
-            <button type="button" class="btn btn-lg-outline01">
-              View More
-              <span class="btn-paging">12/222</span>
-              <span class="btn-icon20 icon-down" aria-hidden="true"></span>
-            </button>
           </div>
         </div>
-      </div>
-    </section>
-  </div>
+      </section>
+    </div>
 
-  <script type="text/javascript" src="../../inc/js/jquery-3.7.1.slim.min.js"></script>
-  <script type="text/javascript" src="../../inc/js/swiper.min.js"></script>
-  <script type="text/javascript" src="../../inc/js/pub-ui.js"></script>
-  <script type="text/javascript" src="../../inc/js/com-ui.js"></script>
-  <script type="text/javascript" src="../../inc/js/plugins.js"></script>
-</body>
-
+    <script type="text/javascript" src="../../inc/js/jquery-3.7.1.slim.min.js"></script>
+    <script type="text/javascript" src="../../inc/js/swiper.min.js"></script>
+    <script type="text/javascript" src="../../inc/js/pub-ui.js"></script>
+    <script type="text/javascript" src="../../inc/js/com-ui.js"></script>
+    <script type="text/javascript" src="../../inc/js/plugins.js"></script>
+  </body>
 </html>

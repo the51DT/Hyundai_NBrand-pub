@@ -585,9 +585,13 @@ $(document).ready(function () {
   $(window).on("resize", pubUi.masonryLayout);
   $(window).resize(() => DropdownFooter());
   DropdownFooter();
-  $(".clear-text")
-    .siblings('input[type="text"]')
-    .on("propertychange change keyup paste input", pubUi.textReset);
+  $(".clear-text").siblings('input[type="text"]').on("propertychange change keyup paste input", pubUi.textReset);
+  $(".selectbox-js").click(function () {
+    handleSelectboxClick(event);
+  });
+  $(".option-click").click(function () {
+    handleOptionClick(event);
+  });
 });
 
 // [Start] : selectbox 컴포넌트

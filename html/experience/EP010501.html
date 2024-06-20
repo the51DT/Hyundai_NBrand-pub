@@ -1,540 +1,520 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name=" format-detection" content="telephone=no" />
+    <title>N브랜드 | Experience_Nfestival_Drivers</title>
 
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name=" format-detection" content="telephone=no" />
-  <title>N브랜드 | Experience_Nfestival_Drivers</title>
+    <link type="text/css" rel="stylesheet" href="../../inc/css/common.css" />
+  </head>
 
-  <link type="text/css" rel="stylesheet" href="../../inc/css/common.css" />
-</head>
-
-<body>
-  <div class="wrap">
-    <section class="content-wrap">
-      <div class="content-area">
-        <div class="content-item01 content-top">
-          <p class="tit-type01 fw-type03">Drivers</p>
-          <p class="tit-type03 fw-type03">Hyundai N Festival participating drivers</p>
-          <div class="tit-btn-wrap">
-            <button type="button" aria-selected="true" class="tit on">KOREA</button>
-            <button type="button" aria-selected="false" class="tit">CHINA</button>
-            <button type="button" aria-selected="false" class="tit">USA</button>
+  <body>
+    <div class="wrap">
+      <section class="content-wrap">
+        <div class="content-area">
+          <div class="content-item01 content-top">
+            <p class="tit-type01 fw-type03">Drivers</p>
+            <p class="tit-type03 fw-type03">Hyundai N Festival participating drivers</p>
+            <div class="tit-btn-wrap">
+              <button type="button" aria-selected="true" class="tit on">KOREA</button>
+              <button type="button" aria-selected="false" class="tit">CHINA</button>
+              <button type="button" aria-selected="false" class="tit">USA</button>
+            </div>
           </div>
-        </div>
-        <div class="content-item02">
-          <div class="drivers_box">
-            <div class="sort_flex">
-              <div class="selectbox-wrap select-type02">
-                <div>
-                  <button class="selectbox-trigger txt-type03 fw-type03" aria-haspopup="listbox" aria-expanded="false"
-                    aria-labelledby="kindSelect" onclick="handleSelectboxClick(event)">By Points</button>
-                  <ul class="selectbox-options 03" role="listbox" id="kindSelect" aria-hidden="true"
-                    style="display: none">
-                    <li class="moclose-btn" style="display: none">
-                      <button type="button" class="btn btn-only-icon">
-                        <span class="visually-hidden">close button</span>
-                        <span class="btn-icon24 icon-close" aria-hidden="true"></span>
-                      </button>
-                    </li>
-                      <li class="option txt-type03 fw-type03 active" role="option" onclick="handleOptionClick(event)" aria-selected="true">By Points</li>
-                      <li class="option txt-type03 fw-type03" role="option" onclick="handleOptionClick(event)">By Teams</li>
-                      <li class="option txt-type03 fw-type03" role="option" onclick="handleOptionClick(event)">By Region</li>
-                      <li class="option txt-type03 fw-type03" role="option" onclick="handleOptionClick(event)">By Alphabetical</li>
-                  </ul>
-                </div>
-                <div>
-                    <button class="selectbox-trigger txt-type03 fw-type03" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="yearSelect" onclick="handleSelectboxClick(event)">2024</button>
+          <div class="content-item02">
+            <div class="drivers_box">
+              <div class="sort_flex">
+                <div class="selectbox-wrap select-type02">
+                  <div>
+                    <button class="selectbox-trigger selectbox-js txt-type03 fw-type03" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="kindSelect">By Points</button>
+                    <ul class="selectbox-options 03" role="listbox" id="kindSelect" aria-hidden="true" style="display: none">
+                      <li class="moclose-btn" style="display: none">
+                        <button type="button" class="btn btn-only-icon">
+                          <span class="visually-hidden">close button</span>
+                          <span class="btn-icon24 icon-close" aria-hidden="true"></span>
+                        </button>
+                      </li>
+                      <li class="option option-click txt-type03 fw-type03 active" role="option" aria-selected="true">By Points</li>
+                      <li class="option option-click txt-type03 fw-type03" role="option">By Teams</li>
+                      <li class="option option-click txt-type03 fw-type03" role="option">By Region</li>
+                      <li class="option option-click txt-type03 fw-type03" role="option">By Alphabetical</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <button class="selectbox-trigger selectbox-js txt-type03 fw-type03" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="yearSelect">2024</button>
                     <ul class="selectbox-options 02" role="listbox" id="yearSelect" aria-hidden="true" style="display: none">
-                    <li class="moclose-btn" style="display: none">
-                      <button type="button" class="btn btn-only-icon">
-                        <span class="visually-hidden">close button</span>
-                        <span class="btn-icon24 icon-close" aria-hidden="true"></span>
-                      </button>
-                    </li>
-                      <li class="option txt-type03 fw-type03 active" role="option" onclick="handleOptionClick(event)" aria-selected="true">2024</li>
-                      <li class="option txt-type03 fw-type03" role="option" onclick="handleOptionClick(event)">2023</li>
-                      <li class="option txt-type03 fw-type03" role="option" onclick="handleOptionClick(event)">2022</li>
-                      <li class="option txt-type03 fw-type03" role="option" onclick="handleOptionClick(event)">2021</li>
-                      <li class="option txt-type03 fw-type03" role="option" onclick="handleOptionClick(event)">2020</li>
-                      <li class="option txt-type03 fw-type03" role="option" onclick="handleOptionClick(event)">2019</li>
-                  </ul>
-                </div>
-                <div>
-                    <button class="selectbox-trigger txt-type03 fw-type03" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="classSelect" onclick="handleSelectboxClick(event)">eN1</button>
+                      <li class="moclose-btn" style="display: none">
+                        <button type="button" class="btn btn-only-icon">
+                          <span class="visually-hidden">close button</span>
+                          <span class="btn-icon24 icon-close" aria-hidden="true"></span>
+                        </button>
+                      </li>
+                      <li class="option option-click txt-type03 fw-type03 active" role="option" aria-selected="true">2024</li>
+                      <li class="option option-click txt-type03 fw-type03" role="option">2023</li>
+                      <li class="option option-click txt-type03 fw-type03" role="option">2022</li>
+                      <li class="option option-click txt-type03 fw-type03" role="option">2021</li>
+                      <li class="option option-click txt-type03 fw-type03" role="option">2020</li>
+                      <li class="option option-click txt-type03 fw-type03" role="option">2019</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <button class="selectbox-trigger selectbox-js txt-type03 fw-type03" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="classSelect">eN1</button>
                     <ul class="selectbox-options 04" role="listbox" id="classSelect" aria-hidden="true" style="display: none">
-                    <li class="moclose-btn" style="display: none">
-                      <button type="button" class="btn btn-only-icon">
-                        <span class="visually-hidden">close button</span>
-                        <span class="btn-icon24 icon-close" aria-hidden="true"></span>
-                      </button>
-                    </li>
-                    <li class="option txt-type03 fw-type03 active" role="option"
-                      onclick="handleOptionClick(event(this))" aria-selected="true">eN1</li>
-                    <li class="option txt-type03 fw-type03" role="option" onclick="handleOptionClick(event(this))">N1
-                    </li>
-                    <li class="option txt-type03 fw-type03" role="option" onclick="handleOptionClick(event(this))">N2
-                    </li>
-                    <li class="option txt-type03 fw-type03" role="option" onclick="handleOptionClick(event(this))">N TT
-                    </li>
-                  </ul>
+                      <li class="moclose-btn" style="display: none">
+                        <button type="button" class="btn btn-only-icon">
+                          <span class="visually-hidden">close button</span>
+                          <span class="btn-icon24 icon-close" aria-hidden="true"></span>
+                        </button>
+                      </li>
+                      <li class="option option-click txt-type03 fw-type03 active" role="option" aria-selected="true">eN1</li>
+                      <li class="option option-click txt-type03 fw-type03" role="option">N1</li>
+                      <li class="option option-click txt-type03 fw-type03" role="option">N2</li>
+                      <li class="option option-click txt-type03 fw-type03" role="option">N TT</li>
+                    </ul>
+                  </div>
                 </div>
-              </div>
-              <div class="selectbox-overlay" style="display: none;"></div>
-              <div class="search-container">
-                <div class="search-wrap search-small" role="search">
-                  <div class="search-input-box">
-                    <input type="text" name="searchInput01" value="" placeholder="Placeholder" />
-                    <div class="clear-text visually-hidden">
-                      <button type="button" class="btn btn-reset">
-                        <span class="visually-hidden">Reset</span>
-                        <span class="btn-icon icon-close-wh" aria-hidden="true"></span>
-                      </button>
-                    </div>
-                    <div class="btn-wrap">
-                      <button type="button" class="btn btn-search">
-                        <span class="visually-hidden">search button</span>
-                        <span class="btn-icon24 icon-search" aria-hidden="true"></span>
-                      </button>
+                <div class="selectbox-overlay" style="display: none"></div>
+                <div class="search-container">
+                  <div class="search-wrap search-small" role="search">
+                    <div class="search-input-box">
+                      <input type="text" name="searchInput01" value="" placeholder="Placeholder" />
+                      <div class="clear-text visually-hidden">
+                        <button type="button" class="btn btn-reset">
+                          <span class="visually-hidden">Reset</span>
+                          <span class="btn-icon icon-close-wh" aria-hidden="true"></span>
+                        </button>
+                      </div>
+                      <div class="btn-wrap">
+                        <button type="button" class="btn btn-search">
+                          <span class="visually-hidden">search button</span>
+                          <span class="btn-icon24 icon-search" aria-hidden="true"></span>
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <!-- *** 검색 결과 없을 때 노출되는 문구 *** -->
-            <!-- <p class="search_result">Your search for <span>“Ryan lee”</span><br>returned 0 results.</p> -->
-            <ul class="grid_3 grid_mo_drop">
-              <li>
-                <a class="card_type01" href="#" title="선수 상세페이지 이동">
-                  <div class="card_top">
-                    <p class="card_rank">1</p>
-                    <div class="card_profile"><img src="../../inc/images/N_Festival/driver/img_N1_17_라이언리-512.png"
-                        alt="선수 프로필사진"></div>
-                    <p class="card_num">70</p>
-                  </div>
-                  <div class="card_bottom">
-                    <div class="card_info">
-                      <p class="card_tit">Ryan lee</p>
-                      <p class="card_subtit">ERACING X VITESSE</p>
+              <!-- *** 검색 결과 없을 때 노출되는 문구 *** -->
+              <!-- <p class="search_result">Your search for <span>“Ryan lee”</span><br>returned 0 results.</p> -->
+              <ul class="grid_3 grid_mo_drop">
+                <li>
+                  <a class="card_type01" href="#" title="선수 상세페이지 이동">
+                    <div class="card_top">
+                      <p class="card_rank">1</p>
+                      <div class="card_profile"><img src="../../inc/images/N_Festival/driver/img_N1_17_라이언리-512.png" alt="선수 프로필사진" /></div>
+                      <p class="card_num">70</p>
                     </div>
-                    <ul class="card_detail">
-                      <li>
-                        <span>Point</span>
-                        <span>84</span>
-                      </li>
-                      <li>
-                        <span>Wins</span>
-                        <span>1</span>
-                      </li>
-                      <li>
-                        <span>Podiums</span>
-                        <span>4</span>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="card_more">
-                    <span>Learn More</span>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="card_type01" href="#" title="선수 상세페이지 이동">
-                  <div class="card_top">
-                    <p class="card_rank">2</p>
-                    <div class="card_profile"><img src="../../inc/images/N_Festival/driver/img_N1_14_이두희-512.png"
-                        alt="선수 프로필사진"></div>
-                    <p class="card_num">90</p>
-                  </div>
-                  <div class="card_bottom">
-                    <div class="card_info">
-                      <p class="card_tit">Lee Doo hee</p>
-                      <p class="card_subtit">ERACING X VITESSE</p>
+                    <div class="card_bottom">
+                      <div class="card_info">
+                        <p class="card_tit">Ryan lee</p>
+                        <p class="card_subtit">ERACING X VITESSE</p>
+                      </div>
+                      <ul class="card_detail">
+                        <li>
+                          <span>Point</span>
+                          <span>84</span>
+                        </li>
+                        <li>
+                          <span>Wins</span>
+                          <span>1</span>
+                        </li>
+                        <li>
+                          <span>Podiums</span>
+                          <span>4</span>
+                        </li>
+                      </ul>
                     </div>
-                    <ul class="card_detail">
-                      <li>
-                        <span>Point</span>
-                        <span>84</span>
-                      </li>
-                      <li>
-                        <span>Wins</span>
-                        <span>1</span>
-                      </li>
-                      <li>
-                        <span>Podiums</span>
-                        <span>4</span>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="card_more">
-                    <span>Learn More</span>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="card_type01" href="#" title="선수 상세페이지 이동">
-                  <div class="card_top">
-                    <p class="card_rank">3</p>
-                    <div class="card_profile"><img src="../../inc/images/N_Festival/driver/img_N1_15_김세욱-512.png"
-                        alt="선수 프로필사진"></div>
-                    <p class="card_num">77</p>
-                  </div>
-                  <div class="card_bottom">
-                    <div class="card_info">
-                      <p class="card_tit">Kim Se wook</p>
-                      <p class="card_subtit">KERS RACING</p>
+                    <div class="card_more">
+                      <span>Learn More</span>
                     </div>
-                    <ul class="card_detail">
-                      <li>
-                        <span>Point</span>
-                        <span>77</span>
-                      </li>
-                      <li>
-                        <span>Wins</span>
-                        <span>2</span>
-                      </li>
-                      <li>
-                        <span>Podiums</span>
-                        <span>2</span>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="card_more">
-                    <span>Learn More</span>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="card_type01" href="#" title="선수 상세페이지 이동">
-                  <div class="card_top">
-                    <p class="card_rank">4</p>
-                    <div class="card_profile"><img src="../../inc/images/N_Festival/driver/img_N1_22_이승재-512.png"
-                        alt="선수 프로필사진"></div>
-                    <p class="card_num">69</p>
-                  </div>
-                  <div class="card_bottom">
-                    <div class="card_info">
-                      <p class="card_tit">Lee Seung jae</p>
-                      <p class="card_subtit">JWORKS X BROS</p>
+                  </a>
+                </li>
+                <li>
+                  <a class="card_type01" href="#" title="선수 상세페이지 이동">
+                    <div class="card_top">
+                      <p class="card_rank">2</p>
+                      <div class="card_profile"><img src="../../inc/images/N_Festival/driver/img_N1_14_이두희-512.png" alt="선수 프로필사진" /></div>
+                      <p class="card_num">90</p>
                     </div>
-                    <ul class="card_detail">
-                      <li>
-                        <span>Point</span>
-                        <span>84</span>
-                      </li>
-                      <li>
-                        <span>Wins</span>
-                        <span>1</span>
-                      </li>
-                      <li>
-                        <span>Podiums</span>
-                        <span>4</span>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="card_more">
-                    <span>Learn More</span>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="card_type01" href="#" title="선수 상세페이지 이동">
-                  <div class="card_top">
-                    <p class="card_rank">5</p>
-                    <div class="card_profile"><img src="../../inc/images/N_Festival/driver/img_N1_26_케인킴-512.png"
-                        alt="선수 프로필사진"></div>
-                    <p class="card_num">37</p>
-                  </div>
-                  <div class="card_bottom">
-                    <div class="card_info">
-                      <p class="card_tit">Kane Kim</p>
-                      <p class="card_subtit">DCT RACING</p>
+                    <div class="card_bottom">
+                      <div class="card_info">
+                        <p class="card_tit">Lee Doo hee</p>
+                        <p class="card_subtit">ERACING X VITESSE</p>
+                      </div>
+                      <ul class="card_detail">
+                        <li>
+                          <span>Point</span>
+                          <span>84</span>
+                        </li>
+                        <li>
+                          <span>Wins</span>
+                          <span>1</span>
+                        </li>
+                        <li>
+                          <span>Podiums</span>
+                          <span>4</span>
+                        </li>
+                      </ul>
                     </div>
-                    <ul class="card_detail">
-                      <li>
-                        <span>Point</span>
-                        <span>84</span>
-                      </li>
-                      <li>
-                        <span>Wins</span>
-                        <span>1</span>
-                      </li>
-                      <li>
-                        <span>Podiums</span>
-                        <span>4</span>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="card_more">
-                    <span>Learn More</span>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="card_type01" href="#" title="선수 상세페이지 이동">
-                  <div class="card_top">
-                    <p class="card_rank">6</p>
-                    <div class="card_profile"><img src="../../inc/images/N_Festival/driver/img_N1_11_안경식-512.png"
-                        alt="선수 프로필사진"></div>
-                    <p class="card_num">7</p>
-                  </div>
-                  <div class="card_bottom">
-                    <div class="card_info">
-                      <p class="card_tit">An Gyung sik</p>
-                      <p class="card_subtit">HNF</p>
+                    <div class="card_more">
+                      <span>Learn More</span>
                     </div>
-                    <ul class="card_detail">
-                      <li>
-                        <span>Point</span>
-                        <span>77</span>
-                      </li>
-                      <li>
-                        <span>Wins</span>
-                        <span>2</span>
-                      </li>
-                      <li>
-                        <span>Podiums</span>
-                        <span>2</span>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="card_more">
-                    <span>Learn More</span>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="card_type01" href="#" title="선수 상세페이지 이동">
-                  <div class="card_top">
-                    <p class="card_rank">7</p>
-                    <div class="card_profile"><img src="../../inc/images/N_Festival/driver/img_N1_10_장준호-512.png"
-                        alt="선수 프로필사진"></div>
-                    <p class="card_num">10</p>
-                  </div>
-                  <div class="card_bottom">
-                    <div class="card_info">
-                      <p class="card_tit">Jang Joon ho</p>
-                      <p class="card_subtit">SEOHAN GP</p>
+                  </a>
+                </li>
+                <li>
+                  <a class="card_type01" href="#" title="선수 상세페이지 이동">
+                    <div class="card_top">
+                      <p class="card_rank">3</p>
+                      <div class="card_profile"><img src="../../inc/images/N_Festival/driver/img_N1_15_김세욱-512.png" alt="선수 프로필사진" /></div>
+                      <p class="card_num">77</p>
                     </div>
-                    <ul class="card_detail">
-                      <li>
-                        <span>Point</span>
-                        <span>72</span>
-                      </li>
-                      <li>
-                        <span>Wins</span>
-                        <span>1</span>
-                      </li>
-                      <li>
-                        <span>Podiums</span>
-                        <span>4</span>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="card_more">
-                    <span>Learn More</span>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="card_type01" href="#" title="선수 상세페이지 이동">
-                  <div class="card_top">
-                    <p class="card_rank">8</p>
-                    <div class="card_profile"><img src="../../inc/images/N_Festival/driver/img_profile_default-512.png"
-                        alt="선수 프로필사진"></div>
-                    <p class="card_num">67</p>
-                  </div>
-                  <div class="card_bottom">
-                    <div class="card_info">
-                      <p class="card_tit">Cho Hoon hyun</p>
-                      <p class="card_subtit">GRIT MOTORSPORTS</p>
+                    <div class="card_bottom">
+                      <div class="card_info">
+                        <p class="card_tit">Kim Se wook</p>
+                        <p class="card_subtit">KERS RACING</p>
+                      </div>
+                      <ul class="card_detail">
+                        <li>
+                          <span>Point</span>
+                          <span>77</span>
+                        </li>
+                        <li>
+                          <span>Wins</span>
+                          <span>2</span>
+                        </li>
+                        <li>
+                          <span>Podiums</span>
+                          <span>2</span>
+                        </li>
+                      </ul>
                     </div>
-                    <ul class="card_detail">
-                      <li>
-                        <span>Point</span>
-                        <span>68</span>
-                      </li>
-                      <li>
-                        <span>Wins</span>
-                        <span>0</span>
-                      </li>
-                      <li>
-                        <span>Podiums</span>
-                        <span>1</span>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="card_more">
-                    <span>Learn More</span>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="card_type01" href="#" title="선수 상세페이지 이동">
-                  <div class="card_top">
-                    <p class="card_rank">9</p>
-                    <div class="card_profile"><img src="../../inc/images/N_Festival/driver/img_N1_04_김영찬-512.png"
-                        alt="선수 프로필사진"></div>
-                    <p class="card_num">88</p>
-                  </div>
-                  <div class="card_bottom">
-                    <div class="card_info">
-                      <p class="card_tit">Kim Yeong chan</p>
-                      <p class="card_subtit">DCT RACING</p>
+                    <div class="card_more">
+                      <span>Learn More</span>
                     </div>
-                    <ul class="card_detail">
-                      <li>
-                        <span>Point</span>
-                        <span>62</span>
-                      </li>
-                      <li>
-                        <span>Wins</span>
-                        <span>2</span>
-                      </li>
-                      <li>
-                        <span>Podiums</span>
-                        <span>3</span>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="card_more">
-                    <span>Learn More</span>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="card_type01" href="#" title="선수 상세페이지 이동">
-                  <div class="card_top">
-                    <p class="card_rank">10</p>
-                    <div class="card_profile"><img src="../../inc/images/N_Festival/driver/img_N1_16_김동식-512.png"
-                        alt="선수 프로필사진"></div>
-                    <p class="card_num">79</p>
-                  </div>
-                  <div class="card_bottom">
-                    <div class="card_info">
-                      <p class="card_tit">Kim Dong sik</p>
-                      <p class="card_subtit">KERS RACING</p>
+                  </a>
+                </li>
+                <li>
+                  <a class="card_type01" href="#" title="선수 상세페이지 이동">
+                    <div class="card_top">
+                      <p class="card_rank">4</p>
+                      <div class="card_profile"><img src="../../inc/images/N_Festival/driver/img_N1_22_이승재-512.png" alt="선수 프로필사진" /></div>
+                      <p class="card_num">69</p>
                     </div>
-                    <ul class="card_detail">
-                      <li>
-                        <span>Point</span>
-                        <span>59</span>
-                      </li>
-                      <li>
-                        <span>Wins</span>
-                        <span>0</span>
-                      </li>
-                      <li>
-                        <span>Podiums</span>
-                        <span>1</span>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="card_more">
-                    <span>Learn More</span>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="card_type01" href="#" title="선수 상세페이지 이동">
-                  <div class="card_top">
-                    <p class="card_rank">11</p>
-                    <div class="card_profile"><img src="../../inc/images/N_Festival/driver/img_N1_06_추성택-512.png"
-                        alt="선수 프로필사진"></div>
-                    <p class="card_num">31</p>
-                  </div>
-                  <div class="card_bottom">
-                    <div class="card_info">
-                      <p class="card_tit">Choo Seong taek</p>
-                      <p class="card_subtit">ERACING X VITESSE</p>
+                    <div class="card_bottom">
+                      <div class="card_info">
+                        <p class="card_tit">Lee Seung jae</p>
+                        <p class="card_subtit">JWORKS X BROS</p>
+                      </div>
+                      <ul class="card_detail">
+                        <li>
+                          <span>Point</span>
+                          <span>84</span>
+                        </li>
+                        <li>
+                          <span>Wins</span>
+                          <span>1</span>
+                        </li>
+                        <li>
+                          <span>Podiums</span>
+                          <span>4</span>
+                        </li>
+                      </ul>
                     </div>
-                    <ul class="card_detail">
-                      <li>
-                        <span>Point</span>
-                        <span>54</span>
-                      </li>
-                      <li>
-                        <span>Wins</span>
-                        <span>0</span>
-                      </li>
-                      <li>
-                        <span>Podiums</span>
-                        <span>0</span>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="card_more">
-                    <span>Learn More</span>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="card_type01" href="#" title="선수 상세페이지 이동">
-                  <div class="card_top">
-                    <p class="card_rank">12</p>
-                    <div class="card_profile"><img src="../../inc/images/N_Festival/driver/img_N1_22_이승재-512.png"
-                        alt="선수 프로필사진"></div>
-                    <p class="card_num">28</p>
-                  </div>
-                  <div class="card_bottom">
-                    <div class="card_info">
-                      <p class="card_tit">Choi Kang hoon</p>
-                      <p class="card_subtit">JWORKS X BROS</p>
+                    <div class="card_more">
+                      <span>Learn More</span>
                     </div>
-                    <ul class="card_detail">
-                      <li>
-                        <span>Point</span>
-                        <span>49</span>
-                      </li>
-                      <li>
-                        <span>Wins</span>
-                        <span>0</span>
-                      </li>
-                      <li>
-                        <span>Podiums</span>
-                        <span>1</span>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="card_more">
-                    <span>Learn More</span>
-                  </div>
-                </a>
-              </li>
-            </ul>
-            <div class="page_wrap">
-              <button class="page_prev_btn disabled"><span class="visually-hidden">prev page</span></button>
-              <ul class="page_list">
-                <li class="on"><button>1</button></li>
-                <li><button>2</button></li>
-                <li><button>3</button></li>
-                <li><button>4</button></li>
-                <li><button>5</button></li>
-                <li><button>6</button></li>
-                <li><button>7</button></li>
-                <li><button>8</button></li>
-                <li><button>9</button></li>
-                <li><button>10</button></li>
+                  </a>
+                </li>
+                <li>
+                  <a class="card_type01" href="#" title="선수 상세페이지 이동">
+                    <div class="card_top">
+                      <p class="card_rank">5</p>
+                      <div class="card_profile"><img src="../../inc/images/N_Festival/driver/img_N1_26_케인킴-512.png" alt="선수 프로필사진" /></div>
+                      <p class="card_num">37</p>
+                    </div>
+                    <div class="card_bottom">
+                      <div class="card_info">
+                        <p class="card_tit">Kane Kim</p>
+                        <p class="card_subtit">DCT RACING</p>
+                      </div>
+                      <ul class="card_detail">
+                        <li>
+                          <span>Point</span>
+                          <span>84</span>
+                        </li>
+                        <li>
+                          <span>Wins</span>
+                          <span>1</span>
+                        </li>
+                        <li>
+                          <span>Podiums</span>
+                          <span>4</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="card_more">
+                      <span>Learn More</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="card_type01" href="#" title="선수 상세페이지 이동">
+                    <div class="card_top">
+                      <p class="card_rank">6</p>
+                      <div class="card_profile"><img src="../../inc/images/N_Festival/driver/img_N1_11_안경식-512.png" alt="선수 프로필사진" /></div>
+                      <p class="card_num">7</p>
+                    </div>
+                    <div class="card_bottom">
+                      <div class="card_info">
+                        <p class="card_tit">An Gyung sik</p>
+                        <p class="card_subtit">HNF</p>
+                      </div>
+                      <ul class="card_detail">
+                        <li>
+                          <span>Point</span>
+                          <span>77</span>
+                        </li>
+                        <li>
+                          <span>Wins</span>
+                          <span>2</span>
+                        </li>
+                        <li>
+                          <span>Podiums</span>
+                          <span>2</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="card_more">
+                      <span>Learn More</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="card_type01" href="#" title="선수 상세페이지 이동">
+                    <div class="card_top">
+                      <p class="card_rank">7</p>
+                      <div class="card_profile"><img src="../../inc/images/N_Festival/driver/img_N1_10_장준호-512.png" alt="선수 프로필사진" /></div>
+                      <p class="card_num">10</p>
+                    </div>
+                    <div class="card_bottom">
+                      <div class="card_info">
+                        <p class="card_tit">Jang Joon ho</p>
+                        <p class="card_subtit">SEOHAN GP</p>
+                      </div>
+                      <ul class="card_detail">
+                        <li>
+                          <span>Point</span>
+                          <span>72</span>
+                        </li>
+                        <li>
+                          <span>Wins</span>
+                          <span>1</span>
+                        </li>
+                        <li>
+                          <span>Podiums</span>
+                          <span>4</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="card_more">
+                      <span>Learn More</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="card_type01" href="#" title="선수 상세페이지 이동">
+                    <div class="card_top">
+                      <p class="card_rank">8</p>
+                      <div class="card_profile"><img src="../../inc/images/N_Festival/driver/img_profile_default-512.png" alt="선수 프로필사진" /></div>
+                      <p class="card_num">67</p>
+                    </div>
+                    <div class="card_bottom">
+                      <div class="card_info">
+                        <p class="card_tit">Cho Hoon hyun</p>
+                        <p class="card_subtit">GRIT MOTORSPORTS</p>
+                      </div>
+                      <ul class="card_detail">
+                        <li>
+                          <span>Point</span>
+                          <span>68</span>
+                        </li>
+                        <li>
+                          <span>Wins</span>
+                          <span>0</span>
+                        </li>
+                        <li>
+                          <span>Podiums</span>
+                          <span>1</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="card_more">
+                      <span>Learn More</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="card_type01" href="#" title="선수 상세페이지 이동">
+                    <div class="card_top">
+                      <p class="card_rank">9</p>
+                      <div class="card_profile"><img src="../../inc/images/N_Festival/driver/img_N1_04_김영찬-512.png" alt="선수 프로필사진" /></div>
+                      <p class="card_num">88</p>
+                    </div>
+                    <div class="card_bottom">
+                      <div class="card_info">
+                        <p class="card_tit">Kim Yeong chan</p>
+                        <p class="card_subtit">DCT RACING</p>
+                      </div>
+                      <ul class="card_detail">
+                        <li>
+                          <span>Point</span>
+                          <span>62</span>
+                        </li>
+                        <li>
+                          <span>Wins</span>
+                          <span>2</span>
+                        </li>
+                        <li>
+                          <span>Podiums</span>
+                          <span>3</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="card_more">
+                      <span>Learn More</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="card_type01" href="#" title="선수 상세페이지 이동">
+                    <div class="card_top">
+                      <p class="card_rank">10</p>
+                      <div class="card_profile"><img src="../../inc/images/N_Festival/driver/img_N1_16_김동식-512.png" alt="선수 프로필사진" /></div>
+                      <p class="card_num">79</p>
+                    </div>
+                    <div class="card_bottom">
+                      <div class="card_info">
+                        <p class="card_tit">Kim Dong sik</p>
+                        <p class="card_subtit">KERS RACING</p>
+                      </div>
+                      <ul class="card_detail">
+                        <li>
+                          <span>Point</span>
+                          <span>59</span>
+                        </li>
+                        <li>
+                          <span>Wins</span>
+                          <span>0</span>
+                        </li>
+                        <li>
+                          <span>Podiums</span>
+                          <span>1</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="card_more">
+                      <span>Learn More</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="card_type01" href="#" title="선수 상세페이지 이동">
+                    <div class="card_top">
+                      <p class="card_rank">11</p>
+                      <div class="card_profile"><img src="../../inc/images/N_Festival/driver/img_N1_06_추성택-512.png" alt="선수 프로필사진" /></div>
+                      <p class="card_num">31</p>
+                    </div>
+                    <div class="card_bottom">
+                      <div class="card_info">
+                        <p class="card_tit">Choo Seong taek</p>
+                        <p class="card_subtit">ERACING X VITESSE</p>
+                      </div>
+                      <ul class="card_detail">
+                        <li>
+                          <span>Point</span>
+                          <span>54</span>
+                        </li>
+                        <li>
+                          <span>Wins</span>
+                          <span>0</span>
+                        </li>
+                        <li>
+                          <span>Podiums</span>
+                          <span>0</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="card_more">
+                      <span>Learn More</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="card_type01" href="#" title="선수 상세페이지 이동">
+                    <div class="card_top">
+                      <p class="card_rank">12</p>
+                      <div class="card_profile"><img src="../../inc/images/N_Festival/driver/img_N1_22_이승재-512.png" alt="선수 프로필사진" /></div>
+                      <p class="card_num">28</p>
+                    </div>
+                    <div class="card_bottom">
+                      <div class="card_info">
+                        <p class="card_tit">Choi Kang hoon</p>
+                        <p class="card_subtit">JWORKS X BROS</p>
+                      </div>
+                      <ul class="card_detail">
+                        <li>
+                          <span>Point</span>
+                          <span>49</span>
+                        </li>
+                        <li>
+                          <span>Wins</span>
+                          <span>0</span>
+                        </li>
+                        <li>
+                          <span>Podiums</span>
+                          <span>1</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="card_more">
+                      <span>Learn More</span>
+                    </div>
+                  </a>
+                </li>
               </ul>
-              <button class="page_next_btn"><span class="visually-hidden">next page</span></button>
-            </div>
-            <!-- <div class="btn-wrap-default">
+              <div class="page_wrap">
+                <button class="page_prev_btn disabled"><span class="visually-hidden">prev page</span></button>
+                <ul class="page_list">
+                  <li class="on"><button>1</button></li>
+                  <li><button>2</button></li>
+                  <li><button>3</button></li>
+                  <li><button>4</button></li>
+                  <li><button>5</button></li>
+                  <li><button>6</button></li>
+                  <li><button>7</button></li>
+                  <li><button>8</button></li>
+                  <li><button>9</button></li>
+                  <li><button>10</button></li>
+                </ul>
+                <button class="page_next_btn"><span class="visually-hidden">next page</span></button>
+              </div>
+              <!-- <div class="btn-wrap-default">
                 <button type="button" class="btn btn-lg-outline01">
                   View More
                   <span class="btn-paging">1/3</span>
                   <span class="btn-icon20 icon-down" aria-hidden="true"></span>
                 </button>
               </div> -->
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-  </div>
+      </section>
+    </div>
 
-  <script type="text/javascript" src="../../inc/js/jquery-3.7.1.slim.min.js"></script>
-  <script type="text/javascript" src="../../inc/js/swiper.min.js"></script>
-  <script type="text/javascript" src="../../inc/js/pub-ui.js"></script>
-</body>
-
+    <script type="text/javascript" src="../../inc/js/jquery-3.7.1.slim.min.js"></script>
+    <script type="text/javascript" src="../../inc/js/swiper.min.js"></script>
+    <script type="text/javascript" src="../../inc/js/pub-ui.js"></script>
+  </body>
 </html>
