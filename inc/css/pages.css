@@ -9,16 +9,19 @@
 }
 /* common */
 .bg-lightblue {
-  background-color: #aacae6;
+  background-color: #aacae6 !important;
 }
 .bg-skyblue {
-  background-color: #e6eff8;
+  background-color: #e6eff8 !important;
 }
 .bg-gray {
-  background-color: #f0f0f0;
+  background-color: #f0f0f0 !important;
 }
 .bg-black {
-  background-color: #000;
+  background-color: #000 !important;
+}
+.bg-white {
+  background-color: #fff !important;
 }
 
 /* press - 공통 활용 */
@@ -427,8 +430,9 @@
   padding-top: 160px;
   padding-bottom: 160px;
 }
-
-.subMain .content-item05,
+.subMain .content-item05 {
+  padding:0;
+}
 .evtGuide .content-item06,
 .evtGuide .content-item09 {
   padding-top: 160px;
@@ -668,11 +672,12 @@
     padding-top: 100px;
     padding-bottom: 120px;
   }
-  .subMain .content-item05,
+
   .evtGuide .content-item09 {
     padding-top: 100px;
     padding-bottom: 160px;
   }
+  
   .evtGuide .content-item05 .tab-head,
   .evtGuide .content-item07 .tab-head {
     padding: 0 24px;

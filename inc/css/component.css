@@ -796,9 +796,7 @@ input[type="radio"]:focus + label {
   background: #fff;
   border-right: 0;
 }
-.tabs-wrap .tabs.ty-black li a {
-  color:#000;
-}
+
 .tabs-wrap .tabs li:last-child {
   border-right: 1px solid #555;
 }
@@ -820,9 +818,10 @@ input[type="radio"]:focus + label {
 .tabs-wrap .tabs li a {
   display: block;
   font-size: 16px;
+  font-weight: 700;
   line-height: 22px;
   padding: 11px 32px;
-  color: #555;
+  color: #777;
 }
 
 .tabs-wrap .tabs li.on a {
@@ -831,10 +830,6 @@ input[type="radio"]:focus + label {
 
 .tabs-wrap .tabs.ty-blue li.on a {
   color: #000;
-}
-
-.tabs-wrap .tabs.ty-black li.on a {
-  color: #fff;
 }
 
 .tab-content {
@@ -961,7 +956,6 @@ input[type="radio"]:focus + label {
   position: absolute;
   top: 348px;
   left: 80px;
-  padding: 14px 24px;
   background: #fff;
   border-radius: 4px;
 }
@@ -1166,6 +1160,7 @@ input[type="radio"]:focus + label {
   font-size: 0.875rem;
   font-weight: 500;
   line-height: 140%;
+  margin-top:4px;
 }
 .card_type01 .card_detail {
   display: flex;
@@ -2100,8 +2095,8 @@ input[type="radio"]:focus + label {
   color: #fff;
 }
 
-.swiper-card-type .swiper-slide {
-  /* max-width: 468px; */
+.ty04Swiper.swiper-card-type .swiper-slide {
+  max-width: 464px;
 }
 
 .swiper-card-type .card_cover {
@@ -2345,7 +2340,7 @@ input[type="radio"]:focus + label {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #e6eff8;
+  background-color: #f0f0f0;
 }
 .wrap-list.list03 .left {
   margin-right: 24px;

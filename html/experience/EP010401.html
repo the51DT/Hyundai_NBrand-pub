@@ -19,32 +19,20 @@
         <div class="content-item01 content-top">
           <p class="tit-type01 fw-type03">Standing</p>
           <p class="tit-type03 fw-type03">Hyundai N Festival Racing Standing</p>
+          <div class="tit-btn-wrap">
+            <button type="button" aria-selected="true" class="tit on">KOREA</button>
+            <button type="button" aria-selected="false" class="tit">CHINA</button>
+            <button type="button" aria-selected="false" class="tit">USA</button>
+          </div>
         </div>
-        <div class="content-item02">
+        <div class="content-item02 bg-gray">
           <div class="standing_top">
             <!-- *** drivers 선택 후 TOP3 *** -->
             <div class="title_flex tilte_padding">
-              <p class="contitle-type01 fw-type03 color-white">Drivers</p>
+              <p class="contitle-type01 fw-type03">Drivers</p>
               <div class="selectbox-wrap select-type02">
                 <div>
-                  <button class="selectbox-trigger txt-type03 fw-type03 color-white" aria-haspopup="listbox"
-                    aria-expanded="false" aria-labelledby="countrySelect"
-                    onclick="handleSelectboxClick(event)">Korea</button>
-                  <ul class="selectbox-options" role="listbox" id="countrySelect" aria-hidden="true"
-                    style="display: none">
-                    <li class="moclose-btn" style="display: none">
-                      <button type="button" class="btn btn-only-icon">
-                        <span class="visually-hidden">close button</span>
-                        <span class="btn-icon24 icon-close" aria-hidden="true"></span>
-                      </button>
-                    </li>
-                      <li class="option txt-type03 fw-type03 active" role="option" onclick="handleOptionClick(event)" aria-selected="true">Korea</li>
-                      <li class="option txt-type03 fw-type03" role="option" onclick="handleOptionClick(event)">China</li>
-                      <li class="option txt-type03 fw-type03" role="option" onclick="handleOptionClick(event)">USA</li>
-                  </ul>
-                </div>
-                <div>
-                    <button class="selectbox-trigger txt-type03 fw-type03 color-white" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="yearSelect" onclick="handleSelectboxClick(event)">2024</button>
+                    <button class="selectbox-trigger txt-type03 fw-type03" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="yearSelect" onclick="handleSelectboxClick(event)">2024</button>
                     <ul class="selectbox-options 02" role="listbox" id="yearSelect" aria-hidden="true" style="display: none">
                     <li class="moclose-btn" style="display: none">
                       <button type="button" class="btn btn-only-icon">
@@ -61,7 +49,7 @@
                   </ul>
                 </div>
                 <div>
-                    <button class="selectbox-trigger txt-type03 fw-type03 color-white" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="kindSelect" onclick="handleSelectboxClick(event)">Drivers</button>
+                    <button class="selectbox-trigger txt-type03 fw-type03" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="kindSelect" onclick="handleSelectboxClick(event)">Drivers</button>
                     <ul class="selectbox-options 03" role="listbox" id="kindSelect" aria-hidden="true" style="display: none">
                     <li class="moclose-btn" style="display: none">
                       <button type="button" class="btn btn-only-icon">
@@ -74,7 +62,7 @@
                   </ul>
                 </div>
                 <div>
-                    <button class="selectbox-trigger txt-type03 fw-type03 color-white" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="classSelect" onclick="handleSelectboxClick(event)">eN1</button>
+                    <button class="selectbox-trigger txt-type03 fw-type03" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="classSelect" onclick="handleSelectboxClick(event)">eN1</button>
                     <ul class="selectbox-options 04" role="listbox" id="classSelect" aria-hidden="true" style="display: none">
                     <li class="moclose-btn" style="display: none">
                       <button type="button" class="btn btn-only-icon">
@@ -195,10 +183,10 @@
 
             <!-- *** team 선택 후 TOP 3 *** -->
             <!-- <div class="title_flex">
-                <p class="contitle-type01 fw-type03 color-white">Teams</p>
+                <p class="contitle-type01 fw-type03">Teams</p>
                 <div class="selectbox-wrap select-type02">
                   <div>
-                    <button class="selectbox-trigger txt-type03 fw-type03 color-white" aria-haspopup="listbox"
+                    <button class="selectbox-trigger txt-type03 fw-type03" aria-haspopup="listbox"
                       aria-expanded="false" aria-labelledby="countrySelect"
                       onclick="handleSelectboxClick(event)">Korea</button>
                     <ul class="selectbox-options" role="listbox" id="countrySelect" aria-hidden="true" style="display: none;">
@@ -214,7 +202,7 @@
                     </ul>
                   </div>
                   <div>
-                    <button class="selectbox-trigger txt-type03 fw-type03 color-white" aria-haspopup="listbox"
+                    <button class="selectbox-trigger txt-type03 fw-type03" aria-haspopup="listbox"
                       aria-expanded="false" aria-labelledby="yearSelect"
                       onclick="handleSelectboxClick(event)">2024</button>
                     <ul class="selectbox-options 02" role="listbox" id="yearSelect" aria-hidden="true" style="display: none;">
@@ -233,7 +221,7 @@
                     </ul>
                   </div>
                   <div>
-                    <button class="selectbox-trigger txt-type03 fw-type03 color-white" aria-haspopup="listbox"
+                    <button class="selectbox-trigger txt-type03 fw-type03" aria-haspopup="listbox"
                       aria-expanded="false" aria-labelledby="kindSelect"
                       onclick="handleSelectboxClick(event)">Teams</button>
                     <ul class="selectbox-options 03" role="listbox" id="kindSelect" aria-hidden="true" style="display: none;">
@@ -248,7 +236,7 @@
                     </ul>
                   </div>
                   <div>
-                    <button class="selectbox-trigger txt-type03 fw-type03 color-white" aria-haspopup="listbox"
+                    <button class="selectbox-trigger txt-type03 fw-type03" aria-haspopup="listbox"
                       aria-expanded="false" aria-labelledby="classSelect"
                       onclick="handleSelectboxClick(event)">eN1</button>
                     <ul class="selectbox-options 04" role="listbox" id="classSelect" aria-hidden="true" style="display: none;">
@@ -664,11 +652,12 @@
               </li>
             </ul>
             <div class="page_wrap">
-              <button class="page_prev_btn"><span class="visually-hidden">prev page</span></button>
+              <button class="page_prev_btn disabled"><span class="visually-hidden">prev page</span></button>
               <ul class="page_list">
-                <li><button>1</button></li>
+                <li class="on"><button>1</button></li>
                 <li><button>2</button></li>
                 <li><button>3</button></li>
+                <li><button>4</button></li>
               </ul>
               <button class="page_next_btn"><span class="visually-hidden">next page</span></button>
             </div>

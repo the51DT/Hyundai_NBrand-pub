@@ -20,6 +20,11 @@
         <section class="content-item01 content-top">
           <p class="tit-type01 fw-type03">Event Guide</p>
           <p class="tit-type03 fw-type03">Fun with Hyundai N Festival</p>
+          <div class="tit-btn-wrap">
+            <button type="button" aria-selected="true" class="tit on">KOREA</button>
+            <button type="button" aria-selected="false" class="tit">CHINA</button>
+            <button type="button" aria-selected="false" class="tit">USA</button>
+          </div>
         </section>
         <div class="dropdown">
           <button class="wrap-dropdown-selected dropdown-btn" aria-haspopup="true" aria-expanded="false">
@@ -85,11 +90,10 @@
           <div class="n-race-box">
             <div class="conts-head ty03">
               <h2 class="tit contitle-type01 fw-type03">N Race</h2>
-              <div class="selectbox-wrap select-type02">
+              <div class="selectbox-wrap select-type">
                 <div>
                   <button class="selectbox-trigger txt-type03 fw-type03" aria-haspopup="listbox" aria-expanded="false"
-                    aria-labelledby="countrySelect" onclick="handleSelectboxClick(event)">
-                    Korea
+                    aria-labelledby="countrySelect" onclick="handleSelectboxClick(event)">All
                   </button>
                   <ul class="selectbox-options" role="listbox" id="countrySelect" aria-hidden="true"
                     style="display: none">
@@ -99,26 +103,9 @@
                         <span class="btn-icon24 icon-close" aria-hidden="true"></span>
                       </button>
                     </li>
-                      <li class="option txt-type03 fw-type03 active" role="option" aria-selected="true" onclick="handleOptionClick(event)">Korea</li>
+                      <li class="option txt-type03 fw-type03 active" role="option" aria-selected="true" onclick="handleOptionClick(event)">All</li>
                       <li class="option txt-type03 fw-type03" role="option" onclick="handleOptionClick(event)">China</li>
                       <li class="option txt-type03 fw-type03" role="option" onclick="handleOptionClick(event)">USA</li>
-                  </ul>
-                </div>
-                <div>
-                    <button class="selectbox-trigger txt-type03 fw-type03" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="yearSelect" onclick="handleSelectboxClick(event)">2024</button>
-                    <ul class="selectbox-options 02" role="listbox" id="yearSelect" aria-hidden="true" style="display: none">
-                    <li class="moclose-btn" style="display: none">
-                      <button type="button" class="btn btn-only-icon">
-                        <span class="visually-hidden">close button</span>
-                        <span class="btn-icon24 icon-close" aria-hidden="true"></span>
-                      </button>
-                    </li>
-                      <li class="option txt-type03 fw-type03 active" role="option" aria-selected="true" onclick="handleOptionClick(event)">2024</li>
-                      <li class="option txt-type03 fw-type03" role="option" onclick="handleOptionClick(event)">2023</li>
-                      <li class="option txt-type03 fw-type03" role="option" onclick="handleOptionClick(event)">2022</li>
-                      <li class="option txt-type03 fw-type03" role="option" onclick="handleOptionClick(event)">2021</li>
-                      <li class="option txt-type03 fw-type03" role="option" onclick="handleOptionClick(event)">2020</li>
-                      <li class="option txt-type03 fw-type03" role="option" onclick="handleOptionClick(event)">2019</li>
                   </ul>
                 </div>
               </div>
@@ -283,16 +270,16 @@
                         </div>
                       </a>
                     </div>
-                  </div>
-                  <!--//swiper-wrapper -->
-                  <!--//swiper-wrapper -->
+                  </div><!--//swiper-wrapper -->
                   <div class="swiper-arrow-wrap">
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next" tabindex="0" role="button"
+                      aria-controls="swiper-wrapper-d1f642c19f1cdd98" aria-disabled="false" aria-label="다음 슬라이드">
+                    </div>
+                    <div class="swiper-button-prev swiper-button-disabled" tabindex="-1" role="button"
+                      aria-controls="swiper-wrapper-d1f642c19f1cdd98" aria-disabled="true" aria-label="이전 슬라이드"></div>
                   </div>
                 </div>
-              </div>
-              <!-- //swiper-container -->
+              </div><!-- //swiper-container -->
               <div class="n-race-box-conts content-item03">
                 <h2 class="title-w1440 contitle-type01 fw-type03">
                   N CUP Round 1
@@ -314,7 +301,7 @@
             <!--//conts-body -->
           </div>
         </section>
-        <div class="content-item04 bg-lightblue">
+        <div class="content-item04 bg-gray">
           <div class="class-info-box">
             <h2 class="title-w1440 contitle-type01 fw-type03 ta-ctr">
               Class Information
@@ -396,7 +383,7 @@
                 <div class="tab-head">
                   <h2 class="title">Race Schedule</h2>
                   <div class="tabs-wrap">
-                    <ul class="tabs" data-contents="탭카테고리">
+                    <ul class="tabs ty-black" data-contents="탭카테고리">
                       <li class="on">
                         <a href="javascript:;" aria-controls="tab1-011" role="tab" aria-selected="true">Saturday</a>
                       </li>
@@ -546,18 +533,14 @@
           </div>
         </div>
 
-        <section class="content-item06 bg-lightblue">
+        <section class="content-item06 bg-gray">
           <div class="event-box">
             <div class="conts-head ty02">
               <h2 class="tit contitle-type01 fw-type03">Event Layout</h2>
               <div class="selectbox-wrap select-type02">
                 <div>
-                  <button class="selectbox-trigger txt-type03 fw-type03" aria-haspopup="listbox" aria-expanded="false"
-                    aria-labelledby="countrySelect" onclick="handleSelectboxClick(event)">
-                    A Paddock
-                  </button>
-                  <ul class="selectbox-options" role="listbox" id="countrySelect" aria-hidden="true"
-                    style="display: none">
+                    <button class="selectbox-trigger txt-type03 fw-type03" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="yearSelect" onclick="handleSelectboxClick(event)">A Paddock</button>
+                    <ul class="selectbox-options 02" role="listbox" id="yearSelect" aria-hidden="true" style="display: none">
                     <li class="moclose-btn" style="display: none">
                       <button type="button" class="btn btn-only-icon">
                         <span class="visually-hidden">close button</span>
@@ -565,7 +548,7 @@
                       </button>
                     </li>
                       <li class="option txt-type03 fw-type03 active" role="option" aria-selected="true" onclick="handleOptionClick(event)">A Paddock</li>
-                      <li class="option txt-type03 fw-type03" role="option" onclick="handleOptionClick(event)">B Paddock</li>
+                      <li class="option txt-type03 fw-type03" role="option" onclick="handleOptionClick(event)">N Experience Zone</li>
                   </ul>
                 </div>
                 <div>
@@ -600,7 +583,7 @@
               <div class="evt-map-wrap">
                 <ul class="evt-map-area">
                   <li>
-                    <!-- aria-controls="pop-side" 과 id="pop-side" 값이 같은 팝업 오픈 -->
+                    <!-- aria-controls="pop-side" 과  id="pop-side" 값이 같은 팝업 오픈 -->
                     <button class="pop-open" aria-controls="pop-side" aria-haspopup="true" aria-expanded="false"
                       title="이벤트 팝업 열기">
                       <strong class="num">1</strong>
@@ -667,7 +650,7 @@
                 <div class="tab-head">
                   <h2 class="title">Event Schedule</h2>
                   <div class="tabs-wrap">
-                    <ul class="tabs" data-contents="탭카테고리">
+                    <ul class="tabs ty-black" data-contents="탭카테고리">
                       <li class="on">
                         <a href="javascript:;" aria-controls="tab2-011" role="tab" aria-selected="true">Saturday</a>
                       </li>
@@ -864,7 +847,7 @@
           </div>
         </div>
 
-        <section class="content-item08 bg-skyblue">
+        <section class="content-item08 bg-gray">
           <div class="track-guide-box">
             <div class="wrap-list list03">
               <div class="left imgwrap">

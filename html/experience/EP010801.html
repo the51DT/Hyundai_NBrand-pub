@@ -10,7 +10,9 @@
 
   <link type="text/css" rel="stylesheet" href="../../inc/css/swiper.min.css" />
   <link type="text/css" rel="stylesheet" href="../../inc/css/common.css" />
-
+  <style>
+    
+  </style>
 </head>
 
 <body>
@@ -140,7 +142,7 @@
                     <a href="#">
                       <div class="img-ico"></div>
                       <div class="img-area">
-                        <img src="../../inc/images/img/conts_bg_img01.svg" alt="이미지 슬라이드1" />
+                        <img src="../../inc/images/img/conts_bg_img01.svg" alt="이미지 슬라이드2" />
                       </div>
                       <div class="text-area">
                         <h4 class="title">
@@ -181,12 +183,20 @@
                 </div>
                 <!-- //swiper-wrapper -->
 
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
+                
+                <div class="swiper-button-next" tabindex="0" role="button" aria-controls="swiper-wrapper-d1f642c19f1cdd98" aria-disabled="false" aria-label="다음 슬라이드">
+                      </div>
+                <div class="swiper-button-prev swiper-button-disabled" tabindex="-1" role="button" aria-controls="swiper-wrapper-d1f642c19f1cdd98" aria-disabled="true" aria-label="이전 슬라이드"></div>
 
                 <div class="swiper-status-wrap">
-                  <div class="swiper-pagination-custom">
-                    <span class="swiper-pagination-bullet-active"></span>
+                  <div class="swiper-pagination-custom swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
+                    <span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button"
+                      aria-current="true" aria-label="첫번째 슬라이드"></span>
+                    <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="두번째 슬라이드"></span>
+                    <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="세번째 슬라이드"></span>
+                    <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="네번째 슬라이드"></span>
+                    <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="다섯번째 슬라이드"></span>
+                    <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="여섯번째 슬라이드"></span>
                   </div>
                   <div class="btn-wrap">
                     <button class="btn btn-play on" type="button">
@@ -194,6 +204,7 @@
                     </button>
                   </div>
                 </div>
+                
               </div>
               <!-- //swiper -->
             </div>
