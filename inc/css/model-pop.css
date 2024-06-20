@@ -123,12 +123,13 @@
 @media screen and (max-width: 1023px) {
   .popup .popup-wrapper .popup-header {
     padding: 16px 24px;
-    border-bottom: 0;
+    /* border-bottom: 0; */
   }
 
   .popup .popup-wrapper .popup-header .inner-header-txt {
     padding-right: 35px;
   }
+  /* 
   .popup .popup-wrapper .popup-body .inner-body-model:before {
     content: "";
     width: 100%;
@@ -137,7 +138,7 @@
     position: fixed;
     top: 5.6rem;
     left: 0;
-  }
+  } */
 
   .popup .popup-wrapper .popup-body .inner-body-model {
     padding: 40px 0 100px;
