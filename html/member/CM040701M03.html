@@ -158,7 +158,7 @@
           <div class="selectbox-wrap select-type01">
             <div>
               <button class="selectbox-trigger txt-type03 fw-type03" aria-haspopup="listbox" aria-expanded="false"
-                aria-labelledby="countrySelect">
+                aria-labelledby="countrySelect" onclick="handleSelectboxClick(event)">
                 Member Selection
               </button>
               <ul class="selectbox-options" role="listbox" id="countrySelect" aria-hidden="true" style="display: none">
@@ -168,13 +168,14 @@
                     <span class="btn-icon24 icon-close" aria-hidden="true"></span>
                   </button>
                 </li>
-                <li class="option txt-type03 fw-type03 active" role="option" aria-selected="true">
+                <li class="option txt-type03 fw-type03 active" role="option" onclick="handleOptionClick(event(this))"
+                  aria-selected="true">
                   Korea
                 </li>
-                <li class="option txt-type03 fw-type03" role="option">
+                <li class="option txt-type03 fw-type03" role="option" onclick="handleOptionClick(event(this))">
                   China
                 </li>
-                <li class="option txt-type03 fw-type03" role="option">USA</li>
+                <li class="option txt-type03 fw-type03" role="option" onclick="handleOptionClick(event(this))">USA</li>
               </ul>
             </div>
           </div>

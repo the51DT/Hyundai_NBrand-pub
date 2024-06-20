@@ -143,7 +143,7 @@
                 <div class="selectbox-wrap select-type04">
                   <div>
                     <button class="selectbox-trigger txt-type03 fw-type03" aria-haspopup="listbox" aria-expanded="false"
-                      aria-labelledby="알림 설정 버튼">
+                      aria-labelledby="알림 설정 버튼" onclick="handleSelectboxClick(event)">
                       <i><img src="../../inc/images/icon/icon-setting.svg" alt="알림 설정 톱니바퀴 이미지" /></i>
                     </button>
                     <ul class="selectbox-options" role="listbox" id="countrySelect" aria-hidden="true"
@@ -154,8 +154,10 @@
                           <span class="btn-icon24 icon-close" aria-hidden="true"></span>
                         </button>
                       </li>
-                      <li class="option txt-type03 fw-type03 active" role="option" aria-selected="true">탈퇴하기</li>
-                      <li class="option txt-type03 fw-type03" role="option" aria-selected="true">양도신청</li>
+                      <li class="option txt-type03 fw-type03 active" role="option"
+                        onclick="handleOptionClick(event(this))" aria-selected="true">탈퇴하기</li>
+                      <li class="option txt-type03 fw-type03" role="option" onclick="handleOptionClick(event(this))"
+                        aria-selected="true">양도신청</li>
                     </ul>
                   </div>
                 </div>
@@ -252,7 +254,7 @@
                   <div class="selectbox-wrap select-type01">
                     <div>
                       <button class="selectbox-trigger txt-type03 fw-type03" aria-haspopup="listbox"
-                        aria-expanded="false" aria-labelledby="정렬버튼">All</button>
+                        aria-expanded="false" aria-labelledby="정렬버튼" onclick="handleSelectboxClick(event)">All</button>
                       <ul class="selectbox-options" role="listbox" id="countrySelect" aria-hidden="true"
                         style="display: none">
                         <li class="moclose-btn" style="display: none">
@@ -261,10 +263,14 @@
                             <span class="btn-icon24 icon-close" aria-hidden="true"></span>
                           </button>
                         </li>
-                        <li class="option txt-type03 fw-type03 active" role="option" aria-selected="true">All</li>
-                        <li class="option txt-type03 fw-type03" role="option">가입</li>
-                        <li class="option txt-type03 fw-type03" role="option">탈퇴</li>
-                        <li class="option txt-type03 fw-type03" role="option">가입 요청</li>
+                        <li class="option txt-type03 fw-type03 active" role="option"
+                          onclick="handleOptionClick(event(this))" aria-selected="true">All</li>
+                        <li class="option txt-type03 fw-type03" role="option" onclick="handleOptionClick(event(this))">
+                          가입</li>
+                        <li class="option txt-type03 fw-type03" role="option" onclick="handleOptionClick(event(this))">
+                          탈퇴</li>
+                        <li class="option txt-type03 fw-type03" role="option" onclick="handleOptionClick(event(this))">
+                          가입 요청</li>
                       </ul>
                     </div>
                   </div>
@@ -304,7 +310,7 @@
                   <div class="selectbox-wrap select-type01">
                     <div>
                       <button class="selectbox-trigger txt-type03 fw-type03" aria-haspopup="listbox"
-                        aria-expanded="false" aria-labelledby="정렬버튼">All</button>
+                        aria-expanded="false" aria-labelledby="정렬버튼" onclick="handleSelectboxClick(event)">All</button>
                       <ul class="selectbox-options" role="listbox" id="countrySelect" aria-hidden="true"
                         style="display: none">
                         <li class="moclose-btn" style="display: none">
@@ -313,13 +319,20 @@
                             <span class="btn-icon24 icon-close" aria-hidden="true"></span>
                           </button>
                         </li>
-                        <li class="option txt-type03 fw-type03 active" role="option" aria-selected="true">All</li>
-                        <li class="option txt-type03 fw-type03" role="option">일반 – N Community</li>
-                        <li class="option txt-type03 fw-type03" role="option">Missions - Nthusiasts</li>
-                        <li class="option txt-type03 fw-type03" role="option">Missions - N Community(회원)</li>
-                        <li class="option txt-type03 fw-type03" role="option">Missions - N Community(Master)</li>
-                        <li class="option txt-type03 fw-type03" role="option">Rewards - Nthusiasts</li>
-                        <li class="option txt-type03 fw-type03" role="option">Rewards - N Community(Master)</li>
+                        <li class="option txt-type03 fw-type03 active" role="option"
+                          onclick="handleOptionClick(event(this))" aria-selected="true">All</li>
+                        <li class="option txt-type03 fw-type03" role="option" onclick="handleOptionClick(event(this))">
+                          일반 – N Community</li>
+                        <li class="option txt-type03 fw-type03" role="option" onclick="handleOptionClick(event(this))">
+                          Missions - Nthusiasts</li>
+                        <li class="option txt-type03 fw-type03" role="option" onclick="handleOptionClick(event(this))">
+                          Missions - N Community(회원)</li>
+                        <li class="option txt-type03 fw-type03" role="option" onclick="handleOptionClick(event(this))">
+                          Missions - N Community(Master)</li>
+                        <li class="option txt-type03 fw-type03" role="option" onclick="handleOptionClick(event(this))">
+                          Rewards - Nthusiasts</li>
+                        <li class="option txt-type03 fw-type03" role="option" onclick="handleOptionClick(event(this))">
+                          Rewards - N Community(Master)</li>
                       </ul>
                     </div>
                   </div>
