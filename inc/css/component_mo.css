@@ -1281,6 +1281,7 @@ min-width : 1024 css
   }
   .roundresult-top p:first-child {
     color: #de3111;
+    margin-bottom: 28px;
   }
   .roundresult-box dl {
     display: flex;
@@ -1598,6 +1599,9 @@ min-width : 1024 css
   .selectbox-wrap.select-type02 > div {
     width: calc(50% - 6px);
   }
+  .selectbox-wrap.select-type02 > div:nth-child(3n) {
+    width: 100%;
+  }
   .selectbox-trigger {
     width: 100%;
   }
@@ -1725,6 +1729,27 @@ min-width : 1024 css
   .tag-list-wrap [class^="tag-list"][class*="multi"] li:not(:last-child) {
     margin-right: 8px;
   }
+  /* 디자인 버전 적용(240619) - 페이징(공용) */
+  .page_wrap {
+    margin:0 24px;
+  }
+  .page_wrap .page_prev_btn, .page_wrap .page_next_btn {
+    max-width: 48px;
+    flex: 1 1 64.35px;
+    margin:0;
+  }  
+
+  .page_wrap .page_list {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+  }
+  .page_wrap .page_list button {
+    float: left;
+    width: 25%;
+    height: 48px;
+  }
+
   /* EP040401M01 (프로필 [02.N Community 가입 한 경우], [05. N Community 폐쇄 된 경우] > 레이어 나오도록 ) ,
   CM040101 (커뮤니티 가입 : 클럽 아이콘 클릭 시 N Community 레이어 노출)
   */
