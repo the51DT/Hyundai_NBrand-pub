@@ -416,7 +416,7 @@
   align-items: end;
   width: 100%;
   height: auto;
-  background-color:#AACAE6;
+  background-color: #aacae6;
   background-position: center;
   background-size: cover;
   aspect-ratio: 1920 / 694;
@@ -2292,7 +2292,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
 
   .video_thumnail_wrap .video_desc {
     position: absolute;
-    top:60%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 32px;
@@ -2400,7 +2400,8 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
   }
 
   .popup-wrapper .btn-wrap button.btn-only-icon-notbg.pop-close.pop-page {
-    top: 23px;
+    top: calc(30px - 12px);
+    right: 24px;
   }
   .popup-wrapper button.btn-only-icon-notbg.pop-close.pop-page {
     right: 24px;
