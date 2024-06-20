@@ -59,6 +59,7 @@
   font-family: "Hyundai Sans Head";
   text-align: center;
   color: #FFF;
+  opacity: 0;
 }
 .configurator_list_swiper .configurator_tit {
   font-size: 3.5rem;
@@ -66,19 +67,24 @@
   line-height: 125%;
 }
 .configurator_list_swiper .configurator_subtit {
+  margin-top: 1rem;
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 140%;
 }
 .configurator_list_swiper .configurator_car_wrap {
   position: absolute;
+  left: 50%;
   top: 29.7%;
-  width: 100%;
+  transform: translateX(-50%);
+  width: 38.625rem;
+  opacity: 0.5;
 }
 .configurator_list_swiper .configurator_detail_wrap {
   position: absolute;
   bottom: 5rem;
   width: 100%;
+  opacity: 0;
 }
 .configurator_list_swiper .configurator_detail {
   display: flex;
@@ -108,11 +114,35 @@
   color: #FFF;
 }
 .configurator_list_swiper .configurator_btn_wrap {
-  /* 스와이퍼 트랜스폼 때문에 픽스 안먹음 다른 방법 찾아서 바꾸기 */
   position: fixed;
-  left: 50%;
+  right: 2.5rem;
   bottom: 5rem;
-  width: 100vw;
+  opacity: 1;
+  z-index: 1;
+}
+.configurator_list_swiper .swiper-slide-active .configurator_tit_wrap {
+  opacity: 1;
+}
+.configurator_list_swiper .swiper-slide-active .configurator_car_wrap {
+  opacity: 1;
+}
+.configurator_list_swiper .swiper-slide-active .configurator_detail_wrap {
+  opacity: 1;
+}
+.configurator_list_swiper .swiper-bottom-wrap {
+  left: 0;
+  bottom: 50%;
+  width: 100%;
+}
+.configurator_list_swiper .swiper-button-next.swiper-button-disabled,
+.configurator_list_swiper .swiper-button-prev.swiper-button-disabled {
+  display: none;
+}
+.configurator_list_swiper .swiper-button-prev:after {
+  background-image: url(../images/icon/icon-arrow-box-white_left.svg);
+}
+.configurator_list_swiper .swiper-button-next:after {
+  background-image: url(../images/icon/icon-arrow-box-white_right.svg);
 }
 
 /* 모바일 */
@@ -128,5 +158,81 @@
   }
   .configurator_header_left p {
     font-size: 1.25rem;
+  }
+  .configurator_swiper_wrap {
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/img/img_config_list_swiper_bg_mo.png);
+    background-position: center;
+    background-size: cover;
+  }
+  .configurator_swiper_wrap .swiper-container {
+    height: 100%;
+  }
+  .configurator_list_swiper {
+    position: relative;
+    height: 100%;
+  }
+  .configurator_list_swiper .swiper-slide {
+    width: 38.625rem;
+    height: 100%;
+  }
+  .configurator_list_swiper .configurator_tit_wrap {
+    position: absolute;
+    top: 2.25rem;
+    width: 100%;
+    font-family: "Hyundai Sans Head";
+    text-align: center;
+    color: #FFF;
+    opacity: 0;
+  }
+  .configurator_list_swiper .configurator_tit {
+    font-size: 1.875rem;
+    line-height: 140%;
+  }
+  .configurator_list_swiper .configurator_subtit {
+    margin-top: 0.5rem;
+    font-size: 1.125rem;
+  }
+  .configurator_list_swiper .configurator_car_wrap {
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 56.66%;
+    text-align: center;
+  }
+  .configurator_list_swiper .configurator_detail_wrap {
+    bottom: 7.87rem;
+  }
+  .configurator_list_swiper .configurator_detail {
+    gap: 2.25rem;
+  }
+  .configurator_list_swiper .configurator_num {
+    font-size: 1.5rem;
+    line-height: 140%;
+  }
+  .configurator_list_swiper .configurator_text {
+    display: none;
+  }
+  .configurator_list_swiper .configurator_btn_wrap {
+    position: fixed;
+    right: 0;
+    bottom: 2.25rem;
+    padding: 0 1.595rem;
+    width: 100%;
+  }
+  .configurator_list_swiper .swiper-bottom-wrap {
+    bottom: 56.5%;
+  }
+  .configurator_list_swiper .swiper-button-prev:after {
+    background-image: url(../images/icon/icon-arrow-box-white_left_mo.svg);
+  }
+  .configurator_list_swiper .swiper-button-next:after {
+    background-image: url(../images/icon/icon-arrow-box-white_right_mo.svg);
+  }
+  .configurator_list_swiper .swiper-button-prev,
+  .configurator_list_swiper .swiper-button-next {
+    display: block;
+    width: 3rem;
+    height: 3rem;
   }
 }
