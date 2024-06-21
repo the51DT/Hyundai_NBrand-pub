@@ -28,17 +28,17 @@
 
   .header-cont .nav-wrap {
     position: absolute;
-    height: calc(100vh - 70px);
+    /* height: calc(100vh - 70px); */
     background: #fff;
     width: 100vw;
-    left: auto;
-    right: 100%;
-    transition: right 0.3s;
+    /* left: auto; */
+    /* right: 100%; */
+    /* transition: right 0.3s; */
   }
-  .header-wrap.menu-on .nav-wrap {
+  /* .header-wrap.menu-on .nav-wrap {
     height: calc(100vh - 70px);
     right: 0;
-  }
+  } */
   .gnb__tab-btn-wrap {
     flex-direction: column;
     gap: 0px;
@@ -78,9 +78,16 @@
   .gnb__tab-btn-wrap [class*="gnb__tab-btn"].on::after {
     background: url(../images/icon/icon-arrow01_right_red.svg) no-repeat center;
   }
+  .gnb__tab-btn-wrap [class*="gnb__tab-btn"].active {
+    color: #de3111;
+    border-bottom: 1px solid #d9d9d9;
+  }
+  .gnb__tab-btn-wrap [class*="gnb__tab-btn"].active::after {
+    background: url(../images/icon/icon-circle_red.svg) no-repeat center;
+  }
   .header__event-wrap {
     position: absolute;
-    bottom: 30px;
+    top: calc(100vh - 405px);
     width: 100%;
     padding-bottom: 0;
     overflow-x: auto;
@@ -153,5 +160,56 @@
     display: none;
     /* transition: right 2s 1s; */
     z-index: 1001;
+  }
+  .gnb__tab-cont-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: calc(100vh -70px);
+    width: 100%;
+    background-color: #fff;
+  }
+  .gnb__tab-cont-wrap [class*="gnb__tab-cont"] {
+    padding: 82px 0 20px 0;
+  }
+  .gnb__tab-cont-wrap [class*="gnb__tab-cont"] > * {
+    float: none;
+    width: 100%;
+  }
+  .gnb__tab02-wrap .gnb__tab02,
+  .gnb__tab-cont03 .gnb__tab02-wrap .gnb__panel02 {
+    width: 100%;
+  }
+  .mo-gnb__back-btn {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 0 20px 56px;
+    width: 100%;
+    color: #000;
+    font-family: "Hyundai Sans Head";
+    font-size: 30px;
+    font-weight: 700;
+    text-align: left;
+    line-height: 140%; /* 42px */
+    background: url(../images/icon/icon-gnb_back.svg) no-repeat left 24px top
+      28px;
+  }
+  .gnb-content__dep2 {
+    display: none;
+  }
+  .gnb__tab02-wrap [class*="gnb__tab02-btn"] {
+    padding: 16px 24px;
+    height: auto;
+  }
+  .gnb__tab02-wrap li:first-of-type [class*="gnb__tab02-btn"] {
+    border-top: 0;
+  }
+  .gnb__tab-cont-wrap .gnb__tab-cont02 .gnb__tab02 {
+    width: 100%;
+  }
+  .gnb__panel02 {
+    display: none;
   }
 }

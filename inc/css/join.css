@@ -1133,7 +1133,9 @@
   .mypage-content.mypage-eachbox .mypage-eachbox-top + .mypage-nodata-box {
     padding: 4px 0 0;
   }
-  .mypage-content.mypage-eachbox.type2 .mypage-eachbox-top + .mypage-nodata-box {
+  .mypage-content.mypage-eachbox.type2
+    .mypage-eachbox-top
+    + .mypage-nodata-box {
     padding: 12px 0 0;
   }
   .mypage-content.mypage-eachbox.type2 .mypage-eachbox-top + .inquiry-nodata {

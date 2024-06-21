@@ -21,6 +21,7 @@
 }
 .models-wrap .content-item02 {
   position: relative;
+  text-align: center; /* 임시로 함 */
 }
 .models-wrap .content-item02 video + .btn {
   position: absolute;
@@ -112,6 +113,9 @@
 }
 .models-wrap .full-1600 {
   aspect-ratio: 1920 / 1600;
+}
+.models-wrap .full-1080 {
+  aspect-ratio: 1920 / 1080;
 }
 .models-wrap .perfor-wrap .models-full.icon20 {
   background: url(../../inc/images/Models/i20N/i20N_performance_bg.png) center no-repeat;
@@ -261,4 +265,88 @@
 .specification-wrap {
   background-color: #f0f0f0;
   padding: 240px 80px;
+}
+.specification-wrap dl {
+  border-top: 1px solid #787d80;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: left;
+  margin-top: 20px;
+}
+.specification-wrap .specification-box > img {
+  margin-top: 40px;
+}
+.specification-wrap dl dt,
+.specification-wrap dl dd {
+  border-bottom: 1px solid #bbbbbb;
+  padding: 32px 0;
+}
+.specification-wrap dl dt {
+  flex: 0 0 222px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+}
+.specification-wrap dl dd {
+  flex: 0 0 calc(100% - 222px);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 33.6px;
+  padding-right: 24px;
+}
+.specification-txt {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16.8px;
+  color: #666;
+  text-align: left;
+  margin-top: 20px;
+}
+.specification-wrap .specification-box img {
+  width: 952px;
+  height: 714px;
+}
+.specification-wrap .specification-box .tab-head {
+  justify-content: center;
+  margin-top: 40px;
+}
+.specification-wrap .specification-box .tab-head li a {
+  width: 154px;
+}
+.gallery-wrap {
+  padding: 240px 0;
+  margin-bottom: 240px;
+}
+.gallery-wrap .max1440 {
+  padding: 0 80px;
+}
+.gallery-wrap .ty02Swiper .swiper-slide-active {
+  max-width: 1196px;
+  position: relative;
+}
+.ty02Swiper .swiper-button-next,
+.ty02Swiper .swiper-button-prev {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.gallery-wrap .ty02Swiper .swiper-button-next {
+  right: 21.2%;
+}
+.gallery-wrap .ty02Swiper .swiper-button-prev {
+  left: 21.2%;
+}
+.gallery-wrap .img-area {
+  position: relative;
+}
+.gallery-wrap .img-area .lg-txt-btn02 {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+}
+.gallery-wrap .img-area .btn[class*="txt-btn"]:hover,
+.gallery-wrap .img-area .btn[class*="txt-btn"]:active {
+  position: absolute;
+}
+.gallery-wrap .img-area .icon-download-wh {
+  margin-left: 12px;
 }
