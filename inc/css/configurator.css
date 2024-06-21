@@ -5,18 +5,20 @@
   flex-direction: column;
   width: 100%;
   height: 100vh;
+  overflow-y: auto;
 }
-.configurator_header-wrap {
+.configurator_header_wrap {
+  position: relative;
   flex-shrink: 0;
   width: 100%;
   background-color: #FFF;
+  border-bottom: 1px solid #D9D9D9;
 }
 .configurator_header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1.12rem 1.5rem 1.06rem;
-  border-bottom: 1px solid #D9D9D9;
 }
 .configurator_header_left {
   display: flex;
@@ -34,11 +36,59 @@
 .configurator_header_tit .icon-right {
   margin-left: 0.75rem;
 }
+.configurator_header_menu_wrap {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  column-gap: 1.75rem;
+}
+.configurator_header_menu {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+.configurator_header_menu_step {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: #ABB2B5;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 140%;
+  color: #FFF;
+}
+.configurator_header_menu.on .configurator_header_menu_step {
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 1.25rem;
+  background-color: #DE3111;
+}
+.configurator_header_menu.on .visually-hidden {
+  position: static;
+  margin: 0;
+  width: auto;
+  height: auto;
+  clip: none;
+}
+.configurator_header_menu_text {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 140%;
+  color: #555555;
+}
+.configurator_header_menu.on .configurator_header_menu_text {
+  color: #000000;
+}
 .configurator_con_wrap {
   flex-grow: 1;
 }
 .configurator_con_tit {
-  position: fixed;
+  position: absolute;
   top: 5.88rem;
   left: 1.5rem;
   font-family: "Hyundai Sans Head";
@@ -46,6 +96,7 @@
   font-weight: 700;
   line-height: 125%;
   color: #FFF;
+  z-index: 2;
 }
 .configurator_swiper_wrap {
   width: 100%;
@@ -71,6 +122,7 @@
   text-align: center;
   color: #FFF;
   opacity: 0;
+  z-index: 1;
 }
 .configurator_list_swiper .configurator_tit {
   font-size: 3.5rem;
@@ -101,6 +153,7 @@
   bottom: 10rem;
   width: 100%;
   opacity: 0;
+  z-index: 1;
 }
 .configurator_list_swiper .configurator_detail {
   display: flex;
@@ -138,6 +191,7 @@
 .configurator_list_swiper .swiper-slide-active .configurator_tit_wrap {
   opacity: 1;
   transition: opacity 0.8s ease-in-out;
+  transition-delay: 0.3s;
 }
 .configurator_list_swiper .swiper-slide-active .configurator_car_wrap {
   opacity: 1;
@@ -146,31 +200,223 @@
 .configurator_list_swiper .swiper-slide-active .configurator_detail_wrap {
   opacity: 1;
   transition: opacity 0.8s ease-in-out;
+  transition-delay: 0.3s;
 }
 .configurator_list_swiper .swiper-slide-active .configurator_btn_wrap {
   opacity: 1;
   transition: opacity 0.8s ease-in-out;
+  transition-delay: 0.3s;
 }
-.configurator_list_swiper .swiper-bottom-wrap {
+.configurator_list_swiper .swiper-bottom-wrap,
+.configurator_swiper .swiper-bottom-wrap {
   left: 0;
   bottom: 50%;
   width: 100%;
 }
 .configurator_list_swiper .swiper-button-next.swiper-button-disabled,
-.configurator_list_swiper .swiper-button-prev.swiper-button-disabled {
+.configurator_list_swiper .swiper-button-prev.swiper-button-disabled,
+.configurator_swiper .swiper-button-next.swiper-button-disabled,
+.configurator_swiper .swiper-button-prev.swiper-button-disabled {
   display: none;
 }
-.configurator_list_swiper .swiper-button-prev:after {
+.full .configurator_swiper .swiper-button-next.swiper-button-disabled,
+.full .configurator_swiper .swiper-button-prev.swiper-button-disabled {
+  display: block;
+  opacity: 1;
+}
+.configurator_list_swiper .swiper-button-prev:after,
+.configurator_swiper .swiper-button-prev:after {
   background-image: url(../images/icon/icon-arrow-box-white_left.svg);
 }
-.configurator_list_swiper .swiper-button-next:after {
+.configurator_list_swiper .swiper-button-next:after,
+.configurator_swiper .swiper-button-next:after {
   background-image: url(../images/icon/icon-arrow-box-white_right.svg);
+}
+.configurator_con_flex {
+  display: flex;
+  justify-content: center;
+}
+.configurator_con_flex .configurator_swiper_wrap {
+  width: calc(100% - 30.875rem);
+  height: calc(100vh - 4.375rem);
+}
+.configurator_swiper {
+  height: 100%;
+}
+.configurator_swiper .swiper-status-wrap {
+  bottom: 3.12rem;
+}
+.configurator_swiper .swiper-pagination-bullet {
+  background-color: #FFF;
+  opacity: 0.5;
+}
+.configurator_swiper .swiper-pagination-bullet-active {
+  width: 5rem;
+  background-color: #DE3111;
+}
+.configurator_swiper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.configurator_fx_wrap {
+  position: absolute;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  display: flex;
+  z-index: 2;
+}
+.configurator_fx_wrap button {
+  width: 3.75rem;
+  height: 3.75rem;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.configurator_fx_wrap button.on {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.configurator_fx_wrap .btn_background .btn-icon24 {
+  background-image: url(../images/icon/icon-img.svg);
+}
+.configurator_fx_wrap .btn_time .btn-icon24 {
+  background-image: url(../images/icon/icon-day.svg);
+}
+.configurator_fx_wrap .btn_zoom .btn-icon24 {
+  background-image: url(../images/icon/icon-zoom.svg);
+}
+.configurator_fx_wrap .btn_save .btn-icon24 {
+  background-image: url(../images/icon/icon-screenshot.svg);
+}
+.configurator_fx_wrap .btn_full .btn-icon24 {
+  background-image: url(../images/icon/icon-fullScreen.svg);
+}
+.configurator_select_wrap {
+  position: relative;
+  width: 30.875rem;
+  flex-shrink: 0;
+}
+.configurator_price_wrap {
+  position: absolute;
+  bottom: 0;
+  padding: 1.75rem 2.75rem 2rem;
+  width: 100%;
+  height: 13.625rem;
+  background: #FFF;
+  box-shadow: 0px -2px 12px 0px rgba(0, 0, 0, 0.20);
+}
+.configurator_price {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  padding: 0 0.25rem;
+}
+.configurator_price_tit {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 140%;
+  color: #555555;
+}
+.configurator_price_total {
+  margin-top: 0.25rem;
+  font-family: "Hyundai Sans Head";
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 125%;
+}
+.configurator_price button {
+  padding-bottom: 0.44rem;
+}
+.configurator_price .btn-icon36 {
+  width: 2.25rem;
+  height: 2.25rem;
+  background-image: url(../images/icon/icon-reset.svg);
+  background-size: contain;
+}
+.configurator_price_wrap .btn-wrap {
+  display: flex;
+  column-gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+.configurator_price_wrap .btn-wrap button {
+  width: calc(50% - 0.25rem);
+}
+.configurator_select_total_wrap {
+  display: none;
+}
+.configurator_select_total_wrap span {
+  font-family: "Hyundai Sans Head";
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 140%;
+}
+.configurator_select_total {
+  padding: 0.19rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #DE3111;
+  font-family: "Hyundai Sans Head";
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 140%;
+  text-align: center;
+  color: #FFF;
+}
+
+/* step summary */
+.configurator_area:has(.configurator_menu_summary.on) .configurator_con_flex {
+  flex-direction: column;
+}
+.configurator_area:has(.configurator_menu_summary.on) .configurator_swiper_wrap {
+  width: 100%;
+}
+.configurator_area:has(.configurator_menu_summary.on) .configurator_price_wrap {
+  padding: 2.5rem;
+  width: 100vw;
+  height: 8.125rem;
+}
+.configurator_area:has(.configurator_menu_summary.on) .configurator_select_total_wrap {
+  display: flex;
+  align-items: center;
+  column-gap: 0.75rem;
+}
+.configurator_area:has(.configurator_menu_summary.on) .configurator_price_wrap .btn-wrap {
+  display: none;
+}
+.configurator_area:has(.configurator_menu_summary.on) .configurator_price_summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 0.88rem;
+  width: 100%;
+  max-width: 60rem;
+}
+.configurator_area:has(.configurator_menu_summary.on) .configurator_price {
+  align-items: center;
+  column-gap: 0.75rem;
+  padding: 0;
+}
+.configurator_area:has(.configurator_menu_summary.on) .configurator_price div {
+  display: flex;
+  align-items: center;
+  column-gap: 1.5rem;
+}
+.configurator_area:has(.configurator_menu_summary.on) .configurator_price_tit {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 140%;
+  color: #000000;
+}
+.configurator_area:has(.configurator_menu_summary.on) .configurator_price_total {
+  margin-top: 0;
+}
+.configurator_area:has(.configurator_menu_summary.on) .configurator_price button {
+  padding-bottom: 0;
 }
 
 /* 모바일 */
 @media screen and (max-width: 1023px) {
   .configurator_header {
-    padding: 1rem 1.5rem 0.94rem;
+    padding: 1rem 1.5rem;
   }
   .configurator_header_left img {
     margin-right: 1.27rem;
@@ -178,6 +424,12 @@
   }
   .configurator_header_tit {
     font-size: 1.25rem;
+  }
+  .configurator_header_menu_wrap {
+    position: static;
+    transform: translate(0, 0);
+    justify-content: center;
+    padding: 0.88rem;
   }
   .configurator_swiper_wrap .swiper-container {
     height: 100%;
