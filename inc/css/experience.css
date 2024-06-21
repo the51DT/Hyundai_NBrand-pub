@@ -2447,6 +2447,13 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
     width: 100%;
   }
 
+  .popup-wrapper
+    button.btn-only-icon-notbg.pop-close.pop-page
+    span.model-closebtn.icon-close {
+    top: 16px;
+    position: relative;
+  }
+
   .popup-wrapper .label-box h1 {
     font-size: 24px;
   }
@@ -2501,7 +2508,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
     height: 100vh;
     top: 17.5px;
     position: absolute;
-    z-index: 5;
+    /* z-index: 5; */
     padding: 0 24px 18px 0;
   }
 
@@ -2510,7 +2517,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
     height: 100vh;
     top: 16px;
     position: absolute;
-    z-index: 5;
+    /* z-index: 5; */
     padding: 0 24px 18px 0;
   }
 
