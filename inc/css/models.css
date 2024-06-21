@@ -202,6 +202,10 @@
   align-items: center;
   justify-content: space-between;
 }
+.models-wrap .models-nofull [class*="type-row"] > div,
+.models-wrap .models-nofull [class*="type-row"] > img {
+  width: 50%;
+}
 .models-wrap .models-nofull .type-row80 {
   gap: 80px;
 }
@@ -513,6 +517,10 @@
     gap: 44px;
     justify-content: center;
   }
+  .models-wrap .models-nofull [class*="type-row"] > div,
+  .models-wrap .models-nofull [class*="type-row"] > img {
+    width: 100%;
+  }
   .models-wrap .models-nofull .type-row80 {
     display: flex;
     flex-direction: column;
@@ -596,5 +604,60 @@
     padding-top: 28px;
     margin-top: 28px;
     border-top: 1px solid #bbbbbb;
+  }
+  .models-wrap .specification-wrap {
+    padding: 152px 24px;
+  }
+  .models-wrap .specification-wrap dl {
+    margin-top: 0;
+  }
+  .models-wrap .specification-wrap .specification-box > img {
+    margin-top: 28px;
+  }
+  .models-wrap .specification-wrap dl dt {
+    flex: 100%;
+    font-size: 16px;
+    line-height: 22.4px;
+    padding: 24px 0 0;
+    border-bottom: 0;
+  }
+  .models-wrap .specification-wrap dl dd {
+    flex: 0 0 100%;
+    font-size: 20px;
+    line-height: 28px;
+    padding-right: 0;
+    padding: 8px 0 24px;
+    font-family: "Hyundai Sans Head";
+  }
+  .models-wrap .specification-txt {
+    margin-top: 24px;
+  }
+  .models-wrap .specification-wrap .specification-box img {
+    width: 312px;
+    height: 234px;
+  }
+  .models-wrap .specification-wrap .specification-box .tab-head {
+    justify-content: center;
+    margin-top: 28px;
+  }
+  .models-wrap .specification-wrap .specification-box .tab-head li a {
+    width: 100%;
+  }
+  .models-wrap .gallery-wrap .img-area .lg-txt-btn02 {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+  }
+  .models-wrap .related-wrap {
+    padding: 80px 0px 120px 24px;
+  }
+  .models-wrap .related-wrap .models-cardbox {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-y: auto;
+    gap: 12px;
+  }
+  .models-wrap .related-wrap .models-cardbox.w30 > div {
+    flex: 0 0 71.25%;
   }
 }
