@@ -728,6 +728,18 @@
   font-weight: 700;
   line-height: 125%;
 }
+.video_thumnail_wrap .video_subtit {
+  position: absolute;
+  top:58%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  padding: 0 5rem;
+  width: 100%;
+  font-family: "Hyundai Sans Head";
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 140%;
+}
 .video_thumnail_wrap .video_desc {
   position: static;
   transform: translateX(0);
@@ -810,6 +822,17 @@
 }
 
 /* 팝업  */
+.popup.model-popup.fullWidth {
+  max-width: 100%;
+  width: 100%;
+}
+.popup.model-popup.fullWidth .popup-wrapper {
+  max-width: 960px;
+}
+.popup.model-popup.fullWidth .popup-wrapper .popup-body {
+  max-height: calc(100vh - 286px);
+}
+
 .popup-wrapper {
   width: 100%;
   margin: 0 auto;
@@ -1243,6 +1266,18 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
 
 .popup-wrapper .popup-body-innerbox .wrap-checkmail .btn-wrap {
   padding: 8px 0;
+}
+
+.popup-wrapper .popup-body-innerbox .wrap-checkmail.changeMail {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 40px;
+  background: #fff;
+  padding: 0;
+}
+
+.popup-wrapper .popup-body-innerbox .wrap-checkmail.changeMail .wrap-form.text {
+  width: 100%;
 }
 
 .popup-wrapper .popup-body-innerbox .inner-textarea-comment {
@@ -2322,7 +2357,14 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
     font-size: 1.5rem;
     line-height: 140%;
   }
-
+  .video_thumnail_wrap .video_subtit {
+    position: static;
+    transform: translate(0, 0);
+    margin: 0.75rem 0 1.25rem;
+    padding: 0 1.5rem;
+    font-size: 1.125rem;
+    line-height: 140%;
+  }
   .video_thumnail_wrap .video_desc {
     position: absolute;
     top: 60%;
@@ -2345,6 +2387,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
   .video_thumnail_wrap .tag_list_wrap .tag_list {
     justify-content: center;
     margin: 36px auto 40px;
+    padding:0 24px;
     flex-wrap: wrap;
   }
   .video_thumnail_wrap .tag_list_wrap .tag_list li {
@@ -2447,6 +2490,13 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
     width: 100%;
   }
 
+  .popup-wrapper
+    button.btn-only-icon-notbg.pop-close.pop-page
+    span.model-closebtn.icon-close {
+    top: 16px;
+    position: relative;
+  }
+
   .popup-wrapper .label-box h1 {
     font-size: 24px;
   }
@@ -2501,7 +2551,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
     height: 100vh;
     top: 17.5px;
     position: absolute;
-    z-index: 5;
+    /* z-index: 5; */
     padding: 0 24px 18px 0;
   }
 
@@ -2510,7 +2560,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
     height: 100vh;
     top: 16px;
     position: absolute;
-    z-index: 5;
+    /* z-index: 5; */
     padding: 0 24px 18px 0;
   }
 

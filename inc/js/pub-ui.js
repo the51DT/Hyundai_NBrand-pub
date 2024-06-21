@@ -425,6 +425,18 @@ var pubUi = {
         },
       },
     });
+    var swiper9 = new Swiper(".configurator_swiper", {
+      slidesPerView: 1,
+      centeredSlides: true,
+      navigation: {
+        nextEl: ".configurator_swiper .swiper-button-next",
+        prevEl: ".configurator_swiper .swiper-button-prev",
+      },
+      pagination: {
+        el: ".configurator_swiper .swiper-pagination-custom",
+        clickable: true,
+      },
+    });
   },
   videoBulletChk: function (targetSwiper) {
     var swiperActiveVideo = targetSwiper.find(
@@ -817,3 +829,52 @@ $("#ToggleDesBtn").click(function () {
   $("#ToggleDesBtn").children(".icon-down").toggleClass("rotate");
 });
 //[End] : CM040701 > 아코디언 토글
+
+// [Start] : 풀스크린
+const toggleFullscreenBtn = document.querySelector('.toggleFullscreenBtn')
+
+const container = document.querySelector(".fullscreenContainer");
+
+toggleFullscreenBtn.addEventListener('click', e => {
+  toggleFullScreen(container)
+  container.classList.toggle('full')
+})
+
+const fullscreen = (element) => {
+  if (element.requestFullscreen) return element.requestFullscreen();
+  if (element.webkitRequestFullscreen) return element.webkitRequestFullscreen();
+  if (element.mozRequestFullScreen) return element.mozRequestFullScreen();
+  if (element.msRequestFullscreen) return element.msRequestFullscreen();
+};
+
+const exitFullScreen = () => {
+  if (document.exitFullscreen) return document.exitFullscreen();
+  if (document.webkitCancelFullscreen) return document.webkitCancelFullscreen();
+  if (document.mozCancelFullScreen) return document.mozCancelFullScreen();
+  if (document.msExitFullscreen) return document.msExitFullscreen();
+};
+
+function toggleFullScreen(element) {
+  if (!document.fullscreenElement) {
+    if (element.requestFullscreen) return element.requestFullscreen()
+    if (element.webkitRequestFullscreen)
+      return element.webkitRequestFullscreen()
+    if (element.mozRequestFullScreen) return element.mozRequestFullScreen()
+    if (element.msRequestFullscreen) return element.msRequestFullscreen()
+  } else {
+    if (document.exitFullscreen) return document.exitFullscreen()
+    if (document.webkitCancelFullscreen)
+      return document.webkitCancelFullscreen()
+    if (document.mozCancelFullScreen) return document.mozCancelFullScreen()
+    if (document.msExitFullscreen) return document.msExitFullscreen()
+  }
+}
+// [End] : 풀스크린
+
+// [Start] : configurator_header_menu 확인용 임시 스크립트
+$(".configurator_header_menu").click((el)=> {
+  $(".configurator_header_menu").removeClass("on");
+  el.target.parentElement.classList.add("on");
+});
+// [End] : configurator_header_menu 확인용 임시 스크립트
+

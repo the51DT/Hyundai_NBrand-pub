@@ -92,6 +92,12 @@
   font-weight: 700;
   line-height: 33.6px;
 }
+.models-wrap .text-normal-s { 
+  font-family: "Hyundai Sans Text";
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+}
 .models-wrap .text-normal-xs {
   font-family: "Hyundai Sans Head";
   font-size: 16px;
@@ -100,6 +106,9 @@
 }
 .models-wrap .text-col .text-strong + .text-normal {
   margin-top: 20px;
+}
+.models-wrap .text-col .text-strong-s + .text-normal-s { 
+  margin-top: 20px;  
 }
 .models-wrap .text-col .text-strong-xs + .text-normal-xs {
   margin-top: 4px;
@@ -516,6 +525,10 @@
   }
   .models-wrap .text-col .text-strong + .text-normal,
   .models-wrap .text-strong + .text-normal {
+    margin-top: 12px;
+  }
+  .models-wrap .text-col .text-strong + .text-normal-s,
+  .models-wrap .text-strong + .text-normal-s {
     margin-top: 12px;
   }
   .models-wrap .models-nofull {
