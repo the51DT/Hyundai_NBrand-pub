@@ -797,7 +797,7 @@ input[type="radio"]:focus + label {
 
 .tabs-wrap .tabs li {
   border: 1px solid #555;
-  background: #fff;
+  background: transparent;
   border-right: 0;
 }
 
@@ -825,7 +825,7 @@ input[type="radio"]:focus + label {
   font-weight: 700;
   line-height: 22px;
   padding: 11px 32px;
-  color: #777;
+  color: #555;
 }
 
 .tabs-wrap .tabs li.on a {
@@ -1930,15 +1930,14 @@ input[type="radio"]:focus + label {
   padding-right: 0;
 }
 
-.ty02Swiper .swiper-slide {
-  max-width: 952px;
+.ty02Swiper .swiper-slide  {
+  width: 952px;
 }
 .ty02Swiper .swiper-slide .img-area {
   height: 536px;
 }
-.ty02Swiper .swiper-slide-active {
-  max-width: 1196px;
-  position: relative;
+.ty02Swiper .swiper-slide-active  {
+  width: 1196px;
 }
 
 .ty02Swiper .swiper-slide-active .img-area {
@@ -2013,6 +2012,7 @@ input[type="radio"]:focus + label {
   height: 80px;
   top: 35%;
 }
+
 .ty02Swiper .swiper-button-prev {
   left: 17%;
   right: auto;
@@ -2034,7 +2034,7 @@ input[type="radio"]:focus + label {
   background: #808080;
   opacity: 1;
 }
-.ty03Swiper .swiper-pagination-bullet-active {
+.swiper:not(.ty01Swiper) .swiper-pagination-bullet-active {
   background: #de3111;
   width: 84px;
 }
