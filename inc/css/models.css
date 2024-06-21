@@ -112,22 +112,26 @@
 }
 /* bg 에 맞는 배경 및 높이 조절은 클래스 변경하기 */
 .models-wrap .full-1938 {
-  aspect-ratio: 1920 / 1938;
+  height: 1938px;
 }
 .models-wrap .full-1440 {
-  aspect-ratio: 1920 / 1440;
+  height: 1440px;
 }
 .models-wrap .full-1920 {
-  aspect-ratio: 1920 / 1920;
+  height: 1920px;
 }
 .models-wrap .full-1600 {
-  aspect-ratio: 1920 / 1600;
+  height: 1600px;
 }
 .models-wrap .full-1080 {
-  aspect-ratio: 1920 / 1080;
+  height: 1080px;
 }
 .models-wrap .perfor-wrap .models-full.icon20 {
   background: url(../../inc/images/Models/i20N/i20N_performance_bg.png) center no-repeat;
+  background-size: cover;
+}
+.models-wrap .perfor-wrap .models-full.icon30 {
+  background: url(../../inc/images/Models/i30N/i30N_performance_bg.png) center no-repeat;
   background-size: cover;
 }
 .models-wrap .models-full .text-strong,
@@ -258,12 +262,25 @@
 .models-wrap .text-col + .models-cardbox {
   margin-top: 80px;
 }
+.models-wrap [class*="type-col"].type-col5 {
+  margin-top: 80px;
+}
+.models-wrap [class*="type-col"].type-col5 > img + div {
+  margin-top: 40px;
+}
+.models-wrap img + .tech-des {
+  margin-top: 40px;
+}
 .models-wrap .desgin-wrap .models-full.icon20 {
   background: url(../../inc/images/Models/i20N/i20N_desgin_bg.png) center no-repeat;
   background-size: cover;
 }
 .models-wrap .tech-wrap .models-full.icon20 {
   background: url(../../inc/images/Models/i20N/i20N_technology_bg.png) center no-repeat;
+  background-size: cover;
+}
+.models-wrap .desgin-wrap .models-full.icon30 {
+  background: url(../../inc/images/Models/i30N/i30N_desgin_bg.png) center no-repeat;
   background-size: cover;
 }
 .models-wrap .tech-des {
@@ -323,7 +340,10 @@
   justify-content: center;
   margin-top: 40px;
 }
-.models-wrap .specification-wrap .specification-box .tab-head li a {
+.models-wrap .specification-wrap .specification-box .tab-head .tab2 li a {
+  width: 304px;
+}
+.models-wrap .specification-wrap .specification-box .tab-head .tab3 li a {
   width: 154px;
 }
 .models-wrap .gallery-wrap {
@@ -397,6 +417,10 @@
   .models-wrap [class*="max1440"] {
     max-width: 100%;
     gap: 44px;
+    width: 100%;
+  }
+  .models-wrap .models-nofull-box {
+    width: 100%;
   }
   .models-wrap .blue-title {
     font-size: 17px;
@@ -454,6 +478,9 @@
   .models-wrap .models-full {
     padding: 152px 24px 122px;
   }
+  .models-wrap .perfor-wrap p {
+    text-align: center;
+  }
   .models-wrap .spec-eachbox {
     position: relative;
     min-width: 100%;
@@ -502,6 +529,9 @@
   .models-wrap .models-nofull .max1440 {
     gap: 120px;
   }
+  .models-wrap .models-nofull .type-col {
+    gap: 44px;
+  }
   .models-wrap .models-nofull .type-col2 {
     flex-direction: column-reverse;
     gap: 44px;
@@ -509,7 +539,7 @@
   .models-wrap .models-nofull [class*="type-col"] > div + img,
   .models-wrap .models-nofull [class*="type-col"] > img + div,
   .models-wrap .models-nofull [class*="type-col"] > .models-cardbox {
-    margin-top: 44px;
+    margin-top: 0;
   }
   .models-wrap .models-nofull .type-row {
     display: flex;
@@ -544,6 +574,9 @@
   }
   .models-wrap .models-nofull .type-col3 p {
     text-align: left;
+  }
+  .models-wrap .models-nofull .type-col3 > div + img {
+    margin-top: 44px;
   }
   .models-wrap .models-nofull .type-col3 > div + img + div {
     margin-top: 28px;
@@ -584,9 +617,12 @@
   .models-wrap .desgin-wrap .models-cardbox.w30 > div {
     gap: 28px;
   }
-  /* .models-wrap .desgin-wrap .models-nofull-box:nth-child(2) {
-    margin-top: 32px;
-  } */
+  .models-wrap [class*="type-col"].type-col5 {
+    margin: 44px 0;
+  }
+  .models-wrap [class*="type-col"].type-col5 > img + div {
+    margin-top: 28px;
+  }
   .models-wrap .models-nofull.type2 {
     padding: 44px 24px 0;
     margin-bottom: 152px;
@@ -640,7 +676,18 @@
     justify-content: center;
     margin-top: 28px;
   }
-  .models-wrap .specification-wrap .specification-box .tab-head li a {
+  .models-wrap .specification-wrap .specification-box .tab-head .tab2 {
+    flex-wrap: wrap;
+  }
+  .models-wrap .specification-wrap .specification-box .tab-head .tab2 li {
+    width: 100%;
+    border-right: 1px solid #777;
+  }
+  .models-wrap .specification-wrap .specification-box .tab-head .tab2 li :first-child {
+    border-bottom: 0;
+  }
+  .models-wrap .specification-wrap .specification-box .tab-head .tab2 li a,
+  .models-wrap .specification-wrap .specification-box .tab-head .tab3 li a {
     width: 100%;
   }
   .models-wrap .gallery-wrap .img-area .lg-txt-btn02 {
@@ -659,5 +706,15 @@
   }
   .models-wrap .related-wrap .models-cardbox.w30 > div {
     flex: 0 0 71.25%;
+  }
+  .models-wrap img + .tech-des {
+    margin-top: 28px;
+  }
+  .models-wrap .gallery-wrap {
+    padding: 152px 0 0;
+    margin-bottom: 152px;
+  }
+  .models-wrap .gallery-wrap .max1440 {
+    padding: 0 24px 44px;
   }
 }

@@ -364,6 +364,9 @@ input[type="radio"]:focus + label {
 [class*="txt-btn03"] {
   color: #a1a1a1 !important;
 }
+[class*="txt-btn04"] {
+  color: #de3111;
+}
 .btn[class*="txt-btn03"]:hover::after,
 .btn[class*="txt-btn03"]:active::after {
   display: none;
