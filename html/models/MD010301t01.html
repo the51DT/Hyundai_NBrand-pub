@@ -21,15 +21,15 @@
           <!-- key visual -->
           <div class="content-item02">
             <!-- key visual01 : video (예시로 영역잡은 영상 / 영상은 교체 필요 및 width=100% 삭제) -->
-            <!-- <video class="video" data-js="video" id="video1" playsinline autoplay muted style="width: 100%">
+            <video class="video" data-js="video" id="video1" playsinline autoplay muted>
               <source src="../../inc/videos/24hnbr24.mp4" type="video/mp4" />
             </video>
             <button type="button" class="btn btn-only-icon-bg01-square">
               <span class="visually-hidden">pause button</span>
               <span class="btn-icon24 icon-pause-wh" aria-hidden="true"></span>
-            </button> -->
+            </button>
             <!-- key visual2 : img -->
-            <img src="../../inc/images/Models/i20N/i20N_visual.png" alt="i20N 이미지" style="width: 1920px" />
+            <!-- <img src="../../inc/images/Models/i20N/i20N_visual.png" alt="i20N 이미지" style="width: 1920px" /> -->
           </div>
           <!-- overview -->
           <div class="content-item03 overview-wrap">
@@ -43,7 +43,8 @@
                   Based on the class-leading i20, This machine is the kind that makes you rev up at a stoplight just before it turns green and say, “This is my stage.”
                 </p>
               </div>
-              <img src="../../inc/images/Models/i20N/i20N_overview.png" alt="i20N 이미지" />
+              <img src="../../inc/images/Models/i20N/i20N_overview.png" alt="i20N 이미지" class="pc-only" />
+              <img src="../../inc/images/Models/i20N/i20N_overview_mo.png" alt="i20N 이미지" class="mo-only" />
               <!-- 버튼 클릭 시 상세팝업 / 빨간색 버튼 없음 -->
               <div class="btn-wrap">
                 <button class="btn lg-txt-btn01">
@@ -70,13 +71,19 @@
                 <img src="../../inc/images/Models/i20N/i20N_performance_main02.png" alt="i20N 이미지" />
                 <div class="perfor-spec">
                   <div class="spec-eachbox">
-                    <p>204<span class="unit">ps</span><span class="unit-des">power</span></p>
+                    <p>
+                      <span>204</span><span class="unit">ps<br /><span class="unit-des">power</span></span>
+                    </p>
                   </div>
                   <div class="spec-eachbox">
-                    <p>28.0<span class="unit">kgf-m</span><span class="unit-des">Max. torque</span></p>
+                    <p>
+                      <span>28.0</span><span class="unit">kgf-m<br /><span class="unit-des">Max. torque</span></span>
+                    </p>
                   </div>
                   <div class="spec-eachbox">
-                    <p>204<span class="unit">sec</span><span class="unit-des">0-100km/h</span></p>
+                    <p>
+                      <span>204</span><span class="unit">sec<br /><span class="unit-des">0-100km/h</span></span>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -372,7 +379,7 @@
             </div>
           </div>
           <!-- Specification -->
-          <!-- <div class="content-item07 specification-wrap">
+          <div class="content-item07 specification-wrap">
             <div class="max1440">
               <h6 class="blue-title">Specification</h6>
               <div class="specification-box">
@@ -396,7 +403,7 @@
                 </p>
               </div>
             </div>
-          </div> -->
+          </div>
           <!-- Specification : tab 경우 -->
           <div class="content-item07 specification-wrap">
             <div class="max1440">
@@ -493,7 +500,7 @@
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
                     <div class="img-area">
-                      <img src="../../inc/images/Models/i20N/i20N_gallery_01.png" loading="lazy" alt="이미지 슬라이드1" />
+                      <img src="../../inc/images/Models/i20N/i20N_gallery_01.png" alt="이미지 슬라이드1" />
                       <a href="#" class="btn lg-txt-btn02" download>
                         Download
                         <span class="btn-icon24 icon-download-wh" aria-hidden="true"></span>
@@ -502,7 +509,7 @@
                   </div>
                   <div class="swiper-slide">
                     <div class="img-area">
-                      <img src="../../inc/images/Models/i20N/i20N_gallery_02.png" loading="lazy" alt="이미지 슬라이드1" />
+                      <img src="../../inc/images/Models/i20N/i20N_gallery_02.png" alt="이미지 슬라이드1" />
                       <a href="#" class="btn lg-txt-btn02" download>
                         Download
                         <span class="btn-icon24 icon-download-wh" aria-hidden="true"></span>
@@ -511,7 +518,7 @@
                   </div>
                   <div class="swiper-slide">
                     <div class="img-area">
-                      <img src="../../inc/images/Models/i20N/i20N_gallery_03.png" loading="lazy" alt="이미지 슬라이드1" />
+                      <img src="../../inc/images/Models/i20N/i20N_gallery_03.png" alt="이미지 슬라이드1" />
                       <a href="#" class="btn lg-txt-btn02" download>
                         Download
                         <span class="btn-icon24 icon-download-wh" aria-hidden="true"></span>
@@ -520,7 +527,7 @@
                   </div>
                   <div class="swiper-slide">
                     <div class="img-area">
-                      <img src="../../inc/images/Models/i20N/i20N_gallery_04.png" loading="lazy" alt="이미지 슬라이드1" />
+                      <img src="../../inc/images/Models/i20N/i20N_gallery_04.png" alt="이미지 슬라이드1" />
                       <a href="#" class="btn lg-txt-btn02" download>
                         Download
                         <span class="btn-icon24 icon-download-wh" aria-hidden="true"></span>
@@ -529,7 +536,7 @@
                   </div>
                   <div class="swiper-slide">
                     <div class="img-area">
-                      <img src="../../inc/images/Models/i20N/i20N_gallery_05.png" loading="lazy" alt="이미지 슬라이드1" />
+                      <img src="../../inc/images/Models/i20N/i20N_gallery_05.png" alt="이미지 슬라이드1" />
                       <a href="#" class="btn lg-txt-btn02" download>
                         Download
                         <span class="btn-icon24 icon-download-wh" aria-hidden="true"></span>
@@ -538,7 +545,7 @@
                   </div>
                   <div class="swiper-slide">
                     <div class="img-area">
-                      <img src="../../inc/images/Models/i20N/i20N_gallery_06.png" loading="lazy" alt="이미지 슬라이드1" />
+                      <img src="../../inc/images/Models/i20N/i20N_gallery_06.png" alt="이미지 슬라이드1" />
                       <a href="#" class="btn lg-txt-btn02" download>
                         Download
                         <span class="btn-icon24 icon-download-wh" aria-hidden="true"></span>
@@ -547,7 +554,7 @@
                   </div>
                   <div class="swiper-slide">
                     <div class="img-area">
-                      <img src="../../inc/images/Models/i20N/i20N_gallery_07.png" loading="lazy" alt="이미지 슬라이드1" />
+                      <img src="../../inc/images/Models/i20N/i20N_gallery_07.png" alt="이미지 슬라이드1" />
                       <a href="#" class="btn lg-txt-btn02" download>
                         Download
                         <span class="btn-icon24 icon-download-wh" aria-hidden="true"></span>
@@ -556,7 +563,7 @@
                   </div>
                   <div class="swiper-slide">
                     <div class="img-area">
-                      <img src="../../inc/images/Models/i20N/i20N_gallery_08.png" loading="lazy" alt="이미지 슬라이드1" />
+                      <img src="../../inc/images/Models/i20N/i20N_gallery_08.png" alt="이미지 슬라이드1" />
                       <a href="#" class="btn lg-txt-btn02" download>
                         Download
                         <span class="btn-icon24 icon-download-wh" aria-hidden="true"></span>
@@ -565,7 +572,7 @@
                   </div>
                   <div class="swiper-slide">
                     <div class="img-area">
-                      <img src="../../inc/images/Models/i20N/i20N_gallery_09.png" loading="lazy" alt="이미지 슬라이드1" />
+                      <img src="../../inc/images/Models/i20N/i20N_gallery_09.png" alt="이미지 슬라이드1" />
                       <a href="#" class="btn lg-txt-btn02" download>
                         Download
                         <span class="btn-icon24 icon-download-wh" aria-hidden="true"></span>
@@ -574,7 +581,7 @@
                   </div>
                   <div class="swiper-slide">
                     <div class="img-area">
-                      <img src="../../inc/images/Models/i20N/i20N_gallery_10.png" loading="lazy" alt="이미지 슬라이드1" />
+                      <img src="../../inc/images/Models/i20N/i20N_gallery_10.png" alt="이미지 슬라이드1" />
                       <a href="#" class="btn lg-txt-btn02" download>
                         Download
                         <span class="btn-icon24 icon-download-wh" aria-hidden="true"></span>
@@ -583,7 +590,6 @@
                   </div>
                 </div>
                 <!-- //swiper-wrapper -->
-
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-status-wrap">
@@ -596,6 +602,34 @@
               <!-- //swiper -->
             </div>
             <!-- //swiper-container -->
+          </div>
+          <!-- Related -->
+          <div class="content-item09 related-wrap">
+            <div class="max1440">
+              <p class="text-strong">Related</p>
+              <div class="models-nofull-box">
+                <div class="models-cardbox w30">
+                  <div>
+                    <img src="../../inc/images/Models/i20N/i20N_Related_01.png" alt="i20N 이미지" />
+                    <div>
+                      <p class="text-strong-md txt-left">The all-new IONIQ 5 N</p>
+                    </div>
+                  </div>
+                  <div>
+                    <img src="../../inc/images/Models/i20N/i20N_Related_02.png" alt="i20N 이미지" />
+                    <div>
+                      <p class="text-strong-md txt-left">IONIQ 5 N 2024 World Performance Car Award Winner</p>
+                    </div>
+                  </div>
+                  <div>
+                    <img src="../../inc/images/Models/i20N/i20N_Related_03.png" alt="i20N 이미지" />
+                    <div>
+                      <p class="text-strong-md txt-left">Mastering Japanese tracks, one drift at</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
