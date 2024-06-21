@@ -66,6 +66,12 @@ var NbrandUI = {
         case "popup model-popup":
           openWrap.addClass("on").fadeIn(200);
           break;
+        case "popup model-popup forModel":
+          openWrap.addClass("on").fadeIn(200);
+          break;
+        case "popup model-popup fullwidth":
+          openWrap.addClass("on").fadeIn(200);
+          break;
         case "popup bottom-popup":
           openWrap.addClass("on").slideDown(200);
           NbrandUI.dimdOn();
@@ -85,6 +91,16 @@ var NbrandUI = {
     } else {
       switch (popClass) {
         case "popup model-popup":
+          openWrap.addClass("on").fadeIn(200);
+          NbrandUI.dimdOn();
+          $(".dimmed").addClass(openmodalData);
+          break;
+        case "popup model-popup forModel":
+          openWrap.addClass("on").fadeIn(200);
+          NbrandUI.dimdOn();
+          $(".dimmed").addClass(openmodalData);
+          break;
+        case "popup model-popup fullWidth":
           openWrap.addClass("on").fadeIn(200);
           NbrandUI.dimdOn();
           $(".dimmed").addClass(openmodalData);

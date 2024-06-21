@@ -822,6 +822,17 @@
 }
 
 /* 팝업  */
+.popup.model-popup.fullWidth {
+  max-width: 100%;
+  width: 100%;
+}
+.popup.model-popup.fullWidth .popup-wrapper {
+  max-width: 960px;
+}
+.popup.model-popup.fullWidth .popup-wrapper .popup-body {
+  max-height: calc(100vh - 286px);
+}
+
 .popup-wrapper {
   width: 100%;
   margin: 0 auto;
@@ -1255,6 +1266,18 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
 
 .popup-wrapper .popup-body-innerbox .wrap-checkmail .btn-wrap {
   padding: 8px 0;
+}
+
+.popup-wrapper .popup-body-innerbox .wrap-checkmail.changeMail {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 40px;
+  background: #fff;
+  padding: 0;
+}
+
+.popup-wrapper .popup-body-innerbox .wrap-checkmail.changeMail .wrap-form.text {
+  width: 100%;
 }
 
 .popup-wrapper .popup-body-innerbox .inner-textarea-comment {
@@ -2467,6 +2490,13 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
     width: 100%;
   }
 
+  .popup-wrapper
+    button.btn-only-icon-notbg.pop-close.pop-page
+    span.model-closebtn.icon-close {
+    top: 16px;
+    position: relative;
+  }
+
   .popup-wrapper .label-box h1 {
     font-size: 24px;
   }
@@ -2521,7 +2551,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
     height: 100vh;
     top: 17.5px;
     position: absolute;
-    z-index: 5;
+    /* z-index: 5; */
     padding: 0 24px 18px 0;
   }
 
@@ -2530,7 +2560,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
     height: 100vh;
     top: 16px;
     position: absolute;
-    z-index: 5;
+    /* z-index: 5; */
     padding: 0 24px 18px 0;
   }
 
