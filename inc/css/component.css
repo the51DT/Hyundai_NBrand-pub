@@ -4244,9 +4244,6 @@ p.text-num-chk {
   height: 32px;
   vertical-align: middle;
 }
-.switch input {
-  display: none;
-}
 .slider {
   position: absolute;
   cursor: pointer;
