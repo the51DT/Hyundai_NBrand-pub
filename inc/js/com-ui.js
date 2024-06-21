@@ -13,7 +13,7 @@ $(document).ready(function () {
   );
   NbrandUI.modalOpen(".pop-open");
   NbrandUI.modalClose(".pop-close");
-
+  resizeDone();
   // NbrandUI.inputClear(".input-del");
 });
 
@@ -22,6 +22,7 @@ var delta = 100;
 var timer = null;
 function resizeDone() {
   if (NbrandUI.windowSize()) {
+    $("[class^=panel2_2]").removeClass("on");
   } else {
   }
 }
@@ -123,7 +124,12 @@ var NbrandUI = {
 
     eventCont = $(com);
     eventParent = $(par);
-    eventContH = eventCont.prop("scrollHeight");
+    if (NbrandUI.windowSize()) {
+      eventContH = $(window).height() - 70;
+    } else {
+      eventContH = eventCont.prop("scrollHeight");
+    }
+
     eventCont.hide();
     tparent = eventParent.find(".sitemap-wrap");
 
@@ -191,21 +197,24 @@ var NbrandUI = {
         gnb2depTarget.toggleClass("on").siblings().removeClass("on");
         if (gnb2depBtn.hasClass("on")) {
           $(".header__event-wrap").hide();
-          $(".nav-wrap")
-            .stop()
-            .animate(
-              {
-                height: gnb2depTarget.prop("scrollHeight") + 50,
-              },
-              100
-            );
-          setTimeout(function () {
+          if (NbrandUI.windowSize()) {
+          } else {
             $(".nav-wrap")
               .stop()
-              .animate({
-                height: gnb2depTarget.prop("scrollHeight") + 50,
-              });
-          }, 100);
+              .animate(
+                {
+                  height: gnb2depTarget.prop("scrollHeight") + 50,
+                },
+                100
+              );
+            setTimeout(function () {
+              $(".nav-wrap")
+                .stop()
+                .animate({
+                  height: gnb2depTarget.prop("scrollHeight") + 50,
+                });
+            }, 100);
+          }
         } else {
           $(".header__event-wrap").show();
         }
@@ -229,9 +238,13 @@ var NbrandUI = {
         gnb3depBtn;
         gnb3depTarget.addClass("on").siblings().removeClass("on");
         if (gnb3depBtn.hasClass("on")) {
-          $(".nav-wrap").animate({
-            height: gnb3depTarget.prop("scrollHeight") + 150,
-          });
+          if (NbrandUI.windowSize()) {
+            gnb3depTarget.parent().show();
+          } else {
+            $(".nav-wrap").animate({
+              height: gnb3depTarget.prop("scrollHeight") + 160,
+            });
+          }
         }
       });
     }

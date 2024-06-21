@@ -169,7 +169,7 @@ body:-webkit-scrollbar {
   width: 100vw;
   height: 0;
   overflow: hidden;
-  background-color: #d9d9d9;
+  background-color: #f5f5f5;
   /* min-height: 464px; */
   max-height: calc(100vh - 70px);
 }
@@ -256,6 +256,9 @@ body:-webkit-scrollbar {
 }
 
 /* gnb 1dep*/
+.mo-gnb__back-btn {
+  display: none;
+}
 .gnb__tab-btn-wrap {
   display: flex;
   gap: 40px;
@@ -316,7 +319,7 @@ body:-webkit-scrollbar {
 }
 .gnb__tab-cont-wrap [class*="gnb__tab-cont"] > * {
   float: left;
-  width: 50%;
+  width: calc(50% - 10px);
 }
 .gnb__tab-cont-wrap .gnb__tab-cont02 > * {
   width: 100%;
@@ -326,6 +329,7 @@ body:-webkit-scrollbar {
 }
 
 .gnb__tab-cont-wrap .gnb-content__dep2 {
+  margin-left: 20px;
   position: relative;
   overflow: hidden;
 }
