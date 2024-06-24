@@ -32,6 +32,14 @@ $(window).resize(function () {
   timer = setTimeout(resizeDone, delta);
 });
 
+function bodyControll(state) {
+  if (!state) {
+    $("body").removeClass("fix");
+  } else {
+    $("body").addClass("fix");
+  }
+}
+
 var NbrandUI = {
   checkObj: function (obj) {
     return $(obj).length == 0 ? false : true;
@@ -168,6 +176,9 @@ var NbrandUI = {
               },
               300
             );
+            if (NbrandUI.windowSize()) {
+              bodyControll(true);
+            }
           } else {
             eventCont.attr("aria-hidden", "true");
             tparent.children(".ui-fctab-s").remove();
@@ -178,11 +189,17 @@ var NbrandUI = {
               },
               300
             );
+            tparent.find(".on").removeClass("on");
+            $(".panel2_2_1, .gnb__tab-cont02 .gnb__tab02-btn01").addClass("on");
+            $(".header__event-wrap").show();
             setTimeout(function () {
               if (!eventItem.hasClass("on")) {
                 eventCont.hide();
               }
             }, 300);
+            if (NbrandUI.windowSize()) {
+              bodyControll(false);
+            }
           }
         });
     }
@@ -214,15 +231,20 @@ var NbrandUI = {
         if (gnb2depBtn.hasClass("on")) {
           $(".header__event-wrap").hide();
           if (NbrandUI.windowSize()) {
+            Nbrand.uiFocusTab({
+              selector: gnb2depTarget,
+              type: "hold",
+            });
           } else {
-            $(".nav-wrap")
-              .stop()
-              .animate(
-                {
-                  height: gnb2depTarget.prop("scrollHeight") + 50,
-                },
-                100
-              );
+            // $(".nav-wrap")
+            //   .stop()
+            //   .animate(
+            //     {
+            //       height: gnb2depTarget.prop("scrollHeight") + 50,
+            //     },
+            //     100
+            //   );
+
             setTimeout(function () {
               $(".nav-wrap")
                 .stop()
@@ -256,6 +278,10 @@ var NbrandUI = {
         if (gnb3depBtn.hasClass("on")) {
           if (NbrandUI.windowSize()) {
             gnb3depTarget.parent().show();
+            Nbrand.uiFocusTab({
+              selector: gnb3depTarget,
+              type: "hold",
+            });
           } else {
             $(".nav-wrap").animate({
               height: gnb3depTarget.prop("scrollHeight") + 160,
@@ -263,6 +289,28 @@ var NbrandUI = {
           }
         }
       });
+
+      $(".gnb__panel02 .mo-gnb__back-btn")
+        .off("click")
+        .on("click", function () {
+          tparent = $(this).parent();
+          tparent.removeClass("on");
+          tparent.children(".ui-fctab-s").remove();
+          tparent.children(".ui-fctab-e").remove();
+          tparent.parent().hide();
+        });
+      $(".gnb__tab02-wrap > .mo-gnb__back-btn")
+        .off("click")
+        .on("click", function () {
+          tparent = $(this).parent().parent();
+          tparent.removeClass("on");
+          tparent.children(".ui-fctab-s").remove();
+          tparent.children(".ui-fctab-e").remove();
+          $(".gnb__tab-btn-wrap button.on")
+            .removeClass("on")
+            .attr("aria-selected", false);
+          $(".header__event-wrap").show();
+        });
     }
     init(dep2, dep2com, dep3, dep3com);
     event();

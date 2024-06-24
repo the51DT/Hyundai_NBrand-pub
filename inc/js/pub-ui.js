@@ -681,7 +681,7 @@ dropdownBtns.forEach((button) => {
     //   .querySelector(".arrow-down");
     const btnRightArr = button
       .closest(".dropdown")
-      .querySelector(".icon-down-wh");
+      .querySelector(".dropdown-icon");
     const btnRightArrFilter =
       button.parentElement.querySelector(".icon-down-wh");
 
@@ -695,18 +695,21 @@ dropdownBtns.forEach((button) => {
     const detectCase2_selectBtn = document.querySelector(
       ".dropdown.centered .wrap-dropdown-selected"
     ); // 필터 컴포넌트: 선택 버튼
+    const detectCase3 = dropdownMenu.classList.contains("stay"); // 메뉴 눌러도 안 닫히게
 
     if (!isExpanded) {
       dropdownMenu.setAttribute("aria-hidden", "true");
     }
 
     if (detectCase1 && !detectCase2) {
-      dropdownMenu.addEventListener("click", function () {
-        dropdownMenu.classList.remove("dropdown-on");
-        dropdownMenu.setAttribute("aria-hidden", "true");
-        button.setAttribute("aria-expanded", "false");
-        btnRightArr.classList.remove("rotate", detectCase1);
-      });
+      if(!detectCase3) {
+        dropdownMenu.addEventListener("click", function () {
+          dropdownMenu.classList.remove("dropdown-on");
+          dropdownMenu.setAttribute("aria-hidden", "true");
+          button.setAttribute("aria-expanded", "false");
+          btnRightArr.classList.remove("rotate", detectCase1);
+        });
+      }
     }
 
     if (detectCase2) {
@@ -878,7 +881,15 @@ function toggleFullScreen(element) {
 // [Start] : configurator_header_menu 확인용 임시 스크립트
 $(".configurator_header_menu").click((el) => {
   $(".configurator_header_menu").removeClass("on");
-  el.target.parentElement.classList.add("on");
+  console.log(el.target)
+  el.target.closest(".configurator_header_menu").classList.add("on");
+  if ($(".configurator_menu_exterior").hasClass("on")) {
+    $(".configurator_con_tit").text("Exterior");
+  } else if ($(".configurator_menu_interior").hasClass("on")) {
+    $(".configurator_con_tit").text("Interior");
+  } else if ($(".configurator_menu_summary").hasClass("on")) {
+    $(".configurator_con_tit").text("Summary");
+  }
 });
 // [End] : configurator_header_menu 확인용 임시 스크립트
 
