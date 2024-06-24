@@ -1318,6 +1318,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
 .popup-wrapper .wrap-popup-profile .box-profile-img {
   width: 40px;
   height: 40px;
+  cursor: pointer;
 }
 
 .popup-wrapper .wrap-popup-profile .box-profile-img img {
@@ -1418,6 +1419,9 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.popup-wrapper .wrap-comment .box-date .icon-trans {
+  cursor: pointer;
 }
 
 .popup-wrapper
