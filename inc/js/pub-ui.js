@@ -695,18 +695,21 @@ dropdownBtns.forEach((button) => {
     const detectCase2_selectBtn = document.querySelector(
       ".dropdown.centered .wrap-dropdown-selected"
     ); // 필터 컴포넌트: 선택 버튼
+    const detectCase3 = dropdownMenu.classList.contains("stay"); // 메뉴 눌러도 안 닫히게
 
     if (!isExpanded) {
       dropdownMenu.setAttribute("aria-hidden", "true");
     }
 
     if (detectCase1 && !detectCase2) {
-      dropdownMenu.addEventListener("click", function () {
-        dropdownMenu.classList.remove("dropdown-on");
-        dropdownMenu.setAttribute("aria-hidden", "true");
-        button.setAttribute("aria-expanded", "false");
-        btnRightArr.classList.remove("rotate", detectCase1);
-      });
+      if(!detectCase3) {
+        dropdownMenu.addEventListener("click", function () {
+          dropdownMenu.classList.remove("dropdown-on");
+          dropdownMenu.setAttribute("aria-hidden", "true");
+          button.setAttribute("aria-expanded", "false");
+          btnRightArr.classList.remove("rotate", detectCase1);
+        });
+      }
     }
 
     if (detectCase2) {
