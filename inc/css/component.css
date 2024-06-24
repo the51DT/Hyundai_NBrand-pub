@@ -663,6 +663,32 @@ input[type="radio"]:focus + label {
   background: url(../../inc/images/icon/icon-close_white.svg);
   background-size: contain;
 }
+.icon-close-gray {
+  background: url(../../inc/images/icon/icon-close_gray.svg);
+  background-size: contain;
+}
+.btn:hover [class*="icon-close-gray"],
+.btn:active [class*="icon-close-gray"] {
+  /* 빨간색 icon 없어서 css로 임시 */
+  background-image: none;
+  background-color: #de3111;
+  mask-image: url("../../inc/images/icon/icon-close_gray.svg");
+  mask-position: center;
+  mask-size: contain;
+}
+.icon-reset-gray {
+  background: url(../../inc/images/icon/icon-reset_gray.svg);
+  background-size: contain;
+}
+.btn:hover [class*="icon-reset-gray"],
+.btn:active [class*="icon-reset-gray"] {
+  /* 빨간색 icon 없어서 css로 임시 */
+  background-image: none;
+  background-color: #de3111;
+  mask-image: url("../../inc/images/icon/icon-reset_gray.svg");
+  mask-position: center;
+  mask-size: contain;
+}
 .icon-heart {
   background: url(../../inc/images/icon/icon-heart.svg);
   background-size: contain;
@@ -702,6 +728,11 @@ input[type="radio"]:focus + label {
 }
 .btn:hover [class*="icon-download"],
 .btn:active [class*="icon-download"] {
+  background: url(../../inc/images/icon/icon-download-wh.svg);
+  background-size: contain;
+}
+.btn[class*="txt-btn"]:hover [class*="icon-download"],
+.btn[class*="txt-btn"]:active [class*="icon-download"] {
   /* 빨간색 다운로드 icon 없어서 css로 임시 */
   background-image: none;
   background-color: #de3111;
@@ -799,13 +830,13 @@ input[type="radio"]:focus + label {
 }
 
 .tabs-wrap .tabs li {
-  border: 1px solid #555;
+  border: 1px solid #777;
   background: transparent;
   border-right: 0;
 }
 
 .tabs-wrap .tabs li:last-child {
-  border-right: 1px solid #555;
+  border-right: 1px solid #777;
 }
 
 .tabs-wrap .tabs li.on {
@@ -828,7 +859,7 @@ input[type="radio"]:focus + label {
   font-weight: 700;
   line-height: 22px;
   padding: 11px 32px;
-  color: #555;
+  color: #777;
 }
 
 .tabs-wrap .tabs li.on a {
@@ -1976,6 +2007,7 @@ input[type="radio"]:focus + label {
   transform: translate(-50%, -50%);
   background: url("../images/icon/icon-play-video.svg") no-repeat center top /
     100%;
+  z-index: 10;
 }
 
 .ty02Swiper .swiper-slide a:hover .img-ico {
@@ -2020,7 +2052,8 @@ input[type="radio"]:focus + label {
 .ty02Swiper .swiper-button-prev {
   width: 80px;
   height: 80px;
-  top: 35%;
+  top: 40%;
+  transform: translateY(-50%);
 }
 
 .ty02Swiper .swiper-button-prev {
