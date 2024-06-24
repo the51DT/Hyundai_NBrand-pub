@@ -223,23 +223,17 @@
     max-height: 100%;
   }
   
-  .brand .models-wrap .content-item02 video {
-    
+  .brand .models-wrap .video-wrap video {
+    max-height:360px;
   }
 
-  .brand .models-wrap .content-item02 video + .btn {
-    bottom: 38%;
+  .brand .models-wrap .video-wrap video + .btn {
+    top:307px;
+    right: 12px;
   }
 
-  .brnad .content-item02 .video_thumnail_wrap {
-    
-  }
   .pyramid-box .img-wrap {
     min-height: 312px;
-  }
-  .pyramid-box .img-wrap  img {
-    /* max-width: 312px;
-    height: 312px; */
   }
 
   .bnr-info-wrap {
