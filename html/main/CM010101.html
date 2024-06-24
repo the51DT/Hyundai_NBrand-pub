@@ -7,8 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name=" format-detection" content="telephone=no">
   <title>N브랜드 | Component</title>
-  <link type="text/css" rel="stylesheet" href="../inc/css/swiper.min.css" />
-  <link type="text/css" rel="stylesheet" href="../inc/css/common.css" />
+  <link type="text/css" rel="stylesheet" href="../../inc/css/swiper.min.css" />
+  <link type="text/css" rel="stylesheet" href="../../inc/css/common.css" />
 </head>
 
 <body>
@@ -31,6 +31,7 @@
           <div class="nav-wrap" id="navWrap" aria-hidden="true">
             <nav>
               <!-- gnb 1dep -->
+              <!-- 현재 페이지 dep버튼에 active class 삽입.  gnb__tab02 첫번째 메뉴는 항상오픈, 활성화 클래스 on -->
               <ul class="gnb__tab-btn-wrap">
                 <li><button class="gnb__tab-btn01 active" id="gnb__tabBtn01" role="tab" aria-controls="gnbTab1"
                     aria-selected="false">Brand</button></li>
@@ -75,10 +76,10 @@
                   <div class="gnb__tab02-wrap">
                     <!-- 모바일 타이틀 -->
                     <ul class="gnb__tab02">
-                      <!-- 현재 페이지 dep버튼에 active class 삽입.  gnb__tab02 첫번째 메뉴는 항상오픈-->
+
                       <li>
-                        <button class="gnb__tab02-btn01 on active " role="tab" id="gnb-tab2_2_1"
-                          aria-controls="gnbTab2_1" aria-selected="true">N</button>
+                        <button class="gnb__tab02-btn01 on " role="tab" id="gnb-tab2_2_1" aria-controls="gnbTab2_1"
+                          aria-selected="true">N</button>
                       </li>
                       <li>
                         <button class="gnb__tab02-btn02" role="tab" id="gnb-tab2_2_2" aria-controls="gnbTab2_2"
@@ -450,8 +451,8 @@
                   <div class="gnb__tab02-wrap">
                     <ul class="gnb__tab02">
                       <!-- 현재 페이지 dep버튼에 active class 삽입. -->
-                      <li><button class="gnb__tab02-btn01 on active " role="tab" id="gnb-tab2_3_1"
-                          aria-controls="gnbTab3_1" aria-selected="true">N Festival</button></li>
+                      <li><button class="gnb__tab02-btn01" role="tab" id="gnb-tab2_3_1" aria-controls="gnbTab3_1"
+                          aria-selected="true">N Festival</button></li>
                       <li><button class="gnb__tab02-btn02" role="tab" id="gnb-tab2_3_2" aria-controls="gnbTab3_2"
                           aria-selected="true">N Channel</button></li>
                       <li><a class="gnb__tab02-btn03" id="gnb-tab2_3_3">N e-Festival</a></li>
@@ -462,7 +463,7 @@
                     <div class="gnb__panel02">
                       <div id="gnbTab3_1" class="panel2_3_1" role="tabpanel" aria-labelledby="gnb-tab2_3_1">
                         <ul class="gnb__tab02_3">
-                          <li><a href="#" class="gnb__tab02-btn active">N Festival</a></li>
+                          <li><a href="#" class="gnb__tab02-btn">N Festival</a></li>
                           <li><a href="#" class="gnb__tab02-btn">Event Guide</a></li>
                           <li><a href="#" class="gnb__tab02-btn">Calendar</a></li>
                           <li><a href="#" class="gnb__tab02-btn">Standing</a></li>
@@ -570,6 +571,13 @@
               <!-- <button class="alarm-btn" title="미확인 알림"></button> -->
             </div>
           </div>
+        </div>
+      </div>
+      <div class="navigation_bar-wrap">
+        <div class="navigation_bar">
+          <div class=""></div>
+          <div class=""></div>
+          <div class=""></div>
         </div>
       </div>
     </header>
@@ -839,9 +847,9 @@
               </div>
               <div class="swiper-bottom-wrap">
                 <div class="swiper-button-next" tabindex="0" role="button"
-                  aria-controls="swiper-wrapper-d1f642c19f1cdd98" aria-disabled="false"></div>
+                  aria-controls="swiper-wrapper-d1f642c19f1cdd98" aria-disabled="false" aria-label="다음"></div>
                 <div class="swiper-button-prev swiper-button-disabled" tabindex="-1" role="button"
-                  aria-controls="swiper-wrapper-d1f642c19f1cdd98" aria-disabled="true"></div>
+                  aria-controls="swiper-wrapper-d1f642c19f1cdd98" aria-disabled="true" aria-label="이전"></div>
                 <div class="swiper-status-wrap">
                   <!-- <div class="autoplay-progress">
                       <div class="bar"></div>
@@ -1390,11 +1398,11 @@
     <!-- <aside></aside> -->
   </div>
 
-  <script type="text/javascript" src="../inc/js/jquery-3.7.1.slim.min.js"></script>
-  <script type="text/javascript" src="../inc/js/swiper.min.js"></script>
-  <script type="text/javascript" src="../inc/js/plugins.js"></script>
-  <script type="text/javascript" src="../inc/js/pub-ui.js"></script>
-  <script type="text/javascript" src="../inc/js/com-ui.js"></script>
+  <script type="text/javascript" src="../../inc/js/jquery-3.7.1.slim.min.js"></script>
+  <script type="text/javascript" src="../../inc/js/swiper.min.js"></script>
+  <script type="text/javascript" src="../../inc/js/plugins.js"></script>
+  <script type="text/javascript" src="../../inc/js/pub-ui.js"></script>
+  <script type="text/javascript" src="../../inc/js/com-ui.js"></script>
 
   <script>
     // alert('d')
