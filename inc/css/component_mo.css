@@ -529,7 +529,10 @@ min-width : 1024 css
     line-height: 25.2px;
   }
   .card_type04 .card-hashtag {
-    margin: 20px 0 12px;
+    margin-top: 20px;
+  }
+  .card_type04 .card_date {
+    margin-top:12px;
   }
   .card_type04 .card_thumbnail.h347 {
     aspect-ratio: 312 / 312;

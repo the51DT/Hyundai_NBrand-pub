@@ -108,7 +108,7 @@ var pubUi = {
     $(".tit-btn-wrap button").click(function (e) {
       $(".tit-btn-wrap button").attr("aria-selected", "false");
       $(".tit-btn-wrap button").removeClass("on");
-      
+
       $(this).addClass("on");
       if ($(this).attr("aria-selected") == "false") {
         $(this).attr("aria-selected", "true");
@@ -494,11 +494,11 @@ var pubUi = {
 
     document.querySelector("#" + tabLabel).classList.add("on");
   },
-  tagBtnEvent: function (e, list, param) {    
+  tagBtnEvent: function (e, list, param) {
     var listItem = list.find("li");
 
     //search input reset 클릭시, 하단 태그 초기화
-    if(param == "reset") {
+    if (param == "reset") {
       for (var i = 0; i < listItem.length; i++) {
         listItem[i].classList.remove("on");
         listItem[i].children[0].checked = "false";
@@ -597,6 +597,8 @@ $(document).ready(function () {
   $(".option-click").click(function () {
     handleOptionClick(event);
   });
+  $(window).resize(() => hasTagFun());
+  hasTagFun();
 });
 
 // [Start] : selectbox 컴포넌트
@@ -613,8 +615,8 @@ function handleSelectboxClick(event) {
   });
 
   $trigger.toggleClass("active").attr("aria-expanded", function () {
-      return $(this).hasClass("active") ? "true" : "false";
-    });
+    return $(this).hasClass("active") ? "true" : "false";
+  });
 
   $options.css({ right: "0" });
 
@@ -679,7 +681,7 @@ dropdownBtns.forEach((button) => {
     //   .querySelector(".arrow-down");
     const btnRightArr = button
       .closest(".dropdown")
-      .querySelector(".icon-down-wh");
+      .querySelector(".dropdown-icon");
     const btnRightArrFilter =
       button.parentElement.querySelector(".icon-down-wh");
 
@@ -774,7 +776,7 @@ function DropdownFooter() {
   if (window.innerWidth < 1024) {
     // resize 때문에 off 한 번 해주고 click 이벤트
     $(".dropdown.inMobile .accor02-wrap .accor02-header").off("click")
-    .on("click", function () {
+      .on("click", function () {
         const accor02List = $(this).siblings("ul");
         accor02List.toggleClass("dropdown-on");
         const expanded = accor02List.hasClass("dropdown-on") ? "true" : "false";
@@ -792,22 +794,24 @@ $(".footer-top-btn").click(() => {
 });
 
 // [Start] : hashTag 말줄임
-$(".card_type04 .card_con").each(function () {
-  var $set = $(this).children("div.card-hashtag").children("button");
-  var $setUl = $(this).children("div.card-hashtag");
+function hasTagFun() {
+  $(".card_type04 .card_con").each(function () {
+    var $set = $(this).children("div.card-hashtag").children("button");
+    var $setUl = $(this).children("div.card-hashtag");
 
-  $set.each(function () {
-    var cardConRightEdge = $setUl.offset().left + $setUl.outerWidth();
-    var liRightEdge = $(this).offset().left + $(this).outerWidth(true);
-    if (liRightEdge >= cardConRightEdge) {
-      $(this).addClass("ellipsis");
-      // $("ul.card-hashtag li.ellipsis").first().css({ minWidth: 50 });
-    }
+    $set.each(function () {
+      var cardConRightEdge = $setUl.offset().left + $setUl.outerWidth();
+      var liRightEdge = $(this).offset().left + $(this).outerWidth(true);
+      if (liRightEdge >= cardConRightEdge) {
+        $(this).addClass("ellipsis");
+        // $("ul.card-hashtag li.ellipsis").first().css({ minWidth: 50 });
+      }
+    });
+
+    $set.siblings(".ellipsis").first().show();
+    $set.siblings(".ellipsis").nextAll().hide(); // EP040501 - Pony Magazine 제목 참고 (안하면 button.ellipsis 뒤에 li들 다 살아있음 - 그래서 button.ellipsis 너비 줄어듦)
   });
-
-  $set.siblings(".ellipsis").first().show();
-  $set.siblings(".ellipsis").nextAll().hide(); // EP040501 - Pony Magazine 제목 참고 (안하면 button.ellipsis 뒤에 li들 다 살아있음 - 그래서 button.ellipsis 너비 줄어듦)
-});
+}
 // [End] : hashTag 말줄임
 
 // [Start] : 하트 버튼 토글 (EP040101, EP040201, EP040301, EP040501)
@@ -872,9 +876,17 @@ function toggleFullScreen(element) {
 // [End] : 풀스크린
 
 // [Start] : configurator_header_menu 확인용 임시 스크립트
-$(".configurator_header_menu").click((el)=> {
+$(".configurator_header_menu").click((el) => {
   $(".configurator_header_menu").removeClass("on");
-  el.target.parentElement.classList.add("on");
+  console.log(el.target)
+  el.target.closest(".configurator_header_menu").classList.add("on");
+  if ($(".configurator_menu_exterior").hasClass("on")) {
+    $(".configurator_con_tit").text("Exterior");
+  } else if ($(".configurator_menu_interior").hasClass("on")) {
+    $(".configurator_con_tit").text("Interior");
+  } else if ($(".configurator_menu_summary").hasClass("on")) {
+    $(".configurator_con_tit").text("Summary");
+  }
 });
 // [End] : configurator_header_menu 확인용 임시 스크립트
 

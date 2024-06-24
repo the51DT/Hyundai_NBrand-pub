@@ -161,7 +161,8 @@
     /* transition: right 2s 1s; */
     z-index: 1001;
   }
-  .gnb__tab-cont-wrap {
+  .gnb__tab-cont-wrap,
+  .gnb__panel02 {
     position: absolute;
     top: 0;
     left: 0;
@@ -171,14 +172,21 @@
   }
   .gnb__tab-cont-wrap [class*="gnb__tab-cont"] {
     padding: 82px 0 20px 0;
+    height: calc(100vh - 70px);
+    background-color: #fff;
   }
   .gnb__tab-cont-wrap [class*="gnb__tab-cont"] > * {
     float: none;
     width: 100%;
   }
+  .gnb__tab02-wrap {
+    display: block;
+  }
   .gnb__tab02-wrap .gnb__tab02,
   .gnb__tab-cont03 .gnb__tab02-wrap .gnb__panel02 {
     width: 100%;
+    height: 100%;
+    background-color: #fff;
   }
   .mo-gnb__back-btn {
     display: block;
@@ -196,9 +204,48 @@
     background: url(../images/icon/icon-gnb_back.svg) no-repeat left 24px top
       28px;
   }
-  .gnb-content__dep2 {
+  .gnb__tab-cont-wrap .gnb-content__dep2 {
+    position: absolute;
+    top: calc(100vh - 405px);
+    width: 100%;
+    padding: 0 24px 0;
+    margin-left: 0;
+  }
+  .gnb__tab-cont-wrap .gnb-content__dep2 .img-area {
+    width: 100%;
+    height: 175px;
+    overflow: hidden;
+    position: relative;
+  }
+  .gnb__tab-cont-wrap .gnb-content__dep2 .img-area img {
+    width: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: auto;
+  }
+  .gnb__tab-cont-wrap .gnb-content__dep2 .text-area {
+    position: static;
+    bottom: 0;
+    color: #000;
+  }
+
+  .gnb__tab-cont-wrap .gnb-content__dep2 .text-area h3 {
+    font-size: 20px;
+    line-height: 28px;
+    padding: 8px 0 0 0;
+  }
+  .gnb__tab-cont-wrap .gnb-content__dep2 .text-area p {
+    font-size: 14px;
+    line-height: 19.6px;
+    padding: 8px 0 0 0;
+  }
+  .gnb__tab-cont-wrap .gnb-content__dep2 .link-area {
     display: none;
   }
+
   .gnb__tab02-wrap [class*="gnb__tab02-btn"] {
     padding: 16px 24px;
     height: auto;
@@ -210,6 +257,84 @@
     width: 100%;
   }
   .gnb__panel02 {
+    max-height: calc(100vh - 70px);
     display: none;
+  }
+  .gnb__panel02 [class*="panel2"] {
+    background: #fff;
+    padding-top: 87px;
+    position: relative;
+    z-index: 1;
+    height: 100%;
+  }
+  .gnb__panel02 [class*="panel2"] .gnb__tab02_2 {
+    height: calc(100vh - 157px);
+    overflow-y: auto;
+    display: block;
+    padding: 0 24px;
+  }
+  .gnb__panel02 [class*="panel2"] .gnb__tab02_2 li {
+    width: 100%;
+    margin-bottom: 12px;
+  }
+  .gnb__panel02 .img-area {
+    width: 224px;
+    height: 168px;
+    margin: 0 auto;
+  }
+  .gnb__panel02 .text-area {
+    margin-top: 16px;
+  }
+  .gnb__panel02 .text-area h3 {
+    font-size: 20px;
+    font-family: Hyundai Sans Head;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+    text-align: center;
+  }
+  .gnb__panel02 .text-area p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.6px;
+    text-align: center;
+    margin-top: 4px;
+  }
+  .gnb__panel02 .link-area {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 16px;
+  }
+  .gnb__panel02 .link-area .link-btn {
+    font-size: 16px;
+    font-weight: 700;
+    text-align: left;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+  }
+
+  .gnb__panel02 .link-area .link-btn span {
+    display: block;
+    width: 16px;
+    height: 16px;
+  }
+  .gnb__panel02 .link-area .link-btn .icon-link {
+    background: url(../../inc/images/icon/icon-link.svg);
+    margin-top: -2px;
+  }
+  .header-cont .utile-wrap {
+    padding-right: 14px;
+  }
+  .header-cont .utile-wrap .lang-btn {
+    width: 50px;
+    padding: 10px 0;
+  }
+  .header-cont .utile-wrap .login-btn {
+    width: 40px;
   }
 }
