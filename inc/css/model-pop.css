@@ -1,5 +1,7 @@
 .popup.model-popup.forModel {
   max-width: 1200px;
+  height: calc(100% - 48px);
+  overflow: hidden;
 }
 
 .popup .popup-wrapper .popup-header {
@@ -10,9 +12,10 @@
   max-height: calc(100vh - 100px);
 }
 
-.popup .popup-wrapper .popup-body .inner-body-model {
+.popup.model-popup .popup-wrapper .popup-body .inner-body-model {
   padding: 40px 0px 100px;
-  max-height: calc(100vh - 84px);
+  /* max-height: calc(100vh - 84px); */
+  max-height: calc(100vh - 250px);
   gap: 60px;
 }
 
@@ -169,6 +172,10 @@
 }
 
 @media screen and (max-width: 1023px) {
+  .popup.model-popup.forModel {
+    height: 100vh;
+  }
+
   .popup .popup-wrapper .popup-header {
     padding: 16px 24px;
     /* border-bottom: 0; */
@@ -187,7 +194,9 @@
     top: 5.6rem;
     left: 0;
   } */
-
+  .popup.model-popup.forModel .popup-wrapper {
+    height: 100%;
+  }
   .popup.model-popup.forModel .popup-wrapper .popup-header {
     position: sticky;
     width: 100%;
