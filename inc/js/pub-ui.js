@@ -681,7 +681,7 @@ dropdownBtns.forEach((button) => {
     //   .querySelector(".arrow-down");
     const btnRightArr = button
       .closest(".dropdown")
-      .querySelector(".icon-down-wh");
+      .querySelector(".dropdown-icon");
     const btnRightArrFilter =
       button.parentElement.querySelector(".icon-down-wh");
 
@@ -878,7 +878,15 @@ function toggleFullScreen(element) {
 // [Start] : configurator_header_menu 확인용 임시 스크립트
 $(".configurator_header_menu").click((el) => {
   $(".configurator_header_menu").removeClass("on");
-  el.target.parentElement.classList.add("on");
+  console.log(el.target)
+  el.target.closest(".configurator_header_menu").classList.add("on");
+  if ($(".configurator_menu_exterior").hasClass("on")) {
+    $(".configurator_con_tit").text("Exterior");
+  } else if ($(".configurator_menu_interior").hasClass("on")) {
+    $(".configurator_con_tit").text("Interior");
+  } else if ($(".configurator_menu_summary").hasClass("on")) {
+    $(".configurator_con_tit").text("Summary");
+  }
 });
 // [End] : configurator_header_menu 확인용 임시 스크립트
 
