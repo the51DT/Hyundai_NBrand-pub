@@ -17,13 +17,15 @@
     <section class="content-wrap models-wrap">
       <div class="content-item02">
         <!-- key visual01 : video (예시로 영역잡은 영상 / 영상은 교체 필요 및 width=100% 삭제) -->
-        <video class="video" data-js="video" id="video1" playsinline autoplay muted>
-          <source src="../../inc/videos/24hnbr24.mp4" type="video/mp4" />
-        </video>
-        <button type="button" class="btn btn-only-icon-bg01-square">
-          <span class="visually-hidden">pause button</span>
-          <span class="btn-icon24 icon-pause-wh" aria-hidden="true"></span>
-        </button>
+        <div class="video-wrap">
+          <video class="video" data-js="video" id="video1" playsinline autoplay muted>
+            <source src="../../inc/videos/24hnbr24.mp4" type="video/mp4" />
+          </video>
+          <button type="button" class="btn btn-only-icon-bg01-square">
+            <span class="visually-hidden">pause button</span>
+            <span class="btn-icon24 icon-pause-wh" aria-hidden="true"></span>
+          </button>
+        </div>
         <div class="video_thumnail_wrap">
           <p class="video_tit">About N</p>
           <p class="video_subtit">Passion For Performance by Hyundai</p>
@@ -136,9 +138,9 @@
 
       <div class="content-item05">
         <div class="models-nofull">
-          <div class="max1440">                
+          <div class="max1440 n-story-box">                
             <!-- type-col > models-cardbox : 텍스트(제목 - 설명 행으로 구성됨) + 이미지 + 카드박스 -->
-            <div class="models-nofull-box type-col">
+            <div class="models-nofull-box">
               <div class="text-col max1200">
                 <p class="text-strong">Born in Namyang,<br/> Honed atNürburgring</p>
                 <p class="text-normal">
@@ -147,23 +149,158 @@
                   Afterward, the performance cars go off to the Nürburgring in Germany, one of the world’s most grueling race tracks, to undergo rigorous testing and inspection. Through this painstaking process, N technology has been refined and reborn.
                 </p>
               </div>
+              
+              <div class="img-conts-wrap max1440">
+                <div class="img-area">
+                  <img src="../../inc/images/img/img_aboutN_conts03-pc.png" alt="Born in Namyang, Honed at Nürburgring background image pc"  class="pc-only"/>
+                  <img src="../../inc/images/img/img_aboutN_conts03-mo.png" alt="Born in Namyang, Honed at Nürburgring background image mobile" class="mo-only"/>
+                  <div class="ico-logo"><img src="../../inc/images/img/logo_N.png" alt="N logo image"></div>
+                </div>                  
+              </div>
               <div class="text-col max1200">
-                <div class="img-conts-wrap">
-                  <img src="../../inc/images/Models/i30N/i30N_performance_02.png" alt="i30N 이미지" />
-                  <div>
-                    <p class="text-strong">N Takes its Name from<br/>Namyang and Nürburgring</p>
-                    <p class="text-normal-s">Being born in Namyang and honed at Nürburgring, the N logo got inspired by the curves of a racetrack.</p>
-                  </div>
+                <div>
+                  <p class="text-strong">N Takes its Name from<br/>Namyang and Nürburgring</p>
+                  <p class="text-normal-s">Being born in Namyang and honed at Nürburgring, the N logo got inspired by the curves of a racetrack.</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- asis -->
-      <!-- 
-        <div class="container">          
-        </div> -->
+      
+      <div class="content-item06 location-wrap">
+        <div class="models-full icon20 full-1600">
+          <div class="max1440">
+            <div class="text-col">
+              <p class="text-strong">The Birthplace of N Namyang R&D Center</p>
+              <p class="text-sub">Namyang, Korea</p>
+              <p class="text-normal">
+                The Namyang R&D Center in South Korea is the heart of Hyundai Motor's global R&D network, and the birthplace of the new i30 N. It consists of a multitude of facilities and test roads that cover over 3.3 million square meters of land. With world-class researchers and facilities, Namyang serves as the ultimate think tank for the development of High-Performance N.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-item07">
+        <div class="models-nofull">
+          <div class="max1440">                
+            <!-- type-col > models-cardbox : 텍스트(제목 - 설명 행으로 구성됨) + 이미지 + 카드박스 -->
+            <div class="models-nofull-box">
+              <div class="img-conts-wrap max1440">
+                <div class="img-area">
+                  <img src="../../inc/images/img/img_aboutN_conts04.png" alt="European Technical Center at Nürburgring background image" />                
+                </div>                  
+              </div>
+              <div class="text-col max1200">
+                <div>
+                  <p class="text-strong">European Technical Center at Nürburgring</p>
+                  <p class="text-normal-s">The Nürburgring Nordschleife is also home to the Hyundai Motor European Technical Center where accelerated durability tests are conducted. The creation of this test center in the middle of a battlefield that pits the world’s most advanced automotive technologies against the harshest road conditions,serves as a sign of Hyundai’s aggressive dedication towards the development of high-performance vehicle technology.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-item08">
+        <div class="models-full icon20 full-1600"></div>
+        <div class="max1200">
+          <div class="text-col">
+            <p class="text-strong">The Proving Grounds of N, The Nürburgring</p>
+            <p class="text-sub">Nürburgring, Germany</p>
+            <p class="text-normal">
+              The Nürburgring Nordschleife is the place where Hyundai N hones its high-performance N technologies. It is one of the world’s most challenging race tracks, with 73 corners covering 20.8 km of tarmac and repeated stretches of steep, sudden, uphill and downhill roads. The elevation varies between 320 and 617 meters, with a maximum difference of 300 meters, making it quite possibly the harshest on-road environment on Earth.
+            </p>
+          </div>
+        </div>
+        <div class="press-sns-wrap">
+          <div class="sns-box">
+            <button type="button" class="btn btn-only-icon-bg01-circle">
+              <span class="visually-hidden">copy link button</span>
+              <span class="btn-icon20 icon-copylink-wh" aria-hidden="true"></span>
+            </button>
+            <a href="https://www.facebook.com/" class="btn btn-only-icon-bg01-circle">
+              <span class="visually-hidden">facebook link button</span>
+              <span class="btn-icon20 icon-facebook-wh" aria-hidden="true"></span>
+            </a>
+            <a href="https://www.instagram.com/" class="btn btn-only-icon-bg01-circle">
+              <span class="visually-hidden">instagram link button</span>
+              <span class="btn-icon20 icon-instagram-wh" aria-hidden="true"></span>
+            </a>
+            <a href="https://x.com/" class="btn btn-only-icon-bg01-circle">
+              <span class="visually-hidden">twitter link button</span>
+              <span class="btn-icon20 icon-twitter-wh" aria-hidden="true"></span>
+            </a>
+          </div>
+          <div class="btn-wrap btn-back">
+            <a href="https://www.hyundai.com/worldwide/ko/brand-journal/mobility-solution/n-story"
+              class="btn lg-txt-btn01">
+              <span class="btn-icon20 icon-left" aria-hidden="true"></span>
+              Label Name
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="content-item09 bg-gray">
+        <div class="related-conts-wrap">
+          <h2 class="tit tit-type02">More from Press</h2>
+          <ul class="grid_3 grid_mo_scroll">
+            <li>
+              <div class="card_type04">
+                <button class="card_thumbnail h347">
+                  <img src="../../inc/images/img/img_aboutN_Related01.png" alt="썸네일 이미지" />
+                </button>
+
+                <div class="card_con">
+                  <p class="tit-type03 fw-type03">The story of electrifying N</p>
+                  <!-- <div class="card-hashtag">
+                    <button class="txt-type04">#WRC</button>
+                    <button class="txt-type04">#Rally_Croatia</button>
+                    <button class="txt-type04">#Motorsport</button>
+                  </div> -->
+                  <p class="card_date">11.09.2023</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="card_type04">
+                <button class="card_thumbnail h347">
+                  <img src="../../inc/images/img/img_aboutN_Related02.png" alt="썸네일 이미지" />
+                </button>
+
+                <div class="card_con">
+                  <p class="tit-type03 fw-type03">N Vision 74 : Envisioning the Future of N brand</p>
+                  <!-- <div class="card-hashtag">
+                    <button class="txt-type04">#WRC</button>
+                    <button class="txt-type04">#Rally_Croatia</button>
+                    <button class="txt-type04">#Motorsport</button>
+                  </div> -->
+                  <p class="card_date">09.07.2022</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="card_type04">
+                <button class="card_thumbnail h347">
+                  <img src="../../inc/images/img/img_aboutN_Related03.png" alt="썸네일 이미지" />
+                </button>
+
+                <div class="card_con">
+                  <p class="tit-type03 fw-type03">RN22e : Presenting the Vision of High-Performance</p>
+                  <!-- <div class="card-hashtag">
+                    <button class="txt-type04">#WRC</button>
+                    <button class="txt-type04">#Rally_Croatia</button>
+                    <button class="txt-type04">#Motorsport</button>
+                  </div> -->
+                  <p class="card_date">09.07.2022</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
     </section>
   </div>
   <script type="text/javascript" src="../../inc/js/jquery-3.7.1.slim.min.js"></script>
