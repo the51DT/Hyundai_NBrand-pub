@@ -108,14 +108,14 @@ var pubUi = {
     });
 
     $(".tit-btn-wrap button").click(function (e) {
-      $(".tit-btn-wrap button").attr("aria-selected", "false");
+      $(".tit-btn-wrap button").attr("aria-pressed", "false");
       $(".tit-btn-wrap button").removeClass("on");
 
       $(this).addClass("on");
-      if ($(this).attr("aria-selected") == "false") {
-        $(this).attr("aria-selected", "true");
+      if ($(this).attr("aria-pressed") == "false") {
+        $(this).attr("aria-pressed", "true");
       } else {
-        $(this).attr("aria-selected", "false");
+        $(this).attr("aria-pressed", "false");
       }
     });
   },
@@ -729,7 +729,7 @@ dropdownBtns.forEach((button) => {
     }
 
     if (detectCase1 && !detectCase2) {
-      if(!detectCase3) {
+      if (!detectCase3) {
         dropdownMenu.addEventListener("click", function () {
           dropdownMenu.classList.remove("dropdown-on");
           dropdownMenu.setAttribute("aria-hidden", "true");
