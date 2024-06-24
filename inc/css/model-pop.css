@@ -155,6 +155,15 @@
   gap: 0;
 }
 
+.popup
+  .popup-wrapper
+  .popup-body
+  .inner-body-model
+  .wrap-desc
+  .box-desc-divide.gap8 {
+  gap: 8px;
+}
+
 .popup .popup-wrapper .popup-body .inner-body-model .wrap-desc.lg .txt-type03 {
   font-weight: 500;
 }
