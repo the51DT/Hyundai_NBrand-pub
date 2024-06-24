@@ -663,6 +663,32 @@ input[type="radio"]:focus + label {
   background: url(../../inc/images/icon/icon-close_white.svg);
   background-size: contain;
 }
+.icon-close-gray {
+  background: url(../../inc/images/icon/icon-close_gray.svg);
+  background-size: contain;
+}
+.btn:hover [class*="icon-close-gray"],
+.btn:active [class*="icon-close-gray"] {
+  /* 빨간색 icon 없어서 css로 임시 */
+  background-image: none;
+  background-color: #de3111;
+  mask-image: url("../../inc/images/icon/icon-close_gray.svg");
+  mask-position: center;
+  mask-size: contain;
+}
+.icon-reset-gray {
+  background: url(../../inc/images/icon/icon-reset_gray.svg);
+  background-size: contain;
+}
+.btn:hover [class*="icon-reset-gray"],
+.btn:active [class*="icon-reset-gray"] {
+  /* 빨간색 icon 없어서 css로 임시 */
+  background-image: none;
+  background-color: #de3111;
+  mask-image: url("../../inc/images/icon/icon-reset_gray.svg");
+  mask-position: center;
+  mask-size: contain;
+}
 .icon-heart {
   background: url(../../inc/images/icon/icon-heart.svg);
   background-size: contain;
@@ -702,6 +728,11 @@ input[type="radio"]:focus + label {
 }
 .btn:hover [class*="icon-download"],
 .btn:active [class*="icon-download"] {
+  background: url(../../inc/images/icon/icon-download-wh.svg);
+  background-size: contain;
+}
+.btn[class*="txt-btn"]:hover [class*="icon-download"],
+.btn[class*="txt-btn"]:active [class*="icon-download"] {
   /* 빨간색 다운로드 icon 없어서 css로 임시 */
   background-image: none;
   background-color: #de3111;
@@ -1528,20 +1559,21 @@ input[type="radio"]:focus + label {
   display: flex;
   flex-wrap: nowrap;
   width: calc(100% + 13px);
-  margin-top:20px;
+  margin-top: 20px;
   column-gap: 12px;
   overflow: hidden;
 }
 .card_type04 .card-hashtag button.txt-type04 {
   /* width: inherit;
    */
+  white-space: nowrap;
   text-align: left;
 }
 .card_type04 .card_date {
   font-size: 12px;
   font-weight: 400;
   line-height: 16.8px;
-  margin-top:20px;
+  margin-top: 20px;
 }
 .card_type04 .card_function {
   padding: 20px 16px 38px;
@@ -1940,13 +1972,13 @@ input[type="radio"]:focus + label {
   padding-right: 0;
 }
 
-.ty02Swiper .swiper-slide  {
+.ty02Swiper .swiper-slide {
   width: 952px;
 }
 .ty02Swiper .swiper-slide .img-area {
   height: 536px;
 }
-.ty02Swiper .swiper-slide-active  {
+.ty02Swiper .swiper-slide-active {
   width: 1196px;
 }
 

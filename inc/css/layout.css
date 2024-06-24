@@ -77,14 +77,7 @@ body:-webkit-scrollbar {
   z-index: 1000;
   background-color: rgba(255, 255, 255, 1);
 }
-.navigation_bar-wrap {
-  width: 100%;
-  height: 48px;
-  background: rgba(255, 255, 255, 0.7);
-  position: absolute;
-  top: 70px;
-  left: 0;
-}
+
 .header-cont {
   width: 100%;
   display: flex;
@@ -269,6 +262,31 @@ body:-webkit-scrollbar {
 }
 .header__event-wrap .link-area a span.icon-link-wh {
   margin-top: -3px;
+}
+
+/* navigation-bar */
+.navigation_bar-wrap {
+  width: 100%;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  top: 70px;
+  left: 0;
+}
+
+.navigation_bar-wrap .sharing-btn {
+}
+.sns-sharing-wrap {
+}
+.sns-sharing-wrap .sharing-icon-btn {
+}
+.sns-sharing-wrap .sharing-icon-btn.url-icon {
+}
+.sns-sharing-wrap .sharing-icon-btn.face-icon {
+}
+.sns-sharing-wrap .sharing-icon-btn.insta-icon {
+}
+.sns-sharing-wrap .sharing-icon-btn.x-icon {
 }
 
 /* gnb 1dep*/
