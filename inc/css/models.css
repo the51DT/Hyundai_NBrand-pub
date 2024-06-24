@@ -173,6 +173,11 @@
   background-size: cover;
   position: relative;
 }
+.models-wrap .perfor-wrap .models-full.project_rm {
+  background: url(../../inc/images/Models/projectRM/projectRM_performance_bg.png) center bottom no-repeat;
+  background-size: cover;
+  position: relative;
+}
 .models-wrap .models-full .text-strong,
 .models-wrap .models-full .text-normal {
   color: #fff;
@@ -252,10 +257,10 @@
 .models-wrap .max1440.type2 .row-img img {
   width: 50%;
 }
-.models-wrap .max1440.type2 .max1440-innerimg {
+.models-wrap .max1440 .max1440-innerimg {
   position: relative;
 }
-.models-wrap .max1440.type2 .max1440-innerimg .text-col {
+.models-wrap .max1440 .max1440-innerimg .text-col {
   position: absolute;
   top: 200px;
   left: 50%;
@@ -377,6 +382,11 @@
 }
 .models-wrap .desgin-wrap .models-full.rm20e {
   background: url(../../inc/images/Models/RM20e/RM20e_design_bg.png) center bottom no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.models-wrap .desgin-wrap .models-full.project_rm {
+  background: url(../../inc/images/Models/projectRM/projectRM_design_bg.png) center bottom no-repeat;
   background-size: cover;
   position: relative;
 }
