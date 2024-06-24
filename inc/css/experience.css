@@ -1570,6 +1570,9 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
 .popup-wrapper .popup-footer .box-result p {
   color: #fff;
 }
+.popup-wrapper .popup-footer .box-result p.blk {
+  color: #000;
+}
 .popup-wrapper .popup-footer .box-result p.txt-type03:last-child {
   /* margin-top: 8px; */
 }

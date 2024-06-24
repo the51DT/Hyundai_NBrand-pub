@@ -77,7 +77,9 @@ var pubUi = {
     // 리셋 버튼 클릭시,
     self.$btnReset.on("click", function (e) {
       e.preventDefault();
-      var tagList = $(this).closest(".search-container").find(".tag-list-wrap .tag-list");
+      var tagList = $(this)
+        .closest(".search-container")
+        .find(".tag-list-wrap .tag-list");
       self.$searchBox.querySelector("input").value = "";
       self.tagBtnEvent("", tagList, "reset");
     });
@@ -177,7 +179,7 @@ var pubUi = {
     }
 
     var swiper2 = new Swiper(".ty02Swiper", {
-      slidesPerView:'auto',
+      slidesPerView: "auto",
       centeredSlides: true,
       loop: loopVal,
       initialSlide: slideInx,
@@ -535,7 +537,6 @@ var pubUi = {
           targetList.children[1].dataset.check = true;
         }
       }
-      
     }
   },
   masonryLayout: function () {
@@ -590,7 +591,9 @@ $(document).ready(function () {
   $(window).on("resize", pubUi.masonryLayout);
   $(window).resize(() => DropdownFooter());
   DropdownFooter();
-  $(".clear-text").siblings('input[type="text"]').on("propertychange change keyup paste input", pubUi.textReset);
+  $(".clear-text")
+    .siblings('input[type="text"]')
+    .on("propertychange change keyup paste input", pubUi.textReset);
   $(".selectbox-js").click(function () {
     handleSelectboxClick(event);
   });
@@ -608,7 +611,10 @@ function handleSelectboxClick(event) {
   var $options = $trigger.siblings(".selectbox-options");
 
   $(".selectbox-options").not($options).hide().attr("aria-hidden", "true");
-  $(".selectbox-trigger").not($trigger).removeClass("active").attr("aria-expanded", "false");
+  $(".selectbox-trigger")
+    .not($trigger)
+    .removeClass("active")
+    .attr("aria-expanded", "false");
 
   $options.toggle().attr("aria-hidden", function (i, attr) {
     return attr === "true" ? "false" : "true";
@@ -632,7 +638,10 @@ function handleSelectboxClick(event) {
         }
         $(".selectbox-options li.moclose-btn button").click(function (event) {
           event.stopPropagation();
-          $(this).closest(".selectbox-wrap>div").find(".selectbox-trigger").removeClass("active"); // close 버튼 클릭 시 모든 trigger의 active가 제거
+          $(this)
+            .closest(".selectbox-wrap>div")
+            .find(".selectbox-trigger")
+            .removeClass("active"); // close 버튼 클릭 시 모든 trigger의 active가 제거
           $(this).closest(".selectbox-options").hide();
           $(".selectbox-overlay").hide();
         });
@@ -650,13 +659,30 @@ function handleOptionClick(event) {
   var selectedText = $(event.target).text();
   // select-type04 클래스(아이콘만 존재하는 경우의 타입)가 없는 경우에만 버튼 텍스트 변경
   if (!$selectboxWrap.hasClass("select-type04")) {
-    $(event.target).closest(".selectbox-options").hide().attr("aria-hidden", "true").siblings(".selectbox-trigger").text(selectedText);
+    $(event.target)
+      .closest(".selectbox-options")
+      .hide()
+      .attr("aria-hidden", "true")
+      .siblings(".selectbox-trigger")
+      .text(selectedText);
   } else {
-    $(event.target).closest(".selectbox-options").hide().attr("aria-hidden", "true");
+    $(event.target)
+      .closest(".selectbox-options")
+      .hide()
+      .attr("aria-hidden", "true");
   }
-  $(event.target).closest(".selectbox-options").find(".option").not(event.target).removeClass("active").attr("aria-selected", "false");
+  $(event.target)
+    .closest(".selectbox-options")
+    .find(".option")
+    .not(event.target)
+    .removeClass("active")
+    .attr("aria-selected", "false");
   $(event.target).addClass("active").attr("aria-selected", "true");
-  $(event.target).closest(".selectbox-wrap>div").find(".selectbox-trigger").removeClass("active").attr("aria-expanded", "false");
+  $(event.target)
+    .closest(".selectbox-wrap>div")
+    .find(".selectbox-trigger")
+    .removeClass("active")
+    .attr("aria-expanded", "false");
   $(window)
     .resize(function () {
       if (window.innerWidth <= 1023) {
@@ -775,7 +801,8 @@ function selectOption(event, optionText) {
 function DropdownFooter() {
   if (window.innerWidth < 1024) {
     // resize 때문에 off 한 번 해주고 click 이벤트
-    $(".dropdown.inMobile .accor02-wrap .accor02-header").off("click")
+    $(".dropdown.inMobile .accor02-wrap .accor02-header")
+      .off("click")
       .on("click", function () {
         const accor02List = $(this).siblings("ul");
         accor02List.toggleClass("dropdown-on");
@@ -818,12 +845,26 @@ function hasTagFun() {
 $(".card_function.btn-wrap-type5 .btn-only-icon-notbg").click(function (event) {
   $(this).find(".btn-icon20").toggleClass("icon-heart icon-heart-red");
 });
+
+// 팝업 하트 버튼 토글
+$(".popup-footer .btn-only-icon-notbg").click(function (event) {
+  $(this).find(".btn-icon20").toggleClass("icon-heart icon-heart-red");
+});
+// 팝업 하트버튼 토글 끝
 // [End] : 하트 버튼 토글 (EP040101, EP040201, EP040301, EP040501)
 
 // [Start] : CM040101 > unread 버튼 클릭 시 배경색, read 문구 변경
 $(".unread-box .mynotice-btm>button.sm-txt-btn01").click(function () {
-  $(this).closest(".mynotice-box.unread-box").attr("class", "mynotice-box read-box");
-  $(this).replaceWith("<p class='mynotice-read'>" + "<i class='btn-icon16 icon-check' aria-hidden='true'>" + "</i>" + "Read" + "</p>");
+  $(this)
+    .closest(".mynotice-box.unread-box")
+    .attr("class", "mynotice-box read-box");
+  $(this).replaceWith(
+    "<p class='mynotice-read'>" +
+      "<i class='btn-icon16 icon-check' aria-hidden='true'>" +
+      "</i>" +
+      "Read" +
+      "</p>"
+  );
 });
 // [End] : CM040101 > unread 버튼 클릭 시 배경색, read 문구 변경
 
@@ -835,14 +876,14 @@ $("#ToggleDesBtn").click(function () {
 //[End] : CM040701 > 아코디언 토글
 
 // [Start] : 풀스크린
-const toggleFullscreenBtn = document.querySelector('.toggleFullscreenBtn')
+const toggleFullscreenBtn = document.querySelector(".toggleFullscreenBtn");
 
 const container = document.querySelector(".fullscreenContainer");
 
-toggleFullscreenBtn.addEventListener('click', e => {
-  toggleFullScreen(container)
-  container.classList.toggle('full')
-})
+toggleFullscreenBtn.addEventListener("click", (e) => {
+  toggleFullScreen(container);
+  container.classList.toggle("full");
+});
 
 const fullscreen = (element) => {
   if (element.requestFullscreen) return element.requestFullscreen();
@@ -860,17 +901,17 @@ const exitFullScreen = () => {
 
 function toggleFullScreen(element) {
   if (!document.fullscreenElement) {
-    if (element.requestFullscreen) return element.requestFullscreen()
+    if (element.requestFullscreen) return element.requestFullscreen();
     if (element.webkitRequestFullscreen)
-      return element.webkitRequestFullscreen()
-    if (element.mozRequestFullScreen) return element.mozRequestFullScreen()
-    if (element.msRequestFullscreen) return element.msRequestFullscreen()
+      return element.webkitRequestFullscreen();
+    if (element.mozRequestFullScreen) return element.mozRequestFullScreen();
+    if (element.msRequestFullscreen) return element.msRequestFullscreen();
   } else {
-    if (document.exitFullscreen) return document.exitFullscreen()
+    if (document.exitFullscreen) return document.exitFullscreen();
     if (document.webkitCancelFullscreen)
-      return document.webkitCancelFullscreen()
-    if (document.mozCancelFullScreen) return document.mozCancelFullScreen()
-    if (document.msExitFullscreen) return document.msExitFullscreen()
+      return document.webkitCancelFullscreen();
+    if (document.mozCancelFullScreen) return document.mozCancelFullScreen();
+    if (document.msExitFullscreen) return document.msExitFullscreen();
   }
 }
 // [End] : 풀스크린
@@ -878,7 +919,7 @@ function toggleFullScreen(element) {
 // [Start] : configurator_header_menu 확인용 임시 스크립트
 $(".configurator_header_menu").click((el) => {
   $(".configurator_header_menu").removeClass("on");
-  console.log(el.target)
+  console.log(el.target);
   el.target.closest(".configurator_header_menu").classList.add("on");
   if ($(".configurator_menu_exterior").hasClass("on")) {
     $(".configurator_con_tit").text("Exterior");
@@ -889,4 +930,3 @@ $(".configurator_header_menu").click((el) => {
   }
 });
 // [End] : configurator_header_menu 확인용 임시 스크립트
-
