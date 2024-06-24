@@ -1,15 +1,21 @@
 .popup.model-popup.forModel {
   max-width: 1200px;
+  height: calc(100% - 48px);
+  overflow: hidden;
 }
 
 .popup .popup-wrapper .popup-header {
   padding: 28px 40px 27px 40px;
-  /* border-bottom: 0; */
 }
 
-.popup .popup-wrapper .popup-body .inner-body-model {
+.popup.model-popup.forModel .popup-body {
+  max-height: calc(100vh - 100px);
+}
+
+.popup.model-popup .popup-wrapper .popup-body .inner-body-model {
   padding: 40px 0px 100px;
-  max-height: calc(100vh - 84px);
+  /* max-height: calc(100vh - 84px); */
+  max-height: calc(100vh - 250px);
   gap: 60px;
 }
 
@@ -38,6 +44,25 @@
   padding-bottom: 0;
   border-bottom: 0;
 }
+
+/* 팝업에 표시할 컨텐츠가 하나일 때(.popup-body-innerbox가 하나일 때 시작*/
+.popup
+  .popup-wrapper
+  .popup-body.single
+  .inner-body-model
+  .popup-body-innerbox {
+  padding-top: 0;
+}
+
+.popup
+  .popup-wrapper
+  .popup-body.single
+  .inner-body-model
+  .popup-body-innerbox
+  .container-desc {
+  padding: 24px 0 0;
+}
+/* 팝업에 표시할 컨텐츠가 하나일 때(.popup-body-innerbox가 하나일 때 끝*/
 
 .popup .popup-wrapper .popup-body .inner-body-model .wrap-model-video {
   max-width: 1120px;
@@ -116,11 +141,41 @@
   gap: 4px;
 }
 
+.popup .popup-wrapper .popup-body .inner-body-model .wrap-desc.none {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.popup
+  .popup-wrapper
+  .popup-body
+  .inner-body-model
+  .wrap-desc
+  .box-desc-divide {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.popup
+  .popup-wrapper
+  .popup-body
+  .inner-body-model
+  .wrap-desc
+  .box-desc-divide.gap8 {
+  gap: 8px;
+}
+
 .popup .popup-wrapper .popup-body .inner-body-model .wrap-desc.lg .txt-type03 {
   font-weight: 500;
 }
 
 @media screen and (max-width: 1023px) {
+  .popup.model-popup.forModel {
+    height: 100vh;
+  }
+
   .popup .popup-wrapper .popup-header {
     padding: 16px 24px;
     /* border-bottom: 0; */
@@ -139,18 +194,22 @@
     top: 5.6rem;
     left: 0;
   } */
+  .popup.model-popup.forModel .popup-wrapper {
+    height: 100%;
+  }
+  .popup.model-popup.forModel .popup-wrapper .popup-header {
+    position: sticky;
+    width: 100%;
+  }
+
+  .popup.model-popup.forModel .popup-wrapper .popup-body {
+    padding: 40px 24px 60px;
+  }
 
   .popup .popup-wrapper .popup-body .inner-body-model {
     padding: 40px 0 100px;
     gap: 36px;
     display: grid;
-  }
-  .popup .popup-wrapper .btn-wrap:last-child {
-    /* width: 100%;
-    top: 17.5px;
-
-    z-index: 22;
-    padding: 0 24px 18px 0; */
   }
 
   .popup .popup-wrapper .popup-body .inner-body-model .type01 {
@@ -163,6 +222,7 @@
     gap: 36px;
   }
   .popup .popup-wrapper .popup-body .inner-body-model .wrap-model-video {
+    max-height: 256px;
     height: 175px;
   }
   .popup
@@ -224,5 +284,41 @@
 
   .popup .popup-wrapper .popup-body .inner-body-model .wrap-desc.lg {
     gap: 12px;
+  }
+}
+
+/* 이하 팝업 헤더의 제목 말줄임 처리 */
+/* .ellip.small의 경우 제목이 조금 더 길 때 작업  */
+@media screen and (max-width: 1280px) {
+  .popup-wrapper .popup-header .ellip {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: calc(100% - 100px);
+  }
+
+  .popup-wrapper .popup-header .ellip.small {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .popup-wrapper .popup-header .ellip {
+    width: calc(100% - 200px);
+  }
+  .popup-wrapper .popup-header .ellip.small {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .popup-wrapper .popup-header .ellip {
+    width: calc(100% - 320px);
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .popup-wrapper .popup-header .ellip.small {
+    width: calc(100% - 100px);
   }
 }

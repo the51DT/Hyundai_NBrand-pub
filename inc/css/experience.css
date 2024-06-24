@@ -730,8 +730,8 @@
 }
 .video_thumnail_wrap .video_subtit {
   position: absolute;
-  top:58%;
-  left:50%;
+  top: 58%;
+  left: 50%;
   transform: translate(-50%, -50%);
   padding: 0 5rem;
   width: 100%;
@@ -1274,10 +1274,19 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
   gap: 40px;
   background: #fff;
   padding: 0;
+  align-items: start;
 }
 
 .popup-wrapper .popup-body-innerbox .wrap-checkmail.changeMail .wrap-form.text {
   width: 100%;
+}
+
+.popup-wrapper
+  .popup-body-innerbox
+  .wrap-checkmail.changeMail
+  .btn-wrap
+  .btn.md-txt-btn01 {
+  margin-top: 8px;
 }
 
 .popup-wrapper .popup-body-innerbox .inner-textarea-comment {
@@ -1309,6 +1318,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
 .popup-wrapper .wrap-popup-profile .box-profile-img {
   width: 40px;
   height: 40px;
+  cursor: pointer;
 }
 
 .popup-wrapper .wrap-popup-profile .box-profile-img img {
@@ -1409,6 +1419,9 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.popup-wrapper .wrap-comment .box-date .icon-trans {
+  cursor: pointer;
 }
 
 .popup-wrapper
@@ -1560,6 +1573,9 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
 }
 .popup-wrapper .popup-footer .box-result p {
   color: #fff;
+}
+.popup-wrapper .popup-footer .box-result p.blk {
+  color: #000;
 }
 .popup-wrapper .popup-footer .box-result p.txt-type03:last-child {
   /* margin-top: 8px; */
@@ -2387,7 +2403,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
   .video_thumnail_wrap .tag_list_wrap .tag_list {
     justify-content: center;
     margin: 36px auto 40px;
-    padding:0 24px;
+    padding: 0 24px;
     flex-wrap: wrap;
   }
   .video_thumnail_wrap .tag_list_wrap .tag_list li {
@@ -2738,6 +2754,33 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
 
   .popup-wrapper .popup-body-innerbox .wrap-checkmail .btn-wrap {
     padding: 8px 0;
+  }
+
+  .popup-wrapper .popup-body-innerbox .wrap-checkmail.changeMail {
+    gap: 28px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .popup-wrapper
+    .popup-body-innerbox
+    .wrap-checkmail.changeMail
+    > div:nth-child(1) {
+    width: 100%;
+  }
+
+  .popup-wrapper
+    .popup-body-innerbox
+    .wrap-checkmail.changeMail
+    .btn-wrap
+    .btn.md-txt-btn01 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    font-size: 16px;
   }
 
   .popup-wrapper .popup-footer .box-result {
