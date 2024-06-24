@@ -1373,6 +1373,7 @@ input[type="radio"]:focus + label {
 .card_type03.card_ranker .card_bottom {
   height: 34%;
 }
+.card_type03 .card_bottom button,
 .card_type03 .card_bottom img {
   width: auto;
   height: 100%;
@@ -1530,6 +1531,11 @@ input[type="radio"]:focus + label {
   margin: 20px 0;
   column-gap: 12px;
   overflow: hidden;
+}
+.card_type04 .card-hashtag button.txt-type04 {
+  /* width: inherit;
+   */
+  text-align: left;
 }
 .card_type04 .card_date {
   font-size: 12px;
