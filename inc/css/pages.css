@@ -213,8 +213,23 @@
 .history-box .history-list li .img-wrap {
   max-width: 586px;
   height: 440px;
+  position: relative;
 }
-
+.history-box .history-list li .img-wrap .ico-video-play {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  width: 160px;
+  height:160px;
+  background: url(../../inc/images/icon/icon-play-video.svg);
+  background-size: contain;
+  cursor: pointer;
+}
+.history-box .history-list li .img-wrap .ico-video-play:hover {
+  background: url(../../inc/images/icon/icon-play-video-hover.svg);
+  background-size: contain;
+}
 .history-box .history-list li .img-wrap.small {
   height: 330px;
 }
@@ -1033,7 +1048,7 @@
 }
 
 .sub-text-list li:not(:last-child) {
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 
 .sub-text-list li.blind {
