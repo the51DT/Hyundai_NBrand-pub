@@ -92,7 +92,7 @@
   font-weight: 700;
   line-height: 33.6px;
 }
-.models-wrap .text-normal-s { 
+.models-wrap .text-normal-s {
   font-family: "Hyundai Sans Text";
   font-size: 20px;
   font-weight: 500;
@@ -107,8 +107,8 @@
 .models-wrap .text-col .text-strong + .text-normal {
   margin-top: 20px;
 }
-.models-wrap .text-col .text-strong-s + .text-normal-s { 
-  margin-top: 20px;  
+.models-wrap .text-col .text-strong-s + .text-normal-s {
+  margin-top: 20px;
 }
 .models-wrap .text-col .text-strong-xs + .text-normal-xs {
   margin-top: 4px;
@@ -136,11 +136,15 @@
   height: 1080px;
 }
 .models-wrap .perfor-wrap .models-full.icon20 {
-  background: url(../../inc/images/Models/i20N/i20N_performance_bg.png) center no-repeat;
+  background: url(../../inc/images/Models/i20N/i20N_performance_bg.png) center bottom no-repeat;
   background-size: cover;
 }
 .models-wrap .perfor-wrap .models-full.icon30 {
-  background: url(../../inc/images/Models/i30N/i30N_performance_bg.png) center no-repeat;
+  background: url(../../inc/images/Models/i30N/i30N_performance_bg.png) center bottom no-repeat;
+  background-size: cover;
+}
+.models-wrap .perfor-wrap .models-full.icon30fast {
+  background: url(../../inc/images/Models/i30NFastbackN/i30NFastbackN_performance_bg.png) center bottom no-repeat;
   background-size: cover;
 }
 .models-wrap .models-full .text-strong,
@@ -281,15 +285,19 @@
   margin-top: 40px;
 }
 .models-wrap .desgin-wrap .models-full.icon20 {
-  background: url(../../inc/images/Models/i20N/i20N_desgin_bg.png) center no-repeat;
+  background: url(../../inc/images/Models/i20N/i20N_desgin_bg.png) center bottom no-repeat;
   background-size: cover;
 }
 .models-wrap .tech-wrap .models-full.icon20 {
-  background: url(../../inc/images/Models/i20N/i20N_technology_bg.png) center no-repeat;
+  background: url(../../inc/images/Models/i20N/i20N_technology_bg.png) center bottom no-repeat;
   background-size: cover;
 }
 .models-wrap .desgin-wrap .models-full.icon30 {
-  background: url(../../inc/images/Models/i30N/i30N_desgin_bg.png) center no-repeat;
+  background: url(../../inc/images/Models/i30N/i30N_desgin_bg.png) center bottom no-repeat;
+  background-size: cover;
+}
+.models-wrap .desgin-wrap .models-full.icon30fast {
+  background: url(../../inc/images/Models/i30NFastbackN/i30NFastbackN_desgin_bg.png) center bottom no-repeat;
   background-size: cover;
 }
 .models-wrap .tech-des {
@@ -344,6 +352,7 @@
 .models-wrap .specification-wrap .specification-box img {
   width: 952px;
   height: 714px;
+  margin: 0 auto;
 }
 .models-wrap .specification-wrap .specification-box .tab-head {
   justify-content: center;
@@ -412,11 +421,8 @@
     aspect-ratio: auto;
     height: 920px;
   }
-  .models-wrap .content-item02 {
-    max-height: 480px;
-  }
   .models-wrap .content-item02 video {
-    max-height: 480px;
+    /* max-height: 480px; */
     width: auto;
   }
   .models-wrap .content-item03 {
