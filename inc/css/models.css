@@ -7,7 +7,7 @@
   margin-bottom: 240px;
 }
 .models-wrap .content-item02 video {
-  width: 100%;
+  object-fit: cover;
 }
 .models-wrap [class*="max1440"] {
   max-width: 1440px;
@@ -422,8 +422,8 @@
     height: 920px;
   }
   .models-wrap .content-item02 video {
-    /* max-height: 480px; */
-    width: auto;
+    max-height: 480px;
+    object-fit: cover;
   }
   .models-wrap .content-item03 {
     padding: 152px 24px 0;
