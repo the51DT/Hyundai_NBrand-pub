@@ -3,36 +3,48 @@
   overflow: hidden;
 }
 
-.popup .popup-wrapper .popup-header {
+.popup.model-popup.forModel .popup-wrapper .popup-header {
   padding: 28px 40px 27px 40px;
 }
 
 .popup.model-popup.forModel .popup-body {
-  /* max-height: calc(100vh - 142px); */
   max-height: calc(100vh - 160px);
+  padding: 40px 40px 160px;
+  margin-bottom: 0;
 }
 
-.popup.model-popup .popup-wrapper .popup-body .inner-body-model {
-  padding: 40px 0px 100px;
-  /* max-height: calc(100vh - 84px); */
-  max-height: calc(100vh - 250px);
+.popup.model-popup.forModel .popup-wrapper .popup-body .inner-body-model {
+  padding: 40px 0px 0;
+  max-height: 100%;
   gap: 60px;
 }
 
-.popup.model-popup .popup-wrapper .popup-body.single .inner-body-model {
+.popup.model-popup.forModel
+  .popup-wrapper
+  .popup-body.single
+  .inner-body-model {
   padding: 0 0px 0;
   max-height: calc(100vh - 250px);
   gap: 60px;
 }
 
-.popup .popup-wrapper .popup-body .inner-body-model:first-child {
+.popup.model-popup.forModel
+  .popup-wrapper
+  .popup-body
+  .inner-body-model:first-child {
   padding-top: 0;
 }
-.popup .popup-wrapper .popup-body .inner-body-model .popup-body-innerbox {
+
+.popup.model-popup.forModel
+  .popup-wrapper
+  .popup-body
+  .inner-body-model
+  .popup-body-innerbox {
   padding: 60px 0 0;
   border-bottom: 1px solid #bbbbbb;
 }
-.popup
+
+.popup.model-popup.forModel
   .popup-wrapper
   .popup-body
   .inner-body-model
@@ -41,18 +53,18 @@
   padding-bottom: 0;
 }
 
-.popup
+.popup.model-popup.forModel
   .popup-wrapper
   .popup-body
   .inner-body-model
   .popup-body-innerbox:last-child {
   padding-top: 60px;
-  padding-bottom: 100px;
+  padding-bottom: 0;
   border-bottom: 0;
 }
 
 /* 팝업에 표시할 컨텐츠가 하나일 때(.popup-body-innerbox가 하나일 때 시작*/
-.popup
+.popup.model-popup.forModel
   .popup-wrapper
   .popup-body.single
   .inner-body-model
@@ -60,7 +72,7 @@
   padding-top: 0;
 }
 
-.popup
+.popup.model-popup.forModel
   .popup-wrapper
   .popup-body.single
   .inner-body-model
@@ -70,7 +82,11 @@
 }
 /* 팝업에 표시할 컨텐츠가 하나일 때(.popup-body-innerbox가 하나일 때 끝*/
 
-.popup .popup-wrapper .popup-body .inner-body-model .wrap-model-video {
+.popup.model-popup.forModel
+  .popup-wrapper
+  .popup-body
+  .inner-body-model
+  .wrap-model-video {
   max-width: 1120px;
   height: 630px;
   max-height: 100%;
@@ -83,11 +99,17 @@
   background-size: cover;
 }
 
-.popup .popup-wrapper .popup-body .inner-body-model .wrap-model-video button {
+.popup.model-popup.forModel
+  .popup-wrapper
+  .popup-body
+  .inner-body-model
+  .wrap-model-video
+  button {
   margin: 0 auto;
   display: block;
 }
-.popup
+
+.popup.model-popup.forModel
   .popup-wrapper
   .popup-body
   .inner-body-model
@@ -98,7 +120,7 @@
   height: 200px;
 }
 
-.popup .popup-wrapper .popup-body .inner-body-model .container-desc {
+.popup.forModel .popup-wrapper .popup-body .inner-body-model .container-desc {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -106,7 +128,16 @@
   padding: 24px 0 60px;
 }
 
-.popup
+.popup.forModel
+  .popup-wrapper
+  .popup-body
+  .inner-body-model
+  .popup-body-innerbox:last-child
+  .container-desc {
+  padding: 24px 0 0;
+}
+
+.popup.model-popup.forModel
   .popup-wrapper
   .popup-body
   .inner-body-model
@@ -116,7 +147,13 @@
   flex-direction: column;
   gap: 12px;
 }
-.popup .popup-wrapper .popup-body .inner-body-model .container-desc .desc-note {
+
+.popup.model-popup.forModel
+  .popup-wrapper
+  .popup-body
+  .inner-body-model
+  .container-desc
+  .desc-note {
   font-family: "Hyundai Sans Text";
   font-size: 12px;
   font-style: normal;
@@ -124,7 +161,8 @@
   line-height: 140%; /* 16.8px */
   color: #555;
 }
-.popup
+
+.popup.model-popup.forModel
   .popup-wrapper
   .popup-body
   .inner-body-model
@@ -135,25 +173,37 @@
   font-size: 20px;
 }
 
-.popup .popup-wrapper .popup-body .inner-body-model .wrap-desc.lg {
+.popup.model-popup.forModel
+  .popup-wrapper
+  .popup-body
+  .inner-body-model
+  .wrap-desc.lg {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
-.popup .popup-wrapper .popup-body .inner-body-model .wrap-desc.sm {
+.popup.model-popup.forModel
+  .popup-wrapper
+  .popup-body
+  .inner-body-model
+  .wrap-desc.sm {
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
 
-.popup .popup-wrapper .popup-body .inner-body-model .wrap-desc.none {
+.popup.model-popup.forModel
+  .popup-wrapper
+  .popup-body
+  .inner-body-model
+  .wrap-desc.none {
   display: flex;
   flex-direction: column;
   gap: 0;
 }
 
-.popup
+.popup.model-popup.forModel
   .popup-wrapper
   .popup-body
   .inner-body-model
@@ -164,7 +214,7 @@
   gap: 0;
 }
 
-.popup
+.popup.model-popup.forModel
   .popup-wrapper
   .popup-body
   .inner-body-model
@@ -182,7 +232,7 @@
     height: 100vh;
   }
 
-  .popup .popup-wrapper .popup-header {
+  .popup.model-popup.forModel .popup-wrapper .popup-header {
     padding: 16px 24px;
     /* border-bottom: 0; */
   }
@@ -190,65 +240,59 @@
   .popup .popup-wrapper .popup-header .inner-header-txt {
     padding-right: 35px;
   }
-  /* 
-  .popup .popup-wrapper .popup-body .inner-body-model:before {
-    content: "";
-    width: 100%;
-    height: 1px;
-    background: #787d80;
-    position: fixed;
-    top: 5.6rem;
-    left: 0;
-  } */
+
   .popup.model-popup.forModel .popup-wrapper {
     height: 100vh;
   }
+
   .popup.model-popup.forModel .popup-wrapper .popup-header {
     position: sticky;
     width: 100%;
   }
 
   .popup.model-popup.forModel .popup-wrapper .popup-body {
-    /* padding: 40px 24px 160px;
-    max-height: calc(100vh - 120px); */
-
-    /* padding: 40px 24px 0;
-    max-height: 100vh; */
+    max-height: calc(100% - 60px);
+    padding: 40px 24px 0;
   }
 
-  .popup.model-popup.forModel .popup-wrapper .popup-body {
-    /* padding: 40px 24px 0;
-    max-height: 100vh; */
-    padding: 40px 24px 60px;
-    max-height: 100%;
-  }
-
-  .popup.model-popup .popup-wrapper .popup-body .inner-body-model {
+  .popup.model-popup.forModel .popup-wrapper .popup-body .inner-body-model {
     max-height: 100%;
     padding: 0 0px 100px;
     gap: 36px;
   }
 
-  .popup .popup-wrapper .popup-body .inner-body-model {
+  .popup.model-popup.forModel .popup-wrapper .popup-body .inner-body-model {
     padding: 40px 0 100px;
     gap: 36px;
     display: grid;
   }
 
-  .popup .popup-wrapper .popup-body .inner-body-model .type01 {
+  .popup.model-popup.forModel
+    .popup-wrapper
+    .popup-body
+    .inner-body-model
+    .type01 {
     padding: 40px 24px 100px;
     gap: 36px;
   }
 
-  .popup .popup-wrapper .popup-body .inner-body-model .type02 {
+  .popup.model-popup.forModel
+    .popup-wrapper
+    .popup-body
+    .inner-body-model
+    .type02 {
     padding: 28px 24px 100px;
     gap: 36px;
   }
-  .popup .popup-wrapper .popup-body .inner-body-model .wrap-model-video {
+  .popup.model-popup.forModel
+    .popup-wrapper
+    .popup-body
+    .inner-body-model
+    .wrap-model-video {
     max-height: 256px;
     height: 175px;
   }
-  .popup
+  .popup.model-popup.forModel
     .popup-wrapper
     .popup-body
     .inner-body-model
@@ -259,16 +303,24 @@
     height: 100px;
   }
 
-  .popup .popup-wrapper .popup-body .inner-body-model .popup-body-innerbox {
+  .popup.model-popup.forModel
+    .popup-wrapper
+    .popup-body
+    .inner-body-model
+    .popup-body-innerbox {
     padding: 0;
     border-bottom: 1px solid #bbbbbb;
   }
 
-  .popup .popup-wrapper .popup-body .inner-body-model .container-desc {
+  .popup.model-popup.forModel
+    .popup-wrapper
+    .popup-body
+    .inner-body-model
+    .container-desc {
     padding: 24px 0 36px;
   }
 
-  .popup
+  .popup.model-popup.forModel
     .popup-wrapper
     .popup-body
     .inner-body-model
@@ -276,7 +328,8 @@
     .container-desc {
     padding: 24px 0 0;
   }
-  .popup
+
+  .popup.model-popup.forModel
     .popup-wrapper
     .popup-body
     .inner-body-model
@@ -285,7 +338,7 @@
     padding-bottom: 0;
   }
 
-  .popup
+  .popup.model-popup.forModel
     .popup-wrapper
     .popup-body
     .inner-body-model
@@ -295,7 +348,7 @@
     border-bottom: 0;
   }
 
-  .popup
+  .popup.model-popup.forModel
     .popup-wrapper
     .popup-body
     .inner-body-model
@@ -305,7 +358,11 @@
     font-size: 24px;
   }
 
-  .popup .popup-wrapper .popup-body .inner-body-model .wrap-desc.lg {
+  .popup.model-popup.forModel
+    .popup-wrapper
+    .popup-body
+    .inner-body-model
+    .wrap-desc.lg {
     gap: 12px;
   }
 }
