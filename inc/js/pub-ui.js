@@ -821,6 +821,37 @@ function DropdownFooter() {
 // 드롭다운(아코디언) 02 끝
 // 드롭다운(아코디언), 필터 컴포넌트 끝
 
+// 모델 팝업 내 동영상 제어 함수 시작
+document.addEventListener("DOMContentLoaded", () => {
+  function ControlVideo() {
+    const videoBtn = document.querySelector(".btn-model-play");
+    const video = document.querySelector("video");
+
+    if (videoBtn) {
+      videoBtn.addEventListener("click", () => {
+        if (video.paused) {
+          video.play();
+          videoBtn.style.opacity = "0";
+        } else {
+          video.pause();
+          videoBtn.style.opacity = "1";
+        }
+      });
+
+      video.addEventListener("pause", () => {
+        videoBtn.style.opacity = "1";
+      });
+
+      video.addEventListener("play", () => {
+        videoBtn.style.opacity = "0";
+      });
+    }
+  }
+
+  ControlVideo();
+});
+// 모델 팝업 내 동영상 제어 함수 끝
+
 // 푸터 스크롤 탑
 $(".footer-top-btn").click(() => {
   $("html, body").animate({ scrollTop: 0 }, 500);
@@ -970,11 +1001,17 @@ function perforSlideMoveFun() {
           _$this.mousedown = true;
         } else if (e.keyCode === 37) {
           e.preventDefault();
-          _boxWid = parseInt(_$moveBtn.css("right"), 10) < _center ? _center + "px" : _maxWid - _margin + "px";
+          _boxWid =
+            parseInt(_$moveBtn.css("right"), 10) < _center
+              ? _center + "px"
+              : _maxWid - _margin + "px";
           tPosition(_boxWid, _delayTime);
         } else if (e.keyCode === 39) {
           e.preventDefault();
-          _boxWid = parseInt(_$moveBtn.css("right"), 10) > _center ? _center + "px" : _margin + "px";
+          _boxWid =
+            parseInt(_$moveBtn.css("right"), 10) > _center
+              ? _center + "px"
+              : _margin + "px";
 
           tPosition(_boxWid, _delayTime);
         }
@@ -1042,3 +1079,7 @@ function perforSlideMoveFun() {
   }
 }
 // [Start] : MD010301t01 > 기획서 v0.18 p.68 AS-IS과 동일한 슬라이드 기능 적용 (AS-IS 그대로 사용 / 클래스만 변경)
+
+// video s
+
+// video e
