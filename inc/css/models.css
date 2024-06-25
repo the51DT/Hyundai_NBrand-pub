@@ -75,13 +75,13 @@
   font-weight: 700;
   line-height: 85px;
 }
-.models-wrap .text-strong-md {
+.models-wrap .text-strong-xs {
   font-family: "Hyundai Sans Head";
   font-size: 24px;
   font-weight: 700;
   line-height: 33.6px;
 }
-.models-wrap .text-strong-xs {
+.models-wrap .text-strong-md {
   font-family: "Hyundai Sans Head";
   font-size: 32px;
   font-weight: 700;
@@ -105,17 +105,23 @@
   font-weight: 500;
   line-height: 22.4px;
 }
+.models-wrap .text-col .text-strong,
+.models-wrap .text-col .text-normal {
+  width: 83%;
+}
+.models-wrap .max1440-poster .text-col .text-strong,
+.models-wrap .max1440-poster .text-col .text-normal {
+  width: 100%;
+}
+.models-wrap .text-col .text-strong:not(.txt-left),
+.models-wrap .text-col .text-normal:not(.txt-left) {
+  margin: auto;
+}
 .models-wrap .text-col .text-strong + .text-normal {
   margin-top: 20px;
 }
-.models-wrap .text-col .text-strong-s + .text-normal-s {
-  margin-top: 20px;
-}
-.models-wrap .text-col .text-strong-xs + .text-normal-xs {
+.models-wrap .text-strong-md + .text-normal-xs {
   margin-top: 4px;
-}
-.models-wrap dt.text-strong-xs + dd.text-normal-xs {
-  margin-top: 8px;
 }
 .models-wrap .models-full {
   padding: 240px 80px 0;
@@ -191,6 +197,21 @@
   background-size: cover;
   position: relative;
 }
+.models-wrap .perfor-wrap .models-full.veloster_n {
+  background: url(../../inc/images/Models/VELOSTER_N/VELOSTER_N_performance_bg.png) center bottom no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.models-wrap .perfor-wrap .models-full.veloster_n_new {
+  background: url(../../inc/images/Models/VELOSTER_N_new/VELOSTER_N_new_performance_bg.png) center bottom no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.models-wrap .perfor-wrap .models-full.kona_n {
+  background: url(../../inc/images/Models/kona_N/kona_N_performance_bg.png) center bottom no-repeat;
+  background-size: cover;
+  position: relative;
+}
 .models-wrap .models-full .text-strong,
 .models-wrap .models-full .text-normal {
   color: #fff;
@@ -251,23 +272,26 @@
   padding: 80px 80px 0;
   margin-bottom: 240px;
 }
+.models-wrap .models-nofull.type3 {
+  margin-bottom: 0;
+}
 .models-wrap .models-nofull .max1440 {
   display: flex;
   flex-direction: column;
   gap: 200px;
 }
-.models-wrap .models-full .max1440 > .text-col {
+/* .models-wrap .models-nofull .max1440 > .text-col {
   width: 83%;
-}
+} */
 .models-wrap .max1440.type2 .max1440-col {
   display: flex;
   flex-direction: column;
   gap: 80px;
 }
-.models-wrap .max1440.type2 .row-img {
+.models-wrap .max1440 .row-img {
   display: flex;
 }
-.models-wrap .max1440.type2 .row-img img {
+.models-wrap .max1440 .row-img img {
   width: 50%;
 }
 .models-wrap .max1440 .max1440-poster {
@@ -342,6 +366,9 @@
 .models-wrap .models-cardbox > div p {
   padding: 0 16px;
 }
+.models-wrap .related-wrap .models-cardbox > div p {
+  padding: 0;
+}
 .models-wrap .models-cardbox.w30 > div {
   gap: 24px;
   flex: 0 0 calc(100% / 3 - 16px);
@@ -364,6 +391,9 @@
 }
 .models-wrap [class*="type-col"].type-col5 > img + div {
   margin-top: 40px;
+}
+.models-wrap .type-col .row-img {
+  margin-top: 80px;
 }
 .models-wrap img + .tech-des {
   margin-top: 40px;
@@ -428,17 +458,53 @@
   background-size: cover;
   position: relative;
 }
+.models-wrap .desgin-wrap .models-full.show_car {
+  background: url(../../inc/images/Models/ShowCar/ShowCar_design_bg.png) center bottom no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.models-wrap .desgin-wrap .models-full.veloster_n_new {
+  background: url(../../inc/images/Models/VELOSTER_N_new/VELOSTER_N_new_design_bg.png) center bottom no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.models-wrap .desgin-wrap .models-full.kona_n {
+  background: url(../../inc/images/Models/kona_N/kona_N_design_bg.png) center bottom no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.models-wrap .tech-wrap .kona-tech {
+  background-color: #000;
+  padding-bottom: 240px;
+  color: #fff;
+}
+.models-wrap .tech-wrap .kona-tech-box {
+  display: flex;
+  gap: 24px;
+}
+.models-wrap .tech-wrap .kona-tech-box > div {
+  flex: 0 0 calc(50% - 12px);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.models-wrap .tech-wrap .kona-tech-box > div > div {
+  padding: 0 16px;
+}
 .models-wrap .tech-des {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
-}
-.models-wrap .tech-des.type2 {
   gap: 40px 24px;
+}
+.models-wrap .tech-des.type3 {
+  gap: 24px;
 }
 .models-wrap .tech-des > div {
   flex: 0 0 calc(50% - 12px);
   padding: 0 16px;
+}
+.models-wrap .tech-des.type3 > div {
+  flex: 0 0 calc(100% / 3 - 16px);
 }
 .models-wrap .tech-des > .num-desbox {
   display: flex;
@@ -551,6 +617,34 @@
 .models-wrap .related-wrap .models-cardbox.w30 .text-strong-md {
   padding: 0;
 }
+.models-wrap .kona-notice-wrap {
+  padding: 160px 80px;
+  background-color: #000;
+  color: #fff;
+}
+.models-wrap .kona-notice-wrap .max1440 {
+  align-items: flex-start;
+  gap: 20px;
+}
+.models-wrap .kona-notice-wrap ul {
+  width: 83%;
+  padding-left: 16px;
+}
+.models-wrap .kona-notice-wrap ul li {
+  position: relative;
+}
+.models-wrap .kona-notice-wrap ul li::before {
+  position: absolute;
+  content: "";
+  width: 4px;
+  height: 4px;
+  background-color: #fff;
+  margin-top: 15px;
+  left: -16px;
+}
+.models-wrap .kona-notice-wrap ul li + li {
+  margin-top: 20px;
+}
 @media screen and (max-width: 1023px) {
   .models-wrap .full-1938 {
     height: 1333px;
@@ -569,6 +663,21 @@
   }
   .models-wrap .mo-full-1598 {
     height: 1598px;
+  }
+  .models-wrap .mo-full-1643 {
+    height: 1643px;
+  }
+  .models-wrap .mo-full-1863 {
+    height: 1863px;
+  }
+  .models-wrap .mo-full-1742 {
+    height: 1742px;
+  }
+  .models-wrap .mo-full-1400 {
+    height: 1400px;
+  }
+  .models-wrap .mo-full-1415 {
+    height: 1415px;
   }
   .models-wrap .content-item02 video {
     height: 480px;
@@ -589,14 +698,15 @@
   .models-wrap .max1440.type2 .max1440 {
     gap: 44px;
   }
-  .models-wrap .max1440.type2 .row-img {
+  .models-wrap .max1440 .row-img {
     flex-wrap: wrap;
   }
-  .models-wrap .max1440.type2 .row-img img {
+  .models-wrap .max1440 .row-img img {
     width: 100%;
   }
   .models-wrap .max1440 .max1440-poster {
     position: static;
+    gap: 28px;
   }
   .models-wrap .max1440 .max1440-poster .text-col {
     position: static;
@@ -660,6 +770,14 @@
     font-weight: 500;
     line-height: 22.4px;
   }
+  .models-wrap .text-col .text-strong,
+  .models-wrap .text-col .text-normal {
+    width: 100%;
+  }
+  .models-wrap .text-col .text-strong:not(.txt-left),
+  .models-wrap .text-col .text-normal:not(.txt-left) {
+    text-align: center;
+  }
   .models-wrap .models-full {
     padding: 152px 24px 0;
   }
@@ -719,10 +837,6 @@
   .models-wrap .models-nofull {
     padding: 152px 24px 0;
     margin-bottom: 152px;
-  }
-  .models-wrap .models-nofull.type2 {
-    padding: 80px 80px 0;
-    margin-bottom: 240px;
   }
   .models-wrap .models-nofull .max1440 {
     gap: 120px;
@@ -807,7 +921,6 @@
   .models-wrap .models-cardbox > div img {
     height: fit-content;
   }
-
   .models-wrap .models-cardbox.w30 + .btn-wrap {
     margin-top: 44px;
   }
@@ -827,9 +940,30 @@
   .models-wrap [class*="type-col"].type-col5 > img + div {
     margin-top: 28px;
   }
+  .models-wrap .type-col .row-img {
+    margin-top: 0;
+  }
   .models-wrap .models-nofull.type2 {
     padding: 44px 24px 0;
     margin-bottom: 152px;
+  }
+  .models-wrap .models-nofull.type3 {
+    padding: 120px 24px 0;
+    margin-bottom: 0;
+  }
+  .models-wrap .tech-wrap .kona-tech {
+    padding-bottom: 152px;
+  }
+  .models-wrap .tech-wrap .kona-tech-box {
+    gap: 44px;
+    flex-direction: column;
+  }
+  .models-wrap .tech-wrap .kona-tech-box > div {
+    flex: 0 0 100%;
+    gap: 28px;
+  }
+  .models-wrap .tech-wrap .kona-tech-box > div > div {
+    padding: 0;
   }
   .models-wrap .tech-des,
   .models-wrap .tech-des.type2 {
@@ -837,9 +971,15 @@
     flex-wrap: wrap;
     gap: 0;
   }
+  .models-wrap .tech-des.type3 {
+    gap: 0;
+  }
   .models-wrap .tech-des > div {
     flex: 0 0 100%;
     padding: 0;
+  }
+  .models-wrap .tech-des.type3 > div {
+    flex: 0 0 100%;
   }
   .models-wrap .tech-des.type2 .perfor-num {
     font-size: 18px;
@@ -930,5 +1070,29 @@
   }
   .models-wrap .gallery-wrap .max1440 {
     padding: 0 24px 44px;
+  }
+  .models-wrap .kona-notice-wrap {
+    padding: 100px 24px;
+  }
+  .models-wrap .kona-notice-wrap .max1440 {
+    gap: 12px;
+  }
+  .models-wrap .kona-notice-wrap ul {
+    width: 100%;
+  }
+  .models-wrap .kona-notice-wrap ul li {
+    position: relative;
+  }
+  .models-wrap .kona-notice-wrap ul li::before {
+    position: absolute;
+    content: "";
+    width: 4px;
+    height: 4px;
+    background-color: #fff;
+    margin-top: 11px;
+    left: -16px;
+  }
+  .models-wrap .kona-notice-wrap ul li + li {
+    margin-top: 12px;
   }
 }
