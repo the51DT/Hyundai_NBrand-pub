@@ -302,8 +302,8 @@
     .popup-body
     .inner-body-model
     .wrap-model-video {
-    max-height: 256px;
-    height: 175px;
+    height: 256px;
+    /* height: 175px; */
   }
   .popup.model-popup.forModel
     .popup-wrapper
@@ -376,7 +376,7 @@
     .container-desc
     .wrap-desc
     .tit-type04 {
-    font-size: 24px;
+    /* font-size: 24px; */
   }
 
   .popup.model-popup.forModel
@@ -417,6 +417,14 @@
 
   .popup-wrapper .popup-header .ellip.small {
     width: 100%;
+  }
+
+  .popup.model-popup.forModel
+    .popup-wrapper
+    .popup-body
+    .inner-body-model
+    .wrap-model-video {
+    height: 441px;
   }
 }
 

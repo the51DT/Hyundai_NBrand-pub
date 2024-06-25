@@ -841,10 +841,11 @@
 
 .popup-wrapper .btn-wrap button.btn-only-icon-notbg.pop-close.pop-page {
   position: absolute;
-  top: 0;
+  top: 28px;
   right: 35px;
   bottom: calc(100% - 105px);
   z-index: 1000;
+  height: fit-content;
 }
 
 /* 팝업 좌우 슬라이드 버튼 (mypage)  */
@@ -2636,7 +2637,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
 
   .popup-wrapper .popup-body.height-longer-mobile {
     /* mission, reward popup in nfluencer, mypost popup in mypage */
-    max-height: calc(100vh - 220px);
+    max-height: calc(100vh - 190px);
     z-index: 6;
   }
 
