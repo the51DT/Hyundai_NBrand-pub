@@ -144,14 +144,17 @@
 .models-wrap .perfor-wrap .models-full.icon30 {
   background: url(../../inc/images/Models/i30N/i30N_performance_bg.png) center bottom no-repeat;
   background-size: cover;
+  position: relative;
 }
 .models-wrap .perfor-wrap .models-full.icon30fast {
   background: url(../../inc/images/Models/i30NFastbackN/i30NFastbackN_performance_bg.png) center bottom no-repeat;
   background-size: cover;
+  position: relative;
 }
 .models-wrap .perfor-wrap .models-full.ioniq5N_en1 {
   background: url(../../inc/images/Models/ioniq5N_en1/ioniq5N_en1_performance_bg.png) center bottom no-repeat;
   background-size: cover;
+  position: relative;
 }
 .models-wrap .perfor-wrap .models-full.ioniq5N_ta {
   background: url(../../inc/images/Models/ioniq5N_ta/ioniq5N_ta_performance_bg.png) center bottom no-repeat;
@@ -170,6 +173,21 @@
 }
 .models-wrap .perfor-wrap .models-full.rm19 {
   background: url(../../inc/images/Models/RM19/RM19_performance_bg.png) center bottom no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.models-wrap .perfor-wrap .models-full.project_rm {
+  background: url(../../inc/images/Models/projectRM/projectRM_performance_bg.png) center bottom no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.models-wrap .perfor-wrap .models-full.vision_gt {
+  background: url(../../inc/images/Models/VisionGT/VisionGT_performance_bg.png) center bottom no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.models-wrap .perfor-wrap .models-full.rn30 {
+  background: url(../../inc/images/Models/RN30/RN30_performance_bg.png) center bottom no-repeat;
   background-size: cover;
   position: relative;
 }
@@ -252,10 +270,10 @@
 .models-wrap .max1440.type2 .row-img img {
   width: 50%;
 }
-.models-wrap .max1440.type2 .max1440-innerimg {
+.models-wrap .max1440 .max1440-poster {
   position: relative;
 }
-.models-wrap .max1440.type2 .max1440-innerimg .text-col {
+.models-wrap .max1440 .max1440-poster .text-col {
   position: absolute;
   top: 200px;
   left: 50%;
@@ -263,6 +281,10 @@
   color: #fff;
   width: 66%;
 }
+.fc-black {
+  color: #000 !important;
+}
+
 .models-wrap .models-nofull [class*="type-col"] {
   display: flex;
   flex-direction: column;
@@ -349,26 +371,32 @@
 .models-wrap .desgin-wrap .models-full.icon20 {
   background: url(../../inc/images/Models/i20N/i20N_desgin_bg.png) center bottom no-repeat;
   background-size: cover;
+  position: relative;
 }
 .models-wrap .tech-wrap .models-full.icon20 {
   background: url(../../inc/images/Models/i20N/i20N_technology_bg.png) center bottom no-repeat;
   background-size: cover;
+  position: relative;
 }
 .models-wrap .desgin-wrap .models-full.icon30 {
   background: url(../../inc/images/Models/i30N/i30N_desgin_bg.png) center bottom no-repeat;
   background-size: cover;
+  position: relative;
 }
 .models-wrap .desgin-wrap .models-full.icon30fast {
   background: url(../../inc/images/Models/i30NFastbackN/i30NFastbackN_desgin_bg.png) center bottom no-repeat;
   background-size: cover;
+  position: relative;
 }
 .models-wrap .desgin-wrap .models-full.ioniq5N_en1 {
   background: url(../../inc/images/Models/ioniq5N_en1/ioniq5N_en1_desgin_bg.png) center bottom no-repeat;
   background-size: cover;
+  position: relative;
 }
 .models-wrap .desgin-wrap .models-full.rn_22e {
   background: url(../../inc/images/Models/RN_22e/rn_22e_desgin_bg.png) center bottom no-repeat;
   background-size: cover;
+  position: relative;
 }
 .models-wrap .desgin-wrap .models-full.ioniq5n_npx1 {
   background: url(../../inc/images/Models/ioniq5N_npx1/ioniq5N_npx1_design_bg.png) center bottom no-repeat;
@@ -377,6 +405,26 @@
 }
 .models-wrap .desgin-wrap .models-full.rm20e {
   background: url(../../inc/images/Models/RM20e/RM20e_design_bg.png) center bottom no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.models-wrap .desgin-wrap .models-full.project_rm {
+  background: url(../../inc/images/Models/projectRM/projectRM_design_bg.png) center bottom no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.models-wrap .desgin-wrap .models-full.vision_gt {
+  background: url(../../inc/images/Models/VisionGT/VisionGT_design_bg.png) center bottom no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.models-wrap .desgin-wrap .models-full.rn30 {
+  background: url(../../inc/images/Models/RN30/RN30_design_bg.png) center bottom no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.models-wrap .desgin-wrap .models-full.veloster_n {
+  background: url(../../inc/images/Models/VELOSTER_N/VELOSTER_N_design_bg.png) center bottom no-repeat;
   background-size: cover;
   position: relative;
 }
@@ -547,10 +595,10 @@
   .models-wrap .max1440.type2 .row-img img {
     width: 100%;
   }
-  .models-wrap .max1440.type2 .max1440-innerimg {
+  .models-wrap .max1440 .max1440-poster {
     position: static;
   }
-  .models-wrap .max1440.type2 .max1440-innerimg .text-col {
+  .models-wrap .max1440 .max1440-poster .text-col {
     position: static;
     transform: translateX(0);
     color: #000;
