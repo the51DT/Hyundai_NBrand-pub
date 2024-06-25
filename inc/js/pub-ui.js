@@ -542,6 +542,9 @@ var pubUi = {
   },
   masonryLayout: function () {
     const masonry_item = document.querySelectorAll(".masonry_item");
+    if (masonry_item.length < 1) {
+      return;
+    }
     const row_gap = 24;
     masonry_item.forEach((el) => {
       el.style.gridRowEnd = `
