@@ -92,6 +92,10 @@ var NbrandUI = {
           openWrap.addClass("on").slideDown(200);
           NbrandUI.mdimdOn();
           break;
+        case "popup club-info-popup bottom-popup":
+          openWrap.addClass("on").slideDown(200);
+          NbrandUI.dimdOn();
+          $(".dimmed").addClass(openmodalData).css("z-index", 1002);
         default:
           openWrap.addClass("on").fadeIn(200);
           break;

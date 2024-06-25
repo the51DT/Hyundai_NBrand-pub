@@ -841,10 +841,11 @@
 
 .popup-wrapper .btn-wrap button.btn-only-icon-notbg.pop-close.pop-page {
   position: absolute;
-  top: 0;
+  top: 28px;
   right: 35px;
   bottom: calc(100% - 105px);
   z-index: 1000;
+  height: fit-content;
 }
 
 /* 팝업 좌우 슬라이드 버튼 (mypage)  */
@@ -1363,6 +1364,106 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
   align-items: center;
   justify-content: space-between;
   grid-template-columns: auto 1fr;
+}
+
+/* EP040201P01 이중 팝업 */
+
+.club-info-popup {
+  position: relative;
+  background: #fff;
+  width: calc(100% - 62px);
+  z-index: 1001;
+  top: 60px;
+  left: 50%;
+  border-radius: 4px;
+  display: none;
+}
+
+.popup.club-info-popup.bottom-popup .pop-wrap {
+  position: relative;
+  left: -12rem;
+  position: absolute;
+  width: 100%;
+  background: #fff;
+  top: -4.5rem;
+  border: 1px solid;
+}
+
+.club-info-popup .popup-wrapper {
+  max-width: 100%;
+}
+.club-info-popup .popup-wrapper .popup-header.pop-profile_wrap {
+  padding: 16px;
+  justify-content: space-between;
+  border-bottom: 0;
+}
+.club-info-popup .popup-wrapper .popup-header.pop-profile_wrap .pop-profile {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.club-info-popup
+  .popup-wrapper
+  .popup-header.pop-profile_wrap
+  .pop-profile
+  img {
+  width: 40px;
+  height: 40px;
+}
+.club-info-popup .pop-profile_club {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 19.6px;
+}
+.club-info-popup .popup-wrapper .popup-body {
+  padding: 0;
+  border-top: 0;
+  display: block;
+  max-height: 100%;
+}
+.club-info-popup .popup-wrapper .popup-body .pop-gray {
+  padding: 24px; /* tooltip 호버영역 잡기 위해 */
+  display: flex;
+  gap: 24px;
+  background-color: #f0f0f0;
+}
+.club-info-popup .popup-wrapper .popup-body .pop-gray > div {
+  width: calc(100% / 3);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.club-info-popup .popup-wrapper .popup-body .pop-gray > div p:first-child {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 19.6px;
+}
+.club-info-popup .popup-wrapper .popup-body .pop-gray > div p:nth-child(2) {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+}
+.club-info-popup .popup-wrapper .popup-body .pop-des {
+  padding: 20px 16px 0;
+}
+.club-info-popup .popup-wrapper .popup-body .pop-des p {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 19.6px;
+}
+.club-info-popup .popup-wrapper .popup-body .btn-wrap {
+  padding: 20px 16px 0;
+}
+.club-info-popup .popup-wrapper .popup-footer {
+  border-top: 0;
+  padding: 16px 0;
+  margin-top: 42px;
+}
+.club-info-popup .popup-wrapper .popup-footer .btn:not(.pop-close) {
+  order: 1;
+}
+.club-info-popup .popup-wrapper .popup-footer .btn.pop-close {
+  order: 0;
 }
 
 /* popup reward, mission
@@ -2493,8 +2594,12 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
   }
 
   .popup-wrapper .btn-wrap button.btn-only-icon-notbg.pop-close.pop-page {
-    top: 0;
+    /* top: 0; */
     right: 24px;
+
+    top: 12px;
+    right: 24px;
+    height: fit-content;
   }
   .popup-wrapper button.btn-only-icon-notbg.pop-close.pop-page {
     right: 24px;
@@ -2504,6 +2609,8 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
   }
   .popup-wrapper button.btn-only-icon-notbg.pop-close.pop-page span.icon-close {
     width: 100%;
+    top: 0;
+    position: relative;
   }
 
   .popup-wrapper
@@ -2530,7 +2637,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
 
   .popup-wrapper .popup-body.height-longer-mobile {
     /* mission, reward popup in nfluencer, mypost popup in mypage */
-    max-height: calc(100vh - 220px);
+    max-height: calc(100vh - 190px);
     z-index: 6;
   }
 
@@ -2543,7 +2650,15 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
     bottom: 0%;
     position: fixed;
     width: 100%;
-    z-index: 6;
+    z-index: 5;
+  }
+
+  .popup.club-info-popup.bottom-popup {
+    z-index: 1005;
+    position: fixed;
+    top: auto;
+    left: auto;
+    width: 100%;
   }
 
   .popup-wrapper .popup-footer.footer-no-pd {
@@ -2564,17 +2679,17 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
 
   .popup-wrapper .popup-footer + .btn-wrap {
     width: 100%;
-    height: 100vh;
+    /* height: 100vh;
     top: 17.5px;
-    position: absolute;
+    position: absolute; */
     /* z-index: 5; */
     padding: 0 24px 18px 0;
   }
 
   .popup-wrapper .wrap-navigation + .btn-wrap {
     width: 100%;
-    height: 100vh;
-    top: 16px;
+    height: fit-content;
+    top: 0;
     position: absolute;
     /* z-index: 5; */
     padding: 0 24px 18px 0;
@@ -2971,5 +3086,25 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
     span.icon-close {
     width: 24px;
     height: 24px;
+  }
+
+  /*  */
+  .popup.club-info-popup.bottom-popup .pop-wrap {
+    position: relative;
+    left: 0;
+    top: auto;
+    border: none;
+  }
+
+  .popup.club-info-popup.bottom-popup .popup-wrapper .popup-body .pop-gray {
+    gap: 20px;
+  }
+
+  .popup.club-info-popup.bottom-popup .popup-wrapper .popup-footer .btn-wrap {
+    flex: 0 0 auto;
+  }
+
+  .club-info-popup .popup-wrapper .popup-footer {
+    position: relative;
   }
 }
