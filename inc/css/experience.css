@@ -2493,8 +2493,12 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
   }
 
   .popup-wrapper .btn-wrap button.btn-only-icon-notbg.pop-close.pop-page {
-    top: 0;
+    /* top: 0; */
     right: 24px;
+
+    top: 12px;
+    right: 24px;
+    height: fit-content;
   }
   .popup-wrapper button.btn-only-icon-notbg.pop-close.pop-page {
     right: 24px;
@@ -2504,6 +2508,8 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
   }
   .popup-wrapper button.btn-only-icon-notbg.pop-close.pop-page span.icon-close {
     width: 100%;
+    top: 0;
+    position: relative;
   }
 
   .popup-wrapper
@@ -2564,17 +2570,17 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
 
   .popup-wrapper .popup-footer + .btn-wrap {
     width: 100%;
-    height: 100vh;
+    /* height: 100vh;
     top: 17.5px;
-    position: absolute;
+    position: absolute; */
     /* z-index: 5; */
     padding: 0 24px 18px 0;
   }
 
   .popup-wrapper .wrap-navigation + .btn-wrap {
     width: 100%;
-    height: 100vh;
-    top: 16px;
+    height: fit-content;
+    top: 0;
     position: absolute;
     /* z-index: 5; */
     padding: 0 24px 18px 0;

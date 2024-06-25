@@ -386,6 +386,23 @@
     .wrap-desc.lg {
     gap: 12px;
   }
+
+  .popup.model-popup.forModel
+    .popup-wrapper
+    .btn-wrap
+    button.btn-only-icon-notbg.pop-close.pop-page {
+    top: 12px;
+    height: fit-content;
+    right: 24px;
+  }
+
+  .popup.model-popup.forModel
+    .popup-wrapper
+    button.btn-only-icon-notbg.pop-close.pop-page
+    span.model-closebtn.icon-close {
+    top: 0;
+    position: relative;
+  }
 }
 
 /* 이하 팝업 헤더의 제목 말줄임 처리 */
