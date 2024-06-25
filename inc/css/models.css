@@ -645,6 +645,49 @@
 .models-wrap .kona-notice-wrap ul li + li {
   margin-top: 20px;
 }
+.perfor-wrap .perfor-slide-box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.perfor-wrap .perfor-slide-box .perfor-slideimg-1 img {
+  width: 100%;
+}
+.perfor-wrap .perfor-slide-box .perfor-imgmask {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+}
+.perfor-wrap .perfor-slide-box .perfor-slideimg-2 img {
+  position: absolute;
+  right: 0;
+}
+.perfor-wrap .perfor-slide-box .mask {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  border-left: 1.5px solid #002c5f;
+}
+.perfor-wrap .perfor-slide-box .img-move-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.perfor-wrap .perfor-slide-box .img-move-btn button {
+  position: absolute;
+  bottom: 44.5%;
+  width: 48px;
+  height: 48px;
+  margin-right: -24px;
+  background: url(../../inc/images/icon/icon-btn-move.svg) no-repeat;
+  background-size: 100%;
+}
 @media screen and (max-width: 1023px) {
   .models-wrap .full-1938 {
     height: 1333px;

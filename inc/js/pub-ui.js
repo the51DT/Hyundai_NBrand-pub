@@ -604,8 +604,9 @@ $(document).ready(function () {
   $(".option-click").click(function () {
     handleOptionClick(event);
   });
-  $(window).resize(() => hasTagFun());
+  $(window).resize(() => hasTagFun(), perforSlideMoveFun());
   hasTagFun();
+  perforSlideMoveFun();
 });
 
 // [Start] : selectbox 컴포넌트
@@ -937,3 +938,109 @@ $(".configurator_header_menu").click((el) => {
   }
 });
 // [End] : configurator_header_menu 확인용 임시 스크립트
+
+// [Start] : MD010301t01 > 기획서 v0.18 p.68 AS-IS과 동일한 슬라이드 기능 적용 (AS-IS 그대로 사용 / 클래스만 변경)
+function perforSlideMoveFun() {
+  var _$this = $(this),
+    _viewType = "web",
+    _$btnBox = $(".img-move-btn"),
+    _$moveBtn = _$btnBox.find(".handler"),
+    _$maskBox = $(".mask"),
+    _$maskImg = _$maskBox.find("img"),
+    _maxWid = _$btnBox.width(),
+    _$conArea = $(".perforMaskWrap"),
+    _center = _maxWid / 2,
+    _margin = 0,
+    _delayTime = 500;
+
+  _$moveBtn.css({ right: _center });
+  _$maskBox.css({ width: _center });
+  _$maskImg.css({ width: _center * 2 });
+  _$this.mousedown = false;
+  _$this.touchstart = false;
+
+  if (document.documentElement.clientWidth == 1024) {
+    _viewType = "tablet";
+  }
+
+  evtMove();
+  function evtMove() {
+    _$moveBtn.on("mousedown keydown touchstart", function (e) {
+      if (_viewType == "web") {
+        if (e.type === "mousedown") {
+          _$btnBox.css({ "z-index": 100 });
+          _$this.mousedown = true;
+        } else if (e.keyCode === 37) {
+          e.preventDefault();
+          _boxWid = parseInt(_$moveBtn.css("right"), 10) < _center ? _center + "px" : _maxWid - _margin + "px";
+          tPosition(_boxWid, _delayTime);
+        } else if (e.keyCode === 39) {
+          e.preventDefault();
+          _boxWid = parseInt(_$moveBtn.css("right"), 10) > _center ? _center + "px" : _margin + "px";
+
+          tPosition(_boxWid, _delayTime);
+        }
+      } else {
+        if (e.type === "touchstart") {
+          _$btnBox.css({ "z-index": 100 });
+          _$this.touchstart = true;
+        }
+      }
+    });
+
+    _$btnBox.on("mousemove touchmove", function (e) {
+      e.preventDefault();
+      var _offset = $(this).offset();
+
+      if (_viewType == "web") {
+        if (_$this.mousedown) {
+          _boxWid = _maxWid - (e.clientX - _offset.left);
+          _boxWid = _boxWid < _margin ? _margin : _boxWid;
+          _boxWid = _boxWid > _maxWid - _margin ? _maxWid - _margin : _boxWid;
+
+          tPosition(_boxWid + "px", 0);
+        }
+      } else if (_viewType == "mobile" || _viewType == "tablet") {
+        if (_$this.touchstart) {
+          console.log(_offset);
+          var event = e.originalEvent,
+            _touch = event.touches[0].clientX;
+          if (_touch >= 0 && _touch <= _maxWid) {
+            _boxWid = _maxWid - _touch;
+            tPosition(_boxWid + "px", 0);
+          }
+        }
+      }
+    });
+
+    _$conArea.on("mouseup touchend", function (e) {
+      e.preventDefault();
+      if (_viewType == "web") {
+        if (_$this.mousedown) {
+          _$btnBox.css({ "z-index": 0 });
+          _$this.mousedown = false;
+        }
+      } else {
+        _$btnBox.css({ "z-index": 0 });
+        _$this.touchstart = false;
+      }
+    });
+
+    function tPosition(prev, delayTime) {
+      var _$this = $(this);
+      _$maskBox.stop(true, true).animate(
+        {
+          width: prev,
+        },
+        delayTime
+      );
+      _$moveBtn.stop(true, true).animate(
+        {
+          right: prev,
+        },
+        delayTime
+      );
+    }
+  }
+}
+// [Start] : MD010301t01 > 기획서 v0.18 p.68 AS-IS과 동일한 슬라이드 기능 적용 (AS-IS 그대로 사용 / 클래스만 변경)
