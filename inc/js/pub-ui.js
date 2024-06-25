@@ -717,6 +717,8 @@ dropdownBtns.forEach((button) => {
       button.parentElement.querySelector(".icon-down-wh");
 
     button.setAttribute("aria-expanded", String(!isExpanded));
+    dropdownMenu.setAttribute("aria-hidden", String(isExpanded));
+
     dropdownMenu.classList.toggle("dropdown-on", !isExpanded);
     btnRightArr.classList.toggle("rotate", !isExpanded);
 
@@ -727,10 +729,6 @@ dropdownBtns.forEach((button) => {
       ".dropdown.centered .wrap-dropdown-selected"
     ); // 필터 컴포넌트: 선택 버튼
     const detectCase3 = dropdownMenu.classList.contains("stay"); // 메뉴 눌러도 안 닫히게
-
-    if (!isExpanded) {
-      dropdownMenu.setAttribute("aria-hidden", "true");
-    }
 
     if (detectCase1 && !detectCase2) {
       if (!detectCase3) {
