@@ -113,7 +113,7 @@
 }
 .models-wrap .text-col .text-strong,
 .models-wrap .text-col .text-normal {
-  width: 83%;
+  width: 83.06%;
 }
 .models-wrap .models-full .max1440 .text-col {
   width: 68%;
@@ -137,7 +137,7 @@
   margin-top: 4px;
 }
 .models-wrap .models-full {
-  padding: 240px 80px 0;
+  padding: 240px 0 0;
 }
 /* bg 에 맞는 배경 및 높이 조절은 클래스 변경하기 */
 .models-wrap .full-1938 {
@@ -679,6 +679,7 @@
   position: relative;
   width: 100%;
   height: 100%;
+  max-width: 1440px;
 }
 .perfor-wrap .perfor-slide-box .perfor-slideimg-1 img {
   width: 100%;
@@ -1174,5 +1175,13 @@
   }
   .models-wrap .kona-notice-wrap ul li + li {
     margin-top: 12px;
+  }
+  .perfor-wrap .perfor-slide-box {
+    max-width: 100%;
+  }
+  .perfor-wrap .perfor-slide-box .img-move-btn button {
+    width: 42px;
+    height: 42px;
+    margin-right: -21px;
   }
 }
