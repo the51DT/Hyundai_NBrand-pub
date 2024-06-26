@@ -240,8 +240,9 @@
   button:hover
   > img {
   transition: 0.3s all ease;
-  opacity: 0.8;
+  opacity: 0.9;
 }
+
 .popup.model-popup.forModel
   .popup-wrapper
   .popup-body
