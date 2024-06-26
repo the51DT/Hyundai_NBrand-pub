@@ -824,33 +824,47 @@ function DropdownFooter() {
 // 모델 팝업 내 동영상 제어 함수 시작
 document.addEventListener("DOMContentLoaded", () => {
   function ControlVideo() {
-    const videoBtn = document.querySelectorAll(".btn-model-play");
-    const video = document.querySelectorAll("video");
+    const videoBtn = document.querySelectorAll(
+      ".popup .wrap-model-video .btn-model-play"
+    );
+    const video = document.querySelectorAll(".popup video");
 
     videoBtn.forEach((btn, indexx) => {
-      const namba = video[indexx];
-      const nambab = videoBtn[indexx];
+      const eachVideos = video[indexx];
+      const eachPlayBtns = videoBtn[indexx];
 
       btn.addEventListener("click", () => {
-        namba.paused ? playVideo(namba, nambab) : pauseVideo(namba, nambab);
+        eachVideos.paused
+          ? playVideo(eachVideos, eachPlayBtns)
+          : pauseVideo(eachVideos, eachPlayBtns);
       });
 
-      namba.addEventListener("pause", () => {
-        nambab.style.opacity = "1";
+      eachVideos.addEventListener("pause", () => {
+        setTimeout(() => {
+          eachPlayBtns.style.opacity = "1";
+        }, 300);
       });
 
-      namba.addEventListener("play", () => {
-        nambab.style.opacity = "0";
+      eachVideos.addEventListener("play", () => {
+        eachPlayBtns.style.opacity = "0";
       });
 
-      // 팝업이 닫혔을 때 영상 정지 + 초기화 처리
+      // 모델 팝업이 닫혔을 때 스크롤, 영상 초기화 처리
       const popCloseBtn = document.querySelector(
         ".popup-wrapper .btn-wrap button.btn-only-icon-notbg.pop-close"
       );
+      const modall = document.querySelector(
+        ".popup.model-popup.forModel .popup-body"
+      );
+
       popCloseBtn.addEventListener("click", () => {
         {
-          namba.played ? namba.pause() : null;
+          eachVideos.paused ? null : resetVideo(eachVideos);
         }
+
+        setTimeout(() => {
+          modall.scrollTop = 0;
+        }, 10);
       });
     });
 
@@ -862,6 +876,11 @@ document.addEventListener("DOMContentLoaded", () => {
     function pauseVideo(video, button) {
       video.pause();
       button.style.opacity = "1";
+    }
+
+    function resetVideo(video) {
+      video.pause();
+      video.currentTime = 0;
     }
   }
 
