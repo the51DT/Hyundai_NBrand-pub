@@ -824,27 +824,44 @@ function DropdownFooter() {
 // 모델 팝업 내 동영상 제어 함수 시작
 document.addEventListener("DOMContentLoaded", () => {
   function ControlVideo() {
-    const videoBtn = document.querySelector(".btn-model-play");
-    const video = document.querySelector("video");
+    const videoBtn = document.querySelectorAll(".btn-model-play");
+    const video = document.querySelectorAll("video");
 
-    if (videoBtn) {
-      videoBtn.addEventListener("click", () => {
-        if (video.paused) {
-          video.play();
-          videoBtn.style.opacity = "0";
-        } else {
-          video.pause();
-          videoBtn.style.opacity = "1";
+    videoBtn.forEach((btn, indexx) => {
+      const namba = video[indexx];
+      const nambab = videoBtn[indexx];
+
+      btn.addEventListener("click", () => {
+        namba.paused ? playVideo(namba, nambab) : pauseVideo(namba, nambab);
+      });
+
+      namba.addEventListener("pause", () => {
+        nambab.style.opacity = "1";
+      });
+
+      namba.addEventListener("play", () => {
+        nambab.style.opacity = "0";
+      });
+
+      // 팝업이 닫혔을 때 영상 정지 + 초기화 처리
+      const popCloseBtn = document.querySelector(
+        ".popup-wrapper .btn-wrap button.btn-only-icon-notbg.pop-close"
+      );
+      popCloseBtn.addEventListener("click", () => {
+        {
+          namba.played ? namba.pause() : null;
         }
       });
+    });
 
-      video.addEventListener("pause", () => {
-        videoBtn.style.opacity = "1";
-      });
+    function playVideo(video, button) {
+      video.play();
+      button.style.opacity = "0";
+    }
 
-      video.addEventListener("play", () => {
-        videoBtn.style.opacity = "0";
-      });
+    function pauseVideo(video, button) {
+      video.pause();
+      button.style.opacity = "1";
     }
   }
 
