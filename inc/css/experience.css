@@ -1166,6 +1166,22 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
   align-items: center;
 }
 
+.popup-body-innerbox .wrap-form.attach .attach-box {
+  background: url("../../inc/images/img/img_upload_image.png") no-repeat;
+  width: 94px;
+  height: 94px;
+  background-size: cover;
+  margin-right: 1rem;
+}
+
+.popup-body-innerbox .wrap-form.attach .upload-btn {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  height: 100%;
+}
 .popup-con
   .wrap-form.attach
   .wrap-form-bottom.comment-type04
@@ -2600,11 +2616,6 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
     position: relative;
   }
 
-  .popup button.btn-only-icon-notbg.pop-close span.model-closebtn.icon-close {
-    top: 16px;
-    position: relative;
-  }
-
   .popup-wrapper .label-box h1 {
     font-size: 24px;
   }
@@ -2749,12 +2760,14 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
     align-self: stretch;
     width: 100%;
   }
+
   .popup-body-innerbox .wrap-form.attach {
     flex-direction: column;
   }
 
-  .popup-body-innerbox .wrap-form.attach .upload-btn {
-    margin-bottom: 20px;
+  .popup-body-innerbox .wrap-form.attach .attach-box {
+    margin-right: 0;
+    margin-bottom: 1rem;
   }
 
   .popup-wrapper.onlyTxt {

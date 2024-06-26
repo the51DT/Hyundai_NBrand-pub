@@ -277,7 +277,7 @@
 /* close btn formodel*/
 
 .popup.model-popup.forModel .btn-wrap button.btn-only-icon-notbg.pop-close {
-  top: 27px;
+  top: 32px;
 }
 
 @media screen and (max-width: 1023px) {
