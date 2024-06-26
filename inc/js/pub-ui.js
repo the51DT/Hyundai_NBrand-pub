@@ -6,6 +6,7 @@ var pubUi = {
     self.swiperSlideEvent();
     self.masonryLayout();
     // self.videoControlerChk("");
+    self.videoBulletChk(".ty01Swiper");
   },
   settings: function () {
     var self = this;
@@ -39,23 +40,16 @@ var pubUi = {
       e.preventDefault();
       var targetSwiper = $(this).closest(".swiper");
 
-      self.videoControlerChk(targetSwiper);
-
       if ($(this).hasClass("on")) {
         console.log("정지버튼 클릭!");
-        // targetSwiper.find(".btn-play").removeClass("on");
-        // targetSwiper.find(".btn-play .visually-hidden").text("정지");
-        targetSwiper[0].swiper.autoplay.stop();
         $(this).removeClass("on");
         $(this).find(".visually-hidden").text("정지");
       } else {
         console.log("재생버튼 클릭!");
-        // targetSwiper.find(".btn-play").addClass("on");
-        // targetSwiper.find(".btn-play .visually-hidden").text("재생");
-        targetSwiper[0].swiper.autoplay.start();
         $(this).addClass("on");
         $(this).find(".visually-hidden").text("재생");
       }
+      self.videoControlerChk(targetSwiper);
     });
 
     // 스와이퍼 소리 버튼 클릭시, (★ 추후, 재생,정지 기능 추가필요함)
@@ -118,23 +112,27 @@ var pubUi = {
         $(this).attr("aria-pressed", "false");
       }
     });
+
+    $(".ty01Swiper .swiper-button-next, .ty01Swiper .swiper-button-prev").on(
+      "click",
+      function () {
+        var targetSwiper = $(this).closest(".swiper");
+        targetSwiper.find(".swiper-slide-active video")[0].pause();
+      }
+    );
   },
   swiperSlideEvent: function () {
+    console.log("스와이퍼 이벤트 진입");
+
     var self = this;
     var slideInx = 1; // 현재 슬라이드 index 체크용 변수
     var loopVal = "";
-    //const progressBar = document.querySelector(".autoplay-progress .bar");
-    const bulletActive = document.querySelector(
-      ".swiper-pagination-custom .swiper-pagination-bullet-active"
-    );
 
     var swiper1 = new Swiper(".ty01Swiper", {
       slidesPerView: 1,
       watchOverflow: true, //pagination 1개 일 경우, 숨김
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
+      initialSlide: 0,
+      loop: true,
       pagination: {
         el: ".swiper-pagination-custom",
         clickable: true,
@@ -144,33 +142,25 @@ var pubUi = {
         prevEl: ".ty01Swiper .swiper-button-prev",
       },
       on: {
-        // autoplayTimeLeft(s, time, progress) {
-        //   // progressBar.style.setProperty("--progress", 1 - progress);
-        // },
         init: function () {
-          //초기 세팅값 이미지 로딩슬라이드,
+          $(".swiper-pagination-custom .swiper-pagination-bullet").html(
+            "<div class='seek-bar'></div>"
+          );
         },
-        slideChange: function () {
-          //pubUi.videoControlerChk(".ty01Swiper");
-          var swiperActiveVideo = $(".ty01Swiper").find(
-            ".swiper-slide-active .kv-video-area video"
-          );
-          var targetBulletActive = $(
-            ".ty01Swiper .swiper-pagination-custom .swiper-pagination-bullet-active"
-          );
-          if (swiperActiveVideo.length > 0) {
-            var curTime = swiperActiveVideo[0].currentTime;
-            var duration = swiperActiveVideo[0].duration;
-            var range = (curTime / duration) * 84;
+        slideChangeTransitionStart: function () {
+          $(".ty01Swiper .swiper-slide-active video")[0].currentTime = 0;
+          $(
+            ".ty01Swiper .swiper-pagination-custom .swiper-pagination-bullet .seek-bar"
+          ).css("--time", "0");
 
-            targetBulletActive.css("--time", `${range}px`);
-            // console.log(range);
-          } else {
-            targetBulletActive.css("--time", "84px");
-          }
+          pubUi.videoBulletChk(".ty01Swiper", this.realIndex);
         },
       },
     });
+
+    // swiper1.on("init", function(){
+    //   pubUi.videoBulletChk(".ty01Swiper");
+    // })
 
     if ($(".ty02Swiper .swiper-slide").length > 3) {
       loopVal = true;
@@ -182,8 +172,10 @@ var pubUi = {
       slidesPerView: "auto",
       centeredSlides: true,
       loop: loopVal,
-      initialSlide: slideInx,
+      initialSlide: 2,
       watchOverflow: true,
+      observer: true,
+      observerParents: true,
       autoplay: {
         delay: 3000,
         disableOnInteraction: false,
@@ -206,15 +198,11 @@ var pubUi = {
           spaceBetween: 12,
         },
         1024: {
+          slidesPerView: "auto",
           spaceBetween: 80,
         },
       },
       on: {
-        autoplayTimeLeft(s, time, progress) {
-          // console.log("타임 : " + time, "progress : " + progress);
-          bulletActive.style.setProperty("--time", progress);
-          // console.log(84 * (1 - progress));
-        },
         activeIndexChange: function () {
           slideInx = this.realIndex; //현재 슬라이드 index 갱신
         },
@@ -249,11 +237,6 @@ var pubUi = {
         1024: {
           slidesPerView: 3,
           spaceBetween: 24,
-        },
-      },
-      on: {
-        autoplayTimeLeft(s, time, progress) {
-          bulletActive.style.setProperty("--time", progress);
         },
       },
     });
@@ -361,11 +344,6 @@ var pubUi = {
           spaceBetween: 24,
         },
       },
-      on: {
-        autoplayTimeLeft(s, time, progress) {
-          bulletActive.style.setProperty("--time", progress);
-        },
-      },
     });
     var swiper6 = new Swiper(".onlyOneSwiper", {
       slidesPerView: 1,
@@ -441,43 +419,90 @@ var pubUi = {
       },
     });
   },
-  videoBulletChk: function (targetSwiper) {
-    var swiperActiveVideo = targetSwiper.find(
-      ".swiper-slide-active .kv-video-area video"
-    );
-    var testWidth = swiperActiveVideo[0].currentTime;
+  videoBulletChk: function (targetSwiper, targetIdx) {
+    var slide = $(targetSwiper);
+    var slideActive = slide.find(".swiper-slide-active");
+    var playBtn = slide.find(".btn-play").hasClass("on");
+    var videoId = slideActive.find(".video").attr("id");
 
-    if (swiperActiveVideo[0].currentTime == 0) {
-    } else {
-      targetBulletActive.css("--time", testWidth);
+    if (targetIdx == undefined) {
+      targetIdx = 0;
     }
+
+    console.log("타겟인덱스: " + targetIdx + " 비디오 Id값: " + videoId);
+    //var slides = document.querySelectorAll(".ty01Swiper .swiper-slide");
+    var video = document.querySelector(`#${videoId}`);
+
+    if (slideActive) {
+      if (playBtn) {
+        video.play();
+      } else {
+        console.log("비디오 일시정지 상태 입니다.");
+        // $(".swiper-pagination-bullet-active .seek-bar").css("--time", "8px");
+      }
+    }
+
+    video.addEventListener(
+      "timeupdate",
+      function (e) {
+        var curTime = Math.floor(video.currentTime); // 현재 동영상 길이
+        var duration = Math.floor(video.duration); // 동영상 전체 길이
+        var per = Math.floor((curTime / duration) * 100); // 퍼센트 계산 값
+
+        if (per <= 100) {
+          document
+            .querySelector(".swiper-pagination-bullet-active .seek-bar")
+            .style.setProperty("--time", `${per}px`);
+          // $("#paging").css("color", "#fff");
+          // $("#paging").html("퍼센트: " + per);
+        }
+
+        if (curTime == duration) {
+          curTime = 0;
+          slide[0].swiper.slideNext();
+        }
+      },
+      false
+    );
   },
   videoControlerChk: function (targetSwiper) {
-    var swiperActiveVideo = targetSwiper.find(
-      ".swiper-slide-active .kv-video-area video"
-    );
+    var swiperActiveVideo = targetSwiper.find(".swiper-slide-active video");
     var targetBulletActive = targetSwiper.find(
-      ".swiper-pagination-custom .swiper-pagination-bullet-active"
+      ".swiper-pagination-custom .swiper-pagination-bullet-active .seek-bar"
     );
-
-    //targetBulletActive.css("--time", range);
+    // var targetBulletWidth = "";
 
     if (swiperActiveVideo.length > 0) {
       var curTime = swiperActiveVideo[0].currentTime;
       var duration = swiperActiveVideo[0].duration;
-      var range = (curTime / duration) * 84;
+      var per = (curTime / duration) * 100;
       const playBtnOn = targetSwiper.find(".btn-play").hasClass("on");
       const soundBtnOn = targetSwiper.find(".btn-sound").hasClass("on");
+      // targetBulletWidth = 0;
 
-      if (playBtnOn == true) {
-        swiperActiveVideo[0].curTime = 0;
-        swiperActiveVideo[0].pause();
-      } else {
+      if (swiperActiveVideo[0].paused) {
         swiperActiveVideo[0].play();
-        console.log("영상 재생!!!!!!!", range);
-        // targetBulletActive.css("--time", range);
-        console.dir(swiperActiveVideo[0]);
+        //console.log("영상 재생!!!!!!!");
+      } else {
+        swiperActiveVideo[0].pause();
+        //console.log("영상 정지!!!!!!!");
+        // targetBulletWidth = targetBulletActive.css("width");
+        // console.log(targetBulletWidth);
+        //targetBulletActive.css("--time", `${per}px`);
       }
+
+      // if (playBtnOn == true) {
+      //   swiperActiveVideo[0].pause();
+      //   // swiperActiveVideo[0].currentTime = 0;
+      //   targetSwiper
+      //     .closest(".swiper-pagination-bullet-active")
+      //     .css("--time", "0px");
+      // } else {
+      //   swiperActiveVideo[0].play();
+      //   console.log("영상 재생!!!!!!!");
+      //   // targetBulletActive.css("--time", range);
+      //   // console.dir(swiperActiveVideo[0]);
+      // }
     }
   },
   tabBtnEvent: function (e, tabContainer) {
@@ -588,6 +613,9 @@ var pubUi = {
         break;
     }
   },
+  windowSize: function () {
+    return $win_W >= 1024 ? false : true;
+  },
 };
 
 $(document).ready(function () {
@@ -612,6 +640,11 @@ $(document).ready(function () {
     configuratorHeader(el);
   });
   configuratorEvent();
+
+  $(".ty01Swiper .swiper-pagination-bullet").on("click", function () {
+    var targetSwiper = $(this).closest(".swiper");
+    targetSwiper.find(".swiper-slide-active video")[0].pause();
+  });
 });
 
 // [Start] : selectbox 컴포넌트
