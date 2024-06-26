@@ -274,6 +274,12 @@
 }
 /* video e */
 
+/* close btn formodel*/
+
+.popup.model-popup.forModel .btn-wrap button.btn-only-icon-notbg.pop-close {
+  top: 27px;
+}
+
 @media screen and (max-width: 1023px) {
   .popup.model-popup.forModel {
     height: 100vh;
@@ -439,18 +445,14 @@
     gap: 12px;
   }
 
-  .popup.model-popup.forModel
-    .popup-wrapper
-    .btn-wrap
-    button.btn-only-icon-notbg.pop-close.pop-page {
+  .popup.model-popup.forModel .btn-wrap button.btn-only-icon-notbg.pop-close {
     top: 12px;
     height: fit-content;
     right: 24px;
   }
 
   .popup.model-popup.forModel
-    .popup-wrapper
-    button.btn-only-icon-notbg.pop-close.pop-page
+    button.btn-only-icon-notbg.pop-close
     span.model-closebtn.icon-close {
     top: 0;
     position: relative;

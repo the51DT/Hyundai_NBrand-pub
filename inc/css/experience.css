@@ -841,7 +841,7 @@
 
 .popup .btn-wrap button.btn-only-icon-notbg.pop-close {
   position: absolute;
-  top: 32px;
+  top: 36px;
   right: 35px;
   bottom: calc(100% - 105px);
   z-index: 1000;
@@ -2587,7 +2587,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
   }
 
   .popup .btn-wrap button.btn-only-icon-notbg.pop-close {
-    top: 16px;
+    top: 18px;
     right: 24px;
     width: 24px;
     height: 24px;
@@ -3088,6 +3088,6 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
   }
 
   .track-guide-box .wrap-list.list03 .right.descwrap h2.sub-tit {
-    margin-top: 8px;    
+    margin-top: 8px;
   }
 }
