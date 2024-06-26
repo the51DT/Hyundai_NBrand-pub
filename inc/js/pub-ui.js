@@ -1042,3 +1042,66 @@ function perforSlideMoveFun() {
   }
 }
 // [Start] : MD010301t01 > 기획서 v0.18 p.68 AS-IS과 동일한 슬라이드 기능 적용 (AS-IS 그대로 사용 / 클래스만 변경)
+
+// [Start] : Models > 영상 버튼 클릭 시 재생 혹은 멈춤 작업 & 한 번 재생 후 포스터 나와야함
+function modelsVideoPlay() {
+  $(".models-wrap .content-item02 .btn-only-icon-bg01-square").click(function () {
+    var videoPc = $(this).siblings("video.pc-only").get(0);
+    var videoMo = $(this).siblings("video.mo-only").get(0);
+    var icon = $(this).children(".btn-icon24");
+    var pcPoster = $(this).siblings(".video_poster.pc-only");
+    var moPoster = $(this).siblings(".video_poster.mo-only");
+
+    if (videoPc.paused && videoMo.paused) {
+      videoPc.play();
+      videoMo.play();
+      pcPoster.hide();
+      moPoster.hide();
+      icon.attr("class", "btn-icon24 icon-pause-wh");
+    } else {
+      videoPc.pause();
+      videoMo.pause();
+      icon.attr("class", "btn-icon24 icon-play-wh");
+    }
+  });
+
+  // 비디오가 끝났을 때 썸네일을 다시 표시하기 위한 이벤트 리스너
+  $(".models-wrap .content-item02 video").on("ended", function () {
+    var icon = $(this).siblings("button").children(".btn-icon24");
+    icon.attr("class", "btn-icon24 icon-play-wh");
+  });
+  $(window)
+    .resize(function () {
+      if (window.innerWidth <= 1023) {
+        $(".models-wrap .content-item02 video.mo-only").attr("aira-hidden", false);
+        $(".models-wrap .content-item02 video.pc-only").attr("aira-hidden", true);
+        $(".models-wrap .content-item02 video.mo-only").on("ended", function () {
+          $(this).siblings(".video_poster.mo-only").show();
+          $(this).siblings(".video_poster.pc-only").hide();
+          $(this).attr("aira-hidden", true);
+        });
+      } else if (window.innerWidth > 1023) {
+        $(".models-wrap .content-item02 video.pc-only").attr("aira-hidden", false);
+        $(".models-wrap .content-item02 video.mo-only").attr("aira-hidden", true);
+        $(".models-wrap .content-item02 video.pc-only").on("ended", function () {
+          $(this).siblings(".video_poster.pc-only").show();
+          $(this).siblings(".video_poster.mo-only").hide();
+          $(this).attr("aira-hidden", true);
+          $(".models-wrap .content-item02 video.mo-only").attr("aira-hidden", true);
+        });
+      }
+    })
+    .resize();
+
+  // 비디오가 끝났을 때 이미지 클릭 시 비디오 재생하기 위한 이벤트 리스너
+  $(".models-wrap .content-item02 .video_poster").click(function () {
+    var videoBox = $(this)
+      .siblings("video." + $(this).attr("class").split(" ")[1])
+      .get(0);
+    videoBox.play();
+    $(this).hide();
+    var icon = $(this).siblings("button").children(".btn-icon24");
+    icon.attr("class", "btn-icon24 icon-pause-wh");
+  });
+}
+// [End] : Models > 영상 버튼 클릭 시 재생 혹은 멈춤 작업 & 한 번 재생 후 포스터 나와야함
