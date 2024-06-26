@@ -8,11 +8,13 @@
   overflow-y: auto;
 }
 .configurator_header_wrap {
-  position: relative;
+  position: sticky;
+  top: 0;
   flex-shrink: 0;
   width: 100%;
   background-color: #FFF;
   border-bottom: 1px solid #D9D9D9;
+  z-index: 4;
 }
 .configurator_header {
   display: flex;
@@ -28,10 +30,15 @@
   height: 2rem;
 }
 .configurator_header_tit {
+  display: none;
   flex-shrink: 0;
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 140%;
+}
+.configurator_area.IONIQ .configurator_header_tit.IONIQ,
+.configurator_area.ELANTRA .configurator_header_tit.ELANTRA {
+  display: flex;
 }
 .configurator_header_tit .icon-right {
   margin-left: 0.75rem;
@@ -89,8 +96,9 @@
 }
 .configurator_con_tit {
   position: absolute;
-  top: 5.88rem;
+  top: 1.5rem;
   left: 1.5rem;
+  display: none;
   font-family: "Hyundai Sans Head";
   font-size: 3.5rem;
   font-weight: 700;
@@ -98,10 +106,16 @@
   color: #FFF;
   z-index: 2;
 }
+.configurator_area:has(.configurator_menu_exterior.on) .configurator_con_tit.tit_exterior,
+.configurator_area:has(.configurator_menu_interior.on) .configurator_con_tit.tit_interior,
+.configurator_area:has(.configurator_menu_summary.on) .configurator_con_tit.tit_summary {
+  display: block;
+}
 .configurator_swiper_wrap {
   width: 100%;
   height: 100%;
   background: linear-gradient(180deg, #060916 30%, #374B55 100%);
+  z-index: 3;
 }
 .configurator_swiper_wrap .swiper-container {
   height: 100%;
@@ -239,7 +253,9 @@
 .configurator_con_flex .configurator_swiper_wrap {
   width: calc(100% - 30.875rem);
   height: calc(100vh - 4.375rem);
+  background: #FFF;
 }
+.configurator_con_flex
 .configurator_swiper {
   height: 100%;
 }
@@ -255,11 +271,19 @@
   background-color: #DE3111;
   opacity: 1;
 }
+.configurator_swiper .swiper-slide {
+  overflow: hidden;
+}
 .configurator_swiper .swiper-slide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
+  transition: transform 0.5s ease-in-out;
+}
+.configurator_swiper:has(.btn_zoom.on) .swiper-slide img {
+  /* 이미지 수급 후 값 조절 필요 */
+  transform: scale(1.3);
 }
 .configurator_fx_wrap {
   position: absolute;
@@ -298,6 +322,7 @@
   position: relative;
   width: 30.875rem;
   flex-shrink: 0;
+  background-color: #FFF;
 }
 .configurator_price_wrap {
   position: absolute;
@@ -403,6 +428,7 @@
   margin-top: 1.5rem;
 }
 .configurator_select_wrap .dropdown-menu li:not(.dropdown-menu .moclose-btn, .dropdown-menu .option) {
+  position: relative;
   display: flex;
   align-items: center;
   padding: 0;
@@ -488,8 +514,10 @@
   height: calc(100vh - 4.3125rem);
   overflow-y: scroll;
 }
-.configurator_area:has(.configurator_menu_exterior.on) .configurator_select_exterior,
-.configurator_area:has(.configurator_menu_interior.on) .configurator_select_interior {
+.configurator_area.IONIQ:has(.configurator_menu_exterior.on) .configurator_select_exterior.IONIQ,
+.configurator_area.ELANTRA:has(.configurator_menu_exterior.on) .configurator_select_exterior.ELANTRA,
+.configurator_area.IONIQ:has(.configurator_menu_interior.on) .configurator_select_interior.IONIQ,
+.configurator_area.ELANTRA:has(.configurator_menu_interior.on) .configurator_select_interior.ELANTRA {
   display: block;
 }
 
@@ -571,7 +599,8 @@
   width: 100%;
   max-width: 60rem;
 }
-.configurator_area:has(.configurator_menu_summary.on) .configurator_select_summary {
+.configurator_area.IONIQ:has(.configurator_menu_summary.on) .configurator_select_summary.IONIQ,
+.configurator_area.ELANTRA:has(.configurator_menu_summary.on) .configurator_select_summary.ELANTRA {
   display: block;
 }
 .configurator_summary_tit {
@@ -651,6 +680,24 @@
   column-gap: 0.75rem;
 }
 
+/* popup */
+.configurator_popup {
+  width: 25rem;
+  height: 15.625rem;
+  padding: 2.5rem;
+  border-radius: 0.25rem;
+}
+.configurator_popup .pop-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 140%;
+}
+
 /* 모바일 */
 @media screen and (max-width: 1023px) {
   .configurator_header {
@@ -675,6 +722,7 @@
   .configurator_list_swiper {
     position: relative;
     height: 100%;
+    background: linear-gradient(180deg, #060916 30%, #374B55 100%);
   }
   .configurator_list_swiper .swiper-slide {
     width: 100%;
@@ -737,7 +785,6 @@
     height: 3rem;
   }
   .configurator_con_tit {
-    top: 8.38rem;
     font-size: 1.875rem;
     line-height: 140%;
   }
@@ -745,8 +792,10 @@
     display: block;
   }
   .configurator_con_flex .configurator_swiper_wrap {
+    position: sticky;
+    top: 6.972rem;
     width: 100%;
-    height: 30rem;
+    height: 15rem;
   }
   .configurator_swiper .swiper-status-wrap {
     bottom: 1.25rem;
@@ -763,6 +812,10 @@
     width: 3rem;
     height: 3rem;
     background-color: rgba(0, 0, 0, 0.3);
+  }
+  .configurator_fx_wrap button .btn-icon24 {
+    width: 1.25rem;
+    height: 1.25rem;
   }
   .configurator_select_wrap {
     width: 100%;
@@ -905,5 +958,15 @@
   }
   .configurator_select_summary .btn-wrap > div {
     width: 100%;
+  }
+
+  /* popup */
+  .configurator_popup {
+    width: 100%;
+    height: 18.75rem;
+    border-radius: 0.25rem 0.25rem 0rem 0rem;
+  }
+  .configurator_popup .pop-wrap {
+    font-size: 1rem;
   }
 }
