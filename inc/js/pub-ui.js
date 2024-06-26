@@ -619,6 +619,7 @@ $(document).ready(function () {
   hasTagFun();
   perforSlideMoveFun();
   footerScrollTop();
+  modelsVideoPlay();
   $(".configurator_header_menu").click((el) => {
     configuratorHeader(el);
   });
