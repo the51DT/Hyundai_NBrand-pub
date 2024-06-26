@@ -302,6 +302,11 @@
     padding: 40px 24px 0;
   }
 
+  .popup.model-popup.forModel .popup-wrapper .video-wrapper .popup-body {
+    max-height: calc(100vh - 60px);
+    padding: 40px 24px 0;
+  }
+
   .popup.model-popup.forModel .popup-wrapper .popup-body.single {
     max-height: calc(100% - 60px);
     padding: 40px 24px 100px;
