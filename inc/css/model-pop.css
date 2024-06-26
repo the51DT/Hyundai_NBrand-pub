@@ -82,44 +82,6 @@
 }
 /* 팝업에 표시할 컨텐츠가 하나일 때(.popup-body-innerbox가 하나일 때 끝*/
 
-.popup.model-popup.forModel
-  .popup-wrapper
-  .popup-body
-  .inner-body-model
-  .wrap-model-video {
-  max-width: 1120px;
-  height: 630px;
-  max-height: 100%;
-  flex-shrink: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  background: url("../images/img/img_model_popup_bg.png") no-repeat;
-  background-size: cover;
-}
-
-.popup.model-popup.forModel
-  .popup-wrapper
-  .popup-body
-  .inner-body-model
-  .wrap-model-video
-  button {
-  margin: 0 auto;
-  display: block;
-}
-
-.popup.model-popup.forModel
-  .popup-wrapper
-  .popup-body
-  .inner-body-model
-  .wrap-model-video
-  button
-  img {
-  width: 200px;
-  height: 200px;
-}
-
 .popup.forModel .popup-wrapper .popup-body .inner-body-model .container-desc {
   width: 100%;
   display: flex;
@@ -227,6 +189,97 @@
   font-weight: 500;
 }
 
+/* video s*/
+
+.popup.model-popup.forModel
+  .popup-wrapper
+  .popup-body
+  .inner-body-model
+  .wrap-model-video {
+  max-width: 1120px;
+  height: 630px;
+  max-height: 100%;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: url("../images/img/img_model_popup_bg.png") no-repeat;
+  background-size: cover;
+}
+
+.popup.model-popup.forModel
+  .popup-wrapper
+  .popup-body
+  .inner-body-model
+  .wrap-model-video
+  button {
+  margin: 0 auto;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: 0.3s all ease;
+}
+
+.popup.model-popup.forModel
+  .popup-wrapper
+  .popup-body
+  .inner-body-model
+  .wrap-model-video
+  button:hover {
+  background: rgba(0, 0, 0, 0.5);
+  transition: 0.3s all ease;
+}
+
+.popup.model-popup.forModel
+  .popup-wrapper
+  .popup-body
+  .inner-body-model
+  .wrap-model-video
+  button:hover
+  > img {
+  transition: 0.3s all ease;
+  opacity: 0.9;
+}
+
+.popup.model-popup.forModel
+  .popup-wrapper
+  .popup-body
+  .inner-body-model
+  .wrap-model-video
+  button
+  img {
+  width: 200px;
+  height: 200px;
+}
+
+.popup.model-popup.forModel
+  .popup-wrapper
+  .popup-body
+  .inner-body-model
+  .wrap-model-video {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.popup.model-popup.forModel
+  .popup-wrapper
+  .popup-body
+  .inner-body-model
+  .wrap-model-video
+  video {
+  width: 100%;
+}
+/* video e */
+
+/* close btn formodel*/
+
+.popup.model-popup.forModel .btn-wrap button.btn-only-icon-notbg.pop-close {
+  top: 32px;
+}
+
 @media screen and (max-width: 1023px) {
   .popup.model-popup.forModel {
     height: 100vh;
@@ -252,6 +305,11 @@
 
   .popup.model-popup.forModel .popup-wrapper .popup-body {
     max-height: calc(100% - 60px);
+    padding: 40px 24px 0;
+  }
+
+  .popup.model-popup.forModel .popup-wrapper .video-wrapper .popup-body {
+    max-height: calc(100vh - 60px);
     padding: 40px 24px 0;
   }
 
@@ -387,18 +445,14 @@
     gap: 12px;
   }
 
-  .popup.model-popup.forModel
-    .popup-wrapper
-    .btn-wrap
-    button.btn-only-icon-notbg.pop-close.pop-page {
+  .popup.model-popup.forModel .btn-wrap button.btn-only-icon-notbg.pop-close {
     top: 12px;
     height: fit-content;
     right: 24px;
   }
 
   .popup.model-popup.forModel
-    .popup-wrapper
-    button.btn-only-icon-notbg.pop-close.pop-page
+    button.btn-only-icon-notbg.pop-close
     span.model-closebtn.icon-close {
     top: 0;
     position: relative;
@@ -424,7 +478,7 @@
     .popup-body
     .inner-body-model
     .wrap-model-video {
-    height: 441px;
+    height: fit-content;
   }
 }
 
