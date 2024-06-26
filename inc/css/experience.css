@@ -839,9 +839,9 @@
   position: relative;
 }
 
-.popup-wrapper .btn-wrap button.btn-only-icon-notbg.pop-close.pop-page {
+.popup .btn-wrap button.btn-only-icon-notbg.pop-close {
   position: absolute;
-  top: 28px;
+  top: 36px;
   right: 35px;
   bottom: calc(100% - 105px);
   z-index: 1000;
@@ -1848,13 +1848,6 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
   font-size: 2rem;
 }
 
-.side-popup .pop-wrap .btn-wrap button.btn-only-icon-notbg.pop-close {
-  position: absolute;
-  top: 0;
-  right: 35px;
-  bottom: calc(100% - 90px);
-}
-
 .side-popup .pop-wrap .popup-body {
   padding: 40px;
   max-height: calc(100vh - 100px);
@@ -2593,29 +2586,21 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
     background-size: contain;
   }
 
-  .popup-wrapper .btn-wrap button.btn-only-icon-notbg.pop-close.pop-page {
-    /* top: 0; */
+  .popup .btn-wrap button.btn-only-icon-notbg.pop-close {
+    top: 18px;
     right: 24px;
-
-    top: 12px;
-    right: 24px;
-    height: fit-content;
-  }
-  .popup-wrapper button.btn-only-icon-notbg.pop-close.pop-page {
-    right: 24px;
-    top: 24px;
     width: 24px;
     height: 24px;
+    /* height: fit-content; */
   }
-  .popup-wrapper button.btn-only-icon-notbg.pop-close.pop-page span.icon-close {
+
+  .popup button.btn-only-icon-notbg.pop-close span.icon-close {
     width: 100%;
     top: 0;
     position: relative;
   }
 
-  .popup-wrapper
-    button.btn-only-icon-notbg.pop-close.pop-page
-    span.model-closebtn.icon-close {
+  .popup button.btn-only-icon-notbg.pop-close span.model-closebtn.icon-close {
     top: 16px;
     position: relative;
   }
@@ -2650,7 +2635,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
     bottom: 0%;
     position: fixed;
     width: 100%;
-    z-index: 5;
+    z-index: 6;
   }
 
   .popup.club-info-popup.bottom-popup {
@@ -3072,12 +3057,6 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
     .txt-type02.cutoff-desc {
     max-width: 100%;
   }
-  .side-popup .pop-wrap .btn-wrap button.btn-only-icon-notbg.pop-close {
-    position: absolute;
-    top: 0;
-    right: 20px;
-    bottom: calc(100% - 55px);
-  }
 
   .side-popup
     .pop-wrap
@@ -3109,6 +3088,6 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
   }
 
   .track-guide-box .wrap-list.list03 .right.descwrap h2.sub-tit {
-    margin-top: 8px;    
+    margin-top: 8px;
   }
 }

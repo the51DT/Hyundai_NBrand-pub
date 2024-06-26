@@ -608,9 +608,9 @@ $(document).ready(function () {
   hasTagFun();
   perforSlideMoveFun();
   footerScrollTop();
-  $(".configurator_header_menu").click(el => {
+  $(".configurator_header_menu").click((el) => {
     configuratorHeader(el);
-  })
+  });
   configuratorEvent();
 });
 
@@ -826,6 +826,138 @@ function DropdownFooter() {
 // 드롭다운(아코디언) 02 끝
 // 드롭다운(아코디언), 필터 컴포넌트 끝
 
+// 모델 팝업 내 동영상 제어 함수 시작
+document.addEventListener("DOMContentLoaded", () => {
+  function ControlVideo() {
+    // 영상 필터링 파싱 시작
+    const videoWrap = document.querySelectorAll(".video-wrapper");
+    const videoHeaderTxt = document.querySelector(
+      ".video-wrapper .popup-header.model .tit-type04"
+    );
+    const video = document.querySelectorAll(".popup video");
+
+    const videoUrlList = [
+      // 팝업 모델 영상 url 파싱 더미 데이터
+      [
+        {
+          id: "modelPop_i20N",
+          url: "../../inc/videos/i20n.mp4",
+          type: "video/mp4",
+        },
+        {
+          id: "modelPop_i20N",
+          url: "../../inc/videos/24hnbr24.mp4",
+          type: "video/mp4",
+        },
+      ],
+      [
+        {
+          id: "modelPop_test",
+          url: "../../inc/videos/elantra-n-kv.mp4",
+          type: "video/mp4",
+        },
+        {
+          id: "modelPop_test",
+          url: "../../inc/videos/i20n.mp4",
+          type: "video/mp4",
+        },
+      ],
+    ];
+
+    videoWrap.forEach((el) => {
+      const videoId = el.id;
+      const filteredVideo = [];
+
+      videoUrlList.forEach((list) => {
+        list.forEach((item) => {
+          if (item.id === videoId) {
+            filteredVideo.push(item);
+          }
+        });
+      });
+
+      video.forEach((videoEl, index) => {
+        if (index < filteredVideo.length) {
+          const videoData = filteredVideo[index];
+          const sourceEl = document.createElement("source");
+          sourceEl.src = videoData.url;
+          sourceEl.type = videoData.type;
+          videoEl.appendChild(sourceEl);
+        }
+      });
+    });
+    // 영상 필터링 파싱 끝
+
+    // 영상 플레이어 제어 시작
+    const videoBtn = document.querySelectorAll(
+      ".popup .wrap-model-video .btn-model-play"
+    );
+
+    videoBtn.forEach((btn, indexx) => {
+      const eachVideos = video[indexx];
+      const eachPlayBtns = videoBtn[indexx];
+
+      btn.addEventListener("click", () => {
+        eachVideos.paused
+          ? playVideo(eachVideos, eachPlayBtns)
+          : pauseVideo(eachVideos, eachPlayBtns);
+      });
+
+      eachVideos.addEventListener("pause", () => {
+        setTimeout(() => {
+          eachPlayBtns.style.opacity = "1";
+        }, 300);
+      });
+
+      eachVideos.addEventListener("play", () => {
+        eachPlayBtns.style.opacity = "0";
+      });
+
+      // if (playVideo) {
+      //   btn.addEventListener("mouseenter", () => {
+      //     eachPlayBtns.style.opacity = "1";
+      //   });
+      // }
+
+      // 모델 팝업이 닫혔을 때 스크롤, 영상 초기화 처리
+      const popCloseBtn = document.querySelector(
+        ".popup-wrapper .btn-wrap button.btn-only-icon-notbg.pop-close"
+      );
+      const popupBody = document.querySelector(
+        ".popup.model-popup.forModel .popup-body"
+      );
+
+      popCloseBtn.addEventListener("click", () => {
+        {
+          eachVideos.paused ? null : resetVideo(eachVideos);
+        }
+
+        setTimeout(() => {
+          popupBody.scrollTop = 0;
+        }, 10);
+      });
+    });
+
+    function playVideo(video, button) {
+      video.play();
+      button.style.opacity = "0";
+    }
+
+    function pauseVideo(video, button) {
+      video.pause();
+      button.style.opacity = "1";
+    }
+
+    function resetVideo(video) {
+      video.pause();
+      video.currentTime = 0;
+    }
+  }
+
+  ControlVideo();
+});
+// 모델 팝업 내 동영상 제어 함수 끝
+
 // 푸터 스크롤 탑
 function footerScrollTop() {
   $(".footer-top-btn").click(() => {
@@ -962,11 +1094,17 @@ function perforSlideMoveFun() {
           _$this.mousedown = true;
         } else if (e.keyCode === 37) {
           e.preventDefault();
-          _boxWid = parseInt(_$moveBtn.css("right"), 10) < _center ? _center + "px" : _maxWid - _margin + "px";
+          _boxWid =
+            parseInt(_$moveBtn.css("right"), 10) < _center
+              ? _center + "px"
+              : _maxWid - _margin + "px";
           tPosition(_boxWid, _delayTime);
         } else if (e.keyCode === 39) {
           e.preventDefault();
-          _boxWid = parseInt(_$moveBtn.css("right"), 10) > _center ? _center + "px" : _margin + "px";
+          _boxWid =
+            parseInt(_$moveBtn.css("right"), 10) > _center
+              ? _center + "px"
+              : _margin + "px";
 
           tPosition(_boxWid, _delayTime);
         }
@@ -1035,6 +1173,10 @@ function perforSlideMoveFun() {
 }
 // [Start] : MD010301t01 > 기획서 v0.18 p.68 AS-IS과 동일한 슬라이드 기능 적용 (AS-IS 그대로 사용 / 클래스만 변경)
 
+// video s
+
+// video e
+
 // [Start] : configurator_header_menu 확인용 스크립트 / 체크값 확인 후 넘어가기 필요
 function configuratorHeader(el) {
   $(".configurator_header_menu").removeClass("on");
@@ -1075,7 +1217,7 @@ function configuratorEvent() {
   );
   configuratorInput.forEach((input) => {
     input.addEventListener("change", () => {
-      console.log(input.value)
+      console.log(input.value);
 
       // configObjEx 에 체크 된 value 추가
       // for (let i in Object.keys(configObjEx)) {
@@ -1085,7 +1227,7 @@ function configuratorEvent() {
       //     }"]:checked`
       //   );
       //   configObjEx[Object.keys(configObjEx)[i]] = exInput === null ? "" : "_" + exInput.value;
-        
+
       // }
       // configObjIn 에 체크 된 value 추가
       // for (let i in Object.keys(configObjIn)) {
@@ -1147,7 +1289,7 @@ $(".btn_time").click(() => {
   // configObj.time = $(".btn_time").hasClass("on") ? "_night" : "_day";
   // configuratorImg();
 });
-$(".btn_zoom").click(()=> {
+$(".btn_zoom").click(() => {
   $(".btn_zoom").toggleClass("on");
-})
+});
 // [End] : configurator fx
