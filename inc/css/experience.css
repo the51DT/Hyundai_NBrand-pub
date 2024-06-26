@@ -3086,4 +3086,8 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
   .club-info-popup .popup-wrapper .popup-footer {
     position: relative;
   }
+
+  .track-guide-box .wrap-list.list03 .right.descwrap h2.sub-tit {
+    margin-top: 8px;    
+  }
 }
