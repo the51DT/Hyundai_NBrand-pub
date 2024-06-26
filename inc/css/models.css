@@ -331,7 +331,9 @@
 .fc-black {
   color: #000 !important;
 }
-
+.fc-black .text-col {
+  color: #000 !important;
+}
 .models-wrap .models-nofull [class*="type-col"] {
   display: flex;
   flex-direction: column;
@@ -764,6 +766,9 @@
   .models-wrap .mo-full-1415 {
     height: 1415px;
   }
+  .models-wrap .mo-full-1207 {
+    height: 1207px;
+  }
   .models-wrap .content-item02 video {
     height: 480px;
     object-fit: cover;
@@ -1044,7 +1049,7 @@
     margin-bottom: 0;
   }
   .models-wrap .tech-wrap .kona-tech {
-    padding-bottom: 152px;
+    padding: 152px 24px;
   }
   .models-wrap .tech-wrap .kona-tech-box {
     gap: 44px;
