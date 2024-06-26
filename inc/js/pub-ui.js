@@ -607,6 +607,11 @@ $(document).ready(function () {
   $(window).resize(() => hasTagFun(), perforSlideMoveFun());
   hasTagFun();
   perforSlideMoveFun();
+  footerScrollTop();
+  $(".configurator_header_menu").click((el) => {
+    configuratorHeader(el);
+  });
+  configuratorEvent();
 });
 
 // [Start] : selectbox 컴포넌트
@@ -954,9 +959,11 @@ document.addEventListener("DOMContentLoaded", () => {
 // 모델 팝업 내 동영상 제어 함수 끝
 
 // 푸터 스크롤 탑
-$(".footer-top-btn").click(() => {
-  $("html, body").animate({ scrollTop: 0 }, 500);
-});
+function footerScrollTop() {
+  $(".footer-top-btn").click(() => {
+    $("html, body").animate({ scrollTop: 0 }, 500);
+  });
+}
 
 // [Start] : hashTag 말줄임
 function hasTagFun() {
@@ -1053,21 +1060,6 @@ function toggleFullScreen(element) {
   }
 }
 // [End] : 풀스크린
-
-// [Start] : configurator_header_menu 확인용 임시 스크립트
-$(".configurator_header_menu").click((el) => {
-  $(".configurator_header_menu").removeClass("on");
-  console.log(el.target);
-  el.target.closest(".configurator_header_menu").classList.add("on");
-  if ($(".configurator_menu_exterior").hasClass("on")) {
-    $(".configurator_con_tit").text("Exterior");
-  } else if ($(".configurator_menu_interior").hasClass("on")) {
-    $(".configurator_con_tit").text("Interior");
-  } else if ($(".configurator_menu_summary").hasClass("on")) {
-    $(".configurator_con_tit").text("Summary");
-  }
-});
-// [End] : configurator_header_menu 확인용 임시 스크립트
 
 // [Start] : MD010301t01 > 기획서 v0.18 p.68 AS-IS과 동일한 슬라이드 기능 적용 (AS-IS 그대로 사용 / 클래스만 변경)
 function perforSlideMoveFun() {
@@ -1184,3 +1176,120 @@ function perforSlideMoveFun() {
 // video s
 
 // video e
+
+// [Start] : configurator_header_menu 확인용 스크립트 / 체크값 확인 후 넘어가기 필요
+function configuratorHeader(el) {
+  $(".configurator_header_menu").removeClass("on");
+  el.target.closest(".configurator_header_menu").classList.add("on");
+}
+// [End] : configurator_header_menu 확인용 스크립트 / 체크값 확인 후 넘어가기 필요
+
+// [Start] : configurator 이미지
+// 기본값 - 디폴트로 체크된 값 있으면 변경 필요
+// let configObjEx = {
+//   wheel: "",
+//   towstrap: "",
+//   brake: "", // ELANTRA N
+//   spoiler: "", // ELANTRA N
+//   sideMirror: "", // ELANTRA N
+//   rearMufflerTip: "", // ELANTRA N
+// };
+// let configObjIn = {
+//   carMat: "",
+//   doorScuff: "",
+//   seatBelt: "",
+//   steeringWheel: "", // IONIQ 5 N
+//   alcantaraPackage: "", // ELANTRA N
+// };
+// let configObj = {
+//   model: "IONIQ5", // 임시 값 모델 바뀜에 따라 변경 필요 / IONIQ5 <-> ELANTRA
+//   background: "_studio", // 디폴트 값 _studio / _studio <-> _track
+//   time: "_day", // 디폴트 값 _day / _day <-> _night
+//   exterior: "",
+//   interior: "",
+// };
+// let valueEx = "";
+// let valueIn = "";
+
+function configuratorEvent() {
+  const configuratorInput = document.querySelectorAll(
+    ".configurator_select_area input"
+  );
+  configuratorInput.forEach((input) => {
+    input.addEventListener("change", () => {
+      console.log(input.value);
+
+      // configObjEx 에 체크 된 value 추가
+      // for (let i in Object.keys(configObjEx)) {
+      //   exInput = document.querySelector(
+      //     `.configurator_select_area input[name="${
+      //       Object.keys(configObjEx)[i]
+      //     }"]:checked`
+      //   );
+      //   configObjEx[Object.keys(configObjEx)[i]] = exInput === null ? "" : "_" + exInput.value;
+
+      // }
+      // configObjIn 에 체크 된 value 추가
+      // for (let i in Object.keys(configObjIn)) {
+      //   inInput = document.querySelector(
+      //     `.configurator_select_area input[name="${
+      //       Object.keys(configObjIn)[i]
+      //     }"]:checked`
+      //   );
+      //   configObjIn[Object.keys(configObjIn)[i]] =
+      //     inInput === null ? "" : "_" + inInput.value;
+      // }
+
+      // configuratorImg();
+
+      // 슬라이드 이미지 애니메이션
+      $(".configurator_swiper .swiper-slide img").hide();
+      $(".configurator_swiper .swiper-slide img").fadeIn(300);
+    });
+  });
+}
+
+// function configuratorImg() {
+//   // configObjEx 값 configObj.exterior 로 옮기기
+//   configObj.exterior = "";
+//   for (let i in Object.keys(configObjEx)) {
+//     configObj.exterior += configObjEx[Object.keys(configObjEx)[i]];
+//   }
+
+//   // configObjIn 값 configObj.interior 로 옮기기
+//   configObj.interior = "";
+//   for (let i in Object.keys(configObjIn)) {
+//     configObj.interior += configObjIn[Object.keys(configObjIn)[i]];
+//   }
+
+//   // exterior 네이밍 규칙
+//   // 모델_배경이미지_시간_옵션1_옵션2 ... _옵션 으로 추가
+//   // interior 네이밍 규칙
+//   // 모델_in_옵션1_옵션2 ... _옵션 으로 추가
+//   valueEx =
+//     configObj.model +
+//     configObj.background +
+//     configObj.time +
+//     configObj.exterior;
+//   valueIn = configObj.model + "_in" + configObj.interior;
+
+//   console.log("valueEx : " + valueEx + " / valueIn : " + valueIn);
+// }
+// configuratorImg();
+// [End] : configurator 이미지
+
+// [Start] : configurator fx
+$(".btn_background").click(() => {
+  $(".btn_background").toggleClass("on");
+  // configObj.background = $(".btn_background").hasClass("on") ? "_track" : "_studio";
+  // configuratorImg();
+});
+$(".btn_time").click(() => {
+  $(".btn_time").toggleClass("on");
+  // configObj.time = $(".btn_time").hasClass("on") ? "_night" : "_day";
+  // configuratorImg();
+});
+$(".btn_zoom").click(() => {
+  $(".btn_zoom").toggleClass("on");
+});
+// [End] : configurator fx
