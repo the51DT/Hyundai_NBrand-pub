@@ -69,6 +69,9 @@
   line-height: 140%;
   color: #FFF;
 }
+.configurator_header_menu:hover .configurator_header_menu_step {
+  background-color: #DE3111;
+}
 .configurator_header_menu.on .configurator_header_menu_step {
   width: 1.25rem;
   height: 1.25rem;
@@ -297,20 +300,35 @@
   height: 3.75rem;
   background-color: rgba(0, 0, 0, 0.3);
 }
+.configurator_fx_wrap button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
 .configurator_fx_wrap .btn_background .btn-icon24 {
   background-image: url(../images/icon/icon-img.svg);
+}
+.configurator_fx_wrap .btn_background.on .btn-icon24 {
+  background-image: url(../images/icon/icon-track.svg);
 }
 .configurator_fx_wrap .btn_time .btn-icon24 {
   background-image: url(../images/icon/icon-day.svg);
 }
+.configurator_fx_wrap .btn_time.on .btn-icon24 {
+  background-image: url(../images/icon/icon-night.svg);
+}
 .configurator_fx_wrap .btn_zoom .btn-icon24 {
   background-image: url(../images/icon/icon-zoom.svg);
+}
+.configurator_fx_wrap .btn_zoom.on .btn-icon24 {
+  background-image: url(../images/icon/icon-zoomOut.svg);
 }
 .configurator_fx_wrap .btn_save .btn-icon24 {
   background-image: url(../images/icon/icon-screenshot.svg);
 }
 .configurator_fx_wrap .btn_full .btn-icon24 {
   background-image: url(../images/icon/icon-fullScreen.svg);
+}
+.configurator_fx_wrap .btn_full.on .btn-icon24 {
+  background-image: url(../images/icon/icon-reduction.svg);
 }
 @media screen and (max-width: 1399px) {
   .configurator_fx_wrap {
@@ -458,7 +476,10 @@
   column-gap: 1.25rem;
   width: 100%;
   border-radius: 0.25rem;
-  border: 1px solid #D9D9D9;
+  outline: 1px solid #D9D9D9;
+}
+.configurator_label_radio:hover {
+  outline: 1px solid #000;
 }
 .configurator_label_radio img {
   width: 7.5rem;
@@ -476,11 +497,19 @@
   width: 100%;
 }
 .configurator_label_checkbox img {
+  object-fit: cover;
+  object-position: center;
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+}
+.configurator_label_checkbox div:has(img) {
   width: 100%;
   height: 16.9375rem;
   border-radius: 0.25rem;
-  object-fit: cover;
-  object-position: center;
+  overflow: hidden;
+}
+.configurator_label_checkbox:hover img {
+  transform: scale(1.2);
 }
 .configurator_label_checkbox .configurator_label_tit {
   position: relative;

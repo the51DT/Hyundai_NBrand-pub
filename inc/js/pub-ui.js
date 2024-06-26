@@ -1291,5 +1291,8 @@ $(".btn_time").click(() => {
 });
 $(".btn_zoom").click(() => {
   $(".btn_zoom").toggleClass("on");
+})
+$(".btn_full").click(() => {
+  $(".btn_full").toggleClass("on");
 });
 // [End] : configurator fx
