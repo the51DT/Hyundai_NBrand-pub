@@ -861,13 +861,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     videoWrap.forEach((el) => {
       const videoId = el.id;
-      const headerTxtt = [];
       const filteredVideo = [];
 
       videoUrlList.forEach((list) => {
         list.forEach((item) => {
           if (item.id === videoId) {
-            // headerTxtt.innerText = item.headerTit;
             filteredVideo.push(item);
           }
         });
