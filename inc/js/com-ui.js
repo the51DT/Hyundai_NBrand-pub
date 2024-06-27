@@ -1,7 +1,6 @@
 if ($.isFunction("checkCommonJs")) {
   checkCommonJs("com.ui.js");
 }
-
 /* 퍼블리셔 JS 셋팅 */
 $(document).ready(function () {
   NbrandUI.headerNav(".nav-btn", ".nav-wrap", ".header-wrap");
@@ -13,6 +12,8 @@ $(document).ready(function () {
   );
   NbrandUI.modalOpen(".pop-open");
   NbrandUI.modalClose(".pop-close");
+  NbrandUI.naviClick(".navi_event-btn");
+  NbrandUI.rendingClick(".rending-btn");
   resizeDone();
   // NbrandUI.inputClear(".input-del");
 });
@@ -62,11 +63,26 @@ var NbrandUI = {
       $(obj).attr("aria-selected", "false");
     }
   },
+
+  navigationBar: function (obj) {
+    navigationBtn = $(obj);
+    navigationBtn.toggleClass("on");
+    NbrandUI.expandedAria();
+    navigationBtn.siblings(".navigation-menu").stop().slideToggle(300);
+  },
+
+  rendingEvent: function (obj) {
+    rendingBtn = $(obj);
+    rendingBtn.addClass("on").parent().siblings().children().removeClass("on");
+    NbrandUI.expandedAria();
+    // navigationBtn.siblings(".navigation-menu").stop().slideToggle(300);
+  },
+
   popOpen: function (obj) {
     openmodalBtn = $(obj);
     openmodalBtn.addClass("open-btn").data("open");
     openmodalData = openmodalBtn.attr("aria-controls");
-    openWrap = $(".popup#" + openmodalData);
+    openWrap = $(".popup" + openmodalData);
     var popClass = openWrap.attr("class");
     NbrandUI.expandedAria(openmodalBtn);
     if (NbrandUI.windowSize()) {
@@ -84,6 +100,11 @@ var NbrandUI = {
           openWrap.addClass("on").slideDown(200);
           NbrandUI.dimdOn();
           $(".dimmed").addClass(openmodalData).css("z-index", 1002);
+          break;
+        case "popup bottom-popup2":
+          openWrap.addClass("on").slideDown(200);
+          NbrandUI.dimdOn();
+          $(".dimmed").addClass(openmodalData);
           break;
         case "popup side-popup":
           openWrap.addClass("on").fadeIn(200);
@@ -122,6 +143,11 @@ var NbrandUI = {
           NbrandUI.dimdOn();
           $(".dimmed").addClass(openmodalData).css("z-index", 1002);
           break;
+        case "popup bottom-popup2":
+          openWrap.addClass("on").fadeIn(200);
+          NbrandUI.dimdOn();
+          $(".dimmed").addClass(openmodalData);
+          break;
         case "popup side-popup":
           NbrandUI.anidimdOn();
           $(".ani-dimmed").addClass(openmodalData + " on");
@@ -137,7 +163,7 @@ var NbrandUI = {
           break;
       }
     }
-    openWrap.find(".pop-close").addClass(openmodalData);
+    // openWrap.find(".pop-close").addClass(openmodalData);
     tparent = openWrap;
     Nbrand.uiFocusTab({
       selector: tparent,
@@ -334,7 +360,34 @@ var NbrandUI = {
     }
     eventItem.toggleClass("on");
   },
+  naviClick: function (obj) {
+    if (!NbrandUI.checkObj(obj)) {
+      return;
+    }
+    var naviBtn = $(obj);
+    function event() {
+      naviBtn.on("click", function () {
+        eventBtn = $(this);
+        NbrandUI.navigationBar(eventBtn);
+      });
+    }
 
+    event();
+  },
+  rendingClick: function (obj) {
+    if (!NbrandUI.checkObj(obj)) {
+      return;
+    }
+    var rendingBtn = $(obj);
+    function event() {
+      rendingBtn.on("click", function () {
+        eventBtn = $(this);
+        NbrandUI.rendingEvent(eventBtn);
+      });
+    }
+
+    event();
+  },
   // 모달팝업 실행
   modalOpen: function (obj) {
     if (!NbrandUI.checkObj(obj)) {
@@ -376,7 +429,7 @@ var NbrandUI = {
           switch (closeWrap.attr("class")) {
             case "popup bottom-popup on":
               closeWrap.removeClass("on").slideUp(200);
-              $(".dimmed").css("z-index", 1000);
+              NbrandUI.dimdZindexOff();
               break;
             default:
               closeWrap.removeClass("on").stop().fadeOut(300);
@@ -393,6 +446,10 @@ var NbrandUI = {
             case "popup bottom-popup on":
               closeWrap.removeClass("on").stop().hide();
               $(".dimmed").css("z-index", 1000);
+              break;
+            case "popup bottom-popup2 on":
+              closeWrap.removeClass("on").stop().hide();
+              NbrandUI.dimdOff();
               break;
             case "popup side-popup on":
               closeWrap.removeClass("on").stop().fadeOut(300);
@@ -483,6 +540,9 @@ var NbrandUI = {
   },
   dimdOff: function () {
     $("body").find(".dimmed").remove();
+  },
+  dimdZindexOff: function () {
+    $("body").find(".dimmed").css("z-index", 1000);
   },
   /* aniDimmed */
   anidimdOn: function () {
