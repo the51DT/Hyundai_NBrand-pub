@@ -268,13 +268,158 @@ body:-webkit-scrollbar {
 .navigation_bar-wrap {
   width: 100%;
   height: 48px;
-  background: rgba(255, 255, 255, 0.7);
+  background: #fff;
   position: absolute;
   top: 70px;
   left: 0;
+  line-height: 48px;
+  border-bottom: 1px solid #bbbbbb;
+}
+.navigation_bar {
+  display: flex;
+  justify-content: space-between;
+}
+.navigation-btn {
+  color: #000;
+  position: relative;
+  font-family: "Hyundai Sans Text";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%; /* 22.4px */
+  padding: 0 24px;
 }
 
-.navigation_bar-wrap .sharing-btn {
+.navigation-btn::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background: url(../images/icon/icon-arrow01_down.svg) no-repeat center;
+  transition: transform 0.2s;
+}
+
+.navigation-btn.on:after {
+  transform: translateY(-50%) rotate(-180deg);
+}
+
+.navigation-menu {
+  background: #fff;
+  width: 100vw;
+  position: absolute;
+  display: none;
+}
+
+.navigation-menu a {
+  width: 100%;
+  padding: 0 24px;
+  text-align: left;
+  height: 60px;
+  font-family: Hyundai Sans Head;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  color: #000;
+  border-bottom: 1px solid #d9d9d9;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.navigation-menu a::after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: url(../images/icon/icon-arrow01_right_gray.svg) no-repeat center;
+}
+.navigation-menu a.on,
+.navigation-menu a:hover,
+.navigation-menu a:focus,
+.navigation-menu a:active {
+  color: #de3111;
+  background: #f0f0f0;
+}
+
+.navigation-menu a.on::after,
+.navigation-menu a:hover::after,
+.navigation-menu a:focus::after,
+.navigation-menu a:active::after {
+  background: url(../images/icon/icon-arrow01_right_red.svg) no-repeat center;
+}
+
+.navigation-menu a.active {
+  color: #fff;
+  background: #de3111;
+}
+
+.navigation-menu a.active::after {
+  background: none;
+}
+.navigation-menu a.active:hover::after {
+  background: url(../images/icon/icon-arrow01_right_red.svg) no-repeat center;
+}
+
+.rending-wrap {
+  display: flex;
+  gap: 20px;
+}
+
+.rending-wrap button {
+  display: block;
+  color: #555;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 140%;
+  position: relative;
+  height: 48px;
+}
+.rending-wrap button.on {
+  color: #000;
+}
+
+.rending-wrap button:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: #000;
+  transition: width 0.2s;
+}
+
+.rending-wrap button.on:after {
+  width: 100%;
+}
+
+.navigation_bar .sharing-btn {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 140%;
+  padding-right: 48px;
+  position: relative;
+}
+.navigation_bar .sharing-btn::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  background: url(../images/icon/icon-share.svg) no-repeat center;
+  background-size: 16px;
 }
 .sns-sharing-wrap {
 }
@@ -596,7 +741,8 @@ body:-webkit-scrollbar {
 }
 
 /* bottom-popup */
-.bottom-popup {
+.bottom-popup,
+.bottom-popup2 {
   top: 50%;
   left: 50%;
   background: #fff;

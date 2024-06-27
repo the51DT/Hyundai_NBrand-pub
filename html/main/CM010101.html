@@ -590,18 +590,26 @@
       <div class="navigation_bar-wrap">
         <div class="navigation_bar">
           <div class="navigation-item01">
-            <button class="">IONIQ 5 N</button>
-            <div class=""></div>
+            <!-- 동적 호출 필요시 NbrandUI.navigationBar(this) navi_event-btn클래스 제거 -->
+            <button class="navigation-btn navi_event-btn" aria-controls="navigationMenu" aria-haspopup="true"
+              aria-expanded="false">IONIQ 5 N</button>
+            <ul class="navigation-menu" id="navigationMenu">
+              <li><a href="#">IONIQ 5 N</a></li>
+              <li><a href="#" class="active">ELANTRA N</a></li>
+              <li><a href="#">i20 N</a></li>
+              <li><a href="#">i30 N</a></li>
+              <li><a href="#">i30 Fastback N</a></li>
+            </ul>
           </div>
           <div class="navigation-item02">
-            <ul class="">
-              <li><button class="rending-btn01" data-scroll="1" title="스크롤 바로가기" aria-current="true">Overview</button>
+            <ul class="rending-wrap">
+              <li><button class="rending-btn on" data-scroll="1" title="스크롤 바로가기" aria-current="true">Overview</button>
               </li>
-              <li><button class="rending-btn02" data-scroll="2" title="스크롤 바로가기">Perfomance</button></li>
-              <li><button class="rending-btn03" data-scroll="3" title="스크롤 바로가기">Design</button></li>
-              <li><button class="rending-btn04" data-scroll="4" title="스크롤 바로가기">Technology</button></li>
-              <li><button class="rending-btn05" data-scroll="5" title="스크롤 바로가기">Specification</button></li>
-              <li><button class="rending-btn06" data-scroll="6" title="스크롤 바로가기">Gallery</button></li>
+              <li><button class="rending-btn" data-scroll="2" title="스크롤 바로가기">Perfomance</button></li>
+              <li><button class="rending-btn" data-scroll="3" title="스크롤 바로가기">Design</button></li>
+              <li><button class="rending-btn" data-scroll="4" title="스크롤 바로가기">Technology</button></li>
+              <li><button class="rending-btn" data-scroll="5" title="스크롤 바로가기">Specification</button></li>
+              <li><button class="rending-btn" data-scroll="6" title="스크롤 바로가기">Gallery</button></li>
             </ul>
           </div>
           <div class="navigation-item03">
@@ -1548,7 +1556,7 @@
         </div>
       </div>
     </footer>
-    <div id="sharing-page" class="popup bottom-popup" role="dialog" aria-modal="true" aria-labelledby="tit">
+    <div id="sharing-page" class="popup bottom-popup2" role="dialog" aria-modal="true" aria-labelledby="tit">
       <div class="pop-wrap sharing-popup">
         <h3 class="tit hidden">Sharing</h3>
         <div class="sns-sharing-wrap">
