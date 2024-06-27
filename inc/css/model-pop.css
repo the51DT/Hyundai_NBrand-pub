@@ -275,8 +275,9 @@
 /* video e */
 
 /* close btn formodel*/
-
-.popup.model-popup.forModel .btn-wrap button.btn-only-icon-notbg.pop-close {
+.popup.model-popup.forModel
+  .btn-wrap
+  button.btn-only-icon-notbg.popup-close-btn-x {
   top: 32px;
 }
 
@@ -445,14 +446,16 @@
     gap: 12px;
   }
 
-  .popup.model-popup.forModel .btn-wrap button.btn-only-icon-notbg.pop-close {
+  .popup.model-popup.forModel
+    .btn-wrap
+    button.btn-only-icon-notbg.popup-close-btn-x {
     top: 12px;
     height: fit-content;
     right: 24px;
   }
 
   .popup.model-popup.forModel
-    button.btn-only-icon-notbg.pop-close
+    button.btn-only-icon-notbg.popup-close-btn-x
     span.model-closebtn.icon-close {
     top: 0;
     position: relative;

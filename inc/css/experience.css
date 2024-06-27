@@ -391,19 +391,19 @@
   background-size: contain;
 }
 .guide_wrap.track-ty01 .imgwrap .track-img {
-  background-image: url('../../inc/images/content/track-ty01.png');
+  background-image: url("../../inc/images/content/track-ty01.png");
 }
 
 .guide_wrap.track-ty02 .imgwrap .track-img {
-  background-image: url('../../inc/images/content/track-ty02.png');
+  background-image: url("../../inc/images/content/track-ty02.png");
 }
 
 .guide_wrap.track-ty03 .imgwrap .track-img {
-  background-image: url('../../inc/images/content/track-ty03.png');
+  background-image: url("../../inc/images/content/track-ty03.png");
 }
 
 .guide_wrap.track-ty04 .imgwrap .track-img {
-  background-image: url('../../inc/images/content/track-ty04.png');
+  background-image: url("../../inc/images/content/track-ty04.png");
 }
 
 /* EP010401 */
@@ -863,7 +863,7 @@
   position: relative;
 }
 
-.popup .btn-wrap button.btn-only-icon-notbg.pop-close {
+.popup .btn-wrap button.btn-only-icon-notbg.popup-close-btn-x {
   position: absolute;
   top: 36px;
   right: 35px;
@@ -1109,9 +1109,14 @@
 }
 
 /*popup onlyTxt 
-EP040401C01, EP040401C02, EP040401M02, EP040401M03
+EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
 */
 .popup-wrapper.onlyTxt .popup-body {
+  /* padding: 40px; */
+}
+
+.popup-wrapper.onlyTxt .popup-body.double-pop-body {
+  /* 이중팝업에만 .popup-body에 .double-pop-body를 추가하여 상하좌우 간격 40px을 적용합니다. */
   padding: 40px;
 }
 .popup-wrapper.onlyTxt .popup-body .popup-body-innerbox p.popup-tit-lg {
@@ -1191,7 +1196,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
 }
 
 .popup-body-innerbox .wrap-form.attach .attach-box {
-  background: url("../../inc/images/img/img_upload_image.png") no-repeat;
+  background: url("../../inc/images/img/img_upload_image_new.png") no-repeat;
   width: 94px;
   height: 94px;
   background-size: cover;
@@ -1499,10 +1504,10 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
   padding: 16px 0;
   margin-top: 42px;
 }
-.club-info-popup .popup-wrapper .popup-footer .btn:not(.pop-close) {
+.club-info-popup .popup-wrapper .popup-footer .btn:not(.popup-close-btn-x) {
   order: 1;
 }
-.club-info-popup .popup-wrapper .popup-footer .btn.pop-close {
+.club-info-popup .popup-wrapper .popup-footer .btn.popup-close-btn-x {
   order: 0;
 }
 
@@ -1950,10 +1955,9 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
 /* 사이드 팝업 끝*/
 
 /* EP010303 */
-  @media screen and (min-width: 1024px) and (max-width: 1366px) {
-  
-  .guide_wrap[class*=track-] .imgwrap {
-    padding:0 !important;
+@media screen and (min-width: 1024px) and (max-width: 1366px) {
+  .guide_wrap[class*="track-"] .imgwrap {
+    padding: 0 !important;
   }
   .guide_wrap .imgwrap .track-img {
     width: 420px;
@@ -2300,18 +2304,18 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
     padding: 6.25rem 1.5rem;
   }
 
-  /* EP010303 */  
-  .guide_wrap[class*=track-] .imgwrap {
-    width:312px;
-    padding:0 !important;
+  /* EP010303 */
+  .guide_wrap[class*="track-"] .imgwrap {
+    width: 312px;
+    padding: 0 !important;
   }
-  .guide_wrap[class*=track-] .wrap-list.list03 .right.descwrap h2.sub-tit {
-    margin-top:8px;
+  .guide_wrap[class*="track-"] .wrap-list.list03 .right.descwrap h2.sub-tit {
+    margin-top: 8px;
   }
   .guide_wrap .imgwrap .track-img {
     width: 312px;
     height: 312px;
-  }  
+  }
   .visit_wrap {
     padding: 6.25rem 1.5rem 10rem;
   }
@@ -2651,7 +2655,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
     background-size: contain;
   }
 
-  .popup .btn-wrap button.btn-only-icon-notbg.pop-close {
+  .popup .btn-wrap button.btn-only-icon-notbg.popup-close-btn-x {
     top: 18px;
     right: 24px;
     width: 24px;
@@ -2659,7 +2663,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
     /* height: fit-content; */
   }
 
-  .popup button.btn-only-icon-notbg.pop-close span.icon-close {
+  .popup button.btn-only-icon-notbg.popup-close-btn-x span.icon-close {
     width: 100%;
     top: 0;
     position: relative;
@@ -3123,7 +3127,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
   .side-popup
     .pop-wrap
     .btn-wrap
-    button.btn-only-icon-notbg.pop-close
+    button.btn-only-icon-notbg.popup-close-btn-x
     span.icon-close {
     width: 24px;
     height: 24px;
