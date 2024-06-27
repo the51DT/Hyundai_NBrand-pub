@@ -136,6 +136,12 @@ min-width : 1024 css
     width: 100%;
     margin-top: 8px;
   }
+  .btn-wrap-type6 {
+    flex-direction: column;
+  }
+  .btn-wrap-type6 > .btn {
+    width: 100%;
+  }
   /*********
     tab
   **********/
