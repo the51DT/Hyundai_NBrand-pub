@@ -6,9 +6,7 @@ var pubUi = {
     self.swiperSlideEvent();
     self.masonryLayout();
     // self.videoControlerChk("");
-    if ($(".kv-video-area").length > 0) {
-      self.videoBulletChk(".ty01Swiper");
-    }
+    self.videoBulletChk(".ty01Swiper");
   },
   settings: function () {
     var self = this;
@@ -42,30 +40,15 @@ var pubUi = {
       e.preventDefault();
       var targetSwiper = $(this).closest(".swiper");
 
-      if (!targetSwiper.hasClass(".ty01Swiper")) {
-        if ($(this).hasClass("on")) {
-          console.log("정지버튼 클릭!");
-          $(this).removeClass("on");
-          $(this).find(".visually-hidden").text("정지");
-          targetSwiper[0].swiper.autoplay.stop();
-        } else {
-          console.log("재생버튼 클릭!");
-          $(this).addClass("on");
-          $(this).find(".visually-hidden").text("재생");
-          targetSwiper[0].swiper.autoplay.start();
-        }
+      if ($(this).hasClass("on")) {
+        console.log("정지버튼 클릭!");
+        $(this).removeClass("on");
+        $(this).find(".visually-hidden").text("정지");
       } else {
-        if ($(this).hasClass("on")) {
-          console.log("정지버튼 클릭!");
-          $(this).removeClass("on");
-          $(this).find(".visually-hidden").text("정지");
-        } else {
-          console.log("재생버튼 클릭!");
-          $(this).addClass("on");
-          $(this).find(".visually-hidden").text("재생");
-        }
-      }      
-      
+        console.log("재생버튼 클릭!");
+        $(this).addClass("on");
+        $(this).find(".visually-hidden").text("재생");
+      }
       self.videoControlerChk(targetSwiper);
     });
 
@@ -189,7 +172,7 @@ var pubUi = {
       slidesPerView: "auto",
       centeredSlides: true,
       loop: loopVal,
-      initialSlide: slideInx,
+      initialSlide: 2,
       watchOverflow: true,
       observer: true,
       observerParents: true,
@@ -1434,3 +1417,5 @@ $(".btn_full").click(() => {
   $(".btn_full").toggleClass("on");
 });
 // [End] : configurator fx
+
+$(".pop-open").addEventListener("click", () => alert());

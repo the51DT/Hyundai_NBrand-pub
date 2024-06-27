@@ -119,6 +119,7 @@ var NbrandUI = {
           $(".dimmed").addClass(openmodalData).css("z-index", 1002);
         default:
           openWrap.addClass("on").fadeIn(200);
+          alert("tt");
           break;
       }
     } else {
