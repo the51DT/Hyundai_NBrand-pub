@@ -790,6 +790,13 @@ input[type="radio"]:focus + label {
 .btn-wrap-type5 {
   justify-content: space-between;
 }
+.btn-wrap-type6 {
+  justify-content: center;
+  gap: 10px;
+}
+.btn-wrap-type6 > .btn {
+  width: calc(100% / 3);
+}
 .btn-wrap-type5 > div:first-child {
   display: flex;
   align-items: center;
