@@ -1317,10 +1317,6 @@ function modelsVideoPlay() {
 }
 // [End] : Models > 영상 버튼 클릭 시 재생 혹은 멈춤 작업 & 한 번 재생 후 포스터 나와야함
 
-// video s
-
-// video e
-
 // [Start] : configurator_header_menu 확인용 스크립트 / 체크값 확인 후 넘어가기 필요
 function configuratorHeader(el) {
   $(".configurator_header_menu").removeClass("on");
