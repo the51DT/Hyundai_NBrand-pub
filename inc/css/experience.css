@@ -382,6 +382,30 @@
   padding: 10rem 5rem 15rem;
 }
 
+/* EP010303 */
+.guide_wrap .imgwrap .track-img {
+  width: 708px;
+  height: 708px;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: contain;
+}
+.guide_wrap.track-ty01 .imgwrap .track-img {
+  background-image: url('../../inc/images/content/track-ty01.png');
+}
+
+.guide_wrap.track-ty02 .imgwrap .track-img {
+  background-image: url('../../inc/images/content/track-ty02.png');
+}
+
+.guide_wrap.track-ty03 .imgwrap .track-img {
+  background-image: url('../../inc/images/content/track-ty03.png');
+}
+
+.guide_wrap.track-ty04 .imgwrap .track-img {
+  background-image: url('../../inc/images/content/track-ty04.png');
+}
+
 /* EP010401 */
 .standing_top {
   padding: 7.5rem 5rem;
@@ -1925,6 +1949,18 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
 }
 /* 사이드 팝업 끝*/
 
+/* EP010303 */
+  @media screen and (min-width: 1024px) and (max-width: 1366px) {
+  
+  .guide_wrap[class*=track-] .imgwrap {
+    padding:0 !important;
+  }
+  .guide_wrap .imgwrap .track-img {
+    width: 420px;
+    height: 420px;
+  }
+}
+
 /* 모바일 */
 @media screen and (max-width: 1023px) {
   /* Experience  common */
@@ -2263,6 +2299,19 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
   .guide_wrap {
     padding: 6.25rem 1.5rem;
   }
+
+  /* EP010303 */  
+  .guide_wrap[class*=track-] .imgwrap {
+    width:312px;
+    padding:0 !important;
+  }
+  .guide_wrap[class*=track-] .wrap-list.list03 .right.descwrap h2.sub-tit {
+    margin-top:8px;
+  }
+  .guide_wrap .imgwrap .track-img {
+    width: 312px;
+    height: 312px;
+  }  
   .visit_wrap {
     padding: 6.25rem 1.5rem 10rem;
   }
