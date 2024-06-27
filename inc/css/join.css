@@ -554,6 +554,9 @@
   line-height: 33.6px;
   margin-bottom: 12px;
 }
+.mypage-eachbox-top.type3 + .mymsission-wrap {
+  border-top: 2px solid #aaa;
+}
 .mypage-eachbox-top.type4 {
   display: flex;
   flex-direction: column;
@@ -1395,7 +1398,11 @@
     line-height: 25.2px;
     margin-bottom: 8px;
   }
-  .mypage-wrap .community-managelist .mymsission-wrap li:first-child {
+  .mypage-wrap .community-managelist .mymsission-wrap li:first-child,
+  .mypage-wrap .mypage-eachbox-top.type3 + .mymsission-wrap li:first-child {
     padding-top: 20px;
+  }
+  .mypage-wrap .mypage-eachbox-top.type3 + .mymsission-wrap li .btn-wrap-type1 {
+    margin-top: 16px;
   }
 }
