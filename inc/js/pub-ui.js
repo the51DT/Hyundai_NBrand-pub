@@ -1440,5 +1440,3 @@ $(".btn_full").click(() => {
   $(".btn_full").toggleClass("on");
 });
 // [End] : configurator fx
-
-$(".pop-open").addEventListener("click", () => alert());

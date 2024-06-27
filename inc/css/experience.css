@@ -863,7 +863,7 @@
   position: relative;
 }
 
-.popup .btn-wrap button.btn-only-icon-notbg.pop-close {
+.popup .btn-wrap button.btn-only-icon-notbg.popup-close-btn-x {
   position: absolute;
   top: 36px;
   right: 35px;
@@ -1499,10 +1499,10 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
   padding: 16px 0;
   margin-top: 42px;
 }
-.club-info-popup .popup-wrapper .popup-footer .btn:not(.pop-close) {
+.club-info-popup .popup-wrapper .popup-footer .btn:not(.popup-close-btn-x) {
   order: 1;
 }
-.club-info-popup .popup-wrapper .popup-footer .btn.pop-close {
+.club-info-popup .popup-wrapper .popup-footer .btn.popup-close-btn-x {
   order: 0;
 }
 
@@ -2650,7 +2650,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
     background-size: contain;
   }
 
-  .popup .btn-wrap button.btn-only-icon-notbg.pop-close {
+  .popup .btn-wrap button.btn-only-icon-notbg.popup-close-btn-x {
     top: 18px;
     right: 24px;
     width: 24px;
@@ -2658,7 +2658,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
     /* height: fit-content; */
   }
 
-  .popup button.btn-only-icon-notbg.pop-close span.icon-close {
+  .popup button.btn-only-icon-notbg.popup-close-btn-x span.icon-close {
     width: 100%;
     top: 0;
     position: relative;
@@ -3122,7 +3122,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03
   .side-popup
     .pop-wrap
     .btn-wrap
-    button.btn-only-icon-notbg.pop-close
+    button.btn-only-icon-notbg.popup-close-btn-x
     span.icon-close {
     width: 24px;
     height: 24px;
