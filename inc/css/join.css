@@ -489,8 +489,7 @@
 .mymsission-col {
   display: flex;
   flex-direction: column;
-  /* flex: 0 0 calc(100% - 352px); */
-  flex: auto;
+  flex: 1;
   align-items: flex-start;
   gap: 8px;
 }
@@ -543,6 +542,18 @@
   padding-bottom: 24px;
   margin-bottom: 40px;
 }
+.mypage-eachbox-top.type3 {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 0;
+}
+.mypage-eachbox-top.type3 p {
+  font-family: "Hyundai Sans Head";
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 33.6px;
+  margin-bottom: 12px;
+}
 .mypage-subtit-box {
   display: flex;
   justify-content: space-between;
@@ -563,6 +574,9 @@
   font-size: 40px;
   font-weight: 700;
   line-height: 50px;
+}
+.tab-container.mypoint-tabwrap .tab-content {
+  margin-top: 0;
 }
 
 /* CM040802 */
@@ -752,6 +766,9 @@
   line-height: 50px;
   color: #fff;
 }
+.mypage-community-info .community-name + .btn.btn-only-icon-bg02-circle {
+  min-width: 40px;
+}
 .mypage-community-info .info-top img {
   width: 100px;
   height: 100px;
@@ -808,6 +825,22 @@
   position: absolute;
   top: 0;
   right: 0;
+}
+.mypage-wrap .mypage-community-info .info-transfer {
+  display: flex;
+  padding: 30px 24px;
+  justify-content: space-between;
+  background-color: #f0f0f0;
+  margin-bottom: 40px;
+  align-items: center;
+}
+.mypage-wrap .mypage-community-info .info-transfer p {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22.4px;
+}
+.mypage-wrap .mypage-community-info .info-transfer .btn-wrap-type2 {
+  margin: 14px 0;
 }
 .mypage-wrap .mypage-content-nodata {
   font-family: "Hyundai Sans Head";
@@ -1133,9 +1166,7 @@
   .mypage-content.mypage-eachbox .mypage-eachbox-top + .mypage-nodata-box {
     padding: 4px 0 0;
   }
-  .mypage-content.mypage-eachbox.type2
-    .mypage-eachbox-top
-    + .mypage-nodata-box {
+  .mypage-content.mypage-eachbox.type2 .mypage-eachbox-top + .mypage-nodata-box {
     padding: 12px 0 0;
   }
   .mypage-content.mypage-eachbox.type2 .mypage-eachbox-top + .inquiry-nodata {
@@ -1173,13 +1204,16 @@
     line-height: 33.6px;
   }
   .tab-container.mypoint-tabwrap .tab-head {
-    margin-bottom: 60px;
+    padding-bottom: 22px;
   }
   .tab-container.mypoint-tabwrap .tab-head h4 {
-    padding-bottom: 0;
+    padding-bottom: 28px;
   }
   .tab-container.mypoint-tabwrap .mypost-contents.type3 {
     margin-top: 60px;
+  }
+  .tab-container.mypoint-tabwrap .tab-content {
+    margin-top: 20px;
   }
 
   /* CM040802 */
@@ -1297,6 +1331,24 @@
   .mypage-community-tab .mymsission-wrap {
     margin-top: 20px;
   }
+  .mypage-community-des .btn-only-icon-bg03-square {
+    width: 24px;
+    height: 24px;
+  }
+  .mypage-wrap .mypage-community-info .info-transfer {
+    gap: 36px;
+    flex-direction: column;
+    margin-bottom: 28px;
+  }
+  .mypage-wrap .mypage-community-info .info-transfer p {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22.4px;
+  }
+  .mypage-wrap .mypage-community-info .info-transfer .btn-wrap-type2 {
+    margin: 0;
+    width: 100%;
+  }
   .mypage-mt40 .mymsission-wrap {
     border-top: 1px solid #787d80;
   }
@@ -1307,5 +1359,10 @@
   .mymsission-wrap + .btn-wrap-default,
   .mynotice-wrap + .btn-wrap-default {
     margin-top: 44px;
+  }
+  .mypage-eachbox-top.type3 p {
+    font-size: 18px;
+    line-height: 25.2px;
+    margin-bottom: 8px;
   }
 }

@@ -106,7 +106,7 @@
                 </li>
                 <li>
                   <a class="btn lg-txt-btn01" href="./CM041101.html">
-                    N Community 관리
+                      N Community management
                     <span class="btn-icon16 icon-right" aria-hidden="true"></span>
                   </a>
                 </li>
@@ -140,28 +140,28 @@
               <h4 class="mypage-eachbox-top">Post</h4>
               <div class="mypost-wrap">
                 <div class="mypost-box">
-                  <!-- v1.02 p.44 승인 상태별 클릭 시 : 작성 Post 목록에 해당 승인 상태 값으로 정렬하여 최신순 노출 -->
-                  <button>Approved</button>
+                    <!-- 0627 작성한 포스트 최신순 노출에 따른 태그 변경 (button → p) -->
+                    <p>Approved</p>
                   <p>10</p>
                 </div>
                 <div class="mypost-box">
-                  <!-- v1.02 p.44 승인 상태별 클릭 시 : 작성 Post 목록에 해당 승인 상태 값으로 정렬하여 최신순 노출 -->
-                  <button>Waiting for approval</button>
+                    <!-- 0627 v1.03 post : 작성한 포스트 최신순 노출에 따른 태그 변경 (button → p) -->
+                    <p>Waiting for approval</p>
                   <p>3</p>
                 </div>
                 <div class="mypost-box">
-                  <!-- v1.02 p.44 승인 상태별 클릭 시 : 작성 Post 목록에 해당 승인 상태 값으로 정렬하여 최신순 노출 -->
-                  <button>Under review</button>
+                    <!-- 0627 v1.03 post : 작성한 포스트 최신순 노출에 따른 태그 변경 (button → p) -->
+                    <p>Under review</p>
                   <p>3</p>
                 </div>
                 <div class="mypost-box">
-                  <!-- v1.02 p.44 승인 상태별 클릭 시 : 작성 Post 목록에 해당 승인 상태 값으로 정렬하여 최신순 노출 -->
-                  <button>Companion</button>
+                    <!-- 0627 v1.03 post : 작성한 포스트 최신순 노출에 따른 태그 변경 (button → p) -->
+                    <p>Companion</p>
                   <p>1</p>
                 </div>
                 <div class="mypost-box">
-                  <!-- v1.02 p.44 승인 상태별 클릭 시 : 작성 Post 목록에 해당 승인 상태 값으로 정렬하여 최신순 노출 -->
-                  <button>non-disclosure action</button>
+                    <!-- 0627 v1.03 post : 작성한 포스트 최신순 노출에 따른 태그 변경 (button → p) -->
+                    <p>non-disclosure action</p>
                   <p>1</p>
                 </div>
               </div>
@@ -190,180 +190,35 @@
                       </ul>
                     </div>
                   </div>
+                    <div class="selectbox-overlay" style="display: none"></div>
                 </div>
-                <!-- 레이아웃 구성 후 pubUi.masonrtLayout 함수 실행해주세요 -->
-                <div class="grid_masonry grid_masonry2">
-                  <div class="masonry_item">
-                    <div class="masonry_con">
-                      <div class="card_type04">
-                        <button class="card_thumbnail">
-                          <img src="../../inc/images/img/img_hub_thumnail02.png" alt="썸네일 이미지" />
-                        </button>
-                        <div class="card_state card_mypage">
-                          <p>Under review</p>
-                        </div>
-                        <div class="card_con">
-                          <p class="tit-type03 fw-type03">Scuderia Ferrari Esports Team triumphs at Sebring</p>
-                          <p class="txt-type03 fw-type02 card_cont-des">A fifth consecutive win for the Scuderia Ferrari
-                            Esports Team in the Virtual Endurance Championship,</p>
-                          <div class="card-hashtag">
-                            <button class="txt-type04">#FormulaSim_Racing</button>
-                            <button class="txt-type04">#DTMEsports</button>
-                            <button class="txt-type04">#VEMdebut</button>
-                            <button class="txt-type04">#Drive</button>
-                          </div>
-                        </div>
-                        <div class="card_function btn-wrap-type5">
-                          <div>
-                            <button type="button" class="btn btn-only-icon-notbg">
-                              <span class="visually-hidden">heart button</span>
-                              <span class="btn-icon20 icon-heart" aria-hidden="true"></span>
-                            </button>
-                            <p class="txt-type03 fw-type03">24</p>
-                          </div>
-                          <div>
-                            <button type="button" class="btn btn-only-icon-notbg">
-                              <span class="visually-hidden">share button</span>
-                              <span class="btn-icon20 icon-share" aria-hidden="true"></span>
-                            </button>
-                            <button type="button" class="btn btn-only-icon-notbg">
-                              <span class="visually-hidden">Translation button</span>
-                              <span class="btn-icon20 icon-trans" aria-hidden="true"></span>
-                            </button>
-                          </div>
-                        </div>
-                      </div>
+                  <!-- 0627 v1.03 p.46 게시글 목록으로 변경 -->
+                  <ul class="mymsission-wrap">
+                    <li>
+                      <div class="mymsission-col">
+                        <!-- 제목 클릭 시 : 상세 화면 노출 (화면 ID : CM040301P01) -->
+                        <button class="mymsission-title ellipsis2">You’ll see me in hindsight</button>
+                        <p class="mymsission-date">04.01.2024</p>
                     </div>
+                      <p class="mymsission-status">Reject</p>
+                    </li>
+                    <li>
+                      <div class="mymsission-col">
+                        <!-- 제목 클릭 시 : 상세 화면 노출 (화면 ID : CM040301P01) -->
+                        <button class="mymsission-title ellipsis2">Nürburgring 24H Race Cheering</button>
+                        <p class="mymsission-date">04.01.2024</p>
                   </div>
-                  <div class="masonry_item">
-                    <div class="masonry_con">
-                      <div class="card_type04">
-                        <button class="card_thumbnail">
-                          <img src="../../inc/images/img/img_missions-event02.png" alt="썸네일 이미지" />
-                        </button>
-                        <div class="card_state compelete card_mypage">
-                          <p>Waiting for approval</p>
-                        </div>
-                        <div class="card_con">
-                          <p class="tit-type03 fw-type03">A win, a second place and championship a new start for the
-                            scuderia N brand esports team</p>
-                          <p class="txt-type03 fw-type02 card_cont-des">SRO Intercontinental GT Challenge Esports – The
-                            season also got off</p>
-                          <div class="card-hashtag">
-                            <button class="txt-type04">#SROIntercontinental GT</button>
-                            <button class="txt-type04">#Upcomingrounds</button>
-                          </div>
-                        </div>
-                        <div class="card_function btn-wrap-type5">
-                          <div>
-                            <button type="button" class="btn btn-only-icon-notbg">
-                              <span class="visually-hidden">heart button</span>
-                              <span class="btn-icon20 icon-heart" aria-hidden="true"></span>
-                            </button>
-                            <p class="txt-type03 fw-type03">3</p>
-                          </div>
-                          <div>
-                            <button type="button" class="btn btn-only-icon-notbg">
-                              <span class="visually-hidden">share button</span>
-                              <span class="btn-icon20 icon-share" aria-hidden="true"></span>
-                            </button>
-                            <button type="button" class="btn btn-only-icon-notbg">
-                              <span class="visually-hidden">Translation button</span>
-                              <span class="btn-icon20 icon-trans" aria-hidden="true"></span>
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="masonry_item">
-                    <div class="masonry_con">
-                      <div class="card_type04">
-                        <button class="card_thumbnail">
-                          <img src="../../inc/images/img/img_hub_thumnail01.png" alt="썸네일 이미지" />
-                        </button>
-                        <div class="card_state end card_mypage">
-                          <p>Approved</p>
-                        </div>
-                        <div class="card_con">
-                          <p class="tit-type03 fw-type03">Maranello 13 March 2024</p>
-                          <p class="txt-type03 fw-type02 card_cont-des">Born on 13 June 1995 in Hungary a great show of
-                            strength and, with two races to go, the Ferrari crew are favourite to take the LMP2 title.
-                          </p>
-                          <div class="card-hashtag">
-                            <button class="txt-type04">#Opportunity</button>
-                            <button class="txt-type04">#IsaacGillisen</button>
-                            <button class="txt-type04">#Drive</button>
-                          </div>
-                        </div>
-                        <div class="card_function btn-wrap-type5">
-                          <div>
-                            <button type="button" class="btn btn-only-icon-notbg">
-                              <span class="visually-hidden">heart button</span>
-                              <span class="btn-icon20 icon-heart" aria-hidden="true"></span>
-                            </button>
-                            <p class="txt-type03 fw-type03">31</p>
-                          </div>
-                          <div>
-                            <button type="button" class="btn btn-only-icon-notbg">
-                              <span class="visually-hidden">share button</span>
-                              <span class="btn-icon20 icon-share" aria-hidden="true"></span>
-                            </button>
-                            <button type="button" class="btn btn-only-icon-notbg">
-                              <span class="visually-hidden">Translation button</span>
-                              <span class="btn-icon20 icon-trans" aria-hidden="true"></span>
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="masonry_item">
-                    <div class="masonry_con">
-                      <div class="card_type04">
-                        <button class="card_thumbnail">
-                          <img src="../../inc/images/img/img_hub_thumnail04.png" alt="썸네일 이미지" />
-                        </button>
-                        <div class="card_state end card_mypage">
-                          <p>Approved</p>
-                        </div>
-                        <div class="card_con">
-                          <p class="tit-type03 fw-type03">Returns with a season of competitive sim racing and exclusive
-                            video content</p>
-                          <p class="txt-type03 fw-type02 card_cont-des">
-                            The Hyundai Series is a six-month racing tournament bringing together sim racers from
-                            Europe, North America and Asian Pacific regions for a chance to race in the grand final on
-                            12 October.
-                          </p>
-                          <div class="card-hashtag">
-                            <button class="txt-type04">#F123</button>
-                            <button class="txt-type04">#FormulaSimRacing</button>
-                            <button class="txt-type04">#DTMEsportsandVEMdebut</button>
-                          </div>
-                        </div>
-                        <div class="card_function btn-wrap-type5">
-                          <div>
-                            <button type="button" class="btn btn-only-icon-notbg">
-                              <span class="visually-hidden">heart button</span>
-                              <span class="btn-icon20 icon-heart" aria-hidden="true"></span>
-                            </button>
-                            <p class="txt-type03 fw-type03">5</p>
-                          </div>
-                          <div>
-                            <button type="button" class="btn btn-only-icon-notbg">
-                              <span class="visually-hidden">share button</span>
-                              <span class="btn-icon20 icon-share" aria-hidden="true"></span>
-                            </button>
-                            <button type="button" class="btn btn-only-icon-notbg">
-                              <span class="visually-hidden">Translation button</span>
-                              <span class="btn-icon20 icon-trans" aria-hidden="true"></span>
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                      <p class="mymsission-status">Wait</p>
+                    </li>
+                    <li>
+                      <div class="mymsission-col">
+                        <!-- 제목 클릭 시 : 상세 화면 노출 (화면 ID : CM040301P01) -->
+                        <button class="mymsission-title ellipsis2">N Activity Verification(1/3)</button>
+                        <p class="mymsission-date">04.01.2024</p>
                 </div>
+                      <p class="mymsission-status">Reject</p>
+                    </li>
+                  </ul>
                 <div class="btn-wrap-default">
                   <button type="button" class="btn btn-lg-outline01">
                     View More
