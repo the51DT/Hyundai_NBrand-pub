@@ -908,20 +908,76 @@ document.addEventListener("DOMContentLoaded", () => {
     const video = document.querySelectorAll(".popup video");
 
     const videoUrlList = [
-      // 팝업 모델 영상 url 파싱 더미 데이터
+      // 팝업 모델 영상 url
       [
         {
-          id: "modelPop_i20N",
+          //MD010101t01P01 모두 미수급 상태
+          id: "MD010101t01P01_IONIQ5N",
           url: "../../inc/videos/i20n.mp4",
           type: "video/mp4",
         },
         {
-          id: "modelPop_i20N",
+          id: "MD010101t01P01_IONIQ5N",
           url: "../../inc/videos/24hnbr24.mp4",
           type: "video/mp4",
         },
       ],
       [
+        {
+          //MD010101t01P01 모두 미수급 상태
+          id: "MD010101t01P01_i20N",
+          url: "../../inc/videos/i20n.mp4",
+          type: "video/mp4",
+        },
+        {
+          id: "MD010101t01P01_i20N",
+          url: "../../inc/videos/24hnbr24.mp4",
+          type: "video/mp4",
+        },
+      ],
+      [
+        {
+          id: "MD010201t01P01",
+          url: "../../inc/videos/elantraN-video01.mp4",
+          type: "video/mp4",
+        },
+        {
+          id: "MD010201t01P01",
+          url: "../../inc/videos/elantraN-video02.mp4",
+          type: "video/mp4",
+        },
+      ],
+      [
+        {
+          // MD010401t01P01 영상 미수급 상태
+          id: "MD010401t01P01",
+          url: "../../inc/videos/elantraN-video01.mp4",
+          type: "video/mp4",
+        },
+      ],
+      [
+        {
+          id: "MD020201P01",
+          url: "../../inc/videos/IONIQ5N-eN1-Cup-video01.mp4",
+          type: "video/mp4",
+        },
+      ],
+      [
+        {
+          id: "MD020301P01",
+          url: "../../inc/videos/IONIQ5N-TA-video01.mp4",
+          type: "video/mp4",
+        },
+      ],
+      [
+        {
+          id: "MD040201P01",
+          url: "../../inc/videos/IONIQ5N-NPX1-video01.mp4",
+          type: "video/mp4",
+        },
+      ],
+      [
+        // 더미 페이지입니다. 추후 삭제 예정입니다.
         {
           id: "modelPop_test",
           url: "../../inc/videos/elantra-n-kv.mp4",

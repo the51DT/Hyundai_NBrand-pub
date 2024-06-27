@@ -1165,6 +1165,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   .txt-type03
   span.accent {
   color: #de3111;
+  font-weight: 700;
 }
 .popup-wrapper.onlyTxt .popup-body .txt-type03 .accent {
   color: #de3111;
@@ -1174,6 +1175,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
 .popup-wrapper.onlyTxt .popup-body .popup-body-innerbox .txt-type03 .accent {
   color: #de3111;
   text-decoration: underline;
+  font-weight: 500;
 }
 
 .popup-wrapper.onlyTxt .popup-body .popup-body-innerbox .selectbox-wrap {
