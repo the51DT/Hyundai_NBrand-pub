@@ -948,18 +948,6 @@ function hasTagFun() {
 }
 // [End] : hashTag 말줄임
 
-// [Start] : 하트 버튼 토글 (EP040101, EP040201, EP040301, EP040501)
-$(".card_function.btn-wrap-type5 .btn-only-icon-notbg").click(function (event) {
-  $(this).find(".btn-icon20").toggleClass("icon-heart icon-heart-red");
-});
-
-// 팝업 하트 버튼 토글
-$(".popup-footer .btn-only-icon-notbg").click(function (event) {
-  $(this).find(".btn-icon20").toggleClass("icon-heart icon-heart-red");
-});
-// 팝업 하트버튼 토글 끝
-// [End] : 하트 버튼 토글 (EP040101, EP040201, EP040301, EP040501)
-
 // [Start] : CM040101 > unread 버튼 클릭 시 배경색, read 문구 변경
 $(".unread-box .mynotice-btm>button.sm-txt-btn01").click(function () {
   $(this).closest(".mynotice-box.unread-box").attr("class", "mynotice-box read-box");
