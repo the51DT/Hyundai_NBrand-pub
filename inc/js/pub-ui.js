@@ -6,9 +6,7 @@ var pubUi = {
     self.swiperSlideEvent();
     self.masonryLayout();
     // self.videoControlerChk("");
-    if ($(".kv-video-area").length > 0) {
-      self.videoBulletChk(".ty01Swiper");
-    }
+    self.videoBulletChk(".ty01Swiper");
   },
   settings: function () {
     var self = this;
@@ -189,7 +187,7 @@ var pubUi = {
       slidesPerView: "auto",
       centeredSlides: true,
       loop: loopVal,
-      initialSlide: slideInx,
+      initialSlide: 2,
       watchOverflow: true,
       observer: true,
       observerParents: true,
@@ -1318,10 +1316,6 @@ function modelsVideoPlay() {
     .resize();
 }
 // [End] : Models > 영상 버튼 클릭 시 재생 혹은 멈춤 작업 & 한 번 재생 후 포스터 나와야함
-
-// video s
-
-// video e
 
 // [Start] : configurator_header_menu 확인용 스크립트 / 체크값 확인 후 넘어가기 필요
 function configuratorHeader(el) {
