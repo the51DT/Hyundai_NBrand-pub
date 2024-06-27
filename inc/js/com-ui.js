@@ -81,10 +81,11 @@ var NbrandUI = {
   popOpen: function (obj) {
     openmodalBtn = $(obj);
     openmodalBtn.addClass("open-btn").data("open");
-    openmodalData = openmodalBtn.attr("aria-controls");
-    openWrap = $(".popup" + openmodalData);
+    // openmodalData = openmodalBtn.attr("aria-controls");
+    openWrap = $(".popup");
     var popClass = openWrap.attr("class");
     NbrandUI.expandedAria(openmodalBtn);
+
     if (NbrandUI.windowSize()) {
       switch (popClass) {
         case "popup model-popup":
@@ -99,12 +100,11 @@ var NbrandUI = {
         case "popup bottom-popup":
           openWrap.addClass("on").slideDown(200);
           NbrandUI.dimdOn();
-          $(".dimmed").addClass(openmodalData).css("z-index", 1002);
+          $(".dimmed").css("z-index", 1002);
           break;
         case "popup bottom-popup2":
           openWrap.addClass("on").slideDown(200);
           NbrandUI.dimdOn();
-          $(".dimmed").addClass(openmodalData);
           break;
         case "popup side-popup":
           openWrap.addClass("on").fadeIn(200);
@@ -116,7 +116,7 @@ var NbrandUI = {
         case "popup club-info-popup bottom-popup":
           openWrap.addClass("on").slideDown(200);
           NbrandUI.dimdOn();
-          $(".dimmed").addClass(openmodalData).css("z-index", 1002);
+          $(".dimmed").css("z-index", 1002);
         default:
           openWrap.addClass("on").fadeIn(200);
           alert("tt");
@@ -127,31 +127,27 @@ var NbrandUI = {
         case "popup model-popup":
           openWrap.addClass("on").fadeIn(200);
           NbrandUI.dimdOn();
-          $(".dimmed").addClass(openmodalData);
           break;
         case "popup model-popup forModel":
           openWrap.addClass("on").fadeIn(200);
           NbrandUI.dimdOn();
-          $(".dimmed").addClass(openmodalData);
           break;
         case "popup model-popup fullWidth":
           openWrap.addClass("on").fadeIn(200);
           NbrandUI.dimdOn();
-          $(".dimmed").addClass(openmodalData);
           break;
         case "popup bottom-popup":
           openWrap.addClass("on").fadeIn(200);
           NbrandUI.dimdOn();
-          $(".dimmed").addClass(openmodalData).css("z-index", 1002);
+          $(".dimmed").css("z-index", 1002);
           break;
         case "popup bottom-popup2":
           openWrap.addClass("on").fadeIn(200);
           NbrandUI.dimdOn();
-          $(".dimmed").addClass(openmodalData);
           break;
         case "popup side-popup":
           NbrandUI.anidimdOn();
-          $(".ani-dimmed").addClass(openmodalData + " on");
+          $(".ani-dimmed").addClass("on");
           setTimeout(function () {
             openWrap.addClass("on"); //.animate({ right: "0px" }, 100);
           }, 200);
@@ -170,6 +166,58 @@ var NbrandUI = {
       selector: tparent,
       type: "hold",
     });
+  },
+  popClose: function (obj) {
+    closeWrap = $(obj).parents(".popup");
+    openmodalBtn = $(".open-btn[aria-expanded = true]");
+    closeWrap.find(".ui-fctab-s").remove();
+    closeWrap.find(".ui-fctab-e").remove();
+    NbrandUI.expandedAria(openmodalBtn);
+    openmodalBtn.focus().removeClass("open-btn");
+
+    if (NbrandUI.windowSize()) {
+      switch (closeWrap.attr("class")) {
+        case "popup bottom-popup on":
+          closeWrap.removeClass("on").slideUp(200);
+          NbrandUI.dimdZindexOff();
+          break;
+        default:
+          closeWrap.removeClass("on").stop().fadeOut(300);
+          $(".dimmed").stop().fadeOut(300);
+          setTimeout(function () {
+            NbrandUI.dimdOff();
+            NbrandUI.mdimdOff();
+            NbrandUI.anidimdOff();
+          }, 300);
+          break;
+      }
+    } else {
+      switch (closeWrap.attr("class")) {
+        case "popup bottom-popup on":
+          closeWrap.removeClass("on").stop().hide();
+          $(".dimmed").css("z-index", 1000);
+          break;
+        case "popup bottom-popup2 on":
+          closeWrap.removeClass("on").stop().hide();
+          NbrandUI.dimdOff();
+          break;
+        case "popup side-popup on":
+          closeWrap.removeClass("on").stop().fadeOut(300);
+          $(".ani-dimmed").stop().fadeOut(300);
+          setTimeout(function () {
+            NbrandUI.anidimdOff();
+          }, 300);
+          break;
+        default:
+          closeWrap.removeClass("on").stop().fadeOut(300);
+          $(".dimmed").stop().fadeOut(300);
+          setTimeout(function () {
+            NbrandUI.dimdOff();
+            NbrandUI.mdimdOff();
+          }, 300);
+          break;
+      }
+    }
   },
   /* headerNav */
   headerNav: function (obj, com, par) {
@@ -410,8 +458,7 @@ var NbrandUI = {
       return;
     }
 
-    var closemodal = null,
-      closeWrap = null;
+    var closemodal = null;
 
     function init(obj) {
       closemodal = $(obj);
@@ -419,56 +466,8 @@ var NbrandUI = {
 
     function event() {
       closemodal.on("click", function () {
-        closeWrap = $(this).parents(".popup");
-        openmodalBtn = $(".open-btn[aria-expanded = true]");
-        closeWrap.find(".ui-fctab-s").remove();
-        closeWrap.find(".ui-fctab-e").remove();
-        NbrandUI.expandedAria(openmodalBtn);
-        openmodalBtn.focus().removeClass("open-btn");
-
-        if (NbrandUI.windowSize()) {
-          switch (closeWrap.attr("class")) {
-            case "popup bottom-popup on":
-              closeWrap.removeClass("on").slideUp(200);
-              NbrandUI.dimdZindexOff();
-              break;
-            default:
-              closeWrap.removeClass("on").stop().fadeOut(300);
-              $(".dimmed").stop().fadeOut(300);
-              setTimeout(function () {
-                NbrandUI.dimdOff();
-                NbrandUI.mdimdOff();
-                NbrandUI.anidimdOff();
-              }, 300);
-              break;
-          }
-        } else {
-          switch (closeWrap.attr("class")) {
-            case "popup bottom-popup on":
-              closeWrap.removeClass("on").stop().hide();
-              $(".dimmed").css("z-index", 1000);
-              break;
-            case "popup bottom-popup2 on":
-              closeWrap.removeClass("on").stop().hide();
-              NbrandUI.dimdOff();
-              break;
-            case "popup side-popup on":
-              closeWrap.removeClass("on").stop().fadeOut(300);
-              $(".ani-dimmed").stop().fadeOut(300);
-              setTimeout(function () {
-                NbrandUI.anidimdOff();
-              }, 300);
-              break;
-            default:
-              closeWrap.removeClass("on").stop().fadeOut(300);
-              $(".dimmed").stop().fadeOut(300);
-              setTimeout(function () {
-                NbrandUI.dimdOff();
-                NbrandUI.mdimdOff();
-              }, 300);
-              break;
-          }
-        }
+        button = $(this);
+        NbrandUI.popClose(button);
       });
     }
 

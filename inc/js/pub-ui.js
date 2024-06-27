@@ -40,15 +40,30 @@ var pubUi = {
       e.preventDefault();
       var targetSwiper = $(this).closest(".swiper");
 
-      if ($(this).hasClass("on")) {
-        console.log("정지버튼 클릭!");
-        $(this).removeClass("on");
-        $(this).find(".visually-hidden").text("정지");
+      if (!targetSwiper.hasClass(".ty01Swiper")) {
+        if ($(this).hasClass("on")) {
+          console.log("정지버튼 클릭!");
+          $(this).removeClass("on");
+          $(this).find(".visually-hidden").text("정지");
+          targetSwiper[0].swiper.autoplay.stop();
+        } else {
+          console.log("재생버튼 클릭!");
+          $(this).addClass("on");
+          $(this).find(".visually-hidden").text("재생");
+          targetSwiper[0].swiper.autoplay.start();
+        }
       } else {
-        console.log("재생버튼 클릭!");
-        $(this).addClass("on");
-        $(this).find(".visually-hidden").text("재생");
+        if ($(this).hasClass("on")) {
+          console.log("정지버튼 클릭!");
+          $(this).removeClass("on");
+          $(this).find(".visually-hidden").text("정지");
+        } else {
+          console.log("재생버튼 클릭!");
+          $(this).addClass("on");
+          $(this).find(".visually-hidden").text("재생");
+        }
       }
+
       self.videoControlerChk(targetSwiper);
     });
 
@@ -666,6 +681,8 @@ $(document).ready(function () {
     var targetSwiper = $(this).closest(".swiper");
     targetSwiper.find(".swiper-slide-active video")[0].pause();
   });
+
+  toggleFullscreen();
 });
 
 // [Start] : selectbox 컴포넌트
@@ -1063,42 +1080,48 @@ $("#ToggleDesBtn").click(function () {
 //[End] : CM040701 > 아코디언 토글
 
 // [Start] : 풀스크린
-const toggleFullscreenBtn = document.querySelector(".toggleFullscreenBtn");
+function toggleFullscreen() {
+  const toggleFullscreenBtn = document.querySelector(".toggleFullscreenBtn");
+  if (toggleFullscreenBtn == null) {
+    return;
+  }
+  const container = document.querySelector(".fullscreenContainer");
 
-const container = document.querySelector(".fullscreenContainer");
+  toggleFullscreenBtn.addEventListener("click", (e) => {
+    toggleFullScreen(container);
+    container.classList.toggle("full");
+  });
 
-toggleFullscreenBtn.addEventListener("click", (e) => {
-  toggleFullScreen(container);
-  container.classList.toggle("full");
-});
+  // const fullscreen = (element) => {
+  //   if (element.requestFullscreen) return element.requestFullscreen();
+  //   if (element.webkitRequestFullscreen)
+  //     return element.webkitRequestFullscreen();
+  //   if (element.mozRequestFullScreen) return element.mozRequestFullScreen();
+  //   if (element.msRequestFullscreen) return element.msRequestFullscreen();
+  // };
 
-const fullscreen = (element) => {
-  if (element.requestFullscreen) return element.requestFullscreen();
-  if (element.webkitRequestFullscreen) return element.webkitRequestFullscreen();
-  if (element.mozRequestFullScreen) return element.mozRequestFullScreen();
-  if (element.msRequestFullscreen) return element.msRequestFullscreen();
-};
+  // const exitFullScreen = () => {
+  //   if (document.exitFullscreen) return document.exitFullscreen();
+  //   if (document.webkitCancelFullscreen)
+  //     return document.webkitCancelFullscreen();
+  //   if (document.mozCancelFullScreen) return document.mozCancelFullScreen();
+  //   if (document.msExitFullscreen) return document.msExitFullscreen();
+  // };
 
-const exitFullScreen = () => {
-  if (document.exitFullscreen) return document.exitFullscreen();
-  if (document.webkitCancelFullscreen) return document.webkitCancelFullscreen();
-  if (document.mozCancelFullScreen) return document.mozCancelFullScreen();
-  if (document.msExitFullscreen) return document.msExitFullscreen();
-};
-
-function toggleFullScreen(element) {
-  if (!document.fullscreenElement) {
-    if (element.requestFullscreen) return element.requestFullscreen();
-    if (element.webkitRequestFullscreen)
-      return element.webkitRequestFullscreen();
-    if (element.mozRequestFullScreen) return element.mozRequestFullScreen();
-    if (element.msRequestFullscreen) return element.msRequestFullscreen();
-  } else {
-    if (document.exitFullscreen) return document.exitFullscreen();
-    if (document.webkitCancelFullscreen)
-      return document.webkitCancelFullscreen();
-    if (document.mozCancelFullScreen) return document.mozCancelFullScreen();
-    if (document.msExitFullscreen) return document.msExitFullscreen();
+  function toggleFullScreen(element) {
+    if (!document.fullscreenElement) {
+      if (element.requestFullscreen) return element.requestFullscreen();
+      if (element.webkitRequestFullscreen)
+        return element.webkitRequestFullscreen();
+      if (element.mozRequestFullScreen) return element.mozRequestFullScreen();
+      if (element.msRequestFullscreen) return element.msRequestFullscreen();
+    } else {
+      if (document.exitFullscreen) return document.exitFullscreen();
+      if (document.webkitCancelFullscreen)
+        return document.webkitCancelFullscreen();
+      if (document.mozCancelFullScreen) return document.mozCancelFullScreen();
+      if (document.msExitFullscreen) return document.msExitFullscreen();
+    }
   }
 }
 // [End] : 풀스크린
