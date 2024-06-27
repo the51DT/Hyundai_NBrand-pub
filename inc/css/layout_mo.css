@@ -141,7 +141,8 @@
   }
 
   /* bottom-popup */
-  .bottom-popup {
+  .bottom-popup,
+  .bottom-popup2 {
     top: auto;
     left: auto;
     bottom: 0;
