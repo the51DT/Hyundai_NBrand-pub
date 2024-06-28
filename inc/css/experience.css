@@ -177,6 +177,10 @@
 .nflmain_wrap .content-item06 .rewards-box {
   padding: 160px 80px 240px;
 }
+.main-rank .swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+  opacity: 0;
+}
 /* EP040201, EP040301, EP040501 */
 .subfilter_wrap .content-item02 {
   background-color: #f0f0f0;
