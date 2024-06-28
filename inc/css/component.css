@@ -1997,7 +1997,7 @@ input[type="radio"]:focus + label {
 }
 
 .ty02Swiper {
-  width: 100%;
+  /* width: 100%; */
 }
 
 .ty02Swiper .swiper-slide:last-child {
@@ -2009,10 +2009,10 @@ input[type="radio"]:focus + label {
   width: 952px;
 }
 .ty02Swiper .swiper-slide .img-area {
-  height: 536px;
+  /* height: 536px; */
 }
 .ty02Swiper .swiper-slide-active {
-  width: 1196px;
+  /* width: 1196px; */
 }
 
 .ty02Swiper .swiper-slide-active .img-area {
@@ -2049,7 +2049,8 @@ input[type="radio"]:focus + label {
 }
 
 .ty02Swiper .text-area {
-  margin-top: 28px;
+  padding-top: 28px;
+  background: #f0f0f0;
 }
 
 .ty02Swiper .text-area .title {
@@ -2091,12 +2092,12 @@ input[type="radio"]:focus + label {
 }
 
 .ty02Swiper .swiper-button-prev {
-  left: 17%;
+  left: 0;
   right: auto;
 }
 .ty02Swiper .swiper-button-next {
   left: auto;
-  right: 17%;
+  right: 0;
 }
 
 .ty03Swiper {

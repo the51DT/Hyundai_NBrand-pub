@@ -20,7 +20,8 @@
   display: none;
 }
 .grid_masonry + .btn-wrap-default,
-.grid_masonry + .btn-wrap-default {
+.grid_masonry + .btn-wrap-default, 
+[class*=grid] + .btn-wrap-default {
   margin-top: 80px;
 }
 .title_flex {
@@ -1988,7 +1989,8 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
     display: block;
   }
   .grid_masonry + .btn-wrap-default,
-  .grid_masonry + .btn-wrap-default {
+  .grid_masonry + .btn-wrap-default,
+  [class*=grid] + .btn-wrap-default {
     margin-top: 44px;
   }
   .title_flex {
