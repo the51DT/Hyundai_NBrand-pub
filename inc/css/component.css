@@ -726,6 +726,21 @@ input[type="radio"]:focus + label {
   background-size: contain;
   background-repeat: no-repeat;
 }
+.icon-wechat {
+  background: url(../../inc/images/icon/icon-wechat-wh.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.icon-weibo {
+  background: url(../../inc/images/icon/icon-weibo-wh.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.icon-tiktok {
+  background: url(../../inc/images/icon/icon-tiktok-wh.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 .btn:hover [class*="icon-download"],
 .btn:active [class*="icon-download"] {
   background: url(../../inc/images/icon/icon-download-wh.svg);
@@ -1602,7 +1617,8 @@ input[type="radio"]:focus + label {
   width: 40px;
   height: 40px;
   position: relative;
-  background: url("../../inc/images/img/img_Nful_profile_default.png") center no-repeat;
+  background: url("../../inc/images/img/img_Nful_profile_default.png") center
+    no-repeat;
   background-size: contain;
 }
 /* 0627 패쇄된 커뮤니티 프로필 경우 : dimmed 처리 해야함 */
@@ -1802,17 +1818,16 @@ input[type="radio"]:focus + label {
   position: relative;
   background: #808080;
   opacity: 1;
-  
 }
 
 .swiper-pagination-custom .swiper-pagination-bullet-active .seek-bar {
   --time: 0;
-  width: calc(var(--time));  
+  width: calc(var(--time));
   background: #de3111;
   height: 4px;
   position: absolute;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
 }
 
 .swiper-button-next,
