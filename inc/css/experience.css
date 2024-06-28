@@ -879,7 +879,10 @@
   right: 24px;
 }
 
-.popup .btn-wrap button.btn-only-icon-notbg.popup-close-btn-x span.icon-close {
+.popup
+  .btn-wrap
+  button.btn-only-icon-notbg.popup-close-btn-x.smallX
+  span.icon-close {
   width: 24px;
   height: 24px;
 }
@@ -1929,8 +1932,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   align-items: center;
 }
 
-/* experience 내 sharing 팝업 끝
- */
+/* experience 내 sharing 팝업 끝 */
 /* 일반 모달 팝업 끝*/
 
 /* 사이드 팝업 시작*/
@@ -2739,6 +2741,11 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
     z-index: 6;
   }
 
+  .popup-wrapper .popup-body.body-pop-mobile {
+    /* CM040701P02, CM040701P04  popup in mypage */
+    max-height: calc(100vh - 200px);
+  }
+
   .popup-wrapper .popup-body .m20 .wrap-label-reward .tit-type04 {
     font-size: 24px;
   }
@@ -3004,6 +3011,11 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   .popup-wrapper .popup-footer .box-result.pd-sm {
     padding: 14px 24px;
   }
+
+  .popup-wrapper .popup-footer .box-result.pd-lg {
+    padding: 14px 16px;
+  }
+
   .popup-wrapper .popup-footer .box-result p.popup-tit-lg {
     font-size: 18px;
   }
