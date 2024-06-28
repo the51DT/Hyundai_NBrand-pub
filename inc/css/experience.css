@@ -119,6 +119,22 @@
 .ranking-wrap .ranking-center .ranking-inner2 > span {
   color: #de3111;
 }
+.ranking-wrap .ranking-center .ranking-inner2box.ranking-nologin,
+.ranking-wrap .ranking-center .ranking-inner2box.community-box {
+  align-items: center;
+  gap: 40px;
+}
+.ranking-wrap .ranking-center .ranking-inner2box.ranking-nologin > p {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 33.6px;
+}
+.ranking-wrap .ranking-center .ranking-inner2box.ranking-nologin > p,
+.ranking-wrap .ranking-center .ranking-inner2box.community-box > p {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 33.6px;
+}
 /* EP040101 */
 .nflmain_wrap .mission-box {
   background-color: #f0f0f0;
@@ -127,7 +143,6 @@
 .nflmain_wrap .content-item03 .banner-box {
   padding: 0 80px;
   background: linear-gradient(#f0f0f0 50%, #fff 50%);
-  margin-bottom: 160px;
 }
 .nflmain_wrap .content-item03 .banner-inner {
   max-width: 1440px;
@@ -143,17 +158,33 @@
 .nflmain_wrap .content-item03 .banner-box > .banner-inner p + p {
   margin-top: 12px;
 }
-.nflmain_wrap .content-item03 .banner-box > .banner-inner p {
+.nflmain_wrap .content-item03 .banner-box .banner-titbox p {
   color: #fff;
 }
-.nflmain_wrap .content-item03 .banner-box .btn-wrap {
+.nflmain_wrap .content-item03 .banner-box .banner-titbox + .btn-wrap {
   position: absolute;
   bottom: 52px;
   left: 60px;
 }
+/* 0628 v1.03 기획서 및 디자인 현행화 작업 banner swiper */
+.nflmain_wrap .content-item03 .banner-box .swiper-container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.nflmain_wrap .content-item03 .banner-box .swiper-container .banner-inner {
+  max-width: 100%;
+}
+.nflmain_wrap .content-item03 .banner-box .swiper-container .swiper {
+  padding-bottom: 48px;
+}
+.nflmain_wrap .swiper-button-next,
+.swiper-button-prev {
+  transform: translateY(-50%);
+}
 .nflmain_wrap .content-item04 .mission-box.white-box {
   background-color: #fff;
   padding: 0 80px 160px;
+  margin-top: 160px;
 }
 .nflmain_wrap .content-item05.main-rank {
   background: #f0f0f0;
@@ -178,7 +209,7 @@
   padding: 160px 80px 240px;
 }
 .main-rank .swiper-button-next.swiper-button-disabled,
-.swiper-button-prev.swiper-button-disabled {
+.main-rank .swiper-button-prev.swiper-button-disabled {
   opacity: 0;
 }
 /* EP040201, EP040301, EP040501 */
@@ -2079,7 +2110,6 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   }
   .nflmain_wrap .content-item03 .banner-box {
     padding: 0 24px;
-    margin-bottom: 100px;
   }
   .nflmain_wrap .content-item03 .banner-inner {
     max-width: 100%;
@@ -2093,7 +2123,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   .nflmain_wrap .content-item03 .banner-box > .banner-inner p + p {
     margin-top: 8px;
   }
-  .nflmain_wrap .content-item03 .banner-box .btn-wrap {
+  .nflmain_wrap .content-item03 .banner-box .banner-titbox + .btn-wrap {
     top: 185px;
     left: 24px;
   }
@@ -2105,6 +2135,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   }
   .nflmain_wrap .content-item04 .mission-box.white-box {
     padding: 0 24px 100px;
+    margin-top: 100px;
   }
   .nflmain_wrap .content-item05.main-rank {
     padding: 80px 24px 176px;
