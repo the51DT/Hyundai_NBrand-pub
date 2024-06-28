@@ -20,8 +20,8 @@
   display: none;
 }
 .grid_masonry + .btn-wrap-default,
-.grid_masonry + .btn-wrap-default, 
-[class*=grid] + .btn-wrap-default {
+.grid_masonry + .btn-wrap-default,
+[class*="grid"] + .btn-wrap-default {
   margin-top: 80px;
 }
 .title_flex {
@@ -2086,7 +2086,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   }
   .grid_masonry + .btn-wrap-default,
   .grid_masonry + .btn-wrap-default,
-  [class*=grid] + .btn-wrap-default {
+  [class*="grid"] + .btn-wrap-default {
     margin-top: 44px;
   }
   .title_flex {
@@ -3074,11 +3074,14 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   .popup-wrapper .popup-footer .box-result {
     padding: 14px 24px;
   }
+
   .popup-wrapper .popup-footer .box-result.pd-sm {
+    /* experience 팝업 중에서 progress 있는 바텀시트의 간격 조절 */
     padding: 14px 24px;
   }
 
   .popup-wrapper .popup-footer .box-result.pd-lg {
+    /* experience 팝업 중에서 progress 없는, 한줄짜리 바텀시트의 간격 조절 */
     padding: 14px 16px;
   }
 
