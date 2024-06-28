@@ -1306,18 +1306,31 @@ function modelsVideoPlay() {
       var moPoster = $(this).siblings(".video_poster.mo-only");
 
       if (videoPc.paused && videoMo.paused) {
-        videoPc.play();
+      icon.attr("class", "btn-icon24 icon-pause-wh");
+      if (window.innerWidth <= 1023) {
         videoMo.play();
-        pcPoster.hide();
         moPoster.hide();
-        icon.attr("class", "btn-icon24 icon-pause-wh");
+        pcPoster.hide();
+        $(".models-wrap .content-item02 video.mo-only").attr("aria-hidden", false);
+      } else {
+        videoPc.play();
+        moPoster.hide();
+        pcPoster.hide();
+        $(".models-wrap .content-item02 video.pc-only").attr("aria-hidden", false);
+      }
+      } else {
+        icon.attr("class", "btn-icon24 icon-play-wh");
+      if (window.innerWidth <= 1023) {
+        videoMo.pause();
+        moPoster.hide();
+        pcPoster.hide();
       } else {
         videoPc.pause();
-        videoMo.pause();
-        icon.attr("class", "btn-icon24 icon-play-wh");
+        moPoster.hide();
+        pcPoster.hide();
       }
     }
-  );
+  });
 
   // 비디오가 끝났을 때 썸네일 나오도록
   $(".models-wrap .content-item02 video").on("ended", function () {
