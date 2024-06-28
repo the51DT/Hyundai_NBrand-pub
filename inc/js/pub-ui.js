@@ -605,12 +605,15 @@ var pubUi = {
 
     masonry_item.each(function () {
       let _this = $(this);
-      _this.find(".card_thumbnail img").ready(function () {
-        console.log($(this).prop("scrollHeight"));
+      function event() {
         let scrHeight = parseInt(
           _this.find(".masonry_con").prop("scrollHeight")
         );
         _this.css("grid-row-end", "span " + (scrHeight + row_gap));
+      }
+      event();
+      _this.find(".card_thumbnail img").ready(function () {
+        event();
       });
     });
   },
