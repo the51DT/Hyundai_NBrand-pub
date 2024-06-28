@@ -6,7 +6,10 @@ var pubUi = {
     self.swiperSlideEvent();
     self.masonryLayout();
     // self.videoControlerChk("");
-    self.videoBulletChk(".ty01Swiper");
+
+    if($(".ty01Swiper").length) {
+      self.videoBulletChk(".ty01Swiper");
+    }
   },
   settings: function () {
     var self = this;
