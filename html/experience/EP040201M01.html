@@ -6,7 +6,7 @@
       name="viewport"
       content="initial-scale=1.0, minimum-scale=1.0, width=device-width, viewport-fit=cover"
     />
-    <title>MD010301t03P01-i20 N</title>
+    <title>EP040201M01</title>
 
     <script
       type="text/javascript"
@@ -81,7 +81,7 @@
             aria-expanded="false"
             title="팝업오픈"
           >
-            MD010301t03P01-i20 N 팝업 열기
+            EP040201M01 팝업 열기
           </button>
         </div>
       </section>
@@ -91,7 +91,7 @@
     </div>
     <!-- .popup가 있을시 종류에따라 클래스네이밍 변경 .model-popup .bottom-popup .side-popup -->
     <div
-      class="popup model-popup forModel"
+      class="popup bottom-popup share-popup"
       id="pop-page"
       role="dialog"
       aria-modal="true"
@@ -102,64 +102,72 @@
         <!-- <p class="temp-header">Hub_Write a post ID : EP040201P02</p> -->
 
         <div class="popup-header">
-          <h3 class="tit-type04">Uncompromised Exterior Design</h3>
+          <h3 class="tit-type04">Sharing</h3>
         </div>
 
-        <div class="popup-body">
-          <div class="inner-body-model">
-            <div class="popup-body-innerbox">
-              <div class="wrap-popmedia only-pic">
-                <img src="../../inc/images/Models/i20N/i20N-popup01.png" />
-              </div>
-              <div class="container-desc">
-                <div class="wrap-desc lg">
-                  <p class="tit-type04">Front</p>
-                  <p class="txt-type03">
-                    The front grille is designed to enhance air intake for the
-                    model’s turbo engine and has a pattern inspired by the
-                    chequered flag used in racing.
-                  </p>
-                </div>
-              </div>
+        <div class="popup-body share-icn-wrap">
+          <div class="box-row">
+            <!-- row 1 -->
+            <div class="box-icn">
+              <a href="" class="btn btn-only-icon-bg01-circle">
+                <span class="visually-hidden">instagram link button</span>
+                <span
+                  class="btn-icon20 icon-instagram-wh"
+                  aria-hidden="true"
+                ></span>
+              </a>
             </div>
 
-            <div class="popup-body-innerbox">
-              <div class="wrap-popmedia only-pic">
-                <img src="../../inc/images/Models/i20N/i20N-popup02.png" />
-              </div>
-              <div class="container-desc">
-                <div class="wrap-desc lg">
-                  <p class="tit-type04">Side</p>
-                  <div class="box-desc-divide">
-                    <p class="txt-type03">
-                      The redesigned side skirts on the all-new i20 N optically
-                      enhances the model’s width and creates a visual connection
-                      between front and back.
-                    </p>
-                  </div>
-
-                  <!-- 시안변경됨 <p>(On, Off available / N pedal Level 1~3)</p> -->
-                </div>
-              </div>
+            <div class="box-icn">
+              <a href="" class="btn btn-only-icon-bg01-circle">
+                <span class="visually-hidden">twitter link button</span>
+                <span
+                  class="btn-icon20 icon-twitter-wh"
+                  aria-hidden="true"
+                ></span>
+              </a>
             </div>
 
-            <div class="popup-body-innerbox">
-              <div class="wrap-popmedia only-pic">
-                <img src="../../inc/images/Models/i20N/i20N-popup03.png" />
-              </div>
+            <div class="box-icn">
+              <a href="" class="btn btn-only-icon-bg01-circle">
+                <span class="visually-hidden">facebook link button</span>
+                <span
+                  class="btn-icon20 icon-facebook-wh"
+                  aria-hidden="true"
+                ></span>
+              </a>
+            </div>
 
-              <div class="container-desc">
-                <div class="wrap-desc lg">
-                  <p class="tit-type04">Rear</p>
-                  <div class="box-desc-divide">
-                    <p class="txt-type03">
-                      Dynamic Tomato Red accents below the grille, on the side
-                      skirts, and on the rear bumper underscore the i20 N’s
-                      high-performance look.
-                    </p>
-                  </div>
-                </div>
-              </div>
+            <div class="box-icn">
+              <a href="" class="btn btn-only-icon-bg01-circle">
+                <span class="visually-hidden">share link button</span>
+                <span
+                  class="btn-icon20 icon-copylink-wh"
+                  aria-hidden="true"
+                ></span>
+              </a>
+            </div>
+
+            <!-- row 2: btns for china only, .link-btn-china -->
+            <div class="box-icn link-btn-china">
+              <a href="" class="btn btn-only-icon-bg01-circle">
+                <span class="visually-hidden">wechat button</span>
+                <span class="btn-icon20 icon-wechat" aria-hidden="true"></span>
+              </a>
+            </div>
+
+            <div class="box-icn link-btn-china">
+              <a href="" class="btn btn-only-icon-bg01-circle">
+                <span class="visually-hidden">weibo button</span>
+                <span class="btn-icon20 icon-weibo" aria-hidden="true"></span>
+              </a>
+            </div>
+
+            <div class="box-icn link-btn-china">
+              <a href="" class="btn btn-only-icon-bg01-circle">
+                <span class="visually-hidden">tiktok button</span>
+                <span class="btn-icon20 icon-tiktok" aria-hidden="true"></span
+              ></a>
             </div>
           </div>
         </div>
@@ -168,7 +176,8 @@
           <!-- pop-close 해당 팝업 닫기 -->
           <button
             type="button"
-            class="btn btn-only-icon-notbg popup-close-btn-x pop-close"
+            class="btn btn-only-icon-notbg popup-close-btn-x smallX"
+            onclick="NbrandUI.popClose(this)"
           >
             <span class="visually-hidden">close button</span>
             <span class="btn-icon36 icon-close" aria-hidden="true"></span>
@@ -177,14 +186,5 @@
       </div>
     </div>
     <!-- //model-popup -->
-
-    <script
-      type="text/javascript"
-      src="../../inc/js/jquery-3.7.1.slim.min.js"
-    ></script>
-    <script type="text/javascript" src="../../inc/js/swiper.min.js"></script>
-    <script type="text/javascript" src="../../inc/js/plugins.js"></script>
-    <script type="text/javascript" src="../../inc/js/com-ui.js"></script>
-    <script type="text/javascript" src="../../inc/js/pub-ui.js"></script>
   </body>
 </html>
