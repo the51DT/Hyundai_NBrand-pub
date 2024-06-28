@@ -1499,13 +1499,17 @@ input[type="radio"]:focus + label {
 .card_type04 .card_entry {
   font-weight: 700;
 }
-.card_type04 .card_state.compelete {
+.card_type04 .card_state.state-ing {
   background-color: #aacae6;
   color: #000000;
 }
-.card_type04 .card_state.end {
+.card_type04 .card_state.compelete {
   background-color: #000000;
-  color: #abb2b5;
+  color: #fff;
+}
+.card_type04 .card_state.end {
+  background-color: #bbbbbb;
+  color: #777;
 }
 .card_type04 .card_con {
   padding: 20px 16px 0;
