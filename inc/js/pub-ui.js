@@ -438,6 +438,9 @@ var pubUi = {
     });
   },
   videoBulletChk: function (targetSwiper, targetIdx) {
+    if (!targetSwiper.length > 0) {
+      return;
+    }
     var slide = $(targetSwiper);
     var slideActive = slide.find(".swiper-slide-active");
     var playBtn = slide.find(".btn-play").hasClass("on");
@@ -608,18 +611,22 @@ var pubUi = {
 
     masonry_item.each(function () {
       let _this = $(this);
-      function event() {
+
+      let scrHeight = parseInt(_this.find(".masonry_con").prop("scrollHeight"));
+      _this.css("grid-row-end", "span " + (scrHeight + row_gap));
+      _this.find(".card_thumbnail img").ready(function () {
         let scrHeight = parseInt(
           _this.find(".masonry_con").prop("scrollHeight")
         );
+        console.log(scrHeight);
         _this.css("grid-row-end", "span " + (scrHeight + row_gap));
-      }
-      event();
-      _this.find(".card_thumbnail img").ready(function () {
-        event();
       });
     });
   },
+  // masonrySet: function () {
+  //   let scrHeight = parseInt(_this.find(".masonry_con").prop("scrollHeight"));
+  //   _this.css("grid-row-end", "span " + (scrHeight + row_gap));
+  // },
   textReset: function (el) {
     const btn = el.target.nextElementSibling;
     if (0 < el.target.value.length) {
@@ -1312,31 +1319,38 @@ function modelsVideoPlay() {
       var moPoster = $(this).siblings(".video_poster.mo-only");
 
       if (videoPc.paused && videoMo.paused) {
-      icon.attr("class", "btn-icon24 icon-pause-wh");
-      if (window.innerWidth <= 1023) {
-        videoMo.play();
-        moPoster.hide();
-        pcPoster.hide();
-        $(".models-wrap .content-item02 video.mo-only").attr("aria-hidden", false);
-      } else {
-        videoPc.play();
-        moPoster.hide();
-        pcPoster.hide();
-        $(".models-wrap .content-item02 video.pc-only").attr("aria-hidden", false);
-      }
+        icon.attr("class", "btn-icon24 icon-pause-wh");
+        if (window.innerWidth <= 1023) {
+          videoMo.play();
+          moPoster.hide();
+          pcPoster.hide();
+          $(".models-wrap .content-item02 video.mo-only").attr(
+            "aria-hidden",
+            false
+          );
+        } else {
+          videoPc.play();
+          moPoster.hide();
+          pcPoster.hide();
+          $(".models-wrap .content-item02 video.pc-only").attr(
+            "aria-hidden",
+            false
+          );
+        }
       } else {
         icon.attr("class", "btn-icon24 icon-play-wh");
-      if (window.innerWidth <= 1023) {
-        videoMo.pause();
-        moPoster.hide();
-        pcPoster.hide();
-      } else {
-        videoPc.pause();
-        moPoster.hide();
-        pcPoster.hide();
+        if (window.innerWidth <= 1023) {
+          videoMo.pause();
+          moPoster.hide();
+          pcPoster.hide();
+        } else {
+          videoPc.pause();
+          moPoster.hide();
+          pcPoster.hide();
+        }
       }
     }
-  });
+  );
 
   // 비디오가 끝났을 때 썸네일 나오도록
   $(".models-wrap .content-item02 video").on("ended", function () {
