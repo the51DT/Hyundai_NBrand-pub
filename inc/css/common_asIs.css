@@ -7,7 +7,7 @@
     -webkit-box-sizing:border-box; 
     -moz-box-sizing:border-box; 
     box-sizing:border-box; 
-    -webkit-font-smoothing:antialiased; 
+    -webkit-font-smoothing:antialiased;     
 }
 html, body, div, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, p, form, fieldset, input, table, tr, th, td, button, textarea, select {
     margin:0; 
@@ -250,8 +250,9 @@ html.no-handy .o-tel {display:none !important;}
 }
 .c-modal__title {
     font-size:19px; 
-    font-family:"Hyundai Sans Bold", "Malgun Gothic", sans-serif; 
+    font-family:"Hyundai Sans Text", "Malgun Gothic", sans-serif; 
     line-height:inherit; 
+    font-weight: 700;
 }
 [lang="my"] .c-modal__title {line-height:inherit;}
 .c-modal__body {position:relative; height:100%;}
@@ -370,7 +371,7 @@ html.no-handy .o-tel {display:none !important;}
     .common-text--tm_2 {font-size:22px; line-height:1.6;}
 }
 
-.common-text--bold {font-family:"Hyundai Sans Bold", "Malgun Gothic", sans-serif;}
+.common-text--bold {font-family:"Hyundai Sans Text", "Malgun Gothic", sans-serif; font-weight: 700;}
 
 /* box align */
 .float--left {float:left;}
@@ -552,8 +553,8 @@ sup {font-family:inherit; font-weight:inherit;}
 .heading__align--center {text-align:center;}
 .heading__align--right {text-align:right;}
 
-.heading__weight--medium {font-family:"Hyundai Sans Medium", "Malgun Gothic", sans-serif;}
-.heading__weight--bold {font-family:"Hyundai Sans Bold", "Malgun Gothic", sans-serif;}
+.heading__weight--medium {font-family:"Hyundai Sans Medium", "Malgun Gothic", sans-serif; font-weight: 500;}
+.heading__weight--bold {font-family:"Hyundai Sans Text", "Malgun Gothic", sans-serif; font-weight: 700;}
 
 /* quotation */
 .quotation__area > div {
@@ -605,10 +606,11 @@ sup {font-family:inherit; font-weight:inherit;}
     margin-bottom:9.17vw; 
     font-style:italic; 
     font-size:4.44vw; 
-    font-family:"Hyundai Sans Bold", "Malgun Gothic", sans-serif; 
+    font-weight: 700;
+    font-family:"Hyundai Sans Text", "Malgun Gothic", sans-serif; 
     line-height:1.5; 
 }
-.quotation__quote--regular {font-family:"Hyundai Sans Text", Arial, Dotum, sans-serif}/* 200924 add */
+.quotation__quote--regular {font-family:"Hyundai Sans Text", Arial, Dotum, sans-serif; font-weight: 700;}/* 200924 add */
 .quotation__caption {margin-bottom:3.06vw; font-size:3.89vw; font-weight:normal;}
 .quotation__caption--item {display:block;}
 .quotation__author {font-size:3.89vw; font-family:"Hyundai Sans Head", Arial, Dotum, sans-serif}
@@ -702,10 +704,10 @@ sup {font-family:inherit; font-weight:inherit;}
 .layout__c-typeE .thumb__title {color:#111; display:block;}
 .layout__c-typeE .thumb__date {display:block;}
 .layout__c-typeE .list__length--2 .thumb__text {margin-top:5.56vw;}
-.layout__c-typeE .list__length--2 .thumb__title {font-family:"Hyundai Sans Medium", "Malgun Gothic", sans-serif; text-align:center; font-size:3.89vw;}
+.layout__c-typeE .list__length--2 .thumb__title {font-family:"Hyundai Sans Medium", "Malgun Gothic", sans-serif; text-align:center; font-size:3.89vw; font-weight: 500;}
 .layout__c-typeE .list__length--3 .thumb__title {margin-top:5.56vw; font-size:3.89vw;}
 .layout__c-typeE .list__length--4 li .thumb__text {margin-top:5.56vw;}
-.layout__c-typeE .list__length--4 li .thumb__title {overflow:hidden; text-align:center; font-family:"Hyundai Sans Medium", "Malgun Gothic", sans-serif; font-size:3.89vw; height:9.72vw;}
+.layout__c-typeE .list__length--4 li .thumb__title {overflow:hidden; text-align:center; font-family:"Hyundai Sans Medium", "Malgun Gothic", sans-serif; font-size:3.89vw; height:9.72vw; font-weight: 500;}
 .layout__c-typeE .list__length--4 li .thumb__date {color:#999; font-size:3.89vw; margin-top:7.5vw;}
 @media all and (min-width: 1024px) {
     .layout__c-typeE .swiper-button-prev, 
@@ -831,7 +833,8 @@ sup {font-family:inherit; font-weight:inherit;}
     height:3.5em; 
     text-overflow:ellipsis; 
     text-align:left; 
-    font-family:"Hyundai Sans Bold", "Malgun Gothic", sans-serif; 
+    font-family:"Hyundai Sans Text", "Malgun Gothic", sans-serif; 
+    font-weight: 700;
     font-size:5.28vw; 
 }
 .layout__c-typeH .thumbnail .list__date {
@@ -944,8 +947,8 @@ html, body, .container,
     transition:opacity 0.5s ease-in-out; 
 }
 .key-visual__item .heading__area.position_bot {top: 80%;}/* 220404 add */
-.key-visual__item .heading__area h2 {font-family:"Hyundai Sans Bold", "Malgun Gothic", sans-serif;}
-.key-visual__item .heading__area span {font-family:"Hyundai Sans Medium", "Malgun Gothic", sans-serif;}
+.key-visual__item .heading__area h2 {font-family:"Hyundai Sans Text", "Malgun Gothic", sans-serif; font-weight:700;}
+.key-visual__item .heading__area span {font-family:"Hyundai Sans Medium", "Malgun Gothic", sans-serif; font-weight: 500;}
 .key-visual__item .heading__area .heading__more {position:absolute; padding-top:6.94vw;}
 .key-visual__item .heading__area .heading__more a {
     display:inline-block; 
@@ -990,7 +993,7 @@ html, body, .container,
 }
 .key-visual__indicator.is-active {color:#e63312;}
 .key-visual__indicator li {position:relative; padding:10px 0;}
-.key-visual__indicator li button {color:#fff; font-size:16px; font-family:"Hyundai Sans Bold", "Malgun Gothic", sans-serif;}
+.key-visual__indicator li button {color:#fff; font-size:16px; font-family:"Hyundai Sans Text", "Malgun Gothic", sans-serif; font-weight: 700;}
 /* //210322 : main KV admin */
 .key-visual__indicator li.is-active button {color:#e63312;}
 .key-visual__indicator li.is-active .seek-bar {background-color:#e63312;}
@@ -1030,7 +1033,7 @@ html, body, .container,
     padding-bottom:20px; 
     color:#fff; 
 }
-.key-visual__scroll span {font-family:"Hyundai Sans Medium", "Malgun Gothic", sans-serif;}
+.key-visual__scroll span {font-family:"Hyundai Sans Medium", "Malgun Gothic", sans-serif; font-weight: 500;}
 @media all and (min-width: 1024px) {
     .key-visual__scroll {display:block; padding-left:1.19vw;}
     .key-visual__scroll span {
@@ -1687,7 +1690,7 @@ html, body, .container,
 
 /* o-btn */
 .o-btn {position:relative; display:inline-block; color:#000;}
-.o-btn span {font-family:"Hyundai Sans Medium", "Malgun Gothic", sans-serif; font-size:4.44vw;}
+.o-btn span {font-family:"Hyundai Sans Medium", "Malgun Gothic", sans-serif; font-size:4.44vw; font-weight: 500;}
 .o-btn i {font-size:3.06vw;}
 @media all and (min-width: 1024px) {
     .o-btn span {font-size:20px;}
@@ -1736,7 +1739,7 @@ html, body, .container,
 .o-btn__type--outlink i {padding-left:9px;}
 
 .o-btn__type--tab {color:#999;}
-.o-btn__type--tab span {font-family:"Hyundai Sans Bold", "Malgun Gothic", sans-serif; font-size:7.22vw;}
+.o-btn__type--tab span {font-family:"Hyundai Sans Text", "Malgun Gothic", sans-serif; font-size:7.22vw;}
 .o-btn__type--tab:after {height:0.56vw;}
 .o-btn__type--tab.is-active {color:#e63312;}
 .o-btn__type--tab.is-active:after {width:100%;}
@@ -1876,7 +1879,7 @@ html, body, .container,
 /* event banner */
 .container.event-banner .header.sticky {top:0;}
 .event-notice .top_banner {position:absolute; top:34.8vw; width:100%; color:#fff; text-align:center; ;}
-.event-notice .tit-banner {font-family:"Hyundai Sans Medium", "Malgun Gothic", sans-serif; font-size:6.1vw;}
+.event-notice .tit-banner {font-family:"Hyundai Sans Medium", "Malgun Gothic", sans-serif; font-size:6.1vw; font-weight: 500;}
 .event-notice .tit-banner span {font-family:inherit;}
 .event-notice .top_banner .txt-period {color:#b2b2b3;}
 .banner-wrap .box-banner.event-notice {width:100%; padding-top:80.56vw;}
@@ -1893,7 +1896,7 @@ html, body, .container,
 .box-banner.maintenance-notice {width:100%; height:80.56vw; padding:16.35vw 0 10.85vw 0; text-align:center;}
 .maintenance-notice .box-tit {position:relative;}
 .maintenance-notice .top_banner {margin:4.2vw 0;}
-.maintenance-notice .tit-banner {font-family:"Hyundai Sans Medium", "Malgun Gothic", sans-serif; font-size:6.2vw; color:#fff; line-height:8.5vw;}
+.maintenance-notice .tit-banner {font-family:"Hyundai Sans Medium", "Malgun Gothic", sans-serif; font-weight: 500; font-size:6.2vw; color:#fff; line-height:8.5vw;}
 .maintenance-notice .tit-banner:before {display:block; position:relative; width:15.3vw; height:15.3vw; margin:0 auto 5vw; content:''; background:url("/images/en/common/notice-ico.png") no-repeat; background-size:cover;}
 .maintenance-notice .top_banner .txt-con {font-size:3.5vw; color:#fff; line-height:4.2vw;}
 .maintenance-notice .top_banner .txt-period {padding-top:3.4vw; font-size:3.5vw; color:#b2b2b3;}
@@ -2063,17 +2066,17 @@ html, body, .container,
 .header.sticky .header__gnb--sticky {display:block; background-color:rgba(0, 0, 0, 0.85);}
 .header.is-active .header__gnb--sticky {display:none; background-color:#000;}
 .container.is-intro .header__gnb--sticky p {color:#fff;}
-.header__gnb--sticky p {font-family:"Hyundai Sans Medium"; font-size:15px; color:#e63312; line-height:1;}
+.header__gnb--sticky p {font-family:"Hyundai Sans Medium"; font-weight: 500; font-size:15px; color:#e63312; line-height:1;}
 .header__gnb--sticky-live {width:105px;}
 .header__gnb--sticky-live .sticky__name {font-size:16px; color:#fff;}
 .header__gnb--sticky-live .sticky__text {margin-top:-2px; font-size:9px; color:#fff; letter-spacing:-0.5px;}
-.header__gnb--sticky-live .sticky__animation-text {position:relative; padding-left:16px; font-family:'Hyundai Sans Bold'; font-size:32px; animation:color-change 1.5s infinite;}
+.header__gnb--sticky-live .sticky__animation-text {position:relative; padding-left:16px; font-family:'Hyundai Sans Text'; font-size:32px; animation:color-change 1.5s infinite;}
 .header__gnb--sticky-live .sticky__animation-text span {display:inline-block; position:absolute; top:50%; left:0; font-size:14px; transform:translateY(-50%); -webkit-transform:translateY(-50%);}
 #counter--sticky {width:100%; margin-top:3px; color:#fff;}
 #counter--sticky .unit-wrap {display:inline-block; position:relative; padding:0 12px 4px 0;}
 #counter--sticky .unit-wrap:last-child {padding-right:0;}
-#counter--sticky .unit-wrap strong {font-family:"Hyundai Sans Bold"; font-size:26px; line-height:1;}
-#counter--sticky .unit-wrap .unit {display:block; position:relative; top:auto; right:auto; bottom:auto; left:auto; font-family:"Hyundai Sans Medium"; font-size:8px;}
+#counter--sticky .unit-wrap strong {font-family:"Hyundai Sans Text"; font-size:26px; line-height:1;}
+#counter--sticky .unit-wrap .unit {display:block; position:relative; top:auto; right:auto; bottom:auto; left:auto; font-family:"Hyundai Sans Medium"; font-weight: 500; font-size:8px;}
 #counter--sticky .unit-wrap .unit:last-child {letter-spacing:-1px;}
 @keyframes color-change {
     0% {color:rgb(215, 48, 17, 1);}
