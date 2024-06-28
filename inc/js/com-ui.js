@@ -3,6 +3,7 @@ if ($.isFunction("checkCommonJs")) {
 }
 /* 퍼블리셔 JS 셋팅 */
 $(document).ready(function () {
+  // NbrandUI.startSet();
   NbrandUI.headerNav(".nav-btn", ".nav-wrap", ".header-wrap");
   NbrandUI.headerNavdep(
     "button[class^='gnb__tab-btn']",
@@ -21,17 +22,25 @@ $(document).ready(function () {
 let $win_W = $(window).width();
 var delta = 100;
 var timer = null;
-function resizeDone() {
-  if (NbrandUI.windowSize()) {
-    $("[class^=panel2_2]").removeClass("on");
-  } else {
-  }
-}
+
 $(window).resize(function () {
   $win_W = $(window).width();
   clearTimeout(timer);
   timer = setTimeout(resizeDone, delta);
 });
+
+function resizeDone() {
+  if (NbrandUI.windowSize()) {
+    $("[class^=panel2_2]").removeClass("on");
+    $(".gnb__panel02").hide();
+    $(".panel2_2_1, .gnb__tab-cont02 .gnb__tab02-btn01").removeClass("on");
+    NbrandUI.headerReset(".nav-btn", ".nav-wrap", ".header-wrap");
+  } else {
+    $(".gnb__panel02").show();
+    $(".panel2_2_1, .gnb__tab-cont02 .gnb__tab02-btn01").addClass("on");
+    NbrandUI.headerReset(".nav-btn", ".nav-wrap", ".header-wrap");
+  }
+}
 
 function bodyControll(state) {
   if (!state) {
@@ -45,6 +54,15 @@ var NbrandUI = {
   checkObj: function (obj) {
     return $(obj).length == 0 ? false : true;
   },
+
+  // startSet: function () {
+  //   if (NbrandUI.windowSize()) {
+  //     $(".panel2_2_1, .gnb__tab-cont02 .gnb__tab02-btn01").removeClass("on");
+  //     alert($(".gnb__tab-cont02 .gnb__tab02-btn01").html());
+  //   } else {
+  //     $(".panel2_2_1, .gnb__tab-cont02 .gnb__tab02-btn01").addClass("on");
+  //   }
+  // },
 
   windowSize: function () {
     return $win_W >= 1024 ? false : true;
@@ -77,14 +95,9 @@ var NbrandUI = {
     NbrandUI.expandedAria();
     // navigationBtn.siblings(".navigation-menu").stop().slideToggle(300);
   },
-
-  popOpen: function (obj) {
-    openmodalBtn = $(obj);
-    openmodalBtn.addClass("open-btn").data("open");
-    // openmodalData = openmodalBtn.attr("aria-controls");
-    openWrap = $(".popup");
+  popContOpen: function (obj) {
+    var openWrap = $(obj);
     var popClass = openWrap.attr("class");
-    NbrandUI.expandedAria(openmodalBtn);
 
     if (NbrandUI.windowSize()) {
       switch (popClass) {
@@ -175,6 +188,13 @@ var NbrandUI = {
       type: "hold",
     });
   },
+  popOpen: function (obj) {
+    openmodalBtn = $(obj);
+    openmodalBtn.addClass("open-btn").data("open");
+    openmodalData = openmodalBtn.attr("aria-controls");
+    NbrandUI.popContOpen($(".popup#" + openmodalData));
+    NbrandUI.expandedAria(openmodalBtn);
+  },
   popClose: function (obj) {
     closeWrap = $(obj).parents(".popup");
     openmodalBtn = $(".open-btn[aria-expanded = true]");
@@ -228,6 +248,27 @@ var NbrandUI = {
     }
   },
   /* headerNav */
+  headerReset: function (obj, com, par) {
+    resetCont = $(com);
+    resetParent = $(par);
+    $(obj).removeClass("on");
+    resetTparent = resetParent.find(".sitemap-wrap");
+    resetCont.attr("aria-hidden", "true");
+    resetTparent.children(".ui-fctab-s").remove();
+    resetTparent.children(".ui-fctab-e").remove();
+    resetCont.css("height", 0);
+    resetTparent.find(".on").removeClass("on");
+    $(".header__event-wrap").show();
+    // setTimeout(function () {
+    //   if (!eventItem.hasClass("on")) {
+    //     eventCont.hide();
+    //   }
+    // }, 300);
+    if (NbrandUI.windowSize()) {
+      bodyControll(false);
+    }
+  },
+
   headerNav: function (obj, com, par) {
     if (!NbrandUI.checkObj(obj)) {
       return;
@@ -235,12 +276,12 @@ var NbrandUI = {
 
     eventCont = $(com);
     eventParent = $(par);
+
     if (NbrandUI.windowSize()) {
       eventContH = $(window).height() - 70;
     } else {
-      eventContH = eventCont.prop("scrollHeight");
+      eventContH_Pc = eventCont.prop("scrollHeight");
     }
-
     eventCont.hide();
     tparent = eventParent.find(".sitemap-wrap");
 
@@ -248,7 +289,14 @@ var NbrandUI = {
       $(obj)
         .off("click")
         .on("click", function () {
+          bodyControll(true);
           eventItem = $(this);
+          if (NbrandUI.windowSize()) {
+            eventContH = $(window).height() - 70;
+            heightDate = eventContH;
+          } else {
+            heightDate = eventContH_Pc;
+          }
           NbrandUI.toggleBtn();
           eventParent.toggleClass("menu-on");
           NbrandUI.expandedAria();
@@ -259,17 +307,16 @@ var NbrandUI = {
             });
             eventCont.show().stop().animate(
               {
-                height: eventContH,
+                height: heightDate,
               },
               300
             );
-            if (NbrandUI.windowSize()) {
-              bodyControll(true);
-            }
           } else {
             eventCont.attr("aria-hidden", "true");
             tparent.children(".ui-fctab-s").remove();
             tparent.children(".ui-fctab-e").remove();
+
+            bodyControll(false);
             eventCont.stop().animate(
               {
                 height: 0,
@@ -285,7 +332,6 @@ var NbrandUI = {
               }
             }, 300);
             if (NbrandUI.windowSize()) {
-              bodyControll(false);
             }
           }
         });

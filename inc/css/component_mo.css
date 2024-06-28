@@ -565,6 +565,9 @@ min-width : 1024 css
     font-size: 1.5rem;
     line-height: 140%;
   }
+  .card_type04 .card_tag + .card_tag.noti-tag {
+    margin-left: 8px;
+  }
 
   /* card_type05 */
   .grid_mo_scroll .card_type05 {
@@ -1474,10 +1477,10 @@ min-width : 1024 css
     padding-bottom: 4px;
   }
   .ty02Swiper .swiper-slide {
-    max-width: 312px;
+    /* max-width: 312px; */
   }
   .ty02Swiper .swiper-slide-active {
-    max-width: 312px;
+    /* max-width: 312px; */
   }
   .ty02Swiper .swiper-slide .img-area {
     height: 234px;

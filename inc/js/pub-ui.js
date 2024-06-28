@@ -6,7 +6,10 @@ var pubUi = {
     self.swiperSlideEvent();
     self.masonryLayout();
     // self.videoControlerChk("");
-    self.videoBulletChk(".ty01Swiper");
+
+    if($(".ty01Swiper").length) {
+      self.videoBulletChk(".ty01Swiper");
+    }
   },
   settings: function () {
     var self = this;
@@ -605,12 +608,15 @@ var pubUi = {
 
     masonry_item.each(function () {
       let _this = $(this);
-      _this.find(".card_thumbnail img").ready(function () {
-        console.log($(this).prop("scrollHeight"));
+      function event() {
         let scrHeight = parseInt(
           _this.find(".masonry_con").prop("scrollHeight")
         );
         _this.css("grid-row-end", "span " + (scrHeight + row_gap));
+      }
+      event();
+      _this.find(".card_thumbnail img").ready(function () {
+        event();
       });
     });
   },
@@ -1306,18 +1312,31 @@ function modelsVideoPlay() {
       var moPoster = $(this).siblings(".video_poster.mo-only");
 
       if (videoPc.paused && videoMo.paused) {
-        videoPc.play();
+      icon.attr("class", "btn-icon24 icon-pause-wh");
+      if (window.innerWidth <= 1023) {
         videoMo.play();
-        pcPoster.hide();
         moPoster.hide();
-        icon.attr("class", "btn-icon24 icon-pause-wh");
+        pcPoster.hide();
+        $(".models-wrap .content-item02 video.mo-only").attr("aria-hidden", false);
+      } else {
+        videoPc.play();
+        moPoster.hide();
+        pcPoster.hide();
+        $(".models-wrap .content-item02 video.pc-only").attr("aria-hidden", false);
+      }
+      } else {
+        icon.attr("class", "btn-icon24 icon-play-wh");
+      if (window.innerWidth <= 1023) {
+        videoMo.pause();
+        moPoster.hide();
+        pcPoster.hide();
       } else {
         videoPc.pause();
-        videoMo.pause();
-        icon.attr("class", "btn-icon24 icon-play-wh");
+        moPoster.hide();
+        pcPoster.hide();
       }
     }
-  );
+  });
 
   // 비디오가 끝났을 때 썸네일 나오도록
   $(".models-wrap .content-item02 video").on("ended", function () {
@@ -1440,6 +1459,10 @@ function configuratorEvent() {
 
       // 슬라이드 이미지 애니메이션
       $(".configurator_swiper .swiper-slide img").hide();
+      $(".configurator_swiper .swiper-slide img").attr(
+        "src",
+        "../../inc/images/Configurator/NEN_EXT_XFB_LD_C003.jpg"
+      ); // 이미지 교체 확인용 임시 스크립트
       $(".configurator_swiper .swiper-slide img").fadeIn(300);
     });
   });

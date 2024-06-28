@@ -535,9 +535,9 @@ body:-webkit-scrollbar {
   transition: bottom 0.5s;
 }
 
-.gnb-content__dep2 .gnb-content__dep2:active .text-area,
-.gnb-content__dep2 .gnb-content__dep2:hover .text-area,
-.gnb-content__dep2 .gnb-content__dep2:focus .text-area {
+.gnb-content__dep2:active .text-area,
+.gnb-content__dep2:hover .text-area,
+.gnb-content__dep2:focus .text-area {
   bottom: 0;
 }
 
