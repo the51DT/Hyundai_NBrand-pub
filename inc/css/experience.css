@@ -863,6 +863,7 @@
   position: relative;
 }
 
+/**  팝업 닫기 버튼 아이콘 시작 **/
 .popup .btn-wrap button.btn-only-icon-notbg.popup-close-btn-x {
   position: absolute;
   top: 36px;
@@ -871,6 +872,18 @@
   z-index: 1000;
   height: fit-content;
 }
+
+/* share-popup 팝업 내 x버튼 (조금 작아요) */
+.popup .btn-wrap button.btn-only-icon-notbg.popup-close-btn-x.smallX {
+  top: 18px;
+  right: 24px;
+}
+
+.popup .btn-wrap button.btn-only-icon-notbg.popup-close-btn-x span.icon-close {
+  width: 24px;
+  height: 24px;
+}
+/**  팝업 닫기 버튼 아이콘 끝 **/
 
 /* 팝업 좌우 슬라이드 버튼 (mypage)  */
 .popup-wrapper .wrap-navigation {
@@ -1884,6 +1897,40 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   font-size: 24px;
 }
 /* mypage 팝업 끝*/
+
+/* experience 내 sharing 팝업 시작 */
+.popup.share-popup {
+  max-width: 500px;
+}
+
+.popup.share-popup .popup-wrapper .popup-header {
+  padding: 13px 24px;
+}
+
+.popup.share-popup .popup-wrapper .popup-header h3 {
+  font-size: 24px;
+}
+
+.popup.share-popup .popup-wrapper .popup-body.share-icn-wrap {
+  padding: 80px 98px;
+}
+
+.popup.share-popup .popup-wrapper .popup-body.share-icn-wrap .box-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 48px;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup.share-popup .popup-wrapper .popup-body.share-icn-wrap .box-row .box-icn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* experience 내 sharing 팝업 끝
+ */
 /* 일반 모달 팝업 끝*/
 
 /* 사이드 팝업 시작*/
@@ -3087,6 +3134,25 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
     border-bottom: 1px solid #d9d9d9;
     width: 100%;
   }
+
+  /* share popup s */
+  .popup.share-popup {
+    max-width: 100%;
+    height: fit-content;
+  }
+
+  .popup.share-popup .popup-wrapper .popup-header h3 {
+    font-size: 18px;
+  }
+
+  .popup.share-popup .popup-wrapper .popup-body.share-icn-wrap {
+    padding: 44px 28px;
+  }
+
+  .popup .btn-wrap button.btn-only-icon-notbg.popup-close-btn-x.smallX {
+    top: 13px;
+  }
+  /* share popup e */
 
   /* 사이드 팝업 모바일 */
   .side-popup .pop-wrap .popup-header {
