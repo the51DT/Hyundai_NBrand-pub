@@ -224,6 +224,18 @@
   max-width: 1440px;
   margin: 0 auto;
 }
+.subfilter_wrap .post-nodata {
+  font-family: "Hyundai Sans Head";
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1440px;
+  margin: 146px auto 106px;
+}
 /* EP040601 */
 .subnotice_wrap .content-item02 {
   padding: 40px 80px 240px;
@@ -2193,6 +2205,12 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
     max-width: 100%;
   }
 
+  .subfilter_wrap .post-nodata {
+    font-size: 18px;
+    line-height: 25.2px;
+    max-width: 100%;
+    margin: 117.5px auto 107.5px;
+  }
   /* EP040601 */
   .subnotice_wrap .content-item01 {
     padding: 133px 0;
