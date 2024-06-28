@@ -110,6 +110,10 @@ var NbrandUI = {
         case "popup model-popup fullwidth":
           openWrap.addClass("on").fadeIn(200);
           break;
+        case "popup bottom-popup share-popup":
+          openWrap.addClass("on").slideDown(200);
+          NbrandUI.dimdOn();
+          break;
         case "popup bottom-popup":
           openWrap.addClass("on").slideDown(200);
           NbrandUI.dimdOn();
@@ -147,6 +151,11 @@ var NbrandUI = {
         case "popup model-popup fullWidth":
           openWrap.addClass("on").fadeIn(200);
           NbrandUI.dimdOn();
+          break;
+        case "popup bottom-popup share-popup":
+          openWrap.addClass("on").fadeIn(200);
+          NbrandUI.dimdOn();
+          $(".dimmed").css("z-index", 1002);
           break;
         case "popup bottom-popup":
           openWrap.addClass("on").fadeIn(200);
