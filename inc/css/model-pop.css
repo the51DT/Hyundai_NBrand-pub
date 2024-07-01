@@ -80,6 +80,18 @@
   .container-desc {
   padding: 24px 0 160px;
 }
+
+/* 추가 케이스: 팝업 안에 영상 3개 들어가는 레이아웃 한 묶음이 하나일 때 시작 */
+.popup.model-popup.forModel
+  .popup-wrapper
+  .popup-body.single
+  .inner-body-model
+  .popup-body-innerbox
+  .container-desc.video-func {
+  padding: 0 0 160px;
+}
+/* 추가 케이스 끝 */
+
 /* 팝업에 표시할 컨텐츠가 하나일 때(.popup-body-innerbox가 하나일 때 끝*/
 
 .popup.forModel .popup-wrapper .popup-body .inner-body-model .container-desc {
@@ -104,7 +116,7 @@
   .popup-body
   .inner-body-model
   .container-desc
-  .wrap-funcion {
+  .wrap-function {
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -129,7 +141,7 @@
   .popup-body
   .inner-body-model
   .container-desc
-  .wrap-funcion
+  .wrap-function
   .wrap-desc
   .tit-type04 {
   font-size: 20px;
@@ -188,6 +200,96 @@
 .popup .popup-wrapper .popup-body .inner-body-model .wrap-desc.lg .txt-type03 {
   font-weight: 500;
 }
+
+/* s */
+.popup.forModel
+  .popup-wrapper
+  .popup-body
+  .inner-body-model
+  .container-desc.video-func {
+  width: 100%;
+  display: flex;
+  gap: 40px;
+  padding: 0px 0 60px;
+}
+
+.popup.forModel
+  .popup-wrapper
+  .popup-body
+  .inner-body-model
+  .container-desc.video-func
+  .wrap-video-func {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  align-items: start;
+}
+
+.popup.forModel
+  .popup-wrapper
+  .popup-body
+  .inner-body-model
+  .container-desc.video-func
+  .wrap-video-func
+  .box-video-func {
+  width: calc(100% / 3);
+  display: grid;
+  gap: 20px;
+}
+
+.popup.forModel
+  .popup-wrapper
+  .popup-body
+  .inner-body-model
+  .container-desc.video-func
+  .wrap-video-func
+  .box-video-func
+  .box-video {
+  width: 100%;
+  height: fit-content;
+  position: relative;
+}
+
+.popup.forModel
+  .popup-wrapper
+  .popup-body
+  .inner-body-model
+  .container-desc.video-func
+  .wrap-video-func
+  .box-video-func
+  .box-video
+  video {
+  width: 100%;
+}
+
+.popup.forModel
+  .popup-wrapper
+  .popup-body
+  .inner-body-model
+  .container-desc.video-func
+  .wrap-video-func
+  .box-video-func
+  .box-video
+  button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.popup.forModel
+  .popup-wrapper
+  .popup-body
+  .inner-body-model
+  .container-desc.video-func
+  .wrap-video-func
+  .txt-type03 {
+  display: flex;
+  gap: 20px;
+  font-weight: 500;
+}
+
+/* e */
 
 /* video s*/
 
@@ -260,7 +362,9 @@
   .inner-body-model
   .wrap-model-video {
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
+  height: 630px;
+  max-height: 100%;
   position: relative;
 }
 
@@ -271,6 +375,8 @@
   .wrap-model-video
   video {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 /* video e */
 
@@ -459,6 +565,68 @@
     span.model-closebtn.icon-close {
     top: 0;
     position: relative;
+  }
+
+  /* 0701 레이아웃 추가 */
+  .popup.model-popup.forModel
+    .popup-wrapper
+    .popup-body
+    .inner-body-model
+    .container-desc {
+    /* padding: 0 0 36px; */
+  }
+
+  .popup.forModel
+    .popup-wrapper
+    .popup-body
+    .inner-body-model
+    .container-desc.video-func {
+    gap: 28px;
+    padding: 0 0 36px;
+  }
+
+  .popup.model-popup.forModel
+    .popup-wrapper
+    .popup-body
+    .inner-body-model
+    .popup-body-innerbox:last-child
+    .container-desc.video-func {
+    /* video, 설명 텍스트 전체 다 감싸는 컨테이너 */
+    padding: 0 0 28px;
+  }
+
+  .popup.forModel
+    .popup-wrapper
+    .popup-body
+    .inner-body-model
+    .container-desc.video-func
+    .wrap-video-func {
+    /* video, 하단 재생 컨트롤버튼만 감싸는 컨테이너 */
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .popup.forModel
+    .popup-wrapper
+    .popup-body
+    .inner-body-model
+    .container-desc.video-func
+    .wrap-video-func
+    /* video, video 하단 설명만 감싸는 컨테이너 */
+    .box-video-func {
+    width: 100%;
+    display: grid;
+    gap: 12px;
+  }
+
+  .popup.forModel
+    .popup-wrapper
+    .popup-body
+    .inner-body-model
+    .container-desc.video-func
+    .wrap-video-func
+    .txt-type03 {
+    gap: 10px;
   }
 }
 
