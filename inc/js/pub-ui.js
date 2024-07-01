@@ -830,9 +830,9 @@ dropdownBtns.forEach((button) => {
       }
     }
 
-    if (detectCase2) {
-      btnRightArrFilter.classList.toggle("rotate", !isExpanded);
-    }
+    // if (detectCase2) {
+    //   btnRightArrFilter.classList.toggle("rotate", !isExpanded);
+    // }
 
     // 필터 모바일 대응
     const screenWidth = window.innerWidth;
