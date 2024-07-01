@@ -138,6 +138,13 @@ var pubUi = {
         targetSwiper.find(".swiper-slide-active video")[0].pause();
       }
     );
+
+    $(".rending-wrap > li button").on("click", function(e){
+      var scrollTarget = $(this).data("scroll");
+      pubUi.pageScrollChk(scrollTarget);
+    })
+
+
   },
   swiperSlideEvent: function () {
     console.log("스와이퍼 이벤트 진입");
@@ -664,6 +671,23 @@ var pubUi = {
   windowSize: function () {
     return $win_W >= 1024 ? false : true;
   },
+  pageScrollChk : function (dataScroll) {
+    var contentItem = document.querySelectorAll(".content-wrap .content-area > div");  
+    var headerHeight = document.querySelector(".header-cont").offsetHeight;
+    var navBarHeight = document.querySelector(".navigation_bar-wrap").offsetHeight;
+
+    var navHeight = headerHeight + navBarHeight;
+            
+    contentItem.forEach((evt,idx) => {
+      
+      contentItem[idx].setAttribute("data-scroll", idx + 1); // 각 콘텐츠에 data-scroll 생성
+
+      if (evt.dataset.scroll == dataScroll) { //nav data-scroll과 값비교 후 동일 대상 체크
+        var offsetTopVal = evt.offsetTop - navHeight;
+      }
+      $("body").animate({ scrollTop: offsetTopVal }, 300);
+    });  
+  }
 };
 
 $(document).ready(function () {
@@ -695,7 +719,8 @@ $(document).ready(function () {
     targetSwiper.find(".swiper-slide-active video")[0].pause();
   });
 
-  toggleFullscreen();
+  toggleFullscreen();  
+  
 });
 
 // [Start] : selectbox 컴포넌트
@@ -1529,3 +1554,33 @@ $(".btn_full").click(() => {
   $(".btn_full").toggleClass("on");
 });
 // [End] : configurator fx
+
+
+// scroll 이벤트 추가 
+$("body").scroll(function () {
+  // console.log("scroll 이벤트 진입");
+  let scrollY = (($("body").scrollTop() / ($(".wrap").height() - $("body").height())) * 100).toFixed(3);
+  let scrollTop = $("body").scrollTop();
+
+  console.log("스크롤 좌표값 체크 - scrollTop : " , scrollTop + " scrollY % 값 : ", scrollY + "%" );  
+
+  if (scrollTop > 0) {
+    $(".navigation_bar-wrap .gage").addClass("on");
+  } else {
+    $(".navigation_bar-wrap .gage").removeClass("on");    
+  }
+  
+  if(window.innerWidth > 1023) {
+    // pc : opacity 다르게
+    if (scrollTop > 0) {      
+      $(".navigation_bar-wrap").css("opacity", "0.8");
+    } else {
+      $(".navigation_bar-wrap").css("opacity", "1");
+    }
+  } else {
+    // mobile : opacity 1 고정
+    $(".navigation_bar-wrap").css("opacity", "1");
+  }
+
+  $(".navigation_bar-wrap .gage.on").css("--bar", `${scrollY}%`);
+});
