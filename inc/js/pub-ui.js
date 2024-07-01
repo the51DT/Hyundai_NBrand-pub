@@ -443,6 +443,18 @@ var pubUi = {
         clickable: true,
       },
     });
+    var swiper10 = new Swiper(".wrc_swiper", {
+      slidesPerView: 1,
+      centeredSlides: true,
+      navigation: {
+        nextEl: ".wrc_swiper .swiper-button-next",
+        prevEl: ".wrc_swiper .swiper-button-prev",
+      },
+      pagination: {
+        el: ".wrc_swiper .swiper-pagination-custom",
+        clickable: true,
+      },
+    });
   },
   videoBulletChk: function (targetSwiper, targetIdx) {
     if (!targetSwiper.length > 0) {

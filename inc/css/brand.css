@@ -161,6 +161,10 @@
   font-weight: 700;
   line-height: 70px;
 }
+.brand .models-wrap .motor_tit {
+  font-size: 68px;
+  line-height: 125%;
+}
 .brand .models-wrap .text-normal-s {
   margin-top:20px;
 }
@@ -365,7 +369,251 @@
 }
 
 .calendar-list-wrap {
-  
+  padding-left: 5rem;
+  padding-right: 5rem;
+  text-align: center;
+  color: #FFF;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.70) 100%), url(../../inc/images/content/img_wrc_cal_bg.png) 50% / cover no-repeat;
+  mix-blend-mode: luminosity;
+}
+.calendar-list {
+  margin-top: 3.75rem;
+}
+.calendar-list .calendar_img {
+  position: relative;
+  width: 100%;
+}
+.calendar-list .img_badge {
+  position: absolute;
+  left: 1rem;
+  top: 1.25rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.25rem;
+  background-color: #DE3111;
+  font-family: "Hyundai Sans Head";
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 140%;
+  color: #FFF;
+}
+.calendar-list .calendar_info {
+  padding: 1rem 1rem 1.25rem;
+  background-color: #FFF;
+  color: #000;
+  text-align: left;
+}
+.calendar-list .calendar_info .info_main {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #AAA;
+}
+.calendar-list .calendar_info .info_main .title {
+  font-family: "Hyundai Sans Head";
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 140%;
+}
+.calendar-list .calendar_info .info_main .md-txt-btn01 {
+  margin: 1rem 0 0.5rem;
+}
+.calendar-list .calendar_info .info_detail dl {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+}
+.calendar-list .calendar_info .info_detail .date {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 140%;
+}
+.calendar-list .calendar_info .info_detail .ico_flag {
+  width: 2.625rem;
+  height: 1.75rem;
+}
+.brand .motor_technical {
+  padding: 15rem 5rem;
+}
+.brand .motor_tab .tab-head {
+  flex-direction: column;
+  row-gap: 2.5rem;
+}
+.brand .motor_tab .tab-head .title {
+  font-family: "Hyundai Sans Head";
+  font-size: 4.25rem;
+  font-weight: 700;
+  line-height: 125%;
+}
+.brand .motor_tab .tab-head .tabs li a {
+  width: 15.688rem;
+  text-align: center;
+}
+.brand .motor_tab .motor_tab_con {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.brand .motor_tab .motor_tab_img {
+  width: 59.5rem;
+}
+.brand .motor_tab .mypage-withdrawal-table {
+  margin-top: 1.25rem;
+  max-width: 54rem;
+  text-align: left;
+}
+.brand .motor_tab .mypage-withdrawal-table th {
+  padding: 2rem 0;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 140%;
+  vertical-align: top;
+}
+.brand .motor_tab .mypage-withdrawal-table td {
+  padding: 2rem 0;
+  padding-right: 2.75rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 140%;
+}
+.brand .motor_tab .motor_tab_con button {
+  margin-top: 2.5rem;
+  padding: 0.75rem 0;
+}
+.brand .motor_wrap {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+.line-up-wrap {
+  background: url(../../inc/images/content/img_wrc_lineUp_bg.png) center / cover no-repeat;
+  text-align: center;
+  color: #FFF;
+}
+.line-up-wrap .text-normal + .motor_tit {
+  margin-top: 0.5rem;
+}
+.line-up-wrap .max1200 + .max1440 {
+  display: block;
+  margin-top: 6.25rem;
+}
+.lineup_wrap {
+  display: flex;
+  justify-content: center;
+  column-gap: 1.5rem;
+  margin: 0 auto;
+  max-width: 59.5rem;
+}
+.lineup_wrap img {
+  width: 100%;
+  max-width: 29rem;
+}
+.lineup_box {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 5rem auto 5rem;
+  max-width: 59.5rem;
+}
+.lineup_info {
+  width: 100%;
+}
+.lineup_info .lineup_subtit {
+  font-family: "Hyundai Sans Head";
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 140%;
+}
+.lineup_info .lineup_tit {
+  margin: 1.75rem auto 0.5rem;
+  font-family: "Hyundai Sans Head";
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 125%;
+  text-transform: capitalize;
+  color: #AACAE6;
+}
+.lineup_info .lineup_detail {
+  margin-top: 1.25rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 140%; 
+}
+.wrc_swiper .swiper-bottom-wrap {
+  left: 0;
+  width: 100%;
+  top: 12.63rem;
+  bottom: auto;
+}
+.wrc_swiper .swiper-button-prev,
+.wrc_swiper .swiper-button-next {
+  margin-top: 0;
+}
+.wrc_swiper .swiper-button-prev:after {
+  background-image: url(../images/icon/icon-arrow-box-white_left.svg);
+}
+.wrc_swiper .swiper-button-next:after {
+  background-image: url(../images/icon/icon-arrow-box-white_right.svg);
+}
+.wrc_swiper .swiper-button-prev.swiper-button-disabled,
+.wrc_swiper .swiper-button-next.swiper-button-disabled {
+  opacity: 1;
+}
+.wrc_swiper .swiper-status-wrap {
+  bottom: 0;
+  height: fit-content;
+}
+.wrc_swiper .swiper-pagination-bullet {
+  background-color: #FFF;
+}
+.conts-section-wrap:has(.wrc_article_img) {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+.wrc_article_img {
+  width: 100%;
+  height: auto;
+}
+.wrc_article_wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  text-align: left;
+}
+.wrc_article_italic {
+  padding: 0rem 1rem;
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 140%;
+}
+.wrc_article_wrap > div {
+  flex-shrink: 0;
+  padding: 0rem 1rem;
+  width: 29rem;
+}
+.wrc_article_wrap > div p:first-of-type {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 140%;
+}
+.wrc_article_wrap > div p:last-of-type {
+  margin-top: 0.75rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 140%;
+}
+.brand .gallery-wrap:has(.sns_wrap) {
+  padding: 0;
+}
+.brand .gallery-wrap .btn-wrap-default {
+  margin-top: 3.75rem;
+}
+.brand .gallery-wrap .btn-wrap-default.sns_wrap {
+  gap: 2rem;
+  margin-top: 12.5rem;
+}
+.brand .gallery-wrap .lg-txt-btn01 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 100%;
 }
 
 /* mobile */
@@ -682,4 +930,132 @@
     height: 60px;
   }
   
+  .calendar-list-wrap {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  .calendar-list {
+    margin-top: 2.25rem;
+  }
+  .calendar-list .img_badge {
+    left: 0.75rem;
+    top: 1rem;
+    padding: 0.25rem 0.5rem;
+    font-size: 1.125rem;
+  }
+  .calendar-list .calendar_info {
+    padding: 1rem 1rem 1.06rem;
+  }
+  .calendar-list .calendar_info .info_main .title {
+    font-size: 1.125rem;
+  }
+  .calendar-list .calendar_info .info_main .md-txt-btn01 {
+    margin: 1rem 0 0.5rem;
+  }
+  .calendar-list .calendar_info .info_detail .ico_flag {
+    width: 1.875rem;
+    height: 1.25rem;
+  }
+  .brand .motor_technical {
+    padding: 9.5rem 1.5rem;
+  }
+  .brand .motor_tab .tab-head {
+    display: flex;
+    row-gap: 1.75rem;
+  }
+  .brand .motor_tab .tab-head .title {
+    font-size: 2.25rem;
+  }
+  .brand .motor_tab .tab-head .tabs {
+    display: flex;
+    flex-direction: column;
+  }
+  .brand .motor_tab .motor_tab_img {
+    width: 100%;
+  }
+  .brand .motor_tab .mypage-withdrawal-table {
+    margin-top: 0.75rem;
+  }
+  .brand .motor_tab .mypage-withdrawal-table th {
+    margin: 0;
+    padding: 1.25rem 0 0.75rem;
+    font-size: 1rem;
+  }
+  .brand .motor_tab .mypage-withdrawal-table td {
+    padding: 0 0 1.25rem;
+    font-size: 1.25rem;
+  }
+  .brand .motor_wrap {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  .line-up-wrap .text-normal + .motor_tit {
+    margin-top: 0.75rem;
+  }
+  .line-up-wrap .max1200 + .max1440 {
+    margin-top: 4rem;
+  }
+  .lineup_wrap {
+    column-gap: 0.75rem;
+  }
+  .lineup_wrap img {
+    width: calc(50% - 0.4rem);
+  }
+  .lineup_box {
+    flex-direction: column;
+    gap: 2.25rem;
+    margin: 3rem auto 3rem;
+  }
+  .lineup_info {
+    text-align: left;
+  }
+  .lineup_info .lineup_subtit {
+    font-size: 1.125rem;
+  }
+  .lineup_info .lineup_tit {
+    margin: 1rem auto 0.5rem;
+    font-size: 1.5rem;
+    line-height: 140%;
+  }
+  .lineup_info .lineup_detail {
+    margin-top: 0.75rem;
+    font-size: 1.0625rem;
+  }
+  .conts-section-wrap:has(.wrc_article_img) {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  .wrc_article_wrap {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  .wrc_article_italic {
+    padding: 0;
+    font-size: 1.22rem;
+  }
+  .wrc_article_wrap > div {
+    padding: 0;
+    width: 100%;
+  }
+  .wrc_article_wrap > div p:first-of-type {
+    font-size: 1.0625rem;
+  }
+  .wrc_article_wrap > div p:last-of-type {
+    font-size: 1.25rem;
+  }
+  .brand .gallery-wrap:has(.sns_wrap) {
+    padding: 0;
+  }
+  .brand .gallery-wrap .btn-wrap-default {
+    margin-top: 2.25rem;
+  }
+  .brand .gallery-wrap .btn-wrap-default.sns_wrap {
+    gap: 2rem;
+    margin-top: 7.5rem;
+  }
+  .brand .gallery-wrap .lg-txt-btn01 {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 100%;
+  }
 }
