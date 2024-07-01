@@ -338,4 +338,17 @@
   .header-cont .utile-wrap .login-btn {
     width: 40px;
   }
+
+  .navigation-item02.nav-mo .rending-wrap {
+    display: block;
+    padding: 20px 24px 32px;
+    border-bottom:1px solid #d9d9d9;
+  }
+
+  .navigation-item02.nav-mo .rending-wrap button {
+    height: 20px;
+  }
+  .navigation-item02.nav-mo .rending-wrap li:not(:first-child) {
+    padding-top: 20px;
+  }
 }

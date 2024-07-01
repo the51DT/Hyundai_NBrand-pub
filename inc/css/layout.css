@@ -279,6 +279,16 @@ body:-webkit-scrollbar {
   display: flex;
   justify-content: space-between;
 }
+
+.navigation_bar-wrap .gage.on {
+  --bar: 0;
+  width: calc(var(--bar));
+  content:'';
+  display:block;
+  height: 4px;
+  background-color: #de3111;
+  z-index: 99;
+}
 .navigation-btn {
   color: #000;
   position: relative;
@@ -341,30 +351,32 @@ body:-webkit-scrollbar {
   background: url(../images/icon/icon-arrow01_right_gray.svg) no-repeat center;
 }
 .navigation-menu a.on,
-.navigation-menu a:hover,
 .navigation-menu a:focus,
 .navigation-menu a:active {
   color: #de3111;
   background: #f0f0f0;
 }
 
+.navigation-menu a:hover {
+  background: #f0f0f0;
+}
+
 .navigation-menu a.on::after,
-.navigation-menu a:hover::after,
 .navigation-menu a:focus::after,
 .navigation-menu a:active::after {
   background: url(../images/icon/icon-arrow01_right_red.svg) no-repeat center;
 }
 
 .navigation-menu a.active {
-  color: #fff;
-  background: #de3111;
+  color: #de3111;
+  /* background: #de3111; */
 }
 
 .navigation-menu a.active::after {
   background: none;
 }
 .navigation-menu a.active:hover::after {
-  background: url(../images/icon/icon-arrow01_right_red.svg) no-repeat center;
+  /* background: url(../images/icon/icon-arrow01_right_red.svg) no-repeat center; */
 }
 
 .rending-wrap {
@@ -383,6 +395,7 @@ body:-webkit-scrollbar {
 }
 .rending-wrap button.on {
   color: #000;
+  font-weight: 700;
 }
 
 .rending-wrap button:after {
@@ -401,7 +414,9 @@ body:-webkit-scrollbar {
 .rending-wrap button.on:after {
   width: 100%;
 }
-
+.rending-wrap button:hover {
+  color: #000;
+}
 .navigation_bar .sharing-btn {
   font-size: 14px;
   font-weight: 500;
