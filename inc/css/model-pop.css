@@ -274,6 +274,7 @@
   position: absolute;
   bottom: 20px;
   right: 20px;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .popup.forModel
