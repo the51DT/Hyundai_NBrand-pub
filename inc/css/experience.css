@@ -844,12 +844,13 @@
 .video_thumnail_wrap .tag_list_wrap .tag_list li a {
   font-family: "Hyundai Sans Text";
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 19.6px;
   color: #fff;
 }
 .video_thumnail_wrap .tag_list_wrap .tag_list li a:hover {
   text-decoration: underline;
+  font-weight: 700;
 }
 .video_detail_wrap {
   padding: 10rem 5rem 15rem;
