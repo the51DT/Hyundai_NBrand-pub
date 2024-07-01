@@ -882,6 +882,13 @@
 .mypage-subtit-box + .mymsission-wrap {
   border-top: 2px solid #787d80;
 }
+.mypage-wrap .mypage-titlebox p {
+  font-family: "Hyundai Sans Head";
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 33.6px;
+  padding-bottom: 12px;
+}
 /* 모바일 */
 @media screen and (max-width: 1023px) {
   .mypage-wrap h4 {
