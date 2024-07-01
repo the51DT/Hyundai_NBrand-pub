@@ -104,7 +104,7 @@
   .popup-body
   .inner-body-model
   .container-desc
-  .wrap-funcion {
+  .wrap-function {
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -129,7 +129,7 @@
   .popup-body
   .inner-body-model
   .container-desc
-  .wrap-funcion
+  .wrap-function
   .wrap-desc
   .tit-type04 {
   font-size: 20px;
@@ -188,6 +188,95 @@
 .popup .popup-wrapper .popup-body .inner-body-model .wrap-desc.lg .txt-type03 {
   font-weight: 500;
 }
+
+/* s */
+.popup.forModel
+  .popup-wrapper
+  .popup-body
+  .inner-body-model
+  .container-desc.video-func {
+  width: 100%;
+  display: flex;
+  gap: 40px;
+  padding: 0px 0 60px;
+}
+
+.popup.forModel
+  .popup-wrapper
+  .popup-body
+  .inner-body-model
+  .container-desc.video-func
+  .wrap-video-func {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  align-items: start;
+}
+
+.popup.forModel
+  .popup-wrapper
+  .popup-body
+  .inner-body-model
+  .container-desc.video-func
+  .wrap-video-func
+  .box-video-func {
+  width: calc(100% / 3);
+  display: grid;
+  gap: 20px;
+}
+
+.popup.forModel
+  .popup-wrapper
+  .popup-body
+  .inner-body-model
+  .container-desc.video-func
+  .wrap-video-func
+  .box-video-func
+  .box-video {
+  width: 100%;
+  height: fit-content;
+  position: relative;
+}
+
+.popup.forModel
+  .popup-wrapper
+  .popup-body
+  .inner-body-model
+  .container-desc.video-func
+  .wrap-video-func
+  .box-video-func
+  .box-video
+  video {
+  width: 100%;
+}
+
+.popup.forModel
+  .popup-wrapper
+  .popup-body
+  .inner-body-model
+  .container-desc.video-func
+  .wrap-video-func
+  .box-video-func
+  .box-video
+  button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.popup.forModel
+  .popup-wrapper
+  .popup-body
+  .inner-body-model
+  .container-desc.video-func
+  .wrap-video-func
+  .txt-type03 {
+  display: flex;
+  gap: 20px;
+  font-weight: 500;
+}
+
+/* e */
 
 /* video s*/
 
@@ -459,6 +548,63 @@
     span.model-closebtn.icon-close {
     top: 0;
     position: relative;
+  }
+
+  /* 0701 레이아웃 추가 */
+  .popup.model-popup.forModel
+    .popup-wrapper
+    .popup-body
+    .inner-body-model
+    .container-desc {
+    padding: 0 0 36px;
+  }
+
+  .popup.forModel
+    .popup-wrapper
+    .popup-body
+    .inner-body-model
+    .container-desc.video-func {
+    gap: 28px;
+  }
+
+  .popup.model-popup.forModel
+    .popup-wrapper
+    .popup-body
+    .inner-body-model
+    .popup-body-innerbox:last-child
+    .container-desc.video-func {
+    padding: 0 0 28px;
+  }
+
+  .popup.forModel
+    .popup-wrapper
+    .popup-body
+    .inner-body-model
+    .container-desc.video-func
+    .wrap-video-func {
+    flex-direction: column;
+  }
+
+  .popup.forModel
+    .popup-wrapper
+    .popup-body
+    .inner-body-model
+    .container-desc.video-func
+    .wrap-video-func
+    .box-video-func {
+    width: 100%;
+    display: grid;
+    gap: 12px;
+  }
+
+  .popup.forModel
+    .popup-wrapper
+    .popup-body
+    .inner-body-model
+    .container-desc.video-func
+    .wrap-video-func
+    .txt-type03 {
+    gap: 10px;
   }
 }
 
