@@ -7,7 +7,7 @@ var pubUi = {
     self.masonryLayout();
     // self.videoControlerChk("");
 
-    if($(".ty01Swiper").length) {
+    if ($(".ty01Swiper").length) {
       self.videoBulletChk(".ty01Swiper");
     }
   },
@@ -807,9 +807,9 @@ dropdownBtns.forEach((button) => {
 
     button.setAttribute("aria-expanded", String(!isExpanded));
     dropdownMenu.setAttribute("aria-hidden", String(isExpanded));
-
     dropdownMenu.classList.toggle("dropdown-on", !isExpanded);
-    btnRightArr.classList.toggle("rotate", !isExpanded);
+
+    btnRightArrFilter.classList.toggle("rotate", !isExpanded);
 
     const dropdownCentered = button.closest(".dropdown");
     const detectCase1 = dropdownMenu.classList.contains("dropdown-on"); // 필터, 드롭다운 공통
