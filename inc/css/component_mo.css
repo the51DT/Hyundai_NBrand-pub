@@ -1,7 +1,7 @@
 /*********************************
 min-width : 1024 css
 *********************************/
-@media screen and (max-width: 1280px) and (min-width: 1024px) {
+@media screen and (max-width: 1800px) and (min-width: 1024px) {
   .content-area > section {
     padding-left: 80px;
     padding-right: 80px;
@@ -1699,7 +1699,8 @@ min-width : 1024 css
     height: 18px;
   }
   .search-container .tag-list-wrap {
-    margin-top: 20px;
+    max-width: revert; 
+    margin:20px auto 0;
   }
 
   .search-small .search-input-box {
@@ -1716,6 +1717,16 @@ min-width : 1024 css
   }
   .search-small .search-input-box input::placeholder {
     font-size: 1rem;
+  }
+  .conts-box-search {
+    padding:100px 24px 160px;
+  }
+  .search-result-list {
+    margin-top: 64px;
+  }
+  .search-result-list .desc {
+    font-size: 24px; 
+    margin-bottom: 36px;
   }
   /* tag */
   .tag-list-wrap [class^="tag-list"] {
