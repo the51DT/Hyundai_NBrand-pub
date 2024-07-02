@@ -110,11 +110,10 @@ var pubUi = {
       e.preventDefault();
       $(this).parents(".swiper-slide").siblings().removeClass("active");
       $(this).parents(".swiper-slide").addClass("active");
-      
+
       setTimeout(function () {
         document.querySelector(".ty05Swiper").swiper.update();
       }, 500);
-
     });
 
     // 이벤트 레이아웃 마이너스 버튼 클릭시, 추 후 요건 확정 후 재작업 예정
@@ -129,7 +128,6 @@ var pubUi = {
         evtImgMapChk(options);
       }
     });
-    
 
     $(".tit-btn-wrap button").click(function (e) {
       $(".tit-btn-wrap button").attr("aria-pressed", "false");
@@ -312,8 +310,7 @@ var pubUi = {
         el: ".swiper-pagination",
         clickable: true,
       },
-      on: {
-      },
+      on: {},
     });
     var swiper3Card = new Swiper(".ty03Swiper.rankswiper", {
       slidesPerView: 3,
@@ -634,7 +631,7 @@ var pubUi = {
     } else {
       btn.classList.add("visually-hidden");
     }
-  },  
+  },
   windowSize: function () {
     return $win_W >= 1024 ? false : true;
   },
@@ -781,21 +778,21 @@ function handleOptionClick(event) {
     })
     .resize();
 
-    if($selectboxWrap.hasClass("evtLayout-type")) {
-      var options = [];
-      var option1 = $("#typeSelect01 .option-click.active").text();
-      var option2 = $("#typeSelect02 .option-click.active").text();
-      options.push(option1,option2);
-      console.log(options)
-      
-      if (option1 != undefined && option2 != undefined)  {
-        evtImgMapChk(options);
-      }
+  if ($selectboxWrap.hasClass("evtLayout-type")) {
+    var options = [];
+    var option1 = $("#typeSelect01 .option-click.active").text();
+    var option2 = $("#typeSelect02 .option-click.active").text();
+    options.push(option1, option2);
+    console.log(options);
+
+    if (option1 != undefined && option2 != undefined) {
+      evtImgMapChk(options);
     }
+  }
 }
 // [End] : selectbox 컴포넌트
 
-// 추 후 이미지 교체 필요 
+// 추 후 이미지 교체 필요
 function evtImgMapChk(options) {
   var evtMapImage = $(".evt-map-wrap .evt-map-img img");
   console.log(evtMapImage);
@@ -1088,6 +1085,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       eachVideos.addEventListener("play", () => {
+        eachVideos.muted = false;
         eachPlayBtns.style.opacity = "0";
       });
 
@@ -1127,7 +1125,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function resetVideo(video) {
-      video.pause();
+      video.play();
       video.currentTime = 0;
     }
   }
