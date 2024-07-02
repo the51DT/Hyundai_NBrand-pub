@@ -754,6 +754,21 @@
   background: url(../../inc/images/icon/icon-btn-move.svg) no-repeat;
   background-size: 100%;
 }
+/* 제목 + kv모션 작업 영역 */
+@keyframes modelSmooth {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.models-wrap .smooth-wrap {
+  animation: modelSmooth 1.5s;
+}
+
 @media screen and (max-width: 1023px) {
   .models-wrap .full-1938 {
     height: 1333px;
