@@ -110,11 +110,10 @@ var pubUi = {
       e.preventDefault();
       $(this).parents(".swiper-slide").siblings().removeClass("active");
       $(this).parents(".swiper-slide").addClass("active");
-      
+
       setTimeout(function () {
         document.querySelector(".ty05Swiper").swiper.update();
       }, 500);
-
     });
 
     // 이벤트 레이아웃 마이너스 버튼 클릭시, 추 후 요건 확정 후 재작업 예정
@@ -129,7 +128,6 @@ var pubUi = {
         evtImgMapChk(options);
       }
     });
-    
 
     $(".tit-btn-wrap button").click(function (e) {
       $(".tit-btn-wrap button").attr("aria-pressed", "false");
@@ -312,8 +310,7 @@ var pubUi = {
         el: ".swiper-pagination",
         clickable: true,
       },
-      on: {
-      },
+      on: {},
     });
     var swiper3Card = new Swiper(".ty03Swiper.rankswiper", {
       slidesPerView: 3,
@@ -613,7 +610,6 @@ var pubUi = {
         let scrHeight = parseInt(
           _this.find(".masonry_con").prop("scrollHeight")
         );
-        console.log(scrHeight);
         _this.css("grid-row-end", "span " + (scrHeight + row_gap));
       });
     });
@@ -634,7 +630,7 @@ var pubUi = {
     } else {
       btn.classList.add("visually-hidden");
     }
-  },  
+  },
   windowSize: function () {
     return $win_W >= 1024 ? false : true;
   },
@@ -781,21 +777,21 @@ function handleOptionClick(event) {
     })
     .resize();
 
-    if($selectboxWrap.hasClass("evtLayout-type")) {
-      var options = [];
-      var option1 = $("#typeSelect01 .option-click.active").text();
-      var option2 = $("#typeSelect02 .option-click.active").text();
-      options.push(option1,option2);
-      console.log(options)
-      
-      if (option1 != undefined && option2 != undefined)  {
-        evtImgMapChk(options);
-      }
+  if ($selectboxWrap.hasClass("evtLayout-type")) {
+    var options = [];
+    var option1 = $("#typeSelect01 .option-click.active").text();
+    var option2 = $("#typeSelect02 .option-click.active").text();
+    options.push(option1, option2);
+    console.log(options);
+
+    if (option1 != undefined && option2 != undefined) {
+      evtImgMapChk(options);
     }
+  }
 }
 // [End] : selectbox 컴포넌트
 
-// 추 후 이미지 교체 필요 
+// 추 후 이미지 교체 필요
 function evtImgMapChk(options) {
   var evtMapImage = $(".evt-map-wrap .evt-map-img img");
   console.log(evtMapImage);
@@ -1585,17 +1581,26 @@ $("body").scroll(function () {
     $(".navigation_bar-wrap .gage").removeClass("on");
   }
 
-  if (window.innerWidth > 1023) {
-    // pc : opacity 다르게
-    if (scrollTop > 0) {
-      $(".navigation_bar-wrap").css("opacity", "0.8");
-    } else {
-      $(".navigation_bar-wrap").css("opacity", "1");
-    }
+  if (scrollTop > 0) {
+    $(".header-wrap").addClass("scroll-on");
   } else {
-    // mobile : opacity 1 고정
-    $(".navigation_bar-wrap").css("opacity", "1");
+    $(".header-wrap").removeClass("scroll-on");
   }
-
+  $(".navigation_bar-wrap").addClass("scroll-ing");
   $(".navigation_bar-wrap .gage.on").css("--bar", `${scrollY}%`);
+});
+
+// 스크를 종료 감지
+$.fn.scrollStopped = function (callback) {
+  var that = this,
+    $this = $(that);
+  $this.scroll(function (ev) {
+    clearTimeout($this.data("scrollTimeout"));
+    $this.data("scrollTimeout", setTimeout(callback.bind(that), 250, ev));
+  });
+};
+$("body").scrollStopped(function (ev) {
+  // console.log(ev);
+  // console.log("스크롤끝");
+  $(".navigation_bar-wrap").removeClass("scroll-ing");
 });

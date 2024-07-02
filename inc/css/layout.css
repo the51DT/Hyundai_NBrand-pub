@@ -77,7 +77,9 @@ body:-webkit-scrollbar {
   z-index: 1000;
   background-color: rgba(255, 255, 255, 1);
 }
-
+.header-wrap.scroll-on {
+  top: -70px;
+}
 .header-cont {
   width: 100%;
   display: flex;
@@ -275,7 +277,12 @@ body:-webkit-scrollbar {
   left: 0;
   line-height: 48px;
   border-bottom: 1px solid #bbbbbb;
+  opacity: 1;
 }
+.navigation_bar-wrap.scroll-ing {
+  opacity: 0.8;
+}
+
 .navigation_bar {
   display: flex;
   justify-content: space-between;
@@ -284,8 +291,8 @@ body:-webkit-scrollbar {
 .navigation_bar-wrap .gage.on {
   --bar: 0;
   width: calc(var(--bar));
-  content:'';
-  display:block;
+  content: "";
+  display: block;
   height: 4px;
   background-color: #de3111;
   z-index: 99;
