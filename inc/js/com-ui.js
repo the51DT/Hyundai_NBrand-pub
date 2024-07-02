@@ -174,7 +174,7 @@ var NbrandUI = {
         case "popup bottom-popup share-popup":
           openWrap.addClass("on").fadeIn(200);
           NbrandUI.dimdOn();
-          $(".dimmed").css("z-index", 1002);
+          // $(".dimmed").css("z-index", 1002);
           break;
         case "popup bottom-popup":
           openWrap.addClass("on").fadeIn(200);

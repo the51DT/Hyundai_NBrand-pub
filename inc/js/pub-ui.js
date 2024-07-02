@@ -1016,6 +1016,18 @@ document.addEventListener("DOMContentLoaded", () => {
         },
       ],
       [
+        {
+          id: "MD050901P01",
+          url: "../../inc/videos/VELOSTERN-video01.mp4",
+          type: "video/mp4",
+        },
+        {
+          id: "MD050901P01",
+          url: "../../inc/videos/VELOSTERN-video02.mp4",
+          type: "video/mp4",
+        },
+      ],
+      [
         // 더미 페이지입니다. 추후 삭제 예정입니다.
         {
           id: "modelPop_test",
@@ -1100,7 +1112,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         setTimeout(() => {
           popupBody.scrollTop = 0;
-        }, 10);
+        }, 250);
       });
     });
 
