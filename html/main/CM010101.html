@@ -2094,36 +2094,65 @@
         </div>
       </div>
     </footer>
-    <div id="sharing-page" class="popup bottom-popup2" role="dialog" aria-modal="true" aria-labelledby="tit">
-      <div class="pop-wrap sharing-popup">
-        <h3 class="tit hidden">Sharing</h3>
-        <div class="sns-sharing-wrap">
-          <a href="#" class="sharing-icon-btn url-icon" aria-label="URL복사"></a>
-          <a href="#" class="sharing-icon-btn face-icon" aria-label="페이스북 공유 링크 복사"></a>
-          <a href="#" class="sharing-icon-btn insta-icon" aria-label="인스타 공유 링크 복사"></a>
-          <a href="#" class="sharing-icon-btn x-icon" aria-label="트위터 공유 링크 복사"></a>
+    <div id="sharing-page" class="popup bottom-popup share-popup" role="dialog" aria-modal="true" aria-labelledby="tit">
+      <div class="popup-wrapper">
+        <!-- <p class="temp-header">Hub_Write a post ID : EP040201P02</p> -->
+
+        <div class="popup-header">
+          <h3 class="tit-type04">Sharing</h3>
+        </div>
+
+        <div class="popup-body share-icn-wrap">
+          <div class="box-row">
+            <!-- row 1 -->
+            <div class="box-icn">
+              <a href="" class="btn btn-only-icon-bg01-circle">
+                <span class="visually-hidden">share link button</span>
+                <span class="btn-icon20 icon-copylink-wh" aria-hidden="true"></span>
+              </a>
+            </div>
+
+            <div class="box-icn">
+              <a href="" class="btn btn-only-icon-bg01-circle">
+                <span class="visually-hidden">facebook link button</span>
+                <span class="btn-icon20 icon-facebook-wh" aria-hidden="true"></span>
+              </a>
+            </div>
+            <div class="box-icn">
+              <a href="" class="btn btn-only-icon-bg01-circle">
+                <span class="visually-hidden">instagram link button</span>
+                <span class="btn-icon20 icon-instagram-wh" aria-hidden="true"></span>
+              </a>
+            </div>
+
+            <div class="box-icn">
+              <a href="" class="btn btn-only-icon-bg01-circle">
+                <span class="visually-hidden">twitter link button</span>
+                <span class="btn-icon20 icon-twitter-wh" aria-hidden="true"></span>
+              </a>
+            </div>
+          </div>
         </div>
         <div class="btn-wrap">
           <!-- pop-close 해당 팝업 닫기 -->
-          <button type="button" class="btn btn-only-icon-notbg pop-close">
+          <button type="button" class="btn btn-only-icon-notbg popup-close-btn-x smallX"
+            onclick="NbrandUI.popClose(this)">
             <span class="visually-hidden">close button</span>
-            <span class="btn-icon20 icon-close" aria-hidden="true"></span>
+            <span class="btn-icon36 icon-close" aria-hidden="true"></span>
           </button>
         </div>
+        <!-- <aside></aside> -->
       </div>
-    </div>
-    <!-- <aside></aside> -->
-  </div>
 
-  <script type="text/javascript" src="../../inc/js/jquery-3.7.1.slim.min.js"></script>
-  <script type="text/javascript" src="../../inc/js/swiper.min.js"></script>
-  <script type="text/javascript" src="../../inc/js/plugins.js"></script>
-  <script type="text/javascript" src="../../inc/js/pub-ui.js"></script>
-  <script type="text/javascript" src="../../inc/js/com-ui.js"></script>
+      <script type="text/javascript" src="../../inc/js/jquery-3.7.1.slim.min.js"></script>
+      <script type="text/javascript" src="../../inc/js/swiper.min.js"></script>
+      <script type="text/javascript" src="../../inc/js/plugins.js"></script>
+      <script type="text/javascript" src="../../inc/js/pub-ui.js"></script>
+      <script type="text/javascript" src="../../inc/js/com-ui.js"></script>
 
-  <script>
-    // alert('d')      
-  </script>
+      <script>
+        // alert('d')      
+      </script>
 </body>
 
 </html>

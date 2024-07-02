@@ -1591,16 +1591,14 @@ $("body").scroll(function () {
 });
 
 // 스크를 종료 감지
-$.fn.scrollStopped = function (callback) {
+$.fn.scrollStop = function (callback) {
   var that = this,
     $this = $(that);
-  $this.scroll(function (ev) {
+  $this.scroll(function (e) {
     clearTimeout($this.data("scrollTimeout"));
-    $this.data("scrollTimeout", setTimeout(callback.bind(that), 250, ev));
+    $this.data("scrollTimeout", setTimeout(callback.bind(that), 10, e));
   });
 };
-$("body").scrollStopped(function (ev) {
-  // console.log(ev);
-  // console.log("스크롤끝");
+$("body").scrollStop(function () {
   $(".navigation_bar-wrap").removeClass("scroll-ing");
 });
