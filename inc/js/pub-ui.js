@@ -610,7 +610,6 @@ var pubUi = {
         let scrHeight = parseInt(
           _this.find(".masonry_con").prop("scrollHeight")
         );
-        console.log(scrHeight);
         _this.css("grid-row-end", "span " + (scrHeight + row_gap));
       });
     });
@@ -1583,17 +1582,26 @@ $("body").scroll(function () {
     $(".navigation_bar-wrap .gage").removeClass("on");
   }
 
-  if (window.innerWidth > 1023) {
-    // pc : opacity 다르게
-    if (scrollTop > 0) {
-      $(".navigation_bar-wrap").css("opacity", "0.8");
-    } else {
-      $(".navigation_bar-wrap").css("opacity", "1");
-    }
+  if (scrollTop > 0) {
+    $(".header-wrap").addClass("scroll-on");
   } else {
-    // mobile : opacity 1 고정
-    $(".navigation_bar-wrap").css("opacity", "1");
+    $(".header-wrap").removeClass("scroll-on");
   }
-
+  $(".navigation_bar-wrap").addClass("scroll-ing");
   $(".navigation_bar-wrap .gage.on").css("--bar", `${scrollY}%`);
+});
+
+// 스크를 종료 감지
+$.fn.scrollStopped = function (callback) {
+  var that = this,
+    $this = $(that);
+  $this.scroll(function (ev) {
+    clearTimeout($this.data("scrollTimeout"));
+    $this.data("scrollTimeout", setTimeout(callback.bind(that), 250, ev));
+  });
+};
+$("body").scrollStopped(function (ev) {
+  // console.log(ev);
+  // console.log("스크롤끝");
+  $(".navigation_bar-wrap").removeClass("scroll-ing");
 });

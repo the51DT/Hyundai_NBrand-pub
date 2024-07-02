@@ -93,6 +93,10 @@ var NbrandUI = {
     rendingBtn = $(obj);
     rendingBtn.addClass("on").parent().siblings().children().removeClass("on");
     NbrandUI.expandedAria();
+    if (NbrandUI.windowSize()) {
+      NbrandUI.navigationBar(".navi_event-btn");
+    }
+
     // navigationBtn.siblings(".navigation-menu").stop().slideToggle(300);
   },
   popContOpen: function (obj, btn) {

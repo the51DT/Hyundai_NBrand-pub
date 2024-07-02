@@ -787,12 +787,15 @@
 .video_thumnail_wrap .img_mo {
   display: none;
 }
-.video_thumnail_wrap .video_tit {
+.video_thumnail_wrap .video_tit_wrap {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 0 5rem;
+  width: 100%;
+}
+.video_thumnail_wrap .video_tit {
   width: 100%;
   font-family: "Hyundai Sans Head";
   font-size: 5rem;
@@ -800,11 +803,7 @@
   line-height: 125%;
 }
 .video_thumnail_wrap .video_subtit {
-  position: absolute;
-  top: 58%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 0 5rem;
+  margin-top: 1rem;
   width: 100%;
   font-family: "Hyundai Sans Head";
   font-size: 2rem;
@@ -2605,19 +2604,19 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   .video_thumnail_wrap .img_mo {
     display: block;
   }
-  .video_thumnail_wrap .video_tit {
+  .video_thumnail_wrap .video_tit_wrap {
     position: static;
     transform: translate(0, 0);
-    margin: 2.5rem 0 1.25rem;
     padding: 0 1.5rem;
+    width: 100%;
+  }
+  .video_thumnail_wrap .video_tit {
+    margin: 2.5rem 0 1.25rem;
     font-size: 1.5rem;
     line-height: 140%;
   }
   .video_thumnail_wrap .video_subtit {
-    position: static;
-    transform: translate(0, 0);
     margin: 0.75rem 0 1.25rem;
-    padding: 0 1.5rem;
     font-size: 1.125rem;
     line-height: 140%;
   }

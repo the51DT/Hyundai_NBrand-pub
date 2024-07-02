@@ -1548,19 +1548,13 @@ min-width : 1024 css
 
   .swiper-card-type .card-list-wrap .swiper-slide {
     position: relative;
-    /* width: 96px !important; */
+    width: 96px
+  }
+  .swiper-card-type .card-list-wrap .swiper-slide.active {
+    width: 204px;
   }
   .swiper-card-type .card-list-wrap .swiper-slide .card_type01 {
     height: 265px;
-  }
-  .swiper-card-type .card-list-wrap .swiper-slide.active {
-    /* width: 204px !important; */
-  }
-  .swiper-card-type .card-list-wrap .swiper-slide.active .card_type01 {
-    /* width: 204px !important; */
-  }
-  .swiper-card-type .card-list-wrap .swiper-slide.active .card_cover {
-    /* max-width: 204px !important; */
   }
   /* select */
   .selectbox-wrap {

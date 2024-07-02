@@ -2268,11 +2268,6 @@ input[type="radio"]:focus + label {
 .swiper-card-type .card_more {
   z-index: 10;
 }
-.swiper-card-type .card_cover img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 .swiper-card-type .card_top .card_rank {
   color: inherit;
   font-size: 24px;
@@ -2310,7 +2305,6 @@ input[type="radio"]:focus + label {
   transition: width 0.3s ease-out;
 }
 .swiper-card-type .card-list-wrap .swiper-slide.active {
-  /* width: 360px !important; */
   width: 360px;
 }
 
