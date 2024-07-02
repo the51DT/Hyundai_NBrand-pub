@@ -99,20 +99,19 @@ var NbrandUI = {
     var openWrap = $(obj);
     var popClass = openWrap.attr("class");
     var popCheck = btn.parents(".popup");
-
     if (!popCheck.length) {
       zData = 1001;
-      btnAddName = "open-btn" + "1";
+      btnAddName = "open-btn1";
       openWrap.css("z-index", zData).attr("data-zindex", zData);
     } else {
       if (zData == 1001) {
-        btnAddName = "open-btn" + "2";
+        btnAddName = "open-btn2";
         zData = 1003;
       } else if (zData == 1003) {
-        btnAddName = "open-btn" + "3";
+        btnAddName = "open-btn3";
         zData = 1005;
       } else if (zData == 1005) {
-        btnAddName = "open-btn" + "4";
+        btnAddName = "open-btn4";
         zData = 1007;
       }
       openWrap.css("z-index", zData).attr("data-zindex", zData);
@@ -215,11 +214,12 @@ var NbrandUI = {
     NbrandUI.popContOpen(".popup#" + openmodalData, openmodalBtn);
     NbrandUI.expandedAria(openmodalBtn);
   },
-  popClose: function (obj) {
-    closeWrap = $(obj).parents(".popup");
+  popContClose: function (obj) {
+    closeWrap = $(obj);
     closeWrap.find(".ui-fctab-s").remove();
     closeWrap.find(".ui-fctab-e").remove();
-    openmodalBtn = $(".open-btn[aria-expanded = true]");
+    openmodalClass = "open-btn1";
+    openmodalBtn = $("." + openmodalClass + "[aria-expanded = true]");
     wrapZindexData = closeWrap.attr("data-zindex");
 
     if (wrapZindexData == 1007) {
@@ -229,18 +229,22 @@ var NbrandUI = {
         "z-index",
         wrapZindexData
       );
+      openmodalBtn = $(".open-btn4[aria-expanded = true]");
+      openmodalClass = "open-btn4";
     } else if (wrapZindexData == 1005) {
       wrapZindexData = 1003;
       $(".popup[data-zindex=" + wrapZindexData + "]").css(
         "z-index",
         wrapZindexData
       );
+      openmodalBtn = $(".open-btn3[aria-expanded = true]");
     } else {
       wrapZindexData = 1001;
       $(".popup[data-zindex=" + wrapZindexData + "]").css(
         "z-index",
         wrapZindexData
       );
+      openmodalBtn = $(".open-btn2[aria-expanded = true]");
     }
     NbrandUI.expandedAria(openmodalBtn);
     openmodalBtn.focus().removeClass("open-btn");
@@ -288,6 +292,10 @@ var NbrandUI = {
           break;
       }
     }
+  },
+  popClose: function (obj) {
+    closeWrap = $(obj).parents(".popup");
+    NbrandUI.popContClose(closeWrap);
   },
   /* headerNav */
   headerReset: function (obj, com, par) {
@@ -342,7 +350,9 @@ var NbrandUI = {
           NbrandUI.toggleBtn();
           eventParent.toggleClass("menu-on");
           NbrandUI.expandedAria();
+
           if (eventItem.hasClass("on")) {
+            //열때
             Nbrand.uiFocusTab({
               selector: tparent,
               type: "hold",
@@ -351,9 +361,12 @@ var NbrandUI = {
               {
                 height: heightDate,
               },
-              300
+              100
             );
+
+            $(".panel2_2_1, .gnb__tab-cont02 .gnb__tab02-btn01").addClass("on");
           } else {
+            //닫을때
             eventCont.attr("aria-hidden", "true");
             tparent.children(".ui-fctab-s").remove();
             tparent.children(".ui-fctab-e").remove();
@@ -363,7 +376,7 @@ var NbrandUI = {
               {
                 height: 0,
               },
-              300
+              100
             );
             tparent.find(".on").removeClass("on");
             $(".panel2_2_1, .gnb__tab-cont02 .gnb__tab02-btn01").addClass("on");
@@ -372,7 +385,7 @@ var NbrandUI = {
               if (!eventItem.hasClass("on")) {
                 eventCont.hide();
               }
-            }, 300);
+            }, 100);
             if (NbrandUI.windowSize()) {
             }
           }
@@ -411,15 +424,6 @@ var NbrandUI = {
               type: "hold",
             });
           } else {
-            // $(".nav-wrap")
-            //   .stop()
-            //   .animate(
-            //     {
-            //       height: gnb2depTarget.prop("scrollHeight") + 50,
-            //     },
-            //     100
-            //   );
-
             setTimeout(function () {
               $(".nav-wrap")
                 .stop()
@@ -458,9 +462,12 @@ var NbrandUI = {
               type: "hold",
             });
           } else {
-            $(".nav-wrap").animate({
-              height: gnb3depTarget.prop("scrollHeight") + 160,
-            });
+            $(".nav-wrap").animate(
+              {
+                height: gnb3depTarget.prop("scrollHeight") + 160,
+              },
+              100
+            );
           }
         }
       });
