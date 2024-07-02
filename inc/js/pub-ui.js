@@ -683,23 +683,27 @@ var pubUi = {
   windowSize: function () {
     return $win_W >= 1024 ? false : true;
   },
-  pageScrollChk : function (dataScroll) {    
-    var contentItem = document.querySelectorAll(".content-area > [class*=content-item]");  
+  pageScrollChk: function (dataScroll) {
+    var contentItem = document.querySelectorAll(
+      ".content-area > [class*=content-item]"
+    );
     var headerHeight = document.querySelector(".header-cont").offsetHeight;
-    var navBarHeight = document.querySelector(".navigation_bar-wrap").offsetHeight;
+    var navBarHeight = document.querySelector(
+      ".navigation_bar-wrap"
+    ).offsetHeight;
 
     var navHeight = headerHeight + navBarHeight;
-                
-    contentItem.forEach((evt,idx) => {
-      
+
+    contentItem.forEach((evt, idx) => {
       contentItem[idx].setAttribute("data-scroll", idx + 1); // 각 콘텐츠에 data-scroll 생성
 
-      if (evt.dataset.scroll == dataScroll) { //nav data-scroll과 값비교 후 동일 대상 체크
+      if (evt.dataset.scroll == dataScroll) {
+        //nav data-scroll과 값비교 후 동일 대상 체크
         var offsetTopVal = evt.offsetTop - navHeight;
       }
       $("body").animate({ scrollTop: offsetTopVal }, 300);
-    });  
-  }
+    });
+  },
 };
 
 $(document).ready(function () {
@@ -731,8 +735,7 @@ $(document).ready(function () {
     targetSwiper.find(".swiper-slide-active video")[0].pause();
   });
 
-  toggleFullscreen();  
-  
+  toggleFullscreen();
 });
 
 // [Start] : selectbox 컴포넌트
@@ -829,26 +832,29 @@ const dropdownBtns = document.querySelectorAll(".wrap-dropdown-selected");
 dropdownBtns.forEach((button) => {
   button.addEventListener("click", function () {
     const isExpanded = button.getAttribute("aria-expanded") === "true";
-    const dropdownMenu = button.nextElementSibling;
-    const dropdownFilterBtn = button.parentElement;
-    const dropdownMenuFilter =
-      button.parentElement.parentElement.querySelector("dropdown-menu");
+    const dropdownMenu = button.nextElementSibling; // 아코디언 트리거 버튼
+    const dropdownFilterBtn = button.parentElement; // 필터 드롭다운 트리거 버튼
+    // const dropdownMenuFilter =
+    //   button.parentElement.parentElement.querySelector("dropdown-menu");
     // const btnRightArr = button
     //   .closest(".dropdown")
     //   .querySelector(".arrow-down");
+
+    // (필터 제외한 모든) 아코디언 오른쪽 화살표
     const btnRightArr = button
       .closest(".dropdown")
       .querySelector(".dropdown-icon");
+    // 필터 오른쪽 화살표
     const btnRightArrFilter =
       button.parentElement.querySelector(".icon-down-wh");
+    btnRightArrFilter.classList.toggle("rotate", !isExpanded);
 
+    // 아코디언 펼침
     button.setAttribute("aria-expanded", String(!isExpanded));
     dropdownMenu.setAttribute("aria-hidden", String(isExpanded));
     dropdownMenu.classList.toggle("dropdown-on", !isExpanded);
 
-    btnRightArrFilter.classList.toggle("rotate", !isExpanded);
-
-    const dropdownCentered = button.closest(".dropdown");
+    // 필터, 드롭다운 케이스 나눠서 요소 조절
     const detectCase1 = dropdownMenu.classList.contains("dropdown-on"); // 필터, 드롭다운 공통
     const detectCase2 = dropdownFilterBtn.classList.contains("centered"); // 필터 컴포넌트만
     const detectCase2_selectBtn = document.querySelector(
@@ -928,7 +934,6 @@ function selectOption(event, optionText) {
 // 드롭다운(아코디언), 필터 컴포넌트 끝
 
 // 드롭다운(아코디언) 02 시작
-
 // 기획서, 시안에 없어 임의로 다중 토글 적용
 function DropdownFooter() {
   if (window.innerWidth < 1024) {
@@ -943,7 +948,6 @@ function DropdownFooter() {
       });
   }
 }
-
 // 드롭다운(아코디언) 02 끝
 // 드롭다운(아코디언), 필터 컴포넌트 끝
 
@@ -1567,24 +1571,30 @@ $(".btn_full").click(() => {
 });
 // [End] : configurator fx
 
-
-// scroll 이벤트 추가 
+// scroll 이벤트 추가
 $("body").scroll(function () {
   // console.log("scroll 이벤트 진입");
-  let scrollY = (($("body").scrollTop() / ($(".wrap").height() - $("body").height())) * 100).toFixed(3);
+  let scrollY = (
+    ($("body").scrollTop() / ($(".wrap").height() - $("body").height())) *
+    100
+  ).toFixed(3);
   let scrollTop = $("body").scrollTop();
 
-  console.log("스크롤 좌표값 체크 - scrollTop : " , scrollTop + " scrollY % 값 : ", scrollY + "%" );  
+  console.log(
+    "스크롤 좌표값 체크 - scrollTop : ",
+    scrollTop + " scrollY % 값 : ",
+    scrollY + "%"
+  );
 
   if (scrollTop > 0) {
     $(".navigation_bar-wrap .gage").addClass("on");
   } else {
-    $(".navigation_bar-wrap .gage").removeClass("on");    
+    $(".navigation_bar-wrap .gage").removeClass("on");
   }
-  
-  if(window.innerWidth > 1023) {
+
+  if (window.innerWidth > 1023) {
     // pc : opacity 다르게
-    if (scrollTop > 0) {      
+    if (scrollTop > 0) {
       $(".navigation_bar-wrap").css("opacity", "0.8");
     } else {
       $(".navigation_bar-wrap").css("opacity", "1");
