@@ -342,6 +342,7 @@
   gap:40px !important; 
 }
 .brand .models-wrap .info-bnr-wrap {
+  width: 100%;
   padding-top: 40px;
 }
 .brand .models-wrap .info-bnr-wrap .text-normal-s {
@@ -458,6 +459,7 @@
 .brand .motor_tab .mypage-withdrawal-table {
   margin-top: 1.25rem;
   max-width: 54rem;
+  border-top: 1px solid #AAAAAA;
   text-align: left;
 }
 .brand .motor_tab .mypage-withdrawal-table th {
@@ -614,6 +616,103 @@
   font-size: 1.25rem;
   font-weight: 700;
   line-height: 100%;
+}
+
+/* BR030103 */
+.brand .max1440:has(.tcr_winner_wrap) {
+  color: #FFF;
+}
+.tcr_winner_wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 2.5rem;
+  width: 100%;
+  max-width: 77.1875rem;
+}
+.tcr_winner_wrap img {
+  width: calc(33% - 1.25rem);
+}
+
+/* BR030104 */
+.motor_tit_wrap {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.25rem;
+  margin: 0 auto 3.75rem;
+  padding: 0 5rem;
+  max-width: 84.75rem;
+  text-align: center;
+}
+.honed_wrap {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.80) 0%, rgba(0, 0, 0, 0.80) 100%), url(../../inc/images/content/img_24h_conts02_bg.png) lightgray 50% / cover no-repeat;
+}
+.honed_wrap .motor_tit {
+  text-align: center;
+  color: #FFF;
+}
+.honed_wrap .img-wrap {
+  margin: 0 auto;
+  margin-top: 6.25rem;
+  max-width: 105rem;
+}
+.motor_team_list {
+  display: flex;
+  justify-content: space-between;
+  gap: 4.25rem;
+  padding: 0 1.38rem;
+  width: 100%;
+  color: #FFF;
+}
+.motor_team_list > li {
+  width: 100%;
+}
+.motor_team_list p {
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid #595C5F;
+  font-family: "Hyundai Sans Head";
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 125%;
+}
+.motor_team_list_detail {
+  padding-top: 3rem;
+}
+.motor_team_list_detail li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0.75rem;
+  font-family: "Hyundai Sans Head";
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 140%;
+}
+.motor_team_list_detail li + li {
+  margin-top: 1rem;
+}
+.motor_team_list_detail li img {
+  width: 2.625rem;
+  height: auto;
+}
+.motor_link_card {
+  display: flex;
+  flex-direction: column;
+}
+.motor_link_card img {
+  width: 100%;
+}
+.motor_link_card p {
+  margin-top: 2.5rem;
+  font-family: "Hyundai Sans Head";
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 140%;
+  text-align: center;
+}
+.motor_link_card .btn {
+  margin-top: 0.75rem;
+  padding: 0.75rem 0;
 }
 
 /* mobile */
@@ -1057,5 +1156,64 @@
     font-size: 1rem;
     font-weight: 700;
     line-height: 100%;
+  }
+
+  /* BR030104 */
+  .brand .models-wrap .img-wrap.info-bnr-wrap {
+    padding-top: 0;
+  }
+  .motor_tit_wrap {
+    row-gap: 0.75rem;
+    margin: 0 auto 2.25rem;
+    padding: 0 1.5rem;
+  }
+  .brand .models-wrap .motor_tit_wrap .text-strong {
+    font-size: 1.875rem;
+    line-height: 140%;
+  }
+  .brand .models-wrap .motor_tit_wrap .text-normal {
+    font-size: 1.0625rem;
+    line-height: 140%;
+  }
+  .honed_wrap .img-wrap {
+    margin-top: 4rem;
+  }
+  .motor_team_list {
+    flex-direction: column;
+    align-items: center;
+    gap: 3.75rem;
+    padding: 0;
+  }
+  .motor_team_list p {
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
+    line-height: 140%;
+  }
+  .motor_team_list_detail {
+    padding-top: 1.75rem;
+  }
+  .motor_team_list_detail li {
+    font-size: 1.25rem;
+  }
+  .motor_team_list_detail li + li {
+    margin-top: 0.75rem;
+  }
+  .motor_team_list_detail li img {
+    width: 1.875rem;
+  }
+  .motor_link_wrap .text-strong.motor_tit {
+    font-size: 1.875rem;
+    line-height: 140%;
+  }
+  .motor_link_wrap .grid_mo_drop {
+    gap: 2.75rem;
+    width: 100%;
+  }
+  .motor_link_card p {
+    margin-top: 1.75rem;
+    font-size: 1.125rem;
+  }
+  .motor_link_card .btn {
+    padding: 0.5rem 0;
   }
 }

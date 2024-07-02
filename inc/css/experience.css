@@ -186,6 +186,9 @@
   padding: 0 80px 160px;
   margin-top: 160px;
 }
+.nflmain_wrap .content-item03 .banner-box .swiper-slide img.mo-only {
+  display: none;
+}
 .nflmain_wrap .content-item05.main-rank {
   background: #f0f0f0;
   padding: 120px 80px 160px;
@@ -2154,6 +2157,12 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   }
   .nflmain_wrap .content-item03 .banner-box .banner-des {
     font-size: 18px;
+  }
+  .nflmain_wrap .content-item03 .banner-box .swiper-slide img.mo-only {
+    display: block;
+  }
+  .nflmain_wrap .content-item03 .banner-box .swiper-slide img.pc-only {
+    display: none;
   }
   .nflmain_wrap .content-item04 .mission-box.white-box {
     padding: 0 24px 100px;
