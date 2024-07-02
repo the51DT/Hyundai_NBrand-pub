@@ -349,8 +349,12 @@ var pubUi = {
       centeredSlides: true,
       touchRatio: 0,
       pagination: {
-        el: ".swiper-pagination",
+        el: ".swiper-pagination-custom",
         clickable: true,
+      },
+      navigation: {
+        nextEl: ".onlyOneSwiper .swiper-button-next",
+        prevEl: ".onlyOneSwiper .swiper-button-prev",
       },
       breakpoints: {
         360: {
