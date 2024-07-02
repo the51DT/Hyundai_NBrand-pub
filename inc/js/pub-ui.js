@@ -38,12 +38,12 @@ var pubUi = {
       });
     }
 
-    // 스와이퍼 재생 버튼 클릭시,
+    // 스와이퍼 재생 버튼 클릭시, 동영상 재생, 정지
     $(".btn-play").on("click", function (e) {
       e.preventDefault();
       var targetSwiper = $(this).closest(".swiper");
 
-      if (!targetSwiper.hasClass(".ty01Swiper")) {
+      if (targetSwiper.hasClass("ty02Swiper")) {
         if ($(this).hasClass("on")) {
           console.log("정지버튼 클릭!");
           $(this).removeClass("on");
@@ -55,7 +55,7 @@ var pubUi = {
           $(this).find(".visually-hidden").text("재생");
           targetSwiper[0].swiper.autoplay.start();
         }
-      } else {
+      } else if (targetSwiper.hasClass("ty01Swiper")) {
         if ($(this).hasClass("on")) {
           console.log("정지버튼 클릭!");
           $(this).removeClass("on");
@@ -70,7 +70,7 @@ var pubUi = {
       self.videoControlerChk(targetSwiper);
     });
 
-    // 스와이퍼 소리 버튼 클릭시, (★ 추후, 재생,정지 기능 추가필요함)
+    // 스와이퍼 소리 버튼 클릭시, 음소거 / 음소거 해제
     self.$btnSound.on("click", function (e) {
       e.preventDefault();
       var targetSwiper = $(this).closest(".swiper");
@@ -79,10 +79,12 @@ var pubUi = {
         console.log("소리 끄기 버튼 클릭!");
         self.$btnSound.removeClass("on");
         self.$btnSound.find(".visually-hidden").text("소리 끄기");
+        targetSwiper.find("video").prop("muted", true);
       } else {
         console.log("소리 켜기버튼 클릭!");
         self.$btnSound.addClass("on");
         self.$btnSound.find(".visually-hidden").text("소리 켜기");
+        targetSwiper.find("video").prop("muted", false);
       }
     });
 
