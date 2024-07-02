@@ -13,6 +13,12 @@ min-width : 1024 css
 *********************************/
 
 @media screen and (max-width: 1023px) {
+  .pc-only {
+    display: none;
+  }
+  .mo-only {
+    display: block;
+  }
   /*********
     font
   **********/
@@ -300,7 +306,7 @@ min-width : 1024 css
   .txt-list-wrap li .txt-box {
     width: 258px;
     height: 266px;
-    background-color: #F0F0F0;
+    background-color: #f0f0f0;
     padding: 24px 16px 28px;
   }
   .txt-list-wrap li .num {
@@ -538,7 +544,7 @@ min-width : 1024 css
     margin-top: 20px;
   }
   .card_type04 .card_date {
-    margin-top:12px;
+    margin-top: 12px;
   }
   .card_type04 .card_thumbnail.h347 {
     aspect-ratio: 312 / 312;
@@ -1510,7 +1516,7 @@ min-width : 1024 css
   }
 
   .swiper-card-type .swiper-slide:first-child {
-    margin-left:0;
+    margin-left: 0;
   }
 
   .swiper-card-type .card_type01 {
@@ -1548,7 +1554,7 @@ min-width : 1024 css
 
   .swiper-card-type .card-list-wrap .swiper-slide {
     position: relative;
-    width: 96px
+    width: 96px;
   }
   .swiper-card-type .card-list-wrap .swiper-slide.active {
     width: 204px;
@@ -1636,7 +1642,8 @@ min-width : 1024 css
   .selectbox-trigger2::after {
     position: absolute;
     content: "";
-    background: url("../../inc/images/icon/icon-arrow01_down.svg") center no-repeat;
+    background: url("../../inc/images/icon/icon-arrow01_down.svg") center
+      no-repeat;
     width: 16px;
     height: 16px;
     right: 8px;
@@ -1693,8 +1700,8 @@ min-width : 1024 css
     height: 18px;
   }
   .search-container .tag-list-wrap {
-    max-width: revert; 
-    margin:20px auto 0;
+    max-width: revert;
+    margin: 20px auto 0;
   }
 
   .search-small .search-input-box {
@@ -1713,13 +1720,13 @@ min-width : 1024 css
     font-size: 1rem;
   }
   .conts-box-search {
-    padding:100px 24px 160px;
+    padding: 100px 24px 160px;
   }
   .search-result-list {
     margin-top: 64px;
   }
   .search-result-list .desc {
-    font-size: 24px; 
+    font-size: 24px;
     margin-bottom: 36px;
   }
   /* tag */
@@ -1744,13 +1751,14 @@ min-width : 1024 css
   }
   /* 디자인 버전 적용(240619) - 페이징(공용) */
   .page_wrap {
-    margin:0 24px;
+    margin: 0 24px;
   }
-  .page_wrap .page_prev_btn, .page_wrap .page_next_btn {
+  .page_wrap .page_prev_btn,
+  .page_wrap .page_next_btn {
     max-width: 48px;
     flex: 1 1 64.35px;
-    margin:0;
-  }  
+    margin: 0;
+  }
 
   .page_wrap .page_list {
     display: block;
