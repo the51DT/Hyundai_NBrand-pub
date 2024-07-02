@@ -347,7 +347,10 @@ var pubUi = {
       slidesPerView: 1,
       spaceBetween: 80,
       centeredSlides: true,
-      touchRatio: 0,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
       pagination: {
         el: ".swiper-pagination-custom",
         clickable: true,
