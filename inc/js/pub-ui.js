@@ -1051,15 +1051,28 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       video.forEach((videoEl, index) => {
+        setTimeout(() => {
+          videoEl.muted = false;
+        }, 150);
+        videoEl.addEventListener("play", () => {
+          if ((videoEl.muted = true)) {
+            console.log("조용");
+          } else {
+            console.log("안조용");
+          }
+        });
         if (index < filteredVideo.length) {
           const videoData = filteredVideo[index];
           const sourceEl = document.createElement("source");
           sourceEl.src = videoData.url;
           sourceEl.type = videoData.type;
           videoEl.appendChild(sourceEl);
+
+          videoEl.addEventListener("play", () => {});
         }
       });
     });
+
     // 영상 필터링 파싱 끝
 
     // 영상 플레이어 제어 시작
