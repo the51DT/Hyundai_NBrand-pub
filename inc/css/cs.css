@@ -1,11 +1,5 @@
 @charset "utf-8";
 /* 공통 */
-.pc-only {
-  display: block;
-}
-.mo-only {
-  display: none;
-}
 .content-top {
   padding: 139.5px 0;
   text-align: center;
@@ -66,7 +60,7 @@
   line-height: 140%;
 }
 .inquiry_popup_wrap ul li::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0.5rem;
   top: 0.5rem;
@@ -80,18 +74,12 @@
   margin-top: 1.5rem;
 }
 .inquiry_popup_wrap ul li span {
-  color: #DE3111;
+  color: #de3111;
 }
 
 /* 모바일 */
 @media screen and (max-width: 1023px) {
   /* 공통 */
-  .pc-only {
-    display: none;
-  }
-  .mo-only {
-    display: block;
-  }
   .content-top {
     padding: 153px 24px;
   }

@@ -1,3 +1,10 @@
+.pc-only {
+  display: block;
+}
+.mo-only {
+  display: none;
+}
+
 /*********
     font
   **********/
@@ -2196,7 +2203,7 @@ input[type="radio"]:focus + label {
 
 .swiper-card-type.ty05Swiper .card_type01:hover {
   background-color: #de3111 !important;
-  color:#fff
+  color: #fff;
 }
 
 .swiper-card-type.ty05Swiper .card_type01:hover .card_bottom {
