@@ -838,7 +838,7 @@ dropdownBtns.forEach((button) => {
     //   .closest(".dropdown")
     //   .querySelector(".arrow-down");
 
-    // 아코디언 오른쪽 화살표
+    // (필터 제외한 모든) 아코디언 오른쪽 화살표
     const btnRightArr = button
       .closest(".dropdown")
       .querySelector(".dropdown-icon");
@@ -852,7 +852,7 @@ dropdownBtns.forEach((button) => {
     dropdownMenu.setAttribute("aria-hidden", String(isExpanded));
     dropdownMenu.classList.toggle("dropdown-on", !isExpanded);
 
-    const dropdownCentered = button.closest(".dropdown");
+    // 필터, 드롭다운 케이스 나눠서 요소 조절
     const detectCase1 = dropdownMenu.classList.contains("dropdown-on"); // 필터, 드롭다운 공통
     const detectCase2 = dropdownFilterBtn.classList.contains("centered"); // 필터 컴포넌트만
     const detectCase2_selectBtn = document.querySelector(
@@ -932,7 +932,6 @@ function selectOption(event, optionText) {
 // 드롭다운(아코디언), 필터 컴포넌트 끝
 
 // 드롭다운(아코디언) 02 시작
-
 // 기획서, 시안에 없어 임의로 다중 토글 적용
 function DropdownFooter() {
   if (window.innerWidth < 1024) {
@@ -947,7 +946,6 @@ function DropdownFooter() {
       });
   }
 }
-
 // 드롭다운(아코디언) 02 끝
 // 드롭다운(아코디언), 필터 컴포넌트 끝
 
