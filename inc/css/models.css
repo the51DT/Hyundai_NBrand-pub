@@ -137,22 +137,6 @@
 .models-wrap .models-full {
   padding: 240px 80px 0;
 }
-/* bg 에 맞는 배경 및 높이 조절은 클래스 변경하기 */
-.models-wrap .full-1938 {
-  height: 1938px;
-}
-.models-wrap .full-1440 {
-  height: 1440px;
-}
-.models-wrap .full-1920 {
-  height: 1920px;
-}
-.models-wrap .full-1600 {
-  height: 1600px;
-}
-.models-wrap .full-1080 {
-  height: 1080px;
-}
 .models-wrap .perfor-wrap .models-full.icon20 {
   background: url(../../inc/images/Models/i20N/i20N_performance_bg.png) center bottom no-repeat;
   background-size: cover;
@@ -816,42 +800,6 @@
   animation-fill-mode: forwards;
 }
 @media screen and (max-width: 1023px) {
-  .models-wrap .full-1938 {
-    height: 1333px;
-  }
-  .models-wrap .full-1440 {
-    height: 920px;
-  }
-  .models-wrap .full-1920 {
-    height: 920px;
-  }
-  .models-wrap .full-1600 {
-    height: 920px;
-  }
-  .models-wrap .full-1080 {
-    height: 920px;
-  }
-  .models-wrap .mo-full-1598 {
-    height: 1598px;
-  }
-  .models-wrap .mo-full-1643 {
-    height: 1643px;
-  }
-  .models-wrap .mo-full-1863 {
-    height: 1863px;
-  }
-  .models-wrap .mo-full-1742 {
-    height: 1742px;
-  }
-  .models-wrap .mo-full-1400 {
-    height: 1400px;
-  }
-  .models-wrap .mo-full-1415 {
-    height: 1415px;
-  }
-  .models-wrap .mo-full-1207 {
-    height: 1207px;
-  }
   .models-wrap .content-item02 video,
   .models-wrap .content-item02 img {
     height: 480px;
@@ -1365,7 +1313,7 @@
     height: 1643px;
   }
   .models-wrap .perfor-wrap .models-full.rn30 {
-    background: url(../../inc/images/Models/RN30/RN30_performance_bg_mo.png) center bottom no-repeat;
+    background: url(../../inc/images/Models/RN30/RN30_performance_bg_mo.png) center top no-repeat;
     background-size: cover;
     position: relative;
     height: 1863px;
