@@ -685,7 +685,7 @@ var pubUi = {
   },
   pageScrollChk: function (dataScroll) {
     var contentItem = document.querySelectorAll(
-      ".content-wrap .content-area > div"
+      ".content-area > [class*=content-item]"
     );
     var headerHeight = document.querySelector(".header-cont").offsetHeight;
     var navBarHeight = document.querySelector(
