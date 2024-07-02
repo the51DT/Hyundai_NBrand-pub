@@ -505,12 +505,8 @@
   z-index: -1;
 }
 .n-race-box .conts-head {
-  /* margin:0 -60px 40px 60px; */
-  padding: 0 60px;
+  padding: 0 60px 0 0;
 }
-/* .n-race-box .conts-body .swiper-container {
-  margin-left: 60px;
-} */
 .event-box {
   max-width: 1440px;
   margin: 0 auto;
@@ -521,13 +517,13 @@
   position: relative;
 }
 
-.event-box .evt-map-wrap {
+/* .event-box .evt-map-wrap {
   position: relative;
   overflow: auto;
   background: url("../../inc/images/content/event-map_img.svg") no-repeat;
   width: 100%;
   min-height: 810px;
-}
+} */
 
 .event-box .btn-area {
   position: absolute;
@@ -566,7 +562,7 @@
   background-image: url("../images/icon/icon-minus.svg");
 }
 
-.evt-map-area li {
+/* .evt-map-area li {
   position: absolute;
   box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.25);
 }
@@ -621,7 +617,7 @@
 
 .evt-map-area li a .tit .icon-right {
   margin: -4px 0;
-}
+} */
 
 .track-guide-box .descwrap .sub-tit {
   margin-top: 4px;
@@ -985,7 +981,7 @@
     height: 28.8px;
   }
 
-  .event-box .evt-map-wrap {
+  /* .event-box .evt-map-wrap {
     min-height: 600px;
   }
 
@@ -1024,7 +1020,7 @@
   .evt-map-area li button .tit .icon-right {
     width: 16px;
     height: 16px;
-  }
+  } */
 }
 
 /* component.css */

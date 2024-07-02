@@ -105,21 +105,31 @@ var pubUi = {
       self.tagBtnEvent(e.target, tagList);
     });
 
-    $(".ty05Swiper .card-list-wrap .swiper-slide").click(function (e) {
+    // ty05Swiper, 슬라이드 클릭 시, active 처리
+    $(".ty05Swiper .card-list-wrap .swiper-slide a").click(function (e) {
       e.preventDefault();
-      $(".card-list-wrap .swiper-slide").removeClass("active");
-      if (!$(this).hasClass("active")) {
-        $(this).addClass("active");
+      $(this).parents(".swiper-slide").siblings().removeClass("active");
+      $(this).parents(".swiper-slide").addClass("active");
+      
+      setTimeout(function () {
+        document.querySelector(".ty05Swiper").swiper.update();
+      }, 500);
+
+    });
+
+    // 이벤트 레이아웃 마이너스 버튼 클릭시, 추 후 요건 확정 후 재작업 예정
+    $(".event-box .btn-wrap.minus").click(function (e) {
+      var options = [];
+      var option1 = $("#typeSelect01 .option-click.active").text();
+      var option2 = $("#typeSelect02 .option-click.active").text();
+      options.push(option1, option2);
+      console.log(options);
+
+      if (option1 != undefined && option2 != undefined) {
+        evtImgMapChk(options);
       }
     });
-
-    $(".btn-wrap.minus").click(function (e) {
-      pubUi.evtZoomInOut("minus");
-    });
-
-    $(".btn-wrap.plus").click(function (e) {
-      pubUi.evtZoomInOut("plus");
-    });
+    
 
     $(".tit-btn-wrap button").click(function (e) {
       $(".tit-btn-wrap button").attr("aria-pressed", "false");
@@ -272,7 +282,6 @@ var pubUi = {
       observer: true,
       observerParents: true,
       freeMode: true,
-      slidesOffsetAfter: 240,
       navigation: {
         nextEl: ".ty04Swiper .swiper-button-next",
         prevEl: ".ty04Swiper .swiper-button-prev",
@@ -294,49 +303,16 @@ var pubUi = {
     var swiper5 = new Swiper(".ty05Swiper", {
       slidesPerView: "auto",
       spaceBetween: 4,
-      observer: true,
-      observerParents: true,
-      freeMode: true,
-      slidesOffsetAfter: 200,
+      slidesOffsetAfter: 24,
       navigation: {
         nextEl: ".ty05Swiper .swiper-button-next",
         prevEl: ".ty05Swiper .swiper-button-prev",
       },
       pagination: {
-        el: ".swiper-pagination-custom",
+        el: ".swiper-pagination",
         clickable: true,
       },
-      breakpoints: {
-        344: {
-          // fold
-          slidesPerView: 2.2,
-          slidesOffsetAfter: 24,
-        },
-        360: {
-          slidesPerView: 2.2,
-          spaceBetween: 4,
-          slidesOffsetAfter: 24,
-        },
-        1124: {
-          slidesPerView: 6.5,
-          spaceBetween: 4,
-          slidesOffsetAfter: 120,
-        },
-      },
       on: {
-        init: function () {
-          // $(window).resize(function(){
-          //   swiper5.update();
-          // })
-        },
-        activeIndexChange: function () {
-          // const realIndex = swiper5.realIndex;
-          // const totalIndex = swiper5.slidesLength;
-          // if (realIndex === totalIndex - 1) {
-          //   console.log(realIndex, totalIndex);
-          //   $(".ty05Swiper .swiper-slide").css("margin-right", "200px");
-          // }
-        },
       },
     });
     var swiper3Card = new Swiper(".ty03Swiper.rankswiper", {
@@ -658,28 +634,7 @@ var pubUi = {
     } else {
       btn.classList.add("visually-hidden");
     }
-  },
-  // 수정 필요, 이벤트 레이아웃 구조 변경 예정
-  evtZoomInOut: function (param) {
-    const evtImg = $(".evt-map-wrap");
-    let result = 1;
-
-    switch (param) {
-      case "plus":
-        result = result + 0.2;
-        console.log("plus", result);
-        evtImg.css("transform", `scale(${result})`);
-        break;
-      case "minus":
-        result = result - 0.2;
-        console.log("minus", result);
-        evtImg.css("transform", `scale(${result})`);
-        break;
-      default:
-        console.log("data is not plus and minus");
-        break;
-    }
-  },
+  },  
   windowSize: function () {
     return $win_W >= 1024 ? false : true;
   },
@@ -825,8 +780,38 @@ function handleOptionClick(event) {
       }
     })
     .resize();
+
+    if($selectboxWrap.hasClass("evtLayout-type")) {
+      var options = [];
+      var option1 = $("#typeSelect01 .option-click.active").text();
+      var option2 = $("#typeSelect02 .option-click.active").text();
+      options.push(option1,option2);
+      console.log(options)
+      
+      if (option1 != undefined && option2 != undefined)  {
+        evtImgMapChk(options);
+      }
+    }
 }
 // [End] : selectbox 컴포넌트
+
+// 추 후 이미지 교체 필요 
+function evtImgMapChk(options) {
+  var evtMapImage = $(".evt-map-wrap .evt-map-img img");
+  console.log(evtMapImage);
+  var option1 = options[0];
+  var option2 = options[1];
+
+  switch ((option1, option2)) {
+    case ("A Paddock", "N Zone"):
+      evtMapImage.attr("src", "../../inc/images/content/car_model_img01.svg");
+      break;
+    case ("B Paddock", "N Experience Zone"):
+      evtMapImage.attr("src", "../../inc/images/content/event-map_img.svg");
+      break;
+  }
+}
+
 // 드롭다운(아코디언), 필터 컴포넌트 시작
 const dropdownBtns = document.querySelectorAll(".wrap-dropdown-selected");
 dropdownBtns.forEach((button) => {
@@ -1580,11 +1565,7 @@ $("body").scroll(function () {
   ).toFixed(3);
   let scrollTop = $("body").scrollTop();
 
-  console.log(
-    "스크롤 좌표값 체크 - scrollTop : ",
-    scrollTop + " scrollY % 값 : ",
-    scrollY + "%"
-  );
+  // console.log("스크롤 좌표값 체크 - scrollTop : ", scrollTop + " scrollY % 값 : ", scrollY + "%");
 
   if (scrollTop > 0) {
     $(".navigation_bar-wrap .gage").addClass("on");
