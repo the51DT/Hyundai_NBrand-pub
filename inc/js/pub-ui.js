@@ -657,7 +657,7 @@ var pubUi = {
 
       if (evt.dataset.scroll == dataScroll) {
         //nav data-scroll과 값비교 후 동일 대상 체크
-        var offsetTopVal = evt.offsetTop - navHeight;
+        var offsetTopVal = evt.offsetTop - navBarHeight;
       }
       $("body").animate({ scrollTop: offsetTopVal }, 300);
     });
@@ -1591,40 +1591,77 @@ $(".btn_full").click(() => {
 // [End] : configurator fx
 
 // scroll 이벤트 추가
-$("body").scroll(function () {
-  // console.log("scroll 이벤트 진입");
-  let scrollY = (
-    ($("body").scrollTop() / ($(".wrap").height() - $("body").height())) *
-    100
-  ).toFixed(3);
-  let scrollTop = $("body").scrollTop();
+function scrollEvent() {
+  var scrollWrap = $("body"),
+    sectionItem = [];
 
-  // console.log("스크롤 좌표값 체크 - scrollTop : ", scrollTop + " scrollY % 값 : ", scrollY + "%");
+  scrollWrap.find(".content-area > [class*=content-item]").each(function (e) {
+    ($this = $(this)),
+      (sectionItem[e] = $this.position().top - $("header").height());
 
-  if (scrollTop > 0) {
-    $(".navigation_bar-wrap .gage").addClass("on");
-  } else {
-    $(".navigation_bar-wrap .gage").removeClass("on");
-  }
+    scrollWrap.off("scroll").on("scroll", function () {
+      var thisScrArea = $(this),
+        scrItem = thisScrArea.find(".content-area > [class*=content-item]"),
+        nowScroll = thisScrArea.scrollTop(),
+        sectionLength = scrItem.length;
 
-  if (scrollTop > 0) {
-    $(".header-wrap").addClass("scroll-on");
-  } else {
-    $(".header-wrap").removeClass("scroll-on");
-  }
-  $(".navigation_bar-wrap").addClass("scroll-ing");
-  $(".navigation_bar-wrap .gage.on").css("--bar", `${scrollY}%`);
-});
+      let scrollY = (
+        ($("body").scrollTop() / ($(".wrap").height() - $("body").height())) *
+        100
+      ).toFixed(3);
+      let scrollTop = $("body").scrollTop();
+
+      var contentItem = document.querySelectorAll(
+        ".content-area > [class*=content-item]"
+      );
+
+      console.log("스크롤 좌표값 체크 - scrollTop : ", scrollTop + " scrollY % 값 : ", scrollY + "%");
+
+      if (scrollTop > 0) {
+        $(".navigation_bar-wrap .gage").addClass("on");
+      } else {
+        $(".navigation_bar-wrap .gage").removeClass("on");
+      }
+
+      if (scrollTop > 0) {
+        $(".header-wrap").addClass("scroll-on");
+      } else {
+        $(".header-wrap").removeClass("scroll-on");
+      }
+
+      $(".navigation_bar-wrap").addClass("scroll-ing");
+      $(".navigation_bar-wrap .gage.on").css("--bar", `${scrollY}%`);
+
+      contentItem.forEach((evt, idx) => {
+        contentItem[idx].setAttribute("data-scroll", idx + 1); // 각 콘텐츠에 data-scroll 생성
+      });
+
+      for (var i = 0; i < sectionLength; i++) {
+        if (sectionItem[i] <= nowScroll + 40) {
+          $(".navigation-item02.pc-only li").eq(i).find("button").addClass("on").parent().siblings().find("button").removeClass("on");         
+        }
+      }
+    });
+  });
+}
 
 // 스크를 종료 감지
-$.fn.scrollStop = function (callback) {
+$.fn.scrollStopped = function (callback) {
   var that = this,
     $this = $(that);
-  $this.scroll(function (e) {
+  $this.scroll(function (ev) {
     clearTimeout($this.data("scrollTimeout"));
-    $this.data("scrollTimeout", setTimeout(callback.bind(that), 10, e));
+    $this.data("scrollTimeout", setTimeout(callback.bind(that), 250, ev));
   });
 };
-$("body").scrollStop(function () {
+$("body").scrollStopped(function (ev) {
+  // console.log(ev);
+  // console.log("스크롤끝");
   $(".navigation_bar-wrap").removeClass("scroll-ing");
 });
+
+window.onload = function () {
+  setTimeout(function () {
+    scrollEvent();
+  }, 500);
+};
