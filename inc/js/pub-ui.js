@@ -683,13 +683,13 @@ var pubUi = {
   windowSize: function () {
     return $win_W >= 1024 ? false : true;
   },
-  pageScrollChk : function (dataScroll) {
-    var contentItem = document.querySelectorAll(".content-wrap .content-area > div");  
+  pageScrollChk : function (dataScroll) {    
+    var contentItem = document.querySelectorAll(".content-area > [class*=content-item]");  
     var headerHeight = document.querySelector(".header-cont").offsetHeight;
     var navBarHeight = document.querySelector(".navigation_bar-wrap").offsetHeight;
 
     var navHeight = headerHeight + navBarHeight;
-            
+                
     contentItem.forEach((evt,idx) => {
       
       contentItem[idx].setAttribute("data-scroll", idx + 1); // 각 콘텐츠에 data-scroll 생성
