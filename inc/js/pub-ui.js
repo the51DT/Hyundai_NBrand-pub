@@ -1058,15 +1058,28 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       video.forEach((videoEl, index) => {
+        setTimeout(() => {
+          videoEl.muted = false;
+        }, 150);
+        videoEl.addEventListener("play", () => {
+          if ((videoEl.muted = true)) {
+            console.log("soundOn");
+          } else {
+            console.log("soundOff");
+          }
+        });
         if (index < filteredVideo.length) {
           const videoData = filteredVideo[index];
           const sourceEl = document.createElement("source");
           sourceEl.src = videoData.url;
           sourceEl.type = videoData.type;
           videoEl.appendChild(sourceEl);
+
+          videoEl.addEventListener("play", () => {});
         }
       });
     });
+
     // 영상 필터링 파싱 끝
 
     // 영상 플레이어 제어 시작
@@ -1091,6 +1104,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       eachVideos.addEventListener("play", () => {
+        eachVideos.muted = false;
         eachPlayBtns.style.opacity = "0";
       });
 
@@ -1121,16 +1135,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function playVideo(video, button) {
       video.play();
+      video.muted = false;
       button.style.opacity = "0";
     }
 
     function pauseVideo(video, button) {
       video.pause();
+      video.muted = false;
+
       button.style.opacity = "1";
     }
 
     function resetVideo(video) {
-      video.pause();
+      video.play();
+      video.muted = false;
+
       video.currentTime = 0;
     }
   }
