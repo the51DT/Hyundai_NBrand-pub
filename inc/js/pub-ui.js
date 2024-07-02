@@ -1056,9 +1056,9 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 150);
         videoEl.addEventListener("play", () => {
           if ((videoEl.muted = true)) {
-            console.log("조용");
+            console.log("soundOn");
           } else {
-            console.log("안조용");
+            console.log("soundOff");
           }
         });
         if (index < filteredVideo.length) {
