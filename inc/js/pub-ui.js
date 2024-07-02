@@ -1115,16 +1115,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function playVideo(video, button) {
       video.play();
+      video.muted = false;
       button.style.opacity = "0";
     }
 
     function pauseVideo(video, button) {
       video.pause();
+      video.muted = false;
+
       button.style.opacity = "1";
     }
 
     function resetVideo(video) {
       video.play();
+      video.muted = false;
+
       video.currentTime = 0;
     }
   }
