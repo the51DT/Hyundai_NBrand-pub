@@ -31,7 +31,7 @@
   bottom: 20px;
   right: 20px;
 }
-.models-wrap .content-item02 img {
+.models-wrap .content-item02 img.video_poster {
   position: absolute;
   top: 0;
   left: 0;
@@ -801,7 +801,8 @@
 }
 @media screen and (max-width: 1023px) {
   .models-wrap .content-item02 video,
-  .models-wrap .content-item02 img {
+  .models-wrap .content-item02 img.video_poster,
+  .models-wrap .content-item02 img.only-kvimg {
     height: 480px;
     object-fit: cover;
   }
