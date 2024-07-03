@@ -275,23 +275,19 @@ var pubUi = {
     });
 
     var swiper4 = new Swiper(".ty04Swiper", {
-      slidesPerView: 4.5,
+      slidesPerView: "auto",
       spaceBetween: 24,
-      observer: true,
-      observerParents: true,
-      freeMode: true,
+      slidesOffsetAfter: 24,
       navigation: {
         nextEl: ".ty04Swiper .swiper-button-next",
         prevEl: ".ty04Swiper .swiper-button-prev",
       },
       breakpoints: {
         360: {
-          slidesPerView: 1.5,
           spaceBetween: 12,
           slidesOffsetAfter: 24,
         },
         768: {
-          slidesPerView: 3.5,
           spaceBetween: 12,
           slidesOffsetAfter: 24,
         },
