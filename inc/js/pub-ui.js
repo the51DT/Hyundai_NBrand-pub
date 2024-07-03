@@ -1150,8 +1150,37 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  // MD010101t02P01 내 다중 영상 제어 함수 시작
+  function ControlMultiVideo() {
+    const videoBtn_multi = document.querySelectorAll(
+      ".popup .wrap-video-func .box-video button"
+    );
+
+    videoBtn_multi.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const nearVideo = btn.previousElementSibling;
+        const iconInBtn = btn.querySelector(
+          ".popup .wrap-video-func .box-video button span.btn-icon24"
+        );
+
+        if (nearVideo.paused) {
+          nearVideo.play();
+          iconInBtn.classList.remove("icon-play-wh");
+          iconInBtn.classList.add("icon-pause-wh");
+        } else {
+          nearVideo.pause();
+          iconInBtn.classList.remove("icon-pause-wh");
+          iconInBtn.classList.add("icon-play-wh");
+        }
+      });
+    });
+  }
+  // MD010101t02P01 내 다중 영상 제어 함수 끝
+
   ControlVideo();
+  ControlMultiVideo();
 });
+
 // 모델 팝업 내 동영상 제어 함수 끝
 
 // 푸터 스크롤 탑
@@ -1611,7 +1640,11 @@ function scrollEvent() {
         ".content-area > [class*=content-item]"
       );
 
-      console.log("스크롤 좌표값 체크 - scrollTop : ", scrollTop + " scrollY % 값 : ", scrollY + "%");
+      console.log(
+        "스크롤 좌표값 체크 - scrollTop : ",
+        scrollTop + " scrollY % 값 : ",
+        scrollY + "%"
+      );
 
       if (scrollTop > 0) {
         $(".navigation_bar-wrap .gage").addClass("on");
@@ -1634,7 +1667,14 @@ function scrollEvent() {
 
       for (var i = 0; i < sectionLength; i++) {
         if (sectionItem[i] <= nowScroll + 40) {
-          $(".navigation-item02.pc-only li").eq(i).find("button").addClass("on").parent().siblings().find("button").removeClass("on");         
+          $(".navigation-item02.pc-only li")
+            .eq(i)
+            .find("button")
+            .addClass("on")
+            .parent()
+            .siblings()
+            .find("button")
+            .removeClass("on");
         }
       }
     });
