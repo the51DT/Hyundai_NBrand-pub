@@ -306,6 +306,11 @@ input[type="radio"]:focus + label {
   font-weight: 700;
   line-height: 20px;
 }
+[class*="xl-txt-btn"] {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 44.8px;
+}
 [class*="lg-txt-btn"] {
   font-size: 20px;
   font-weight: 700;
