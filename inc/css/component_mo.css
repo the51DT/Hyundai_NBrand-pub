@@ -87,6 +87,10 @@ min-width : 1024 css
     font-size: 16px;
     line-height: 16px;
   }
+  [class*="xl-txt-btn"] {
+    font-size: 20px;
+    line-height: 28px;
+  }
   [class*="btn-md"] {
     padding: 12px 16px;
     font-size: 14px;
@@ -1503,7 +1507,7 @@ min-width : 1024 css
   }
 
   .ty02Swiper .text-area {
-    margin-top: 16px;
+    padding-top: 16px;
   }
 
   .ty02Swiper .text-area .title {

@@ -153,6 +153,10 @@ var pubUi = {
       var scrollTarget = $(this).data("scroll");
       pubUi.pageScrollChk(scrollTarget);
     });
+
+    $("#topBtn").on("click", function(){
+      $("body").animate({ scrollTop: 0 }, 300);
+    });
   },
   swiperSlideEvent: function () {
     console.log("스와이퍼 이벤트 진입");
@@ -165,6 +169,7 @@ var pubUi = {
       slidesPerView: 1,
       watchOverflow: true, //pagination 1개 일 경우, 숨김
       initialSlide: 0,
+      touchRatio: 0, // 드래그 X
       loop: true,
       pagination: {
         el: ".swiper-pagination-custom",
@@ -173,6 +178,14 @@ var pubUi = {
       navigation: {
         nextEl: ".ty01Swiper .swiper-button-next",
         prevEl: ".ty01Swiper .swiper-button-prev",
+      },
+      breakpoints: {
+        360: {
+          //touchRatio: 1, // 드래그 O
+        },
+        768: {
+          //touchRatio: 1, // 드래그 O
+        },
       },
       on: {
         init: function () {
@@ -189,29 +202,27 @@ var pubUi = {
           pubUi.videoBulletChk(".ty01Swiper", this.realIndex);
         },
       },
-    });
+    });    
 
-    // swiper1.on("init", function(){
-    //   pubUi.videoBulletChk(".ty01Swiper");
-    // })
-
-    if ($(".ty02Swiper .swiper-slide").length > 3) {
-      loopVal = true;
-    } else {
-      loopVal = false;
-    }
+    // if ($(".ty02Swiper .swiper-slide").length > 3) {
+    //   loopVal = true;
+    // } else {
+    //   loopVal = false;
+    // }
 
     var swiper2 = new Swiper(".ty02Swiper", {
-      slidesPerView: "auto",
+      effect: "coverflow",
+      grabCursor: true,
       centeredSlides: true,
-      loop: loopVal,
-      initialSlide: 2,
-      watchOverflow: true,
-      observer: true,
-      observerParents: true,
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
+      slidesPerView: "auto",
+      loop: "auto",
+      coverflowEffect: {
+        rotate: 0, //각도
+        // stretch: -80, //간격
+        // depth: 0, // z축 깊이
+        // modifier: 0,
+        scale: 0.87, //배율
+        slideShadows: false, //그림자
       },
       pagination: {
         el: ".swiper-pagination-custom",
@@ -222,11 +233,13 @@ var pubUi = {
         prevEl: ".ty02Swiper .swiper-button-prev",
       },
       breakpoints: {
-        360: {
-          slidesPerView: 1.3,
+        280: {
+          effect: "slide",
+          slidesPerView: 1.2,
           spaceBetween: 12,
         },
         768: {
+          effect: "slide",
           slidesPerView: 1.3,
           spaceBetween: 12,
         },
@@ -431,6 +444,49 @@ var pubUi = {
         clickable: true,
       },
     });
+    var swiper11 = new Swiper(".merchandise_swiper", {
+      slidesPerView: 1,
+      centeredSlides: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: ".merchandise_swiper .swiper-button-next",
+        prevEl: ".merchandise_swiper .swiper-button-prev",
+      },
+      pagination: {
+        el: ".merchandise_swiper .swiper-pagination-custom",
+        clickable: true,
+      },
+    });
+    var swiper12 = new Swiper(".collection_swiper", {
+      slidesPerView: 3,
+      spaceBetween: 24,
+      watchOverflow: true,
+      pagination: {
+        el: ".collection_swiper .swiper-pagination-custom",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".collection_swiper .swiper-button-next",
+        prevEl: ".collection_swiper .swiper-button-prev",
+      },
+      breakpoints: {
+        360: {
+          slidesPerView: 1.07,
+          spaceBetween: 12,
+        },
+        768: {
+          slidesPerView: 1.07,
+          spaceBetween: 12,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 24,
+        },
+      },
+    });
   },
   videoBulletChk: function (targetSwiper, targetIdx) {
     if (!targetSwiper.length > 0) {
@@ -448,9 +504,10 @@ var pubUi = {
     console.log("타겟인덱스: " + targetIdx + " 비디오 Id값: " + videoId);
     //var slides = document.querySelectorAll(".ty01Swiper .swiper-slide");
     var video = document.querySelector(`#${videoId}`);
-
+    
+    
     if (slideActive) {
-      if (playBtn) {
+      if (playBtn) {        
         video.play();
       } else {
         console.log("비디오 일시정지 상태 입니다.");
@@ -461,25 +518,23 @@ var pubUi = {
     video.addEventListener(
       "timeupdate",
       function (e) {
+        
         var curTime = Math.floor(video.currentTime); // 현재 동영상 길이
         var duration = Math.floor(video.duration); // 동영상 전체 길이
         var per = Math.floor((curTime / duration) * 100); // 퍼센트 계산 값
-
+        
         if (per <= 100) {
-          document
-            .querySelector(".swiper-pagination-bullet-active .seek-bar")
-            .style.setProperty("--time", `${per}px`);
+          document.querySelector(".swiper-pagination-bullet-active .seek-bar").style.setProperty("--time", `${per}px`);
+          
           // $("#paging").css("color", "#fff");
           // $("#paging").html("퍼센트: " + per);
         }
 
         if (curTime == duration) {
-          curTime = 0;
           slide[0].swiper.slideNext();
+          curTime = 0;
         }
-      },
-      false
-    );
+      }, false);
   },
   videoControlerChk: function (targetSwiper) {
     var swiperActiveVideo = targetSwiper.find(".swiper-slide-active video");
@@ -526,6 +581,7 @@ var pubUi = {
     const tabLabel = target.getAttribute("aria-controls");
     const tabList = tabContainer.find(".tabs li");
     const tabConts = tabContainer.find(".tab-content");
+    const contentItem = document.querySelector(".content-item04.collectiontab-wrap");
 
     for (let i = 0; i < tabList.length; i++) {
       tabList[i].classList.remove("on");
@@ -537,6 +593,24 @@ var pubUi = {
     }
 
     document.querySelector("#" + tabLabel).classList.add("on");
+
+    // BR050101 : Brand_N Merchandise tab 배경 때문에 추가
+    contentItem.classList.remove("tab01-bg", "tab02-bg", "tab03-bg", "tab04-bg", "tab05-bg");
+    if (tabLabel === "tab1-01") {
+      contentItem.classList.add("tab01-bg");
+    }
+    if (tabLabel === "tab1-02") {
+      contentItem.classList.add("tab02-bg");
+    }
+    if (tabLabel === "tab1-03") {
+      contentItem.classList.add("tab03-bg");
+    }
+    if (tabLabel === "tab1-04") {
+      contentItem.classList.add("tab04-bg");
+    }
+    if (tabLabel === "tab1-05") {
+      contentItem.classList.add("tab05-bg");
+    }
   },
   tagBtnEvent: function (e, list, param) {
     var listItem = list.find("li");
@@ -688,8 +762,7 @@ $(document).ready(function () {
     var targetSwiper = $(this).closest(".swiper");
     targetSwiper.find(".swiper-slide-active video")[0].pause();
   });
-
-  toggleFullscreen();
+  toggleFullscreen();  
 });
 
 // [Start] : selectbox 컴포넌트
@@ -1657,14 +1730,14 @@ function scrollEvent() {
 
       if (scrollTop > 0) {
         $(".navigation_bar-wrap .gage").addClass("on");
+        $(".header-wrap").addClass("scroll-on");
+        $("#topBtn").fadeIn('slow');
+        $("#topBtn").css("display", "flex");
       } else {
         $(".navigation_bar-wrap .gage").removeClass("on");
-      }
-
-      if (scrollTop > 0) {
-        $(".header-wrap").addClass("scroll-on");
-      } else {
         $(".header-wrap").removeClass("scroll-on");
+        $("#topBtn").fadeOut('slow');
+        $("#topBtn").css("display", "none");
       }
 
       $(".navigation_bar-wrap").addClass("scroll-ing");

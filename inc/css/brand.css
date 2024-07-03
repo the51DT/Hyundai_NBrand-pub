@@ -162,7 +162,9 @@
   line-height: 70px;
 }
 .brand .models-wrap .motor_tit {
+  font-family: "Hyundai Sans Head";
   font-size: 68px;
+  font-weight: 700;
   line-height: 125%;
 }
 .brand .models-wrap .text-normal-s {
@@ -482,7 +484,7 @@
   font-weight: 700;
   line-height: 140%;
 }
-.brand .motor_tab .motor_tab_con button {
+.brand .motor_tab .motor_tab_con .lg-txt-btn01 {
   margin-top: 2.5rem;
   padding: 0.75rem 0;
 }
@@ -825,140 +827,328 @@
   margin-top: 0.75rem;
   padding: 0.75rem 0;
 }
-
-/* popup start */
-.popup.forBrand {
-  max-width: 1200px;
-  overflow: hidden;
+/* BR040101 */
+.brand .performance_wrap .max1440 {
+  gap: 5rem;
 }
-
-.popup.forBrand .popup-wrapper .popup-header {
-  padding: 28px 40px 27px 40px;
+.performance_tit_area {
+  padding: 8.75rem 5rem;
+  text-align: center;
 }
-
-.popup.forBrand .popup-body {
-  max-height: calc(100vh - 160px);
-  padding: 40px 40px 160px;
-  margin-bottom: 0;
-}
-
-.popup.forBrand .popup-wrapper .popup-body .brand-pd {
-  display: grid;
-  gap: 44px;
-  width: 100%;
-  grid-template-columns: 1fr 1fr;
-}
-
-.popup.forBrand .popup-wrapper .popup-body .brand-pd .popup-body-innerbox {
-  border: 1px solid;
+.performance_tab_area {
+  padding: 12.5rem 5rem;
   width: 100%;
 }
-
-.popup.forBrand
-  .popup-wrapper
-  .popup-body
-  .brand-pd
-  .popup-body-innerbox
-  .wrap-brand-desc {
-  padding: 40px 0px 0;
-  max-height: 100%;
-  gap: 60px;
+.performance_tab_area .motor_tab {
+  width: 100%;
 }
-
-.popup.forBrand
-  .popup-wrapper
-  .popup-body
-  .brand-pd
-  .popup-body-innerbox
-  .wrap-brand-desc:first-child {
-  padding-top: 0;
+.performance_tab_area .tabs-wrap {
+  width: 100%;
 }
-
-.popup.forBrand
-  .popup-wrapper
-  .popup-body
-  .brand-pd
-  .popup-body-innerbox
-  .wrap-brand-desc {
-  padding: 60px 0 0;
-  border-bottom: 1px solid #bbbbbb;
+.performance_tab_area .motor_tab .tab-head .tabs li {
+  width: 20%;
 }
-
-.popup.forBrand
-  .popup-wrapper
-  .popup-body
-  .brand-pd
-  .popup-body-innerbox
-  .wrap-brand-desc:first-child {
-  padding-top: 0;
-  padding-bottom: 0;
+.performance_tab_area .motor_tab .tab-head .tabs li a {
+  width: 100%;
 }
-
-.popup.forBrand
-  .popup-wrapper
-  .popup-body
-  .brand-pd
-  .popup-body-innerbox
-  .wrap-brand-desc:last-child {
-  padding-top: 60px;
-  padding-bottom: 0;
-  border-bottom: 0;
+.performance_tab_area .tab-content {
+  margin-top: 3.75rem;
 }
-
-.popup.forBrand .btn-wrap button.btn-only-icon-notbg.popup-close-btn-x {
-  top: 32px;
-}
-
-/* BR030102P01 s */
-
-.popup.forBrand
-  .popup-wrapper
-  .popup-body
-  .brand-pd
-  .popup-body-innerbox
-  .wrap-brand-desc
-  .gap12 {
-  display: grid;
-  gap: 12px;
-}
-
-.popup.forBrand
-  .popup-wrapper
-  .popup-body
-  .brand-pd
-  .popup-body-innerbox
-  .wrap-brand-desc
-  .gap12
-  .inner-subDesc {
-  display: grid;
-  gap: 4px;
-}
-
-.popup.forBrand
-  .popup-wrapper
-  .popup-body
-  .brand-pd
-  .popup-body-innerbox
-  .wrap-brand-desc
-  .gap12
-  .inner-subDesc:last-child {
-  padding-bottom: 60px;
-}
-
-.popup.forBrand
-  .popup-wrapper
-  .popup-body
-  .brand-pd
-  .popup-body-innerbox
-  .box-brand-tit {
-  margin-bottom: 32px;
+.performance_tab_tit {
   display: flex;
-  gap: 12px;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  width: 100%;
+  text-align: left;
 }
-/* BR030102P01 e */
-/* popup end */
-
+.performance_tab_tit .text-normal {
+  margin: 1.25rem 0 0.75rem;
+}
+.performance_tab_notice {
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 140%;
+  color: #666666;
+}
+.performance_tab_tit .btn-lg-outline01 {
+  margin-top: 2.75rem;
+}
+.performance_tab_area .motor_tab_con .grid_3 {
+  margin-top: 3.75rem;
+}
+.performance_tab_area .motor_tab_con .grid_3 p {
+  margin-top: 1.25rem;
+  font-family: "Hyundai Sans Head";
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 140%;
+  text-align: left;
+}
+.models-wrap.performance_wrap .gallery-wrap {
+  margin: 0;
+  padding: 0;
+}
+.performance_slide_tit {
+  margin: 2.5rem auto 0;
+  padding: 0.69rem 2rem;
+  width: fit-content;
+  min-width: 9.625rem;
+  background-color: #000000;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 140%;
+  color: #fff;
+}
+.brand .gallery-wrap .swiper-bottom-wrap {
+  top: 50%;
+}
+.performance_slide_wrap + .performance_slide_wrap {
+  margin-top: 12.5rem;
+}
+.brand .gallery-wrap .performance_slide_wrap .btn-wrap-default {
+  margin-top: 5rem;
+  padding: 0.75rem 0;
+}
+.performance_garage_wrap {
+  height: 90rem;
+  background-image: url(../images/content/img_performance_garage_bg_pc.png);
+  background-position: bottom center;
+  background-size: cover;
+}
+.performance_garage_wrap .text-col .btn-lg-outline01 {
+  margin-top: 3.75rem;
+}
+.performance_garage {
+  padding: 5rem 5rem 15rem;
+}
+/* BR050101 */
+.merchandise-wrap .swiper-slide img.pc-only {
+  display: block;
+}
+.merchandise-wrap .swiper-slide img.mo-only {
+  display: none;
+}
+.merchandise-wrap .merchandise-w1440 {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.merchandise-wrap .merchandise-w1096 {
+  max-width: 1096px;
+  margin: 0 auto;
+  text-align: center;
+}
+.merchandise-wrap .collection-wrap {
+  padding: 160px 80px 200px;
+}
+.merchandise-wrap .merchandise-kv .swiper-button-prev {
+  bottom: 40px;
+  left: 40px;
+  top: auto;
+  height: 36px;
+  width: 36px;
+}
+.merchandise-wrap .merchandise-kv .swiper-button-next {
+  bottom: 40px;
+  right: 40px;
+  top: auto;
+  height: 36px;
+  width: 36px;
+}
+.merchandise-wrap .merchandise-kv .swiper-button-prev:after {
+  background: url(../../inc/images/icon/icon-arrow01_left_white.svg) no-repeat
+    center top / 100%;
+  opacity: 0.5;
+}
+.merchandise-wrap .merchandise-kv .swiper-button-next:after {
+  background: url(../../inc/images/icon/icon-arrow01_right_white.svg) no-repeat
+    center top / 100%;
+  opacity: 0.5;
+}
+.merchandise-wrap .merchandise-kv .swiper-status-wrap {
+  bottom: 46px;
+}
+.merchandise-wrap .collection-wrap .collection-box {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 60px;
+}
+.merchandise-wrap .collection-wrap .collection-col {
+  display: flex;
+  gap: 24px;
+}
+.merchandise-wrap .collection-wrap .collection-each {
+  position: relative;
+}
+.merchandise-wrap .collection-wrap .btn-wrap {
+  position: absolute;
+  bottom: 28px;
+  left: 40px;
+  width: calc(100% - 80px);
+}
+.merchandise-wrap .collection-wrap .btn-wrap .btn {
+  justify-content: space-between;
+  width: 100%;
+  display: flex;
+}
+.merchandise-wrap .collectiontab-wrap {
+  padding: 291px 80px 362px;
+  position: relative;
+  height: 1440px;
+}
+.merchandise-wrap .collectiontab-wrap .merchandise-w1096 {
+  color: #fff;
+}
+.merchandise-wrap .collectiontab-wrap .tab-head.ty04 {
+  justify-content: center;
+  margin-top: 60px;
+}
+.merchandise-wrap .collectiontab-wrap .tab-head.ty04 .tabs-wrap .tabs li {
+  border-color: #fff;
+}
+.merchandise-wrap .collectiontab-wrap .tab-head.ty04 .tabs-wrap .tabs li a {
+  color: #fff;
+  text-align: center;
+}
+.merchandise-wrap .collectiontab-wrap .tab-head.ty04 .tabs-wrap .tabs li.on a {
+  background-color: #fff;
+  color: #000;
+}
+.merchandise-wrap .collectiontab-wrap .tab-content {
+  margin-top: 80px;
+}
+.content-item04.collectiontab-wrap.tab01-bg {
+  background: url("../../inc/images/content/img_Merchandise_tabbg_01.png")
+    center no-repeat;
+  background-size: cover;
+}
+.content-item04.collectiontab-wrap.tab02-bg {
+  background: url("../../inc/images/content/img_Merchandise_tabbg_02.png")
+    center no-repeat;
+  background-size: cover;
+}
+.content-item04.collectiontab-wrap.tab03-bg {
+  background: url("../../inc/images/content/img_Merchandise_tabbg_03.png")
+    center no-repeat;
+  background-size: cover;
+}
+.content-item04.collectiontab-wrap.tab04-bg {
+  background: url("../../inc/images/content/img_Merchandise_tabbg_04.png")
+    center no-repeat;
+  background-size: cover;
+}
+.content-item04.collectiontab-wrap.tab05-bg {
+  background: url("../../inc/images/content/img_Merchandise_tabbg_05.png")
+    center no-repeat;
+  background-size: cover;
+}
+.merchandise-wrap .collectiontab-wrap .swiper-wrapper {
+  padding-bottom: 115px;
+}
+.merchandise-wrap .collectiontab-wrap .collection_swiper-txt {
+  font-family: "Hyundai Sans Head";
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 33.6px;
+  color: #fff;
+  margin-top: 20px;
+}
+.merchandise-wrap .collectiontab-wrap .swiper-txt-red {
+  color: #de3111;
+}
+.merchandise-wrap
+  .collectiontab-wrap
+  .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
+  background-color: #fff;
+  opacity: 0.5;
+}
+.merchandise-wrap .productlist-wrap {
+  padding: 200px 80px 240px;
+}
+.merchandise-wrap .productlist-wrap .merchandise-w1096 {
+  text-align: left;
+  margin: 0;
+}
+.merchandise-wrap .productlist-wrap .productlist-bigbox {
+  margin-top: 60px;
+  display: flex;
+  column-gap: 28px;
+}
+.merchandise-wrap .productlist-wrap .productlist-bigbox p {
+  font-family: "Hyundai Sans Head";
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 50px;
+}
+.merchandise-wrap .productlist-wrap .productlist-col1 {
+  flex: 0 0 calc(100% / 3 - 28px);
+}
+.merchandise-wrap .productlist-wrap .productlist-col2 {
+  flex: 1;
+}
+.merchandise-wrap .productlist-wrap .productlist-col2 > div {
+  display: flex;
+  gap: 28px;
+}
+.merchandise-wrap .productlist-wrap .productlist-col2 > div > div {
+  flex: 0 0 calc(100% / 2 - 14px);
+}
+.merchandise-wrap .productlist-wrap .productlist-col1 > div + div {
+  margin-top: 60px;
+}
+.merchandise-wrap .productlist-wrap .productlist-subbox {
+  font-family: "Hyundai Sans Text";
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+  margin-top: 36px;
+}
+.merchandise-wrap .productlist-wrap .productlist-subbox li {
+  position: relative;
+  padding-left: 16px;
+}
+.merchandise-wrap .productlist-wrap .productlist-subbox li + li {
+  margin-top: 16px;
+}
+.merchandise-wrap .productlist-wrap .productlist-subbox li::before {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background-color: #000;
+  border-radius: 50%;
+  top: 12.5px;
+  left: 4.5px;
+  content: "";
+}
+.merchandise-wrap .merchandise_related-wrap {
+  padding: 95.56px 80px 120px;
+  background-color: #f0f0f0;
+}
+.merchandise-wrap .merchandise_related-wrap .merchandise-w1096 {
+  margin: 0;
+  text-align: left;
+  font-family: "Hyundai Sans Head";
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 70px;
+}
+.merchandise-wrap .merchandise_related-wrap .merchandise_related {
+  margin-top: 47.55px;
+  display: flex;
+  gap: 24px;
+}
+.merchandise-wrap .merchandise_related-wrap .merchandise_related > div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 0 0 calc(100% / 3 - 8px);
+}
+.merchandise-wrap .merchandise_related-wrap .merchandise_related > div p {
+  font-family: "Hyundai Sans Head";
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 33.6px;
+}
 /* mobile */
 @media screen and (max-width: 1023px) {
   .brand .video_wrap .search-container {
@@ -1390,7 +1580,7 @@
     margin-top: 2.25rem;
   }
   .brand .gallery-wrap .btn-wrap-default.sns_wrap {
-    gap: 2rem;
+    gap: 1.25rem;
     margin-top: 7.5rem;
   }
   .brand .gallery-wrap .lg-txt-btn01 {
@@ -1545,5 +1735,205 @@
   }
   .motor_link_card .btn {
     padding: 0.5rem 0;
+  }
+  /* BR040101 */
+  .brand .performance_wrap .max1440 {
+    gap: 2.75rem;
+  }
+  .performance_tit_area {
+    padding: 6.25rem 1.5rem;
+  }
+  .performance_tab_area {
+    padding: 7.5rem 1.5rem;
+  }
+  .performance_tab_area .motor_tab {
+    width: 100%;
+  }
+  .performance_tab_area .motor_tab .tab-head .tabs {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 0;
+  }
+  .performance_tab_area .motor_tab .tab-head .tabs li {
+    width: 50%;
+    border: 1px solid #777;
+  }
+  .performance_tab_area .motor_tab .tab-head .tabs li:nth-child(even) {
+    border-left: none;
+  }
+  .performance_tab_area
+    .motor_tab
+    .tab-head
+    .tabs
+    li:not(:nth-child(1), :nth-child(2)) {
+    border-top: none;
+  }
+  .performance_tab_area .tab-content {
+    margin-top: 2.25rem;
+  }
+  .performance_tab_tit {
+    flex-direction: column;
+  }
+  .performance_tab_tit .text-normal {
+    margin: 0.75rem 0;
+  }
+  .performance_tab_tit .btn-lg-outline01 {
+    margin-top: 1.75rem;
+    width: 100%;
+  }
+  .performance_tab_area .motor_tab_con .grid_3 {
+    row-gap: 1.75rem;
+    margin-top: 4rem;
+    width: 100%;
+  }
+  .performance_tab_area .motor_tab_con .grid_3 p {
+    margin-top: 0.75rem;
+    font-size: 1.125rem;
+  }
+  .performance_slide_tit {
+    margin: 1.75rem auto 0;
+  }
+  .performance_slide_wrap + .performance_slide_wrap {
+    margin-top: 7.5rem;
+  }
+  .brand .gallery-wrap .performance_slide_wrap .btn-wrap-default {
+    margin-top: 2.75rem;
+    padding: 0.5rem 0;
+  }
+  .performance_garage_wrap {
+    height: 57.5rem;
+    background-image: url(../images/content/img_performance_garage_bg_mo.png);
+  }
+  .performance_garage_wrap .text-col .btn-lg-outline01 {
+    margin-top: 2.25rem;
+  }
+  .performance_garage {
+    padding: 2.75rem 1.5rem 10rem;
+  }
+  /* BR050101 */
+  .merchandise-wrap .swiper-slide img.pc-only {
+    display: none;
+  }
+  .merchandise-wrap .swiper-slide img.mo-only {
+    display: block;
+  }
+  .merchandise-wrap .merchandise-w1440 {
+    max-width: 100%;
+  }
+  .merchandise-wrap .merchandise-w1096 {
+    max-width: 100%;
+  }
+  .merchandise-wrap .collection-wrap {
+    padding: 100px 24px 120px;
+  }
+  .merchandise-wrap .merchandise-kv .swiper-status-wrap {
+    bottom: 20px;
+  }
+  .merchandise-wrap .collection-wrap .collection-box {
+    gap: 20px;
+    margin-top: 36px;
+  }
+  .merchandise-wrap .collection-wrap .collection-col {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .merchandise-wrap .collection-wrap .btn-wrap {
+    bottom: 20px;
+    left: 28px;
+    width: calc(100% - 56px);
+  }
+  .merchandise-wrap .collectiontab-wrap {
+    padding: 120px 24px 148px;
+    height: fit-content;
+  }
+  .merchandise-wrap .collectiontab-wrap .tab-head.ty04 {
+    margin-top: 36px;
+  }
+  .merchandise-wrap .collectiontab-wrap .tab-head.ty04 .tabs-wrap .tabs {
+    margin-top: 0;
+  }
+  .merchandise-wrap .collectiontab-wrap .tab-head.ty04 .tabs-wrap .tabs {
+    display: flex;
+    flex-direction: column;
+  }
+  .merchandise-wrap .collectiontab-wrap .tab-head.ty04 .tabs-wrap .tabs li {
+    border-right: 1px solid #fff;
+    text-align: center;
+  }
+  .merchandise-wrap .collectiontab-wrap .tab-content {
+    margin: 48px -24px 0 0;
+  }
+  .merchandise-wrap
+    .collectiontab-wrap
+    .tab-head.ty04
+    .tabs-wrap
+    .tabs
+    li:not(:nth-child(1)) {
+    border-top: 0;
+  }
+  .merchandise-wrap .collectiontab-wrap .swiper-wrapper {
+    padding-bottom: 76px;
+  }
+  .merchandise-wrap .collectiontab-wrap .collection_swiper-txt {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 25.2px;
+    margin-top: 12px;
+  }
+  .merchandise-wrap .productlist-wrap {
+    padding: 120px 24px 160px;
+  }
+  .merchandise-wrap .productlist-wrap .productlist-bigbox {
+    display: block;
+    margin-top: 36px;
+  }
+  .merchandise-wrap .productlist-wrap .productlist-bigbox p {
+    font-size: 24px;
+    line-height: 33.6px;
+  }
+  .merchandise-wrap .productlist-wrap .productlist-subbox {
+    font-size: 17px;
+    line-height: 23.8px;
+    margin-top: 24px;
+  }
+  .merchandise-wrap .productlist-wrap .productlist-subbox li + li {
+    margin-top: 12px;
+  }
+  .merchandise-wrap
+    .productlist-wrap
+    .productlist-subbox
+    + .productlist-subbox {
+    margin-top: 28px;
+  }
+  .merchandise-wrap .productlist-wrap .productlist-col1 {
+    flex: 0 0 100%;
+  }
+  .merchandise-wrap .productlist-wrap .productlist-col2 {
+    margin-top: 36px;
+  }
+  .merchandise-wrap .productlist-wrap .productlist-col2 > div {
+    display: block;
+  }
+  .merchandise-wrap .productlist-wrap .productlist-col1 > div + div {
+    margin-top: 36px;
+  }
+  .merchandise-wrap .merchandise_related-wrap {
+    padding: 80px 0 120px 24px;
+  }
+  .merchandise-wrap .merchandise_related-wrap .merchandise-w1096 {
+    font-size: 30px;
+    line-height: 37.5px;
+  }
+  .merchandise-wrap .merchandise_related-wrap .merchandise_related {
+    margin-top: 36px;
+    flex-wrap: nowrap;
+    overflow-y: auto;
+  }
+  .merchandise-wrap .merchandise_related-wrap .merchandise_related > div {
+    flex: 0 0 71.25%;
+  }
+  .merchandise-wrap .merchandise_related-wrap .merchandise_related > div p {
+    font-size: 20px;
+    line-height: 25px;
   }
 }

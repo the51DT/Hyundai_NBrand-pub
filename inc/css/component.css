@@ -306,6 +306,11 @@ input[type="radio"]:focus + label {
   font-weight: 700;
   line-height: 20px;
 }
+[class*="xl-txt-btn"] {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 44.8px;
+}
 [class*="lg-txt-btn"] {
   font-size: 20px;
   font-weight: 700;
@@ -1893,6 +1898,20 @@ input[type="radio"]:focus + label {
   left: 50px;
 }
 
+.ty02Swiper .swiper-bottom-wrap {
+  width: calc(100% - (100% - 1196px));  
+  bottom: revert;
+  top:40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+.ty02Swiper .swiper-bottom-wrap.ty02 {
+  top:50%;
+}
+.ty02Swiper .swiper-bottom-wrap.ty03 {
+  top:0;
+}
 .swiper-status-wrap {
   display: flex;
   align-items: center;
@@ -2040,22 +2059,7 @@ input[type="radio"]:focus + label {
 }
 
 .ty02Swiper .swiper-slide {
-  width: 952px;
-}
-.ty02Swiper .swiper-slide .img-area {
-  /* height: 536px; */
-}
-.ty02Swiper .swiper-slide-active {
-  /* width: 1196px; */
-}
-
-.ty02Swiper .swiper-slide-active .img-area {
-  height: 673px;
-}
-
-.ty02Swiper .swiper-slide:last-child {
-  margin-right: 0;
-  padding-right: 0;
+  width: 1196px;
 }
 
 .ty02Swiper .swiper-slide .img-area img {
@@ -2168,8 +2172,8 @@ input[type="radio"]:focus + label {
 .ty04Swiper.swiper-card-type .card_cover {
   position: absolute;
   width: 100%;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
 }
 .ty04Swiper .card_type01 .card_more::after {
   width: 17px;
@@ -5262,4 +5266,33 @@ input:checked + .slider:before {
 }
 .club-popup .popup-wrapper .popup-footer .btn.pop-close {
   order: 0;
+}
+
+/* top button */
+.top-btn-area {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;  
+}
+.top-btn-area .btn {
+  width: 60px;
+  height: 60px;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 140%;
+  flex-direction: column;
+  display: none;
+}
+.top-btn-area .btn::before {
+  content:'';
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-image: url(../../inc/images/icon/icon-arrow01_down.svg);
+  background-size: contain;
+  rotate: 180deg;
 }

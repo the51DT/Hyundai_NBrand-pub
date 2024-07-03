@@ -93,13 +93,11 @@
               <p class="contitle-type01 fw-type03">Featured</p>
               <div class="selectbox-wrap select-type02">
                 <div>
-                  <button class="selectbox-trigger selectbox-js txt-type03 fw-type03" aria-haspopup="listbox"
-                    aria-expanded="false" aria-labelledby="yearSelect">2024</button>
-                  <ul class="selectbox-options 02" role="listbox" id="yearSelect" aria-hidden="true"
-                    style="display: none">
+                    <button class="selectbox-trigger selectbox-js txt-type03 fw-type03" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="yearSelect">2024</button>
+                    <ul class="selectbox-options 02" role="listbox" id="yearSelect" aria-hidden="true" style="display: none">
                     <li class="moclose-btn" style="display: none">
-                      <button type="button" class="btn btn-only-icon">
-                        <span class="visually-hidden">close button</span>
+                        <button type="button" class="btn btn-only-icon" title="close">
+                          <span class="visually-hidden">close</span>
                         <span class="btn-icon24 icon-close" aria-hidden="true"></span>
                       </button>
                     </li>
@@ -182,11 +180,15 @@
                 <!-- //swiper-wrapper -->
 
 
-                <div class="swiper-button-next" tabindex="0" role="button"
-                  aria-controls="swiper-wrapper-d1f642c19f1cdd98" aria-disabled="false" aria-label="다음 슬라이드">
+                <!-- 07.03 추가 : swiper-arrow wrap 수정 -->
+                <div class="swiper-bottom-wrap">
+                  <div class="swiper-button-next" tabindex="0" role="button"
+                    aria-controls="swiper-wrapper-d1f642c19f1cdd98" aria-disabled="false" aria-label="다음 슬라이드">
+                  </div>
+                  <div class="swiper-button-prev swiper-button-disabled" tabindex="-1" role="button"
+                    aria-controls="swiper-wrapper-d1f642c19f1cdd98" aria-disabled="true" aria-label="이전 슬라이드"></div>
                 </div>
-                <div class="swiper-button-prev swiper-button-disabled" tabindex="-1" role="button"
-                  aria-controls="swiper-wrapper-d1f642c19f1cdd98" aria-disabled="true" aria-label="이전 슬라이드"></div>
+                <!-- //07.03 추가 : swiper-arrow wrap 수정 -->
 
                 <div class="swiper-status-wrap">
                   <div
@@ -290,18 +292,15 @@
                 <div class="title_flex_sub">
                   <div class="selectbox-wrap select-type01 select-large">
                     <div>
-                      <button class="selectbox-trigger selectbox-js txt-type03 fw-type03" aria-haspopup="listbox"
-                        aria-expanded="false" aria-labelledby="countrySelect">the weight of the crown</button>
-                      <ul class="selectbox-options" role="listbox" id="countrySelect" aria-hidden="true"
-                        style="display: none">
+                        <button class="selectbox-trigger selectbox-js txt-type03 fw-type03" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="countrySelect">the weight of the crown</button>
+                        <ul class="selectbox-options" role="listbox" id="countrySelect" aria-hidden="true" style="display: none">
                         <li class="moclose-btn" style="display: none">
-                          <button type="button" class="btn btn-only-icon">
-                            <span class="visually-hidden">close button</span>
+                            <button type="button" class="btn btn-only-icon" title="close">
+                              <span class="visually-hidden">close</span>
                             <span class="btn-icon24 icon-close" aria-hidden="true"></span>
                           </button>
                         </li>
-                        <li class="option option-click fw-type03 active" role="option" aria-selected="true">the weight
-                          of the crown</li>
+                          <li class="option option-click fw-type03 active" role="option" aria-selected="true">the weight of the crown</li>
                         <li class="option option-click fw-type03" role="option">셀렉트박스 값 수급 필요</li>
                       </ul>
                     </div>
