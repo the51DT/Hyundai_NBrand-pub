@@ -1893,6 +1893,14 @@ input[type="radio"]:focus + label {
   left: 50px;
 }
 
+.ty02Swiper .swiper-bottom-wrap {
+  width: calc(100% - (100% - 952px));  
+  bottom: revert;
+  top:40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
 .swiper-status-wrap {
   display: flex;
   align-items: center;
