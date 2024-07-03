@@ -153,6 +153,10 @@ var pubUi = {
       var scrollTarget = $(this).data("scroll");
       pubUi.pageScrollChk(scrollTarget);
     });
+
+    $("#topBtn").on("click", function(){
+      $("body").animate({ scrollTop: 0 }, 300);
+    });
   },
   swiperSlideEvent: function () {
     console.log("스와이퍼 이벤트 진입");
@@ -758,8 +762,7 @@ $(document).ready(function () {
     var targetSwiper = $(this).closest(".swiper");
     targetSwiper.find(".swiper-slide-active video")[0].pause();
   });
-
-  toggleFullscreen();
+  toggleFullscreen();  
 });
 
 // [Start] : selectbox 컴포넌트
@@ -1685,14 +1688,14 @@ function scrollEvent() {
 
       if (scrollTop > 0) {
         $(".navigation_bar-wrap .gage").addClass("on");
+        $(".header-wrap").addClass("scroll-on");
+        $("#topBtn").fadeIn('slow');
+        $("#topBtn").css("display", "flex");
       } else {
         $(".navigation_bar-wrap .gage").removeClass("on");
-      }
-
-      if (scrollTop > 0) {
-        $(".header-wrap").addClass("scroll-on");
-      } else {
         $(".header-wrap").removeClass("scroll-on");
+        $("#topBtn").fadeOut('slow');
+        $("#topBtn").css("display", "none");
       }
 
       $(".navigation_bar-wrap").addClass("scroll-ing");
