@@ -721,14 +721,28 @@ $(document).ready(function () {
     var targetSwiper = $(this).closest(".swiper");
     targetSwiper.find(".swiper-slide-active video")[0].pause();
   });
-  toggleFullscreen();  
+  toggleFullscreen();
 
-  $(window).resize(function(){
+  $(window).resize(function () {
     if ($(window).innerWidth() < 1024) {
       swiper2.destroy();
       swiper2SlideEvt();
     }
-  });  
+  });
+  // 진행중 - 07.03
+  if ($(".content-wrap").hasClass("models-wrap")) {
+    var contsImages = document.querySelectorAll(
+      ".content-wrap.models-wrap .content-area img"
+    );
+    var contsTitles = document.querySelectorAll(
+      ".content-wrap.models-wrap .content-area [class*=content-item] .blue-title"
+    );
+    var navTitles = document.querySelectorAll(".rending-wrap li button");
+
+    for (var i = 0; i < contsImages.length; i++) {
+      contsImages[i].removeAttribute("loading");
+    }
+  }
 });
 
 // ty02Swiper swiper 이벤트 분리
@@ -1753,13 +1767,14 @@ $(".btn_full").click(() => {
 // scroll 이벤트 추가
 function scrollEvent() {
   var scrollWrap = $("body"),
-    sectionItem = [];
+    sectionItem = [],
+    headerNavHeight = $(".navigation_bar-wrap").height();
 
   scrollWrap.find(".content-area > [class*=content-item]").each(function (e) {
     ($this = $(this)),
-      (sectionItem[e] = $this.position().top - $("header").height());
+      (sectionItem[e] = $this.position().top - headerNavHeight);
 
-    scrollWrap.off("scroll").on("scroll", function () {
+    scrollWrap.on("scroll", function () {
       var thisScrArea = $(this),
         scrItem = thisScrArea.find(".content-area > [class*=content-item]"),
         nowScroll = thisScrArea.scrollTop(),
@@ -1775,21 +1790,17 @@ function scrollEvent() {
         ".content-area > [class*=content-item]"
       );
 
-      console.log(
-        "스크롤 좌표값 체크 - scrollTop : ",
-        scrollTop + " scrollY % 값 : ",
-        scrollY + "%"
-      );
+      // console.log("스크롤 좌표값 체크 - scrollTop : ", scrollTop + " scrollY % 값 : ", scrollY + "%");
 
       if (scrollTop > 0) {
         $(".navigation_bar-wrap .gage").addClass("on");
         $(".header-wrap").addClass("scroll-on");
-        $("#topBtn").fadeIn('slow');
+        $("#topBtn").fadeIn("slow");
         $("#topBtn").css("display", "flex");
       } else {
         $(".navigation_bar-wrap .gage").removeClass("on");
         $(".header-wrap").removeClass("scroll-on");
-        $("#topBtn").fadeOut('slow');
+        $("#topBtn").fadeOut("slow");
         $("#topBtn").css("display", "none");
       }
 
@@ -1822,7 +1833,7 @@ $.fn.scrollStopped = function (callback) {
     $this = $(that);
   $this.scroll(function (ev) {
     clearTimeout($this.data("scrollTimeout"));
-    $this.data("scrollTimeout", setTimeout(callback.bind(that), 250, ev));
+    $this.data("scrollTimeout", setTimeout(callback.bind(that), 10, ev));
   });
 };
 $("body").scrollStopped(function (ev) {
@@ -1834,5 +1845,5 @@ $("body").scrollStopped(function (ev) {
 window.onload = function () {
   setTimeout(function () {
     scrollEvent();
-  }, 500);
+  }, 1000);
 };
