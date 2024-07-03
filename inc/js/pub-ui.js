@@ -165,6 +165,7 @@ var pubUi = {
       slidesPerView: 1,
       watchOverflow: true, //pagination 1개 일 경우, 숨김
       initialSlide: 0,
+      touchRatio: 0, // 드래그 X
       loop: true,
       pagination: {
         el: ".swiper-pagination-custom",
@@ -173,6 +174,14 @@ var pubUi = {
       navigation: {
         nextEl: ".ty01Swiper .swiper-button-next",
         prevEl: ".ty01Swiper .swiper-button-prev",
+      },
+      breakpoints: {
+        360: {
+          //touchRatio: 1, // 드래그 O
+        },
+        768: {
+          //touchRatio: 1, // 드래그 O
+        },
       },
       on: {
         init: function () {
@@ -189,11 +198,7 @@ var pubUi = {
           pubUi.videoBulletChk(".ty01Swiper", this.realIndex);
         },
       },
-    });
-
-    // swiper1.on("init", function(){
-    //   pubUi.videoBulletChk(".ty01Swiper");
-    // })
+    });    
 
     if ($(".ty02Swiper .swiper-slide").length > 3) {
       loopVal = true;
@@ -448,9 +453,10 @@ var pubUi = {
     console.log("타겟인덱스: " + targetIdx + " 비디오 Id값: " + videoId);
     //var slides = document.querySelectorAll(".ty01Swiper .swiper-slide");
     var video = document.querySelector(`#${videoId}`);
-
+    
+    
     if (slideActive) {
-      if (playBtn) {
+      if (playBtn) {        
         video.play();
       } else {
         console.log("비디오 일시정지 상태 입니다.");
@@ -461,25 +467,23 @@ var pubUi = {
     video.addEventListener(
       "timeupdate",
       function (e) {
+        
         var curTime = Math.floor(video.currentTime); // 현재 동영상 길이
         var duration = Math.floor(video.duration); // 동영상 전체 길이
         var per = Math.floor((curTime / duration) * 100); // 퍼센트 계산 값
-
+        
         if (per <= 100) {
-          document
-            .querySelector(".swiper-pagination-bullet-active .seek-bar")
-            .style.setProperty("--time", `${per}px`);
+          document.querySelector(".swiper-pagination-bullet-active .seek-bar").style.setProperty("--time", `${per}px`);
+          
           // $("#paging").css("color", "#fff");
           // $("#paging").html("퍼센트: " + per);
         }
 
         if (curTime == duration) {
-          curTime = 0;
           slide[0].swiper.slideNext();
+          curTime = 0;
         }
-      },
-      false
-    );
+      }, false);
   },
   videoControlerChk: function (targetSwiper) {
     var swiperActiveVideo = targetSwiper.find(".swiper-slide-active video");
