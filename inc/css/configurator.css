@@ -473,7 +473,6 @@
 .configurator_label_radio {
   display: flex;
   align-items: center;
-  column-gap: 1.25rem;
   width: 100%;
   border-radius: 0.25rem;
   outline: 1px solid #D9D9D9;
@@ -486,6 +485,9 @@
   height: 7.5rem;
   object-fit: cover;
   object-position: center;
+}
+.configurator_label_radio div {
+  padding: 1.5rem 1.25rem;
 }
 .configurator_label_radio .configurator_label_price {
   margin-top: 0.75rem;
@@ -886,9 +888,6 @@
   }
   .configurator_select_wrap .dropdown-menu {
     margin-top: 1rem;
-  }
-  .configurator_label_radio {
-    column-gap: 0.75rem;
   }
   .configurator_label_radio img {
     width: 6rem;
