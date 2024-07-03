@@ -240,7 +240,6 @@ var pubUi = {
           spaceBetween: 12,
         },
         1024: {
-          effect: "slide",
           slidesPerView: "auto",
           spaceBetween: 80,
         },
