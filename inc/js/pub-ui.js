@@ -942,192 +942,192 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
   // 영상 필터링 파싱 시작
-  function ControlVideo() {
-    const videoWrap = document.querySelectorAll(".video-wrapper");
-    const video = document.querySelectorAll(".popup video");
-    video.muted = true;
+  // function ControlVideo() {
+  //   const videoWrap = document.querySelectorAll(".video-wrapper");
+  //   const video = document.querySelectorAll(".popup video");
+  //   video.muted = true;
 
-    const videoUrlList = [
-      [
-        {
-          //MD010101t01P01 모두 미수급 상태
-          id: "MD010101t01P01_IONIQ5N",
-          url: "../../inc/videos/i20n.mp4",
-          type: "video/mp4",
-        },
-        {
-          id: "MD010101t01P01_IONIQ5N",
-          url: "../../inc/videos/24hnbr24.mp4",
-          type: "video/mp4",
-        },
-      ],
-      [
-        {
-          //MD010101t01P01 모두 미수급 상태
-          id: "MD010101t01P01_i20N",
-          url: "../../inc/videos/i20n.mp4",
-          type: "video/mp4",
-        },
-        {
-          id: "MD010101t01P01_i20N",
-          url: "../../inc/videos/24hnbr24.mp4",
-          type: "video/mp4",
-        },
-      ],
-      [
-        {
-          id: "MD010201t01P01",
-          url: "../../inc/videos/elantraN-video01.mp4",
-          type: "video/mp4",
-        },
-        {
-          id: "MD010201t01P01",
-          url: "../../inc/videos/elantraN-video02.mp4",
-          type: "video/mp4",
-        },
-      ],
-      [
-        {
-          // MD010401t01P01 영상 미수급 상태
-          id: "MD010401t01P01",
-          url: "../../inc/videos/elantraN-video01.mp4",
-          type: "video/mp4",
-        },
-      ],
-      [
-        {
-          id: "MD020201P01",
-          url: "../../inc/videos/IONIQ5N-eN1-Cup-video01.mp4",
-          type: "video/mp4",
-        },
-      ],
-      [
-        {
-          id: "MD020301P01",
-          url: "../../inc/videos/IONIQ5N-TA-video01.mp4",
-          type: "video/mp4",
-        },
-      ],
-      [
-        {
-          id: "MD040201P01",
-          url: "../../inc/videos/IONIQ5N-NPX1-video01.mp4",
-          type: "video/mp4",
-        },
-      ],
-      [
-        {
-          id: "MD050901P01",
-          url: "../../inc/videos/VELOSTERN-video01.mp4",
-          type: "video/mp4",
-        },
-        {
-          id: "MD050901P01",
-          url: "../../inc/videos/VELOSTERN-video02.mp4",
-          type: "video/mp4",
-        },
-      ],
-      [
-        // 더미 페이지입니다. 추후 삭제 예정입니다.
-        {
-          id: "modelPop_test",
-          url: "../../inc/videos/elantra-n-kv.mp4",
-          type: "video/mp4",
-        },
-        {
-          id: "modelPop_test",
-          url: "../../inc/videos/i20n.mp4",
-          type: "video/mp4",
-        },
-      ],
-    ];
+  //   const videoUrlList = [
+  //     [
+  //       {
+  //         //MD010101t01P01 모두 미수급 상태
+  //         id: "MD010101t01P01_IONIQ5N",
+  //         url: "../../inc/videos/i20n.mp4",
+  //         type: "video/mp4",
+  //       },
+  //       {
+  //         id: "MD010101t01P01_IONIQ5N",
+  //         url: "../../inc/videos/24hnbr24.mp4",
+  //         type: "video/mp4",
+  //       },
+  //     ],
+  //     [
+  //       {
+  //         //MD010101t01P01 모두 미수급 상태
+  //         id: "MD010101t01P01_i20N",
+  //         url: "../../inc/videos/i20n.mp4",
+  //         type: "video/mp4",
+  //       },
+  //       {
+  //         id: "MD010101t01P01_i20N",
+  //         url: "../../inc/videos/24hnbr24.mp4",
+  //         type: "video/mp4",
+  //       },
+  //     ],
+  //     [
+  //       {
+  //         id: "MD010201t01P01",
+  //         url: "../../inc/videos/elantraN-video01.mp4",
+  //         type: "video/mp4",
+  //       },
+  //       {
+  //         id: "MD010201t01P01",
+  //         url: "../../inc/videos/elantraN-video02.mp4",
+  //         type: "video/mp4",
+  //       },
+  //     ],
+  //     [
+  //       {
+  //         // MD010401t01P01 영상 미수급 상태
+  //         id: "MD010401t01P01",
+  //         url: "../../inc/videos/elantraN-video01.mp4",
+  //         type: "video/mp4",
+  //       },
+  //     ],
+  //     [
+  //       {
+  //         id: "MD020201P01",
+  //         url: "../../inc/videos/IONIQ5N-eN1-Cup-video01.mp4",
+  //         type: "video/mp4",
+  //       },
+  //     ],
+  //     [
+  //       {
+  //         id: "MD020301P01",
+  //         url: "../../inc/videos/IONIQ5N-TA-video01.mp4",
+  //         type: "video/mp4",
+  //       },
+  //     ],
+  //     [
+  //       {
+  //         id: "MD040201P01",
+  //         url: "../../inc/videos/IONIQ5N-NPX1-video01.mp4",
+  //         type: "video/mp4",
+  //       },
+  //     ],
+  //     [
+  //       {
+  //         id: "MD050901P01",
+  //         url: "../../inc/videos/VELOSTERN-video01.mp4",
+  //         type: "video/mp4",
+  //       },
+  //       {
+  //         id: "MD050901P01",
+  //         url: "../../inc/videos/VELOSTERN-video02.mp4",
+  //         type: "video/mp4",
+  //       },
+  //     ],
+  //     [
+  //       // 더미 페이지입니다. 추후 삭제 예정입니다.
+  //       {
+  //         id: "modelPop_test",
+  //         url: "../../inc/videos/elantra-n-kv.mp4",
+  //         type: "video/mp4",
+  //       },
+  //       {
+  //         id: "modelPop_test",
+  //         url: "../../inc/videos/i20n.mp4",
+  //         type: "video/mp4",
+  //       },
+  //     ],
+  //   ];
 
-    videoWrap.forEach((el) => {
-      const videoId = el.id;
-      const filteredVideo = [];
+  //   videoWrap.forEach((el) => {
+  //     const videoId = el.id;
+  //     const filteredVideo = [];
 
-      videoUrlList.forEach((list) => {
-        list.forEach((item) => {
-          if (item.id === videoId) {
-            filteredVideo.push(item);
-          }
-        });
-      });
+  //     videoUrlList.forEach((list) => {
+  //       list.forEach((item) => {
+  //         if (item.id === videoId) {
+  //           filteredVideo.push(item);
+  //         }
+  //       });
+  //     });
 
-      video.forEach((videoEl, index) => {
-        if (index < filteredVideo.length) {
-          const videoData = filteredVideo[index];
-          const sourceEl = document.createElement("source");
-          sourceEl.src = videoData.url;
-          sourceEl.type = videoData.type;
-          videoEl.muted = true;
-          videoEl.appendChild(sourceEl);
-        }
-      });
-    });
-    // 영상 필터링 파싱 끝
+  //     video.forEach((videoEl, index) => {
+  //       if (index < filteredVideo.length) {
+  //         const videoData = filteredVideo[index];
+  //         const sourceEl = document.createElement("source");
+  //         sourceEl.src = videoData.url;
+  //         sourceEl.type = videoData.type;
+  //         videoEl.muted = true;
+  //         videoEl.appendChild(sourceEl);
+  //       }
+  //     });
+  //   });
+  //   // 영상 필터링 파싱 끝
 
-    // 영상 플레이어 제어 시작
-    const videoBtn = document.querySelectorAll(
-      ".popup .wrap-model-video .btn-model-play"
-    );
+  //   // 영상 플레이어 제어 시작
+  //   const videoBtn = document.querySelectorAll(
+  //     ".popup .wrap-model-video .btn-model-play"
+  //   );
 
-    videoBtn.forEach((btn, indexx) => {
-      const eachVideos = video[indexx];
-      const eachPlayBtns = videoBtn[indexx];
+  //   videoBtn.forEach((btn, indexx) => {
+  //     const eachVideos = video[indexx];
+  //     const eachPlayBtns = videoBtn[indexx];
 
-      btn.addEventListener("click", () => {
-        eachVideos.paused
-          ? playVideo(eachVideos, eachPlayBtns)
-          : pauseVideo(eachVideos, eachPlayBtns);
-      });
+  //     btn.addEventListener("click", () => {
+  //       eachVideos.paused
+  //         ? playVideo(eachVideos, eachPlayBtns)
+  //         : pauseVideo(eachVideos, eachPlayBtns);
+  //     });
 
-      eachVideos.addEventListener("pause", () => {
-        setTimeout(() => {
-          eachPlayBtns.style.opacity = "1";
-        }, 300);
-      });
+  //     eachVideos.addEventListener("pause", () => {
+  //       setTimeout(() => {
+  //         eachPlayBtns.style.opacity = "1";
+  //       }, 300);
+  //     });
 
-      eachVideos.addEventListener("play", () => {
-        eachVideos.muted = true;
-        eachPlayBtns.style.opacity = "0";
-      });
+  //     eachVideos.addEventListener("play", () => {
+  //       eachVideos.muted = true;
+  //       eachPlayBtns.style.opacity = "0";
+  //     });
 
-      // 모델 팝업이 닫혔을 때 스크롤, 영상 초기화 처리
-      const popCloseBtn = document.querySelector(
-        ".popup-wrapper .btn-wrap button.btn-only-icon-notbg.pop-close"
-      );
-      const popupBody = document.querySelector(
-        ".popup.model-popup.forModel .popup-body"
-      );
+  //     // 모델 팝업이 닫혔을 때 스크롤, 영상 초기화 처리
+  //     const popCloseBtn = document.querySelector(
+  //       ".popup-wrapper .btn-wrap button.btn-only-icon-notbg.pop-close"
+  //     );
+  //     const popupBody = document.querySelector(
+  //       ".popup.model-popup.forModel .popup-body"
+  //     );
 
-      popCloseBtn.addEventListener("click", () => {
-        {
-          eachVideos.paused ? null : resetVideo(eachVideos);
-        }
+  //     popCloseBtn.addEventListener("click", () => {
+  //       {
+  //         eachVideos.paused ? null : resetVideo(eachVideos);
+  //       }
 
-        setTimeout(() => {
-          popupBody.scrollTop = 0;
-        }, 250);
-      });
-    });
+  //       setTimeout(() => {
+  //         popupBody.scrollTop = 0;
+  //       }, 250);
+  //     });
+  //   });
 
-    function playVideo(video, button) {
-      video.play();
-      button.style.opacity = "0";
-    }
+  //   function playVideo(video, button) {
+  //     video.play();
+  //     button.style.opacity = "0";
+  //   }
 
-    function pauseVideo(video, button) {
-      video.pause();
+  //   function pauseVideo(video, button) {
+  //     video.pause();
 
-      button.style.opacity = "1";
-    }
+  //     button.style.opacity = "1";
+  //   }
 
-    function resetVideo(video) {
-      video.play();
-      video.currentTime = 0;
-    }
-  }
+  //   function resetVideo(video) {
+  //     video.play();
+  //     video.currentTime = 0;
+  //   }
+  // }
 
   // MD010101t02P01 내 다중 영상 제어 함수 시작
   function ControlMultiVideo() {
@@ -1161,7 +1161,7 @@ document.addEventListener("DOMContentLoaded", () => {
           ".popup.model-popup.forModel .popup-body"
         );
 
-        popCloseBtn.addEventListener("click", (ee) => {
+        popCloseBtn.addEventListener("click", () => {
           {
             video.paused ? null : resetVideo();
           }
@@ -1182,22 +1182,14 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
     });
-
-    const videoBtn = document.querySelectorAll(".popup .box-video button");
-
-    popCloseBtn.addEventListener("click", () => {
-      {
-        video.paused ? null : resetVideo(video);
-      }
-    });
   }
-  // MD010101t02P01 내 다중 영상 제어 함수 끝
+  //ControlMultiVideo() 끝
 
   if (chkPopupOpened) {
     ControlMultiVideo();
   }
 });
-
+// MD010101t02P01 내 다중 영상 제어 함수 끝
 // 모델 팝업 내 동영상 제어 함수 끝
 
 // 푸터 스크롤 탑
