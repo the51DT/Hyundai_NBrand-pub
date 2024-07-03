@@ -162,7 +162,9 @@
   line-height: 70px;
 }
 .brand .models-wrap .motor_tit {
+  font-family: "Hyundai Sans Head";
   font-size: 68px;
+  font-weight: 700;
   line-height: 125%;
 }
 .brand .models-wrap .text-normal-s {
@@ -476,7 +478,7 @@
   font-weight: 700;
   line-height: 140%;
 }
-.brand .motor_tab .motor_tab_con button {
+.brand .motor_tab .motor_tab_con .lg-txt-btn01 {
   margin-top: 2.5rem;
   padding: 0.75rem 0;
 }
@@ -806,6 +808,100 @@
 .motor_link_card .btn {
   margin-top: 0.75rem;
   padding: 0.75rem 0;
+}
+/* BR040101 */
+.brand .performance_wrap .max1440 {
+  gap: 5rem;
+}
+.performance_tit_area {
+  padding: 8.75rem 5rem;
+  text-align: center;
+}
+.performance_tab_area {
+  padding: 12.5rem 5rem;
+  width: 100%;
+}
+.performance_tab_area .motor_tab {
+  width: 100%;
+}
+.performance_tab_area .tabs-wrap {
+  width: 100%;
+}
+.performance_tab_area .motor_tab .tab-head .tabs li {
+  width: 20%;
+}
+.performance_tab_area .motor_tab .tab-head .tabs li a {
+  width: 100%;
+}
+.performance_tab_area .tab-content {
+  margin-top: 3.75rem;
+}
+.performance_tab_tit {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  width: 100%;
+  text-align: left;
+}
+.performance_tab_tit .text-normal {
+  margin: 1.25rem 0 0.75rem;
+}
+.performance_tab_notice {
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 140%; 
+  color: #666666;
+}
+.performance_tab_tit .btn-lg-outline01 {
+  margin-top: 2.75rem;
+}
+.performance_tab_area .motor_tab_con .grid_3 {
+  margin-top: 3.75rem;
+}
+.performance_tab_area .motor_tab_con .grid_3 p {
+  margin-top: 1.25rem;
+  font-family: "Hyundai Sans Head";
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 140%;
+  text-align: left;
+}
+.models-wrap.performance_wrap .gallery-wrap {
+  margin: 0;
+  padding: 0;
+}
+.performance_slide_tit {
+  margin: 2.5rem auto 0;
+  padding: 0.69rem 2rem;
+  width: fit-content;
+  min-width: 9.625rem;
+  background-color: #000000;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 140%;
+  color: #FFF;
+}
+.brand .gallery-wrap .swiper-bottom-wrap {
+  top: 50%;
+}
+.performance_slide_wrap + .performance_slide_wrap {
+  margin-top: 12.5rem;
+}
+.brand .gallery-wrap .performance_slide_wrap .btn-wrap-default {
+  margin-top: 5rem;
+  padding: 0.75rem 0;
+}
+.performance_garage_wrap {
+  height: 90rem;
+  background-image: url(../images/content/img_performance_garage_bg_pc.png);
+  background-position: bottom center;
+  background-size: cover;
+}
+.performance_garage_wrap .text-col .btn-lg-outline01 {
+  margin-top: 3.75rem;
+}
+.performance_garage {
+  padding: 5rem 5rem 15rem;
 }
 /* BR050101 */
 .merchandise-wrap .swiper-slide img.pc-only {
@@ -1460,7 +1556,7 @@
     margin-top: 2.25rem;
   }
   .brand .gallery-wrap .btn-wrap-default.sns_wrap {
-    gap: 2rem;
+    gap: 1.25rem;
     margin-top: 7.5rem;
   }
   .brand .gallery-wrap .lg-txt-btn01 {
@@ -1615,6 +1711,76 @@
   }
   .motor_link_card .btn {
     padding: 0.5rem 0;
+  }
+  /* BR040101 */
+  .brand .performance_wrap .max1440 {
+    gap: 2.75rem;
+  }
+  .performance_tit_area {
+    padding: 6.25rem 1.5rem;
+  }
+  .performance_tab_area {
+    padding: 7.5rem 1.5rem;
+  }
+  .performance_tab_area .motor_tab {
+    width: 100%;
+  }
+  .performance_tab_area .motor_tab .tab-head .tabs {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 0;
+  }
+  .performance_tab_area .motor_tab .tab-head .tabs li {
+    width: 50%;
+    border: 1px solid #777;
+  }
+  .performance_tab_area .motor_tab .tab-head .tabs li:nth-child(even) {
+    border-left: none;
+  }
+  .performance_tab_area .motor_tab .tab-head .tabs li:not(:nth-child(1), :nth-child(2)) {
+    border-top: none;
+  }
+  .performance_tab_area .tab-content {
+    margin-top: 2.25rem;
+  }
+  .performance_tab_tit {
+    flex-direction: column;
+  }
+  .performance_tab_tit .text-normal {
+    margin: 0.75rem 0;
+  }
+  .performance_tab_tit .btn-lg-outline01 {
+    margin-top: 1.75rem;
+    width: 100%;
+  }
+  .performance_tab_area .motor_tab_con .grid_3 {
+    row-gap: 1.75rem;
+    margin-top: 4rem;
+    width: 100%;
+  }
+  .performance_tab_area .motor_tab_con .grid_3 p {
+    margin-top: 0.75rem;
+    font-size: 1.125rem;
+  }
+  .performance_slide_tit {
+    margin: 1.75rem auto 0;
+  }
+  .performance_slide_wrap + .performance_slide_wrap {
+    margin-top: 7.5rem;
+  }
+  .brand .gallery-wrap .performance_slide_wrap .btn-wrap-default {
+    margin-top: 2.75rem;
+    padding: 0.5rem 0;
+  }
+  .performance_garage_wrap {
+    height: 57.5rem;
+    background-image: url(../images/content/img_performance_garage_bg_mo.png);
+  }
+  .performance_garage_wrap .text-col .btn-lg-outline01 {
+    margin-top: 2.25rem;
+  }
+  .performance_garage {
+    padding: 2.75rem 1.5rem 10rem;
   }
   /* BR050101 */
   .merchandise-wrap .swiper-slide img.pc-only {
