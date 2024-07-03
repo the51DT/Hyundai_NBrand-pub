@@ -937,16 +937,17 @@ function DropdownFooter() {
 
 // 모델 팝업 내 동영상 제어 함수 시작
 document.addEventListener("DOMContentLoaded", () => {
+  const chkPopupOpened = document.querySelectorAll(
+    ".popup.model-popup.forModel"
+  );
+
+  // 영상 필터링 파싱 시작
   function ControlVideo() {
-    // 영상 필터링 파싱 시작
     const videoWrap = document.querySelectorAll(".video-wrapper");
-    const videoHeaderTxt = document.querySelector(
-      ".video-wrapper .popup-header.model .tit-type04"
-    );
     const video = document.querySelectorAll(".popup video");
+    video.muted = true;
 
     const videoUrlList = [
-      // 팝업 모델 영상 url
       [
         {
           //MD010101t01P01 모두 미수급 상태
@@ -1054,28 +1055,16 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       video.forEach((videoEl, index) => {
-        setTimeout(() => {
-          videoEl.muted = false;
-        }, 150);
-        videoEl.addEventListener("play", () => {
-          if ((videoEl.muted = true)) {
-            console.log("soundOn");
-          } else {
-            console.log("soundOff");
-          }
-        });
         if (index < filteredVideo.length) {
           const videoData = filteredVideo[index];
           const sourceEl = document.createElement("source");
           sourceEl.src = videoData.url;
           sourceEl.type = videoData.type;
+          videoEl.muted = true;
           videoEl.appendChild(sourceEl);
-
-          videoEl.addEventListener("play", () => {});
         }
       });
     });
-
     // 영상 필터링 파싱 끝
 
     // 영상 플레이어 제어 시작
@@ -1100,15 +1089,9 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       eachVideos.addEventListener("play", () => {
-        eachVideos.muted = false;
+        eachVideos.muted = true;
         eachPlayBtns.style.opacity = "0";
       });
-
-      // if (playVideo) {
-      //   btn.addEventListener("mouseenter", () => {
-      //     eachPlayBtns.style.opacity = "1";
-      //   });
-      // }
 
       // 모델 팝업이 닫혔을 때 스크롤, 영상 초기화 처리
       const popCloseBtn = document.querySelector(
@@ -1131,21 +1114,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function playVideo(video, button) {
       video.play();
-      video.muted = false;
       button.style.opacity = "0";
     }
 
     function pauseVideo(video, button) {
       video.pause();
-      video.muted = false;
 
       button.style.opacity = "1";
     }
 
     function resetVideo(video) {
       video.play();
-      video.muted = false;
-
       video.currentTime = 0;
     }
   }
@@ -1172,13 +1151,51 @@ document.addEventListener("DOMContentLoaded", () => {
           iconInBtn.classList.remove("icon-pause-wh");
           iconInBtn.classList.add("icon-play-wh");
         }
+
+        // 모델 팝업이 닫혔을 때 스크롤, 영상 초기화 처리
+        const video = document.querySelectorAll(".popup video");
+        const popCloseBtn = document.querySelector(
+          ".popup-wrapper .btn-wrap button.btn-only-icon-notbg.pop-close"
+        );
+        const popupBody = document.querySelector(
+          ".popup.model-popup.forModel .popup-body"
+        );
+
+        popCloseBtn.addEventListener("click", (ee) => {
+          {
+            video.paused ? null : resetVideo();
+          }
+        });
+
+        function resetVideo() {
+          nearVideo.play();
+          nearVideo.currentTime = 0;
+
+          if (iconInBtn.classList.contains("icon-play-wh")) {
+            iconInBtn.classList.remove("icon-play-wh");
+            iconInBtn.classList.add("icon-pause-wh");
+          }
+
+          setTimeout(() => {
+            popupBody.scrollTop = 0;
+          }, 250);
+        }
       });
+    });
+
+    const videoBtn = document.querySelectorAll(".popup .box-video button");
+
+    popCloseBtn.addEventListener("click", () => {
+      {
+        video.paused ? null : resetVideo(video);
+      }
     });
   }
   // MD010101t02P01 내 다중 영상 제어 함수 끝
 
-  ControlVideo();
-  ControlMultiVideo();
+  if (chkPopupOpened) {
+    ControlMultiVideo();
+  }
 });
 
 // 모델 팝업 내 동영상 제어 함수 끝
