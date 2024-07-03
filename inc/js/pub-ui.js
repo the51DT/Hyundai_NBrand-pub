@@ -1641,6 +1641,33 @@ function configuratorEvent() {
     input.addEventListener("change", () => {
       console.log(input.value);
 
+      if (input.value.includes("transmission")) {
+        const alcantaraInput = document.querySelectorAll(
+          `.configurator_select_area input[name="transmission"]`
+        );
+        const alcantaraValue = [];
+        alcantaraInput.forEach((el) => {
+          alcantaraValue.push(el.value);
+        });
+        const alcantaraDropdown = document
+          .querySelectorAll(
+            `.configurator_select_area input[name*="alcantaraPackage"]`
+          );
+        alcantaraDropdown.forEach((el) => {
+          el.checked = false;
+          el.closest(".dropdown").classList.add("none");
+        });
+        const alcantaraIndex = alcantaraValue.indexOf(input.value);
+        document
+          .querySelector(
+            `.configurator_select_area input[name="alcantaraPackage${
+              alcantaraIndex + 1
+            }"]`
+          )
+          .closest(".dropdown")
+          .classList.remove("none");
+      }
+
       // configObjEx 에 체크 된 value 추가
       // for (let i in Object.keys(configObjEx)) {
       //   exInput = document.querySelector(
