@@ -200,17 +200,17 @@ var pubUi = {
       },
     });    
 
-    if ($(".ty02Swiper .swiper-slide").length > 3) {
-      loopVal = true;
-    } else {
-      loopVal = false;
-    }
+    // if ($(".ty02Swiper .swiper-slide").length > 3) {
+    //   loopVal = true;
+    // } else {
+    //   loopVal = false;
+    // }
 
     var swiper2 = new Swiper(".ty02Swiper", {
       slidesPerView: "auto",
       centeredSlides: true,
-      loop: loopVal,
-      initialSlide: 2,
+      loop: true,
+      initialSlide: 1,
       watchOverflow: true,
       observer: true,
       observerParents: true,
@@ -227,8 +227,8 @@ var pubUi = {
         prevEl: ".ty02Swiper .swiper-button-prev",
       },
       breakpoints: {
-        360: {
-          slidesPerView: 1.3,
+        280: {
+          slidesPerView: 1.2,
           spaceBetween: 12,
         },
         768: {
