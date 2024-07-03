@@ -2184,8 +2184,8 @@ input[type="radio"]:focus + label {
 .ty04Swiper.swiper-card-type .card_cover {
   position: absolute;
   width: 100%;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
 }
 .ty04Swiper .card_type01 .card_more::after {
   width: 17px;
