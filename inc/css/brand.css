@@ -864,7 +864,7 @@
     max-height:360px;
   }
 
-  .brand .models-wrap .video-wrap video + .btn {
+  .brand .models-wrap .video-wrap video ~ .btn {
     top:307px;
     right: 12px;
   }
