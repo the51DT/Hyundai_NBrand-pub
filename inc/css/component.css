@@ -1906,6 +1906,9 @@ input[type="radio"]:focus + label {
   transform: translate(-50%, -50%);
   z-index: 10;
 }
+.ty02Swiper .swiper-bottom-wrap.ty02 {
+  top:50%;
+}
 .swiper-status-wrap {
   display: flex;
   align-items: center;
