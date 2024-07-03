@@ -26,6 +26,9 @@ var pubUi = {
 
     // search
     self.$searchBox = document.querySelector(".search-input-box");
+
+    // swiper
+    self.swiper2;
   },
   bindEvents: function () {
     var self = this;
@@ -158,12 +161,13 @@ var pubUi = {
       $("body").animate({ scrollTop: 0 }, 300);
     });
   },
-  swiperSlideEvent: function () {
-    console.log("스와이퍼 이벤트 진입");
-
+  swiperSlideEvent: function () {    
     var self = this;
     var slideInx = 1; // 현재 슬라이드 index 체크용 변수
     var loopVal = "";
+
+    console.log("스와이퍼 이벤트 진입");
+    swiper2SlideEvt(); //swiper2 이벤트 실행
 
     var swiper1 = new Swiper(".ty01Swiper", {
       slidesPerView: 1,
@@ -208,52 +212,7 @@ var pubUi = {
     //   loopVal = true;
     // } else {
     //   loopVal = false;
-    // }
-
-    var swiper2 = new Swiper(".ty02Swiper", {
-      effect: "coverflow",
-      grabCursor: true,
-      centeredSlides: true,
-      slidesPerView: "auto",
-      loop: "auto",
-      coverflowEffect: {
-        rotate: 0, //각도
-        // stretch: -80, //간격
-        // depth: 0, // z축 깊이
-        // modifier: 0,
-        scale: 0.87, //배율
-        slideShadows: false, //그림자
-      },
-      pagination: {
-        el: ".swiper-pagination-custom",
-        clickable: true,
-      },
-      navigation: {
-        nextEl: ".ty02Swiper .swiper-button-next",
-        prevEl: ".ty02Swiper .swiper-button-prev",
-      },
-      breakpoints: {
-        280: {
-          effect: "slide",
-          slidesPerView: 1.2,
-          spaceBetween: 12,
-        },
-        768: {
-          effect: "slide",
-          slidesPerView: 1.3,
-          spaceBetween: 12,
-        },
-        1024: {
-          slidesPerView: "auto",
-          spaceBetween: 80,
-        },
-      },
-      on: {
-        activeIndexChange: function () {
-          slideInx = this.realIndex; //현재 슬라이드 index 갱신
-        },
-      },
-    });
+    // }    
 
     var swiper3 = new Swiper(".ty03Swiper", {
       slidesPerView: 3,
@@ -763,7 +722,74 @@ $(document).ready(function () {
     targetSwiper.find(".swiper-slide-active video")[0].pause();
   });
   toggleFullscreen();  
+
+  $(window).resize(function(){
+    if ($(window).innerWidth() < 1024) {
+      swiper2.destroy();
+      swiper2SlideEvt();
+    }
+  });  
 });
+
+// ty02Swiper swiper 이벤트 분리
+function swiper2SlideEvt() {
+  // console.log("swiper2 이벤트 실행");
+  self.swiper2 = new Swiper(".ty02Swiper", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    loop: "auto",
+    coverflowEffect: {
+      rotate: 0, //각도
+      // stretch: -80, //간격
+      // depth: 0, // z축 깊이
+      // modifier: 0,
+      scale: 0.87, //배율
+      slideShadows: false, //그림자
+    },
+    pagination: {
+      el: ".swiper-pagination-custom",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".ty02Swiper .swiper-button-next",
+      prevEl: ".ty02Swiper .swiper-button-prev",
+    },
+    breakpoints: {
+      280: {
+        effect: "slide",
+        slidesPerView: 1.2,
+        spaceBetween: 12,
+      },
+      768: {
+        effect: "slide",
+        slidesPerView: 1.3,
+        spaceBetween: 12,
+      },
+      1023: {
+        effect: "coverflow",
+        slidesPerView: "auto",
+        spaceBetween: 12,
+      },
+      1270: {
+        effect: "coverflow",
+        slidesPerView: "auto",
+        spaceBetween: 12,
+      },
+      1399: {
+        effect: "coverflow",
+        slidesPerView: "auto",
+        spaceBetween: 60,
+      },
+    },
+    on: {
+      activeIndexChange: function () {
+        slideInx = this.realIndex; //현재 슬라이드 index 갱신
+      },
+    },
+  });
+}
 
 // [Start] : selectbox 컴포넌트
 function handleSelectboxClick(event) {
