@@ -207,16 +207,18 @@ var pubUi = {
     // }
 
     var swiper2 = new Swiper(".ty02Swiper", {
-      slidesPerView: "auto",
+      effect: "coverflow",
+      grabCursor: true,
       centeredSlides: true,
-      loop: true,
-      initialSlide: 1,
-      watchOverflow: true,
-      observer: true,
-      observerParents: true,
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
+      slidesPerView: "auto",
+      loop: "auto",
+      coverflowEffect: {
+        rotate: 0, //각도
+        // stretch: -80, //간격
+        // depth: 0, // z축 깊이
+        // modifier: 0,
+        scale: 0.87, //배율
+        slideShadows: false, //그림자
       },
       pagination: {
         el: ".swiper-pagination-custom",
@@ -228,10 +230,12 @@ var pubUi = {
       },
       breakpoints: {
         280: {
+          effect: "slide",
           slidesPerView: 1.2,
           spaceBetween: 12,
         },
         768: {
+          effect: "slide",
           slidesPerView: 1.3,
           spaceBetween: 12,
         },
