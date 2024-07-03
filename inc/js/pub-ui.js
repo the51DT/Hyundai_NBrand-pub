@@ -436,6 +436,49 @@ var pubUi = {
         clickable: true,
       },
     });
+    var swiper11 = new Swiper(".merchandise_swiper", {
+      slidesPerView: 1,
+      centeredSlides: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: ".merchandise_swiper .swiper-button-next",
+        prevEl: ".merchandise_swiper .swiper-button-prev",
+      },
+      pagination: {
+        el: ".merchandise_swiper .swiper-pagination-custom",
+        clickable: true,
+      },
+    });
+    var swiper12 = new Swiper(".collection_swiper", {
+      slidesPerView: 3,
+      spaceBetween: 24,
+      watchOverflow: true,
+      pagination: {
+        el: ".collection_swiper .swiper-pagination-custom",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".collection_swiper .swiper-button-next",
+        prevEl: ".collection_swiper .swiper-button-prev",
+      },
+      breakpoints: {
+        360: {
+          slidesPerView: 1.07,
+          spaceBetween: 12,
+        },
+        768: {
+          slidesPerView: 1.07,
+          spaceBetween: 12,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 24,
+        },
+      },
+    });
   },
   videoBulletChk: function (targetSwiper, targetIdx) {
     if (!targetSwiper.length > 0) {
@@ -530,6 +573,7 @@ var pubUi = {
     const tabLabel = target.getAttribute("aria-controls");
     const tabList = tabContainer.find(".tabs li");
     const tabConts = tabContainer.find(".tab-content");
+    const contentItem = document.querySelector(".content-item04.collectiontab-wrap");
 
     for (let i = 0; i < tabList.length; i++) {
       tabList[i].classList.remove("on");
@@ -541,6 +585,24 @@ var pubUi = {
     }
 
     document.querySelector("#" + tabLabel).classList.add("on");
+
+    // BR050101 : Brand_N Merchandise tab 배경 때문에 추가
+    contentItem.classList.remove("tab01-bg", "tab02-bg", "tab03-bg", "tab04-bg", "tab05-bg");
+    if (tabLabel === "tab1-01") {
+      contentItem.classList.add("tab01-bg");
+    }
+    if (tabLabel === "tab1-02") {
+      contentItem.classList.add("tab02-bg");
+    }
+    if (tabLabel === "tab1-03") {
+      contentItem.classList.add("tab03-bg");
+    }
+    if (tabLabel === "tab1-04") {
+      contentItem.classList.add("tab04-bg");
+    }
+    if (tabLabel === "tab1-05") {
+      contentItem.classList.add("tab05-bg");
+    }
   },
   tagBtnEvent: function (e, list, param) {
     var listItem = list.find("li");
