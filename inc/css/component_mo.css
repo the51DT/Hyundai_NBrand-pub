@@ -1514,6 +1514,9 @@ min-width : 1024 css
   .ty02Swiper .text-area > div {
     margin-top: 16px;
   }
+  .ty04Swiper.swiper-card-type .swiper-slide {
+    max-width: 258px;
+  }
 
   .swiper-card-type .swiper-slide:first-child {
     margin-left: 0;
