@@ -130,6 +130,9 @@ var NbrandUI = {
         case "popup model-popup forModel":
           openWrap.addClass("on").fadeIn(200);
           break;
+        case "popup model-popup forBrand":
+          openWrap.addClass("on").fadeIn(200);
+          break;
         case "popup model-popup fullwidth":
           openWrap.addClass("on").fadeIn(200);
           break;
@@ -168,6 +171,10 @@ var NbrandUI = {
           NbrandUI.dimdOn();
           break;
         case "popup model-popup forModel":
+          openWrap.addClass("on").fadeIn(200);
+          NbrandUI.dimdOn();
+          break;
+        case "popup model-popup forBrand":
           openWrap.addClass("on").fadeIn(200);
           NbrandUI.dimdOn();
           break;

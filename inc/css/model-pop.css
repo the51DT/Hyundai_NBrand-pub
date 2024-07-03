@@ -674,7 +674,17 @@
     .box-video-func
     .box-video
     button
-    .icon-pause-wh {
+    .icon-pause-wh,
+  .popup.forModel
+    .popup-wrapper
+    .popup-body
+    .inner-body-model
+    .container-desc.video-func
+    .wrap-video-func
+    .box-video-func
+    .box-video
+    button
+    .icon-play-wh {
     width: 12px;
     height: 12px;
   }
