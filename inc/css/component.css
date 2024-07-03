@@ -4,6 +4,10 @@
 .mo-only {
   display: none;
 }
+/* display: none; 클래스 제어용 */
+.none {
+  display: none;
+}
 
 /*********
     font
