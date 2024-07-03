@@ -2162,7 +2162,15 @@ input[type="radio"]:focus + label {
 .ty04Swiper .swiper-button-next {
   right: 0;
 }
-
+.ty04Swiper .card_type01 {
+  position: relative;
+}
+.ty04Swiper.swiper-card-type .card_cover {
+  position: absolute;
+  width: 100%;
+  top:0;
+  left:0;
+}
 .ty04Swiper .card_type01 .card_more::after {
   width: 17px;
   height: 17px;
@@ -2239,28 +2247,24 @@ input[type="radio"]:focus + label {
   max-width: 464px;
 }
 
-.swiper-card-type .card_cover {
+.ty05Swiper.swiper-card-type .card_cover {
   width: 360px;
   max-width: revert;
   height: 100%;
   max-height: revert;
-  /* display: none; */
-  /* position: absolute; */
-  /* top: 0;
-  left: 0; */
   opacity: 0;
   transition: opacity 0.2s;
 }
-.swiper-card-type .active .card_cover {
+.ty05Swiper.swiper-card-type .active .card_cover {
   opacity: 1;
 }
-.swiper-card-type .card_top {
+.ty05Swiper.swiper-card-type .card_top {
   z-index: 10;
   position: absolute;
   top: 0;
   text-align: left;
 }
-.swiper-card-type .card_bottom {
+.ty05Swiper.swiper-card-type .card_bottom {
   z-index: 10;
   position: absolute;
   bottom: 0;
