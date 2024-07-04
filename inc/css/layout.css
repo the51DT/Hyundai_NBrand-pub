@@ -131,6 +131,27 @@ body:-webkit-scrollbar {
   background: url(../images/icon/icon-myinfo.svg) no-repeat center center;
 }
 
+.header-cont .utile-wrap .alarm-btn {
+  height: 70px;
+  width: 68px;
+  background: url(../images/icon/icon-myinfo.svg) no-repeat center center;
+  position: relative;
+}
+
+.header-cont .utile-wrap .alarm-btn.on:after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  margin-right: -13px;
+  margin-top: -13px;
+  border-radius: 100%;
+  background-color: #de3111;
+}
+
 .header-cont .utile-cont {
   display: flex;
 }

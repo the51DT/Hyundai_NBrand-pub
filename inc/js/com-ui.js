@@ -103,11 +103,13 @@ var NbrandUI = {
     var openWrap = $(obj);
     var popClass = openWrap.attr("class");
     var popCheck = btn.parents(".popup");
+    // zData = 1001;
     if (!popCheck.length) {
       zData = 1001;
       btnAddName = "open-btn1";
       openWrap.css("z-index", zData).attr("data-zindex", zData);
     } else {
+      // zData + 2;
       if (zData == 1001) {
         btnAddName = "open-btn2";
         zData = 1003;
@@ -144,10 +146,6 @@ var NbrandUI = {
           openWrap.addClass("on").slideDown(200);
           NbrandUI.dimdOn();
           // $(".dimmed").css("z-index", 1002);
-          break;
-        case "popup bottom-popup2":
-          openWrap.addClass("on").slideDown(200);
-          NbrandUI.dimdOn();
           break;
         case "popup side-popup":
           openWrap.addClass("on").fadeIn(200);
