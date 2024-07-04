@@ -1203,7 +1203,7 @@
   .brand-pd
   .popup-body-innerbox
   .wrap-brand-desc {
-  padding: 60px 0 0;
+  padding: 60px 0;
   border-bottom: 1px solid #bbbbbb;
 }
 
@@ -1214,7 +1214,6 @@
   .popup-body-innerbox
   .wrap-brand-desc:first-child {
   padding-top: 0;
-  padding-bottom: 0;
 }
 
 .popup.forBrand
@@ -1230,6 +1229,38 @@
 
 .popup.forBrand .btn-wrap button.btn-only-icon-notbg.popup-close-btn-x {
   top: 32px;
+}
+
+.popup.forBrand .popup-wrapper .popup-body .brand-pd .txt-type03 {
+  font-weight: 500;
+}
+
+.popup.model-popup
+  .popup-wrapper
+  .popup-body
+  .inner-body-model
+  .wrap-desc.lg.nogap {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.popup.model-popup
+  .popup-wrapper
+  .popup-body
+  .inner-body-model
+  .wrap-desc.lg.nogap
+  .tit-type04.desc-tit {
+  margin-bottom: 12px;
+}
+
+.popup.model-popup
+  .popup-wrapper
+  .popup-body
+  .inner-body-model
+  .wrap-desc.lg.nogap
+  .desc-note {
+  margin-top: 8px;
 }
 
 /* BR030102P01 s */
@@ -1265,7 +1296,8 @@
   .wrap-brand-desc
   .gap12
   .inner-subDesc:last-child {
-  padding-bottom: 60px;
+  /* padding-bottom: 60px; */
+  padding-bottom: 0px;
 }
 
 .popup.forBrand
@@ -1284,12 +1316,22 @@
   .popup-wrapper
   .popup-body
   .brand-pd
+  .popup-body-innerbox
+  .box-brand-tit.no-mb {
+  margin-bottom: 0;
+}
+
+.popup.forBrand
+  .popup-wrapper
+  .popup-body
+  .brand-pd
   .popup-body-innerbox:nth-child(2)
   .wrap-brand-desc:last-child
   .gap12
   .inner-subDesc:last-child {
   padding-bottom: 0;
 }
+
 /*  */
 
 /* mobile */
@@ -2096,6 +2138,11 @@
   .popup.forBrand .popup-wrapper .popup-body .brand-pd {
     display: block;
   }
+
+  .popup.forBrand .popup-wrapper .popup-body .brand-pd .popup-body-innerbox {
+    display: grid;
+    gap: 36px;
+  }
   .popup.forBrand
     .popup-wrapper
     .popup-body
@@ -2104,7 +2151,7 @@
     .wrap-brand-desc:first-child {
     padding-top: 0;
     padding-bottom: 0;
-    gap: 32px;
+    gap: 36px;
     display: grid;
   }
 
@@ -2123,11 +2170,23 @@
     .brand-pd
     .popup-body-innerbox
     .wrap-brand-desc
-    .gap12
-    .inner-subDesc:last-child {
+    .gap12.onlyOne {
     padding-bottom: 36px;
   }
 
+  .popup.forBrand
+    .popup-wrapper
+    .popup-body
+    .brand-pd
+    .popup-body-innerbox
+    .wrap-brand-desc
+    .gap12
+    .inner-subDesc:last-child {
+    padding-bottom: 36px;
+    border: 2px solid red;
+  }
+
+  /* 첫번째(pc에서는 좌측 박스)의 맨 아래 요소에 padding: 0 적용 */
   .popup.forBrand
     .popup-wrapper
     .popup-body
@@ -2145,17 +2204,38 @@
     .brand-pd
     .popup-body-innerbox
     .wrap-brand-desc {
-    padding: 36px 0 0;
+    padding: 0 0;
   }
 
   .popup.forBrand
     .popup-wrapper
     .popup-body
     .brand-pd
-    .popup-body-innerbox
+    .popup-body-innerbox:nth-child(1)
     .wrap-brand-desc:last-child {
-    padding-top: 36px;
+    padding-top: 0;
     padding-bottom: 36px;
+    border-bottom: 0;
+  }
+
+  .popup.forBrand
+    .popup-wrapper
+    .popup-body
+    .brand-pd
+    .popup-body-innerbox:nth-child(1)
+    .wrap-brand-desc:last-child
+    .gap12 {
+    padding-bottom: 0;
+  }
+
+  .popup.forBrand
+    .popup-wrapper
+    .popup-body
+    .brand-pd
+    .popup-body-innerbox:nth-child(3n-1)
+    .wrap-brand-desc:last-child {
+    padding-top: 0;
+    padding-bottom: 0;
     border-bottom: 0;
   }
 
