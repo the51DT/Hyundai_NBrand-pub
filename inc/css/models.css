@@ -124,6 +124,9 @@
 .models-wrap .models-nofull-box.type-col2 .text-col {
   max-width: 100%;
 }
+.models-wrap .models-nofull-box.type-col2 .text-col .text-strong + .text-normal {
+  margin-top: 0;
+}
 .models-wrap .text-col .text-strong:not(.txt-left),
 .models-wrap .text-col .text-normal:not(.txt-left) {
   margin: auto;
@@ -752,7 +755,7 @@
   right: 0;
   bottom: 0;
   overflow: hidden;
-  border-left: 1.5px solid #002c5f;
+  border-left: 4px solid #000000;
 }
 .perfor-wrap .perfor-slide-box .img-move-btn {
   position: absolute;
@@ -1463,5 +1466,8 @@
     background-size: cover;
     position: relative;
     height: 920px;
+  }
+  .models-wrap .models-nofull-box.type-col2 .text-col .text-strong + .text-normal {
+    margin-top: 12px;
   }
 }

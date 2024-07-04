@@ -690,6 +690,7 @@
 .dropdown-btn.tcr_dropdown .wrap-dropdown-selected {
   margin: 0 auto;
   max-width: 90rem;
+  cursor: default;
 }
 .dropdown-btn.tcr_dropdown .dropdown-btn-title {
   font-family: "Hyundai Sans Head";
