@@ -739,8 +739,8 @@ $(document).ready(function () {
 
   $(window).resize(function () {
     if ($(window).innerWidth() < 1024) {
-      if(swiper2 != null) {
-        swiper2.destroy();
+      if (self.swiper2.slides.length > 0) {
+        self.swiper2.destroy();
         swiper2SlideEvt();
       }
     }
