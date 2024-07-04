@@ -1441,6 +1441,17 @@
   .container-desc {
   border-bottom: 0;
 }
+
+.popup.forBrand
+  .popup-wrapper
+  .popup-body
+  .brand-pd
+  .popup-body-innerbox
+  .wrap-brand-desc
+  .mb24 {
+  margin-bottom: 24px;
+}
+
 /* 끝 */
 /* 브랜드 내 팝업 끝  */
 
@@ -1634,9 +1645,9 @@
   .conts-section-wrap.type-tab .tab-head .desc {
     font-size: 18px;
     line-height: 25.2px;
-    margin-top: 12px;  
+    margin-top: 12px;
   }
-  
+
   .conts-section-wrap.type-tab .tab-head .tabs-wrap {
     margin-top: 36px;
   }
@@ -2253,6 +2264,12 @@
     padding: 28px 24px 100px;
     max-height: calc(100vh - 60px);
   }
+
+  .popup.forBrand .popup-wrapper .popup-body.brand-onlyTxt {
+    padding: 40px 24px 100px;
+    max-height: calc(100vh - 60px);
+  }
+
   .popup.forBrand .popup-wrapper .popup-body .brand-pd {
     display: block;
   }
@@ -2269,8 +2286,8 @@
     .wrap-brand-desc:first-child {
     padding-top: 0;
     padding-bottom: 0;
-    gap: 36px;
     display: grid;
+    gap: 32px;
   }
 
   .popup.forBrand
@@ -2424,5 +2441,26 @@
     .popup-body-innerbox:last-child
     .container-desc {
     padding: 20px 0 0;
+  }
+
+  .popup.forBrand
+    .popup-wrapper
+    .popup-body
+    .brand-pd
+    .popup-body-innerbox
+    .wrap-brand-desc
+    .mb24 {
+    margin-bottom: 12px;
+  }
+
+  .popup.forBrand
+    .popup-wrapper
+    .popup-body
+    .brand-pd
+    .popup-body-innerbox
+    .wrap-brand-desc
+    .mb24.mobile-mb20 {
+    /* BR030103P01에만 해당함 */
+    margin-bottom: 20px;
   }
 }
