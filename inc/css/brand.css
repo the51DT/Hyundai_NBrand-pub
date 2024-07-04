@@ -1191,27 +1191,8 @@
   .brand-pd
   .popup-body-innerbox
   .wrap-brand-desc {
-  padding: 40px 0px 0;
+  padding: 40px 0 0;
   max-height: 100%;
-}
-
-.popup.forBrand
-  .popup-wrapper
-  .popup-body
-  .brand-pd
-  .popup-body-innerbox
-  .wrap-brand-desc:first-child {
-  padding-top: 0;
-}
-
-.popup.forBrand
-  .popup-wrapper
-  .popup-body
-  .brand-pd
-  .popup-body-innerbox
-  .wrap-brand-desc {
-  padding: 60px 0;
-  border-bottom: 1px solid #bbbbbb;
 }
 
 .popup.forBrand
@@ -1234,6 +1215,16 @@
   border-bottom: 0;
 }
 
+.popup.forBrand
+  .popup-wrapper
+  .popup-body
+  .brand-pd
+  .popup-body-innerbox
+  .wrap-brand-desc {
+  padding: 60px 0;
+  border-bottom: 1px solid #bbbbbb;
+}
+
 .popup.forBrand .btn-wrap button.btn-only-icon-notbg.popup-close-btn-x {
   top: 32px;
 }
@@ -1242,6 +1233,7 @@
   font-weight: 500;
 }
 
+/* .nogap: BR040101P04에만  */
 .popup.forBrand .popup-wrapper .popup-body .inner-body-model .wrap-desc.nogap {
   display: flex;
   flex-direction: column;
@@ -1452,8 +1444,6 @@
   .mb24 {
   margin-bottom: 24px;
 }
-
-/* 끝 */
 /* 브랜드 내 팝업 끝  */
 
 /* mobile */
@@ -2253,7 +2243,7 @@
     line-height: 25px;
   }
 
-  /* popup */
+  /* 브랜드 내 팝업 시작 */
   .popup.forBrand .popup-wrapper .popup-header {
     padding: 16px 24px;
   }
@@ -2267,6 +2257,7 @@
     max-height: calc(100vh - 60px);
   }
 
+  /* BR030102P01, BR030102P02, BR030103P01에만 .brand-onlyTxt 클래스 추가 */
   .popup.forBrand .popup-wrapper .popup-body.brand-onlyTxt {
     padding: 40px 24px 100px;
     max-height: calc(100vh - 60px);
@@ -2280,6 +2271,7 @@
     display: grid;
     gap: 36px;
   }
+
   .popup.forBrand
     .popup-wrapper
     .popup-body
@@ -2289,7 +2281,7 @@
     padding-top: 0;
     padding-bottom: 0;
     display: grid;
-    gap: 32px;
+    gap: 32px; /* BR030102P01의 첫번째 wrap-brand-desc 간격 유지 */
   }
 
   .popup.forBrand
@@ -2380,7 +2372,6 @@
     .popup-body
     .brand-pd
     .popup-body-innerbox:nth-child(2) {
-    /* margin-top: 36px; */
     border-top: 1px solid #bbb;
   }
 
@@ -2404,7 +2395,6 @@
     padding-bottom: 0;
   }
 
-  /* txt size */
   .popup.forBrand .popup-wrapper .popup-body .brand-pd .tit-type04 {
     font-size: 20px;
   }
