@@ -106,7 +106,7 @@ var NbrandUI = {
     var popCheck = btn.parents(".popup");
     // zData = 1001;
     if (!popCheck.length) {
-      zData = 1001;
+      zData = openWrap.hasClass('toast-popup') ? 1100 : 1001;
       btnAddName = "open-btn1";
       openWrap.css("z-index", zData).attr("data-zindex", zData);
     } else {
@@ -204,6 +204,9 @@ var NbrandUI = {
           break;
         case "popup club-popup":
           openWrap.addClass("on").fadeIn(200);
+          break;
+        case "popup toast-popup":
+          openWrap.fadeIn(200).delay(3000).fadeOut(200);
           break;
         default:
           openWrap.addClass("on").fadeIn(200);
