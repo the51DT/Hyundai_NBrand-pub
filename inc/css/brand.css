@@ -79,6 +79,13 @@
 .conts-section-wrap.type-tab .tab-head {
   flex-direction: column;
 }
+.conts-section-wrap.type-tab .tab-head .desc {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 33.6px;
+  margin-top: 20px;
+  text-align: center;
+}
 .conts-section-wrap.type-tab .tab-head .tabs-wrap {
   margin-top: 60px;
 }
@@ -1328,13 +1335,18 @@
   }
 
   .conts-section-wrap.type-tab .tab-head {
-    padding: 0 49px;
+    padding: 0 30px;
   }
-  .conts-section-wrap.type-tab .tab-head .title {    
+  .conts-section-wrap.type-tab .tab-head .title {
     font-size: 36px;
     font-weight: 700;
     line-height: 45px;
     text-align: center;
+  }
+  .conts-section-wrap.type-tab .tab-head .desc {
+    font-size: 18px;
+    line-height: 25.2px;
+    margin-top: 12px;  
   }
   
   .conts-section-wrap.type-tab .tab-head .tabs-wrap {
