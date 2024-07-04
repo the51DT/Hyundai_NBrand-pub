@@ -226,8 +226,8 @@ var NbrandUI = {
     NbrandUI.popContOpen(".popup#" + openmodalData, openmodalBtn);
     NbrandUI.expandedAria(openmodalBtn);
   },
-  toastPopup: function () {
-    $(".toast-popup").fadeIn(200).delay(3000).fadeOut(200);
+  toastPopup: function (obj) {
+    $(obj).fadeIn(200).delay(3000).fadeOut(200);
   },
   popContClose: function (obj) {
     closeWrap = $(obj);
