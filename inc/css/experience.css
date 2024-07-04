@@ -2072,7 +2072,63 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
 .nChannel .more-btn [class*=btn-icon] {
   margin-left: 4px;
 }
+.nChannel .conts-section-wrap.type-tab {
+  padding-bottom: 200px;
+}
+.nChannel .content-box.bnr {
+  padding-top:100px;
+  padding-bottom: 140px;
+}
 
+.nChannel .models-wrap .content-item03.gallery-wrap {
+  padding-top:160px;
+  padding-bottom: 200px;
+}
+.nChannel .models-wrap .max1200 {  
+  text-align: center;
+}
+.nChannel .models-wrap .gallery-wrap .swiper-container {
+  margin-top: 60px;
+}
+.nChannel .models-wrap .max1200 .text-normal {
+  margin-top: 20px;
+}
+.nChannel .models-wrap .conts-sect:not(:last-child) {
+  margin-bottom: 200px;
+}
+
+.info-container-wrap {
+  display: flex;
+  gap:24px;
+  text-align: left;
+  width: 100%;
+  margin-bottom: 40px;
+}
+.info-container-wrap .left-area .title {
+  font-size: 32px; 
+  font-weight: 700;
+  line-height: 44.8px;
+}
+.info-container-wrap .right-area .info-container {
+  padding:0 20px;
+}
+.info-container-wrap .right-area .info-container li:not(:last-child) {
+  margin-bottom: 32px;
+}
+.info-container-wrap .right-area .info-container li .tit {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 33.6px;
+}
+.info-container-wrap .right-area .info-container li .desc {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+  margin-top: 12px;
+}
+.info-container-wrap > div {
+  flex:1 1 auto;
+}
 
 /* EP010303 */
 @media screen and (min-width: 1024px) and (max-width: 1366px) {
@@ -3335,5 +3391,49 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
 
   .track-guide-box .wrap-list.list03 .right.descwrap h2.sub-tit {
     margin-top: 8px;
+  }
+
+  /* nChannel - EP020101 */
+  .conts_card_list .grid_mo_drop {
+    gap:1.75rem;
+  }
+  .conts_card_list .card_con {
+    padding:12px 0 0;
+  }
+  .conts_card_list .card_con p {
+    font-size: 18px;
+    line-height: 25.2px;
+  }  
+  .nChannel .content-box.bnr {
+    padding:56px 24px 96px;
+  }
+  .nChannel .models-wrap .content-item03.gallery-wrap {
+    padding-top:100px;
+    padding-bottom: 120px;
+  }
+
+  .info-container-wrap {
+    display: block;
+  }
+  .info-container-wrap .left-area .title {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .info-container-wrap .right-area {
+    margin-top: 28px;
+  }
+  .info-container-wrap .right-area .info-container {
+    padding:0;
+  }
+  .info-container-wrap .right-area .info-container li:not(:last-child) {
+    margin-bottom: 24px;
+  }
+  .info-container-wrap .right-area .info-container li .tit {
+    font-size: 18px;
+    line-height: 25.2px;
+  }
+  .info-container-wrap .right-area .info-container li .desc {
+    font-size: 17px;    
+    line-height: 23.8px;
   }
 }
