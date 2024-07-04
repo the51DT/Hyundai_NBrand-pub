@@ -2061,6 +2061,15 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
 }
 /* 사이드 팝업 끝*/
 
+/* EP020101 - N Channel */
+.nChannel .more-btn {
+  margin-top:20px !important;
+}
+.nChannel .more-btn [class*=btn-icon] {
+  margin-left: 4px;
+}
+
+
 /* EP010303 */
 @media screen and (min-width: 1024px) and (max-width: 1366px) {
   .guide_wrap[class*="track-"] .imgwrap {

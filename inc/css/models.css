@@ -401,9 +401,6 @@
 .models-cardbox-bigimg {
   margin-top: 80px;
 }
-.models-wrap .text-col + .btn-wrap [class^=btn-icon] {
-  margin-left:4px;
-}
 .models-wrap .models-cardbox > div {
   display: flex;
   flex-direction: column;

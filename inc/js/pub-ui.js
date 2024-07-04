@@ -739,8 +739,10 @@ $(document).ready(function () {
 
   $(window).resize(function () {
     if ($(window).innerWidth() < 1024) {
-      swiper2.destroy();
-      swiper2SlideEvt();
+      if(swiper2 != null) {
+        swiper2.destroy();
+        swiper2SlideEvt();
+      }
     }
   });
 
