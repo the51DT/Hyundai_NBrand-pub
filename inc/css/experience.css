@@ -1601,7 +1601,8 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
 .popup-wrapper .popup-body .m20 .wrap-hashtag .hashtags {
   margin-bottom: 40px;
   display: flex;
-  gap: 12px;
+  gap: 4px 12px;
+  flex-wrap: wrap;
 }
 .popup-wrapper .popup-body .m20 .wrap-hashtag .hashtags .txt-type04 {
   width: fit-content;
