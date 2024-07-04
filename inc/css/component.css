@@ -4982,6 +4982,13 @@ input:checked + .slider:before {
   display: flex;
 }
 
+.search-wrap .search-input-box .btn-group .btn-reset {
+  display: none;
+}
+.search-wrap .search-input-box.on .btn-group .btn-reset {
+  display : flex;
+}
+
 .search-wrap .search-input-box .btn-group .btn-txt {
   font-family: "Hyundai Sans Text";
   font-size: 20px;
