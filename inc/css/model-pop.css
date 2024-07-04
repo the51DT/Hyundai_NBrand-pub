@@ -94,7 +94,11 @@
 
 /* 팝업에 표시할 컨텐츠가 하나일 때(.popup-body-innerbox가 하나일 때 끝*/
 
-.popup.forModel .popup-wrapper .popup-body .inner-body-model .container-desc {
+.popup.model-popup.forModel
+  .popup-wrapper
+  .popup-body
+  .inner-body-model
+  .container-desc {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -102,7 +106,7 @@
   padding: 24px 0 60px;
 }
 
-.popup.forModel
+.popup.model-popup.forModel
   .popup-wrapper
   .popup-body
   .inner-body-model
