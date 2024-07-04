@@ -171,6 +171,9 @@
 .nflmain_wrap .content-item03 .banner-box .swiper-container .swiper {
   padding-bottom: 48px;
 }
+.nflmain_wrap .content-item03 .banner-box .swiper-container .swiper.onlyone-swiper {
+  padding-bottom: 0;
+}
 .nflmain_wrap .swiper-button-next,
 .nflmain_wrap .swiper-button-prev {
   transform: translateY(-50%);

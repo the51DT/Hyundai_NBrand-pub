@@ -174,6 +174,11 @@ var pubUi = {
     $("#topBtn").on("click", function () {
       $("body").animate({ scrollTop: 0 }, 300);
     });
+    if ($(".onlyOneSwiper .swiper-slide").length === 1) {
+      $(".onlyOneSwiper .swiper-slide .swiper-status-wrap .btn-wrap").hide();
+      console.log($(".onlyOneSwiper .swiper-status-wrap .btn-wrap").hide());
+      $(".nflmain_wrap .content-item03 .banner-box .swiper-container .swiper").addClass("onlyone-swiper");
+    }
   },
   swiperSlideEvent: function () {    
     var self = this;
@@ -329,6 +334,7 @@ var pubUi = {
       slidesPerView: 1,
       spaceBetween: 80,
       centeredSlides: true,
+      watchOverflow: true,
       autoplay: {
         delay: 3000,
         disableOnInteraction: false,
