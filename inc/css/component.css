@@ -1608,6 +1608,9 @@ input[type="radio"]:focus + label {
 .card_type04 .card_con p.tit-type03.fw-type03 + .card_cont-des {
   margin-top: 8px;
 }
+.card_type04 .card_txt {
+  text-align: left;
+}
 .card_type04 .card-hashtag {
   display: flex;
   flex-wrap: nowrap;
