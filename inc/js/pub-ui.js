@@ -45,7 +45,7 @@ var pubUi = {
     // 스와이퍼 재생 버튼 클릭시, 동영상 재생, 정지
     $(".btn-play").on("click", function (e) {
       e.preventDefault();
-      var targetSwiper = $(this).closest(".swiper");
+      var targetSwiper = $(this).closest(".swiper");    
       var videoChk = targetSwiper.find(".swiper-slide video");
 
       if (targetSwiper.hasClass("ty02Swiper")) {
@@ -61,27 +61,33 @@ var pubUi = {
           targetSwiper[0].swiper.autoplay.start();
         }
       } else if (targetSwiper.hasClass("ty01Swiper")) {
-        if ($(this).hasClass("on")) {
-          console.log("정지버튼 클릭!");
-          $(this).removeClass("on");
-          $(this).find(".visually-hidden").text("정지");
-        } else {
-          console.log("재생버튼 클릭!");
-          $(this).addClass("on");
-          $(this).find(".visually-hidden").text("재생");
-        }
-
         // ty01Swiper - video 케이스 아닐 경우,
-        if ((videoChk.length = 0)) {
+        if (videoChk.length > 0) {
           if ($(this).hasClass("on")) {
+            console.log("정지버튼 클릭!");
+            $(this).removeClass("on");
+            $(this).find(".visually-hidden").text("정지");
+          } else {
+            console.log("재생버튼 클릭!");
+            $(this).addClass("on");
+            $(this).find(".visually-hidden").text("재생");
+          }
+
+          self.videoControlerChk(targetSwiper);
+        } else {
+          if ($(this).hasClass("on")) {
+            console.log("정지버튼 클릭!");
+            $(this).removeClass("on");
+            $(this).find(".visually-hidden").text("정지");
             targetSwiper[0].swiper.autoplay.stop();
           } else {
+            console.log("재생버튼 클릭!");
+            $(this).addClass("on");
+            $(this).find(".visually-hidden").text("재생");
             targetSwiper[0].swiper.autoplay.start();
           }
         }
-      }
-
-      self.videoControlerChk(targetSwiper);
+      }      
     });
 
     // 스와이퍼 소리 버튼 클릭시, 음소거 / 음소거 해제
@@ -251,12 +257,19 @@ var pubUi = {
         },
         slideChangeTransitionStart: function () {
           if (self.typeChk.length > 0) {
+            // 동영상 케이스,
             $(".ty01Swiper .swiper-slide-active video")[0].currentTime = 0;
-            $(
-              ".ty01Swiper .swiper-pagination-custom .swiper-pagination-bullet .seek-bar"
-            ).css("--time", "0");
+            $(".ty01Swiper .swiper-pagination-custom .swiper-pagination-bullet .seek-bar").css("--time", "0");
 
             pubUi.videoBulletChk(".ty01Swiper", this.realIndex);
+
+          } else {
+            // 동영상 x 케이스,
+            if (!$(".swiper-pagination-custom .swiper-pagination-bullet").hasClass(".swiper-pagination-bullet-active")) {
+              $(".swiper-pagination-custom .swiper-pagination-bullet:not(.swiper-pagination-bullet-active)").css("background-color", "#fff");
+            }
+            
+            $(".swiper-pagination-custom .swiper-pagination-bullet-active").css("background-color","#de3111");
           }
         },
       },
@@ -560,10 +573,9 @@ var pubUi = {
     } else {
       console.log("비디오 타입 X");
       $(".seek-bar").remove();
-      $(".swiper-pagination-custom .swiper-pagination-bullet-active").css(
-        "background-color",
-        "#de3111"
-      );
+      $(targetSwiper).find(".btn-sound").hide();
+      $(".swiper-pagination-custom .swiper-pagination-bullet-active").css("background-color",
+        "#de3111");
       return;
     }
   },
@@ -580,7 +592,6 @@ var pubUi = {
       var per = (curTime / duration) * 100;
       const playBtnOn = targetSwiper.find(".btn-play").hasClass("on");
       const soundBtnOn = targetSwiper.find(".btn-sound").hasClass("on");
-      // targetBulletWidth = 0;
 
       if (swiperActiveVideo[0].paused) {
         swiperActiveVideo[0].play();
@@ -588,23 +599,7 @@ var pubUi = {
       } else {
         swiperActiveVideo[0].pause();
         //console.log("영상 정지!!!!!!!");
-        // targetBulletWidth = targetBulletActive.css("width");
-        // console.log(targetBulletWidth);
-        //targetBulletActive.css("--time", `${per}px`);
       }
-
-      // if (playBtnOn == true) {
-      //   swiperActiveVideo[0].pause();
-      //   // swiperActiveVideo[0].currentTime = 0;
-      //   targetSwiper
-      //     .closest(".swiper-pagination-bullet-active")
-      //     .css("--time", "0px");
-      // } else {
-      //   swiperActiveVideo[0].play();
-      //   console.log("영상 재생!!!!!!!");
-      //   // targetBulletActive.css("--time", range);
-      //   // console.dir(swiperActiveVideo[0]);
-      // }
     }
   },
   tabBtnEvent: function (e, tabContainer) {
