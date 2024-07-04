@@ -1610,6 +1610,7 @@ input[type="radio"]:focus + label {
 }
 .card_type04 .card_txt {
   text-align: left;
+  width: 100%;
 }
 .card_type04 .card-hashtag {
   display: flex;

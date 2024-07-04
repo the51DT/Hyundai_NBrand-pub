@@ -174,6 +174,11 @@ var pubUi = {
     $("#topBtn").on("click", function () {
       $("body").animate({ scrollTop: 0 }, 300);
     });
+    if ($(".onlyOneSwiper .swiper-slide").length === 1) {
+      $(".onlyOneSwiper .swiper-slide .swiper-status-wrap .btn-wrap").hide();
+      console.log($(".onlyOneSwiper .swiper-status-wrap .btn-wrap").hide());
+      $(".nflmain_wrap .content-item03 .banner-box .swiper-container .swiper").addClass("onlyone-swiper");
+    }
   },
   swiperSlideEvent: function () {    
     var self = this;
@@ -329,6 +334,7 @@ var pubUi = {
       slidesPerView: 1,
       spaceBetween: 80,
       centeredSlides: true,
+      watchOverflow: true,
       autoplay: {
         delay: 3000,
         disableOnInteraction: false,
@@ -568,6 +574,7 @@ var pubUi = {
     document.querySelector("#" + tabLabel).classList.add("on");
 
     // BR050101 : Brand_N Merchandise tab 배경 때문에 추가
+    if (contentItem) {
     contentItem.classList.remove("tab01-bg", "tab02-bg", "tab03-bg", "tab04-bg", "tab05-bg");
     if (tabLabel === "tab1-01") {
       contentItem.classList.add("tab01-bg");
@@ -583,6 +590,7 @@ var pubUi = {
     }
     if (tabLabel === "tab1-05") {
       contentItem.classList.add("tab05-bg");
+    }
     }
   },
   tagBtnEvent: function (e, list, param) {
