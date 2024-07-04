@@ -728,6 +728,10 @@ body:-webkit-scrollbar {
   justify-content: center;
   padding: 20px 12px;
 }
+.gnb__panel02 .dep3_item:hover {
+  background: #aacae6;
+}
+
 .gnb__panel02 .img-area {
   width: 136px;
   height: 102px;

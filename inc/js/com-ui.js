@@ -12,6 +12,7 @@ $(document).ready(function () {
     ".gnb__panel02"
   );
   NbrandUI.modalOpen(".pop-open");
+  // NbrandUI.profileOpen(".pop-open");
   NbrandUI.modalClose(".pop-close");
   NbrandUI.naviClick(".navi_event-btn");
   NbrandUI.rendingClick(".rending-btn");
@@ -680,11 +681,7 @@ var NbrandUI = {
     $("body").find(".ani-dimmed").remove();
   },
   mdimdOn: function () {
-    if (!$("body").children(".dimmed").length) {
-      $("body").append("<div class='m-dimmed' aria-hidden='true'></div>");
-    } else {
-      // $(".dimmed").css("z-index", 1002);
-    }
+    $("body").append("<div class='m-dimmed' aria-hidden='true'></div>");
   },
   mdimdOff: function () {
     $("body").find(".m-dimmed").remove();
