@@ -103,14 +103,16 @@ var pubUi = {
     });
 
     // 검색 창 입력값 존재 시, 리셋 버튼 활성화
-    self.$searchBox.querySelector("input").oninput = function (e) {
-      var searchBoxValue = e.target.value;
-      if (searchBoxValue) {
-        self.$searchBox.classList.add("on");
-      } else {
-        self.$searchBox.classList.remove("on");
-      }      
-    };
+    if (self.$searchBox != null) {
+      self.$searchBox.querySelector("input").oninput = function (e) {
+        var searchBoxValue = e.target.value;
+        if (searchBoxValue) {
+          self.$searchBox.classList.add("on");
+        } else {
+          self.$searchBox.classList.remove("on");
+        }
+      };
+    }
 
     // 태그 버튼 클릭시,
     $(".tag-list li label").click(function (e) {
