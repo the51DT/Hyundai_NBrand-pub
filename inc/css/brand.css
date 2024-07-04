@@ -1466,11 +1466,12 @@
   }
 
   .content-box .banner-box img {
-    max-height: 400px;
+    min-height: 400px;
   }
   .content-box .banner-box .banner-titbox {
     top: 32px;
     left: 24px;
+    padding-right: 24px;
   }
 
   .content-box .banner-box .banner-titbox .banner-tit {
@@ -1483,7 +1484,7 @@
     line-height: 25.2px;
   }
   .content-box .banner-box .btn-wrap {
-    left: 17px;
+    left: 24px;
     bottom: 234px;
   }
 
