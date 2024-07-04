@@ -574,6 +574,7 @@ var pubUi = {
     document.querySelector("#" + tabLabel).classList.add("on");
 
     // BR050101 : Brand_N Merchandise tab 배경 때문에 추가
+    if (contentItem) {
     contentItem.classList.remove("tab01-bg", "tab02-bg", "tab03-bg", "tab04-bg", "tab05-bg");
     if (tabLabel === "tab1-01") {
       contentItem.classList.add("tab01-bg");
@@ -589,6 +590,7 @@ var pubUi = {
     }
     if (tabLabel === "tab1-05") {
       contentItem.classList.add("tab05-bg");
+    }
     }
   },
   tagBtnEvent: function (e, list, param) {
