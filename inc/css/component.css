@@ -3702,6 +3702,7 @@ input[type="radio"]:focus + label {
   background: none;
   border: none;
   cursor: pointer;
+  font-family: "Hyundai Sans Text";
   font-size: 1.25rem;
   font-weight: 500;
   line-height: 1.75rem;
@@ -3743,7 +3744,7 @@ input[type="radio"]:focus + label {
 .dropdown-menu
   li:not(.dropdown-menu .moclose-btn, .dropdown-menu .option)
   .btn-wrap
-  button.btn-only-icon-bg01-square {
+  .btn-only-icon-bg01-square {
   margin-left: 4px;
   background: none;
   width: 24px;

@@ -947,51 +947,30 @@ function evtImgMapChk(options) {
   }
 }
 
-// 드롭다운(아코디언), 필터 컴포넌트 시작
-const dropdownBtns = document.querySelectorAll(".wrap-dropdown-selected");
-dropdownBtns.forEach((button) => {
-  button.addEventListener("click", function () {
-    const isExpanded = button.getAttribute("aria-expanded") === "true";
-    const dropdownMenu = button.nextElementSibling; // 아코디언 트리거 버튼
-    const dropdownFilterBtn = button.parentElement; // 필터 드롭다운 트리거 버튼
-    // const dropdownMenuFilter =
-    //   button.parentElement.parentElement.querySelector("dropdown-menu");
-    // const btnRightArr = button
-    //   .closest(".dropdown")
-    //   .querySelector(".arrow-down");
+// 필터 컴포넌트 아코디언
+const dropdownFilter = document.querySelectorAll(
+  ".dropdown.centered .wrap-dropdown-selected"
+);
+dropdownFilter.forEach((filter) => {
+  filter.addEventListener("click", function () {
+    const isExpanded = filter.getAttribute("aria-expanded") === "true";
+    const dropdownMenu = filter.nextElementSibling; // 아코디언 트리거 버튼
+    const dropdownFilterBtn = filter.parentElement; // 필터 드롭다운 트리거 버튼
 
-    // (필터 제외한 모든) 아코디언 오른쪽 화살표
-    const btnRightArr = button
-      .closest(".dropdown")
-      .querySelector(".dropdown-icon");
     // 필터 오른쪽 화살표
     const btnRightArrFilter =
-      button.parentElement.querySelector(".icon-down-wh");
+      filter.parentElement.querySelector(".icon-down-wh");
     btnRightArrFilter.classList.toggle("rotate", !isExpanded);
 
     // 아코디언 펼침
-    button.setAttribute("aria-expanded", String(!isExpanded));
+    filter.setAttribute("aria-expanded", String(!isExpanded));
     dropdownMenu.setAttribute("aria-hidden", String(isExpanded));
     dropdownMenu.classList.toggle("dropdown-on", !isExpanded);
 
-    // 필터, 드롭다운 케이스 나눠서 요소 조절
-    const detectCase1 = dropdownMenu.classList.contains("dropdown-on"); // 필터, 드롭다운 공통
     const detectCase2 = dropdownFilterBtn.classList.contains("centered"); // 필터 컴포넌트만
     const detectCase2_selectBtn = document.querySelector(
       ".dropdown.centered .wrap-dropdown-selected"
     ); // 필터 컴포넌트: 선택 버튼
-    const detectCase3 = dropdownMenu.classList.contains("stay"); // 메뉴 눌러도 안 닫히게
-
-    if (detectCase1 && !detectCase2) {
-      if (!detectCase3) {
-        dropdownMenu.addEventListener("click", function () {
-          dropdownMenu.classList.remove("dropdown-on");
-          dropdownMenu.setAttribute("aria-hidden", "true");
-          button.setAttribute("aria-expanded", "false");
-          btnRightArr.classList.remove("rotate", detectCase1);
-        });
-      }
-    }
 
     // if (detectCase2) {
     //   btnRightArrFilter.classList.toggle("rotate", !isExpanded);
@@ -1040,6 +1019,27 @@ dropdownBtns.forEach((button) => {
         filterBtn_icn1.style.display = "flex";
       }
     }
+  });
+});
+
+// 드롭다운 아코디언
+const dropdownBtns = document.querySelectorAll(".dropdown .dropdown-trigger");
+dropdownBtns.forEach((button) => {
+  button.addEventListener("click", function () {
+    const isExpanded = button.getAttribute("aria-expanded") === "true";
+    const dropdownMenu = button
+      .closest(".dropdown")
+      .querySelector(".dropdown-menu"); // 드롭다운 메뉴
+
+    // (필터 제외한 모든) 아코디언 오른쪽 화살표
+    const btnRightArr = button
+      .closest(".dropdown")
+      .querySelector(".dropdown-icon");
+
+    // 아코디언 펼침
+    button.setAttribute("aria-expanded", String(!isExpanded));
+    dropdownMenu.classList.toggle("dropdown-on", !isExpanded);
+    btnRightArr.classList.toggle("rotate", !isExpanded);
   });
 });
 
