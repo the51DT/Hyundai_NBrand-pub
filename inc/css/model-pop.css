@@ -94,7 +94,7 @@
 
 /* 팝업에 표시할 컨텐츠가 하나일 때(.popup-body-innerbox가 하나일 때 끝*/
 
-.popup.model-popup
+.popup.model-popup.forModel
   .popup-wrapper
   .popup-body
   .inner-body-model
@@ -106,7 +106,7 @@
   padding: 24px 0 60px;
 }
 
-.popup.model-popup
+.popup.model-popup.forModel
   .popup-wrapper
   .popup-body
   .inner-body-model
@@ -115,7 +115,7 @@
   padding: 24px 0 0;
 }
 
-.popup.model-popup
+.popup.model-popup.forModel
   .popup-wrapper
   .popup-body
   .inner-body-model
@@ -126,7 +126,7 @@
   gap: 12px;
 }
 
-.popup.model-popup
+.popup.model-popup.forModel
   .popup-wrapper
   .popup-body
   .inner-body-model
@@ -140,7 +140,7 @@
   color: #555;
 }
 
-.popup.model-popup
+.popup.model-popup.forModel
   .popup-wrapper
   .popup-body
   .inner-body-model
@@ -151,13 +151,21 @@
   font-size: 20px;
 }
 
-.popup.model-popup .popup-wrapper .popup-body .inner-body-model .wrap-desc.lg {
+.popup.model-popup.forModel
+  .popup-wrapper
+  .popup-body
+  .inner-body-model
+  .wrap-desc.lg {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
-.popup.model-popup .popup-wrapper .popup-body .inner-body-model .wrap-desc.sm {
+.popup.model-popup.forModel
+  .popup-wrapper
+  .popup-body
+  .inner-body-model
+  .wrap-desc.sm {
   display: flex;
   flex-direction: column;
   gap: 4px;
