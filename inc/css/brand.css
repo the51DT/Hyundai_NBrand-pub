@@ -79,8 +79,8 @@
 .conts-section-wrap.type-tab .tab-head {
   flex-direction: column;
 }
-.conts-section-wrap.type-tab .tab-head .title {
-  margin-bottom: 60px;
+.conts-section-wrap.type-tab .tab-head .tabs-wrap {
+  margin-top: 60px;
 }
 .conts-section-wrap.type-tab .tab-content {
   margin-top: 80px;
@@ -1330,12 +1330,15 @@
   .conts-section-wrap.type-tab .tab-head {
     padding: 0 49px;
   }
-  .conts-section-wrap.type-tab .tab-head .title {
-    margin-bottom: 36px;
+  .conts-section-wrap.type-tab .tab-head .title {    
     font-size: 36px;
     font-weight: 700;
     line-height: 45px;
     text-align: center;
+  }
+  
+  .conts-section-wrap.type-tab .tab-head .tabs-wrap {
+    margin-top: 36px;
   }
   .conts-section-wrap.type-tab .tabs-wrap .tabs {
     margin: 0 5px 0;
