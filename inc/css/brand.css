@@ -1150,7 +1150,7 @@
   line-height: 33.6px;
 }
 
-/* popup start */
+/*  브랜드 내 팝업 시작 */
 .popup.forBrand {
   max-width: 1200px;
   overflow: hidden;
@@ -1185,7 +1185,6 @@
   .wrap-brand-desc {
   padding: 40px 0px 0;
   max-height: 100%;
-  gap: 60px;
 }
 
 .popup.forBrand
@@ -1263,8 +1262,6 @@
   margin-top: 8px;
 }
 
-/* BR030102P01 s */
-
 .popup.forBrand
   .popup-wrapper
   .popup-body
@@ -1296,7 +1293,6 @@
   .wrap-brand-desc
   .gap12
   .inner-subDesc:last-child {
-  /* padding-bottom: 60px; */
   padding-bottom: 0px;
 }
 
@@ -1331,8 +1327,7 @@
   .inner-subDesc:last-child {
   padding-bottom: 0;
 }
-
-/*  */
+/* 브랜드 내 팝업 끝  */
 
 /* mobile */
 @media screen and (max-width: 1023px) {
@@ -2183,7 +2178,6 @@
     .gap12
     .inner-subDesc:last-child {
     padding-bottom: 36px;
-    border: 2px solid red;
   }
 
   /* 첫번째(pc에서는 좌측 박스)의 맨 아래 요소에 padding: 0 적용 */
