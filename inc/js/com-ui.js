@@ -206,7 +206,6 @@ var NbrandUI = {
           openWrap.addClass("on").fadeIn(200);
           break;
         case "popup toast-popup":
-          openWrap.fadeIn(200).delay(3000).fadeOut(200);
           break;
         default:
           openWrap.addClass("on").fadeIn(200);
@@ -226,6 +225,9 @@ var NbrandUI = {
     openmodalData = openmodalBtn.attr("aria-controls");
     NbrandUI.popContOpen(".popup#" + openmodalData, openmodalBtn);
     NbrandUI.expandedAria(openmodalBtn);
+  },
+  toastPopup: function () {
+    $(".toast-popup").fadeIn(200).delay(3000).fadeOut(200);
   },
   popContClose: function (obj) {
     closeWrap = $(obj);
