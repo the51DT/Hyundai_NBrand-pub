@@ -1156,6 +1156,294 @@
   font-weight: 700;
   line-height: 33.6px;
 }
+
+/*  브랜드 내 팝업 시작 */
+.popup.forBrand {
+  max-width: 1200px;
+  overflow: hidden;
+}
+
+.popup.forBrand .popup-wrapper .popup-header {
+  padding: 28px 40px 27px 40px;
+}
+
+.popup.forBrand .popup-body {
+  max-height: calc(100vh - 160px);
+  padding: 40px 40px 160px;
+  margin-bottom: 0;
+}
+
+.popup.forBrand .popup-wrapper .popup-body .brand-pd {
+  display: grid;
+  gap: 44px;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+}
+
+.popup.forBrand .popup-wrapper .popup-body .brand-pd .popup-body-innerbox {
+  width: 100%;
+}
+
+.popup.forBrand
+  .popup-wrapper
+  .popup-body
+  .brand-pd
+  .popup-body-innerbox
+  .wrap-brand-desc {
+  padding: 40px 0px 0;
+  max-height: 100%;
+}
+
+.popup.forBrand
+  .popup-wrapper
+  .popup-body
+  .brand-pd
+  .popup-body-innerbox
+  .wrap-brand-desc:first-child {
+  padding-top: 0;
+}
+
+.popup.forBrand
+  .popup-wrapper
+  .popup-body
+  .brand-pd
+  .popup-body-innerbox
+  .wrap-brand-desc {
+  padding: 60px 0;
+  border-bottom: 1px solid #bbbbbb;
+}
+
+.popup.forBrand
+  .popup-wrapper
+  .popup-body
+  .brand-pd
+  .popup-body-innerbox
+  .wrap-brand-desc:first-child {
+  padding-top: 0;
+}
+
+.popup.forBrand
+  .popup-wrapper
+  .popup-body
+  .brand-pd
+  .popup-body-innerbox
+  .wrap-brand-desc:last-child {
+  padding-top: 60px;
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.popup.forBrand .btn-wrap button.btn-only-icon-notbg.popup-close-btn-x {
+  top: 32px;
+}
+
+.popup.forBrand .popup-wrapper .popup-body .txt-type03 {
+  font-weight: 500;
+}
+
+.popup.forBrand .popup-wrapper .popup-body .inner-body-model .wrap-desc.nogap {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.popup.forBrand
+  .popup-wrapper
+  .popup-body
+  .inner-body-model
+  .wrap-desc.nogap
+  .tit-type04.desc-tit {
+  margin-bottom: 12px;
+}
+
+.popup.forBrand
+  .popup-wrapper
+  .popup-body
+  .inner-body-model
+  .wrap-desc.nogap
+  .desc-note {
+  margin-top: 8px;
+}
+
+.popup.forBrand
+  .popup-wrapper
+  .popup-body
+  .brand-pd
+  .popup-body-innerbox
+  .wrap-brand-desc
+  .gap12 {
+  display: grid;
+  gap: 12px;
+}
+
+.popup.forBrand
+  .popup-wrapper
+  .popup-body
+  .brand-pd
+  .popup-body-innerbox
+  .wrap-brand-desc
+  .gap12
+  .inner-subDesc {
+  display: grid;
+  gap: 4px;
+}
+
+.popup.forBrand
+  .popup-wrapper
+  .popup-body
+  .brand-pd
+  .popup-body-innerbox
+  .wrap-brand-desc
+  .gap12
+  .inner-subDesc:last-child {
+  padding-bottom: 0px;
+}
+
+.popup.forBrand
+  .popup-wrapper
+  .popup-body
+  .brand-pd
+  .popup-body-innerbox
+  .box-brand-tit {
+  margin-bottom: 32px;
+  display: flex;
+  gap: 12px;
+  flex-direction: column;
+}
+
+.popup.forBrand
+  .popup-wrapper
+  .popup-body
+  .brand-pd
+  .popup-body-innerbox
+  .box-brand-tit.no-mb {
+  margin-bottom: 0;
+}
+
+.popup.forBrand
+  .popup-wrapper
+  .popup-body
+  .brand-pd
+  .popup-body-innerbox:nth-child(2)
+  .wrap-brand-desc:last-child
+  .gap12
+  .inner-subDesc:last-child {
+  padding-bottom: 0;
+}
+
+/* 공통 박스 추가  */
+
+.popup.model-popup.forBrand
+  .popup-wrapper
+  .popup-body
+  .inner-body-model
+  .container-desc {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 24px 0 60px;
+}
+
+.popup.model-popup.forBrand
+  .popup-wrapper
+  .popup-body
+  .inner-body-model
+  .popup-body-innerbox:last-child
+  .container-desc {
+  padding: 24px 0 0;
+}
+
+.popup.model-popup.forBrand
+  .popup-wrapper
+  .popup-body.single
+  .inner-body-model
+  .popup-body-innerbox:last-child
+  .container-desc {
+  padding: 28px 0 0;
+}
+
+.popup.model-popup.forBrand
+  .popup-wrapper
+  .popup-body
+  .inner-body-model
+  .container-desc
+  .wrap-function {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.popup.model-popup.forBrand
+  .popup-wrapper
+  .popup-body
+  .inner-body-model
+  .container-desc
+  .desc-note {
+  font-family: "Hyundai Sans Text";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 16.8px */
+  color: #555;
+}
+
+.popup.model-popup.forBrand
+  .popup-wrapper
+  .popup-body
+  .inner-body-model
+  .container-desc
+  .wrap-function
+  .wrap-desc
+  .tit-type04 {
+  font-size: 20px;
+}
+
+.popup.model-popup.forBrand
+  .popup-wrapper
+  .popup-body
+  .inner-body-model
+  .wrap-desc.lg {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.popup.model-popup.forBrand
+  .popup-wrapper
+  .popup-body
+  .inner-body-model
+  .wrap-desc.sm {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.popup.forBrand .pop-brand-gap {
+  display: grid;
+  gap: 60px;
+}
+
+.popup.model-popup.forBrand
+  .popup-wrapper
+  .popup-body
+  .inner-body-model.pop-brand-gap
+  .container-desc {
+  padding: 28px 0 60px;
+  border-bottom: 1px solid #bbb;
+}
+
+.popup.model-popup.forBrand
+  .popup-wrapper
+  .popup-body
+  .inner-body-model
+  .popup-body-innerbox:last-child
+  .container-desc {
+  border-bottom: 0;
+}
+/* 끝 */
+/* 브랜드 내 팝업 끝  */
+
 /* mobile */
 @media screen and (max-width: 1023px) {
   .brand .video_wrap .search-container {
@@ -1950,5 +2238,191 @@
   .merchandise-wrap .merchandise_related-wrap .merchandise_related > div p {
     font-size: 20px;
     line-height: 25px;
+  }
+
+  /* popup */
+  .popup.forBrand .popup-wrapper .popup-header {
+    padding: 16px 24px;
+  }
+
+  .popup.forBrand .btn-wrap button.btn-only-icon-notbg.popup-close-btn-x {
+    top: 18px;
+  }
+
+  .popup.forBrand .popup-wrapper .popup-body {
+    padding: 28px 24px 100px;
+    max-height: calc(100vh - 60px);
+  }
+  .popup.forBrand .popup-wrapper .popup-body .brand-pd {
+    display: block;
+  }
+
+  .popup.forBrand .popup-wrapper .popup-body .brand-pd .popup-body-innerbox {
+    display: grid;
+    gap: 36px;
+  }
+  .popup.forBrand
+    .popup-wrapper
+    .popup-body
+    .brand-pd
+    .popup-body-innerbox
+    .wrap-brand-desc:first-child {
+    padding-top: 0;
+    padding-bottom: 0;
+    gap: 36px;
+    display: grid;
+  }
+
+  .popup.forBrand
+    .popup-wrapper
+    .popup-body
+    .brand-pd
+    .popup-body-innerbox
+    .box-brand-tit {
+    margin-bottom: 0;
+  }
+
+  .popup.forBrand
+    .popup-wrapper
+    .popup-body
+    .brand-pd
+    .popup-body-innerbox
+    .wrap-brand-desc
+    .gap12.onlyOne {
+    padding-bottom: 36px;
+  }
+
+  .popup.forBrand
+    .popup-wrapper
+    .popup-body
+    .brand-pd
+    .popup-body-innerbox
+    .wrap-brand-desc
+    .gap12
+    .inner-subDesc:last-child {
+    padding-bottom: 36px;
+  }
+
+  /* 첫번째(pc에서는 좌측 박스)의 맨 아래 요소에 padding: 0 적용 */
+  .popup.forBrand
+    .popup-wrapper
+    .popup-body
+    .brand-pd
+    .popup-body-innerbox:nth-child(1)
+    .wrap-brand-desc:last-child
+    .gap12
+    .inner-subDesc:last-child {
+    padding-bottom: 0;
+  }
+
+  .popup.forBrand
+    .popup-wrapper
+    .popup-body
+    .brand-pd
+    .popup-body-innerbox
+    .wrap-brand-desc {
+    padding: 0 0;
+  }
+
+  .popup.forBrand
+    .popup-wrapper
+    .popup-body
+    .brand-pd
+    .popup-body-innerbox:nth-child(1)
+    .wrap-brand-desc:last-child {
+    padding-top: 0;
+    padding-bottom: 36px;
+    border-bottom: 0;
+  }
+
+  .popup.forBrand
+    .popup-wrapper
+    .popup-body
+    .brand-pd
+    .popup-body-innerbox:nth-child(1)
+    .wrap-brand-desc:last-child
+    .gap12 {
+    padding-bottom: 0;
+  }
+
+  .popup.forBrand
+    .popup-wrapper
+    .popup-body
+    .brand-pd
+    .popup-body-innerbox:nth-child(3n-1)
+    .wrap-brand-desc:last-child {
+    padding-top: 0;
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+
+  .popup.forBrand
+    .popup-wrapper
+    .popup-body
+    .brand-pd
+    .popup-body-innerbox:nth-child(2) {
+    /* margin-top: 36px; */
+    border-top: 1px solid #bbb;
+  }
+
+  .popup.forBrand
+    .popup-wrapper
+    .popup-body
+    .brand-pd
+    .popup-body-innerbox:nth-child(2)
+    .wrap-brand-desc:first-child {
+    padding-top: 36px;
+  }
+
+  .popup.forBrand
+    .popup-wrapper
+    .popup-body
+    .brand-pd
+    .popup-body-innerbox:nth-child(2)
+    .wrap-brand-desc:last-child
+    .gap12
+    .inner-subDesc:last-child {
+    padding-bottom: 0;
+  }
+
+  /* txt size */
+  .popup.forBrand .popup-wrapper .popup-body .brand-pd .tit-type04 {
+    font-size: 20px;
+  }
+
+  .popup.forBrand .popup-wrapper .popup-body .brand-pd .tit-type05 {
+    font-size: 18px;
+  }
+
+  .popup.forBrand .pop-brand-gap {
+    display: grid;
+    gap: 36px;
+  }
+
+  .popup.model-popup.forBrand
+    .popup-wrapper
+    .popup-body
+    .inner-body-model.pop-brand-gap
+    .container-desc {
+    padding: 20px 0 36px;
+    border-bottom: 1px solid #bbb;
+  }
+
+  .popup.model-popup.forBrand
+    .popup-wrapper
+    .popup-body
+    .inner-body-model
+    .popup-body-innerbox:last-child
+    .container-desc {
+    border-bottom: 0;
+  }
+
+  .popup.model-popup.forBrand
+    .popup-wrapper
+    .popup-body.single
+    .inner-body-model
+    .popup-body-innerbox:last-child
+    .container-desc {
+    padding: 20px 0 0;
   }
 }
