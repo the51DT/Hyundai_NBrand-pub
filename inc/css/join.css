@@ -184,7 +184,7 @@
 .join_wrap {
   margin: 0 auto;
   padding: 0 5rem 15rem;
-  max-width: 60rem;
+  max-width: 70rem;
 }
 .join_wrap .join_step {
   margin: 0 auto;
@@ -197,6 +197,11 @@
   font-weight: 700;
   line-height: 125%;
   text-align: center;
+}
+.join_wrap .join_subtit {
+  margin-top: 1.25rem;
+  font-size: 1.25rem;
+  line-height: 140%;
 }
 .join_form_wrap {
   width: 100%;
@@ -228,6 +233,17 @@
 .join_form_wrap .btn.disabled {
   background-color: #e6e6e6;
   color: #a1a1a1;
+}
+.join_bottom {
+  margin-top: 1.25rem;
+  font-family: "Hyundai Sans Text";
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 140%;
+}
+.join_bottom .btn-wrap {
+  margin-top: 0.75rem;
+  padding: 0.5rem 0;
 }
 
 /* CM050101 */
@@ -308,6 +324,22 @@
 }
 .join_complete_text span {
   font-weight: 700;
+}
+.join_complete_text span.join_text_head {
+  font-family: "Hyundai Sans Head";
+  font-size: 1.25rem;
+}
+
+/* CM050107 */
+.join_form .mypage-withdrawal-list {
+  margin-top: 0;
+}
+.join_form .mypage-withdrawal-table {
+  border-top: 1px solid #AAAAAA;
+}
+.join_form.join_withdrawal {
+  padding-bottom: 0;
+  border-bottom: none;
 }
 
 /* CM040101 */
@@ -891,6 +923,13 @@
 }
 /* 모바일 */
 @media screen and (max-width: 1023px) {
+  .content-top.join_top_wrap .tit-type01 {
+    font-size: 2.5rem;
+    line-height: 125%;
+  }
+  .content-top.join_top_wrap {
+    padding: 7.81rem 1.5rem;
+  }
   .mypage-wrap h4 {
     font-size: 30px;
     font-weight: 700;
@@ -1139,6 +1178,10 @@
     font-size: 1.875rem;
     line-height: 140%;
   }
+  .join_wrap .join_subtit {
+    margin-top: 0.75rem;
+    font-size: 1.125rem;
+  }
   .join_wrap .btn-wrap-default {
     margin-top: 2.25rem;
   }
@@ -1147,6 +1190,9 @@
   }
   .join_text_tit {
     font-size: 1.125rem;
+  }
+  .join_bottom {
+    margin-top: 0.75rem;
   }
 
   /* CM050101 */

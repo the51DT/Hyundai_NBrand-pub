@@ -1335,6 +1335,10 @@ input[type="radio"]:focus + label {
   font-size: 3.5rem;
 }
 
+.card_item a {
+  display: block;
+}
+
 /* card_type02 */
 .card_type02 {
   width: 100%;
@@ -4980,6 +4984,13 @@ input:checked + .slider:before {
 
 .search-wrap .search-input-box .btn-wrap {
   display: flex;
+}
+
+.search-wrap .search-input-box .btn-group .btn-reset {
+  display: none;
+}
+.search-wrap .search-input-box.on .btn-group .btn-reset {
+  display : flex;
 }
 
 .search-wrap .search-input-box .btn-group .btn-txt {

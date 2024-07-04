@@ -25,7 +25,7 @@ var pubUi = {
     self.$btnReset = $(".btn-reset");
 
     // search
-    self.$searchBox = document.querySelector(".search-input-box");
+    self.$searchBox = document.querySelector(".search-input-box");    
 
     // swiper
     self.swiper2;
@@ -98,8 +98,21 @@ var pubUi = {
         .closest(".search-container")
         .find(".tag-list-wrap .tag-list");
       self.$searchBox.querySelector("input").value = "";
-      self.tagBtnEvent("", tagList, "reset");
+      self.$searchBox.classList.remove("on");      
+      // self.tagBtnEvent("", tagList, "reset"); 07.04 수정 : 태그 리셋 비활성화
     });
+
+    // 검색 창 입력값 존재 시, 리셋 버튼 활성화
+    if (self.$searchBox != null) {
+      self.$searchBox.querySelector("input").oninput = function (e) {
+        var searchBoxValue = e.target.value;
+        if (searchBoxValue) {
+          self.$searchBox.classList.add("on");
+        } else {
+          self.$searchBox.classList.remove("on");
+        }
+      };
+    }
 
     // 태그 버튼 클릭시,
     $(".tag-list li label").click(function (e) {
@@ -153,11 +166,12 @@ var pubUi = {
     );
 
     $(".rending-wrap > li button").on("click", function (e) {
+      e.preventDefault();
       var scrollTarget = $(this).data("scroll");
       pubUi.pageScrollChk(scrollTarget);
     });
 
-    $("#topBtn").on("click", function(){
+    $("#topBtn").on("click", function () {
       $("body").animate({ scrollTop: 0 }, 300);
     });
   },
@@ -725,24 +739,33 @@ $(document).ready(function () {
 
   $(window).resize(function () {
     if ($(window).innerWidth() < 1024) {
-      swiper2.destroy();
-      swiper2SlideEvt();
+      if (self.swiper2.slides.length > 0) {
+        self.swiper2.destroy();
+        swiper2SlideEvt();
+      }
     }
   });
-  // 진행중 - 07.03
-  if ($(".content-wrap").hasClass("models-wrap")) {
-    var contsImages = document.querySelectorAll(
-      ".content-wrap.models-wrap .content-area img"
-    );
-    var contsTitles = document.querySelectorAll(
-      ".content-wrap.models-wrap .content-area [class*=content-item] .blue-title"
-    );
-    var navTitles = document.querySelectorAll(".rending-wrap li button");
 
-    for (var i = 0; i < contsImages.length; i++) {
-      contsImages[i].removeAttribute("loading");
-    }
-  }
+  // 진행중 - 07.03
+  // if ($(".content-wrap").hasClass("models-wrap")) {
+  // if ($(".navigation-item02 ul .rending-wrap").length > 0) {
+  //   console.log("테스트");
+  //   var contsImages = document.querySelectorAll(
+  //     ".content-wrap .content-area img"
+  //   );
+  //   var contsTitles = document.querySelectorAll(
+  //     ".content-wrap .content-area [class*=content-item] .blue-title"
+  //   );
+  //   var navTitles = document.querySelectorAll(".rending-wrap li button");
+
+  //   for (var i = 0; i < contsImages.length; i++) {
+  //     contsImages[i].removeAttribute("loading");
+  //   }
+
+  //   for (var i = 0; i < contsTitles.length; i++) {
+  //     console.log(contsTitles[i].value);
+  //   }
+  // }
 });
 
 // ty02Swiper swiper 이벤트 분리
