@@ -618,8 +618,8 @@ min-width : 1024 css
     margin-bottom: 1rem;
   }
   .card_video .card_play {
-    width: 3.75rem;
-    height: 3.75rem;
+    width: 67px !important;
+    height: 67px !important
   }
   .grid_2 .card_video .card_play {
     width: 6.25rem;
@@ -1505,9 +1505,9 @@ min-width : 1024 css
   }
 
   .ty02Swiper .swiper-slide .img-ico {
-    width: 100px;
-    height: 100px;
-    top: 67px;
+    width: 67px;
+    height: 67px;
+    top: 81px;
     transform: translateX(-50%);
   }
 
