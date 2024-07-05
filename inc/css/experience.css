@@ -3342,7 +3342,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
     font-size: 1.25rem;
   }
   .side-popup .pop-wrap .popup-body {
-    max-height: calc(100vh - 40px);
+    max-height: calc(100vh - 60px);
   }
   .side-popup .pop-wrap .popup-body .wrap-popup-title .tit-type04 {
     font-size: 1.125rem; /* 18px */
