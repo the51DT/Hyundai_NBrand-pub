@@ -2381,6 +2381,13 @@ input[type="radio"]:focus + label {
   max-height: 100vh;
 }
 
+.section_list-content .list-content {
+  display: none;
+}
+.section_list-content .list-content.active {
+  display: block;
+}
+
 /* swiper 반응형 예외 케이스 처리 */
 @media screen and (max-width: 1480px) {
   .swiper-arrow-wrap {
