@@ -61,10 +61,6 @@
         <button class="pop-open" aria-controls="pop03" aria-haspopup="true" aria-expanded="false" title="팝업오픈">
           CM030101C02 하단 팝업 열기
         </button>
-        <br>
-        <button class="pop-open" aria-controls="toast" aria-haspopup="true" aria-expanded="false" title="팝업오픈">
-          토스트 팝업 열기
-        </button>
       </div>
     </section>
     <footer class="footer-wrap">
@@ -130,9 +126,16 @@
       </div>
     </div>
   </div>
-  <div id="toast" class="popup toast-popup" role="alert" aria-live="polite" aria-atomic="true">
+  <!-- NbrandUI.toastPopup 함수 사용하면 토스트 팝업 노출 -->
+  <div id="toast" class="toast-popup" role="alert" aria-live="polite" aria-atomic="true">
     <p>I copied the link. Please paste it wherever you want.</p>
   </div>
+
+  <script>
+    $(document).ready(function () {
+      NbrandUI.toastPopup(".toast-popup");
+    })
+  </script>
 </body>
 
 </html>

@@ -12,7 +12,7 @@ $(document).ready(function () {
     ".gnb__panel02"
   );
   NbrandUI.modalOpen(".pop-open");
-  // NbrandUI.profileOpen(".pop-open");
+  NbrandUI.profileOpenClose(".profile-open");
   NbrandUI.modalClose(".pop-close");
   NbrandUI.naviClick(".navi_event-btn");
   NbrandUI.rendingClick(".rending-btn");
@@ -206,7 +206,6 @@ var NbrandUI = {
           openWrap.addClass("on").fadeIn(200);
           break;
         case "popup toast-popup":
-          openWrap.fadeIn(200).delay(3000).fadeOut(200);
           break;
         default:
           openWrap.addClass("on").fadeIn(200);
@@ -226,6 +225,9 @@ var NbrandUI = {
     openmodalData = openmodalBtn.attr("aria-controls");
     NbrandUI.popContOpen(".popup#" + openmodalData, openmodalBtn);
     NbrandUI.expandedAria(openmodalBtn);
+  },
+  toastPopup: function (obj) {
+    $(obj).fadeIn(200).delay(3000).fadeOut(200);
   },
   popContClose: function (obj) {
     closeWrap = $(obj);
@@ -563,6 +565,7 @@ var NbrandUI = {
       openmodal.on("click", function () {
         eventBtn = $(this);
         NbrandUI.popOpen(eventBtn);
+        NbrandUI.profileOffset(".box-profile-img", ".popup-body");
       });
     }
 
@@ -588,6 +591,68 @@ var NbrandUI = {
     }
 
     init(obj);
+    event();
+  },
+
+  profileOffset: function (obj, com) {
+    if (!NbrandUI.checkObj(obj)) {
+      return;
+    }
+    winHeight = $(com).prop("scrollHeight");
+    $(obj).each(function () {
+      contentPoint = $(this).position().top;
+      alert(winHeight - contentPoint - 500);
+    });
+  },
+  profileOpenClose: function (obj) {
+    if (!NbrandUI.checkObj(obj)) {
+      return;
+    }
+    // alert(openprofileBtn.offset().top);
+    openprofileData = openprofileBtn.attr("aria-controls");
+    NbrandUI.expandedAria(openprofileBtn);
+    var openprofile = $(obj);
+    function event() {
+      openprofile.on("click", function () {
+        eventBtn = $(this);
+        openWrap = eventBtn.siblings(".club-popup");
+        // alert(openWrap.attr("class"));
+        if (NbrandUI.windowSize()) {
+          openWrap.addClass("on").slideDown(200);
+          NbrandUI.mdimdOn();
+        } else {
+          openWrap.addClass("on").fadeIn(200);
+        }
+        tparent = openWrap;
+        Nbrand.uiFocusTab({
+          selector: tparent,
+          type: "hold",
+        });
+
+        openWrap.find(".profile-close").on("click", function () {
+          closeWrap = $(this).parents(".club-popup");
+          openProfileBtn = closeWrap
+            .siblings(".card_profile")
+            .find(".profile-open");
+          closeWrap.find(".ui-fctab-s").remove();
+          closeWrap.find(".ui-fctab-e").remove();
+          NbrandUI.expandedAria(openProfileBtn);
+          openProfileBtn.focus().removeClass("open-btn");
+          if (NbrandUI.windowSize()) {
+            closeWrap.removeClass("on").slideUp(200);
+            NbrandUI.mdimdOff();
+          } else {
+            closeWrap.removeClass("on").stop().fadeOut(300);
+            $(".dimmed").stop().fadeOut(300);
+            setTimeout(function () {
+              NbrandUI.dimdOff();
+              NbrandUI.mdimdOff();
+            }, 300);
+          }
+        });
+      });
+    }
+
     event();
   },
   /* Input data clear */
