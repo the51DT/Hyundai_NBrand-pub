@@ -106,7 +106,7 @@ var NbrandUI = {
     var popCheck = btn.parents(".popup");
     // zData = 1001;
     if (!popCheck.length) {
-      zData = openWrap.hasClass('toast-popup') ? 1100 : 1001;
+      zData = 1001;
       btnAddName = "open-btn1";
       openWrap.css("z-index", zData).attr("data-zindex", zData);
     } else {
