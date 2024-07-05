@@ -652,11 +652,14 @@
     /* margin-right: 60px; */
   }
   .evtGuide .content-item05 .tab-head,
+  .evtGuide .content-item06 .conts-head,
   .evtGuide .content-item07 .tab-head {
     padding: 0 80px;
   }
   .evtGuide .content-item05 .tab-content,
-  .evtGuide .content-item07 .tab-content {
+  .evtGuide .content-item06 .conts-body,
+  .evtGuide .content-item07 .tab-content,
+  .evtGuide .content-item09 .info-guide-box {
     padding-left: 80px;
     padding-right: 80px;
   }
@@ -697,6 +700,15 @@
   .evtGuide .content-item07 .tab-content {
     padding-left: 24px;
     padding-right: 0;
+  }
+  
+  .evtGuide .content-item06 .conts-head,
+  .evtGuide .content-item06 .conts-body {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .evtGuide .content-item09 .info-guide-box {
+    padding:0 24px;
   }
   .evtGuide .wrap-list .__bottom .wrap-lists:last-child {
     margin-right: 24px;

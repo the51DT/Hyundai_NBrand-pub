@@ -787,7 +787,7 @@ var pubUi = {
 
     if(!swiperContents.hasClass("active")) {
       alert("Comming soon !");
-      target.removeClass("active")
+      target.removeClass("active");
     }
   }
 };
