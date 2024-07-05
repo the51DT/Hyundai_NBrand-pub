@@ -1446,6 +1446,12 @@
 }
 /* 브랜드 내 팝업 끝  */
 
+/* 0705 버튼 내 아이콘 호버될 때 사이즈 고정을 위해 수정 */
+.performance_wrap .content-area .btn:hover [class*="icon-link"],
+.performance_wrap .content-area .btn:active [class*="icon-link"] {
+  background-size: contain;
+}
+
 /* mobile */
 @media screen and (max-width: 1023px) {
   .brand .video_wrap .search-container {
