@@ -1,3 +1,5 @@
+/*** model 내 팝업 ***/
+
 .popup.model-popup.forModel {
   max-width: 1200px;
   overflow: hidden;
@@ -63,7 +65,7 @@
   border-bottom: 0;
 }
 
-/* 팝업에 표시할 컨텐츠가 하나일 때(.popup-body-innerbox가 하나일 때 시작*/
+/** 팝업에 표시할 컨텐츠가 하나일 때(.popup-body-innerbox가 하나일 때 시작 **/
 .popup.model-popup.forModel
   .popup-wrapper
   .popup-body.single
@@ -92,7 +94,7 @@
 }
 /* 추가 케이스 끝 */
 
-/* 팝업에 표시할 컨텐츠가 하나일 때(.popup-body-innerbox가 하나일 때 끝*/
+/** 팝업에 표시할 컨텐츠가 하나일 때(.popup-body-innerbox가 하나일 때 끝 **/
 
 .popup.model-popup.forModel
   .popup-wrapper
@@ -205,7 +207,7 @@
   font-weight: 500;
 }
 
-/* s */
+/** s **/
 .popup.forModel
   .popup-wrapper
   .popup-body
@@ -316,8 +318,7 @@
 
 /* e */
 
-/* video s*/
-
+/** 모델 팝업 내 영상 시작 **/
 .popup.model-popup.forModel
   .popup-wrapper
   .popup-body
@@ -403,9 +404,9 @@
   height: 100%;
   object-fit: cover;
 }
-/* video e */
+/** 모델 팝업 내 영상 끝 **/
 
-/* close btn formodel*/
+/** .formodel 내 닫기 버튼 **/
 .popup.model-popup.forModel
   .btn-wrap
   button.btn-only-icon-notbg.popup-close-btn-x {
@@ -419,7 +420,6 @@
 
   .popup.model-popup.forModel .popup-wrapper .popup-header {
     padding: 16px 24px;
-    /* border-bottom: 0; */
   }
 
   .popup .popup-wrapper .popup-header .inner-header-txt {
@@ -460,7 +460,7 @@
 
   .popup.model-popup.forModel .popup-wrapper .popup-body .inner-body-model {
     max-height: 100%;
-    padding: 0 0px 100px;
+    padding: 0 0 100px;
     gap: 36px;
   }
 
@@ -487,6 +487,7 @@
     padding: 28px 24px 100px;
     gap: 36px;
   }
+
   .popup.model-popup.forModel
     .popup-wrapper
     .popup-body
@@ -495,6 +496,7 @@
     height: 256px;
     /* height: 175px; */
   }
+
   .popup.model-popup.forModel
     .popup-wrapper
     .popup-body
@@ -563,16 +565,6 @@
     .popup-wrapper
     .popup-body
     .inner-body-model
-    .container-desc
-    .wrap-desc
-    .tit-type04 {
-    /* font-size: 24px; */
-  }
-
-  .popup.model-popup.forModel
-    .popup-wrapper
-    .popup-body
-    .inner-body-model
     .wrap-desc.lg {
     gap: 12px;
   }
@@ -593,14 +585,6 @@
   }
 
   /* 0701 레이아웃 추가 */
-  .popup.model-popup.forModel
-    .popup-wrapper
-    .popup-body
-    .inner-body-model
-    .container-desc {
-    /* padding: 0 0 36px; */
-  }
-
   .popup.forModel
     .popup-wrapper
     .popup-body
