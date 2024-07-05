@@ -2381,10 +2381,10 @@ input[type="radio"]:focus + label {
   max-height: 100vh;
 }
 
-.section_list-content .list-content {
+.section_list .list-content {
   display: none;
 }
-.section_list-content .list-content.active {
+.section_list .list-content.active {
   display: block;
 }
 

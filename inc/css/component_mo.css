@@ -1574,9 +1574,9 @@ min-width : 1024 css
   .swiper-card-type .card-list-wrap .swiper-slide .card_type01 {
     height: 265px;
   }
-  .section_list-content .list-content .track-guide-box,
-  .section_list-content .list-content .info-guide-box,
-  .section_list-content .list-content .evt-map-wrap {
+  .section_list .list-content .track-guide-box,
+  .section_list .list-content .info-guide-box,
+  .section_list .list-content .evt-map-wrap {
     padding-left:24px; 
     padding-right: 24px;
   }

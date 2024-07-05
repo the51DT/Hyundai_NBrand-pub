@@ -770,7 +770,7 @@ var pubUi = {
   listContsActive: function(target) {
     console.log("타겟테스트");
     var swiperDataCont = target.data("content");
-    var swiperContents = $(".section_list-content .list-content");
+    var swiperContents = $(".section_list .list-content");
     var contentDataCont;
 
     swiperContents.removeClass("active");
@@ -783,6 +783,11 @@ var pubUi = {
         swiperContents[i].style.display = "block";
         swiperContents[i].classList.add("active");
       }
+    }
+
+    if(!swiperContents.hasClass("active")) {
+      alert("Comming soon !");
+      target.removeClass("active")
     }
   }
 };
