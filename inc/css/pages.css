@@ -652,11 +652,14 @@
     /* margin-right: 60px; */
   }
   .evtGuide .content-item05 .tab-head,
+  .evtGuide .content-item06 .conts-head,
   .evtGuide .content-item07 .tab-head {
     padding: 0 80px;
   }
   .evtGuide .content-item05 .tab-content,
-  .evtGuide .content-item07 .tab-content {
+  .evtGuide .content-item06 .conts-body,
+  .evtGuide .content-item07 .tab-content,
+  .evtGuide .content-item09 .info-guide-box {
     padding-left: 80px;
     padding-right: 80px;
   }
@@ -697,6 +700,15 @@
   .evtGuide .content-item07 .tab-content {
     padding-left: 24px;
     padding-right: 0;
+  }
+  
+  .evtGuide .content-item06 .conts-head,
+  .evtGuide .content-item06 .conts-body {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .evtGuide .content-item09 .info-guide-box {
+    padding:0 24px;
   }
   .evtGuide .wrap-list .__bottom .wrap-lists:last-child {
     margin-right: 24px;
@@ -1021,40 +1033,4 @@
     width: 16px;
     height: 16px;
   } */
-}
-
-/* component.css */
-.sub-text-list li {
-  position: relative;
-  padding-left: 16px;
-  font-size: 16px;
-  font-weight: 500;
-}
-
-.sub-text-list li:before {
-  content: "";
-  display: inline-block;
-  width: 4px;
-  height: 4px;
-  background: #777;
-  position: absolute;
-  top: 9px;
-  left: 0;
-  transform: translateY(-50%);
-}
-
-.sub-text-list li:not(:last-child) {
-  margin-bottom: 12px;
-}
-
-.sub-text-list li.blind {
-  padding-left: 0;
-}
-
-.sub-text-list li.blind:before {
-  display: none;
-}
-
-.sub-text-list + [class^="table"] {
-  margin-top: 12px;
 }
