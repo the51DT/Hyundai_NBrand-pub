@@ -3531,15 +3531,15 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   .qrcode-box-wrap {
     padding:28px 24px; 
   }
-  .qrcode-box-wrap .conts-box {
+  .qrcode-box-wrap [class*="max1440"].conts-box {
     display: block;
     text-align: center;
   }
   .qrcode-box-wrap .conts-box h3 {
     font-size: 20px;
     line-height: 28px;
-  }
+  }  
   .qrcode-box-wrap .conts-box .img-wrap {
-    margin-top: 28px;
+    margin:28px auto 0;
   }
 }
