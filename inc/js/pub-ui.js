@@ -202,6 +202,11 @@ var pubUi = {
         ".nflmain_wrap .content-item03 .banner-box .swiper-container .swiper"
       ).addClass("onlyone-swiper");
     }
+
+    // Event Guide N Race 선택시, 하단 스와이퍼 관련 컨텐츠 내용 활성화
+    $(".section_tab .swiper-card-type .swiper-slide").on("click", function () {
+      pubUi.listContsActive($(this));
+    });
   },
   swiperSlideEvent: function () {
     var self = this;
@@ -762,6 +767,24 @@ var pubUi = {
       $("body").animate({ scrollTop: offsetTopVal }, 300);
     });
   },
+  listContsActive: function(target) {
+    console.log("타겟테스트");
+    var swiperDataCont = target.data("content");
+    var swiperContents = $(".section_list-content .list-content");
+    var contentDataCont;
+
+    swiperContents.removeClass("active");
+    swiperContents.hide();
+
+    for (var i = 0; i < swiperContents.length; i++) {
+      contentDataCont = swiperContents[i].dataset.content;
+
+      if (swiperDataCont == contentDataCont) {
+        swiperContents[i].style.display = "block";
+        swiperContents[i].classList.add("active");
+      }
+    }
+  }
 };
 
 $(document).ready(function () {
