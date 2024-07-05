@@ -45,7 +45,7 @@ var pubUi = {
     // 스와이퍼 재생 버튼 클릭시, 동영상 재생, 정지
     $(".btn-play").on("click", function (e) {
       e.preventDefault();
-      var targetSwiper = $(this).closest(".swiper");    
+      var targetSwiper = $(this).closest(".swiper");
       var videoChk = targetSwiper.find(".swiper-slide video");
 
       if (targetSwiper.hasClass("ty02Swiper")) {
@@ -87,7 +87,7 @@ var pubUi = {
             targetSwiper[0].swiper.autoplay.start();
           }
         }
-      }      
+      }
     });
 
     // 스와이퍼 소리 버튼 클릭시, 음소거 / 음소거 해제
@@ -259,17 +259,27 @@ var pubUi = {
           if (self.typeChk.length > 0) {
             // 동영상 케이스,
             $(".ty01Swiper .swiper-slide-active video")[0].currentTime = 0;
-            $(".ty01Swiper .swiper-pagination-custom .swiper-pagination-bullet .seek-bar").css("--time", "0");
+            $(
+              ".ty01Swiper .swiper-pagination-custom .swiper-pagination-bullet .seek-bar"
+            ).css("--time", "0");
 
             pubUi.videoBulletChk(".ty01Swiper", this.realIndex);
-
           } else {
             // 동영상 x 케이스,
-            if (!$(".swiper-pagination-custom .swiper-pagination-bullet").hasClass(".swiper-pagination-bullet-active")) {
-              $(".swiper-pagination-custom .swiper-pagination-bullet:not(.swiper-pagination-bullet-active)").css("background-color", "#fff");
+            if (
+              !$(
+                ".swiper-pagination-custom .swiper-pagination-bullet"
+              ).hasClass(".swiper-pagination-bullet-active")
+            ) {
+              $(
+                ".swiper-pagination-custom .swiper-pagination-bullet:not(.swiper-pagination-bullet-active)"
+              ).css("background-color", "#fff");
             }
-            
-            $(".swiper-pagination-custom .swiper-pagination-bullet-active").css("background-color","#de3111");
+
+            $(".swiper-pagination-custom .swiper-pagination-bullet-active").css(
+              "background-color",
+              "#de3111"
+            );
           }
         },
       },
@@ -574,8 +584,10 @@ var pubUi = {
       console.log("비디오 타입 X");
       $(".seek-bar").remove();
       $(targetSwiper).find(".btn-sound").hide();
-      $(".swiper-pagination-custom .swiper-pagination-bullet-active").css("background-color",
-        "#de3111");
+      $(".swiper-pagination-custom .swiper-pagination-bullet-active").css(
+        "background-color",
+        "#de3111"
+      );
       return;
     }
   },
@@ -624,22 +636,28 @@ var pubUi = {
 
     // BR050101 : Brand_N Merchandise tab 배경 때문에 추가
     if (contentItem) {
-    contentItem.classList.remove("tab01-bg", "tab02-bg", "tab03-bg", "tab04-bg", "tab05-bg");
-    if (tabLabel === "tab1-01") {
-      contentItem.classList.add("tab01-bg");
-    }
-    if (tabLabel === "tab1-02") {
-      contentItem.classList.add("tab02-bg");
-    }
-    if (tabLabel === "tab1-03") {
-      contentItem.classList.add("tab03-bg");
-    }
-    if (tabLabel === "tab1-04") {
-      contentItem.classList.add("tab04-bg");
-    }
-    if (tabLabel === "tab1-05") {
-      contentItem.classList.add("tab05-bg");
-    }
+      contentItem.classList.remove(
+        "tab01-bg",
+        "tab02-bg",
+        "tab03-bg",
+        "tab04-bg",
+        "tab05-bg"
+      );
+      if (tabLabel === "tab1-01") {
+        contentItem.classList.add("tab01-bg");
+      }
+      if (tabLabel === "tab1-02") {
+        contentItem.classList.add("tab02-bg");
+      }
+      if (tabLabel === "tab1-03") {
+        contentItem.classList.add("tab03-bg");
+      }
+      if (tabLabel === "tab1-04") {
+        contentItem.classList.add("tab04-bg");
+      }
+      if (tabLabel === "tab1-05") {
+        contentItem.classList.add("tab05-bg");
+      }
     }
   },
   tagBtnEvent: function (e, list, param) {
@@ -1323,7 +1341,7 @@ document.addEventListener("DOMContentLoaded", () => {
   //   }
   // }
 
-  // MD010101t02P01 내 다중 영상 제어 함수 시작
+  // 모델 팝업 내 다중 영상 제어 함수 시작
   function ControlMultiVideo() {
     const videoBtn_multi = document.querySelectorAll(
       ".popup .wrap-video-func .box-video button"
@@ -1744,10 +1762,9 @@ function configuratorEvent() {
         alcantaraInput.forEach((el) => {
           alcantaraValue.push(el.value);
         });
-        const alcantaraDropdown = document
-          .querySelectorAll(
-            `.configurator_select_area input[name*="alcantaraPackage"]`
-          );
+        const alcantaraDropdown = document.querySelectorAll(
+          `.configurator_select_area input[name*="alcantaraPackage"]`
+        );
         alcantaraDropdown.forEach((el) => {
           el.checked = false;
           el.closest(".dropdown").classList.add("none");
