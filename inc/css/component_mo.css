@@ -844,6 +844,11 @@ min-width : 1024 css
     text-align: left;
   }
 
+  .wrap-list.list04 .inner .box .box-desc .sub-text-list li {
+    font-size: 17px;
+    line-height: 23.8px;
+  }
+
   /**/
   .wrap-list .__bottom.list05 .wrap-lists .list-box:nth-child(1) p.txt-type01,
   .wrap-list .__bottom.list06 .wrap-lists .list-box:nth-child(1) p.txt-type01 {

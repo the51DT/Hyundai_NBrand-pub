@@ -1598,6 +1598,20 @@ input[type="radio"]:focus + label {
   justify-content: flex-start;
   margin-bottom: 16px;
 }
+.card_type04 .txt-desc {
+  margin-top: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22.4px;
+}
+.card_type04 .txt-xs {
+  margin-top: 4px;
+  font-family: "Hyundai Sans Text";  
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 140%;
+  color: #666;
+}
 .card_type04 .card_tag.noti-tag {
   color: #000;
   background-color: #aacae6;
@@ -2382,6 +2396,42 @@ input[type="radio"]:focus + label {
   }
 }
 
+/* sub-text-list */
+.sub-text-list li {
+  position: relative;
+  padding-left: 16px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.sub-text-list li:before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  background: #777;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.sub-text-list li:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.sub-text-list li.blind {
+  padding-left: 0;
+}
+
+.sub-text-list li.blind:before {
+  display: none;
+}
+
+.sub-text-list + [class^="table"] {
+  margin-top: 12px;
+}
+
 /* list */
 .wrap-list,
 .wrap-list.list04 {
@@ -2636,6 +2686,19 @@ input[type="radio"]:focus + label {
 .wrap-list.list04 .inner .box .box-desc {
   padding: 0 1.25rem;
   width: 50%;
+}
+.wrap-list.list04 .inner .box .box-desc .sub-text-list li {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+}
+.wrap-list.list04 .inner .box .box-desc .sub-text-list li:before {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: #000;
+  top: 12px;
+  transform: none;
 }
 .wrap-list.list04 .inner .box.box01 h3.tit {
   font-size: 2rem;
