@@ -12,7 +12,7 @@ $(document).ready(function () {
     ".gnb__panel02"
   );
   NbrandUI.modalOpen(".pop-open");
-  NbrandUI.profileOpenClose(".profile-open");
+  NbrandUI.profileOpenClose(".profile-open", ".profile-close");
   NbrandUI.modalClose(".pop-close");
   NbrandUI.naviClick(".navi_event-btn");
   NbrandUI.rendingClick(".rending-btn");
@@ -21,8 +21,9 @@ $(document).ready(function () {
 });
 
 let $win_W = $(window).width();
-var delta = 100;
-var timer = null;
+const delta = 100;
+let timer = null;
+let $popDate = 0;
 
 $(window).resize(function () {
   $win_W = $(window).width();
@@ -42,7 +43,6 @@ function resizeDone() {
     NbrandUI.headerReset(".nav-btn", ".nav-wrap", ".header-wrap");
   }
 }
-
 function bodyControll(state) {
   if (!state) {
     $("body").removeClass("fix");
@@ -103,26 +103,24 @@ var NbrandUI = {
   popContOpen: function (obj, btn) {
     var openWrap = $(obj);
     var popClass = openWrap.attr("class");
-    var popCheck = btn.parents(".popup");
+    // var popCheck = btn.parents(".popup");
+    $popDate++;
     // zData = 1001;
-    if (!popCheck.length) {
+    if ($popDate == 1) {
       zData = 1001;
       btnAddName = "open-btn1";
       openWrap.css("z-index", zData).attr("data-zindex", zData);
-    } else {
-      // zData + 2;
-      if (zData == 1001) {
-        btnAddName = "open-btn2";
-        zData = 1003;
-      } else if (zData == 1003) {
-        btnAddName = "open-btn3";
-        zData = 1005;
-      } else if (zData == 1005) {
-        btnAddName = "open-btn4";
-        zData = 1007;
-      }
-      openWrap.css("z-index", zData).attr("data-zindex", zData);
+    } else if ($popDate == 2) {
+      btnAddName = "open-btn2";
+      zData = 1003;
+    } else if ($popDate == 3) {
+      btnAddName = "open-btn3";
+      zData = 1005;
+    } else if ($popDate == 4) {
+      btnAddName = "open-btn4";
+      zData = 1007;
     }
+    openWrap.css("z-index", zData).attr("data-zindex", zData);
     // openWrap.css("z-index", zindex);
     $(btn).addClass(btnAddName).data("open");
     if (NbrandUI.windowSize()) {
@@ -151,14 +149,6 @@ var NbrandUI = {
         case "popup side-popup":
           openWrap.addClass("on").fadeIn(200);
           break;
-        case "popup club-popup":
-          openWrap.addClass("on").slideDown(200);
-          NbrandUI.mdimdOn();
-          break;
-        case "popup club-info-popup bottom-popup":
-          openWrap.addClass("on").slideDown(200);
-          NbrandUI.dimdOn();
-        // $(".dimmed").css("z-index", 1002);
         default:
           openWrap.addClass("on").fadeIn(200);
           break;
@@ -191,19 +181,12 @@ var NbrandUI = {
           NbrandUI.dimdOn();
           // $(".dimmed").css("z-index", 1002);
           break;
-        case "popup bottom-popup2":
-          openWrap.addClass("on").fadeIn(200);
-          NbrandUI.dimdOn();
-          break;
         case "popup side-popup":
           NbrandUI.anidimdOn();
           $(".ani-dimmed").addClass("on");
           setTimeout(function () {
             openWrap.addClass("on"); //.animate({ right: "0px" }, 100);
           }, 200);
-          break;
-        case "popup club-popup":
-          openWrap.addClass("on").fadeIn(200);
           break;
         case "popup toast-popup":
           break;
@@ -235,9 +218,10 @@ var NbrandUI = {
     closeWrap.find(".ui-fctab-e").remove();
     openmodalClass = "open-btn1";
     openmodalBtn = $("." + openmodalClass + "[aria-expanded = true]");
-    wrapZindexData = closeWrap.attr("data-zindex");
+    $popDate--;
+    // alert($popDate);
 
-    if (wrapZindexData == 1007) {
+    if ($popDate == 3) {
       wrapZindexData = 1005;
       // alert($(".popup[data-zindex=" + wrapZindexData + "]").html());
       $(".popup[data-zindex=" + wrapZindexData + "]").css(
@@ -246,7 +230,7 @@ var NbrandUI = {
       );
       openmodalBtn = $(".open-btn4[aria-expanded = true]");
       openmodalClass = "open-btn4";
-    } else if (wrapZindexData == 1005) {
+    } else if ($popDate == 2) {
       wrapZindexData = 1003;
       $(".popup[data-zindex=" + wrapZindexData + "]").css(
         "z-index",
@@ -565,7 +549,6 @@ var NbrandUI = {
       openmodal.on("click", function () {
         eventBtn = $(this);
         NbrandUI.popOpen(eventBtn);
-        NbrandUI.profileOffset(".box-profile-img", ".popup-body");
       });
     }
 
@@ -604,55 +587,50 @@ var NbrandUI = {
       alert(winHeight - contentPoint - 500);
     });
   },
-  profileOpenClose: function (obj) {
+  profileOpenClose: function (obj, closeObj) {
     if (!NbrandUI.checkObj(obj)) {
       return;
     }
     // alert(openprofileBtn.offset().top);
-    openprofileData = openprofileBtn.attr("aria-controls");
-    NbrandUI.expandedAria(openprofileBtn);
+    // openprofileData = openprofileBtn.attr("aria-controls");
     var openprofile = $(obj);
+    var winHeight = 0;
+    // function init(obj) {
+    //   NbrandUI.expandedAria(openprofile);
+    // }
+
+    function close(obj) {
+      obj.removeClass("on").stop().fadeOut(300);
+      obj.find(".ui-fctab-s").remove();
+      obj.find(".ui-fctab-e").remove();
+    }
     function event() {
       openprofile.on("click", function () {
         eventBtn = $(this);
         openWrap = eventBtn.siblings(".club-popup");
-        // alert(openWrap.attr("class"));
-        if (NbrandUI.windowSize()) {
-          openWrap.addClass("on").slideDown(200);
-          NbrandUI.mdimdOn();
-        } else {
-          openWrap.addClass("on").fadeIn(200);
-        }
+        close($(".club-popup"));
+        openWrap.addClass("on").stop().fadeIn(200);
         tparent = openWrap;
         Nbrand.uiFocusTab({
           selector: tparent,
           type: "hold",
         });
 
-        openWrap.find(".profile-close").on("click", function () {
-          closeWrap = $(this).parents(".club-popup");
-          openProfileBtn = closeWrap
-            .siblings(".card_profile")
-            .find(".profile-open");
-          closeWrap.find(".ui-fctab-s").remove();
-          closeWrap.find(".ui-fctab-e").remove();
-          NbrandUI.expandedAria(openProfileBtn);
-          openProfileBtn.focus().removeClass("open-btn");
-          if (NbrandUI.windowSize()) {
-            closeWrap.removeClass("on").slideUp(200);
-            NbrandUI.mdimdOff();
-          } else {
-            closeWrap.removeClass("on").stop().fadeOut(300);
-            $(".dimmed").stop().fadeOut(300);
-            setTimeout(function () {
-              NbrandUI.dimdOff();
-              NbrandUI.mdimdOff();
-            }, 300);
-          }
-        });
+        openWrap
+          .find(closeObj)
+          .off("click")
+          .on("click", function () {
+            closeWrap = $(this).parents(".club-popup");
+            openProfileBtn = closeWrap
+              .siblings(".card_profile")
+              .find(".profile-open");
+            NbrandUI.expandedAria(openProfileBtn);
+            openProfileBtn.focus();
+            close(closeWrap);
+          });
       });
     }
-
+    // init();
     event();
   },
   /* Input data clear */
@@ -750,6 +728,9 @@ var NbrandUI = {
   },
   mdimdOn: function () {
     $("body").append("<div class='m-dimmed' aria-hidden='true'></div>");
+  },
+  popDimdOn: function (obj) {
+    $(obj).append("<div class='pop-dimmed' aria-hidden='true'></div>");
   },
   mdimdOff: function () {
     $("body").find(".m-dimmed").remove();

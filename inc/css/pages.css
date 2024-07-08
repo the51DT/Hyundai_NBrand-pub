@@ -29,10 +29,10 @@
   display: block;
 }
 .conts-box-wrap.ty03 article {
-  padding-top:160px;
+  padding-top: 160px;
   padding-bottom: 0;
   max-width: 1440px;
-  margin:0 auto;
+  margin: 0 auto;
   border-bottom: 0;
 }
 .conts-box-wrap.ty03 article.mg0 {
@@ -41,7 +41,7 @@
 
 .conts-box-wrap.ty03 article.mg0 .txt-wrap {
   max-width: 1440px;
-  margin:0 auto;
+  margin: 0 auto;
 }
 
 .conts-box-wrap.ty03 article .txt-wrap.ty02 {
@@ -65,7 +65,7 @@
 }
 
 .conts-box-wrap.ty03 article .img-wrap {
-  margin-top:60px;
+  margin-top: 60px;
 }
 
 /* about */
@@ -91,13 +91,13 @@
   color: #de3111;
 }
 .tit-btn-wrap .tit:after {
-  content: '';
+  content: "";
   width: 100%;
   height: 4px;
   background-color: transparent;
   display: block;
 }
-.tit-btn-wrap .tit.on:after { 
+.tit-btn-wrap .tit.on:after {
   background-color: #de3111;
 }
 .tit-btn-wrap .tit:not(:last-child) {
@@ -107,8 +107,8 @@
 .conts-key-visual.ty02 .text-area {
   left: 60px;
   bottom: 136px;
-  top:revert;
-  transform: translate(0,0);
+  top: revert;
+  transform: translate(0, 0);
 }
 .conts-key-visual.ty02 .text-area .tit {
   text-align: left;
@@ -121,7 +121,6 @@
 .conts-key-visual.ty02 .text-area button {
   margin-top: 32px;
 }
-
 
 .about .history-box-wrap {
   padding-top: 160px;
@@ -217,12 +216,12 @@
   position: relative;
 }
 .history-box .history-list li .img-wrap .ico-video-play {
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform: translate(-50%,-50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 160px;
-  height:160px;
+  height: 160px;
   background: url(../../inc/images/icon/icon-play-video.svg);
   background-size: contain;
   cursor: pointer;
@@ -270,7 +269,7 @@
 .swiper-card-type .card_type01.bg-gray .card_tit,
 .swiper-card-type .card_type01.bg-gray .card_info,
 .swiper-card-type .card_type01.bg-gray .card_subtit {
-  color:#000;
+  color: #000;
 }
 
 /* intro-race-box */
@@ -305,7 +304,6 @@
   padding: 40px;
   background-color: #000;
   color: #fff;
-
 }
 
 .info-table-box .info-head .title {
@@ -372,7 +370,7 @@
 
 .info-car-box {
   padding-top: 240px;
-  padding-bottom:  240px;
+  padding-bottom: 240px;
 }
 
 .info-car-box .img-area {
@@ -440,8 +438,10 @@
   padding: 160px 0 200px;
 }
 
+.next-race-box .conts-head {
+}
 .next-race-box .conts-head .selectbox-wrap {
-  margin-right: 240px;
+  margin-right: 0;
 }
 .evtGuide {
   overflow: hidden;
@@ -453,7 +453,7 @@
   padding-bottom: 160px;
 }
 .subMain .content-item05 {
-  padding:0;
+  padding: 0;
 }
 .evtGuide .content-item06,
 .evtGuide .content-item09 {
@@ -637,10 +637,13 @@
 }
 
 @media screen and (max-width: 2168px) {
-  .next-race-box {
-    padding-left: 240px;
+  .next-race-box .conts-body {
+    max-width: 1440px;
+    margin: 0 auto;
+    /* padding-left: 240px; */
   }
   .next-race-box .conts-body .swiper-container {
+    width: calc((100vw - 1440px) / 2 + 1440px);
     margin: 0;
   }
   .next-race-box .swiper-card-type .swiper-button-prev {
@@ -711,7 +714,7 @@
     padding-top: 100px;
     padding-bottom: 160px;
   }
-  
+
   .evtGuide .content-item05 .tab-head,
   .evtGuide .content-item07 .tab-head {
     padding: 0 24px;
@@ -765,7 +768,7 @@
     bottom: 80px;
     color: #fff;
     padding: 0;
-    margin:0 24px;
+    margin: 0 24px;
   }
   .conts-key-visual.ty02 .text-area .desc {
     font-family: "Hyundai Sans Text";
@@ -878,6 +881,8 @@
   .intro-race-box {
     padding-top: 80px;
     padding-bottom: 100px;
+    padding-left: 24px;
+    padding-right: 24px;
   }
   .intro-race-box .tit {
     text-align: center;
@@ -959,8 +964,8 @@
     margin-top: 12px;
   }
   .info-car-box .wrap-list {
-    padding:0;
-  } 
+    padding: 0;
+  }
   .info-car-box .wrap-list .__bottom .wrap-lists {
     padding: 20px 0 !important;
   }

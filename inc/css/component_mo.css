@@ -1804,11 +1804,13 @@ min-width : 1024 css
   CM040101 (커뮤니티 가입 : 클럽 아이콘 클릭 시 N Community 레이어 노출)
   */
   /* club-popup */
-  .club-popup {
+  /* .club-popup {
     position: fixed;
     background: #fff;
     width: 100%;
-    z-index: 1001;
+    min-width: auto;
+    max-width: none;
+    z-index: 1003;
     top: auto;
     bottom: 0;
     left: 0;
@@ -1818,14 +1820,23 @@ min-width : 1024 css
   }
   .club-popup .popup-wrapper .popup-body .pop-gray {
     gap: 20px;
-  }
+  }*/
   .club-popup .popup-wrapper .popup-footer {
     position: static;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    padding: 24px;
+    margin-top: 0;
   }
-  .club-popup .popup-wrapper .popup-footer .btn-wrap {
+  /* .popup-wrapper .popup-footer {
+    padding: 16px 24px;
+    bottom: 0%;
+    position: fixed;
+    width: 100%;
+    z-index: 6;
+  } */
+  /* .club-popup .popup-wrapper .popup-footer .btn-wrap {
     flex: 0 0 auto;
-  }
+  } */
 }

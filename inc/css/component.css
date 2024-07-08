@@ -954,16 +954,17 @@ input[type="radio"]:focus + label {
 }
 
 /* contents-box */
-.content-area > section {
+/* .content-area > section {
   padding-left: 240px;
   padding-right: 240px;
-}
+} */
 
 .conts-box-wrap {
   display: flex;
   justify-content: center;
 }
-
+.bg-black .conts-box-wrap {
+}
 .conts-box-wrap.ty02 {
   flex-direction: column;
 }
@@ -1465,8 +1466,8 @@ input[type="radio"]:focus + label {
 }
 .card_type03 .card_bottom button,
 .card_type03 .card_bottom img {
-  width: auto;
-  height: 100%;
+  width: 140px;
+  height: 140px;
 }
 .card_type03 .card_bottom .card_detail {
   display: flex;
@@ -1956,18 +1957,18 @@ input[type="radio"]:focus + label {
 }
 
 .ty02Swiper .swiper-bottom-wrap {
-  width: calc(100% - (100% - 1196px));  
+  width: calc(100% - (100% - 1196px));
   bottom: revert;
-  top:40%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 10;
 }
 .ty02Swiper .swiper-bottom-wrap.ty02 {
-  top:50%;
+  top: 50%;
 }
 .ty02Swiper .swiper-bottom-wrap.ty03 {
-  top:0;
+  top: 0;
 }
 .swiper-status-wrap {
   display: flex;
@@ -5102,7 +5103,7 @@ input:checked + .slider:before {
   display: none;
 }
 .search-wrap .search-input-box.on .btn-group .btn-reset {
-  display : flex;
+  display: flex;
 }
 
 .search-wrap .search-input-box .btn-group .btn-txt {
@@ -5315,6 +5316,8 @@ input:checked + .slider:before {
   position: absolute;
   background: #fff;
   width: calc(100% - 62px);
+  max-width: 402px;
+  min-width: 300px;
   z-index: 1001;
   top: 60px;
   left: 16px;
@@ -5400,7 +5403,7 @@ input:checked + .slider:before {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  z-index: 99;  
+  z-index: 99;
 }
 .top-btn-area .btn {
   width: 60px;
@@ -5415,7 +5418,7 @@ input:checked + .slider:before {
   display: none;
 }
 .top-btn-area .btn::before {
-  content:'';
+  content: "";
   display: block;
   width: 16px;
   height: 16px;
