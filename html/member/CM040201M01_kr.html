@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name=" format-detection" content="telephone=no" />
-    <title>N브랜드 | CM040701M01</title>
-    <link
-      type="text/css"
-      rel="stylesheet"
-      href="../../inc/css/swiper.min.css"
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="initial-scale=1.0, minimum-scale=1.0, width=device-width, viewport-fit=cover"
     />
-    <link type="text/css" rel="stylesheet" href="../../inc/css/common.css" />
+    <title>CM040201M01-popup</title>
+
+    <script
+      type="text/javascript"
+      src="../../inc/js/jquery-3.7.1.slim.min.js"
+    ></script>
+    <script type="text/javascript" src="../../inc/js/swiper.min.js"></script>
+    <script type="text/javascript" src="../../inc/js/plugins.js"></script>
+    <script type="text/javascript" src="../../inc/js/com-ui.js"></script>
+    <script type="text/javascript" src="../../inc/js/pub-ui.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../inc/css/common.css" />
   </head>
 
   <body>
@@ -76,7 +81,7 @@
             aria-expanded="false"
             title="팝업오픈"
           >
-            CM040701M01 팝업 열기
+            팝업 열기
           </button>
         </div>
       </section>
@@ -97,65 +102,74 @@
         <!-- <p class="temp-header">Hub_Write a post ID : EP040201P02</p> -->
 
         <div class="popup-header">
-          <h3 class="tit-type03">N Community closure</h3>
+          <h3 class="tit-type04">알림 설정</h3>
         </div>
 
-        <div class="popup-body">
-          <div class="m40">
-            <p class="tit-type04 main-header">N Community closure notice</p>
+        <div class="popup-body for-switch">
+          <div class="popup-body-innerbox">
+            <div class="wrap-switch all">
+              <p>모든 알림</p>
 
-            <p class="tit-type04">
-              Please check the precautions when closing N Community.
-            </p>
-
-            <div class="wrap-notice-info m10">
-              <h3 class="tit-type05">N Community Missions Information</h3>
-              <div>
-                <div class="box-infotxt">
-                  <p class="txt-type03">1. Participate in Missions</p>
-                  <p class="txt-type03">
-                    - Missions that only the Master can participate in and that
-                    any member can participate in
-                  </p>
-                </div>
-                <div class="box-infotxt">
-                  <p class="txt-type03">2. Point payment</p>
-                  <p class="txt-type03">
-                    - Points earned by completing participation in N Community
-                    Missions are paid to the Master.
-                  </p>
-                  <p class="txt-type03">
-                    - Master uses and manages N Community Points separately from
-                    personal Points.
-                  </p>
-                </div>
-              </div>
+              <label class="switch">
+                <input type="checkbox" aria-label="스위치" />
+                <span class="slider round"></span>
+              </label>
             </div>
 
-            <div class="wrap-notice-info">
-              <h3 class="tit-type05">Reasons for application for closure</h3>
-              <div class="wrap-form textarea">
-                <div class="inner-textarea-comment">
-                  <textarea
-                    placeholder="* Please enter the reward information you wish to apply for. (OOO goods, size L, 1 piece, etc.) &#10; * Please enter your nickname, name, address, email, and mobile phone number."
-                  ></textarea>
-                </div>
-                <div class="wrap-form-bottom comment-type05">
-                  <p class="text-num-chk">
-                    <span>0 / 500</span>
-                  </p>
-                </div>
+            <div class="switch-to-select">
+              <div class="wrap-switch">
+                <p>포스트</p>
+
+                <label class="switch">
+                  <input type="checkbox" aria-label="스위치" />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+
+              <div class="wrap-switch">
+                <p>미션</p>
+
+                <label class="switch">
+                  <input type="checkbox" aria-label="스위치" />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+
+              <div class="wrap-switch">
+                <p>리워드</p>
+
+                <label class="switch">
+                  <input type="checkbox" aria-label="스위치" />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+
+              <div class="wrap-switch">
+                <p>N 커뮤니티 전체</p>
+
+                <label class="switch">
+                  <input type="checkbox" aria-label="스위치" />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+              <div class="wrap-switch">
+                <p>N 커뮤니티 회원 탈퇴</p>
+
+                <label class="switch">
+                  <input type="checkbox" aria-label="스위치" />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+
+              <div class="wrap-switch">
+                <p>포인트</p>
+
+                <label class="switch">
+                  <input type="checkbox" aria-label="스위치" />
+                  <span class="slider round"></span>
+                </label>
               </div>
             </div>
-          </div>
-        </div>
-
-        <div class="popup-footer">
-          <div class="btn-wrap">
-            <button type="button" class="btn btn-lg-primary01">
-              Request Closure
-              <span class="btn-icon20 icon-right-wh" aria-hidden="true"></span>
-            </button>
           </div>
         </div>
 
@@ -173,14 +187,5 @@
       </div>
     </div>
     <!-- //model-popup -->
-
-    <script
-      type="text/javascript"
-      src="../../inc/js/jquery-3.7.1.slim.min.js"
-    ></script>
-    <script type="text/javascript" src="../../inc/js/swiper.min.js"></script>
-    <script type="text/javascript" src="../../inc/js/plugins.js"></script>
-    <script type="text/javascript" src="../../inc/js/com-ui.js"></script>
-    <script type="text/javascript" src="../../inc/js/pub-ui.js"></script>
   </body>
 </html>
