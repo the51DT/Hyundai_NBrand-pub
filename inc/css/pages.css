@@ -114,6 +114,7 @@
   text-align: left;
 }
 .conts-key-visual.ty02 .text-area .desc {
+  padding-right: 1.5rem;
   text-align: left;
   font-family: "Hyundai Sans Head";
 }
@@ -394,9 +395,15 @@
 }
 .info-car-box .wrap-list .__bottom .wrap-lists {
   padding: 32px 0;
+  grid-template-columns: 25% 75%;
+  align-items: flex-start;
 }
 .info-car-box .text-area .wrap-list .inner .__bottom.list05 {
   margin: 0;
+}
+.info-car-box .wrap-list .__bottom .wrap-lists .list-box:nth-child(1),
+.info-car-box .wrap-list .__bottom .wrap-lists .list-box:nth-child(2) {
+  width: 100%;
 }
 .info-car-box .wrap-list .__bottom .wrap-lists .list-box:nth-child(1) p {
   font-weight: 500;
@@ -468,6 +475,8 @@
   padding-bottom: 160px;
   padding-left: 80px;
   padding-right: 80px;
+  margin: 0 auto;
+  max-width: 100rem;
 }
 
 .evtGuide .content-item05,
@@ -560,6 +569,10 @@
 
 .event-box .btn-area .btn-wrap.minus::after {
   background-image: url("../images/icon/icon-minus.svg");
+}
+
+.about .txt-list-wrap li {
+  width: 33.33%;
 }
 
 /* .evt-map-area li {
@@ -721,6 +734,24 @@
   .about .content-top {
     padding: 107px 24px;
   }
+  .about .conts-key-visual:not(.ty02) .img-area {
+    position: relative;
+    margin: 0 auto;
+    padding-top: calc((360 / 360) * 100%);
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+  .about .conts-key-visual:not(.ty02) .img-area img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    background-size: cover;
+  }
   .conts-key-visual.ty02 .text-area {
     position: absolute;
     left: 0;
@@ -731,6 +762,9 @@
   }
   .conts-key-visual.ty02 .text-area .desc {
     font-family: "Hyundai Sans Text";
+  }
+  .about .conts-key-visual .text-area .desc {
+    font-size: 20px;
   }
 
   .tit-btn-wrap .tit {
@@ -803,16 +837,31 @@
     padding-left: 46px !important;
   }
   .history-box .history-list li .img-wrap {
+    position: relative;
+    padding-top: calc((192 / 258) * 100%);
+    width: 100%;
+    height: 0;
     min-width: 258px;
-    height: 192px;
+    overflow: hidden;
   }
 
   .history-box .history-list li .img-wrap.small {
-    height: 146px;
+    padding-top: calc((146 / 258) * 100%);
+    height: 0;
   }
 
   .history-box .history-list li .img-wrap.big {
-    height: 459px;
+    padding-top: calc((459 / 258) * 100%);
+    height: 0;
+  }
+
+  .history-box .history-list li .img-wrap img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
   }
 
   .history-box .history-list li .img-wrap:not(:last-child) {
@@ -823,7 +872,7 @@
     padding-top: 80px;
     padding-bottom: 100px;
   }
-  .intro-race-box .conts-head .tit {
+  .intro-race-box .tit {
     text-align: center;
   }
 
@@ -991,6 +1040,10 @@
   .event-box .btn-area .btn-wrap::after {
     width: 28.8px;
     height: 28.8px;
+  }
+
+  .about .txt-list-wrap li {
+    width: auto;
   }
 
   /* .event-box .evt-map-wrap {
