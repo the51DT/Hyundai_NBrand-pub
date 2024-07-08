@@ -85,6 +85,8 @@ body:-webkit-scrollbar {
   top: 0;
   z-index: 1000;
   background-color: rgba(255, 255, 255, 1);
+  transition: all 0.2s;
+  opacity: 1;
 }
 .header-wrap.scroll-on {
   top: -70px;
@@ -307,9 +309,8 @@ body:-webkit-scrollbar {
   left: 0;
   line-height: 48px;
   border-bottom: 1px solid #bbbbbb;
-  opacity: 1;
 }
-.navigation_bar-wrap.scroll-ing {
+.header-wrap.scroll-ing {
   opacity: 0.8;
 }
 
