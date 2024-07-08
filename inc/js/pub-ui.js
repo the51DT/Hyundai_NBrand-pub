@@ -9,7 +9,7 @@ var pubUi = {
 
     if ($(".ty01Swiper") != undefined && $(".ty01Swiper").length > 0) {
       self.videoBulletChk(".ty01Swiper");
-    }
+    }    
   },
   settings: function () {
     var self = this;
@@ -1071,20 +1071,15 @@ function evtImgMapChk(options) {
 
   if (evtSelect.length > 1) {
     console.log("셀렉트 박스 2개");
-    switch ((option1, option2)) {
-      case ("A Paddock", "N Zone"):
-        evtMapImage.attr("src", "../../inc/images/content/car_model_img01.svg");
-        break;
-      case ("B Paddock", "N Experience Zone"):
-        evtMapImage.attr("src", "../../inc/images/content/event-map_img.svg");
-        break;
+    if(option1 == "A Paddock" && option2 == "N Zone") {
+      evtMapImage.attr("src", "../../inc/images/content/car_model_img01.svg");
+    } else if (option1 == "B Paddock" && option2 == "N Experience Zone") {
+      evtMapImage.attr("src", "../../inc/images/content/event-map_img.svg");
     }
   } else {
     console.log("셀렉트 박스 1개");
-    switch (option1) {
-      case "Motorsport Experience":
-        evtMapImage.attr("src", "../../inc/images/content/car_model_img01.svg");
-        break;
+    if (option1 == "Motorsport Experience") {
+      evtMapImage.attr("src", "../../inc/images/content/evt_map_yeongam_01-pc.png");
     }
   }
 }
