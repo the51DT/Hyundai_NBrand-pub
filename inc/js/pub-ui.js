@@ -342,10 +342,17 @@ var pubUi = {
       },
       breakpoints: {
         360: {
+          slidesPerView: "auto",
           spaceBetween: 12,
           slidesOffsetAfter: 24,
         },
         768: {
+          slidesPerView: "auto",
+          spaceBetween: 12,
+          slidesOffsetAfter: 24,
+        },
+        1200: {
+          slidesPerView: "auto",
           spaceBetween: 12,
           slidesOffsetAfter: 24,
         },

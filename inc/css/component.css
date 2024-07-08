@@ -2234,9 +2234,10 @@ input[type="radio"]:focus + label {
   left: 0;
 }
 .ty04Swiper .card_type01 .card_more::after {
-  width: 17px;
-  height: 17px;
-  mask-image: url("../images/icon/icon-arrow01_right_white.svg");
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/icon/icon-arrow01_right_white.svg");
+  background-position: top center;
 }
 .swiper-card-type {
   width: 100%;
