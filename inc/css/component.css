@@ -964,6 +964,8 @@ input[type="radio"]:focus + label {
   justify-content: center;
 }
 .bg-black .conts-box-wrap {
+  padding-top:160px;
+  padding-bottom: 160px;
 }
 .conts-box-wrap.ty02 {
   flex-direction: column;
