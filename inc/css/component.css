@@ -1884,10 +1884,6 @@ input[type="radio"]:focus + label {
   margin-right: 6px !important;
 }
 
-.swiper-slide a {
-  display: block;
-}
-
 .swiper-slide img {
   display: block;
   width: 100%;
@@ -2109,6 +2105,10 @@ input[type="radio"]:focus + label {
 
 .ty02Swiper {
   /* width: 100%; */
+}
+
+.ty02Swiper .swiper-slide a {
+  display: block;
 }
 
 .ty02Swiper .swiper-slide:last-child {
