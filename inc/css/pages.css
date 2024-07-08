@@ -660,6 +660,12 @@
     left: 80px;
   }
 }
+@media screen and (min-width:1800px) {
+  .n-race-box .event-box .conts-head {
+    padding-right: 0;
+  } 
+}
+
 @media screen and (max-width: 1800px) {
   .n-race-box .conts-head {
     /* margin-right: 60px; */
@@ -677,6 +683,7 @@
     padding-right: 80px;
   }
 }
+
 /* mobile */
 @media screen and (max-width: 1023px) {
   /* component : start */
@@ -1026,8 +1033,7 @@
 
   .track-guide-box .wrap-list.list03 .right {
     max-width: revert;
-  }
-
+  }  
   .event-box .btn-area {
     top: 24px;
     right: 16px;
@@ -1044,46 +1050,5 @@
 
   .about .txt-list-wrap li {
     width: auto;
-  }
-
-  /* .event-box .evt-map-wrap {
-    min-height: 600px;
-  }
-
-  .evt-map-area li:nth-child(1) {
-    top: 193px;
-    left: 60px;
-  }
-  .evt-map-area li:nth-child(2) {
-    top: 244px;
-    left: 620px;
-  }
-  .evt-map-area li:nth-child(3) {
-    top: 128px;
-    left: 60px;
-  }
-  .evt-map-area li:nth-child(4) {
-    top: 435px;
-    left: 680px;
-  }
-  .evt-map-area li:nth-child(5) {
-    top: 358px;
-    left: 30px;
-  }
-
-  .evt-map-area li button .num {
-    width: 40px;
-    height: 40px;
-    padding: 5px;
-  }
-
-  .evt-map-area li button .tit {
-    padding: 12px 16px;
-    font-size: 16px;
-    line-height: 16px;
-  }
-  .evt-map-area li button .tit .icon-right {
-    width: 16px;
-    height: 16px;
-  } */
+  }  
 }
