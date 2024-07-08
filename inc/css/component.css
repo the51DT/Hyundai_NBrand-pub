@@ -4024,6 +4024,7 @@ input[type="radio"]:focus + label {
     .small-category
     .tag-list.ty02 {
     flex-wrap: wrap;
+    row-gap: 8px;
   }
   .dropdown.centered
     .dropdown-menu
@@ -4315,19 +4316,6 @@ input[type="radio"]:focus + label {
     .wrap-inner-category
     .small-category {
     max-width: 100%;
-  }
-
-  .dropdown.centered
-    .dropdown-menu
-    li
-    .wrap-category
-    .wrap-inner-category
-    .small-category
-    .tag-list-wrap
-    [class^="tag-list"]
-    li
-    .tag-item {
-    white-space: pre-line;
   }
   .dropdown.centered .dropdown-menu ul.wrap-filter .wrap-forFilterScroll {
     overflow-y: visible;
