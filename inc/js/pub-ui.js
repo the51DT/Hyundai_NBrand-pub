@@ -152,9 +152,16 @@ var pubUi = {
     // 이벤트 레이아웃 마이너스 버튼 클릭시, 추 후 요건 확정 후 재작업 예정
     $(".event-box .btn-wrap.minus").click(function (e) {
       var options = [];
-      var option1 = $("#typeSelect01 .option-click.active").text();
-      var option2 = $("#typeSelect02 .option-click.active").text();
-      options.push(option1, option2);
+
+      var option1 = $(".list-content.active .evtLayout-type div").filter(":first-child").find(".option-click.active").text();
+      var option2 = $(".list-content.active .evtLayout-type div").filter(":last-child").find(".option-click.active").text();
+
+      if (option2 == "" || option2 == undefined) {
+        options.push(option1);
+      } else {
+        options.push(option1, option2);
+      }
+
       console.log(options);
 
       if (option1 != undefined && option2 != undefined) {
@@ -289,12 +296,7 @@ var pubUi = {
         },
       },
     });
-
-    // if ($(".ty02Swiper .swiper-slide").length > 3) {
-    //   loopVal = true;
-    // } else {
-    //   loopVal = false;
-    // }
+    
 
     swiper2SlideEvt(); //swiper2 이벤트 실행
 
@@ -875,12 +877,19 @@ $(document).ready(function () {
 // ty02Swiper swiper 이벤트 분리
 function swiper2SlideEvt() {
   // console.log("swiper2 이벤트 실행");
+
+  if ($(".ty02Swiper .swiper-slide").length > 3) {
+    loopVal = true;
+  } else {
+    loopVal = false;
+  }
+
   self.swiper2 = new Swiper(".ty02Swiper", {
     effect: "coverflow",
     grabCursor: true,
     centeredSlides: true,
     slidesPerView: "auto",
-    loop: "auto",
+    loop: loopVal,
     coverflowEffect: {
       rotate: 0, //각도
       // stretch: -80, //간격
@@ -905,15 +914,15 @@ function swiper2SlideEvt() {
       },
       768: {
         effect: "slide",
-        slidesPerView: 1.3,
+        slidesPerView: 1.2,
         spaceBetween: 12,
       },
       1023: {
-        effect: "coverflow",
-        slidesPerView: "auto",
+        effect: "slide",
+        slidesPerView: 1.2,
         spaceBetween: 12,
       },
-      1270: {
+      1269: {
         effect: "coverflow",
         slidesPerView: "auto",
         spaceBetween: 12,
@@ -1026,9 +1035,21 @@ function handleOptionClick(event) {
 
   if ($selectboxWrap.hasClass("evtLayout-type")) {
     var options = [];
-    var option1 = $("#typeSelect01 .option-click.active").text();
-    var option2 = $("#typeSelect02 .option-click.active").text();
-    options.push(option1, option2);
+    var option1 = $(".list-content.active .evtLayout-type div")
+      .filter(":first-child")
+      .find(".option-click.active")
+      .text();
+    var option2 = $(".list-content.active .evtLayout-type div")
+      .filter(":last-child")
+      .find(".option-click.active")
+      .text();
+
+    if (option2 == "" || option2 == undefined) {
+      options.push(option1);
+    } else {
+      options.push(option1, option2);
+    }
+
     console.log(options);
 
     if (option1 != undefined && option2 != undefined) {
@@ -1041,17 +1062,30 @@ function handleOptionClick(event) {
 // 추 후 이미지 교체 필요
 function evtImgMapChk(options) {
   var evtMapImage = $(".evt-map-wrap .evt-map-img img");
+  var swiperContentsActive = $(".section_list .list-content.active");
+  var evtSelect = swiperContentsActive.find(".evtLayout-type > div");
+
   console.log(evtMapImage);
   var option1 = options[0];
   var option2 = options[1];
 
-  switch ((option1, option2)) {
-    case ("A Paddock", "N Zone"):
-      evtMapImage.attr("src", "../../inc/images/content/car_model_img01.svg");
-      break;
-    case ("B Paddock", "N Experience Zone"):
-      evtMapImage.attr("src", "../../inc/images/content/event-map_img.svg");
-      break;
+  if (evtSelect.length > 1) {
+    console.log("셀렉트 박스 2개");
+    switch ((option1, option2)) {
+      case ("A Paddock", "N Zone"):
+        evtMapImage.attr("src", "../../inc/images/content/car_model_img01.svg");
+        break;
+      case ("B Paddock", "N Experience Zone"):
+        evtMapImage.attr("src", "../../inc/images/content/event-map_img.svg");
+        break;
+    }
+  } else {
+    console.log("셀렉트 박스 1개");
+    switch (option1) {
+      case "Motorsport Experience":
+        evtMapImage.attr("src", "../../inc/images/content/car_model_img01.svg");
+        break;
+    }
   }
 }
 
