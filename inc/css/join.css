@@ -139,7 +139,7 @@
   text-align: end;
 }
 /* 로그인 팝업 */
-.bottom-popup:has(.logout_popup_wrap) {
+.bottom-popup.logout_popup_wrap {
   padding: 2.5rem;
   width: fit-content;
   min-width: 25rem;
@@ -1136,7 +1136,7 @@
     margin-top: 20px;
   }
   /* 로그인 팝업 */
-  .bottom-popup:has(.logout_popup_wrap) {
+  .bottom-popup.logout_popup_wrap {
     padding: 2.5rem;
     width: 100%;
     min-width: 0;
@@ -1145,7 +1145,7 @@
   .logout_popup_wrap .logout_popup_text {
     margin-bottom: 9.88rem;
   }
-  .logout_popup_wrap:has(.btn-wrap-type2) .logout_popup_text {
+  .logout_popup_wrap.ty02 .logout_popup_text {
     font-size: 1rem;
   }
 

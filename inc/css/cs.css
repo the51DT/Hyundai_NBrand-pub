@@ -39,7 +39,7 @@
 }
 
 /* CM070102C01 */
-.popup:has(.inquiry_popup_wrap) {
+.popup.inquiry_popup_wrap {
   padding: 2.5rem;
   border-radius: 0.25rem;
 }

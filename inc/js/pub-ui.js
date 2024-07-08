@@ -153,8 +153,14 @@ var pubUi = {
     $(".event-box .btn-wrap.minus").click(function (e) {
       var options = [];
 
-      var option1 = $(".list-content.active .evtLayout-type div").filter(":first-child").find(".option-click.active").text();
-      var option2 = $(".list-content.active .evtLayout-type div").filter(":last-child").find(".option-click.active").text();
+      var option1 = $(".list-content.active .evtLayout-type div")
+        .filter(":first-child")
+        .find(".option-click.active")
+        .text();
+      var option2 = $(".list-content.active .evtLayout-type div")
+        .filter(":last-child")
+        .find(".option-click.active")
+        .text();
 
       if (option2 == "" || option2 == undefined) {
         options.push(option1);
@@ -296,7 +302,6 @@ var pubUi = {
         },
       },
     });
-    
 
     swiper2SlideEvt(); //swiper2 이벤트 실행
 
@@ -794,7 +799,7 @@ var pubUi = {
       $("body").animate({ scrollTop: offsetTopVal }, 300);
     });
   },
-  listContsActive: function(target) {
+  listContsActive: function (target) {
     console.log("타겟테스트");
     var swiperDataCont = target.data("content");
     var swiperContents = $(".section_list .list-content");
@@ -812,11 +817,11 @@ var pubUi = {
       }
     }
 
-    if(!swiperContents.hasClass("active")) {
+    if (!swiperContents.hasClass("active")) {
       alert("Comming soon !");
       target.removeClass("active");
     }
-  }
+  },
 };
 
 $(document).ready(function () {
@@ -967,7 +972,7 @@ function handleSelectboxClick(event) {
   $trigger.toggleClass("active").attr("aria-expanded", function () {
     return $(this).hasClass("active") ? "true" : "false";
   });
-  
+
   if ($trigger[0].classList.contains("selectbox-left")) {
     $options.css({ left: "0" });
   } else {
@@ -1935,42 +1940,61 @@ function scrollEvent() {
   var scrollWrap = $("body"),
     sectionItem = [],
     headerNavHeight = $(".navigation_bar-wrap").height();
-
+  let scrollPrev = 0,
+    scrollTop = 1;
   scrollWrap.find(".content-area > [class*=content-item]").each(function (e) {
     ($this = $(this)),
       (sectionItem[e] = $this.position().top - headerNavHeight);
 
-    scrollWrap.on("scroll", function () {
+    scrollWrap.scroll(function () {
+      // alert('d')
       var thisScrArea = $(this),
         scrItem = thisScrArea.find(".content-area > [class*=content-item]"),
         nowScroll = thisScrArea.scrollTop(),
         sectionLength = scrItem.length;
 
       let scrollY = (
-        ($("body").scrollTop() / ($(".wrap").height() - $("body").height())) *
+        (scrollWrap.scrollTop() / ($(".wrap").height() - scrollWrap.height())) *
         100
       ).toFixed(3);
-      let scrollTop = $("body").scrollTop();
+      scrollTop = scrollWrap.scrollTop();
 
       var contentItem = document.querySelectorAll(
         ".content-area > [class*=content-item]"
       );
 
-      // console.log("스크롤 좌표값 체크 - scrollTop : ", scrollTop + " scrollY % 값 : ", scrollY + "%");
+      // console.log(
+      //   "스크롤 좌표값 체크 - scrollTop : ",
+      //   scrollTop + " scrollY % 값 : ",
+      //   scrollY + "%"
+      // );
+
+      console.log(scrollTop, scrollPrev);
 
       if (scrollTop > 0) {
         $(".navigation_bar-wrap .gage").addClass("on");
-        $(".header-wrap").addClass("scroll-on");
+        // $(".header-wrap").addClass("scroll-on");
         $("#topBtn").fadeIn("slow");
         $("#topBtn").css("display", "flex");
+        if (scrollTop >= scrollPrev) {
+          // 스크롤 위치 증가
+          $(".header-wrap").addClass("scroll-on");
+          console.log(scrollTop, scrollPrev);
+        } else {
+          // 스크롤 위치 감소
+          $(".header-wrap").removeClass("scroll-on");
+        }
+        setTimeout(function () {
+          scrollPrev = scrollTop;
+        }, 10);
       } else {
         $(".navigation_bar-wrap .gage").removeClass("on");
-        $(".header-wrap").removeClass("scroll-on");
+        // $(".header-wrap").removeClass("scroll-on");
         $("#topBtn").fadeOut("slow");
         $("#topBtn").css("display", "none");
       }
 
-      $(".navigation_bar-wrap").addClass("scroll-ing");
+      $(".header-wrap").addClass("scroll-ing");
       $(".navigation_bar-wrap .gage.on").css("--bar", `${scrollY}%`);
 
       contentItem.forEach((evt, idx) => {
@@ -1999,17 +2023,18 @@ $.fn.scrollStopped = function (callback) {
     $this = $(that);
   $this.scroll(function (ev) {
     clearTimeout($this.data("scrollTimeout"));
-    $this.data("scrollTimeout", setTimeout(callback.bind(that), 10, ev));
+    $this.data("scrollTimeout", setTimeout(callback.bind(that), 100, ev));
   });
 };
 $("body").scrollStopped(function (ev) {
   // console.log(ev);
   // console.log("스크롤끝");
-  $(".navigation_bar-wrap").removeClass("scroll-ing");
+  $(".header-wrap").removeClass("scroll-ing");
 });
 
 window.onload = function () {
-  setTimeout(function () {
-    scrollEvent();
-  }, 1000);
+  scrollEvent();
+  // setTimeout(function () {
+  //   scrollEvent();
+  // }, 1000);
 };
