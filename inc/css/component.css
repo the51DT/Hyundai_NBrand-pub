@@ -692,16 +692,16 @@ input[type="radio"]:focus + label {
   mask-position: center;
   mask-size: contain;
 }
-.icon-reset-gray {
-  background: url(../../inc/images/icon/icon-reset_gray.svg);
+.icon-change-gray {
+  background: url(../../inc/images/icon/icon-change_gray.svg);
   background-size: contain;
 }
-.btn:hover [class*="icon-reset-gray"],
-.btn:active [class*="icon-reset-gray"] {
+.btn:hover [class*="icon-change-gray"],
+.btn:active [class*="icon-change-gray"] {
   /* 빨간색 icon 없어서 css로 임시 */
   background-image: none;
   background-color: #de3111;
-  mask-image: url("../../inc/images/icon/icon-reset_gray.svg");
+  mask-image: url("../../inc/images/icon/icon-change_gray.svg");
   mask-position: center;
   mask-size: contain;
 }
@@ -967,6 +967,25 @@ input[type="radio"]:focus + label {
 .conts-box-wrap.ty02 {
   flex-direction: column;
 }
+.conts-box-wrap.ty03 {
+  position: relative;
+  margin: 0 auto;
+  padding-top: calc((810 / 1440) * 100%);
+  width: 100%;
+  max-width: 1440px;
+  max-height: 810px;
+  overflow: hidden;
+}
+.conts-box-wrap.ty03 .bg-img-wrap {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  background-size: cover;
+}
 
 .conts-box-wrap article {
   padding: 80px 0;
@@ -1146,7 +1165,7 @@ input[type="radio"]:focus + label {
   transform: translateX(-50%);
   display: flex;
   justify-content: center;
-  align-items: end;
+  align-items: flex-end;
   width: 100%;
   height: 100%;
   /* background-image: url("../images/N_Festival/driver/bg_driver-464x478.png"); */
@@ -1293,11 +1312,9 @@ input[type="radio"]:focus + label {
   display: block;
   width: 1.5rem;
   height: 1.5rem;
-  /* 아이콘 없어서 임시 */
-  background-color: #fff;
-  mask-image: url("../images/icon/icon-arrow02_right.svg");
-  mask-position: center;
-  mask-size: contain;
+  background-image: url("../images/icon/icon-arrow02_right-wh.svg");
+  background-position: center;
+  background-size: contain;
 }
 
 .grid_mo_drop .card_type01 {
@@ -1720,16 +1737,26 @@ input[type="radio"]:focus + label {
   height: 100%;
 }
 .grid_2 .card_type05 .card_top {
+  position: relative;
+  padding-top: calc((472 / 708) * 100%);
   width: 100%;
   height: auto;
-  aspect-ratio: 708 / 472;
+  overflow: hidden;
+  /* aspect-ratio: 708 / 472; */
 }
 .grid_3 .card_type05 .card_top {
+  position: relative;
+  padding-top: calc((348 / 464) * 100%);
   width: 100%;
   height: auto;
-  aspect-ratio: 464 / 348;
+  overflow: hidden;
+  /* aspect-ratio: 464 / 348; */
 }
 .card_type05 .card_top img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -2660,6 +2687,12 @@ input[type="radio"]:focus + label {
   flex: 1;
   justify-content: space-between;
   padding: 2.5rem 0;
+}
+.wrap-list.list04 .box.wrap-multi-box {
+  padding: 0;
+}
+.wrap-list.list04 .box.wrap-multi-box +.box.wrap-multi-box {
+  margin-top: 32px;
 }
 .wrap-list.list04 .inner .box.box01 {
   border-bottom: 1px solid #bbb;
@@ -5255,7 +5288,7 @@ input:checked + .slider:before {
   font-weight: 700;
   color: #777;
   line-height: 28px;
-  padding: 0 14px;
+  /* padding: 0 14px; */
 }
 .page_wrap .page_list button:hover {
   color: #000;

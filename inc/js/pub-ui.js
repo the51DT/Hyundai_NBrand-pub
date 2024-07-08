@@ -951,8 +951,12 @@ function handleSelectboxClick(event) {
   $trigger.toggleClass("active").attr("aria-expanded", function () {
     return $(this).hasClass("active") ? "true" : "false";
   });
-
-  $options.css({ right: "0" });
+  
+  if ($trigger[0].classList.contains("selectbox-left")) {
+    $options.css({ left: "0" });
+  } else {
+    $options.css({ right: "0" });
+  }
 
   $(window)
     .resize(function () {

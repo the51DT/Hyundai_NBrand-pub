@@ -114,7 +114,7 @@ label {
 }
 legend,
 caption {
-  position: absolute;
+  /* position: absolute; */
   height: 0;
   overflow: hidden;
 }

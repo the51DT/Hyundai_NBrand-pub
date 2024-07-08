@@ -381,6 +381,9 @@
   background-image: url(../images/icon/icon-reset.svg);
   background-size: contain;
 }
+.configurator_price .btn:hover .btn-icon36 {
+  background-image: url(../images/icon/icon-reset_active.svg);
+}
 .configurator_price_wrap .btn-wrap {
   display: flex;
   column-gap: 0.5rem;

@@ -245,6 +245,15 @@ min-width : 1024 css
     padding-right: 24px;
   }
 
+  .conts-box-wrap.ty03 {
+    padding-top: 0;
+  }
+  .conts-box-wrap.ty03 .bg-img-wrap {
+    position: static;
+    transform: translate(0,0);
+    min-height: 509px;
+  }
+
   .conts-box-wrap article {
     padding: 60px 0;
   }
@@ -395,7 +404,8 @@ min-width : 1024 css
     height: 8.6875rem;
   }
   .card_type01.card_swiper .card_bottom {
-    height: 3.88rem;
+    padding: 1.16rem 1.25rem;
+    height: 5.38rem;
   }
   .card_type01 .card_tit {
     margin-bottom: 0;
@@ -418,7 +428,7 @@ min-width : 1024 css
     padding-right: 0;
   }
   .card_type01 .card_detail li + li {
-    border-left: 0.0625rem solid #e6eff8;
+    border-left: 0.0625rem solid rgb(230, 239, 248, 0.3);
   }
   .card_type01 .card_detail li span:first-of-type {
     font-size: 0.75rem;
@@ -1363,6 +1373,7 @@ min-width : 1024 css
   .seasonstats-box .skyblue-box {
     padding: 0;
     gap: 0;
+    border-top: 1px solid #787D80;
   }
   .seasonstats-box dl.blue-box > div {
     min-width: auto;
@@ -1403,7 +1414,7 @@ min-width : 1024 css
     padding: 20px 20px 12px 25.5px;
   }
   .seasonstats-box dl > div:not(:nth-child(5), :nth-child(6)) {
-    border-bottom: 1px solid #787d80;
+    border-bottom: 1px solid #D9D9D9;
   }
   .seasonstats-box.seasonstats-type2 p {
     background-color: #000;
@@ -1453,7 +1464,7 @@ min-width : 1024 css
   }
 
   .ty01Swiper .swiper-slide .btn-wrap .btn:not(:last-child) {
-    margin-right: 12px;
+    margin-right: 8px;
   }
 
   .ty01Swiper .swiper-bottom-wrap {

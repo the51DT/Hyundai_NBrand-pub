@@ -2183,7 +2183,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   .content-top {
     padding: 107px 24px;
   }
-  .content-top p:last-child {
+  .content-top p:last-of-type {
     font-size: 20px;
     line-height: 28px;
   }
