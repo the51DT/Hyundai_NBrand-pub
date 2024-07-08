@@ -12,8 +12,8 @@
   top: 0;
   flex-shrink: 0;
   width: 100%;
-  background-color: #FFF;
-  border-bottom: 1px solid #D9D9D9;
+  background-color: #fff;
+  border-bottom: 1px solid #d9d9d9;
   z-index: 4;
 }
 .configurator_header {
@@ -63,20 +63,20 @@
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 0.5rem;
-  background-color: #ABB2B5;
+  background-color: #abb2b5;
   font-size: 0.875rem;
   font-weight: 700;
   line-height: 140%;
-  color: #FFF;
+  color: #fff;
 }
 .configurator_header_menu:hover .configurator_header_menu_step {
-  background-color: #DE3111;
+  background-color: #de3111;
 }
 .configurator_header_menu.on .configurator_header_menu_step {
   width: 1.25rem;
   height: 1.25rem;
   border-radius: 1.25rem;
-  background-color: #DE3111;
+  background-color: #de3111;
 }
 .configurator_header_menu.on .visually-hidden {
   position: static;
@@ -106,18 +106,21 @@
   font-size: 3.5rem;
   font-weight: 700;
   line-height: 125%;
-  color: #FFF;
+  color: #fff;
   z-index: 2;
 }
-.configurator_area:has(.configurator_menu_exterior.on) .configurator_con_tit.tit_exterior,
-.configurator_area:has(.configurator_menu_interior.on) .configurator_con_tit.tit_interior,
-.configurator_area:has(.configurator_menu_summary.on) .configurator_con_tit.tit_summary {
+.configurator_area:has(.configurator_menu_exterior.on)
+  .configurator_con_tit.tit_exterior,
+.configurator_area:has(.configurator_menu_interior.on)
+  .configurator_con_tit.tit_interior,
+.configurator_area:has(.configurator_menu_summary.on)
+  .configurator_con_tit.tit_summary {
   display: block;
 }
 .configurator_swiper_wrap {
   width: 100%;
   height: 100%;
-  background: linear-gradient(180deg, #060916 30%, #374B55 100%);
+  background: linear-gradient(180deg, #060916 30%, #374b55 100%);
   z-index: 3;
 }
 .configurator_swiper_wrap .swiper-container {
@@ -137,7 +140,7 @@
   width: 100%;
   font-family: "Hyundai Sans Head";
   text-align: center;
-  color: #FFF;
+  color: #fff;
   opacity: 0;
   z-index: 1;
 }
@@ -176,7 +179,7 @@
   display: flex;
   justify-content: center;
   gap: 3.5rem;
-  color: #FFF;
+  color: #fff;
   text-align: center;
 }
 .configurator_list_swiper .configurator_num {
@@ -256,22 +259,21 @@
 .configurator_con_flex .configurator_swiper_wrap {
   width: calc(100% - 30.875rem);
   height: calc(100vh - 4.375rem);
-  background: #FFF;
+  background: #fff;
 }
-.configurator_con_flex
-.configurator_swiper {
+.configurator_con_flex .configurator_swiper {
   height: 100%;
 }
 .configurator_swiper .swiper-status-wrap {
   bottom: 3.12rem;
 }
 .configurator_swiper .swiper-pagination-bullet {
-  background-color: #FFF;
+  background-color: #fff;
   opacity: 0.5;
 }
 .configurator_swiper .swiper-pagination-bullet-active {
   width: 5rem;
-  background-color: #DE3111;
+  background-color: #de3111;
   opacity: 1;
 }
 .configurator_swiper .swiper-slide {
@@ -340,7 +342,7 @@
   position: relative;
   width: 30.875rem;
   flex-shrink: 0;
-  background-color: #FFF;
+  background-color: #fff;
 }
 .configurator_price_wrap {
   position: absolute;
@@ -348,8 +350,8 @@
   padding: 1.75rem 2.75rem 2rem;
   width: 100%;
   height: 13.625rem;
-  background: #FFF;
-  box-shadow: 0px -2px 12px 0px rgba(0, 0, 0, 0.20);
+  background: #fff;
+  box-shadow: 0px -2px 12px 0px rgba(0, 0, 0, 0.2);
   z-index: 2;
 }
 .configurator_price {
@@ -407,13 +409,13 @@
   align-items: center;
   width: 2.5rem;
   height: 2.5rem;
-  background-color: #DE3111;
+  background-color: #de3111;
   font-family: "Hyundai Sans Head";
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 140%;
   text-align: center;
-  color: #FFF;
+  color: #fff;
 }
 
 /* 아코디언 */
@@ -427,7 +429,7 @@
   padding-bottom: 0;
 }
 .configurator_select_wrap .dropdown + .dropdown {
-  border-top: 1px solid #BBBBBB;
+  border-top: 1px solid #bbbbbb;
 }
 .configurator_select_wrap .dropdown-btn {
   display: flex;
@@ -448,7 +450,9 @@
 .configurator_select_wrap .dropdown-menu {
   margin-top: 1.5rem;
 }
-.configurator_select_wrap .dropdown-menu li:not(.dropdown-menu .moclose-btn, .dropdown-menu .option) {
+.configurator_select_wrap
+  .dropdown-menu
+  li:not(.dropdown-menu .moclose-btn, .dropdown-menu .option) {
   position: relative;
   display: flex;
   align-items: center;
@@ -478,7 +482,7 @@
   align-items: center;
   width: 100%;
   border-radius: 0.25rem;
-  outline: 1px solid #D9D9D9;
+  outline: 1px solid #d9d9d9;
 }
 .configurator_label_radio:hover {
   outline: 1px solid #000;
@@ -495,7 +499,9 @@
 .configurator_label_radio .configurator_label_price {
   margin-top: 0.75rem;
 }
-.configurator_select_wrap input[type="radio"]:checked + .configurator_label_radio {
+.configurator_select_wrap
+  input[type="checkbox"]:checked
+  + .configurator_label_radio {
   outline: 2px solid #000000;
 }
 .configurator_label_checkbox {
@@ -525,7 +531,7 @@
   padding: 0 0.25rem;
 }
 .configurator_label_checkbox .configurator_label_tit::after {
-  content: '';
+  content: "";
   position: absolute;
   right: 0;
   top: 0;
@@ -536,7 +542,10 @@
   background-size: contain;
   background-position: center;
 }
-.configurator_select_wrap input[type="checkbox"]:checked + .configurator_label_checkbox .configurator_label_tit::after {
+.configurator_select_wrap
+  input[type="checkbox"]:checked
+  + .configurator_label_checkbox
+  .configurator_label_tit::after {
   background-image: url(../images/icon/icon-checkbox-checked.svg);
 }
 
@@ -548,10 +557,14 @@
   height: calc(100vh - 4.3125rem);
   overflow-y: scroll;
 }
-.configurator_area.IONIQ:has(.configurator_menu_exterior.on) .configurator_select_exterior.IONIQ,
-.configurator_area.ELANTRA:has(.configurator_menu_exterior.on) .configurator_select_exterior.ELANTRA,
-.configurator_area.IONIQ:has(.configurator_menu_interior.on) .configurator_select_interior.IONIQ,
-.configurator_area.ELANTRA:has(.configurator_menu_interior.on) .configurator_select_interior.ELANTRA {
+.configurator_area.IONIQ:has(.configurator_menu_exterior.on)
+  .configurator_select_exterior.IONIQ,
+.configurator_area.ELANTRA:has(.configurator_menu_exterior.on)
+  .configurator_select_exterior.ELANTRA,
+.configurator_area.IONIQ:has(.configurator_menu_interior.on)
+  .configurator_select_interior.IONIQ,
+.configurator_area.ELANTRA:has(.configurator_menu_interior.on)
+  .configurator_select_interior.ELANTRA {
   display: block;
 }
 
@@ -567,19 +580,21 @@
   font-size: 1rem;
   font-weight: 500;
   line-height: 140%;
-  color: #FFF;
+  color: #fff;
   z-index: 1;
 }
 .configurator_scroll_tooltip .btn-icon24 {
   background-image: url(../images/icon/icon-scroll.svg);
 }
-.configurator_area:has(.configurator_menu_summary.on) .configurator_scroll_tooltip {
+.configurator_area:has(.configurator_menu_summary.on)
+  .configurator_scroll_tooltip {
   display: flex;
 }
 .configurator_area:has(.configurator_menu_summary.on) .configurator_con_flex {
   flex-direction: column;
 }
-.configurator_area:has(.configurator_menu_summary.on) .configurator_swiper_wrap {
+.configurator_area:has(.configurator_menu_summary.on)
+  .configurator_swiper_wrap {
   width: 100%;
 }
 .configurator_area:has(.configurator_menu_summary.on) .configurator_price_wrap {
@@ -588,15 +603,19 @@
   width: 100vw;
   height: 8.125rem;
 }
-.configurator_area:has(.configurator_menu_summary.on) .configurator_select_total_wrap {
+.configurator_area:has(.configurator_menu_summary.on)
+  .configurator_select_total_wrap {
   display: flex;
   align-items: center;
   column-gap: 0.75rem;
 }
-.configurator_area:has(.configurator_menu_summary.on) .configurator_price_wrap .btn-wrap {
+.configurator_area:has(.configurator_menu_summary.on)
+  .configurator_price_wrap
+  .btn-wrap {
   display: none;
 }
-.configurator_area:has(.configurator_menu_summary.on) .configurator_price_summary {
+.configurator_area:has(.configurator_menu_summary.on)
+  .configurator_price_summary {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -620,10 +639,12 @@
   line-height: 140%;
   color: #000000;
 }
-.configurator_area:has(.configurator_menu_summary.on) .configurator_price_total {
+.configurator_area:has(.configurator_menu_summary.on)
+  .configurator_price_total {
   margin-top: 0;
 }
-.configurator_area:has(.configurator_menu_summary.on) .configurator_select_wrap {
+.configurator_area:has(.configurator_menu_summary.on)
+  .configurator_select_wrap {
   width: 100%;
 }
 .configurator_select_summary {
@@ -633,8 +654,10 @@
   width: 100%;
   max-width: 60rem;
 }
-.configurator_area.IONIQ:has(.configurator_menu_summary.on) .configurator_select_summary.IONIQ,
-.configurator_area.ELANTRA:has(.configurator_menu_summary.on) .configurator_select_summary.ELANTRA {
+.configurator_area.IONIQ:has(.configurator_menu_summary.on)
+  .configurator_select_summary.IONIQ,
+.configurator_area.ELANTRA:has(.configurator_menu_summary.on)
+  .configurator_select_summary.ELANTRA {
   display: block;
 }
 .configurator_summary_tit {
@@ -645,8 +668,8 @@
 }
 .configurator_summary_list {
   margin: 1.5rem 0 3.75rem;
-  border-top: 2px solid #787D80;
-  border-bottom: 1px solid #BBBBBB;
+  border-top: 2px solid #787d80;
+  border-bottom: 1px solid #bbbbbb;
 }
 .configurator_summary_list li {
   display: flex;
@@ -655,7 +678,7 @@
   padding: 1.25rem 0.75rem 1.75rem;
 }
 .configurator_summary_list li + li {
-  border-top: 1px solid #BBBBBB;
+  border-top: 1px solid #bbbbbb;
 }
 .configurator_summary_list_top {
   display: flex;
@@ -678,7 +701,7 @@
   font-size: 1rem;
   font-weight: 500;
   line-height: 140%;
-  color: #DE3111;
+  color: #de3111;
 }
 .configurator_summary_list_bottom {
   display: flex;
@@ -756,7 +779,7 @@
   .configurator_list_swiper {
     position: relative;
     height: 100%;
-    background: linear-gradient(180deg, #060916 30%, #374B55 100%);
+    background: linear-gradient(180deg, #060916 30%, #374b55 100%);
   }
   .configurator_list_swiper .swiper-slide {
     width: 100%;
@@ -768,7 +791,7 @@
     width: 100%;
     font-family: "Hyundai Sans Head";
     text-align: center;
-    color: #FFF;
+    color: #fff;
     opacity: 0;
   }
   .configurator_list_swiper .configurator_tit {
@@ -913,18 +936,22 @@
   }
 
   /* step summary */
-  .configurator_area:has(.configurator_menu_summary.on) .configurator_scroll_tooltip {
+  .configurator_area:has(.configurator_menu_summary.on)
+    .configurator_scroll_tooltip {
     display: none;
   }
-  .configurator_area:has(.configurator_menu_summary.on) .configurator_price_wrap {
+  .configurator_area:has(.configurator_menu_summary.on)
+    .configurator_price_wrap {
     padding: 1.87rem 1.5rem 1.75rem;
     height: 10.25rem;
   }
-  .configurator_area:has(.configurator_menu_summary.on) .configurator_select_total_wrap {
+  .configurator_area:has(.configurator_menu_summary.on)
+    .configurator_select_total_wrap {
     justify-content: space-between;
     width: 100%;
   }
-  .configurator_area:has(.configurator_menu_summary.on) .configurator_price_summary {
+  .configurator_area:has(.configurator_menu_summary.on)
+    .configurator_price_summary {
     flex-direction: column;
     row-gap: 1rem;
   }
@@ -935,7 +962,9 @@
     padding-left: 0.25rem;
     width: 100%;
   }
-  .configurator_area:has(.configurator_menu_summary.on) .configurator_price div {
+  .configurator_area:has(.configurator_menu_summary.on)
+    .configurator_price
+    div {
     justify-content: end;
     column-gap: 0.5rem;
   }
