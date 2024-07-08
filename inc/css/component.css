@@ -1782,8 +1782,8 @@ input[type="radio"]:focus + label {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 15rem;
-  height: 15rem;
+  width: 115px !important;
+  height: 115px !important;
   background-image: url("../../inc/images/icon/icon-play-video.svg");
   background-position: center;
   background-repeat: no-repeat;
@@ -2097,8 +2097,8 @@ input[type="radio"]:focus + label {
 .ty02Swiper .swiper-slide .img-ico {
   display: block;
   content: "";
-  width: 240px;
-  height: 240px;
+  width: 138px;
+  height: 138px;
   position: absolute;
   top: 40%;
   left: 50%;
