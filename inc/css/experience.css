@@ -2207,6 +2207,10 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   margin-top: 24px;
 }
 
+.break-no-pc-only {
+  display: none;
+}
+
 /* 모바일 */
 @media screen and (max-width: 1023px) {
   /* Experience  common */
@@ -3569,5 +3573,11 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   }
   .qrcode-box-wrap .conts-box .img-wrap {
     margin: 28px auto 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .break-no-pc-only {
+    display: block;
   }
 }
