@@ -116,7 +116,7 @@
                       <!-- active 케이스 -->
                       <div class="swiper-slide item active" data-content="1">
                         <!-- active 클래스 추가 -->
-                        <a role="button" class="card_type01 bg-blue">
+                        <a role="button" class="card_type01 bg-blue" onclick="pubUi.listContsActive(this);">
                           <div class="card_cover">
                             <img src="../../inc/images/img/img_card-content.svg" alt="N CUP">
                           </div>
@@ -133,7 +133,7 @@
                         </a>
                       </div>
                       <div class="swiper-slide item" data-content="2">
-                        <a role="button" class="card_type01 bg-blue">
+                        <a role="button" class="card_type01 bg-blue" onclick="pubUi.listContsActive(this);">
                           <div class="card_cover">
                             <img src="../../inc/images/img/img_card-content.svg" alt="N CUP">
                           </div>
@@ -951,7 +951,7 @@
                     </div>
                   </section>
                 </div> <!-- //conts01-->
-                <div class="list-content conts02" data-content="2">
+                <div class="list-content conts01" data-content="2">
                   <div class="n-race-box-conts content-item03">
                     <h2 class="title-w1440 contitle-type01 fw-type03">
                       N CUP Round 2
@@ -960,8 +960,8 @@
                       <div class="bg-img-wrap" style="
                             background-image: url('../../inc/images/content/conts-nrace_img01.svg');
                           ">
-                        <h3 class="tit">2024 Hyundai N Festival<br />N Cup Round 2</h3>
-                        <p class="desc">05.11(Sat) - 05.12(Sun)<br />Yongin Everland Speedium</p>
+                        <h3 class="tit">2024 Hyundai N Festival<br />N Cup Round 1</h3>
+                        <p class="desc">04.27(Sat) - 04.28(Sun)<br />Inje Speedium</p>
                         <a href="" target="_blank" class="more_btn btn btn-md-primary02">
                           Tickets
                           <span class="btn-icon16 icon-right" aria-hidden="true"></span>
@@ -1050,15 +1050,15 @@
                             <div class="tabs-wrap">
                               <ul class="tabs ty-black" data-contents="탭카테고리">
                                 <li class="on">
-                                  <a href="javascript:;" aria-controls="tab1-0111" role="tab" aria-selected="true">Saturday</a>
+                                  <a href="javascript:;" aria-controls="tab1-011" role="tab" aria-selected="true">Saturday</a>
                                 </li>
                                 <li>
-                                  <a href="javascript:;" aria-controls="tab1-0211" role="tab" aria-selected="false"> Sunday </a>
+                                  <a href="javascript:;" aria-controls="tab1-021" role="tab" aria-selected="false"> Sunday </a>
                                 </li>
                               </ul>
                             </div>
                           </div>
-                          <div class="tab-content on" id="tab1-0111" role="tabpanel">
+                          <div class="tab-content on" id="tab1-011" role="tabpanel">
                             <div class="__bottom">
                               <div class="wrap-lists">
                                 <div class="list-box">
@@ -1182,7 +1182,7 @@
                               </div>
                             </div>
                           </div>
-                          <div class="tab-content" id="tab1-0211" role="tabpanel"></div>
+                          <div class="tab-content" id="tab1-021" role="tabpanel"></div>
                           <button type="button" class="btn btn-md-outline01">
                             View More
                             <span class="btn-icon16 icon-down" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16"
@@ -1204,29 +1204,15 @@
                         <h2 class="tit contitle-type01 fw-type03">Event Layout</h2>
                         <div class="selectbox-wrap select-type02 evtLayout-type">
                           <div>
-                              <button class="selectbox-trigger selectbox-js txt-type03 fw-type03" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="typeSelect01">A Paddock</button>
-                              <ul class="selectbox-options 02" role="listbox" id="typeSelect01" aria-hidden="true" style="display: none">
+                              <button class="selectbox-trigger selectbox-js txt-type03 fw-type03" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="typeSelect03">Motorsport Experience</button>
+                              <ul class="selectbox-options 02" role="listbox" id="typeSelect03" aria-hidden="true" style="display: none">
                               <li class="moclose-btn" style="display: none">
                                   <button type="button" class="btn btn-only-icon" title="close">
                                     <span class="visually-hidden">close</span>
                                   <span class="btn-icon24 icon-close" aria-hidden="true"></span>
                                 </button>
                               </li>
-                              <li class="option option-click fw-type03 active" role="option" aria-selected="true">A Paddock</li>
-                              <li class="option option-click fw-type03" role="option">B Paddock</li>
-                            </ul>
-                          </div>
-                          <div>
-                              <button class="selectbox-trigger selectbox-js txt-type03 fw-type03" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="typeSelect02">N Zone</button>
-                              <ul class="selectbox-options 02" role="listbox" id="typeSelect02" aria-hidden="true" style="display: none">
-                              <li class="moclose-btn" style="display: none">
-                                  <button type="button" class="btn btn-only-icon" title="close">
-                                    <span class="visually-hidden">close</span>
-                                  <span class="btn-icon24 icon-close" aria-hidden="true"></span>
-                                </button>
-                              </li>
-                              <li class="option option-click fw-type03 active" role="option" aria-selected="true">N Zone</li>
-                              <li class="option option-click fw-type03" role="option">N Experience Zone</li>
+                              <li class="option option-click fw-type03 active" role="option" aria-selected="true">Motorsport Experience</li>
                             </ul>
                           </div>
                         </div>
@@ -1320,15 +1306,15 @@
                             <div class="tabs-wrap">
                               <ul class="tabs ty-black" data-contents="탭카테고리">
                                 <li class="on">
-                                  <a href="javascript:;" aria-controls="tab2-0111" role="tab" aria-selected="true">Saturday</a>
+                                  <a href="javascript:;" aria-controls="tab2-011" role="tab" aria-selected="true">Saturday</a>
                                 </li>
                                 <li>
-                                  <a href="javascript:;" aria-controls="tab2-0211" role="tab" aria-selected="false"> Sunday </a>
+                                  <a href="javascript:;" aria-controls="tab2-021" role="tab" aria-selected="false"> Sunday </a>
                                 </li>
                               </ul>
                             </div>
                           </div>
-                          <div class="tab-content on" id="tab2-0111" role="tabpanel">
+                          <div class="tab-content on" id="tab2-011" role="tabpanel">
                             <div class="__bottom">
                               <div class="wrap-lists">
                                 <div class="list-box">
@@ -1384,7 +1370,7 @@
                               </div>
                             </div>
                           </div>
-                          <div class="tab-content" id="tab2-0211" role="tabpanel">
+                          <div class="tab-content" id="tab2-021" role="tabpanel">
                             <div class="__bottom">
                               <div class="wrap-lists">
                                 <div class="list-box">
