@@ -203,12 +203,7 @@ var pubUi = {
       $(
         ".nflmain_wrap .content-item03 .banner-box .swiper-container .swiper"
       ).addClass("onlyone-swiper");
-    }
-
-    // Event Guide N Race 선택시, 하단 스와이퍼 관련 컨텐츠 내용 활성화
-    // $(".section_tab .swiper-card-type .swiper-slide").on("click", function () {
-    //   pubUi.listContsActive($(this));
-    // });
+    }    
   },
   swiperSlideEvent: function () {
     var self = this;
@@ -799,7 +794,6 @@ var pubUi = {
     });
   },
   listContsActive: function (target) {
-    // ty05Swiper, 슬라이드 클릭 시, active 처리
     console.log("타겟테스트");
     var targetSwiper = $(target).parents(".swiper-slide");
     var swiperDataCont = targetSwiper.data("content");
@@ -811,7 +805,7 @@ var pubUi = {
     var raceMonth = targetSwiper.find(".card_bottom .card_badge").text();
     var raceDay = targetSwiper.find(".card_bottom .card_tit").text();
     var raceLocation = targetSwiper.find(".card_bottom .card_subtit").text();
-    
+
     // console.log(raceRank, raceMonth, raceDay, raceLocation);
 
     swiperContents.removeClass("active");
@@ -826,6 +820,7 @@ var pubUi = {
       }
     }
 
+    // ty05Swiper, 슬라이드 클릭 시, active 처리
     targetSwiper.siblings().removeClass("active");
     targetSwiper.addClass("active");
 
