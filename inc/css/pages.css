@@ -1,11 +1,15 @@
 @charset "utf-8";
 
 /* component.css */
-.swiper-card-type.ty04Swiper {
-  max-width: 100%;
-}
 .kv-video-area {
   width: 100%;
+}
+.swiper-card-type.ty04Swiper {
+  overflow: hidden;
+}
+.swiper-card-type.ty04Swiper .swiper-wrapper {
+  /* width: calc((100vw - 1440px) / 2 + 1440px); */
+  width: calc((100% - 1440px) / 2 + 1440px);
 }
 /* common */
 .bg-lightblue {
@@ -419,6 +423,14 @@
 /* swiper - key-visual-wrap */
 .key-visual-wrap {
   background-color: #1c1c1c;
+  position: relative;
+}
+.key-visual-wrap .text-wrap {
+  color:#fff;
+}
+.key-visual-wrap .text-wrap .tit {
+  position: absolute;
+  
 }
 .conts-head {
   display: flex;
@@ -436,10 +448,11 @@
 }
 .next-race-box {
   padding: 160px 0 200px;
+  /* 07.09 */
+  /* max-width: 1440px;
+  margin: 0 auto; */
 }
 
-.next-race-box .conts-head {
-}
 .next-race-box .conts-head .selectbox-wrap {
   margin-right: 0;
 }
@@ -636,14 +649,13 @@
   margin-top: 4px;
 }
 
+.next-race-box .conts-body .swiper-container {
+  /* width: calc((100% - 240px) / 2 + 1440px); */
+  /* margin: 0 auto; */
+}
+
 @media screen and (max-width: 2168px) {
-  .next-race-box .conts-body {
-    max-width: 1440px;
-    margin: 0 auto;
-    /* padding-left: 240px; */
-  }
-  .next-race-box .conts-body .swiper-container {
-    width: calc((100vw - 1440px) / 2 + 1440px);
+  .next-race-box .conts-body .swiper-container {    
     margin: 0;
   }
   .next-race-box .swiper-card-type .swiper-button-prev {
@@ -653,12 +665,16 @@
 
 /* min-width : 1024 css */
 @media screen and (max-width: 1280px) and (min-width: 1024px) {
-  .next-race-box .conts-head .selectbox-wrap {
+  /* .next-race-box .conts-head .selectbox-wrap {
     margin-right: 80px;
+  } */
+  .next-race-box .conts-head {
+    margin:0 80px 40px;
   }
-  .next-race-box {
-    padding-left: 80px;
+  .next-race-box .conts-body {
+    margin-left: 80px;
   }
+    
   .next-race-box .swiper-card-type .swiper-button-prev {
     left: 80px;
   }
@@ -881,8 +897,6 @@
   .intro-race-box {
     padding-top: 80px;
     padding-bottom: 100px;
-    padding-left: 24px;
-    padding-right: 24px;
   }
   .intro-race-box .tit {
     text-align: center;
@@ -993,12 +1007,13 @@
   .next-race-box {
     padding-top: 100px;
     padding-bottom: 120px;
-    padding-left: 24px;
   }
   .next-race-box .conts-head {
+    padding-left: 24px;
     padding-right: 24px;
     margin-bottom: 64px;
   }
+  
   .next-race-box .swiper {
     width: 100%;
   }
@@ -1036,6 +1051,11 @@
     width: 100%;
   }
 
+  .content-item04.bg-black .conts-box-wrap {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
   .track-guide-box .wrap-list.list03 .right {
     max-width: revert;
   }  
@@ -1055,5 +1075,5 @@
 
   .about .txt-list-wrap li {
     width: auto;
-  }  
+  }
 }

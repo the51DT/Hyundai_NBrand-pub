@@ -136,18 +136,7 @@ var pubUi = {
       e.preventDefault();
       var tagList = $(this).closest(".tag-list-wrap").find(".tag-list");
       self.tagBtnEvent(e.target, tagList);
-    });
-
-    // ty05Swiper, 슬라이드 클릭 시, active 처리
-    $(".ty05Swiper .card-list-wrap .swiper-slide a").click(function (e) {
-      e.preventDefault();
-      $(this).parents(".swiper-slide").siblings().removeClass("active");
-      $(this).parents(".swiper-slide").addClass("active");
-
-      setTimeout(function () {
-        document.querySelector(".ty05Swiper").swiper.update();
-      }, 500);
-    });
+    });    
 
     // 이벤트 레이아웃 마이너스 버튼 클릭시, 추 후 요건 확정 후 재작업 예정
     $(".event-box .btn-wrap.minus").click(function (e) {
@@ -214,12 +203,7 @@ var pubUi = {
       $(
         ".nflmain_wrap .content-item03 .banner-box .swiper-container .swiper"
       ).addClass("onlyone-swiper");
-    }
-
-    // Event Guide N Race 선택시, 하단 스와이퍼 관련 컨텐츠 내용 활성화
-    $(".section_tab .swiper-card-type .swiper-slide").on("click", function () {
-      pubUi.listContsActive($(this));
-    });
+    }    
   },
   swiperSlideEvent: function () {
     var self = this;
@@ -341,6 +325,7 @@ var pubUi = {
       slidesPerView: "auto",
       spaceBetween: 24,
       slidesOffsetAfter: 24,
+      slidesOffsetBefore: 560,
       navigation: {
         nextEl: ".ty04Swiper .swiper-button-next",
         prevEl: ".ty04Swiper .swiper-button-prev",
@@ -350,16 +335,25 @@ var pubUi = {
           slidesPerView: "auto",
           spaceBetween: 12,
           slidesOffsetAfter: 24,
+          slidesOffsetBefore: 24,
         },
-        768: {
+        1023: {
           slidesPerView: "auto",
           spaceBetween: 12,
-          slidesOffsetAfter: 24,
+          slidesOffsetAfter: 80,
+          slidesOffsetBefore: 80,
         },
-        1200: {
+        1280: {
           slidesPerView: "auto",
           spaceBetween: 12,
-          slidesOffsetAfter: 24,
+          slidesOffsetAfter: 80,
+          slidesOffsetBefore: 80,
+        },
+        2100: {
+          slidesPerView: "auto",
+          spaceBetween: 12,
+          slidesOffsetAfter: 80,
+          slidesOffsetBefore: 560,
         },
       },
     });
@@ -800,27 +794,43 @@ var pubUi = {
     });
   },
   listContsActive: function (target) {
-    console.log("타겟테스트");
-    var swiperDataCont = target.data("content");
+    var targetSwiper = $(target).parents(".swiper-slide");
+    var swiperDataCont = targetSwiper.data("content");
     var swiperContents = $(".section_list .list-content");
     var contentDataCont;
 
-    swiperContents.removeClass("active");
-    swiperContents.hide();
+    // ty05Swiper, 슬라이드 클릭 시, active 처리
+    targetSwiper.siblings().removeClass("active");
+    targetSwiper.addClass("active");
 
-    for (var i = 0; i < swiperContents.length; i++) {
-      contentDataCont = swiperContents[i].dataset.content;
+    setTimeout(function () {
+      document.querySelector(".ty05Swiper").swiper.update();
+    }, 500);
 
-      if (swiperDataCont == contentDataCont) {
-        swiperContents[i].style.display = "block";
-        swiperContents[i].classList.add("active");
-      }
-    }
+    // 사용 안함 - 개발에서 제어
+    // var raceRank = targetSwiper.find(".card_top .card_rank").text();
+    // var raceMonth = targetSwiper.find(".card_bottom .card_badge").text();
+    // var raceDay = targetSwiper.find(".card_bottom .card_tit").text();
+    // var raceLocation = targetSwiper.find(".card_bottom .card_subtit").text();
 
-    if (!swiperContents.hasClass("active")) {
-      alert("Comming soon !");
-      target.removeClass("active");
-    }
+    // console.log(raceRank, raceMonth, raceDay, raceLocation);
+
+    // swiperContents.removeClass("active");
+    // swiperContents.hide();
+
+    // for (var i = 0; i < swiperContents.length; i++) {
+    //   contentDataCont = swiperContents[i].dataset.content;
+
+    //   if (swiperDataCont == contentDataCont) {
+    //     swiperContents[i].style.display = "block";
+    //     swiperContents[i].classList.add("active");
+    //   }
+    // }
+
+    // if (!swiperContents.hasClass("active")) {
+    //   alert("Comming soon !");
+    //   targetSwiper.removeClass("active");
+    // }
   },
 };
 

@@ -1450,23 +1450,23 @@ min-width : 1024 css
     display: none;
   }
 
-  .ty01Swiper .swiper-slide .text-area {
+  .key-visual-wrap .text-area {
     bottom: 80px;
     left: 24px;
   }
 
-  .ty01Swiper .swiper-slide .text-area .title {
+  .key-visual-wrap .text-area .title {
     font-size: 30px;
     line-height: 42px;
   }
-  .ty01Swiper .swiper-slide .text-area .desc {
+  .key-visual-wrap .text-area .desc {
     margin-top: 9px;
   }
-  .ty01Swiper .swiper-slide .btn-wrap {
+  .key-visual-wrap .btn-wrap {
     margin-top: 24px;
   }
 
-  .ty01Swiper .swiper-slide .btn-wrap .btn:not(:last-child) {
+  .key-visual-wrap .btn-wrap .btn:not(:last-child) {
     margin-right: 8px;
   }
 
