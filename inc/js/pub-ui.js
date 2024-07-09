@@ -325,7 +325,7 @@ var pubUi = {
       slidesPerView: "auto",
       spaceBetween: 24,
       slidesOffsetAfter: 24,
-      // slidesOffsetBefore: 560,
+      slidesOffsetBefore: 560,
       navigation: {
         nextEl: ".ty04Swiper .swiper-button-next",
         prevEl: ".ty04Swiper .swiper-button-prev",
@@ -349,12 +349,12 @@ var pubUi = {
           slidesOffsetAfter: 80,
           slidesOffsetBefore: 80,
         },
-        // 2100: {
-        //   slidesPerView: "auto",
-        //   spaceBetween: 12,
-        //   slidesOffsetAfter: 80,
-        //   slidesOffsetBefore: 560,
-        // },
+        2100: {
+          slidesPerView: "auto",
+          spaceBetween: 12,
+          slidesOffsetAfter: 80,
+          slidesOffsetBefore: 560,
+        },
       },
     });
 
@@ -794,31 +794,10 @@ var pubUi = {
     });
   },
   listContsActive: function (target) {
-    console.log("타겟테스트");
     var targetSwiper = $(target).parents(".swiper-slide");
     var swiperDataCont = targetSwiper.data("content");
     var swiperContents = $(".section_list .list-content");
     var contentDataCont;
-
-    // 필요시 사용,
-    var raceRank = targetSwiper.find(".card_top .card_rank").text();
-    var raceMonth = targetSwiper.find(".card_bottom .card_badge").text();
-    var raceDay = targetSwiper.find(".card_bottom .card_tit").text();
-    var raceLocation = targetSwiper.find(".card_bottom .card_subtit").text();
-
-    // console.log(raceRank, raceMonth, raceDay, raceLocation);
-
-    swiperContents.removeClass("active");
-    swiperContents.hide();
-
-    for (var i = 0; i < swiperContents.length; i++) {
-      contentDataCont = swiperContents[i].dataset.content;
-
-      if (swiperDataCont == contentDataCont) {
-        swiperContents[i].style.display = "block";
-        swiperContents[i].classList.add("active");
-      }
-    }
 
     // ty05Swiper, 슬라이드 클릭 시, active 처리
     targetSwiper.siblings().removeClass("active");
@@ -828,10 +807,30 @@ var pubUi = {
       document.querySelector(".ty05Swiper").swiper.update();
     }, 500);
 
-    if (!swiperContents.hasClass("active")) {
-      alert("Comming soon !");
-      targetSwiper.removeClass("active");
-    }
+    // 사용 안함 - 개발에서 제어
+    // var raceRank = targetSwiper.find(".card_top .card_rank").text();
+    // var raceMonth = targetSwiper.find(".card_bottom .card_badge").text();
+    // var raceDay = targetSwiper.find(".card_bottom .card_tit").text();
+    // var raceLocation = targetSwiper.find(".card_bottom .card_subtit").text();
+
+    // console.log(raceRank, raceMonth, raceDay, raceLocation);
+
+    // swiperContents.removeClass("active");
+    // swiperContents.hide();
+
+    // for (var i = 0; i < swiperContents.length; i++) {
+    //   contentDataCont = swiperContents[i].dataset.content;
+
+    //   if (swiperDataCont == contentDataCont) {
+    //     swiperContents[i].style.display = "block";
+    //     swiperContents[i].classList.add("active");
+    //   }
+    // }
+
+    // if (!swiperContents.hasClass("active")) {
+    //   alert("Comming soon !");
+    //   targetSwiper.removeClass("active");
+    // }
   },
 };
 
