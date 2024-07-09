@@ -116,7 +116,7 @@
                       <!-- active 케이스 -->
                       <div class="swiper-slide item active" data-content="1">
                         <!-- active 클래스 추가 -->
-                        <a role="button" class="card_type01 bg-blue" onclick="pubUi.listContsActive(this);">
+                        <a role="button" onclick="pubUi.listContsActive(this);" class="card_type01 bg-blue">
                           <div class="card_cover">
                             <img src="../../inc/images/img/img_card-content.svg" alt="N CUP">
                           </div>
@@ -133,7 +133,7 @@
                         </a>
                       </div>
                       <div class="swiper-slide item" data-content="2">
-                        <a role="button" class="card_type01 bg-blue" onclick="pubUi.listContsActive(this);">
+                        <a role="button" onclick="pubUi.listContsActive(this);" class="card_type01 bg-blue">
                           <div class="card_cover">
                             <img src="../../inc/images/img/img_card-content.svg" alt="N CUP">
                           </div>
@@ -150,7 +150,7 @@
                         </a>
                       </div>
                       <div class="swiper-slide item" data-content="3">
-                        <a role="button" class="card_type01 bg-blue">
+                        <a role="button" onclick="pubUi.listContsActive(this);" class="card_type01 bg-blue">
                           <div class="card_cover">
                             <img src="../../inc/images/img/img_card-content.svg" alt="N CUP">
                           </div>
@@ -167,7 +167,7 @@
                         </a>
                       </div>
                       <div class="swiper-slide item" data-content="4">
-                        <a role="button" class="card_type01 bg-blue">
+                        <a role="button" onclick="pubUi.listContsActive(this);" class="card_type01 bg-blue">
                           <div class="card_cover">
                             <img src="../../inc/images/img/img_card-content.svg" alt="N CUP">
                           </div>
@@ -184,7 +184,7 @@
                         </a>
                       </div>
                       <div class="swiper-slide item" data-content="5">
-                        <a role="button" class="card_type01 bg-blue">
+                        <a role="button" onclick="pubUi.listContsActive(this);" class="card_type01 bg-blue">
                           <div class="card_cover">
                             <img src="../../inc/images/img/img_card-content.svg" alt="N CUP">
                           </div>
@@ -201,7 +201,7 @@
                         </a>
                       </div>
                       <div class="swiper-slide item" data-content="6">
-                        <a role="button" class="card_type01 bg-black">
+                        <a role="button" onclick="pubUi.listContsActive(this);" class="card_type01 bg-black">
                           <div class="card_cover">
                             <img src="../../inc/images/img/img_card-content.svg" alt="N CUP">
                           </div>
@@ -218,7 +218,7 @@
                         </a>
                       </div>
                       <div class="swiper-slide item" data-content="7">
-                        <a role="button" class="card_type01 bg-black">
+                        <a role="button" onclick="pubUi.listContsActive(this);" class="card_type01 bg-black">
                           <div class="card_cover">
                             <img src="../../inc/images/img/img_card-content.svg" alt="N CUP">
                           </div>
@@ -235,7 +235,7 @@
                         </a>
                       </div>
                       <div class="swiper-slide item" data-content="8">
-                        <a role="button" class="card_type01 bg-black">
+                        <a role="button" onclick="pubUi.listContsActive(this);" class="card_type01 bg-black">
                           <div class="card_cover">
                             <img src="../../inc/images/img/img_card-content.svg" alt="N CUP">
                           </div>
@@ -252,7 +252,7 @@
                         </a>
                       </div>
                       <div class="swiper-slide item" data-content="9">
-                        <a role="button" class="card_type01 bg-black">
+                        <a role="button" onclick="pubUi.listContsActive(this);" class="card_type01 bg-black">
                           <div class="card_cover">
                             <img src="../../inc/images/img/img_card-content.svg" alt="N CUP">
                           </div>
@@ -269,7 +269,7 @@
                         </a>
                       </div>
                       <div class="swiper-slide item" data-content="10">
-                        <a role="button" class="card_type01 bg-black">
+                        <a role="button" onclick="pubUi.listContsActive(this);" class="card_type01 bg-black">
                           <div class="card_cover">
                             <img src="../../inc/images/img/img_card-content.svg" alt="N CUP">
                           </div>
@@ -286,7 +286,7 @@
                         </a>
                       </div>
                       <div class="swiper-slide item" data-content="11">
-                        <a role="button" class="card_type01 bg-black">
+                        <a role="button" onclick="pubUi.listContsActive(this);" class="card_type01 bg-black">
                           <div class="card_cover">
                             <img src="../../inc/images/img/img_card-content.svg" alt="N CUP">
                           </div>
@@ -951,7 +951,7 @@
                     </div>
                   </section>
                 </div> <!-- //conts01-->
-                <div class="list-content conts01" data-content="2">
+                <!-- <div class="list-content conts02" data-content="2">
                   <div class="n-race-box-conts content-item03">
                     <h2 class="title-w1440 contitle-type01 fw-type03">
                       N CUP Round 2
@@ -1235,63 +1235,6 @@
                           <div class="evt-map-img">
                             <img src="../../inc/images/content/event-map_img.svg" alt="이벤트 레이아웃 선택 이미지" />
                           </div>
-                          <!-- aria-controls="pop-side" 과  id="pop-side" 값이 같은 팝업 오픈 -->
-                          <!-- <ul class="evt-map-area">
-                            <li>                    
-                              <button class="pop-open" aria-controls="pop-side" aria-haspopup="true" aria-expanded="false"
-                                title="이벤트 팝업 열기">
-                                <strong class="num">1</strong>
-                                <h5 class="tit">
-                                  Pit Garage
-                                  <span class="btn-icon20 icon-right" aria-hidden="true"></span>
-                                </h5>
-                              </button>
-                            </li>
-                            <li>
-                              
-                              <button class="pop-open" aria-controls="pop-side" aria-haspopup="true" aria-expanded="false"
-                                title="이벤트 팝업 열기">
-                                <strong class="num">2</strong>
-                                <h5 class="tit">
-                                  Driver Meet & Greet
-                                  <span class="btn-icon20 icon-right" aria-hidden="true"></span>
-                                </h5>
-                              </button>
-                            </li>
-                            <li>
-                              
-                              <button class="pop-open" aria-controls="pop-side" aria-haspopup="true" aria-expanded="false"
-                                title="이벤트 팝업 열기">
-                                <strong class="num">3</strong>
-                                <h5 class="tit">
-                                  N Exhibition
-                                  <span class="btn-icon20 icon-right" aria-hidden="true"></span>
-                                </h5>
-                              </button>
-                            </li>
-                            <li>
-                              
-                              <button class="pop-open" aria-controls="pop-side" aria-haspopup="true" aria-expanded="false"
-                                title="이벤트 팝업 열기">
-                                <strong class="num">4</strong>
-                                <h5 class="tit">
-                                  Photo Spot
-                                  <span class="btn-icon20 icon-right" aria-hidden="true"></span>
-                                </h5>
-                              </button>
-                            </li>
-                            <li>
-                              
-                              <button class="pop-open" aria-controls="pop-side" aria-haspopup="true" aria-expanded="false"
-                                title="이벤트 팝업 열기">
-                                <strong class="num">5</strong>
-                                <h5 class="tit">
-                                  N Customization Store
-                                  <span class="btn-icon20 icon-right" aria-hidden="true"></span>
-                                </h5>
-                              </button>
-                            </li>
-                          </ul> -->
                         </div>
                       </div>
                     </div>
@@ -1586,7 +1529,8 @@
                       </div>
                     </div>
                   </section>
-                </div> <!-- //conts02-->
+                </div>  -->
+                <!-- //conts02-->
               </section> <!--//section_list-content -->
             </div><!--//conts-body -->
           </div>
