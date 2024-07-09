@@ -124,7 +124,11 @@
 .models-wrap .models-nofull-box.type-col2 .text-col {
   max-width: 100%;
 }
-.models-wrap .models-nofull-box.type-col2 .text-col .text-strong + .text-normal {
+.models-wrap
+  .models-nofull-box.type-col2
+  .text-col
+  .text-strong
+  + .text-normal {
   margin-top: 0;
 }
 .models-wrap .text-col .text-strong:not(.txt-left),
@@ -141,103 +145,120 @@
   padding: 240px 80px 0;
 }
 .models-wrap .perfor-wrap .models-full.icon20 {
-  background: url(../../inc/images/Models/i20N/i20N_performance_bg.png) center bottom no-repeat;
+  background: url(../../inc/images/Models/i20N/i20N_performance_bg.png) center
+    bottom no-repeat;
   background-size: cover;
   position: relative;
   height: 1920px;
 }
 .models-wrap .perfor-wrap .models-full.icon30 {
-  background: url(../../inc/images/Models/i30N/i30N_performance_bg.png) center bottom no-repeat;
+  background: url(../../inc/images/Models/i30N/i30N_performance_bg.png) center
+    bottom no-repeat;
   background-size: cover;
   position: relative;
   height: 1440px;
 }
 .models-wrap .perfor-wrap .models-full.icon30fast {
-  background: url(../../inc/images/Models/i30NFastbackN/i30NFastbackN_performance_bg.png) center bottom no-repeat;
+  background: url(../../inc/images/Models/i30NFastbackN/i30NFastbackN_performance_bg.png)
+    center bottom no-repeat;
   background-size: cover;
   position: relative;
   height: 1440px;
 }
 .models-wrap .perfor-wrap .models-full.ioniq5N_en1 {
-  background: url(../../inc/images/Models/ioniq5N_en1/ioniq5N_en1_performance_bg.png) center bottom no-repeat;
+  background: url(../../inc/images/Models/ioniq5N_en1/ioniq5N_en1_performance_bg.png)
+    center bottom no-repeat;
   background-size: cover;
   position: relative;
   height: 1440px;
 }
 .models-wrap .perfor-wrap .models-full.ioniq5N_ta {
-  background: url(../../inc/images/Models/ioniq5N_ta/ioniq5N_ta_performance_bg.png) center top no-repeat;
+  background: url(../../inc/images/Models/ioniq5N_ta/ioniq5N_ta_performance_bg.png)
+    center top no-repeat;
   background-size: cover;
   position: relative;
   height: 1440px;
 }
 .models-wrap .perfor-wrap .models-full.rn_22e {
-  background: url(../../inc/images/Models/RN_22e/RN_22e_performance_bg.png) center bottom no-repeat;
+  background: url(../../inc/images/Models/RN_22e/RN_22e_performance_bg.png)
+    center bottom no-repeat;
   background-size: cover;
   position: relative;
   height: 1440px;
 }
 .models-wrap .perfor-wrap .models-full.rm20e {
-  background: url(../../inc/images/Models/RM20e/RM20e_performance_bg.png) center bottom no-repeat;
+  background: url(../../inc/images/Models/RM20e/RM20e_performance_bg.png) center
+    bottom no-repeat;
   background-size: cover;
   position: relative;
   height: 1440px;
 }
 .models-wrap .perfor-wrap .models-full.rm19 {
-  background: url(../../inc/images/Models/RM19/RM19_performance_bg.png) center bottom no-repeat;
+  background: url(../../inc/images/Models/RM19/RM19_performance_bg.png) center
+    bottom no-repeat;
   background-size: cover;
   position: relative;
   height: 1440px;
 }
 .models-wrap .perfor-wrap .models-full.project_rm {
-  background: url(../../inc/images/Models/projectRM/projectRM_performance_bg.png) center bottom no-repeat;
+  background: url(../../inc/images/Models/projectRM/projectRM_performance_bg.png)
+    center bottom no-repeat;
   background-size: cover;
   position: relative;
   height: 1440px;
 }
 .models-wrap .perfor-wrap .models-full.vision_gt {
-  background: url(../../inc/images/Models/VisionGT/VisionGT_performance_bg.png) center bottom no-repeat;
+  background: url(../../inc/images/Models/VisionGT/VisionGT_performance_bg.png)
+    center bottom no-repeat;
   background-size: cover;
   position: relative;
   height: 1440px;
 }
 .models-wrap .perfor-wrap .models-full.rn30 {
-  background: url(../../inc/images/Models/RN30/RN30_performance_bg.png) center bottom no-repeat;
+  background: url(../../inc/images/Models/RN30/RN30_performance_bg.png) center
+    bottom no-repeat;
   background-size: cover;
   position: relative;
   height: 1440px;
 }
 .models-wrap .perfor-wrap .models-full.veloster_n {
-  background: url(../../inc/images/Models/VELOSTER_N/VELOSTER_N_performance_bg.png) center bottom no-repeat;
+  background: url(../../inc/images/Models/VELOSTER_N/VELOSTER_N_performance_bg.png)
+    center bottom no-repeat;
   background-size: cover;
   position: relative;
   height: 1440px;
 }
 .models-wrap .perfor-wrap .models-full.veloster_n_new {
-  background: url(../../inc/images/Models/VELOSTER_N_new/VELOSTER_N_new_performance_bg.png) center bottom no-repeat;
+  background: url(../../inc/images/Models/VELOSTER_N_new/VELOSTER_N_new_performance_bg.png)
+    center bottom no-repeat;
   background-size: cover;
   position: relative;
   height: 1440px;
 }
 .models-wrap .perfor-wrap .models-full.kona_n {
-  background: url(../../inc/images/Models/kona_N/kona_N_performance_bg.png) center bottom no-repeat;
+  background: url(../../inc/images/Models/kona_N/kona_N_performance_bg.png)
+    center bottom no-repeat;
   background-size: cover;
   position: relative;
   height: 1440px;
 }
 .models-wrap .perfor-wrap .models-full.ioniq5n {
-  background: url(../../inc/images/Models/ioniq5N/ioniq5N_performance_bg.png) center bottom no-repeat;
+  background: url(../../inc/images/Models/ioniq5N/ioniq5N_performance_bg.png)
+    center bottom no-repeat;
   background-size: cover;
   position: relative;
   height: 1440px;
 }
 .models-wrap .perfor-wrap .models-full.elantra_n {
-  background: url(../../inc/images/Models/elantraN/elantraN_performance_bg.png) center bottom no-repeat;
+  background: url(../../inc/images/Models/elantraN/elantraN_performance_bg.png)
+    center bottom no-repeat;
   background-size: cover;
   position: relative;
   height: 1440px;
 }
 .models-wrap .perfor-wrap .models-full.vision74 {
-  background: url(../../inc/images/Models/NVision74/NVision74_performance_bg.png) center bottom no-repeat;
+  background: url(../../inc/images/Models/NVision74/NVision74_performance_bg.png)
+    center bottom no-repeat;
   background-size: cover;
   position: relative;
   height: 1440px;
@@ -446,109 +467,127 @@
   margin-top: 40px;
 }
 .models-wrap .desgin-wrap .models-full.icon20 {
-  background: url(../../inc/images/Models/i20N/i20N_desgin_bg.png) center bottom no-repeat;
+  background: url(../../inc/images/Models/i20N/i20N_desgin_bg.png) center bottom
+    no-repeat;
   background-size: cover;
   position: relative;
   height: 1920px;
 }
 .models-wrap .tech-wrap .models-full.icon20 {
-  background: url(../../inc/images/Models/i20N/i20N_technology_bg.png) center bottom no-repeat;
+  background: url(../../inc/images/Models/i20N/i20N_technology_bg.png) center
+    bottom no-repeat;
   background-size: cover;
   position: relative;
   height: 1600px;
 }
 .models-wrap .desgin-wrap .models-full.icon30 {
-  background: url(../../inc/images/Models/i30N/i30N_desgin_bg.png) center bottom no-repeat;
+  background: url(../../inc/images/Models/i30N/i30N_desgin_bg.png) center bottom
+    no-repeat;
   background-size: cover;
   position: relative;
   height: 1920px;
 }
 .models-wrap .desgin-wrap .models-full.icon30fast {
-  background: url(../../inc/images/Models/i30NFastbackN/i30NFastbackN_desgin_bg.png) center bottom no-repeat;
+  background: url(../../inc/images/Models/i30NFastbackN/i30NFastbackN_desgin_bg.png)
+    center bottom no-repeat;
   background-size: cover;
   position: relative;
   height: 1920px;
 }
 .models-wrap .desgin-wrap .models-full.ioniq5N_en1 {
-  background: url(../../inc/images/Models/ioniq5N_en1/ioniq5N_en1_desgin_bg.png) center bottom no-repeat;
+  background: url(../../inc/images/Models/ioniq5N_en1/ioniq5N_en1_desgin_bg.png)
+    center bottom no-repeat;
   background-size: cover;
   position: relative;
   height: 1920px;
 }
 .models-wrap .desgin-wrap .models-full.rn_22e {
-  background: url(../../inc/images/Models/RN_22e/RN_22e_desgin_bg.png) center bottom no-repeat;
+  background: url(../../inc/images/Models/RN_22e/RN_22e_desgin_bg.png) center
+    bottom no-repeat;
   background-size: cover;
   position: relative;
   height: 1920px;
 }
 .models-wrap .desgin-wrap .models-full.ioniq5n_npx1 {
-  background: url(../../inc/images/Models/ioniq5N_npx1/ioniq5N_npx1_design_bg.png) center bottom no-repeat;
+  background: url(../../inc/images/Models/ioniq5N_npx1/ioniq5N_npx1_design_bg.png)
+    center bottom no-repeat;
   background-size: cover;
   position: relative;
   height: 1920px;
 }
 .models-wrap .desgin-wrap .models-full.rm20e {
-  background: url(../../inc/images/Models/RM20e/RM20e_design_bg.png) center bottom no-repeat;
+  background: url(../../inc/images/Models/RM20e/RM20e_design_bg.png) center
+    bottom no-repeat;
   background-size: cover;
   position: relative;
   height: 1920px;
 }
 .models-wrap .desgin-wrap .models-full.project_rm {
-  background: url(../../inc/images/Models/projectRM/projectRM_design_bg.png) center bottom no-repeat;
+  background: url(../../inc/images/Models/projectRM/projectRM_design_bg.png)
+    center bottom no-repeat;
   background-size: cover;
   position: relative;
   height: 1920px;
 }
 .models-wrap .desgin-wrap .models-full.vision_gt {
-  background: url(../../inc/images/Models/VisionGT/VisionGT_design_bg.png) center bottom no-repeat;
+  background: url(../../inc/images/Models/VisionGT/VisionGT_design_bg.png)
+    center bottom no-repeat;
   background-size: cover;
   position: relative;
   height: 1920px;
 }
 .models-wrap .desgin-wrap .models-full.rn30 {
-  background: url(../../inc/images/Models/RN30/RN30_design_bg.png) center bottom no-repeat;
+  background: url(../../inc/images/Models/RN30/RN30_design_bg.png) center bottom
+    no-repeat;
   background-size: cover;
   position: relative;
   height: 1920px;
 }
 .models-wrap .desgin-wrap .models-full.veloster_n {
-  background: url(../../inc/images/Models/VELOSTER_N/VELOSTER_N_design_bg.png) center bottom no-repeat;
+  background: url(../../inc/images/Models/VELOSTER_N/VELOSTER_N_design_bg.png)
+    center bottom no-repeat;
   background-size: cover;
   position: relative;
   height: 1920px;
 }
 .models-wrap .desgin-wrap .models-full.show_car {
-  background: url(../../inc/images/Models/ShowCar/ShowCar_design_bg.png) center bottom no-repeat;
+  background: url(../../inc/images/Models/ShowCar/ShowCar_design_bg.png) center
+    bottom no-repeat;
   background-size: cover;
   position: relative;
   height: 1920px;
 }
 .models-wrap .desgin-wrap .models-full.veloster_n_new {
-  background: url(../../inc/images/Models/VELOSTER_N_new/VELOSTER_N_new_design_bg.png) center bottom no-repeat;
+  background: url(../../inc/images/Models/VELOSTER_N_new/VELOSTER_N_new_design_bg.png)
+    center bottom no-repeat;
   background-size: cover;
   position: relative;
   height: 1920px;
 }
 .models-wrap .desgin-wrap .models-full.kona_n {
-  background: url(../../inc/images/Models/kona_N/kona_N_design_bg.png) center bottom no-repeat;
+  background: url(../../inc/images/Models/kona_N/kona_N_design_bg.png) center
+    bottom no-repeat;
   background-size: cover;
   position: relative;
   height: 1920px;
 }
 .models-wrap .desgin-wrap .models-full.ioniq5n {
-  background: url(../../inc/images/Models/ioniq5N/ioniq5N_design_bg.png) center bottom no-repeat;
+  background: url(../../inc/images/Models/ioniq5N/ioniq5N_design_bg.png) center
+    bottom no-repeat;
   background-size: cover;
   position: relative;
   height: 1920px;
 }
 .models-wrap .desgin-wrap .models-full.elantra_n {
-  background: url(../../inc/images/Models/elantraN/elantraN_design_bg.png) center bottom no-repeat;
+  background: url(../../inc/images/Models/elantraN/elantraN_design_bg.png)
+    center bottom no-repeat;
   background-size: cover;
   position: relative;
   height: 1920px;
 }
 .models-wrap .desgin-wrap .models-full.vision74 {
-  background: url(../../inc/images/Models/NVision74/NVision74_design_bg.png) center bottom no-repeat;
+  background: url(../../inc/images/Models/NVision74/NVision74_design_bg.png)
+    center bottom no-repeat;
   background-size: cover;
   position: relative;
   height: 1920px;
@@ -679,6 +718,9 @@
   position: absolute;
   bottom: 40px;
   right: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .models-wrap .gallery-wrap .img-area .btn[class*="txt-btn"]:hover,
 .models-wrap .gallery-wrap .img-area .btn[class*="txt-btn"]:active {
@@ -1190,7 +1232,13 @@
     width: 100%;
     border-right: 1px solid #777;
   }
-  .models-wrap .specification-wrap .specification-box .tab-head .tab2 li :first-child {
+  .models-wrap
+    .specification-wrap
+    .specification-box
+    .tab-head
+    .tab2
+    li
+    :first-child {
     border-bottom: 0;
   }
   .models-wrap .specification-wrap .specification-box .tab-head .tab2 li a,
@@ -1257,217 +1305,260 @@
     margin-right: -21px;
   }
   .models-wrap .perfor-wrap .models-full.icon20 {
-    background: url(../../inc/images/Models/i20N/i20N_performance_bg_mo.png) center top no-repeat;
+    background: url(../../inc/images/Models/i20N/i20N_performance_bg_mo.png)
+      center top no-repeat;
     background-size: cover;
     position: relative;
     height: 1333px;
   }
   .models-wrap .perfor-wrap .models-full.icon30 {
-    background: url(../../inc/images/Models/i30N/i30N_performance_bg_mo.png) center bottom no-repeat;
+    background: url(../../inc/images/Models/i30N/i30N_performance_bg_mo.png)
+      center bottom no-repeat;
     background-size: cover;
     position: relative;
     height: 920px;
   }
   .models-wrap .perfor-wrap .models-full.icon30fast {
-    background: url(../../inc/images/Models/i30NFastbackN/i30NFastbackN_performance_bg_mo.png) center bottom no-repeat;
+    background: url(../../inc/images/Models/i30NFastbackN/i30NFastbackN_performance_bg_mo.png)
+      center bottom no-repeat;
     background-size: cover;
     position: relative;
     height: 920px;
   }
   .models-wrap .perfor-wrap .models-full.ioniq5N_en1 {
-    background: url(../../inc/images/Models/ioniq5N_en1/ioniq5N_en1_performance_bg_mo.png) center bottom no-repeat;
+    background: url(../../inc/images/Models/ioniq5N_en1/ioniq5N_en1_performance_bg_mo.png)
+      center bottom no-repeat;
     background-size: cover;
     position: relative;
     height: 920px;
   }
   .models-wrap .perfor-wrap .models-full.ioniq5N_ta {
-    background: url(../../inc/images/Models/ioniq5N_ta/ioniq5N_ta_performance_bg_mo.png) center bottom no-repeat;
+    background: url(../../inc/images/Models/ioniq5N_ta/ioniq5N_ta_performance_bg_mo.png)
+      center bottom no-repeat;
     background-size: cover;
     position: relative;
     height: 1053px;
   }
   .models-wrap .perfor-wrap .models-full.rn_22e {
-    background: url(../../inc/images/Models/RN_22e/RN_22e_performance_bg_mo.png) center bottom no-repeat;
+    background: url(../../inc/images/Models/RN_22e/RN_22e_performance_bg_mo.png)
+      center bottom no-repeat;
     background-size: cover;
     position: relative;
     height: 920px;
   }
   .models-wrap .perfor-wrap .models-full.rm20e {
-    background: url(../../inc/images/Models/RM20e/RM20e_performance_bg_mo.png) center top no-repeat;
+    background: url(../../inc/images/Models/RM20e/RM20e_performance_bg_mo.png)
+      center top no-repeat;
     background-size: cover;
     position: relative;
     height: 1598px;
   }
   .models-wrap .perfor-wrap .models-full.rm19 {
-    background: url(../../inc/images/Models/RM19/RM19_performance_bg_mo.png) center bottom no-repeat;
+    background: url(../../inc/images/Models/RM19/RM19_performance_bg_mo.png)
+      center bottom no-repeat;
     background-size: cover;
     position: relative;
     height: 920px;
   }
   .models-wrap .perfor-wrap .models-full.project_rm {
-    background: url(../../inc/images/Models/projectRM/projectRM_performance_bg_mo.png) center bottom no-repeat;
+    background: url(../../inc/images/Models/projectRM/projectRM_performance_bg_mo.png)
+      center bottom no-repeat;
     background-size: cover;
     position: relative;
     height: 960px;
   }
   .models-wrap .perfor-wrap .models-full.vision_gt {
-    background: url(../../inc/images/Models/VisionGT/VisionGT_performance_bg_mo.png) center top no-repeat;
+    background: url(../../inc/images/Models/VisionGT/VisionGT_performance_bg_mo.png)
+      center top no-repeat;
     background-size: cover;
     position: relative;
     height: 1643px;
   }
   .models-wrap .perfor-wrap .models-full.rn30 {
-    background: url(../../inc/images/Models/RN30/RN30_performance_bg_mo.png) center top no-repeat;
+    background: url(../../inc/images/Models/RN30/RN30_performance_bg_mo.png)
+      center top no-repeat;
     background-size: cover;
     position: relative;
     height: 1863px;
   }
   .models-wrap .perfor-wrap .models-full.veloster_n {
-    background: url(../../inc/images/Models/VELOSTER_N/VELOSTER_N_performance_bg_mo.png) center bottom no-repeat;
+    background: url(../../inc/images/Models/VELOSTER_N/VELOSTER_N_performance_bg_mo.png)
+      center bottom no-repeat;
     background-size: cover;
     position: relative;
     height: 920px;
   }
   .models-wrap .perfor-wrap .models-full.veloster_n_new {
-    background: url(../../inc/images/Models/VELOSTER_N_new/VELOSTER_N_new_performance_bg_mo.png) center bottom no-repeat;
+    background: url(../../inc/images/Models/VELOSTER_N_new/VELOSTER_N_new_performance_bg_mo.png)
+      center bottom no-repeat;
     background-size: cover;
     position: relative;
     height: 920px;
   }
   .models-wrap .perfor-wrap .models-full.kona_n {
-    background: url(../../inc/images/Models/kona_N/kona_N_performance_bg_mo.png) center top no-repeat;
+    background: url(../../inc/images/Models/kona_N/kona_N_performance_bg_mo.png)
+      center top no-repeat;
     background-size: cover;
     position: relative;
     height: 1415px;
   }
   .models-wrap .perfor-wrap .models-full.ioniq5n {
-    background: url(../../inc/images/Models/ioniq5N/ioniq5N_performance_bg_mo.png) center top no-repeat;
+    background: url(../../inc/images/Models/ioniq5N/ioniq5N_performance_bg_mo.png)
+      center top no-repeat;
     background-size: cover;
     position: relative;
     height: 1026px;
   }
   .models-wrap .perfor-wrap .models-full.elantra_n {
-    background: url(../../inc/images/Models/elantraN/elantraN_performance_bg_mo.png) center top no-repeat;
+    background: url(../../inc/images/Models/elantraN/elantraN_performance_bg_mo.png)
+      center top no-repeat;
     background-size: cover;
     position: relative;
     height: 1207px;
   }
   .models-wrap .perfor-wrap .models-full.vision74 {
-    background: url(../../inc/images/Models/NVision74/NVision74_performance_bg_mo.png) center bottom no-repeat;
+    background: url(../../inc/images/Models/NVision74/NVision74_performance_bg_mo.png)
+      center bottom no-repeat;
     background-size: cover;
     position: relative;
     height: 920px;
   }
   /* design */
   .models-wrap .desgin-wrap .models-full.icon20 {
-    background: url(../../inc/images/Models/i20N/i20N_desgin_bg_mo.png) center bottom no-repeat;
+    background: url(../../inc/images/Models/i20N/i20N_desgin_bg_mo.png) center
+      bottom no-repeat;
     background-size: cover;
     position: relative;
     height: 920px;
   }
   .models-wrap .tech-wrap .models-full.icon20 {
-    background: url(../../inc/images/Models/i20N/i20N_technology_bg_mo.png) center bottom no-repeat;
+    background: url(../../inc/images/Models/i20N/i20N_technology_bg_mo.png)
+      center bottom no-repeat;
     background-size: cover;
     position: relative;
     height: 920px;
   }
   .models-wrap .desgin-wrap .models-full.icon30 {
-    background: url(../../inc/images/Models/i30N/i30N_desgin_bg_mo.png) center bottom no-repeat;
+    background: url(../../inc/images/Models/i30N/i30N_desgin_bg_mo.png) center
+      bottom no-repeat;
     background-size: cover;
     position: relative;
     height: 920px;
   }
   .models-wrap .desgin-wrap .models-full.icon30fast {
-    background: url(../../inc/images/Models/i30NFastbackN/i30NFastbackN_desgin_bg_mo.png) center bottom no-repeat;
+    background: url(../../inc/images/Models/i30NFastbackN/i30NFastbackN_desgin_bg_mo.png)
+      center bottom no-repeat;
     background-size: cover;
     position: relative;
     height: 920px;
   }
   .models-wrap .desgin-wrap .models-full.ioniq5N_en1 {
-    background: url(../../inc/images/Models/ioniq5N_en1/ioniq5N_en1_desgin_bg_mo.png) center bottom no-repeat;
+    background: url(../../inc/images/Models/ioniq5N_en1/ioniq5N_en1_desgin_bg_mo.png)
+      center bottom no-repeat;
     background-size: cover;
     position: relative;
     height: 920px;
   }
   .models-wrap .desgin-wrap .models-full.rn_22e {
-    background: url(../../inc/images/Models/RN_22e/RN_22e_desgin_bg_mo.png) center bottom no-repeat;
+    background: url(../../inc/images/Models/RN_22e/RN_22e_desgin_bg_mo.png)
+      center bottom no-repeat;
     background-size: cover;
     position: relative;
     height: 920px;
   }
   .models-wrap .desgin-wrap .models-full.ioniq5n_npx1 {
-    background: url(../../inc/images/Models/ioniq5N_npx1/ioniq5N_npx1_design_bg_mo.png) center bottom no-repeat;
+    background: url(../../inc/images/Models/ioniq5N_npx1/ioniq5N_npx1_design_bg_mo.png)
+      center bottom no-repeat;
     background-size: cover;
     position: relative;
     height: 920px;
   }
   .models-wrap .desgin-wrap .models-full.rm20e {
-    background: url(../../inc/images/Models/RM20e/RM20e_design_bg_mo.png) center bottom no-repeat;
+    background: url(../../inc/images/Models/RM20e/RM20e_design_bg_mo.png) center
+      bottom no-repeat;
     background-size: cover;
     position: relative;
     height: 920px;
   }
   .models-wrap .desgin-wrap .models-full.project_rm {
-    background: url(../../inc/images/Models/projectRM/projectRM_design_bg_mo.png) center bottom no-repeat;
+    background: url(../../inc/images/Models/projectRM/projectRM_design_bg_mo.png)
+      center bottom no-repeat;
     background-size: cover;
     position: relative;
     height: 1220px;
   }
   .models-wrap .desgin-wrap .models-full.vision_gt {
-    background: url(../../inc/images/Models/VisionGT/VisionGT_design_bg_mo.png) center bottom no-repeat;
+    background: url(../../inc/images/Models/VisionGT/VisionGT_design_bg_mo.png)
+      center bottom no-repeat;
     background-size: cover;
     position: relative;
     height: 1232px;
   }
   .models-wrap .desgin-wrap .models-full.rn30 {
-    background: url(../../inc/images/Models/RN30/RN30_design_bg_mo.png) center bottom no-repeat;
+    background: url(../../inc/images/Models/RN30/RN30_design_bg_mo.png) center
+      bottom no-repeat;
     background-size: cover;
     position: relative;
     height: 1742px;
   }
   .models-wrap .desgin-wrap .models-full.veloster_n {
-    background: url(../../inc/images/Models/VELOSTER_N/VELOSTER_N_design_bg_mo.png) center bottom no-repeat;
+    background: url(../../inc/images/Models/VELOSTER_N/VELOSTER_N_design_bg_mo.png)
+      center bottom no-repeat;
     background-size: cover;
     position: relative;
     height: 920px;
   }
   .models-wrap .desgin-wrap .models-full.show_car {
-    background: url(../../inc/images/Models/ShowCar/ShowCar_design_bg_mo.png) center bottom no-repeat;
+    background: url(../../inc/images/Models/ShowCar/ShowCar_design_bg_mo.png)
+      center bottom no-repeat;
     background-size: cover;
     position: relative;
     height: 1400px;
   }
   .models-wrap .desgin-wrap .models-full.veloster_n_new {
-    background: url(../../inc/images/Models/VELOSTER_N_new/VELOSTER_N_new_design_bg_mo.png) center bottom no-repeat;
+    background: url(../../inc/images/Models/VELOSTER_N_new/VELOSTER_N_new_design_bg_mo.png)
+      center bottom no-repeat;
     background-size: cover;
     position: relative;
     height: 920px;
   }
   .models-wrap .desgin-wrap .models-full.kona_n {
-    background: url(../../inc/images/Models/kona_N/kona_N_design_bg_mo.png) center bottom no-repeat;
+    background: url(../../inc/images/Models/kona_N/kona_N_design_bg_mo.png)
+      center bottom no-repeat;
     background-size: cover;
     position: relative;
     height: 920px;
   }
   .models-wrap .desgin-wrap .models-full.ioniq5n {
-    background: url(../../inc/images/Models/ioniq5N/ioniq5N_design_bg_mo.png) center bottom no-repeat;
+    background: url(../../inc/images/Models/ioniq5N/ioniq5N_design_bg_mo.png)
+      center bottom no-repeat;
     background-size: cover;
     position: relative;
     height: 920px;
   }
   .models-wrap .desgin-wrap .models-full.elantra_n {
-    background: url(../../inc/images/Models/elantraN/elantraN_design_bg_mo.png) center bottom no-repeat;
+    background: url(../../inc/images/Models/elantraN/elantraN_design_bg_mo.png)
+      center bottom no-repeat;
     background-size: cover;
     position: relative;
     height: 920px;
   }
   .models-wrap .desgin-wrap .models-full.vision74 {
-    background: url(../../inc/images/Models/NVision74/NVision74_design_bg_mo.png) center bottom no-repeat;
+    background: url(../../inc/images/Models/NVision74/NVision74_design_bg_mo.png)
+      center bottom no-repeat;
     background-size: cover;
     position: relative;
     height: 920px;
   }
-  .models-wrap .models-nofull-box.type-col2 .text-col .text-strong + .text-normal {
+  .models-wrap
+    .models-nofull-box.type-col2
+    .text-col
+    .text-strong
+    + .text-normal {
     margin-top: 12px;
+  }
+  /* 0709 모델 내 갤러리 다운로드 버튼 수정 */
+  .models-wrap .gallery-wrap .img-area .icon-download-wh {
+    margin-left: 0;
   }
 }
