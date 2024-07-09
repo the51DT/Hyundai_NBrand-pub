@@ -1254,12 +1254,25 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
 
 .popup-wrapper.onlyTxt .popup-body .popup-body-innerbox .txt-type03 .accent {
   color: #de3111;
-  text-decoration: underline;
+  /* text-decoration: underline; */
   font-weight: 500;
 }
 
 .popup-wrapper.onlyTxt .popup-body .popup-body-innerbox .selectbox-wrap {
-  justify-content: start;
+  width: 100%;
+}
+
+.popup-wrapper.onlyTxt .popup-body .popup-body-innerbox .selectbox-wrap > div {
+  width: 100%;
+}
+
+.popup-wrapper.onlyTxt
+  .popup-body
+  .popup-body-innerbox
+  .selectbox-wrap
+  > div
+  button.selectbox-trigger {
+  width: 100%;
 }
 
 .popup-wrapper.onlyTxt .popup-body .popup-body-innerbox .selectbox-wrap ul {
@@ -1967,9 +1980,6 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   font-weight: 500;
 }
 
-.popup-wrapper .popup-body .tit-type04.main-header {
-  font-size: 24px;
-}
 /** mypage 팝업 끝 **/
 
 /** sharing 팝업 시작 **/
@@ -2210,6 +2220,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
 .break-no-pc-only {
   display: none;
 }
+/* 끝 */
 
 /* 모바일 */
 @media screen and (max-width: 1023px) {
@@ -3306,6 +3317,10 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
 
   .popup-wrapper .popup-body .tit-type04 {
     font-size: 18px;
+  }
+
+  .popup-wrapper .popup-body .tit-type04.main-header {
+    font-size: 24px;
   }
 
   .popup-wrapper .popup-body .wrap-notice-info .tit-type05 {
