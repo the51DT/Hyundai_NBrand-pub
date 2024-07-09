@@ -2065,11 +2065,11 @@ input[type="radio"]:focus + label {
   font-weight: 700;
   margin-top: 12px;
 }
-.key-visual-wrap .btn-wrap {
+.key-visual-wrap .text-area .btn-wrap {
   margin-top: 32px;
 }
 
-.key-visual-wrap .btn-wrap .btn:not(:last-child) {
+.key-visual-wrap .text-area .btn-wrap .btn:not(:last-child) {
   margin-right: 12px;
 }
 

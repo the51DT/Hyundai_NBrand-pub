@@ -29,6 +29,7 @@ var pubUi = {
 
     // swiper
     self.swiper2;
+    self.swiper4;
     self.typeChk = $(".ty01Swiper").find(".swiper-slide video");
   },
   bindEvents: function () {
@@ -288,6 +289,7 @@ var pubUi = {
     });
 
     swiper2SlideEvt(); //swiper2 이벤트 실행
+    swiper4SlideEvt(); //swiper4 이벤트 실행
 
     var swiper3 = new Swiper(".ty03Swiper", {
       slidesPerView: 3,
@@ -319,44 +321,7 @@ var pubUi = {
           spaceBetween: 24,
         },
       },
-    });
-
-    var swiper4 = new Swiper(".ty04Swiper", {
-      slidesPerView: "auto",
-      spaceBetween: 24,
-      slidesOffsetAfter: 24,
-      slidesOffsetBefore: 560,
-      navigation: {
-        nextEl: ".ty04Swiper .swiper-button-next",
-        prevEl: ".ty04Swiper .swiper-button-prev",
-      },
-      breakpoints: {
-        360: {
-          slidesPerView: "auto",
-          spaceBetween: 12,
-          slidesOffsetAfter: 24,
-          slidesOffsetBefore: 24,
-        },
-        1023: {
-          slidesPerView: "auto",
-          spaceBetween: 12,
-          slidesOffsetAfter: 80,
-          slidesOffsetBefore: 80,
-        },
-        1280: {
-          slidesPerView: "auto",
-          spaceBetween: 12,
-          slidesOffsetAfter: 80,
-          slidesOffsetBefore: 80,
-        },
-        2100: {
-          slidesPerView: "auto",
-          spaceBetween: 12,
-          slidesOffsetAfter: 80,
-          slidesOffsetBefore: 560,
-        },
-      },
-    });
+    });    
 
     var swiper5 = new Swiper(".ty05Swiper", {
       slidesPerView: "auto",
@@ -881,7 +846,21 @@ $(document).ready(function () {
           // console.log("swiper2 destroy")
         }
       }
+
+      if (self.swiper4.length > 0) {
+        for (var i = 0; i < self.swiper4.length; i++) {
+          self.swiper4[i].destroy();
+          // console.log("swiper2 destroy!!!");
+        }
+      } else {
+        if (self.swiper4.slides.length > 0 && self.swiper4 != undefined) {
+          self.swiper4.destroy();
+          // console.log("swiper2 destroy")
+        }
+      }
+
       swiper2SlideEvt();
+      swiper4SlideEvt();
     }
   });
 
@@ -958,6 +937,48 @@ function swiper2SlideEvt() {
     on: {
       activeIndexChange: function () {
         slideInx = this.realIndex; //현재 슬라이드 index 갱신
+      },
+    },
+  });
+}
+
+// ty04Swiper swiper 이벤트 분리
+function swiper4SlideEvt() {
+  // console.log("swiper4 이벤트 실행");
+
+  self.swiper4 = new Swiper(".ty04Swiper", {
+    slidesPerView: "auto",
+    spaceBetween: 24,
+    slidesOffsetAfter: 24,
+    slidesOffsetBefore: 560,
+    navigation: {
+      nextEl: ".ty04Swiper .swiper-button-next",
+      prevEl: ".ty04Swiper .swiper-button-prev",
+    },
+    breakpoints: {
+      360: {
+        slidesPerView: "auto",
+        spaceBetween: 12,
+        slidesOffsetAfter: 24,
+        slidesOffsetBefore: 24,
+      },
+      1023: {
+        slidesPerView: "auto",
+        spaceBetween: 12,
+        slidesOffsetAfter: 0,
+        slidesOffsetBefore: 0,
+      },
+      1280: {
+        slidesPerView: "auto",
+        spaceBetween: 12,
+        slidesOffsetAfter: 80,
+        slidesOffsetBefore: 80,
+      },
+      2100: {
+        slidesPerView: "auto",
+        spaceBetween: 12,
+        slidesOffsetAfter: 80,
+        slidesOffsetBefore: 560,
       },
     },
   });

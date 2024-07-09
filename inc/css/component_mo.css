@@ -1462,11 +1462,11 @@ min-width : 1024 css
   .key-visual-wrap .text-area .desc {
     margin-top: 9px;
   }
-  .key-visual-wrap .btn-wrap {
+  .key-visual-wrap .text-area .btn-wrap {
     margin-top: 24px;
   }
 
-  .key-visual-wrap .btn-wrap .btn:not(:last-child) {
+  .key-visual-wrap .text-area .btn-wrap .btn:not(:last-child) {
     margin-right: 8px;
   }
 
