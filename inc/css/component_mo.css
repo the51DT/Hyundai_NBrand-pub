@@ -267,6 +267,7 @@ min-width : 1024 css
 
   .conts-box-wrap .bg-img-wrap {
     background: url("../images/img/conts_bg_img01.svg") no-repeat 100%;
+    background-position: center;
     min-height: 509px;
     padding: 64px 20px;
     text-align: center;

@@ -390,7 +390,7 @@ input[type="radio"]:focus + label {
 [class*="btn-icon"] {
   display: inline-block;
   background-repeat: no-repeat !important;
-  background-position: center;
+  background-position: center !important;
 }
 [class*="btn-icon20"] {
   width: 20px;
@@ -4571,7 +4571,7 @@ p.text-num-chk {
   font-family: "Hyundai Sans Text";
 }
 .wrap-form .wrap-form-bottom.comment-type05 {
-  justify-content: end;
+  justify-content: flex-end;
 }
 .wrap-form .wrap-form-bottom.comment-type01 span.comment,
 .wrap-form .wrap-form-bottom.comment-type02 span.comment {
