@@ -2198,6 +2198,15 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   }
 }
 
+/* 0709 CM040701M03_1 내 간격 추가(디자인 시안에 없어 임의 적용) */
+.popup-wrapper.onlyTxt .popup-body .popup-body-innerbox .mt8 {
+  margin-top: 8px;
+}
+
+.popup-wrapper.onlyTxt .popup-body .popup-body-innerbox .mt24 {
+  margin-top: 24px;
+}
+
 /* 모바일 */
 @media screen and (max-width: 1023px) {
   /* Experience  common */
