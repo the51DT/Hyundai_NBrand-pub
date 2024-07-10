@@ -580,10 +580,6 @@
 .wrc_swiper .swiper-pagination-bullet {
   background-color: #fff;
 }
-.conts-section-wrap:has(.wrc_article_img) {
-  padding-left: 5rem;
-  padding-right: 5rem;
-}
 .wrc_article_img {
   width: 100%;
   height: auto;
@@ -617,7 +613,7 @@
   font-weight: 700;
   line-height: 140%;
 }
-.brand .gallery-wrap:has(.sns_wrap) {
+.brand .gallery-wrap.barnd-gallery {
   padding: 0;
 }
 .brand .gallery-wrap .btn-wrap-default {
@@ -1862,10 +1858,6 @@
     margin-top: 0.75rem;
     font-size: 1.0625rem;
   }
-  .conts-section-wrap:has(.wrc_article_img) {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
   .wrc_article_wrap {
     flex-direction: column;
     gap: 1.25rem;
@@ -1884,7 +1876,7 @@
   .wrc_article_wrap > div p:last-of-type {
     font-size: 1.25rem;
   }
-  .brand .gallery-wrap:has(.sns_wrap) {
+  .brand .gallery-wrap.barnd-gallery {
     padding: 0;
   }
   .brand .gallery-wrap .btn-wrap-default {

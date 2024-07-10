@@ -249,17 +249,13 @@
 }
 
 /* CM050101 */
-.join_form_wrap .join_form:has(.join_form_checkbox) {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
 .join_form_wrap.wrap-form.label-tit-type02 label.required span:after {
   content: "*";
   right: unset;
 }
 .join_form_checkbox {
   position: relative;
+  margin-bottom: 0.75rem;
 }
 .join_form_checkbox label {
   display: flex;
@@ -1266,10 +1262,8 @@
   }
 
   /* CM050101 */
-  .join_form_wrap .join_form:has(.join_form_checkbox) {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+  .join_form_checkbox {
+    margin-bottom: 0.5rem;
   }
 
   /* CM050102 */

@@ -35,9 +35,6 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
-.footer-list-area:has(.dropdown-on) .icon-down-wh  {
-  transform: rotate(180deg);
-}
 .footer-list-tit {
   font-size: 1.25rem;
   font-weight: 500;
@@ -144,9 +141,6 @@
   }
   .footer-list-area:first-of-type .footer-list-tit {
     padding-top: 0 !important;
-  }
-  .footer-list-area:has(.dropdown-on) .footer-list-tit {
-    border-bottom: none !important;
   }
   .footer-list {
     padding: 0.75rem 0 1.75rem;
