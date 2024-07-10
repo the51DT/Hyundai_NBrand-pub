@@ -565,6 +565,9 @@
   border-radius: 0.25rem;
   outline: 1px solid rgba(217, 217, 217, 0.97);
 }
+.configurator_label_list:hover {
+  outline: 1px solid rgba(0, 0, 0, 0.97);
+}
 .configurator_select_wrap input[type="checkbox"]:checked + .configurator_label_list {
   outline: 2px solid rgba(0, 0, 0, 0.97);
 }
