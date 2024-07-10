@@ -1451,22 +1451,27 @@ min-width : 1024 css
     display: none;
   }
 
+  .ty01Swiper .text-area, 
   .key-visual-wrap .text-area {
     bottom: 80px;
     left: 24px;
   }
 
+  .ty01Swiper .text-area .title, 
   .key-visual-wrap .text-area .title {
     font-size: 30px;
     line-height: 42px;
   }
+  .ty01Swiper .text-area .desc, 
   .key-visual-wrap .text-area .desc {
     margin-top: 9px;
   }
+  .ty01Swiper .text-area .btn-wrap, 
   .key-visual-wrap .text-area .btn-wrap {
     margin-top: 24px;
   }
 
+  .ty01Swiper .text-area .btn-wrap .btn:not(:last-child), 
   .key-visual-wrap .text-area .btn-wrap .btn:not(:last-child) {
     margin-right: 8px;
   }

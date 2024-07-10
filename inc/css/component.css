@@ -2048,27 +2048,32 @@ input[type="radio"]:focus + label {
   min-height: 1080px;
 }
 
+.ty01Swiper .text-area, 
 .key-visual-wrap .text-area {
   position: absolute;
   bottom: 136px;
   left: 60px;
   color: #fff;
 }
+.ty01Swiper .text-area .title, 
 .key-visual-wrap .text-area .title {
   font-size: 68px;
   line-height: 85px;
   font-weight: 700;
 }
+.ty01Swiper .text-area .desc, 
 .key-visual-wrap .text-area .desc {
   font-size: 20px;
   line-height: 28px;
   font-weight: 700;
   margin-top: 12px;
 }
+.ty01Swiper .text-area .btn-wrap, 
 .key-visual-wrap .text-area .btn-wrap {
   margin-top: 32px;
 }
 
+.ty01Swiper .text-area .btn-wrap .btn:not(:last-child), 
 .key-visual-wrap .text-area .btn-wrap .btn:not(:last-child) {
   margin-right: 12px;
 }
