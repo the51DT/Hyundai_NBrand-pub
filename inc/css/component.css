@@ -5280,7 +5280,7 @@ input:checked + .slider:before {
   font-weight: 700;
   color: #777;
   line-height: 28px;
-  /* padding: 0 14px; */
+  padding: 0 14px;
 }
 .page_wrap .page_list button:hover {
   color: #000;
