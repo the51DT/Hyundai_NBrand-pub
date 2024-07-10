@@ -1096,6 +1096,7 @@
   .mypage-wrap .mypage-content {
     padding: 0 24px;
     gap: 44px;
+    max-width: none;
   }
   .mypage-wrap .mypage-content.type2 {
     gap: 28px;
