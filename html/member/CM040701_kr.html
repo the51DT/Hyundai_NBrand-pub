@@ -27,7 +27,10 @@
                   loading="lazy"
                   alt="프로필 이미지"
                 />
-                <p class="mypage-name ellipsis2">Olivia Marie Johnson</p>
+                <div>
+                  <p class="mypage-name ellipsis2">Olivia Marie Johnson</p>
+                  <p class="mypage-club">i30N_Club</p>
+                </div>
               </div>
               <div class="mypage-info">
                 <dl>
@@ -40,7 +43,7 @@
                     <dd>5,844</dd>
                   </div>
                 </dl>
-                <div class="btn-wrap">
+                <!-- <div class="btn-wrap">
                   <a
                     href="/html/main/experience/EP040401.html"
                     class="btn md-txt-btn01"
@@ -51,7 +54,7 @@
                       aria-hidden="true"
                     ></span>
                   </a>
-                </div>
+                </div> -->
               </div>
             </div>
             <!-- v.101 기획서 p.15 : 커뮤니티 가입 / 클럽 아이콘 클릭 시 N Community 레이어 노출 (EP040401M01) -->
@@ -338,21 +341,13 @@
                     <p>2,220P</p>
                   </div>
                   <div class="mypost-wrap">
-                    <div class="mypost-box width4">
-                      <p>Common – N Community</p>
+                    <div class="mypost-box width2">
+                      <p>적립 포인트</p>
                       <p>10</p>
                     </div>
-                    <div class="mypost-box width4">
-                      <p>Missions – Master</p>
+                    <div class="mypost-box width2">
+                      <p>사용 포인트</p>
                       <p>10</p>
-                    </div>
-                    <div class="mypost-box width4">
-                      <p>Missions - Member</p>
-                      <p>830</p>
-                    </div>
-                    <div class="mypost-box width4">
-                      <p>Rewards</p>
-                      <p>-200</p>
                     </div>
                   </div>
                 </div>
@@ -447,7 +442,10 @@
                           <p class="mymsission-title ellipsis2">Youngbizzi</p>
                           <p class="mymsission-date">04.01.2024</p>
                         </div>
-                        <p class="mymsission-flag">Master</p>
+                        <div class="btn-wrap-type2">
+                          <button type="button" class="btn btn-xs-outline01">거절</button>
+                          <button type="button" class="btn btn-xs-primary01">승인</button>
+                        </div>
                       </li>
                       <li>
                         <div class="mymsission-col">
@@ -456,15 +454,17 @@
                           </p>
                           <p class="mymsission-date">04.01.2024</p>
                         </div>
-                        <p class="mymsission-flag gray-flag">Master</p>
+                        <p class="mymsission-status">Withdrawal</p>
                       </li>
                       <li>
                         <div class="mymsission-col">
                           <p class="mymsission-title ellipsis2">
-                            i20n.mrs1step
+                            Olivia Marie Johnson
+                            <span class="mymsission-flag">Master</span>
                           </p>
                           <p class="mymsission-date">04.01.2024</p>
                         </div>
+                        <p class="mymsission-status">Join</p>
                       </li>
                     </ul>
                     <div class="btn-wrap-default">
@@ -564,7 +564,7 @@
                         </p>
                         <div class="mymsission-col">
                           <p class="mymsission-title ellipsis2">
-                            Cheers to the Nürburgring 24H Race!
+                            n.ck | Korea invitation ticket! Your application has been 
                           </p>
                           <p class="mymsission-date">04.01.2024</p>
                         </div>
@@ -573,10 +573,10 @@
                       <li>
                         <p class="mymsission-type">Missions - Nthusiasts</p>
                         <div class="mymsission-col">
-                          <p class="mymsission-title ellipsis2">Beauty shot!</p>
-                          <p class="mymsission-date">04.01.2024</p>
+                          <p class="mymsission-title ellipsis2">Hyndai_n_only | Participation in community content has been [completed].</p>
+                          <p class="mymsission-date">04.01.2024<span class="mypoint-reject">반려</span></p>
                         </div>
-                        <p class="mypoint-plus">+300</p>
+                        <p class="mypoint-plus mypoint-reject">+300</p>
                       </li>
                       <li>
                         <p class="mymsission-type">
@@ -584,11 +584,11 @@
                         </p>
                         <div class="mymsission-col">
                           <p class="mymsission-title ellipsis2">
-                            Korea invitation ticket!
+                            n.ck | N Community Activity verification!! Participation has been [completed].
                           </p>
                           <p class="mymsission-date">04.01.2024</p>
                         </div>
-                        <p class="mypoint-minus">-3,000</p>
+                        <p class="mypoint-minus">-300</p>
                       </li>
                     </ul>
                     <div class="btn-wrap-default">
@@ -608,12 +608,9 @@
                 <!-- N Community 생성, 가입하지 않은 케이스 -->
                 <div class="mypage-nodata-box">
                   <p>
-                    생성 또는 가입한 N 커뮤니티가 없으시네요!<br
-                      class="pc-only"
-                    />N 커뮤니티만의 다양한 활동과 미션에 참여해 보세요.<br
-                      class="pc-only"
-                    />N 커뮤니티만의 <span class="color-red">리워드</span> 도
-                    받을 수 있습니다.
+                    생성 또는 가입한 N 커뮤니티가 없으시네요!<br class="pc-only" />
+                    N 커뮤니티만의 다양한 활동과 미션에 참여해 보세요.<br class="pc-only" />
+                    N 커뮤니티만의 리워드도 받을 수 있습니다.
                   </p>
                   <div class="btn-wrap-type3">
                     <a

@@ -526,9 +526,7 @@
   left: 0;
   z-index: -1;
 }
-.n-race-box .conts-head {
-  padding: 0 60px 0 0;
-}
+
 .event-box {
   max-width: 1440px;
   margin: 0 auto;
@@ -687,7 +685,10 @@
 
 @media screen and (max-width: 1800px) {
   .n-race-box .conts-head {
-    /* margin-right: 60px; */
+    margin:0 80px 40px 80px;
+  }
+  .n-race-box .conts-body .section_tab {
+    margin-left:80px;
   }
   .evtGuide .content-item05 .tab-head,
   .evtGuide .content-item06 .conts-head,
@@ -1037,6 +1038,9 @@
   .n-race-box .conts-head {
     margin: 0 24px 28px;
     padding: 0;
+  }
+  .n-race-box .conts-body .section_tab {
+    margin-left: 0;
   }
   .n-race-box::before {
     height: 332px;

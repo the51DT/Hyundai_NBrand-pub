@@ -95,7 +95,7 @@
 .mypage-box {
   display: flex;
   /* gap: 7.6042vw; */
-  gap: 146px;
+  gap: 7.6vw;
   max-width: 1440px;
   margin: 120px auto 240px;
 }
@@ -128,7 +128,9 @@
   display: flex;
   flex-direction: column;
   gap: 80px;
-  flex: 0 0 calc(100% - 488px);
+  flex-grow: 1;
+  max-width: 952px;
+  /* flex: 0 0 calc(100% - 488px); */
   /* flex: 0 0 calc(100% - 25.4167vw); */
 }
 .mypage-wrap .mypage-content.type2 {
@@ -390,7 +392,7 @@
 .mynotice-wrap .mynotice-btm .mynotice-read {
   display: flex;
   gap: 4px;
-  align-items: flex-start;
+  align-items: center;
   font-size: 14px;
   font-weight: 400;
   line-height: 19.6px;
@@ -405,21 +407,25 @@
   column-gap: 12px;
 }
 .mypost-wrap .mypost-box {
-  width: 20%;
+  flex-shrink: 0;
+  width: calc(20% - 10px);
   background-color: #aacae6;
   border-radius: 4px;
   padding: 20px;
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  /* gap: 60px; */
   justify-content: space-between;
   height: 170px;
 }
+.mypost-wrap .mypost-box.width2 {
+  width: calc(50% - 6px);
+}
 .mypost-wrap .mypost-box.width3 {
-  width: calc(100% / 3);
+  width: calc(100% / 3 - 8px);
 }
 .mypost-wrap .mypost-box.width4 {
-  width: calc(100% / 4);
+  width: calc(100% / 4 - 9px);
 }
 .mypost-wrap .mypost-box a,
 .mypost-wrap .mypost-box button,
@@ -429,6 +435,15 @@
   line-height: 19.6px;
   text-align: left;
   width: auto;
+}
+/* 사파리 전용 미디어쿼리 */
+@media not all and (min-resolution:.001dpcm) {
+  body {
+    letter-spacing: -1px;
+  }
+	.mypost-wrap .mypost-box p:first-child {
+    word-break: break-all;
+  }
 }
 .mypost-wrap .mypost-box p:last-child {
   font-family: "Hyundai Sans Head";
@@ -454,6 +469,24 @@
 }
 .tab-container.mycommunity-wrap .tab-head {
   padding-bottom: 24px;
+  column-gap: 30px;
+}
+.tab-container.mycommunity-wrap .tab-head .tabs li {
+  width: 12.95rem;
+  text-align: center;
+}
+@media screen and (max-width: 1455px) {
+  .tab-container.mycommunity-wrap .tabs {
+    flex-direction: column;
+  }
+  .tab-container.mycommunity-wrap .tabs li:not(.on) {
+    border: 1px solid #777;
+  }
+}
+@media screen and (max-width: 1255px) {
+  .tab-container.mycommunity-wrap .tab-head .tabs li {
+    width: auto;
+  }
 }
 .tab-container.mypoint-tabwrap .tab-head {
   border-bottom: 2px solid #787d80;
@@ -498,6 +531,27 @@
 .mypoint-plus {
   color: #de3111;
 }
+.mypoint-minus.mypoint-reject,
+.mypoint-plus.mypoint-reject {
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+}
+.mypoint-reject:not(.mypoint-minus, .mypoint-plus) {
+  position: relative;
+  display: inline-block;
+  margin-left: 9px;
+}
+.mypoint-reject:not(.mypoint-minus, .mypoint-plus)::before {
+  content: '';
+  position: absolute;
+  left: -4px;
+  top: 43%;
+  transform: translateY(-50%);
+  display: block;
+  width: 1px;
+  height: 10px;
+  background-color: #222;
+}
 .mymsission-flag {
   /* 디자인 없어서 임의로 함 */
   font-size: 16px;
@@ -509,7 +563,7 @@
   border-radius: 15px;
   padding: 4px 12px;
   text-align: center;
-  margin-right: 12px;
+  margin-left: 6px;
   width: fit-content;
 }
 .mymsission-flag.gray-flag {
@@ -524,6 +578,7 @@
   flex: 1;
   align-items: flex-start;
   gap: 8px;
+  padding: 0 0.75rem;
 }
 .mypage-nodata-box p,
 .mypage-nodata-onlytext p {
@@ -855,6 +910,9 @@
   max-height: 100%;
   overflow: auto;
 }
+.mypage-community-des #ToggleDesBtn {
+  flex-shrink: 0;
+}
 .mypage-community-des #ToggleDesBtn .icon-down.rotate {
   transform: rotate(180deg);
 }
@@ -865,6 +923,17 @@
   position: absolute;
   top: 0;
   right: 0;
+}
+.tab-container.mypage-community-tab .tabs {
+  text-align: center;
+}
+@media screen and (max-width: 1080px) {
+  .mypage-community-tab .tabs {
+    flex-direction: column;
+  }
+  .mypage-community-tab .selectbox-wrap {
+    padding-top: 20px;
+  }
 }
 .mypage-wrap .mypage-community-info .info-transfer {
   display: flex;
@@ -912,7 +981,7 @@
   border-top: 2px solid #aaa;
 }
 .mypage-subtit-box + .mymsission-wrap {
-  border-top: 2px solid #787d80;
+  /* border-top: 2px solid #787d80; */
 }
 .mypage-wrap .mypage-titlebox p {
   font-family: "Hyundai Sans Head";
@@ -950,7 +1019,7 @@
   }
   .mypage-wrap .mypage-profile {
     gap: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 72px;
   }
   .mypage-wrap .mypage-profile > img {
     width: 110px;
@@ -1001,7 +1070,7 @@
   .mypage-box {
     display: block;
     max-width: 100%;
-    margin: 44px 0 160px;
+    margin: 80px 0 160px;
     padding: 0;
   }
   .mypage-wrap .mypage-nav {
@@ -1026,7 +1095,8 @@
   }
   .mypage-wrap .mypage-content {
     padding: 0 24px;
-    gap: 60px;
+    gap: 44px;
+    max-width: none;
   }
   .mypage-wrap .mypage-content.type2 {
     gap: 28px;
@@ -1402,6 +1472,9 @@
   }
   .mypage-community-tab {
     position: relative;
+  }
+  .mypage-community-tab .tabs {
+    flex-direction: row;
   }
   .mypage-community-tab .selectbox-wrap {
     position: static;

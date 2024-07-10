@@ -390,7 +390,7 @@ input[type="radio"]:focus + label {
 [class*="btn-icon"] {
   display: inline-block;
   background-repeat: no-repeat !important;
-  background-position: center;
+  background-position: center !important;
 }
 [class*="btn-icon20"] {
   width: 20px;
@@ -2048,28 +2048,33 @@ input[type="radio"]:focus + label {
   min-height: 1080px;
 }
 
+.ty01Swiper .text-area, 
 .key-visual-wrap .text-area {
   position: absolute;
   bottom: 136px;
   left: 60px;
   color: #fff;
 }
+.ty01Swiper .text-area .title, 
 .key-visual-wrap .text-area .title {
   font-size: 68px;
   line-height: 85px;
   font-weight: 700;
 }
+.ty01Swiper .text-area .desc, 
 .key-visual-wrap .text-area .desc {
   font-size: 20px;
   line-height: 28px;
   font-weight: 700;
   margin-top: 12px;
 }
-.key-visual-wrap .btn-wrap {
+.ty01Swiper .text-area .btn-wrap, 
+.key-visual-wrap .text-area .btn-wrap {
   margin-top: 32px;
 }
 
-.key-visual-wrap .btn-wrap .btn:not(:last-child) {
+.ty01Swiper .text-area .btn-wrap .btn:not(:last-child), 
+.key-visual-wrap .text-area .btn-wrap .btn:not(:last-child) {
   margin-right: 12px;
 }
 
@@ -4571,7 +4576,7 @@ p.text-num-chk {
   font-family: "Hyundai Sans Text";
 }
 .wrap-form .wrap-form-bottom.comment-type05 {
-  justify-content: end;
+  justify-content: flex-end;
 }
 .wrap-form .wrap-form-bottom.comment-type01 span.comment,
 .wrap-form .wrap-form-bottom.comment-type02 span.comment {
@@ -5275,7 +5280,7 @@ input:checked + .slider:before {
   font-weight: 700;
   color: #777;
   line-height: 28px;
-  /* padding: 0 14px; */
+  padding: 0 14px;
 }
 .page_wrap .page_list button:hover {
   color: #000;
