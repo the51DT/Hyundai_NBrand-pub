@@ -3697,7 +3697,8 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
     line-height: 28px;
   }
 
-  .nTaxi .banner-wrap .models-full {    
+  .nTaxi .banner-wrap .models-full {
+    background-image: url(../../inc/images/content/img_driving_cont04_1-mo.png);
     min-height: 1080px;
     padding:120px 24px 312px
   }
