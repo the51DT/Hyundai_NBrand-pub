@@ -1170,7 +1170,7 @@
 
 .popup.forBrand .popup-body {
   max-height: calc(100vh - 160px);
-  padding: 40px 40px 160px;
+  padding: 40px 40px 160px 40px;
   margin-bottom: 0;
 }
 
@@ -1191,7 +1191,7 @@
   .brand-pd
   .popup-body-innerbox
   .wrap-brand-desc {
-  padding: 40px 0 0;
+  padding: 40px 0 0 0;
   max-height: 100%;
 }
 
@@ -1335,7 +1335,7 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
-  padding: 24px 0 60px;
+  padding: 28px 0 60px 0;
 }
 
 .popup.model-popup.forBrand
@@ -1344,7 +1344,7 @@
   .inner-body-model
   .popup-body-innerbox:last-child
   .container-desc {
-  padding: 24px 0 0;
+  padding: 24px 0 0 0;
 }
 
 .popup.model-popup.forBrand
@@ -1353,7 +1353,7 @@
   .inner-body-model
   .popup-body-innerbox:last-child
   .container-desc {
-  padding: 28px 0 0;
+  padding: 28px 0 0 0;
 }
 
 .popup.model-popup.forBrand
@@ -1422,7 +1422,6 @@
   .popup-body
   .inner-body-model.pop-brand-gap
   .container-desc {
-  padding: 28px 0 60px;
   border-bottom: 1px solid #bbb;
 }
 
@@ -2259,13 +2258,13 @@
   }
 
   .popup.forBrand .popup-wrapper .popup-body {
-    padding: 28px 24px 100px;
+    padding: 28px 24px 100px 24px;
     max-height: calc(100vh - 60px);
   }
 
   /* BR030102P01, BR030102P02, BR030103P01에만 .brand-onlyTxt 클래스 추가 */
   .popup.forBrand .popup-wrapper .popup-body.brand-onlyTxt {
-    padding: 40px 24px 100px;
+    padding: 40px 24px 100px 24px;
     max-height: calc(100vh - 60px);
   }
 
@@ -2419,7 +2418,7 @@
     .popup-body
     .inner-body-model.pop-brand-gap
     .container-desc {
-    padding: 20px 0 36px;
+    padding: 20px 0 36px 0;
     border-bottom: 1px solid #bbb;
   }
 
