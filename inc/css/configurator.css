@@ -109,12 +109,9 @@
   color: #fff;
   z-index: 2;
 }
-.configurator_area:has(.configurator_menu_exterior.on)
-  .configurator_con_tit.tit_exterior,
-.configurator_area:has(.configurator_menu_interior.on)
-  .configurator_con_tit.tit_interior,
-.configurator_area:has(.configurator_menu_summary.on)
-  .configurator_con_tit.tit_summary {
+.configurator_area.exterior .configurator_con_tit.tit_exterior,
+.configurator_area.interior .configurator_con_tit.tit_interior,
+.configurator_area.summary .configurator_con_tit.tit_summary {
   display: block;
 }
 .configurator_swiper_wrap {
@@ -122,6 +119,10 @@
   height: 100%;
   background: linear-gradient(180deg, #060916 30%, #374b55 100%);
   z-index: 3;
+}
+.configurator_swiper_wrap:-webkit-full-screen {
+  width: 100vw !important;
+  height: 100vh !important;
 }
 .configurator_swiper_wrap .swiper-container {
   height: 100%;
@@ -286,7 +287,7 @@
   object-position: center;
   transition: transform 0.5s ease-in-out;
 }
-.configurator_swiper:has(.btn_zoom.on) .swiper-slide img {
+.configurator_swiper.zoom .swiper-slide img {
   /* 이미지 수급 후 값 조절 필요 */
   transform: scale(1.3);
 }
@@ -513,7 +514,7 @@
   overflow: hidden;
   transition: transform 0.2s ease-in-out;
 }
-.configurator_label_checkbox div:has(img) {
+.configurator_label_checkbox div {
   width: 100%;
   height: 16.9375rem;
   border-radius: 0.25rem;
@@ -548,6 +549,37 @@
   .configurator_label_tit::after {
   background-image: url(../images/icon/icon-checkbox-checked.svg);
 }
+.dropdown-on.configurator_list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+.configurator_select_wrap .dropdown-menu.configurator_list li + li {
+  margin-top: 0;
+}
+.configurator_label_list {
+  width: 100%;
+  min-width: 7rem;
+  padding: 0.5rem;
+  background-color: #FFF;
+  border-radius: 0.25rem;
+  outline: 1px solid rgba(217, 217, 217, 0.97);
+}
+.configurator_select_wrap input[type="checkbox"]:checked + .configurator_label_list {
+  outline: 2px solid rgba(0, 0, 0, 0.97);
+}
+.configurator_label_list img {
+  width: 100%;
+  height: 3.75rem;
+  object-fit: cover;
+}
+.configurator_label_list p {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 140%;
+  text-align: center;
+}
 
 /* step exterior/ interior */
 .configurator_select_exterior,
@@ -557,14 +589,10 @@
   height: calc(100vh - 4.3125rem);
   overflow-y: scroll;
 }
-.configurator_area.IONIQ:has(.configurator_menu_exterior.on)
-  .configurator_select_exterior.IONIQ,
-.configurator_area.ELANTRA:has(.configurator_menu_exterior.on)
-  .configurator_select_exterior.ELANTRA,
-.configurator_area.IONIQ:has(.configurator_menu_interior.on)
-  .configurator_select_interior.IONIQ,
-.configurator_area.ELANTRA:has(.configurator_menu_interior.on)
-  .configurator_select_interior.ELANTRA {
+.configurator_area.IONIQ.exterior .configurator_select_exterior.IONIQ,
+.configurator_area.ELANTRA.exterior .configurator_select_exterior.ELANTRA,
+.configurator_area.IONIQ.interior .configurator_select_interior.IONIQ,
+.configurator_area.ELANTRA.interior .configurator_select_interior.ELANTRA {
   display: block;
 }
 
@@ -586,36 +614,31 @@
 .configurator_scroll_tooltip .btn-icon24 {
   background-image: url(../images/icon/icon-scroll.svg);
 }
-.configurator_area:has(.configurator_menu_summary.on)
-  .configurator_scroll_tooltip {
+.configurator_area.summary .configurator_scroll_tooltip {
   display: flex;
 }
-.configurator_area:has(.configurator_menu_summary.on) .configurator_con_flex {
+.configurator_area.summary .configurator_con_flex {
   flex-direction: column;
 }
-.configurator_area:has(.configurator_menu_summary.on)
-  .configurator_swiper_wrap {
+.configurator_area.summary .configurator_swiper_wrap {
   width: 100%;
 }
-.configurator_area:has(.configurator_menu_summary.on) .configurator_price_wrap {
+.configurator_area.summary .configurator_price_wrap {
   position: sticky;
   padding: 2.5rem;
   width: 100vw;
   height: 8.125rem;
 }
-.configurator_area:has(.configurator_menu_summary.on)
-  .configurator_select_total_wrap {
+.configurator_area.summary .configurator_select_total_wrap {
   display: flex;
   align-items: center;
   column-gap: 0.75rem;
 }
-.configurator_area:has(.configurator_menu_summary.on)
-  .configurator_price_wrap
+.configurator_area.summary .configurator_price_wrap
   .btn-wrap {
   display: none;
 }
-.configurator_area:has(.configurator_menu_summary.on)
-  .configurator_price_summary {
+.configurator_area.summary .configurator_price_summary {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -624,27 +647,25 @@
   width: 100%;
   max-width: 60rem;
 }
-.configurator_area:has(.configurator_menu_summary.on) .configurator_price {
+.configurator_area.summary .configurator_price {
   flex-direction: row;
   align-items: center;
   column-gap: 1.5rem;
   padding: 0;
 }
-.configurator_area:has(.configurator_menu_summary.on) .configurator_price div {
+.configurator_area.summary .configurator_price div {
   column-gap: 0.75rem;
 }
-.configurator_area:has(.configurator_menu_summary.on) .configurator_price_tit {
+.configurator_area.summary .configurator_price_tit {
   font-size: 1rem;
   font-weight: 500;
   line-height: 140%;
   color: #000000;
 }
-.configurator_area:has(.configurator_menu_summary.on)
-  .configurator_price_total {
+.configurator_area.summary .configurator_price_total {
   margin-top: 0;
 }
-.configurator_area:has(.configurator_menu_summary.on)
-  .configurator_select_wrap {
+.configurator_area.summary .configurator_select_wrap {
   width: 100%;
 }
 .configurator_select_summary {
@@ -654,10 +675,8 @@
   width: 100%;
   max-width: 60rem;
 }
-.configurator_area.IONIQ:has(.configurator_menu_summary.on)
-  .configurator_select_summary.IONIQ,
-.configurator_area.ELANTRA:has(.configurator_menu_summary.on)
-  .configurator_select_summary.ELANTRA {
+.configurator_area.IONIQ.summary .configurator_select_summary.IONIQ,
+.configurator_area.ELANTRA.summary .configurator_select_summary.ELANTRA {
   display: block;
 }
 .configurator_summary_tit {
@@ -687,7 +706,7 @@
 .configurator_summary_list_top > div {
   display: flex;
   justify-content: end;
-  column-gap: 1.25rem;
+  column-gap: 0.75rem;
 }
 .configurator_summary_list_top .btn {
   gap: 0.25rem;
@@ -756,7 +775,7 @@
 }
 
 /* 모바일 */
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .configurator_header {
     padding: 1rem 1.5rem;
   }
@@ -919,52 +938,64 @@
     width: 6rem;
     height: 6rem;
   }
+  .configurator_label_radio div {
+    padding: 0 1.25rem;
+  }
+  .configurator_label_radio .configurator_label_tit {
+    font-size: 0.875rem;
+  }
   .configurator_label_radio .configurator_label_price {
     margin-top: 0.5rem;
   }
+  .configurator_label_checkbox div {
+    height: 13rem;
+  }
   .configurator_label_checkbox img {
     width: 100%;
-    height: 13rem;
+  }
+  .dropdown-on.configurator_list {
+    display: flex;
+    margin: 1rem 0 0 -1.5rem;
+    padding: 2px 1.5rem;
+    width: calc(100% + (1.5rem * 2));
+    overflow-x: scroll;
+  }
+  .configurator_label_list img {
+    width: 100%;
   }
 
   /* step exterior/ interior */
   .configurator_select_exterior,
   .configurator_select_interior {
     display: none;
-    padding: 4rem 1.5rem 2.25rem;
+    padding: 1.5rem 1.5rem 2.25rem;
     height: 100%;
   }
 
   /* step summary */
-  .configurator_area:has(.configurator_menu_summary.on)
-    .configurator_scroll_tooltip {
+  .configurator_area.summary .configurator_scroll_tooltip {
     display: none;
   }
-  .configurator_area:has(.configurator_menu_summary.on)
-    .configurator_price_wrap {
+  .configurator_area.summary .configurator_price_wrap {
     padding: 1.87rem 1.5rem 1.75rem;
     height: 10.25rem;
   }
-  .configurator_area:has(.configurator_menu_summary.on)
-    .configurator_select_total_wrap {
+  .configurator_area.summary .configurator_select_total_wrap {
     justify-content: space-between;
     width: 100%;
   }
-  .configurator_area:has(.configurator_menu_summary.on)
-    .configurator_price_summary {
+  .configurator_area.summary .configurator_price_summary {
     flex-direction: column;
     row-gap: 1rem;
   }
-  .configurator_area:has(.configurator_menu_summary.on) .configurator_price {
+  .configurator_area.summary .configurator_price {
     flex-direction: column;
     align-items: normal;
     row-gap: 0.5rem;
     padding-left: 0.25rem;
     width: 100%;
   }
-  .configurator_area:has(.configurator_menu_summary.on)
-    .configurator_price
-    div {
+  .configurator_area.summary .configurator_price div {
     justify-content: end;
     column-gap: 0.5rem;
   }
@@ -987,7 +1018,7 @@
     justify-content: space-between;
   }
   .configurator_summary_list_top > div {
-    column-gap: 0.75rem;
+    column-gap: 1rem;
   }
   .configurator_summary_list_top .btn {
     font-size: 0.875rem;
@@ -1013,7 +1044,7 @@
     flex-wrap: wrap;
     row-gap: 0.75rem;
   }
-  .configurator_select_summary .btn-wrap button {
+  .configurator_select_summary .btn-wrap > button {
     width: 100%;
   }
   .configurator_select_summary .btn-wrap > div {

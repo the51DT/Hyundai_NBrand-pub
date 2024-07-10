@@ -1243,6 +1243,13 @@ function DropdownFooter() {
       .on("click", function () {
         const accor02List = $(this).siblings("ul");
         accor02List.toggleClass("dropdown-on");
+        if(accor02List.hasClass("dropdown-on")) {
+          $(".footer-list-area .icon-down-wh").css("transform", "rotate(180deg)");
+          $(this).css("border-bottom", "none");
+        } else {
+          $(".footer-list-area .icon-down-wh").css("transform", "rotate(0deg)");
+          $(this).css("border-bottom", "1px solid #333");
+        }
         const expanded = accor02List.hasClass("dropdown-on") ? "true" : "false";
         $(this).attr("aria-expanded", expanded);
       });
@@ -1588,18 +1595,24 @@ function toggleFullscreen() {
   // };
 
   function toggleFullScreen(element) {
-    if (!document.fullscreenElement) {
-      if (element.requestFullscreen) return element.requestFullscreen();
-      if (element.webkitRequestFullscreen)
-        return element.webkitRequestFullscreen();
-      if (element.mozRequestFullScreen) return element.mozRequestFullScreen();
-      if (element.msRequestFullscreen) return element.msRequestFullscreen();
+    if (document.fullscreenElement) {
+      document.exitFullscreen();
+    } else if (document.webkitFullscreenElement) {
+      document.webkitExitFullscreen();
+    } else if (document.mozFullScreenElement) {
+      document.mozCancelFullScreen();
+    } else if (document.msFullscreenElement) {
+      document.msExitFullscreen();
     } else {
-      if (document.exitFullscreen) return document.exitFullscreen();
-      if (document.webkitCancelFullscreen)
-        return document.webkitCancelFullscreen();
-      if (document.mozCancelFullScreen) return document.mozCancelFullScreen();
-      if (document.msExitFullscreen) return document.msExitFullscreen();
+      if (element.requestFullscreen) {
+        element.requestFullscreen();
+      } else if (element.webkitRequestFullscreen) {
+        element.webkitRequestFullscreen();
+      } else if (element.mozRequestFullScreen) {
+        element.mozRequestFullScreen();
+      } else if (element.msRequestFullscreen) {
+        element.msRequestFullscreen();
+      }
     }
   }
 }
@@ -1820,6 +1833,14 @@ function modelsVideoPlay() {
 function configuratorHeader(el) {
   $(".configurator_header_menu").removeClass("on");
   el.target.closest(".configurator_header_menu").classList.add("on");
+  const menuName = ["exterior", "interior", "summary"];
+  for(let i = 0; i < menuName.length; i++) {
+    if($(`.configurator_menu_${menuName[i]}`).hasClass("on")) {
+      $(".configurator_area").addClass(menuName[i]);
+    } else {
+      $(".configurator_area").removeClass(menuName[i]);
+    }
+  }
 }
 // [End] : configurator_header_menu 확인용 스크립트 / 체크값 확인 후 넘어가기 필요
 
@@ -1856,8 +1877,22 @@ function configuratorEvent() {
   );
   configuratorInput.forEach((input) => {
     input.addEventListener("change", () => {
-      console.log(input.value);
+      // console.log(input.value);
 
+      // 라디오 기능
+      configuratorInput.forEach((samename) => {
+        const inputLabel = input.nextElementSibling.classList;
+        if (
+          samename.name === input.name &&
+          (inputLabel.contains("configurator_label_radio") ||
+            inputLabel.contains("configurator_label_list"))
+        ) {
+          samename.checked = false;
+          input.checked = true;
+        }
+      });
+
+      // transmission 값에 따라 alcantaraPackage 노출
       if (input.value.includes("transmission")) {
         const alcantaraInput = document.querySelectorAll(
           `.configurator_select_area input[name="transmission"]`
@@ -1960,6 +1995,7 @@ $(".btn_time").click(() => {
 });
 $(".btn_zoom").click(() => {
   $(".btn_zoom").toggleClass("on");
+  $(".configurator_swiper").toggleClass("zoom");
 });
 $(".btn_full").click(() => {
   $(".btn_full").toggleClass("on");
