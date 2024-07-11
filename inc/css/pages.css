@@ -527,16 +527,15 @@
 
 .event-box .conts-body {
   overflow: hidden;
-  position: relative;
 }
 
-/* .event-box .evt-map-wrap {
-  position: relative;
-  overflow: auto;
-  background: url("../../inc/images/content/event-map_img.svg") no-repeat;
-  width: 100%;
-  min-height: 810px;
-} */
+.event-box .evt-map-wrap {
+  position: relative;    
+}
+
+.event-box .evt-map-img img {
+  object-fit: cover;
+}
 
 .event-box .btn-area {
   position: absolute;
@@ -616,7 +615,6 @@
     margin-left:80px;
   }
   .evtGuide .content-item05 .tab-head,
-  .evtGuide .content-item06 .conts-head,
   .evtGuide .content-item07 .tab-head {
     padding: 0 80px;
   }
@@ -833,6 +831,11 @@
     padding-bottom: 120px;
   }
 
+  .class-info-box h2.ta-ctr {
+    text-align: left !important;
+    padding:0 24px 28px 24px;
+  }
+
   .class-info-box .conts-card-wrap {
     padding-left: 0;
     padding-right: 0;
@@ -984,10 +987,14 @@
 
   .track-guide-box .wrap-list.list03 .right {
     max-width: revert;
-  }  
+  }
+
+  .event-box .evt-map-img img {
+    min-height: 600px;    
+  }
   .event-box .btn-area {
     top: 24px;
-    right: 16px;
+    right: 48px;
   }
   .event-box .btn-area .btn-wrap {
     width: 48px;
