@@ -1877,7 +1877,7 @@ function configuratorEvent() {
   );
   configuratorInput.forEach((input) => {
     input.addEventListener("change", () => {
-      // console.log(input.value);
+      console.log(input.value);
 
       // 라디오 기능
       configuratorInput.forEach((samename) => {
@@ -2002,6 +2002,35 @@ $(".btn_full").click(() => {
 });
 // [End] : configurator fx
 
+// [Start] : configuratorScroll
+function configuratorScroll() {
+  var scrollWrap = $(".configurator_area");
+  let scrollPrev = 0,
+    scrollTop = 1;
+
+  scrollWrap.scroll(function () {
+    scrollTop = scrollWrap.scrollTop();
+
+    if (scrollTop > 0) {
+      if (scrollTop >= scrollPrev) {
+        // 스크롤 위치 증가
+        $(".configurator_header_wrap").addClass("scroll-on");
+        $(".configurator_swiper_wrap").removeClass("scroll-on");
+        $(".configurator_price_wrap").removeClass("scroll-on");
+      } else {
+        // 스크롤 위치 감소
+        $(".configurator_header_wrap").removeClass("scroll-on");
+        $(".configurator_swiper_wrap").addClass("scroll-on");
+        $(".configurator_price_wrap").addClass("scroll-on");
+      }
+      setTimeout(function () {
+        scrollPrev = scrollTop;
+      }, 10);
+    }
+  });
+}
+// [End] : configuratorScroll
+
 // scroll 이벤트 추가
 function scrollEvent() {
   var scrollWrap = $("body"),
@@ -2099,9 +2128,18 @@ $("body").scrollStopped(function (ev) {
   $(".header-wrap").removeClass("scroll-ing");
 });
 
+// vh 모바일
+function setVh () {
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty("--vh", `${vh}px`);
+}
+
 window.onload = function () {
   scrollEvent();
   // setTimeout(function () {
   //   scrollEvent();
   // }, 1000);
+  configuratorScroll();
+  setVh();
+  $(window).resize(() => {setVh();})
 };
