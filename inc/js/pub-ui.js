@@ -9,7 +9,7 @@ var pubUi = {
 
     if ($(".ty01Swiper") != undefined && $(".ty01Swiper").length > 0) {
       self.videoBulletChk(".ty01Swiper");
-    }    
+    }
   },
   settings: function () {
     var self = this;
@@ -137,7 +137,7 @@ var pubUi = {
       e.preventDefault();
       var tagList = $(this).closest(".tag-list-wrap").find(".tag-list");
       self.tagBtnEvent(e.target, tagList);
-    });    
+    });
 
     // 이벤트 레이아웃 마이너스 버튼 클릭시, 추 후 요건 확정 후 재작업 예정
     $(".event-box .btn-wrap.minus").click(function (e) {
@@ -204,7 +204,7 @@ var pubUi = {
       $(
         ".nflmain_wrap .content-item03 .banner-box .swiper-container .swiper"
       ).addClass("onlyone-swiper");
-    }    
+    }
   },
   swiperSlideEvent: function () {
     var self = this;
@@ -289,7 +289,6 @@ var pubUi = {
     });
 
     swiper2SlideEvt(); //swiper2 이벤트 실행
-    swiper4SlideEvt(); //swiper4 이벤트 실행
 
     var swiper3 = new Swiper(".ty03Swiper", {
       slidesPerView: 3,
@@ -321,7 +320,9 @@ var pubUi = {
           spaceBetween: 24,
         },
       },
-    });    
+    });
+
+    swiper4SlideEvt(); //swiper4 이벤트 실행
 
     var swiper5 = new Swiper(".ty05Swiper", {
       slidesPerView: "auto",
@@ -436,18 +437,18 @@ var pubUi = {
         },
       },
     });
-    var swiper9 = new Swiper(".configurator_swiper", {
-      slidesPerView: 1,
-      centeredSlides: true,
-      navigation: {
-        nextEl: ".configurator_swiper .swiper-button-next",
-        prevEl: ".configurator_swiper .swiper-button-prev",
-      },
-      pagination: {
-        el: ".configurator_swiper .swiper-pagination-custom",
-        clickable: true,
-      },
-    });
+    // var swiper9 = new Swiper(".configurator_swiper", {
+    //   slidesPerView: 1,
+    //   centeredSlides: true,
+    //   navigation: {
+    //     nextEl: ".configurator_swiper .swiper-button-next",
+    //     prevEl: ".configurator_swiper .swiper-button-prev",
+    //   },
+    //   pagination: {
+    //     el: ".configurator_swiper .swiper-pagination-custom",
+    //     clickable: true,
+    //   },
+    // });
     var swiper10 = new Swiper(".wrc_swiper", {
       slidesPerView: 1,
       centeredSlides: true,
@@ -847,21 +848,21 @@ $(document).ready(function () {
         }
       }
 
-      if (self.swiper4.length > 0) {
-        for (var i = 0; i < self.swiper4.length; i++) {
-          self.swiper4[i].destroy();
-          // console.log("swiper2 destroy!!!");
-        }
-      } else {
-        if (self.swiper4.slides.length > 0 && self.swiper4 != undefined) {
-          self.swiper4.destroy();
-          // console.log("swiper2 destroy")
-        }
-      }
-
       swiper2SlideEvt();
-      swiper4SlideEvt();
     }
+
+    if (self.swiper4.length > 0) {
+      for (var i = 0; i < self.swiper4.length; i++) {
+        self.swiper4[i].destroy();
+        console.log("swiper4 destroy!!!");
+      }
+    } else {
+      if (self.swiper4.slides.length > 0 && self.swiper4 != undefined) {
+        self.swiper4.destroy();
+        console.log("swiper4 destroy");
+      }
+    }
+    swiper4SlideEvt();
   });
 
   // 07.03 추가 - models-wrap 클래스 존재하는 페이지 일 경우, 하단 img loading 속성 제거
@@ -945,40 +946,59 @@ function swiper2SlideEvt() {
 // ty04Swiper swiper 이벤트 분리
 function swiper4SlideEvt() {
   // console.log("swiper4 이벤트 실행");
+  var swiper4Wrapper = $(".ty04Swiper .swiper-wrapper").innerWidth();
+  var raceBoxWidth = $(".next-race-box").outerWidth();
+  var leftSpaceVal = "";
+
+  if (window.innerWidth > 1799) {
+    leftSpaceVal = Number((raceBoxWidth - 1440) / 2);
+  } else {
+    leftSpaceVal = Number((raceBoxWidth - swiper4Wrapper) / 2);
+    if (leftSpaceVal < 80) {
+      leftSpaceVal = 80;
+    }
+  }
 
   self.swiper4 = new Swiper(".ty04Swiper", {
     slidesPerView: "auto",
     spaceBetween: 24,
-    slidesOffsetAfter: 24,
-    slidesOffsetBefore: 560,
+    observer: true,
+    observeParents: true,
+    slidesOffsetBefore: leftSpaceVal,
     navigation: {
       nextEl: ".ty04Swiper .swiper-button-next",
       prevEl: ".ty04Swiper .swiper-button-prev",
     },
     breakpoints: {
+      280: {
+        slidesPerView: "auto",
+        spaceBetween: 12,
+        slidesOffsetBefore: 24,
+        slidesOffsetAfter: 24,
+      },
       360: {
         slidesPerView: "auto",
         spaceBetween: 12,
-        slidesOffsetAfter: 24,
         slidesOffsetBefore: 24,
+        slidesOffsetAfter: 24,
       },
       1023: {
         slidesPerView: "auto",
         spaceBetween: 12,
-        slidesOffsetAfter: 0,
-        slidesOffsetBefore: 0,
+        slidesOffsetBefore: leftSpaceVal,
+        slidesOffsetAfter: 80,
       },
       1280: {
         slidesPerView: "auto",
         spaceBetween: 12,
+        slidesOffsetBefore: leftSpaceVal,
         slidesOffsetAfter: 80,
-        slidesOffsetBefore: 80,
       },
       2100: {
         slidesPerView: "auto",
         spaceBetween: 12,
+        slidesOffsetBefore: leftSpaceVal,
         slidesOffsetAfter: 80,
-        slidesOffsetBefore: 560,
       },
     },
   });
@@ -1114,7 +1134,7 @@ function evtImgMapChk(options) {
 
   if (evtSelect.length > 1) {
     console.log("셀렉트 박스 2개");
-    if(option1 == "A Paddock" && option2 == "N Zone") {
+    if (option1 == "A Paddock" && option2 == "N Zone") {
       evtMapImage.attr("src", "../../inc/images/content/car_model_img01.svg");
     } else if (option1 == "B Paddock" && option2 == "N Experience Zone") {
       evtMapImage.attr("src", "../../inc/images/content/event-map_img.svg");
@@ -1122,7 +1142,10 @@ function evtImgMapChk(options) {
   } else {
     console.log("셀렉트 박스 1개");
     if (option1 == "Motorsport Experience") {
-      evtMapImage.attr("src", "../../inc/images/content/evt_map_yeongam_01-pc.png");
+      evtMapImage.attr(
+        "src",
+        "../../inc/images/content/evt_map_yeongam_01-pc.png"
+      );
     }
   }
 }
@@ -1243,8 +1266,11 @@ function DropdownFooter() {
       .on("click", function () {
         const accor02List = $(this).siblings("ul");
         accor02List.toggleClass("dropdown-on");
-        if(accor02List.hasClass("dropdown-on")) {
-          $(".footer-list-area .icon-down-wh").css("transform", "rotate(180deg)");
+        if (accor02List.hasClass("dropdown-on")) {
+          $(".footer-list-area .icon-down-wh").css(
+            "transform",
+            "rotate(180deg)"
+          );
           $(this).css("border-bottom", "none");
         } else {
           $(".footer-list-area .icon-down-wh").css("transform", "rotate(0deg)");
@@ -1834,8 +1860,8 @@ function configuratorHeader(el) {
   $(".configurator_header_menu").removeClass("on");
   el.target.closest(".configurator_header_menu").classList.add("on");
   const menuName = ["exterior", "interior", "summary"];
-  for(let i = 0; i < menuName.length; i++) {
-    if($(`.configurator_menu_${menuName[i]}`).hasClass("on")) {
+  for (let i = 0; i < menuName.length; i++) {
+    if ($(`.configurator_menu_${menuName[i]}`).hasClass("on")) {
       $(".configurator_area").addClass(menuName[i]);
     } else {
       $(".configurator_area").removeClass(menuName[i]);
@@ -2129,7 +2155,7 @@ $("body").scrollStopped(function (ev) {
 });
 
 // vh 모바일
-function setVh () {
+function setVh() {
   let vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty("--vh", `${vh}px`);
 }
@@ -2141,5 +2167,7 @@ window.onload = function () {
   // }, 1000);
   configuratorScroll();
   setVh();
-  $(window).resize(() => {setVh();})
+  $(window).resize(() => {
+    setVh();
+  });
 };

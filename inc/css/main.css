@@ -57,14 +57,12 @@
   width: 100%;
   max-width: 22.8rem;
   height: auto;
-  aspect-ratio: 365 / 231;
   background-image: url(../../inc/images/img/img_IONIQ_5-365x231.png);
   background-size: contain;
 }
 .main_summery_card img {
   width: 100%;
   height: auto;
-  aspect-ratio: 465 / 365;
 }
 .main_summery_card div {
   display: flex;
@@ -120,10 +118,10 @@
   position: relative;
   width: 100%;
   height: auto;
-  aspect-ratio: 464 / 618;
+  padding-top: calc((618 / 464) * 100%);
 }
 .main_model_wrap .grid_3 li:first-of-type .main_model_card {
-  aspect-ratio: 952 / 618;
+  padding-top: calc((618 / 952) * 100%);
 }
 .main_model_card img {
   position: absolute;
@@ -224,6 +222,12 @@
   .main_Nfestival_wrap .swiper {
     height: 35rem;
   }
+  .main_swiper .swiper-slide .text-area button,
+  .main_model_swiper .swiper-slide .text-area button,
+  .main_Nfestival_wrap .swiper-slide .text-area button {
+    padding: 0.75rem 1rem;
+    font-size: 14px;
+  }
 
   .main_model_wrap {
     padding: 5rem 1.5rem 6.25rem;
@@ -233,9 +237,11 @@
   }
   .main_model_card {
     height: 26rem;
+    padding-top: 0;
   }
   .main_model_wrap .grid_3 li:first-of-type .main_model_card {
-    aspect-ratio: auto;
+    height: 26rem;
+    padding-top: 0;
   }
   .main_model_card .model_tit {
     position: absolute;

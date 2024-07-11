@@ -84,7 +84,9 @@ img {
   height: auto;
 }
 textarea {
+  appearance: none;
   -webkit-appearance: none;
+  -webkit-border-radius: 0;
   resize: none;
 }
 ul,
@@ -96,9 +98,17 @@ em,
 address {
   font-style: normal;
 }
-input,
+input {
+  appearance: none;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  vertical-align: middle;
+}
+
 select {
   -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   vertical-align: middle;
 }
 table {
@@ -131,6 +141,7 @@ button {
   background: none;
   cursor: pointer;
   font-family: Hyundai Sans Text, Arial, Dotum, sans-serif;
+  -webkit-appearance: none;
 }
 input,
 select,
@@ -171,6 +182,8 @@ a {
   color: inherit;
   text-decoration: none;
   cursor: default;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
 }
 abbr {
   text-decoration: none;
@@ -205,7 +218,31 @@ textarea::placeholder {
 }
 body {
   word-break: break-all;
+  padding-right: 0;
+  padding: 0 !important;
+  box-sizing: border-box;
 }
+
+/* body::-webkit-scrollbar {
+  background-color: transparent;
+  opacity: 0;
+  overflow: visible;
+  position: absolute;
+  left: auto;
+  right: 20px;
+  top: 0;
+}
+
+body::-webkit-scrollbar-thumb {
+  width: 30px;
+  background: linear-gradient(transparent, #30ff00);
+  border-radius: 6px;
+  border-radius: 20px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(transparent, #00c6ff, transparent);
+} */
 /* body * {
   outline: none;
 }
