@@ -924,7 +924,7 @@
   margin-top: 3.75rem;
 }
 .performance_garage {
-  padding: 5rem 5rem 15rem;
+  padding: 5rem 5rem 15rem 5rem;
 }
 /* BR050101 */
 .merchandise-wrap .swiper-slide img.pc-only {
@@ -943,7 +943,7 @@
   text-align: center;
 }
 .merchandise-wrap .collection-wrap {
-  padding: 160px 80px 200px;
+  padding: 160px 80px 200px 80px;
 }
 .merchandise-wrap .merchandise-kv .swiper-button-prev {
   bottom: 40px;
@@ -997,7 +997,7 @@
   display: flex;
 }
 .merchandise-wrap .collectiontab-wrap {
-  padding: 291px 80px 362px;
+  padding: 291px 80px 362px 80px;
   position: relative;
   height: 1440px;
 }
@@ -1594,7 +1594,7 @@
     height: 240px;
   }
   .brand .models-wrap .content-item08 .text-col {
-    padding: 36px 24px 0;
+    padding: 36px 24px 0 24px;
   }
   .brand .models-wrap .content-item08 .text-col .text-sub {
     margin-top: 28px;
@@ -1613,7 +1613,7 @@
   }
   .models-wrap .poster-bnr-wrap .models-full {
     height: 840px;
-    padding: 152px 24px 120px;
+    padding: 152px 24px 120px 24px;
   }
   .models-wrap .poster-bnr-wrap .text-strong {
     font-size: 30px;
@@ -1720,7 +1720,7 @@
     margin-top: 20px !important;
   }
   .gallery-box .conts-section-wrap {
-    padding: 36px 0 0;
+    padding: 36px 0 0 0;
   }
   .gallery-box .swiper-status-wrap {
     bottom: auto;
@@ -1780,7 +1780,7 @@
     font-size: 1.125rem;
   }
   .calendar-list .calendar_info {
-    padding: 1rem 1rem 1.06rem;
+    padding: 1rem 1rem 1.06rem 1rem;
   }
   .calendar-list .calendar_info .info_main .title {
     font-size: 1.125rem;
@@ -1818,7 +1818,7 @@
     font-size: 1rem;
   }
   .brand .motor_tab .mypage-withdrawal-table td {
-    padding: 0 0 1.25rem;
+    padding: 0 0 1.25rem 0;
     font-size: 1.25rem;
   }
   .brand .motor_wrap {
@@ -2110,7 +2110,7 @@
     margin-top: 2.25rem;
   }
   .performance_garage {
-    padding: 2.75rem 1.5rem 10rem;
+    padding: 2.75rem 1.5rem 10rem 1.5rem;
   }
   /* BR050101 */
   .merchandise-wrap .swiper-slide img.pc-only {
@@ -2126,7 +2126,7 @@
     max-width: 100%;
   }
   .merchandise-wrap .collection-wrap {
-    padding: 100px 24px 120px;
+    padding: 100px 24px 120px 100px;
   }
   .merchandise-wrap .merchandise-kv .swiper-status-wrap {
     bottom: 20px;
@@ -2145,7 +2145,7 @@
     width: calc(100% - 56px);
   }
   .merchandise-wrap .collectiontab-wrap {
-    padding: 120px 24px 148px;
+    padding: 120px 24px 148px 120px;
     height: fit-content;
   }
   .merchandise-wrap .collectiontab-wrap .tab-head.ty04 {
@@ -2183,7 +2183,7 @@
     margin-top: 12px;
   }
   .merchandise-wrap .productlist-wrap {
-    padding: 120px 24px 160px;
+    padding: 120px 24px 160px 120px;
   }
   .merchandise-wrap .productlist-wrap .productlist-bigbox {
     display: block;

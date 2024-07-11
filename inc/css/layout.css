@@ -80,6 +80,7 @@ body.fix {
   background-color: rgba(255, 255, 255, 1);
   transition: all 0.2s;
   opacity: 1;
+  padding-top: calc(env(safe-area-inset-top));
 }
 .header-wrap.scroll-on {
   top: -70px;
