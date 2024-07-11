@@ -101,20 +101,54 @@
         </div>
 
         <div class="popup-body height-longer-mobile">
-          <!-- 승인 상태 안내 박스 
+          <!-- 진행상태 영문 -->
+          <!-- 반려: Rejected ,  참여 대기: Awaiting Participation   -->
+          <!-- 승인 완료: Approved  ,  승인 대기: Awaiting Approval , 검토 중: Under Review  , 비공개 조치: Made Hidden   -->
+          <!-- 답변 완료: Answered   ,  답변 대기: Awaiting Answer  , 답변 중: Being Answered    -->
+          <!-- // -->
+
+          <!-- case 01: 비공개  -->
+          <div class="wrap-requested-msg">
+            <div class="box-msg">
+              <p class="txt-type03">
+                Thank you for participating in the mission.
+              </p>
+              <p class="txt-type03">
+                The participating post has been hidden after being reported for
+                monitoring.
+              </p>
+            </div>
+
+            <div class="box-msg-summary">
+              <p class="tit-type05">Reason for being hidden</p>
+              <p class="txt-type02">- Content theft</p>
+            </div>
+
+            <div class="box-msg">
+              <p class="txt-type03">
+                Please check the reason for being hidden before raising any
+                objection, if any, through our
+                <a class="accent" href=""> 1:1 inquiry service.</a>
+              </p>
+            </div>
+          </div>
+
+          <!-- 승인 상태 안내 박스, 
+            case 02: 반려
+
             <div class="wrap-requested-msg">
               <div class="box-msg">
                 <p class="txt-type03">
-                  Thank you for your Nfluencer activity.
+                  Thank you for participating in the mission.
                 </p>
                 <p class="txt-type03">
-                  After reviewing the post, it was rejected.
+                  The participating post has been rejected after our review.
                 </p>
               </div>
 
               <div class="box-msg-summary">
                 <p class="tit-type05">
-                  Reason for refusal
+                 Reason for rejection
                 </p>
                 <p class="txt-type02">
                   - Content theft
@@ -123,13 +157,15 @@
 
               <div class="box-msg">
                 <p class="txt-type03">
-                  After confirming the reason for non-disclosure, please proceed with your objection through
+                  Please check the reason for rejection and modify the post as necessary before reapplying for approval.
+
                   <a class="accent" href="">
                     1:1 inquiry.</a>
                 </p>
               </div>
             </div>
             -->
+
           <div class="m20">
             <div class="wrap-label-reward">
               <p class="tit-type04">You’ll see me in hindsight</p>
@@ -165,12 +201,12 @@
 
         <div class="popup-footer footer-no-pd">
           <div class="box-result pd-lg bg-blue">
-            <p class="popup-tit-lg">Waiting to participate</p>
+            <p class="popup-tit-lg">Awaiting Approval</p>
           </div>
           <!--
             이하 배경색 경우의 수 클래스 (.bg-blue, .bg-red, .bg-brown, bg-blk, bg-blk + .no-action)
             <div class="box-result pd-lg bg-blue">
-              <p class="popup-tit-lg">Waiting to participate</p>
+              <p class="popup-tit-lg">Awaiting Approval</p>
             </div>
 
             <div class="box-result pd-lg bg-red">
@@ -186,7 +222,7 @@
             </div>
 
             <div class="box-result pd-lg bg-blk">
-              <p class="popup-tit-lg no-action ">non-disclosure action</p>
+              <p class="popup-tit-lg no-action ">Made Hidden</p>
             </div>
 -->
 
@@ -196,7 +232,7 @@
                 type="button"
                 class="btn btn-lg-outline01 btn-lg-primary02"
               >
-                Cancel
+                Modify
                 <span class="btn-icon20 icon-right" aria-hidden="true"></span>
               </button>
               <button type="button" class="btn btn-lg-primary01">
@@ -212,7 +248,11 @@
 
         <div class="btn-wrap">
           <!-- pop-close 해당 팝업 닫기 -->
-          <button type="button" class="btn btn-only-icon-notbg popup-close-btn-x pop-close" title="close">
+          <button
+            type="button"
+            class="btn btn-only-icon-notbg popup-close-btn-x pop-close"
+            title="close"
+          >
             <span class="visually-hidden">close</span>
             <span class="btn-icon36 icon-close" aria-hidden="true"></span>
           </button>
