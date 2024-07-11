@@ -1670,6 +1670,9 @@ input[type="radio"]:focus + label {
   height: 40px;
   position: relative;
 }
+.card_type04 .card_profile .profile_img img{
+  height: 100%;
+}
 /* 0627 개발요청) 프로필 미등록 시 기본값으로 bg로 이미지 나타나도록 작업 요청 */
 .card_type04 .card_profile .profile_img {
   width: 40px;
@@ -1680,7 +1683,7 @@ input[type="radio"]:focus + label {
   background-size: contain;
 }
 /* 0627 패쇄된 커뮤니티 프로필 경우 : dimmed 처리 해야함 */
-.card_type04 .card_profile.close .profile_img::after {
+.card_type04 .card_profile .profile_img.close::after {
   background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
   width: 40px;

@@ -7,14 +7,7 @@ body {
 body.fix {
   overflow: hidden !important;
 }
-.wrap {
-}
-body:-webkit-scrollbar {
-  display: block;
-  opacity: 0;
-}
-.wrap * {
-}
+
 /* dimmed */
 .dimmed {
   position: fixed;

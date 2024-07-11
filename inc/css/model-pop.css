@@ -416,6 +416,8 @@
 @media screen and (max-width: 1023px) {
   .popup.model-popup.forModel {
     height: 100vh;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
   }
 
   .popup.model-popup.forModel .popup-wrapper .popup-header {
@@ -428,6 +430,8 @@
 
   .popup.model-popup.forModel .popup-wrapper {
     height: 100vh;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
   }
 
   .popup.model-popup.forModel .popup-wrapper .popup-header {

@@ -18,6 +18,7 @@ $(document).ready(function () {
   NbrandUI.rendingClick(".rending-btn");
   resizeDone();
   // NbrandUI.inputClear(".input-del");
+  NbrandSwiper.swiper9(".configurator_swiper");
 });
 
 let $win_W = $(window).width();
@@ -127,15 +128,19 @@ var NbrandUI = {
       switch (popClass) {
         case "popup model-popup":
           openWrap.addClass("on").fadeIn(200);
+          NbrandUI.dimdOn();
           break;
         case "popup model-popup forModel":
           openWrap.addClass("on").fadeIn(200);
+          NbrandUI.dimdOn();
           break;
         case "popup model-popup forBrand":
           openWrap.addClass("on").fadeIn(200);
+          NbrandUI.dimdOn();
           break;
         case "popup model-popup fullwidth":
           openWrap.addClass("on").fadeIn(200);
+          NbrandUI.dimdOn();
           break;
         case "popup bottom-popup share-popup":
           openWrap.addClass("on").slideDown(200);
@@ -587,6 +592,23 @@ var NbrandUI = {
       alert(winHeight - contentPoint - 500);
     });
   },
+
+  profileClose: function (obj) {
+    closeWrap = $(obj);
+    openProfileBtn = closeWrap.siblings(".card_profile").find(".profile-open");
+    // $(obj).siblings(".card_profile").find(".profile-open");
+    closeWrap.removeClass("on").stop().fadeOut(300);
+    closeWrap.find(".ui-fctab-s").remove();
+    closeWrap.find(".ui-fctab-e").remove();
+    NbrandUI.expandedAria(openProfileBtn);
+    $(".open-profile-btn").focus().removeClass("open-profile-btn");
+  },
+  profileCloseOption: function (obj) {
+    obj.removeClass("on").stop().fadeOut(300);
+    obj.find(".ui-fctab-s").remove();
+    obj.find(".ui-fctab-e").remove();
+    $(".profile-open").removeClass("open-profile-btn");
+  },
   profileOpenClose: function (obj, closeObj) {
     if (!NbrandUI.checkObj(obj)) {
       return;
@@ -594,39 +616,30 @@ var NbrandUI = {
     // alert(openprofileBtn.offset().top);
     // openprofileData = openprofileBtn.attr("aria-controls");
     var openprofile = $(obj);
-    var winHeight = 0;
+    var closeprofile = $(closeObj);
+    // var winHeight = 0;
     // function init(obj) {
     //   NbrandUI.expandedAria(openprofile);
     // }
 
-    function close(obj) {
-      obj.removeClass("on").stop().fadeOut(300);
-      obj.find(".ui-fctab-s").remove();
-      obj.find(".ui-fctab-e").remove();
-    }
     function event() {
       openprofile.on("click", function () {
         eventBtn = $(this);
         openWrap = eventBtn.siblings(".club-popup");
-        close($(".club-popup"));
+        NbrandUI.profileCloseOption($(".club-popup"));
+        eventBtn.addClass("open-profile-btn");
         openWrap.addClass("on").stop().fadeIn(200);
         tparent = openWrap;
         Nbrand.uiFocusTab({
           selector: tparent,
           type: "hold",
         });
-
         openWrap
           .find(closeObj)
           .off("click")
           .on("click", function () {
             closeWrap = $(this).parents(".club-popup");
-            openProfileBtn = closeWrap
-              .siblings(".card_profile")
-              .find(".profile-open");
-            NbrandUI.expandedAria(openProfileBtn);
-            openProfileBtn.focus();
-            close(closeWrap);
+            NbrandUI.profileClose(closeWrap);
           });
       });
     }
@@ -734,5 +747,26 @@ var NbrandUI = {
   },
   mdimdOff: function () {
     $("body").find(".m-dimmed").remove();
+  },
+};
+
+var NbrandSwiper = {
+  swiper9: function (obj) {
+    if (!NbrandUI.checkObj(obj)) {
+      return;
+    }
+
+    var swiper9 = new Swiper(obj, {
+      slidesPerView: 1,
+      centeredSlides: true,
+      navigation: {
+        nextEl: ".configurator_swiper .swiper-button-next",
+        prevEl: ".configurator_swiper .swiper-button-prev",
+      },
+      pagination: {
+        el: ".configurator_swiper .swiper-pagination-custom",
+        clickable: true,
+      },
+    });
   },
 };
