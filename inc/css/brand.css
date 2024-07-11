@@ -36,16 +36,17 @@
   max-width: 1440px;
   margin: 100px auto;
 }
-.content-box .banner-box .banner-titbox {
+.content-box .banner-box .banner-txt-wrap{
   position: absolute;
-  top: 40px;
-  left: 60px;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding: 40px 60px;
   color: #fff;
-}
-.content-box .banner-box .btn-wrap {
-  position: absolute;
-  left: 60px;
-  bottom: 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .content-box .banner-box .banner-titbox .banner-tit {
   font-size: 40px;
@@ -1457,12 +1458,14 @@
   }
 
   .content-box .banner-box img {
-    min-height: 400px;
+    height: 400px;
+    object-fit: cover;
+    object-position: bottom;
   }
-  .content-box .banner-box .banner-titbox {
-    top: 32px;
-    left: 24px;
-    padding-right: 24px;
+  .content-box .banner-box .banner-txt-wrap {
+    padding: 32px 24px;
+    justify-content: flex-start;
+    row-gap: 43px;
   }
 
   .content-box .banner-box .banner-titbox .banner-tit {
@@ -1473,10 +1476,6 @@
   .content-box .banner-box .banner-titbox .banner-des {
     font-size: 18px;
     line-height: 25.2px;
-  }
-  .content-box .banner-box .btn-wrap {
-    left: 24px;
-    bottom: 234px;
   }
 
   .content-box .paging {
