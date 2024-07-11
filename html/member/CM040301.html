@@ -45,7 +45,7 @@
                     href="/html/main/experience/EP040401.html"
                     class="btn md-txt-btn01"
                   >
-                    Create and join N Community
+                    Create or join an N Community
                     <span
                       class="btn-icon16 icon-right"
                       aria-hidden="true"
@@ -166,7 +166,7 @@
                   </li>
                   <li>
                     <a class="btn lg-txt-btn01" href="./CM041001.html">
-                      Withdrawal
+                      Membership withdrawal
                       <span
                         class="btn-icon16 icon-right"
                         aria-hidden="true"
@@ -194,7 +194,7 @@
                   </div>
                   <div class="mypost-box">
                     <!-- 0627 v1.03 post : 작성한 포스트 최신순 노출에 따른 태그 변경 (button → p) -->
-                    <p>Waiting for approval</p>
+                    <p>Awaiting Approval</p>
                     <p>3</p>
                   </div>
                   <div class="mypost-box">
@@ -209,7 +209,7 @@
                   </div>
                   <div class="mypost-box">
                     <!-- 0627 v1.03 post : 작성한 포스트 최신순 노출에 따른 태그 변경 (button → p) -->
-                    <p>non-disclosure action</p>
+                    <p>Made Hidden</p>
                     <p>1</p>
                   </div>
                 </div>
@@ -288,6 +288,13 @@
                     </div>
                     <div class="selectbox-overlay" style="display: none"></div>
                   </div>
+
+                  <!-- 진행상태 영문 -->
+                  <!-- 반려: Rejected ,  참여 대기: Awaiting Participation   -->
+                  <!-- 승인 완료: Approved  ,  승인 대기: Awaiting Approval , 검토 중: Under Review  , 비공개 조치: Made Hidden   -->
+                  <!-- 답변 완료: Answered   ,  답변 대기: Awaiting Answer  , 답변 중: Being Answered    -->
+                  <!-- // -->
+
                   <!-- 0627 v1.03 p.46 게시글 목록으로 변경 -->
                   <ul class="mymsission-wrap">
                     <li>
@@ -308,7 +315,7 @@
                         </button>
                         <p class="mymsission-date">04.01.2024</p>
                       </div>
-                      <p class="mymsission-status">Wait</p>
+                      <p class="mymsission-status">Awaiting Participation</p>
                     </li>
                     <li>
                       <div class="mymsission-col">
@@ -331,21 +338,21 @@
                       ></span>
                     </button>
                   </div>
-                  <!-- v1.02 기획서  p.44: 정령 항목 알림 없을 경우 문구 노출 (디자인 x) -->
+                  <!-- v1.02 기획서  p.44: 정렬 항목 알림 없을 경우 문구 노출 (디자인 x) -->
                   <p class="mypage-content-nodata">게시글이 없습니다.</p>
                 </div>
                 <!-- 작성한 Post 게시글 없을 경우 -->
                 <div class="mypage-nodata-box">
                   <p>
-                    There are no posts you wrote!<br class="pc-only" />
-                    Write a post and communicate with N Brand members.
+                    You have not written any posts!<br class="pc-only" />
+                    Write a post and share it with Hyundai N members.
                   </p>
                   <div class="btn-wrap-type2">
                     <a
                       href="../../main/experience/EP040201.html"
                       class="btn btn-md-outline01"
                     >
-                      See Hub
+                      Go to Hub
                       <span
                         class="btn-icon16 icon-right"
                         aria-hidden="true"
@@ -358,6 +365,120 @@
                     >
                   </div>
                 </div>
+
+                <!-- 미션이 없을 경우 -->
+                <!-- <div class="mypage-nodata-box">
+                  <p>
+                    You haven't participated in any missions!<br
+                      class="pc-only"
+                    />
+                    Participate in missions to earn points.
+                    <br class="pc-only" />
+                    You can get special rewards using the points.
+                  </p>
+                  <div class="btn-wrap-type2">
+                    <a
+                      href="../../main/experience/EP040201.html"
+                      class="btn btn-md-outline01"
+                    >
+                      Go to Missions
+                      <span
+                        class="btn-icon16 icon-right"
+                        aria-hidden="true"
+                      ></span>
+                    </a>
+                    <a
+                      href="../../main/experience/EP040201P02.html"
+                      class="btn btn-md-outline01"
+                      >+ Post</a
+                    >
+                  </div>
+                </div> -->
+
+                <!-- 신청 리워드가 없을 경우 -->
+                <!-- 
+                  <div class="mypage-nodata-box">
+                  <p>
+                    You haven't applied for rewards!<br class="pc-only" />
+                    Get exclusive rewards from Hyundai N.
+                    <br class="pc-only" />
+                    You can earn points by completing missions.
+                  </p>
+                  <div class="btn-wrap-type2">
+                    <a
+                      href="../../main/experience/EP040201.html"
+                      class="btn btn-md-outline01"
+                    >
+                      Go to Rewards
+                      <span
+                        class="btn-icon16 icon-right"
+                        aria-hidden="true"
+                      ></span>
+                    </a>
+                    <a
+                      href="../../main/experience/EP040201P02.html"
+                      class="btn btn-md-outline01"
+                      >+ Post</a
+                    >
+                  </div>
+                </div> -->
+
+                <!-- 보유 포인트 없을 경우 -->
+                <!-- 
+                  <div class="mypage-nodata-box">
+                  <p>
+                    You have no points!<br class="pc-only" />
+                    You can earn points by completing missions.
+                  </p>
+                  <div class="btn-wrap-type2">
+                    <a
+                      href="../../main/experience/EP040201.html"
+                      class="btn btn-md-outline01"
+                    >
+                      Go to Rewards
+                      <span
+                        class="btn-icon16 icon-right"
+                        aria-hidden="true"
+                      ></span>
+                    </a>
+                    <a
+                      href="../../main/experience/EP040201P02.html"
+                      class="btn btn-md-outline01"
+                      >+ Post</a
+                    >
+                  </div>
+                </div>
+                 -->
+
+                <!-- 가입한 커뮤니티가 없을 경우 -->
+                <!-- 
+                  <div class="mypage-nodata-box">
+                  <p>
+                    You haven't created or joined an N Community!
+                    <br class="pc-only" />
+                    Participate in various activities and missions in any N Community you want.
+                    <br class="pc-only" />
+                    You can get exclusive rewards from your N Community.
+                  </p>
+                  <div class="btn-wrap-type2">
+                    <a
+                      href="../../main/experience/EP040201.html"
+                      class="btn btn-md-outline01"
+                    >
+                      Go to N Community  
+                      <span
+                        class="btn-icon16 icon-right"
+                        aria-hidden="true"
+                      ></span>
+                    </a>
+                    <a
+                      href="../../main/experience/EP040201P02.html"
+                      class="btn btn-md-outline01"
+                      >Creating an N Community</a
+                    >
+                  </div>
+                </div>
+                 -->
               </div>
             </div>
           </div>
