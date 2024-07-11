@@ -289,7 +289,6 @@ var pubUi = {
     });
 
     swiper2SlideEvt(); //swiper2 이벤트 실행
-    swiper4SlideEvt(); //swiper4 이벤트 실행
 
     var swiper3 = new Swiper(".ty03Swiper", {
       slidesPerView: 3,
@@ -321,7 +320,9 @@ var pubUi = {
           spaceBetween: 24,
         },
       },
-    });    
+    });
+
+    swiper4SlideEvt(); //swiper4 이벤트 실행
 
     var swiper5 = new Swiper(".ty05Swiper", {
       slidesPerView: "auto",
@@ -847,21 +848,21 @@ $(document).ready(function () {
         }
       }
 
-      if (self.swiper4.length > 0) {
-        for (var i = 0; i < self.swiper4.length; i++) {
-          self.swiper4[i].destroy();
-          // console.log("swiper2 destroy!!!");
-        }
-      } else {
-        if (self.swiper4.slides.length > 0 && self.swiper4 != undefined) {
-          self.swiper4.destroy();
-          // console.log("swiper2 destroy")
-        }
-      }
-
       swiper2SlideEvt();
-      swiper4SlideEvt();
     }
+
+    if (self.swiper4.length > 0) {
+      for (var i = 0; i < self.swiper4.length; i++) {
+        self.swiper4[i].destroy();
+        console.log("swiper4 destroy!!!");
+      }
+    } else {
+      if (self.swiper4.slides.length > 0 && self.swiper4 != undefined) {
+        self.swiper4.destroy();
+        console.log("swiper4 destroy");
+      }
+    }
+    swiper4SlideEvt();
   });
 
   // 07.03 추가 - models-wrap 클래스 존재하는 페이지 일 경우, 하단 img loading 속성 제거
@@ -945,40 +946,60 @@ function swiper2SlideEvt() {
 // ty04Swiper swiper 이벤트 분리
 function swiper4SlideEvt() {
   // console.log("swiper4 이벤트 실행");
+  var swiper4Wrapper = $(".ty04Swiper .swiper-wrapper").innerWidth();
+  var raceBoxWidth = $(".next-race-box").outerWidth();
+  var leftSpaceVal = "";
+  
+
+  if (window.innerWidth > 1799) {
+    leftSpaceVal = Number((raceBoxWidth - 1440) / 2);
+  } else {
+    leftSpaceVal = Number((raceBoxWidth - swiper4Wrapper) / 2);
+    if(leftSpaceVal < 80) {
+      leftSpaceVal = 80;
+    }
+  }  
 
   self.swiper4 = new Swiper(".ty04Swiper", {
     slidesPerView: "auto",
     spaceBetween: 24,
-    slidesOffsetAfter: 24,
-    slidesOffsetBefore: 560,
+    observer: true,
+    observeParents: true,
+    slidesOffsetBefore: leftSpaceVal,
     navigation: {
       nextEl: ".ty04Swiper .swiper-button-next",
       prevEl: ".ty04Swiper .swiper-button-prev",
     },
     breakpoints: {
+      280: {
+        slidesPerView: "auto",
+        spaceBetween: 12,
+        slidesOffsetBefore: 24,
+        slidesOffsetAfter: 24,
+      },
       360: {
         slidesPerView: "auto",
         spaceBetween: 12,
-        slidesOffsetAfter: 24,
         slidesOffsetBefore: 24,
+        slidesOffsetAfter: 24,
       },
       1023: {
         slidesPerView: "auto",
         spaceBetween: 12,
-        slidesOffsetAfter: 0,
-        slidesOffsetBefore: 0,
+        slidesOffsetBefore: leftSpaceVal,
+        slidesOffsetAfter: 80,
       },
       1280: {
         slidesPerView: "auto",
         spaceBetween: 12,
+        slidesOffsetBefore: leftSpaceVal,
         slidesOffsetAfter: 80,
-        slidesOffsetBefore: 80,
       },
       2100: {
         slidesPerView: "auto",
         spaceBetween: 12,
+        slidesOffsetBefore: leftSpaceVal,
         slidesOffsetAfter: 80,
-        slidesOffsetBefore: 560,
       },
     },
   });

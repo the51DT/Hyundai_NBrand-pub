@@ -4,13 +4,6 @@
 .kv-video-area {
   width: 100%;
 }
-.swiper-card-type.ty04Swiper {
-  overflow: hidden;
-}
-.swiper-card-type.ty04Swiper .swiper-wrapper {
-  /* width: calc((100vw - 1440px) / 2 + 1440px); */
-  width: calc((100% - 1440px) / 2 + 1440px);
-}
 /* common */
 .bg-lightblue {
   background-color: #aacae6 !important;
@@ -586,70 +579,8 @@
   width: 33.33%;
 }
 
-/* .evt-map-area li {
-  position: absolute;
-  box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.25);
-}
-
-.evt-map-area li:nth-child(1) {
-  top: 254px;
-  left: 444px;
-}
-.evt-map-area li:nth-child(2) {
-  top: 214px;
-  left: 783px;
-}
-.evt-map-area li:nth-child(3) {
-  top: 189px;
-  left: 443px;
-}
-.evt-map-area li:nth-child(4) {
-  top: 435px;
-  left: 847px;
-}
-.evt-map-area li:nth-child(5) {
-  top: 431px;
-  left: 378px;
-}
-
-.evt-map-area li button {
-  display: flex;
-  align-items: center;
-}
-
-.evt-map-area li button .num {
-  width: 53px;
-  height: 53px;
-  color: #fff;
-  background-color: #de3111;
-  padding: 10px;
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 30px;
-  text-align: center;
-}
-
-.evt-map-area li button .tit {
-  background: #fff;
-  padding: 16px;
-  color: #000;
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 20px;
-  white-space: nowrap;
-}
-
-.evt-map-area li a .tit .icon-right {
-  margin: -4px 0;
-} */
-
 .track-guide-box .descwrap .sub-tit {
   margin-top: 4px;
-}
-
-.next-race-box .conts-body .swiper-container {
-  /* width: calc((100% - 240px) / 2 + 1440px); */
-  /* margin: 0 auto; */
 }
 
 @media screen and (max-width: 2168px) {
@@ -662,16 +593,10 @@
 }
 
 /* min-width : 1024 css */
-@media screen and (max-width: 1280px) and (min-width: 1024px) {
-  /* .next-race-box .conts-head .selectbox-wrap {
-    margin-right: 80px;
-  } */
+@media screen and (max-width: 1280px) and (min-width: 1024px) {  
   .next-race-box .conts-head {
     margin:0 80px 40px;
-  }
-  .next-race-box .conts-body {
-    margin-left: 80px;
-  }
+  }  
     
   .next-race-box .swiper-card-type .swiper-button-prev {
     left: 80px;
@@ -684,9 +609,9 @@
 }
 
 @media screen and (max-width: 1800px) {
-  .n-race-box .conts-head {
+  .n-race-box .conts-head, .next-race-box .conts-head {
     margin:0 80px 40px 80px;
-  }
+  }  
   .n-race-box .conts-body .section_tab {
     margin-left:80px;
   }
@@ -1012,11 +937,7 @@
   .next-race-box .conts-head {
     padding-left: 24px;
     padding-right: 24px;
-    margin-bottom: 64px;
-  }
-  
-  .next-race-box .swiper {
-    width: 100%;
+    margin:0 0 64px 0;
   }
 
   .next-race-box .conts-head .selectbox-wrap {
@@ -1045,6 +966,7 @@
   .n-race-box::before {
     height: 332px;
   }
+
   .conts-head {
     display: block;
   }
@@ -1080,4 +1002,5 @@
   .about .txt-list-wrap li {
     width: auto;
   }
+
 }
