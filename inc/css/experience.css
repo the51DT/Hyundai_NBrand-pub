@@ -514,12 +514,12 @@
   display: flex;
   justify-content: center;
   align-items: end;
+  padding-top: 5rem;
   width: 100%;
   height: auto;
   background-color: #aacae6;
   background-position: center;
   background-size: cover;
-  aspect-ratio: 1920 / 694;
 }
 .driver_top img {
   width: 31.98%;
@@ -658,10 +658,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 5rem 0;
   width: 100%;
   height: auto;
   background-color: #f0f0f0;
-  aspect-ratio: 1920 / 694;
 }
 .team_top img {
   width: 41.67%;
@@ -2716,7 +2716,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
 
   /* EP010501P01 */
   .driver_top {
-    aspect-ratio: 360 / 240;
+    padding-top: 1.44rem;
   }
   .driver_top img {
     width: 60.28%;
@@ -2792,8 +2792,8 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
 
   /* EP010601P01 */
   .team_top {
+    padding: 2.75rem;
     background-color: #f0f0f0;
-    aspect-ratio: 360 / 240;
   }
   .team_top img {
     width: 60.28%;

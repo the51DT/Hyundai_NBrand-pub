@@ -511,11 +511,9 @@ min-width : 1024 css
   /* card_type03 */
   .card_type03 {
     height: 14rem;
-    aspect-ratio: 224 / 312;
   }
   .card_type03.card_ranker {
     height: 17.5625rem;
-    aspect-ratio: 281 / 312;
   }
   .card_type03 .card_top {
     padding: 1.44rem 1.31rem 0 1.25rem;
@@ -564,27 +562,6 @@ min-width : 1024 css
   .card_type04 .card_date {
     margin-top: 12px;
   }
-  .card_type04 .card_thumbnail.h347 {
-    aspect-ratio: 312 / 312;
-  }
-  .card_type04 .card_thumbnail.h464 {
-    aspect-ratio: 312 /312;
-  }
-  .card_type04 .card_thumbnail.h359 {
-    aspect-ratio: 312 / 235;
-  }
-  .card_type04 .card_thumbnail.h823 {
-    aspect-ratio: 312 / 552;
-  }
-  .card_type04 .card_thumbnail.h825 {
-    aspect-ratio: 312 / 552;
-  }
-  .card_type04 .card_thumbnail.h618 {
-    aspect-ratio: 312 / 415;
-  }
-  .card_type04 .card_thumbnail.h261 {
-    aspect-ratio: 312 / 190;
-  }
   .card_type04 .card_con p.tit-type03 {
     font-size: 1.5rem;
     line-height: 140%;
@@ -599,10 +576,10 @@ min-width : 1024 css
     min-width: 16.125rem;
   }
   .grid_mo_drop .card_type05 .card_top {
-    aspect-ratio: 312 / 208;
+    padding-top: calc((208 / 312) * 100%);
   }
   .grid_mo_scroll .card_type05 .card_top {
-    aspect-ratio: 312 / 208;
+    padding-top: calc((208 / 312) * 100%);
   }
   .card_type05 .card_bottom {
     padding: 1.25rem 1.25rem 1.75rem;
@@ -644,10 +621,10 @@ min-width : 1024 css
     height: 6.25rem;
   }
   .grid_2 .card_video .card_img {
-    aspect-ratio: 312 / 234;
+    padding-top: calc((234 / 312) * 100%);
   }
   .grid_3 .card_video .card_img {
-    aspect-ratio: 312 / 234;
+    padding-top: calc((234 / 312) * 100%);
   }
   .card_video .card_title {
     font-size: 1.25rem;

@@ -1412,12 +1412,19 @@ input[type="radio"]:focus + label {
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  height: auto;
-  aspect-ratio: 464 / 300;
+  height: 300px;
   background-color: #aacae6;
 }
 .card_type03.card_ranker {
-  aspect-ratio: 464 / 414;
+  height: 414px;
+}
+@media screen and (max-width: 1440px) {
+  .card_type03 {
+    height: 245px;
+  }
+  .card_type03.card_ranker {
+    height: 245px;
+  }
 }
 .card_type03 .card_top {
   display: flex;
@@ -1468,8 +1475,9 @@ input[type="radio"]:focus + label {
 }
 .card_type03 .card_bottom button,
 .card_type03 .card_bottom img {
-  width: 140px;
-  height: 140px;
+  width: auto;
+  height: 100%;
+  object-fit: cover;
 }
 .card_type03 .card_bottom .card_detail {
   display: flex;
@@ -1479,12 +1487,14 @@ input[type="radio"]:focus + label {
 }
 .card_type03.card_ranker .card_bottom .card_detail {
   gap: 0.25rem;
+  padding-right: 1.5rem;
 }
 .card_type03 .card_name {
   font-family: "Hyundai Sans Head";
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 140%;
+  word-break: break-all;
 }
 .card_type03 .card_community {
   font-family: "Hyundai Sans Text";
@@ -1505,27 +1515,6 @@ input[type="radio"]:focus + label {
 .card_type04 .card_thumbnail {
   width: 100%;
   height: auto;
-}
-.card_type04 .card_thumbnail.h347 {
-  aspect-ratio: 464 / 347;
-}
-.card_type04 .card_thumbnail.h464 {
-  aspect-ratio: 464 /464;
-}
-.card_type04 .card_thumbnail.h359 {
-  aspect-ratio: 464 / 359;
-}
-.card_type04 .card_thumbnail.h823 {
-  aspect-ratio: 464 / 823;
-}
-.card_type04 .card_thumbnail.h825 {
-  aspect-ratio: 464 / 825;
-}
-.card_type04 .card_thumbnail.h618 {
-  aspect-ratio: 464 / 618;
-}
-.card_type04 .card_thumbnail.h261 {
-  aspect-ratio: 464 / 261;
 }
 .card_type04 .card_thumbnail img {
   height: 100%;
@@ -1745,7 +1734,6 @@ input[type="radio"]:focus + label {
   width: 100%;
   height: auto;
   overflow: hidden;
-  /* aspect-ratio: 708 / 472; */
 }
 .grid_3 .card_type05 .card_top {
   position: relative;
@@ -1753,7 +1741,6 @@ input[type="radio"]:focus + label {
   width: 100%;
   height: auto;
   overflow: hidden;
-  /* aspect-ratio: 464 / 348; */
 }
 .card_type05 .card_top img {
   position: absolute;
@@ -1833,10 +1820,19 @@ input[type="radio"]:focus + label {
   background-image: url("../../inc/images/icon/icon-play-video-hover.svg");
 }
 .grid_2 .card_video .card_img {
-  aspect-ratio: 708 / 531;
+  position: relative;
+  padding-top: calc((531 / 708) * 100%);
 }
 .grid_3 .card_video .card_img {
-  aspect-ratio: 464 / 261;
+  position: relative;
+  padding-top: calc((261 / 464) * 100%);
+}
+.grid_2 .card_video .card_img img,
+.grid_3 .card_video .card_img img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 .card_video .card_img img {
   width: 100%;
@@ -2041,7 +2037,7 @@ input[type="radio"]:focus + label {
 .ty01Swiper .swiper-slide {
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
 }
 
 .ty01Swiper .swiper-slide .img-area img {
