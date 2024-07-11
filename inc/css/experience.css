@@ -44,7 +44,7 @@
 }
 .ranking-wrap .ranking-center .tab-head {
   justify-content: flex-end;
-  padding: 120px 80px 0;
+  padding: 120px 80px 0 80px;
   max-width: 1600px;
   margin: 0 auto;
 }
@@ -54,7 +54,7 @@
 }
 .ranking-wrap .tab-whitecont {
   background-color: #fff;
-  padding: 80px 80px 240px;
+  padding: 80px 80px 240px 80px;
 }
 .ranking-wrap .tab-graycont {
   position: relative;
@@ -74,7 +74,7 @@
   margin: 0;
 }
 .ranking-wrap .ranking-center .ranking-tabcont + ul {
-  padding: 130px 0 120px;
+  padding: 130px 0 120px 0;
 }
 .ranking-wrap .ranking-center .ranking-inner2box {
   display: flex;
@@ -132,7 +132,7 @@
 /* EP040101 */
 .nflmain_wrap .mission-box {
   background-color: #f0f0f0;
-  padding: 120px 80px 160px;
+  padding: 120px 80px 160px 80px;
 }
 .nflmain_wrap .content-item03 .banner-box {
   padding: 0 80px;
@@ -184,7 +184,7 @@
 }
 .nflmain_wrap .content-item04 .mission-box.white-box {
   background-color: #fff;
-  padding: 0 80px 160px;
+  padding: 0 80px 160px 80px;
   margin-top: 160px;
 }
 .nflmain_wrap .content-item03 .banner-box .swiper-slide img.mo-only {
@@ -192,7 +192,7 @@
 }
 .nflmain_wrap .content-item05.main-rank {
   background: #f0f0f0;
-  padding: 120px 80px 160px;
+  padding: 120px 80px 160px 80px;
 }
 .nflmain_wrap .content-item05.main-rank .tab-container {
   max-width: 1440px;
@@ -210,7 +210,7 @@
   align-items: center;
 }
 .nflmain_wrap .content-item06 .rewards-box {
-  padding: 160px 80px 240px;
+  padding: 160px 80px 240px 80px;
 }
 .main-rank .swiper-button-next.swiper-button-disabled,
 .main-rank .swiper-button-prev.swiper-button-disabled {
@@ -219,7 +219,7 @@
 /* EP040201, EP040301, EP040501 */
 .subfilter_wrap .content-item02 {
   background-color: #f0f0f0;
-  padding: 120px 80px 240px;
+  padding: 120px 80px 240px 80px;
 }
 .subfilter_wrap .grid_masonry {
   margin-top: 40px;
@@ -238,11 +238,11 @@
   justify-content: center;
   align-items: center;
   max-width: 1440px;
-  margin: 146px auto 106px;
+  margin: 146px auto 106px auto;
 }
 /* EP040601 */
 .subnotice_wrap .content-item02 {
-  padding: 40px 80px 240px;
+  padding: 40px 80px 240px 80px;
 }
 .subnotice_wrap .noti-topbox {
   display: flex;
@@ -265,7 +265,7 @@
   margin-top: 100px;
   border-top: 3px solid #787d80;
   max-width: 1440px;
-  margin: 100px auto 0;
+  margin: 100px auto 0 auto;
   font-family: "Hyundai Sans Text";
 }
 .subnotice_wrap .noti-listbox li {
@@ -294,7 +294,7 @@
 }
 .subnotice_wrap .noti-listbox + .btn-wrap-default {
   max-width: 1440px;
-  margin: 80px auto 0;
+  margin: 80px auto 0 auto;
 }
 
 /* EP010301 */
@@ -960,10 +960,10 @@
   width: 100vw;
   margin: 0 auto;
   position: fixed;
+  top: 50%;
   left: 50%;
   transform: translateX(-50%);
   height: auto;
-  top: 50%;
 }
 
 .popup-wrapper .wrap-navigation .modal-btn {
@@ -1022,7 +1022,7 @@
 }
 
 .popup-wrapper .popup-body {
-  padding: 40px 40px 60px;
+  padding: 40px 40px 60px 40px;
   display: grid;
   gap: 40px 0;
   overflow-y: auto;
@@ -1138,7 +1138,7 @@
 }
 
 .popup-wrapper .popup-body.invite p:first-child {
-  margin: 0 0 40px;
+  margin: 0 0 40px 0;
 }
 
 /* EP040301M01 이중 팝업 (.popup-wrapper.invite) */
@@ -1190,9 +1190,6 @@
 /*popup onlyTxt 
 EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
 */
-.popup-wrapper.onlyTxt .popup-body {
-  /* padding: 40px; */
-}
 
 .popup-wrapper.onlyTxt .popup-body.double-pop-body {
   /* 이중팝업에만 .popup-body에 .double-pop-body를 추가하여 상하좌우 간격 40px을 적용합니다. */
@@ -1313,7 +1310,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   .wrap-form-bottom.comment-type04
   ul
   li:first-child {
-  margin: 0 0 15px;
+  margin: 0 0 15px 0;
 }
 
 .popup-body-innerbox
@@ -1321,7 +1318,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   .wrap-form-bottom.comment-type04
   ul
   li:last-child {
-  margin: 15px 0 0;
+  margin: 15px 0 0 0;
 }
 
 .popup-body-innerbox .wrap-form.attach .wrap-form-bottom.comment-type04 {
@@ -1391,7 +1388,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
 .popup-wrapper .popup-body-innerbox .wrap-checkmail {
   background: #f0f0f0;
   padding: 30px;
-  margin: 8px 0 0;
+  margin: 8px 0 0 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1609,9 +1606,8 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   order: 0;
 } */
 
-/* popup reward, mission
-    .m20이 추가(gap:20px)
-*/
+/* popup reward, mission*/
+/* .m20이 추가(gap:20px)*/
 .popup-wrapper .popup-body .m20 .wrap-desc .txt-type03 {
   font-weight: 500;
 }
@@ -1651,12 +1647,12 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
 .popup-wrapper .wrap-comment {
   display: grid;
   gap: 20px;
-  margin: 40px 0 0;
+  margin: 40px 0 0 0;
   padding-bottom: 40px;
   border-bottom: 1px solid #bbb;
 }
 .popup-wrapper .wrap-comment:last-child {
-  margin: 40px 0 0;
+  margin: 40px 0 0 0;
   padding-bottom: 0;
   border-bottom: 0;
 }
@@ -1979,7 +1975,6 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
 .popup-wrapper .popup-body .wrap-notice-info .box-infotxt .txt-type03 {
   font-weight: 500;
 }
-
 /** mypage 팝업 끝 **/
 
 /** sharing 팝업 시작 **/
@@ -2210,7 +2205,8 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: url(../images/icon/icon-play-video.svg) no-repeat center top / 100%;
+  background: url(../images/icon/icon-play-video.svg) no-repeat center top /
+    100%;
   z-index: 10;
 }
 
@@ -2224,7 +2220,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
 }
 
 .nTaxi .models-wrap .gallery-wrap {
-  padding:200px 0;
+  padding: 200px 0;
   margin-bottom: 0;
 }
 
@@ -2234,23 +2230,23 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
 
 .next-taxi-wrap .grid_2 li .img-wrap {
   position: relative;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
 }
 
 .next-taxi-wrap .grid_2 li .btn-wrap {
   position: absolute;
-  left:50%;
+  left: 50%;
   bottom: 28px;
   transform: translateX(-50%);
 }
 
 .next-taxi-wrap .grid_2 li .btn-wrap a {
-  color:#fff;
+  color: #fff;
   font-size: 32px;
   font-weight: 700;
   line-height: 44.8px;
-  gap:8px;
+  gap: 8px;
 }
 
 .nTaxi .banner-wrap .models-full {
@@ -2258,10 +2254,10 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   background-size: cover;
   background-position: center;
   min-height: 1440px;
-  padding:200px 360px;  
+  padding: 200px 360px;
 }
 
-.nTaxi .models-wrap .banner-wrap .text-col .text-strong, 
+.nTaxi .models-wrap .banner-wrap .text-col .text-strong,
 .nTaxi .models-wrap .banner-wrap .text-col .text-normal {
   text-align: center;
   color: #000;
@@ -2272,17 +2268,16 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
 }
 
 .banner-wrap .sub-info {
-  margin:80px auto 200px;
+  margin: 80px auto 200px;
 }
 
 .gallery-wrap.ty02 {
-  padding:0 !important;
+  padding: 0 !important;
 }
 
-.nTaxi [class*=content-item]:last-child .conts-section-wrap {
+.nTaxi [class*="content-item"]:last-child .conts-section-wrap {
   padding-bottom: 240px;
 }
-
 
 /* EP010303 */
 @media screen and (min-width: 1024px) and (max-width: 1366px) {
@@ -2348,7 +2343,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   /* EP040401 */
   .ranking-wrap .ranking-center .tab-head {
     max-width: 100%;
-    padding: 80px 24px 0;
+    padding: 80px 24px 0 24px;
   }
   .ranking-wrap .ranking-center .tabs-wrap .tabs {
     margin-top: 0;
@@ -2360,14 +2355,14 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   }
   .ranking-wrap .tab-whitecont {
     background-color: #fff;
-    padding: 44px 24px 160px;
+    padding: 44px 24px 160px 24px;
   }
   .ranking-wrap .ranking-center .tab-container .ranking-tabcont {
     position: static;
     text-align: center;
   }
   .ranking-wrap .ranking-center .ranking-tabcont + ul {
-    padding: 36px 0 80px;
+    padding: 36px 0 80px 0;
   }
   .ranking-wrap .ranking-center .ranking-inner2:not(:first-child)::after {
     display: none;
@@ -2418,7 +2413,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   }
   /* EP040101 */
   .nflmain_wrap .mission-box {
-    padding: 80px 24px 100px;
+    padding: 80px 24px 100px 24px;
   }
   .nflmain_wrap .content-item03 .banner-box {
     padding: 0 24px;
@@ -2452,11 +2447,11 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
     display: none;
   }
   .nflmain_wrap .content-item04 .mission-box.white-box {
-    padding: 0 24px 100px;
+    padding: 0 24px 100px 24px;
     margin-top: 100px;
   }
   .nflmain_wrap .content-item05.main-rank {
-    padding: 80px 24px 176px;
+    padding: 80px 24px 176px 24px;
     position: relative;
   }
   .nflmain_wrap .content-item05.main-rank .tab-container {
@@ -2481,20 +2476,20 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
     transform: translateX(-50%);
   }
   .nflmain_wrap .content-item05.main-rank .ty03Swiper {
-    padding: 12px 0 48px;
+    padding: 12px 0 48px 0;
   }
   .nflmain_wrap .content-item05.main-rank .ty03Swiper .swiper-slide {
     max-width: 100%;
   }
   .nflmain_wrap .content-item06 .rewards-box {
-    padding: 80px 24px 160px;
+    padding: 80px 24px 160px 24px;
   }
   .content-item06 .rewards-box .grid_masonry + .btn-wrap-default {
     margin-top: 44px;
   }
   /* EP040201, EP040301, EP040501 */
   .subfilter_wrap .content-item02 {
-    padding: 80px 24px 160px;
+    padding: 80px 24px 160px 24px;
   }
   .subfilter_wrap .content-item02 .dropdown.centered {
     max-width: 100%;
@@ -2511,7 +2506,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
     padding: 133px 0;
   }
   .subnotice_wrap .content-item02 {
-    padding: 40px 24px 160px;
+    padding: 40px 24px 160px 24px;
   }
   .subnotice_wrap .noti-topbox {
     display: flex;
@@ -3047,7 +3042,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   }
 
   .popup-wrapper .popup-body {
-    padding: 40px 24px 60px;
+    padding: 40px 24px 60px 24px;
     max-height: calc(100vh - 130px);
     overflow-y: auto;
     display: grid;
@@ -3686,7 +3681,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
     min-height: 176px;
   }
   .conts-intro .conts-section-wrap {
-    padding-top:100px; 
+    padding-top: 100px;
     padding-bottom: 120px;
   }
   .nTaxi .models-wrap .gallery-wrap {
@@ -3700,7 +3695,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   .nTaxi .banner-wrap .models-full {
     background-image: url(../../inc/images/content/img_driving_cont04_1-mo.png);
     min-height: 1080px;
-    padding:120px 24px 312px
+    padding: 120px 24px 312px;
   }
 
   .banner-wrap .text-col .text-strong {
@@ -3710,7 +3705,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   .banner-wrap .sub-info {
     margin: 44px 24px 120px;
   }
-  .nTaxi [class*=content-item]:last-child .conts-section-wrap { 
+  .nTaxi [class*="content-item"]:last-child .conts-section-wrap {
     padding-bottom: 160px;
   }
 }

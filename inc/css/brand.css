@@ -1067,7 +1067,7 @@
   opacity: 0.5;
 }
 .merchandise-wrap .productlist-wrap {
-  padding: 200px 80px 240px;
+  padding: 200px 80px 240px 80px;
 }
 .merchandise-wrap .productlist-wrap .merchandise-w1096 {
   text-align: left;
@@ -1125,7 +1125,7 @@
   content: "";
 }
 .merchandise-wrap .merchandise_related-wrap {
-  padding: 95.56px 80px 120px;
+  padding: 95.56px 80px 120px 80px;
   background-color: #f0f0f0;
 }
 .merchandise-wrap .merchandise_related-wrap .merchandise-w1096 {
@@ -2429,7 +2429,7 @@
     .inner-body-model
     .popup-body-innerbox:last-child
     .container-desc {
-    padding: 20px 0 0;
+    padding: 20px 0 0 0;
   }
 
   .popup.forBrand
