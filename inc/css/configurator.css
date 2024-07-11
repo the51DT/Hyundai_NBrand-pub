@@ -1,11 +1,13 @@
 @charset "utf-8";
 
+
 .configurator_area {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   overflow-y: auto;
+  overscroll-behavior: none;
 }
 .configurator_header_wrap {
   position: sticky;
@@ -15,6 +17,7 @@
   background-color: #fff;
   border-bottom: 1px solid #d9d9d9;
   z-index: 4;
+  transition: top 0.5s;
 }
 .configurator_header {
   display: flex;
@@ -122,7 +125,7 @@
 }
 .configurator_swiper_wrap:-webkit-full-screen {
   width: 100vw !important;
-  height: 100vh !important;
+  height: calc(var(--vh, 1vh) * 100) !important;
 }
 .configurator_swiper_wrap .swiper-container {
   height: 100%;
@@ -259,7 +262,7 @@
 }
 .configurator_con_flex .configurator_swiper_wrap {
   width: calc(100% - 30.875rem);
-  height: calc(100vh - 4.375rem);
+  height: calc((var(--vh, 1vh) * 100) - 4.375rem);
   background: #fff;
 }
 .configurator_con_flex .configurator_swiper {
@@ -589,7 +592,7 @@
 .configurator_select_interior {
   display: none;
   padding: 2.81rem 2.75rem 17.37rem;
-  height: calc(100vh - 4.3125rem);
+  height: calc((var(--vh, 1vh) * 100) - 4.3125rem);
   overflow-y: scroll;
 }
 .configurator_area.IONIQ.exterior .configurator_select_exterior.IONIQ,
@@ -779,6 +782,10 @@
 
 /* 모바일 */
 @media screen and (max-width: 1024px) {
+  .configurator_header_wrap.scroll-on {
+    position: fixed;
+    top: -112.55px;
+  }
   .configurator_header {
     padding: 1rem 1.5rem;
   }
@@ -872,9 +879,13 @@
   }
   .configurator_con_flex .configurator_swiper_wrap {
     position: sticky;
-    top: 6.972rem;
+    top: 0;
     width: 100%;
     height: 15rem;
+    transition: top 0.5s;
+  }
+  .configurator_con_flex .configurator_swiper_wrap.scroll-on {
+    top: 111.55px;
   }
   .configurator_swiper .swiper-status-wrap {
     bottom: 1.25rem;
@@ -903,6 +914,10 @@
     position: sticky;
     padding: 1.25rem 1.5rem 1.75rem;
     height: 11.25rem;
+    transition: bottom 0.5s;
+  }
+  .configurator_price_wrap.scroll-on {
+    bottom: -200px;
   }
   .configurator_price_total {
     font-size: 1.5rem;
@@ -1004,7 +1019,7 @@
   }
   .configurator_select_summary {
     margin: 0;
-    padding: 4rem 1.5rem 5rem;
+    padding: 1.5rem 1.5rem 5rem;
   }
   .configurator_summary_tit {
     font-size: 1.5rem;
