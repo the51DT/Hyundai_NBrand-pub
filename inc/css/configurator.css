@@ -564,6 +564,7 @@
 .configurator_label_list {
   width: 100%;
   min-width: 7rem;
+  /* height: 124px; */
   padding: 0.5rem;
   background-color: #fff;
   border-radius: 0.25rem;
@@ -588,6 +589,10 @@
   font-weight: 700;
   line-height: 140%;
   text-align: center;
+  height: 39px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* step exterior/ interior */

@@ -25,6 +25,7 @@ let $win_W = $(window).width();
 const delta = 100;
 let timer = null;
 let $popDate = 0;
+let swiperConfigurator;
 
 $(window).resize(function () {
   $win_W = $(window).width();
@@ -755,8 +756,7 @@ var NbrandSwiper = {
     if (!NbrandUI.checkObj(obj)) {
       return;
     }
-
-    var swiper9 = new Swiper(obj, {
+    swiperConfigurator = new Swiper(obj, {
       slidesPerView: 1,
       centeredSlides: true,
       navigation: {
