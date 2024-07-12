@@ -719,12 +719,12 @@ body.fix {
   animation-fill-mode: forwards;
 }
 
-.gnb__panel02 .gnb__tab02_2 {
+.gnb__panel02.type-thumbnail ul {
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
 }
-.gnb__panel02 .dep3_item {
+.gnb__panel02.type-thumbnail li {
   width: calc(100% / 3 - 8px);
   background: #f0f0f0;
   display: flex;
@@ -732,7 +732,7 @@ body.fix {
   justify-content: center;
   padding: 20px 12px;
 }
-.gnb__panel02 .dep3_item:hover {
+.gnb__panel02.type-thumbnail li:hover {
   background: #aacae6;
 }
 

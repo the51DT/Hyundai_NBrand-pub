@@ -43,6 +43,8 @@
     flex-direction: column;
     gap: 0px;
     padding: 8px 0 0;
+    position: relative;
+    /* z-index: 1; */
   }
   .gnb__tab-btn-wrap [class*="gnb__tab-btn"] {
     font-family: Hyundai Sans Head;
@@ -172,7 +174,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    height: calc(100vh - 70px);
+    /* height: calc(100vh - 70px); */
     width: 100%;
     background-color: #fff;
   }
@@ -273,13 +275,13 @@
     z-index: 1;
     height: 100%;
   }
-  .gnb__panel02 [class*="panel2"] .gnb__tab02_2 {
+  .gnb__panel02.type-thumbnail ul {
     height: calc(100vh - 157px);
     overflow-y: auto;
     display: block;
     padding: 0 24px;
   }
-  .gnb__panel02 [class*="panel2"] .gnb__tab02_2 li {
+  .gnb__panel02.type-thumbnail li {
     width: 100%;
     margin-bottom: 12px;
   }

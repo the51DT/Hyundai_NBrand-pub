@@ -307,6 +307,8 @@ var NbrandUI = {
     resetCont = $(com);
     resetParent = $(par);
     $(obj).removeClass("on");
+
+    resetParent.removeClass("menu-on");
     resetTparent = resetParent.find(".sitemap-wrap");
     resetCont.attr("aria-hidden", "true");
     resetTparent.children(".ui-fctab-s").remove();
