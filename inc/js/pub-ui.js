@@ -2091,7 +2091,7 @@ function scrollEvent() {
       //   scrollY + "%"
       // );
 
-      console.log(scrollTop, scrollPrev);
+      // console.log(scrollTop, scrollPrev);
 
       if (scrollTop > 0) {
         $(".navigation_bar-wrap .gage").addClass("on");
@@ -2101,7 +2101,7 @@ function scrollEvent() {
         if (scrollTop >= scrollPrev) {
           // 스크롤 위치 증가
           $(".header-wrap").addClass("scroll-on");
-          console.log(scrollTop, scrollPrev);
+          // console.log(scrollTop, scrollPrev);
         } else {
           // 스크롤 위치 감소
           $(".header-wrap").removeClass("scroll-on");
