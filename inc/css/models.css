@@ -896,7 +896,7 @@
     font-size: 17px;
     line-height: 23.8px;
     height: 33px;
-  }
+  /* }
   .models-wrap .blue-title::before {
     content: "";
     position: absolute;
@@ -918,7 +918,7 @@
     border-color: #aacae6 transparent #aacae6 transparent;
     right: -24px;
     top: 0;
-  }
+  } */
   .models-wrap .text-strong {
     font-size: 36px;
     line-height: 45px;
