@@ -115,8 +115,11 @@ var pubUi = {
       var tagList = $(this)
         .closest(".search-container")
         .find(".tag-list-wrap .tag-list");
-      self.$searchBox.querySelector("input").value = "";
-      self.$searchBox.classList.remove("on");
+
+      if (self.$searchBox != null) {
+        self.$searchBox.querySelector("input").value = "";
+        self.$searchBox.classList.remove("on");
+      }
       // self.tagBtnEvent("", tagList, "reset"); 07.04 수정 : 태그 리셋 비활성화
     });
 
