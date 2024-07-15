@@ -2074,19 +2074,6 @@ function configuratorEvent() {
     input.addEventListener("change", () => {
       // console.log(input.value);
 
-      // 라디오 기능
-      configuratorInput.forEach((samename) => {
-        const inputLabel = input.nextElementSibling.classList;
-        if (
-          samename.name === input.name &&
-          (inputLabel.contains("configurator_label_radio") ||
-            inputLabel.contains("configurator_label_list"))
-        ) {
-          samename.checked = false;
-          input.checked = true;
-        }
-      });
-
       // transmission 값에 따라 alcantaraPackage 노출
       if (input.value.includes("transmission")) {
         const alcantaraInput = document.querySelectorAll(

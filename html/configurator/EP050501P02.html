@@ -16,7 +16,7 @@
     <section class="content-wrap">
       <div class="content-area">
         <div class="content-item01">
-          <div id="EP050501P02" class="popup configurator_area ELANTRA exterior">
+          <div id="EP050501P02" class="popup configurator_area IONIQ exterior">
             <!-- IONIQ 클래스 추가 시 IONIQ 5 N 모델 레이아웃 노출 / ELANTRA 클래스 추가 시 ELANTRA N 모델 레이아웃 노출 -->
             <!-- exterior 추가 시 exterior 레이아웃 노출 / interior 클래스 추가 시 interior 레이아웃 노출 / summary 클래스 추가 시 summary 레이아웃 노출 -->
             <div class="configurator_header_wrap">
@@ -118,6 +118,7 @@
                     </div> <!-- //swiper -->
                   </div><!-- //swiper-container -->
                 </div>
+                <!-- input type checkbox/radio인 경우 클래스 따로 없고 li.menuitem 내부의 인풋 타입만 바꿔주시면 됩니다. -->
                 <div class="configurator_select_wrap">
                   <div class="configurator_select_area">
                     <!-- exterior 파츠 선택 영역 / .configurator_menu_exterior on 시 노출 -->
@@ -132,7 +133,7 @@
                         </button>
                         <ul class="dropdown-menu dropdown-on configurator_list" role="menu">
                           <li role="menuitem">
-                            <input id="IONIQ_color1" name="color" value="blue" type="checkbox">
+                            <input id="IONIQ_color1" name="color" value="blue" type="radio">
                             <label for="IONIQ_color1" class="configurator_label_list">
                               <img src="../../inc/images/img/img_config_color1.png" loading="lazy" alt="파츠 이미지">
                               <p>Performance<br>Blue</p>
@@ -214,7 +215,9 @@
                           <li role="menuitem">
                             <input id="IONIQ_wheel1" name="wheel" value="R20W" type="checkbox">
                             <label for="IONIQ_wheel1" class="configurator_label_radio">
-                              <img src="../../inc/images/img/img_config_wheel_white.png" loading="lazy" alt="파츠 이미지">
+                              <div>
+                                <img src="../../inc/images/img/img_config_wheel_white.png" loading="lazy" alt="파츠 이미지">
+                              </div>
                               <div>
                                 <p class="configurator_label_tit">BRAID 20inch Lightweight Forged Wheel [White]</p>
                                 <p class="configurator_label_price">₩ 5,350,000</p>
@@ -224,7 +227,9 @@
                           <li role="menuitem">
                             <input id="IONIQ_wheel2" name="wheel" value="R20B" type="checkbox">
                             <label for="IONIQ_wheel2" class="configurator_label_radio">
-                              <img src="../../inc/images/img/img_config_wheel_balck.png" loading="lazy" alt="파츠 이미지">
+                              <div>
+                                <img src="../../inc/images/img/img_config_wheel_balck.png" loading="lazy" alt="파츠 이미지">
+                              </div>
                               <div>
                                 <p class="configurator_label_tit">BRAID 20inch Lightweight Forged Wheel [Black]</p>
                                 <p class="configurator_label_price">₩ 5,350,000</p>
@@ -234,7 +239,9 @@
                           <li role="menuitem">
                             <input id="IONIQ_wheel3" name="wheel" value="R21B" type="checkbox">
                             <label for="IONIQ_wheel3" class="configurator_label_radio">
-                              <img src="../../inc/images/img/img_config_wheel_carbon.png" loading="lazy" alt="파츠 이미지">
+                              <div>
+                                <img src="../../inc/images/img/img_config_wheel_carbon.png" loading="lazy" alt="파츠 이미지">
+                              </div>
                               <div>
                                 <p class="configurator_label_tit">Dymag 21inch Carbon Hybrid Wheel</p>
                                 <p class="configurator_label_price">₩ 5,350,000</p>
@@ -253,12 +260,14 @@
                         <ul class="dropdown-menu dropdown-on" role="menu">
                           <li role="menuitem">
                             <input id="IONIQ_towstrap" name="towstrap" value="TOW" type="checkbox">
-                            <label for="IONIQ_towstrap" class="configurator_label_checkbox">
+                            <label for="IONIQ_towstrap" class="configurator_label_radio">
                               <div>
                                 <img src="../../inc/images/img/img_config_towstrap.png" loading="lazy" alt="파츠 이미지">
                               </div>
-                              <p class="configurator_label_tit">Sabelt toe strap</p>
-                              <p class="configurator_label_price">₩ 5,350,000</p>
+                              <div>
+                                <p class="configurator_label_tit">Sabelt toe strap</p>
+                                <p class="configurator_label_price">₩ 5,350,000</p>
+                              </div>
                             </label>
                           </li>
                         </ul>
@@ -277,71 +286,50 @@
                           <li role="menuitem">
                             <input id="ELANTRA_color1" name="color" value="blue" type="checkbox">
                             <label for="ELANTRA_color1" class="configurator_label_list">
-                              <img src="../../inc/images/img/img_config_color1.png" loading="lazy" alt="파츠 이미지">
+                              <img src="../../inc/images/img/img_config_color1_2.png" loading="lazy" alt="파츠 이미지">
                               <p>Performance<br>Blue</p>
                             </label>
                           </li>
                           <li role="menuitem">
                             <input id="ELANTRA_color2" name="color" value="grayPearl" type="checkbox">
                             <label for="ELANTRA_color2" class="configurator_label_list">
-                              <img src="../../inc/images/img/img_config_color2.png" loading="lazy" alt="파츠 이미지">
-                              <p>Ecotronic Gray<br>Pearl</p>
+                              <img src="../../inc/images/img/img_config_color2_2.png" loading="lazy" alt="파츠 이미지">
+                              <p>Atlas<br>White</p>
                             </label>
                           </li>
                           <li role="menuitem">
                             <input id="ELANTRA_color3" name="color" value="orangePearl" type="checkbox">
                             <label for="ELANTRA_color3" class="configurator_label_list">
-                              <img src="../../inc/images/img/img_config_color3.png" loading="lazy" alt="파츠 이미지">
-                              <p>Soultronic<br>Orange Pearl</p>
+                              <img src="../../inc/images/img/img_config_color3_2.png" loading="lazy" alt="파츠 이미지">
+                              <p>Ecotronic Gray<br>Pearl</p>
                             </label>
                           </li>
                           <li role="menuitem">
                             <input id="ELANTRA_color4" name="color" value="white" type="checkbox">
                             <label for="ELANTRA_color4" class="configurator_label_list">
-                              <img src="../../inc/images/img/img_config_color4.png" loading="lazy" alt="파츠 이미지">
-                              <p>Atlas<br>White</p>
+                              <img src="../../inc/images/img/img_config_color4_2.png" loading="lazy" alt="파츠 이미지">
+                              <p>Ultimate Red<br>Metallic</p>
                             </label>
                           </li>
                           <li role="menuitem">
                             <input id="ELANTRA_color5" name="color" value="blackPearl" type="checkbox">
                             <label for="ELANTRA_color5" class="configurator_label_list">
-                              <img src="../../inc/images/img/img_config_color5.png" loading="lazy" alt="파츠 이미지">
+                              <img src="../../inc/images/img/img_config_color5_2.png" loading="lazy" alt="파츠 이미지">
                               <p>Abyss Black<br>Pearl</p>
                             </label>
                           </li>
                           <li role="menuitem">
                             <input id="ELANTRA_color6" name="color" value="grayMetallic" type="checkbox">
                             <label for="ELANTRA_color6" class="configurator_label_list">
-                              <img src="../../inc/images/img/img_config_color6.png" loading="lazy" alt="파츠 이미지">
-                              <p>Cyber Gray<br>Metallic</p>
+                              <img src="../../inc/images/img/img_config_color6_2.png" loading="lazy" alt="파츠 이미지">
+                              <p>Meta Blue<br>Pearl</p>
                             </label>
                           </li>
                           <li role="menuitem">
                             <input id="ELANTRA_color7" name="color" value="grayMatte" type="checkbox">
                             <label for="ELANTRA_color7" class="configurator_label_list">
-                              <img src="../../inc/images/img/img_config_color7.png" loading="lazy" alt="파츠 이미지">
-                              <p>Ecotronic Gray<br>Matte</p>
-                            </label>
-                          </li>
-                          <li role="menuitem">
-                            <input id="ELANTRA_color8" name="color" value="goldMatte" type="checkbox">
-                            <label for="ELANTRA_color8" class="configurator_label_list">
-                              <img src="../../inc/images/img/img_config_color8.png" loading="lazy" alt="파츠 이미지">
-                              <p>Gravity Gold<br>Matte</p>
-                            </label>
-                          </li>
-                          <li role="menuitem">
-                            <input id="ELANTRA_color9" name="color" value="whiteMatte" type="checkbox">
-                            <label for="ELANTRA_color9" class="configurator_label_list">
-                              <img src="../../inc/images/img/img_config_color9.png" loading="lazy" alt="파츠 이미지">
-                              <p>Atlas White<br>Matte</p>
-                            </label>
-                          </li>
-                          <li role="menuitem">
-                            <input id="ELANTRA_color10" name="color" value="blueMatte" type="checkbox">
-                            <label for="ELANTRA_color10" class="configurator_label_list">
-                              <img src="../../inc/images/img/img_config_color10.png" loading="lazy" alt="파츠 이미지">
-                              <p>Performance<br>Blue Matte</p>
+                              <img src="../../inc/images/img/img_config_color7_2.png" loading="lazy" alt="파츠 이미지">
+                              <p>Cyber Gray<br>Metallic</p>
                             </label>
                           </li>
                         </ul>
@@ -357,7 +345,9 @@
                           <li role="menuitem">
                             <input id="ELANTRA_wheel1" name="wheel" value="wheel1" type="checkbox">
                             <label for="ELANTRA_wheel1" class="configurator_label_radio">
-                              <img src="../../inc/images/img/img_config_elantra_wheel1.png" loading="lazy" alt="파츠 이미지">
+                              <div>
+                                <img src="../../inc/images/img/img_config_elantra_wheel1.png" loading="lazy" alt="파츠 이미지">
+                              </div>
                               <div>
                                 <p class="configurator_label_tit">18-inch forged wheels - matte black18-inch forged
                                   wheels - matte black18-inch forged wheels - matte black18-inch forged wheels - matte
@@ -369,7 +359,9 @@
                           <li role="menuitem">
                             <input id="ELANTRA_wheel2" name="wheel" value="wheel2" type="checkbox">
                             <label for="ELANTRA_wheel2" class="configurator_label_radio">
-                              <img src="../../inc/images/img/img_config_elantra_wheel2.png" loading="lazy" alt="파츠 이미지">
+                              <div>
+                                <img src="../../inc/images/img/img_config_elantra_wheel2.png" loading="lazy" alt="파츠 이미지">
+                              </div>
                               <div>
                                 <p class="configurator_label_tit">Black matte forged wheels</p>
                                 <p class="configurator_label_price">₩ 5,350,000</p>
@@ -388,12 +380,14 @@
                         <ul class="dropdown-menu dropdown-on" role="menu">
                           <li role="menuitem">
                             <input id="ELANTRA_brake" name="brake" value="brake" type="checkbox">
-                            <label for="ELANTRA_brake" class="configurator_label_checkbox">
+                            <label for="ELANTRA_brake" class="configurator_label_radio">
                               <div>
                                 <img src="../../inc/images/img/img_config_brake.png" loading="lazy" alt="파츠 이미지">
                               </div>
-                              <p class="configurator_label_tit">Brake system</p>
-                              <p class="configurator_label_price">₩ 5,350,000</p>
+                              <div>
+                                <p class="configurator_label_tit">Brake system</p>
+                                <p class="configurator_label_price">₩ 5,350,000</p>
+                              </div>
                             </label>
                           </li>
                         </ul>
@@ -408,12 +402,14 @@
                         <ul class="dropdown-menu dropdown-on" role="menu">
                           <li role="menuitem">
                             <input id="ELANTRA_spoiler" name="spoiler" value="spoiler" type="checkbox">
-                            <label for="ELANTRA_spoiler" class="configurator_label_checkbox">
+                            <label for="ELANTRA_spoiler" class="configurator_label_radio">
                               <div>
                                 <img src="../../inc/images/img/img_config_spoiler.png" loading="lazy" alt="파츠 이미지">
                               </div>
-                              <p class="configurator_label_tit">Carbon side mirror</p>
-                              <p class="configurator_label_price">₩ 5,350,000</p>
+                              <div>
+                                <p class="configurator_label_tit">Carbon side mirror</p>
+                                <p class="configurator_label_price">₩ 5,350,000</p>
+                              </div>
                             </label>
                           </li>
                         </ul>
@@ -428,12 +424,14 @@
                         <ul class="dropdown-menu dropdown-on" role="menu">
                           <li role="menuitem">
                             <input id="ELANTRA_sideMirror" name="sideMirror" value="sideMirror" type="checkbox">
-                            <label for="ELANTRA_sideMirror" class="configurator_label_checkbox">
+                            <label for="ELANTRA_sideMirror" class="configurator_label_radio">
                               <div>
                                 <img src="../../inc/images/img/img_config_sidemirror.png" loading="lazy" alt="파츠 이미지">
                               </div>
-                              <p class="configurator_label_tit">Carbon side mirror</p>
-                              <p class="configurator_label_price">₩ 5,350,000</p>
+                              <div>
+                                <p class="configurator_label_tit">Carbon side mirror</p>
+                                <p class="configurator_label_price">₩ 5,350,000</p>
+                              </div>
                             </label>
                           </li>
                         </ul>
@@ -449,12 +447,14 @@
                           <li role="menuitem">
                             <input id="ELANTRA_rearMufflerTip" name="rearMufflerTip" value="rearMufflerTip"
                               type="checkbox">
-                            <label for="ELANTRA_rearMufflerTip" class="configurator_label_checkbox">
+                            <label for="ELANTRA_rearMufflerTip" class="configurator_label_radio">
                               <div>
                                 <img src="../../inc/images/img/img_config_muffler.png" loading="lazy" alt="파츠 이미지">
                               </div>
-                              <p class="configurator_label_tit">Carbon rear muffler tip</p>
-                              <p class="configurator_label_price">₩ 5,350,000</p>
+                              <div>
+                                <p class="configurator_label_tit">Carbon rear muffler tip</p>
+                                <p class="configurator_label_price">₩ 5,350,000</p>
+                              </div>
                             </label>
                           </li>
                         </ul>
@@ -469,13 +469,15 @@
                         <ul class="dropdown-menu dropdown-on" role="menu">
                           <li role="menuitem">
                             <input id="ELANTRA_towstrap" name="towstrap" value="towstrap" type="checkbox">
-                            <label for="ELANTRA_towstrap" class="configurator_label_checkbox">
+                            <label for="ELANTRA_towstrap" class="configurator_label_radio">
                               <div>
                                 <img src="../../inc/images/img/img_config_towstrap_elantra.png" loading="lazy"
                                   alt="파츠 이미지">
                               </div>
-                              <p class="configurator_label_tit">Sabelt towstrap</p>
-                              <p class="configurator_label_price">₩ 5,350,000</p>
+                              <div>
+                                <p class="configurator_label_tit">Sabelt towstrap</p>
+                                <p class="configurator_label_price">₩ 5,350,000</p>
+                              </div>
                             </label>
                           </li>
                         </ul>
@@ -504,6 +506,78 @@
                       <div class="dropdown">
                         <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger" aria-haspopup="true"
                           aria-expanded="true" aria-controls="dropdown-menu" title="파츠 더보기">
+                          Transmission
+                          <span class="btn-icon20 icon-down dropdown-icon rotate" aria-hidden="true">
+                          </span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-on" role="menu">
+                          <li role="menuitem">
+                            <input id="IONIQ_transmission1" name="transmission" value="transmission1" type="checkbox">
+                            <label for="IONIQ_transmission1" class="configurator_label_radio">
+                              <div>
+                                <p class="configurator_label_tit">8-speed DCT</p>
+                              </div>
+                            </label>
+                          </li>
+                          <li role="menuitem">
+                            <input id="IONIQ_transmission2" name="transmission" value="transmission2" type="checkbox">
+                            <label for="IONIQ_transmission2" class="configurator_label_radio">
+                              <div>
+                                <p class="configurator_label_tit">4 manual 6-speed</p>
+                              </div>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="dropdown">
+                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger" aria-haspopup="true"
+                          aria-expanded="true" aria-controls="dropdown-menu" title="파츠 더보기">
+                          Alcantara Interior Package
+                          <span class="btn-icon20 icon-down dropdown-icon rotate" aria-hidden="true">
+                          </span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-on" role="menu">
+                          <li role="menuitem">
+                            <input id="IONIQ_alcantaraPackage1" name="alcantaraPackage1" value="alcantaraPackage1"
+                              type="checkbox">
+                            <label for="IONIQ_alcantaraPackage1" class="configurator_label_radio">
+                              <div>
+                                <img src="../../inc/images/img/img_config_alcantara1.png" loading="lazy" alt="파츠 이미지">
+                              </div>
+                              <div>
+                                <p class="configurator_label_tit">Alcantara package - DCT</p>
+                                <p class="configurator_label_price">₩ 5,350,000</p>
+                              </div>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="dropdown none">
+                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger" aria-haspopup="true"
+                          aria-expanded="true" aria-controls="dropdown-menu" title="파츠 더보기">
+                          Alcantara Interior Package
+                          <span class="btn-icon20 icon-down dropdown-icon rotate" aria-hidden="true">
+                          </span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-on" role="menu">
+                          <li role="menuitem">
+                            <input id="IONIQ_alcantaraPackage2" name="alcantaraPackage2" value="alcantaraPackage2"
+                              type="checkbox">
+                            <label for="IONIQ_alcantaraPackage2" class="configurator_label_radio">
+                              <div>
+                                <img src="../../inc/images/img/img_config_alcantara2.png" loading="lazy" alt="파츠 이미지">
+                              </div>
+                              <div>
+                                <p class="configurator_label_tit">Alcantara Interior Package (MT)</p>
+                                <p class="configurator_label_price">₩ 5,350,000</p>
+                              </div>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="dropdown">
+                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger" aria-haspopup="true"
+                          aria-expanded="true" aria-controls="dropdown-menu" title="파츠 더보기">
                           Car Mat
                           <span class="btn-icon20 icon-down dropdown-icon rotate" aria-hidden="true">
                           </span>
@@ -511,12 +585,14 @@
                         <ul class="dropdown-menu dropdown-on" role="menu">
                           <li role="menuitem">
                             <input id="IONIQ_carMat" name="carMat" value="NFM" type="checkbox">
-                            <label for="IONIQ_carMat" class="configurator_label_checkbox">
+                            <label for="IONIQ_carMat" class="configurator_label_radio">
                               <div>
                                 <img src="../../inc/images/img/img_config_mat.png" loading="lazy" alt="파츠 이미지">
                               </div>
-                              <p class="configurator_label_tit">N Performance Mats</p>
-                              <p class="configurator_label_price">₩ 5,350,000</p>
+                              <div>
+                                <p class="configurator_label_tit">N Performance Mats</p>
+                                <p class="configurator_label_price">₩ 5,350,000</p>
+                              </div>
                             </label>
                           </li>
                         </ul>
@@ -531,12 +607,14 @@
                         <ul class="dropdown-menu dropdown-on" role="menu">
                           <li role="menuitem">
                             <input id="IONIQ_doorScuff" name="doorScuff" value="NSP" type="checkbox">
-                            <label for="IONIQ_doorScuff" class="configurator_label_checkbox">
+                            <label for="IONIQ_doorScuff" class="configurator_label_radio">
                               <div>
                                 <img src="../../inc/images/img/img_config_door.png" loading="lazy" alt="파츠 이미지">
                               </div>
-                              <p class="configurator_label_tit">Metal Door Scuff</p>
-                              <p class="configurator_label_price">₩ 5,350,000</p>
+                              <div>
+                                <p class="configurator_label_tit">Metal Door Scuff</p>
+                                <p class="configurator_label_price">₩ 5,350,000</p>
+                              </div>
                             </label>
                           </li>
                         </ul>
@@ -551,12 +629,14 @@
                         <ul class="dropdown-menu dropdown-on" role="menu">
                           <li role="menuitem">
                             <input id="IONIQ_steeringWheel" name="steeringWheel" value="ASW" type="checkbox">
-                            <label for="IONIQ_steeringWheel" class="configurator_label_checkbox">
+                            <label for="IONIQ_steeringWheel" class="configurator_label_radio">
                               <div>
                                 <img src="../../inc/images/img/img_config_steering.png" loading="lazy" alt="파츠 이미지">
                               </div>
-                              <p class="configurator_label_tit">Alcantara Steering Wheel</p>
-                              <p class="configurator_label_price">₩ 5,350,000</p>
+                              <div>
+                                <p class="configurator_label_tit">Alcantara Steering Wheel</p>
+                                <p class="configurator_label_price">₩ 5,350,000</p>
+                              </div>
                             </label>
                           </li>
                         </ul>
@@ -572,7 +652,9 @@
                           <li role="menuitem">
                             <input id="IONIQ_seatBelt1" name="seatBelt" value="4PSB" type="checkbox">
                             <label for="IONIQ_seatBelt1" class="configurator_label_radio">
-                              <img src="../../inc/images/img/img_config_belt_4p.png" loading="lazy" alt="파츠 이미지">
+                              <div>
+                                <img src="../../inc/images/img/img_config_belt_4p.png" loading="lazy" alt="파츠 이미지">
+                              </div>
                               <div>
                                 <p class="configurator_label_tit">Sabelt 4-Point Harness</p>
                                 <p class="configurator_label_price">₩ 5,350,000</p>
@@ -582,7 +664,9 @@
                           <li role="menuitem">
                             <input id="IONIQ_seatBelt2" name="seatBelt" value="6PSB" type="checkbox">
                             <label for="IONIQ_seatBelt2" class="configurator_label_radio">
-                              <img src="../../inc/images/img/img_config_belt_6p.png" loading="lazy" alt="파츠 이미지">
+                              <div>
+                                <img src="../../inc/images/img/img_config_belt_6p.png" loading="lazy" alt="파츠 이미지">
+                              </div>
                               <div>
                                 <p class="configurator_label_tit">Sabelt 6-Point Harness</p>
                                 <p class="configurator_label_price">₩ 5,350,000</p>
@@ -605,8 +689,8 @@
                           <li role="menuitem">
                             <input id="ELANTRA_color_interior" name="color" value="blue" type="checkbox">
                             <label for="ELANTRA_color_interior" class="configurator_label_list">
-                              <img src="../../inc/images/img/img_config_color_interior.png" loading="lazy" alt="파츠 이미지">
-                              <p>Black Monotone</p>
+                              <img src="../../inc/images/img/img_config_color_interior_2.png" loading="lazy" alt="파츠 이미지">
+                              <p>Black one-tone</p>
                             </label>
                           </li>
                         </ul>
@@ -648,12 +732,14 @@
                           <li role="menuitem">
                             <input id="ELANTRA_alcantaraPackage1" name="alcantaraPackage1" value="alcantaraPackage1"
                               type="checkbox">
-                            <label for="ELANTRA_alcantaraPackage1" class="configurator_label_checkbox">
+                            <label for="ELANTRA_alcantaraPackage1" class="configurator_label_radio">
                               <div>
                                 <img src="../../inc/images/img/img_config_alcantara1.png" loading="lazy" alt="파츠 이미지">
                               </div>
-                              <p class="configurator_label_tit">Alcantara Interior Package (AT)</p>
-                              <p class="configurator_label_price">₩ 5,350,000</p>
+                              <div>
+                                <p class="configurator_label_tit">Alcantara Interior Package (AT)</p>
+                                <p class="configurator_label_price">₩ 5,350,000</p>
+                              </div>
                             </label>
                           </li>
                         </ul>
@@ -669,12 +755,14 @@
                           <li role="menuitem">
                             <input id="ELANTRA_alcantaraPackage2" name="alcantaraPackage2" value="alcantaraPackage2"
                               type="checkbox">
-                            <label for="ELANTRA_alcantaraPackage2" class="configurator_label_checkbox">
+                            <label for="ELANTRA_alcantaraPackage2" class="configurator_label_radio">
                               <div>
                                 <img src="../../inc/images/img/img_config_alcantara2.png" loading="lazy" alt="파츠 이미지">
                               </div>
-                              <p class="configurator_label_tit">Alcantara Interior Package (MT)</p>
-                              <p class="configurator_label_price">₩ 5,350,000</p>
+                              <div>
+                                <p class="configurator_label_tit">Alcantara Interior Package (MT)</p>
+                                <p class="configurator_label_price">₩ 5,350,000</p>
+                              </div>
                             </label>
                           </li>
                         </ul>
@@ -689,12 +777,14 @@
                         <ul class="dropdown-menu dropdown-on" role="menu">
                           <li role="menuitem">
                             <input id="ELANTRA_carMat" name="carMat" value="carMat" type="checkbox">
-                            <label for="ELANTRA_carMat" class="configurator_label_checkbox">
+                            <label for="ELANTRA_carMat" class="configurator_label_radio">
                               <div>
                                 <img src="../../inc/images/img/img_config_elantra_mat.png" loading="lazy" alt="파츠 이미지">
                               </div>
-                              <p class="configurator_label_tit">N Performance Mats</p>
-                              <p class="configurator_label_price">₩ 5,350,000</p>
+                              <div>
+                                <p class="configurator_label_tit">N Performance Mats</p>
+                                <p class="configurator_label_price">₩ 5,350,000</p>
+                              </div>
                             </label>
                           </li>
                         </ul>
@@ -709,12 +799,14 @@
                         <ul class="dropdown-menu dropdown-on" role="menu">
                           <li role="menuitem">
                             <input id="ELANTRA_doorScuff" name="doorScuff" value="doorScuff" type="checkbox">
-                            <label for="ELANTRA_doorScuff" class="configurator_label_checkbox">
+                            <label for="ELANTRA_doorScuff" class="configurator_label_radio">
                               <div>
                                 <img src="../../inc/images/img/img_config_elantra_mat.png" loading="lazy" alt="파츠 이미지">
                               </div>
-                              <p class="configurator_label_tit">Metal Door Scuff</p>
-                              <p class="configurator_label_price">₩ 5,350,000</p>
+                              <div>
+                                <p class="configurator_label_tit">Metal Door Scuff</p>
+                                <p class="configurator_label_price">₩ 5,350,000</p>
+                              </div>
                             </label>
                           </li>
                         </ul>
@@ -730,7 +822,9 @@
                           <li role="menuitem">
                             <input id="ELANTRA_seatBelt1" name="seatBelt" value="seatBelt1" type="checkbox">
                             <label for="ELANTRA_seatBelt1" class="configurator_label_radio">
-                              <img src="../../inc/images/img/img_config_belt_4p.png" loading="lazy" alt="파츠 이미지">
+                              <div>
+                                <img src="../../inc/images/img/img_config_belt_4p.png" loading="lazy" alt="파츠 이미지">
+                              </div>
                               <div>
                                 <p class="configurator_label_tit">Sabelt 4-Point Harness</p>
                                 <p class="configurator_label_price">₩ 5,350,000</p>
@@ -740,7 +834,9 @@
                           <li role="menuitem">
                             <input id="ELANTRA_seatBelt2" name="seatBelt" value="seatBelt2" type="checkbox">
                             <label for="ELANTRA_seatBelt2" class="configurator_label_radio">
-                              <img src="../../inc/images/img/img_config_belt_6p.png" loading="lazy" alt="파츠 이미지">
+                              <div>
+                                <img src="../../inc/images/img/img_config_belt_6p.png" loading="lazy" alt="파츠 이미지">
+                              </div>
                               <div>
                                 <p class="configurator_label_tit">Sabelt 6-Point Harness</p>
                                 <p class="configurator_label_price">₩ 5,350,000</p>
@@ -755,6 +851,25 @@
                     <div class="configurator_select_summary IONIQ">
                       <p class="configurator_summary_tit">Exterior</p>
                       <ul class="configurator_summary_list">
+                        <li>
+                          <div class="configurator_summary_list_top">
+                            <p class="configurator_summary_parts">Color</p>
+                            <div>
+                              <button type="button" class="btn txt-btn">
+                                <span class="btn-icon16 icon-change-gray" aria-hidden="true"></span>
+                                <span class="visually-hidden">Change</span>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="configurator_summary_list_bottom">
+                            <img class="configurator_summary_img" src="../../inc/images/img/img_config_color1.png"
+                              loading="lazy" alt="옵션 썸네일 이미지">
+                            <div>
+                              <p class="configurator_summary_item">Performance Blue</p>
+                              <p class="configurator_summary_price">₩ 0</p>
+                            </div>
+                          </div>
+                        </li>
                         <li>
                           <div class="configurator_summary_list_top">
                             <p class="configurator_summary_parts">Wheel</p>
@@ -800,6 +915,15 @@
                       </ul>
                       <p class="configurator_summary_tit">Interior</p>
                       <ul class="configurator_summary_list">
+                        <li>
+                          <div class="configurator_summary_list_top">
+                            <p class="configurator_summary_parts">Transmission</p>
+                          </div>
+                          <div class="configurator_summary_list_bottom">
+                            <p class="configurator_summary_item">8-speed DCT</p>
+                            <p class="configurator_summary_price">₩ 0</p>
+                          </div>
+                        </li>
                         <li>
                           <div class="configurator_summary_list_top">
                             <p class="configurator_summary_parts">Car Mat</p>
@@ -887,29 +1011,6 @@
                       </ul>
                       <p class="configurator_summary_tit">Interior</p>
                       <ul class="configurator_summary_list">
-                        <li>
-                          <div class="configurator_summary_list_top">
-                            <p class="configurator_summary_parts">Alcantara package</p>
-                            <div>
-                              <button type="button" class="btn txt-btn">
-                                <span class="btn-icon16 icon-change-gray" aria-hidden="true"></span>
-                                <span class="visually-hidden">Change</span>
-                              </button>
-                              <button type="button" class="btn txt-btn">
-                                <span class="btn-icon16 icon-close-gray" aria-hidden="true"></span>
-                                <span class="visually-hidden">Delete</span>
-                              </button>
-                            </div>
-                          </div>
-                          <div class="configurator_summary_list_bottom">
-                            <img class="configurator_summary_img" src="../../inc/images/img/img_config_alcantara2.png"
-                              loading="lazy" alt="옵션 썸네일 이미지">
-                            <div>
-                              <p class="configurator_summary_item">Alcantara package - MT</p>
-                              <p class="configurator_summary_price">₩ 5,350,000</p>
-                            </div>
-                          </div>
-                        </li>
                         <li>
                           <div class="configurator_summary_list_top">
                             <p class="configurator_summary_parts">Car Mat</p>
