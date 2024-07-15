@@ -51,12 +51,12 @@ var pubUi = {
 
       if (targetSwiper.hasClass("ty02Swiper")) {
         if ($(this).hasClass("on")) {
-          console.log("정지버튼 클릭!");
+          // console.log("정지버튼 클릭!");
           $(this).removeClass("on");
           $(this).find(".visually-hidden").text("정지");
           targetSwiper[0].swiper.autoplay.stop();
         } else {
-          console.log("재생버튼 클릭!");
+          // console.log("재생버튼 클릭!");
           $(this).addClass("on");
           $(this).find(".visually-hidden").text("재생");
           targetSwiper[0].swiper.autoplay.start();
@@ -65,11 +65,11 @@ var pubUi = {
         // ty01Swiper - video 케이스 아닐 경우,
         if (videoChk.length > 0) {
           if ($(this).hasClass("on")) {
-            console.log("정지버튼 클릭!");
+            // console.log("정지버튼 클릭!");
             $(this).removeClass("on");
             $(this).find(".visually-hidden").text("정지");
           } else {
-            console.log("재생버튼 클릭!");
+            // console.log("재생버튼 클릭!");
             $(this).addClass("on");
             $(this).find(".visually-hidden").text("재생");
           }
@@ -77,12 +77,12 @@ var pubUi = {
           self.videoControlerChk(targetSwiper);
         } else {
           if ($(this).hasClass("on")) {
-            console.log("정지버튼 클릭!");
+            // console.log("정지버튼 클릭!");
             $(this).removeClass("on");
             $(this).find(".visually-hidden").text("정지");
             targetSwiper[0].swiper.autoplay.stop();
           } else {
-            console.log("재생버튼 클릭!");
+            // console.log("재생버튼 클릭!");
             $(this).addClass("on");
             $(this).find(".visually-hidden").text("재생");
             targetSwiper[0].swiper.autoplay.start();
@@ -97,12 +97,12 @@ var pubUi = {
       var targetSwiper = $(this).closest(".swiper");
 
       if (self.$btnSound.hasClass("on")) {
-        console.log("소리 끄기 버튼 클릭!");
+        // console.log("소리 끄기 버튼 클릭!");
         self.$btnSound.removeClass("on");
         self.$btnSound.find(".visually-hidden").text("소리 끄기");
         targetSwiper.find("video").prop("muted", true);
       } else {
-        console.log("소리 켜기버튼 클릭!");
+        // console.log("소리 켜기버튼 클릭!");
         self.$btnSound.addClass("on");
         self.$btnSound.find(".visually-hidden").text("소리 켜기");
         targetSwiper.find("video").prop("muted", false);
@@ -115,8 +115,11 @@ var pubUi = {
       var tagList = $(this)
         .closest(".search-container")
         .find(".tag-list-wrap .tag-list");
-      self.$searchBox.querySelector("input").value = "";
-      self.$searchBox.classList.remove("on");
+
+      if (self.$searchBox != null) {
+        self.$searchBox.querySelector("input").value = "";
+        self.$searchBox.classList.remove("on");
+      }
       // self.tagBtnEvent("", tagList, "reset"); 07.04 수정 : 태그 리셋 비활성화
     });
 
@@ -140,6 +143,42 @@ var pubUi = {
     });
 
     // 이벤트 레이아웃 마이너스 버튼 클릭시, 추 후 요건 확정 후 재작업 예정
+    $(".event-box .btn-wrap.plus").click(function (e) {
+      var options = [];
+      var option1 = $(".list-content.active .evtLayout-type div")
+        .filter(":first-child")
+        .find(".option-click.active")
+        .text();
+      var option2 = $(".list-content.active .evtLayout-type div")
+        .filter(":last-child")
+        .find(".option-click.active")
+        .text();
+
+      var selectedArea = document.querySelector(
+        ".ty05Swiper .swiper-slide.active .card_info .card_subtit"
+      ).innerText;
+      console.log(selectedArea);
+
+      if ($(".evt-map-wrap").hasClass("on")) {
+        alert(
+          "현재 이미지보다 큰 이미지를 볼 수 없습니다. \n이전 이미지로 돌아가려면 - 버튼을 눌러주세요. "
+        );
+      } else {
+        if (option2 == "" || option2 == undefined) {
+          options.push(option1);
+        } else {
+          options.push(option1, option2);
+        }
+
+        console.log(options);
+
+        if (options) {
+          $(".evt-map-wrap").addClass("on");
+          evtImgMapChk(options, selectedArea);
+        }
+      }
+    });
+
     $(".event-box .btn-wrap.minus").click(function (e) {
       var options = [];
 
@@ -152,6 +191,11 @@ var pubUi = {
         .find(".option-click.active")
         .text();
 
+      var selectedArea = document.querySelector(
+        ".ty05Swiper .swiper-slide.active .card_info .card_subtit"
+      ).innerText;
+      console.log(selectedArea);
+
       if (option2 == "" || option2 == undefined) {
         options.push(option1);
       } else {
@@ -160,8 +204,9 @@ var pubUi = {
 
       console.log(options);
 
-      if (option1 != undefined && option2 != undefined) {
-        evtImgMapChk(options);
+      if (options) {
+        $(".evt-map-wrap").removeClass("on");
+        evtImgMapChk(options, selectedArea);
       }
     });
 
@@ -200,7 +245,7 @@ var pubUi = {
     });
     if ($(".onlyOneSwiper .swiper-slide").length === 1) {
       $(".onlyOneSwiper .swiper-slide .swiper-status-wrap .btn-wrap").hide();
-      console.log($(".onlyOneSwiper .swiper-status-wrap .btn-wrap").hide());
+      // console.log($(".onlyOneSwiper .swiper-status-wrap .btn-wrap").hide());
       $(
         ".nflmain_wrap .content-item03 .banner-box .swiper-container .swiper"
       ).addClass("onlyone-swiper");
@@ -227,7 +272,7 @@ var pubUi = {
       };
     }
 
-    console.log("스와이퍼 이벤트 진입");
+    // console.log("스와이퍼 이벤트 진입");
 
     var swiper1 = new Swiper(".ty01Swiper", {
       slidesPerView: 1,
@@ -513,7 +558,7 @@ var pubUi = {
     }
 
     if (self.typeChk.length > 0) {
-      console.log("비디오 타입");
+      // console.log("비디오 타입");
       var slide = $(targetSwiper);
       var slideActive = slide.find(".swiper-slide-active");
       var playBtn = slide.find(".btn-play").hasClass("on");
@@ -523,7 +568,7 @@ var pubUi = {
         targetIdx = 0;
       }
 
-      console.log("타겟인덱스: " + targetIdx + " 비디오 Id값: " + videoId);
+      // console.log("타겟인덱스: " + targetIdx + " 비디오 Id값: " + videoId);
       //var slides = document.querySelectorAll(".ty01Swiper .swiper-slide");
       var video = document.querySelector(`#${videoId}`);
 
@@ -531,7 +576,7 @@ var pubUi = {
         if (playBtn) {
           video.play();
         } else {
-          console.log("비디오 일시정지 상태 입니다.");
+          // console.log("비디오 일시정지 상태 입니다.");
           // $(".swiper-pagination-bullet-active .seek-bar").css("--time", "8px");
         }
       }
@@ -560,7 +605,7 @@ var pubUi = {
         false
       );
     } else {
-      console.log("비디오 타입 X");
+      // console.log("비디오 타입 X");
       $(".seek-bar").remove();
       $(targetSwiper).find(".btn-sound").hide();
       $(".swiper-pagination-custom .swiper-pagination-bullet-active").css(
@@ -774,29 +819,30 @@ var pubUi = {
     }, 500);
 
     // 사용 안함 - 개발에서 제어
-    // var raceRank = targetSwiper.find(".card_top .card_rank").text();
-    // var raceMonth = targetSwiper.find(".card_bottom .card_badge").text();
-    // var raceDay = targetSwiper.find(".card_bottom .card_tit").text();
-    // var raceLocation = targetSwiper.find(".card_bottom .card_subtit").text();
+    var raceRank = targetSwiper.find(".card_top .card_rank").text();
+    var raceMonth = targetSwiper.find(".card_bottom .card_badge").text();
+    var raceDay = targetSwiper.find(".card_bottom .card_tit").text();
+    var raceLocation = targetSwiper.find(".card_bottom .card_subtit").text();
 
     // console.log(raceRank, raceMonth, raceDay, raceLocation);
 
-    // swiperContents.removeClass("active");
-    // swiperContents.hide();
+    swiperContents.removeClass("active");
+    swiperContents.hide();
+    swiperContents.find(".evtLayout-type").removeClass(raceLocation);
 
-    // for (var i = 0; i < swiperContents.length; i++) {
-    //   contentDataCont = swiperContents[i].dataset.content;
+    for (var i = 0; i < swiperContents.length; i++) {
+      contentDataCont = swiperContents[i].dataset.content;
 
-    //   if (swiperDataCont == contentDataCont) {
-    //     swiperContents[i].style.display = "block";
-    //     swiperContents[i].classList.add("active");
-    //   }
-    // }
+      if (swiperDataCont == contentDataCont) {
+        swiperContents[i].style.display = "block";
+        swiperContents[i].classList.add("active");
+      }
+    }
 
-    // if (!swiperContents.hasClass("active")) {
-    //   alert("Comming soon !");
-    //   targetSwiper.removeClass("active");
-    // }
+    if (!swiperContents.hasClass("active")) {
+      alert("Comming soon !");
+      targetSwiper.removeClass("active");
+    }
   },
 };
 
@@ -819,9 +865,7 @@ $(document).ready(function () {
   perforSlideMoveFun();
   footerScrollTop();
   modelsVideoPlay();
-  $(".configurator_header_menu").click((el) => {
-    configuratorHeader(el);
-  });
+
   configuratorEvent();
 
   $(".ty01Swiper .swiper-pagination-bullet").on("click", function () {
@@ -854,12 +898,12 @@ $(document).ready(function () {
     if (self.swiper4.length > 0) {
       for (var i = 0; i < self.swiper4.length; i++) {
         self.swiper4[i].destroy();
-        console.log("swiper4 destroy!!!");
+        // console.log("swiper4 destroy!!!");
       }
     } else {
       if (self.swiper4.slides.length > 0 && self.swiper4 != undefined) {
         self.swiper4.destroy();
-        console.log("swiper4 destroy");
+        // console.log("swiper4 destroy");
       }
     }
     swiper4SlideEvt();
@@ -1107,45 +1151,212 @@ function handleOptionClick(event) {
       .find(".option-click.active")
       .text();
 
+    var selectedArea = document.querySelector(
+      ".ty05Swiper .swiper-slide.active .card_info .card_subtit"
+    ).innerText;
+
     if (option2 == "" || option2 == undefined) {
       options.push(option1);
     } else {
       options.push(option1, option2);
     }
 
-    console.log(options);
+    // console.log(options);
 
     if (option1 != undefined && option2 != undefined) {
-      evtImgMapChk(options);
+      evtImgMapChk(options, selectedArea);
     }
   }
 }
 // [End] : selectbox 컴포넌트
 
 // 추 후 이미지 교체 필요
-function evtImgMapChk(options) {
+function evtImgMapChk(options, area) {
   var evtMapImage = $(".evt-map-wrap .evt-map-img img");
   var swiperContentsActive = $(".section_list .list-content.active");
   var evtSelect = swiperContentsActive.find(".evtLayout-type > div");
+
+  var evtMapPopBtn = $(".evt-map-wrap .evt-map-img .btn-evtmap-pop");
+  var evtMapPopLayerId = $(".side-popup").attr("id");
 
   console.log(evtMapImage);
   var option1 = options[0];
   var option2 = options[1];
 
-  if (evtSelect.length > 1) {
-    console.log("셀렉트 박스 2개");
-    if (option1 == "A Paddock" && option2 == "N Zone") {
-      evtMapImage.attr("src", "../../inc/images/content/car_model_img01.svg");
-    } else if (option1 == "B Paddock" && option2 == "N Experience Zone") {
-      evtMapImage.attr("src", "../../inc/images/content/event-map_img.svg");
+  var selectedArea = area.toLowerCase();
+  console.log(selectedArea);
+
+  if ($(".evt-map-wrap").hasClass("on")) {
+    if (evtSelect.length > 1) {
+      console.log("셀렉트 박스 2개");
+      if (
+        selectedArea == "yongin" ||
+        selectedArea == "youngin everland speedium"
+      ) {
+        if (option1 == "A Paddock" && option2 == "N Zone") {
+          evtMapImage.attr(
+            "src",
+            "../../inc/images/eventLayout/evtLayout_max_A_NZone.png"
+          );
+          evtMapPopBtn.attr("aria-controls", "pop-nZone");
+        } else if (option1 == "A Paddock" && option2 == "N Experience zone") {
+          evtMapImage.attr(
+            "src",
+            "../../inc/images/eventLayout/evtLayout_max_A_ExperZone.png"
+          );
+          evtMapPopBtn.attr("aria-controls", "pop-nExperZone");
+        } else if (option1 == "B Paddock" && option2 == "N Fan Zone") {
+          evtMapImage.attr(
+            "src",
+            "../../inc/images/eventLayout/evtLayout_max_B_FanZone.png"
+          );
+          evtMapPopBtn.attr("aria-controls", "pop-nFanZone");
+        } else {
+          alert(
+            "조건에 맞지 않습니다. 지역에 맞는 이벤트 옵션을 선택해주세요."
+          );
+        }
+      }
+    } else {
+      console.log("셀렉트 박스 1개");
+      if (selectedArea == "inje" || selectedArea == "inje speedium") {
+        if (option1 == "N Lounge") {
+          evtMapImage.attr(
+            "src",
+            "../../inc/images/eventLayout/evtLayout_max_nLounge.png"
+          );
+          evtMapPopBtn.attr("aria-controls", "pop-nLounge");
+        } else if (option1 == "Motorsport Experience") {
+          evtMapImage.attr(
+            "src",
+            "../../inc/images/eventLayout/evtLayout_max_motorExperience.png"
+          );
+          evtMapPopBtn.attr("aria-controls", "pop-motorExperience");
+        } else if (option1 == "Viewing zone") {
+          evtMapImage.attr(
+            "src",
+            "../../inc/images/eventLayout/evtLayout_max_viewingZone.png"
+          );
+          evtMapPopBtn.attr("aria-controls", "pop-viewingZone");
+        } else {
+          alert(
+            "조건에 맞지 않습니다. 지역에 맞는 이벤트 옵션을 선택해주세요."
+          );
+        }
+      } else if (
+        selectedArea == "yeongam" ||
+        selectedArea == "korea international circuit"
+      ) {
+        if (option1 == "Experience Zone") {
+          evtMapImage.attr(
+            "src",
+            "../../inc/images/eventLayout/evtLayout_max_yeongam_ExperZone.png"
+          );
+          evtMapPopBtn.attr("aria-controls", "pop-yeongamExperZone");
+        } else if (option1 == "Motorsport Experience") {
+          evtMapImage.attr(
+            "src",
+            "../../inc/images/eventLayout/evtLayout_max_yeongam_MotorExper.png"
+          );
+          evtMapPopBtn.attr("aria-controls", "pop-yeongamMotorExper");
+        } else if (option1 == "Viewing zone") {
+          evtMapImage.attr(
+            "src",
+            "../../inc/images/eventLayout/evtLayout_max_yeongam_ViewingZone.png"
+          );
+          evtMapPopBtn.attr("aria-controls", "pop-yeongamViewingZone");
+        } else {
+          alert(
+            "조건에 맞지 않습니다. 지역에 맞는 이벤트 옵션을 선택해주세요."
+          );
+        }
+      }
     }
   } else {
-    console.log("셀렉트 박스 1개");
-    if (option1 == "Motorsport Experience") {
-      evtMapImage.attr(
-        "src",
-        "../../inc/images/content/evt_map_yeongam_01-pc.png"
-      );
+    if (evtSelect.length > 1) {
+      console.log("셀렉트 박스 2개");
+      if (
+        selectedArea == "yongin" ||
+        selectedArea == "youngin everland speedium"
+      ) {
+        if (option1 == "A Paddock" && option2 == "N Zone") {
+          evtMapImage.attr(
+            "src",
+            "../../inc/images/eventLayout/evtLayout_min_shortImg02.png"
+          );
+          evtMapPopBtn.attr("aria-controls", "pop-nZone");
+        } else if (option1 == "A Paddock" && option2 == "N Experience zone") {
+          evtMapImage.attr(
+            "src",
+            "../../inc/images/eventLayout/evtLayout_min_shortImg02.png"
+          );
+          evtMapPopBtn.attr("aria-controls", "pop-nExperZone");
+        } else if (option1 == "B Paddock" && option2 == "N Fan Zone") {
+          evtMapImage.attr(
+            "src",
+            "../../inc/images/eventLayout/evtLayout_min_shortImg03.png"
+          );
+          evtMapPopBtn.attr("aria-controls", "pop-nFanZone");
+        } else {
+          alert(
+            "조건에 맞지 않습니다. 지역에 맞는 이벤트 옵션을 선택해주세요."
+          );
+        }
+      }
+    } else {
+      console.log("셀렉트 박스 1개");
+      if (selectedArea == "inje" || selectedArea == "inje speedium") {
+        if (option1 == "N Lounge") {
+          evtMapImage.attr(
+            "src",
+            "../../inc/images/eventLayout/evtLayout_min_shortImg01.png"
+          );
+          evtMapPopBtn.attr("aria-controls", "pop-nLounge");
+        } else if (option1 == "Motorsport Experience") {
+          evtMapImage.attr(
+            "src",
+            "../../inc/images/eventLayout/evtLayout_min_shortImg01.png"
+          );
+          evtMapPopBtn.attr("aria-controls", "pop-motorExperience");
+        } else if (option1 == "Viewing zone") {
+          evtMapImage.attr(
+            "src",
+            "../../inc/images/eventLayout/evtLayout_min_shortImg01.png"
+          );
+          evtMapPopBtn.attr("aria-controls", "pop-viewingZone");
+        } else {
+          alert(
+            "조건에 맞지 않습니다. 지역에 맞는 이벤트 옵션을 선택해주세요."
+          );
+        }
+      } else if (
+        selectedArea == "yeongam" ||
+        selectedArea == "korea international circuit"
+      ) {
+        if (option1 == "Experience Zone") {
+          evtMapImage.attr(
+            "src",
+            "../../inc/images/eventLayout/evtLayout_min_shortImg04.png"
+          );
+          evtMapPopBtn.attr("aria-controls", "pop-yeongamExperZone");
+        } else if (option1 == "Motorsport Experience") {
+          evtMapImage.attr(
+            "src",
+            "../../inc/images/eventLayout/evtLayout_min_shortImg04.png"
+          );
+          evtMapPopBtn.attr("aria-controls", "pop-yeongamMotorExper");
+        } else if (option1 == "Viewing zone") {
+          evtMapImage.attr(
+            "src",
+            "../../inc/images/eventLayout/evtLayout_min_shortImg04.png"
+          );
+          evtMapPopBtn.attr("aria-controls", "pop-yeongamViewingZone");
+        } else {
+          alert(
+            "조건에 맞지 않습니다. 지역에 맞는 이벤트 옵션을 선택해주세요."
+          );
+        }
+      }
     }
   }
 }
@@ -1855,55 +2066,13 @@ function modelsVideoPlay() {
 }
 // [End] : Models > 영상 버튼 클릭 시 재생 혹은 멈춤 작업 & 한 번 재생 후 포스터 나와야함
 
-// [Start] : configurator_header_menu 확인용 스크립트 / 체크값 확인 후 넘어가기 필요
-function configuratorHeader(el) {
-  $(".configurator_header_menu").removeClass("on");
-  el.target.closest(".configurator_header_menu").classList.add("on");
-  const menuName = ["exterior", "interior", "summary"];
-  for (let i = 0; i < menuName.length; i++) {
-    if ($(`.configurator_menu_${menuName[i]}`).hasClass("on")) {
-      $(".configurator_area").addClass(menuName[i]);
-    } else {
-      $(".configurator_area").removeClass(menuName[i]);
-    }
-  }
-}
-// [End] : configurator_header_menu 확인용 스크립트 / 체크값 확인 후 넘어가기 필요
-
-// [Start] : configurator 이미지
-// 기본값 - 디폴트로 체크된 값 있으면 변경 필요
-// let configObjEx = {
-//   wheel: "",
-//   towstrap: "",
-//   brake: "", // ELANTRA N
-//   spoiler: "", // ELANTRA N
-//   sideMirror: "", // ELANTRA N
-//   rearMufflerTip: "", // ELANTRA N
-// };
-// let configObjIn = {
-//   carMat: "",
-//   doorScuff: "",
-//   seatBelt: "",
-//   steeringWheel: "", // IONIQ 5 N
-//   alcantaraPackage: "", // ELANTRA N
-// };
-// let configObj = {
-//   model: "IONIQ5", // 임시 값 모델 바뀜에 따라 변경 필요 / IONIQ5 <-> ELANTRA
-//   background: "_studio", // 디폴트 값 _studio / _studio <-> _track
-//   time: "_day", // 디폴트 값 _day / _day <-> _night
-//   exterior: "",
-//   interior: "",
-// };
-// let valueEx = "";
-// let valueIn = "";
-
 function configuratorEvent() {
   const configuratorInput = document.querySelectorAll(
     ".configurator_select_area input"
   );
   configuratorInput.forEach((input) => {
     input.addEventListener("change", () => {
-      console.log(input.value);
+      // console.log(input.value);
 
       // 라디오 기능
       configuratorInput.forEach((samename) => {
@@ -1970,43 +2139,14 @@ function configuratorEvent() {
 
       // 슬라이드 이미지 애니메이션
       $(".configurator_swiper .swiper-slide img").hide();
-      $(".configurator_swiper .swiper-slide img").attr(
-        "src",
-        "../../inc/images/Configurator/NEN_EXT_XFB_LD_C003.jpg"
-      ); // 이미지 교체 확인용 임시 스크립트
+      // $(".configurator_swiper .swiper-slide img").attr(
+      //   "src",
+      //   "../../inc/images/Configurator/NEN_EXT_XFB_LD_C003.jpg"
+      // ); // 이미지 교체 확인용 임시 스크립트
       $(".configurator_swiper .swiper-slide img").fadeIn(300);
     });
   });
 }
-
-// function configuratorImg() {
-//   // configObjEx 값 configObj.exterior 로 옮기기
-//   configObj.exterior = "";
-//   for (let i in Object.keys(configObjEx)) {
-//     configObj.exterior += configObjEx[Object.keys(configObjEx)[i]];
-//   }
-
-//   // configObjIn 값 configObj.interior 로 옮기기
-//   configObj.interior = "";
-//   for (let i in Object.keys(configObjIn)) {
-//     configObj.interior += configObjIn[Object.keys(configObjIn)[i]];
-//   }
-
-//   // exterior 네이밍 규칙
-//   // 모델_배경이미지_시간_옵션1_옵션2 ... _옵션 으로 추가
-//   // interior 네이밍 규칙
-//   // 모델_in_옵션1_옵션2 ... _옵션 으로 추가
-//   valueEx =
-//     configObj.model +
-//     configObj.background +
-//     configObj.time +
-//     configObj.exterior;
-//   valueIn = configObj.model + "_in" + configObj.interior;
-
-//   console.log("valueEx : " + valueEx + " / valueIn : " + valueIn);
-// }
-// configuratorImg();
-// [End] : configurator 이미지
 
 // [Start] : configurator fx
 $(".btn_background").click(() => {
