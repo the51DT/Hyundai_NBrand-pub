@@ -938,7 +938,7 @@
 
 /* share-popup 팝업 내 x버튼 (조금 작아요) */
 .popup .btn-wrap button.btn-only-icon-notbg.popup-close-btn-x.smallX {
-  top: 18px;
+  top: 17px;
   right: 24px;
 }
 
@@ -2028,7 +2028,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
 }
 
 .side-popup .pop-wrap .popup-body article:not(:last-child)::after {
-  content: '';
+  content: "";
   display: block;
   width: 100%;
   height: 1px;
@@ -3508,11 +3508,11 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   }
   .side-popup .pop-wrap .popup-body {
     max-height: calc(100vh - 60px);
-    padding:28px 24px 64px 24px;
+    padding: 28px 24px 64px 24px;
   }
 
   .side-popup .pop-wrap .popup-body article:not(:last-child)::after {
-    margin:36px 0;
+    margin: 36px 0;
   }
 
   .side-popup .pop-wrap .popup-body .wrap-popup-title .tit-type04 {
