@@ -891,6 +891,12 @@
     max-width: calc(100vw - 48px);
     overflow-x: auto;
     scroll-snap-type: x mandatory;
+  }  
+  .models-wrap .related-wrap .models-nofull-box {
+    max-width: calc(100vw - 24px);
+  }
+  .models-wrap .related-wrap .models-nofull-box .models-cardbox > div:last-child {
+    padding-right: 24px;
   }
   .models-wrap .blue-title {
     font-size: 17px;
