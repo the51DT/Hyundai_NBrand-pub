@@ -1473,6 +1473,14 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   height: 40px;
 }
 
+.popup-wrapper .wrap-popup-profile .box-profile-img.bg-contain {
+  background-color: #ABB2B5;
+}
+
+.popup-wrapper .wrap-popup-profile .box-profile-img.bg-contain img {
+  z-index: 0;
+}
+
 .popup-wrapper .wrap-form.textarea .inner-textarea-comment button {
   position: relative;
 }

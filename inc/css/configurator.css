@@ -498,14 +498,14 @@
   object-fit: cover;
   object-position: center;
 }
-.configurator_label_radio div {
+.configurator_label_radio div:last-of-type {
   padding: 1.5rem 1.25rem;
 }
 .configurator_label_radio .configurator_label_price {
   margin-top: 0.75rem;
 }
 .configurator_select_wrap
-  input[type="checkbox"]:checked
+  input:checked
   + .configurator_label_radio {
   outline: 2px solid #000000;
 }
@@ -518,7 +518,7 @@
   overflow: hidden;
   transition: transform 0.2s ease-in-out;
 }
-.configurator_label_checkbox div {
+.configurator_label_checkbox div:first-of-type {
   width: 100%;
   height: 16.9375rem;
   border-radius: 0.25rem;
@@ -548,7 +548,7 @@
   background-position: center;
 }
 .configurator_select_wrap
-  input[type="checkbox"]:checked
+  input:checked
   + .configurator_label_checkbox
   .configurator_label_tit::after {
   background-image: url(../images/icon/icon-checkbox-checked.svg);
@@ -574,7 +574,7 @@
   outline: 1px solid rgba(0, 0, 0, 0.97);
 }
 .configurator_select_wrap
-  input[type="checkbox"]:checked
+  input:checked
   + .configurator_label_list {
   outline: 2px solid rgba(0, 0, 0, 0.97);
 }
@@ -963,7 +963,7 @@
     width: 6rem;
     height: 6rem;
   }
-  .configurator_label_radio div {
+  .configurator_label_radio div:last-of-type {
     padding: 0 1.25rem;
   }
   .configurator_label_radio .configurator_label_tit {
@@ -972,7 +972,7 @@
   .configurator_label_radio .configurator_label_price {
     margin-top: 0.5rem;
   }
-  .configurator_label_checkbox div {
+  .configurator_label_checkbox div:first-of-type {
     height: 13rem;
   }
   .configurator_label_checkbox img {
@@ -1050,13 +1050,12 @@
   }
   .configurator_summary_list_bottom {
     column-gap: 0.75rem;
-    height: 6rem;
   }
   .configurator_summary_list_bottom > div {
     flex-direction: column;
     align-items: normal;
     padding: 0.31rem 0;
-    height: 100%;
+    height: 6rem;
   }
   .configurator_summary_img {
     width: 6rem;
