@@ -647,16 +647,18 @@ var pubUi = {
       ".content-item04.collectiontab-wrap"
     );
 
-    for (let i = 0; i < tabList.length; i++) {
-      tabList[i].classList.remove("on");
-    }
-    target.parentNode.classList.add("on");
+    if (tabLabel != null) {
+      for (let i = 0; i < tabList.length; i++) {
+        tabList[i].classList.remove("on");
+      }
+      target.parentNode.classList.add("on");
 
-    for (let i = 0; i < tabConts.length; i++) {
-      tabConts[i].classList.remove("on");
-    }
+      for (let i = 0; i < tabConts.length; i++) {
+        tabConts[i].classList.remove("on");
+      }
 
-    document.querySelector("#" + tabLabel).classList.add("on");
+      document.querySelector("#" + tabLabel).classList.add("on");
+    }
 
     // BR050101 : Brand_N Merchandise tab 배경 때문에 추가
     if (contentItem) {
