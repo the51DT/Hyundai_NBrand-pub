@@ -855,6 +855,7 @@ $(document).ready(function () {
     .siblings('input[type="text"]')
     .on("propertychange change keyup paste input", pubUi.textReset);
   $(".selectbox-js").click(function () {
+    $this = $(this);
     handleSelectboxClick(event);
   });
   $(".option-click").click(function () {
@@ -1053,7 +1054,9 @@ function handleSelectboxClick(event) {
   event.stopPropagation();
   var $trigger = $(event.target).closest(".selectbox-trigger");
   var $options = $trigger.siblings(".selectbox-options");
-
+  if ($this.parents(".dropdown-menu").length) {
+    $(".dropdown-menu").addClass("non-sticky");
+  }
   $(".selectbox-options").not($options).hide().attr("aria-hidden", "true");
   $(".selectbox-trigger")
     .not($trigger)
@@ -1086,6 +1089,10 @@ function handleSelectboxClick(event) {
         }
         $(".selectbox-options li.moclose-btn button").click(function (event) {
           event.stopPropagation();
+
+          if ($this.parents(".dropdown-menu").length) {
+            $(".dropdown-menu").removeClass("non-sticky");
+          }
           $(this)
             .closest(".selectbox-wrap>div")
             .find(".selectbox-trigger")
@@ -1103,6 +1110,9 @@ function handleSelectboxClick(event) {
 
 function handleOptionClick(event) {
   event.stopPropagation();
+  if ($this.parents(".dropdown-menu").length) {
+    $(".dropdown-menu").removeClass("non-sticky");
+  }
   var $selectboxWrap = $(event.target).closest(".selectbox-wrap");
   var selectedText = $(event.target).text();
   // select-type04 클래스(아이콘만 존재하는 경우의 타입)가 없는 경우에만 버튼 텍스트 변경
@@ -1367,6 +1377,11 @@ const dropdownFilter = document.querySelectorAll(
 );
 dropdownFilter.forEach((filter) => {
   filter.addEventListener("click", function () {
+    const filterScrollMove = this.offsetTop;
+    document.querySelector("body").scrollTo({
+      top: filterScrollMove,
+      behavior: "smooth",
+    });
     const isExpanded = filter.getAttribute("aria-expanded") === "true";
     const dropdownMenu = filter.nextElementSibling; // 아코디언 트리거 버튼
     const dropdownFilterBtn = filter.parentElement; // 필터 드롭다운 트리거 버튼
@@ -1408,23 +1423,23 @@ dropdownFilter.forEach((filter) => {
     if (detectCase2) {
       detectCase2_selectBtn.classList.toggle("dropdown-on");
       // 필터: 스크린 사이즈 대응
-      if (
-        detectCase2_selectBtn.classList.contains("dropdown-on") &&
-        screenWidth < 500
-      ) {
-        // < 500
-        filterBtn_forDisplayText.style.width = "100%";
-        filterBtn_forDisplay.style.padding = "17px 40px";
+      // if (
+      //   detectCase2_selectBtn.classList.contains("dropdown-on") &&
+      //   screenWidth < 500
+      // ) {
+      //   // < 500
+      //   filterBtn_forDisplayText.style.width = "100%";
+      //   filterBtn_forDisplay.style.padding = "17px 40px";
 
-        filterBtn_forDisplay.classList.toggle("bgwhite");
-        filterBtn_icn1.style.display = "none";
-      }
-      if (
-        detectCase2_selectBtn.classList.contains("dropdown-on") &&
-        screenWidth > 500
-      ) {
-        filterBtn_forDisplay.classList.toggle("bgred");
-      }
+      //   filterBtn_forDisplay.classList.toggle("bgwhite");
+      //   filterBtn_icn1.style.display = "none";
+      // }
+      // if (
+      //   detectCase2_selectBtn.classList.contains("dropdown-on") &&
+      //   screenWidth > 500
+      // ) {
+      filterBtn_forDisplay.classList.toggle("bgred");
+      // }
 
       if (!detectCase2_selectBtn.classList.contains("dropdown-on")) {
         filterBtn_forDisplay.classList.remove("bgred");

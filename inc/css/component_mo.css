@@ -1178,6 +1178,10 @@ min-width : 1024 css
   .wrap-dropdown-selected .dropdown-btn-title span.icon-right {
     display: none;
   }
+  .dropdown.centered .dropdown-menu .wrap-filter {
+    max-height: 100%;
+    padding: 0 24px;
+  }
   .dropdown.centered .dropdown-menu .selectbox-options .option {
     border-bottom: none;
     padding: 19px 48px 19px 24px;
