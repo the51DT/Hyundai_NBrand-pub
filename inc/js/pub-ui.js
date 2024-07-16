@@ -5,6 +5,7 @@ var pubUi = {
     self.bindEvents();
     self.swiperSlideEvent();
     self.masonryLayout();
+    btnNaviCheck();
     // self.videoControlerChk("");
 
     if ($(".ty01Swiper") != undefined && $(".ty01Swiper").length > 0) {
@@ -30,7 +31,7 @@ var pubUi = {
     // swiper
     self.swiper2;
     self.swiper4;
-    self.typeChk = $(".ty01Swiper").find(".swiper-slide video");
+    self.typeChk = $(".ty01Swiper").find(".swiper-slide video");  
   },
   bindEvents: function () {
     var self = this;
@@ -787,7 +788,7 @@ var pubUi = {
     }
   },
   windowSize: function () {
-    return $win_W >= 1024 ? false : true;
+    return $win_W >= 1024 ? true : false;
   },
   pageScrollChk: function (dataScroll) {
     var contentItem = document.querySelectorAll(
@@ -798,15 +799,16 @@ var pubUi = {
       ".navigation_bar-wrap"
     ).offsetHeight;
 
-    var navHeight = headerHeight + navBarHeight;
+    var navHeight = headerHeight + navBarHeight;    
 
     contentItem.forEach((evt, idx) => {
       contentItem[idx].setAttribute("data-scroll", idx + 1); // 각 콘텐츠에 data-scroll 생성
 
       if (evt.dataset.scroll == dataScroll) {
         //nav data-scroll과 값비교 후 동일 대상 체크
-        var offsetTopVal = evt.offsetTop - navBarHeight;
-      }
+        var offsetTopVal = evt.offsetTop - navBarHeight;        
+      }      
+
       $("body").animate({ scrollTop: offsetTopVal }, 300);
     });
   },
@@ -886,6 +888,7 @@ $(document).ready(function () {
   toggleFullscreen();
 
   $(window).resize(function () {
+
     if ($(window).innerWidth() < 1024) {
       if (self.swiper2.length > 0) {
         for (var i = 0; i < self.swiper2.length; i++) {
@@ -914,6 +917,8 @@ $(document).ready(function () {
       }
     }
     swiper4SlideEvt();
+    
+    btnNaviCheck();
   });
 
   // 07.03 추가 - models-wrap 클래스 존재하는 페이지 일 경우, 하단 img loading 속성 제거
@@ -926,6 +931,32 @@ $(document).ready(function () {
     }
   }
 });
+
+function btnNaviCheck() {
+  //nav-bar 버튼 갯수에 따른 노출형식 처리 
+  var $navBarWrap = $(".navigation_bar-wrap");
+  var $navItem03 = $navBarWrap.find(".navigation-item03");
+  var $btnNaviBtnPC = $navItem03.find(".btn-navi-wrap:not(.mo-only)");
+  var $btnNaviBtnMO = $navBarWrap.find(".btn-navi-wrap.mo-only");
+  var $btnNaviBox = $navItem03.find(".btn-navi-wrap:not(.mo-only) .btn-box");
+
+
+  if (pubUi.windowSize()) {
+    //pc
+    if ($btnNaviBox.find(".btn").length > 0 || $btnNaviBox.find(".btn")) {
+      $btnNaviBox.show();
+    }
+  } else {    
+    //mobile
+    if ($btnNaviBox.find(".btn").length > 1) {
+      $btnNaviBox.hide();
+      $btnNaviBtnMO.show();
+    } else {
+      $btnNaviBtnMO.hide();
+      $btnNaviBox.show();
+    }
+  }    
+}
 
 // ty02Swiper swiper 이벤트 분리
 function swiper2SlideEvt() {

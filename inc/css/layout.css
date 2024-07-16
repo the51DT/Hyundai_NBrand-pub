@@ -484,9 +484,14 @@ body.fix {
 }
 
 /* 07.16 추가 */
+
+.navigation_bar .navigation-item03 {
+  margin: auto 0;
+}
 .btn-navi-wrap {
   display: flex;
   gap:16px;
+  align-items: center;
 }
 .btn-navi-wrap .btn-box .btn {
   padding:5px 12px;
