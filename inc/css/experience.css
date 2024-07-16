@@ -274,6 +274,12 @@
   align-items: center;
   border-bottom: 1px solid #bbb;
 }
+.subnotice_wrap .noti-listbox li .noti-fix {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+}
 .subnotice_wrap .noti-listbox li .noti-fix img {
   width: 24px;
   height: 24px;

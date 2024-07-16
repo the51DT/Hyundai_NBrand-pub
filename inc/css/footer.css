@@ -43,11 +43,11 @@
 .dropdown.inMobile .accor02-wrap .accor02-header.footer-list-tit.mo-only {
   display: none;
 }
-.footer-list .icon-link-footer {
+.footer-list .text-icon {
   vertical-align: middle;
   margin-left: 0.5rem;
-  background: url(../images/icon/icon-link_footer.svg);
-  background-size: contain;
+  padding-right: 24px;
+  background: url(../images/icon/icon-link_footer.svg) no-repeat top 0 right 0;
 }
 .footer-link-tit {
   margin-bottom: 1.25rem;
