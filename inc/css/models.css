@@ -11,14 +11,17 @@
   width: 100%;
 }
 .models-wrap [class*="max1440"] {
-  max-width: 1600px;
-  padding: 0 80px;
   margin: 0 auto;
   display: flex;
   gap: 80px;
   flex-direction: column;
   align-items: center;
   text-align: center;
+}
+
+.models-wrap.brand [class*="max1440"] {
+  max-width: 1600px;
+  padding: 0 80px;
 }
 
 .models-wrap .max1440.type2 {
@@ -864,6 +867,8 @@
     max-width: 100%;
     gap: 44px;
     width: 100%;
+  } 
+  .models-wrap.brand [class*="max1440"] {
     padding: 0 24px;
   }
   .models-wrap .max1440.type2 {

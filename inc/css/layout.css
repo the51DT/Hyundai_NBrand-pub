@@ -483,6 +483,20 @@ body.fix {
 .sns-sharing-wrap .sharing-icon-btn.x-icon {
 }
 
+/* 07.16 추가 */
+.btn-navi-wrap {
+  display: flex;
+  gap:16px;
+}
+.btn-navi-wrap .btn-box .btn {
+  padding:5px 12px;
+  font-size: 16px;
+  line-height: 22px;
+}
+.btn-navi-wrap .btn-box .btn:not(:last-child) {
+  margin-right: 6px;
+}
+
 /* gnb 1dep*/
 .mo-gnb__back-btn {
   display: none;

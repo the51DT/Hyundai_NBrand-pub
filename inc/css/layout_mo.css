@@ -359,4 +359,20 @@
   .navigation-item02.nav-mo .rending-wrap li:not(:first-child) {
     padding-top: 20px;
   }
+
+
+  /* 07.16 추가 */
+  .btn-navi-wrap {
+    gap:12px;
+  }
+  .btn-navi-wrap.mo-only .btn-box {
+    display: flex;
+  }
+  .btn-navi-wrap.mo-only .btn-box .btn {
+    display: block;
+    width: 50%;
+  }
+  .btn-navi-wrap.mo-only .btn-box .btn:not(:last-child) {
+    margin-right: 0;
+  }
 }
