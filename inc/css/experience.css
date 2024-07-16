@@ -3469,7 +3469,6 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
     padding: 18px 24px 18px 0;
     border-bottom: 1px solid #d9d9d9;
     width: 100%;
-    height: fit-content;
     display: flex;
     justify-content: flex-end;
     position: fixed;

@@ -13,7 +13,7 @@
   margin: 0 auto;
   padding: 0 5rem 15rem 5rem;
   width: 100%;
-  max-width: 60rem;
+  max-width: 70rem;
 }
 .inquiry_form {
   padding-bottom: 5rem;
@@ -89,7 +89,7 @@
   }
 
   .inquiry_wrap {
-    padding: 0 1.5rem 10rem 1.5rem;
+    padding: 0;
   }
   .inquiry_form {
     padding-bottom: 3.75rem;

@@ -511,8 +511,10 @@ article.info-bnr-wrap + article.info-video-wrap {
 .brand .motor_tab .mypage-withdrawal-table {
   margin-top: 1.25rem;
   max-width: 54rem;
-  border-top: 1px solid #aaaaaa;
   text-align: left;
+}
+.brand .motor_tab .mypage-withdrawal-table tr {
+  border-top: 1px solid #aaaaaa;
 }
 .brand .motor_tab .mypage-withdrawal-table th {
   padding: 2rem 0;

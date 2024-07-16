@@ -335,7 +335,7 @@
 .join_form .mypage-withdrawal-list {
   margin-top: 0;
 }
-.join_form .mypage-withdrawal-table {
+.join_form .mypage-withdrawal-table tr:first-of-type {
   border-top: 1px solid #aaaaaa;
 }
 .join_form.join_withdrawal {
@@ -438,7 +438,7 @@
 /* 사파리 전용 미디어쿼리 */
 @media not all and (min-resolution: 0.001dpcm) {
   body {
-    letter-spacing: -1px;
+    letter-spacing: -0.3px;
   }
   .mypost-wrap .mypost-box p:first-child {
     word-break: break-all;
@@ -773,7 +773,6 @@
 .mypage-withdrawal-table {
   position: relative;
   margin-top: 2rem;
-  border-top: 2px solid #787d80;
 }
 .mypage-withdrawal-table thead {
   position: absolute;
@@ -782,6 +781,9 @@
   margin: -1px;
   overflow: hidden;
   clip-path: polygon(0 0, 0 0, 0 0);
+}
+.mypage-withdrawal-table tbody tr:first-of-type {
+  border-top: 2px solid #787d80;
 }
 .mypage-withdrawal-table tbody tr {
   border-bottom: 1px solid #bbbbbb;
@@ -1049,7 +1051,7 @@
     position: relative;
   }
   .mypage-wrap .mypage-info > dl > div:first-child::after {
-    height: 98px;
+    height: 100%;
     right: -24.5px;
   }
   .mypage-wrap .mypage-info dt {
@@ -1200,6 +1202,7 @@
   }
   .mymsission-col {
     display: block;
+    padding: 0;
   }
   .mymsission-status + .btn-wrap-type2 {
     margin-top: 20px;
