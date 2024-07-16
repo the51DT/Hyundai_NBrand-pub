@@ -42,7 +42,7 @@
   .gnb__tab-btn-wrap {
     flex-direction: column;
     gap: 0px;
-    padding: 8px 0 0;
+    padding: 8px 0 0 0;
     position: relative;
     /* z-index: 1; */
   }
@@ -100,7 +100,7 @@
   }
   [class*="header__event-item"] {
     scroll-snap-align: start;
-    padding: 0 24px 10px;
+    padding: 0 24px 10px 24px;
   }
   .header__event-wrap .img-area {
     width: 100%;
@@ -216,7 +216,7 @@
     position: absolute;
     top: calc(100vh - 405px);
     width: 100%;
-    padding: 0 24px 0;
+    padding: 0 24px;
     margin-left: 0;
   }
   .gnb__tab-cont-wrap .gnb-content__dep2 .img-area {
@@ -349,7 +349,7 @@
 
   .navigation-item02.nav-mo .rending-wrap {
     display: block;
-    padding: 20px 24px 32px;
+    padding: 20px 24px 32px 24px;
     border-bottom: 1px solid #d9d9d9;
   }
 

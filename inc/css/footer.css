@@ -5,9 +5,9 @@
 }
 
 .footer-wrap {
-  padding: 5rem 5rem 6.25rem;
+  padding: 5rem 5rem 6.25rem 5rem;
   background-color: #000;
-  color: #FFF;
+  color: #fff;
 }
 .footer-area {
   margin: 0 auto;
@@ -29,7 +29,7 @@
   margin-top: 1rem;
   font-size: 0.875rem;
   font-weight: 500;
-  line-height: 140%
+  line-height: 140%;
 }
 .footer-grid {
   display: grid;
@@ -67,14 +67,14 @@
   padding: 0 0.75rem;
 }
 .footer-etc li::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 50%;
   transform: translateY(-50%);
   width: 0.0625rem;
   height: 0.625rem;
-  background-color: #595C5F;
+  background-color: #595c5f;
 }
 .footer-etc li:first-of-type {
   padding-left: 0;
@@ -101,7 +101,7 @@
   font-size: 1rem;
   font-weight: 700;
   line-height: 1.375rem;
-  color: #FFF;
+  color: #fff;
 }
 
 @media screen and (max-width: 1023px) {
@@ -109,7 +109,7 @@
     display: block;
   }
   .footer-wrap {
-    padding: 2.5rem 1.5rem 6.25rem;
+    padding: 2.5rem 1.5rem 6.25rem 1.5rem;
   }
   .footer-list-wrap {
     padding-bottom: 0;
@@ -124,7 +124,7 @@
     margin-top: 1.5rem;
     font-size: 0.875rem;
     font-weight: 500;
-    line-height: 140%
+    line-height: 140%;
   }
   .footer-grid {
     display: grid;
@@ -137,13 +137,13 @@
   .dropdown.inMobile .accor02-wrap .accor02-header.footer-list-tit.mo-only {
     display: flex;
     width: 100%;
-    color: #FFF;
+    color: #fff;
   }
   .footer-list-area:first-of-type .footer-list-tit {
     padding-top: 0 !important;
   }
   .footer-list {
-    padding: 0.75rem 0 1.75rem;
+    padding: 0.75rem 0 1.75rem 0;
     border-bottom: 1px solid #333;
   }
   .footer-list li {
@@ -165,14 +165,14 @@
     padding: 0 0.75rem;
   }
   .footer-etc li::before {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     top: 50%;
     transform: translateY(-50%);
     width: 0.0625rem;
     height: 0.625rem;
-    background-color: #595C5F;
+    background-color: #595c5f;
   }
   .footer-etc li:first-of-type::before,
   .footer-etc li:nth-of-type(3):before {

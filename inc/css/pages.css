@@ -145,7 +145,7 @@
 }
 .history-box > ul {
   position: relative;
-  padding: 40px 0 0;
+  padding: 40px 0 0 0;
 }
 .history-box .history-list:after {
   content: "";
@@ -355,7 +355,7 @@
   min-width: 237px;
   height: 320px;
   justify-content: space-between;
-  padding: 24px 20px 32px;
+  padding: 24px 20px 32px 20px;
 }
 .card-wrap-list .card-list li .card_top {
   padding: 0;
@@ -421,11 +421,10 @@
   position: relative;
 }
 .key-visual-wrap .text-wrap {
-  color:#fff;
+  color: #fff;
 }
 .key-visual-wrap .text-wrap .tit {
   position: absolute;
-  
 }
 .conts-head {
   display: flex;
@@ -442,7 +441,7 @@
   max-width: 1800px;
 }
 .next-race-box {
-  padding: 160px 0 200px;
+  padding: 160px 0 200px 0;
   /* 07.09 */
   /* max-width: 1440px;
   margin: 0 auto; */
@@ -495,7 +494,7 @@
 }
 
 .n-race-box {
-  padding: 60px 0 0;
+  padding: 60px 0 0 0;
   /* max-width: 1800px; */
   margin: 0 auto;
 }
@@ -532,7 +531,7 @@
 }
 
 .event-box .evt-map-wrap {
-  position: relative;    
+  position: relative;
 }
 
 .event-box .evt-map-img img {
@@ -592,7 +591,7 @@
 }
 
 @media screen and (max-width: 2168px) {
-  .next-race-box .conts-body .swiper-container {    
+  .next-race-box .conts-body .swiper-container {
     margin: 0;
   }
   .next-race-box .swiper-card-type .swiper-button-prev {
@@ -601,27 +600,28 @@
 }
 
 /* min-width : 1024 css */
-@media screen and (max-width: 1280px) and (min-width: 1024px) {  
+@media screen and (max-width: 1280px) and (min-width: 1024px) {
   .next-race-box .conts-head {
-    margin:0 80px 40px;
-  }  
-    
+    margin: 0 80px 40px;
+  }
+
   .next-race-box .swiper-card-type .swiper-button-prev {
     left: 80px;
   }
 }
-@media screen and (min-width:1800px) {
+@media screen and (min-width: 1800px) {
   .n-race-box .event-box .conts-head {
     padding-right: 0;
-  } 
+  }
 }
 
 @media screen and (max-width: 1800px) {
-  .n-race-box .conts-head, .next-race-box .conts-head {
-    margin:0 80px 40px 80px;
-  }  
+  .n-race-box .conts-head,
+  .next-race-box .conts-head {
+    margin: 0 80px 40px 80px;
+  }
   .n-race-box .conts-body .section_tab {
-    margin-left:80px;
+    margin-left: 80px;
   }
   .evtGuide .content-item05 .tab-head,
   .evtGuide .content-item07 .tab-head {
@@ -673,14 +673,14 @@
     padding-left: 24px;
     padding-right: 0;
   }
-  
+
   .evtGuide .content-item06 .conts-head,
   .evtGuide .content-item06 .conts-body {
     padding-left: 0;
     padding-right: 0;
   }
   .evtGuide .content-item09 .info-guide-box {
-    padding:0 24px;
+    padding: 0 24px;
   }
   .evtGuide .wrap-list .__bottom .wrap-lists:last-child {
     margin-right: 24px;
@@ -753,7 +753,7 @@
     overflow: hidden;
   }
   .history-box > ul {
-    padding: 28px 0 0;
+    padding: 28px 0 0 0;
   }
   .history-box .history-list:after {
     left: 4px;
@@ -842,7 +842,7 @@
 
   .class-info-box h2.ta-ctr {
     text-align: left !important;
-    padding:0 24px 28px 24px;
+    padding: 0 24px 28px 24px;
   }
 
   .class-info-box .conts-card-wrap {
@@ -872,7 +872,7 @@
   .card-wrap-list .card-list li a {
     min-width: 128px;
     height: 265px;
-    padding: 20px 12px 12px;
+    padding: 20px 12px 12px 12px;
   }
 
   .info-table-box .info-head {
@@ -949,7 +949,7 @@
   .next-race-box .conts-head {
     padding-left: 24px;
     padding-right: 24px;
-    margin:0 0 64px 0;
+    margin: 0 0 64px 0;
   }
 
   .next-race-box .conts-head .selectbox-wrap {
@@ -963,13 +963,13 @@
     margin-right: 24px;
   }
   .n-race-box {
-    padding: 36px 0 0;
+    padding: 36px 0 0 0;
   }
   .n-race-box .conts-body .swiper-container {
     margin-left: 24px;
   }
   .n-race-box .conts-head {
-    margin: 0 24px 28px;
+    margin: 0 24px 28px 24px;
     padding: 0;
   }
   .n-race-box .conts-body .section_tab {
@@ -999,7 +999,7 @@
   }
 
   .event-box .evt-map-img img {
-    min-height: 600px;    
+    min-height: 600px;
   }
   .event-box .btn-area {
     top: 24px;
@@ -1018,5 +1018,4 @@
   .about .txt-list-wrap li {
     width: auto;
   }
-
 }

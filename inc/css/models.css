@@ -3,7 +3,7 @@
   font-family: "Hyundai Sans Text";
 }
 .models-wrap .content-item03 {
-  padding: 240px 80px 0;
+  padding: 240px 80px 0 80px;
   margin-bottom: 240px;
 }
 .models-wrap .content-item02 video {
@@ -146,7 +146,7 @@
   margin-top: 4px;
 }
 .models-wrap .models-full {
-  padding: 240px 80px 0;
+  padding: 240px 80px 0 80px;
 }
 .models-wrap .perfor-wrap .models-full.icon20 {
   background: url(../../inc/images/Models/i20N/i20N_performance_bg.png) center
@@ -320,18 +320,18 @@
   top: 8.5px;
 }
 .models-wrap .models-nofull {
-  padding: 200px 80px 0;
+  padding: 200px 80px 080px;
   margin-bottom: 240px;
 }
 .models-wrap .models-nofull.type2 {
-  padding: 80px 80px 0;
+  padding: 80px 80px 0 80px;
   margin-bottom: 240px;
 }
 .models-wrap .models-nofull.type3 {
   margin-bottom: 0;
 }
 .models-wrap .models-nofull.type4 {
-  padding: 40px 80px 0;
+  padding: 40px 80px 0 80px;
   margin-bottom: 240px;
 }
 .models-wrap .models-nofull .max1440 {
@@ -710,11 +710,11 @@
   width: 154px;
 }
 .models-wrap .gallery-wrap {
-  padding: 240px 0 0;
+  padding: 240px 0 0 0;
   margin-bottom: 240px;
 }
 .models-wrap .gallery-wrap .max1440 {
-  padding: 0 80px 80px;
+  padding: 0 80px 80px 80px;
 }
 .models-wrap .gallery-wrap .img-area {
   position: relative;
@@ -735,7 +735,7 @@
   margin-left: 12px;
 }
 .models-wrap .related-wrap {
-  padding: 100px 80px 120px;
+  padding: 100px 80px 120px 80px;
   background-color: #f0f0f0;
 }
 .models-wrap .related-wrap .max1440 {
@@ -857,7 +857,7 @@
     object-fit: cover;
   }
   .models-wrap .content-item03 {
-    padding: 152px 24px 0;
+    padding: 152px 24px 0 24px;
     margin-bottom: 152px;
   }
   .models-wrap [class*="max1440"] {
@@ -893,11 +893,15 @@
     max-width: calc(100vw - 48px);
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-  }  
+  }
   .models-wrap .related-wrap .models-nofull-box {
     max-width: calc(100vw - 24px);
   }
-  .models-wrap .related-wrap .models-nofull-box .models-cardbox > div:last-child {
+  .models-wrap
+    .related-wrap
+    .models-nofull-box
+    .models-cardbox
+    > div:last-child {
     padding-right: 24px;
   }
   .models-wrap .blue-title {
@@ -964,7 +968,7 @@
     text-align: center;
   }
   .models-wrap .models-full {
-    padding: 152px 24px 0;
+    padding: 152px 24px 0 24px;
   }
   .models-wrap .perfor-wrap p:not(.txt-left) {
     text-align: center;
@@ -1020,7 +1024,7 @@
     margin-top: 12px;
   }
   .models-wrap .models-nofull {
-    padding: 152px 24px 0;
+    padding: 152px 24px 0 24px;
     margin-bottom: 152px;
   }
   .models-wrap .models-nofull .max1440 {
@@ -1139,19 +1143,19 @@
     margin-top: 0;
   }
   .models-wrap .models-nofull.type2 {
-    padding: 44px 24px 0;
+    padding: 44px 24px 0 24px;
     margin-bottom: 152px;
   }
   .models-wrap .models-nofull.type3 {
-    padding: 120px 24px 0;
+    padding: 120px 24px 0 24px;
     margin-bottom: 0;
   }
   .models-wrap .models-nofull.type4 {
-    padding: 28px 24px 0;
+    padding: 28px 24px 0 24px;
     margin-bottom: 152px;
   }
   .models-wrap .models-nofull.type5 {
-    padding: 120px 24px 0;
+    padding: 120px 24px 0 24px;
     margin-bottom: 152px;
   }
   .models-wrap .tech-wrap .kona-tech {
@@ -1216,7 +1220,7 @@
     flex: 100%;
     font-size: 16px;
     line-height: 22.4px;
-    padding: 24px 0 0;
+    padding: 24px 0 0 0;
     border-bottom: 0;
   }
   .models-wrap .specification-wrap dl dd {
@@ -1224,7 +1228,7 @@
     font-size: 20px;
     line-height: 28px;
     padding-right: 0;
-    padding: 8px 0 24px;
+    padding: 8px 0 24px 0;
     font-family: "Hyundai Sans Head";
   }
   .models-wrap .specification-txt {
@@ -1285,11 +1289,11 @@
     margin-top: 28px;
   }
   .models-wrap .gallery-wrap {
-    padding: 152px 0 0;
+    padding: 152px 0 0 0;
     margin-bottom: 152px;
   }
   .models-wrap .gallery-wrap .max1440 {
-    padding: 0 24px 44px;
+    padding: 0 24px 44px 24px;
   }
   .models-wrap .kona-notice-wrap {
     padding: 100px 24px;

@@ -1156,7 +1156,7 @@ input[type="radio"]:focus + label {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 1.25rem 1.5rem 0;
+  padding: 1.25rem 1.5rem 0 1.5rem;
   flex-grow: 1;
 }
 .card_type01.card_swiper .card_top {
@@ -1364,7 +1364,7 @@ input[type="radio"]:focus + label {
 .card_type02 {
   width: 100%;
   height: 38.6875rem;
-  padding: 1.5rem 1.5rem 2.5rem;
+  padding: 1.5rem 1.5rem 2.5rem 1.5rem;
   background-color: #ffffff;
 }
 .card_type02 .card_tit {
@@ -1431,7 +1431,7 @@ input[type="radio"]:focus + label {
   display: flex;
   justify-content: space-between;
   align-items: start;
-  padding: 1.25rem 2.5rem 0;
+  padding: 1.25rem 2.5rem 0 2.5rem;
   font-family: "Hyundai Sans Head";
   text-align: right;
 }
@@ -1660,7 +1660,7 @@ input[type="radio"]:focus + label {
   margin-top: 20px;
 }
 .card_type04 .card_function {
-  padding: 20px 16px 38px;
+  padding: 20px 16px 38px 16px;
 }
 .card_type04 .card_profile {
   display: flex;
@@ -2207,7 +2207,7 @@ input[type="radio"]:focus + label {
 }
 
 .ty03Swiper {
-  padding: 40px 0 50px;
+  padding: 40px 0 50px 0;
 }
 
 .ty03Swiper .swiper-slide {
@@ -2664,7 +2664,7 @@ input[type="radio"]:focus + label {
 
 @media screen and (min-width: 1024px) and (max-width: 1366px) {
   .wrap-list.list03 .left {
-    padding: 80px 60px 72px;
+    padding: 80px 60px 72px 60px;
     margin-right: 40px;
     width: 420px;
   }
@@ -4869,7 +4869,7 @@ p.text-num-chk {
   text-align: left;
 }
 .selectbox-trigger2 {
-  padding: 27px 8px 23px;
+  padding: 27px 8px 23px 8px;
   min-width: 240px;
   font-size: 32px;
   line-height: 44.8px;
@@ -5100,7 +5100,7 @@ input:checked + .slider:before {
 .search-small .search-input-box {
   column-gap: 0.62rem;
   width: 18.75rem;
-  padding: 0.625rem 0.5rem 0.375rem;
+  padding: 0.625rem 0.5rem 0.375rem 0.5rem;
 }
 
 .search-small .search-input-box .btn-search {
@@ -5325,7 +5325,7 @@ input:checked + .slider:before {
   line-height: 28px;
 }
 .club-popup .popup-wrapper .popup-body .pop-des {
-  padding: 20px 16px 0;
+  padding: 20px 16px 0 16px;
 }
 .club-popup .popup-wrapper .popup-body .pop-des p {
   font-size: 14px;
@@ -5333,7 +5333,7 @@ input:checked + .slider:before {
   line-height: 19.6px;
 }
 .club-popup .popup-wrapper .popup-body .btn-wrap {
-  padding: 20px 16px 0;
+  padding: 20px 16px 0 16px;
 }
 .club-popup .popup-wrapper .popup-footer {
   border-top: 0;

@@ -185,7 +185,7 @@
 }
 .join_wrap {
   margin: 0 auto;
-  padding: 0 5rem 15rem;
+  padding: 0 5rem 15rem 5rem;
   max-width: 70rem;
 }
 .join_wrap .join_step {
@@ -336,7 +336,7 @@
   margin-top: 0;
 }
 .join_form .mypage-withdrawal-table {
-  border-top: 1px solid #AAAAAA;
+  border-top: 1px solid #aaaaaa;
 }
 .join_form.join_withdrawal {
   padding-bottom: 0;
@@ -436,11 +436,11 @@
   width: auto;
 }
 /* 사파리 전용 미디어쿼리 */
-@media not all and (min-resolution:.001dpcm) {
+@media not all and (min-resolution: 0.001dpcm) {
   body {
     letter-spacing: -1px;
   }
-	.mypost-wrap .mypost-box p:first-child {
+  .mypost-wrap .mypost-box p:first-child {
     word-break: break-all;
   }
 }
@@ -455,7 +455,7 @@
   border-top: 1px solid #787d80;
 }
 .mymsission-wrap li {
-  padding: 29px 0 28px;
+  padding: 29px 0 28px 0;
   border-bottom: 1px solid #bbb;
   width: 100%;
   display: flex;
@@ -541,7 +541,7 @@
   margin-left: 9px;
 }
 .mypoint-reject:not(.mypoint-minus, .mypoint-plus)::before {
-  content: '';
+  content: "";
   position: absolute;
   left: -4px;
   top: 43%;
@@ -1237,7 +1237,7 @@
     font-size: 1.25rem;
   }
   .join_wrap {
-    padding: 0 1.5rem 9.5rem;
+    padding: 0 1.5rem 9.5rem 1.5rem;
   }
   .join_wrap .join_step {
     width: 4.5rem;
@@ -1309,13 +1309,15 @@
     gap: 20px;
   }
   .mypage-content.mypage-eachbox .mypage-eachbox-top + .mypage-nodata-box {
-    padding: 4px 0 0;
+    padding: 4px 0 0 0;
   }
-  .mypage-content.mypage-eachbox.type2 .mypage-eachbox-top + .mypage-nodata-box {
-    padding: 12px 0 0;
+  .mypage-content.mypage-eachbox.type2
+    .mypage-eachbox-top
+    + .mypage-nodata-box {
+    padding: 12px 0 0 0;
   }
   .mypage-content.mypage-eachbox.type2 .mypage-eachbox-top + .inquiry-nodata {
-    padding: 50.5px 0 10.5px;
+    padding: 50.5px 0 10.5px 0;
   }
   .mypost-wrap + .mypost-contents.type2 {
     margin-top: 16px;
@@ -1415,12 +1417,12 @@
   .mypage-withdrawal-table tbody tr th {
     display: block;
     margin-bottom: 0.5rem;
-    padding: 1.75rem 0.75rem 0;
+    padding: 1.75rem 0.75rem 0 0.75rem;
     font-size: 1.125rem;
   }
   .mypage-withdrawal-table tbody tr td {
     display: block;
-    padding: 0 0.75rem 1.75rem;
+    padding: 0 0.75rem 1.75rem 0.75rem;
     font-size: 1.0625rem;
   }
   .mypage-withdrawal-checkbox-wrap {

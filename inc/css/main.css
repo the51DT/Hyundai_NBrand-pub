@@ -27,7 +27,7 @@
   line-height: 140%;
 }
 .main_summery_list {
-  grid-template-areas: 
+  grid-template-areas:
     ". . brand"
     "history people img"
     ". lab press";
@@ -75,7 +75,7 @@
   line-height: 140%;
 }
 .main_summery_card div::after {
-  content: '';
+  content: "";
   width: 1.5rem;
   height: 1.5rem;
   background-image: url(../../inc/images/icon/icon-arrow01_right.svg);
@@ -87,7 +87,7 @@
 .main_summery_card:focus div,
 .main_summery_card:active div {
   padding: 0.63rem 0.5rem;
-  background-color: #AACAE6;
+  background-color: #aacae6;
 }
 
 .swiper-title {
@@ -98,7 +98,7 @@
   font-size: 2rem;
   font-weight: 700;
   line-height: 140%;
-  color: #FFF;
+  color: #fff;
   z-index: 2;
 }
 
@@ -108,8 +108,8 @@
 }
 
 .main_model_wrap {
-  padding: 7.5rem 5rem 10rem;
-  background-color: #E6EFF8;
+  padding: 7.5rem 5rem 10rem 5rem;
+  background-color: #e6eff8;
 }
 .main_model_wrap .grid_3 li:first-of-type {
   grid-column: 1 / 3;
@@ -139,7 +139,7 @@
   font-size: 2rem;
   font-weight: 700;
   line-height: 140%;
-  color: #FFF;
+  color: #fff;
   text-align: center;
 }
 .main_model_card .model_copy {
@@ -150,7 +150,7 @@
   font-size: 1.125rem;
   font-weight: 700;
   line-height: 140%;
-  color: #FFF;
+  color: #fff;
   text-align: center;
 }
 .main_model_card .btn-wrap {
@@ -166,14 +166,14 @@
 }
 
 .main_Nfluencer_wrap {
-  padding: 10rem 5rem 15rem;
+  padding: 10rem 5rem 15rem 5rem;
 }
 .main_Nfluencer_wrap .fw-type03 {
   margin: 0 auto;
   max-width: 90rem;
 }
 .main_Nfluencer_wrap .tit-type04 {
-  margin: 0.5rem auto 2.5rem;
+  margin: 0.5rem auto 2.5rem auto;
 }
 
 @media screen and (max-width: 1023px) {
@@ -230,7 +230,7 @@
   }
 
   .main_model_wrap {
-    padding: 5rem 1.5rem 6.25rem;
+    padding: 5rem 1.5rem 6.25rem 1.5rem;
   }
   .main_model_wrap .grid_3 li:first-of-type {
     grid-column: 1 / 2;
@@ -251,7 +251,7 @@
     font-size: 2rem;
     font-weight: 700;
     line-height: 140%;
-    color: #FFF;
+    color: #fff;
     text-align: center;
   }
   .main_model_card .model_copy {
@@ -262,7 +262,7 @@
     font-size: 1.125rem;
     font-weight: 700;
     line-height: 140%;
-    color: #FFF;
+    color: #fff;
     text-align: center;
   }
   .main_model_card .btn-wrap {
@@ -279,7 +279,7 @@
   }
 
   .main_Nfluencer_wrap {
-    padding: 6.25rem 1.5rem 9.5rem;
+    padding: 6.25rem 1.5rem 9.5rem 1.5rem;
   }
   .main_Nfluencer_wrap .contitle-type01 {
     font-size: 2.5rem;
