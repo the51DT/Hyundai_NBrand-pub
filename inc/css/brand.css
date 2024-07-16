@@ -2247,6 +2247,9 @@
     font-size: 20px;
     line-height: 25px;
   }
+  .merchandise-wrap .merchandise_related-wrap .merchandise_related > div:last-child {
+    margin-right: 24px;
+  }
 
   /* 브랜드 내 팝업 시작 */
   .popup.forBrand .popup-wrapper .popup-header {
