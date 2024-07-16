@@ -4456,6 +4456,7 @@ table {
   flex-direction: row;
   border-bottom: 4px solid #000;
   padding-right: 8px;
+  column-gap: 0.625rem;
 }
 .wrap-form input[type="text"] {
   font-family: "Hyundai Sans Text";
@@ -4501,15 +4502,24 @@ p.text-num-chk {
   margin-left: 2px;
 }
 .clear-text .btn {
-  width: 20px;
-  height: 20px;
+  width: 34px;
+  height: 34px;
   padding: 5.13px;
   border-radius: 20px;
   background-color: rgba(0, 0, 0, 0.15);
 }
+.search-small .clear-text .btn {
+  width: 20px;
+  height: 20px;
+}
+.wrap-form.text .clear-text .btn {
+  width: 20px;
+  height: 20px;
+  margin-top: 8px;
+}
 .clear-text .icon-close-wh {
-  width: 10px;
-  height: 10px;
+  width: 100%;
+  height: 100%;
 }
 
 /* comment-type01, comment-type02 */
@@ -5016,6 +5026,7 @@ input:checked + .slider:before {
   justify-content: space-between;
   padding: 24px 4px 20px 8px;
   color: #000;
+  column-gap: 1.25rem;
 }
 
 .search-wrap .search-input-box input {
