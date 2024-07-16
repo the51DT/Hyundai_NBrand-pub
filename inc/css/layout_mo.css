@@ -342,7 +342,8 @@
     width: 50px;
     padding: 10px 0;
   }
-  .header-cont .utile-wrap .login-btn {
+  .header-cont .utile-wrap .login-btn,
+  .header-cont .utile-wrap .alarm-btn {
     width: 40px;
   }
 
