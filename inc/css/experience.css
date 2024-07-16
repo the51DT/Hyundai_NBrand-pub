@@ -1997,23 +1997,21 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
 /** mypage 팝업 끝 **/
 
 /** sharing 팝업 시작 **/
-.popup.share-popup {
-  max-width: 500px;
-}
 
-.popup.share-popup .popup-wrapper .popup-header {
+.share-popup.popup-wrapper .popup-header {
+  /* max-width: 500px; */
   padding: 13px 24px;
 }
 
-.popup.share-popup .popup-wrapper .popup-header h3 {
+.share-popup.popup-wrapper .popup-header h3 {
   font-size: 24px;
 }
 
-.popup.share-popup .popup-wrapper .popup-body.share-icn-wrap {
+.share-popup.popup-wrapper .popup-body.share-icn-wrap {
   padding: 80px 98px;
 }
 
-.popup.share-popup .popup-wrapper .popup-body.share-icn-wrap .box-row {
+.share-popup.popup-wrapper .popup-body.share-icn-wrap .box-row {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 48px;
@@ -2021,7 +2019,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   align-items: center;
 }
 
-.popup.share-popup .popup-wrapper .popup-body.share-icn-wrap .box-row .box-icn {
+.share-popup.popup-wrapper .popup-body.share-icn-wrap .box-row .box-icn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -3502,16 +3500,16 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   /** 끝 **/
 
   /** share popup 시작 **/
-  .popup.share-popup {
+  .share-popup.popup-wrapper {
     max-width: 100%;
     height: fit-content;
   }
 
-  .popup.share-popup .popup-wrapper .popup-header h3 {
+  .share-popup.popup-wrapper .popup-header h3 {
     font-size: 18px;
   }
 
-  .popup.share-popup .popup-wrapper .popup-body.share-icn-wrap {
+  .share-popup.popup-wrapper .popup-body.share-icn-wrap {
     padding: 44px 28px;
   }
 

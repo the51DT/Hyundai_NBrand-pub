@@ -143,16 +143,7 @@ var NbrandUI = {
           openWrap.addClass("on").fadeIn(200);
           NbrandUI.dimdOn();
           break;
-        case "popup bottom-popup share-popup":
-          openWrap.addClass("on").slideDown(200);
-          NbrandUI.dimdOn();
-          break;
-        case "popup bottom-popup share-popup":
-          openWrap.addClass("on").slideDown(200);
-          NbrandUI.dimdOn();
-          break;
-        case "popup bottom-popup inquiry_popup_wrap":
-          //CM070102C01 내 팝업
+        case "popup bottom-popup":
           openWrap.addClass("on").slideDown(200);
           NbrandUI.dimdOn();
           break;
@@ -180,17 +171,6 @@ var NbrandUI = {
         case "popup model-popup fullWidth":
           openWrap.addClass("on").fadeIn(200);
           NbrandUI.dimdOn();
-          break;
-        case "popup bottom-popup share-popup":
-          openWrap.addClass("on").fadeIn(200);
-          NbrandUI.dimdOn();
-          // $(".dimmed").css("z-index", 1002);
-          break;
-        case "popup bottom-popup inquiry_popup_wrap":
-          //CM070102C01 내 팝업
-          openWrap.addClass("on").fadeIn(200);
-          NbrandUI.dimdOn();
-          // $(".dimmed").css("z-index", 1002);
           break;
         case "popup bottom-popup":
           openWrap.addClass("on").fadeIn(200);

@@ -141,7 +141,7 @@
   text-align: end;
 }
 /* 로그인 팝업 */
-.bottom-popup.logout_popup_wrap {
+.logout_popup_wrap {
   padding: 2.5rem;
   width: fit-content;
   min-width: 25rem;
@@ -1208,7 +1208,7 @@
     margin-top: 20px;
   }
   /* 로그인 팝업 */
-  .bottom-popup.logout_popup_wrap {
+  .logout_popup_wrap {
     padding: 2.5rem;
     width: 100%;
     min-width: 0;

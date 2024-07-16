@@ -490,11 +490,15 @@ body.fix {
 }
 .btn-navi-wrap {
   display: flex;
+<<<<<<< Updated upstream
   gap:16px;
   align-items: center;
+=======
+  gap: 16px;
+>>>>>>> Stashed changes
 }
 .btn-navi-wrap .btn-box .btn {
-  padding:5px 12px;
+  padding: 5px 12px;
   font-size: 16px;
   line-height: 22px;
 }
@@ -830,7 +834,7 @@ body.fix {
   top: 50%;
   left: 50%;
   background: #fff;
-  width: calc(100% - 40px);
+  /* width: calc(100% - 40px); */
   max-width: 500px;
   z-index: 1003;
   transform: translate(-50%, -50%);
