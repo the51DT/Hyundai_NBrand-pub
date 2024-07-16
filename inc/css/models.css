@@ -744,6 +744,7 @@
 .models-wrap .related-wrap .max1440 {
   align-items: flex-start;
   gap: 40px;
+  max-width: 1440px;
 }
 .models-wrap .related-wrap .models-cardbox.w30 > div {
   gap: 20px;
