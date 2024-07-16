@@ -4527,9 +4527,9 @@ p.text-num-chk {
   margin-left: 2px;
 }
 .clear-text .btn {
-  width: 34px;
-  height: 34px;
-  padding: 5.13px;
+  width: 24.5px;
+  height: 24.5px;
+  padding: 4px;
   border-radius: 20px;
   background-color: rgba(0, 0, 0, 0.15);
 }
