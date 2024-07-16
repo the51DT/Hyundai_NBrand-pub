@@ -525,7 +525,6 @@ var pubUi = {
     var swiper12 = new Swiper(".collection_swiper", {
       slidesPerView: 3,
       spaceBetween: 24,
-      slidesOffsetAfter: 24,
       watchOverflow: true,
       pagination: {
         el: ".collection_swiper .swiper-pagination-custom",
@@ -539,10 +538,14 @@ var pubUi = {
         360: {
           slidesPerView: 1.07,
           spaceBetween: 12,
+          slidesOffsetBefore: 24,
+          slidesOffsetAfter: 24,
         },
         768: {
           slidesPerView: 1.07,
           spaceBetween: 12,
+          slidesOffsetBefore: 24,
+          slidesOffsetAfter: 24,
         },
         1024: {
           slidesPerView: 3,

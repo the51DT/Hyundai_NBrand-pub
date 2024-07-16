@@ -120,8 +120,9 @@
 }
 
 .about .history-box-wrap {
+  padding: 0 80px;
   padding-top: 160px;
-  max-width: 1440px;
+  max-width: 1600px;
   margin: 0 auto;
 }
 .about .history-box-wrap .tit {
@@ -188,6 +189,7 @@
   font-weight: 700;
   font-size: 80px;
   line-height: 100px;
+  font-family: "Hyundai Sans Head";
 }
 
 .history-box .history-list li .text-area .title {

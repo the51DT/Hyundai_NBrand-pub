@@ -1557,9 +1557,12 @@ input[type="radio"]:focus + label {
   color: #777;
 }
 .card_type04 .card_con {
-  padding: 20px 16px 0;
+  padding: 20px 0;
   background-color: #fff;
   text-align: left;
+}
+.grid_masonry .card_type04 .card_con {
+  padding: 20px 16px 0 16px;
 }
 .card_type04 .card_state.card_mypage {
   padding: 16px;
