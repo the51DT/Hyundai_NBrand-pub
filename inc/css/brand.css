@@ -73,6 +73,8 @@
 .conts-section-wrap {
   padding-top: 200px;
   padding-bottom: 200px;
+  padding-left: 80px;
+  padding-right: 80px;
 }
 .conts-section-wrap.type-tab {
   padding-bottom: 0;
@@ -90,6 +92,10 @@
 .conts-section-wrap.type-tab .tab-head .tabs-wrap {
   margin-top: 60px;
 }
+.conts-section-wrap.type-tab .tabs li {
+  width: 222px;
+  text-align: center;
+}
 .conts-section-wrap.type-tab .tab-content {
   margin-top: 80px;
 }
@@ -102,7 +108,7 @@
   width: 100%;
 }
 .models-wrap .conts-section-wrap .conts-bnr-box img {
-  height: 805px;
+  object-fit: cover;
 }
 .brand .models-wrap .content-item03 {
   padding: 0;
@@ -113,9 +119,26 @@
   gap: 60px;
 }
 .brand .models-wrap [class*="max1200"] {
-  max-width: 1200px;
+  max-width: 1360px;
+  padding: 0 80px;
   margin: 0 auto;
 }
+.brand .conts-section-wrap .max1440,
+.brand .conts-section-wrap .max1200,
+.brand .models-wrap .max1440 .max1440,
+.brand .models-wrap .max1440 .max1200 {
+  padding-left: 0;
+  padding-right: 0;
+}
+.brand .conts-section-wrap .max1440,
+.brand .models-wrap .max1440 .max1440 {
+  max-width: 1440px;
+}
+.brand .conts-section-wrap .max1200,
+.brand .models-wrap .max1440 .max1200 {
+  max-width: 1200px;
+}
+
 
 .models-wrap .video_thumnail_wrap {
   position: static;
@@ -125,7 +148,7 @@
   margin: 160px 0 60px;
 }
 .brand .models-wrap .models-nofull {
-  padding: 200px 24px;
+  padding: 200px 80px;
   margin-bottom: 0;
 }
 
@@ -133,13 +156,18 @@
   background: url(../../inc/images/img/img_aboutN_loca.png);
   background-size: cover;
   background-position: center;
-  padding: 200px 240px;
+  padding: 200px 160px;
   display: flex;
   align-items: flex-end;
+  height: 1600px;
 }
 .models-wrap .location-wrap [class*="max1440"] {
   text-align: left;
   display: block;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  max-width: 1440px;
 }
 
 .models-wrap .text-col .text-sub {
@@ -152,6 +180,7 @@
 }
 .models-wrap .location-wrap .text-col .text-normal {
   margin-top: 20px;
+  font-weight: 500;
 }
 
 .n-story-box .img-conts-wrap .img-area {
@@ -201,6 +230,9 @@
 .brand .models-wrap .content-item08 .text-col .text-normal {
   margin-top: 20px;
 }
+.brand .history-box-wrap {
+  padding-top: 0;
+}
 .brand .history-box .history-list li .text-area .sub-text-list {
   margin-top: 12px;
 }
@@ -224,7 +256,7 @@
   background: url(../../inc/images/img/img_dna_conts02.png);
   background-size: cover;
   background-position: center;
-  padding: 200px 240px;
+  padding: 200px 0;
   display: flex;
   align-items: flex-end;
   height: 2924px;
@@ -246,14 +278,14 @@
 .article-box-wrap .conts-section-wrap {
   padding-top: 160px;
   padding-bottom: 200px;
-  max-width: 1440px;
+  max-width: 1600px;
   margin: 0 auto;
 }
 .article-box-wrap .article:not(:last-child) {
   padding-bottom: 160px;
 }
 .article-box-wrap .article .img-area {
-  height: 810px;
+  width: 100%;
 }
 .article-box-wrap .article .img-area img {
   width: 100%;
@@ -331,6 +363,7 @@
   text-align: center;
   margin-top: 80px;
   display: none;
+  background-color: transparent;
 }
 .gallery-box .gallery-conts-box .swiper-slide.swiper-slide-active .text-area {
   display: block;
@@ -355,8 +388,14 @@
   width: 100%;
   padding-top: 40px;
 }
+.brand .models-wrap .info-bnr-wrap .img-wrap {
+  width: 100%;
+}
 .brand .models-wrap .info-bnr-wrap .text-normal-s {
   margin-top: 0;
+}
+article.info-bnr-wrap + article.info-video-wrap {
+  margin-top: 160px;
 }
 .info-video-wrap {
   padding-top: 160px;
@@ -381,8 +420,6 @@
 }
 
 .calendar-list-wrap {
-  padding-left: 5rem;
-  padding-right: 5rem;
   text-align: center;
   color: #fff;
   background: linear-gradient(
@@ -499,6 +536,9 @@
 .brand .motor_wrap {
   padding-left: 5rem;
   padding-right: 5rem;
+}
+.brand .motor_wrap .grid_2 {
+  width: 100%;
 }
 .line-up-wrap {
   background: url(../../inc/images/content/img_wrc_lineUp_bg.png) center / cover
@@ -654,6 +694,9 @@
 .tcr_winner_wrap img {
   width: calc(33% - 1.25rem);
 }
+.text-year {
+  margin-bottom: 20px;
+}
 .brand .info-video-wrap.info-bnr-wrap + .max1440 {
   margin-top: 10rem;
 }
@@ -773,6 +816,9 @@
   margin: 0 auto;
   margin-top: 6.25rem;
   max-width: 105rem;
+}
+.motor_paddig_wrap {
+  padding: 200px 0;
 }
 .motor_team_list {
   display: flex;
@@ -919,8 +965,9 @@
   background-image: url(../images/content/img_performance_garage_bg_pc.png);
   background-position: bottom center;
   background-size: cover;
+  color: #FFF;
 }
-.performance_garage_wrap .text-col .btn-lg-outline01 {
+.performance_garage_wrap .text-col .btn-lg-outline02 {
   margin-top: 3.75rem;
 }
 .performance_garage {
@@ -1066,6 +1113,16 @@
   .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
   background-color: #fff;
   opacity: 0.5;
+}
+.brand .collection_swiper .swiper-bottom-wrap {
+  width: 100%;
+  left: 0;
+  top: 35%;
+  bottom: auto;
+}
+.brand .collection_swiper .swiper-button-next.swiper-button-disabled,
+.brand .collection_swiper .swiper-button-prev.swiper-button-disabled {
+  display: none;
 }
 .merchandise-wrap .productlist-wrap {
   padding: 200px 80px 240px 80px;
@@ -1497,7 +1554,7 @@
   }
 
   .models-wrap .conts-section-wrap .conts-bnr-box img {
-    height: 240px;
+    object-fit: cover;
   }
 
   .brand .models-wrap [class*="max1440"] {
@@ -1587,8 +1644,12 @@
   }
 
   .brand .models-wrap .text-strong {
+    font-size: 30px;
+    line-height: 140%;
+  }
+  .brand .models-wrap .text-strong.motor_tit {
     font-size: 36px;
-    line-height: 45px;
+    line-height: 125%;
   }
   .brand .models-wrap .text-normal-s {
     margin-top: 12px;
@@ -1596,7 +1657,21 @@
 
   .models-wrap .location-wrap .full-1600 {
     height: 840px;
-    padding: 120px 24px;
+    padding: 120px 48px;
+  }
+  .models-wrap .location-wrap .text-col .text-strong {
+    font-size: 30px;
+    line-height: 140%;
+  }
+  .models-wrap .text-col .text-sub {
+    font-size: 20px;
+    line-height: 28px;
+    margin-top: 28px;
+  }
+  .models-wrap .location-wrap .text-col .text-normal {
+    margin-top: 12px;
+    font-size: 17px;
+    line-height: 140%;
   }
 
   .brand .models-wrap .content-item08 .models-full {
@@ -1622,7 +1697,9 @@
   }
   .models-wrap .poster-bnr-wrap .models-full {
     height: 840px;
-    padding: 152px 24px 120px 24px;
+    padding: 152px 0 120px 0;
+    background-image: url(../images/img/img_dna_conts02_mo.png);
+    background-position: top center;
   }
   .models-wrap .poster-bnr-wrap .text-strong {
     font-size: 30px;
@@ -1656,6 +1733,7 @@
     margin: 0 5px 0;
   }
   .conts-section-wrap.type-tab .tabs-wrap .tabs li {
+    width: 100%;
     float: revert;
     border-right: 1px solid #777;
   }
@@ -1691,7 +1769,7 @@
     padding-bottom: 100px;
   }
   .article-box-wrap .article .img-area {
-    height: 200px;
+    /* height: 200px; */
   }
   .article-box-wrap .article .img-area img {
     object-fit: revert;
@@ -1766,6 +1844,14 @@
   .conts-section-wrap > article {
     gap: 28px !important;
   }
+  .brand .models-wrap .info-bnr-wrap .text-normal-s,
+  .brand .models-wrap .info-video-wrap .text-normal-s {
+    font-size: 17px;
+    line-height: 140%;
+  }
+  article.info-bnr-wrap + article.info-video-wrap {
+    margin-top: 100px;
+  }
   .info-video-wrap {
     padding-top: 100px;
   }
@@ -1775,9 +1861,9 @@
     height: 60px;
   }
 
-  .calendar-list-wrap {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+  .calendar-list-wrap .text-normal {
+    font-size: 18px;
+    line-height: 140%;
   }
   .calendar-list {
     margin-top: 2.25rem;
@@ -1921,11 +2007,15 @@
   .tcr_winner_wrap img {
     width: calc(33% - 0.375rem);
   }
+  .text-year {
+    margin-bottom: 12px;
+  }
   .brand .info-video-wrap.info-bnr-wrap + .max1440 {
     margin-top: 6.25rem;
   }
   .brand .fame_grid {
     row-gap: 2.75rem;
+    width: 100%;
   }
   .brand .fame_date {
     margin-bottom: 0.5rem;
@@ -2008,6 +2098,9 @@
   }
   .honed_wrap .img-wrap {
     margin-top: 4rem;
+  }
+  .motor_paddig_wrap {
+    padding: 120px 0;
   }
   .motor_team_list {
     flex-direction: column;
@@ -2115,7 +2208,7 @@
     height: 57.5rem;
     background-image: url(../images/content/img_performance_garage_bg_mo.png);
   }
-  .performance_garage_wrap .text-col .btn-lg-outline01 {
+  .performance_garage_wrap .text-col .btn-lg-outline02 {
     margin-top: 2.25rem;
   }
   .performance_garage {
@@ -2135,7 +2228,7 @@
     max-width: 100%;
   }
   .merchandise-wrap .collection-wrap {
-    padding: 100px 24px 120px 100px;
+    padding: 100px 24px 120px 24px;
   }
   .merchandise-wrap .merchandise-kv .swiper-status-wrap {
     bottom: 20px;
@@ -2154,11 +2247,15 @@
     width: calc(100% - 56px);
   }
   .merchandise-wrap .collectiontab-wrap {
-    padding: 120px 24px 148px 120px;
+    padding: 120px 0 148px 0;
     height: fit-content;
+  }
+  .merchandise-wrap .tab-container .merchandise-w1096 {
+    padding: 0 24px;
   }
   .merchandise-wrap .collectiontab-wrap .tab-head.ty04 {
     margin-top: 36px;
+    padding: 0 24px;
   }
   .merchandise-wrap .collectiontab-wrap .tab-head.ty04 .tabs-wrap .tabs {
     margin-top: 0;
@@ -2172,7 +2269,7 @@
     text-align: center;
   }
   .merchandise-wrap .collectiontab-wrap .tab-content {
-    margin: 48px -24px 0 0;
+    margin: 48px 0 0 0;
   }
   .merchandise-wrap
     .collectiontab-wrap
@@ -2192,7 +2289,7 @@
     margin-top: 12px;
   }
   .merchandise-wrap .productlist-wrap {
-    padding: 120px 24px 160px 120px;
+    padding: 120px 24px 160px 24px;
   }
   .merchandise-wrap .productlist-wrap .productlist-bigbox {
     display: block;
@@ -2246,6 +2343,9 @@
   .merchandise-wrap .merchandise_related-wrap .merchandise_related > div p {
     font-size: 20px;
     line-height: 25px;
+  }
+  .merchandise-wrap .merchandise_related-wrap .merchandise_related > div:last-child {
+    margin-right: 24px;
   }
 
   /* 브랜드 내 팝업 시작 */

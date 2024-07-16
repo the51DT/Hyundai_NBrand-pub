@@ -159,6 +159,7 @@ body.fix {
 
 .header-cont .utile-cont {
   display: flex;
+  height: 70px;
 }
 
 .header-cont .nav-btn {

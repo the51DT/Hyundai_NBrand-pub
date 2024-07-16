@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>N브랜드 | path</title>
+  <link type="text/css" rel="stylesheet" href="./inc/css/guide.css" />
+</head>
+
+<body>
+  <div id="guideWrap">
+    <header>
+      <!-- Guide Header -->
+      <div id="guideHeader">
+        <div>
+          <h1>N브랜드<span> : Path</span></h1>
+          <div class="total"></div>
+        </div>
+      </div>
+      <!-- //Guide Header -->
+      <div class="nav-wrap">
+        <ul class="nav">
+          <li class="nav-item nav-item1"><a href="path.html">Path</a></li>
+          <li class="nav-item nav-item6"><a href="path02.html" class="on">Path_kr</a></li>
+          <li class="nav-item nav-item2"><a href="setting.html">Setting</a></li>
+          <li class="nav-item nav-item3"><a href="ui-guide.html">Component</a></li>
+          <li class="nav-item nav-item4"><a href="#">Layout</a></li>
+          <li class="nav-item nav-item5"><a href="issue.html">Issue</a></li>
+        </ul>
+      </div>
+      <!-- Navi Menu -->
+      <div class="path-head">
+        <div class="naviMenu"></div>
+        <ul class="mark-wrap">
+          <li><span class="icon-state"></span>대기</li>
+          <li><span class="icon-state working"></span>작업중</li>
+          <li><span class="icon-state examine"></span>검수요청</li>
+          <li><span class="icon-state retouch"></span>수정</li>
+          <li><span class="icon-state comp"></span>완료</li>
+        </ul>
+      </div>
+      <!-- // Navi Menu -->
+    </header>
+    <!-- Path List -->
+    <div class="pathList">
+      <!-- Path -->
+
+      <div id="path-wrap">
+        <table class="pathTbl">
+          <caption>Path List</caption>
+          <colgroup>
+            <col width='6%' />
+            <col width='8%' />
+            <col width='8%' />
+            <col width='8%' />
+            <col width='8%' />
+            <col width='15%' />
+            <col width='7%' />
+            <col width='3%' />
+            <col width='17%' />
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col">Depth 1</th>
+              <th scope="col">Depth 2</th>
+              <th scope="col">Depth 3</th>
+              <th scope="col">Depth 4</th>
+              <th scope="col">Depth 5</th>
+              <th scope="col">URL</th>
+              <th scope="col">Date</th>
+              <th scope="col">State</th>
+              <th scope="col">Notice</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+      <!-- // Path -->
+    </div>
+    <!-- // Path List -->
+
+    <!-- Footer -->
+    <!-- <div id="footer">Media4th&amp;Company</div> -->
+    <!-- // Footer -->
+  </div>
+</body>
+
+<script type="text/javascript" src="./inc/js/jquery-1.12.4.min.js"></script>
+
+<script>
+  // date:'<span>2017-04-10</span> <span>2017-04-11</span>''
+  // noti: ''
+  var path = [{
+      dep1: 'Main',
+      dep2: 'GNB',
+      dep3: '',
+      dep4: '',
+      dep5: '',
+      url: 'main/CM010101_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Main',
+      dep2: 'contents',
+      dep3: '',
+      dep4: '',
+      dep5: '',
+      url: 'main/CM010201_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Main',
+      dep2: 'Footer',
+      dep3: '',
+      dep4: '',
+      dep5: '',
+      url: 'main/CM020101_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Models',
+      dep2: 'N',
+      dep3: 'IONIQ 5 N',
+      dep4: '',
+      dep5: '',
+      url: 'models/MD010101_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Models',
+      dep2: 'N',
+      dep3: 'ELANTRA N',
+      dep4: '',
+      dep5: '',
+      url: 'models/MD010201_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Models',
+      dep2: 'N',
+      dep3: 'i20 N',
+      dep4: '',
+      dep5: '',
+      url: 'models/MD010301_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Models',
+      dep2: 'N',
+      dep3: 'i30 N',
+      dep4: '',
+      dep5: '',
+      url: 'models/MD010401_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Models',
+      dep2: 'N',
+      dep3: 'i30 Fastback N',
+      dep4: '',
+      dep5: '',
+      url: 'models/MD010501_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Models',
+      dep2: 'Motorsports',
+      dep3: 'eN1 Cup Car',
+      dep4: '',
+      dep5: '',
+      url: 'models/MD020201_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Models',
+      dep2: 'Motorsports',
+      dep3: 'eN1 Time Attack',
+      dep4: '',
+      dep5: '',
+      url: 'models/MD020301_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Models',
+      dep2: 'Rolling Lab',
+      dep3: 'N Vision 74',
+      dep4: '',
+      dep5: '',
+      url: 'models/MD030201_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Models',
+      dep2: 'Rolling Lab',
+      dep3: 'RN22e',
+      dep4: '',
+      dep5: '',
+      url: 'models/MD030301_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Models',
+      dep2: 'Concept',
+      dep3: 'NPX1',
+      dep4: '',
+      dep5: '',
+      url: 'models/MD040201_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Models',
+      dep2: 'Legacy',
+      dep3: 'RM20e',
+      dep4: '',
+      dep5: '',
+      url: 'models/MD050201_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Models',
+      dep2: 'Legacy',
+      dep3: 'RM19',
+      dep4: '',
+      dep5: '',
+      url: 'models/MD050301_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Models',
+      dep2: 'Legacy',
+      dep3: 'Project RM',
+      dep4: '',
+      dep5: '',
+      url: 'models/MD050401_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Models',
+      dep2: 'Legacy',
+      dep3: 'N 2025 Vision Gran Turismo',
+      dep4: '',
+      dep5: '',
+      url: 'models/MD050501_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Models',
+      dep2: 'Legacy',
+      dep3: 'RN30',
+      dep4: '',
+      dep5: '',
+      url: 'models/MD050601_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Models',
+      dep2: 'Legacy',
+      dep3: 'VELOSTER N Performance Car',
+      dep4: '',
+      dep5: '',
+      url: 'models/MD050701_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Models',
+      dep2: 'Legacy',
+      dep3: 'N Option Show Car',
+      dep4: '',
+      dep5: '',
+      url: 'models/MD050801_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Models',
+      dep2: 'Legacy',
+      dep3: 'Veloster N',
+      dep4: '',
+      dep5: '',
+      url: 'models/MD050901_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Models',
+      dep2: 'Legacy',
+      dep3: 'KONA N',
+      dep4: '',
+      dep5: '',
+      url: 'models/MD051001_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Experience',
+      dep2: 'N Festival',
+      dep3: 'N Festival',
+      dep4: '',
+      dep5: '',
+      url: 'experience/EP010101_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Experience',
+      dep2: 'N Festival',
+      dep3: 'Event Guide',
+      dep4: '',
+      dep5: '',
+      url: 'experience/EP010201_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Experience',
+      dep2: 'N Festival',
+      dep3: 'Calendar',
+      dep4: '',
+      dep5: '',
+      url: 'experience/EP010301_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Experience',
+      dep2: 'N Festival',
+      dep3: 'Calendar',
+      dep4: '',
+      dep5: 'Round Result',
+      url: 'experience/EP010302_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Experience',
+      dep2: 'N Festival',
+      dep3: 'Calendar',
+      dep4: '',
+      dep5: 'N CUP Round1 detail',
+      url: 'experience/EP010303_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Experience',
+      dep2: 'N Festival',
+      dep3: 'Standing',
+      dep4: '',
+      dep5: '',
+      url: 'experience/EP010401_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Experience',
+      dep2: 'N Festival',
+      dep3: 'Drivers',
+      dep4: '',
+      dep5: '',
+      url: 'experience/EP010501_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Experience',
+      dep2: 'N Festival',
+      dep3: 'Drivers',
+      dep4: 'Driver 3detail',
+      dep5: '',
+      url: 'experience/EP010501P01_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Experience',
+      dep2: 'N Festival',
+      dep3: 'Teams',
+      dep4: '',
+      dep5: '',
+      url: 'experience/EP010601_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Experience',
+      dep2: 'N Festival',
+      dep3: 'Teams',
+      dep4: 'Team 3detail',
+      dep5: '',
+      url: 'experience/EP010601P01_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Experience',
+      dep2: 'N Festival',
+      dep3: 'About',
+      dep4: '',
+      dep5: '',
+      url: 'experience/EP010701_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Experience',
+      dep2: 'N Festival',
+      dep3: 'About',
+      dep4: 'KOREA',
+      dep5: '',
+      url: 'experience/EP010702_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Experience',
+      dep2: 'N Festival',
+      dep3: 'Video',
+      dep4: '',
+      dep5: '',
+      url: 'experience/EP010801_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Experience',
+      dep2: 'N Festival',
+      dep3: 'Video',
+      dep4: 'detail',
+      dep5: '',
+      url: 'experience/EP010802_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Experience',
+      dep2: 'N Channel',
+      dep3: 'N Channel',
+      dep4: '',
+      dep5: '',
+      url: 'experience/EP020101_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Experience',
+      dep2: 'N Channel',
+      dep3: 'N Performance Parts Garage',
+      dep4: '',
+      dep5: '',
+      url: 'experience/EP020201_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Experience',
+      dep2: 'N Channel',
+      dep3: 'N Lounge',
+      dep4: '',
+      dep5: '',
+      url: 'experience/EP020301_1_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Experience',
+      dep2: 'N Channel',
+      dep3: 'N Lounge',
+      dep4: '',
+      dep5: '',
+      url: 'experience/EP020301_2_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Experience',
+      dep2: 'N Channel',
+      dep3: 'N Lounge',
+      dep4: '',
+      dep5: '',
+      url: 'experience/EP020301_3_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Experience',
+      dep2: 'N e-Festival',
+      dep3: '',
+      dep4: '',
+      dep5: '',
+      url: 'EP030101_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Experience',
+      dep2: 'Nfluencer',
+      dep3: 'Nfluencer',
+      dep4: '',
+      dep5: '',
+      url: 'experience/EP040101_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Experience',
+      dep2: 'Nfluencer',
+      dep3: 'Hub',
+      dep4: '',
+      dep5: '',
+      url: 'experience/EP040201_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Experience',
+      dep2: 'Nfluencer',
+      dep3: 'Hub',
+      dep4: 'Hub-detail-P01',
+      dep5: '',
+      url: 'experience/EP040201P01_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Experience',
+      dep2: 'Nfluencer',
+      dep3: 'Hub',
+      dep4: 'Hub-write-P02',
+      dep5: '',
+      url: 'experience/EP040201P02_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Experience',
+      dep2: 'Nfluencer',
+      dep3: 'Hub',
+      dep4: 'Hub-report-P03',
+      dep5: '',
+      url: 'experience/EP040201P03_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Experience',
+      dep2: 'Nfluencer',
+      dep3: 'Hub',
+      dep4: 'Hub-share-M01',
+      dep5: '',
+      url: 'experience/EP040201M01_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Experience',
+      dep2: 'Nfluencer',
+      dep3: 'Missions',
+      dep4: '',
+      dep5: '',
+      url: 'experience/EP040301_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Experience',
+      dep2: 'Nfluencer',
+      dep3: 'Missions',
+      dep4: 'Missions-상세',
+      dep5: '',
+      url: 'experience/EP040301P01_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Experience',
+      dep2: 'Nfluencer',
+      dep3: 'Missions',
+      dep4: 'Missions-참여하기',
+      dep5: '',
+      url: 'experience/EP040301P02_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Experience',
+      dep2: 'Nfluencer',
+      dep3: 'Missions',
+      dep4: '친구초대하기',
+      dep5: '',
+      url: 'experience/EP040301M01_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Experience',
+      dep2: 'Nfluencer',
+      dep3: 'Ranking',
+      dep4: '',
+      dep5: '',
+      url: 'experience/EP040401_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Experience',
+      dep2: 'Nfluencer',
+      dep3: 'Ranking',
+      dep4: 'N-Community-상세보기팝업',
+      dep5: '',
+      url: 'experience/EP040401M01_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Experience',
+      dep2: 'Nfluencer',
+      dep3: 'Ranking',
+      dep4: 'N-Community-가입안내',
+      dep5: '',
+      url: 'experience/EP040401M02_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Experience',
+      dep2: 'Nfluencer',
+      dep3: 'Ranking',
+      dep4: 'N-Community-가입완료',
+      dep5: '',
+      url: 'experience/EP040401C01_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Experience',
+      dep2: 'Nfluencer',
+      dep3: 'Ranking',
+      dep4: 'N-Community-생성안내',
+      dep5: '',
+      url: 'experience/EP040401M04_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Experience',
+      dep2: 'Nfluencer',
+      dep3: 'Ranking',
+      dep4: 'N-Community-생성요청',
+      dep5: '',
+      url: 'experience/EP040401M05_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Experience',
+      dep2: 'Nfluencer',
+      dep3: 'Ranking',
+      dep4: 'N-Community-생성하기',
+      dep5: '',
+      url: 'experience/EP040401P01_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Experience',
+      dep2: 'Nfluencer',
+      dep3: 'Ranking',
+      dep4: 'N-Community-탈퇴안내',
+      dep5: '',
+      url: 'experience/EP040401M03_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Experience',
+      dep2: 'Nfluencer',
+      dep3: 'Ranking',
+      dep4: 'N-Community-탈퇴완료',
+      dep5: '',
+      url: 'experience/EP040401C02_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Experience',
+      dep2: 'Nfluencer',
+      dep3: 'Rewards',
+      dep4: '',
+      dep5: '',
+      url: 'experience/EP040501_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Experience',
+      dep2: 'Nfluencer',
+      dep3: 'Rewards',
+      dep4: '',
+      dep5: '상세',
+      url: 'experience/EP040501P01_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Experience',
+      dep2: 'Nfluencer',
+      dep3: 'Rewards',
+      dep4: '',
+      dep5: '신청',
+      url: 'experience/EP040501P02_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Experience',
+      dep2: 'Nfluencer',
+      dep3: 'Notice',
+      dep4: '',
+      dep5: '',
+      url: 'experience/EP040601_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Experience',
+      dep2: 'Nfluencer',
+      dep3: 'Notice',
+      dep4: 'notice-상세',
+      dep5: '',
+      url: 'experience/EP040601P01_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Configurator',
+      dep2: '',
+      dep3: '',
+      dep4: '',
+      dep5: '',
+      url: 'configurator/EP050501P01_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Configurator',
+      dep2: '',
+      dep3: '',
+      dep4: 'Configurator-내차만들기',
+      dep5: '',
+      url: 'configurator/EP050501P02_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Member',
+      dep2: 'Mypage',
+      dep3: '',
+      dep4: '',
+      dep5: '',
+      url: 'member/CM040101_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Member',
+      dep2: 'Mypage',
+      dep3: '알림',
+      dep4: '',
+      dep5: '',
+      url: 'member/CM040201_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Member',
+      dep2: 'Mypage',
+      dep3: '알림',
+      dep4: '알림설정팝업',
+      dep5: '',
+      url: 'member/CM040201M01_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Member',
+      dep2: 'Mypage',
+      dep3: 'Post',
+      dep4: '',
+      dep5: '알림 안내',
+      url: 'member/CM040301_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Member',
+      dep2: 'Mypage',
+      dep3: 'Post',
+      dep4: 'Post-상세',
+      dep5: '',
+      url: 'member/CM040301P01_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Member',
+      dep2: 'Mypage',
+      dep3: 'Post',
+      dep4: 'Post-수정하기',
+      dep5: '',
+      url: 'member/CM040301P02_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Member',
+      dep2: 'Mypage',
+      dep3: 'Missions',
+      dep4: '',
+      dep5: '',
+      url: 'member/CM040401_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Member',
+      dep2: 'Mypage',
+      dep3: 'Missions',
+      dep4: 'Missions-상세',
+      dep5: '',
+      url: 'member/CM040401P01_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Member',
+      dep2: 'Mypage',
+      dep3: 'Missions',
+      dep4: 'Missions-상세',
+      dep5: '수정',
+      url: 'member/CM040401P02_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Member',
+      dep2: 'Mypage',
+      dep3: 'Rewards',
+      dep4: '',
+      dep5: '',
+      url: 'member/CM040501_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Member',
+      dep2: 'Mypage',
+      dep3: 'Point',
+      dep4: '',
+      dep5: '',
+      url: 'member/CM040601_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Member',
+      dep2: 'Mypage',
+      dep3: 'N Community',
+      dep4: '',
+      dep5: '',
+      url: 'member/CM040701_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Member',
+      dep2: 'Mypage',
+      dep3: '1:1문의',
+      dep4: '',
+      dep5: '',
+      url: 'member/CM040801_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Member',
+      dep2: 'Mypage',
+      dep3: '1:1문의 상세',
+      dep4: '',
+      dep5: '',
+      url: 'member/CM040802_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Member',
+      dep2: 'Mypage',
+      dep3: '친구 초대하기',
+      dep4: '',
+      dep5: '',
+      url: 'member/CM040901_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Member',
+      dep2: 'Mypage',
+      dep3: '회원탈퇴(Withdrawal)',
+      dep4: '',
+      dep5: '',
+      url: 'member/CM041001_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Member',
+      dep2: 'Mypage',
+      dep3: 'N Community-관리',
+      dep4: '',
+      dep5: '',
+      url: 'member/CM041101_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Member',
+      dep2: 'Mypage',
+      dep3: 'N Community-관리',
+      dep4: 'N Community-수정하기',
+      dep5: '',
+      url: 'member/CM040701P01_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Member',
+      dep2: 'Mypage',
+      dep3: 'N Community-관리',
+      dep4: 'N Community-생성요청',
+      dep5: '',
+      url: 'member/CM040701P02_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Member',
+      dep2: 'Mypage',
+      dep3: 'N Community-관리',
+      dep4: 'N Community 폐쇄 하기 ',
+      dep5: '',
+      url: 'member/CM040701M01_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Member',
+      dep2: 'Mypage',
+      dep3: 'N Community-관리',
+      dep4: 'N Community 양도 하기',
+      dep5: '',
+      url: 'member/CM040701M03_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Member',
+      dep2: 'Mypage',
+      dep3: 'N Community-관리',
+      dep4: 'N Community 양도 신청 안내',
+      dep5: '',
+      url: 'CM040701M05_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Member',
+      dep2: 'Join',
+      dep3: '회원가입안내',
+      dep4: '',
+      dep5: '',
+      url: 'member/CM050101_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Member',
+      dep2: 'Join',
+      dep3: '닉네임설정',
+      dep4: '',
+      dep5: '',
+      url: 'member/CM050102_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Member',
+      dep2: 'Join',
+      dep3: '추천인코드',
+      dep4: '',
+      dep5: '',
+      url: 'member/CM050103_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Member',
+      dep2: 'Join',
+      dep3: '회원가입완료',
+      dep4: '',
+      dep5: '',
+      url: 'member/CM050104_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Member',
+      dep2: 'Join',
+      dep3: '변경 서비스 이용약관',
+      dep4: '',
+      dep5: '',
+      url: 'member/CM050105_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Member',
+      dep2: 'Join',
+      dep3: 'Inactive member information',
+      dep4: '',
+      dep5: '',
+      url: 'member/CM050106_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Member',
+      dep2: 'Join',
+      dep3: '회원탈퇴',
+      dep4: '',
+      dep5: '',
+      url: 'member/CM050107_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Member',
+      dep2: 'Login',
+      dep3: '로그인안내-팝업',
+      dep4: '',
+      dep5: '',
+      url: 'member/CM030101C01_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'Member',
+      dep2: 'Login',
+      dep3: '알림안내-팝업',
+      dep4: '',
+      dep5: '',
+      url: 'member/CM030101C02_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'cs',
+      dep2: '1:1문의하기',
+      dep3: '',
+      dep4: '',
+      dep5: '',
+      url: 'cs/CM070102_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'cs',
+      dep2: '1:1문의',
+      dep3: '완료팝업',
+      dep4: '',
+      dep5: '',
+      url: 'cs/CM070102C01_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    },
+    {
+      dep1: 'cs',
+      dep2: 'Login',
+      dep3: '1:1문의',
+      dep4: '수정하기',
+      dep5: '',
+      url: 'cs/CM070103_kr.html',
+      date: '',
+      check: "",
+      noti: ''
+    }
+  ];
+
+
+  var _tablePath = "";
+
+
+  // for (var i = 0; i < arr.length; i++) {
+
+  // }
+  // document.addEventListener("DOMContentLoaded", function () {
+  // var $listTbody = document.querySelector(".list tbody");
+  var pathWrap = document.getElementById('path-wrap');
+  var pathTbody = pathWrap.querySelector('tbody')
+  path.forEach(function (e) {
+    pathTbody.innerHTML += "<tr><th class='dep1'><p class='tit'>" + e.dep1 +
+      "</p></th><td class='dep2'><p class='tit'>" + e.dep2 + "</p></td><td class='dep3'><p class='tit'>" + e
+      .dep3 + "</p></td><td class='dep4'><p class='tit'>" + e.dep4 +
+      "</p></td><td class='dep5'><p class='tit'>" + e.dep5 + "</p></td><td class='url'><span>" + e.url +
+      "</span></td><td class='date'>" + e.date + "</td><td class='check'>" + e.check +
+      "</td><td class='txt'><ul>" + e.noti + "</ul></td></tr>"
+  });
+  // });
+
+  // $('.path-wrap')
+  // pathWrap.write(_tablePath);
+</script>
+<script type="text/javascript" src="./inc/js/guideUi.js"></script>
+
+</html>
