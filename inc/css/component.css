@@ -4127,8 +4127,20 @@ input[type="radio"]:focus + label {
     .dropdown-menu
     .wrap-category-result
     .wrap-result-nums
+    .btn:not(.btn-only-icon-notbg):hover,
+  .dropdown.centered
+    .dropdown-menu
+    .wrap-category-result
+    .wrap-result-nums
+    .btn:not(.btn-only-icon-notbg):active {
+    padding: 16px 0 20px 0;
+  }
+  .dropdown.centered
+    .dropdown-menu
+    .wrap-category-result
+    .wrap-result-nums
     .btn-lg-primary02 {
-    margin-bottom: 6px;
+    margin-bottom: 0;
   }
   .dropdown.centered
     .dropdown-menu
