@@ -3996,10 +3996,10 @@ input[type="radio"]:focus + label {
     flex-wrap: wrap;
   }
   .dropdown.centered .dropdown-menu li .wrap-category.cart-type00 {
-    margin: 48px 0 0;
+    margin: 48px 0 0 0;
   }
   .dropdown.centered .dropdown-menu li .wrap-category:nth-child(3n-1) {
-    margin: 0 0 40px;
+    margin: 0 0 40px 0;
   }
   .dropdown.centered .dropdown-menu ul.wrap-filter .wrap-forFilterScroll {
     max-height: 20rem;
@@ -4016,13 +4016,30 @@ input[type="radio"]:focus + label {
   .dropdown.centered .wrap-dropdown-selected .dropdown-btn {
     font-size: 20px;
   }
+  /* 초기화 버튼 액티브시 배경, 오른쪽 여백 삭제 */
+  .dropdown.centered .dropdown-menu .wrap-category-result .wrap-result-nums {
+    padding-right: 0;
+  }
+  .dropdown.centered
+    .dropdown-menu
+    .wrap-category-result
+    .wrap-result-nums
+    .btn:not(.btn-only-icon-notbg):hover,
+  .dropdown.centered
+    .dropdown-menu
+    .wrap-category-result
+    .wrap-result-nums
+    .btn:not(.btn-only-icon-notbg):active {
+    background-color: transparent;
+    color: #000;
+  }
 }
 @media screen and (max-width: 850px) {
   .dropdown.centered .dropdown-menu {
     height: calc(100vh - 62px);
   }
   .dropdown.centered .dropdown-menu ul.wrap-filter {
-    padding: 0 24px 40px;
+    padding: 0 24px 40px 24px;
     max-height: 400px;
   }
   .dropdown.centered .dropdown-menu li {
@@ -4095,7 +4112,7 @@ input[type="radio"]:focus + label {
     .wrap-inner-category
     .middle-category
     .txt-type03 {
-    padding: 6px 0 0;
+    padding: 6px 0 0 0;
   }
   .dropdown.centered
     .dropdown-menu
@@ -4105,6 +4122,13 @@ input[type="radio"]:focus + label {
     .tag-list-wrap
     .tag-list {
     margin-bottom: 14px;
+  }
+  .dropdown.centered
+    .dropdown-menu
+    .wrap-category-result
+    .wrap-result-nums
+    .btn-lg-primary02 {
+    margin-bottom: 6px;
   }
   .dropdown.centered
     .dropdown-menu
@@ -4145,7 +4169,7 @@ input[type="radio"]:focus + label {
   .dropdown.centered .dropdown-menu li .wrap-category:nth-child(3n-1) {
     width: 100%;
     flex-wrap: wrap;
-    margin: 40px 0 0;
+    margin: 40px 0 0 0;
   }
   .dropdown.centered
     .dropdown-menu
@@ -4153,7 +4177,7 @@ input[type="radio"]:focus + label {
     .wrap-inner-category
     .inner {
     flex-direction: column;
-    margin: 0 0 8px;
+    margin: 0 0 8px 0;
   }
   .dropdown.centered
     .dropdown-menu
