@@ -4128,7 +4128,8 @@ input[type="radio"]:focus + label {
     .wrap-category-result
     .wrap-result-nums
     .btn-lg-primary02 {
-    margin-bottom: 6px;
+    margin-bottom: 0;
+    padding: 16px 0 20px 0;
   }
   .dropdown.centered
     .dropdown-menu
