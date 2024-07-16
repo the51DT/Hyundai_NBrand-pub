@@ -25,7 +25,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.12rem 1.5rem 1.06rem;
+  padding: 1.12rem 1.5rem 1.06rem 1.5rem;
 }
 .configurator_header_left {
   display: flex;
@@ -352,7 +352,7 @@
 .configurator_price_wrap {
   position: absolute;
   bottom: 0;
-  padding: 1.75rem 2.75rem 2rem;
+  padding: 1.75rem 2.75rem 2rem 2.75rem;
   width: 100%;
   height: 13.625rem;
   background: #fff;
@@ -504,9 +504,7 @@
 .configurator_label_radio .configurator_label_price {
   margin-top: 0.75rem;
 }
-.configurator_select_wrap
-  input:checked
-  + .configurator_label_radio {
+.configurator_select_wrap input:checked + .configurator_label_radio {
   outline: 2px solid #000000;
 }
 .configurator_label_checkbox {
@@ -573,9 +571,7 @@
 .configurator_label_list:hover {
   outline: 1px solid rgba(0, 0, 0, 0.97);
 }
-.configurator_select_wrap
-  input:checked
-  + .configurator_label_list {
+.configurator_select_wrap input:checked + .configurator_label_list {
   outline: 2px solid rgba(0, 0, 0, 0.97);
 }
 .configurator_label_list img {
@@ -599,7 +595,7 @@
 .configurator_select_exterior,
 .configurator_select_interior {
   display: none;
-  padding: 2.81rem 2.75rem 17.37rem;
+  padding: 2.81rem 2.75rem 17.37rem 2.75rem;
   height: calc((var(--vh, 1vh) * 100) - 4.3125rem);
   overflow-y: scroll;
 }
@@ -684,7 +680,7 @@
 .configurator_select_summary {
   display: none;
   margin: 0 auto;
-  padding: 6.25rem 0 7.5rem;
+  padding: 6.25rem 0 7.5rem 0;
   width: 100%;
   max-width: 60rem;
 }
@@ -707,7 +703,7 @@
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
-  padding: 1.25rem 0.75rem 1.75rem;
+  padding: 1.25rem 0.75rem 1.75rem 0.75rem;
 }
 .configurator_summary_list li + li {
   border-top: 1px solid #bbbbbb;
@@ -919,7 +915,7 @@
   }
   .configurator_price_wrap {
     position: sticky;
-    padding: 1.25rem 1.5rem 1.75rem;
+    padding: 1.25rem 1.5rem 1.75rem 1.5rem;
     height: 11.25rem;
     transition: bottom 0.5s;
   }
@@ -993,7 +989,7 @@
   .configurator_select_exterior,
   .configurator_select_interior {
     display: none;
-    padding: 1.5rem 1.5rem 2.25rem;
+    padding: 1.5rem 1.5rem 2.25rem 1.5rem;
     height: 100%;
   }
 
@@ -1002,7 +998,7 @@
     display: none;
   }
   .configurator_area.summary .configurator_price_wrap {
-    padding: 1.87rem 1.5rem 1.75rem;
+    padding: 1.87rem 1.5rem 1.75rem 1.5rem;
     height: 10.25rem;
   }
   .configurator_area.summary .configurator_select_total_wrap {
@@ -1026,7 +1022,7 @@
   }
   .configurator_select_summary {
     margin: 0;
-    padding: 1.5rem 1.5rem 5rem;
+    padding: 1.5rem 1.5rem 5rem 1.5rem;
   }
   .configurator_summary_tit {
     font-size: 1.5rem;

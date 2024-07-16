@@ -188,7 +188,7 @@ header {
 }
 
 #guideWrap #footer {
-  padding: 15px 0 10px;
+  padding: 15px 0 10px 0;
   border: 0;
   background: #7a7166;
   font-size: 18px;
@@ -199,7 +199,7 @@ header {
 /* Path */
 
 .nav-wrap {
-  margin: 50px 0 10px;
+  margin: 50px 0 10px 0;
   padding-right: 50px;
   display: flex;
   justify-content: flex-end;
@@ -527,7 +527,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 20px 0;
+  padding: 20px 20px 0 20px;
 }
 
 .mark-wrap {

@@ -11,12 +11,12 @@
 
 .popup.model-popup.forModel .popup-body {
   max-height: calc(100vh - 160px);
-  padding: 40px 40px 160px;
+  padding: 40px 40px 160px 40px;
   margin-bottom: 0;
 }
 
 .popup.model-popup.forModel .popup-wrapper .popup-body .inner-body-model {
-  padding: 40px 0px 0;
+  padding: 40px 0 0 0;
   max-height: 100%;
   gap: 60px;
 }
@@ -42,7 +42,7 @@
   .popup-body
   .inner-body-model
   .popup-body-innerbox {
-  padding: 60px 0 0;
+  padding: 60px 0 0 0;
   border-bottom: 1px solid #bbbbbb;
 }
 
@@ -80,7 +80,7 @@
   .inner-body-model
   .popup-body-innerbox
   .container-desc {
-  padding: 24px 0 160px;
+  padding: 24px 0 160px 0;
 }
 
 /* 추가 케이스: 팝업 안에 영상 3개 들어가는 레이아웃 한 묶음이 하나일 때 시작 */
@@ -90,7 +90,7 @@
   .inner-body-model
   .popup-body-innerbox
   .container-desc.video-func {
-  padding: 0 0 160px;
+  padding: 0 0 160px 0;
 }
 /* 추가 케이스 끝 */
 
@@ -105,7 +105,7 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
-  padding: 24px 0 60px;
+  padding: 24px 0 60px 0;
 }
 
 .popup.model-popup.forModel
@@ -114,7 +114,7 @@
   .inner-body-model
   .popup-body-innerbox:last-child
   .container-desc {
-  padding: 24px 0 0;
+  padding: 24px 0 0 0;
 }
 
 .popup.model-popup.forModel
@@ -216,7 +216,7 @@
   width: 100%;
   display: flex;
   gap: 40px;
-  padding: 0px 0 60px;
+  padding: 0 0 60px 0;
 }
 
 .popup.forModel
@@ -441,17 +441,17 @@
 
   .popup.model-popup.forModel .popup-wrapper .popup-body {
     max-height: calc(100% - 60px);
-    padding: 40px 24px 0;
+    padding: 40px 24px 024px;
   }
 
   .popup.model-popup.forModel .popup-wrapper .video-wrapper .popup-body {
     max-height: calc(100vh - 60px);
-    padding: 40px 24px 0;
+    padding: 40px 24px 0 24px;
   }
 
   .popup.model-popup.forModel .popup-wrapper .popup-body.single {
     max-height: calc(100% - 60px);
-    padding: 40px 24px 100px;
+    padding: 40px 24px 100px 24px;
   }
 
   .popup.model-popup.forModel
@@ -464,12 +464,12 @@
 
   .popup.model-popup.forModel .popup-wrapper .popup-body .inner-body-model {
     max-height: 100%;
-    padding: 0 0 100px;
+    padding: 0 0 100px 0;
     gap: 36px;
   }
 
   .popup.model-popup.forModel .popup-wrapper .popup-body .inner-body-model {
-    padding: 40px 0 100px;
+    padding: 40px 0 100px 0;
     gap: 36px;
     display: grid;
   }
@@ -479,7 +479,7 @@
     .popup-body
     .inner-body-model
     .type01 {
-    padding: 40px 24px 100px;
+    padding: 40px 24px 100px 24px;
     gap: 36px;
   }
 
@@ -488,7 +488,7 @@
     .popup-body
     .inner-body-model
     .type02 {
-    padding: 28px 24px 100px;
+    padding: 28px 24px 100px 24px;
     gap: 36px;
   }
 
@@ -526,7 +526,7 @@
     .popup-body
     .inner-body-model
     .container-desc {
-    padding: 24px 0 36px;
+    padding: 24px 0 36px 0;
   }
 
   .popup.model-popup.forModel
@@ -534,7 +534,7 @@
     .popup-body.single
     .inner-body-model
     .container-desc {
-    padding: 24px 0 36px;
+    padding: 24px 0 36px 0;
   }
 
   .popup.model-popup.forModel
@@ -543,7 +543,7 @@
     .inner-body-model
     .popup-body-innerbox:last-child
     .container-desc {
-    padding: 24px 0 0;
+    padding: 24px 0 0 0;
   }
 
   .popup.model-popup.forModel
@@ -595,7 +595,7 @@
     .inner-body-model
     .container-desc.video-func {
     gap: 28px;
-    padding: 0 0 36px;
+    padding: 0 0 36px 0;
   }
 
   .popup.model-popup.forModel
@@ -605,7 +605,7 @@
     .popup-body-innerbox:last-child
     .container-desc.video-func {
     /* video, 설명 텍스트 전체 다 감싸는 컨테이너 */
-    padding: 0 0 28px;
+    padding: 0 0 28px 0;
   }
 
   .popup.forModel

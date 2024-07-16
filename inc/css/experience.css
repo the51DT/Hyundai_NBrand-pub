@@ -299,7 +299,7 @@
 
 /* EP010301 */
 .calender_box {
-  padding: 7.5rem 5rem 15rem;
+  padding: 7.5rem 5rem 15rem 5rem;
   background-color: #f0f0f0;
 }
 .calender_wrap {
@@ -323,7 +323,7 @@
   background-color: #000000;
 }
 .result_bottom {
-  padding: 5rem 5rem 15rem;
+  padding: 5rem 5rem 15rem 5rem;
 }
 .result_bottom .title_flex {
   margin-bottom: 6.25rem;
@@ -389,7 +389,7 @@
 
 /* EP010303 */
 .issue_wrap {
-  padding: 12.5rem 5rem 12.5rem;
+  padding: 12.5rem 5rem 12.5rem 5rem;
 }
 .issue_wrap .contitle-type01 {
   text-align: center;
@@ -412,7 +412,7 @@
   width: 17rem;
 }
 .info_wrap {
-  padding: 7.5rem 5rem 10em;
+  padding: 7.5rem 5rem 10rem 5rem;
   background-color: #f0f0f0;
 }
 .info_wrap .contitle-type01 {
@@ -420,7 +420,7 @@
   text-align: center;
 }
 .standing_wrap {
-  padding: 10rem 5rem 12.5rem;
+  padding: 10rem 5rem 12.5rem 5rem;
   background-color: #555;
 }
 .standing_wrap .title_flex {
@@ -435,14 +435,14 @@
   text-align: right;
 }
 .schedule_wrap {
-  padding: 10rem 5rem 12.5rem;
+  padding: 10rem 5rem 12.5rem 5rem;
 }
 .guide_wrap {
   padding: 5rem;
   background-color: #f0f0f0;
 }
 .visit_wrap {
-  padding: 10rem 5rem 15rem;
+  padding: 10rem 5rem 15rem 5rem;
 }
 
 /* EP010303 */
@@ -482,7 +482,7 @@
   background-image: url("../../inc/images/icon/icon-arrow01_down_white.svg");
 }
 .standing_bottom {
-  padding: 5rem 5rem 15rem;
+  padding: 5rem 5rem 15rem 5rem;
 }
 .standing_bottom .page_wrap {
   margin-top: 5rem;
@@ -490,14 +490,14 @@
 
 /* EP010501 */
 .drivers_box {
-  padding: 7.5rem 5rem 15rem;
+  padding: 7.5rem 5rem 15rem 5rem;
   background-color: #f0f0f0;
 }
 .drivers_box .grid_3 {
   margin-bottom: 5rem;
 }
 .search_result {
-  padding: 8.75rem 0 3.5rem;
+  padding: 8.75rem 0 3.5rem 0;
   font-family: "Hyundai Sans Head";
   font-size: 2.5rem;
   font-weight: 700;
@@ -552,7 +552,7 @@
     calc(0.125rem * 0.9239) calc(0.125rem * -0.3827) 0 #fff;
 }
 .driver_bottom {
-  padding: 7.5rem 5rem 15rem;
+  padding: 7.5rem 5rem 15rem 5rem;
 }
 .coment_wrap {
   max-width: 90rem;
@@ -634,14 +634,14 @@
 
 /* EP010601 */
 .drivers_box {
-  padding: 7.5rem 5rem 15rem;
+  padding: 7.5rem 5rem 15rem 5rem;
   background-color: #f0f0f0;
 }
 .drivers_box .grid_3 {
   margin-bottom: 5rem;
 }
 .search_result {
-  padding: 8.75rem 0 3.5rem;
+  padding: 8.75rem 0 3.5rem 0;
   font-family: "Hyundai Sans Head";
   font-size: 2.5rem;
   font-weight: 700;
@@ -667,7 +667,7 @@
   width: 41.67%;
 }
 .team_bottom {
-  padding: 7.5rem 5rem 15rem;
+  padding: 7.5rem 5rem 15rem 5rem;
 }
 .coment_wrap {
   max-width: 90rem;
@@ -773,7 +773,7 @@
   gap: 1.5rem;
 }
 .video_wrap {
-  padding: 7.5rem 5rem 15rem;
+  padding: 7.5rem 5rem 15rem 5rem;
 }
 .video_list {
   margin: 0 auto;
@@ -867,7 +867,7 @@
   font-weight: 700;
 }
 .video_detail_wrap {
-  padding: 10rem 5rem 15rem;
+  padding: 10rem 5rem 15rem 5rem;
 }
 .video_detail_wrap .card_video {
   display: block;
@@ -893,7 +893,7 @@
   line-height: 100%;
 }
 .related_wrap {
-  padding: 5rem 5rem 7.5rem;
+  padding: 5rem 5rem 7.5rem 5rem;
   background-color: #e6eff8;
 }
 .related_wrap .related_tit {
@@ -1474,7 +1474,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
 }
 
 .popup-wrapper .wrap-popup-profile .box-profile-img.bg-contain {
-  background-color: #ABB2B5;
+  background-color: #abb2b5;
 }
 
 .popup-wrapper .wrap-popup-profile .box-profile-img.bg-contain img {
@@ -1597,7 +1597,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   line-height: 28px;
 }
 .club-info-popup .popup-wrapper .popup-body .pop-des {
-  padding: 20px 16px 0;
+  padding: 20px 16px 0 16px;
 }
 .club-info-popup .popup-wrapper .popup-body .pop-des p {
   font-size: 14px;
@@ -1605,7 +1605,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   line-height: 19.6px;
 }
 .club-info-popup .popup-wrapper .popup-body .btn-wrap {
-  padding: 20px 16px 0;
+  padding: 20px 16px 0 16px;
 }
 .club-info-popup .popup-wrapper .popup-footer {
   border-top: 0;
@@ -2576,7 +2576,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
 
   /* EP010301 */
   .calender_box {
-    padding: 5rem 1.5rem 10rem;
+    padding: 5rem 1.5rem 10rem 1.5rem;
   }
   .calender_wrap {
     padding: 5rem 0;
@@ -2587,7 +2587,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
     padding: 5rem 0;
   }
   .result_bottom {
-    padding: 2.75rem 0rem 10rem;
+    padding: 2.75rem 0rem 10rem 0rem;
   }
   .result_wrap .title_flex {
     display: block;
@@ -2643,7 +2643,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
 
   /* EP010303 */
   .issue_wrap {
-    padding: 7.5rem 0 7.5rem;
+    padding: 7.5rem 0 7.5rem 0;
   }
   .issue_wrap .tit-type04 {
     margin: 1rem auto 2.25rem;
@@ -2663,14 +2663,14 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
     width: fit-content;
   }
   .info_wrap {
-    padding: 5rem 0 6.25rem;
+    padding: 5rem 0 6.25rem 0;
   }
   .info_wrap .contitle-type01 {
     margin: 0 0 1.75rem 1.5rem;
     text-align: left;
   }
   .standing_wrap {
-    padding: 6.25rem 0 5.13rem;
+    padding: 6.25rem 0 5.13rem 0;
   }
   .standing_wrap .title_flex {
     align-items: normal;
@@ -2683,7 +2683,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
     text-align: center;
   }
   .schedule_wrap {
-    padding: 6.25rem 0 7.5rem;
+    padding: 6.25rem 0 7.5rem 0;
   }
   .schedule_wrap .tab-head,
   .schedule_wrap .__bottom {
@@ -2706,7 +2706,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
     height: 312px;
   }
   .visit_wrap {
-    padding: 6.25rem 1.5rem 10rem;
+    padding: 6.25rem 1.5rem 10rem 1.5rem;
   }
 
   /* EP010401 */
@@ -2714,7 +2714,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
     padding: 5rem 0;
   }
   .standing_bottom {
-    padding: 2.75rem 1.5rem 10rem;
+    padding: 2.75rem 1.5rem 10rem 1.5rem;
   }
   .standing_bottom .page_wrap {
     margin-top: 2.75rem;
@@ -2725,7 +2725,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
 
   /* EP010501 */
   .drivers_box {
-    padding: 5rem 1.5rem 10rem;
+    padding: 5rem 1.5rem 10rem 1.5rem;
   }
   .drivers_box .grid_3 {
     margin-bottom: 2.75rem;
@@ -2749,7 +2749,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
     font-size: 2.5rem;
   }
   .driver_bottom {
-    padding: 5rem 1.5rem 10rem;
+    padding: 5rem 1.5rem 10rem 1.5rem;
   }
   .coment_wrap {
     padding-bottom: 2.25rem;
@@ -2801,7 +2801,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
 
   /* EP010601 */
   .drivers_box {
-    padding: 5rem 1.5rem 10rem;
+    padding: 5rem 1.5rem 10rem 1.5rem;
   }
   .drivers_box .grid_3 {
     margin-bottom: 2.75rem;
@@ -2821,7 +2821,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
     width: 60.28%;
   }
   .team_bottom {
-    padding: 5rem 1.5rem 10rem;
+    padding: 5rem 1.5rem 10rem 1.5rem;
   }
   .coment_wrap {
     padding-bottom: 2.25rem;
@@ -2887,7 +2887,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
     padding: 0 1.5rem;
   }
   .video_wrap {
-    padding: 5rem 1.5rem 10rem;
+    padding: 5rem 1.5rem 10rem 1.5rem;
   }
   .video_list:first-of-type {
     padding-bottom: 6.25rem;
@@ -2968,7 +2968,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
     color: #000;
   }
   .video_detail_wrap {
-    padding: 6.25rem 1.5rem 10rem;
+    padding: 6.25rem 1.5rem 10rem 1.5rem;
   }
   .video_detail_wrap .card_video .card_title {
     padding: 0;
@@ -2987,7 +2987,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
     font-size: 1rem;
   }
   .related_wrap {
-    padding: 5rem 0rem 7.5rem;
+    padding: 5rem 0rem 7.5rem 0rem;
   }
   .related_wrap .related_tit {
     margin: 0 auto 2.25rem;
@@ -3601,14 +3601,14 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
     gap: 1.75rem;
   }
   .conts_card_list .card_con {
-    padding: 12px 0 0;
+    padding: 12px 0 0 0;
   }
   .conts_card_list .card_con p {
     font-size: 18px;
     line-height: 25.2px;
   }
   .nChannel .content-box.bnr {
-    padding: 56px 24px 96px;
+    padding: 56px 24px 96px 24px;
   }
   .nChannel .models-wrap .content-item03.gallery-wrap {
     padding-top: 100px;
@@ -3622,10 +3622,10 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   }
 
   .nChannel .models-wrap .content-item03.intro-wrap {
-    padding: 100px 24px 120px;
+    padding: 100px 24px 120px 24px;
   }
   .nChannel .conts_card_list .card_con {
-    padding: 28px 0 0;
+    padding: 28px 0 0 0;
   }
   .nChannel .conts_card_list .card_con p {
     font-size: 20px;
@@ -3727,7 +3727,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   .nTaxi .banner-wrap .models-full {
     background-image: url(../../inc/images/content/img_driving_cont04_1-mo.png);
     min-height: 1080px;
-    padding: 120px 24px 312px;
+    padding: 120px 24px 312px 24px;
   }
 
   .banner-wrap .text-col .text-strong {
@@ -3735,7 +3735,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
     line-height: 45px;
   }
   .banner-wrap .sub-info {
-    margin: 44px 24px 120px;
+    margin: 44px 24px 120px 24px;
   }
   .nTaxi [class*="content-item"]:last-child .conts-section-wrap {
     padding-bottom: 160px;

@@ -381,7 +381,7 @@ min-width : 1024 css
     height: 16.3rem;
   }
   .card_type01 .card_top {
-    padding: 1rem 1.25rem 0;
+    padding: 1rem 1.25rem 0 1.25rem;
   }
   .card_type01 .card_profile img {
     width: 12.5rem;
@@ -422,7 +422,7 @@ min-width : 1024 css
   .card_type01 .card_detail li {
     flex-direction: column;
     align-items: normal;
-    padding: 0 0.75rem;
+    padding: 0 0.75rem 0;
     max-width: 100%;
   }
   .card_type01 .card_detail li:first-of-type {
@@ -788,7 +788,7 @@ min-width : 1024 css
   }
 
   .wrap-list.list04 .inner .box {
-    padding: 1.75rem 0 0;
+    padding: 1.75rem 0 0 0;
   }
 
   .wrap-list.list04 .inner .box.box01,
@@ -855,7 +855,7 @@ min-width : 1024 css
   .wrap-list .inner .__bottom.list06 .wrap-lists {
     background: none;
     border-bottom: 1px solid #bbb;
-    padding: 27px 0 45px;
+    padding: 27px 0 45px 0;
     margin-right: 0;
   }
   .wrap-list .inner .__bottom.list05 .wrap-lists:first-child,
@@ -943,7 +943,7 @@ min-width : 1024 css
   /* 06 btntype */
   .wrap-list .inner .__bottom.list06 .wrap-lists.btn-type {
     background: none;
-    padding: 27px 0 45px;
+    padding: 27px 0 45px 0;
     margin-right: 0;
     display: flex;
   }
@@ -1726,7 +1726,7 @@ min-width : 1024 css
   .search-small .search-input-box {
     column-gap: 0.62rem;
     width: 100%;
-    padding: 0.625rem 0.5rem 0.375rem;
+    padding: 0.625rem 0.5rem 0.375rem 0.5rem;
   }
   .search-small .search-input-box .btn-search {
     width: 1.5rem;
@@ -1739,7 +1739,7 @@ min-width : 1024 css
     font-size: 1rem;
   }
   .conts-box-search {
-    padding: 100px 24px 160px;
+    padding: 100px 24px 160px 24px;
   }
   .search-result-list {
     margin-top: 64px;
