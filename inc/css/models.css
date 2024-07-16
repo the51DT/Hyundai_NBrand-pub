@@ -112,8 +112,7 @@
   font-family: "Hyundai Sans Head";
   font-size: 16px;
   font-weight: 500;
-  line-height: 22.4px;
-  max-width: calc(1440px / 2 - 12px);
+  line-height: 22.4px;  
   width: 100%;
 }
 .models-wrap .text-col {
@@ -449,6 +448,10 @@
   gap: 24px;
   flex: 0 0 calc(100% / 3 - 16px);
 }
+.models-wrap .models-cardbox .text-normal-xs {
+  max-width: calc(1440px / 2 - 12px);
+}
+
 .models-wrap .models-cardbox > div img {
   /* height: 531px; */
 }
