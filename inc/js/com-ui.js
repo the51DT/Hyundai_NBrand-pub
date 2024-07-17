@@ -37,11 +37,11 @@ function resizeDone() {
   if (NbrandUI.windowSize()) {
     $("[class^=panel2_2]").removeClass("on");
     $(".gnb__panel02").hide();
-    $(".panel2_2_1, .gnb__tab-cont02 .gnb__tab02-btn01").removeClass("on");
+    // $(".panel2_2_1, .gnb__tab-cont02 .gnb__tab02-btn01").removeClass("on");
     NbrandUI.headerReset(".nav-btn", ".nav-wrap", ".header-wrap");
   } else {
     $(".gnb__panel02").show();
-    $(".panel2_2_1, .gnb__tab-cont02 .gnb__tab02-btn01").addClass("on");
+    // $(".panel2_2_1, .gnb__tab-cont02 .gnb__tab02-btn01").addClass("on");
     NbrandUI.headerReset(".nav-btn", ".nav-wrap", ".header-wrap");
   }
 }
@@ -297,13 +297,13 @@ var NbrandUI = {
     resetCont = $(com);
     resetParent = $(par);
     $(obj).removeClass("on");
-
+    bodyControll(false);
     resetParent.removeClass("menu-on");
     resetTparent = resetParent.find(".sitemap-wrap");
     resetCont.attr("aria-hidden", "true");
     resetTparent.children(".ui-fctab-s").remove();
     resetTparent.children(".ui-fctab-e").remove();
-    resetCont.css("height", 0);
+    resetCont.hide();
     resetTparent.find(".on").removeClass("on");
     $(".header__event-wrap").show();
     // setTimeout(function () {
@@ -312,7 +312,9 @@ var NbrandUI = {
     //   }
     // }, 300);
     if (NbrandUI.windowSize()) {
-      bodyControll(false);
+      eventCont.css("height", "calc(100vh - 70px)");
+    } else {
+      eventCont.css("height", "auto");
     }
   },
 
@@ -326,8 +328,6 @@ var NbrandUI = {
 
     if (NbrandUI.windowSize()) {
       eventContH = $(window).height() - 70;
-    } else {
-      eventContH_Pc = eventCont.prop("scrollHeight");
     }
     eventCont.hide();
     tparent = eventParent.find(".sitemap-wrap");
@@ -338,12 +338,6 @@ var NbrandUI = {
         .on("click", function () {
           bodyControll(true);
           eventItem = $(this);
-          if (NbrandUI.windowSize()) {
-            eventContH = $(window).height() - 70;
-            heightDate = eventContH;
-          } else {
-            heightDate = eventContH_Pc;
-          }
           NbrandUI.toggleBtn();
           eventParent.toggleClass("menu-on");
           NbrandUI.expandedAria();
@@ -354,12 +348,14 @@ var NbrandUI = {
               selector: tparent,
               type: "hold",
             });
-            eventCont.show().stop().animate(
-              {
-                height: heightDate,
-              },
-              100
-            );
+
+            if (NbrandUI.windowSize()) {
+              eventContH = $(window).height() - 70;
+              eventCont.css("height", eventContH).fadeIn(100);
+            } else {
+              eventCont.css("height", "auto").fadeIn(100);
+              eventCont.slideDown(100);
+            }
 
             $(".panel2_2_1, .gnb__tab-cont02 .gnb__tab02-btn01").addClass("on");
           } else {
@@ -369,12 +365,7 @@ var NbrandUI = {
             tparent.children(".ui-fctab-e").remove();
 
             bodyControll(false);
-            eventCont.stop().animate(
-              {
-                height: 0,
-              },
-              100
-            );
+            eventCont.stop().slideUp(100);
             tparent.find(".on").removeClass("on");
             $(".panel2_2_1, .gnb__tab-cont02 .gnb__tab02-btn01").addClass("on");
             $(".header__event-wrap").show();
@@ -421,13 +412,7 @@ var NbrandUI = {
               type: "hold",
             });
           } else {
-            setTimeout(function () {
-              $(".nav-wrap")
-                .stop()
-                .animate({
-                  height: gnb2depTarget.prop("scrollHeight") + 50,
-                });
-            }, 100);
+            $(".nav-wrap").stop().slideDown(100);
           }
         } else {
           $(".header__event-wrap").show();
@@ -459,12 +444,7 @@ var NbrandUI = {
               type: "hold",
             });
           } else {
-            $(".nav-wrap").animate(
-              {
-                height: gnb3depTarget.prop("scrollHeight") + 160,
-              },
-              100
-            );
+            $(".nav-wrap").stop().slideDown(100);
           }
         }
       });
