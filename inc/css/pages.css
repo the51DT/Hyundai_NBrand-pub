@@ -120,9 +120,7 @@
 }
 
 .about .history-box-wrap {
-  padding: 0 80px;
   padding-top: 160px;
-  max-width: 1600px;
   margin: 0 auto;
 }
 .about .history-box-wrap .tit {
@@ -607,6 +605,10 @@
 
   .next-race-box .swiper-card-type .swiper-button-prev {
     left: 80px;
+  }
+  .about .history-box-wrap {
+    /* max-width: 1600px;
+    padding:0 80px; */
   }
 }
 @media screen and (min-width: 1800px) {

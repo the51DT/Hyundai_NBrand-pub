@@ -490,7 +490,7 @@ body.fix {
 }
 .btn-navi-wrap {
   display: flex;
-  gap:16px;
+  gap: 16px;
   align-items: center;
 }
 .btn-navi-wrap .btn-box .btn {
@@ -739,12 +739,12 @@ body.fix {
   animation-fill-mode: forwards;
 }
 
-.gnb__panel02.type-thumbnail ul {
+.gnb__panel02 .type-thumbnail ul {
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
 }
-.gnb__panel02.type-thumbnail li {
+.gnb__panel02 .type-thumbnail li {
   width: calc(100% / 3 - 8px);
   background: #f0f0f0;
   display: flex;
@@ -752,7 +752,7 @@ body.fix {
   justify-content: center;
   padding: 20px 12px;
 }
-.gnb__panel02.type-thumbnail li:hover {
+.gnb__panel02 .type-thumbnail li:hover {
   background: #aacae6;
 }
 

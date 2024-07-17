@@ -499,7 +499,7 @@ min-width : 1024 css
     height: 13.4375rem;
   }
   .card_type02 .card_detail {
-    margin: 0.75rem 0 2.25rem;
+    margin: 0.75rem 0 2.25rem 0;
   }
   .card_type02 .card_month {
     font-size: 1.125rem;
@@ -597,7 +597,7 @@ min-width : 1024 css
   }
   .card_type05 .card_detail {
     max-width: max-content;
-    margin: 0.75rem 0 1rem;
+    margin: 0.75rem 0 1rem 0;
     font-size: 1.0625rem;
   }
   .card_type05 .btn-wrap {
@@ -1422,7 +1422,6 @@ min-width : 1024 css
     text-align: right;
     display: flex;
     align-items: start;
-    height: 100%;
     width: fit-content;
   }
 
@@ -1720,7 +1719,7 @@ min-width : 1024 css
   }
   .search-container .tag-list-wrap {
     max-width: revert;
-    margin: 20px auto 0;
+    margin: 20px auto 0 auto;
   }
 
   .search-small .search-input-box {

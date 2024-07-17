@@ -285,7 +285,7 @@
     font-size: 2.5rem;
   }
   .main_Nfluencer_wrap .tit-type04 {
-    margin: 0.5rem auto 1.75rem;
+    margin: 0.5rem auto 1.75rem auto;
     font-size: 1.125rem;
   }
 }

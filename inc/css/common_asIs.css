@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 * {
-  word-break: keep-all;
+  word-break: break-word;
   word-wrap: break-word;
   font-family: "Hyundai Sans Text", Arial, Dotum, sans-serif;
   -webkit-box-sizing: border-box;
@@ -3605,7 +3605,7 @@ body,
   position: relative;
   width: 15.3vw;
   height: 15.3vw;
-  margin: 0 auto 5vw;
+  margin: 0 auto 5vw auto;
   content: "";
   background: url("/images/en/common/notice-ico.png") no-repeat;
   background-size: cover;

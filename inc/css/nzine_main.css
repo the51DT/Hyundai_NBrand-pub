@@ -350,7 +350,7 @@
 }
 .media-nzine [data-name="section_default"] .box-wrap {
   padding: 0 6.94vw;
-  margin: 12vw auto 0;
+  margin: 12vw auto 0 auto;
 }
 .media-nzine [data-name="section_default"] .box-wrap:after {
   display: block;
@@ -360,7 +360,7 @@
 .media-nzine [data-name="section_tag"] .txt-cont {
   position: relative;
   padding: 0 6.94vw 0 6.94vw;
-  margin: 13vw auto 0;
+  margin: 13vw auto 0 auto;
 }
 .media-nzine [data-name="section_tag"] .txt-cont .tag-cont {
   padding-bottom: 13.89vw;
@@ -3604,7 +3604,7 @@ html.no-handy .media-nzine-typeC .scroll-area .img-roll {
 .layout__c-typeJ .box-wrap {
   position: relative;
   width: 100%;
-  margin: 0 auto 8vw;
+  margin: 0 auto 8vw auto;
   padding-left: 6.94vw;
   padding-right: 6.94vw;
 }
@@ -3656,7 +3656,7 @@ html.no-handy .media-nzine-typeC .scroll-area .img-roll {
 }
 /* //210111 edit */
 .layout__c-typeJ .box-tit-wrap {
-  margin: 12vw auto 5vw;
+  margin: 12vw auto 5vw auto;
 }
 .layout__c-typeJ .box-tit-wrap:after {
   display: block;
@@ -3687,7 +3687,7 @@ html.no-handy .media-nzine-typeC .scroll-area .img-roll {
   font-size: 4.48vw;
 }
 .layout__c-typeJ h2.tit {
-  margin: 10vw 0 3vw;
+  margin: 10vw 0 3vw 0;
   font-size: 5vw;
   font-weight: bold;
 }
@@ -3792,7 +3792,7 @@ html.no-handy .media-nzine-typeC .scroll-area .img-roll {
   }
   /* //210111 edit */
   .layout__c-typeJ .box-tit-wrap {
-    margin: 7vw auto 4vw;
+    margin: 7vw auto 4vw auto;
   }
   .layout__c-typeJ .box-tit-wrap .point {
     float: left;
@@ -3861,7 +3861,7 @@ html.no-handy .media-nzine-typeC .scroll-area .img-roll {
     width: 100%;
   }
   .layout__c-typeJ h2.tit {
-    margin: 5vw 0 3vw;
+    margin: 5vw 0 3vw 0;
     font-size: 3vw;
     font-weight: normal;
   }
@@ -3933,7 +3933,7 @@ html.no-handy .media-nzine-typeC .scroll-area .img-roll {
   }
   /* //210111 edit */
   .layout__c-typeJ .box-tit-wrap {
-    margin: 200px auto 0;
+    margin: 200px auto 0 auto;
   }
   .layout__c-typeJ .box-tit-wrap .point {
     width: 39%;
@@ -3991,7 +3991,7 @@ html.no-handy .media-nzine-typeC .scroll-area .img-roll {
     width: 41.181%;
   }
   .layout__c-typeJ h2.tit {
-    margin: 70px 0 40px;
+    margin: 70px 0 40px 0;
     font-size: 45px;
   }
   .layout__c-typeJ h3.tit {
@@ -4028,7 +4028,7 @@ html.no-handy .media-nzine-typeC .scroll-area .img-roll {
 }
 .media-nzine [data-name="section_col2_wrap"] .box-wrap {
   padding: 0 6.94vw;
-  margin: 12vw auto 0;
+  margin: 12vw auto 0 auto;
 }
 .media-nzine [data-name="section_col2_wrap"] .box-wrap:after {
   display: block;
@@ -4072,7 +4072,7 @@ html.no-handy .media-nzine-typeC .scroll-area .img-roll {
 }
 .media-nzine [data-name="section_col2_bgwrap"] .box-wrap {
   padding: 0 6.94vw;
-  margin: 12vw auto 0;
+  margin: 12vw auto 0 auto;
 }
 .media-nzine [data-name="section_col2_bgwrap"] .bar-tit {
   position: relative;
@@ -4299,7 +4299,7 @@ html.no-handy .media-nzine-typeC .scroll-area .img-roll {
 }
 .media-nzine .box-Nfluencer {
   padding: 0 6.94vw;
-  margin: 6vw auto 0;
+  margin: 6vw auto 0 auto;
 }
 .media-nzine .box-Nfluencer:after {
   display: block;
@@ -4319,7 +4319,7 @@ html.no-handy .media-nzine-typeC .scroll-area .img-roll {
   font-family: "Hyundai Sans Text", "Malgun Gothic", sans-serif;
 }
 .media-nzine .list-nfluencer {
-  margin: 8vw 0 10vw;
+  margin: 8vw 0 10vw 0;
   font-size: 4.48vw;
 }
 .media-nzine .list-nfluencer li {
