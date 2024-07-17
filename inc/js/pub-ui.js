@@ -940,6 +940,7 @@ function btnNaviCheck() {
   var $btnNaviBtnPC = $navItem03.find(".btn-navi-wrap:not(.mo-only)");
   var $btnNaviBtnMO = $navBarWrap.find(".btn-navi-wrap.mo-only");
   var $btnNaviBox = $navItem03.find(".btn-navi-wrap:not(.mo-only) .btn-box");
+  var $sharingBtn = $(".sharing-btn");
 
 
   if (pubUi.windowSize()) {
@@ -947,7 +948,8 @@ function btnNaviCheck() {
     if ($btnNaviBox.find(".btn").length > 0 || $btnNaviBox.find(".btn")) {
       $btnNaviBox.show();
     }
-  } else {    
+    $sharingBtn.html("Sharing");
+  } else {
     //mobile
     if ($btnNaviBox.find(".btn").length > 1) {
       $btnNaviBox.hide();
@@ -956,6 +958,7 @@ function btnNaviCheck() {
       $btnNaviBtnMO.hide();
       $btnNaviBox.show();
     }
+    $sharingBtn.html("");
   }    
 }
 
