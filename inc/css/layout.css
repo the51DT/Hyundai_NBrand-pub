@@ -490,12 +490,8 @@ body.fix {
 }
 .btn-navi-wrap {
   display: flex;
-<<<<<<< Updated upstream
   gap:16px;
   align-items: center;
-=======
-  gap: 16px;
->>>>>>> Stashed changes
 }
 .btn-navi-wrap .btn-box .btn {
   padding: 5px 12px;

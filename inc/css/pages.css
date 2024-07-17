@@ -997,8 +997,13 @@
   .track-guide-box .wrap-list.list03 .right {
     max-width: revert;
   }
+  
+  .event-box .evt-map-img {
+    overflow-x: scroll;    
+  }
 
   .event-box .evt-map-img img {
+    width: 1000px;
     min-height: 600px;
   }
   .event-box .btn-area {
