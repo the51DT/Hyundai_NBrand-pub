@@ -3249,7 +3249,7 @@ input[type="radio"]:focus + label {
   .search-input-box
   .btn-wrap {
   margin-right: 10px;
-  max-width: 24px;
+  max-width: 36px;
 }
 .dropdown.centered
   .dropdown-menu
@@ -3392,8 +3392,10 @@ input[type="radio"]:focus + label {
   .search-wrap
   .search-input-box
   .btn-search {
-  width: 24px;
-  height: 24px;
+  /* width: 24px;
+  height: 24px; */
+  width: 36px;
+  height: 36px;
 }
 .dropdown.centered .dropdown-menu .wrap-category .major-category {
   width: 183px;
@@ -4239,6 +4241,16 @@ input[type="radio"]:focus + label {
 
   .dropdown.centered .dropdown-menu li .wrap-category.cart-type01 {
     flex-direction: column;
+  }
+
+  .dropdown.centered
+    .dropdown-menu
+    .wrap-category.cart-type00
+    .search-wrap
+    .search-input-box
+    .btn-search {
+    width: 24px;
+    height: 24px;
   }
 }
 @media screen and (max-width: 849px) {
