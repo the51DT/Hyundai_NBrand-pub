@@ -281,7 +281,7 @@ input[type="radio"]:focus + label {
 }
 .btn:not(.btn-only-icon-notbg):hover [class*="icon-instagram"],
 .btn:not(.btn-only-icon-notbg):active [class*="icon-instagram"] {
-  background: url(../../inc/images/icon/icon-instagram_white.svg);
+  background: url(../../inc/images/icon/icon-Instagram_white.svg);
   background-size: contain;
 }
 .btn:not(.btn-only-icon-notbg):hover [class*="icon-twitter"],
@@ -3386,17 +3386,6 @@ input[type="radio"]:focus + label {
 .dropdown.centered .dropdown-menu {
   box-shadow: 0px 30px 20px -10px rgba(0, 0, 0, 0.15);
 }
-.dropdown.centered
-  .dropdown-menu
-  .wrap-category.cart-type00
-  .search-wrap
-  .search-input-box
-  .btn-search {
-  width: 24px;
-  height: 24px;
-  /* width: 36px;
-  height: 36px; */
-}
 .dropdown.centered .dropdown-menu .wrap-category .major-category {
   width: 183px;
   display: flex;
@@ -4034,16 +4023,6 @@ input[type="radio"]:focus + label {
     .btn:not(.btn-only-icon-notbg):active {
     background-color: transparent;
     color: #000;
-  }
-
-  .dropdown.centered
-    .dropdown-menu
-    .wrap-category.cart-type00
-    .search-wrap
-    .search-input-box
-    .btn-search {
-    width: 36px;
-    height: 36px;
   }
 }
 @media screen and (max-width: 850px) {
