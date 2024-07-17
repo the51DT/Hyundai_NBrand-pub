@@ -275,13 +275,13 @@
     z-index: 1;
     height: 100%;
   }
-  .gnb__panel02.type-thumbnail ul {
+  .gnb__panel02 .type-thumbnail ul {
     height: calc(100vh - 157px);
     overflow-y: auto;
     display: block;
     padding: 0 24px;
   }
-  .gnb__panel02.type-thumbnail li {
+  .gnb__panel02 .type-thumbnail li {
     width: 100%;
     margin-bottom: 12px;
   }
@@ -360,10 +360,9 @@
     padding-top: 20px;
   }
 
-
   /* 07.16 추가 */
   .btn-navi-wrap {
-    gap:12px;
+    gap: 12px;
   }
   .btn-navi-wrap.mo-only .btn-box {
     display: flex;
@@ -371,7 +370,7 @@
   .btn-navi-wrap.mo-only .btn-box .btn {
     display: block;
     width: 50%;
-    padding:12px 16px;
+    padding: 12px 16px;
     border-radius: 0;
     font-size: 14px;
     line-height: 16px;

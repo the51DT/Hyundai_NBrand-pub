@@ -21,7 +21,7 @@
 .title_flex {
   display: flex;
   justify-content: space-between;
-  margin: 0 auto 2.5rem;
+  margin: 0 auto 2.5rem auto;
   max-width: 90rem;
 }
 .title_flex .color-white {
@@ -34,7 +34,7 @@
 .sort_flex {
   display: flex;
   justify-content: space-between;
-  margin: 0 auto 3.75rem;
+  margin: 0 auto 3.75rem auto;
   max-width: 90rem;
 }
 
@@ -262,7 +262,6 @@
   border-bottom: 4px solid #000;
 }
 .subnotice_wrap .noti-listbox {
-  margin-top: 100px;
   border-top: 3px solid #787d80;
   max-width: 1440px;
   margin: 100px auto 0 auto;
@@ -2282,7 +2281,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
 }
 
 .banner-wrap .sub-info {
-  margin: 80px auto 200px;
+  margin: 80px auto 200px auto;
   padding: 0 80px;
 }
 
@@ -2510,7 +2509,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
     font-size: 18px;
     line-height: 25.2px;
     max-width: 100%;
-    margin: 117.5px auto 107.5px;
+    margin: 117.5px 107.5px auto;
   }
   /* EP040601 */
   .subnotice_wrap .content-item01 {
@@ -2553,14 +2552,14 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
     text-align: left;
   }
   .subnotice_wrap .noti-listbox li .noti-fix img {
-    margin: 0 0 8px;
+    margin: 0 0 8px 0;
   }
   .subnotice_wrap .noti-listbox li button + .notice-date {
     margin-top: 24px;
   }
   .subnotice_wrap .noti-listbox + .btn-wrap-default {
     max-width: 100%;
-    margin: 44px auto 0;
+    margin: 44px auto 0 auto;
   }
 
   /* EP010301 */
@@ -2635,7 +2634,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
     padding: 7.5rem 0 7.5rem 0;
   }
   .issue_wrap .tit-type04 {
-    margin: 1rem auto 2.25rem;
+    margin: 1rem auto 2.25rem auto;
     font-size: 1.125rem;
     width: calc(100% - 3rem);
     min-width: 0;
@@ -2913,12 +2912,12 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
     width: 100%;
   }
   .video_thumnail_wrap .video_tit {
-    margin: 2.5rem 0 1.25rem;
+    margin: 2.5rem 0 1.25rem 0;
     font-size: 1.5rem;
     line-height: 140%;
   }
   .video_thumnail_wrap .video_subtit {
-    margin: 0.75rem 0 1.25rem;
+    margin: 0.75rem 0 1.25rem 0;
     font-size: 1.125rem;
     line-height: 140%;
   }
@@ -2943,7 +2942,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   }
   .video_thumnail_wrap .tag_list_wrap .tag_list {
     justify-content: center;
-    margin: 36px auto 40px;
+    margin: 36px auto 40px auto;
     padding: 0 24px;
     flex-wrap: wrap;
   }
@@ -2979,7 +2978,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
     padding: 5rem 0rem 7.5rem 0rem;
   }
   .related_wrap .related_tit {
-    margin: 0 auto 2.25rem;
+    margin: 0 auto 2.25rem auto;
     padding: 0 1.5rem;
     font-size: 1.875rem;
   }
@@ -3689,7 +3688,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
     line-height: 28px;
   }
   .qrcode-box-wrap .conts-box .img-wrap {
-    margin: 28px auto 0;
+    margin: 28px auto 0 auto;
   }
 
   /* N Taxi */

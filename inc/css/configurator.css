@@ -528,7 +528,7 @@
 }
 .configurator_label_checkbox .configurator_label_tit {
   position: relative;
-  margin: 1rem 0 0.5rem;
+  margin: 1rem 0 0.5rem 0;
   padding: 0 0.25rem;
 }
 .configurator_label_checkbox .configurator_label_price {
@@ -696,7 +696,7 @@
   line-height: 125%;
 }
 .configurator_summary_list {
-  margin: 1.5rem 0 3.75rem;
+  margin: 1.5rem 0 3.75rem 0;
   border-top: 2px solid #787d80;
   border-bottom: 1px solid #bbbbbb;
 }
@@ -1028,10 +1028,10 @@
     line-height: 140%;
   }
   .configurator_summary_list {
-    margin: 1rem 0 2.25rem;
+    margin: 1rem 0 2.25rem 0;
   }
   .configurator_summary_list li {
-    padding: 1rem 0 1.25rem;
+    padding: 1rem 0 1.25rem 0;
   }
   .configurator_summary_list_top {
     display: flex;

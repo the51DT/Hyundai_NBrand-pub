@@ -332,7 +332,7 @@ header {
 .pathList .pathTbl .dep4,
 .pathList .pathTbl .dep5 {
   padding-top: 15px;
-  word-break: keep-all;
+  word-break: break-word;
 }
 .pathList .pathTbl .date {
   font-size: 12px;

@@ -1385,7 +1385,7 @@ input[type="radio"]:focus + label {
   max-width: 13.9rem;
 }
 .card_type02 .card_detail {
-  margin: 1.5rem 0 3.75rem;
+  margin: 1.5rem 0 3.75rem 0;
   font-family: "Hyundai Sans Head";
   font-weight: 700;
 }
@@ -1781,7 +1781,7 @@ input[type="radio"]:focus + label {
 }
 .card_type05 .card_detail {
   max-width: 26rem;
-  margin: 0.75rem 0 1.5rem;
+  margin: 0.75rem 0 1.5rem 0;
   font-family: "Hyundai Sans Text";
   font-size: 1.25rem;
   font-weight: 500;
@@ -3083,7 +3083,7 @@ input[type="radio"]:focus + label {
   align-items: center;
 }
 
-.wrap-list .inner .btn-wrap.list-outerBtnWrap bntton.btn {
+.wrap-list .inner .btn-wrap.list-outerBtnWrap button.btn {
   padding: 14px 0 14px 24px;
 }
 
@@ -3632,7 +3632,7 @@ input[type="radio"]:focus + label {
   .wrap-category.cart-type02
   .wrap-inner-category
   .inner {
-  margin: 0 0 10px;
+  margin: 0 0 10px 0;
 }
 .dropdown.centered
   .dropdown-menu
@@ -4178,7 +4178,7 @@ input[type="radio"]:focus + label {
     font-size: 20px;
   }
   /* .dropdown.centered .dropdown-menu li .wrap-category {
-    margin: 40px 0 0;
+    margin: 40px 0 0 0;
   } */
   .dropdown.centered .dropdown-menu li .wrap-category:nth-child(3n-1) {
     width: 100%;
@@ -4655,7 +4655,7 @@ p.text-num-chk {
 
 /* comment-type04 */
 .wrap-form .wrap-form-bottom.comment-type04 ul li {
-  margin: 0 0 15px;
+  margin: 0 0 15px 0;
 }
 
 /* textarea */
@@ -5137,7 +5137,7 @@ input:checked + .slider:before {
 
 .search-container .tag-list-wrap {
   max-width: 708px;
-  margin: 32px auto 0;
+  margin: 32px auto 0 auto;
 }
 
 .search-container .tag-list {
@@ -5347,7 +5347,7 @@ input:checked + .slider:before {
   padding: 0;
   border-top: 0;
   display: block;
-  max-height: 100%;
+  ht: 100%;
 }
 .club-popup .popup-wrapper .popup-body .pop-gray {
   padding: 24px; /* tooltip 호버영역 잡기 위해 */

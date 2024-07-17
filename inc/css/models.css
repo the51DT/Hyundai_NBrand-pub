@@ -112,7 +112,7 @@
   font-family: "Hyundai Sans Head";
   font-size: 16px;
   font-weight: 500;
-  line-height: 22.4px;  
+  line-height: 22.4px;
   width: 100%;
 }
 .models-wrap .text-col {
@@ -668,7 +668,7 @@
   flex-wrap: wrap;
   text-align: left;
   max-width: 864px;
-  margin: 20px auto 0;
+  margin: 20px auto 0 auto;
 }
 .models-wrap .specification-wrap .specification-box > img {
   margin-top: 40px;
@@ -698,7 +698,7 @@
   color: #666;
   text-align: left;
   max-width: 864px;
-  margin: 20px auto 0;
+  margin: 20px auto 0 auto;
 }
 .models-wrap .specification-wrap .specification-box img {
   width: 952px;
@@ -871,7 +871,7 @@
     max-width: 100%;
     gap: 44px;
     width: 100%;
-  } 
+  }
   .models-wrap.brand [class*="max1440"] {
     padding: 0 24px;
   }
@@ -1236,7 +1236,6 @@
     flex: 0 0 100%;
     font-size: 20px;
     line-height: 28px;
-    padding-right: 0;
     padding: 8px 0 24px 0;
     font-family: "Hyundai Sans Head";
   }

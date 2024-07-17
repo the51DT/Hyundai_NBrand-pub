@@ -97,7 +97,7 @@
   /* gap: 7.6042vw; */
   gap: 7.6vw;
   max-width: 1440px;
-  margin: 120px auto 240px;
+  margin: 120px auto 240px auto;
 }
 .mypage-wrap .mypage-nav {
   display: flex;
@@ -193,7 +193,7 @@
   width: 5.25rem;
 }
 .join_wrap .join_tit {
-  margin: 0.75rem 0 3.75rem;
+  margin: 0.75rem 0 3.75rem 0;
   font-family: "Hyundai Sans Head";
   font-size: 3.5rem;
   font-weight: 700;
@@ -556,7 +556,6 @@
   font-size: 16px;
   font-weight: 700;
   line-height: 22.4px;
-  padding-right: 12px;
   color: #fff;
   background-color: #000;
   border-radius: 15px;
@@ -1071,7 +1070,7 @@
   .mypage-box {
     display: block;
     max-width: 100%;
-    margin: 80px 0 160px;
+    margin: 80px 0 160px 0;
     padding: 0;
   }
   .mypage-wrap .mypage-nav {
@@ -1198,7 +1197,7 @@
     right: 0;
   }
   .mymsission-wrap .btn-wrap-type2 {
-    margin: 16px 0 0;
+    margin: 16px 0 0 0;
   }
   .mymsission-col {
     display: block;
@@ -1246,7 +1245,7 @@
     width: 4.5rem;
   }
   .join_wrap .join_tit {
-    margin: 0.75rem 0 2.25rem;
+    margin: 0.75rem 0 2.25rem 0;
     font-size: 1.875rem;
     line-height: 140%;
   }
