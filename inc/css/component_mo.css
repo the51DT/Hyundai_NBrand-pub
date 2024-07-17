@@ -1422,7 +1422,6 @@ min-width : 1024 css
     text-align: right;
     display: flex;
     align-items: start;
-    height: 100%;
     width: fit-content;
   }
 
