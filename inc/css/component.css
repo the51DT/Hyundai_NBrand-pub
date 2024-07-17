@@ -5199,7 +5199,7 @@ input:checked + .slider:before {
 }
 
 .tag-list-wrap [class^="tag-list"] li.on .tag-item {
-  /* background-color: #de3111; */
+  background-color: #de3111;
   color: #fff;
 }
 
