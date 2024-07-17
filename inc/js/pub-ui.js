@@ -788,6 +788,7 @@ var pubUi = {
     }
   },
   windowSize: function () {
+    var $win_W = window.innerWidth;
     return $win_W >= 1024 ? true : false;
   },
   pageScrollChk: function (dataScroll) {
