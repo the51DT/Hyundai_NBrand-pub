@@ -5351,5 +5351,5 @@ input:checked + .slider:before {
   height: 16px;
   background-image: url(../../inc/images/icon/icon-arrow01_down.svg);
   background-size: contain;
-  rotate: 180deg;
+  transform: rotate(180deg);
 }
