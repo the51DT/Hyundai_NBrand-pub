@@ -1078,9 +1078,6 @@
   justify-content: flex-end;
   align-items: center;
   align-self: stretch;
-
-  /* position: fixed;
-  bottom: -84px; */
   width: 100%;
   background: #fff;
   z-index: 200;
@@ -1202,7 +1199,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
 */
 
 .popup-wrapper.onlyTxt .popup-body.double-pop-body {
-  /* 이중팝업에만 .popup-body에 .double-pop-body를 추가하여 상하좌우 간격 40px을 적용합니다. */
+  /* 이중팝업(class="popup bottom-popup"이 있는 팝업)에만 .popup-body에 .double-pop-body를 추가하여 상하좌우 간격 40px을 적용합니다. */
   padding: 40px;
 }
 .popup-wrapper.onlyTxt .popup-body .popup-body-innerbox p.popup-tit-lg {
@@ -2344,7 +2341,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
 }
 .eFestival_card_wrap {
   padding: 120px 80px;
-  color: #FFF;
+  color: #fff;
 }
 .eFestival_card div {
   display: flex;
@@ -2394,10 +2391,10 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   clip-path: polygon(0 0, 0 0, 0 0);
 }
 .eFestival_map_table tbody tr:first-of-type {
-  border-top: 2px solid #595C5F;
+  border-top: 2px solid #595c5f;
 }
 .eFestival_map_table tbody tr {
-  border-bottom: 1px solid #595C5F;
+  border-bottom: 1px solid #595c5f;
 }
 .eFestival_map_table tbody tr th {
   padding: 16px 4px;
@@ -2456,7 +2453,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   font-size: 24px;
   font-weight: 700;
   line-height: 140%;
-  color: #FFF;
+  color: #fff;
 }
 .eFestival_grid .grid_card {
   display: flex;
@@ -2466,11 +2463,11 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
 }
 .eFestival_grid .grid_top {
   padding: 20px 24px;
-  background-color: #DE3111;
+  background-color: #de3111;
   font-size: 16px;
   font-weight: 400;
   line-height: 140%;
-  color: #FFF;
+  color: #fff;
 }
 .eFestival_grid .grid_top p:first-of-type {
   margin-bottom: 4px;
@@ -2485,7 +2482,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   flex-direction: column;
   justify-content: space-between;
   padding: 20px 24px 40px 24px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   font-size: 16px;
   font-weight: 700;
   line-height: 140%;
@@ -2532,7 +2529,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
 .eFestival_schedule_card {
   padding: 24px 20px;
   border-radius: 4px;
-  background-color: #DBE1FA;
+  background-color: #dbe1fa;
   font-size: 16px;
   font-weight: 500;
   line-height: 140%;
@@ -2563,24 +2560,36 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   margin-top: 20px;
 }
 .eFestival_schedule_card div + div {
-  border-top: 1px solid #BBBBBB;
+  border-top: 1px solid #bbbbbb;
 }
 .eFestival_schedule ul li:nth-of-type(1) .eFestival_schedule_card {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%), url(../images/content/img_eFestival_schedule_card01_bg.png) lightgray 50% / cover no-repeat;
-  color: #FFF;
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(0, 0, 0, 0.6) 100%
+    ),
+    url(../images/content/img_eFestival_schedule_card01_bg.png) lightgray 50% /
+      cover no-repeat;
+  color: #fff;
 }
 .eFestival_schedule ul li:nth-of-type(3) .eFestival_schedule_card {
-  background-color: #F8E2E2;
+  background-color: #f8e2e2;
 }
 .eFestival_schedule ul li:nth-of-type(4) .eFestival_schedule_card {
-  background-color: #F7E5D3;
+  background-color: #f7e5d3;
 }
 .eFestival_schedule ul li:nth-of-type(5) .eFestival_schedule_card {
-  background-color: #D8F5F4;
+  background-color: #d8f5f4;
 }
 .eFestival_schedule ul li:nth-of-type(6) .eFestival_schedule_card {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.70) 100%), url(../images/content/img_eFestival_schedule_card06_bg.png) lightgray 50% / cover no-repeat;
-  color: #FFF;
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(0, 0, 0, 0.7) 100%
+    ),
+    url(../images/content/img_eFestival_schedule_card06_bg.png) lightgray 50% /
+      cover no-repeat;
+  color: #fff;
 }
 /* 끝 */
 
