@@ -715,7 +715,7 @@
 }
 .configurator_summary_list_top > div {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   column-gap: 0.75rem;
 }
 .configurator_summary_list_top .btn {
@@ -1016,7 +1016,7 @@
     width: 100%;
   }
   .configurator_area.summary .configurator_price div {
-    justify-content: end;
+    justify-content: flex-end;
     column-gap: 0.5rem;
   }
   .configurator_select_summary {

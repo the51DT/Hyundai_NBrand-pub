@@ -1160,7 +1160,7 @@ input[type="radio"]:focus + label {
   flex-grow: 1;
 }
 .card_type01.card_swiper .card_top {
-  justify-content: end;
+  justify-content: flex-end;
 }
 .card_type01 .card_profile {
   position: absolute;
@@ -1430,7 +1430,7 @@ input[type="radio"]:focus + label {
 .card_type03 .card_top {
   display: flex;
   justify-content: space-between;
-  align-items: start;
+  align-items: flex-start;
   padding: 1.25rem 2.5rem 0 2.5rem;
   font-family: "Hyundai Sans Head";
   text-align: right;
@@ -2796,7 +2796,7 @@ input[type="radio"]:focus + label {
 .wrap-list.list05 .inner .btn-wrap,
 .wrap-list.list06 .inner .btn-wrap {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
   font-family: "Hyundai Sans Text";
 }
@@ -2883,7 +2883,7 @@ input[type="radio"]:focus + label {
 .wrap-list .__bottom.list06 .wrap-lists.btn-type .list-box:nth-child(2) div {
   width: 100%;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 .wrap-list .__bottom.list06 .wrap-lists.btn-type .list-box p.txt-type03 {
   text-align: Right;
@@ -2939,7 +2939,7 @@ input[type="radio"]:focus + label {
     .wrap-lists.btn-type
     .list-box:nth-child(1)
     div:last-child {
-    align-items: end;
+    align-items: flex-end;
   }
   .wrap-list
     .inner
@@ -3079,7 +3079,7 @@ input[type="radio"]:focus + label {
 
 .wrap-list .inner .btn-wrap.list-outerBtnWrap {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
 }
 
@@ -3519,7 +3519,7 @@ input[type="radio"]:focus + label {
   .small-category
   .tag-list.ty02 {
   flex-wrap: wrap;
-  align-items: start;
+  align-items: flex-start;
   position: relative;
 }
 .dropdown.centered
@@ -3607,7 +3607,7 @@ input[type="radio"]:focus + label {
   align-items: center;
 }
 .dropdown.centered .dropdown-menu .wrap-category.cart-type01 .major-category {
-  justify-content: start;
+  justify-content: flex-start;
   height: 100%;
 }
 .dropdown.centered .dropdown-menu.wrap-category.cart-type02 {
@@ -3813,7 +3813,7 @@ input[type="radio"]:focus + label {
   .btn-wrap
   a.md-txt-btn01 {
   width: 100%;
-  justify-content: start;
+  justify-content: flex-start;
 }
 .dropdown-menu
   li:not(.dropdown-menu .moclose-btn, .dropdown-menu .option)
