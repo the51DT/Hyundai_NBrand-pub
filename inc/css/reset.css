@@ -223,24 +223,18 @@ body {
   box-sizing: border-box;
 }
 
-/* body::-webkit-scrollbar {
+/* *::-webkit-scrollbar {
   background-color: transparent;
-  opacity: 0;
-  overflow: visible;
-  position: absolute;
-  left: auto;
-  right: 20px;
-  top: 0;
 }
 
-body::-webkit-scrollbar-thumb {
+*::-webkit-scrollbar-thumb {
   width: 30px;
   background: linear-gradient(transparent, #30ff00);
   border-radius: 6px;
   border-radius: 20px;
 }
 
-body::-webkit-scrollbar-thumb:hover {
+*::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(transparent, #00c6ff, transparent);
 } */
 /* body * {
