@@ -2131,23 +2131,23 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   padding-right: 80px;
 }
 
-.nChannel .models-wrap .content-item03.gallery-wrap {
+.nChannel.models-wrap .content-item03.gallery-wrap {
   padding-top: 160px;
   padding-bottom: 200px;
 }
-.nChannel .models-wrap .max1200 {
+.nChannel.models-wrap .max1200 {
   text-align: center;
 }
-.nChannel .models-wrap .gallery-wrap .swiper-container {
+.nChannel.models-wrap .gallery-wrap .swiper-container {
   margin-top: 60px;
 }
-.nChannel .models-wrap .max1200 .text-normal {
+.nChannel.models-wrap .max1200 .text-normal {
   margin-top: 20px;
 }
-.nChannel .models-wrap .conts-sect:not(:last-child) {
+.nChannel.models-wrap .conts-sect:not(:last-child) {
   margin-bottom: 200px;
 }
-.nChannel .models-wrap .content-item03.intro-wrap {
+.nChannel.models-wrap .content-item03.intro-wrap {
   padding-top: 160px;
   padding-bottom: 200px;
 }
@@ -2238,7 +2238,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   padding-bottom: 200px;
 }
 
-.nTaxi .models-wrap .gallery-wrap {
+.nTaxi.models-wrap .gallery-wrap {
   padding: 200px 0;
   margin-bottom: 0;
 }
@@ -2276,8 +2276,8 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   padding: 200px 80px;
 }
 
-.nTaxi .models-wrap .banner-wrap .text-col .text-strong,
-.nTaxi .models-wrap .banner-wrap .text-col .text-normal {
+.nTaxi.models-wrap .banner-wrap .text-col .text-strong,
+.nTaxi.models-wrap .banner-wrap .text-col .text-normal {
   text-align: center;
   color: #000;
 }
@@ -3872,18 +3872,18 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   .nChannel .content-box.bnr {
     padding: 56px 24px 96px 24px;
   }
-  .nChannel .models-wrap .content-item03.gallery-wrap {
+  .nChannel.models-wrap .content-item03.gallery-wrap {
     padding-top: 100px;
     padding-bottom: 120px;
   }
-  .nChannel .models-wrap .conts-sect:not(:last-child) {
+  .nChannel.models-wrap .conts-sect:not(:last-child) {
     margin-bottom: 120px;
   }
   .nChannel .more-btn {
     margin-top: 8px !important;
   }
 
-  .nChannel .models-wrap .content-item03.intro-wrap {
+  .nChannel.models-wrap .content-item03.intro-wrap {
     padding: 100px 24px 120px 24px;
   }
   .nChannel .conts_card_list .card_con {
@@ -3978,7 +3978,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
     padding-top: 100px;
     padding-bottom: 120px;
   }
-  .nTaxi .models-wrap .gallery-wrap {
+  .nTaxi.models-wrap .gallery-wrap {
     padding: 120px 0;
   }
   .next-taxi-wrap .grid_2 li .btn-wrap a {

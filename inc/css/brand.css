@@ -110,32 +110,32 @@
 .models-wrap .conts-section-wrap .conts-bnr-box img {
   object-fit: cover;
 }
-.brand .models-wrap .content-item03 {
+.brand.models-wrap .content-item03 {
   padding: 0;
   margin: 0;
 }
 
-.brand .models-wrap [class*="max1440"] {
+.brand.models-wrap [class*="max1440"] {
   gap: 60px;
 }
-.brand .models-wrap [class*="max1200"] {
+.brand.models-wrap [class*="max1200"] {
   max-width: 1360px;
   padding: 0 80px;
   margin: 0 auto;
 }
 .brand .conts-section-wrap .max1440,
 .brand .conts-section-wrap .max1200,
-.brand .models-wrap .max1440 .max1440,
-.brand .models-wrap .max1440 .max1200 {
+.brand.models-wrap .max1440 .max1440,
+.brand.models-wrap .max1440 .max1200 {
   padding-left: 0;
   padding-right: 0;
 }
 .brand .conts-section-wrap .max1440,
-.brand .models-wrap .max1440 .max1440 {
+.brand.models-wrap .max1440 .max1440 {
   max-width: 1440px;
 }
 .brand .conts-section-wrap .max1200,
-.brand .models-wrap .max1440 .max1200 {
+.brand.models-wrap .max1440 .max1200 {
   max-width: 1200px;
 }
 
@@ -146,7 +146,7 @@
 .models-nofull-box .img-conts-wrap .img-area > img {
   margin: 160px 0 60px 0;
 }
-.brand .models-wrap .models-nofull {
+.brand.models-wrap .models-nofull {
   padding: 200px 80px;
   margin-bottom: 0;
 }
@@ -192,18 +192,18 @@
   transform: translate(-50%, -50%);
 }
 
-.brand .models-wrap .text-strong {
+.brand.models-wrap .text-strong {
   font-size: 56px;
   font-weight: 700;
   line-height: 70px;
 }
-.brand .models-wrap .motor_tit {
+.brand.models-wrap .motor_tit {
   font-family: "Hyundai Sans Head";
   font-size: 68px;
   font-weight: 700;
   line-height: 125%;
 }
-.brand .models-wrap .text-normal-s {
+.brand.models-wrap .text-normal-s {
   margin-top: 20px;
 }
 
@@ -211,22 +211,22 @@
   margin-top: 0;
 }
 
-.brand .models-wrap .content-item08 .models-full {
+.brand.models-wrap .content-item08 .models-full {
   background: url(../../inc/images/img/img_aboutN_conts05.png);
   background-size: cover;
   background-position: center;
   padding: 0;
   height: 979px;
 }
-.brand .models-wrap .content-item08 .text-col {
+.brand.models-wrap .content-item08 .text-col {
   margin-top: 60px;
   display: flex;
   flex-direction: column;
 }
-.brand .models-wrap .content-item08 .text-col .text-sub {
+.brand.models-wrap .content-item08 .text-col .text-sub {
   color: #000;
 }
-.brand .models-wrap .content-item08 .text-col .text-normal {
+.brand.models-wrap .content-item08 .text-col .text-normal {
   margin-top: 20px;
 }
 .brand .history-box-wrap {
@@ -383,14 +383,14 @@
 .conts-section-wrap > article {
   gap: 40px !important;
 }
-.brand .models-wrap .info-bnr-wrap {
+.brand.models-wrap .info-bnr-wrap {
   width: 100%;
   padding-top: 40px;
 }
-.brand .models-wrap .info-bnr-wrap .img-wrap {
+.brand.models-wrap .info-bnr-wrap .img-wrap {
   width: 100%;
 }
-.brand .models-wrap .info-bnr-wrap .text-normal-s {
+.brand.models-wrap .info-bnr-wrap .text-normal-s {
   margin-top: 0;
 }
 article.info-bnr-wrap + article.info-video-wrap {
@@ -675,7 +675,7 @@ article.info-bnr-wrap + article.info-video-wrap {
 .brand .ty02Swiper .swiper-slide .img-area img.mo-only {
   display: none;
 }
-.brand .models-wrap .max1440.tcr_winner_wrap {
+.brand.models-wrap .max1440.tcr_winner_wrap {
   gap: 0;
   color: #fff;
 }
@@ -751,7 +751,7 @@ article.info-bnr-wrap + article.info-video-wrap {
     url(../images/content/img_tcr_team_bg.png) lightgray 50% / cover no-repeat;
   color: #fff;
 }
-.brand .models-wrap .tcr_team_wrap .max1440 {
+.brand.models-wrap .tcr_team_wrap .max1440 {
   gap: 0;
 }
 .tcr_team_wrap .motor_tit_wrap {
@@ -1558,19 +1558,19 @@ article.info-bnr-wrap + article.info-video-wrap {
     object-fit: cover;
   }
 
-  .brand .models-wrap [class*="max1440"] {
+  .brand.models-wrap [class*="max1440"] {
     gap: 36px;
   }
 
-  .brand .models-wrap .content-item02 {
+  .brand.models-wrap .content-item02 {
     max-height: 100%;
   }
 
-  .brand .models-wrap .video-wrap video {
+  .brand.models-wrap .video-wrap video {
     max-height: 360px;
   }
 
-  .brand .models-wrap .video-wrap video ~ .btn {
+  .brand.models-wrap .video-wrap video ~ .btn {
     top: 307px;
     right: 12px;
   }
@@ -1639,20 +1639,20 @@ article.info-bnr-wrap + article.info-video-wrap {
     margin: 100px 0 36px 0;
     width: 100%;
   }
-  .brand .models-wrap .models-nofull {
+  .brand.models-wrap .models-nofull {
     padding: 120px 24px;
     margin-bottom: 0;
   }
 
-  .brand .models-wrap .text-strong {
+  .brand.models-wrap .text-strong {
     font-size: 30px;
     line-height: 140%;
   }
-  .brand .models-wrap .text-strong.motor_tit {
+  .brand.models-wrap .text-strong.motor_tit {
     font-size: 36px;
     line-height: 125%;
   }
-  .brand .models-wrap .text-normal-s {
+  .brand.models-wrap .text-normal-s {
     margin-top: 12px;
   }
 
@@ -1675,16 +1675,16 @@ article.info-bnr-wrap + article.info-video-wrap {
     line-height: 140%;
   }
 
-  .brand .models-wrap .content-item08 .models-full {
+  .brand.models-wrap .content-item08 .models-full {
     height: 240px;
   }
-  .brand .models-wrap .content-item08 .text-col {
+  .brand.models-wrap .content-item08 .text-col {
     padding: 36px 24px 0 24px;
   }
-  .brand .models-wrap .content-item08 .text-col .text-sub {
+  .brand.models-wrap .content-item08 .text-col .text-sub {
     margin-top: 28px;
   }
-  .brand .models-wrap .content-item08 .text-col .text-normal {
+  .brand.models-wrap .content-item08 .text-col .text-normal {
     margin-top: 12px;
   }
 
@@ -1839,14 +1839,14 @@ article.info-bnr-wrap + article.info-video-wrap {
     line-height: 23.8px;
   }
 
-  .brand .models-wrap .info-bnr-wrap {
+  .brand.models-wrap .info-bnr-wrap {
     padding-top: 36px;
   }
   .conts-section-wrap > article {
     gap: 28px !important;
   }
-  .brand .models-wrap .info-bnr-wrap .text-normal-s,
-  .brand .models-wrap .info-video-wrap .text-normal-s {
+  .brand.models-wrap .info-bnr-wrap .text-normal-s,
+  .brand.models-wrap .info-video-wrap .text-normal-s {
     font-size: 17px;
     line-height: 140%;
   }
@@ -2081,7 +2081,7 @@ article.info-bnr-wrap + article.info-video-wrap {
   }
 
   /* BR030104 */
-  .brand .models-wrap .img-wrap.info-bnr-wrap {
+  .brand.models-wrap .img-wrap.info-bnr-wrap {
     padding-top: 0;
   }
   .motor_tit_wrap {
@@ -2089,11 +2089,11 @@ article.info-bnr-wrap + article.info-video-wrap {
     margin: 0 auto 2.25rem auto;
     padding: 0 1.5rem;
   }
-  .brand .models-wrap .motor_tit_wrap .motor_tit {
+  .brand.models-wrap .motor_tit_wrap .motor_tit {
     font-size: 1.875rem;
     line-height: 140%;
   }
-  .brand .models-wrap .motor_tit_wrap .text-normal {
+  .brand.models-wrap .motor_tit_wrap .text-normal {
     font-size: 1.0625rem;
     line-height: 140%;
   }
