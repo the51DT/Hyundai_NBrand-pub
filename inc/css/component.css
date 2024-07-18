@@ -3032,51 +3032,6 @@ input[type="radio"]:focus + label {
 }
 /* list07 ed */
 
-/* .wrap-list.list08 {
-  max-width: 326px;
-}
-
-.wrap-list.list08 .wrap-side-nav {
-  margin-top: 25px;
-}
-
-.wrap-list.list08 ul li {
-  border-top: 1px solid #d9d9d9;
-}
-
-.wrap-list.list08 ul li:last-child {
-  border-bottom: 1px solid #d9d9d9;
-}
-
-.wrap-list.list08 ul li .box-side-nav {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 16px 8px;
-}
-
-.wrap-list.list08 ul li .box-side-nav .tit-type05 {
-  color: #555;
-}
-
-.wrap-list.list08 .wrap-side-nav a.btn {
-  margin: 24px auto;
-  padding: 0 8px;
-  display: flex;
-  font-family: "Hyundai Sans Text";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 100%;
-}
-
-.wrap-list.list08 .wrap-side-nav a.btn span.icon-right {
-  margin-left: 4px;
-} */
-
-/* list08 end*/
-
 .wrap-list .inner .btn-wrap.list-outerBtnWrap {
   display: flex;
   justify-content: flex-end;
@@ -3333,13 +3288,10 @@ input[type="radio"]:focus + label {
 .dropdown.centered .wrap-dropdown-selected {
   background-color: #000;
   padding: 17px 16px;
-  /* border-radius: 4px; */
 }
 .dropdown.centered .bgred {
   color: #fff;
   background-color: #de3111;
-  /* border-top-left-radius: 4px;
-  border-top-right-radius: 4px; */
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   border-bottom-left-radius: 0;
@@ -3350,8 +3302,6 @@ input[type="radio"]:focus + label {
 .dropdown.centered .bgwhite {
   color: #000;
   background-color: #fff;
-  /* border-top-left-radius: 4px;
-  border-top-right-radius: 4px; */
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   border-bottom-left-radius: 0;
@@ -3430,11 +3380,12 @@ input[type="radio"]:focus + label {
   .wrap-inner-category
   .middle-category {
   align-items: baseline;
-  padding-top: 8px;
+  padding: 8px 0 0 0;
   flex-shrink: 0;
 }
 .dropdown.centered .dropdown-menu .wrap-category.cart-type03 {
   align-items: baseline;
+  margin: 0 0 46px 0;
   margin-bottom: 46px;
 }
 .dropdown.centered
@@ -3445,7 +3396,7 @@ input[type="radio"]:focus + label {
   .txt-type03 {
   font-weight: 700;
   width: 100%;
-  padding: 6px 12px 0;
+  padding: 6px 12px 0 12px;
 }
 .dropdown.centered
   .dropdown-menu
@@ -3453,7 +3404,7 @@ input[type="radio"]:focus + label {
   .wrap-inner-category
   .middle-category
   .txt-type03:first-child {
-  padding: 0 12px 0;
+  padding: 0 12px 0 12px;
 }
 .dropdown.centered
   .dropdown-menu
@@ -3591,7 +3542,6 @@ input[type="radio"]:focus + label {
   .wrap-inner-category
   .small-category
   button:first-child {
-  /* margin: 8px 8px 8px 0; */
   margin: 0px 8px 8px 0;
 }
 .dropdown.centered .dropdown-menu .wrap-category .wrap-inner-category .inner {
@@ -3673,8 +3623,7 @@ input[type="radio"]:focus + label {
   .wrap-category-result
   .btn-lg-primary02
   span.btn-icon20 {
-  margin-left: 0;
-  margin-right: 8px;
+  margin: 0 8px 0 0;
 }
 .dropdown.centered .dropdown-menu .wrap-category-result span.accent {
   color: #de3111;
@@ -5402,5 +5351,5 @@ input:checked + .slider:before {
   height: 16px;
   background-image: url(../../inc/images/icon/icon-arrow01_down.svg);
   background-size: contain;
-  rotate: 180deg;
+  transform: rotate(180deg);
 }
