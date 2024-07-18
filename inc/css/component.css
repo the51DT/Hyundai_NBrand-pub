@@ -4632,6 +4632,8 @@ p.text-num-chk {
   width: 100%;
   font-size: 14px;
   padding: 0 1rem;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 .wrap-form.textarea .wrap-form-bottom.comment-type02 .comment-type02-1 {
   max-width: 820px;
@@ -4656,6 +4658,8 @@ p.text-num-chk {
     align-self: stretch;
     width: 100%;
     max-width: 100%;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
   }
 }
 
