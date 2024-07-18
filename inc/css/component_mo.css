@@ -520,7 +520,7 @@ min-width : 1024 css
   }
   .card_type03.card_ranker .card_top {
     padding: 1.31rem 1.31rem 0 1.25rem;
-    align-items: end;
+    align-items: flex-end;
   }
   .card_type03 .card_rank {
     font-size: 2.25rem;
@@ -920,8 +920,8 @@ min-width : 1024 css
     max-width: 100%;
     width: 100%;
     display: flex;
-    align-items: end;
-    justify-content: end;
+    align-items: flex-end;
+    justify-content: flex-end;
     height: 100%;
   }
   .wrap-list
@@ -929,7 +929,7 @@ min-width : 1024 css
     .__bottom.list06
     .wrap-lists.list-only-single
     .list-box:last-child {
-    align-items: start;
+    align-items: flex-start;
   }
   .wrap-list
     .inner
@@ -991,7 +991,7 @@ min-width : 1024 css
     align-items: stretch;
     text-align: right;
     width: 100%;
-    justify-content: end;
+    justify-content: flex-end;
     max-width: 118px;
   }
   .wrap-list .__bottom.list06 .wrap-lists.btn-type .list-box:nth-child(2) {
@@ -1064,7 +1064,7 @@ min-width : 1024 css
     .wrap-lists
     .list-box:nth-child(3)
     .box-listChkRead {
-    align-items: start;
+    align-items: flex-start;
   }
 
   /* cont08 accordion */
@@ -1421,7 +1421,7 @@ min-width : 1024 css
   .wrap-form .wrap-form-bottom.comment-type02 p.text-num-chk {
     text-align: right;
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     width: fit-content;
   }
 
