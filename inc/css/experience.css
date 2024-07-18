@@ -429,7 +429,7 @@
   background-color: #555;
 }
 .standing_wrap .title_flex {
-  align-items: end;
+  align-items: flex-end;
 }
 .standing_wrap .title_flex .selectbox-wrap {
   margin-bottom: 1.37rem;
@@ -518,7 +518,7 @@
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: end;
+  align-items: flex-end;
   padding-top: 5rem;
   width: 100%;
   height: auto;
@@ -589,7 +589,7 @@
 }
 .driver_detail {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   flex-flow: column wrap;
   row-gap: 1.5rem;
   width: 100%;
@@ -704,7 +704,7 @@
 }
 .team_detail {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   flex-flow: column wrap;
   row-gap: 1.5rem;
   width: 100%;
@@ -1422,7 +1422,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   gap: 40px;
   background: #fff;
   padding: 0;
-  align-items: start;
+  align-items: flex-start;
 }
 
 .popup-wrapper .popup-body-innerbox .wrap-checkmail.changeMail .wrap-form.text {
@@ -1459,7 +1459,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
 .popup-wrapper .wrap-popup-profile {
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: flex-start;
   gap: 0 8px;
   width: 100%;
   position: relative;
@@ -1493,8 +1493,8 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
 .popup-wrapper .wrap-popup-profile .box-profile-txt {
   display: flex;
   flex-direction: column;
-  justify-content: start;
-  align-items: start;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .popup-wrapper .wrap-popup-profile .box-profile-txt p.txt-type04.nickname {
@@ -1714,7 +1714,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
 .popup-wrapper .wrap-comment .box-date {
   display: flex;
   gap: 20px;
-  align-items: end;
+  align-items: flex-end;
 }
 
 /** 신청 결과 안내 문구 박스, 하단 진행상태 박스 시작 **/
@@ -1925,7 +1925,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   .box-confirm
   .wrap-reaction-icon.divided
   div:nth-child(1) {
-  justify-content: start;
+  justify-content: flex-start;
   margin-right: 0;
 }
 
@@ -2907,7 +2907,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
     max-width: 49.875rem;
   }
   .issue_wrap .txt-list-wrap {
-    justify-content: start;
+    justify-content: flex-start;
     margin: 0 auto;
     width: 100%;
     max-width: 52.875rem;
@@ -3802,7 +3802,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
     margin-top: 36px;
     gap: 28px 0;
     grid-template-columns: auto;
-    justify-content: start;
+    justify-content: flex-start;
   }
   .side-popup .pop-wrap .popup-body .wrap-zone-info .box-info {
     width: 100%;

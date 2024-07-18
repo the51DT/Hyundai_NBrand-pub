@@ -909,7 +909,7 @@ article.info-bnr-wrap + article.info-video-wrap {
 .performance_tab_tit {
   display: flex;
   justify-content: space-between;
-  align-items: start;
+  align-items: flex-start;
   width: 100%;
   text-align: left;
 }
