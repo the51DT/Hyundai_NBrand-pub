@@ -5278,7 +5278,7 @@ input:checked + .slider:before {
   padding: 0;
   border-top: 0;
   display: block;
-  max-height: 100%;
+  ht: 100%;
 }
 .club-popup .popup-wrapper .popup-body .pop-gray {
   padding: 24px; /* tooltip 호버영역 잡기 위해 */
