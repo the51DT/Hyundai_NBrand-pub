@@ -2325,6 +2325,263 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
 .break-no-pc-only {
   display: none;
 }
+
+/* EP030101 */
+.eFestival_top_wrap {
+  padding: 160px 80px 60px 80px;
+}
+.eFestival_top_wrap .img-wrap {
+  max-width: 1440px;
+  margin: 60px auto 40px auto;
+}
+.eFestival_top_wrap > p {
+  margin: 0 auto 200px auto;
+  max-width: 1196px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 140%;
+  text-align: center;
+}
+.eFestival_card_wrap {
+  padding: 120px 80px;
+  color: #FFF;
+}
+.eFestival_card div {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4px;
+  margin-top: 40px;
+  padding: 0 16px;
+}
+.eFestival_card .card_tit {
+  font-family: "Hyundai Sans Head";
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 140%;
+}
+.eFestival_card .card_subtit {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 140%;
+}
+.eFestival_bottom_wrap {
+  padding: 100px 80px 200px 80px;
+}
+.eFestival_bottom_wrap .eFestival_card {
+  margin: 0 auto;
+  max-width: 1440px;
+}
+.eFestival_map_wrap {
+  margin: 0 auto;
+  padding: 200px 0;
+}
+.models-wrap .eFestival_map_wrap .text-col {
+  width: calc(100% - 160px);
+  margin: 0 80px;
+}
+.eFestival_map {
+  margin: 20px auto;
+  padding: 0 80px;
+  max-width: 1600px;
+}
+.eFestival_map_wrap .eFestival_map_table,
+.eFestival_map_table thead {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: polygon(0 0, 0 0, 0 0);
+}
+.eFestival_map_table tbody tr:first-of-type {
+  border-top: 2px solid #595C5F;
+}
+.eFestival_map_table tbody tr {
+  border-bottom: 1px solid #595C5F;
+}
+.eFestival_map_table tbody tr th {
+  padding: 16px 4px;
+  font-family: "Hyundai Sans Head";
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 140%;
+  text-align: left;
+  vertical-align: top;
+}
+.eFestival_map_table tbody tr td {
+  padding: 16px 8px;
+}
+.eFestival_map_table tbody tr td div {
+  display: flex;
+}
+.eFestival_map_table tbody tr td img {
+  margin-top: 2px;
+  width: 30px;
+  height: 20px;
+}
+.eFestival_map_table tbody tr td p {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2px;
+  margin-left: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 140%;
+}
+.eFestival_map_table tbody tr td p span:first-of-type {
+  font-family: "Hyundai Sans Head";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 140%;
+}
+.eFestival_grid {
+  display: flex;
+  column-gap: 24px;
+  margin: 0 auto;
+  padding: 0 80px;
+  max-width: 1600px;
+  overflow-x: scroll;
+}
+.eFestival_grid > li {
+  display: flex;
+  flex-direction: column;
+  row-gap: 28px;
+  align-items: center;
+}
+.eFestival_grid .grid_step {
+  padding: 12px 42px;
+  border-radius: 29px;
+  background-color: #000;
+  font-family: "Hyundai Sans Head";
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 140%;
+  color: #FFF;
+}
+.eFestival_grid .grid_card {
+  display: flex;
+  flex-direction: column;
+  width: 342px;
+  height: 487px;
+}
+.eFestival_grid .grid_top {
+  padding: 20px 24px;
+  background-color: #DE3111;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
+  color: #FFF;
+}
+.eFestival_grid .grid_top p:first-of-type {
+  margin-bottom: 4px;
+  font-family: "Hyundai Sans Head";
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 140%;
+}
+.eFestival_grid .grid_bottom {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 24px 40px 24px;
+  background-color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 140%;
+}
+.eFestival_grid .grid_card ul li {
+  padding: 12px 0;
+  border-bottom: 1px solid #d9d9d9;
+  font-family: "Hyundai Sans Text";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 140%;
+  color: #555555;
+}
+.eFestival_grid .grid_card ul li:first-of-type {
+  padding-top: 0;
+}
+.eFestival_grid .grid_card ul li:last-of-type {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+.eFestival_grid .grid_card ul li p:last-of-type {
+  margin-top: 8px;
+  font-family: "Hyundai Sans Head";
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 125%;
+  color: #000;
+}
+.eFestival_schedule_wrap {
+  padding: 200px 80px 240px 80px;
+}
+.eFestival_schedule {
+  margin: 60px auto 80px auto;
+  max-width: 1440px;
+}
+.eFestival_schedule > ul {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: polygon(0 0, 0 0, 0 0);
+}
+.eFestival_schedule_card {
+  padding: 24px 20px;
+  border-radius: 4px;
+  background-color: #DBE1FA;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 140%;
+}
+.eFestival_schedule_card .card_tit {
+  font-family: "Hyundai Sans Head";
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 140%;
+}
+.eFestival_schedule_card div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.eFestival_schedule_card div:not(:last-of-type) {
+  padding-bottom: 16px;
+}
+.eFestival_schedule_card div:not(:first-of-type) {
+  padding-top: 16px;
+}
+.eFestival_schedule_card .card_date {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 140%;
+}
+.eFestival_schedule_card .card_tit + div {
+  margin-top: 20px;
+}
+.eFestival_schedule_card div + div {
+  border-top: 1px solid #BBBBBB;
+}
+.eFestival_schedule ul li:nth-of-type(1) .eFestival_schedule_card {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%), url(../images/content/img_eFestival_schedule_card01_bg.png) lightgray 50% / cover no-repeat;
+  color: #FFF;
+}
+.eFestival_schedule ul li:nth-of-type(3) .eFestival_schedule_card {
+  background-color: #F8E2E2;
+}
+.eFestival_schedule ul li:nth-of-type(4) .eFestival_schedule_card {
+  background-color: #F7E5D3;
+}
+.eFestival_schedule ul li:nth-of-type(5) .eFestival_schedule_card {
+  background-color: #D8F5F4;
+}
+.eFestival_schedule ul li:nth-of-type(6) .eFestival_schedule_card {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.70) 100%), url(../images/content/img_eFestival_schedule_card06_bg.png) lightgray 50% / cover no-repeat;
+  color: #FFF;
+}
 /* 끝 */
 
 /* 모바일 */
@@ -3747,6 +4004,108 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   }
   .nTaxi [class*="content-item"]:last-child .conts-section-wrap {
     padding-bottom: 160px;
+  }
+
+  /* EP030101 */
+  .eFestival_top_wrap {
+    padding: 100px 24px 36px 24px;
+  }
+  .eFestival_top_wrap .img-wrap {
+    margin: 36px auto 28px auto;
+  }
+  .eFestival_top_wrap > p {
+    margin: 0 auto 120px auto;
+    max-width: 1196px;
+    font-size: 17px;
+    font-weight: 500;
+  }
+  .eFestival_card_wrap {
+    padding: 80px 24px;
+  }
+  .eFestival_card_wrap .grid_mo_drop {
+    row-gap: 44px;
+  }
+  .eFestival_card div {
+    margin-top: 28px;
+    padding: 0;
+  }
+  .eFestival_card .card_tit {
+    font-size: 20px;
+  }
+  .eFestival_card .card_subtit {
+    font-weight: 500;
+  }
+  .eFestival_bottom_wrap {
+    padding: 64px 24px 120px 24px;
+  }
+  .eFestival_map_wrap {
+    padding: 120px 0;
+  }
+  .models-wrap .eFestival_map_wrap .text-col {
+    width: calc(100% - 48px);
+    margin: 0 24px;
+  }
+  .eFestival_map {
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  .eFestival_map_wrap .eFestival_map_table {
+    position: static;
+    width: 100%;
+    height: auto;
+    margin: 36px 0 44px 0;
+    clip-path: unset;
+  }
+  .eFestival_grid {
+    column-gap: 12px;
+    padding: 0 24px;
+  }
+  .eFestival_grid > li {
+    row-gap: 20px;
+  }
+  .eFestival_grid .grid_step {
+    padding: 12px 25px;
+    border-radius: 24px;
+    font-size: 18px;
+  }
+  .eFestival_grid .grid_card {
+    width: 258px;
+    height: 429px;
+  }
+  .eFestival_grid .grid_top {
+    padding: 18px 20px;
+  }
+  .eFestival_grid .grid_top p:first-of-type {
+    margin-bottom: 2px;
+    font-size: 18px;
+  }
+  .eFestival_grid .grid_bottom {
+    padding: 16px 20px 28px 20px;
+  }
+  .eFestival_grid .grid_card ul li {
+    padding: 8px 0;
+  }
+  .eFestival_grid .grid_card ul li p:last-of-type {
+    margin-top: 4px;
+    font-size: 18px;
+    line-height: 140%;
+  }
+  .eFestival_schedule_wrap {
+    padding: 120px 24px 160px 24px;
+  }
+  .eFestival_schedule {
+    margin: 35px auto 44px auto;
+    max-width: 1440px;
+  }
+  .eFestival_schedule > ul {
+    position: static;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    clip-path: unset;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
   }
 }
 
