@@ -742,17 +742,17 @@ input[type="radio"]:focus + label {
   background-size: contain;
   background-repeat: no-repeat;
 }
-.icon-wechat {
+.icon-wechat-wh {
   background: url(../../inc/images/icon/icon-wechat-wh.svg);
   background-size: contain;
   background-repeat: no-repeat;
 }
-.icon-weibo {
+.icon-weibo-wh {
   background: url(../../inc/images/icon/icon-weibo-wh.svg);
   background-size: contain;
   background-repeat: no-repeat;
 }
-.icon-tiktok {
+.icon-tiktok-wh {
   background: url(../../inc/images/icon/icon-tiktok-wh.svg);
   background-size: contain;
   background-repeat: no-repeat;
