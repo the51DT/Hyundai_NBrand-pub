@@ -608,6 +608,9 @@
   color: #fff;
   padding: 240px 80px;
 }
+.models-wrap .tech-wrap .kona-tech .blue-title {
+  color: #000;
+}
 .models-wrap .tech-wrap .kona-tech-box {
   display: flex;
   gap: 24px;
