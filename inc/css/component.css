@@ -4540,10 +4540,11 @@ p.text-num-chk {
   .wrap-category
   .search-wrap
   .search-input-box
-  .clear-text .btn {
-    width: 20px;
-    height: 20px;
-  }
+  .clear-text
+  .btn {
+  width: 20px;
+  height: 20px;
+}
 .clear-text .icon-close-wh {
   width: 100%;
   height: 100%;
@@ -4678,7 +4679,8 @@ p.text-num-chk {
   margin-left: 0;
   background-color: #e6e6e6;
   color: #a1a1a1;
-  width: 86px;
+  max-width: 86px;
+  width: 100%;
   font-size: 14px;
   padding: 0 1rem;
 }
@@ -4704,6 +4706,7 @@ p.text-num-chk {
     align-items: center;
     align-self: stretch;
     width: 100%;
+    max-width: 100%;
   }
 }
 
