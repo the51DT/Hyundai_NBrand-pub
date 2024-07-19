@@ -2446,6 +2446,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   align-items: center;
 }
 .eFestival_grid .grid_step {
+  position: relative;
   padding: 12px 42px;
   border-radius: 29px;
   background-color: #000;
@@ -2454,6 +2455,16 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   font-weight: 700;
   line-height: 140%;
   color: #fff;
+}
+.eFestival_grid li:not(:last-of-type) .grid_step::after {
+  content: '';
+  position: absolute;
+  right: -177px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 154px;
+  height: 16px;
+  background-image: url(../images/content/img_eFestival_arrow_pc.png);
 }
 .eFestival_grid .grid_card {
   display: flex;
@@ -4066,6 +4077,12 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
     padding: 12px 25px;
     border-radius: 24px;
     font-size: 18px;
+  }
+  .eFestival_grid li:not(:last-of-type) .grid_step::after {
+    right: -142px;
+    width: 126px;
+    height: 12px;
+    background-image: url(../images/content/img_eFestival_arrow_mo.png);
   }
   .eFestival_grid .grid_card {
     width: 258px;
