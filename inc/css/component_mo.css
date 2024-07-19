@@ -297,17 +297,13 @@ min-width : 1024 css
   }
 
   .conts-box-wrap .bg-img-wrap .more_btn {
+    position: absolute;
     top: revert;
     width: calc(100% - 72px);
     left: 50%;
     transform: translateX(-50%);
     bottom: 36px;
     padding: 12px 16px;
-  }
-  .conts-box-wrap .bg-img-wrap .more_btn .btn {
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 16px;
   }
 
   .txt-list-wrap {
