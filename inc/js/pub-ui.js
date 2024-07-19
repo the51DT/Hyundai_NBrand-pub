@@ -558,6 +558,7 @@ var pubUi = {
   videoBulletChk: function (targetSwiper, targetIdx) {
     var self = this;
 
+    var maxVideoW = 84; //pagination width 값
     if (!targetSwiper.length > 0) {
       return;
     }
@@ -568,7 +569,6 @@ var pubUi = {
       var slideActive = slide.find(".swiper-slide-active");
       var playBtn = slide.find(".btn-play").hasClass("on");
       var videoId = slideActive.find(".video").attr("id");
-
       if (targetIdx == undefined) {
         targetIdx = 0;
       }
@@ -589,22 +589,27 @@ var pubUi = {
       video.addEventListener(
         "timeupdate",
         function (e) {
-          var curTime = Math.floor(video.currentTime); // 현재 동영상 길이
           var duration = Math.floor(video.duration); // 동영상 전체 길이
-          var per = Math.floor((curTime / duration) * 100); // 퍼센트 계산 값
-
-          if (per <= 100) {
+          var curTime = Math.floor(video.currentTime) + 1; // 현재 동영상 길이
+          var per = Math.floor((maxVideoW / duration) * curTime); // 퍼센트 계산 값
+          var perWrap = (1 / duration) * 100;
+          console.log(curTime);
+          // alert(curTime, duration);
+          if (per <= maxVideoW) {
             document
               .querySelector(".swiper-pagination-bullet-active .seek-bar")
               .style.setProperty("--time", `${per}px`);
+            document
+              .querySelector(".swiper-pagination-bullet-active .seek-bar")
+              .style.setProperty("--set", `${perWrap / 10 + 0.5}s`);
 
             // $("#paging").css("color", "#fff");
             // $("#paging").html("퍼센트: " + per);
           }
 
-          if (curTime == duration) {
+          if (curTime >= duration + 1) {
             slide[0].swiper.slideNext();
-            curTime = 0;
+            curTime = perWrap;
           }
         },
         false
@@ -855,7 +860,7 @@ var pubUi = {
   overScroll: function (cl) {
     const slider = document.querySelectorAll(cl);
     if (!slider) return;
-    slider.forEach((el)=>{
+    slider.forEach((el) => {
       let isDown = false;
       let startX;
       let scrollLeft;
@@ -881,7 +886,7 @@ var pubUi = {
         const walk = x - startX;
         el.scrollLeft = scrollLeft - walk;
       });
-    })
+    });
   },
 };
 let resizeTimer = null;

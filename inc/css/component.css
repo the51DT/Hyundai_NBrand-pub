@@ -1896,9 +1896,14 @@ input[type="radio"]:focus + label {
   opacity: 1;
 }
 
-.swiper-pagination-custom .swiper-pagination-bullet-active .seek-bar {
+.swiper-pagination-custom .swiper-pagination-bullet .seek-bar {
   --time: 0;
+  --set: 0;
   width: calc(var(--time));
+  transition: width var(--set);
+}
+
+.swiper-pagination-custom .swiper-pagination-bullet-active .seek-bar {
   background: #de3111;
   height: 4px;
   position: absolute;
