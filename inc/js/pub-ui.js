@@ -48,7 +48,7 @@ var pubUi = {
     $(".btn-play").on("click", function (e) {
       e.preventDefault();
       var targetSwiper = $(this).closest(".swiper");
-      var videoChk = targetSwiper.find(".swiper-slide video");
+      var videoChk = targetSwiper.find(".swiper-slide-active video");
 
       if (targetSwiper.hasClass("ty02Swiper")) {
         if ($(this).hasClass("on")) {
@@ -227,7 +227,7 @@ var pubUi = {
       "click",
       function () {
         var targetSwiper = $(this).closest(".swiper");
-        var videoChk = targetSwiper.find(".swiper-slide video");
+        var videoChk = targetSwiper.find(".swiper-slide-active video");
 
         if (videoChk.length > 0) {
           targetSwiper.find(".swiper-slide-active video")[0].pause();
@@ -279,7 +279,7 @@ var pubUi = {
       slidesPerView: 1,
       watchOverflow: true, //pagination 1개 일 경우, 숨김
       initialSlide: 0,
-      touchRatio: touchFlag, // 드래그 X : 0 , 드래그 O : 1
+      touchRatio: 1, // 드래그 X : 0 , 드래그 O : 1
       loop: true,
       autoplay: autoplayVal,
       pagination: {
@@ -305,31 +305,57 @@ var pubUi = {
           );
         },
         slideChangeTransitionStart: function () {
-          if (self.typeChk.length > 0) {
+          var currentIndex = swiper1.activeIndex;
+
+          if (
+            $(".ty01Swiper .swiper-slide")[currentIndex].querySelector("video")
+          ) {
+            // if (self.typeChk.length > 0) {
             // 동영상 케이스,
+            console.log("동영상 케이스");
             $(".ty01Swiper .swiper-slide-active video")[0].currentTime = 0;
             $(
               ".ty01Swiper .swiper-pagination-custom .swiper-pagination-bullet .seek-bar"
             ).css("--time", "0");
-
             pubUi.videoBulletChk(".ty01Swiper", this.realIndex);
           } else {
             // 동영상 x 케이스,
-            if (
-              !$(
-                ".swiper-pagination-custom .swiper-pagination-bullet"
-              ).hasClass(".swiper-pagination-bullet-active")
-            ) {
-              $(
-                ".swiper-pagination-custom .swiper-pagination-bullet:not(.swiper-pagination-bullet-active)"
-              ).css("background-color", "#fff");
+            console.log("이미지 케이스");
+            if (!$(".swiper-pagination-custom .swiper-pagination-bullet").hasClass(".swiper-pagination-bullet-active")) {
+                              
+              $(".swiper-pagination-custom .swiper-pagination-bullet:not(.swiper-pagination-bullet-active)").css({background: "#fff",opcaity: "0.5",
+              });
             }
-
+            
+            $(".ty01Swiper .swiper-pagination-custom .swiper-pagination-bullet .seek-bar").css("--time", "84px");
+            document.querySelector(".swiper-pagination-bullet-active .seek-bar").style.setProperty("--set", "0.3s");
             $(".swiper-pagination-custom .swiper-pagination-bullet-active").css(
-              "background-color",
+              "background",
               "#de3111"
             );
+
+            setTimeout(function () {
+              swiper1.slideNext();
+            }, 5000);
           }
+
+          //   if (self.activeVideoChk.length > 0) {
+          //     // 동영상 케이스,
+          //     console.log("동영상 케이스");
+          //     $(".ty01Swiper .swiper-slide-active video")[0].currentTime = 0;
+          //     $(".ty01Swiper .swiper-pagination-custom .swiper-pagination-bullet .seek-bar").css("--time", "0");
+
+          //     pubUi.videoBulletChk(".ty01Swiper", this.realIndex);
+          //   } else {
+          //     // 동영상 x 케이스,
+          //     console.log("이미지 케이스");
+
+          //     setTimeout(function () {
+          //       $(".ty01Swiper .swiper-pagination-custom .swiper-pagination-bullet .seek-bar").css("--time", "84px");
+          //     }, 5000);
+
+          //     pubUi.videoBulletChk(".ty01Swiper", this.realIndex);
+          //   }
         },
       },
     });
@@ -927,7 +953,7 @@ $(document).ready(function () {
 
   $(".ty01Swiper .swiper-pagination-bullet").on("click", function () {
     var targetSwiper = $(this).closest(".swiper");
-    var videoChk = targetSwiper.find(".swiper-slide video");
+    var videoChk = targetSwiper.find(".swiper-slide-active video");
 
     if (videoChk.length > 0) {
       targetSwiper.find(".swiper-slide-active video")[0].pause();
