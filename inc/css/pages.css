@@ -614,9 +614,16 @@
 @media screen and (min-width: 1800px) {
   .n-race-box .event-box .conts-head {
     padding-right: 0;
-  }
+  }  
 }
 
+@media screen and  (max-width: 1800px) {
+  .evtGuide .track-guide-box .wrap-list {
+    padding-left: 80px;
+    padding-right: 80px;
+    justify-content: space-between;
+  }
+}
 @media screen and (max-width: 1800px) {
   .n-race-box .conts-head,
   .next-race-box .conts-head {
@@ -637,7 +644,6 @@
     padding-right: 80px;
   }
 }
-
 /* mobile */
 @media screen and (max-width: 1023px) {
   /* component : start */
@@ -690,6 +696,10 @@
 
   .evtGuide .wrap-list.list04 .inner .box .box-desc {
     width: 100%;
+  }
+  .evtGuide .track-guide-box .wrap-list { 
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .about .content-top {
@@ -1007,6 +1017,7 @@
   .event-box .evt-map-img img {
     width: 1000px;
     min-height: 600px;
+    /* object-position: 450% 0%; */ /* 해당 속성 추가시 이미지맵 위치 중앙 정렬은 되나, 우측 여백이 생겨 적용 하지 X -> 수정 필요함  */
   }
   .event-box .btn-area {
     top: 24px;
