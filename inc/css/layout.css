@@ -664,16 +664,18 @@ body.fix {
   flex: 1;
 }
 
-.gnb__tab-cont {
-}
 .gnb__tab02-wrap {
   display: flex;
   /* flex: 0 0 50%; */
   gap: 30px;
 }
 .gnb__tab02-wrap .gnb__tab02,
-.gnb__tab-cont03 .gnb__tab02-wrap .gnb__panel02 {
+.gnb__tab02-wrap .gnb__panel02 {
   width: calc(100vw / 4 - 48px);
+}
+
+.gnb__tab02-wrap.thumbnail-ui .gnb__panel02 {
+  width: calc(75vw - 24px);
 }
 .gnb__tab02-wrap [class*="gnb__tab02-btn"] {
   width: 100%;
@@ -745,6 +747,7 @@ body.fix {
 }
 .gnb__panel02 .type-thumbnail {
   width: calc(75vw - 24px);
+  display: none;
 }
 .gnb__panel02 .type-thumbnail ul {
   display: flex;
