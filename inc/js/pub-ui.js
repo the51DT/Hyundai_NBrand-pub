@@ -1747,7 +1747,7 @@ document.addEventListener("DOMContentLoaded", () => {
   //   }
   // }
 
-  // 모델 팝업 내 다중 영상 제어 함수 시작
+  //  MD010101t02P01,MD010101t02P02,MD010101t02P03 내 다중 영상 제어 함수 시작
   function ControlMultiVideo() {
     const videoBtn_multi = document.querySelectorAll(
       ".popup .wrap-video-func .box-video button"
@@ -1807,7 +1807,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ControlMultiVideo();
   }
 });
-// MD010101t02P01 내 다중 영상 제어 함수 끝
+// MD010101t02P01,MD010101t02P02,MD010101t02P03 내 다중 영상 제어 함수 끝
 // 모델 팝업 내 동영상 제어 함수 끝
 
 // 푸터 스크롤 탑
