@@ -353,7 +353,7 @@
   min-width: 237px;
   height: 320px;
   justify-content: space-between;
-  padding: 24px 20px 32px 20px;
+  padding: 24px 15px 32px 15px;
 }
 .card-wrap-list .card-list li .card_top {
   padding: 0;
@@ -872,7 +872,7 @@
   }
 
   .card-wrap-list .card-list li a {
-    min-width: 128px;
+    min-width: 160px;
     height: 265px;
     padding: 20px 12px 12px 12px;
   }

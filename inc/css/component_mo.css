@@ -1767,14 +1767,10 @@ min-width : 1024 css
   .tag-list-wrap [class^="tag-list"][class*="multi"] li:not(:last-child) {
     margin-right: 8px;
   }
-  /* 디자인 버전 적용(240619) - 페이징(공용) */
-  .page_wrap {
-    margin: 0 24px;
-  }
   .page_wrap .page_prev_btn,
   .page_wrap .page_next_btn {
     max-width: 48px;
-    flex: 1 1 64.35px;
+    flex: 1 0 64.35px;
     margin: 0;
   }
 
@@ -1782,6 +1778,7 @@ min-width : 1024 css
     display: block;
     overflow: hidden;
     width: 100%;
+    height: 48px;
   }
   .page_wrap .page_list button {
     float: left;

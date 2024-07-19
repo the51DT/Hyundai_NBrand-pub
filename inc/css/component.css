@@ -1197,6 +1197,7 @@ input[type="radio"]:focus + label {
 }
 .card_type01.card_swiper .card_profile img {
   width: 13rem;
+  height: auto;
 }
 .card_type01.card_swiper:hover .card_profile img,
 .card_type01.card_swiper:active .card_profile img,
@@ -5221,6 +5222,7 @@ input:checked + .slider:before {
   display: flex;
   align-items: center;
   gap: 0;
+  margin: 0 12px;
 }
 .page_wrap .page_list button {
   font-size: 20px;

@@ -852,6 +852,37 @@ var pubUi = {
       targetSwiper.removeClass("active");
     }
   },
+  overScroll: function (cl) {
+    const slider = document.querySelectorAll(cl);
+    if (!slider) return;
+    slider.forEach((el)=>{
+      let isDown = false;
+      let startX;
+      let scrollLeft;
+
+      el.addEventListener("mousedown", (e) => {
+        isDown = true;
+        startX = e.pageX - el.offsetLeft;
+        scrollLeft = el.scrollLeft;
+      });
+
+      el.addEventListener("mouseleave", () => {
+        isDown = false;
+      });
+
+      el.addEventListener("mouseup", () => {
+        isDown = false;
+      });
+
+      el.addEventListener("mousemove", (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - el.offsetLeft;
+        const walk = x - startX;
+        el.scrollLeft = scrollLeft - walk;
+      });
+    })
+  },
 };
 let resizeTimer = null;
 $(window).resize(function () {
@@ -877,8 +908,17 @@ $(document).ready(function () {
   perforSlideMoveFun();
   footerScrollTop();
   modelsVideoPlay();
-
   configuratorEvent();
+  pubUi.overScroll(".overScroll");
+  pubUi.overScroll(".grid_mo_scroll");
+  pubUi.overScroll(".configurator_list");
+  pubUi.overScroll(".__bottom");
+  pubUi.overScroll(".evt-map-img");
+  pubUi.overScroll(".card-list");
+  pubUi.overScroll(".txt-list-wrap");
+  pubUi.overScroll(".header__event-wrap");
+  pubUi.overScroll(".table-scrollx");
+  pubUi.overScroll(".roundresult-wrap");
 
   $(".ty01Swiper .swiper-pagination-bullet").on("click", function () {
     var targetSwiper = $(this).closest(".swiper");
