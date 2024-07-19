@@ -385,6 +385,8 @@
 }
 .brand.models-wrap .info-bnr-wrap {
   width: 100%;
+}
+.brand.models-wrap .info-bnr-wrap.info-video-wrap {
   padding-top: 40px;
 }
 .brand.models-wrap .info-bnr-wrap .img-wrap {
@@ -405,8 +407,8 @@ article.info-bnr-wrap + article.info-video-wrap {
 .info-video-wrap .img-wrap::before {
   content: "";
   display: block;
-  width: 240px;
-  height: 240px;
+  width: 138px;
+  height: 138px;
   background: url(../images/icon/icon-play-video.svg) no-repeat center center /
     100%;
   position: absolute;
@@ -879,6 +881,7 @@ article.info-bnr-wrap + article.info-video-wrap {
   margin-top: 0.75rem;
   padding: 0.75rem 0;
 }
+
 /* BR040101 */
 .brand .performance_wrap .max1440 {
   gap: 5rem;
@@ -1839,8 +1842,8 @@ article.info-bnr-wrap + article.info-video-wrap {
     line-height: 23.8px;
   }
 
-  .brand.models-wrap .info-bnr-wrap {
-    padding-top: 36px;
+  .brand.models-wrap .info-bnr-wrap.info-video-wrap {
+    padding-top: 28px;
   }
   .conts-section-wrap > article {
     gap: 28px !important;
@@ -1858,8 +1861,8 @@ article.info-bnr-wrap + article.info-video-wrap {
   }
 
   .info-video-wrap .img-wrap::before {
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
   }
 
   .calendar-list-wrap .text-normal {
@@ -2102,6 +2105,9 @@ article.info-bnr-wrap + article.info-video-wrap {
   }
   .motor_paddig_wrap {
     padding: 120px 0;
+  }
+  .motor_paddig_wrap .ty02Swiper .swiper-slide .img-area {
+    height: 19.5rem;
   }
   .motor_team_list {
     flex-direction: column;

@@ -17,7 +17,7 @@
       <div class="content-area">
         <div class="content-item02">
           <!-- key visual01 : video (예시로 영역잡은 영상 / 영상은 교체 필요 및 width=100% 삭제) -->
-          <div class="video-wrap">
+          <!-- <div class="video-wrap">
             <video class="video" data-js="video" id="video1" playsinline autoplay muted>
               <source src="../../inc/videos/tcr.mp4" type="video/mp4" />
             </video>
@@ -25,8 +25,16 @@
                 <span class="visually-hidden">pause</span>
               <span class="btn-icon24 icon-pause-wh" aria-hidden="true"></span>
             </button>
-          </div>
+          </div> -->
           <div class="video_thumnail_wrap">
+            <!-- 07.19 수정 : 키비주얼 이미지 추가 -->
+            <div class="video_thumnail_img">
+              <img class="img_pc" src="../../inc/images/img/conts_tcr_img.png" loading="lazy" alt="커버 pc 이미지"
+                aria-hidden="true">
+              <img class="img_mo" src="../../inc/images/img/conts_tcr_img.png" loading="lazy" alt="커버 mo 이미지"
+                aria-hidden="true">
+            </div>
+            <!-- //07.19 수정 : 키비주얼 이미지 추가 -->
             <div class="video_tit_wrap">
               <p class="video_tit">TCR</p>
               <p class="video_subtit">Taking the Pole Position</p>
@@ -89,7 +97,7 @@
             <div class="max1440">
               <div>
                 <p class="text-normal text-year">2023 / 2022 / 2019 / 2018</p>
-                <p class="text-strong motor_tit">FIA World Touring Car Cup Championship</p>
+                <p class="text-strong motor_tit">FIA World Touring Car Cup<br class="pc-only">Championship</p>
               </div>
               <div class="img-wrap">
                 <img src="../../inc/images/content/img_tcr_conts02_pc.png" loading="lazy" alt="FIA World Touring Car Cup Championship PC 이미지"
@@ -462,7 +470,7 @@
         </div>
         <div class="content-item11 bg-gray">
           <div class="related-conts-wrap">
-            <h2 class="tit tit-type02">More from Press</h2>
+            <h2 class="tit tit-type02">More from Motorsports</h2> <!-- 07.19 수정 : 문구 변경 -->
             <ul class="grid_3 grid_mo_scroll">
               <li>
                 <div class="card_type04">
