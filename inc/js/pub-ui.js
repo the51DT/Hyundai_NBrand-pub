@@ -754,9 +754,8 @@ var pubUi = {
     if (masonry_item.length < 1) {
       return;
     }
-    const img = $(".card_thumbnail img");
+    // const img = $(".card_thumbnail img");
     const row_gap = parseInt(24);
-
     masonry_item.each(function () {
       let _this = $(this);
 
@@ -854,7 +853,11 @@ var pubUi = {
     }
   },
 };
-
+let resizeTimer = null;
+$(window).resize(function () {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(hasTagFunResize(), perforSlideMoveFun(), 10);
+});
 $(document).ready(function () {
   pubUi.init();
   $(window).on("resize", pubUi.masonryLayout);
@@ -870,7 +873,6 @@ $(document).ready(function () {
   $(".option-click").click(function () {
     handleOptionClick(event);
   });
-  $(window).resize(() => hasTagFun(), perforSlideMoveFun());
   hasTagFun();
   perforSlideMoveFun();
   footerScrollTop();
@@ -1419,8 +1421,21 @@ const dropdownFilter = document.querySelectorAll(
   ".dropdown.centered .wrap-dropdown-selected"
 );
 dropdownFilter.forEach((filter) => {
+  let filterScrollMove = 0;
+  let gnbButtonH = 0;
   filter.addEventListener("click", function () {
-    const filterScrollMove = this.offsetTop;
+    // alert(document.querySelectorAll(".btn-navi-wrap.mo-only").length);
+    const heightBtn = document.querySelectorAll(".btn-navi-wrap.mo-only");
+    if (heightBtn.length) {
+      heightBtn.forEach((scrollH) => {
+        gnbButtonH = scrollH.offsetHeight;
+        document
+          .querySelector(".dropdown.centered .dropdown-menu")
+          .style.setProperty("----sticky", `${gnbButtonH}px`);
+      });
+      filterScrollMove = this.offsetTop - gnbButtonH - 48;
+    }
+
     document.querySelector("body").scrollTo({
       top: filterScrollMove,
       behavior: "smooth",
@@ -1495,26 +1510,30 @@ dropdownFilter.forEach((filter) => {
 });
 
 // 드롭다운 아코디언
-const dropdownBtns = document.querySelectorAll(".dropdown .dropdown-trigger");
-dropdownBtns.forEach((button) => {
-  button.addEventListener("click", function () {
-    const isExpanded = button.getAttribute("aria-expanded") === "true";
-    const dropdownMenu = button
-      .closest(".dropdown")
-      .querySelector(".dropdown-menu"); // 드롭다운 메뉴
+function dropdownAccordion() {
+  const dropdownBtns = document.querySelectorAll(".dropdown .dropdown-trigger");
+  if (!dropdownBtns) {
+    return;
+  }
+  dropdownBtns.forEach((button) => {
+    button.addEventListener("click", function () {
+      const isExpanded = button.getAttribute("aria-expanded") === "true";
+      const dropdownMenu = button
+        .closest(".dropdown")
+        .querySelector(".dropdown-menu"); // 드롭다운 메뉴
 
-    // (필터 제외한 모든) 아코디언 오른쪽 화살표
-    const btnRightArr = button
-      .closest(".dropdown")
-      .querySelector(".dropdown-icon");
+      // (필터 제외한 모든) 아코디언 오른쪽 화살표
+      const btnRightArr = button
+        .closest(".dropdown")
+        .querySelector(".dropdown-icon");
 
-    // 아코디언 펼침
-    button.setAttribute("aria-expanded", String(!isExpanded));
-    dropdownMenu.classList.toggle("dropdown-on", !isExpanded);
-    btnRightArr.classList.toggle("rotate", !isExpanded);
+      // 아코디언 펼침
+      button.setAttribute("aria-expanded", String(!isExpanded));
+      dropdownMenu.classList.toggle("dropdown-on", !isExpanded);
+      btnRightArr.classList.toggle("rotate", !isExpanded);
+    });
   });
-});
-
+}
 // 드롭다운(아코디언), 필터 컴포넌트: 리스트를 클릭할 시 상단 버튼에 클릭한 리스트의 텍스트를 반영
 function selectOption(event, optionText) {
   event.preventDefault();
@@ -1819,22 +1838,27 @@ function footerScrollTop() {
 
 // [Start] : hashTag 말줄임
 function hasTagFun() {
-  $(".card_type04 .card_con").each(function () {
-    var $set = $(this).children("div.card-hashtag").children("button");
-    var $setUl = $(this).children("div.card-hashtag");
-
-    $set.each(function () {
-      var cardConRightEdge = $setUl.offset().left + $setUl.outerWidth();
-      var liRightEdge = $(this).offset().left + $(this).outerWidth(true);
-      if (liRightEdge >= cardConRightEdge) {
-        $(this).addClass("ellipsis");
-        // $("ul.card-hashtag li.ellipsis").first().css({ minWidth: 50 });
-      }
-    });
+  $(".card-hashtag button").each(function (e) {
+    var $set = $(this);
+    var $setUl = $(this).parent();
+    var cardConRightEdge = $setUl.outerWidth();
+    var liRightEdge =
+      $set.offset().left - $setUl.offset().left + $set.outerWidth(true);
+    if (liRightEdge >= cardConRightEdge) {
+      $(this).addClass("ellipsis");
+    } else {
+      $(this).removeClass("ellipsis");
+    }
 
     $set.siblings(".ellipsis").first().show();
     $set.siblings(".ellipsis").nextAll().hide(); // EP040501 - Pony Magazine 제목 참고 (안하면 button.ellipsis 뒤에 li들 다 살아있음 - 그래서 button.ellipsis 너비 줄어듦)
   });
+}
+
+function hasTagFunResize() {
+  $("div.card-hashtag button").show().removeClass("ellipsis");
+  // alert("d");
+  hasTagFun();
 }
 // [End] : hashTag 말줄임
 
@@ -2243,6 +2267,8 @@ function configuratorScroll() {
 // [End] : configuratorScroll
 
 // scroll 이벤트 추가
+// masonryLayout 높이 추가로 잡기
+let $firstScroll = true;
 function scrollEvent() {
   var scrollWrap = $("body"),
     sectionItem = [],
@@ -2254,6 +2280,10 @@ function scrollEvent() {
       (sectionItem[e] = $this.position().top - headerNavHeight);
 
     scrollWrap.scroll(function () {
+      if ($firstScroll) {
+        pubUi.masonryLayout();
+        $firstScroll = false;
+      }
       // alert('d')
       var thisScrArea = $(this),
         scrItem = thisScrArea.find(".content-area > [class*=content-item]"),
@@ -2352,6 +2382,7 @@ window.onload = function () {
   // }, 1000);
   configuratorScroll();
   setVh();
+  dropdownAccordion();
   $(window).resize(() => {
     setVh();
   });

@@ -1642,7 +1642,7 @@ input[type="radio"]:focus + label {
 .card_type04 .card-hashtag {
   display: flex;
   flex-wrap: nowrap;
-  width: calc(100% + 13px);
+  width: 100%;
   margin-top: 20px;
   column-gap: 12px;
   overflow: hidden;
@@ -3977,7 +3977,9 @@ input[type="radio"]:focus + label {
 }
 @media screen and (max-width: 850px) {
   .dropdown.centered .dropdown-menu {
-    height: calc(100vh - 62px);
+    --sticky: 48px;
+    height: calc(100vh - var(--sticky) - 116px);
+    /* height: --sticky; */
   }
   .dropdown.centered .dropdown-menu ul.wrap-filter {
     padding: 0 24px 40px 24px;
@@ -4616,6 +4618,7 @@ p.text-num-chk {
   justify-content: space-between;
   align-items: stretch;
   border: 1px solid #000;
+  border-radius: 5px;
   margin-top: 0;
 }
 .wrap-form.textarea .inner-textarea-comment textarea {
