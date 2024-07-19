@@ -107,12 +107,12 @@ i {
 .icon-angle3-down:before {
   content: "\e91c";
 }
-.icon-angle3-left:before {
+/* .icon-angle3-left:before {
   content: "\e91d";
 }
 .icon-angle3-right:before {
   content: "\e91e";
-}
+} */
 .icon-angle3-up:before {
   content: "\e91f";
 }
