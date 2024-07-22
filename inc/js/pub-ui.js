@@ -313,30 +313,42 @@ var pubUi = {
             // if (self.typeChk.length > 0) {
             // 동영상 케이스,
             console.log("동영상 케이스");
-            $(".ty01Swiper .swiper-slide-active video")[0].currentTime = 0;
+            $(".ty01Swiper .swiper-slide")[currentIndex].querySelector(
+              "video"
+            ).currentTime = 0;
             $(
               ".ty01Swiper .swiper-pagination-custom .swiper-pagination-bullet .seek-bar"
             ).css("--time", "0");
+            document
+              .querySelector(
+                ".ty01Swiper .swiper-pagination-bullet-active .seek-bar"
+              )
+              .style.setProperty("--set", "0");
             pubUi.videoBulletChk(".ty01Swiper", this.realIndex);
           } else {
             // 동영상 x 케이스,
             console.log("이미지 케이스");
-            if (!$(".swiper-pagination-custom .swiper-pagination-bullet").hasClass(".swiper-pagination-bullet-active")) {
-                              
-              $(".swiper-pagination-custom .swiper-pagination-bullet:not(.swiper-pagination-bullet-active)").css({background: "#fff",opcaity: "0.5",
-              });
-            }
-            
-            $(".ty01Swiper .swiper-pagination-custom .swiper-pagination-bullet .seek-bar").css("--time", "84px");
-            document.querySelector(".swiper-pagination-bullet-active .seek-bar").style.setProperty("--set", "0.3s");
-            $(".swiper-pagination-custom .swiper-pagination-bullet-active").css(
-              "background",
-              "#de3111"
-            );
+            // if (!$(".swiper-pagination-custom .swiper-pagination-bullet").hasClass(".swiper-pagination-bullet-active")) {
+
+            //   $(".swiper-pagination-custom .swiper-pagination-bullet:not(.swiper-pagination-bullet-active)").css({background: "#fff",opcaity: "0.5",
+            //   });
+            // }
+
+            $(
+              ".ty01Swiper .swiper-pagination-custom .swiper-pagination-bullet .seek-bar"
+            ).css("--time", "84px");
+            document
+              .querySelector(".swiper-pagination-bullet-active .seek-bar")
+              .style.setProperty("--set", "0.3s");
+
+            // $(".swiper-pagination-custom .swiper-pagination-bullet-active").css(
+            //   "background",
+            //   "#de3111"
+            // );
 
             setTimeout(function () {
               swiper1.slideNext();
-            }, 5000);
+            }, 3000);
           }
 
           //   if (self.activeVideoChk.length > 0) {
@@ -606,40 +618,40 @@ var pubUi = {
       if (slideActive) {
         if (playBtn) {
           video.play();
+
+          video.addEventListener(
+            "timeupdate",
+            function (e) {
+              var duration = Math.floor(video.duration); // 동영상 전체 길이
+              var curTime = Math.floor(video.currentTime) + 1; // 현재 동영상 길이
+              var per = Math.floor((maxVideoW / duration) * curTime); // 퍼센트 계산 값
+              var perWrap = (1 / duration) * 100;
+              console.log(curTime);
+              // alert(curTime, duration);
+              if (per <= maxVideoW) {
+                document
+                  .querySelector(".swiper-pagination-bullet-active .seek-bar")
+                  .style.setProperty("--time", `${per}px`);
+                document
+                  .querySelector(".swiper-pagination-bullet-active .seek-bar")
+                  .style.setProperty("--set", `${perWrap / 10 + 0.5}s`);
+
+                // $("#paging").css("color", "#fff");
+                // $("#paging").html("퍼센트: " + per);
+              }
+
+              if (curTime >= duration + 1) {
+                slide[0].swiper.slideNext();
+                curTime = perWrap;
+              }
+            },
+            false
+          );
         } else {
-          // console.log("비디오 일시정지 상태 입니다.");
-          // $(".swiper-pagination-bullet-active .seek-bar").css("--time", "8px");
+          console.log("비디오 일시정지 상태 입니다.");
+          $(".swiper-pagination-bullet-active .seek-bar").css("--time", "8px");
         }
       }
-
-      video.addEventListener(
-        "timeupdate",
-        function (e) {
-          var duration = Math.floor(video.duration); // 동영상 전체 길이
-          var curTime = Math.floor(video.currentTime) + 1; // 현재 동영상 길이
-          var per = Math.floor((maxVideoW / duration) * curTime); // 퍼센트 계산 값
-          var perWrap = (1 / duration) * 100;
-          console.log(curTime);
-          // alert(curTime, duration);
-          if (per <= maxVideoW) {
-            document
-              .querySelector(".swiper-pagination-bullet-active .seek-bar")
-              .style.setProperty("--time", `${per}px`);
-            document
-              .querySelector(".swiper-pagination-bullet-active .seek-bar")
-              .style.setProperty("--set", `${perWrap / 10 + 0.5}s`);
-
-            // $("#paging").css("color", "#fff");
-            // $("#paging").html("퍼센트: " + per);
-          }
-
-          if (curTime >= duration + 1) {
-            slide[0].swiper.slideNext();
-            curTime = perWrap;
-          }
-        },
-        false
-      );
     } else {
       // console.log("비디오 타입 X");
       $(".seek-bar").remove();
@@ -952,13 +964,15 @@ $(document).ready(function () {
   pubUi.overScroll(".roundresult-wrap");
   pubUi.overScroll(".related-wrap .models-nofull-box");
 
-  $(".ty01Swiper .swiper-pagination-bullet").on("click", function () {
-    var targetSwiper = $(this).closest(".swiper");
-    var videoChk = targetSwiper.find(".swiper-slide-active video");
-
-    if (videoChk.length > 0) {
-      targetSwiper.find(".swiper-slide-active video")[0].pause();
-    }
+  $(".ty01Swiper .swiper-pagination-bullet").on("click", function (e) {
+    e.preventDefault();
+    $(".ty01Swiper .swiper-slide-active video").currentTime = 0;
+    $(
+      ".ty01Swiper .swiper-pagination-custom .swiper-pagination-bullet .seek-bar"
+    ).css("--time", "0");
+    document
+      .querySelector(".ty01Swiper .swiper-pagination-bullet-active .seek-bar")
+      .style.setProperty("--set", "0");
   });
   toggleFullscreen();
 
@@ -1003,6 +1017,15 @@ $(document).ready(function () {
     for (var i = 0; i < contsImages.length; i++) {
       contsImages[i].removeAttribute("loading");
     }
+  }
+
+  // 07.22 수정
+  if ($(".content-item04 .grid_3 li").length == 1) {
+    $(".content-item04 .grid_3").css("grid-template-columns", "revert");
+  }
+
+  if ($(".content-item07 .grid_3 li").length == 1) {
+    $(".content-item07 .grid_3").css("grid-template-columns", "revert");
   }
 });
 
@@ -1451,6 +1474,24 @@ function evtImgMapChk(options, area) {
             "../../inc/images/eventLayout/evtLayout_min_shortImg01.png"
           );
           evtMapPopBtn.attr("aria-controls", "pop-viewingZone");
+        } else if (option1 == "Motorsport Experience") {
+          evtMapImage.attr(
+            "src",
+            "../../inc/images/eventLayout/evtLayout_max_inje_ntt.png"
+          );
+          evtMapPopBtn.attr("aria-controls", "pop-nTTMoterExper");
+        } else if (option1 == "N Lounge") {
+          evtMapImage.attr(
+            "src",
+            "../../inc/images/eventLayout/evtLayout_max_nlounge_ntt.png"
+          );
+          evtMapPopBtn.attr("aria-controls", "pop-nTTNLounge");
+        } else if (option1 == "Rest Zone") {
+          evtMapImage.attr(
+            "src",
+            "../../inc/images/eventLayout/evtLayout_max_rest_ntt.png"
+          );
+          evtMapPopBtn.attr("aria-controls", "pop-nTTRestZone");
         } else {
           alert(
             "조건에 맞지 않습니다. 지역에 맞는 이벤트 옵션을 선택해주세요."
