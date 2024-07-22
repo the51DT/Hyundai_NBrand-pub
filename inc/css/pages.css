@@ -588,6 +588,18 @@
   margin-top: 4px;
 }
 
+.no_data_evtInfo {
+  padding: 275px 0;
+  text-align: center;
+  border-top:1px solid #aaa;
+  border-bottom:1px solid #aaa;
+}
+.no_data_evtInfo p {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 140%;
+}
+
 @media screen and (max-width: 2168px) {
   .next-race-box .conts-body .swiper-container {
     margin: 0;
@@ -1035,5 +1047,13 @@
 
   .about .txt-list-wrap li {
     width: auto;
+  }
+
+  .no_data_evtInfo {
+    padding: 185px 0;
+    margin:0 24px;
+  }
+  .no_data_evtInfo p {
+    font-size: 18px;
   }
 }
