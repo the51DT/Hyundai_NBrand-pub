@@ -1641,6 +1641,9 @@ input[type="radio"]:focus + label {
   white-space: nowrap;
   text-align: left;
 }
+.card_type04 .card-hashtag button.txt-type04:hover {
+  text-decoration: underline;
+}
 .card_type04 .card_date {
   font-size: 12px;
   font-weight: 400;
@@ -3429,7 +3432,7 @@ input[type="radio"]:focus + label {
   li
   .tag-item {
   font-size: 14px;
-  padding: 8px 12px;
+  padding: 6px 12px;
   border-radius: 30px;
   /* white-space: pre-line; */
 }
@@ -3440,7 +3443,7 @@ input[type="radio"]:focus + label {
   .small-category
   .tag-list-wrap
   [class^="tag-list"]
-  li.on
+  li
   .tag-item:hover {
   background: #de3111;
   color: #fff;
@@ -5147,8 +5150,9 @@ input:checked + .slider:before {
   cursor: pointer;
 }
 
-.tag-list-wrap [class^="tag-list"] li.on .tag-item:hover {
+.tag-list-wrap [class^="tag-list"] li .tag-item:hover {
   background-color: #de3111;
+  color: #fff;
 }
 
 .tag-list-wrap [class^="tag-list"] li.on .tag-item {

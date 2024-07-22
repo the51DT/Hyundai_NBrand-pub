@@ -86,10 +86,14 @@
 .main_summery_card:hover div,
 .main_summery_card:focus div,
 .main_summery_card:active div {
-  padding: 0.63rem 0.5rem;
-  background-color: #aacae6;
+  color: #de3111;
 }
 
+.main_summery_card:hover div::after,
+.main_summery_card:focus div::after,
+.main_summery_card:active div::after {
+  background-image: url(../../inc/images/icon/icon-arrow01_right_red.svg);
+}
 .swiper-title {
   position: absolute;
   left: 3.75rem;
