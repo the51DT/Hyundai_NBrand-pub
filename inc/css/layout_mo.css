@@ -366,6 +366,10 @@
   .navigation-item02.nav-mo .rending-wrap li:not(:first-child) {
     padding-top: 20px;
   }
+  .navigation_bar .navigation-item03 {
+    flex-grow: 0;
+    flex-basis: auto;
+  }
 
   /* 07.16 추가 */
   .btn-navi-wrap {

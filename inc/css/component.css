@@ -1051,20 +1051,7 @@ input[type="radio"]:focus + label {
 }
 
 .conts-box-wrap .bg-img-wrap .more_btn {
-  position: absolute;
-  top: 348px;
-  left: 80px;
-  background: #fff;
-  border-radius: 4px;
-}
-.conts-box-wrap .bg-img-wrap .more_btn .btn {
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 16px;
-  background: none;
-}
-.conts-box-wrap .bg-img-wrap .more_btn:hover {
-  background: #de3111;
+  margin-top: 40px;
 }
 .txt-list-wrap {
   display: flex;
@@ -1876,7 +1863,8 @@ input[type="radio"]:focus + label {
 }
 
 /* swiper */
-.swiper-button-prev.swiper-button-disabled {
+.swiper-button-prev.swiper-button-disabled,
+.swiper-button-next.swiper-button-disabled {
   display: none;
 }
 .swiper-pagination-bullet {
@@ -1908,9 +1896,14 @@ input[type="radio"]:focus + label {
   opacity: 1;
 }
 
-.swiper-pagination-custom .swiper-pagination-bullet-active .seek-bar {
+.swiper-pagination-custom .swiper-pagination-bullet .seek-bar {
   --time: 0;
+  --set: 0;
   width: calc(var(--time));
+  transition: width var(--set);
+}
+
+.swiper-pagination-custom .swiper-pagination-bullet-active .seek-bar {
   background: #de3111;
   height: 4px;
   position: absolute;
@@ -2401,7 +2394,7 @@ input[type="radio"]:focus + label {
 }
 
 .swiper-card-type .swiper-button-prev {
-  left: 60px;
+  left: 0;
 }
 
 .swiper-card-type .swiper-button-next {

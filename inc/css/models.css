@@ -269,12 +269,25 @@
   position: relative;
   height: 1440px;
 }
+.models-wrap .perfor-wrap .models-full.ioniq5n,
+.models-wrap .perfor-wrap .models-full.elantra_n,
+.models-wrap .perfor-wrap .models-full.icon20,
+.models-wrap .perfor-wrap .models-full.ioniq5N_ta,
+.models-wrap .perfor-wrap .models-full.rm20e,
+.models-wrap .perfor-wrap .models-full.vision_gt,
+.models-wrap .perfor-wrap .models-full.rn30,
+.models-wrap .perfor-wrap .models-full.kona_n {
+  padding-bottom: 10.4vw;
+}
+.models-wrap .perfor-wrap .models-full .max1440 {
+  height: 100%;
+}
 .models-wrap .models-full .text-strong,
 .models-wrap .models-full .text-normal {
   color: #fff;
 }
 .models-wrap .spec-eachbox {
-  min-width: 240px;
+  flex-grow: 1;
   position: relative;
 }
 .models-wrap .spec-eachbox p {
@@ -309,8 +322,10 @@
 .models-wrap .perfor-spec {
   display: flex;
   gap: 57px;
-  position: absolute;
-  bottom: 200px;
+  justify-content: center;
+  width: 100%;
+  max-width: 1131px;
+  margin-top: auto;
 }
 .models-wrap .spec-eachbox + .spec-eachbox::before {
   position: absolute;
@@ -431,6 +446,7 @@
 }
 .models-cardbox-bigimg {
   margin-top: 80px;
+  max-width: 1440px;
 }
 .models-wrap .models-cardbox > div {
   display: flex;
