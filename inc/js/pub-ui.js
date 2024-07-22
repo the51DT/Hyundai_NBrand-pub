@@ -950,6 +950,7 @@ $(document).ready(function () {
   pubUi.overScroll(".header__event-wrap");
   pubUi.overScroll(".table-scrollx");
   pubUi.overScroll(".roundresult-wrap");
+  pubUi.overScroll(".related-wrap .models-nofull-box");
 
   $(".ty01Swiper .swiper-pagination-bullet").on("click", function () {
     var targetSwiper = $(this).closest(".swiper");
