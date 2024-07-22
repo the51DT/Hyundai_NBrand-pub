@@ -4612,7 +4612,7 @@ p.text-num-chk {
   justify-content: space-between;
   align-items: stretch;
   border: 1px solid #000;
-  border-radius: 5px;
+  border-radius: 0;
   margin-top: 0;
 }
 .wrap-form.textarea .inner-textarea-comment textarea {
