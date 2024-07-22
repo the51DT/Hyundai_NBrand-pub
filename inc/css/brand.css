@@ -2396,7 +2396,16 @@ article.info-bnr-wrap + article.info-video-wrap {
     padding-top: 0;
     padding-bottom: 0;
     display: grid;
-    gap: 32px; /* BR030102P01의 첫번째 wrap-brand-desc 간격 유지 */
+    gap: 32px; /* BR030102P01만 첫번째 wrap-brand-desc 간격 유지 */
+  }
+
+  .popup.forBrand
+    .popup-wrapper
+    .popup-body
+    .brand-pd
+    .popup-body-innerbox:nth-child(3n-1)
+    .wrap-brand-desc:first-child {
+    gap: 0; /* 두번째 열의 첫번째 행 간격 조절 */
   }
 
   .popup.forBrand
