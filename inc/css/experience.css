@@ -228,7 +228,7 @@
   max-width: 1440px;
   margin: 0 auto;
 }
-.subfilter_wrap .post-nodata {
+.post-nodata {
   font-family: "Hyundai Sans Head";
   font-size: 20px;
   font-weight: 700;
@@ -2457,7 +2457,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   color: #fff;
 }
 .eFestival_grid li:not(:last-of-type) .grid_step::after {
-  content: '';
+  content: "";
   position: absolute;
   right: -177px;
   top: 50%;
@@ -2791,7 +2791,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
     max-width: 100%;
   }
 
-  .subfilter_wrap .post-nodata {
+  .post-nodata {
     font-size: 18px;
     line-height: 25.2px;
     max-width: 100%;
