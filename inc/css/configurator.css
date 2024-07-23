@@ -257,6 +257,14 @@
 .configurator_swiper .swiper-button-next:after {
   background-image: url(../images/icon/icon-arrow-box-white_right.svg);
 }
+.configurator_list_swiper .swiper-button-prev:hover::after,
+.configurator_swiper .swiper-button-prev:hover::after {
+  background-image: url(../images/icon/icon-arrow-box-red_left.svg);
+}
+.configurator_list_swiper .swiper-button-next:hover::after,
+.configurator_swiper .swiper-button-next:hover::after {
+  background-image: url(../images/icon/icon-arrow-box-red_right.svg);
+}
 .configurator_con_flex {
   display: flex;
   justify-content: center;

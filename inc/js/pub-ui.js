@@ -435,10 +435,6 @@ var pubUi = {
       slidesPerView: 1,
       spaceBetween: 80,
       centeredSlides: true,
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
       pagination: {
         el: ".swiper-pagination-custom",
         clickable: true,

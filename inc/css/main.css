@@ -56,9 +56,11 @@
   margin: 0 auto;
   width: 100%;
   max-width: 22.8rem;
-  height: auto;
+  height: 100%;
   background-image: url(../../inc/images/img/img_IONIQ_5-365x231.png);
   background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .main_summery_card img {
   width: 100%;
@@ -113,7 +115,7 @@
 
 .main_model_wrap {
   padding: 7.5rem 5rem 10rem 5rem;
-  background-color: #e6eff8;
+  background-color: #F0F0F0;
 }
 .main_model_wrap .grid_3 li:first-of-type {
   grid-column: 1 / 3;

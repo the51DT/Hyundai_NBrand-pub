@@ -482,12 +482,7 @@ input[type="radio"]:focus + label {
 }
 .btn[class*="txt-btn"]:hover [class*="icon-link"],
 .btn[class*="txt-btn"]:active [class*="icon-link"] {
-  /* 아이콘 없어서 임시 */
-  background-image: none;
-  background-color: #de3111;
-  mask-image: url(../../../inc/images/icon/icon-link.svg);
-  mask-position: center;
-  mask-size: contain;
+  background: url(../../inc/images/icon/icon-link_red.svg);
 }
 .icon-link-wh {
   background: url(../../inc/images/icon/icon-link_white.svg);
@@ -685,12 +680,8 @@ input[type="radio"]:focus + label {
 }
 .btn:hover [class*="icon-close-gray"],
 .btn:active [class*="icon-close-gray"] {
-  /* 빨간색 icon 없어서 css로 임시 */
-  background-image: none;
-  background-color: #de3111;
-  mask-image: url("../../inc/images/icon/icon-close_gray.svg");
-  mask-position: center;
-  mask-size: contain;
+  background: url(../../inc/images/icon/icon-close_red.svg);
+  background-size: contain;
 }
 .icon-change-gray {
   background: url(../../inc/images/icon/icon-change_gray.svg);
@@ -698,12 +689,8 @@ input[type="radio"]:focus + label {
 }
 .btn:hover [class*="icon-change-gray"],
 .btn:active [class*="icon-change-gray"] {
-  /* 빨간색 icon 없어서 css로 임시 */
-  background-image: none;
-  background-color: #de3111;
-  mask-image: url("../../inc/images/icon/icon-change_gray.svg");
-  mask-position: center;
-  mask-size: contain;
+  background: url(../../inc/images/icon/icon-change_red.svg);
+  background-size: contain;
 }
 .icon-heart {
   background: url(../../inc/images/icon/icon-heart.svg);
@@ -717,8 +704,18 @@ input[type="radio"]:focus + label {
   background: url(../../inc/images/icon/icon-share.svg);
   background-size: contain;
 }
+.btn:hover [class*="icon-share"],
+.btn:active [class*="icon-share"] {
+  background: url(../../inc/images/icon/icon-share_red.svg);
+  background-size: contain;
+}
 .icon-trans {
   background: url(../../inc/images/icon/icon-trans.svg);
+  background-size: contain;
+}
+.btn:hover [class*="icon-trans"],
+.btn:active [class*="icon-trans"] {
+  background: url(../../inc/images/icon/icon-trans_red.svg);
   background-size: contain;
 }
 .icon-download {
@@ -731,6 +728,11 @@ input[type="radio"]:focus + label {
 }
 .icon-refresh {
   background: url(../../inc/images/icon/icon-refresh.svg);
+  background-size: contain;
+}
+.btn[class*="txt-btn"]:hover [class*="icon-refresh"],
+.btn[class*="txt-btn"]:active [class*="icon-refresh"] {
+  background: url(../../inc/images/icon/icon-reset_active.svg);
   background-size: contain;
 }
 .icon-control-bar {
@@ -764,12 +766,13 @@ input[type="radio"]:focus + label {
 }
 .btn[class*="txt-btn"]:hover [class*="icon-download"],
 .btn[class*="txt-btn"]:active [class*="icon-download"] {
-  /* 빨간색 다운로드 icon 없어서 css로 임시 */
-  background-image: none;
-  background-color: #de3111;
-  mask-image: url("../../../inc/images/icon/icon-download.svg");
-  mask-position: center;
-  mask-size: contain;
+  background: url(../../inc/images/icon/icon-download-red.svg);
+  background-size: contain;
+}
+.icon-comments {
+  background: url(../../inc/images/icon/icon-comments.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 [class*="btn-only-icon"] {
   display: inline-flex;
@@ -1719,6 +1722,12 @@ input[type="radio"]:focus + label {
   font-weight: 400;
   line-height: 16.8px;
 }
+.card_type04 .profile-open {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
 
 /* card_type05 */
 .card_type05 {
@@ -1866,6 +1875,12 @@ input[type="radio"]:focus + label {
 }
 
 /* swiper */
+.swiper-button-prev:hover::after {
+  background-image: url(../images/icon/icon-arrow-box-red_left.svg);
+}
+.swiper-button-next:hover::after {
+  background-image: url(../images/icon/icon-arrow-box-red_right.svg);
+}
 .swiper-button-prev.swiper-button-disabled,
 .swiper-button-next.swiper-button-disabled {
   display: none;
@@ -4438,7 +4453,10 @@ table {
   border-bottom: none;
   width: 100%;
 }
-.wrap-form input.form-input-text::placeholder {
+.wrap-form input[type="text"]::placeholder {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 140%;
   color: #777;
   font-family: "Hyundai Sans Text";
 }
@@ -4604,6 +4622,10 @@ p.text-num-chk {
   margin-top: 0;
 }
 .wrap-form textarea::placeholder {
+  font-family: "Hyundai Sans Text";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 140%;
   color: #777;
   width: fit-content;
   white-space: pre-line;
