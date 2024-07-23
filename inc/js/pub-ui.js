@@ -63,7 +63,7 @@ var pubUi = {
           targetSwiper[0].swiper.autoplay.start();
         }
       } else if (targetSwiper.hasClass("ty01Swiper")) {
-        // ty01Swiper - video 케이스 아닐 경우,
+        // ty01Swiper - video 케이스 일 경우,
         if (videoChk.length > 0) {
           if ($(this).hasClass("on")) {
             // console.log("정지버튼 클릭!");
@@ -307,48 +307,26 @@ var pubUi = {
         slideChangeTransitionStart: function () {
           var currentIndex = swiper1.activeIndex;
 
-          if (
-            $(".ty01Swiper .swiper-slide")[currentIndex].querySelector("video")
-          ) {
-            // if (self.typeChk.length > 0) {
+          if ($(".ty01Swiper .swiper-slide")[currentIndex].querySelector("video")) {            
             // 동영상 케이스,
             console.log("동영상 케이스");
-            $(".ty01Swiper .swiper-slide")[currentIndex].querySelector(
-              "video"
-            ).currentTime = 0;
-            $(
-              ".ty01Swiper .swiper-pagination-custom .swiper-pagination-bullet .seek-bar"
-            ).css("--time", "0");
-            document
-              .querySelector(
-                ".ty01Swiper .swiper-pagination-bullet-active .seek-bar"
-              )
-              .style.setProperty("--set", "0");
+            $(".ty01Swiper .swiper-slide")[currentIndex].querySelector("video").currentTime = 0;
+            $(".ty01Swiper .swiper-pagination-custom .swiper-pagination-bullet .seek-bar").css("--time", "0");
+            document.querySelector(".ty01Swiper .swiper-pagination-bullet-active .seek-bar").style.setProperty("--set", "0");
             pubUi.videoBulletChk(".ty01Swiper", this.realIndex);
           } else {
             // 동영상 x 케이스,
             console.log("이미지 케이스");
-            // if (!$(".swiper-pagination-custom .swiper-pagination-bullet").hasClass(".swiper-pagination-bullet-active")) {
 
-            //   $(".swiper-pagination-custom .swiper-pagination-bullet:not(.swiper-pagination-bullet-active)").css({background: "#fff",opcaity: "0.5",
-            //   });
-            // }
+            $(".ty01Swiper .swiper-pagination-custom .swiper-pagination-bullet .seek-bar").css("--time", "84px");
 
-            $(
-              ".ty01Swiper .swiper-pagination-custom .swiper-pagination-bullet .seek-bar"
-            ).css("--time", "84px");
-            document
-              .querySelector(".swiper-pagination-bullet-active .seek-bar")
-              .style.setProperty("--set", "0.3s");
-
-            // $(".swiper-pagination-custom .swiper-pagination-bullet-active").css(
-            //   "background",
-            //   "#de3111"
-            // );
-
-            setTimeout(function () {
-              swiper1.slideNext();
-            }, 3000);
+            if($(".ty01Swiper .btn-play").hasClass("on")) {
+              setTimeout(function () {
+                swiper1.slideNext();
+                console.log("slideChangeTransitionStart 다음 슬라이드 이동 !");
+              }, 3000);
+            }
+            
           }
 
           //   if (self.activeVideoChk.length > 0) {
