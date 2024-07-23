@@ -870,7 +870,7 @@ body.fix {
   max-width: 960px;
   max-height: calc(var(--vh, 1vh) * 100);
   overflow-x: initial;
-  overflow-y: auto;
+  /* overflow-y: auto; */
   z-index: 1001;
   transform: translate(-50%, -50%);
   display: none;

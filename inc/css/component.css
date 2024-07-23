@@ -2085,7 +2085,9 @@ input[type="radio"]:focus + label {
 .ty01Swiper .swiper-slide .img-area img {
   min-height: 1080px;
 }
-
+.ty01Swiper.banner-swiper .swiper-slide .img-area img {
+  min-height: auto;
+}
 .ty01Swiper .text-area,
 .key-visual-wrap .text-area {
   position: absolute;
@@ -3743,12 +3745,12 @@ input[type="radio"]:focus + label {
   font-weight: 500;
   line-height: 19.6px;
   text-align: left;
-}
-
-.dropdown.inMobile .accor02-wrap ul li a {
-  font-weight: 500;
   color: #b3b3b3;
   font-family: "Hyundai Sans Text";
+}
+
+.dropdown.inMobile .accor02-wrap ul li a:hover {
+  text-decoration: underline;
 }
 
 .dropdown.inMobile .accor02-wrap ul li a span.btn-icon20 {
