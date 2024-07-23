@@ -145,9 +145,22 @@ body.fix {
   padding: 10px;
   font-size: 14px;
 }
+.header-cont .utile-wrap .lang-btn:hover {
+  height: 70px;
+  width: 60px;
+  background: url(../images/icon/icon-language_red.svg) no-repeat;
+  background-position: center right 10px;
+  background-size: 17px 17px;
+  text-align: left;
+  padding: 10px;
+  font-size: 14px;
+}
 .header-cont .utile-wrap .lang-btn span {
   display: block;
-  padding-top: 2px;
+  padding-top: 4px;
+}
+.header-cont .utile-wrap .lang-btn:hover span {
+  color: #de3111;
 }
 
 .header-cont .utile-wrap .login-btn {
@@ -161,6 +174,9 @@ body.fix {
   width: 68px;
   background: url(../images/icon/icon-myinfo.svg) no-repeat center center;
   position: relative;
+}
+.header-cont .utile-wrap .alarm-btn:hover {
+  background: url(../images/icon/icon-myinfo_red.svg) no-repeat center center;
 }
 
 .header-cont .utile-wrap .alarm-btn.on:after {
@@ -198,6 +214,12 @@ body.fix {
   width: 15px;
   height: 2.5px;
   background: #000;
+  transition: all 0.2s;
+}
+.header-cont .nav-btn:hover .line {
+  width: 15px;
+  height: 2.5px;
+  background: #de3111;
   transition: all 0.2s;
 }
 .header-cont .nav-btn.on {
@@ -353,6 +375,9 @@ body.fix {
   line-height: 140%; /* 22.4px */
   padding: 0 24px;
 }
+.navigation-btn:hover {
+  color: #de3111;
+}
 
 .navigation-btn::after {
   content: "";
@@ -365,6 +390,10 @@ body.fix {
   height: 20px;
   background: url(../images/icon/icon-arrow01_down.svg) no-repeat center;
   transition: transform 0.2s;
+}
+.navigation-btn:hover::after {
+  background: url(../images/icon/icon-arrow01_down_red.svg) no-repeat center;
+  background-size: 16px 16px;
 }
 
 .navigation-btn.on:after {
@@ -490,19 +519,12 @@ body.fix {
   background: url(../images/icon/icon-share.svg) no-repeat center;
   background-size: 16px;
 }
-.sns-sharing-wrap {
+.navigation_bar .sharing-btn:hover {
+  color: #de3111;
 }
-.sns-sharing-wrap .sharing-icon-btn {
+.navigation_bar .sharing-btn:hover::after {
+  background: url(../images/icon/icon-share_red.svg) no-repeat center;
 }
-.sns-sharing-wrap .sharing-icon-btn.url-icon {
-}
-.sns-sharing-wrap .sharing-icon-btn.face-icon {
-}
-.sns-sharing-wrap .sharing-icon-btn.insta-icon {
-}
-.sns-sharing-wrap .sharing-icon-btn.x-icon {
-}
-
 /* 07.16 추가 */
 
 .navigation_bar .navigation-item01 {
