@@ -1894,14 +1894,19 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
 .popup-wrapper .popup-footer .box-confirm .wrap-reaction-icon {
   display: flex;
   gap: 10px;
+  align-items: center;
 }
 
-.popup-wrapper .popup-footer .box-confirm .wrap-reaction-icon div {
+.popup-wrapper .popup-footer .box-confirm .wrap-reaction-icon div,
+.popup-wrapper .popup-footer .box-confirm .wrap-reaction-icon .btn-only-icon-notbg {
   display: flex;
   align-items: flex-start;
   justify-content: center;
   gap: 0 8px;
   cursor: pointer;
+}
+.popup-wrapper .popup-footer .box-confirm .wrap-reaction-icon .btn-only-icon-notbg:hover p {
+  color: #de3111;
 }
 .popup-wrapper .popup-footer .box-confirm .wrap-reaction-icon div:nth-child(1) {
   /* 시안에서 마진 간격 계산 안된 부분 추가 */
