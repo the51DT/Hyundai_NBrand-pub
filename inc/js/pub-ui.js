@@ -307,26 +307,37 @@ var pubUi = {
         slideChangeTransitionStart: function () {
           var currentIndex = swiper1.activeIndex;
 
-          if ($(".ty01Swiper .swiper-slide")[currentIndex].querySelector("video")) {            
+          if (
+            $(".ty01Swiper .swiper-slide")[currentIndex].querySelector("video")
+          ) {
             // 동영상 케이스,
             console.log("동영상 케이스");
-            $(".ty01Swiper .swiper-slide")[currentIndex].querySelector("video").currentTime = 0;
-            $(".ty01Swiper .swiper-pagination-custom .swiper-pagination-bullet .seek-bar").css("--time", "0");
-            document.querySelector(".ty01Swiper .swiper-pagination-bullet-active .seek-bar").style.setProperty("--set", "0");
+            $(".ty01Swiper .swiper-slide")[currentIndex].querySelector(
+              "video"
+            ).currentTime = 0;
+            $(
+              ".ty01Swiper .swiper-pagination-custom .swiper-pagination-bullet .seek-bar"
+            ).css("--time", "0");
+            document
+              .querySelector(
+                ".ty01Swiper .swiper-pagination-bullet-active .seek-bar"
+              )
+              .style.setProperty("--set", "0");
             pubUi.videoBulletChk(".ty01Swiper", this.realIndex);
           } else {
             // 동영상 x 케이스,
             console.log("이미지 케이스");
 
-            $(".ty01Swiper .swiper-pagination-custom .swiper-pagination-bullet .seek-bar").css("--time", "84px");
+            $(
+              ".ty01Swiper .swiper-pagination-custom .swiper-pagination-bullet .seek-bar"
+            ).css("--time", "84px");
 
-            if($(".ty01Swiper .btn-play").hasClass("on")) {
+            if ($(".ty01Swiper .btn-play").hasClass("on")) {
               setTimeout(function () {
                 swiper1.slideNext();
                 console.log("slideChangeTransitionStart 다음 슬라이드 이동 !");
               }, 3000);
             }
-            
           }
 
           //   if (self.activeVideoChk.length > 0) {
@@ -356,10 +367,10 @@ var pubUi = {
       slidesPerView: 3,
       spaceBetween: 24,
       watchOverflow: true,
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
+      // autoplay: {
+      //   delay: 3000,
+      //   disableOnInteraction: false,
+      // },
       pagination: {
         el: ".swiper-pagination-custom",
         clickable: true,
@@ -1046,10 +1057,11 @@ function swiper2SlideEvt() {
     grabCursor: true,
     centeredSlides: true,
     slidesPerView: "auto",
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
+    // 요청 7/23 오토플레이제거
+    // autoplay: {
+    //   delay: 3000,
+    //   disableOnInteraction: false,
+    // },
     loop: loopVal,
     coverflowEffect: {
       rotate: 0, //각도
