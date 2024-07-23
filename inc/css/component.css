@@ -670,6 +670,11 @@ input[type="radio"]:focus + label {
   background: url(../../inc/images/icon/icon-close.svg);
   background-size: contain;
 }
+.btn:hover [class*="icon-close"],
+.btn:active [class*="icon-close"] {
+  background: url(../../inc/images/icon/icon-close_red.svg);
+  background-size: contain;
+}
 .icon-close-wh {
   background: url(../../inc/images/icon/icon-close_white.svg);
   background-size: contain;
@@ -1511,6 +1516,7 @@ input[type="radio"]:focus + label {
 .card_type03 .card_bottom .card_detail {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 0.62rem;
   color: #ffffff;
 }
