@@ -670,8 +670,8 @@ input[type="radio"]:focus + label {
   background: url(../../inc/images/icon/icon-close.svg);
   background-size: contain;
 }
-.btn:hover [class*="icon-close"],
-.btn:active [class*="icon-close"] {
+.btn:not([class*="only-icon-bg"]):hover [class*="icon-close"],
+.btn:not([class*="only-icon-bg"]):active [class*="icon-close"] {
   background: url(../../inc/images/icon/icon-close_red.svg);
   background-size: contain;
 }
