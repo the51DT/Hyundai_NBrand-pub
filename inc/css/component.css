@@ -782,6 +782,11 @@ input[type="radio"]:focus + label {
   background-size: contain;
   background-repeat: no-repeat;
 }
+.btn:hover [class*="icon-comments"],
+.btn:active [class*="icon-comments"] {
+  background: url(../../inc/images/icon/icon-comments-hover.svg);
+  background-size: contain;
+}
 [class*="btn-only-icon"] {
   display: inline-flex;
   width: 40px;
