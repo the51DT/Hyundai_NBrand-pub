@@ -849,10 +849,14 @@ input[type="radio"]:focus + label {
 .btn-wrap-type6 > .btn {
   width: calc(100% / 3);
 }
-.btn-wrap-type5 > div:first-child {
+.btn-wrap-type5 > div:first-child,
+.btn-wrap-type5 > button {
   display: flex;
   align-items: center;
   gap: 8px;
+}
+.btn-wrap-type5 > button:hover p {
+  color: #de3111;
 }
 .btn-wrap-type5 > div:last-child {
   display: flex;
