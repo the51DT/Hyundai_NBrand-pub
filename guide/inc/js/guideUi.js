@@ -22,7 +22,12 @@ pathApp.setUrl = function () {
     var link = $(this).text(),
       str = "";
     if (link != null && link != "") {
-      str += '<a href="../html/' + link + '" target="_blank">' + link + "</a>";
+      str +=
+        '<a href="../html/' +
+        link +
+        '" target="_blank" rel="noopener">' +
+        link +
+        "</a>";
       $(this).empty().html(str);
     }
   });

@@ -17,7 +17,7 @@
   -khtml-user-drag: none;
   -moz-user-drag: none;
   -o-user-drag: none;
-  user-drag: none;
+  /* user-drag: none; */
 }
 body,
 p,
@@ -225,7 +225,6 @@ textarea::placeholder {
 }
 body {
   word-break: break-all;
-  padding-right: 0;
   padding: 0 !important;
   box-sizing: border-box;
 }
