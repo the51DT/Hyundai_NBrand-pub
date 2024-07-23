@@ -1461,7 +1461,18 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   width: 100%;
   position: relative;
 }
+.popup-wrapper .wrap-popup-profile > button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0 8px;
+  width: 100%;
+  position: relative;
+}
 
+.popup-wrapper .wrap-popup-profile > button:hover .groupname {
+  text-decoration: underline;
+}
 .popup-wrapper .wrap-popup-profile .box-profile-img {
   width: 40px;
   height: 40px;

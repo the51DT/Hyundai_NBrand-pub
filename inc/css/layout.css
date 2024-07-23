@@ -837,7 +837,7 @@ body.fix {
   color: #de3111;
 }
 
-.gnb__panel02 .link-area .link-btn:first-child:hover .icon-right {
+.gnb__panel02 .link-area .link-btn:hover .icon-right {
   background: url(../../inc/images/icon/icon-arrow01_right_red.svg) no-repeat
     center;
   background-size: 16px 16px;
