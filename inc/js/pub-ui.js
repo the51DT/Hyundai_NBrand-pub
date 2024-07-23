@@ -308,7 +308,7 @@ var pubUi = {
         },
         beforeSlideChangeStart: function () {
           console.log("스와이퍼바뀌기전");
-          var currentIndex = swiper1.realIndex;
+          var currentIndex = swiper1.activeIndex;
           if (
             $(".ty01Swiper .swiper-slide")[currentIndex].querySelector("video")
           ) {
