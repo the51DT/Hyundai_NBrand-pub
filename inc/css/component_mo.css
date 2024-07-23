@@ -985,10 +985,11 @@ min-width : 1024 css
     display: flex;
     height: 100%;
     align-items: stretch;
-    text-align: right;
+    text-align: left;
     width: 100%;
-    justify-content: flex-end;
-    max-width: 118px;
+    max-width: 100%;
+    justify-content: flex-start;
+    flex-direction: column;
   }
   .wrap-list .__bottom.list06 .wrap-lists.btn-type .list-box:nth-child(2) {
     margin-right: 0;
