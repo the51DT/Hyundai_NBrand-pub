@@ -4,6 +4,9 @@
 .kv-video-area {
   width: 100%;
 }
+.kv-video-area video {
+  width: 100%;
+}
 /* common */
 .bg-lightblue {
   background-color: #aacae6 !important;
@@ -591,8 +594,8 @@
 .no_data_evtInfo {
   padding: 275px 0;
   text-align: center;
-  border-top:1px solid #aaa;
-  border-bottom:1px solid #aaa;
+  border-top: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
 }
 .no_data_evtInfo p {
   font-size: 24px;
@@ -626,10 +629,10 @@
 @media screen and (min-width: 1800px) {
   .n-race-box .event-box .conts-head {
     padding-right: 0;
-  }  
+  }
 }
 
-@media screen and  (max-width: 1800px) {
+@media screen and (max-width: 1800px) {
   .evtGuide .track-guide-box .wrap-list {
     padding-left: 80px;
     padding-right: 80px;
@@ -659,6 +662,12 @@
 /* mobile */
 @media screen and (max-width: 1023px) {
   /* component : start */
+  .kv-video-area {
+    width: 100%;
+  }
+  .kv-video-area video {
+    width: auto;
+  }
   .kv-video-area video {
     max-height: 640px;
   }
@@ -709,7 +718,7 @@
   .evtGuide .wrap-list.list04 .inner .box .box-desc {
     width: 100%;
   }
-  .evtGuide .track-guide-box .wrap-list { 
+  .evtGuide .track-guide-box .wrap-list {
     padding-left: 0;
     padding-right: 0;
   }
@@ -1021,9 +1030,9 @@
   .track-guide-box .wrap-list.list03 .right {
     max-width: revert;
   }
-  
+
   .event-box .evt-map-img {
-    overflow-x: scroll;    
+    overflow-x: scroll;
   }
 
   .event-box .evt-map-img img {
@@ -1051,7 +1060,7 @@
 
   .no_data_evtInfo {
     padding: 185px 0;
-    margin:0 24px;
+    margin: 0 24px;
   }
   .no_data_evtInfo p {
     font-size: 18px;

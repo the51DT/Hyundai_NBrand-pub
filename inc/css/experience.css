@@ -1653,6 +1653,9 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
 .popup-wrapper .popup-body .m20 .wrap-hashtag .hashtags .txt-type04 {
   width: fit-content;
 }
+.popup-wrapper .popup-body .m20 .wrap-hashtag .hashtags .txt-type04:hover {
+  text-decoration: underline;
+}
 .popup-wrapper .wrap-form.textarea textarea {
   /* margin-top: 0; */
   z-index: 1;
