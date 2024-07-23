@@ -174,10 +174,18 @@
     position: absolute;
     top: 0;
     left: 0;
-    /* height: calc(100vh - 70px); */
     width: 100%;
+    /* height: calc(100vh - 70px); */
+
     background-color: #fff;
   }
+  .gnb__tab02-wrap.thumbnail-ui .gnb__panel02 {
+    width: 100%;
+  }
+  .gnb__tab02-wrap.thumbnail-ui .gnb__panel02 ul {
+    margin-top: 82px;
+  }
+
   .gnb__tab-cont-wrap [class*="gnb__tab-cont"] {
     padding: 82px 0 20px 0;
     height: calc(100vh - 70px);
@@ -197,7 +205,6 @@
     background-color: #fff;
   }
   [class*="gnb__tab02_"] {
-    margin-top: 82px;
     background-color: #fff;
     height: calc(100vh - 557px);
     overflow-y: auto;

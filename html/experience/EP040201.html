@@ -32,7 +32,7 @@
               <!-- 현재 페이지 dep버튼에 active class 삽입.  gnb__tab02 첫번째 메뉴는 항상오픈, 활성화 클래스 on -->
               <ul class="gnb__tab-btn-wrap">
                 <li>
-                  <button class="gnb__tab-btn01 active" id="gnb__tabBtn01" role="tab" aria-controls="gnbTab1"
+                  <button class="gnb__tab-btn01" id="gnb__tabBtn01" role="tab" aria-controls="gnbTab1"
                     aria-selected="false">
                     Brand
                   </button>
@@ -85,7 +85,7 @@
                       <p>Inje SPEEDIUM, 04.27 - 04.28</p>
                       <div class="link-area">
                         <a href="#" class="link-btn">Learn More<span class="icon-right-wh"></span></a>
-                        <a href="#" class="link-btn">Configrator <span class="icon-link-wh"></span></a>
+                        <a href="#" class="link-btn">Configrator <span class="icon-right-wh"></span></a>
                       </div>
                     </div>
                   </div>
@@ -140,7 +140,7 @@
                                 <p>Electrifying Driving Passion</p>
                                 <div class="link-area">
                                   <a href="#" class="link-btn">Learn More<span class="icon-right"></span></a>
-                                  <a href="#" class="link-btn">Configrator
+                                  <a href="#" class="link-btn">Configrator<span class="icon-right"></span>
                                     <!--<span class="icon-link"></span>--></a>
                                 </div>
                               </div>
@@ -156,7 +156,7 @@
                                 <p>The Perfect Balance</p>
                                 <div class="link-area">
                                   <a href="#" class="link-btn">Learn More<span class="icon-right"></span></a>
-                                  <a href="#" class="link-btn">Configrator
+                                  <a href="#" class="link-btn">Configrator<span class="icon-right"></span>
                                     <!--<span class="icon-link"></span>--></a>
                                 </div>
                               </div>
@@ -595,7 +595,7 @@
                       <p>Inje SPEEDIUM, 04.27 - 04.28</p>
                       <div class="link-area">
                         <a href="#" class="link-btn">Learn More<span class="icon-right-wh"></span></a>
-                        <a href="#" class="link-btn">Configrator <span class="icon-link-wh"></span></a>
+                        <a href="#" class="link-btn">Configrator <span class="icon-right-wh"></span></a>
                       </div>
                     </div>
                   </div>
@@ -613,7 +613,7 @@
                     <p>Inje SPEEDIUM, 04.27 - 04.28</p>
                     <div class="link-area">
                       <a href="#" class="link-btn">Learn More<span class="icon-right-wh"></span></a>
-                      <a href="#" class="link-btn">Configrator <span class="icon-link-wh"></span></a>
+                      <a href="#" class="link-btn">Configrator <span class="icon-right-wh"></span></a>
                     </div>
                   </div>
                 </li>
@@ -626,7 +626,7 @@
                     <p>Electrifying Driving Passion</p>
                     <div class="link-area">
                       <a href="#" class="link-btn">Learn More<span class="icon-right-wh"></span></a>
-                      <a href="#" class="link-btn">Configrator<span class="icon-link-wh"></span></a>
+                      <a href="#" class="link-btn">Configrator<span class="icon-right-wh"></span></a>
                     </div>
                   </div>
                 </li>
@@ -639,7 +639,7 @@
                     <p>The Perfect Balance</p>
                     <div class="link-area">
                       <a href="#" class="link-btn">Learn More<span class="icon-right-wh"></span></a>
-                      <a href="#" class="link-btn">Configrator<span class="icon-link- wh"></span></a>
+                      <a href="#" class="link-btn">Configrator<span class="icon-right-wh"></span></a>
                     </div>
                   </div>
                 </li>
@@ -1079,10 +1079,16 @@
                     <p class="card_detail">03.24.2024 - 04.31.2024</p>
                   </div>
                   <div class="card_profile">
-                    <button class="profile_img profile-open" aria-controls="pop-page" aria-haspopup="true"
-                      aria-expanded="false" title="팝업오픈">
-                      <img src="../../inc/images/img/img_Nful_profile_01.png" loading="lazy"
-                        alt="N Community가입자의 프로필 이미지" />
+                    <button class="profile-open" aria-controls="pop-page" aria-haspopup="true" aria-expanded="false"
+                      title="팝업오픈">
+                      <div class="profile_img">
+                        <img src="../../inc/images/img/img_Nful_profile_01.png" loading="lazy"
+                          alt="N Community가입자의 프로필 이미지" />
+                      </div>
+                      <p class="profile_des">
+                        <span class="profile_name">Madison</span>
+                        <span class="profile_club">i30N_Club</span>
+                      </p>
                     </button>
                     <div class="popup club-popup" role="dialog" aria-modal="true" aria-labelledby="tit-type04"
                       data-pop="pop-page">
@@ -1093,10 +1099,6 @@
                               alt="N Community가입자의 프로필 이미지" />
                             <p class="pop-profile_club">i30N_Club</p>
                           </div>
-                          <a href="#" class="btn btn-only-icon-notbg" title="Go to the community homepage">
-                            <span class="visually-hidden">Go to the community homepage</span>
-                            <span class="btn-icon20 icon-right" aria-hidden="true"></span>
-                          </a>
                         </div>
                         <div class="popup-body">
                           <div class="pop-gray">
@@ -1147,10 +1149,6 @@
                         </div>
                       </div>
                     </div>
-                    <p class="profile_des">
-                      <span class="profile_name">Madison</span>
-                      <span class="profile_club">i30N_Club</span>
-                    </p>
                   </div>
                   <div class="card_con">
                     <p class="card_tag">N Community Master</p>
@@ -2747,7 +2745,7 @@
             </button>
           </div>
           <!-- 0628 v.103 기획서 및 디자인 현행화 : 검색 결과 없을 경우 문구 노출 -->
-          <p class="post-nodata">There are no posts.</p>
+          <!-- <p class="post-nodata">There are no posts.</p> -->
         </div>
       </div>
     </section>
