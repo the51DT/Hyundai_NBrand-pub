@@ -834,7 +834,7 @@
   background-repeat: no-repeat;
 }
 .mypage-withdrawal-checkbox input:checked + label::before {
-  background-image: url(../images/icon/icon-checkbox-checked-black.svg);
+  background-image: url(../images/icon/icon-checkbox-checked.svg);
 }
 .mypage-withdrawal-wrap .btn-wrap-default {
   margin-top: 1.5rem;

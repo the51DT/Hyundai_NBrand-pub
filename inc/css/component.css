@@ -2026,8 +2026,7 @@ input[type="radio"]:focus + label {
   position: relative;
   width: 24px;
   height: 24px;
-  background: #000;
-  opacity: 0.5;
+  background: rgba(0, 0, 0, 0.5);
   border-radius: 2px;
 }
 .swiper-status-wrap .btn-wrap .btn:not(:last-child) {
@@ -2052,11 +2051,17 @@ input[type="radio"]:focus + label {
 .swiper-status-wrap .btn-wrap .btn-play.on::before {
   background-image: url(../../inc/images/icon/icon-pause_white.svg);
 }
+.swiper-status-wrap .btn-wrap .btn-play:hover {
+  background-color: #DE3111;
+}
 .swiper-status-wrap .btn-wrap .btn-sound::before {
   background-image: url(../../inc/images/icon/icon-soundon_white.svg);
 }
 .swiper-status-wrap .btn-wrap .btn-sound.on::before {
   background-image: url(../../inc/images/icon/icon-soundoff_white.svg);
+}
+.swiper-status-wrap .btn-wrap .btn-sound:hover {
+  background-color: #DE3111;
 }
 
 .swiper-status-wrap .swiper-pagination,
@@ -2131,7 +2136,6 @@ input[type="radio"]:focus + label {
 .ty01Swiper .swiper-button-prev {
   width: 36px;
   height: 36px;
-  opacity: 0.5;
 }
 
 .ty01Swiper .swiper-button-prev:after,
@@ -2142,10 +2146,20 @@ input[type="radio"]:focus + label {
 
 .ty01Swiper .swiper-button-prev:after {
   background-image: url("../images/icon/icon-arrow01_left_white.svg");
+  opacity: 0.5;
+}
+.ty01Swiper .swiper-button-prev:hover:after {
+  background-image: url("../images/icon/icon-arrow01_left_red.svg");
+  opacity: 1;
 }
 
 .ty01Swiper .swiper-button-next:after {
   background-image: url("../images/icon/icon-arrow01_right_white.svg");
+  opacity: 0.5;
+}
+.ty01Swiper .swiper-button-next:hover:after {
+  background-image: url("../images/icon/icon-arrow01_right_red.svg");
+  opacity: 1;
 }
 
 .ty02Swiper .swiper-wrapper {

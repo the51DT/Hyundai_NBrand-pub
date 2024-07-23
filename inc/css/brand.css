@@ -613,6 +613,12 @@ article.info-bnr-wrap + article.info-video-wrap {
 .wrc_swiper .swiper-button-next:after {
   background-image: url(../images/icon/icon-arrow-box-white_right.svg);
 }
+.wrc_swiper .swiper-button-prev:hover:after {
+  background-image: url(../images/icon/icon-arrow-box-red_left.svg);
+}
+.wrc_swiper .swiper-button-next:hover:after {
+  background-image: url(../images/icon/icon-arrow-box-red_right.svg);
+}
 .wrc_swiper .swiper-button-prev.swiper-button-disabled,
 .wrc_swiper .swiper-button-next.swiper-button-disabled {
   opacity: 1;
