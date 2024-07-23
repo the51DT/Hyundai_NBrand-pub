@@ -883,9 +883,19 @@ input[type="radio"]:focus + label {
   background: transparent;
   border-right: 0;
 }
+.tabs-wrap .tabs li:hover {
+  border: 1px solid #999;
+  border-right: none;
+}
+.tabs-wrap .tabs li:hover a {
+  color: #999;
+}
 
 .tabs-wrap .tabs li:last-child {
   border-right: 1px solid #777;
+}
+.tabs-wrap .tabs li:last-child:hover {
+  border-right: 1px solid #999;
 }
 
 .tabs-wrap .tabs li.on {
