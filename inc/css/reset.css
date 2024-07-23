@@ -56,13 +56,13 @@ aside {
   word-break: break-word;
   word-wrap: break-word;
   white-space: normal;
-  font-family: Hyundai Sans Text, sans-serif;
+  font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
 }
 html,
 body {
   overflow: hidden;
   position: relative;
-  font-family: Hyundai Sans Text, sans-serif;
+  font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
   font-size: 16px;
   color: #222;
   height: 100%;
@@ -94,7 +94,7 @@ textarea {
   -webkit-appearance: none;
   -webkit-border-radius: 0;
   resize: none;
-  font-family: Hyundai Sans Text, sans-serif;
+  font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
 }
 ul,
 ol,
@@ -147,7 +147,7 @@ button {
   border: none;
   background: none;
   cursor: pointer;
-  font-family: Hyundai Sans Text, sans-serif;
+  font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
   -webkit-appearance: none;
 }
 input,
@@ -167,7 +167,7 @@ input[type="email"],
 select,
 textarea {
   border-radius: 3px;
-  font-family: Hyundai Sans Text, sans-serif;
+  font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
   font-size: 17px;
   color: #222;
   word-break: break-all;
@@ -200,7 +200,7 @@ select::-ms-expand {
 }
 ::-webkit-input-placeholder,
 textarea::placeholder {
-  font-family: Hyundai Sans Text, sans-serif;
+  font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
   font-size: 17px;
   font-weight: 400;
   color: #b2b2b2;

@@ -15,7 +15,7 @@
 /* tit */
 [class*="tit-type"] {
   color: #000;
-  font-family: "Hyundai Sans Head";
+  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
   font-weight: 600;
 }
 .tit-type01 {
@@ -41,17 +41,17 @@
 .contitle-type01 {
   font-size: 4.25rem;
   line-height: 125%;
-  font-family: "Hyundai Sans Head";
+  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
 }
 .contitle-type02 {
   font-size: 2.5rem;
   line-height: 125%;
-  font-family: "Hyundai Sans Head";
+  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
 }
 /* txt */
 [class*="txt-type"] {
   color: #000;
-  font-family: "Hyundai Sans Text";
+  font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
   line-height: 140%;
   font-weight: 400;
 }
@@ -167,7 +167,7 @@ input[type="radio"]:focus + label {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  font-family: "Hyundai Sans Text";
+  font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
 }
 .btn[class*="-primary"]:hover,
 .btn[class*="-primary"]:active {
@@ -969,14 +969,14 @@ input[type="radio"]:focus + label {
 }
 
 .conts-key-visual .text-area .tit {
-  font-family: "Hyundai Sans Head";
+  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
   font-size: 80px;
   font-weight: 700;
   line-height: 100px;
   text-align: center;
 }
 .conts-key-visual .text-area .desc {
-  font-family: "Hyundai Sans Head";
+  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
   font-size: 32px;
   font-weight: 700;
   line-height: 44.8px;
@@ -1162,7 +1162,7 @@ input[type="radio"]:focus + label {
   height: 40vw;
   min-height: 28.5rem;
   max-height: 40.25rem;
-  font-family: "Hyundai Sans Head";
+  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
   overflow: hidden;
 }
 .card_type01.card_swiper {
@@ -1274,7 +1274,7 @@ input[type="radio"]:focus + label {
 }
 .card_type01 .card_subtit {
   color: #aacae6;
-  font-family: "Hyundai Sans Text";
+  font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
   font-size: 0.875rem;
   font-weight: 500;
   line-height: 140%;
@@ -1295,7 +1295,7 @@ input[type="radio"]:focus + label {
   gap: 0.5rem;
 }
 .card_type01 .card_detail li span:first-of-type {
-  font-family: "Hyundai Sans Text";
+  font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
   font-size: 0.875rem;
   font-weight: 500;
   line-height: 140%;
@@ -1387,7 +1387,7 @@ input[type="radio"]:focus + label {
   background-color: #ffffff;
 }
 .card_type02 .card_tit {
-  font-family: "Hyundai Sans Text";
+  font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 140%;
@@ -1405,7 +1405,7 @@ input[type="radio"]:focus + label {
 }
 .card_type02 .card_detail {
   margin: 1.5rem 0 3.75rem 0;
-  font-family: "Hyundai Sans Head";
+  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
   font-weight: 700;
 }
 .card_type02 .card_month {
@@ -1417,7 +1417,7 @@ input[type="radio"]:focus + label {
   line-height: 125%;
 }
 .card_type02 .card_track {
-  font-family: "Hyundai Sans Text";
+  font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
   font-size: 1rem;
   font-weight: 500;
   line-height: 140%;
@@ -1451,7 +1451,7 @@ input[type="radio"]:focus + label {
   justify-content: space-between;
   align-items: flex-start;
   padding: 1.25rem 2.5rem 0 2.5rem;
-  font-family: "Hyundai Sans Head";
+  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
   text-align: right;
 }
 .card_type03.card_ranker .card_top {
@@ -1476,7 +1476,7 @@ input[type="radio"]:focus + label {
   line-height: 140%;
 }
 .card_type03 .card_mission {
-  font-family: "Hyundai Sans Text";
+  font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
   font-size: 0.875rem;
   font-weight: 500;
   line-height: 140%;
@@ -1525,14 +1525,14 @@ input[type="radio"]:focus + label {
   padding-right: 1.5rem;
 }
 .card_type03 .card_name {
-  font-family: "Hyundai Sans Head";
+  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 140%;
   word-break: break-all;
 }
 .card_type03 .card_community {
-  font-family: "Hyundai Sans Text";
+  font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
   font-size: 0.875rem;
   font-weight: 500;
   line-height: 140%;
@@ -1546,7 +1546,7 @@ input[type="radio"]:focus + label {
   flex-direction: column;
   width: 100%;
   background-color: #fff;
-  font-family: "Hyundai Sans Text";
+  font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
 }
 .card_type04 .card_thumbnail {
   width: 100%;
@@ -1563,7 +1563,7 @@ input[type="radio"]:focus + label {
   color: #fff;
 }
 .card_type04 .card_step {
-  font-family: "Hyundai Sans Head";
+  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 140%;
@@ -1603,7 +1603,7 @@ input[type="radio"]:focus + label {
   padding: 16px;
 }
 .card_type04 .card_state.card_mypage p {
-  font-family: "Hyundai Sans Head";
+  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
   font-size: 20px;
   font-weight: 700;
   line-height: 28px;
@@ -1654,7 +1654,7 @@ input[type="radio"]:focus + label {
 }
 .card_type04 .txt-xs {
   margin-top: 4px;
-  font-family: "Hyundai Sans Text";
+  font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
   font-size: 0.75rem;
   font-weight: 400;
   line-height: 140%;
@@ -1823,7 +1823,7 @@ input[type="radio"]:focus + label {
   min-height: 16.4rem;
 }
 .card_type05 .card_tit {
-  font-family: "Hyundai Sans Head";
+  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
   font-size: 2.5rem;
   font-weight: 700;
   line-height: 125%;
@@ -1835,7 +1835,7 @@ input[type="radio"]:focus + label {
 .card_type05 .card_detail {
   max-width: 26rem;
   margin: 0.75rem 0 1.5rem 0;
-  font-family: "Hyundai Sans Text";
+  font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
   font-size: 1.25rem;
   font-weight: 500;
   line-height: 140%;
@@ -1900,7 +1900,7 @@ input[type="radio"]:focus + label {
   object-fit: cover;
 }
 .card_video .card_title {
-  font-family: "Hyundai Sans Head";
+  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
   font-size: 2rem;
   font-weight: 700;
   line-height: 140%;
@@ -2702,7 +2702,7 @@ input[type="radio"]:focus + label {
   text-align: left;
 }
 .wrap-list.list03 .right.descwrap h2.sub-tit {
-  font-family: "Hyundai Sans Head";
+  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
   font-size: 1.25rem;
   font-weight: 700;
   text-align: left;
@@ -2781,14 +2781,14 @@ input[type="radio"]:focus + label {
   text-align: left;
   max-width: 44.125rem;
   width: 100%;
-  font-family: "Hyundai Sans Text";
+  font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
 }
 .wrap-list.list04 .inner .box .box-desc.right .desc-note {
   font-size: 14px;
   font-weight: 500;
   line-height: 19.6px;
   text-align: left;
-  font-family: "Hyundai Sans Text";
+  font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
 }
 .wrap-list.list04 .inner .box.box02 {
   flex-direction: column;
@@ -2827,7 +2827,7 @@ input[type="radio"]:focus + label {
 /* list 05 */
 .wrap-list.list05 .tit {
   font-size: 3.5rem;
-  font-family: "Hyundai Sans Head";
+  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
   font-weight: 700;
   line-height: 4.375rem;
 }
@@ -2852,7 +2852,7 @@ input[type="radio"]:focus + label {
   p.txt-type05 {
   font-weight: 400;
   line-height: 1.05rem;
-  font-family: "Hyundai Sans Text";
+  font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
   margin-top: 0.5rem;
 }
 .wrap-list.list05
@@ -2868,7 +2868,7 @@ input[type="radio"]:focus + label {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  font-family: "Hyundai Sans Text";
+  font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
 }
 .wrap-list.list05 .inner .btn-wrap button.btn,
 .wrap-list.list06 .inner .btn-wrap button.btn {
@@ -2904,7 +2904,7 @@ input[type="radio"]:focus + label {
   p.txt-type05 {
   font-weight: 400;
   line-height: 1.05rem;
-  font-family: "Hyundai Sans Text";
+  font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
   margin-top: 0.5rem;
 }
 .wrap-list.list06 .__bottom.list06 .wrap-lists .list-box:last-child {
@@ -3125,14 +3125,14 @@ input[type="radio"]:focus + label {
 /* list title size */
 .wrap-list .tit.small {
   font-size: 3.5rem;
-  font-family: "Hyundai Sans Head";
+  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
   font-weight: 700;
   line-height: 4.375rem;
 }
 
 .wrap-list .tit.large {
   font-size: 4.25rem;
-  font-family: "Hyundai Sans Head";
+  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
   font-weight: 700;
 }
 
@@ -3296,7 +3296,7 @@ input[type="radio"]:focus + label {
   font-weight: 500;
   line-height: 22.4px;
   padding: 10px 4px 10px 10px;
-  /* font-family: "Hyundai Sans Text"; */
+  /* font-family: "Hyundai Sans Text" , "Hyundai Sans Text KR" ,  sans-serif; */
 }
 .dropdown.centered
   .dropdown-menu
@@ -3630,7 +3630,7 @@ input[type="radio"]:focus + label {
   border-radius: 30px;
   font-size: 14px;
   line-height: 140%;
-  font-family: "Hyundai Sans Text";
+  font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
 }
 .dropdown.centered
   .dropdown-menu
@@ -3692,7 +3692,7 @@ input[type="radio"]:focus + label {
 .dropdown.centered .dropdown-menu .wrap-category .middle-category {
   width: 120px;
   font-weight: 700;
-  font-family: "Hyundai Sans head";
+  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
 }
 .dropdown.centered .dropdown-menu .wrap-category-result {
   display: grid;
@@ -3728,7 +3728,7 @@ input[type="radio"]:focus + label {
 }
 .dropdown.centered .dropdown-menu .wrap-category-result .wrap-result-nums p {
   font-weight: 500;
-  font-family: "Hyundai Sans Text";
+  font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
   margin: 20px auto 20px 0;
 }
 .dropdown.centered
@@ -3824,7 +3824,7 @@ input[type="radio"]:focus + label {
   line-height: 19.6px;
   text-align: left;
   color: #b3b3b3;
-  font-family: "Hyundai Sans Text";
+  font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
 }
 
 .dropdown.inMobile .accor02-wrap ul li a:hover {
@@ -3840,7 +3840,7 @@ input[type="radio"]:focus + label {
   background: none;
   border: none;
   cursor: pointer;
-  font-family: "Hyundai Sans Text";
+  font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
   font-size: 1.25rem;
   font-weight: 500;
   line-height: 1.75rem;
@@ -3895,7 +3895,7 @@ input[type="radio"]:focus + label {
   font-weight: 500;
   margin-right: 0.25rem;
   cursor: pointer;
-  font-family: "Hyundai Sans Text";
+  font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
 }
 .dropdown-menu a[class*="txt-btn01"] {
   color: #555;
@@ -3961,7 +3961,7 @@ input[type="radio"]:focus + label {
   display: block;
 }
 .dropdown.inMobile .accor02-wrap .accor02-header p {
-  font-family: "Hyundai Sans Text";
+  font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
   font-size: 20px;
   font-weight: 500;
   line-height: 28px;
@@ -4440,7 +4440,7 @@ table {
   font-size: 40px;
   font-weight: 700;
   line-height: 50px;
-  font-family: "Hyundai Sans Head";
+  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
 }
 .seasonstats-box dl {
   display: flex;
@@ -4465,13 +4465,13 @@ table {
   font-size: 20px;
   font-weight: 500;
   line-height: 28px;
-  font-family: "Hyundai Sans Text";
+  font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
 }
 .seasonstats-box dl dd {
   font-size: 32px;
   font-weight: 700;
   line-height: 44.8px;
-  font-family: "Hyundai Sans Head";
+  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
 }
 .seasonstats-box dl > div {
   display: flex;
@@ -4492,7 +4492,7 @@ table {
 .wrap-form.label-tit-type02 label {
   position: relative;
   width: 100%;
-  font-family: "Hyundai Sans Head";
+  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
   font-size: 1.25rem;
   font-weight: 700;
   line-height: 1.75rem;
@@ -4512,7 +4512,7 @@ table {
 /* 유효성 검사 문구 시작 */
 .popup-wrapper .validation-txt,
 .wrap-form .validation-txt {
-  font-family: "Hyundai Sans Text";
+  font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
@@ -4543,7 +4543,7 @@ table {
   column-gap: 0.625rem;
 }
 .wrap-form input[type="text"] {
-  font-family: "Hyundai Sans Text";
+  font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
   margin-top: 8px;
   font-size: 1rem;
   font-weight: 500;
@@ -4561,17 +4561,17 @@ table {
   font-weight: 500;
   line-height: 140%;
   color: #777;
-  font-family: "Hyundai Sans Text";
+  font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
 }
 span.text-comment {
-  font-family: "Hyundai Sans Text";
+  font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.225rem;
   color: #777;
 }
 .wrap-form span.text-comment {
-  font-family: "Hyundai Sans Text";
+  font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.225rem;
@@ -4630,7 +4630,7 @@ p.text-num-chk {
 .wrap-form .wrap-form-bottom.comment-type02,
 .wrap-form .wrap-form-bottom.comment-type03,
 .wrap-form .wrap-form-bottom.comment-type04 {
-  font-family: "Hyundai Sans Text";
+  font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
 }
 .wrap-form .wrap-form-bottom.comment-type05 {
   justify-content: flex-end;
@@ -4690,7 +4690,7 @@ p.text-num-chk {
 /* comment-type03 */
 .wrap-form .wrap-form-bottom.comment-type03 ul li {
   margin: 7px 0;
-  font-family: "Hyundai Sans Text";
+  font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
 }
 .wrap-form .wrap-form-bottom.comment-type03 ul li span.hashtag,
 .wrap-form .wrap-form-bottom.comment-type04 ul li span.hashtag {
@@ -4715,7 +4715,7 @@ p.text-num-chk {
 .wrap-form textarea {
   position: relative;
   padding: 14px 12px;
-  font-family: "Hyundai Sans Text";
+  font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
   font-size: 1rem;
   font-weight: 500;
   line-height: 22.4px;
@@ -4725,7 +4725,7 @@ p.text-num-chk {
   margin-top: 0;
 }
 .wrap-form textarea::placeholder {
-  font-family: "Hyundai Sans Text";
+  font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 140%;
@@ -4920,7 +4920,7 @@ p.text-num-chk {
   font-weight: 400;
   line-height: 1.4rem;
   font-size: 1rem;
-  font-family: "Hyundai Sans Text";
+  font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
 }
 /* 라디오 버튼 일부 미디어쿼리 */
 @media screen and (max-width: 768px) {
@@ -5162,7 +5162,7 @@ input:checked + .slider:before {
 }
 
 .search-wrap .search-input-box .btn-group .btn-txt {
-  font-family: "Hyundai Sans Text";
+  font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
   font-size: 20px;
   font-weight: 500;
   line-height: 28px;
@@ -5264,7 +5264,7 @@ input:checked + .slider:before {
 }
 
 .tag-list-wrap [class^="tag-list"] li .tag-item {
-  font-family: "Hyundai Sans Text";
+  font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
   font-size: 17px;
   font-weight: 500;
   line-height: 23.8px;
