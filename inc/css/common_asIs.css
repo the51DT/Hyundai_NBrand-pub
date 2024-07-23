@@ -1,347 +1,5 @@
 @charset "utf-8";
 
-* {
-  word-break: break-word;
-  word-wrap: break-word;
-  font-family: "Hyundai Sans Text", Arial, Dotum, sans-serif;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-}
-html,
-body,
-div,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-ul,
-ol,
-li,
-dl,
-dt,
-dd,
-p,
-form,
-fieldset,
-input,
-table,
-tr,
-th,
-td,
-button,
-textarea,
-select {
-  margin: 0;
-  padding: 0;
-}
-body {
-  margin: 0;
-  padding: 0;
-  font-family: "Hyundai Sans Text", Arial, Dotum, sans-serif;
-  font-size: 14px;
-  line-height: 1.2;
-  color: #333;
-  letter-spacing: 0;
-  -ms-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-}
-@media all and (min-width: 721px) {
-  body {
-    font-size: 18px;
-  }
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-size: 100%;
-  font-weight: normal;
-}
-img {
-  border: 0;
-  vertical-align: top;
-}
-hr {
-  display: none;
-}
-ul,
-ol,
-dl,
-dt,
-dd,
-li {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-table,
-th,
-td {
-  border-collapse: collapse;
-  border-spacing: 0;
-  font-weight: normal;
-}
-caption {
-  padding: 0;
-}
-fieldset,
-blockquote,
-iframe,
-button {
-  border: none;
-}
-em,
-u,
-cite {
-  font-style: normal;
-}
-a {
-  color: #333;
-  text-decoration: none;
-}
-a:hover,
-a:focus {
-  color: #333;
-  text-decoration: none;
-}
-input {
-  font-family: "Hyundai Sans Text", Arial, Dotum, sans-serif;
-}
-label {
-  font-weight: normal;
-  margin: 0;
-}
-strong {
-  font-weight: normal;
-}
-button {
-  background: transparent;
-  cursor: pointer;
-  vertical-align: middle;
-  font-family: "Hyundai Sans Head", Arial, Dotum, sans-serif;
-  font-size: 14px;
-  line-height: 1.2;
-  color: #333;
-  letter-spacing: 0;
-  -webkit-text-size-adjust: none;
-  outline: none;
-}
-button,
-input[type="submit"],
-input[type="button"],
-input[type="reset"] {
-  cursor: pointer;
-  -webkit-appearance: none;
-}
-section,
-nav,
-article,
-aside,
-header,
-footer,
-main {
-  display: block;
-}
-input[type="date"]::-webkit-calendar-picker-indicator,
-input[type="date"]::-webkit-inner-spin-button {
-  display: none;
-}
-::-webkit-input-placeholder {
-  color: #aaa;
-}
-::-moz-placeholder {
-  color: #aaa;
-}
-:-ms-input-placeholder {
-  color: #aaa;
-}
-:-moz-placeholder {
-  color: #aaa;
-}
-::-ms-clear,
-::-ms-reveal {
-  display: none;
-}
-input,
-select,
-textarea,
-button {
-  border: none;
-  font-size: 14px;
-}
-@media all and (min-width: 721px) {
-  input,
-  select,
-  textarea,
-  button {
-    font-size: 18px;
-  }
-}
-.skip {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 2000;
-}
-.skip a {
-  display: block;
-  width: 0;
-  height: 0;
-  font-size: 0;
-}
-.skip a:hover,
-.skip a:focus,
-.skip a:active {
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  display: block;
-  padding: 9px 0;
-  height: 16px;
-  width: 100%;
-  text-align: center;
-  font-size: 18px;
-  color: #fff;
-  background: #341d17;
-}
-.no-js {
-  visibility: hidden;
-}
-html.has-modal {
-  overflow: hidden;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-html.no-handy .o-tel {
-  display: none !important;
-}
-@media all and (min-width: 721px) {
-  html.handy .o-tel {
-    display: none;
-  }
-}
-
-/*@media print {
-    !* chrome style *!
-    @page {
-        !*size:297mm 419mm; *!
-        !*size:420mm 296mm; *!   !* landscape *!
-        size:445mm 628mm; !* 1.5 ratio *!
-        !*size:A4; *!
-    }
-
-    !* ie style *!
-    .ie11 > body:not(#is-printReady) {
-        width:285mm; 
-        height:auto;
-    }
-}*/
-.tol-area {
-  position: fixed;
-  bottom: 70px;
-  width: 100%;
-  z-index: 100;
-  display: none;
-}
-
-@media all and (min-width: 1280px) {
-  .tol-area {
-    bottom: 130px;
-  }
-}
-.tol-area > div {
-  position: relative;
-  max-width: 1610px;
-  margin: 0 auto;
-}
-.tol-area .tol_top {
-  position: absolute;
-  right: 15px;
-  display: block;
-  width: 50px;
-  height: 50px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-  background: #555;
-  text-align: center;
-  font-size: 1px;
-  color: transparent;
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
-  /*@include breakpoint($point:desktop-s) {
-        width:80px; 
-        height:80px; 
-        &:before, &:after {
-            width:4px; 
-            height:25px; 
-            top:27px; 
-        }
-        &:before {
-            left:30px; 
-        }
-        &:after {
-            left:44px; 
-        }
-    }*/
-}
-.tol-area .tol_top:before,
-.tol-area .tol_top:after {
-  content: "";
-  display: block;
-  width: 3px;
-  height: 16px;
-  border-radius: 5px;
-  background: #fff;
-  position: absolute;
-  left: 0px;
-  top: 17px;
-}
-.tol-area .tol_top:before {
-  -webkit-transform: rotate(40deg);
-  transform: rotate(40deg);
-  left: 19px;
-}
-.tol-area .tol_top:after {
-  -webkit-transform: rotate(-40deg);
-  transform: rotate(-40deg);
-  left: 28px;
-}
-
-/*.font-loaded {visibility:visible;}*/
-
-/* ---------------------------------------------------------------------------------------------------------------------
-    Dim
-    --------------------------------------------------------------------------------------------------------------------- */
-.o-dimed {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 102;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  opacity: 0;
-  transition: opacity 0ms ease-out;
-}
-.o-dimed--transition {
-  transition-duration: 200ms;
-}
-.o-dimed.is-active {
-  opacity: 1;
-}
-
 /* ---------------------------------------------------------------------------------------------------------------------
     Modal
     --------------------------------------------------------------------------------------------------------------------- */
@@ -387,7 +45,7 @@ html.no-handy .o-tel {
 }
 .c-modal__title {
   font-size: 19px;
-  font-family: "Hyundai Sans Text", "Malgun Gothic", sans-serif;
+  font-family: "Hyundai Sans Text", sans-serif;
   line-height: inherit;
   font-weight: 700;
 }
@@ -697,7 +355,7 @@ html.no-handy .o-tel {
 }
 
 .common-text--bold {
-  font-family: "Hyundai Sans Text", "Malgun Gothic", sans-serif;
+  font-family: "Hyundai Sans Text", sans-serif;
   font-weight: 700;
 }
 
@@ -1141,11 +799,11 @@ sup {
 }
 
 .heading__weight--medium {
-  font-family: "Hyundai Sans Medium", "Malgun Gothic", sans-serif;
+  font-family: "Hyundai Sans Medium", sans-serif;
   font-weight: 500;
 }
 .heading__weight--bold {
-  font-family: "Hyundai Sans Text", "Malgun Gothic", sans-serif;
+  font-family: "Hyundai Sans Text", sans-serif;
   font-weight: 700;
 }
 
@@ -1225,7 +883,7 @@ sup {
   font-style: italic;
   font-size: 4.44vw;
   font-weight: 700;
-  font-family: "Hyundai Sans Text", "Malgun Gothic", sans-serif;
+  font-family: "Hyundai Sans Text", sans-serif;
   line-height: 1.5;
 }
 .quotation__quote--regular {
@@ -1441,7 +1099,7 @@ sup {
   margin-top: 5.56vw;
 }
 .layout__c-typeE .list__length--2 .thumb__title {
-  font-family: "Hyundai Sans Medium", "Malgun Gothic", sans-serif;
+  font-family: "Hyundai Sans Medium", sans-serif;
   text-align: center;
   font-size: 3.89vw;
   font-weight: 500;
@@ -1456,7 +1114,7 @@ sup {
 .layout__c-typeE .list__length--4 li .thumb__title {
   overflow: hidden;
   text-align: center;
-  font-family: "Hyundai Sans Medium", "Malgun Gothic", sans-serif;
+  font-family: "Hyundai Sans Medium", sans-serif;
   font-size: 3.89vw;
   height: 9.72vw;
   font-weight: 500;
@@ -1777,7 +1435,7 @@ sup {
   height: 3.5em;
   text-overflow: ellipsis;
   text-align: left;
-  font-family: "Hyundai Sans Text", "Malgun Gothic", sans-serif;
+  font-family: "Hyundai Sans Text", sans-serif;
   font-weight: 700;
   font-size: 5.28vw;
 }
@@ -2034,11 +1692,11 @@ body,
   top: 80%;
 } /* 220404 add */
 .key-visual__item .heading__area h2 {
-  font-family: "Hyundai Sans Text", "Malgun Gothic", sans-serif;
+  font-family: "Hyundai Sans Text", sans-serif;
   font-weight: 700;
 }
 .key-visual__item .heading__area span {
-  font-family: "Hyundai Sans Medium", "Malgun Gothic", sans-serif;
+  font-family: "Hyundai Sans Medium", sans-serif;
   font-weight: 500;
 }
 .key-visual__item .heading__area .heading__more {
@@ -2126,7 +1784,7 @@ body,
 .key-visual__indicator li button {
   color: #fff;
   font-size: 16px;
-  font-family: "Hyundai Sans Text", "Malgun Gothic", sans-serif;
+  font-family: "Hyundai Sans Text", sans-serif;
   font-weight: 700;
 }
 /* //210322 : main KV admin */
@@ -2178,7 +1836,7 @@ body,
   color: #fff;
 }
 .key-visual__scroll span {
-  font-family: "Hyundai Sans Medium", "Malgun Gothic", sans-serif;
+  font-family: "Hyundai Sans Medium", sans-serif;
   font-weight: 500;
 }
 @media all and (min-width: 1024px) {
@@ -3190,7 +2848,7 @@ body,
   color: #000;
 }
 .o-btn span {
-  font-family: "Hyundai Sans Medium", "Malgun Gothic", sans-serif;
+  font-family: "Hyundai Sans Medium", sans-serif;
   font-size: 4.44vw;
   font-weight: 500;
 }
@@ -3284,7 +2942,7 @@ body,
   color: #999;
 }
 .o-btn__type--tab span {
-  font-family: "Hyundai Sans Text", "Malgun Gothic", sans-serif;
+  font-family: "Hyundai Sans Text", sans-serif;
   font-size: 7.22vw;
 }
 .o-btn__type--tab:after {
@@ -3533,7 +3191,7 @@ body,
   text-align: center;
 }
 .event-notice .tit-banner {
-  font-family: "Hyundai Sans Medium", "Malgun Gothic", sans-serif;
+  font-family: "Hyundai Sans Medium", sans-serif;
   font-size: 6.1vw;
   font-weight: 500;
 }
@@ -3594,7 +3252,7 @@ body,
   margin: 4.2vw 0;
 }
 .maintenance-notice .tit-banner {
-  font-family: "Hyundai Sans Medium", "Malgun Gothic", sans-serif;
+  font-family: "Hyundai Sans Medium", sans-serif;
   font-weight: 500;
   font-size: 6.2vw;
   color: #fff;

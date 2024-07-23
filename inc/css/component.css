@@ -1531,6 +1531,7 @@ input[type="radio"]:focus + label {
   font-weight: 500;
   line-height: 140%;
   opacity: 0.8;
+  text-align: left;
 }
 
 /* card_type04 */
@@ -4750,8 +4751,7 @@ p.text-num-chk {
   width: 100%;
   font-size: 14px;
   padding: 0 1rem;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  border-radius: 0;
 }
 .wrap-form.textarea .wrap-form-bottom.comment-type02 .comment-type02-1 {
   max-width: 820px;
