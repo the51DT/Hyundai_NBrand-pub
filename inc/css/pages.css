@@ -87,7 +87,8 @@
   color: #555;
   font-family: "Hyundai Sans Head";
 }
-.tit-btn-wrap .tit.on {
+.tit-btn-wrap .tit.on,
+.tit-btn-wrap .tit:hover {
   color: #de3111;
 }
 .tit-btn-wrap .tit:after {
