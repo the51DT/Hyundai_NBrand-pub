@@ -32,7 +32,7 @@
               <!-- 현재 페이지 dep버튼에 active class 삽입.  gnb__tab02 첫번째 메뉴는 항상오픈, 활성화 클래스 on -->
               <ul class="gnb__tab-btn-wrap">
                 <li>
-                  <button class="gnb__tab-btn01 active" id="gnb__tabBtn01" role="tab" aria-controls="gnbTab1"
+                  <button class="gnb__tab-btn01" id="gnb__tabBtn01" role="tab" aria-controls="gnbTab1"
                     aria-selected="false">
                     Brand
                   </button>
@@ -1079,10 +1079,16 @@
                     <p class="card_detail">03.24.2024 - 04.31.2024</p>
                   </div>
                   <div class="card_profile">
-                    <button class="profile_img profile-open" aria-controls="pop-page" aria-haspopup="true"
-                      aria-expanded="false" title="팝업오픈">
-                      <img src="../../inc/images/img/img_Nful_profile_01.png" loading="lazy"
-                        alt="N Community가입자의 프로필 이미지" />
+                    <button class="profile-open" aria-controls="pop-page" aria-haspopup="true" aria-expanded="false"
+                      title="팝업오픈">
+                      <div class="profile_img">
+                        <img src="../../inc/images/img/img_Nful_profile_01.png" loading="lazy"
+                          alt="N Community가입자의 프로필 이미지" />
+                      </div>
+                      <p class="profile_des">
+                        <span class="profile_name">Madison</span>
+                        <span class="profile_club">i30N_Club</span>
+                      </p>
                     </button>
                     <div class="popup club-popup" role="dialog" aria-modal="true" aria-labelledby="tit-type04"
                       data-pop="pop-page">
@@ -1147,10 +1153,6 @@
                         </div>
                       </div>
                     </div>
-                    <p class="profile_des">
-                      <span class="profile_name">Madison</span>
-                      <span class="profile_club">i30N_Club</span>
-                    </p>
                   </div>
                   <div class="card_con">
                     <p class="card_tag">N Community Master</p>
