@@ -3239,6 +3239,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
 
   /* EP010802 */
   .video_thumnail_wrap {
+    height: auto;
     color: #000;
   }
   .video_thumnail_wrap::after {
