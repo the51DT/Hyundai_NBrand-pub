@@ -804,6 +804,14 @@
   position: relative;
   text-align: center;
   color: #fff;
+  height: calc(var(--vh, 1vh) * 100 - 70px);
+}
+.video_thumnail_wrap .video_thumnail_img {
+  height: 100%;
+}
+.video_thumnail_wrap .video_thumnail_img img {
+  height: 100%;
+  object-fit: cover;
 }
 .video_thumnail_wrap .img_mo {
   display: none;

@@ -3,6 +3,8 @@
 /* component.css */
 .kv-video-area {
   width: 100%;
+  display: flex;
+  align-items: center;
 }
 .kv-video-area video {
   width: 100%;
@@ -421,15 +423,30 @@
 }
 
 /* swiper - key-visual-wrap */
-.key-visual-wrap {
+.key-visual-wrap,
+.key-visual-wrap .ty01Swiper {
   background-color: #1c1c1c;
   position: relative;
+  height: calc(var(--vh, 1vh) * 100 - 70px);
+}
+.key-visual-wrap .img-wrap {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.key-visual-wrap .img-wrap img {
+  object-fit: cover;
+  max-height: 100%;
 }
 .key-visual-wrap .text-wrap {
   color: #fff;
 }
 .key-visual-wrap .text-wrap .tit {
   position: absolute;
+}
+.video-wrap,
+.video-wrap video {
+  max-height: calc(var(--vh, 1vh) * 100 - 70px);
 }
 .conts-head {
   display: flex;

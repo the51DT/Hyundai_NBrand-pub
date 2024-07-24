@@ -957,7 +957,7 @@ input[type="radio"]:focus + label {
 }
 
 .conts-key-visual .img-area {
-  height: 1080px;
+  height: 100%;
 }
 .conts-key-visual .img-area img {
   width: 100%;
@@ -2118,9 +2118,11 @@ input[type="radio"]:focus + label {
 
 .ty01Swiper .swiper-slide .img-area {
   width: 100%;
+  display: flex;
+  align-items: center;
 }
 .ty01Swiper .swiper-slide .img-area img {
-  min-height: 1080px;
+  height: 100%;
 }
 .ty01Swiper.banner-swiper .swiper-slide .img-area img {
   min-height: auto;

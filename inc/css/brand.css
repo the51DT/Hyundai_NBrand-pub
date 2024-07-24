@@ -1002,6 +1002,16 @@ article.info-bnr-wrap + article.info-video-wrap {
 .merchandise-wrap .collection-wrap {
   padding: 160px 80px 200px 80px;
 }
+.merchandise-wrap .merchandise_swiper,
+.merchandise-wrap .merchandise_swiper .swiper-wrapper,
+.merchandise-wrap .merchandise_swiper .swiper-slide {
+  max-height: calc(var(--vh, 1vh) * 100 - 70px);
+}
+.merchandise-wrap .merchandise_swiper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .merchandise-wrap .merchandise-kv .swiper-button-prev {
   bottom: 40px;
   left: 40px;
