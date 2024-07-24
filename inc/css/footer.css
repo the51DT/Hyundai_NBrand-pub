@@ -112,7 +112,7 @@
   display: flex;
   align-items: center;
   column-gap: 0.75rem;
-  font-family: "Hyundai Sans Head";
+  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
   font-size: 1rem;
   font-weight: 700;
   line-height: 1.375rem;
@@ -170,7 +170,14 @@
   }
   .footer-link-tit {
     margin-bottom: 1rem;
+    padding-right: 40px;
   }
+  .footer-link-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
   .footer-etc {
     flex-wrap: wrap;
     width: 14.5rem;

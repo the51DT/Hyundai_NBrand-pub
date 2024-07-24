@@ -134,7 +134,7 @@
   .inner-body-model
   .container-desc
   .desc-note {
-  font-family: "Hyundai Sans Text";
+  font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;

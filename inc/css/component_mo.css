@@ -26,7 +26,7 @@ min-width : 1024 css
   /* tit */
   [class*="tit-type"] {
     color: #000;
-    font-family: "Hyundai Sans Head";
+    font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
     font-style: normal;
     font-weight: 600;
   }
