@@ -124,7 +124,7 @@
       format("embedded-opentype"),
     url("../font/HyundaiSansTextKRBold.woff2") format("woff2"),
     url("../font/HyundaiSansTextKRBold.woff") format("woff");
-  font-weight: 700;
+  font-weight: 900;
   font-style: normal;
 }
 
@@ -134,7 +134,7 @@
   src: url("../font/HyundaiSansTextKRMedium.eot") format("embedded-opentype"),
     url("../font/HyundaiSansTextKRMedium.woff2") format("woff2"),
     url("../font/HyundaiSansTextKRMedium.woff") format("woff");
-  font-weight: 500;
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -145,6 +145,6 @@
       format("embedded-opentype"),
     url("../font/HyundaiSansTextKRRegular.woff2") format("woff2"),
     url("../font/HyundaiSansTextKRRegular.woff") format("woff");
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
 }
