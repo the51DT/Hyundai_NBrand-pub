@@ -2365,15 +2365,27 @@ window.onload = function () {
   });
 };
 
-// N Race : N TT 경기의 경우에만 사이드 팝업
-const selectedAreaInje = document.querySelector(
+// N Race : N TT 경기의 경우에만 사이드 팝업 시작
+
+// ** 참고
+// 실제 페이지에서 .evt-map-img 내 button을 1회 클릭시  aria-controls가 eCup의 팝업과 아이디값이 중복되는 현상이 발생합니다.
+// eCup 페이지의 .btn-evtmap-pop의 aria-controls의 규칙은 pop-으로 시작하며, ntt의 경우는 pop-nTT로 시작됩니다.
+// .btn-evtmap-pop을 2회 클릭 시 nttVal의 텍스트가 aria-controls에 반영이 되어 팝업이 나타납니다.
+//    (예: 1회 클릭 시 pop-motorExperience, 2회 클릭 시 pop-nTTMoterExper로 변경됨)
+// nttVal 변수를 추가하여 ntt 페이지일 경우에만 구분하여 팝업이 표시 되도록 하였습니다.
+// 팝업 id에 해당하는 nttOptions배열이 매칭이 될 때 호출하는 식으로 중복 클릭을 없애보려고 했으나 충돌하는 부분이 있어 의도한대로 잘 되지 않았습니다.
+// aria-controls에 nttOptions 배열 내 데이터값으로 변동되도록 하였으나 다른 소스와 충돌하는 부분이 다수 있는 상태입니다.
+
+// 상단에 있는 evtImgMapChk 함수, selectbox 관련 함수와 같이 참고해주세요.
+
+const locationNtt = document.querySelector(
   ".ty05Swiper .swiper-slide.active .card_info .card_subtit"
-).innerText;
+).innerText; // 다른 함수 내의 selectedArea 변수와 값은 같음
 const nttVal = document.querySelectorAll(
-  // N TT 호출
+  // 구분 호출) N TT 호출
   ".ty05Swiper .swiper-slide.active .card_top .card_rank .ntt-val"
 );
-const nttOptions = ["pop-nTTMoterExper", "pop-nTTNLounge", "pop-nTTRestZone"];
+const nttOptions = ["pop-nTTMoterExper", "pop-nTTNLounge", "pop-nTTRestZone"]; // aria-controls 값을 변경하기 위함
 const btnCallPop = document.querySelector(".evtLayout-type button"); // 셀렉트 박스를 감싸는 div
 
 nttVal.forEach(function (el) {
@@ -2381,12 +2393,11 @@ nttVal.forEach(function (el) {
 
   // case 01) N TT + Inje Speedium || Inje
   if (
-    (nttChk == "N TT" && selectedAreaInje == "Inje Speedium") ||
-    selectedAreaInje == "Inje"
+    (nttChk == "N TT" && locationNtt == "Inje Speedium") ||
+    (nttChk == "N TT" && locationNtt == "Inje")
   ) {
     btnCallPop.addEventListener("click", function () {
       const mapImg = document.querySelector(".btn-evtmap-pop"); // 맵 이미지 버튼
-
       mapImg.addEventListener("click", function () {
         switch (btnCallPop.innerText) {
           case "Motorsport Experience": {
@@ -2410,7 +2421,7 @@ nttVal.forEach(function (el) {
   }
 
   // case 02) N TT + Youngin
-  if (nttChk == "N TT" && selectedAreaInje == "Youngin") {
+  if (nttChk == "N TT" && locationNtt == "Youngin") {
     btnCallPop.addEventListener("click", function () {
       const mapImg = document.querySelector(".btn-evtmap-pop"); // 맵 이미지 버튼
 
@@ -2436,4 +2447,4 @@ nttVal.forEach(function (el) {
     });
   }
 });
-//
+// N Race : N TT 경기의 경우에만 사이드 팝업 끝
