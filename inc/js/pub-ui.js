@@ -1380,8 +1380,8 @@ function evtImgMapChk(options, area) {
   var evtMapPopLayerId = $(".side-popup").attr("id");
 
   console.log(evtMapImage);
-  var option1 = options[0];
-  var option2 = options[1];
+  var option1 = options[0].trim(); // 데이터 좌우 공백 제거
+  var option2 = options[1].trim(); // 데이터 좌우 공백 제거
 
   var selectedArea = area.toLowerCase();
   console.log(selectedArea);
@@ -1440,7 +1440,7 @@ function evtImgMapChk(options, area) {
           evtMapPopBtn.attr("aria-controls", "pop-viewingZone");
         } else {
           alert(
-            "조건에 맞지 않습니다. 지역에 맞는 이벤트 옵션을 선택해주세요."
+            "조건에 맞지 않습니다. 지역에 맞는 이벤트 옵션을 선택해주세요. "
           );
         }
       } else if (
@@ -1524,25 +1524,28 @@ function evtImgMapChk(options, area) {
             "../../inc/images/eventLayout/evtLayout_min_shortImg01.png"
           );
           evtMapPopBtn.attr("aria-controls", "pop-viewingZone");
-        } else if (option1 == "Motorsport Experience") {
-          evtMapImage.attr(
-            "src",
-            "../../inc/images/eventLayout/evtLayout_max_inje_ntt.png"
-          );
-          evtMapPopBtn.attr("aria-controls", "pop-nTTMoterExper");
-        } else if (option1 == "N Lounge") {
-          evtMapImage.attr(
-            "src",
-            "../../inc/images/eventLayout/evtLayout_max_nlounge_ntt.png"
-          );
-          evtMapPopBtn.attr("aria-controls", "pop-nTTNLounge");
-        } else if (option1 == "Rest Zone") {
-          evtMapImage.attr(
-            "src",
-            "../../inc/images/eventLayout/evtLayout_max_rest_ntt.png"
-          );
-          evtMapPopBtn.attr("aria-controls", "pop-nTTRestZone");
-        } else {
+        }
+        // NTT 관련 이벤트 임시 주석 처리
+        // else if (option1 == "Motorsport Experience") {
+        //   evtMapImage.attr(
+        //     "src",
+        //     "../../inc/images/eventLayout/evtLayout_max_inje_ntt.png"
+        //   );
+        //   evtMapPopBtn.attr("aria-controls", "pop-nTTMoterExper");
+        // } else if (option1 == "N Lounge") {
+        //   evtMapImage.attr(
+        //     "src",
+        //     "../../inc/images/eventLayout/evtLayout_max_nlounge_ntt.png"
+        //   );
+        //   evtMapPopBtn.attr("aria-controls", "pop-nTTNLounge");
+        // } else if (option1 == "Rest Zone") {
+        //   evtMapImage.attr(
+        //     "src",
+        //     "../../inc/images/eventLayout/evtLayout_max_rest_ntt.png"
+        //   );
+        //   evtMapPopBtn.attr("aria-controls", "pop-nTTRestZone");
+        // }
+        else {
           alert(
             "조건에 맞지 않습니다. 지역에 맞는 이벤트 옵션을 선택해주세요."
           );
@@ -1740,194 +1743,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const chkPopupOpened = document.querySelectorAll(
     ".popup.model-popup.forModel"
   );
-
-  // 영상 필터링 파싱 시작
-  // function ControlVideo() {
-  //   const videoWrap = document.querySelectorAll(".video-wrapper");
-  //   const video = document.querySelectorAll(".popup video");
-  //   video.muted = true;
-
-  //   const videoUrlList = [
-  //     [
-  //       {
-  //         //MD010101t01P01 모두 미수급 상태
-  //         id: "MD010101t01P01_IONIQ5N",
-  //         url: "../../inc/videos/i20n.mp4",
-  //         type: "video/mp4",
-  //       },
-  //       {
-  //         id: "MD010101t01P01_IONIQ5N",
-  //         url: "../../inc/videos/24hnbr24.mp4",
-  //         type: "video/mp4",
-  //       },
-  //     ],
-  //     [
-  //       {
-  //         //MD010101t01P01 모두 미수급 상태
-  //         id: "MD010101t01P01_i20N",
-  //         url: "../../inc/videos/i20n.mp4",
-  //         type: "video/mp4",
-  //       },
-  //       {
-  //         id: "MD010101t01P01_i20N",
-  //         url: "../../inc/videos/24hnbr24.mp4",
-  //         type: "video/mp4",
-  //       },
-  //     ],
-  //     [
-  //       {
-  //         id: "MD010201t01P01",
-  //         url: "../../inc/videos/elantraN-video01.mp4",
-  //         type: "video/mp4",
-  //       },
-  //       {
-  //         id: "MD010201t01P01",
-  //         url: "../../inc/videos/elantraN-video02.mp4",
-  //         type: "video/mp4",
-  //       },
-  //     ],
-  //     [
-  //       {
-  //         // MD010401t01P01 영상 미수급 상태
-  //         id: "MD010401t01P01",
-  //         url: "../../inc/videos/elantraN-video01.mp4",
-  //         type: "video/mp4",
-  //       },
-  //     ],
-  //     [
-  //       {
-  //         id: "MD020201P01",
-  //         url: "../../inc/videos/IONIQ5N-eN1-Cup-video01.mp4",
-  //         type: "video/mp4",
-  //       },
-  //     ],
-  //     [
-  //       {
-  //         id: "MD020301P01",
-  //         url: "../../inc/videos/IONIQ5N-TA-video01.mp4",
-  //         type: "video/mp4",
-  //       },
-  //     ],
-  //     [
-  //       {
-  //         id: "MD040201P01",
-  //         url: "../../inc/videos/IONIQ5N-NPX1-video01.mp4",
-  //         type: "video/mp4",
-  //       },
-  //     ],
-  //     [
-  //       {
-  //         id: "MD050901P01",
-  //         url: "../../inc/videos/VELOSTERN-video01.mp4",
-  //         type: "video/mp4",
-  //       },
-  //       {
-  //         id: "MD050901P01",
-  //         url: "../../inc/videos/VELOSTERN-video02.mp4",
-  //         type: "video/mp4",
-  //       },
-  //     ],
-  //     [
-  //       // 더미 페이지입니다. 추후 삭제 예정입니다.
-  //       {
-  //         id: "modelPop_test",
-  //         url: "../../inc/videos/elantra-n-kv.mp4",
-  //         type: "video/mp4",
-  //       },
-  //       {
-  //         id: "modelPop_test",
-  //         url: "../../inc/videos/i20n.mp4",
-  //         type: "video/mp4",
-  //       },
-  //     ],
-  //   ];
-
-  //   videoWrap.forEach((el) => {
-  //     const videoId = el.id;
-  //     const filteredVideo = [];
-
-  //     videoUrlList.forEach((list) => {
-  //       list.forEach((item) => {
-  //         if (item.id === videoId) {
-  //           filteredVideo.push(item);
-  //         }
-  //       });
-  //     });
-
-  //     video.forEach((videoEl, index) => {
-  //       if (index < filteredVideo.length) {
-  //         const videoData = filteredVideo[index];
-  //         const sourceEl = document.createElement("source");
-  //         sourceEl.src = videoData.url;
-  //         sourceEl.type = videoData.type;
-  //         videoEl.muted = true;
-  //         videoEl.appendChild(sourceEl);
-  //       }
-  //     });
-  //   });
-  //   // 영상 필터링 파싱 끝
-
-  //   // 영상 플레이어 제어 시작
-  //   const videoBtn = document.querySelectorAll(
-  //     ".popup .wrap-model-video .btn-model-play"
-  //   );
-
-  //   videoBtn.forEach((btn, indexx) => {
-  //     const eachVideos = video[indexx];
-  //     const eachPlayBtns = videoBtn[indexx];
-
-  //     btn.addEventListener("click", () => {
-  //       eachVideos.paused
-  //         ? playVideo(eachVideos, eachPlayBtns)
-  //         : pauseVideo(eachVideos, eachPlayBtns);
-  //     });
-
-  //     eachVideos.addEventListener("pause", () => {
-  //       setTimeout(() => {
-  //         eachPlayBtns.style.opacity = "1";
-  //       }, 300);
-  //     });
-
-  //     eachVideos.addEventListener("play", () => {
-  //       eachVideos.muted = true;
-  //       eachPlayBtns.style.opacity = "0";
-  //     });
-
-  //     // 모델 팝업이 닫혔을 때 스크롤, 영상 초기화 처리
-  //     const popCloseBtn = document.querySelector(
-  //       ".popup-wrapper .btn-wrap button.btn-only-icon-notbg.pop-close"
-  //     );
-  //     const popupBody = document.querySelector(
-  //       ".popup.model-popup.forModel .popup-body"
-  //     );
-
-  //     popCloseBtn.addEventListener("click", () => {
-  //       {
-  //         eachVideos.paused ? null : resetVideo(eachVideos);
-  //       }
-
-  //       setTimeout(() => {
-  //         popupBody.scrollTop = 0;
-  //       }, 250);
-  //     });
-  //   });
-
-  //   function playVideo(video, button) {
-  //     video.play();
-  //     button.style.opacity = "0";
-  //   }
-
-  //   function pauseVideo(video, button) {
-  //     video.pause();
-
-  //     button.style.opacity = "1";
-  //   }
-
-  //   function resetVideo(video) {
-  //     video.play();
-  //     video.currentTime = 0;
-  //   }
-  // }
 
   //  MD010101t02P01,MD010101t02P02,MD010101t02P03 내 다중 영상 제어 함수 시작
   function ControlMultiVideo() {
@@ -2559,3 +2374,87 @@ window.onload = function () {
     setVh();
   });
 };
+
+// N Race : N TT 경기의 경우에만 사이드 팝업 시작
+
+// ** 참고
+// 실제 페이지에서 .evt-map-img 내 button을 1회 클릭시  aria-controls가 eCup의 팝업과 아이디값이 중복되는 현상이 발생합니다.
+// eCup 페이지의 .btn-evtmap-pop의 aria-controls의 규칙은 pop-으로 시작하며, ntt의 경우는 pop-nTT로 시작됩니다.
+// .btn-evtmap-pop을 2회 클릭 시 nttVal의 텍스트가 aria-controls에 반영이 되어 팝업이 나타납니다.
+//    (예: 1회 클릭 시 pop-motorExperience, 2회 클릭 시 pop-nTTMoterExper로 변경됨)
+// nttVal 변수를 추가하여 ntt 페이지일 경우에만 구분하여 팝업이 표시 되도록 하였습니다.
+// 팝업 id에 해당하는 nttOptions배열이 매칭이 될 때 호출하는 식으로 중복 클릭을 없애보려고 했으나 충돌하는 부분이 있어 의도한대로 잘 되지 않았습니다.
+// aria-controls에 nttOptions 배열 내 데이터값으로 변동되도록 하였으나 다른 소스와 충돌하는 부분이 다수 있는 상태입니다.
+
+// 상단에 있는 evtImgMapChk 함수, selectbox 관련 함수와 같이 참고해주세요.
+
+const locationNtt = document.querySelector(
+  ".ty05Swiper .swiper-slide.active .card_info .card_subtit"
+).innerText; // 다른 함수 내의 selectedArea 변수와 값은 같음
+const nttVal = document.querySelectorAll(
+  // 구분 호출) N TT 호출
+  ".ty05Swiper .swiper-slide.active .card_top .card_rank .ntt-val"
+);
+const nttOptions = ["pop-nTTMoterExper", "pop-nTTNLounge", "pop-nTTRestZone"]; // aria-controls 값을 변경하기 위함
+const btnCallPop = document.querySelector(".evtLayout-type button"); // 셀렉트 박스를 감싸는 div
+
+nttVal.forEach(function (el) {
+  const nttChk = el.innerText;
+
+  // case 01) N TT + Inje Speedium || Inje
+  if (
+    (nttChk == "N TT" && locationNtt == "Inje Speedium") ||
+    (nttChk == "N TT" && locationNtt == "Inje")
+  ) {
+    btnCallPop.addEventListener("click", function () {
+      const mapImg = document.querySelector(".btn-evtmap-pop"); // 맵 이미지 버튼
+      mapImg.addEventListener("click", function () {
+        switch (btnCallPop.innerText) {
+          case "Motorsport Experience": {
+            mapImg.setAttribute("aria-controls", nttOptions[0]);
+            break;
+          }
+          case "N Lounge": {
+            mapImg.setAttribute("aria-controls", nttOptions[1]);
+            break;
+          }
+          case "Rest zone": {
+            mapImg.setAttribute("aria-controls", nttOptions[2]);
+            break;
+          }
+          default:
+            mapImg.setAttribute("aria-controls", "");
+            break;
+        }
+      });
+    });
+  }
+
+  // case 02) N TT + Youngin
+  if (nttChk == "N TT" && locationNtt == "Youngin") {
+    btnCallPop.addEventListener("click", function () {
+      const mapImg = document.querySelector(".btn-evtmap-pop"); // 맵 이미지 버튼
+
+      mapImg.addEventListener("click", function () {
+        switch (btnCallPop.innerText) {
+          case "Motorsport Experience": {
+            mapImg.setAttribute("aria-controls", nttOptions[0]);
+            break;
+          }
+          case "N Lounge": {
+            mapImg.setAttribute("aria-controls", nttOptions[1]);
+            break;
+          }
+          case "Rest zone": {
+            mapImg.setAttribute("aria-controls", nttOptions[2]);
+            break;
+          }
+          default:
+            mapImg.setAttribute("aria-controls", "");
+            break;
+        }
+      });
+    });
+  }
+});
+// N Race : N TT 경기의 경우에만 사이드 팝업 끝
