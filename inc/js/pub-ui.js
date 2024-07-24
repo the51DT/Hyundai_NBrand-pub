@@ -2387,74 +2387,75 @@ window.onload = function () {
 // aria-controls에 nttOptions 배열 내 데이터값으로 변동되도록 하였으나 다른 소스와 충돌하는 부분이 다수 있는 상태입니다.
 
 // 상단에 있는 evtImgMapChk 함수, selectbox 관련 함수와 같이 참고해주세요.
+if (document.querySelector(".ty05Swiper")) {
+  const locationNtt = document.querySelector(
+    ".ty05Swiper .swiper-slide.active .card_info .card_subtit"
+  ).innerText; // 다른 함수 내의 selectedArea 변수와 값은 같음
+  const nttVal = document.querySelectorAll(
+    // 구분 호출) N TT 호출
+    ".ty05Swiper .swiper-slide.active .card_top .card_rank .ntt-val"
+  );
+  const nttOptions = ["pop-nTTMoterExper", "pop-nTTNLounge", "pop-nTTRestZone"]; // aria-controls 값을 변경하기 위함
+  const btnCallPop = document.querySelector(".evtLayout-type button"); // 셀렉트 박스를 감싸는 div
 
-const locationNtt = document.querySelector(
-  ".ty05Swiper .swiper-slide.active .card_info .card_subtit"
-).innerText; // 다른 함수 내의 selectedArea 변수와 값은 같음
-const nttVal = document.querySelectorAll(
-  // 구분 호출) N TT 호출
-  ".ty05Swiper .swiper-slide.active .card_top .card_rank .ntt-val"
-);
-const nttOptions = ["pop-nTTMoterExper", "pop-nTTNLounge", "pop-nTTRestZone"]; // aria-controls 값을 변경하기 위함
-const btnCallPop = document.querySelector(".evtLayout-type button"); // 셀렉트 박스를 감싸는 div
+  nttVal.forEach(function (el) {
+    const nttChk = el.innerText;
 
-nttVal.forEach(function (el) {
-  const nttChk = el.innerText;
-
-  // case 01) N TT + Inje Speedium || Inje
-  if (
-    (nttChk == "N TT" && locationNtt == "Inje Speedium") ||
-    (nttChk == "N TT" && locationNtt == "Inje")
-  ) {
-    btnCallPop.addEventListener("click", function () {
-      const mapImg = document.querySelector(".btn-evtmap-pop"); // 맵 이미지 버튼
-      mapImg.addEventListener("click", function () {
-        switch (btnCallPop.innerText) {
-          case "Motorsport Experience": {
-            mapImg.setAttribute("aria-controls", nttOptions[0]);
-            break;
+    // case 01) N TT + Inje Speedium || Inje
+    if (
+      (nttChk == "N TT" && locationNtt == "Inje Speedium") ||
+      (nttChk == "N TT" && locationNtt == "Inje")
+    ) {
+      btnCallPop.addEventListener("click", function () {
+        const mapImg = document.querySelector(".btn-evtmap-pop"); // 맵 이미지 버튼
+        mapImg.addEventListener("click", function () {
+          switch (btnCallPop.innerText) {
+            case "Motorsport Experience": {
+              mapImg.setAttribute("aria-controls", nttOptions[0]);
+              break;
+            }
+            case "N Lounge": {
+              mapImg.setAttribute("aria-controls", nttOptions[1]);
+              break;
+            }
+            case "Rest zone": {
+              mapImg.setAttribute("aria-controls", nttOptions[2]);
+              break;
+            }
+            default:
+              mapImg.setAttribute("aria-controls", "");
+              break;
           }
-          case "N Lounge": {
-            mapImg.setAttribute("aria-controls", nttOptions[1]);
-            break;
-          }
-          case "Rest zone": {
-            mapImg.setAttribute("aria-controls", nttOptions[2]);
-            break;
-          }
-          default:
-            mapImg.setAttribute("aria-controls", "");
-            break;
-        }
+        });
       });
-    });
-  }
+    }
 
-  // case 02) N TT + Youngin
-  if (nttChk == "N TT" && locationNtt == "Youngin") {
-    btnCallPop.addEventListener("click", function () {
-      const mapImg = document.querySelector(".btn-evtmap-pop"); // 맵 이미지 버튼
+    // case 02) N TT + Youngin
+    if (nttChk == "N TT" && locationNtt == "Youngin") {
+      btnCallPop.addEventListener("click", function () {
+        const mapImg = document.querySelector(".btn-evtmap-pop"); // 맵 이미지 버튼
 
-      mapImg.addEventListener("click", function () {
-        switch (btnCallPop.innerText) {
-          case "Motorsport Experience": {
-            mapImg.setAttribute("aria-controls", nttOptions[0]);
-            break;
+        mapImg.addEventListener("click", function () {
+          switch (btnCallPop.innerText) {
+            case "Motorsport Experience": {
+              mapImg.setAttribute("aria-controls", nttOptions[0]);
+              break;
+            }
+            case "N Lounge": {
+              mapImg.setAttribute("aria-controls", nttOptions[1]);
+              break;
+            }
+            case "Rest zone": {
+              mapImg.setAttribute("aria-controls", nttOptions[2]);
+              break;
+            }
+            default:
+              mapImg.setAttribute("aria-controls", "");
+              break;
           }
-          case "N Lounge": {
-            mapImg.setAttribute("aria-controls", nttOptions[1]);
-            break;
-          }
-          case "Rest zone": {
-            mapImg.setAttribute("aria-controls", nttOptions[2]);
-            break;
-          }
-          default:
-            mapImg.setAttribute("aria-controls", "");
-            break;
-        }
+        });
       });
-    });
-  }
-});
-// N Race : N TT 경기의 경우에만 사이드 팝업 끝
+    }
+  });
+  // N Race : N TT 경기의 경우에만 사이드 팝업 끝
+}
