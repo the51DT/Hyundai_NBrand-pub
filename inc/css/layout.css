@@ -1030,3 +1030,13 @@ body.fix {
     right: -100%;
   }
 }
+
+
+@keyframes swiperTransition {
+  0% {
+    width:0;
+  }
+  100% {
+    width:84px;
+  }
+}
