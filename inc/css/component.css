@@ -1986,6 +1986,17 @@ input[type="radio"]:focus + label {
   left: 0;
 }
 
+/*임시 - 테스트용 추가 - 07.24 */
+.ty01Swiper .swiper-pagination-custom .swiper-pagination-bullet .seek-bar {  
+  width:0;
+  transition: width 10s;
+}
+
+.ty01Swiper .swiper-pagination-custom .swiper-pagination-bullet-active .seek-bar {  
+  width: 84px;
+}
+/*임시 - 테스트용 추가 */
+
 .swiper-button-next,
 .swiper-button-prev {
   width: 60px;

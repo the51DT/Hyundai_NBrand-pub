@@ -282,7 +282,7 @@ var pubUi = {
       slidesPerView: 1,
       watchOverflow: true, //pagination 1개 일 경우, 숨김
       initialSlide: 0,
-      touchRatio: 0, // 드래그 X : 0 , 드래그 O : 1
+      touchRatio: 1, // 드래그 X : 0 , 드래그 O : 1
       loop: true,
       autoplay: autoplayVal,
       pagination: {
@@ -310,45 +310,6 @@ var pubUi = {
         // realIndexChange: function (){
 
         // },
-        beforeSlideChangeStart: function () {
-          console.log("스와이퍼바뀌기전");
-          currentIndex = swiper1.activeIndex;
-          var dataType = $(".ty01Swiper:not(.banner-swiper) .swiper-slide")[
-            currentIndex
-          ].dataset.type;
-          console.log(dataType);
-          // if ($(".ty01Swiper .swiper-slide")[currentIndex].querySelector("video")) {
-          //   var videoId = $(".ty01Swiper .swiper-slide")[
-          //     currentIndex
-          //   ].querySelector("video").id;
-          //   var video = document.querySelector(`#${videoId}`);
-          //   video.pause();
-          //   video.currentTime = 0;
-          //   // if ($(".ty01Swiper .swiper-slide")[currentIndex].querySelector("video").paused == false) {
-          //   //   var videoId = $(".ty01Swiper .swiper-slide")[currentIndex].querySelector("video").id;
-          //   //   var video = document.querySelector(`#${videoId}`);
-          //   //   video.pause();
-          //   //   video.currentTime = 0;
-          //   // }
-          // } else {
-          //   swiper1.autoplay.stop();
-          // }
-
-          if (dataType == "video") {
-            var videoId = $(".ty01Swiper:not(.banner-swiper) .swiper-slide")[
-              currentIndex
-            ].querySelector("video").id;
-            var video = document.querySelector(`#${videoId}`);
-
-            if (video.paused == false) {
-              video.pause();
-              video.currentTime = 0;
-            }
-          } else {
-            console.log("img입니다" + dataType);
-            $(".ty01Swiper:not(.banner-swiper)")[0].swiper.autoplay.stop();
-          }
-        },
         slideChangeTransitionEnd: function () {
           currentIndex = swiper1.activeIndex;
           // var swiperLength = $(".ty01Swiper .swiper-slide").length;
@@ -389,33 +350,6 @@ var pubUi = {
       },
     });
 
-    var swiper1_1 = new Swiper(".banner-swiper", {
-      slidesPerView: 1,
-      watchOverflow: true, //pagination 1개 일 경우, 숨김
-      initialSlide: 0,
-      touchRatio: 1, // 드래그 X : 0 , 드래그 O : 1
-      loop: true,
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: ".swiper-pagination-custom",
-        clickable: true,
-      },
-      navigation: {
-        nextEl: ".ty01Swiper .swiper-button-next",
-        prevEl: ".ty01Swiper .swiper-button-prev",
-      },
-      breakpoints: {
-        360: {
-          //touchRatio: 1, // 드래그 O
-        },
-        768: {
-          //touchRatio: 1, // 드래그 O
-        },
-      },
-    });
 
     swiper2SlideEvt(); //swiper2 이벤트 실행
 
@@ -653,7 +587,6 @@ var pubUi = {
       var playBtn = slide.find(".btn-play").hasClass("on");
       var videoId = slideActive.find(".video").attr("id");
       var video = document.querySelector(`#${videoId}`);
-      var flag = "";
 
       if (targetIdx == undefined) {
         targetIdx = 0;
@@ -661,7 +594,6 @@ var pubUi = {
 
       if (slideActive) {
         if (type != "image") {
-          flag = 0;
           if (playBtn) {
             // type = video
             console.log("타겟 인덱스 : ", targetIdx);
@@ -693,13 +625,7 @@ var pubUi = {
                 video.pause();
                 slide[0].swiper.slideNext();
               }
-              flag = 1;
             });
-            if (flag == 1) {
-              video.addEventListener("playing", (event) => {
-                this.removeEventListener("timeupdate", arguments.callee, false);
-              });
-            }
           } else {
             console.log("비디오 일시정지 상태 입니다.");
             $(".swiper-pagination-bullet-active .seek-bar").css(
@@ -710,18 +636,13 @@ var pubUi = {
         } else {
           // type = image
           console.log("타겟 인덱스 : ", targetIdx);
-          flag = 0;
           slide[0].swiper.autoplay.stop();
 
           if (playBtn) {
             setTimeout(function () {
-              if (flag == 0) {
-                slide[0].swiper.slideNext();
-                console.log("slideChangeTransitionStart 다음 슬라이드 이동 !");
-              } else {
-                console.log("flag값: " + flag);
-              }
-            }, 3000);
+              slide[0].swiper.slideNext();
+              console.log("slideChangeTransitionStart 다음 슬라이드 이동 !");
+            }, 10000);
           } else {
             console.log("재생버튼 비활성화 상태 입니다.");
           }
