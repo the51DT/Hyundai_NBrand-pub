@@ -6,10 +6,12 @@ var pubUi = {
     self.swiperSlideEvent();
     self.masonryLayout();
     btnNaviCheck();
-    // self.videoControlerChk("");
 
-    if ($(".ty01Swiper") != undefined && $(".ty01Swiper").length > 0) {
-      self.videoBulletChk(".ty01Swiper");
+    if (
+      $(".ty01Swiper:not(.banner-swiper)") != undefined &&
+      $(".ty01Swiper:not(.banner-swiper)").length > 0
+    ) {
+      self.videoPlayChk(".ty01Swiper:not(.banner-swiper)");
     }
   },
   settings: function () {
@@ -275,9 +277,7 @@ var pubUi = {
       };
     }
 
-    // console.log("스와이퍼 이벤트 진입");
-
-    var swiper1 = new Swiper(".ty01Swiper", {
+    var swiper1 = new Swiper(".ty01Swiper:not(.banner-swiper)", {
       slidesPerView: 1,
       watchOverflow: true, //pagination 1개 일 경우, 숨김
       initialSlide: 0,
@@ -306,58 +306,56 @@ var pubUi = {
             "<div class='seek-bar'></div>"
           );
         },
-        beforeSlideChangeStart: function () {
-          console.log("스와이퍼바뀌기전");
-          var currentIndex = swiper1.activeIndex;
-          if (
-            $(".ty01Swiper .swiper-slide")[currentIndex].querySelector("video")
-          ) {
-            var videoId = $(".ty01Swiper .swiper-slide")[
-              currentIndex
-            ].querySelector("video").id;
-            var video = document.querySelector(`#${videoId}`);
-            video.pause();
-            video.currentTime = 0;
-            // if ($(".ty01Swiper .swiper-slide")[currentIndex].querySelector("video").paused == false) {
-            //   var videoId = $(".ty01Swiper .swiper-slide")[currentIndex].querySelector("video").id;
-            //   var video = document.querySelector(`#${videoId}`);
-            //   video.pause();
-            //   video.currentTime = 0;
-            // }
-          } else {
-            // alert("이미지"+ videoFlag)
-            swiper1.autoplay.stop();
-            videoFlag = "0";
-          }
-        },
+        // realIndexChange: function () {
+        //   slideInx = this.realIndex; //현재 슬라이드 index 갱신
+        // },
+        // beforeSlideChangeStart: function () {
+        //   console.log("스와이퍼바뀌기전");
+        //   currentIndex = swiper1.activeIndex;
+        //   if ($(".ty01Swiper .swiper-slide")[currentIndex].querySelector("video")) {
+        //     var videoId = $(".ty01Swiper .swiper-slide")[
+        //       currentIndex
+        //     ].querySelector("video").id;
+        //     var video = document.querySelector(`#${videoId}`);
+        //     video.pause();
+        //     video.currentTime = 0;
+        //   } else {
+        //     swiper1.autoplay.stop();
+        //   }
+        // },
         slideChangeTransitionEnd: function () {
-          currentIndex = swiper1.activeIndex;
-          // var swiperLength = $(".ty01Swiper .swiper-slide").length;
-          // if (currentIndex == swiperLength - 1) {
-          //   currentIndex = 0;
+          self.videoPlayChk(".ty01Swiper:not(.banner-swiper)");
+          // currentIndex = swiper1.activeIndex;
+          // if (
+          //   $(".ty01Swiper .swiper-slide")[currentIndex].querySelector("video")
+          // ) {
+          //   // 동영상 케이스,
+          //   console.log("동영상 케이스");
+          //   $(
+          //     ".ty01Swiper .swiper-pagination-custom .swiper-pagination-bullet .seek-bar"
+          //   ).css("--time", "0");
+          //   $(".ty01Swiper .swiper-slide")[currentIndex].querySelector(
+          //     "video"
+          //   ).currentTime = 0;
+
+          //   pubUi.videoBulletChk(
+          //     ".ty01Swiper:not(.banner-swiper)",
+          //     currentIndex,
+          //     "video"
+          //   );
+          // } else {
+          //   // 동영상 x 케이스,
+          //   console.log("이미지 케이스");
+          //   $(
+          //     ".ty01Swiper .swiper-pagination-custom .swiper-pagination-bullet .seek-bar"
+          //   ).css("--time", "84px");
+
+          //   pubUi.videoBulletChk(
+          //     ".ty01Swiper:not(.banner-swiper)",
+          //     currentIndex,
+          //     "image"
+          //   );
           // }
-          if (
-            $(".ty01Swiper .swiper-slide")[currentIndex].querySelector("video")
-          ) {
-            // 동영상 케이스,
-            console.log("동영상 케이스");
-            $(
-              ".ty01Swiper .swiper-pagination-custom .swiper-pagination-bullet .seek-bar"
-            ).css("--time", "0");
-            $(".ty01Swiper .swiper-slide")[currentIndex].querySelector(
-              "video"
-            ).currentTime = 0;
-
-            pubUi.videoBulletChk(".ty01Swiper", currentIndex, "video");
-          } else {
-            // 동영상 x 케이스,
-            console.log("이미지 케이스");
-            $(
-              ".ty01Swiper .swiper-pagination-custom .swiper-pagination-bullet .seek-bar"
-            ).css("--time", "84px");
-
-            pubUi.videoBulletChk(".ty01Swiper", currentIndex, "image");
-          }
         },
       },
     });
@@ -447,10 +445,7 @@ var pubUi = {
       slidesPerView: 1,
       spaceBetween: 80,
       centeredSlides: true,
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
+      loop: true,
       pagination: {
         el: ".swiper-pagination-custom",
         clickable: true,
@@ -604,57 +599,60 @@ var pubUi = {
       }
 
       if (slideActive) {
-        if (playBtn) {
-          if (type != "image") {
+        if (type != "image") {
+          if (playBtn) {
             // type = video
             console.log("타겟 인덱스 : ", targetIdx);
-            video.play();
-            video.addEventListener(
-              "timeupdate",
-              function (e) {
-                var duration = Math.floor(this.duration); // 동영상 전체 길이
-                var curTime = Math.floor(this.currentTime) + 1; // 현재 동영상 길이
-                var per = Math.floor((maxVideoW / duration) * curTime); // 퍼센트 계산 값
-                var perWrap = (1 / duration) * 100;
-                console.log(curTime);
-                // alert(curTime, duration);
-                if (per <= maxVideoW) {
-                  document
-                    .querySelector(".swiper-pagination-bullet-active .seek-bar")
-                    .style.setProperty("--time", `${per}px`);
-                  document
-                    .querySelector(".swiper-pagination-bullet-active .seek-bar")
-                    .style.setProperty("--set", `${perWrap / 10 + 0.5}s`);
+            if (video.paused) {
+              video.play();
+            } else {
+              video.pause();
+            }
+            video.addEventListener("timeupdate", function (e) {
+              var duration = Math.floor(this.duration); // 동영상 전체 길이
+              var curTime = Math.floor(this.currentTime) + 1; // 현재 동영상 길이
+              var per = Math.floor((maxVideoW / duration) * curTime); // 퍼센트 계산 값
+              var perWrap = (1 / duration) * 100;
+              console.log(curTime);
+              // alert(curTime, duration);
+              if (per <= maxVideoW) {
+                document
+                  .querySelector(".swiper-pagination-bullet-active .seek-bar")
+                  .style.setProperty("--time", `${per}px`);
+                document
+                  .querySelector(".swiper-pagination-bullet-active .seek-bar")
+                  .style.setProperty("--set", `${perWrap / 10 + 0.5}s`);
 
-                  // $("#paging").css("color", "#fff");
-                  // $("#paging").html("퍼센트: " + per);
-                }
-                if (curTime >= duration + 1) {
-                  curTime = 0;
-                  video.pause();
-                  video.removeEventListener(
-                    "timeupdate",
-                    arguments.callee.false
-                  );
-                  slide[0].swiper.slideNext();
-                }
-              },
-              false
-            );
+                // $("#paging").css("color", "#fff");
+                // $("#paging").html("퍼센트: " + per);
+              }
+              if (curTime >= duration + 1) {
+                curTime = 0;
+                video.pause();
+                slide[0].swiper.slideNext();
+              }
+            });
           } else {
-            // type = image
-            console.log("타겟 인덱스 : ", targetIdx);
-            slide[0].swiper.autoplay.stop();
+            console.log("비디오 일시정지 상태 입니다.");
+            $(".swiper-pagination-bullet-active .seek-bar").css(
+              "--time",
+              "8px"
+            );
+          }
+        } else {
+          // type = image
+          console.log("타겟 인덱스 : ", targetIdx);
+          slide[0].swiper.autoplay.stop();
+
+          if (playBtn) {
             setTimeout(function () {
               slide[0].swiper.slideNext();
               console.log("slideChangeTransitionStart 다음 슬라이드 이동 !");
-            }, 3000);
+            }, 10000);
+          } else {
+            console.log("재생버튼 비활성화 상태 입니다.");
           }
         }
-        // else {
-        //   console.log("비디오 일시정지 상태 입니다.");
-        //   $(".swiper-pagination-bullet-active .seek-bar").css("--time", "8px");
-        // }
       }
     } else {
       // console.log("비디오 타입 X");
@@ -666,6 +664,46 @@ var pubUi = {
       );
       return;
     }
+  },
+  videoPlayChk: function (targetSwiper) {
+    var videoTarget = $(targetSwiper).find(".swiper-slide-active video");
+
+    if (
+      $(".swiper-pagination-custom .swiper-pagination-bullet").hasClass(
+        ".swiper-pagination-bullet-active"
+      )
+    ) {
+      $(".swiper-pagination-custom .swiper-pagination-bullet").removeClass(
+        ".swiper-pagination-bullet-active"
+      );
+    }
+
+    if (videoTarget.length > 0) {
+      if (videoTarget[0].paused) {
+        videoTarget[0].play();
+        console.log("영상 재생!!!!!!!");
+        setTimeout(function () {
+          $(targetSwiper)[0].swiper.slideNext();
+          console.log("slideChangeTransitionStart 다음 슬라이드 이동 !");
+        }, 8000);
+      } else {
+        videoTarget[0].pause();
+        console.log("영상 정지!!!!!!!");
+      }
+    } else {
+      //이미지
+      setTimeout(function () {
+        $(targetSwiper)[0].swiper.slideNext();
+        console.log("slideChangeTransitionStart 다음 슬라이드 이동 !");
+      }, 8000);
+    }
+
+    // if(videoTarget.length > 0) {
+    //   videoTarget[0].play();
+    //   console.log("비디오 재생!!!!!!!");
+    // } else {
+    //   videoTarget[0].pause();
+    // }
   },
   videoControlerChk: function (targetSwiper) {
     var swiperActiveVideo = targetSwiper.find(".swiper-slide-active video");
@@ -882,21 +920,26 @@ var pubUi = {
     // console.log(raceRank, raceMonth, raceDay, raceLocation);
 
     swiperContents.removeClass("active");
-    swiperContents.hide();
+    // 보고용
+    // swiperContents.hide();
     swiperContents.find(".evtLayout-type").removeClass(raceLocation);
 
     for (var i = 0; i < swiperContents.length; i++) {
       contentDataCont = swiperContents[i].dataset.content;
 
       if (swiperDataCont == contentDataCont) {
-        swiperContents[i].style.display = "block";
+        // 보고용
+        // swiperContents[i].style.display = "block";
         swiperContents[i].classList.add("active");
       }
     }
 
     if (!swiperContents.hasClass("active")) {
       alert("Comming soon !");
-      targetSwiper.removeClass("active");
+      // 보고용
+      // targetSwiper.removeClass("active");
+      // 보고용
+      $(".section_list .list-content.conts03").addClass("active");
     }
   },
   overScroll: function (cl) {
@@ -976,6 +1019,8 @@ $(document).ready(function () {
     if (video.length > 0) {
       video.pause();
       video.currentTime = 0;
+    } else {
+      console.log("이미지");
     }
   });
   toggleFullscreen();

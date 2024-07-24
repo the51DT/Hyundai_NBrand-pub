@@ -6,9 +6,11 @@
   padding: 240px 80px 0 80px;
   margin-bottom: 240px;
 }
-.models-wrap .content-item02 video {
+.models-wrap .content-item02 video,
+.models-wrap .content-item02 .video_poster {
   object-fit: cover;
   width: 100%;
+  max-height: calc(var(--vh, 1vh) * 100 - 70px);
 }
 .models-wrap [class*="max1440"] {
   margin: 0 auto;

@@ -1182,6 +1182,11 @@ min-width : 1024 css
     flex-direction: column;
     padding: 0 24px;
   }
+  .dropdown.centered .dropdown-menu .filter-cont {
+    min-height: calc(100vh - 500px);
+    overflow-y: auto;
+  }
+
   .dropdown.centered .dropdown-menu .selectbox-options .option {
     border-bottom: none;
     padding: 19px 48px 19px 24px;

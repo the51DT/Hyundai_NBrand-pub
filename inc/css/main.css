@@ -108,9 +108,10 @@
   z-index: 2;
 }
 
-.main_model_swiper .swiper,
-.main_Nfestival_wrap .swiper {
-  /* height: 46.5rem; */
+.main_model_swiper .swiper-slide,
+.main_Nfestival_wrap .swiper-slide {
+  flex-grow: 1;
+  max-height: calc(var(--vh, 1vh) * 100 - 70px);
 }
 
 .main_model_wrap {

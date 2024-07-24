@@ -804,6 +804,14 @@
   position: relative;
   text-align: center;
   color: #fff;
+  height: calc(var(--vh, 1vh) * 100 - 70px);
+}
+.video_thumnail_wrap .video_thumnail_img {
+  height: 100%;
+}
+.video_thumnail_wrap .video_thumnail_img img {
+  height: 100%;
+  object-fit: cover;
 }
 .video_thumnail_wrap .img_mo {
   display: none;
@@ -1711,7 +1719,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   margin-left: auto;
   position: absolute;
   right: 0;
-  top: 0;
+  top: 4px;
   padding: 3px;
 }
 
@@ -2173,6 +2181,15 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   padding-bottom: 140px;
   padding-left: 80px;
   padding-right: 80px;
+}
+.nChannel .content-item02 .img-wrap,
+.nChannel .content-item02 .img-wrap img {
+  max-height: calc(var(--vh, 1vh) * 100 - 70px);
+}
+.nChannel .content-item02 .img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .nChannel.models-wrap .content-item03.gallery-wrap {
@@ -3223,6 +3240,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
 
   /* EP010802 */
   .video_thumnail_wrap {
+    height: auto;
     color: #000;
   }
   .video_thumnail_wrap::after {

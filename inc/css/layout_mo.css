@@ -44,6 +44,8 @@
     gap: 0px;
     padding: 8px 0 0 0;
     position: relative;
+    overflow-y: auto;
+    height: calc(100vh - 370px);
     /* z-index: 1; */
   }
   .gnb__tab-btn-wrap [class*="gnb__tab-btn"] {
@@ -89,10 +91,11 @@
   }
   .header__event-wrap {
     position: absolute;
-    top: calc(100vh - 405px);
+    top: calc(100vh - 350px);
     width: 100%;
-    padding-bottom: 0;
+    /* padding-bottom: 0; */
     overflow-x: auto;
+    padding: 0;
     /* scroll-snap-type: x mandatory; */
   }
   .header__event-wrap .header__event-area {
@@ -179,6 +182,9 @@
 
     background-color: #fff;
   }
+  .gnb__tab02-wrap.thumbnail-ui {
+    height: 100%;
+  }
   .gnb__tab02-wrap.thumbnail-ui .gnb__panel02 {
     width: 100%;
   }
@@ -187,7 +193,7 @@
   }
 
   .gnb__tab-cont-wrap [class*="gnb__tab-cont"] {
-    padding: 82px 0 20px 0;
+    padding: 0 0 20px 0;
     height: calc(100vh - 70px);
     background-color: #fff;
   }
@@ -197,18 +203,29 @@
   }
   .gnb__tab02-wrap {
     display: block;
+    position: relative;
+    z-index: 1;
+  }
+  .gnb__tab02 {
   }
   .gnb__tab02-wrap .gnb__tab02,
+  .gnb__tab02-wrap .gnb__tab02_3,
   .gnb__tab-cont03 .gnb__tab02-wrap .gnb__panel02 {
     width: 100%;
-    height: 100%;
+    height: calc(100vh - 360px);
+    overflow-y: auto;
     background-color: #fff;
   }
-  [class*="gnb__tab02_"] {
+  .gnb__tab02-wrap .gnb__tab02,
+  .gnb__tab02-wrap .gnb__tab02_3 {
+    padding-top: 82px;
+  }
+
+  /* [class*="gnb__tab02_"] {
     background-color: #fff;
     height: calc(100vh - 557px);
     overflow-y: auto;
-  }
+  } */
   .mo-gnb__back-btn {
     display: block;
     position: absolute;
@@ -225,9 +242,12 @@
     background: #fff url(../images/icon/icon-gnb_back.svg) no-repeat left 24px
       top 28px;
   }
+
+  /* .gnb__tab02-wrap {
+  } */
   .gnb__tab-cont-wrap .gnb-content__dep2 {
     position: absolute;
-    top: calc(100vh - 405px);
+    top: calc(100vh - 335px);
     width: 100%;
     padding: 0 24px;
     margin-left: 0;
@@ -290,7 +310,7 @@
     /* padding-top: 75px; */
   }
   .gnb__panel02 .type-thumbnail ul {
-    height: calc(100vh - 157px);
+    height: calc(100vh - 180px);
     overflow-y: auto;
     padding: 0 24px;
   }
