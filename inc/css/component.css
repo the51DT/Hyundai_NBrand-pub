@@ -79,7 +79,7 @@
   font-weight: 500;
 }
 .fw-type03 {
-  font-weight: bold;
+  font-weight: 700;
 }
 
 /* 말줄임 */
@@ -670,8 +670,10 @@ input[type="radio"]:focus + label {
   background: url(../../inc/images/icon/icon-close.svg);
   background-size: contain;
 }
-.btn:not([class*="only-icon-bg"], [class*="btn-reset"]):hover [class*="icon-close"],
-.btn:not([class*="only-icon-bg"], [class*="btn-reset"]):active [class*="icon-close"] {
+.btn:not([class*="only-icon-bg"], [class*="btn-reset"]):hover
+  [class*="icon-close"],
+.btn:not([class*="only-icon-bg"], [class*="btn-reset"]):active
+  [class*="icon-close"] {
   background: url(../../inc/images/icon/icon-close_red.svg);
   background-size: contain;
 }
@@ -1990,11 +1992,14 @@ input[type="radio"]:focus + label {
 }
 
 /*임시 - 테스트용 추가 - 07.24 */
-.ty01Swiper .swiper-pagination-custom .swiper-pagination-bullet .seek-bar {  
-  width:0;
+.ty01Swiper .swiper-pagination-custom .swiper-pagination-bullet .seek-bar {
+  width: 0;
 }
 
-.ty01Swiper .swiper-pagination-custom .swiper-pagination-bullet-active .seek-bar {  
+.ty01Swiper
+  .swiper-pagination-custom
+  .swiper-pagination-bullet-active
+  .seek-bar {
   animation: swiperTransition 8s;
   animation-fill-mode: forwards;
 }
