@@ -1369,10 +1369,6 @@ function handleOptionClick(event) {
 }
 // [End] : selectbox 컴포넌트
 
-var raceChkNTT = document.querySelector(
-  ".ty05Swiper .swiper-slide.active .card_top .card_rank .ntt-val"
-).innerText;
-
 // 추 후 이미지 교체 필요
 function evtImgMapChk(options, area) {
   var evtMapImage = $(".evt-map-wrap .evt-map-img img");
@@ -1553,8 +1549,6 @@ function evtImgMapChk(options, area) {
             "조건에 맞지 않습니다. 지역에 맞는 이벤트 옵션을 선택해주세요."
           );
         }
-      } else if (raceChkNTT == "N TT") {
-        alert("ads");
       } else if (
         selectedArea == "yeongam" ||
         selectedArea == "korea international circuit"
@@ -2442,4 +2436,4 @@ nttVal.forEach(function (el) {
     });
   }
 });
-// nTT
+//
