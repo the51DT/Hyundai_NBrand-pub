@@ -670,8 +670,8 @@ input[type="radio"]:focus + label {
   background: url(../../inc/images/icon/icon-close.svg);
   background-size: contain;
 }
-.btn:not([class*="only-icon-bg"]):hover [class*="icon-close"],
-.btn:not([class*="only-icon-bg"]):active [class*="icon-close"] {
+.btn:not([class*="only-icon-bg"], [class*="btn-reset"]):hover [class*="icon-close"],
+.btn:not([class*="only-icon-bg"], [class*="btn-reset"]):active [class*="icon-close"] {
   background: url(../../inc/images/icon/icon-close_red.svg);
   background-size: contain;
 }
@@ -954,15 +954,18 @@ input[type="radio"]:focus + label {
 /* key-visual */
 .conts-key-visual {
   position: relative;
+  max-height: calc(var(--vh, 1vh) * 100 - 70px);
 }
 
 .conts-key-visual .img-area {
   height: 100%;
+  max-height: calc(var(--vh, 1vh) * 100 - 70px);
 }
 .conts-key-visual .img-area img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  max-height: calc(var(--vh, 1vh) * 100 - 70px);
 }
 .conts-key-visual .text-area {
   position: absolute;
