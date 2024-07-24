@@ -445,6 +445,7 @@ var pubUi = {
       slidesPerView: 1,
       spaceBetween: 80,
       centeredSlides: true,
+      loop: true,
       pagination: {
         el: ".swiper-pagination-custom",
         clickable: true,
