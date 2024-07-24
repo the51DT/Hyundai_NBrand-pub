@@ -977,6 +977,7 @@ var pubUi = {
 let resizeTimer = null;
 $(window).resize(function () {
   clearTimeout(resizeTimer);
+  deviceChk();
   resizeTimer = setTimeout(hasTagFunResize(), perforSlideMoveFun(), 10);
 });
 $(document).ready(function () {
@@ -2100,9 +2101,21 @@ function toggleFullscreen() {
 // [End] : 풀스크린
 
 // [Start] : MD010301t01 > 기획서 v0.18 p.68 AS-IS과 동일한 슬라이드 기능 적용 (AS-IS 그대로 사용 / 클래스만 변경)
+
+let _viewType = "";
+// alert(user);
+
+function deviceChk() {
+  let user = navigator.userAgent;
+  if (user.indexOf("iPhone") > -1 || user.indexOf("Android") > -1) {
+    _viewType = "mobile";
+  } else {
+    _viewType = "web";
+  }
+}
 function perforSlideMoveFun() {
   var _$this = $(this),
-    _viewType = "web",
+    // _viewType = "web",
     _$btnBox = $(".img-move-btn"),
     _$moveBtn = _$btnBox.find(".handler"),
     _$maskBox = $(".mask"),
@@ -2119,13 +2132,10 @@ function perforSlideMoveFun() {
   _$this.mousedown = false;
   _$this.touchstart = false;
 
-  if (document.documentElement.clientWidth == 1024) {
-    _viewType = "tablet";
-  }
-
   evtMove();
   function evtMove() {
     _$moveBtn.on("mousedown keydown touchstart", function (e) {
+      // alert("d");
       if (_viewType == "web") {
         if (e.type === "mousedown") {
           _$btnBox.css({ "z-index": 100 });
@@ -2168,7 +2178,7 @@ function perforSlideMoveFun() {
         }
       } else if (_viewType == "mobile" || _viewType == "tablet") {
         if (_$this.touchstart) {
-          console.log(_offset);
+          // console.log(_offset);
           var event = e.originalEvent,
             _touch = event.touches[0].clientX;
           if (_touch >= 0 && _touch <= _maxWid) {
