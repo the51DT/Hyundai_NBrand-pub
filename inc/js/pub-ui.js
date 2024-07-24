@@ -436,10 +436,11 @@ var pubUi = {
       slidesPerView: 1,
       spaceBetween: 80,
       centeredSlides: true,
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
+      loop: true,
+      // autoplay: {
+      //   delay: 3000,
+      //   disableOnInteraction: false,
+      // },
       pagination: {
         el: ".swiper-pagination-custom",
         clickable: true,
@@ -899,21 +900,22 @@ var pubUi = {
     // console.log(raceRank, raceMonth, raceDay, raceLocation);
 
     swiperContents.removeClass("active");
-    swiperContents.hide();
+    // swiperContents.hide();
     swiperContents.find(".evtLayout-type").removeClass(raceLocation);
 
     for (var i = 0; i < swiperContents.length; i++) {
       contentDataCont = swiperContents[i].dataset.content;
 
       if (swiperDataCont == contentDataCont) {
-        swiperContents[i].style.display = "block";
+        // swiperContents[i].style.display = "block";
         swiperContents[i].classList.add("active");
       }
     }
 
     if (!swiperContents.hasClass("active")) {
       alert("Comming soon !");
-      targetSwiper.removeClass("active");
+      // targetSwiper.removeClass("active");
+      $(".section_list .list-content.conts03").addClass("active");
     }
   },
   overScroll: function (cl) {
