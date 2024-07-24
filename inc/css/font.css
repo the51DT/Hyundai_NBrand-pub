@@ -80,7 +80,7 @@
 @font-face {
   font-family: "Hyundai Sans Text KR";
   src: url("../font/HyundaiSansHeadKRBold.eot");
-  src: local("Hyundai Sans Text Bold"), local("HyundaiSansTextKRBold"),
+  src: local("Hyundai Sans Text KR Bold"), local("HyundaiSansTextKRBold"),
     url("../font/HyundaiSansHeadKRBold.eot?#iefix") format("embedded-opentype"),
     url("../font/HyundaiSansHeadKRBold.woff2") format("woff2"),
     url("../font/HyundaiSansHeadKRBold.woff") format("woff");
@@ -91,7 +91,7 @@
 @font-face {
   font-family: "Hyundai Sans Head KR";
   src: url("../font/HyundaiSansHeadKRMedium.eot");
-  src: local("Hyundai Sans Head Medium"), local("HyundaiSansHeadKRMedium"),
+  src: local("Hyundai Sans Head KR Medium"), local("HyundaiSansHeadKRMedium"),
     url("../font/HyundaiSansHeadKRMedium.eot?#iefix")
       format("embedded-opentype"),
     url("../font/HyundaiSansHeadKRMedium.woff2") format("woff2"),
@@ -103,7 +103,7 @@
 @font-face {
   font-family: "Hyundai Sans Head KR";
   src: url("HyundaiSansHeadKRRegular.eot");
-  src: local("Hyundai Sans Head"), local("HyundaiSansHeadKRRegular"),
+  src: local("Hyundai Sans Head KR"), local("HyundaiSansHeadKRRegular"),
     url("../font/HyundaiSansHeadKRRegular.eot") format("embedded-opentype"),
     url("../font/HyundaiSansHeadKRRegular.woff2") format("woff2"),
     url("../font/HyundaiSansHeadKRRegular.woff") format("woff");
@@ -114,7 +114,7 @@
 @font-face {
   font-family: "Hyundai Sans Head KR";
   src: url("../font/HyundaiSansHeadKRLight.eot");
-  src: local("Hyundai Sans Head Light"), local("HyundaiSansHeadKRLight"),
+  src: local("Hyundai Sans Head KR Light"), local("HyundaiSansHeadKRLight"),
     url("../font/HyundaiSansHeadKRLight.eot?#iefix") format("embedded-opentype"),
     url("../font/HyundaiSansHeadKRLight.woff2") format("woff2"),
     url("../font/HyundaiSansHeadKRLight.woff") format("woff");
@@ -125,7 +125,7 @@
 @font-face {
   font-family: "Hyundai Sans Text KR";
   src: url("../font/HyundaiSansTextKRBold.eot");
-  src: local("Hyundai Sans Text Bold"), local("HyundaiSansTextKRBold"),
+  src: local("Hyundai Sans Text KR Bold"), local("HyundaiSansTextKRBold"),
     url("../font/HyundaiSansTextKRBold.eot?#iefix") format("embedded-opentype"),
     url("../font/HyundaiSansTextKRBold.woff2") format("woff2"),
     url("../font/HyundaiSansTextKRBold.woff") format("woff");
@@ -136,7 +136,7 @@
 @font-face {
   font-family: "Hyundai Sans Text KR";
   src: url("../font/HyundaiSansTextKRMedium.eot");
-  src: local("Hyundai Sans Text Medium"), local("HyundaiSansTextKRMedium"),
+  src: local("Hyundai Sans Text KR Medium"), local("HyundaiSansTextKRMedium"),
     url("../font/HyundaiSansTextKRMedium.eot") format("embedded-opentype"),
     url("../font/HyundaiSansTextKRMedium.woff2") format("woff2"),
     url("../font/HyundaiSansTextKRMedium.woff") format("woff");
@@ -147,7 +147,7 @@
 @font-face {
   font-family: "Hyundai Sans Text KR";
   src: url("../font/HyundaiSansTextKRRegular.eot");
-  src: local("Hyundai Sans Text"), local("HyundaiSansTextKRRegular"),
+  src: local("Hyundai Sans Text KR"), local("HyundaiSansTextKRRegular"),
     url("../font/HyundaiSansTextKRRegular.eot?#iefix")
       format("embedded-opentype"),
     url("../font/HyundaiSansTextKRRegular.woff2") format("woff2"),
