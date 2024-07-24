@@ -350,7 +350,6 @@ var pubUi = {
       },
     });
 
-
     swiper2SlideEvt(); //swiper2 이벤트 실행
 
     var swiper3 = new Swiper(".ty03Swiper", {
@@ -900,6 +899,7 @@ var pubUi = {
     // console.log(raceRank, raceMonth, raceDay, raceLocation);
 
     swiperContents.removeClass("active");
+    // 보고용
     // swiperContents.hide();
     swiperContents.find(".evtLayout-type").removeClass(raceLocation);
 
@@ -907,6 +907,7 @@ var pubUi = {
       contentDataCont = swiperContents[i].dataset.content;
 
       if (swiperDataCont == contentDataCont) {
+        // 보고용
         // swiperContents[i].style.display = "block";
         swiperContents[i].classList.add("active");
       }
@@ -914,7 +915,9 @@ var pubUi = {
 
     if (!swiperContents.hasClass("active")) {
       alert("Comming soon !");
+      // 보고용
       // targetSwiper.removeClass("active");
+      // 보고용
       $(".section_list .list-content.conts03").addClass("active");
     }
   },
