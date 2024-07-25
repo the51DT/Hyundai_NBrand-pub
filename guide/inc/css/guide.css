@@ -122,7 +122,10 @@ legend {
 ul,
 ol,
 li {
-  list-style-type: none;
+  /* list-style-type: none; */
+}
+.pathTbl ul {
+  padding-left: 10px;
 }
 hr {
   display: none;

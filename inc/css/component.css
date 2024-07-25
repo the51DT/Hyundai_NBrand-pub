@@ -1973,6 +1973,7 @@ input[type="radio"]:focus + label {
   background: #fff;
 }
 
+/* .swiper-pagination-custom .swiper-pagination-bullet{} */
 .swiper-pagination-custom .swiper-pagination-bullet-active {
   width: 84px;
   height: 4px;
@@ -1981,33 +1982,29 @@ input[type="radio"]:focus + label {
   opacity: 1;
 }
 
-.swiper-pagination-custom .swiper-pagination-bullet .seek-bar {
-  --time: 0;
-  --set: 0;
-  width: calc(var(--time));
-  transition: width var(--set);
-}
-
 .swiper-pagination-custom .swiper-pagination-bullet-active .seek-bar {
   background: #de3111;
   height: 4px;
   position: absolute;
   top: 0;
   left: 0;
+  --time: 0;
+  /* --set: 0; */
+  width: calc(var(--time));
 }
 
 /*임시 - 테스트용 추가 - 07.24 */
-.ty01Swiper .swiper-pagination-custom .swiper-pagination-bullet .seek-bar {
+/* .ty01Swiper .swiper-pagination-custom .swiper-pagination-bullet .seek-bar {
   width: 0;
-}
+} */
 
-.ty01Swiper
+/* .ty01Swiper
   .swiper-pagination-custom
   .swiper-pagination-bullet-active
   .seek-bar {
   animation: swiperTransition 8s;
   animation-fill-mode: forwards;
-}
+} */
 /*임시 - 테스트용 추가 */
 
 .swiper-button-next,

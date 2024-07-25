@@ -360,6 +360,33 @@ var pubUi = {
       },
     });
 
+    var swiper1_1 = new Swiper(".banner-swiper", {
+      slidesPerView: 1,
+      watchOverflow: true, //pagination 1개 일 경우, 숨김
+      initialSlide: 0,
+      touchRatio: 1, // 드래그 X : 0 , 드래그 O : 1
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination-custom",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".ty01Swiper .swiper-button-next",
+        prevEl: ".ty01Swiper .swiper-button-prev",
+      },
+      breakpoints: {
+        360: {
+          //touchRatio: 1, // 드래그 O
+        },
+        768: {
+          //touchRatio: 1, // 드래그 O
+        },
+      },
+    });
     swiper2SlideEvt(); //swiper2 이벤트 실행
 
     var swiper3 = new Swiper(".ty03Swiper", {
@@ -506,18 +533,6 @@ var pubUi = {
         },
       },
     });
-    // var swiper9 = new Swiper(".configurator_swiper", {
-    //   slidesPerView: 1,
-    //   centeredSlides: true,
-    //   navigation: {
-    //     nextEl: ".configurator_swiper .swiper-button-next",
-    //     prevEl: ".configurator_swiper .swiper-button-prev",
-    //   },
-    //   pagination: {
-    //     el: ".configurator_swiper .swiper-pagination-custom",
-    //     clickable: true,
-    //   },
-    // });
     var swiper10 = new Swiper(".wrc_swiper", {
       slidesPerView: 1,
       centeredSlides: true,
