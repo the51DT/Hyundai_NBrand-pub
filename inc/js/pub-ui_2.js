@@ -38,10 +38,12 @@ var pubUi = {
     self.swiper2;
     self.swiper4;
     self.typeChk = $(".ty01Swiper").find(".swiper-slide video");
-    self.flag = "";
-    self.video = "";
     
-    self.timeInterVal;
+    self.video = "";
+    self.pauseFlag = 0;
+    self.timer = "";
+    self.maxVideoW = 84; //pagination width 값
+
   },
   bindEvents: function () {
     var self = this;
@@ -61,7 +63,7 @@ var pubUi = {
       var videoChk = targetSwiper.find(".swiper-slide video");
 
       if (targetSwiper.hasClass("ty02Swiper")) {
-        if ($(this).hasClass("on")) {
+        if ($(this).hasClass("on")) {l
           // console.log("정지버튼 클릭!");
           $(this).removeClass("on");
           $(this).find(".visually-hidden").text("정지");
@@ -240,12 +242,10 @@ var pubUi = {
       var videoChk = targetSwiper.find(".swiper-slide-active video");
       var videoId = targetSwiper.find(".swiper-slide-active video").attr("id");
       var video = document.querySelector(`#${videoId}`);
-
       
-
       if(video) {
-        console.log("prev,next arrow video!!!");        
-        // clearInterval(self.timeInterVal);
+        // stopTimer();
+        console.log("prev,next arrow video!!!");
       } else {
         console.log("이미지")
         targetSwiper[0].swiper.autoplay.stop();
@@ -325,34 +325,38 @@ var pubUi = {
         },
         beforeSlideChangeStart: function () {
           currentIndex = swiper1.activeIndex;
+          
+          $(".swiper-pagination-bullet-active").removeClass("on");
 
-          $(".swiper-pagination-bullet-active").removeClass("on");                    
           if ($(".ty01Swiper:not(.swiper-banner) .swiper-slide")[currentIndex].querySelector("video")) {
+                      
             console.log("스와이퍼바뀌기전 + 비디오");
             var videoId = $(".ty01Swiper:not(.swiper-banner) .swiper-slide")[currentIndex].querySelector("video").id;
             var video = document.querySelector(`#${videoId}`);
-              // alert("remove!!!-111");
-              // video.pause();
-              // video.currentTime = 0;
-              // $(".ty01Swiper .swiper-pagination-custom .swiper-pagination-bullet .seek-bar").css("--time", "0");                            
-            // self.flag = 0;
+            stopTimer();
+            //alert("스와이퍼바뀌기전 + 비디오");
+            // video.pause();
+            // video.currentTime = 0;            
+            // $(".ty01Swiper .swiper-pagination-custom .swiper-pagination-bullet .seek-bar").css("--time", "0");
           } else {
             console.log("스와이퍼 바뀌기 전, 이미지-!");
+            //alert("스와이퍼 바뀌기 전, 이미지-!");
             swiper1.autoplay.stop();
           }
-          // clearInterval(self.timeInterVal);
+          
         },
         slideChangeTransitionEnd: function () {
           var currentIndex = swiper1.activeIndex;
           if ($(".ty01Swiper:not(.swiper-banner) .swiper-slide")[currentIndex].querySelector("video")
           ) {
-            // 동영상 케이스,                        
+            // 동영상 케이스,            
+            //stopTimer();
             console.log("동영상@@@@@@@");
-            pubUi.videoBulletChk(".ty01Swiper", this.realIndex, "video");
+            pubUi.videoBulletChk(".ty01Swiper:not(.swiper-banner)", this.realIndex, "video");
           } else {
             // 동영상 x 케이스,
             console.log("이미지@@@@@@@");
-            pubUi.videoBulletChk(".ty01Swiper", this.realIndex, "image");
+            pubUi.videoBulletChk(".ty01Swiper:not(.swiper-banner)", this.realIndex, "image");
           }
         },
       },
@@ -580,8 +584,7 @@ var pubUi = {
     });
   },
   videoBulletChk: function (targetSwiper, targetIdx, type) {
-    var self = this;
-    var maxVideoW = 84; //pagination width 값
+    var self = this;    
     if (!targetSwiper.length > 0) {
       return;
     }    
@@ -602,7 +605,7 @@ var pubUi = {
       //var slides = document.querySelectorAll(".ty01Swiper .swiper-slide");
 
       if (slideActive) {
-        if (type != "image") {          
+        if (type != "image") {
           if (playBtn) {
             // type = video
             console.log("타겟 인덱스 : ", targetIdx);
@@ -612,7 +615,10 @@ var pubUi = {
               video.pause();
             }
             
-            startTimer(slide,video, maxVideoW);
+            //alert("start Flag!!! : " + self.pauseFlag);
+            if(self.pauseFlag == 0) {
+              startTimer(slide, video, self.maxVideoW);
+            }
             
           } else {
             console.log("비디오 일시정지 상태 입니다.");
@@ -622,7 +628,7 @@ var pubUi = {
             );
           }
         } else {
-          console.log("flag----------------------값 : " + self.flag);          
+          // console.log("flag----------------------값 : " + self.pauseFlag);          
           console.log("타겟 인덱스 : ", targetIdx);
           slide[0].swiper.autoplay.stop();
 
@@ -921,6 +927,7 @@ var pubUi = {
     });
   },
 };
+
 let resizeTimer = null;
 $(window).resize(function () {
   clearTimeout(resizeTimer);
@@ -965,6 +972,7 @@ $(document).ready(function () {
     var video = document.querySelector(`#${videoId}`);
 
     if (video) {
+      // stopTimer();
       console.log("bullet video");
     } else {
       console.log("이미지");
@@ -2472,9 +2480,10 @@ window.onload = function () {
 };
 
 function startTimer(slide, video, maxVideoW) {
-    var timeInterVal = setInterval(function () {
+  self.pauseFlag = 0;
+  self.timer = setInterval(function () {
     var duration = Math.floor(video.duration); // 동영상 전체 길이
-    var curTime = Math.floor(video.currentTime) + 0.9; // 현재 동영상 길이
+    var curTime = Math.floor(video.currentTime) + 1; // 현재 동영상 길이
     var per = Math.floor((maxVideoW / duration) * curTime); // 퍼센트 계산 값
     var perWrap = (1 / duration) * 100;
     console.log("per : " + per + "perWrap : " + perWrap);
@@ -2490,13 +2499,32 @@ function startTimer(slide, video, maxVideoW) {
       // $("#paging").css("color", "#fff");
       // $("#paging").html("퍼센트: " + per);
     }
-    if (curTime >= duration + 0.9) {
+    if (curTime >= duration + 1) {      
       curTime = perWrap;
       video.pause();
-      slide[0].swiper.slideNext();      
-      clearInterval(timeInterVal);
-      // return false;
-    }
-    self.flag = 0; // reset flag
-  }, 1000);
+      slide[0].swiper.slideNext();
+      stopTimer();
+    } 
+  }, 1000);  
 }
+
+function stopTimer() {
+  console.log("clear 전 "+self.timer);
+  clearInterval(self.timer);
+  console.log("clear 후 " + self.timer);
+  self.pauseFlag = 1;
+  //alert("stopPause "+ self.pauseFlag);
+}
+
+
+// let TimeoutId;
+
+// for (let i = 0; i < 100; i++) {
+//   TimeoutId = setInterval(() => 
+//   console.log(`timeout ${100 * i}`)
+//   , 100 * i);
+// }
+
+// for (let i = 0; i <= TimeoutId; i++) {
+//   clearTimeout(i);
+// }
