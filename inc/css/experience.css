@@ -2197,6 +2197,9 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
 /** 사이드 팝업 끝 **/
 
 /* EP020101 - N Channel */
+.nChannel .key-visual-wrap {
+  height: revert;
+}
 .nChannel .more-btn {
   margin-top: 20px !important;
 }
@@ -2253,6 +2256,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   gap: 24px;
   text-align: left;
   width: 100%;
+  max-width: 1440px;
   margin-bottom: 40px;
 }
 .info-container-wrap .left-area .title {
@@ -2269,7 +2273,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
 .info-container-wrap .right-area .info-container li .tit {
   font-size: 24px;
   font-weight: 700;
-  line-height: 33.6px;
+  line-height: 33.6px;  
 }
 .info-container-wrap .right-area .info-container li .desc {
   font-size: 20px;
