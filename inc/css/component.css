@@ -774,6 +774,11 @@ input[type="radio"]:focus + label {
   background-size: contain;
   background-repeat: no-repeat;
 }
+.icon-user-black {
+  background: url(../../inc/images/icon/icon-user_black.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 .btn:hover [class*="icon-download"],
 .btn:active [class*="icon-download"] {
   background: url(../../inc/images/icon/icon-download-wh.svg);
