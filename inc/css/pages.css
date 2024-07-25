@@ -144,6 +144,7 @@
   padding-bottom: 160px;
 }
 .history-box {
+  position: relative;
   margin-top: 120px;
   margin-bottom: 240px;
 }
@@ -158,10 +159,10 @@
   content: "";
   display: inline-block;
   width: 4px;
-  height: 100%;
+  height: calc(100% - 120px);
   background: #bbb;
   position: absolute;
-  top: 0;
+  top: 120px;
   left: 50%;
 }
 .history-box .history-list > li {
@@ -173,17 +174,18 @@
 .history-box .history-list > li:not(:last-child) {
   padding-bottom: 160px;
 }
-.history-box .history-list > li::after {
+.history-box .history-pointer {
   content: "";
   display: block;
   width: 20px;
   height: 20px;
   background-color: #de3111;
   position: absolute;
-  top: 118px;
+  top: 120px;
   left: 50.1%;
   transform: translateX(-49%);
   z-index: 10;
+  transition: top 0.5s ease-in-out;
 }
 
 .history-box .history-list li .text-area {
@@ -806,11 +808,20 @@
     margin-bottom: 160px;
     overflow: hidden;
   }
+  .brand .history-box {
+    padding: 0;
+  }
   .history-box > ul {
     padding: 28px 0 0 0;
   }
+  .history-box .history-pointer {
+    left: 10px;
+    top: 46px;
+    width: 12px;
+    height: 12px;
+  }
   .history-box .history-list:after {
-    left: 4px;
+    left: 8px;
   }
   .history-box .history-list > li {
     display: block;
