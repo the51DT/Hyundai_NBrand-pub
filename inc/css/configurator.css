@@ -1088,3 +1088,11 @@
     font-size: 1rem;
   }
 }
+@media print {
+  .configurator_con_flex .configurator_swiper_wrap {
+    height: 30vh !important;
+  }
+  .configurator_swiper .swiper-slide img {
+    height: auto !important;
+  }
+}
