@@ -1995,6 +1995,10 @@ input[type="radio"]:focus + label {
   opacity: 1;
 }
 
+.ty01Swiper.banner-swiper .swiper-pagination-custom .swiper-pagination-bullet-active { 
+  background: #de3111;
+}
+
 .swiper-pagination-custom .swiper-pagination-bullet-active .seek-bar {
   background: #de3111;
   height: 4px;
