@@ -242,6 +242,7 @@ body.fix {
 
 /* nav pop */
 .header-wrap .nav-wrap {
+  display: none;
   position: absolute;
   top: 70px;
   left: 0;
@@ -1031,12 +1032,11 @@ body.fix {
   }
 }
 
-
 @keyframes swiperTransition {
   0% {
-    width:0;
+    width: 0;
   }
   100% {
-    width:84px;
+    width: 84px;
   }
 }

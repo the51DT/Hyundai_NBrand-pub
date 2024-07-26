@@ -35,12 +35,12 @@ $(window).resize(function () {
 
 function resizeDone() {
   if (NbrandUI.windowSize()) {
-    $("[class^=panel2_2]").removeClass("on");
-    $(".gnb__panel02").hide();
+    // $("[class^=panel2_2]").removeClass("on");
+    // $(".gnb__panel02").hide();
     // $(".type-thumbnail, .gnb__tab-cont02 .gnb__tab02-btn01").removeClass("on");
     NbrandUI.headerReset(".nav-btn", ".nav-wrap", ".header-wrap");
   } else {
-    $(".gnb__panel02").show();
+    // $(".gnb__panel02").show();
     // $(".type-thumbnail, .gnb__tab-cont02 .gnb__tab02-btn01").addClass("on");
     NbrandUI.headerReset(".nav-btn", ".nav-wrap", ".header-wrap");
   }

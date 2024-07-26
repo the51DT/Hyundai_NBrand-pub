@@ -315,6 +315,13 @@ var pubUi = {
         slideChangeTransitionEnd: function () {
           var currentIndex = swiper1.activeIndex;
           self.typeIdx = this.realIndex;
+          $(".ty01Swiper:not(.swiper-banner) video").each(function () {
+            var videoIdEach = $(this).attr("id");
+            var videoAll = document.querySelector(`#${videoIdEach}`);
+            videoAll.currentTime = 0;
+            // alert(videoAll.duration);
+            //  = 0;
+          });
           if (
             $(".ty01Swiper:not(.swiper-banner) .swiper-slide")[
               currentIndex
@@ -580,7 +587,7 @@ var pubUi = {
 
     var videoId = slideActive.find(".video").attr("id");
     var video = document.querySelector(`#${videoId}`);
-
+    // alert("d");
     stopTimer(video, type);
     if (slideActive) {
       startTimer(slide, video, self.maxVideoW, type, targetIdx);
@@ -2309,6 +2316,7 @@ if (document.querySelector(".ty05Swiper")) {
 function startTimer(slide, video, maxVideoW, type, targetIdx) {
   let duration = 0;
   self.dataSecond = 0;
+
   var playBtn = slide.find(".btn-play").hasClass("on");
   if (type == "image") {
     if (playBtn) {
@@ -2319,6 +2327,7 @@ function startTimer(slide, video, maxVideoW, type, targetIdx) {
     }
   } else {
     if (playBtn) {
+      // video.currentTime = 0;
       video.play();
       duration = Math.floor(video.duration); // 동영상 전체 길이
     } else {
