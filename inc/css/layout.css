@@ -242,6 +242,7 @@ body.fix {
 
 /* nav pop */
 .header-wrap .nav-wrap {
+  display: none;
   position: absolute;
   top: 70px;
   left: 0;
@@ -300,7 +301,7 @@ body.fix {
 }
 
 .header__event-wrap .text-area h3 {
-  font-family: Hyundai Sans Head;
+  font-family: "Hyundai Sans Head";
   font-size: 28px;
   font-weight: 500;
   line-height: 39.2px;
@@ -412,7 +413,7 @@ body.fix {
   padding: 0 24px;
   text-align: left;
   height: 60px;
-  font-family: Hyundai Sans Head;
+  font-family: "Hyundai Sans Head";
   font-size: 20px;
   font-weight: 700;
   line-height: 28px;
@@ -551,6 +552,9 @@ body.fix {
 .btn-navi-wrap .btn-box .btn:not(:last-child) {
   margin-right: 6px;
 }
+.btn-navi-wrap .btn[class*="-primary"] [class*="btn-icon16"] {
+  margin-left: 8px;
+}
 
 /* gnb 1dep*/
 .mo-gnb__back-btn {
@@ -563,7 +567,7 @@ body.fix {
 }
 
 .gnb__tab-btn-wrap [class^="gnb__tab-btn"] {
-  font-family: Hyundai Sans Head;
+  font-family: "Hyundai Sans Head";
   font-size: 20px;
   font-weight: 700;
   line-height: 28px;
@@ -659,7 +663,7 @@ body.fix {
 }
 
 .gnb-content__dep2 .text-area h3 {
-  font-family: Hyundai Sans Head;
+  font-family: "Hyundai Sans Head";
   font-size: 28px;
   font-weight: 500;
   line-height: 39.2px;
@@ -717,7 +721,7 @@ body.fix {
   width: 100%;
   text-align: left;
   height: 60px;
-  font-family: Hyundai Sans Head;
+  font-family: "Hyundai Sans Head";
   font-size: 20px;
   font-weight: 700;
   line-height: 28px;
@@ -813,7 +817,7 @@ body.fix {
   margin-top: 16px;
 }
 .gnb__panel02 .text-area h3 {
-  font-family: Hyundai Sans Head;
+  font-family: "Hyundai Sans Head";
   font-size: 20px;
   font-weight: 700;
   line-height: 28px;
@@ -1031,12 +1035,11 @@ body.fix {
   }
 }
 
-
 @keyframes swiperTransition {
   0% {
-    width:0;
+    width: 0;
   }
   100% {
-    width:84px;
+    width: 84px;
   }
 }

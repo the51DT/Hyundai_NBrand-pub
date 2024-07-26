@@ -87,7 +87,7 @@
   font-weight: 700;
   line-height: 44.8px;
   color: #555;
-  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
 }
 .tit-btn-wrap .tit.on,
 .tit-btn-wrap .tit:hover {
@@ -119,7 +119,7 @@
 .conts-key-visual.ty02 .text-area .desc {
   padding-right: 1.5rem;
   text-align: left;
-  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
 }
 .conts-key-visual.ty02 .text-area button {
   margin-top: 32px;
@@ -198,7 +198,7 @@
   font-weight: 700;
   font-size: 80px;
   line-height: 100px;
-  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
 }
 
 .history-box .history-list li .text-area .title {
@@ -306,6 +306,13 @@
 .class-info-box .tab-container {
   max-width: 1440px;
   margin: 0 auto;
+}
+.about .class-info-box {
+  padding-top: 160px;
+}
+.about .class-info-box .tabs-wrap .tabs li a {
+  min-width: 154px;
+  text-align: center;
 }
 
 .info-table-box .info-head {
@@ -421,7 +428,7 @@
 }
 
 .info-car-box .text-area [class^="btn-wrap"] {
-  margin-top: 60px;
+  margin-top: 40px;
 }
 
 /* swiper - key-visual-wrap */
@@ -454,7 +461,7 @@
   display: flex;
   justify-content: space-between;
   max-width: 1440px;
-  margin: 0 auto 40px;
+  margin: 0 auto 100px auto;
 }
 
 .conts-head.ty02 {
@@ -544,10 +551,16 @@
   left: 0;
   z-index: -1;
 }
+.n-race-box .conts-head .contitle-type01 {
+  font-size: 56px;
+}
 
 .event-box {
   max-width: 1440px;
   margin: 0 auto;
+}
+.event-box .conts-head {
+  margin-bottom: 40px;
 }
 
 .event-box .conts-body {
@@ -665,7 +678,7 @@
 @media screen and (max-width: 1800px) {
   .n-race-box .conts-head,
   .next-race-box .conts-head {
-    margin: 0 80px 40px 80px;
+    margin: 0 80px 100px 80px;
   }
   .n-race-box .conts-body .section_tab {
     margin-left: 80px;
@@ -904,10 +917,17 @@
     padding-top: 100px;
     padding-bottom: 120px;
   }
+  .about .class-info-box {
+    padding-top: 100px;
+  }
 
   .class-info-box h2.ta-ctr {
     text-align: left !important;
     padding: 0 24px 28px 24px;
+  }
+  .about .class-info-box h2.ta-ctr {
+    text-align: center !important;
+    padding: 0 0 28px 0;
   }
 
   .class-info-box .conts-card-wrap {
@@ -998,13 +1018,13 @@
     font-size: 1rem;
   }
   .info-car-box .wrap-list .__bottom .wrap-lists .list-box:nth-child(2) p {
-    font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
+    font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
     font-size: 20px;
     line-height: 28px;
     padding-left: 0;
   }
   .info-car-box .text-area [class^="btn-wrap"] {
-    margin-top: 36px;
+    margin-top: 28px;
   }
 
   .next-race-box {
@@ -1042,6 +1062,12 @@
   }
   .n-race-box::before {
     height: 332px;
+  }
+  .n-race-box .conts-head .contitle-type01 {
+    font-size: 36px;
+  }
+  .n-race-box-conts .contitle-type01 {
+    font-size: 30px;
   }
 
   .conts-head {

@@ -64,7 +64,7 @@ body {
   position: relative;
   font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
   font-size: 16px;
-  color: #222;
+  color: #000;
   height: 100%;
   font-weight: 400;
   letter-spacing: 0;
@@ -76,7 +76,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Hyundai Sans Head, sans-serif;
+  font-family: "Hyundai Sans Head", sans-serif;
   font-weight: normal;
 }
 img,

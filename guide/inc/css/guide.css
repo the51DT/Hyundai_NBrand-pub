@@ -124,6 +124,13 @@ ol,
 li {
   list-style-type: none;
 }
+.pathTbl ul,
+.pathTbl ul li {
+  list-style-type: disc;
+}
+.pathTbl ul {
+  padding-left: 12px;
+}
 hr {
   display: none;
 }
