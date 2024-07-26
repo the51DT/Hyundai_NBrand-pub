@@ -107,7 +107,7 @@
   top: 1.5rem;
   left: 1.5rem;
   display: none;
-  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   font-size: 3.5rem;
   font-weight: 700;
   line-height: 125%;
@@ -144,7 +144,7 @@
   position: absolute;
   top: 3.75rem;
   width: 100%;
-  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   text-align: center;
   color: #fff;
   opacity: 0;
@@ -190,7 +190,7 @@
 .configurator_list_swiper .configurator_num {
   margin-bottom: 1rem;
   width: 5.5rem;
-  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   font-size: 2.5rem;
   font-weight: 700;
   line-height: 125%;
@@ -385,7 +385,7 @@
 }
 .configurator_price_total {
   margin-top: 0.25rem;
-  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   font-size: 2.5rem;
   font-weight: 700;
   line-height: 125%;
@@ -411,7 +411,7 @@
   display: none;
 }
 .configurator_select_total_wrap span {
-  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 140%;
@@ -423,7 +423,7 @@
   width: 2.5rem;
   height: 2.5rem;
   background-color: #de3111;
-  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 140%;
@@ -451,7 +451,7 @@
   padding: 0 0.25rem;
   background: none;
   background-color: none;
-  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 140%;
@@ -698,7 +698,7 @@
   display: block;
 }
 .configurator_summary_tit {
-  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   font-size: 2.5rem;
   font-weight: 700;
   line-height: 125%;
@@ -828,7 +828,7 @@
     position: absolute;
     top: 2.25rem;
     width: 100%;
-    font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
+    font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
     text-align: center;
     color: #fff;
     opacity: 0;

@@ -12,14 +12,14 @@
   margin: 0 auto;
 }
 .mypage-wrap h4 {
-  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   font-size: 56px;
   font-weight: 700;
   line-height: 70px;
   padding-bottom: 24px;
 }
 .mypage-wrap h5 {
-  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   font-size: 40px;
   font-weight: 700;
   line-height: 50px;
@@ -36,7 +36,7 @@
   display: block;
 }
 .mypage-wrap .mypage-profile .mypage-name {
-  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   font-size: 56px;
   font-weight: 700;
   line-height: 70px;
@@ -83,7 +83,7 @@
   text-align: left;
 }
 .mypage-wrap .mypage-info dd {
-  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   font-size: 40px;
   font-weight: 700;
   line-height: 50px;
@@ -178,7 +178,7 @@
   margin-top: 16px;
 }
 .join_con1_subtit {
-  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   font-size: 2rem;
   font-weight: 700;
   line-height: 140%;
@@ -194,7 +194,7 @@
 }
 .join_wrap .join_tit {
   margin: 0.75rem 0 3.75rem 0;
-  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   font-size: 3.5rem;
   font-weight: 700;
   line-height: 125%;
@@ -218,7 +218,7 @@
   border-bottom: 1px solid #d9d9d9;
 }
 .join_text_tit {
-  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 140%;
@@ -310,7 +310,7 @@
 
 /* CM050104 */
 .join_complete_tit {
-  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   font-size: 3.5rem;
   font-weight: 700;
   line-height: 125%;
@@ -327,7 +327,7 @@
   font-weight: 700;
 }
 .join_complete_text span.join_text_head {
-  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   font-size: 1.25rem;
 }
 
@@ -445,7 +445,7 @@
   }
 }
 .mypost-wrap .mypost-box p:last-child {
-  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   font-size: 32px;
   font-weight: 700;
   line-height: 44.8px;
@@ -584,7 +584,7 @@
 }
 .mypage-nodata-box p,
 .mypage-nodata-onlytext p {
-  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   font-size: 20px;
   font-weight: 700;
   line-height: 28px;
@@ -637,7 +637,7 @@
   border-bottom: 0;
 }
 .mypage-eachbox-top.type3 p {
-  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   font-size: 24px;
   font-weight: 700;
   line-height: 33.6px;
@@ -667,7 +667,7 @@
   padding-bottom: 24px;
 }
 .mypage-wrap .point-total p {
-  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   font-size: 40px;
   font-weight: 700;
   line-height: 50px;
@@ -708,7 +708,7 @@
 }
 .mypage-inquiry-wrap .mypage-inquiry-qna {
   margin-bottom: 1.25rem;
-  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   font-size: 1.25rem;
   font-weight: 700;
   line-height: 140%;
@@ -731,7 +731,7 @@
 
 /* CM041001 */
 .mypage-withdrawal-tit {
-  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   font-size: 2.5rem;
   font-weight: 700;
   line-height: 125%;
@@ -751,7 +751,7 @@
 .mypage-withdrawal-li-tit {
   position: relative;
   padding-left: 1.88rem;
-  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   font-size: 1.25rem;
   font-weight: 700;
   line-height: 140%;
@@ -796,7 +796,7 @@
   padding: 1.81rem 0.75rem;
 }
 .mypage-withdrawal-table tbody tr th {
-  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   font-size: 1.25rem;
   font-weight: 700;
   line-height: 140%;
@@ -813,7 +813,7 @@
   row-gap: 2rem;
   padding: 2rem 0;
   border-bottom: 1px solid #000;
-  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   font-size: 1.25rem;
   font-weight: 700;
   line-height: 140%;
@@ -859,7 +859,7 @@
   align-items: center;
 }
 .mypage-community-info .community-name {
-  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   font-size: 40px;
   font-weight: 700;
   line-height: 50px;
@@ -890,7 +890,7 @@
   color: #fff;
 }
 .mypage-community-info .info-btm > dl dd {
-  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   font-size: 40px;
   font-weight: 700;
   line-height: 50px;
@@ -956,7 +956,7 @@
   margin: 14px 0;
 }
 .mypage-wrap .mypage-content-nodata {
-  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 25.2px;
@@ -975,7 +975,7 @@
 }
 /* CM041101 */
 .mypage-wrap .community-managelist .managelist-title {
-  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   font-size: 24px;
   font-weight: 700;
   line-height: 33.6px;
@@ -988,7 +988,7 @@
   /* border-top: 2px solid #787d80; */
 }
 .mypage-wrap .mypage-titlebox p {
-  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   font-size: 24px;
   font-weight: 700;
   line-height: 33.6px;
@@ -1454,7 +1454,7 @@
     flex-wrap: wrap;
   }
   .mypage-community-info .community-name {
-    font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
+    font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
     font-size: 24px;
     line-height: 33.6px;
     flex: 0 0 calc(100% - 80px);
@@ -1523,7 +1523,7 @@
   }
   /* CM041101 */
   .mypage-wrap .community-managelist .managelist-title {
-    font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
+    font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
     font-size: 18px;
     font-weight: 700;
     line-height: 25.2px;

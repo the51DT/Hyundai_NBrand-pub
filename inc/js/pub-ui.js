@@ -1070,21 +1070,21 @@ function swiper4SlideEvt() {
         slidesOffsetBefore: 24,
         slidesOffsetAfter: 24,
       },
-      1023: {
+      1024: {
         slidesPerView: "auto",
-        spaceBetween: 12,
+        spaceBetween: 24,
         slidesOffsetBefore: leftSpaceVal,
         slidesOffsetAfter: 80,
       },
       1280: {
         slidesPerView: "auto",
-        spaceBetween: 12,
+        spaceBetween: 24,
         slidesOffsetBefore: leftSpaceVal,
         slidesOffsetAfter: 80,
       },
       2100: {
         slidesPerView: "auto",
-        spaceBetween: 12,
+        spaceBetween: 24,
         slidesOffsetBefore: leftSpaceVal,
         slidesOffsetAfter: 80,
       },

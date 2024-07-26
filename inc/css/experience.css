@@ -229,7 +229,7 @@
   margin: 0 auto;
 }
 .post-nodata {
-  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   font-size: 20px;
   font-weight: 700;
   line-height: 28px;
@@ -328,7 +328,10 @@
   background-color: #000000;
 }
 .result_bottom {
-  padding: 5rem 5rem 15rem 5rem;
+  padding: 5rem 5rem 7.5rem 5rem;
+}
+.content-item03 .result_bottom {
+  padding: 120px 80px 240px 80px;
 }
 .result_bottom .title_flex {
   margin-bottom: 6.25rem;
@@ -341,17 +344,22 @@
   margin: 0 auto;
   max-width: 90rem;
 }
-.result_wrap .contitle-type01 {
+.result_wrap .contitle-type01,
+.result_wrap .tit-type02 {
   margin-bottom: 2.5rem;
 }
 .result_wrap .roundresult-wrap {
-  margin-bottom: 3.75rem;
+  margin-bottom: 40px;
 }
 .result_wrap + .result_wrap {
   margin-top: 7.5rem;
 }
 .result_wrap .page_wrap > button {
   background-color: #f0f0f0;
+}
+.result_wrap + .btn-wrap-default {
+  margin-top: 200px;
+  padding: 12px 0;
 }
 .section-table-wrap {
   margin-top: 100px;
@@ -431,6 +439,9 @@
 .standing_wrap .title_flex {
   align-items: flex-end;
 }
+.standing_wrap.main_standing .title_flex {
+  margin-bottom: 100px;
+}
 .standing_wrap .title_flex .selectbox-wrap {
   margin-bottom: 1.37rem;
 }
@@ -503,7 +514,7 @@
 }
 .search_result {
   padding: 8.75rem 0 3.5rem 0;
-  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   font-size: 2.5rem;
   font-weight: 700;
   line-height: 125%;
@@ -535,7 +546,7 @@
   bottom: 1.25rem;
   color: #de3111;
   text-align: right;
-  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   font-size: 5rem;
   font-weight: 700;
   line-height: 125%;
@@ -603,7 +614,7 @@
 }
 .driver_detail li p + p {
   margin-top: 0.75rem;
-  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   font-size: 2.5rem;
   font-weight: 700;
   line-height: 125%;
@@ -647,7 +658,7 @@
 }
 .search_result {
   padding: 8.75rem 0 3.5rem 0;
-  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   font-size: 2.5rem;
   font-weight: 700;
   line-height: 125%;
@@ -719,7 +730,7 @@
 }
 .team_detail li p + p {
   margin-top: 0.75rem;
-  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   font-size: 2.5rem;
   font-weight: 700;
   line-height: 125%;
@@ -733,6 +744,7 @@
 }
 .team_wrap .ty03Swiper {
   padding-top: 0;
+  padding-bottom: 46px;
 }
 .career_list {
   display: flex;
@@ -826,7 +838,7 @@
 }
 .video_thumnail_wrap .video_tit {
   width: 100%;
-  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   font-size: 5rem;
   font-weight: 700;
   line-height: 125%;
@@ -834,7 +846,7 @@
 .video_thumnail_wrap .video_subtit {
   margin-top: 1rem;
   width: 100%;
-  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   font-size: 2rem;
   font-weight: 700;
   line-height: 140%;
@@ -887,6 +899,9 @@
   margin: 0 auto;
   max-width: 90rem;
 }
+.video_detail_wrap .card_video .card_img {
+  margin-bottom: 40px;
+}
 .video_detail_wrap .card_video .card_title {
   padding: 0 7.62rem;
 }
@@ -907,12 +922,12 @@
 }
 .related_wrap {
   padding: 5rem 5rem 7.5rem 5rem;
-  background-color: #e6eff8;
+  background-color: #F0F0F0;
 }
 .related_wrap .related_tit {
   margin: 0 auto 4.06rem;
   max-width: 90rem;
-  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   font-size: 3.5rem;
   font-weight: 700;
   line-height: 125%;
@@ -1132,7 +1147,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
 
-  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   font-size: 40px;
   font-style: normal;
   font-weight: 700;
@@ -1180,12 +1195,12 @@
 
 .popup-wrapper.invite .popup-body p.tit-type05 {
   font-weight: 700;
-  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
 }
 
 .popup-wrapper.invite .popup-body p span.accent {
   color: #de3111;
-  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
@@ -1211,7 +1226,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   padding: 40px;
 }
 .popup-wrapper.onlyTxt .popup-body .popup-body-innerbox p.popup-tit-lg {
-  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   font-size: 40px;
   font-style: normal;
   font-weight: 700;
@@ -1220,7 +1235,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   margin-bottom: 40px;
 }
 .popup-wrapper.onlyTxt .popup-body .popup-body-innerbox p.popup-tit-lg.no-mb {
-  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   font-size: 40px;
   font-style: normal;
   font-weight: 700;
@@ -1229,7 +1244,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   margin-bottom: 0;
 }
 .popup-wrapper.onlyTxt .popup-body .popup-body-innerbox p.txt-type01 {
-  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
@@ -1972,7 +1987,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
 .popup-wrapper p.popup-tit-lg {
   font-size: 24px;
   color: #000;
-  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   font-weight: 700;
 }
 
@@ -2012,13 +2027,13 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   border-bottom: 1px solid #000;
 }
 .popup-wrapper .popup-body.for-switch .wrap-switch.all p {
-  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
 }
 .popup-wrapper .popup-body.for-switch .wrap-switch p {
-  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   font-size: 20px;
   font-weight: 700;
   line-height: 140%;
@@ -2446,7 +2461,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   padding: 0 16px;
 }
 .eFestival_card .card_tit {
-  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   font-size: 32px;
   font-weight: 700;
   line-height: 140%;
@@ -2493,7 +2508,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
 }
 .eFestival_map_table tbody tr th {
   padding: 16px 4px;
-  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   font-size: 20px;
   font-weight: 700;
   line-height: 140%;
@@ -2521,7 +2536,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   line-height: 140%;
 }
 .eFestival_map_table tbody tr td p span:first-of-type {
-  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 140%;
@@ -2545,7 +2560,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   padding: 12px 42px;
   border-radius: 29px;
   background-color: #000;
-  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   font-size: 24px;
   font-weight: 700;
   line-height: 140%;
@@ -2577,7 +2592,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
 }
 .eFestival_grid .grid_top p:first-of-type {
   margin-bottom: 4px;
-  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   font-size: 24px;
   font-weight: 700;
   line-height: 140%;
@@ -2611,7 +2626,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
 }
 .eFestival_grid .grid_card ul li p:last-of-type {
   margin-top: 8px;
-  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   font-size: 20px;
   font-weight: 700;
   line-height: 125%;
@@ -2641,7 +2656,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   line-height: 140%;
 }
 .eFestival_schedule_card .card_tit {
-  font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   font-size: 20px;
   font-weight: 700;
   line-height: 140%;
@@ -2958,6 +2973,9 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   .result_bottom {
     padding: 2.75rem 0rem 10rem 0rem;
   }
+  .content-item03 .result_bottom {
+    padding: 80px 0 160px 0;
+  }
   .result_wrap .title_flex {
     display: block;
     margin-bottom: 64px;
@@ -2969,11 +2987,21 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   .result_wrap .contitle-type01 {
     padding: 0 1.5rem;
   }
+  .result_wrap .tit-type02 {
+    margin-bottom: 1.75rem;
+    padding: 0 1.5rem;
+    font-size: 1.875rem;
+  }
   .result_wrap .roundresult-wrap {
+    margin-bottom: 28px;
     padding: 0 1.75rem;
   }
   .result_wrap > .btn-wrap {
     display: none;
+  }
+  .result_wrap + .btn-wrap-default {
+    margin-top: 120px;
+    padding: 8px 0;
   }
   .result_wrap .roundresult-box {
     background: #fff;
@@ -3044,8 +3072,14 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   .standing_wrap {
     padding: 6.25rem 0 5.13rem 0;
   }
+  .standing_wrap.main_standing {
+    padding-bottom: 160px;
+  }
   .standing_wrap .title_flex {
     align-items: normal;
+  }
+  .standing_wrap.main_standing .title_flex {
+    margin-bottom: 64px;
   }
   .standing_wrap .title_flex .selectbox-wrap {
     margin-bottom: 0;
@@ -3210,6 +3244,9 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   .team_wrap {
     padding: 2.75rem 0;
   }
+  .team_wrap .ty03Swiper {
+    padding-bottom: 34px;
+  }
   .team_wrap .seasonstats-box {
     margin-top: 1.75rem;
   }
@@ -3342,6 +3379,9 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   }
   .video_detail_wrap {
     padding: 6.25rem 1.5rem 10rem 1.5rem;
+  }
+  .video_detail_wrap .card_video .card_img {
+    margin-bottom: 28px;
   }
   .video_detail_wrap .card_video .card_title {
     padding: 0;
@@ -3521,7 +3561,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
 
   .popup-wrapper.invite .popup-header {
     padding: 0;
-    font-family: "Hyundai Sans Head ", "Hyundai Sans Head KR", sans-serif;
+    font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
     font-style: normal;
     font-weight: 700;
     height: auto;
