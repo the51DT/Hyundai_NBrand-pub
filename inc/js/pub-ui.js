@@ -7,16 +7,14 @@ var pubUi = {
     self.masonryLayout();
     btnNaviCheck();
 
-    if ($(".ty01Swiper") != undefined && $(".ty01Swiper").length > 0) {
+    if ($(".ty01Swiper:not(.banner-swiper)") != undefined && $(".ty01Swiper:not(.banner-swiper)").length > 0) {
       var typeChk = "";
-      if (
-        $(".ty01Swiper:not(.banner-swiper) .swiper-slide-active").find("img")
-      ) {
+      if ($(".ty01Swiper:not(.banner-swiper) .swiper-slide-active").find("img").length != 0) {
         typeChk = "image";
       } else {
         typeChk = "video";
       }
-      self.videoBulletChk(".ty01Swiper", 0, typeChk);
+      self.videoBulletChk(".ty01Swiper:not(.banner-swiper)", 0, typeChk);
     }
   },
   settings: function () {
@@ -48,6 +46,7 @@ var pubUi = {
     self.dataSecond = 0;
     self.curTime = 0;
     self.per = 0;
+    self.typeIdx = 0;
     // self.perWrap = 0;
   },
   bindEvents: function () {
@@ -90,15 +89,13 @@ var pubUi = {
             // console.log("재생버튼 클릭!");
             $(this).addClass("on");
             $(this).find(".visually-hidden").text("재생");
-          }
-
-          self.videoControlerChk(targetSwiper);
+          }  
         } else {
           if ($(this).hasClass("on")) {
             // console.log("정지버튼 클릭!");
             $(this).removeClass("on");
             $(this).find(".visually-hidden").text("정지");
-            targetSwiper[0].swiper.autoplay.stop();
+            targetSwiper[0].swiper.autoplay.stop();            
           } else {
             // console.log("재생버튼 클릭!");
             $(this).addClass("on");
@@ -106,6 +103,8 @@ var pubUi = {
             targetSwiper[0].swiper.autoplay.start();
           }
         }
+
+        self.videoControlerChk(targetSwiper, self.typeIdx);
       }
     });
 
@@ -282,9 +281,12 @@ var pubUi = {
       slidesPerView: 1,
       watchOverflow: true, //pagination 1개 일 경우, 숨김
       initialSlide: 0,
-      touchRatio: touchFlag, // 드래그 X : 0 , 드래그 O : 1
+      touchRatio: 1, // 드래그 X : 0 , 드래그 O : 1
       loop: true,
-      autoplay: autoplayVal,
+      autoplay : {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
       pagination: {
         el: ".swiper-pagination-custom",
         clickable: true,
@@ -301,23 +303,12 @@ var pubUi = {
         },
         slideChangeTransitionEnd: function () {
           var currentIndex = swiper1.activeIndex;
-
-          if (
-            $(".ty01Swiper:not(.swiper-banner) .swiper-slide")[
-              currentIndex
-            ].querySelector("video")
-          ) {
-            pubUi.videoBulletChk(
-              ".ty01Swiper:not(.swiper-banner)",
-              this.realIndex,
-              "video"
-            );
+          self.typeIdx = this.realIndex;
+          if ($(".ty01Swiper:not(.swiper-banner) .swiper-slide")[currentIndex].querySelector("video")) {
+            pubUi.videoBulletChk(".ty01Swiper:not(.swiper-banner)", this.realIndex, "video");
           } else {
-            pubUi.videoBulletChk(
-              ".ty01Swiper:not(.swiper-banner)",
-              this.realIndex,
-              "image"
-            );
+            pubUi.videoBulletChk(".ty01Swiper:not(.swiper-banner)", this.realIndex, "image");
+            
           }
         },
       },
@@ -567,26 +558,30 @@ var pubUi = {
 
     var videoId = slideActive.find(".video").attr("id");
     var video = document.querySelector(`#${videoId}`);
-
+    
     stopTimer(video, type);
     if (slideActive) {
       startTimer(slide, video, self.maxVideoW, type, targetIdx);
     }
   },
-  videoControlerChk: function (targetSwiper) {
+  videoControlerChk: function (targetSwiper, targetIdx) {
     var swiperActiveVideo = targetSwiper.find(".swiper-slide-active video");    
+    var swiperAutoplayFlag = targetSwiper[0].swiper.autoplay;
 
     if (swiperActiveVideo.length > 0) {
       if (swiperActiveVideo[0].paused) {
         swiperActiveVideo[0].play();
-        pubUi.videoBulletChk(".ty01Swiper", 0, "video");
+        pubUi.videoBulletChk(".ty01Swiper:not(.banner-swiper)", targetIdx, "video");
       } else {
         swiperActiveVideo[0].pause();
-        stopTimer(swiperActiveVideo[0], "video");
-        $(".swiper-pagination-bullet .seek-bar").css("width", 0);
+        stopTimer("", "video");
       }
     } else {
-      $(".swiper-pagination-bullet .seek-bar").css("width", 0);
+      if (swiperAutoplayFlag == false) {
+        stopTimer("", "image");
+      } else {
+        pubUi.videoBulletChk(".ty01Swiper:not(.banner-swiper)", targetIdx, "image");
+      }
     }
   },
   tabBtnEvent: function (e, tabContainer) {
@@ -2314,11 +2309,20 @@ function startTimer(slide, video, maxVideoW, type, targetIdx) {
   self.dataSecond = 0;
   var playBtn = slide.find(".btn-play").hasClass("on");
   if (type == "image") {
-    duration = Math.floor(3);
+    if(playBtn) {
+      duration = Math.floor(3);
+    } else {
+      duration = 0;          
+      return false;
+    }
+    
   } else {
-    if (playBtn) {
+    if(playBtn) {
       video.play();
       duration = Math.floor(video.duration); // 동영상 전체 길이
+    } else {
+      duration = 0; // 동영상 전체 길이
+      return false;
     }
   }
 
@@ -2343,11 +2347,13 @@ function stopTimer(video, type) {
   self.per = 0;
   if (type !== "image") {
     // alert(type);
-    video.pause();
-    video.currentTime = 0;
+
+    // 일시정지 상태 일경우만 동작 하도록, video.paused 조건 추가하였음
+    if(video.paused = false) {
+      video.pause();
+      video.currentTime = 0;
+    }
   }
   $(".swiper-pagination-bullet .seek-bar").css("width", 0);
-
-  // ).style.width = 0;
-  clearInterval(self.timer);
+  clearInterval(self.timer);  
 }
