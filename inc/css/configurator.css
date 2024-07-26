@@ -1104,9 +1104,78 @@
     transform: none !important;
   }
   .swiper-slide,
-  .configurator_con_flex .configurator_swiper_wrap,
+  .configurator_con_flex .configurator_swiper_wrap {
+    width: 100% !important;
+    height: auto !important;
+  }
+
   .configurator_swiper .swiper-slide img {
     width: 100% !important;
     height: auto !important;
+    margin: 0 auto !important;
+  }
+
+  .configurator_select_summary {
+    padding: 1rem 0 !important;
+  }
+
+  .configurator_select_summary .btn-wrap {
+    display: none !important;
+  }
+  .configurator_summary_tit {
+    font-size: 1rem !important;
+  }
+  .configurator_summary_list {
+    margin: 0.5rem 0 0.75rem 0 !important;
+  }
+  .configurator_summary_list li {
+    justify-content: flex-start !important;
+    row-gap: 0 !important;
+    padding: 0.25rem 0.75rem 0.25rem 0.75rem !important;
+  }
+  .configurator_summary_img {
+    width: 2rem !important;
+    height: 2rem !important;
+  }
+  .configurator_price_wrap {
+    padding: 1rem 0.5rem 1rem 0.5rem !important;
+    height: 4.625rem !important;
+    box-shadow: none !important;
+    border-top: 1px solid #000 !important;
+  }
+  .configurator_price_total {
+    font-size: 1.2rem !important;
+  }
+  .configurator_price .btn-icon36 {
+    display: none !important;
+  }
+  .configurator_summary_parts {
+    font-size: 0.5rem !important;
+    line-height: 1 !important;
+  }
+  .configurator_summary_item,
+  .configurator_summary_price {
+    font-size: 0.5rem !important;
+  }
+  .configurator_summary_tit {
+    font-size: 1rem !important;
+  }
+  .configurator_area.summary .configurator_price_wrap {
+    padding: 0.5rem !important;
+    height: 2.125rem !important;
+  }
+  .configurator_summary_list_top .btn {
+    display: none !important;
+  }
+  .configurator_con_tit {
+    display: none !important;
+  }
+  .configurator_select_summary {
+    display: flex !important;
+    justify-content: space-between !important;
+    gap: 1rem !important;
+  }
+  .configurator_select_summary > div {
+    flex: 1 !important;
   }
 }
