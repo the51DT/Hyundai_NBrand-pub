@@ -454,6 +454,10 @@
 .mymsission-wrap {
   border-top: 1px solid #787d80;
 }
+.mymsission-wrap + .mymsission-wrap {
+  border-top: 0;
+}
+
 .mymsission-wrap li {
   padding: 29px 0 28px 0;
   border-bottom: 1px solid #bbb;

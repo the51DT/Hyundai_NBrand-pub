@@ -1089,10 +1089,24 @@
   }
 }
 @media print {
-  .configurator_con_flex .configurator_swiper_wrap {
-    height: 30vh !important;
+  .configurator_header {
+    padding-left: 0 !important;
   }
+  .configurator_scroll_tooltip,
+  .swiper-status-wrap,
+  .configurator_fx_wrap,
+  .swiper-button-next,
+  .swiper-button-prev,
+  .configurator_header_menu_wrap {
+    display: none !important;
+  }
+  .swiper-wrapper {
+    transform: none !important;
+  }
+  .swiper-slide,
+  .configurator_con_flex .configurator_swiper_wrap,
   .configurator_swiper .swiper-slide img {
+    width: 100% !important;
     height: auto !important;
   }
 }
