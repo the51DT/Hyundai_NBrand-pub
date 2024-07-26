@@ -173,6 +173,17 @@
   gap: 4px;
 }
 
+.popup.model-popup
+  .popup-wrapper
+  .popup-body
+  .inner-body-model
+  .container-desc
+  .wrap-function
+  .wrap-desc
+  .txt-type03 {
+  font-weight: 500;
+}
+
 .popup.model-popup.forModel
   .popup-wrapper
   .popup-body
