@@ -7,6 +7,10 @@ var pubUi = {
     self.masonryLayout();
     btnNaviCheck();
 
+    if ($(".evt-map-wrap").length > 0) {
+      scrollToCenter(".event-box .evt-map-img");
+    }
+
     if (
       $(".ty01Swiper:not(.banner-swiper)") != undefined &&
       $(".ty01Swiper:not(.banner-swiper)").length > 0
@@ -764,9 +768,6 @@ var pubUi = {
   },
   listContsActive: function (target) {
     var targetSwiper = $(target).parents(".swiper-slide");
-    var swiperDataCont = targetSwiper.data("content");
-    var swiperContents = $(".section_list .list-content");
-    var contentDataCont;
 
     // ty05Swiper, 슬라이드 클릭 시, active 처리
     targetSwiper.siblings().removeClass("active");
@@ -777,35 +778,35 @@ var pubUi = {
     }, 500);
 
     // 사용 안함 - 개발에서 제어
-    var raceRank = targetSwiper.find(".card_top .card_rank").text();
-    var raceMonth = targetSwiper.find(".card_bottom .card_badge").text();
-    var raceDay = targetSwiper.find(".card_bottom .card_tit").text();
-    var raceLocation = targetSwiper.find(".card_bottom .card_subtit").text();
+    // var raceRank = targetSwiper.find(".card_top .card_rank").text();
+    // var raceMonth = targetSwiper.find(".card_bottom .card_badge").text();
+    // var raceDay = targetSwiper.find(".card_bottom .card_tit").text();
+    // var raceLocation = targetSwiper.find(".card_bottom .card_subtit").text();
 
     // console.log(raceRank, raceMonth, raceDay, raceLocation);
 
-    swiperContents.removeClass("active");
+    //swiperContents.removeClass("active");
     // 보고용
     // swiperContents.hide();
-    swiperContents.find(".evtLayout-type").removeClass(raceLocation);
+    // swiperContents.find(".evtLayout-type").removeClass(raceLocation);
 
-    for (var i = 0; i < swiperContents.length; i++) {
-      contentDataCont = swiperContents[i].dataset.content;
+    // for (var i = 0; i < swiperContents.length; i++) {
+    //   contentDataCont = swiperContents[i].dataset.content;
 
-      if (swiperDataCont == contentDataCont) {
-        // 보고용
-        // swiperContents[i].style.display = "block";
-        swiperContents[i].classList.add("active");
-      }
-    }
+    //   if (swiperDataCont == contentDataCont) {
+    //     // 보고용
+    //     // swiperContents[i].style.display = "block";
+    //     swiperContents[i].classList.add("active");
+    //   }
+    // }
 
-    if (!swiperContents.hasClass("active")) {
-      alert("Comming soon !");
-      // 보고용
-      // targetSwiper.removeClass("active");
-      // 보고용
-      $(".section_list .list-content.conts03").addClass("active");
-    }
+    // if (!swiperContents.hasClass("active")) {
+    //   alert("Comming soon !");
+    //   // 보고용
+    //   // targetSwiper.removeClass("active");
+    //   // 보고용
+    //   $(".section_list .list-content.conts03").addClass("active");
+    // }
   },
   overScroll: function (cl) {
     const slider = document.querySelectorAll(cl);
@@ -894,6 +895,11 @@ $(document).ready(function () {
       }
 
       swiper2SlideEvt();
+
+      //07.29 추가
+      if ($(".evt-map-wrap").length > 0) {
+        scrollToCenter(".event-box .evt-map-img");
+      }
     }
 
     if (self.swiper4.length > 0) {
@@ -1432,6 +1438,23 @@ function evtImgMapChk(options, area) {
         }
       }
     }
+  }
+}
+
+// 07.29 추가 : mobile 일 경우, 스크롤 가운데 위치하도록 적용
+function scrollToCenter(el) {
+  let $element = document.querySelector(el);
+  let scrollFullWidth = $element.scrollWidth;
+  let scrollClientWidth = $element.clientWidth;
+  let calWidth = (scrollFullWidth - scrollClientWidth) / 2;
+
+  console.log(calWidth);
+  if (pubUi.windowSize()) {
+    // pc
+    // console.log("pc");
+  } else {
+    // mobile
+    $element.scrollLeft = calWidth;
   }
 }
 
