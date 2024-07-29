@@ -35,18 +35,18 @@
   height: 2rem;
 }
 .configurator_header_tit {
-  display: none;
+  display: flex;
   flex-shrink: 0;
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 140%;
 }
-.configurator_area.IONIQ .configurator_header_tit.IONIQ,
-.configurator_area.ELANTRA .configurator_header_tit.ELANTRA {
-  display: flex;
+.configurator_area.IONIQ .configurator_header_tit.ELANTRA,
+.configurator_area.ELANTRA .configurator_header_tit.IONIQ {
+  display: none;
 }
 .configurator_header_tit .icon-right {
-  margin-left: 0.75rem;
+  margin-left: 0.75rem !important;
 }
 .configurator_header_menu_wrap {
   position: absolute;
@@ -144,19 +144,20 @@
   position: absolute;
   top: 3.75rem;
   width: 100%;
-  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   text-align: center;
   color: #fff;
   opacity: 0;
   z-index: 1;
 }
 .configurator_list_swiper .configurator_tit {
+  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   font-size: 3.5rem;
   font-weight: 700;
   line-height: 125%;
   white-space: nowrap;
 }
 .configurator_list_swiper .configurator_subtit {
+  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   margin-top: 1rem;
   font-size: 1.5rem;
   font-weight: 700;
@@ -209,6 +210,9 @@
   max-width: 26.1rem;
   opacity: 0;
   z-index: 1;
+}
+.configurator_list_swiper .configurator_btn_wrap .btn {
+  word-break: normal;
 }
 .configurator_list_swiper .configurator_btn_wrap .btn-icon20 {
   flex-shrink: 0;
@@ -311,6 +315,9 @@
   z-index: 2;
 }
 .configurator_fx_wrap button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 3.75rem;
   height: 3.75rem;
   background-color: rgba(0, 0, 0, 0.3);
@@ -357,6 +364,10 @@
   flex-shrink: 0;
   background-color: #fff;
 }
+.configurator_select_wrap .dropdown .btn-icon20 {
+  width: 24px;
+  height: 24px;
+}
 .configurator_price_wrap {
   position: absolute;
   bottom: 0;
@@ -364,6 +375,7 @@
   width: 100%;
   height: 13.625rem;
   background: #fff;
+  border-top: 1px solid #BBB;
   box-shadow: 0px -2px 12px 0px rgba(0, 0, 0, 0.2);
   z-index: 2;
 }
@@ -594,7 +606,6 @@
   font-weight: 700;
   line-height: 140%;
   text-align: center;
-  height: 39px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -705,13 +716,13 @@
 }
 .configurator_summary_list {
   margin: 1.5rem 0 3.75rem 0;
-  border-top: 2px solid #787d80;
+  border-top: 2px solid #AAA;
   border-bottom: 1px solid #bbbbbb;
 }
 .configurator_summary_list li {
   display: flex;
   flex-direction: column;
-  row-gap: 1rem;
+  row-gap: 1.25rem;
   padding: 1.25rem 0.75rem 1.75rem 0.75rem;
 }
 .configurator_summary_list li + li {
@@ -733,6 +744,9 @@
   font-weight: 700;
   line-height: 100%;
   color: #555;
+}
+.configurator_summary_list_top .btn .btn-icon16 {
+
 }
 .configurator_summary_parts {
   font-size: 1rem;
@@ -806,6 +820,9 @@
   .configurator_header_tit {
     font-size: 1.25rem;
   }
+  .configurator_header_tit .icon-right {
+    margin-left: 4px !important;
+  }
   .configurator_header_menu_wrap {
     position: static;
     transform: translate(0, 0);
@@ -864,7 +881,7 @@
     padding: 0 1.5rem;
   }
   .configurator_list_swiper .swiper-bottom-wrap {
-    bottom: 56.5%;
+    bottom: 50%;
   }
   .configurator_list_swiper .swiper-button-prev:after {
     background-image: url(../images/icon/icon-arrow-box-white_left_mo.svg);
@@ -950,6 +967,10 @@
   .configurator_select_wrap .dropdown {
     padding: 1.75rem 0;
   }
+  .configurator_select_wrap .dropdown .btn-icon20 {
+    width: 20px;
+    height: 20px;
+  }
   .configurator_select_wrap .dropdown:first-of-type {
     padding-top: 0;
   }
@@ -968,6 +989,13 @@
   }
   .configurator_label_radio div:last-of-type {
     padding: 0 1.25rem;
+  }
+  .configurator_label_radio div:only-child {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .configurator_label_radio div:only-child .configurator_label_tit {
+    font-size: 1rem;
   }
   .configurator_label_radio .configurator_label_tit {
     font-size: 0.875rem;
@@ -1057,7 +1085,7 @@
   .configurator_summary_list_bottom > div {
     flex-direction: column;
     align-items: normal;
-    padding: 0.31rem 0;
+    padding: 1rem 0;
     height: 6rem;
   }
   .configurator_summary_img {
