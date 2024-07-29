@@ -1,703 +1,1046 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name=" format-detection" content="telephone=no" />
+    <title>N브랜드 | Brand_N Merchandise</title>
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="../../inc/css/swiper.min.css"
+    />
+    <link type="text/css" rel="stylesheet" href="../../inc/css/common.css" />
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name=" format-detection" content="telephone=no" />
-  <title>N브랜드 | Brand_N Merchandise</title>
-  <link type="text/css" rel="stylesheet" href="../../inc/css/swiper.min.css" />
-  <link type="text/css" rel="stylesheet" href="../../inc/css/common.css" />
-</head>
-
-<body>
-  <div class="wrap">
-    <!-- 07.17 수정 : header 추가 -->
-    <header class="header-wrap">
-      <div class="header-cont">
-        <h1 class="logo">
-          <a href="/"><img src="../../inc/images/img/img_logo.svg" loading="lazy" alt="N브랜드" /></a>
-        </h1>
-        <div class="sitemap-wrap">
-          <button class="nav-btn" data-label="전체 메뉴 닫기" aria-label="전체 메뉴 열기" aria-expanded="true"
-            aria-controls="navWrap">
-            <span class="line"></span>
-            <span class="line"></span>
-            <span class="line"></span>
-          </button>
-          <div class="nav-wrap" id="navWrap" aria-hidden="true">
-            <nav>
-              <!-- gnb 1dep -->
-              <!-- 현재 페이지 dep버튼에 active class 삽입.  gnb__tab02 첫번째 메뉴는 항상오픈, 활성화 클래스 on -->
-              <ul class="gnb__tab-btn-wrap">
-                <li>
-                  <button class="gnb__tab-btn01" id="gnb__tabBtn01" role="tab" aria-controls="gnbTab1"
-                    aria-selected="false">
-                    Brand
-                  </button>
-                </li>
-                <li>
-                  <button class="gnb__tab-btn02" id="gnb__tabBtn02" role="tab" aria-controls="gnbTab2"
-                    aria-selected="false">
-                    Models
-                  </button>
-                </li>
-                <li>
-                  <button class="gnb__tab-btn03" id="gnb__tabBtn03" role="tab" aria-controls="gnbTab3"
-                    aria-selected="false">
-                    Experience
-                  </button>
-                </li>
-                <li><a href="#" class="gnb__tab-btn04">Configurator</a></li>
-              </ul>
-              <!-- g nb 1dep panel -->
-              <div class="gnb__tab-cont-wrap">
-                <div class="gnb__tab-cont01" id="gnbTab1" role="tabpanel" aria-labelledby="gnb__tabBtn01">
-                  <!-- gnb 2-1 dep-->
-                  <div class="gnb__tab02-wrap">
-                    <ul class="gnb__tab02">
-                      <!-- 현재 페이지 dep버튼에 active class 삽입. -->
-                      <li>
-                        <a href="#" class="gnb__tab02-btn01">Hyundai N</a>
-                      </li>
-                      <li>
-                        <a href="#" class="gnb__tab02-btn02">Motorsports</a>
-                      </li>
-                      <li>
-                        <a href="#" class="gnb__tab02-btn03">N Performance Parts</a>
-                      </li>
-                      <li>
-                        <a href="#" class="gnb__tab02-btn04 active">N Merchandise</a>
-                      </li>
-                      <li><a href="#" class="gnb__tab02-btn05">Press</a></li>
-                    </ul>
-                    <button class="mo-gnb__back-btn" title="이전메뉴로 가기">
+  <body>
+    <div class="wrap">
+      <!-- 07.17 수정 : header 추가 -->
+      <header class="header-wrap">
+        <div class="header-cont">
+          <h1 class="logo">
+            <a href="/"
+              ><img
+                src="../../inc/images/img/img_logo.svg"
+                loading="lazy"
+                alt="N브랜드"
+            /></a>
+          </h1>
+          <div class="sitemap-wrap">
+            <button
+              class="nav-btn"
+              data-label="전체 메뉴 닫기"
+              aria-label="전체 메뉴 열기"
+              aria-expanded="true"
+              aria-controls="navWrap"
+            >
+              <span class="line"></span>
+              <span class="line"></span>
+              <span class="line"></span>
+            </button>
+            <div class="nav-wrap" id="navWrap" aria-hidden="true">
+              <nav>
+                <!-- gnb 1dep -->
+                <!-- 현재 페이지 dep버튼에 active class 삽입.  gnb__tab02 첫번째 메뉴는 항상오픈, 활성화 클래스 on -->
+                <ul class="gnb__tab-btn-wrap">
+                  <li>
+                    <button
+                      class="gnb__tab-btn01"
+                      id="gnb__tabBtn01"
+                      role="tab"
+                      aria-controls="gnbTab1"
+                      aria-selected="false"
+                    >
                       Brand
                     </button>
-                  </div>
-                  <div class="gnb-content__dep2">
-                    <div class="img-area">
-                      <img src="../../inc/images/img/img_gnb_dep2_content.png" loading="lazy" alt="N Cup - Round 1" />
-                    </div>
-                    <div class="text-area">
-                      <h3>N Cup - Round 1</h3>
-                      <p>Inje SPEEDIUM, 04.27 - 04.28</p>
-                      <div class="link-area">
-                        <a href="#" class="link-btn">Learn More<span class="icon-right-wh"></span></a>
-                        <a href="#" class="link-btn">Configrator <span class="icon-right-wh"></span></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="gnb__tab-cont02" id="gnbTab2" role="tabpanel" aria-labelledby="gnb__tabBtn02">
-                  <!-- gnb 2-2dep-->
-                  <div class="gnb__tab02-wrap">
-                    <!-- 모바일 타이틀 -->
-                    <ul class="gnb__tab02">
-                      <li>
-                        <button class="gnb__tab02-btn01 on" role="tab" id="gnb-tab2_2_1" aria-controls="gnbTab2_1"
-                          aria-selected="true">
-                          N
-                        </button>
-                      </li>
-                      <li>
-                        <button class="gnb__tab02-btn02" role="tab" id="gnb-tab2_2_2" aria-controls="gnbTab2_2"
-                          aria-selected="false">
-                          Motorsports
-                        </button>
-                      </li>
-                      <li>
-                        <button class="gnb__tab02-btn03" role="tab" id="gnb-tab2_2_3" aria-controls="gnbTab2_3"
-                          aria-selected="false">
-                          Rolling Lab
-                        </button>
-                      </li>
-                      <li>
-                        <button class="gnb__tab02-btn04" role="tab" id="gnb-tab2_2_4" aria-controls="gnbTab2_4"
-                          aria-selected="false">
-                          Concept
-                        </button>
-                      </li>
-                      <li>
-                        <button class="gnb__tab02-btn05" role="tab" id="gnb-tab2_2_5" aria-controls="gnbTab2_5"
-                          aria-selected="false">
-                          Legacy
-                        </button>
-                      </li>
-                    </ul>
-                    <!-- type-thumbnail 썸네일 메뉴일경우 클래스 추가 -->
-                    <div class="gnb__panel02">
-                      <div id="gnbTab2_1" class="type-thumbnail" role="tabpanel" aria-labelledby="gnb-tab2_2_1">
-                        <ul>
-                          <li>
-                            <div>
-                              <div class="img-area">
-                                <img src="../../inc/images/img/img_gnb_dep3.png" loading="lazy" alt="IONIQ 5 N 차량" />
-                              </div>
-                              <div class="text-area">
-                                <h3>IONIQ 5 N</h3>
-                                <p>Electrifying Driving Passion</p>
-                                <div class="link-area">
-                                  <a href="#" class="link-btn">Learn More<span class="icon-right"></span></a>
-                                  <a href="#" class="link-btn">Configrator<span class="icon-right"></span>
-                                    <!--<span class="icon-link"></span>--></a>
-                                </div>
-                              </div>
-                            </div>
-                          </li>
-                          <li>
-                            <div>
-                              <div class="img-area">
-                                <img src="../../inc/images/img/img_gnb_dep3.png" loading="lazy" alt="ELANTRA N 차량" />
-                              </div>
-                              <div class="text-area">
-                                <h3>ELANTRA N</h3>
-                                <p>The Perfect Balance</p>
-                                <div class="link-area">
-                                  <a href="#" class="link-btn">Learn More<span class="icon-right"></span></a>
-                                  <a href="#" class="link-btn">Configrator<span class="icon-right"></span>
-                                    <!--<span class="icon-link"></span>--></a>
-                                </div>
-                              </div>
-                            </div>
-                          </li>
-                          <li>
-                            <div>
-                              <div class="img-area">
-                                <img src="../../inc/images/img/img_gnb_dep3.png" loading="lazy" alt="i20 N 차량" />
-                              </div>
-                              <div class="text-area">
-                                <h3>i20 N</h3>
-                                <p>This is my stage</p>
-                                <div class="link-area">
-                                  <a href="#" class="link-btn">Learn More<span class="icon-right"></span></a>
-                                </div>
-                              </div>
-                            </div>
-                          </li>
-                          <li>
-                            <div>
-                              <div class="img-area">
-                                <img src="../../inc/images/img/img_gnb_dep3.png" loading="lazy" alt="i30 N 차량" />
-                              </div>
-                              <div class="text-area">
-                                <h3>i30 N</h3>
-                                <p>Shift the moment</p>
-                                <div class="link-area">
-                                  <a href="#" class="link-btn">Learn More<span class="icon-right"></span></a>
-                                </div>
-                              </div>
-                            </div>
-                          </li>
-                          <li>
-                            <div>
-                              <div class="img-area">
-                                <img src="../../inc/images/img/img_gnb_dep3.png" loading="lazy"
-                                  alt="i30 Fastback N 차량" />
-                              </div>
-                              <div class="text-area">
-                                <h3>i30 Fastback N</h3>
-                                <p>Elegant Adrenaline</p>
-                                <div class="link-area">
-                                  <a href="#" class="link-btn">Learn More<span class="icon-right"></span></a>
-                                </div>
-                              </div>
-                            </div>
-                          </li>
-                        </ul>
-                        <button class="mo-gnb__back-btn" title="이전메뉴로 가기">
-                          N
-                        </button>
-                      </div>
-                      <div id="gnbTab2_2" class="type-thumbnail" role="tabpanel" aria-labelledby="gnb-tab2_2_2">
-                        <ul class="gnb__tab02_2">
-                          <li>
-                            <div>
-                              <div class="img-area">
-                                <img src="../../inc/images/img/img_gnb_dep3.png" loading="lazy" alt="eN1 Cup Car 차량" />
-                              </div>
-                              <div class="text-area">
-                                <h3>eN1 Cup Car</h3>
-                                <p>
-                                  Shaping the future of motorsports with an EV
-                                </p>
-                                <div class="link-area">
-                                  <a href="#" class="link-btn">Learn More<span class="icon-right"></span></a>
-                                </div>
-                              </div>
-                            </div>
-                          </li>
-                          <li>
-                            <div>
-                              <div class="img-area">
-                                <img src="../../inc/images/img/img_gnb_dep3.png" loading="lazy"
-                                  alt="IONIQ 5 N TA Spec 차량" />
-                              </div>
-                              <div class="text-area">
-                                <h3>IONIQ 5 N TA Spec</h3>
-                                <p>The Perfect Balance</p>
-                                <div class="link-area">
-                                  <a href="#" class="link-btn">Learn More<span class="icon-right"></span></a>
-                                </div>
-                              </div>
-                            </div>
-                          </li>
-                          <li>
-                            <div>
-                              <div class="img-area">
-                                <img src="../../inc/images/img/img_gnb_dep3.png" loading="lazy"
-                                  alt="i20 N Rally 1 차량" />
-                              </div>
-                              <div class="text-area">
-                                <h3>i20 N Rally 1</h3>
-                                <p>The Perfect Balance</p>
-                                <div class="link-area">
-                                  <a href="#" class="link-btn">Learn More<span class="icon-right"></span></a>
-                                </div>
-                              </div>
-                            </div>
-                          </li>
-                          <li>
-                            <div>
-                              <div class="img-area">
-                                <img src="../../inc/images/img/img_gnb_dep3.png" loading="lazy"
-                                  alt="ELANTRA N TCR 차량" />
-                              </div>
-                              <div class="text-area">
-                                <h3>ELANTRA N TCR</h3>
-                                <p>The Perfect Balance</p>
-                                <div class="link-area">
-                                  <a href="#" class="link-btn">Learn More<span class="icon-right"></span></a>
-                                </div>
-                              </div>
-                            </div>
-                          </li>
-                        </ul>
-                        <button class="mo-gnb__back-btn" title="이전메뉴로 가기">
-                          Motorsports
-                        </button>
-                      </div>
-                      <div id="gnbTab2_3" class="type-thumbnail" role="tabpanel" aria-labelledby="gnb-tab2_2_3">
-                        <ul class="gnb__tab02_2">
-                          <li>
-                            <div>
-                              <div class="img-area">
-                                <img src="../../inc/images/img/img_gnb_dep3.png" loading="lazy" alt="N Vision 74 차량" />
-                              </div>
-                              <div class="text-area">
-                                <h3>N Vision 74</h3>
-                                <p>First Hydrogen Hybrid Rolling Lab</p>
-                                <div class="link-area">
-                                  <a href="#" class="link-btn">Learn More<span class="icon-right"></span></a>
-                                </div>
-                              </div>
-                            </div>
-                          </li>
-                          <li>
-                            <div>
-                              <div class="img-area">
-                                <img src="../../inc/images/img/img_gnb_dep3.png" loading="lazy" alt="RN22e 차량" />
-                              </div>
-                              <div class="text-area">
-                                <h3>RN22e</h3>
-                                <p>
-                                  Rolling Lab with Maximized EGMP Potential
-                                </p>
-                                <div class="link-area">
-                                  <a href="#" class="link-btn">Learn More<span class="icon-right"></span></a>
-                                </div>
-                              </div>
-                            </div>
-                          </li>
-                        </ul>
-                        <button class="mo-gnb__back-btn" title="이전메뉴로 가기">
-                          Rolling Lab
-                        </button>
-                      </div>
-                      <div id="gnbTab2_4" class="type-thumbnail" role="tabpanel" aria-labelledby="gnb-tab2_2_4">
-                        <ul class="gnb__tab02_2">
-                          <li>
-                            <div>
-                              <div class="img-area">
-                                <img src="../../inc/images/img/img_gnb_dep3.png" loading="lazy" alt="NPX1 차량" />
-                              </div>
-                              <div class="text-area">
-                                <h3>NPX1</h3>
-                                <p>N Performance eXperimental 1</p>
-                                <div class="link-area">
-                                  <a href="#" class="link-btn">Learn More<span class="icon-right"></span></a>
-                                </div>
-                              </div>
-                            </div>
-                          </li>
-                        </ul>
-                        <button class="mo-gnb__back-btn" title="이전메뉴로 가기">
-                          Concept
-                        </button>
-                      </div>
-                      <div id="gnbTab2_5" class="type-thumbnail" role="tabpanel" aria-labelledby="gnb-tab2_2_5">
-                        <ul class="gnb__tab02_2">
-                          <li>
-                            <div>
-                              <div class="img-area">
-                                <img src="../../inc/images/img/img_gnb_dep3.png" loading="lazy" alt="RN20e 차량" />
-                              </div>
-                              <div class="text-area">
-                                <h3>RN20e</h3>
-                                <p>Performance, Electrified</p>
-                                <div class="link-area">
-                                  <a href="#" class="link-btn">Learn More<span class="icon-right"></span></a>
-                                </div>
-                              </div>
-                            </div>
-                          </li>
-                          <li>
-                            <div>
-                              <div class="img-area">
-                                <img src="../../inc/images/img/img_gnb_dep3.png" loading="lazy" alt="RM19 차량" />
-                              </div>
-                              <div class="text-area">
-                                <h3>RM19</h3>
-                                <p>Proof of Continuous Development</p>
-                                <div class="link-area">
-                                  <a href="#" class="link-btn">Learn More<span class="icon-right"></span></a>
-                                </div>
-                              </div>
-                            </div>
-                          </li>
-                          <li>
-                            <div>
-                              <div class="img-area">
-                                <img src="../../inc/images/img/img_gnb_dep3.png" loading="lazy" alt="Project RM 차량" />
-                              </div>
-                              <div class="text-area">
-                                <h3>Project RM</h3>
-                                <p>Developing High Performance</p>
-                                <div class="linKONA Nk-area">
-                                  <a href="#" class="link-btn">Learn More<span class="icon-right"></span></a>
-                                </div>
-                              </div>
-                            </div>
-                          </li>
-                          <li>
-                            <div>
-                              <div class="img-area">
-                                <img src="../../inc/images/img/img_gnb_dep3.png" loading="lazy"
-                                  alt="N 2025 Vision Gran Turismo 차량" />
-                              </div>
-                              <div class="text-area">
-                                <h3>N 2025 Vision Gran Turismo</h3>
-                                <p>The Potential and Vision of N</p>
-                                <div class="link-area">
-                                  <a href="#" class="link-btn">Learn More<span class="icon-right"></span></a>
-                                </div>
-                              </div>
-                            </div>
-                          </li>
-                          <li>
-                            <div>
-                              <div class="img-area">
-                                <img src="../../inc/images/img/img_gnb_dep3.png" loading="lazy" alt="RN30 차량" />
-                              </div>
-                              <div class="text-area">
-                                <h3>RN30</h3>
-                                <p>
-                                  The Exceptional N Racing Machine Concept
-                                </p>
-                                <div class="link-area">
-                                  <a href="#" class="link-btn">Learn More<span class="icon-right"></span></a>
-                                </div>
-                              </div>
-                            </div>
-                          </li>
-                          <li>
-                            <div>
-                              <div class="img-area">
-                                <img src="../../inc/images/img/img_gnb_dep3.png" loading="lazy"
-                                  alt="VELOSTER N Performance Car 차량" />
-                              </div>
-
-                              <div class="text-area">
-                                <h3>VELOSTER N Performance Car</h3>
-                                <p>2019 Seoul Motor Show Car</p>
-                                <div class="link-area">
-                                  <a href="#" class="link-btn">Learn More<span class="icon-right"></span></a>
-                                </div>
-                              </div>
-                            </div>
-                          </li>
-                          <li>
-                            <div>
-                              <div class="img-area">
-                                <img src="../../inc/images/img/img_gnb_dep3.png" loading="lazy"
-                                  alt="N Option Show Car 차량" />
-                              </div>
-
-                              <div class="text-area">
-                                <h3>N Option Show Car</h3>
-                                <p>Unveiled at 2018 Paris Motor Show</p>
-                                <div class="link-area">
-                                  <a href="#" class="link-btn">Learn More<span class="icon-right"></span></a>
-                                </div>
-                              </div>
-                            </div>
-                          </li>
-                          <li>
-                            <div>
-                              <div class="img-area">
-                                <img src="../../inc/images/img/img_gnb_dep3.png" loading="lazy" alt="Veloster N 차량" />
-                              </div>
-
-                              <div class="text-area">
-                                <h3>Veloster N</h3>
-                                <p>Shift the Moment.</p>
-                                <div class="link-area">
-                                  <a href="#" class="link-btn">Learn More<span class="icon-right"></span></a>
-                                </div>
-                              </div>
-                            </div>
-                          </li>
-                          <li>
-                            <div>
-                              <div class="img-area">
-                                <img src="../../inc/images/img/img_gnb_dep3.png" loading="lazy" alt="KONA N 차량" />
-                              </div>
-
-                              <div class="text-area">
-                                <h3>KONA N</h3>
-                                <p>Elegant Adrenaline</p>
-                                <div class="link-area">
-                                  <a href="#" class="link-btn">Yes. It's N<span class="icon-right"></span></a>
-                                </div>
-                              </div>
-                            </div>
-                          </li>
-                        </ul>
-                        <button class="mo-gnb__back-btn" title="이전메뉴로 가기">
-                          Legacy
-                        </button>
-                      </div>
-                    </div>
-                    <button class="mo-gnb__back-btn" title="이전메뉴로 가기">
+                  </li>
+                  <li>
+                    <button
+                      class="gnb__tab-btn02"
+                      id="gnb__tabBtn02"
+                      role="tab"
+                      aria-controls="gnbTab2"
+                      aria-selected="false"
+                    >
                       Models
                     </button>
-                  </div>
-                </div>
-                <div class="gnb__tab-cont03" id="gnbTab3" role="tabpanel" aria-labelledby="gnb-tab2_2_1">
-                  <div class="gnb__tab02-wrap">
-                    <ul class="gnb__tab02">
-                      <!-- 현재 페이지 dep버튼에 active class 삽입. -->
-                      <li>
-                        <button class="gnb__tab02-btn01" role="tab" id="gnb-tab2_3_1" aria-controls="gnbTab3_1"
-                          aria-selected="true">
-                          N Festival
-                        </button>
-                      </li>
-                      <li>
-                        <button class="gnb__tab02-btn02" role="tab" id="gnb-tab2_3_2" aria-controls="gnbTab3_2"
-                          aria-selected="true">
-                          N Channel
-                        </button>
-                      </li>
-                      <li>
-                        <a class="gnb__tab02-btn03" id="gnb-tab2_3_3">N e-Festival</a>
-                      </li>
-                      <li>
-                        <button class="gnb__tab02-btn04" role="tab" id="gnb-tab2_3_4" aria-controls="gnbTab3_4"
-                          aria-selected="true">
-                          NFluencer
-                        </button>
-                      </li>
-                      <li>
-                        <a class="gnb__tab02-btn05" id="gnb-tab2_3_5">N Taxi</a>
-                      </li>
-                      <li>
-                        <a class="gnb__tab02-btn06" id="gnb-tab2_3_6">Driving Experience</a>
-                      </li>
-                    </ul>
-                    <button class="mo-gnb__back-btn" title="이전메뉴로 가기">
+                  </li>
+                  <li>
+                    <button
+                      class="gnb__tab-btn03"
+                      id="gnb__tabBtn03"
+                      role="tab"
+                      aria-controls="gnbTab3"
+                      aria-selected="false"
+                    >
                       Experience
                     </button>
-                    <div class="gnb__panel02">
-                      <div id="gnbTab3_1" class="panel2_3_1" role="tabpanel" aria-labelledby="gnb-tab2_3_1">
-                        <ul class="gnb__tab02_3">
-                          <li>
-                            <a href="#" class="gnb__tab02-btn">N Festival</a>
-                          </li>
-                          <li>
-                            <a href="#" class="gnb__tab02-btn">Event Guide</a>
-                          </li>
-                          <li>
-                            <a href="#" class="gnb__tab02-btn">Calendar</a>
-                          </li>
-                          <li>
-                            <a href="#" class="gnb__tab02-btn">Standing</a>
-                          </li>
-                          <li>
-                            <a href="#" class="gnb__tab02-btn">Drivers</a>
-                          </li>
-                          <li>
-                            <a href="#" class="gnb__tab02-btn">Teams</a>
-                          </li>
-                          <li>
-                            <a href="#" class="gnb__tab02-btn">About</a>
-                          </li>
-                          <li>
-                            <a href="#" class="gnb__tab02-btn">Video</a>
-                          </li>
-                        </ul>
-                        <button class="mo-gnb__back-btn" title="이전메뉴로 가기">
-                          N Festival
-                        </button>
+                  </li>
+                  <li><a href="#" class="gnb__tab-btn04">Configurator</a></li>
+                </ul>
+                <!-- g nb 1dep panel -->
+                <div class="gnb__tab-cont-wrap">
+                  <div
+                    class="gnb__tab-cont01"
+                    id="gnbTab1"
+                    role="tabpanel"
+                    aria-labelledby="gnb__tabBtn01"
+                  >
+                    <!-- gnb 2-1 dep-->
+                    <div class="gnb__tab02-wrap">
+                      <ul class="gnb__tab02">
+                        <!-- 현재 페이지 dep버튼에 active class 삽입. -->
+                        <li>
+                          <a href="#" class="gnb__tab02-btn01">Hyundai N</a>
+                        </li>
+                        <li>
+                          <a href="#" class="gnb__tab02-btn02">Motorsports</a>
+                        </li>
+                        <li>
+                          <a href="#" class="gnb__tab02-btn03"
+                            >N Performance Parts</a
+                          >
+                        </li>
+                        <li>
+                          <a href="#" class="gnb__tab02-btn04 active"
+                            >N Merchandise</a
+                          >
+                        </li>
+                        <li><a href="#" class="gnb__tab02-btn05">Press</a></li>
+                      </ul>
+                      <button class="mo-gnb__back-btn" title="이전메뉴로 가기">
+                        Brand
+                      </button>
+                    </div>
+                    <div class="gnb-content__dep2">
+                      <div class="img-area">
+                        <img
+                          src="../../inc/images/img/img_gnb_dep2_content.png"
+                          loading="lazy"
+                          alt="N Cup - Round 1"
+                        />
                       </div>
-                      <div id="gnbTab3_2" class="panel2_3_2" role="tabpanel" aria-labelledby="gnb-tab2_3_2">
-                        <ul class="gnb__tab02_3">
-                          <li>
-                            <a href="#" class="gnb__tab02-btn">N Channel</a>
-                          </li>
-                          <li>
-                            <a href="#" class="gnb__tab02-btn">N Performance Garage</a>
-                          </li>
-                          <li>
-                            <a href="#" class="gnb__tab02-btn">N Lounge Inje</a>
-                          </li>
-                          <li>
-                            <a href="#" class="gnb__tab02-btn">N Lounge Jeonju</a>
-                          </li>
-                          <li>
-                            <a href="#" class="gnb__tab02-btn">N Lounge Shanghai</a>
-                          </li>
-                        </ul>
-                        <button class="mo-gnb__back-btn" title="이전메뉴로 가기">
-                          N Channel
-                        </button>
-                      </div>
-                      <div id="gnbTab3_4" class="panel2_3_4" role="tabpanel" aria-labelledby="gnb-tab2_3_4">
-                        <ul class="gnb__tab02_3">
-                          <li>
-                            <a href="#" class="gnb__tab02-btn">Nfluencer</a>
-                          </li>
-                          <li><a href="#" class="gnb__tab02-btn">Hub</a></li>
-                          <li>
-                            <a href="#" class="gnb__tab02-btn">Missions</a>
-                          </li>
-                          <li>
-                            <a href="#" class="gnb__tab02-btn">Ranking</a>
-                          </li>
-                          <li>
-                            <a href="#" class="gnb__tab02-btn">Rewards</a>
-                          </li>
-                          <li>
-                            <a href="#" class="gnb__tab02-btn">Notice</a>
-                          </li>
-                        </ul>
-                        <button class="mo-gnb__back-btn" title="이전메뉴로 가기">
-                          NFluencer
-                        </button>
+                      <div class="text-area">
+                        <h3>N Cup - Round 1</h3>
+                        <p>Inje SPEEDIUM, 04.27 - 04.28</p>
+                        <div class="link-area">
+                          <a href="#" class="link-btn"
+                            >Learn More<span class="icon-right-wh"></span
+                          ></a>
+                          <a href="#" class="link-btn"
+                            >Configrator <span class="icon-right-wh"></span
+                          ></a>
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <div class="gnb-content__dep2">
+                  <div
+                    class="gnb__tab-cont02"
+                    id="gnbTab2"
+                    role="tabpanel"
+                    aria-labelledby="gnb__tabBtn02"
+                  >
+                    <!-- gnb 2-2dep-->
+                    <div class="gnb__tab02-wrap">
+                      <!-- 모바일 타이틀 -->
+                      <ul class="gnb__tab02">
+                        <li>
+                          <button
+                            class="gnb__tab02-btn01 on"
+                            role="tab"
+                            id="gnb-tab2_2_1"
+                            aria-controls="gnbTab2_1"
+                            aria-selected="true"
+                          >
+                            N
+                          </button>
+                        </li>
+                        <li>
+                          <button
+                            class="gnb__tab02-btn02"
+                            role="tab"
+                            id="gnb-tab2_2_2"
+                            aria-controls="gnbTab2_2"
+                            aria-selected="false"
+                          >
+                            Motorsports
+                          </button>
+                        </li>
+                        <li>
+                          <button
+                            class="gnb__tab02-btn03"
+                            role="tab"
+                            id="gnb-tab2_2_3"
+                            aria-controls="gnbTab2_3"
+                            aria-selected="false"
+                          >
+                            Rolling Lab
+                          </button>
+                        </li>
+                        <li>
+                          <button
+                            class="gnb__tab02-btn04"
+                            role="tab"
+                            id="gnb-tab2_2_4"
+                            aria-controls="gnbTab2_4"
+                            aria-selected="false"
+                          >
+                            Concept
+                          </button>
+                        </li>
+                        <li>
+                          <button
+                            class="gnb__tab02-btn05"
+                            role="tab"
+                            id="gnb-tab2_2_5"
+                            aria-controls="gnbTab2_5"
+                            aria-selected="false"
+                          >
+                            Legacy
+                          </button>
+                        </li>
+                      </ul>
+                      <!-- type-thumbnail 썸네일 메뉴일경우 클래스 추가 -->
+                      <div class="gnb__panel02">
+                        <div
+                          id="gnbTab2_1"
+                          class="type-thumbnail"
+                          role="tabpanel"
+                          aria-labelledby="gnb-tab2_2_1"
+                        >
+                          <ul>
+                            <li>
+                              <div>
+                                <div class="img-area">
+                                  <img
+                                    src="../../inc/images/img/img_gnb_dep3.png"
+                                    loading="lazy"
+                                    alt="IONIQ 5 N 차량"
+                                  />
+                                </div>
+                                <div class="text-area">
+                                  <h3>IONIQ 5 N</h3>
+                                  <p>Electrifying Driving Passion</p>
+                                  <div class="link-area">
+                                    <a href="#" class="link-btn"
+                                      >Learn More<span class="icon-right"></span
+                                    ></a>
+                                    <a href="#" class="link-btn"
+                                      >Configrator<span
+                                        class="icon-right"
+                                      ></span>
+                                      <!--<span class="icon-link"></span>--></a
+                                    >
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div>
+                                <div class="img-area">
+                                  <img
+                                    src="../../inc/images/img/img_gnb_dep3.png"
+                                    loading="lazy"
+                                    alt="ELANTRA N 차량"
+                                  />
+                                </div>
+                                <div class="text-area">
+                                  <h3>ELANTRA N</h3>
+                                  <p>The Perfect Balance</p>
+                                  <div class="link-area">
+                                    <a href="#" class="link-btn"
+                                      >Learn More<span class="icon-right"></span
+                                    ></a>
+                                    <a href="#" class="link-btn"
+                                      >Configrator<span
+                                        class="icon-right"
+                                      ></span>
+                                      <!--<span class="icon-link"></span>--></a
+                                    >
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div>
+                                <div class="img-area">
+                                  <img
+                                    src="../../inc/images/img/img_gnb_dep3.png"
+                                    loading="lazy"
+                                    alt="i20 N 차량"
+                                  />
+                                </div>
+                                <div class="text-area">
+                                  <h3>i20 N</h3>
+                                  <p>This is my stage</p>
+                                  <div class="link-area">
+                                    <a href="#" class="link-btn"
+                                      >Learn More<span class="icon-right"></span
+                                    ></a>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div>
+                                <div class="img-area">
+                                  <img
+                                    src="../../inc/images/img/img_gnb_dep3.png"
+                                    loading="lazy"
+                                    alt="i30 N 차량"
+                                  />
+                                </div>
+                                <div class="text-area">
+                                  <h3>i30 N</h3>
+                                  <p>Shift the moment</p>
+                                  <div class="link-area">
+                                    <a href="#" class="link-btn"
+                                      >Learn More<span class="icon-right"></span
+                                    ></a>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div>
+                                <div class="img-area">
+                                  <img
+                                    src="../../inc/images/img/img_gnb_dep3.png"
+                                    loading="lazy"
+                                    alt="i30 Fastback N 차량"
+                                  />
+                                </div>
+                                <div class="text-area">
+                                  <h3>i30 Fastback N</h3>
+                                  <p>Elegant Adrenaline</p>
+                                  <div class="link-area">
+                                    <a href="#" class="link-btn"
+                                      >Learn More<span class="icon-right"></span
+                                    ></a>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+                          <button
+                            class="mo-gnb__back-btn"
+                            title="이전메뉴로 가기"
+                          >
+                            N
+                          </button>
+                        </div>
+                        <div
+                          id="gnbTab2_2"
+                          class="type-thumbnail"
+                          role="tabpanel"
+                          aria-labelledby="gnb-tab2_2_2"
+                        >
+                          <ul class="gnb__tab02_2">
+                            <li>
+                              <div>
+                                <div class="img-area">
+                                  <img
+                                    src="../../inc/images/img/img_gnb_dep3.png"
+                                    loading="lazy"
+                                    alt="eN1 Cup Car 차량"
+                                  />
+                                </div>
+                                <div class="text-area">
+                                  <h3>eN1 Cup Car</h3>
+                                  <p>
+                                    Shaping the future of motorsports with an EV
+                                  </p>
+                                  <div class="link-area">
+                                    <a href="#" class="link-btn"
+                                      >Learn More<span class="icon-right"></span
+                                    ></a>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div>
+                                <div class="img-area">
+                                  <img
+                                    src="../../inc/images/img/img_gnb_dep3.png"
+                                    loading="lazy"
+                                    alt="IONIQ 5 N TA Spec 차량"
+                                  />
+                                </div>
+                                <div class="text-area">
+                                  <h3>IONIQ 5 N TA Spec</h3>
+                                  <p>The Perfect Balance</p>
+                                  <div class="link-area">
+                                    <a href="#" class="link-btn"
+                                      >Learn More<span class="icon-right"></span
+                                    ></a>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div>
+                                <div class="img-area">
+                                  <img
+                                    src="../../inc/images/img/img_gnb_dep3.png"
+                                    loading="lazy"
+                                    alt="i20 N Rally 1 차량"
+                                  />
+                                </div>
+                                <div class="text-area">
+                                  <h3>i20 N Rally 1</h3>
+                                  <p>The Perfect Balance</p>
+                                  <div class="link-area">
+                                    <a href="#" class="link-btn"
+                                      >Learn More<span class="icon-right"></span
+                                    ></a>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div>
+                                <div class="img-area">
+                                  <img
+                                    src="../../inc/images/img/img_gnb_dep3.png"
+                                    loading="lazy"
+                                    alt="ELANTRA N TCR 차량"
+                                  />
+                                </div>
+                                <div class="text-area">
+                                  <h3>ELANTRA N TCR</h3>
+                                  <p>The Perfect Balance</p>
+                                  <div class="link-area">
+                                    <a href="#" class="link-btn"
+                                      >Learn More<span class="icon-right"></span
+                                    ></a>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+                          <button
+                            class="mo-gnb__back-btn"
+                            title="이전메뉴로 가기"
+                          >
+                            Motorsports
+                          </button>
+                        </div>
+                        <div
+                          id="gnbTab2_3"
+                          class="type-thumbnail"
+                          role="tabpanel"
+                          aria-labelledby="gnb-tab2_2_3"
+                        >
+                          <ul class="gnb__tab02_2">
+                            <li>
+                              <div>
+                                <div class="img-area">
+                                  <img
+                                    src="../../inc/images/img/img_gnb_dep3.png"
+                                    loading="lazy"
+                                    alt="N Vision 74 차량"
+                                  />
+                                </div>
+                                <div class="text-area">
+                                  <h3>N Vision 74</h3>
+                                  <p>First Hydrogen Hybrid Rolling Lab</p>
+                                  <div class="link-area">
+                                    <a href="#" class="link-btn"
+                                      >Learn More<span class="icon-right"></span
+                                    ></a>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div>
+                                <div class="img-area">
+                                  <img
+                                    src="../../inc/images/img/img_gnb_dep3.png"
+                                    loading="lazy"
+                                    alt="RN22e 차량"
+                                  />
+                                </div>
+                                <div class="text-area">
+                                  <h3>RN22e</h3>
+                                  <p>
+                                    Rolling Lab with Maximized EGMP Potential
+                                  </p>
+                                  <div class="link-area">
+                                    <a href="#" class="link-btn"
+                                      >Learn More<span class="icon-right"></span
+                                    ></a>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+                          <button
+                            class="mo-gnb__back-btn"
+                            title="이전메뉴로 가기"
+                          >
+                            Rolling Lab
+                          </button>
+                        </div>
+                        <div
+                          id="gnbTab2_4"
+                          class="type-thumbnail"
+                          role="tabpanel"
+                          aria-labelledby="gnb-tab2_2_4"
+                        >
+                          <ul class="gnb__tab02_2">
+                            <li>
+                              <div>
+                                <div class="img-area">
+                                  <img
+                                    src="../../inc/images/img/img_gnb_dep3.png"
+                                    loading="lazy"
+                                    alt="NPX1 차량"
+                                  />
+                                </div>
+                                <div class="text-area">
+                                  <h3>NPX1</h3>
+                                  <p>N Performance eXperimental 1</p>
+                                  <div class="link-area">
+                                    <a href="#" class="link-btn"
+                                      >Learn More<span class="icon-right"></span
+                                    ></a>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+                          <button
+                            class="mo-gnb__back-btn"
+                            title="이전메뉴로 가기"
+                          >
+                            Concept
+                          </button>
+                        </div>
+                        <div
+                          id="gnbTab2_5"
+                          class="type-thumbnail"
+                          role="tabpanel"
+                          aria-labelledby="gnb-tab2_2_5"
+                        >
+                          <ul class="gnb__tab02_2">
+                            <li>
+                              <div>
+                                <div class="img-area">
+                                  <img
+                                    src="../../inc/images/img/img_gnb_dep3.png"
+                                    loading="lazy"
+                                    alt="RN20e 차량"
+                                  />
+                                </div>
+                                <div class="text-area">
+                                  <h3>RN20e</h3>
+                                  <p>Performance, Electrified</p>
+                                  <div class="link-area">
+                                    <a href="#" class="link-btn"
+                                      >Learn More<span class="icon-right"></span
+                                    ></a>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div>
+                                <div class="img-area">
+                                  <img
+                                    src="../../inc/images/img/img_gnb_dep3.png"
+                                    loading="lazy"
+                                    alt="RM19 차량"
+                                  />
+                                </div>
+                                <div class="text-area">
+                                  <h3>RM19</h3>
+                                  <p>Proof of Continuous Development</p>
+                                  <div class="link-area">
+                                    <a href="#" class="link-btn"
+                                      >Learn More<span class="icon-right"></span
+                                    ></a>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div>
+                                <div class="img-area">
+                                  <img
+                                    src="../../inc/images/img/img_gnb_dep3.png"
+                                    loading="lazy"
+                                    alt="Project RM 차량"
+                                  />
+                                </div>
+                                <div class="text-area">
+                                  <h3>Project RM</h3>
+                                  <p>Developing High Performance</p>
+                                  <div class="linKONA Nk-area">
+                                    <a href="#" class="link-btn"
+                                      >Learn More<span class="icon-right"></span
+                                    ></a>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div>
+                                <div class="img-area">
+                                  <img
+                                    src="../../inc/images/img/img_gnb_dep3.png"
+                                    loading="lazy"
+                                    alt="N 2025 Vision Gran Turismo 차량"
+                                  />
+                                </div>
+                                <div class="text-area">
+                                  <h3>N 2025 Vision Gran Turismo</h3>
+                                  <p>The Potential and Vision of N</p>
+                                  <div class="link-area">
+                                    <a href="#" class="link-btn"
+                                      >Learn More<span class="icon-right"></span
+                                    ></a>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div>
+                                <div class="img-area">
+                                  <img
+                                    src="../../inc/images/img/img_gnb_dep3.png"
+                                    loading="lazy"
+                                    alt="RN30 차량"
+                                  />
+                                </div>
+                                <div class="text-area">
+                                  <h3>RN30</h3>
+                                  <p>
+                                    The Exceptional N Racing Machine Concept
+                                  </p>
+                                  <div class="link-area">
+                                    <a href="#" class="link-btn"
+                                      >Learn More<span class="icon-right"></span
+                                    ></a>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div>
+                                <div class="img-area">
+                                  <img
+                                    src="../../inc/images/img/img_gnb_dep3.png"
+                                    loading="lazy"
+                                    alt="VELOSTER N Performance Car 차량"
+                                  />
+                                </div>
+
+                                <div class="text-area">
+                                  <h3>VELOSTER N Performance Car</h3>
+                                  <p>2019 Seoul Motor Show Car</p>
+                                  <div class="link-area">
+                                    <a href="#" class="link-btn"
+                                      >Learn More<span class="icon-right"></span
+                                    ></a>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div>
+                                <div class="img-area">
+                                  <img
+                                    src="../../inc/images/img/img_gnb_dep3.png"
+                                    loading="lazy"
+                                    alt="N Option Show Car 차량"
+                                  />
+                                </div>
+
+                                <div class="text-area">
+                                  <h3>N Option Show Car</h3>
+                                  <p>Unveiled at 2018 Paris Motor Show</p>
+                                  <div class="link-area">
+                                    <a href="#" class="link-btn"
+                                      >Learn More<span class="icon-right"></span
+                                    ></a>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div>
+                                <div class="img-area">
+                                  <img
+                                    src="../../inc/images/img/img_gnb_dep3.png"
+                                    loading="lazy"
+                                    alt="Veloster N 차량"
+                                  />
+                                </div>
+
+                                <div class="text-area">
+                                  <h3>Veloster N</h3>
+                                  <p>Shift the Moment.</p>
+                                  <div class="link-area">
+                                    <a href="#" class="link-btn"
+                                      >Learn More<span class="icon-right"></span
+                                    ></a>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div>
+                                <div class="img-area">
+                                  <img
+                                    src="../../inc/images/img/img_gnb_dep3.png"
+                                    loading="lazy"
+                                    alt="KONA N 차량"
+                                  />
+                                </div>
+
+                                <div class="text-area">
+                                  <h3>KONA N</h3>
+                                  <p>Elegant Adrenaline</p>
+                                  <div class="link-area">
+                                    <a href="#" class="link-btn"
+                                      >Yes. It's N<span
+                                        class="icon-right"
+                                      ></span
+                                    ></a>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+                          <button
+                            class="mo-gnb__back-btn"
+                            title="이전메뉴로 가기"
+                          >
+                            Legacy
+                          </button>
+                        </div>
+                      </div>
+                      <button class="mo-gnb__back-btn" title="이전메뉴로 가기">
+                        Models
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    class="gnb__tab-cont03"
+                    id="gnbTab3"
+                    role="tabpanel"
+                    aria-labelledby="gnb-tab2_2_1"
+                  >
+                    <div class="gnb__tab02-wrap">
+                      <ul class="gnb__tab02">
+                        <!-- 현재 페이지 dep버튼에 active class 삽입. -->
+                        <li>
+                          <button
+                            class="gnb__tab02-btn01"
+                            role="tab"
+                            id="gnb-tab2_3_1"
+                            aria-controls="gnbTab3_1"
+                            aria-selected="true"
+                          >
+                            N Festival
+                          </button>
+                        </li>
+                        <li>
+                          <button
+                            class="gnb__tab02-btn02"
+                            role="tab"
+                            id="gnb-tab2_3_2"
+                            aria-controls="gnbTab3_2"
+                            aria-selected="true"
+                          >
+                            N Channel
+                          </button>
+                        </li>
+                        <li>
+                          <a class="gnb__tab02-btn03" id="gnb-tab2_3_3"
+                            >N e-Festival</a
+                          >
+                        </li>
+                        <li>
+                          <button
+                            class="gnb__tab02-btn04"
+                            role="tab"
+                            id="gnb-tab2_3_4"
+                            aria-controls="gnbTab3_4"
+                            aria-selected="true"
+                          >
+                            NFluencer
+                          </button>
+                        </li>
+                        <li>
+                          <a class="gnb__tab02-btn05" id="gnb-tab2_3_5"
+                            >N Taxi</a
+                          >
+                        </li>
+                        <li>
+                          <a class="gnb__tab02-btn06" id="gnb-tab2_3_6"
+                            >Driving Experience</a
+                          >
+                        </li>
+                      </ul>
+                      <button class="mo-gnb__back-btn" title="이전메뉴로 가기">
+                        Experience
+                      </button>
+                      <div class="gnb__panel02">
+                        <div
+                          id="gnbTab3_1"
+                          class="panel2_3_1"
+                          role="tabpanel"
+                          aria-labelledby="gnb-tab2_3_1"
+                        >
+                          <ul class="gnb__tab02_3">
+                            <li>
+                              <a href="#" class="gnb__tab02-btn">N Festival</a>
+                            </li>
+                            <li>
+                              <a href="#" class="gnb__tab02-btn">Event Guide</a>
+                            </li>
+                            <li>
+                              <a href="#" class="gnb__tab02-btn">Calendar</a>
+                            </li>
+                            <li>
+                              <a href="#" class="gnb__tab02-btn">Standing</a>
+                            </li>
+                            <li>
+                              <a href="#" class="gnb__tab02-btn">Drivers</a>
+                            </li>
+                            <li>
+                              <a href="#" class="gnb__tab02-btn">Teams</a>
+                            </li>
+                            <li>
+                              <a href="#" class="gnb__tab02-btn">About</a>
+                            </li>
+                            <li>
+                              <a href="#" class="gnb__tab02-btn">Video</a>
+                            </li>
+                          </ul>
+                          <button
+                            class="mo-gnb__back-btn"
+                            title="이전메뉴로 가기"
+                          >
+                            N Festival
+                          </button>
+                        </div>
+                        <div
+                          id="gnbTab3_2"
+                          class="panel2_3_2"
+                          role="tabpanel"
+                          aria-labelledby="gnb-tab2_3_2"
+                        >
+                          <ul class="gnb__tab02_3">
+                            <li>
+                              <a href="#" class="gnb__tab02-btn">N Channel</a>
+                            </li>
+                            <li>
+                              <a href="#" class="gnb__tab02-btn"
+                                >N Performance Garage</a
+                              >
+                            </li>
+                            <li>
+                              <a href="#" class="gnb__tab02-btn"
+                                >N Lounge Inje</a
+                              >
+                            </li>
+                            <li>
+                              <a href="#" class="gnb__tab02-btn"
+                                >N Lounge Jeonju</a
+                              >
+                            </li>
+                            <li>
+                              <a href="#" class="gnb__tab02-btn"
+                                >N Lounge Shanghai</a
+                              >
+                            </li>
+                          </ul>
+                          <button
+                            class="mo-gnb__back-btn"
+                            title="이전메뉴로 가기"
+                          >
+                            N Channel
+                          </button>
+                        </div>
+                        <div
+                          id="gnbTab3_4"
+                          class="panel2_3_4"
+                          role="tabpanel"
+                          aria-labelledby="gnb-tab2_3_4"
+                        >
+                          <ul class="gnb__tab02_3">
+                            <li>
+                              <a href="#" class="gnb__tab02-btn">Nfluencer</a>
+                            </li>
+                            <li><a href="#" class="gnb__tab02-btn">Hub</a></li>
+                            <li>
+                              <a href="#" class="gnb__tab02-btn">Missions</a>
+                            </li>
+                            <li>
+                              <a href="#" class="gnb__tab02-btn">Ranking</a>
+                            </li>
+                            <li>
+                              <a href="#" class="gnb__tab02-btn">Rewards</a>
+                            </li>
+                            <li>
+                              <a href="#" class="gnb__tab02-btn">Notice</a>
+                            </li>
+                          </ul>
+                          <button
+                            class="mo-gnb__back-btn"
+                            title="이전메뉴로 가기"
+                          >
+                            NFluencer
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="gnb-content__dep2">
+                      <div class="img-area">
+                        <img
+                          src="../../inc/images/img/img_gnb_dep2_content.png"
+                          loading="lazy"
+                          alt="N Cup - Round 1"
+                        />
+                      </div>
+                      <div class="text-area">
+                        <h3>N Cup - Round 1</h3>
+                        <p>Inje SPEEDIUM, 04.27 - 04.28</p>
+                        <div class="link-area">
+                          <a href="#" class="link-btn"
+                            >Learn More<span class="icon-right-wh"></span
+                          ></a>
+                          <a href="#" class="link-btn"
+                            >Configrator <span class="icon-right-wh"></span
+                          ></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+              <div class="header__event-wrap">
+                <ul class="header__event-area">
+                  <li class="header__event-item01">
                     <div class="img-area">
-                      <img src="../../inc/images/img/img_gnb_dep2_content.png" loading="lazy" alt="N Cup - Round 1" />
+                      <img
+                        src="../../inc/images/img/img_header-event01.png"
+                        loading="lazy"
+                        alt="N Cup - Round 1"
+                      />
                     </div>
                     <div class="text-area">
                       <h3>N Cup - Round 1</h3>
                       <p>Inje SPEEDIUM, 04.27 - 04.28</p>
                       <div class="link-area">
-                        <a href="#" class="link-btn">Learn More<span class="icon-right-wh"></span></a>
-                        <a href="#" class="link-btn">Configrator <span class="icon-right-wh"></span></a>
+                        <a href="#" class="link-btn"
+                          >Learn More<span class="icon-right-wh"></span
+                        ></a>
+                        <a href="#" class="link-btn"
+                          >Configrator <span class="icon-right-wh"></span
+                        ></a>
                       </div>
                     </div>
-                  </div>
-                </div>
+                  </li>
+                  <li class="header__event-item02">
+                    <div class="img-area">
+                      <img
+                        src="../../inc/images/img/img_header-event02.png"
+                        loading="lazy"
+                        alt="IONIQ 5 N"
+                      />
+                    </div>
+                    <div class="text-area">
+                      <h3>IONIQ 5 N</h3>
+                      <p>Electrifying Driving Passion</p>
+                      <div class="link-area">
+                        <a href="#" class="link-btn"
+                          >Learn More<span class="icon-right-wh"></span
+                        ></a>
+                        <a href="#" class="link-btn"
+                          >Configrator<span class="icon-right-wh"></span
+                        ></a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="header__event-item03">
+                    <div class="img-area">
+                      <img
+                        src="../../inc/images/img/img_header-event03.png"
+                        loading="lazy"
+                        alt="ELANTRA N"
+                      />
+                    </div>
+                    <div class="text-area">
+                      <h3>ELANTRA N</h3>
+                      <p>The Perfect Balance</p>
+                      <div class="link-area">
+                        <a href="#" class="link-btn"
+                          >Learn More<span class="icon-right-wh"></span
+                        ></a>
+                        <a href="#" class="link-btn"
+                          >Configrator<span class="icon-right-wh"></span
+                        ></a>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
               </div>
-            </nav>
-            <div class="header__event-wrap">
-              <ul class="header__event-area">
-                <li class="header__event-item01">
-                  <div class="img-area">
-                    <img src="../../inc/images/img/img_header-event01.png" loading="lazy" alt="N Cup - Round 1" />
-                  </div>
-                  <div class="text-area">
-                    <h3>N Cup - Round 1</h3>
-                    <p>Inje SPEEDIUM, 04.27 - 04.28</p>
-                    <div class="link-area">
-                      <a href="#" class="link-btn">Learn More<span class="icon-right-wh"></span></a>
-                      <a href="#" class="link-btn">Configrator <span class="icon-right-wh"></span></a>
-                    </div>
-                  </div>
-                </li>
-                <li class="header__event-item02">
-                  <div class="img-area">
-                    <img src="../../inc/images/img/img_header-event02.png" loading="lazy" alt="IONIQ 5 N" />
-                  </div>
-                  <div class="text-area">
-                    <h3>IONIQ 5 N</h3>
-                    <p>Electrifying Driving Passion</p>
-                    <div class="link-area">
-                      <a href="#" class="link-btn">Learn More<span class="icon-right-wh"></span></a>
-                      <a href="#" class="link-btn">Configrator<span class="icon-right-wh"></span></a>
-                    </div>
-                  </div>
-                </li>
-                <li class="header__event-item03">
-                  <div class="img-area">
-                    <img src="../../inc/images/img/img_header-event03.png" loading="lazy" alt="ELANTRA N" />
-                  </div>
-                  <div class="text-area">
-                    <h3>ELANTRA N</h3>
-                    <p>The Perfect Balance</p>
-                    <div class="link-area">
-                      <a href="#" class="link-btn">Learn More<span class="icon-right-wh"></span></a>
-                      <a href="#" class="link-btn">Configrator<span class="icon-right-wh"></span></a>
-                    </div>
-                  </div>
-                </li>
+            </div>
+          </div>
+
+          <div class="utile-wrap">
+            <div class="utile-cont">
+              <div class="utile-item">
+                <button
+                  class="lang-btn"
+                  data-txt="KR"
+                  data-label="현재 국문, 영문로 변경하기"
+                  aria-label="현재 영문, 국문으로 변경하기"
+                >
+                  <span>EU</span>
+                </button>
+              </div>
+              <div class="utile-item02">
+                <!-- 로그인 전 -->
+                <!-- <button class="login-btn" title="로그인"></button> -->
+
+                <!-- 로그인 후 alarm-btn-->
+                <!-- 알람이 있는 경우 on class 삽입 로그인 전 로그인 후 버튼 디자인 같음 -->
+                <a class="alarm-btn on" title="미확인 알림"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="navigation_bar-wrap">
+          <div class="navigation_bar">
+            <div class="navigation-item01">
+              <!-- 동적 호출 필요시 NbrandUI.navigationBar(this) navi_event-btn클래스 제거 -->
+              <button
+                class="navigation-btn navi_event-btn"
+                aria-controls="navigationMenu"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                N Merchandise
+              </button>
+              <ul class="navigation-menu" id="navigationMenu">
+                <li><a href="#">Hyundai N</a></li>
+                <li><a href="#">Motorsports</a></li>
+                <li><a href="#">N Performance Parts</a></li>
+                <li><a href="#" class="active">N Merchandise</a></li>
+                <li><a href="#">Press</a></li>
               </ul>
             </div>
-          </div>
-        </div>
-
-        <div class="utile-wrap">
-          <div class="utile-cont">
-            <div class="utile-item">
-              <button class="lang-btn" data-txt="KR" data-label="현재 국문, 영문로 변경하기" aria-label="현재 영문, 국문으로 변경하기">
-                <span>EU</span>
-              </button>
-            </div>
-            <div class="utile-item02">
-              <!-- 로그인 전 -->
-              <!-- <button class="login-btn" title="로그인"></button> -->
-
-              <!-- 로그인 후 alarm-btn-->
-              <!-- 알람이 있는 경우 on class 삽입 로그인 전 로그인 후 버튼 디자인 같음 -->
-              <a class="alarm-btn on" title="미확인 알림"></a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="navigation_bar-wrap">
-        <div class="navigation_bar">
-          <div class="navigation-item01">
-            <!-- 동적 호출 필요시 NbrandUI.navigationBar(this) navi_event-btn클래스 제거 -->
-            <button class="navigation-btn navi_event-btn" aria-controls="navigationMenu" aria-haspopup="true"
-              aria-expanded="false">
-              N Merchandise
-            </button>
-            <ul class="navigation-menu" id="navigationMenu">
-              <li><a href="#">Hyundai N</a></li>
-              <li><a href="#">Motorsports</a></li>
-              <li><a href="#">N Performance Parts</a></li>
-              <li><a href="#" class="active">N Merchandise</a></li>
-              <li><a href="#">Press</a></li>
-            </ul>
-          </div>
-          <div class="navigation-item03">
-            <!-- 07.16 수정 : 버튼 마크업 구조 변경 -->
-            <div class="btn-navi-wrap">
-              <!-- <div class="btn-box">
+            <div class="navigation-item03">
+              <!-- 07.16 수정 : 버튼 마크업 구조 변경 -->
+              <div class="btn-navi-wrap">
+                <!-- <div class="btn-box">
                   <button type="button" class="btn btn-md-primary01">
                     My Point
                     <span class="btn-icon16 icon-right-wh" aria-hidden="true"></span>
@@ -707,18 +1050,23 @@
                     <span class="btn-icon16 icon-right-wh" aria-hidden="true"></span>
                   </button>
                 </div> -->
-              <button class="sharing-btn pop-open" aria-controls="sharing-page" aria-haspopup="true"
-                aria-expanded="false" title="sharing 팝업오픈">
-                Sharing
-              </button>
+                <button
+                  class="sharing-btn pop-open"
+                  aria-controls="sharing-page"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  title="sharing 팝업오픈"
+                >
+                  Sharing
+                </button>
+              </div>
+              <!--//btn-navi -->
             </div>
-            <!--//btn-navi -->
           </div>
-        </div>
-        <!-- 07.16 수정 : 버튼 마크업 구조 변경 -->
-        <!-- 모바일, 버튼 2개 이상일 경우 노출 -->
-        <div class="btn-navi-wrap mo-only">
-          <!-- <div class="btn-box">
+          <!-- 07.16 수정 : 버튼 마크업 구조 변경 -->
+          <!-- 모바일, 버튼 2개 이상일 경우 노출 -->
+          <div class="btn-navi-wrap mo-only">
+            <!-- <div class="btn-box">
               <button type="button" class="btn btn-md-primary01">
                 My Point
                 <span class="btn-icon16 icon-right-wh" aria-hidden="true"></span>
@@ -728,369 +1076,318 @@
                 <span class="btn-icon16 icon-right-wh" aria-hidden="true"></span>
               </button>
             </div> -->
-        </div>
-        <!-- //07.16 수정 : 버튼 마크업 구조 변경 -->
-        <span class="gage"></span>
-      </div>
-    </header>
-    <!-- //07.17 수정 : header 추가 -->
-    <section class="content-wrap brand">
-      <!-- 07.18 수정 : brand 클래스 위치 변경 -->
-      <div class="content-area merchandise-wrap">
-        <div class="content-item01">
-          <div class="content-item01 content-top">
-            <p class="tit-type01 fw-type03">N Merchandise</p>
-            <p class="tit-type03 fw-type03">Bringing you joy beyond driving</p>
           </div>
+          <!-- //07.16 수정 : 버튼 마크업 구조 변경 -->
+          <span class="gage"></span>
         </div>
-        <div class="cotent-item02 merchandise-kv">
-          <div class="swiper-container">
-            <!-- Swiper -->
-            <div class="swiper merchandise_swiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <img src="../../inc/images/content/img_Merchandise_kv01.png" alt="N Merchandise 이미지"
-                    class="pc-only" />
-                  <img src="../../inc/images/content/img_Merchandise_kv01_mo.png" alt="N Merchandise 이미지"
-                    class="mo-only" />
+      </header>
+      <!-- //07.17 수정 : header 추가 -->
+      <section class="content-wrap brand">
+        <!-- 07.18 수정 : brand 클래스 위치 변경 -->
+        <div class="content-area merchandise-wrap">
+          <div class="content-item01">
+            <div class="content-item01 content-top">
+              <p class="tit-type01 fw-type03">N Merchandise</p>
+              <p class="tit-type03 fw-type03">
+                Bringing you joy beyond driving
+              </p>
+            </div>
+          </div>
+          <div class="cotent-item02 merchandise-kv">
+            <div class="swiper-container">
+              <!-- Swiper -->
+              <div class="swiper merchandise_swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img
+                      src="../../inc/images/content/img_Merchandise_kv01.png"
+                      alt="N Merchandise 이미지"
+                      class="pc-only"
+                    />
+                    <img
+                      src="../../inc/images/content/img_Merchandise_kv01_mo.png"
+                      alt="N Merchandise 이미지"
+                      class="mo-only"
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="../../inc/images/content/img_Merchandise_kv02.png"
+                      alt="N Merchandise 이미지"
+                      class="pc-only"
+                    />
+                    <img
+                      src="../../inc/images/content/img_Merchandise_kv02_mo.png"
+                      alt="N Merchandise 이미지"
+                      class="mo-only"
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="../../inc/images/content/img_Merchandise_kv03.png"
+                      alt="N Merchandise 이미지"
+                      class="pc-only"
+                    />
+                    <img
+                      src="../../inc/images/content/img_Merchandise_kv03_mo.png"
+                      alt="N Merchandise 이미지"
+                      class="mo-only"
+                    />
+                  </div>
                 </div>
-                <div class="swiper-slide">
-                  <img src="../../inc/images/content/img_Merchandise_kv02.png" alt="N Merchandise 이미지"
-                    class="pc-only" />
-                  <img src="../../inc/images/content/img_Merchandise_kv02_mo.png" alt="N Merchandise 이미지"
-                    class="mo-only" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="../../inc/images/content/img_Merchandise_kv03.png" alt="N Merchandise 이미지"
-                    class="pc-only" />
-                  <img src="../../inc/images/content/img_Merchandise_kv03_mo.png" alt="N Merchandise 이미지"
-                    class="mo-only" />
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-status-wrap">
+                  <div class="swiper-pagination-custom">
+                    <span class="swiper-pagination-bullet-active"></span>
+                  </div>
+                  <div class="btn-wrap">
+                    <button
+                      class="btn btn-play on"
+                      type="button"
+                      title="정지"
+                    ></button>
+                  </div>
                 </div>
               </div>
-              <div class="swiper-button-next"></div>
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-status-wrap">
-                <div class="swiper-pagination-custom">
-                  <span class="swiper-pagination-bullet-active"></span>
+              <!-- //swiper -->
+            </div>
+            <!-- //swiper-container -->
+          </div>
+          <div class="content-item03 collection-wrap">
+            <div class="merchandise-w1440">
+              <p class="contitle-type01 fw-type03 merchandise-w1096">
+                Enjoy every moment in style.<br />
+                Find new inspiration in the N Collection.
+              </p>
+              <div class="collection-box">
+                <div class="collection-col">
+                  <div class="collection-each">
+                    <img
+                      src="../../inc/images/content/img_Merchandise_collection_01.png"
+                      alt="N Merchandise 이미지"
+                      class="pc-only"
+                    />
+                    <img
+                      src="../../inc/images/content/img_Merchandise_collection_01_mo.png"
+                      alt="N Merchandise 이미지"
+                      class="mo-only"
+                    />
+                    <div class="btn-wrap">
+                      <a
+                        href="https://collection.hyundai.com/category.do?cate_id=C0300000&child_cate_id=&parent_cate_id=C0300000"
+                        class="btn xl-txt-btn02"
+                        target="_blank"
+                        rel="noopener"
+                      >
+                        View All
+                        <span
+                          class="btn-icon24 icon-right-wh"
+                          aria-hidden="true"
+                        ></span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="collection-each">
+                    <img
+                      src="../../inc/images/content/img_Merchandise_collection_02.png"
+                      alt="N Merchandise 이미지"
+                      class="pc-only"
+                    />
+                    <img
+                      src="../../inc/images/content/img_Merchandise_collection_02_mo.png"
+                      alt="N Merchandise 이미지"
+                      class="mo-only"
+                    />
+                    <div class="btn-wrap">
+                      <!-- https://collection.hyundai.com/items/prd_detail.do?item_id=I000000223 -->
+                      <a
+                        href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000185"
+                        class="btn xl-txt-btn02"
+                        target="_blank"
+                        rel="noopener"
+                      >
+                        Mini Car
+                        <span
+                          class="btn-icon24 icon-right-wh"
+                          aria-hidden="true"
+                        ></span>
+                      </a>
+                    </div>
+                  </div>
                 </div>
-                <div class="btn-wrap">
-                  <button class="btn btn-play on" type="button" title="정지"></button>
+                <div class="collection-col">
+                  <div class="collection-each">
+                    <img
+                      src="../../inc/images/content/img_Merchandise_collection_03.png"
+                      alt="N Merchandise 이미지"
+                      class="pc-only"
+                    />
+                    <img
+                      src="../../inc/images/content/img_Merchandise_collection_03_mo.png"
+                      alt="N Merchandise 이미지"
+                      class="mo-only"
+                    />
+                    <div class="btn-wrap">
+                      <!-- https://collection.hyundai.com/items/prd_detail.do?item_id=I000000185 -->
+                      <a
+                        href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000225"
+                        class="btn xl-txt-btn02"
+                        target="_blank"
+                        rel="noopener"
+                      >
+                        Life
+                        <span
+                          class="btn-icon24 icon-right-wh"
+                          aria-hidden="true"
+                        ></span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="collection-each">
+                    <img
+                      src="../../inc/images/content/img_Merchandise_collection_04.png"
+                      alt="N Merchandise 이미지"
+                      class="pc-only"
+                    />
+                    <img
+                      src="../../inc/images/content/img_Merchandise_collection_04_mo.png"
+                      alt="N Merchandise 이미지"
+                      class="mo-only"
+                    />
+                    <div class="btn-wrap">
+                      <!-- 기존 url : https://collection.hyundai.com/items/prd_detail.do?item_id=I000000225 -->
+                      <a
+                        href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000223"
+                        class="btn xl-txt-btn02"
+                        target="_blank"
+                        rel="noopener"
+                      >
+                        Apparel
+                        <span
+                          class="btn-icon24 icon-right-wh"
+                          aria-hidden="true"
+                        ></span>
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <!-- //swiper -->
           </div>
-          <!-- //swiper-container -->
-        </div>
-        <div class="content-item03 collection-wrap">
-          <div class="merchandise-w1440">
-            <p class="contitle-type01 fw-type03 merchandise-w1096">
-              Enjoy every moment in style.<br />
-              Find new inspiration in the N Collection.
-            </p>
-            <div class="collection-box">
-              <div class="collection-col">
-                <div class="collection-each">
-                  <img src="../../inc/images/content/img_Merchandise_collection_01.png" alt="N Merchandise 이미지"
-                    class="pc-only" />
-                  <img src="../../inc/images/content/img_Merchandise_collection_01_mo.png" alt="N Merchandise 이미지"
-                    class="mo-only" />
-                  <div class="btn-wrap">
-                    <a href="https://collection.hyundai.com/category.do?cate_id=C0300000&child_cate_id=&parent_cate_id=C0300000"
-                      class="btn xl-txt-btn02">
-                      View All
-                      <span class="btn-icon24 icon-right-wh" aria-hidden="true"></span>
-                    </a>
+          <div class="content-item04 collectiontab-wrap tab01-bg">
+            <div class="merchandise-w1440">
+              <div class="tab-container">
+                <p class="contitle-type01 fw-type03 merchandise-w1096">
+                  Hyundai N Collection
+                </p>
+                <div class="tab-head ty04">
+                  <div class="tabs-wrap">
+                    <ul class="tabs ty-black" data-contents="탭카테고리">
+                      <li class="on">
+                        <a
+                          href="javascript:;"
+                          aria-controls="tab1-01"
+                          role="tab"
+                          aria-selected="true"
+                          >2024 Hyundai N Collection</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="javascript:;"
+                          aria-controls="tab1-02"
+                          role="tab"
+                          aria-selected="false"
+                          >2023 Hyundai N Collection</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="javascript:;"
+                          aria-controls="tab1-03"
+                          role="tab"
+                          aria-selected="false"
+                          >Hyundai N Basic Collection</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="javascript:;"
+                          aria-controls="tab1-04"
+                          role="tab"
+                          aria-selected="false"
+                          >IONIQ 5 N Collection</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="javascript:;"
+                          aria-controls="tab1-05"
+                          role="tab"
+                          aria-selected="false"
+                          >Hyundai N Winter Collection</a
+                        >
+                      </li>
+                    </ul>
                   </div>
                 </div>
-                <div class="collection-each">
-                  <img src="../../inc/images/content/img_Merchandise_collection_02.png" alt="N Merchandise 이미지"
-                    class="pc-only" />
-                  <img src="../../inc/images/content/img_Merchandise_collection_02_mo.png" alt="N Merchandise 이미지"
-                    class="mo-only" />
-                  <div class="btn-wrap">
-                    <a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000223"
-                      class="btn xl-txt-btn02">
-                      Mini Car
-                      <span class="btn-icon24 icon-right-wh" aria-hidden="true"></span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="collection-col">
-                <div class="collection-each">
-                  <img src="../../inc/images/content/img_Merchandise_collection_03.png" alt="N Merchandise 이미지"
-                    class="pc-only" />
-                  <img src="../../inc/images/content/img_Merchandise_collection_03_mo.png" alt="N Merchandise 이미지"
-                    class="mo-only" />
-                  <div class="btn-wrap">
-                    <a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000185"
-                      class="btn xl-txt-btn02">
-                      Life
-                      <span class="btn-icon24 icon-right-wh" aria-hidden="true"></span>
-                    </a>
-                  </div>
-                </div>
-                <div class="collection-each">
-                  <img src="../../inc/images/content/img_Merchandise_collection_04.png" alt="N Merchandise 이미지"
-                    class="pc-only" />
-                  <img src="../../inc/images/content/img_Merchandise_collection_04_mo.png" alt="N Merchandise 이미지"
-                    class="mo-only" />
-                  <div class="btn-wrap">
-                    <a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000225"
-                      class="btn xl-txt-btn02">
-                      Apparel
-                      <span class="btn-icon24 icon-right-wh" aria-hidden="true"></span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="content-item04 collectiontab-wrap tab01-bg">
-          <div class="merchandise-w1440">
-            <div class="tab-container">
-              <p class="contitle-type01 fw-type03 merchandise-w1096">Hyundai N Collection</p>
-              <div class="tab-head ty04">
-                <div class="tabs-wrap">
-                  <ul class="tabs ty-black" data-contents="탭카테고리">
-                    <li class="on">
-                      <a href="javascript:;" aria-controls="tab1-01" role="tab" aria-selected="true">2024 Hyundai N
-                        Collection</a>
-                    </li>
-                    <li>
-                      <a href="javascript:;" aria-controls="tab1-02" role="tab" aria-selected="false">2023 Hyundai N
-                        Collection</a>
-                    </li>
-                    <li>
-                      <a href="javascript:;" aria-controls="tab1-03" role="tab" aria-selected="false">Hyundai N Basic
-                        Collection</a>
-                    </li>
-                    <li>
-                      <a href="javascript:;" aria-controls="tab1-04" role="tab" aria-selected="false">IONIQ 5 N
-                        Collection</a>
-                    </li>
-                    <li>
-                      <a href="javascript:;" aria-controls="tab1-05" role="tab" aria-selected="false">Hyundai N Winter
-                        Collection</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="tab-content on" id="tab1-01" role="tabpanel">
-                <div class="collection-tabcont">
-                  <div class="swiper-container">
-                    <!-- Swiper -->
-                    <div class="swiper collection_swiper">
-                      <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                          <img src="../../inc/images/content/img_Merchandise_tabcont_01_01.png"
-                            alt="N Brand Postcard (Season 2) 이미지" />
-                          <p class="collection_swiper-txt">N Brand Postcard (Season 2)</p>
-                        </div>
-                        <div class="swiper-slide">
-                          <img src="../../inc/images/content/img_Merchandise_tabcont_01_02.png"
-                            alt="N long umbrella 이미지" />
-                          <p class="collection_swiper-txt">Hyundai N long umbrella</p>
-                        </div>
-                        <div class="swiper-slide">
-                          <img src="../../inc/images/content/img_Merchandise_tabcont_01_03.png"
-                            alt="Hyundai N Never Just Drive Keyring 이미지" />
-                          <p class="collection_swiper-txt">Hyundai N long umbrella</p>
-                        </div>
-                      </div>
-                      <div class="swiper-status-wrap">
-                        <div class="swiper-pagination-custom">
-                          <span class="swiper-pagination-bullet-active"></span>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- //swiper -->
-                  </div>
-                  <!-- //swiper-container -->
-                </div>
-              </div>
-              <div class="tab-content" id="tab1-02" role="tabpanel">
-                <div class="collection-tabcont">
-                  <div class="swiper-container">
-                    <!-- Swiper -->
-                    <div class="swiper collection_swiper">
-                      <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                          <img src="../../inc/images/content/img_Merchandise_tabcont_02_01.png" alt="Apparel 이미지" />
-                          <p class="collection_swiper-txt">Apparel</p>
-                        </div>
-                        <div class="swiper-slide">
-                          <img src="../../inc/images/content/img_Merchandise_tabcont_02_02.png" alt="Mini Car 이미지" />
-                          <p class="collection_swiper-txt">Mini Car</p>
-                        </div>
-                        <div class="swiper-slide">
-                          <img src="../../inc/images/content/img_Merchandise_tabcont_02_03.png"
-                            alt="Collaboration 이미지" />
-                          <p class="collection_swiper-txt">Collaboration</p>
-                        </div>
-                        <div class="swiper-slide">
-                          <img src="../../inc/images/content/img_Merchandise_tabcont_02_04.png" alt="Life 이미지" />
-                          <p class="collection_swiper-txt">Life</p>
-                        </div>
-                        <div class="swiper-slide">
-                          <img src="../../inc/images/content/img_Merchandise_tabcont_02_05.png" alt="Stationary 이미지" />
-                          <p class="collection_swiper-txt">Stationary</p>
-                        </div>
-                      </div>
-                      <div class="swiper-bottom-wrap">
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-                      </div>
-                      <div class="swiper-status-wrap">
-                        <div class="swiper-pagination-custom">
-                          <span class="swiper-pagination-bullet-active"></span>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- //swiper -->
-                  </div>
-                  <!-- //swiper-container -->
-                </div>
-              </div>
-              <div class="tab-content" id="tab1-03" role="tabpanel">
-                <div class="collection-tabcont">
-                  <div class="swiper-container">
-                    <!-- Swiper -->
-                    <div class="swiper collection_swiper">
-                      <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                          <img src="../../inc/images/content/img_Merchandise_tabcont_03_01.png"
-                            alt="Hyundai N Brand Lanyard 이미지" />
-                          <p class="collection_swiper-txt">Hyundai N Brand Lanyard</p>
-                        </div>
-                        <div class="swiper-slide">
-                          <img src="../../inc/images/content/img_Merchandise_tabcont_03_02.png"
-                            alt="Hyundai N Brand Round T-Shirt 이미지" />
-                          <p class="collection_swiper-txt">Hyundai N Brand Round T-Shirt</p>
-                        </div>
-                        <div class="swiper-slide">
-                          <img src="../../inc/images/content/img_Merchandise_tabcont_03_03.png"
-                            alt="Hyundai N brand polo shirt 이미지" />
-                          <p class="collection_swiper-txt">Hyundai N brand polo shirt</p>
-                        </div>
-                        <div class="swiper-slide">
-                          <img src="../../inc/images/content/img_Merchandise_tabcont_03_04.png"
-                            alt="Hyundai N Brand Windbreaker 이미지" />
-                          <p class="collection_swiper-txt">Hyundai N Brand Windbreaker</p>
-                        </div>
-                        <div class="swiper-slide">
-                          <img src="../../inc/images/content/img_Merchandise_tabcont_03_05.png"
-                            alt="Hyundai N Brand Softshell 이미지" />
-                          <p class="collection_swiper-txt">Hyundai N Brand Softshell</p>
-                        </div>
-                        <div class="swiper-slide">
-                          <img src="../../inc/images/content/img_Merchandise_tabcont_03_06.png"
-                            alt="Hyundai N Brand String Backpack 이미지" />
-                          <p class="collection_swiper-txt">Hyundai N Brand String Backpack</p>
-                        </div>
-                        <div class="swiper-slide">
-                          <img src="../../inc/images/content/img_Merchandise_tabcont_03_07.png"
-                            alt="Hyundai N Brand Gimsaek 이미지" />
-                          <p class="collection_swiper-txt">Hyundai N Brand Gimsaek</p>
-                        </div>
-                      </div>
-                      <div class="swiper-bottom-wrap">
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-                      </div>
-                      <div class="swiper-status-wrap">
-                        <div class="swiper-pagination-custom">
-                          <span class="swiper-pagination-bullet-active"></span>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- //swiper -->
-                  </div>
-                  <!-- //swiper-container -->
-                </div>
-              </div>
-              <div class="tab-content" id="tab1-04" role="tabpanel">
-                <div class="collection-tabcont">
-                  <div class="swiper-container">
-                    <!-- Swiper -->
-                    <div class="swiper collection_swiper">
-                      <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                          <img src="../../inc/images/content/img_Merchandise_tabcont_04_01.png"
-                            alt="IONIQ 5 N graphic t-shirt 이미지" />
-                          <p class="collection_swiper-txt">IONIQ 5 N graphic t-shirt</p>
-                        </div>
-                        <div class="swiper-slide">
-                          <img src="../../inc/images/content/img_Merchandise_tabcont_04_02.png"
-                            alt="IONIQ 5 N Graphic Sweatshirt 이미지" />
-                          <p class="collection_swiper-txt">IONIQ 5 N Graphic Sweatshirt</p>
-                        </div>
-                        <div class="swiper-slide">
-                          <img src="../../inc/images/content/img_Merchandise_tabcont_04_03.png"
-                            alt="IONIQ 5 N Camouflage Box Tape 이미지" />
-                          <p class="collection_swiper-txt">IONIQ 5 N Camouflage Box Tape</p>
-                        </div>
-                        <div class="swiper-slide">
-                          <img src="../../inc/images/content/img_Merchandise_tabcont_04_04.png"
-                            alt="IONIQ 5 N Camouflage Reusable Bag 이미지" />
-                          <p class="collection_swiper-txt">IONIQ 5 N Camouflage Reusable Bag</p>
-                        </div>
-                        <div class="swiper-slide">
-                          <img src="../../inc/images/content/img_Merchandise_tabcont_04_05.png"
-                            alt="IONIQ 5 N graphic towel 이미지" />
-                          <p class="collection_swiper-txt">IONIQ 5 N graphic towel</p>
-                        </div>
-                        <div class="swiper-slide">
-                          <img src="../../inc/images/content/img_Merchandise_tabcont_04_06.png"
-                            alt="IONIQ 5 N Sticker Pack 이미지" />
-                          <p class="collection_swiper-txt">IONIQ 5 N Sticker Pack</p>
-                        </div>
-                        <div class="swiper-slide">
-                          <img src="../../inc/images/content/img_Merchandise_tabcont_04_07.png"
-                            alt="IONIQ 5 N Keyring 이미지" />
-                          <p class="collection_swiper-txt">IONIQ 5 N Keyring</p>
-                        </div>
-                      </div>
-                      <div class="swiper-bottom-wrap">
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-                      </div>
-                      <div class="swiper-status-wrap">
-                        <div class="swiper-pagination-custom">
-                          <span class="swiper-pagination-bullet-active"></span>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- //swiper -->
-                  </div>
-                  <!-- //swiper-container -->
-                </div>
-              </div>
-              <div class="tab-content" id="tab1-05" role="tabpanel">
-                <div>
+                <div class="tab-content on" id="tab1-01" role="tabpanel">
                   <div class="collection-tabcont">
                     <div class="swiper-container">
                       <!-- Swiper -->
                       <div class="swiper collection_swiper">
                         <div class="swiper-wrapper">
                           <div class="swiper-slide">
-                            <img src="../../inc/images/content/img_Merchandise_tabcont_05_01.png"
-                              alt="Hyundai N brand lightweight padding 이미지" />
-                            <p class="collection_swiper-txt"><span class="swiper-txt-red">Hyundai</span> N brand
-                              lightweight padding</p>
+                            <a
+                              href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000320"
+                              target="_blank"
+                              rel="noopener"
+                            >
+                              <img
+                                src="../../inc/images/content/img_Merchandise_tabcont_01_01.png"
+                                alt="N Brand Postcard (Season 2) 이미지"
+                            /></a>
+                            <p class="collection_swiper-txt">
+                              N Brand Postcard (Season 2)
+                            </p>
                           </div>
                           <div class="swiper-slide">
-                            <img src="../../inc/images/content/img_Merchandise_tabcont_05_02.png"
-                              alt="Hyundai N Brand MA-1 이미지" />
-                            <p class="collection_swiper-txt"><span class="swiper-txt-red">Hyundai</span> N Brand MA-1
+                            <a
+                              href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000321"
+                              target="_blank"
+                              rel="noopener"
+                            >
+                              <img
+                                src="../../inc/images/content/img_Merchandise_tabcont_01_02.png"
+                                alt="N long umbrella 이미지"
+                              />
+                            </a>
+                            <p class="collection_swiper-txt">
+                              Hyundai N long umbrella
+                            </p>
+                          </div>
+                          <div class="swiper-slide">
+                            <a
+                              href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000351"
+                              target="_blank"
+                              rel="noopener"
+                            >
+                              <img
+                                src="../../inc/images/content/img_Merchandise_tabcont_01_03.png"
+                                alt="Hyundai N Never Just Drive Keyring 이미지"
+                              />
+                            </a>
+                            <p class="collection_swiper-txt">
+                              Hyundai N long umbrella
                             </p>
                           </div>
                         </div>
                         <div class="swiper-status-wrap">
                           <div class="swiper-pagination-custom">
-                            <span class="swiper-pagination-bullet-active"></span>
+                            <span
+                              class="swiper-pagination-bullet-active"
+                            ></span>
                           </div>
                         </div>
                       </div>
@@ -1099,197 +1396,798 @@
                     <!-- //swiper-container -->
                   </div>
                 </div>
+                <div class="tab-content" id="tab1-02" role="tabpanel">
+                  <div class="collection-tabcont">
+                    <div class="swiper-container">
+                      <!-- Swiper -->
+                      <div class="swiper collection_swiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <a
+                              href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000291"
+                              target="_blank"
+                              rel="noopener"
+                            >
+                              <img
+                                src="../../inc/images/content/img_Merchandise_tabcont_02_01.png"
+                                alt="Apparel 이미지"
+                              />
+                            </a>
+                            <p class="collection_swiper-txt">Apparel</p>
+                          </div>
+                          <div class="swiper-slide">
+                            <a
+                              href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000302"
+                              target="_blank"
+                              rel="noopener"
+                            >
+                              <img
+                                src="../../inc/images/content/img_Merchandise_tabcont_02_02.png"
+                                alt="Mini Car 이미지"
+                            /></a>
+                            <p class="collection_swiper-txt">Mini Car</p>
+                          </div>
+                          <div class="swiper-slide">
+                            <a
+                              href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000164"
+                              target="_blank"
+                              rel="noopener"
+                            >
+                              <img
+                                src="../../inc/images/content/img_Merchandise_tabcont_02_03.png"
+                                alt="Collaboration 이미지"
+                              />
+                            </a>
+                            <p class="collection_swiper-txt">Collaboration</p>
+                          </div>
+                          <div class="swiper-slide">
+                            <a
+                              href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000266"
+                              target="_blank"
+                              rel="noopener"
+                            >
+                              <img
+                                src="../../inc/images/content/img_Merchandise_tabcont_02_04.png"
+                                alt="Life 이미지"
+                              />
+                            </a>
+                            <p class="collection_swiper-txt">Life</p>
+                          </div>
+                          <div class="swiper-slide">
+                            <a
+                              href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000320"
+                              target="_blank"
+                              rel="noopener"
+                            >
+                              <img
+                                src="../../inc/images/content/img_Merchandise_tabcont_02_05.png"
+                                alt="Stationary 이미지"
+                              />
+                            </a>
+                            <p class="collection_swiper-txt">Stationary</p>
+                          </div>
+                        </div>
+                        <div class="swiper-bottom-wrap">
+                          <div class="swiper-button-next"></div>
+                          <div class="swiper-button-prev"></div>
+                        </div>
+                        <div class="swiper-status-wrap">
+                          <div class="swiper-pagination-custom">
+                            <span
+                              class="swiper-pagination-bullet-active"
+                            ></span>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- //swiper -->
+                    </div>
+                    <!-- //swiper-container -->
+                  </div>
+                </div>
+                <div class="tab-content" id="tab1-03" role="tabpanel">
+                  <div class="collection-tabcont">
+                    <div class="swiper-container">
+                      <!-- Swiper -->
+                      <div class="swiper collection_swiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <a
+                              href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000256"
+                              target="_blank"
+                              rel="noopener"
+                            >
+                              <img
+                                src="../../inc/images/content/img_Merchandise_tabcont_03_01.png"
+                                alt="Hyundai N Brand Lanyard 이미지"
+                              />
+                            </a>
+                            <p class="collection_swiper-txt">
+                              Hyundai N Brand Lanyard
+                            </p>
+                          </div>
+                          <div class="swiper-slide">
+                            <a
+                              href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000257"
+                              target="_blank"
+                              rel="noopener"
+                            >
+                              <img
+                                src="../../inc/images/content/img_Merchandise_tabcont_03_02.png"
+                                alt="Hyundai N Brand Round T-Shirt 이미지"
+                              />
+                            </a>
+                            <p class="collection_swiper-txt">
+                              Hyundai N Brand Round T-Shirt
+                            </p>
+                          </div>
+                          <div class="swiper-slide">
+                            <a
+                              href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000258"
+                              target="_blank"
+                              rel="noopener"
+                            >
+                              <img
+                                src="../../inc/images/content/img_Merchandise_tabcont_03_03.png"
+                                alt="Hyundai N brand polo shirt 이미지"
+                              />
+                            </a>
+                            <p class="collection_swiper-txt">
+                              Hyundai N brand polo shirt
+                            </p>
+                          </div>
+                          <div class="swiper-slide">
+                            <a
+                              href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000259"
+                              target="_blank"
+                              rel="noopener"
+                            >
+                              <img
+                                src="../../inc/images/content/img_Merchandise_tabcont_03_04.png"
+                                alt="Hyundai N Brand Windbreaker 이미지"
+                              />
+                            </a>
+                            <p class="collection_swiper-txt">
+                              Hyundai N Brand Windbreaker
+                            </p>
+                          </div>
+                          <div class="swiper-slide">
+                            <a
+                              href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000260"
+                              target="_blank"
+                              rel="noopener"
+                            >
+                              <img
+                                src="../../inc/images/content/img_Merchandise_tabcont_03_05.png"
+                                alt="Hyundai N Brand Softshell 이미지"
+                              />
+                            </a>
+                            <p class="collection_swiper-txt">
+                              Hyundai N Brand Softshell
+                            </p>
+                          </div>
+                          <div class="swiper-slide">
+                            <a
+                              href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000262"
+                              target="_blank"
+                              rel="noopener"
+                            >
+                              <img
+                                src="../../inc/images/content/img_Merchandise_tabcont_03_06.png"
+                                alt="Hyundai N Brand String Backpack 이미지"
+                              />
+                            </a>
+                            <p class="collection_swiper-txt">
+                              Hyundai N Brand String Backpack
+                            </p>
+                          </div>
+                          <div class="swiper-slide">
+                            <a
+                              href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000263"
+                              target="_blank"
+                              rel="noopener"
+                            >
+                              <img
+                                src="../../inc/images/content/img_Merchandise_tabcont_03_07.png"
+                                alt="Hyundai N Brand Gimsaek 이미지"
+                              />
+                            </a>
+                            <p class="collection_swiper-txt">
+                              Hyundai N Brand Gimsaek
+                            </p>
+                          </div>
+                        </div>
+                        <div class="swiper-bottom-wrap">
+                          <div class="swiper-button-next"></div>
+                          <div class="swiper-button-prev"></div>
+                        </div>
+                        <div class="swiper-status-wrap">
+                          <div class="swiper-pagination-custom">
+                            <span
+                              class="swiper-pagination-bullet-active"
+                            ></span>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- //swiper -->
+                    </div>
+                    <!-- //swiper-container -->
+                  </div>
+                </div>
+                <div class="tab-content" id="tab1-04" role="tabpanel">
+                  <div class="collection-tabcont">
+                    <div class="swiper-container">
+                      <!-- Swiper -->
+                      <div class="swiper collection_swiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <a
+                              href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000267"
+                              target="_blank"
+                              rel="noopener"
+                            >
+                              <img
+                                src="../../inc/images/content/img_Merchandise_tabcont_04_01.png"
+                                alt="IONIQ 5 N graphic t-shirt 이미지"
+                              />
+                            </a>
+                            <p class="collection_swiper-txt">
+                              IONIQ 5 N graphic t-shirt
+                            </p>
+                          </div>
+                          <div class="swiper-slide">
+                            <a
+                              href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000268"
+                              target="_blank"
+                              rel="noopener"
+                            >
+                              <img
+                                src="../../inc/images/content/img_Merchandise_tabcont_04_02.png"
+                                alt="IONIQ 5 N Graphic Sweatshirt 이미지"
+                              />
+                            </a>
+                            <p class="collection_swiper-txt">
+                              IONIQ 5 N Graphic Sweatshirt
+                            </p>
+                          </div>
+                          <div class="swiper-slide">
+                            <a
+                              href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000264"
+                              target="_blank"
+                              rel="noopener"
+                            >
+                              <img
+                                src="../../inc/images/content/img_Merchandise_tabcont_04_03.png"
+                                alt="IONIQ 5 N Camouflage Box Tape 이미지"
+                              />
+                            </a>
+                            <p class="collection_swiper-txt">
+                              IONIQ 5 N Camouflage Box Tape
+                            </p>
+                          </div>
+                          <div class="swiper-slide">
+                            <a
+                              href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000265"
+                              target="_blank"
+                              rel="noopener"
+                            >
+                              <img
+                                src="../../inc/images/content/img_Merchandise_tabcont_04_04.png"
+                                alt="IONIQ 5 N Camouflage Reusable Bag 이미지"
+                              />
+                            </a>
+                            <p class="collection_swiper-txt">
+                              IONIQ 5 N Camouflage Reusable Bag
+                            </p>
+                          </div>
+                          <div class="swiper-slide">
+                            <a
+                              href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000269"
+                              target="_blank"
+                              rel="noopener"
+                            >
+                              <img
+                                src="../../inc/images/content/img_Merchandise_tabcont_04_05.png"
+                                alt="IONIQ 5 N graphic towel 이미지"
+                              />
+                            </a>
+                            <p class="collection_swiper-txt">
+                              IONIQ 5 N graphic towel
+                            </p>
+                          </div>
+                          <div class="swiper-slide">
+                            <a
+                              href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000270"
+                              target="_blank"
+                              rel="noopener"
+                            >
+                              <img
+                                src="../../inc/images/content/img_Merchandise_tabcont_04_06.png"
+                                alt="IONIQ 5 N Sticker Pack 이미지"
+                              />
+                            </a>
+                            <p class="collection_swiper-txt">
+                              IONIQ 5 N Sticker Pack
+                            </p>
+                          </div>
+                          <div class="swiper-slide">
+                            <a
+                              href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000271"
+                              target="_blank"
+                              rel="noopener"
+                            >
+                              <img
+                                src="../../inc/images/content/img_Merchandise_tabcont_04_07.png"
+                                alt="IONIQ 5 N Keyring 이미지"
+                              />
+                            </a>
+                            <p class="collection_swiper-txt">
+                              IONIQ 5 N Keyring
+                            </p>
+                          </div>
+                        </div>
+                        <div class="swiper-bottom-wrap">
+                          <div class="swiper-button-next"></div>
+                          <div class="swiper-button-prev"></div>
+                        </div>
+                        <div class="swiper-status-wrap">
+                          <div class="swiper-pagination-custom">
+                            <span
+                              class="swiper-pagination-bullet-active"
+                            ></span>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- //swiper -->
+                    </div>
+                    <!-- //swiper-container -->
+                  </div>
+                </div>
+                <div class="tab-content" id="tab1-05" role="tabpanel">
+                  <div>
+                    <div class="collection-tabcont">
+                      <div class="swiper-container">
+                        <!-- Swiper -->
+                        <div class="swiper collection_swiper">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              <a
+                                href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000292"
+                                target="_blank"
+                                rel="noopener"
+                              >
+                                <img
+                                  src="../../inc/images/content/img_Merchandise_tabcont_05_01.png"
+                                  alt="Hyundai N brand lightweight padding 이미지"
+                                />
+                              </a>
+                              <p class="collection_swiper-txt">
+                                <span class="swiper-txt-red">Hyundai</span> N
+                                brand lightweight padding
+                              </p>
+                            </div>
+                            <div class="swiper-slide">
+                              <a
+                                href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000291"
+                                target="_blank"
+                                rel="noopener"
+                              >
+                                <img
+                                  src="../../inc/images/content/img_Merchandise_tabcont_05_02.png"
+                                  alt="Hyundai N Brand MA-1 이미지"
+                                />
+                              </a>
+                              <p class="collection_swiper-txt">
+                                <span class="swiper-txt-red">Hyundai</span> N
+                                Brand MA-1
+                              </p>
+                            </div>
+                          </div>
+                          <div class="swiper-status-wrap">
+                            <div class="swiper-pagination-custom">
+                              <span
+                                class="swiper-pagination-bullet-active"
+                              ></span>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- //swiper -->
+                      </div>
+                      <!-- //swiper-container -->
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="content-item05 productlist-wrap">
-          <div class="merchandise-w1440">
-            <p class="contitle-type01 fw-type03 merchandise-w1096">
-              Collection<br class="mo-only" />
-              Product List
-            </p>
-            <div class="productlist-bigbox">
-              <div class="productlist-col1">
-                <div>
-                  <p>Apparel</p>
-                  <ul class="productlist-subbox">
-                    <li>
-                      <a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000291">Hyundai N
-                        MA-1Jacket</a>
-                    </li>
-                    <li><a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000292">Hyundai N
-                        Lightweight Padded Jacket</a></li>
-                    <li><a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000267">IONIQ 5 N
-                        Graphic T-Shirt</a></li>
-                    <li><a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000268">IONIQ 5 N
-                        Graphic Sweatshirts</a></li>
-                    <li><a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000257">Hyundai N Round
-                        T-Shirt</a></li>
-                  </ul>
-                  <ul class="productlist-subbox">
-                    <li><a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000258">Hyundai N Polo
-                        Shirt</a></li>
-                    <li>
-                      <a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000259">Hyundai N
-                        Windbreaker</a>
-                    </li>
-                    <li>
-                      <a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000260">Hyundai N
-                        Softshell</a>
-                    </li>
-                    <li>
-                      <a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000222">RN22e Illust
-                        T-Shirt</a>
-                    </li>
-                    <li><a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000223">N Vision 74
-                        Illust T-Shirt (Season 2)</a></li>
-                  </ul>
-                </div>
-                <div>
-                  <p>Mini Car</p>
-                  <ul class="productlist-subbox">
-                    <li><a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000302">N Vision 74 RC
-                        Car(1:10)</a></li>
-                    <li><a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000254">AVANTE N Diecast
-                        (1:38)</a></li>
-                    <li><a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000185">Mini GT AVANTE N
-                        Diecast (1:64)</a></li>
-                    <li><a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000186">Mini GT Kona N
-                        Diecast (1:64)</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="productlist-col2">
-                <p>Life</p>
-                <div>
+          <div class="content-item05 productlist-wrap">
+            <div class="merchandise-w1440">
+              <p class="contitle-type01 fw-type03 merchandise-w1096">
+                Collection<br class="mo-only" />
+                Product List
+              </p>
+              <div class="productlist-bigbox">
+                <div class="productlist-col1">
                   <div>
+                    <p>Apparel</p>
                     <ul class="productlist-subbox">
-                      <li><a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000350">Hyundai N Mug
-                          Cup</a></li>
-                      <li><a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000351">Hyundai N
-                          Never just drive Key Ring</a></li>
-                      <li><a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000321">Hyundai N
-                          Umbrella</a></li>
-                      <li><a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000320">24 New
-                          Postcard(Season 2)</a></li>
-                      <li><a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000349">Hyundai N Tire
-                          Pattern Pen</a></li>
-                    </ul>
-                    <ul class="productlist-subbox">
-                      <li><a href=" https://collection.hyundai.com/items/prd_detail.do?item_id=I000000288">Hyundai N Pin
-                          Badge</a></li>
-                      <li><a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000289">Hyundai N Gear
-                          Knob Umbrella</a></li>
-                      <li><a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000269">IONIQ 5 N
-                          Graphic Towel</a></li>
-                      <li><a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000270">IONIQ 5 N
-                          Sticker Pack</a></li>
-                      <li><a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000271">IONIQ 5 N Key
-                          Ring</a></li>
-                    </ul>
-                    <ul class="productlist-subbox">
-                      <li><a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000264">IONIQ 5 N
-                          Camouflage Box Tape</a></li>
-                      <li><a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000265">IONIQ 5 N
-                          Camouflage Reusable Bag (S)</a></li>
-                      <li><a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000266">IONIQ 5 N
-                          Camouflage Reusable Bag (L)</a></li>
-                      <li><a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000256">Hyundai N
-                          Lanyard</a></li>
-                      <li><a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000262">Hyundai N
-                          String Backpack</a></li>
-                    </ul>
-                    <ul class="productlist-subbox">
-                      <li><a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000263">Hyundai N
-                          Gymsack</a></li>
-                      <li><a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000224">Hyundai N
-                          Strap Grille Bottle Opener</a></li>
-                      <li><a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000225">Hyundai N
-                          Tumbler</a></li>
-                      <li><a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000226">Never just
-                          drive Key Strap</a></li>
-                      <li><a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000191">Performance
-                          Blue AirPods Case</a></li>
-                    </ul>
-                  </div>
-                  <div>
-                    <ul class="productlist-subbox">
-                      <li><a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000162">Hyundai N x
-                          Pelican 3310PL Flashlight</a></li>
-                      <li><a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000164">Hyundai N x
-                          Pelican 1535 Air Travel Case</a></li>
-                      <li><a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000190">N Logo
-                          Magnet</a></li>
-                      <li><a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000189">N Car Wash
-                          Mitt</a></li>
-                      <li><a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000166">Postcard</a>
+                      <li>
+                        <a
+                          href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000291"
+                          >Hyundai N MA-1Jacket</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000292"
+                          >Hyundai N Lightweight Padded Jacket</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000267"
+                          >IONIQ 5 N Graphic T-Shirt</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000268"
+                          >IONIQ 5 N Graphic Sweatshirts</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000257"
+                          >Hyundai N Round T-Shirt</a
+                        >
                       </li>
                     </ul>
                     <ul class="productlist-subbox">
-                      <li><a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000169">ABC Book for
-                          Little Nthusiasts</a></li>
-                      <li><a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000170">N Camouflage
-                          iPhone Case</a></li>
-                      <li><a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000171">Mini Handheld
-                          Fan</a></li>
-                      <li><a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000161">Hyundai N
-                          Playing Cards</a></li>
-                      <li><a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000159">Performance
-                          Blue Shopping Bag (Horizontal)</a></li>
-                      <li><a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000160">Performance
-                          Blue Shopping Bag (Vertical)</a></li>
-                    </ul>
-                    <ul class="productlist-subbox">
-                      <li><a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000144">N Car
-                          Sticker</a></li>
-                      <li><a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000142">Box Tape</a>
+                      <li>
+                        <a
+                          href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000258"
+                          >Hyundai N Polo Shirt</a
+                        >
                       </li>
-                      <li><a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000153">Korean
-                          Alphabet Car Sticker</a></li>
-                      <li><a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000154">Never just
-                          drive License Plate Guard</a></li>
+                      <li>
+                        <a
+                          href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000259"
+                          >Hyundai N Windbreaker</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000260"
+                          >Hyundai N Softshell</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000222"
+                          >RN22e Illust T-Shirt</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000223"
+                          >N Vision 74 Illust T-Shirt (Season 2)</a
+                        >
+                      </li>
                     </ul>
+                  </div>
+                  <div>
+                    <p>Mini Car</p>
+                    <ul class="productlist-subbox">
+                      <li>
+                        <a
+                          href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000302"
+                          >N Vision 74 RC Car(1:10)</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000254"
+                          >AVANTE N Diecast (1:38)</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000185"
+                          >Mini GT AVANTE N Diecast (1:64)</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000186"
+                          >Mini GT Kona N Diecast (1:64)</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="productlist-col2">
+                  <p>Life</p>
+                  <div>
+                    <div>
+                      <ul class="productlist-subbox">
+                        <li>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000350"
+                            >Hyundai N Mug Cup</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000351"
+                            >Hyundai N Never just drive Key Ring</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000321"
+                            >Hyundai N Umbrella</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000320"
+                            >24 New Postcard(Season 2)</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000349"
+                            >Hyundai N Tire Pattern Pen</a
+                          >
+                        </li>
+                      </ul>
+                      <ul class="productlist-subbox">
+                        <li>
+                          <a
+                            href=" https://collection.hyundai.com/items/prd_detail.do?item_id=I000000288"
+                            >Hyundai N Pin Badge</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000289"
+                            >Hyundai N Gear Knob Umbrella</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000269"
+                            >IONIQ 5 N Graphic Towel</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000270"
+                            >IONIQ 5 N Sticker Pack</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000271"
+                            >IONIQ 5 N Key Ring</a
+                          >
+                        </li>
+                      </ul>
+                      <ul class="productlist-subbox">
+                        <li>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000264"
+                            >IONIQ 5 N Camouflage Box Tape</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000265"
+                            >IONIQ 5 N Camouflage Reusable Bag (S)</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000266"
+                            >IONIQ 5 N Camouflage Reusable Bag (L)</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000256"
+                            >Hyundai N Lanyard</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000262"
+                            >Hyundai N String Backpack</a
+                          >
+                        </li>
+                      </ul>
+                      <ul class="productlist-subbox">
+                        <li>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000263"
+                            >Hyundai N Gymsack</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000224"
+                            >Hyundai N Strap Grille Bottle Opener</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000225"
+                            >Hyundai N Tumbler</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000226"
+                            >Never just drive Key Strap</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000191"
+                            >Performance Blue AirPods Case</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                    <div>
+                      <ul class="productlist-subbox">
+                        <li>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000162"
+                            >Hyundai N x Pelican 3310PL Flashlight</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000164"
+                            >Hyundai N x Pelican 1535 Air Travel Case</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000190"
+                            >N Logo Magnet</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000189"
+                            >N Car Wash Mitt</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000166"
+                            >Postcard</a
+                          >
+                        </li>
+                      </ul>
+                      <ul class="productlist-subbox">
+                        <li>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000169"
+                            >ABC Book for Little Nthusiasts</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000170"
+                            >N Camouflage iPhone Case</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000171"
+                            >Mini Handheld Fan</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000161"
+                            >Hyundai N Playing Cards</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000159"
+                            >Performance Blue Shopping Bag (Horizontal)</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000160"
+                            >Performance Blue Shopping Bag (Vertical)</a
+                          >
+                        </li>
+                      </ul>
+                      <ul class="productlist-subbox">
+                        <li>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000144"
+                            >N Car Sticker</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000142"
+                            >Box Tape</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000153"
+                            >Korean Alphabet Car Sticker</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000154"
+                            >Never just drive License Plate Guard</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content-item06 merchandise_related-wrap">
+            <div class="merchandise-w1440">
+              <p class="merchandise-w1096">Related</p>
+              <div class="merchandise_related">
+                <div>
+                  <img
+                    src="../../inc/images/Models/ioniq5N/ioniq5N_Related_01.png"
+                    loading="lazy"
+                    alt="ioniq5N 이미지"
+                  />
+                  <div>
+                    <p>Models</p>
+                  </div>
+                </div>
+                <div>
+                  <img
+                    src="../../inc/images/Models/ioniq5N/ioniq5N_Related_02.png"
+                    loading="lazy"
+                    alt="ioniq5N 이미지"
+                  />
+                  <div>
+                    <p>Motorsports</p>
+                  </div>
+                </div>
+                <div>
+                  <img
+                    src="../../inc/images/Models/ioniq5N/ioniq5N_Related_03.png"
+                    loading="lazy"
+                    alt="ioniq5N 이미지"
+                  />
+                  <div>
+                    <p>N festival</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="content-item06 merchandise_related-wrap">
-          <div class="merchandise-w1440">
-            <p class="merchandise-w1096">Related</p>
-            <div class="merchandise_related">
-              <div>
-                <img src="../../inc/images/Models/ioniq5N/ioniq5N_Related_01.png" loading="lazy" alt="ioniq5N 이미지" />
-                <div>
-                  <p>Models</p>
-                </div>
-              </div>
-              <div>
-                <img src="../../inc/images/Models/ioniq5N/ioniq5N_Related_02.png" loading="lazy" alt="ioniq5N 이미지" />
-                <div>
-                  <p>Motorsports</p>
-                </div>
-              </div>
-              <div>
-                <img src="../../inc/images/Models/ioniq5N/ioniq5N_Related_03.png" loading="lazy" alt="ioniq5N 이미지" />
-                <div>
-                  <p>N festival</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
-  <script type="text/javascript" src="../../inc/js/jquery-3.7.1.slim.min.js"></script>
-  <script type="text/javascript" src="../../inc/js/swiper.min.js"></script>
-  <script type="text/javascript" src="../../inc/js/pub-ui.js"></script>
-  <!-- 07.17 수정 : com-ui.js / plugins.js 파일 import -->
-  <script type="text/javascript" src="../../inc/js/com-ui.js"></script>
-  <script type="text/javascript" src="../../inc/js/plugins.js"></script>
-</body>
-
+      </section>
+    </div>
+    <script
+      type="text/javascript"
+      src="../../inc/js/jquery-3.7.1.slim.min.js"
+    ></script>
+    <script type="text/javascript" src="../../inc/js/swiper.min.js"></script>
+    <script type="text/javascript" src="../../inc/js/pub-ui.js"></script>
+    <!-- 07.17 수정 : com-ui.js / plugins.js 파일 import -->
+    <script type="text/javascript" src="../../inc/js/com-ui.js"></script>
+    <script type="text/javascript" src="../../inc/js/plugins.js"></script>
+  </body>
 </html>
