@@ -113,7 +113,7 @@
   .popup-body
   .inner-body-model
   .popup-body-innerbox:last-child
-  .container-desc {
+  .container-desc:not(.video-func) {
   padding: 24px 0 0 0;
 }
 
@@ -223,6 +223,7 @@
   .popup-wrapper
   .popup-body
   .inner-body-model
+  .popup-body-innerbox
   .container-desc.video-func {
   width: 100%;
   display: flex;
