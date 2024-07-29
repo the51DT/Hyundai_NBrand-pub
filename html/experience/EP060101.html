@@ -735,22 +735,38 @@
     <section class="content-wrap models-wrap brand nTaxi">
       <!-- 07.18 수정 : brand nTaxi 클래스 위치 변경 -->
       <div class="content-area">
-        <div class="content-item01 content-top">
-          <p class="tit-type01 fw-type03">N Taxi</p>
-          <p class="tit-type03 fw-type03">
-            Your ultimate co-pilot experience
-          </p>
-        </div>
-        <div class="content-item02">
-          <div class="key-visual-wrap">
-            <div class="img-wrap">
-              <img src="../../inc/images/content/img_nTaxi_visual-pc.png" alt="N Taxi Visual Banner PC 이미지"
-                class="pc-only">
-              <img src="../../inc/images/content/img_nTaxi_visual-mo.png" alt="N Taxi Visual Banner Mobile 이미지"
-                class="mo-only">
-            </div>
+        <!-- 07.29 마크업 수정 : model 레이아웃 공통 적용 -->
+        <div class="smooth-wrap">
+          <div class="content-item01 content-top">
+            <p class="tit-type01 fw-type03">N Taxi</p>
+            <p class="tit-type03 fw-type03">
+              Your ultimate co-pilot experience
+            </p>
+          </div>
+          <!-- key visual -->
+          <div class="content-item02">
+            <!-- video 케이스일 경우 -->
+            <!-- <video class="video pc-only" data-js="video" id="video1" playsinline autoplay muted
+              poster="../../inc/images/content/img_nChannel_visual-pc.png" aria-hidden="false">
+              <source src="../../inc/images/Models/ioniq5N_en1/en1.mp4" type="video/mp4" />
+            </video>
+            <video class="video mo-only" data-js="video" id="video2" playsinline autoplay muted
+              poster="../../inc/images/content/img_nChannel_visual-mo.png" aria-hidden="true">
+              <source src="../../inc/images/Models/ioniq5N_en1/en1mo.mp4" type="video/mp4" />
+            </video>
+            <img src="../../inc/images/content/img_nChannel_visual-pc.png" alt="N Channel 영상 썸네일"
+              style="display: none" class="video_poster pc-only" />
+            <img src="../../inc/images/content/img_nChannel_visual-mo.png" alt="N Channel 영상 썸네일" style="display: none" class="video_poster mo-only" />
+            <button type="button" class="btn btn-only-icon-bg01-square" title="pause">
+              <span class="visually-hidden">pause</span>
+              <span class="btn-icon24 icon-pause-wh" aria-hidden="true"></span>
+            </button> -->
+            <!-- img 케이스일 경우 -->
+            <img src="../../inc/images/content/img_nTaxi_visual-pc.png" alt="N Taxi Visual Banner PC 이미지" class="pc-only" loading="lazy">
+            <img src="../../inc/images/content/img_nTaxi_visual-mo.png" alt="N Taxi Visual Banner Mobile 이미지" class="mo-only" loading="lazy">
           </div>
         </div>
+        <!-- //07.29 마크업 수정 : model 레이아웃 공통 적용 -->
 
         <!-- intro -->
         <div class="content-item03 conts-intro">

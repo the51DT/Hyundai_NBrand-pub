@@ -1083,45 +1083,41 @@
       <section class="content-wrap models-wrap performance_wrap brand">
         <!-- 07.18 수정 : brand 클래스 위치 변경 -->
         <div class="content-area">
-          <div class="content-item01">
-            <div class="performance_tit_area">
+          <!-- 07.29 마크업 수정 : model 레이아웃 공통 적용 -->
+          <div class="smooth-wrap">
+            <div class="content-item01 content-top">
               <p class="tit-type01">N Performance Parts</p>
               <p class="tit-type03">
                 Choose N performance parts to customize your N for performance
                 and uniqueness.
               </p>
             </div>
-          </div>
-
-          <div class="content-item02">
-            <!-- key visual01 : video (예시로 영역잡은 영상 / 영상은 교체 필요 및 width=100% 삭제) -->
-            <div class="video-wrap">
-              <video
-                class="video"
-                data-js="video"
-                id="video1"
-                playsinline
-                autoplay
-                muted
-              >
-                <source
-                  src="../../inc/videos/nperformanceparts.mp4"
-                  type="video/mp4"
-                />
+            <!-- key visual -->
+            <div class="content-item02">
+              <!-- video 케이스일 경우 -->
+              <video class="video pc-only" data-js="video" id="video1" playsinline autoplay muted
+                poster="../../inc/images/content/nperformanceparts_poster.png" aria-hidden="false">
+                <source src="../../inc/videos/nperformanceparts.mp4" type="video/mp4" />
               </video>
-              <button
-                type="button"
-                class="btn btn-only-icon-bg01-square"
-                title="pause"
-              >
+              <video class="video mo-only" data-js="video" id="video2" playsinline autoplay muted
+                poster="../../inc/images/content/nperformanceparts_poster_mo.png" aria-hidden="true">
+                <source src="../../inc/videos/nperformanceparts.mp4" type="video/mp4" />
+              </video>
+              <img src="../../inc/images/content/nperformanceparts_poster.png" alt="N Performance Parts 썸네일"
+                style="display: none" class="video_poster pc-only" />
+              <img src="../../inc/images/content/nperformanceparts_poster_mo.png" alt="N Performance Parts 썸네일" style="display: none" class="video_poster mo-only" />
+              <button type="button" class="btn btn-only-icon-bg01-square" title="pause">
                 <span class="visually-hidden">pause</span>
-                <span
-                  class="btn-icon24 icon-pause-wh"
-                  aria-hidden="true"
-                ></span>
+                <span class="btn-icon24 icon-pause-wh" aria-hidden="true"></span>
               </button>
+              <!-- img 케이스일 경우 -->
+              <!-- <img src="../../inc/images/content/img_jeonju_visual-pc.png"
+                  alt="N Performance Parts Visual Banner PC 이미지" class="pc-only" loading="lazy">
+              <img src="../../inc/images/content/img_jeonju_visual-mo.png"
+                alt="N Performance Parts Visual Banner Mobile 이미지" class="mo-only" loading="lazy"> -->
             </div>
           </div>
+          <!-- //07.29 마크업 수정 : model 레이아웃 공통 적용 -->          
 
           <div class="content-item03">
             <!-- .max1440 : gap: 80px;  / .max1440.type2 : gap: 200px; -->
