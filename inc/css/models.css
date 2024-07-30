@@ -715,6 +715,13 @@
   justify-content: center;
   margin-top: 6px;
 }
+.models-wrap .tech-des .num-desbox .text-normal-xs {
+  font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 22.4px;
+  width: 100%;
+}
 .models-wrap .specification-wrap {
   background-color: #f0f0f0;
   padding: 240px 80px;
