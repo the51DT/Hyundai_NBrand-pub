@@ -199,6 +199,9 @@ var NbrandUI = {
     // openmodalBtn.addClass("open-btn").data("open");
     openmodalData = openmodalBtn.attr("aria-controls");
     NbrandUI.popContOpen(".popup#" + openmodalData, openmodalBtn);
+    if ($(".popup#" + openmodalData).find("video").length) {
+      NbrandUI.videoAutoPlay(".popup#" + openmodalData);
+    }
   },
   toastPopup: function (obj) {
     $(obj).fadeIn(200).delay(3000).fadeOut(200);
@@ -289,6 +292,9 @@ var NbrandUI = {
   },
   popClose: function (obj) {
     closeWrap = $(obj).parents(".popup");
+    if (closeWrap.find("video").length) {
+      NbrandUI.videoPause(closeWrap);
+    }
     NbrandUI.popContClose(closeWrap);
   },
   /* headerNav */
@@ -312,7 +318,22 @@ var NbrandUI = {
     // }, 300);
     NbrandUI.headerDimdOff();
   },
-
+  videoAutoPlay: function (videoWrap) {
+    var eventContainer = $(videoWrap);
+    var eventItemVideo = eventContainer.find(".video").length;
+    for (var i = 0; i < eventItemVideo; i++) {
+      eventContainer.find("video").get(i).play();
+    }
+    // eventItemVideo.find("video").get(0).play();
+  },
+  videoPause: function (videoWrap) {
+    var eventContainer = $(videoWrap);
+    var eventItemVideo = eventContainer.find(".video").length;
+    for (var i = 0; i < eventItemVideo; i++) {
+      eventContainer.find("video").get(i).pause();
+    }
+    // eventItemVideo.find("video").get(0).play();
+  },
   headerNav: function (obj, com, par) {
     if (!NbrandUI.checkObj(obj)) {
       return;
