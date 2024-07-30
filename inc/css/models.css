@@ -919,9 +919,11 @@
   }
 }
 .models-wrap .smooth-wrap .content-item01 {
+  will-change: transform, opacity;
   animation: modelSmooth 1.5s;
 }
 .models-wrap .smooth-wrap .content-item02 {
+  will-change: transform, opacity;
   animation: modelSmooth2 1.5s;
   transform: translateY(30%);
   animation-fill-mode: forwards;
