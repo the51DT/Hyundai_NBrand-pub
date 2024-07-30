@@ -559,7 +559,7 @@
   max-width: 1440px;
   margin: 0 auto;
 }
-.event-box .conts-head {
+.n-race-box .event-box .conts-head {
   margin-bottom: 40px;
 }
 
@@ -572,7 +572,12 @@
 }
 
 .event-box .evt-map-img img {
+  display: block;
   object-fit: cover;
+}
+
+.event-box .evt-map-active-box > button {
+  display: none;
 }
 
 .event-box .btn-area {
