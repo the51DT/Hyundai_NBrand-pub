@@ -549,9 +549,11 @@ var pubUi = {
       },
     });
     var swiper12 = new Swiper(".collection_swiper", {
-      slidesPerView: 3,
+      slidesPerView: 1.15,
       spaceBetween: 24,
       watchOverflow: true,
+      slidesOffsetBefore: 24,
+      slidesOffsetAfter: 24,
       pagination: {
         el: ".collection_swiper .swiper-pagination-custom",
         clickable: true,
@@ -562,12 +564,18 @@ var pubUi = {
       },
       breakpoints: {
         360: {
-          slidesPerView: 1.07,
+          slidesPerView: 1.13,
           spaceBetween: 12,
           slidesOffsetBefore: 24,
           slidesOffsetAfter: 24,
         },
-        768: {
+        400: {
+          slidesPerView: 1.1,
+          spaceBetween: 12,
+          slidesOffsetBefore: 24,
+          slidesOffsetAfter: 24,
+        },
+        550: {
           slidesPerView: 1.07,
           spaceBetween: 12,
           slidesOffsetBefore: 24,
@@ -576,6 +584,8 @@ var pubUi = {
         1024: {
           slidesPerView: 3,
           spaceBetween: 24,
+          slidesOffsetBefore: 0,
+          slidesOffsetAfter: 0,
         },
       },
     });

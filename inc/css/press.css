@@ -1657,6 +1657,10 @@
   padding: 20px 0 0 0;
 }
 
+.brand .editor-box-wrap .press-view__editor {
+  margin-top: 160px;
+}
+
 /* mobile */
 @media screen and (max-width: 1023px) {
   .press-sns-wrap {
@@ -1673,8 +1677,12 @@
   }
   .related-conts-wrap .tit {
     margin-bottom: 36px;
+    font-size: 30px;
   }
   .press-sns-wrap .sns-box > .btn:not(:last-child) {
     margin-right: 20px;
+  }
+  .brand .editor-box-wrap .press-view__editor {
+    margin-top: 100px;
   }
 }

@@ -169,7 +169,7 @@
   display: flex;
   justify-content: space-between;
   position: relative;
-  gap: 132px;
+  gap: 268px;
 }
 .history-box .history-list > li:not(:last-child) {
   padding-bottom: 160px;
@@ -228,11 +228,12 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 160px;
-  height: 160px;
+  width: 92px;
+  height: 92px;
   background: url(../../inc/images/icon/icon-play-video.svg);
   background-size: contain;
   cursor: pointer;
+  z-index: 1;
 }
 .history-box .history-list li .img-wrap .ico-video-play:hover {
   background: url(../../inc/images/icon/icon-play-video-hover.svg);
@@ -826,9 +827,6 @@
     margin-bottom: 160px;
     overflow: hidden;
   }
-  .brand .history-box {
-    padding: 0;
-  }
   .history-box > ul {
     padding: 28px 0 0 0;
   }
@@ -840,6 +838,7 @@
   }
   .history-box .history-list:after {
     left: 8px;
+    top: 46px;
   }
   .history-box .history-list > li {
     display: block;
@@ -908,6 +907,10 @@
 
   .history-box .history-list li .img-wrap:not(:last-child) {
     margin-bottom: 44px;
+  }
+  .history-box .history-list li .img-wrap .ico-video-play {
+    width: 67px;
+    height: 67px;
   }
 
   .intro-race-box {

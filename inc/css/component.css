@@ -1719,7 +1719,7 @@ input[type="radio"]:focus + label {
   margin-top: 20px;
 }
 .card_type04 .card_function {
-  padding: 20px 16px 38px 16px;
+  padding: 40px 16px 38px 16px;
 }
 .card_type04 .card_profile {
   display: flex;
@@ -5318,9 +5318,9 @@ input:checked + .slider:before {
 
 .tag-list-wrap [class^="tag-list"] li .tag-item {
   font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
-  font-size: 17px;
+  font-size: 20px;
   font-weight: 500;
-  line-height: 23.8px;
+  line-height: 140%;
   padding: 8px 16px;
   border-radius: 22px;
   display: block;
