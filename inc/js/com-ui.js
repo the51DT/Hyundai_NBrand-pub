@@ -310,6 +310,7 @@ var NbrandUI = {
     //     eventCont.hide();
     //   }
     // }, 300);
+    NbrandUI.headerDimdOff();
   },
 
   headerNav: function (obj, com, par) {
@@ -342,7 +343,7 @@ var NbrandUI = {
               selector: tparent,
               type: "hold",
             });
-
+            NbrandUI.headerDimdOn();
             if (NbrandUI.windowSize()) {
               eventContH = $(window).height() - 70;
               eventCont.css("height", eventContH).fadeIn(100);
@@ -359,7 +360,7 @@ var NbrandUI = {
             eventCont.attr("aria-hidden", "true");
             tparent.children(".ui-fctab-s").remove();
             tparent.children(".ui-fctab-e").remove();
-
+            NbrandUI.headerDimdOff();
             bodyControll(false);
             eventCont.stop().slideUp(100);
             tparent.find(".on").removeClass("on");
@@ -717,8 +718,11 @@ var NbrandUI = {
   mdimdOn: function () {
     $("body").append("<div class='m-dimmed' aria-hidden='true'></div>");
   },
-  popDimdOn: function (obj) {
-    $(obj).append("<div class='pop-dimmed' aria-hidden='true'></div>");
+  headerDimdOn: function (obj) {
+    $("body").append("<div class='header-dimmed' aria-hidden='true'></div>");
+  },
+  headerDimdOff: function (obj) {
+    $("body").find(".header-dimmed").remove();
   },
   mdimdOff: function () {
     $("body").find(".m-dimmed").remove();

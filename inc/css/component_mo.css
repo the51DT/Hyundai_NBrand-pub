@@ -727,15 +727,16 @@ min-width : 1024 css
   }
 
   .wrap-list.list03 .left img {
-    max-width: 237px;
+    max-width: none;
     width: 100%;
     height: auto;
     flex-shrink: 0;
   }
 
   .wrap-list.list03 .left.imgwrap {
-    padding: 37px 50px;
-    max-width: 312px;
+    /* padding: 37px 50px; */
+    max-width: none;
+    width: 100%;
     margin-top: 0;
     margin-right: 0;
   }
@@ -1142,9 +1143,9 @@ min-width : 1024 css
     gap: 28px;
   }
   .dropdown-menu
-  li:not(.dropdown-menu .moclose-btn, .dropdown-menu .option)
-  .btn-wrap
-  .btn-only-icon-bg01-square {
+    li:not(.dropdown-menu .moclose-btn, .dropdown-menu .option)
+    .btn-wrap
+    .btn-only-icon-bg01-square {
     margin-left: auto;
   }
   .dropdown-menu li:hover {

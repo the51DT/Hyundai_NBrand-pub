@@ -2044,7 +2044,7 @@ article.info-bnr-wrap + article.info-video-wrap {
     line-height: 100%;
   }
   .brand .gallery-wrap .ty02Swiper .swiper-slide .img-area {
-    height: 19.5rem;
+    height: auto;
   }
 
   /* BR030103 */

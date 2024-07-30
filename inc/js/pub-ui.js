@@ -374,11 +374,12 @@ var pubUi = {
     var swiper3 = new Swiper(".ty03Swiper", {
       slidesPerView: 3,
       spaceBetween: 24,
+      loop: true,
       watchOverflow: true,
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
+      // autoplay: {
+      //   delay: 3000,
+      //   disableOnInteraction: false,
+      // },
       pagination: {
         el: ".swiper-pagination-custom",
         clickable: true,
@@ -387,8 +388,19 @@ var pubUi = {
         nextEl: ".ty03Swiper .swiper-button-next",
         prevEl: ".ty03Swiper .swiper-button-prev",
       },
+      on: {
+        slideChangeTransitionStart: function () {
+          if ($(".ty03Swiper .profile-open").length) {
+            NbrandUI.profileCloseOption($(".ty03Swiper .club-popup"));
+          }
+        },
+      },
       breakpoints: {
         360: {
+          slidesPerView: 1,
+          spaceBetween: 12,
+        },
+        400: {
           slidesPerView: 1.2,
           spaceBetween: 12,
         },
@@ -986,10 +998,10 @@ function swiper2SlideEvt() {
     grabCursor: true,
     centeredSlides: true,
     slidesPerView: "auto",
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
+    // autoplay: {
+    //   delay: 3000,
+    //   disableOnInteraction: false,
+    // },
     loop: loopVal,
     coverflowEffect: {
       rotate: 0, //각도

@@ -1996,7 +1996,9 @@ input[type="radio"]:focus + label {
   opacity: 1;
 }
 
-.ty01Swiper.banner-swiper .swiper-pagination-custom .swiper-pagination-bullet-active { 
+.ty01Swiper.banner-swiper
+  .swiper-pagination-custom
+  .swiper-pagination-bullet-active {
   background: #de3111;
 }
 
@@ -2332,6 +2334,7 @@ input[type="radio"]:focus + label {
 .ty03Swiper .swiper-pagination-bullet {
   background: #808080;
   opacity: 1;
+  transition: width .3s;
 }
 .swiper:not(.ty01Swiper) .swiper-pagination-bullet-active {
   background: #de3111;
@@ -2614,7 +2617,7 @@ input[type="radio"]:focus + label {
 
 /* bottom list start (list01, list02, list05 only) */
 .wrap-list .__bottom {
-  border-top: 2px solid #787D80;
+  border-top: 2px solid #787d80;
   margin-top: 40px;
   margin-bottom: 60px;
 }
@@ -2823,7 +2826,7 @@ input[type="radio"]:focus + label {
   /* margin-top: 32px; */
 }
 .wrap-list.list04 .inner .box.box01 {
-border-bottom: 1px solid #bbb;
+  border-bottom: 1px solid #bbb;
 }
 .wrap-list.list04 .inner .box .box-desc.right .desc-location {
   font-size: 1.25rem;
