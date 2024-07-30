@@ -577,6 +577,9 @@ min-width : 1024 css
   .card_type04 .card_tag + .card_tag.noti-tag {
     margin-left: 8px;
   }
+  .card_type04 .card_function {
+    padding-top: 32px;
+  }
 
   /* card_type05 */
   .grid_mo_scroll .card_type05 {

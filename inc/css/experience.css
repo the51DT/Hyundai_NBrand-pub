@@ -799,7 +799,7 @@
 .video_list:first-of-type {
   padding-bottom: 10rem;
 }
-.video_list:last-of-type {
+.video_list + .video_list {
   padding-top: 10rem;
   border-top: 2px solid #bbb;
 }
@@ -809,6 +809,9 @@
 }
 .video_list .btn-wrap-default {
   margin-top: 5rem;
+}
+.video_list + .btn-wrap-default {
+  margin-top: 80px;
 }
 
 /* EP010802 */
@@ -3307,6 +3310,9 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   .video_list .grid_2,
   .video_list .grid_3 {
     row-gap: 2.75rem;
+  }
+  .video_list + .btn-wrap-default {
+    margin-top: 44px;
   }
 
   /* EP010802 */

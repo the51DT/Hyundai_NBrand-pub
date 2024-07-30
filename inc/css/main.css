@@ -182,6 +182,9 @@
 .main_Nfluencer_wrap .tit-type04 {
   margin: 0.5rem auto 2.5rem auto;
 }
+.main_Nfluencer_wrap .grid_masonry + .btn-wrap-default {
+  margin-top: 76px;
+}
 
 @media screen and (max-width: 1023px) {
   .main_summery_wrap {
@@ -294,5 +297,8 @@
   .main_Nfluencer_wrap .tit-type04 {
     margin: 0.5rem auto 1.75rem auto;
     font-size: 1.125rem;
+  }
+  .main_Nfluencer_wrap .grid_masonry + .btn-wrap-default {
+    margin-top: 64px;
   }
 }

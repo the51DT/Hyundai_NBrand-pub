@@ -22,7 +22,7 @@
 }
 
 .models-wrap.brand [class*="max1440"] {
-  max-width: 1600px;
+  max-width: 1440px;
   /* padding: 0 80px; */
 }
 
