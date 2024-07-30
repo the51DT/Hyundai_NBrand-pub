@@ -1577,6 +1577,9 @@ input[type="radio"]:focus + label {
   height: 100%;
   object-fit: cover;
 }
+.card_type04 .card_thumbnail p {
+  margin-top: 20px;
+}
 .card_type04 .card_state {
   padding: 1rem 0.875rem;
   background-color: #de3111;
@@ -2275,14 +2278,19 @@ input[type="radio"]:focus + label {
   padding-top: 28px;
   background: #f0f0f0;
 }
-
+.ty02Swiper .img-area .title {
+  margin-top: 28px;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 44.8px;
+}
 .ty02Swiper .text-area .title {
   font-size: 32px;
   font-weight: 700;
   line-height: 44.8px;
 }
 
-.ty02Swiper .text-area > div {
+.ty02Swiper .text-area > div:not(:first-child) {
   margin-top: 20px;
 }
 
