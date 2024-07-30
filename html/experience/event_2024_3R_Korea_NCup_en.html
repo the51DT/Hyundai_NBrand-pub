@@ -28,26 +28,20 @@
                   <ul class="selectbox-options" role="listbox" id="countrySelect" aria-hidden="true"
                     style="display: none">
                     <li class="moclose-btn" style="display: none">
-                      <button type="button" class="btn btn-only-icon" title="c lose">
+                      <button type="button" class="btn btn-only-icon" title="close">
                         <span class="visually-hidden">close</span>
                         <span class="btn-icon24 icon-close" aria-hidden="true"></span>
                       </button>
                     </li>
                     <li class="option option-click fw-type03 active" role="option" aria-selected="true">All</li>
-                    <li class="option option-click fw-type03" role="option">China</li>
-                    <li class="option option-click fw-type03" role="option">USA</li>
+                    <li class="option option-click fw-type03" role="option">N CUP</li>
+                    <li class="option option-click fw-type03" role="option">N TT</li>
                   </ul>
                 </div>
               </div>
               <div class="selectbox-overlay" style="display: none"></div>
             </div>
             <div class="conts-body">
-
-              <!--
-                * 개발시 확인 및 참고 사항 
-                * section_tab > swiper-slide의 data-content와 
-                  section_list > list-content의 data-content 옵션값 동일하게 매핑 필요함
-              -->
               <section class="section_tab">
                 <div class="swiper-container">
                   <div class="swiper ty05Swiper swiper-card-type">
@@ -537,8 +531,8 @@
                             <div class="selectbox-overlay" style="display: none"></div>
                           </div>
                           <div class="conts-body">
-                            <!-- 07.12 수정 : evt-map-wrap 내 버튼 태그 마크업 위치 변경 -->
-                            <div class="evt-map-wrap">
+                            <!-- 07.30 수정 : evt-map-wrap 마크업 구조 변경 : 선택한 selectbox 옵션값에 따른 하드코딩 노출 형태로 변경 (스크립트 로 동적생성 X) -->
+                            <div class="evt-map-wrap"> <!-- on 클래스 : 상세맵 활성화시(+ 버튼 클릭시) on 클래스 추가 -->
                               <div class="btn-area">
                                 <div class="btn-wrap plus">
                                   <button type="button">
@@ -551,17 +545,46 @@
                                   </button>
                                 </div>
                               </div>
+
+                              
                               <div class="evt-map-img">
                                 <!-- 07.12 추가 : 레이어팝업 버튼 추가 -->
-                                <button class="pop-open btn-evtmap-pop" aria-controls="pop-nLounge" aria-haspopup="true"
+                                <!-- N Cup - Round3 이벤트레이아웃 기본 이미지 -->
+                                <button class="pop-open btn-evtmap-pop" aria-controls="pop-yeongamExperZone" aria-haspopup="true"
                                   aria-expanded="false" title="팝업오픈">
                                   <span class="visually-hidden">side-popup1 열기</span>
                                   <img src="../../inc/images/eventLayout/evtLayout_min_shortImg04.png"
-                                    alt="이벤트 레이아웃01 축소 이미지" />
+                                    alt="이벤트 레이아웃 N lounge 확대 이미지" />
                                 </button>
+
+                                <div class="evt-map-active-box">
+                                  <!-- yeongam - Experience Zone --> 
+                                  <button class="pop-open btn-evtmap-pop" aria-controls="pop-yeongamExperZone" aria-haspopup="true"
+                                    aria-expanded="false" title="팝업오픈">
+                                    <span class="visually-hidden">side-popup1 열기</span>
+                                    <img src="../../inc/images/eventLayout/evtLayout_max_yeongam_ExperZone.png"
+                                      alt="yeongam - Experience Zone 확대 이미지" />
+                                  </button>
+
+                                  <!-- yeongam - Motorsport Experience Zone --> 
+                                  <button class="pop-open btn-evtmap-pop" aria-controls="pop-yeongamMotorExper" aria-haspopup="true"
+                                    aria-expanded="false" title="팝업오픈">
+                                    <span class="visually-hidden">side-popup2 열기</span>
+                                    <img src="../../inc/images/eventLayout/evtLayout_max_yeongam_MotorExper.png"
+                                      alt="yeongam - Motorsport Experience 확대 이미지" />
+                                  </button>
+                                  <!--  yeongam - viewing Zone  --> 
+                                  <button class="pop-open btn-evtmap-pop" aria-controls="pop-yeongamViewingZone" aria-haspopup="true"
+                                    aria-expanded="false" title="팝업오픈">
+                                    <span class="visually-hidden">side-popup3 열기</span>
+                                    <img src="../../inc/images/eventLayout/evtLayout_max_yeongam_ViewingZone.png"
+                                      alt="yeongam - viewing zone 확대 이미지" />
+                                  </button>
+                                </div>
                                 <!-- //07.12 추가 : 레이어팝업 버튼 추가 -->
                               </div>
                             </div>
+                            <!-- //07.30 수정 -->
                           </div>
                         </div>
                       </section>

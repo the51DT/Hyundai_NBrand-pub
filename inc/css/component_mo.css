@@ -1871,4 +1871,10 @@ min-width : 1024 css
   /* .club-popup .popup-wrapper .popup-footer .btn-wrap {
     flex: 0 0 auto;
   } */
+
+  /* 공통 : 프로필 영역 클럽(커뮤니티) 가입되어 있을 경우 레이어팝업 노출 */
+  .profile-btn-box .club-popup {
+    top:80px;
+    left:0;
+  }
 }

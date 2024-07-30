@@ -1776,6 +1776,7 @@ input[type="radio"]:focus + label {
   flex-direction: column;
   align-items: flex-start;
   width: calc(100% - 48px);
+  text-align-last: left;
 }
 .card_type04 .card_profile .profile_des .profile_name {
   font-size: 14px;
@@ -5459,6 +5460,13 @@ input:checked + .slider:before {
   font-size: 14px;
   font-weight: 700;
   line-height: 19.6px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  max-height: calc(2.8em);
 }
 .club-popup .popup-wrapper .popup-body {
   padding: 0;
@@ -5538,4 +5546,13 @@ input:checked + .slider:before {
   background-image: url(../../inc/images/icon/icon-arrow01_down.svg);
   background-size: contain;
   transform: rotate(180deg);
+}
+
+
+/* 공통 : 프로필 영역 클럽(커뮤니티) 가입되어 있을 경우 레이어팝업 노출 */
+.profile-btn-box {
+  position: relative;
+}
+.profile-btn-box .club-popup {
+  left:50px;
 }
