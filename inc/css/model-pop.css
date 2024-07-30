@@ -426,6 +426,28 @@
   height: 100%;
   object-fit: cover;
 }
+
+.model-video-wrap {
+  position: relative;
+}
+
+.model-video-wrap .img-wrap:before {
+  content: "";
+  display: block;
+  width: 138px;
+  height: 138px;
+  background: url(../images/icon/icon-play-video.svg) no-repeat center center /
+    100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.model-video-wrap:hover .img-wrap::before {
+  background-image: url(../images/icon/icon-play-video-hover.svg);
+}
 /** 모델 팝업 내 영상 끝 **/
 
 /** .formodel 내 닫기 버튼 **/
@@ -711,6 +733,11 @@
     .icon-play-wh {
     width: 12px;
     height: 12px;
+  }
+
+  .model-video-wrap .img-wrap:before {
+    width: 40px;
+    height: 40px;
   }
 }
 
