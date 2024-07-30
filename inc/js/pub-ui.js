@@ -201,7 +201,13 @@ var pubUi = {
         );
       } else {
         $(".evt-map-wrap").addClass("on");
-        evtImgMapChk(options, selectedArea, selectedNType, selected1Idx, selected2Idx);
+        evtImgMapChk(
+          options,
+          selectedArea,
+          selectedNType,
+          selected1Idx,
+          selected2Idx
+        );
       }
     });
 
@@ -231,10 +237,15 @@ var pubUi = {
       } else {
         options.push(option1, option2);
       }
-      
 
       $(".evt-map-wrap").removeClass("on");
-      evtImgMapChk(options, selectedArea, selectedNType, selected1Idx, selected2Idx);
+      evtImgMapChk(
+        options,
+        selectedArea,
+        selectedNType,
+        selected1Idx,
+        selected2Idx
+      );
     });
 
     $(".tit-btn-wrap button").click(function (e) {
@@ -376,10 +387,10 @@ var pubUi = {
       spaceBetween: 24,
       loop: true,
       watchOverflow: true,
-      // autoplay: {
-      //   delay: 3000,
-      //   disableOnInteraction: false,
-      // },
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
       pagination: {
         el: ".swiper-pagination-custom",
         clickable: true,
@@ -896,7 +907,8 @@ $(document).ready(function () {
   pubUi.overScroll(".related-wrap .models-nofull-box");
 
   toggleFullscreen();
-
+  swiper4SlideEvt();
+  btnNaviCheck();
   $(window).resize(function () {
     if ($(window).innerWidth() < 1024) {
       if (self.swiper2.length > 0) {
@@ -930,9 +942,6 @@ $(document).ready(function () {
         // console.log("swiper4 destroy");
       }
     }
-    swiper4SlideEvt();
-
-    btnNaviCheck();
   });
 
   // 07.03 추가 - models-wrap 클래스 존재하는 페이지 일 경우, 하단 img loading 속성 제거
@@ -998,10 +1007,10 @@ function swiper2SlideEvt() {
     grabCursor: true,
     centeredSlides: true,
     slidesPerView: "auto",
-    // autoplay: {
-    //   delay: 3000,
-    //   disableOnInteraction: false,
-    // },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
     loop: loopVal,
     coverflowEffect: {
       rotate: 0, //각도
@@ -1245,7 +1254,13 @@ function handleOptionClick(event) {
     // console.log(options);
 
     if (option1 != undefined && option2 != undefined) {
-      evtImgMapChk(options, selectedArea, selectedNType, selected1Idx, selected2Idx);
+      evtImgMapChk(
+        options,
+        selectedArea,
+        selectedNType,
+        selected1Idx,
+        selected2Idx
+      );
     }
   }
 }
@@ -2049,12 +2064,76 @@ function scrollEvent() {
   scrollWrap.find(".content-area > [class*=content-item]").each(function (e) {
     ($this = $(this)),
       (sectionItem[e] = $this.position().top - headerNavHeight);
+  });
+  scrollWrap.scroll(function () {
+    if ($firstScroll) {
+      pubUi.masonryLayout();
+      $firstScroll = false;
+    }
+    // alert('d')
+    var thisScrArea = $(this),
+      scrItem = thisScrArea.find(".content-area > [class*=content-item]"),
+      nowScroll = thisScrArea.scrollTop(),
+      sectionLength = scrItem.length;
 
-    scrollWrap.scroll(function () {
-      if ($firstScroll) {
-        pubUi.masonryLayout();
-        $firstScroll = false;
+    let scrollY = (
+      (scrollWrap.scrollTop() / ($(".wrap").height() - scrollWrap.height())) *
+      100
+    ).toFixed(3);
+    scrollTop = scrollWrap.scrollTop();
+
+    var contentItem = document.querySelectorAll(
+      ".content-area > [class*=content-item]"
+    );
+
+    if (scrollTop > 0) {
+      $(".navigation_bar-wrap .gage").addClass("on");
+      // $(".header-wrap").addClass("scroll-on");
+      $("#topBtn").fadeIn("slow");
+      $("#topBtn").css("display", "flex");
+      if (scrollTop >= scrollPrev) {
+        // 스크롤 위치 증가
+        $(".header-wrap").addClass("scroll-on");
+        // console.log(scrollTop, scrollPrev);
+      } else {
+        // 스크롤 위치 감소
+        $(".header-wrap").removeClass("scroll-on");
       }
+      setTimeout(function () {
+        scrollPrev = scrollTop;
+      }, 10);
+    } else {
+      $(".navigation_bar-wrap .gage").removeClass("on");
+      // $(".header-wrap").removeClass("scroll-on");
+      $("#topBtn").fadeOut("slow");
+      $("#topBtn").css("display", "none");
+    }
+
+    $(".header-wrap").addClass("scroll-ing");
+    $(".navigation_bar-wrap .gage.on").css("--bar", `${scrollY}%`);
+
+    contentItem.forEach((evt, idx) => {
+      contentItem[idx].setAttribute("data-scroll", idx + 1); // 각 콘텐츠에 data-scroll 생성
+    });
+
+    for (var i = 0; i < sectionLength; i++) {
+      if (sectionItem[i] <= nowScroll + 40) {
+        $(".navigation-item02.pc-only li")
+          .eq(i)
+          .find("button")
+          .addClass("on")
+          .parent()
+          .siblings()
+          .find("button")
+          .removeClass("on");
+      }
+    }
+  });
+
+  $(".history-list li").each(function (e) {
+    ($this = $(this)),
+      (historyItem[e] = $this.position().top - headerNavHeight);
+    scrollWrap.scroll(function () {
       // alert('d')
       var thisScrArea = $(this),
         scrItem = thisScrArea.find(".content-area > [class*=content-item]"),
@@ -2216,3 +2295,25 @@ function stopTimer(video, type) {
   $(".swiper-pagination-bullet .seek-bar").css("width", 0);
   clearInterval(self.timer);
 }
+
+// history
+// function historyFx() {
+//   let historyList = document.querySelectorAll(".history-list");
+//   historyList.forEach((list) => {
+//     let historyTit = $(list).children("li");
+//     let historyPointer = list.previousElementSibling;
+//     let pos = [];
+//     let count = 0;
+//     for (let i = 0; i < historyTit.length; i++) {
+//       pos.push(window.pageYOffset + historyTit[i].getBoundingClientRect().top);
+//       pos.push($(historyTit[i]).offset().top);
+//     }
+//     $("body").scroll(() => {
+//       console.log($(historyPointer).offsetParent());
+//       if (($(historyPointer).offset().top = 118)) {
+//         $(historyPointer).css("top", `${pos[count] - 1689}px`);
+//         count += 1;
+//       }
+//     });
+//   });
+// }
