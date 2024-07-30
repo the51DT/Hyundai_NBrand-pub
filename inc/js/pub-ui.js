@@ -878,7 +878,7 @@ $(document).ready(function () {
   $(".option-click").click(function () {
     handleOptionClick(event);
   });
-  hasTagFun();
+  //hasTagFun();
   perforSlideMoveFun();
   footerScrollTop();
   modelsVideoPlay();
@@ -2154,6 +2154,7 @@ window.onload = function () {
   configuratorScroll();
   setVh();
   dropdownAccordion();
+  hasTagFun();
   $(window).resize(() => {
     setVh();
   });
