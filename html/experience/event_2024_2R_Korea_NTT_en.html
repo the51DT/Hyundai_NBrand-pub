@@ -53,19 +53,9 @@
                           ></span>
                         </button>
                       </li>
-                      <li
-                        class="option option-click fw-type03 active"
-                        role="option"
-                        aria-selected="true"
-                      >
-                        All
-                      </li>
-                      <li class="option option-click fw-type03" role="option">
-                        China
-                      </li>
-                      <li class="option option-click fw-type03" role="option">
-                        USA
-                      </li>
+                      <li class="option option-click fw-type03 active" role="option" aria-selected="true">All</li>
+                      <li class="option option-click fw-type03" role="option">N CUP</li>
+                      <li class="option option-click fw-type03" role="option">N TT</li>
                     </ul>
                   </div>
                 </div>
@@ -709,7 +699,7 @@
                                       </button>
                                     </li>
                                     <li
-                                      class="option option-click fw-type03"
+                                      class="option option-click fw-type03 active"
                                       role="option"
                                       aria-selected="false"
                                     >
@@ -724,44 +714,46 @@
                               ></div>
                             </div>
                             <div class="conts-body">
-                              <!-- 07.12 수정 : evt-map-wrap 내 버튼 태그 마크업 위치 변경 -->
-                              <div class="evt-map-wrap">
+                              <!-- 07.30 수정 : evt-map-wrap 마크업 구조 변경 : 선택한 selectbox 옵션값에 따른 하드코딩 노출 형태로 변경 (스크립트 로 동적생성 X) -->
+                              <div class="evt-map-wrap"> <!-- on 클래스 : 상세맵 활성화시(+ 버튼 클릭시) on 클래스 추가 -->
                                 <div class="btn-area">
                                   <div class="btn-wrap plus">
                                     <button type="button">
-                                      <span class="visually-hidden"
-                                        >+ 확대 버튼</span
-                                      >
+                                      <span class="visually-hidden">+ 확대 버튼</span>
                                     </button>
                                   </div>
                                   <div class="btn-wrap minus">
                                     <button type="button">
-                                      <span class="visually-hidden"
-                                        >- 축소 버튼</span
-                                      >
+                                      <span class="visually-hidden">- 축소 버튼</span>
                                     </button>
                                   </div>
                                 </div>
+
+                                
                                 <div class="evt-map-img">
                                   <!-- 07.12 추가 : 레이어팝업 버튼 추가 -->
-                                  <button
-                                    class="pop-open btn-evtmap-pop"
-                                    aria-controls="pop-nTTMoterExper"
-                                    aria-haspopup="true"
-                                    aria-expanded="false"
-                                    title="팝업오픈"
-                                  >
-                                    <span class="visually-hidden"
-                                      >side-popup1 열기</span
-                                    >
-                                    <img
-                                      src="../../inc/images/eventLayout/evtLayout_min_com_ntt.png"
-                                      alt="NTT 이벤트 레이아웃01 축소 이미지"
-                                    />
+                                  <!-- N Cup - Round6 이벤트레이아웃 기본 이미지 -->
+                                  <button class="pop-open btn-evtmap-pop" aria-controls="pop-nTTMoterExper" aria-haspopup="true"
+                                    aria-expanded="false" title="팝업오픈">
+                                    <span class="visually-hidden">side-popup1 열기</span>
+                                    <img src="../../inc/images/eventLayout/evtLayout_min_com_ntt.png" alt="NTT 이벤트 레이아웃01 축소 이미지" />
                                   </button>
+
+                                  <div class="evt-map-active-box">
+
+                                    <!-- N TT - yongin - N Experience zone --> 
+                                    <button class="pop-open btn-evtmap-pop" aria-controls="pop-nTTMoterExper" aria-haspopup="true"
+                                      aria-expanded="false" title="팝업오픈">
+                                      <span class="visually-hidden">side-popup1 열기</span>
+                                      <img src="../../inc/images/eventLayout/evtLayout_max_nExperzone_ntt.png"
+                                        alt="inje - Motorsport Experience 확대 이미지" />
+                                    </button>
+                                  </div>
                                   <!-- //07.12 추가 : 레이어팝업 버튼 추가 -->
                                 </div>
                               </div>
+                              <!-- //07.30 수정 -->
+                              
                             </div>
                           </div>
                         </section>

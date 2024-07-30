@@ -174,72 +174,67 @@ var pubUi = {
       self.tagBtnEvent(e.target, tagList);
     });
 
-    // 이벤트 레이아웃 마이너스 버튼 클릭시, 추 후 요건 확정 후 재작업 예정
+    // 이벤트 레이아웃 + 버튼 클릭시,
     $(".event-box .btn-wrap.plus").click(function (e) {
       var options = [];
       var option1 = $(".list-content.active .evtLayout-type div")
-        .filter(":first-child")
-        .find(".option-click.active")
-        .text();
+        .filter(":nth-child(1)")
+        .find(".option-click.active");
       var option2 = $(".list-content.active .evtLayout-type div")
-        .filter(":last-child")
-        .find(".option-click.active")
-        .text();
+        .filter(":nth-child(2)")
+        .find(".option-click.active");
 
       var selectedArea = document.querySelector(
         ".ty05Swiper .swiper-slide.active .card_info .card_subtit"
       ).innerText;
-      console.log(selectedArea);
+
+      var selectedNType = document.querySelector(
+        "#countrySelect li.active"
+      ).innerText;
+
+      var selected1Idx = option1.index();
+      var selected2Idx = option2.index();
 
       if ($(".evt-map-wrap").hasClass("on")) {
         alert(
           "현재 이미지보다 큰 이미지를 볼 수 없습니다. \n이전 이미지로 돌아가려면 - 버튼을 눌러주세요. "
         );
       } else {
-        if (option2 == "" || option2 == undefined) {
-          options.push(option1);
-        } else {
-          options.push(option1, option2);
-        }
-
-        console.log(options);
-
-        if (options) {
-          $(".evt-map-wrap").addClass("on");
-          evtImgMapChk(options, selectedArea);
-        }
+        $(".evt-map-wrap").addClass("on");
+        evtImgMapChk(options, selectedArea, selectedNType, selected1Idx, selected2Idx);
       }
     });
 
+    // 이벤트 레이아웃 - 버튼 클릭시,
     $(".event-box .btn-wrap.minus").click(function (e) {
       var options = [];
-
       var option1 = $(".list-content.active .evtLayout-type div")
-        .filter(":first-child")
-        .find(".option-click.active")
-        .text();
+        .filter(":nth-child(1)")
+        .find(".option-click.active");
       var option2 = $(".list-content.active .evtLayout-type div")
-        .filter(":last-child")
-        .find(".option-click.active")
-        .text();
+        .filter(":nth-child(2)")
+        .find(".option-click.active");
 
       var selectedArea = document.querySelector(
         ".ty05Swiper .swiper-slide.active .card_info .card_subtit"
       ).innerText;
-      console.log(selectedArea);
+
+      var selectedNType = document.querySelector(
+        "#countrySelect li.active"
+      ).innerText;
+
+      var selected1Idx = option1.index();
+      var selected2Idx = option2.index();
 
       if (option2 == "" || option2 == undefined) {
         options.push(option1);
       } else {
         options.push(option1, option2);
       }
+      
 
-      console.log(options);
-
-      if (options) {
-        $(".evt-map-wrap").removeClass("on");
-        evtImgMapChk(options, selectedArea);
-      }
+      $(".evt-map-wrap").removeClass("on");
+      evtImgMapChk(options, selectedArea, selectedNType, selected1Idx, selected2Idx);
     });
 
     $(".tit-btn-wrap button").click(function (e) {
@@ -1212,17 +1207,22 @@ function handleOptionClick(event) {
   if ($selectboxWrap.hasClass("evtLayout-type")) {
     var options = [];
     var option1 = $(".list-content.active .evtLayout-type div")
-      .filter(":first-child")
-      .find(".option-click.active")
-      .text();
+      .filter(":nth-child(1)")
+      .find(".option-click.active");
     var option2 = $(".list-content.active .evtLayout-type div")
-      .filter(":last-child")
-      .find(".option-click.active")
-      .text();
+      .filter(":nth-child(2)")
+      .find(".option-click.active");
 
     var selectedArea = document.querySelector(
       ".ty05Swiper .swiper-slide.active .card_info .card_subtit"
     ).innerText;
+
+    var selectedNType = document.querySelector(
+      "#countrySelect li.active"
+    ).innerText;
+
+    var selected1Idx = option1.index();
+    var selected2Idx = option2.index();
 
     if (option2 == "" || option2 == undefined) {
       options.push(option1);
@@ -1233,222 +1233,108 @@ function handleOptionClick(event) {
     // console.log(options);
 
     if (option1 != undefined && option2 != undefined) {
-      evtImgMapChk(options, selectedArea);
+      evtImgMapChk(options, selectedArea, selectedNType, selected1Idx, selected2Idx);
     }
   }
 }
 // [End] : selectbox 컴포넌트
 
-// 추 후 이미지 교체 필요
-function evtImgMapChk(options, area) {
-  var evtMapImage = $(".evt-map-wrap .evt-map-img img");
-  var swiperContentsActive = $(".section_list .list-content.active");
-  var evtSelect = swiperContentsActive.find(".evtLayout-type > div");
+function evtImgMapChk(options, area, ntype, option1Idx, option2Idx) {
+  var evtMapWrap = $(".evt-map-wrap");
+  var evtMapDefultBtn = $(".evt-map-img > button");
+  var evtMapActiveBox = $(".evt-map-active-box > button");
+  var selectboxEvtLayout = $(".selectbox-wrap.evtLayout-type");
 
-  var evtMapPopBtn = $(".evt-map-wrap .evt-map-img .btn-evtmap-pop");
-  var evtMapPopLayerId = $(".side-popup").attr("id");
+  area = area.toLowerCase();
+  ntype = ntype.toLowerCase();
 
-  console.log(evtMapImage);
-  var option1 = options[0].trim(); // 데이터 좌우 공백 제거
-  var option2 = options[1].trim(); // 데이터 좌우 공백 제거
+  //console.log("selected option idx값 : " + option1Idx + ", " + option2Idx + ", " + area + ", " + ntype);
 
-  var selectedArea = area.toLowerCase();
-  console.log(selectedArea);
-
-  if ($(".evt-map-wrap").hasClass("on")) {
-    if (evtSelect.length > 1) {
-      console.log("셀렉트 박스 2개");
-      if (
-        selectedArea == "yongin" ||
-        selectedArea == "youngin everland speedium"
-      ) {
-        if (option1 == "A Paddock" && option2 == "N Zone") {
-          evtMapImage.attr(
-            "src",
-            "../../inc/images/eventLayout/evtLayout_max_A_NZone.png"
-          );
-          evtMapPopBtn.attr("aria-controls", "pop-nZone");
-        } else if (option1 == "A Paddock" && option2 == "N Experience zone") {
-          evtMapImage.attr(
-            "src",
-            "../../inc/images/eventLayout/evtLayout_max_A_ExperZone.png"
-          );
-          evtMapPopBtn.attr("aria-controls", "pop-nExperZone");
-        } else if (option1 == "B Paddock" && option2 == "N Fan Zone") {
-          evtMapImage.attr(
-            "src",
-            "../../inc/images/eventLayout/evtLayout_max_B_FanZone.png"
-          );
-          evtMapPopBtn.attr("aria-controls", "pop-nFanZone");
-        } else {
-          alert(
-            "조건에 맞지 않습니다. 지역에 맞는 이벤트 옵션을 선택해주세요."
-          );
+  if (selectboxEvtLayout.hasClass("select-type01")) {
+    // selectbox 1개 일 경우,
+    if (evtMapWrap.hasClass("on")) {
+      // 상세이미지 활성화일 경우,
+      if (option1Idx > 0) {
+        evtMapDefultBtn.hide();
+        for (var i = 0; i < evtMapActiveBox.length; i++) {
+          if (option1Idx == i + 1) {
+            evtMapActiveBox[i].style.display = "block";
+          } else {
+            evtMapActiveBox[i].style.display = "none";
+          }
         }
       }
     } else {
-      console.log("셀렉트 박스 1개");
-      if (selectedArea == "inje" || selectedArea == "inje speedium") {
-        if (option1 == "N Lounge") {
-          evtMapImage.attr(
-            "src",
-            "../../inc/images/eventLayout/evtLayout_max_nLounge.png"
-          );
-          evtMapPopBtn.attr("aria-controls", "pop-nLounge");
-        } else if (option1 == "Motorsport Experience") {
-          evtMapImage.attr(
-            "src",
-            "../../inc/images/eventLayout/evtLayout_max_motorExperience.png"
-          );
-          evtMapPopBtn.attr("aria-controls", "pop-motorExperience");
-        } else if (option1 == "Viewing zone") {
-          evtMapImage.attr(
-            "src",
-            "../../inc/images/eventLayout/evtLayout_max_viewingZone.png"
-          );
-          evtMapPopBtn.attr("aria-controls", "pop-viewingZone");
-        } else {
-          alert(
-            "조건에 맞지 않습니다. 지역에 맞는 이벤트 옵션을 선택해주세요. "
-          );
-        }
-      } else if (
-        selectedArea == "yeongam" ||
-        selectedArea == "korea international circuit"
-      ) {
-        if (option1 == "Experience Zone") {
-          evtMapImage.attr(
-            "src",
-            "../../inc/images/eventLayout/evtLayout_max_yeongam_ExperZone.png"
-          );
-          evtMapPopBtn.attr("aria-controls", "pop-yeongamExperZone");
-        } else if (option1 == "Motorsport Experience") {
-          evtMapImage.attr(
-            "src",
-            "../../inc/images/eventLayout/evtLayout_max_yeongam_MotorExper.png"
-          );
-          evtMapPopBtn.attr("aria-controls", "pop-yeongamMotorExper");
-        } else if (option1 == "Viewing zone") {
-          evtMapImage.attr(
-            "src",
-            "../../inc/images/eventLayout/evtLayout_max_yeongam_ViewingZone.png"
-          );
-          evtMapPopBtn.attr("aria-controls", "pop-yeongamViewingZone");
-        } else {
-          alert(
-            "조건에 맞지 않습니다. 지역에 맞는 이벤트 옵션을 선택해주세요."
-          );
+      evtMapActiveBox.hide();
+      evtMapDefultBtn.show();
+      for (var i = 0; i < evtMapActiveBox.length; i++) {
+        if (option1Idx == i + 1) {
+          var ariaControl = evtMapActiveBox[i].getAttribute("aria-controls");
+          evtMapDefultBtn.attr("aria-controls", ariaControl);
         }
       }
     }
-  } else {
-    if (evtSelect.length > 1) {
-      console.log("셀렉트 박스 2개");
-      if (
-        selectedArea == "yongin" ||
-        selectedArea == "youngin everland speedium"
-      ) {
-        if (option1 == "A Paddock" && option2 == "N Zone") {
-          evtMapImage.attr(
-            "src",
-            "../../inc/images/eventLayout/evtLayout_min_shortImg02.png"
-          );
-          evtMapPopBtn.attr("aria-controls", "pop-nZone");
-        } else if (option1 == "A Paddock" && option2 == "N Experience zone") {
-          evtMapImage.attr(
-            "src",
-            "../../inc/images/eventLayout/evtLayout_min_shortImg02.png"
-          );
-          evtMapPopBtn.attr("aria-controls", "pop-nExperZone");
-        } else if (option1 == "B Paddock" && option2 == "N Fan Zone") {
-          evtMapImage.attr(
-            "src",
-            "../../inc/images/eventLayout/evtLayout_min_shortImg03.png"
-          );
-          evtMapPopBtn.attr("aria-controls", "pop-nFanZone");
+  } else if (selectboxEvtLayout.hasClass("select-type02")) {
+    // selectbox 2개 일 경우,
+    if (area == "yongin" || area == "youngin everland speedium") {
+      if (evtMapWrap.hasClass("on")) {
+        evtMapDefultBtn.hide();
+        if (option1Idx == 1 && option2Idx == 1) {
+          evtMapDefultBtn.hide();
+          for (var i = 0; i < evtMapActiveBox.length; i++) {
+            if (
+              evtMapActiveBox[i].getAttribute("aria-controls") == "pop-nZone"
+            ) {
+              evtMapActiveBox[i].style.display = "block";
+            } else {
+              evtMapActiveBox[i].style.display = "none";
+            }
+          }
+        } else if (option1Idx == 1 && option2Idx == 2) {
+          for (var i = 0; i < evtMapActiveBox.length; i++) {
+            if (
+              evtMapActiveBox[i].getAttribute("aria-controls") ==
+              "pop-nExperZone"
+            ) {
+              evtMapActiveBox[i].style.display = "block";
+            } else {
+              evtMapActiveBox[i].style.display = "none";
+            }
+          }
+        } else if (option1Idx == 2 && option2Idx == 3) {
+          for (var i = 0; i < evtMapActiveBox.length; i++) {
+            if (
+              evtMapActiveBox[i].getAttribute("aria-controls") == "pop-nFanZone"
+            ) {
+              evtMapActiveBox[i].style.display = "block";
+            } else {
+              evtMapActiveBox[i].style.display = "none";
+            }
+          }
         } else {
           alert(
-            "조건에 맞지 않습니다. 지역에 맞는 이벤트 옵션을 선택해주세요."
+            "선택한 값의 맵을 조회할 수 없습니다. 첫번째 선택값을 다른 옵션으로 변경해 주세요."
           );
         }
-      }
-    } else {
-      console.log("셀렉트 박스 1개");
-      if (selectedArea == "inje" || selectedArea == "inje speedium") {
-        if (option1 == "N Lounge") {
-          evtMapImage.attr(
-            "src",
-            "../../inc/images/eventLayout/evtLayout_min_shortImg01.png"
-          );
-          evtMapPopBtn.attr("aria-controls", "pop-nLounge");
-        } else if (option1 == "Motorsport Experience") {
-          evtMapImage.attr(
-            "src",
-            "../../inc/images/eventLayout/evtLayout_min_shortImg01.png"
-          );
-          evtMapPopBtn.attr("aria-controls", "pop-motorExperience");
-        } else if (option1 == "Viewing zone") {
-          evtMapImage.attr(
-            "src",
-            "../../inc/images/eventLayout/evtLayout_min_shortImg01.png"
-          );
-          evtMapPopBtn.attr("aria-controls", "pop-viewingZone");
-        }
-        // NTT 관련 이벤트 임시 주석 처리
-        // else if (option1 == "Motorsport Experience") {
-        //   evtMapImage.attr(
-        //     "src",
-        //     "../../inc/images/eventLayout/evtLayout_max_inje_ntt.png"
-        //   );
-        //   evtMapPopBtn.attr("aria-controls", "pop-nTTMoterExper");
-        // } else if (option1 == "N Lounge") {
-        //   evtMapImage.attr(
-        //     "src",
-        //     "../../inc/images/eventLayout/evtLayout_max_nlounge_ntt.png"
-        //   );
-        //   evtMapPopBtn.attr("aria-controls", "pop-nTTNLounge");
-        // } else if (option1 == "Rest Zone") {
-        //   evtMapImage.attr(
-        //     "src",
-        //     "../../inc/images/eventLayout/evtLayout_max_rest_ntt.png"
-        //   );
-        //   evtMapPopBtn.attr("aria-controls", "pop-nTTRestZone");
-        // }
-        else {
-          alert(
-            "조건에 맞지 않습니다. 지역에 맞는 이벤트 옵션을 선택해주세요."
-          );
-        }
-      } else if (
-        selectedArea == "yeongam" ||
-        selectedArea == "korea international circuit"
-      ) {
-        if (option1 == "Experience Zone") {
-          evtMapImage.attr(
-            "src",
-            "../../inc/images/eventLayout/evtLayout_min_shortImg04.png"
-          );
-          evtMapPopBtn.attr("aria-controls", "pop-yeongamExperZone");
-        } else if (option1 == "Motorsport Experience") {
-          evtMapImage.attr(
-            "src",
-            "../../inc/images/eventLayout/evtLayout_min_shortImg04.png"
-          );
-          evtMapPopBtn.attr("aria-controls", "pop-yeongamMotorExper");
-        } else if (option1 == "Viewing zone") {
-          evtMapImage.attr(
-            "src",
-            "../../inc/images/eventLayout/evtLayout_min_shortImg04.png"
-          );
-          evtMapPopBtn.attr("aria-controls", "pop-yeongamViewingZone");
+      } else {
+        evtMapActiveBox.hide();
+        evtMapDefultBtn.show();
+        if (option1Idx == 1 && option2Idx == 1) {
+          evtMapDefultBtn.attr("aria-controls", "pop-nZone");
+        } else if (option1Idx == 1 && option2Idx == 2) {
+          evtMapDefultBtn.attr("aria-controls", "pop-nExperZone");
+        } else if (option1Idx == 2 && option2Idx == 3) {
+          evtMapDefultBtn.attr("aria-controls", "pop-nFanZone");
         } else {
           alert(
-            "조건에 맞지 않습니다. 지역에 맞는 이벤트 옵션을 선택해주세요."
+            "선택한 값의 맵을 조회할 수 없습니다. 첫번째 선택값을 다른 옵션으로 변경해 주세요."
           );
         }
       }
     }
   }
+
+  scrollToCenter(".event-box .evt-map-img");
 }
 
 // 07.29 추가 : mobile 일 경우, 스크롤 가운데 위치하도록 적용
@@ -2259,92 +2145,12 @@ window.onload = function () {
   $(window).resize(() => {
     setVh();
   });
+
+  // 07.30 추가 - 모바일에서 navigation-bar 존재 시, 컨텐츠영역 상단 짤림 현상 방지
+  if ($(".navigation_bar-wrap").length > 0) {
+    $(".wrap .content-area").css("padding-top", "48px");
+  }
 };
-
-// N Race : N TT 경기의 경우에만 사이드 팝업 시작
-
-// ** 참고
-// 실제 페이지에서 .evt-map-img 내 button을 1회 클릭시  aria-controls가 eCup의 팝업과 아이디값이 중복되는 현상이 발생합니다.
-// eCup 페이지의 .btn-evtmap-pop의 aria-controls의 규칙은 pop-으로 시작하며, ntt의 경우는 pop-nTT로 시작됩니다.
-// .btn-evtmap-pop을 2회 클릭 시 nttVal의 텍스트가 aria-controls에 반영이 되어 팝업이 나타납니다.
-//    (예: 1회 클릭 시 pop-motorExperience, 2회 클릭 시 pop-nTTMoterExper로 변경됨)
-// nttVal 변수를 추가하여 ntt 페이지일 경우에만 구분하여 팝업이 표시 되도록 하였습니다.
-// 팝업 id에 해당하는 nttOptions배열이 매칭이 될 때 호출하는 식으로 중복 클릭을 없애보려고 했으나 충돌하는 부분이 있어 의도한대로 잘 되지 않았습니다.
-// aria-controls에 nttOptions 배열 내 데이터값으로 변동되도록 하였으나 다른 소스와 충돌하는 부분이 다수 있는 상태입니다.
-
-// 상단에 있는 evtImgMapChk 함수, selectbox 관련 함수와 같이 참고해주세요.
-if (document.querySelector(".ty05Swiper")) {
-  const locationNtt = document.querySelector(
-    ".ty05Swiper .swiper-slide.active .card_info .card_subtit"
-  ).innerText; // 다른 함수 내의 selectedArea 변수와 값은 같음
-  const nttVal = document.querySelectorAll(
-    // 구분 호출) N TT 호출
-    ".ty05Swiper .swiper-slide.active .card_top .card_rank .ntt-val"
-  );
-  const nttOptions = ["pop-nTTMoterExper", "pop-nTTNLounge", "pop-nTTRestZone"]; // aria-controls 값을 변경하기 위함
-  const btnCallPop = document.querySelector(".evtLayout-type button"); // 셀렉트 박스를 감싸는 div
-
-  nttVal.forEach(function (el) {
-    const nttChk = el.innerText;
-
-    // case 01) N TT + Inje Speedium || Inje
-    if (
-      (nttChk == "N TT" && locationNtt == "Inje Speedium") ||
-      (nttChk == "N TT" && locationNtt == "Inje")
-    ) {
-      btnCallPop.addEventListener("click", function () {
-        const mapImg = document.querySelector(".btn-evtmap-pop"); // 맵 이미지 버튼
-        mapImg.addEventListener("click", function () {
-          switch (btnCallPop.innerText) {
-            case "Motorsport Experience": {
-              mapImg.setAttribute("aria-controls", nttOptions[0]);
-              break;
-            }
-            case "N Lounge": {
-              mapImg.setAttribute("aria-controls", nttOptions[1]);
-              break;
-            }
-            case "Rest zone": {
-              mapImg.setAttribute("aria-controls", nttOptions[2]);
-              break;
-            }
-            default:
-              mapImg.setAttribute("aria-controls", "");
-              break;
-          }
-        });
-      });
-    }
-
-    // case 02) N TT + Youngin
-    if (nttChk == "N TT" && locationNtt == "Youngin") {
-      btnCallPop.addEventListener("click", function () {
-        const mapImg = document.querySelector(".btn-evtmap-pop"); // 맵 이미지 버튼
-
-        mapImg.addEventListener("click", function () {
-          switch (btnCallPop.innerText) {
-            case "Motorsport Experience": {
-              mapImg.setAttribute("aria-controls", nttOptions[0]);
-              break;
-            }
-            case "N Lounge": {
-              mapImg.setAttribute("aria-controls", nttOptions[1]);
-              break;
-            }
-            case "Rest zone": {
-              mapImg.setAttribute("aria-controls", nttOptions[2]);
-              break;
-            }
-            default:
-              mapImg.setAttribute("aria-controls", "");
-              break;
-          }
-        });
-      });
-    }
-  });
-  // N Race : N TT 경기의 경우에만 사이드 팝업 끝
-}
 
 function startTimer(slide, video, maxVideoW, type, targetIdx) {
   let duration = 0;

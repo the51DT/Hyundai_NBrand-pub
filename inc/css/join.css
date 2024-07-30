@@ -40,12 +40,14 @@
   font-size: 56px;
   font-weight: 700;
   line-height: 70px;
+  text-align: left;
 }
 .mypage-wrap .mypage-profile .mypage-club {
   font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
   font-size: 16px;
   font-weight: 700;
   line-height: 22.4px;
+  text-align: left;
 }
 .mypage-wrap .mypage-info {
   display: flex;
