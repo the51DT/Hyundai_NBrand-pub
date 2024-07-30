@@ -192,7 +192,7 @@
 }
 .nflmain_wrap .content-item05.main-rank {
   background: #f0f0f0;
-  padding: 120px 80px 160px 80px;
+  padding: 120px 80px 120px 80px;
 }
 .nflmain_wrap .content-item05.main-rank .tab-container {
   max-width: 1440px;
@@ -216,6 +216,28 @@
 .main-rank .swiper-button-prev.swiper-button-disabled {
   opacity: 0;
 }
+.main-rank .ty03Swiper {
+  padding: 40px 0 50px 0;
+  overflow: visible;
+  overflow-x: clip;
+}
+.main-rank .ty03Swiper .card_bottom {
+  position: relative;
+}
+.main-rank .ty03Swiper .club-popup {
+  top: 5px;
+  left: 5px;
+}
+
+.main-rank .swiper-status-wrap {
+  position: unset;
+  margin-top: 40px;
+  transform: none;
+  width:100%;
+  display: flex;
+  justify-content: center;
+}
+
 /* EP040201, EP040301, EP040501 */
 .subfilter_wrap .content-item02 {
   background-color: #f0f0f0;
@@ -925,7 +947,7 @@
 }
 .related_wrap {
   padding: 5rem 5rem 7.5rem 5rem;
-  background-color: #F0F0F0;
+  background-color: #f0f0f0;
 }
 .related_wrap .related_tit {
   margin: 0 auto 4.06rem;
@@ -2291,7 +2313,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
 .info-container-wrap .right-area .info-container li .tit {
   font-size: 24px;
   font-weight: 700;
-  line-height: 33.6px;  
+  line-height: 33.6px;
 }
 .info-container-wrap .right-area .info-container li .desc {
   font-size: 20px;

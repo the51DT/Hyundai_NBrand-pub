@@ -134,7 +134,7 @@
   .header__event-wrap .text-area p {
     font-size: 14px;
     line-height: 19.6px;
-    padding: 8px 0 0 0;
+    padding: 4px 0 0 0;
   }
   .header__event-wrap .link-area {
     display: none;
@@ -318,6 +318,7 @@
     width: 100%;
     margin-bottom: 12px;
     height: 344px;
+    padding: 24px 24px 36px 24px;
   }
   .gnb__panel02 .img-area {
     width: 224px;

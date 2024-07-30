@@ -896,6 +896,7 @@
   background: url(../../inc/images/icon/icon-btn-move.svg) no-repeat;
   background-size: 100%;
 }
+
 /* 제목 + kv모션 작업 영역 */
 @keyframes modelSmooth {
   0% {
@@ -1694,5 +1695,15 @@
   /* 0709 모델 내 갤러리 다운로드 버튼 수정 */
   .models-wrap .gallery-wrap .img-area .icon-download-wh {
     margin-left: 0;
+  }
+
+  .models-wrap .ty02Swiper .swiper-slide .img-area img {
+    height: auto;
+  }
+  .models-wrap .ty02Swiper .swiper-status-wrap {
+    position: unset;
+    justify-content: center;
+    transform: none;
+    margin-top: 40px;
   }
 }

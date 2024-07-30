@@ -29,6 +29,16 @@ body.fix {
   border: 0;
 }
 /* dimmed */
+.header-dimmed {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  background: #000;
+  opacity: 0.5;
+  width: 100vw;
+  height: 100vh;
+}
 .dimmed {
   position: fixed;
   left: 0;
@@ -328,6 +338,7 @@ body.fix {
   align-items: center;
   justify-content: center;
   gap: 4px;
+  font-weight: bold;
 }
 .header__event-wrap .link-area a span {
   width: 16px;
@@ -675,7 +686,7 @@ body.fix {
   font-weight: 500;
   line-height: 19.6px;
   text-align: left;
-  padding: 0 24px 24px 24px;
+  padding: 8px 24px 24px 24px;
 }
 .gnb-content__dep2 .link-area {
   display: flex;
@@ -800,7 +811,7 @@ body.fix {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px 12px;
+  padding: 24px 12px 58px 12px;
 }
 .gnb__panel02 .type-thumbnail li:hover {
   background: #aacae6;
@@ -835,7 +846,7 @@ body.fix {
   gap: 12px;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 24px;
+  margin-top: 16px;
 }
 .gnb__panel02 .link-area .link-btn {
   font-size: 16px;
