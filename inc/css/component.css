@@ -1974,6 +1974,7 @@ input[type="radio"]:focus + label {
   width: 8px;
   height: 4px;
   border-radius: 0;
+  transition: width 0.3s;
 }
 
 .swiper-pagination-bullet:not(:last-child) {
@@ -2342,7 +2343,7 @@ input[type="radio"]:focus + label {
 .ty03Swiper .swiper-pagination-bullet {
   background: #808080;
   opacity: 1;
-  transition: width .3s;
+  transition: width 0.3s;
 }
 .swiper:not(.ty01Swiper) .swiper-pagination-bullet-active {
   background: #de3111;
@@ -5559,11 +5560,10 @@ input:checked + .slider:before {
   transform: rotate(180deg);
 }
 
-
 /* 공통 : 프로필 영역 클럽(커뮤니티) 가입되어 있을 경우 레이어팝업 노출 */
 .profile-btn-box {
   position: relative;
 }
 .profile-btn-box .club-popup {
-  left:50px;
+  left: 50px;
 }

@@ -2058,13 +2058,16 @@ let $firstScroll = true;
 function scrollEvent() {
   var scrollWrap = $("body"),
     sectionItem = [],
-    headerNavHeight = $(".navigation_bar-wrap").height();
+    historyItemOffset = [],
+    historyItemPosition = [];
+  headerNavHeight = $(".navigation_bar-wrap").height();
   let scrollPrev = 0,
     scrollTop = 1;
   scrollWrap.find(".content-area > [class*=content-item]").each(function (e) {
     ($this = $(this)),
       (sectionItem[e] = $this.position().top - headerNavHeight);
   });
+
   scrollWrap.scroll(function () {
     if ($firstScroll) {
       pubUi.masonryLayout();
@@ -2130,78 +2133,45 @@ function scrollEvent() {
     }
   });
 
-  $(".history-list li").each(function (e) {
-    ($this = $(this)),
-      (historyItem[e] = $this.position().top - headerNavHeight);
-    scrollWrap.scroll(function () {
-      // alert('d')
-      var thisScrArea = $(this),
-        scrItem = thisScrArea.find(".content-area > [class*=content-item]"),
-        nowScroll = thisScrArea.scrollTop(),
-        sectionLength = scrItem.length;
-
-      let scrollY = (
-        (scrollWrap.scrollTop() / ($(".wrap").height() - scrollWrap.height())) *
-        100
-      ).toFixed(3);
-      scrollTop = scrollWrap.scrollTop();
-
-      var contentItem = document.querySelectorAll(
-        ".content-area > [class*=content-item]"
-      );
-
-      // console.log(
-      //   "스크롤 좌표값 체크 - scrollTop : ",
-      //   scrollTop + " scrollY % 값 : ",
-      //   scrollY + "%"
-      // );
-
-      // console.log(scrollTop, scrollPrev);
-
-      if (scrollTop > 0) {
-        $(".navigation_bar-wrap .gage").addClass("on");
-        // $(".header-wrap").addClass("scroll-on");
-        $("#topBtn").fadeIn("slow");
-        $("#topBtn").css("display", "flex");
-        if (scrollTop >= scrollPrev) {
-          // 스크롤 위치 증가
-          $(".header-wrap").addClass("scroll-on");
-          // console.log(scrollTop, scrollPrev);
-        } else {
-          // 스크롤 위치 감소
-          $(".header-wrap").removeClass("scroll-on");
-        }
-        setTimeout(function () {
-          scrollPrev = scrollTop;
-        }, 10);
-      } else {
-        $(".navigation_bar-wrap .gage").removeClass("on");
-        // $(".header-wrap").removeClass("scroll-on");
-        $("#topBtn").fadeOut("slow");
-        $("#topBtn").css("display", "none");
-      }
-
-      $(".header-wrap").addClass("scroll-ing");
-      $(".navigation_bar-wrap .gage.on").css("--bar", `${scrollY}%`);
-
-      contentItem.forEach((evt, idx) => {
-        contentItem[idx].setAttribute("data-scroll", idx + 1); // 각 콘텐츠에 data-scroll 생성
-      });
-
-      for (var i = 0; i < sectionLength; i++) {
-        if (sectionItem[i] <= nowScroll + 40) {
-          $(".navigation-item02.pc-only li")
-            .eq(i)
-            .find("button")
-            .addClass("on")
-            .parent()
-            .siblings()
-            .find("button")
-            .removeClass("on");
-        }
-      }
+  if ($(".history-list").length) {
+    moveItem = $(".history-pointer");
+    historyItemLength = $(".history-list > li").length;
+    $(".history-list > li").each(function (e) {
+      _this = $(this);
+      historyItemOffset[e] = _this.offset().top;
+      historyItemPosition[e] = _this.position().top;
     });
-  });
+    $(".history-list")
+      .find("img")
+      .ready(function () {
+        $(".history-list > li").each(function (e) {
+          _this = $(this);
+          historyItemOffset[e] = _this.offset().top;
+          historyItemPosition[e] = _this.position().top;
+        });
+      });
+    if ($(window).width() >= 1024) {
+      dateGap = 120;
+      dateGapScroll = 80;
+    } else {
+      dateGapScroll = 18;
+      dateGap = 18;
+    }
+    moveItemTop = moveItem.position().top;
+    // alert(historyItemLength);
+    scrollWrap.scroll(function () {
+      scrollTop = scrollWrap.scrollTop();
+      for (var i = 0; i < historyItemLength; i++) {
+        if (scrollTop + dateGapScroll > historyItemOffset[i]) {
+          moveItemTop = historyItemPosition[i + 1];
+        } else if (scrollTop <= historyItemOffset[0]) {
+          moveItemTop = historyItemPosition[0];
+        }
+        console.log(_this.attr("class"));
+      }
+      moveItem.css("top", moveItemTop + dateGap);
+    });
+  }
 }
 
 // 스크를 종료 감지

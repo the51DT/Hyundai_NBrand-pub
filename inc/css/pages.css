@@ -154,15 +154,16 @@
 .history-box > ul {
   position: relative;
   padding: 40px 0 0 0;
+  overflow: hidden;
 }
 .history-box .history-list:after {
   content: "";
   display: inline-block;
   width: 4px;
-  height: calc(100% - 120px);
+  height: 100%;
   background: #bbb;
   position: absolute;
-  top: 120px;
+  top: 160px;
   left: 50%;
 }
 .history-box .history-list > li {
