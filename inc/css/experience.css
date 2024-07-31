@@ -3619,7 +3619,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
     height: auto;
   }
 
-  .popup-wrapper.invite .popup-header p.tit-type05 {
+  .popup-wrapper.invite p.tit-type05 {
     font-size: 18px;
   }
 
