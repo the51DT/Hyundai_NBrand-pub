@@ -2639,4 +2639,23 @@ article.info-bnr-wrap + article.info-video-wrap {
     /* BR030103P01에만 해당함 */
     margin-bottom: 20px;
   }
+
+  .featured_wrap .ty02Swiper .swiper-slide .img-area {
+    height: auto;
+  }
+  .featured_wrap .ty02Swiper .img-area .title {
+    color: #000;
+    font-family: "Hyundai Sans Head";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%;
+    margin-top: 16px;
+  }
+  .featured_wrap .ty02Swiper .text-area {
+    padding-top: 0;
+  }
+  .featured_wrap .ty02Swiper .text-area .date {
+    margin-top: 16px;
+  }
 }

@@ -913,20 +913,12 @@ $(document).ready(function () {
   pubUi.overScroll(".related-wrap .models-nofull-box");
 
   toggleFullscreen();
-  swiper4SlideEvt();
+
   btnNaviCheck();
   $(window).resize(function () {
     if ($(window).innerWidth() < 1024) {
-      if (self.swiper2.length > 0) {
-        for (var i = 0; i < self.swiper2.length; i++) {
-          self.swiper2[i].destroy();
-          // console.log("swiper2 destroy!!!");
-        }
-      } else {
-        if (self.swiper2.slides.length > 0 && self.swiper2 != undefined) {
-          self.swiper2.destroy();
-          // console.log("swiper2 destroy")
-        }
+      if ($(".ty02Swiper").length > 0) {
+        self.swiper2.destroy();
       }
 
       swiper2SlideEvt();
@@ -934,18 +926,6 @@ $(document).ready(function () {
       //07.29 추가
       if ($(".evt-map-wrap").length > 0) {
         scrollToCenter(".event-box .evt-map-img");
-      }
-    }
-
-    if (self.swiper4.length > 0) {
-      for (var i = 0; i < self.swiper4.length; i++) {
-        self.swiper4[i].destroy();
-        // console.log("swiper4 destroy!!!");
-      }
-    } else {
-      if (self.swiper4.slides.length > 0 && self.swiper4 != undefined) {
-        self.swiper4.destroy();
-        // console.log("swiper4 destroy");
       }
     }
   });
