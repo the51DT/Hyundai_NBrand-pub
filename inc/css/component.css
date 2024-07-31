@@ -992,9 +992,9 @@ input[type="radio"]:focus + label {
 }
 .conts-key-visual .text-area .desc {
   font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
-  font-size: 32px;
+  font-size: 20px;
   font-weight: 700;
-  line-height: 44.8px;
+  line-height: 140%;
   margin-top: 16px;
   text-align: center;
 }
@@ -1101,7 +1101,7 @@ input[type="radio"]:focus + label {
 }
 
 .conts-box-wrap .bg-img-wrap .more_btn {
-  margin-top: 60px;
+  margin-top: 40px;
 }
 .txt-list-wrap {
   display: flex;
@@ -2642,7 +2642,7 @@ input[type="radio"]:focus + label {
 
 /* bottom list start (list01, list02, list05 only) */
 .wrap-list .__bottom {
-  border-top: 2px solid #787d80;
+  border-top: 2px solid #AAA;
   margin-top: 40px;
   margin-bottom: 60px;
 }
@@ -4473,11 +4473,11 @@ table {
 } */
 .table-type01 thead tr,
 .table-type02 thead tr {
-  border-bottom: 2px solid #787d80;
+  border-bottom: 2px solid #AAA;
 }
 .table-type03 thead tr {
-  border-top: 2px solid #787d80;
-  border-bottom: 2px solid #787d80;
+  border-top: 2px solid #AAA;
+  border-bottom: 2px solid #AAA;
   background-color: #b0c5e0;
 }
 .table-type01 thead th {

@@ -484,7 +484,7 @@
   text-align: end;
 }
 .mymsission-wrap {
-  border-top: 1px solid #787d80;
+  border-top: 2px solid #AAA;
 }
 .mymsission-wrap + .mymsission-wrap {
   border-top: 0;
@@ -652,7 +652,7 @@
 .mypage-eachbox-top {
   display: flex;
   justify-content: space-between;
-  border-bottom: 2px solid #787d80;
+  border-bottom: 2px solid #AAA;
 }
 .mypage-eachbox-top.type2 {
   display: block;
@@ -682,6 +682,9 @@
   display: flex;
   flex-direction: column;
   border-bottom: 0;
+}
+.mypage-eachbox-top + .mypage-eachbox-point {
+  margin-top: -40px;
 }
 .mypage-subtit-box {
   display: flex;
@@ -963,6 +966,9 @@
 .tab-container.mypage-community-tab .tabs {
   text-align: center;
 }
+.mypage-community-tab .tab-content {
+  margin-top: 24px;
+}
 @media screen and (max-width: 1080px) {
   .mypage-community-tab .tabs {
     flex-direction: column;
@@ -1184,6 +1190,9 @@
     gap: 12px;
     flex-wrap: wrap;
   }
+  .mypost-wrap:last-child {
+    margin-bottom: 20px;
+  }
   .mypost-wrap .mypost-box,
   .mypost-wrap .mypost-box.width3,
   .mypost-wrap .mypost-box.width4 {
@@ -1353,6 +1362,9 @@
   .mypage-eachbox-top + .mypage-nodata-onlytext p {
     padding-top: 86px;
   }
+  .mypage-eachbox-top + .mypage-eachbox-point {
+    margin-top: 0;
+  }
   .mypage-nodata-box {
     gap: 20px;
   }
@@ -1373,7 +1385,6 @@
   .mypage-subtit-box.type2,
   .mypage-subtit-box.type3 {
     gap: 8px;
-    padding-bottom: 28px;
   }
   .mypost-wrap + .mypost-contents.type3 {
     margin-top: 32px;
