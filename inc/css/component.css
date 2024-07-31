@@ -1968,15 +1968,31 @@ input[type="radio"]:focus + label {
   display: none;
 }
 .swiper-pagination-bullet {
-  opacity: 0.5;
   width: 8px;
   height: 4px;
   border-radius: 0;
   transition: width 0.3s;
+  position: relative;
+  opacity: 1;
+  background: transparent;
+}
+.swiper-pagination-bullet::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  background: #fff;
 }
 
 .swiper-pagination-bullet:not(:last-child) {
-  margin-right: 6px !important;
+  margin: 0 6px 0 0 !important;
+}
+
+.swiper-pagination-bullet:last-child {
+  margin: 0 !important;
 }
 
 .swiper-slide img {
@@ -1986,7 +2002,6 @@ input[type="radio"]:focus + label {
   object-fit: cover;
 }
 .ty01Swiper .swiper-pagination-bullet {
-  background: #fff;
 }
 
 /* .swiper-pagination-custom .swiper-pagination-bullet{} */
@@ -1994,8 +2009,8 @@ input[type="radio"]:focus + label {
   width: 84px;
   height: 4px;
   position: relative;
-  background: #808080;
-  opacity: 1;
+  background: transparent;
+  /* opacity: 1; */
 }
 
 .ty01Swiper.banner-swiper
@@ -2006,6 +2021,7 @@ input[type="radio"]:focus + label {
 
 .swiper-pagination-custom .swiper-pagination-bullet-active .seek-bar {
   background: #de3111;
+  z-index: 1;
   height: 4px;
   position: absolute;
   top: 0;

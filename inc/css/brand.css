@@ -5,7 +5,7 @@
   margin-bottom: 6.25rem;
 }
 
-.video_list .card_video a  {
+.video_list .card_video a {
   width: 100%;
 }
 .video_list li .card_img {
@@ -544,8 +544,7 @@ article.info-bnr-wrap + article.info-video-wrap {
   line-height: 140%;
 }
 .brand .motor_tab .motor_tab_con .lg-txt-btn01 {
-  margin-top: 92px;
-  margin-bottom: 12px;
+  margin-top: 80px;
 }
 .brand .motor_wrap {
   padding-left: 5rem;
@@ -980,7 +979,7 @@ article.info-bnr-wrap + article.info-video-wrap {
 }
 .brand .gallery-wrap .performance_slide_wrap .btn-wrap-default {
   margin-top: 5rem;
-  padding: 0.75rem 0;
+  /* padding: 0.75rem 0; */
 }
 .performance_garage_wrap {
   height: 90rem;
@@ -1975,8 +1974,7 @@ article.info-bnr-wrap + article.info-video-wrap {
     font-size: 1.25rem;
   }
   .brand .motor_tab .motor_tab_con .lg-txt-btn01 {
-    margin-top: 52px;
-    margin-bottom: 8px;
+    margin-top: 44px;
   }
   .brand .motor_wrap {
     padding-left: 1.5rem;
@@ -2271,7 +2269,7 @@ article.info-bnr-wrap + article.info-video-wrap {
   }
   .brand .gallery-wrap .performance_slide_wrap .btn-wrap-default {
     margin-top: 2.75rem;
-    padding: 0.5rem 0;
+    /* padding: 0.5rem 0; */
   }
   .performance_garage_wrap {
     height: 57.5rem;

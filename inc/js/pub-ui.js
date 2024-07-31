@@ -23,6 +23,12 @@ var pubUi = {
         typeChk = "image";
       } else {
         typeChk = "video";
+        $(".ty01Swiper:not(.banner-swiper) .swiper-slide-active")
+          .find("video")
+          .get(0)
+          .addEventListener("loadeddata", function () {
+            self.videoBulletChk(".ty01Swiper:not(.banner-swiper)", 0, typeChk);
+          });
       }
       self.videoBulletChk(".ty01Swiper:not(.banner-swiper)", 0, typeChk);
     }
