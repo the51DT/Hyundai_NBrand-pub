@@ -2357,7 +2357,7 @@ input[type="radio"]:focus + label {
 }
 
 .ty03Swiper .swiper-pagination-bullet {
-  background: #808080;
+  /* background: #808080; */
   opacity: 1;
   transition: width 0.3s;
 }
