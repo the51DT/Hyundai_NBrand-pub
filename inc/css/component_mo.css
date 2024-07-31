@@ -1795,6 +1795,7 @@ min-width : 1024 css
   .search-result-list .desc {
     font-size: 24px;
     margin-bottom: 36px;
+    text-align: center;
   }
   /* tag */
   .tag-list-wrap [class^="tag-list"] {
