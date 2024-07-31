@@ -2282,7 +2282,9 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   height: 100%;
   object-fit: cover;
 }
-
+.nChannel.models-wrap .content-item03 .conts-section-wrap {
+  padding-top: 160px;
+}
 .nChannel.models-wrap .content-item03.gallery-wrap {
   padding-top: 160px;
   padding-bottom: 200px;
@@ -2303,11 +2305,23 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   padding-top: 160px;
   padding-bottom: 200px;
 }
+.nChannel .intro-wrap .card_type04 .card_con {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 40px;
+}
 .nChannel .sub-conts-wrap {
   padding-top: 80px;
 }
+.nChannel .wrap-list.list04 .inner {
+  border-top: 2px solid #AAA;
+}
 .nChannel .wrap-list.list04 .inner .box:last-child {
   border-bottom: 0;
+  padding-bottom: 0;
+}
+.nChannel .content-item04 .conts-section-wrap.max1440 {
+  gap: 80px;
 }
 .info-container-wrap {
   display: flex;
@@ -2343,6 +2357,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   padding-top: 8px;
 }
 .info-container-wrap > div {
+  width: 50%;
   flex: 1 1 auto;
 }
 .qrcode-box-wrap {
@@ -2391,6 +2406,12 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   padding-bottom: 200px;
 }
 
+.nTaxi.brand.models-wrap .text-strong {
+  font-size: 68px;
+}
+.nTaxi.models-wrap .gallery-wrap .max1440 {
+  padding-bottom: 60px;
+}
 .nTaxi.models-wrap .gallery-wrap {
   padding: 200px 0;
   margin-bottom: 0;
@@ -2411,6 +2432,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   left: 50%;
   bottom: 28px;
   transform: translateX(-50%);
+  width: 100%;
 }
 
 .next-taxi-wrap .grid_2 li .btn-wrap a {
@@ -2419,6 +2441,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   font-weight: 700;
   line-height: 44.8px;
   gap: 8px;
+  font-family: "Hyundai Sans Head", "Malgun Gothic", sans-serif;
 }
 
 .nTaxi .banner-wrap .models-full {
@@ -4098,8 +4121,15 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
     font-size: 18px;
     line-height: 25.2px;
   }
+  .nChannel.brand.models-wrap .text-strong,
+  .nTaxi.brand.models-wrap .text-strong {
+    font-size: 36px;
+  }
   .nChannel .content-box.bnr {
     padding: 56px 24px 96px 24px;
+  }
+  .nChannel.models-wrap .content-item03 .conts-section-wrap {
+    padding-top: 100px;
   }
   .nChannel.models-wrap .content-item03.gallery-wrap {
     padding-top: 100px;
@@ -4115,8 +4145,13 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   .nChannel.models-wrap .content-item03.intro-wrap {
     padding: 100px 24px 120px 24px;
   }
-  .nChannel .conts_card_list .card_con {
-    padding: 28px 0 0 0;
+  .nChannel .intro-wrap .card_type04 .card_con {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 12px;
+  }
+  .nChannel .conts_card_list .card_con > *:not(:last-child) {
+    margin-top: 16px;
   }
   .nChannel .conts_card_list .card_con p {
     font-size: 20px;
@@ -4150,6 +4185,25 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   }
   .nChannel .sub-conts-wrap {
     padding-top: 16px;
+  }
+
+  .nChannel .content-item04 .conts-section-wrap.max1440 {
+    gap: 36px;
+  }
+  .nChannel .content-item04 .conts-section-wrap.max1440 .img-wrap,
+  .nChannel .content-item04 .conts-section-wrap.max1440 .info-container-wrap {
+    padding-top: 8px;
+  }
+
+  .nChannel .conts-section-wrap.type-tab .tab-content .text-strong {
+    font-size: 20px;
+    line-height: 140%;
+  }
+  .nChannel .conts-section-wrap.type-tab {
+    padding-bottom: 120px;
+  }
+  .nChannel .tab-container .tab-content .text-col .text-strong + .text-normal, .models-wrap .text-strong + .text-normal {
+    margin-top: 4px;
   }
 
   .info-container-wrap {
@@ -4207,12 +4261,22 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
     padding-top: 100px;
     padding-bottom: 120px;
   }
+  .nTaxi.models-wrap .gallery-wrap .max1440 {
+    padding-bottom: 36px;
+  }
   .nTaxi.models-wrap .gallery-wrap {
     padding: 120px 0;
+  }
+  .nTaxi.models-wrap .ty02Swiper .swiper-status-wrap {
+    margin-top: 0;
+  }
+  .next-taxi-wrap .grid_2 {
+    gap: 44px;
   }
   .next-taxi-wrap .grid_2 li .btn-wrap a {
     font-size: 20px;
     line-height: 28px;
+    width: 100%;
   }
 
   .nTaxi .banner-wrap .models-full {
