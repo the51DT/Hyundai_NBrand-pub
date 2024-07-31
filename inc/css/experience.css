@@ -243,7 +243,7 @@
   position: unset;
   margin-top: 36px;
   transform: none;
-  width:100%;
+  width: 100%;
   display: flex;
   justify-content: center;
 }
@@ -389,7 +389,8 @@
 .result_wrap .page_wrap > button {
   background-color: #f0f0f0;
 }
-.result_wrap + .btn-wrap-default, .visit_wrap .wrap-list + .btn-wrap-default {
+.result_wrap + .btn-wrap-default,
+.visit_wrap .wrap-list + .btn-wrap-default {
   margin-top: 200px;
   padding: 12px 0;
 }
@@ -996,7 +997,7 @@
 /**  팝업 닫기 버튼 아이콘 시작 **/
 .popup .btn-wrap button.btn-only-icon-notbg.popup-close-btn-x {
   position: absolute;
-  top: 36px;
+  top: 32px;
   right: 35px;
   bottom: calc(100% - 105px);
   z-index: 1000;
@@ -1981,11 +1982,18 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   gap: 10px;
   align-items: center;
 }
-.popup-wrapper .popup-footer .box-confirm .wrap-reaction-icon.wrap-reaction-between {
+.popup-wrapper
+  .popup-footer
+  .box-confirm
+  .wrap-reaction-icon.wrap-reaction-between {
   justify-content: space-between;
   width: 100%;
 }
-.popup-wrapper .popup-footer .box-confirm .wrap-reaction-icon.wrap-reaction-between > div {
+.popup-wrapper
+  .popup-footer
+  .box-confirm
+  .wrap-reaction-icon.wrap-reaction-between
+  > div {
   gap: 10px;
 }
 
@@ -2318,7 +2326,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   padding-top: 80px;
 }
 .nChannel .wrap-list.list04 .inner {
-  border-top: 2px solid #AAA;
+  border-top: 2px solid #aaa;
 }
 .nChannel .wrap-list.list04 .inner .box:last-child {
   border-bottom: 0;
@@ -3076,7 +3084,8 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   .result_wrap > .btn-wrap {
     display: none;
   }
-  .result_wrap + .btn-wrap-default, .visit_wrap .wrap-list + .btn-wrap-default {
+  .result_wrap + .btn-wrap-default,
+  .visit_wrap .wrap-list + .btn-wrap-default {
     margin-top: 120px;
     padding: 8px 0;
   }
@@ -3865,7 +3874,11 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
     width: 100%;
   }
 
-  .popup-wrapper .popup-footer .box-confirm .wrap-reaction-icon.wrap-reaction-between > div {
+  .popup-wrapper
+    .popup-footer
+    .box-confirm
+    .wrap-reaction-icon.wrap-reaction-between
+    > div {
     gap: 20px;
   }
 
@@ -4207,7 +4220,8 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   .nChannel .conts-section-wrap.type-tab {
     padding-bottom: 120px;
   }
-  .nChannel .tab-container .tab-content .text-col .text-strong + .text-normal, .models-wrap .text-strong + .text-normal {
+  .nChannel .tab-container .tab-content .text-col .text-strong + .text-normal,
+  .models-wrap .text-strong + .text-normal {
     margin-top: 4px;
   }
 
