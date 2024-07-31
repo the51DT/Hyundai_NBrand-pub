@@ -2,6 +2,12 @@
 .models-wrap {
   font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
 }
+
+.models-wrap .ty02Swiper .swiper-status-wrap {
+  position: unset;
+  justify-content: center;
+  transform: none;
+}
 .models-wrap .content-item03 {
   padding: 240px 80px 0 80px;
   margin-bottom: 240px;
@@ -699,6 +705,10 @@
   color: #fff;
   padding: 240px 80px;
 }
+
+.models-wrap .tech-wrap .kona-tech .max1440 {
+  max-width: 1440px;
+}
 .models-wrap .tech-wrap .kona-tech .blue-title {
   color: #000;
 }
@@ -867,6 +877,7 @@
   color: #fff;
 }
 .models-wrap .kona-notice-wrap .max1440 {
+  max-width: 1440px;
   align-items: flex-start;
   gap: 20px;
 }
@@ -1732,14 +1743,19 @@
     margin-left: 0;
   }
 
-  .models-wrap .ty02Swiper .swiper-slide .img-area img {
-    height: auto;
+  .models-wrap .ty02Swiper .swiper-wrapper {
+    padding-bottom: 38px;
+  }
+  .models-wrap .ty02Swiper .swiper-bottom-wrap {
+    display: none;
+  }
+  .models-wrap .ty02Swiper .swiper-slide .img-area {
+    min-height: 234px;
   }
   .models-wrap .ty02Swiper .swiper-status-wrap {
     position: unset;
     justify-content: center;
     transform: none;
-    margin-top: 40px;
   }
 
   .models-wrap
