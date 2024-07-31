@@ -125,6 +125,9 @@
   max-width: 1196px;
   width: 100%;
 }
+.models-nofull-box {
+  width: 100%;
+}
 .models-wrap .models-nofull-box[class*="type-row"] .text-col .text-strong,
 .models-wrap .models-nofull-box[class*="type-row"] .text-col .text-normal {
   max-width: 100%;

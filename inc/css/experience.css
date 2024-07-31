@@ -74,7 +74,7 @@
   margin: 0;
 }
 .ranking-wrap .ranking-center .ranking-tabcont + ul {
-  padding: 130px 0 120px 0;
+  padding: 60px 0 120px 0;
 }
 .ranking-wrap .ranking-center .ranking-inner2box {
   display: flex;
@@ -192,22 +192,31 @@
 }
 .nflmain_wrap .content-item05.main-rank {
   background: #f0f0f0;
-  padding: 120px 80px 120px 80px;
+  padding: 120px 0 120px 0;
 }
-.nflmain_wrap .content-item05.main-rank .tab-container {
+.nflmain_wrap .content-item05.main-rank .title-w1440 {
+  padding: 0 80px 40px 80px;
+  max-width: 1600px;
+}
+.nflmain_wrap .content-item05.main-rank .ranking-tabcont {
   max-width: 1440px;
   margin: 0 auto;
 }
 .nflmain_wrap .content-item05.main-rank .tab-head {
   justify-content: flex-end;
+  margin: 0 auto;
   margin-top: -100px;
+  padding: 0 80px;
   padding-bottom: 60px;
+  max-width: 1600px;
 }
 .nflmain_wrap .content-item05.main-rank .ranking-tabcont {
   display: flex;
   justify-content: space-between;
   margin-bottom: 40px;
   align-items: center;
+  padding: 0 80px;
+  max-width: 1600px;
 }
 .nflmain_wrap .content-item06 .rewards-box {
   padding: 160px 80px 240px 80px;
@@ -220,6 +229,8 @@
   padding: 40px 0 50px 0;
   overflow: visible;
   overflow-x: clip;
+  max-width: 1440px;
+  width: calc(100vw - 160px);
 }
 .main-rank .ty03Swiper .card_bottom {
   position: relative;
@@ -228,10 +239,9 @@
   top: 5px;
   left: 5px;
 }
-
 .main-rank .swiper-status-wrap {
   position: unset;
-  margin-top: 40px;
+  margin-top: 36px;
   transform: none;
   width:100%;
   display: flex;
@@ -505,6 +515,10 @@
 
 .guide_wrap.track-ty04 .imgwrap .track-img {
   background-image: url("../../inc/images/content/track-ty04.png");
+}
+
+.guide_wrap.track-ty05 .imgwrap .track-img {
+  background-image: url("../../inc/images/content/track-ty05.png");
 }
 
 /* EP010401 */
@@ -1066,7 +1080,7 @@
 
 .popup-wrapper .popup-header {
   display: flex;
-  padding: 32px 40px;
+  padding: 27.5px 40px;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #787d80;
@@ -1226,7 +1240,7 @@
 .popup-wrapper.invite .popup-body p span.accent {
   color: #de3111;
   font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 700;
   line-height: 140%;
@@ -1898,6 +1912,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
 
 .popup-wrapper .popup-footer .box-result p {
   color: #fff;
+  line-height: normal;
 }
 
 .popup-wrapper .popup-footer .box-result p.blk {
@@ -1965,6 +1980,13 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   display: flex;
   gap: 10px;
   align-items: center;
+}
+.popup-wrapper .popup-footer .box-confirm .wrap-reaction-icon.wrap-reaction-between {
+  justify-content: space-between;
+  width: 100%;
+}
+.popup-wrapper .popup-footer .box-confirm .wrap-reaction-icon.wrap-reaction-between > div {
+  gap: 10px;
 }
 
 .popup-wrapper .popup-footer .box-confirm .wrap-reaction-icon div,
@@ -2264,7 +2286,9 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   height: 100%;
   object-fit: cover;
 }
-
+.nChannel.models-wrap .content-item03 .conts-section-wrap {
+  padding-top: 160px;
+}
 .nChannel.models-wrap .content-item03.gallery-wrap {
   padding-top: 160px;
   padding-bottom: 200px;
@@ -2285,11 +2309,23 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   padding-top: 160px;
   padding-bottom: 200px;
 }
+.nChannel .intro-wrap .card_type04 .card_con {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 40px;
+}
 .nChannel .sub-conts-wrap {
   padding-top: 80px;
 }
+.nChannel .wrap-list.list04 .inner {
+  border-top: 2px solid #AAA;
+}
 .nChannel .wrap-list.list04 .inner .box:last-child {
   border-bottom: 0;
+  padding-bottom: 0;
+}
+.nChannel .content-item04 .conts-section-wrap.max1440 {
+  gap: 80px;
 }
 .info-container-wrap {
   display: flex;
@@ -2325,6 +2361,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   padding-top: 8px;
 }
 .info-container-wrap > div {
+  width: 50%;
   flex: 1 1 auto;
 }
 .qrcode-box-wrap {
@@ -2373,6 +2410,12 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   padding-bottom: 200px;
 }
 
+.nTaxi.brand.models-wrap .text-strong {
+  font-size: 68px;
+}
+.nTaxi.models-wrap .gallery-wrap .max1440 {
+  padding-bottom: 60px;
+}
 .nTaxi.models-wrap .gallery-wrap {
   padding: 200px 0;
   margin-bottom: 0;
@@ -2393,6 +2436,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   left: 50%;
   bottom: 28px;
   transform: translateX(-50%);
+  width: 100%;
 }
 
 .next-taxi-wrap .grid_2 li .btn-wrap a {
@@ -2401,6 +2445,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   font-weight: 700;
   line-height: 44.8px;
   gap: 8px;
+  font-family: "Hyundai Sans Head", "Malgun Gothic", sans-serif;
 }
 
 .nTaxi .banner-wrap .models-full {
@@ -2882,8 +2927,11 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
     margin-top: 100px;
   }
   .nflmain_wrap .content-item05.main-rank {
-    padding: 80px 24px 176px 24px;
+    padding: 80px 0 176px 0;
     position: relative;
+  }
+  .nflmain_wrap .content-item05.main-rank .title-w1440 {
+    padding: 0 24px 40px 24px;
   }
   .nflmain_wrap .content-item05.main-rank .tab-container {
     max-width: 100%;
@@ -2891,6 +2939,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   .nflmain_wrap .content-item05.main-rank .tab-head {
     justify-content: flex-end;
     margin-top: 0;
+    padding: 0 24px;
     padding-bottom: 28px;
   }
   .nflmain_wrap .content-item05.main-rank .tab-head .tabs-wrap .tabs {
@@ -2899,6 +2948,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   .nflmain_wrap .content-item05.main-rank .ranking-tabcont {
     display: block;
     margin-bottom: 0;
+    padding: 0 24px;
   }
   .nflmain_wrap .content-item05.main-rank .ranking-tabcont .btn-wrap {
     position: absolute;
@@ -2907,7 +2957,8 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
     transform: translateX(-50%);
   }
   .nflmain_wrap .content-item05.main-rank .ty03Swiper {
-    padding: 12px 0 48px 0;
+    width: 100%;
+    padding: 12px 24px 48px 24px;
   }
   .nflmain_wrap .content-item05.main-rank .ty03Swiper .swiper-slide {
     max-width: 100%;
@@ -3595,7 +3646,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
     height: auto;
   }
 
-  .popup-wrapper.invite .popup-header p.tit-type05 {
+  .popup-wrapper.invite p.tit-type05 {
     font-size: 18px;
   }
 
@@ -3779,6 +3830,10 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
     padding: 14px 24px;
   }
 
+  .popup-wrapper .popup-footer .btn-wrap-type3 button {
+    width: 100%;
+  }
+
   .popup-wrapper .popup-footer .box-result.pd-sm {
     /* 팝업 중에서 progress 있는 바텀시트의 간격 조절 */
     padding: 14px 24px;
@@ -3807,6 +3862,10 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
 
   .popup-wrapper .popup-footer .box-confirm .wrap-reaction-icon {
     width: 100%;
+  }
+
+  .popup-wrapper .popup-footer .box-confirm .wrap-reaction-icon.wrap-reaction-between > div {
+    gap: 20px;
   }
 
   .popup-wrapper
@@ -4066,8 +4125,15 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
     font-size: 18px;
     line-height: 25.2px;
   }
+  .nChannel.brand.models-wrap .text-strong,
+  .nTaxi.brand.models-wrap .text-strong {
+    font-size: 36px;
+  }
   .nChannel .content-box.bnr {
     padding: 56px 24px 96px 24px;
+  }
+  .nChannel.models-wrap .content-item03 .conts-section-wrap {
+    padding-top: 100px;
   }
   .nChannel.models-wrap .content-item03.gallery-wrap {
     padding-top: 100px;
@@ -4083,8 +4149,13 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   .nChannel.models-wrap .content-item03.intro-wrap {
     padding: 100px 24px 120px 24px;
   }
-  .nChannel .conts_card_list .card_con {
-    padding: 28px 0 0 0;
+  .nChannel .intro-wrap .card_type04 .card_con {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 12px;
+  }
+  .nChannel .conts_card_list .card_con > *:not(:last-child) {
+    margin-top: 16px;
   }
   .nChannel .conts_card_list .card_con p {
     font-size: 20px;
@@ -4118,6 +4189,25 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   }
   .nChannel .sub-conts-wrap {
     padding-top: 16px;
+  }
+
+  .nChannel .content-item04 .conts-section-wrap.max1440 {
+    gap: 36px;
+  }
+  .nChannel .content-item04 .conts-section-wrap.max1440 .img-wrap,
+  .nChannel .content-item04 .conts-section-wrap.max1440 .info-container-wrap {
+    padding-top: 8px;
+  }
+
+  .nChannel .conts-section-wrap.type-tab .tab-content .text-strong {
+    font-size: 20px;
+    line-height: 140%;
+  }
+  .nChannel .conts-section-wrap.type-tab {
+    padding-bottom: 120px;
+  }
+  .nChannel .tab-container .tab-content .text-col .text-strong + .text-normal, .models-wrap .text-strong + .text-normal {
+    margin-top: 4px;
   }
 
   .info-container-wrap {
@@ -4175,12 +4265,22 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
     padding-top: 100px;
     padding-bottom: 120px;
   }
+  .nTaxi.models-wrap .gallery-wrap .max1440 {
+    padding-bottom: 36px;
+  }
   .nTaxi.models-wrap .gallery-wrap {
     padding: 120px 0;
+  }
+  .nTaxi.models-wrap .ty02Swiper .swiper-status-wrap {
+    margin-top: 0;
+  }
+  .next-taxi-wrap .grid_2 {
+    gap: 44px;
   }
   .next-taxi-wrap .grid_2 li .btn-wrap a {
     font-size: 20px;
     line-height: 28px;
+    width: 100%;
   }
 
   .nTaxi .banner-wrap .models-full {

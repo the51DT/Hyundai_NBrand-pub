@@ -70,7 +70,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.25rem 0.75rem 0 0;
+  padding: 12px 16px 11px 16px;
   font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   font-size: 2rem;
   font-weight: 700;
@@ -88,14 +88,14 @@
 .main_summery_card:hover div,
 .main_summery_card:focus div,
 .main_summery_card:active div {
-  color: #de3111;
+  background: #aacae6;
 }
 
-.main_summery_card:hover div::after,
+/* .main_summery_card:hover div::after,
 .main_summery_card:focus div::after,
 .main_summery_card:active div::after {
   background-image: url(../../inc/images/icon/icon-arrow01_right_red.svg);
-}
+} */
 .swiper-title {
   position: absolute;
   left: 3.75rem;
@@ -208,7 +208,7 @@
     display: none;
   }
   .main_summery_card div {
-    padding: 1rem 0.5rem 0 0;
+    padding: 12px 16px;
     font-size: 1.25rem;
   }
   .main_summery_card div::after {
@@ -218,8 +218,8 @@
   .main_summery_card:hover div,
   .main_summery_card:focus div,
   .main_summery_card:active div {
-    padding: 1rem 0.5rem 0 0;
-    background-color: transparent;
+    /* padding: 1rem 0.5rem 0 0; */
+    background-color: #aacae6;
   }
 
   .swiper-title {
