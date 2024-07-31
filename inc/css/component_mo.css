@@ -449,11 +449,11 @@ min-width : 1024 css
   .card_type01 .card_detail li span:last-of-type {
     font-size: 1.125rem;
   }
-  .card_type01 .card_more,
+  /* .card_type01 .card_more,
   .card_type01 .card_more,
   .card_type01 .card_more {
     display: none;
-  }
+  } */
 
   .grid_mo_drop .card_type01 {
     width: 100%;
@@ -1879,7 +1879,7 @@ min-width : 1024 css
 
   /* 공통 : 프로필 영역 클럽(커뮤니티) 가입되어 있을 경우 레이어팝업 노출 */
   .profile-btn-box .club-popup {
-    top:80px;
-    left:0;
+    top: 80px;
+    left: 0;
   }
 }
