@@ -21,7 +21,7 @@
 .title_flex {
   display: flex;
   justify-content: space-between;
-  margin: 0 auto 2.5rem auto;
+  margin: 0 auto 6.25rem auto;
   max-width: 90rem;
 }
 .title_flex .color-white {
@@ -34,7 +34,7 @@
 .sort_flex {
   display: flex;
   justify-content: space-between;
-  margin: 0 auto 3.75rem auto;
+  margin: 0 auto 6.25rem auto;
   max-width: 90rem;
 }
 
@@ -2807,6 +2807,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   .title_flex {
     flex-direction: column;
     row-gap: 1.75rem;
+    margin-bottom: 4rem;
   }
   .title_flex.tilte_padding {
     padding: 0 1.5rem;
@@ -2817,7 +2818,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   .sort_flex {
     flex-direction: column;
     row-gap: 1.25rem;
-    margin-bottom: 2.75rem;
+    margin-bottom: 4rem;
   }
 
   /* EP040401 */
@@ -2903,7 +2904,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   }
   .nflmain_wrap .content-item03 .banner-box .banner-txt-wrap {
     justify-content: flex-start;
-    row-gap: 35px;
+    row-gap: 43px;
     padding: 32px 24px;
   }
   .nflmain_wrap .content-item03 .banner-box > .banner-inner p + p {
