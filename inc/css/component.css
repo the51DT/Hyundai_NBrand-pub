@@ -483,6 +483,7 @@ input[type="radio"]:focus + label {
 .btn[class*="txt-btn"]:hover [class*="icon-link"],
 .btn[class*="txt-btn"]:active [class*="icon-link"] {
   background: url(../../inc/images/icon/icon-link_red.svg);
+  background-size: contain;
 }
 .icon-link-wh {
   background: url(../../inc/images/icon/icon-link_white.svg);

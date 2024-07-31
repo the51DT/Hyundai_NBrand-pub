@@ -18,16 +18,15 @@
   [class*="max1440"]
   .btn-wrap:last-child
   .btn[class*="lg-txt-btn"],
-.models-wrap .btn-wrap-default:last-child .btn[class*="lg-txt-btn"] {
+.btn-wrap-default:last-child .btn[class*="lg-txt-btn"],
+.brand .motor_tab .motor_tab_con .lg-txt-btn01 {
   padding: 12px 0;
 }
 
-.models-wrap
-  .btn-wrap-default:last-child
-  .btn[class*="lg-txt-btn"]:hover::after,
-.models-wrap
-  .btn-wrap-default:last-child
-  .btn[class*="lg-txt-btn"]:active::after,
+.brand .motor_tab .motor_tab_con .lg-txt-btn01:hover::after,
+.brand .motor_tab .motor_tab_con .lg-txt-btn01:active::after,
+.btn-wrap-default:last-child .btn[class*="lg-txt-btn"]:hover::after,
+.btn-wrap-default:last-child .btn[class*="lg-txt-btn"]:active::after,
 .models-wrap
   [class*="content-item"]
   [class*="max1440"]
