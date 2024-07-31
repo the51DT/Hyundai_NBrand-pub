@@ -517,6 +517,10 @@
   background-image: url("../../inc/images/content/track-ty04.png");
 }
 
+.guide_wrap.track-ty05 .imgwrap .track-img {
+  background-image: url("../../inc/images/content/track-ty05.png");
+}
+
 /* EP010401 */
 .standing_top {
   padding: 7.5rem 5rem;
