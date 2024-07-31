@@ -437,6 +437,9 @@
   display: flex;
   column-gap: 12px;
 }
+.mypage-eachbox-top + .mypost-wrap {
+  margin-bottom: 40px;
+}
 .mypost-wrap .mypost-box {
   flex-shrink: 0;
   width: calc(20% - 10px);
@@ -1030,7 +1033,7 @@
   font-size: 24px;
   font-weight: 700;
   line-height: 33.6px;
-  padding-bottom: 12px;
+  padding-bottom: 24px;
 }
 /* 모바일 */
 @media screen and (max-width: 1023px) {
@@ -1058,6 +1061,9 @@
     font-size: 24px;
     font-weight: 700;
     line-height: 33.6px;
+  }
+  .mypage-wrap .mypage-titlebox p {
+    padding-bottom: 8px;
   }
   .mypage-wrap .content-item01 {
     padding: 24px;
@@ -1190,8 +1196,12 @@
     gap: 12px;
     flex-wrap: wrap;
   }
+  .mypage-eachbox-top + .mypost-wrap {
+    margin-bottom: 40px;
+  }
   .mypost-wrap:last-child {
-    margin-bottom: 20px;
+    margin-bottom: 4px;
+    margin-top: 16px;
   }
   .mypost-wrap .mypost-box,
   .mypost-wrap .mypost-box.width3,
@@ -1499,7 +1509,8 @@
     width: fit-content;
   }
   .mypage-community-info {
-    margin-top: -32px;
+    margin-top: 0;
+    margin-bottom: 20px;
   }
   .mypage-community-info .info-top {
     padding: 20px 24px;
@@ -1538,7 +1549,10 @@
     position: static;
   }
   .mypage-community-tab .mymsission-wrap {
-    margin-top: 20px;
+    margin-top: 24px;
+  }
+  .mypage-community-tab .tab-content {
+    margin-top: 4px;
   }
   .mypage-community-des .btn-only-icon-bg03-square {
     width: 24px;
@@ -1588,5 +1602,8 @@
   }
   .mypage-wrap .mypage-eachbox-top.type3 + .mymsission-wrap li .btn-wrap-type1 {
     margin-top: 16px;
+  }
+  .mypage-wrap .mypage-eachbox-top.type4 .btn-wrap-type6 {
+    margin-bottom: 20px;
   }
 }
