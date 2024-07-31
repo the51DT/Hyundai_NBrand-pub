@@ -74,7 +74,7 @@
   margin: 0;
 }
 .ranking-wrap .ranking-center .ranking-tabcont + ul {
-  padding: 130px 0 120px 0;
+  padding: 60px 0 120px 0;
 }
 .ranking-wrap .ranking-center .ranking-inner2box {
   display: flex;
@@ -192,22 +192,31 @@
 }
 .nflmain_wrap .content-item05.main-rank {
   background: #f0f0f0;
-  padding: 120px 80px 120px 80px;
+  padding: 120px 0 120px 0;
 }
-.nflmain_wrap .content-item05.main-rank .tab-container {
+.nflmain_wrap .content-item05.main-rank .title-w1440 {
+  padding: 0 80px 40px 80px;
+  max-width: 1600px;
+}
+.nflmain_wrap .content-item05.main-rank .ranking-tabcont {
   max-width: 1440px;
   margin: 0 auto;
 }
 .nflmain_wrap .content-item05.main-rank .tab-head {
   justify-content: flex-end;
+  margin: 0 auto;
   margin-top: -100px;
+  padding: 0 80px;
   padding-bottom: 60px;
+  max-width: 1600px;
 }
 .nflmain_wrap .content-item05.main-rank .ranking-tabcont {
   display: flex;
   justify-content: space-between;
   margin-bottom: 40px;
   align-items: center;
+  padding: 0 80px;
+  max-width: 1600px;
 }
 .nflmain_wrap .content-item06 .rewards-box {
   padding: 160px 80px 240px 80px;
@@ -220,6 +229,8 @@
   padding: 40px 0 50px 0;
   overflow: visible;
   overflow-x: clip;
+  max-width: 1440px;
+  width: calc(100vw - 160px);
 }
 .main-rank .ty03Swiper .card_bottom {
   position: relative;
@@ -228,10 +239,9 @@
   top: 5px;
   left: 5px;
 }
-
 .main-rank .swiper-status-wrap {
   position: unset;
-  margin-top: 40px;
+  margin-top: 36px;
   transform: none;
   width:100%;
   display: flex;
@@ -1066,7 +1076,7 @@
 
 .popup-wrapper .popup-header {
   display: flex;
-  padding: 32px 40px;
+  padding: 27.5px 40px;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #787d80;
@@ -1226,7 +1236,7 @@
 .popup-wrapper.invite .popup-body p span.accent {
   color: #de3111;
   font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 700;
   line-height: 140%;
@@ -1898,6 +1908,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
 
 .popup-wrapper .popup-footer .box-result p {
   color: #fff;
+  line-height: normal;
 }
 
 .popup-wrapper .popup-footer .box-result p.blk {
@@ -1965,6 +1976,13 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   display: flex;
   gap: 10px;
   align-items: center;
+}
+.popup-wrapper .popup-footer .box-confirm .wrap-reaction-icon.wrap-reaction-between {
+  justify-content: space-between;
+  width: 100%;
+}
+.popup-wrapper .popup-footer .box-confirm .wrap-reaction-icon.wrap-reaction-between > div {
+  gap: 10px;
 }
 
 .popup-wrapper .popup-footer .box-confirm .wrap-reaction-icon div,
@@ -2882,8 +2900,11 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
     margin-top: 100px;
   }
   .nflmain_wrap .content-item05.main-rank {
-    padding: 80px 24px 176px 24px;
+    padding: 80px 0 176px 0;
     position: relative;
+  }
+  .nflmain_wrap .content-item05.main-rank .title-w1440 {
+    padding: 0 24px 40px 24px;
   }
   .nflmain_wrap .content-item05.main-rank .tab-container {
     max-width: 100%;
@@ -2891,6 +2912,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   .nflmain_wrap .content-item05.main-rank .tab-head {
     justify-content: flex-end;
     margin-top: 0;
+    padding: 0 24px;
     padding-bottom: 28px;
   }
   .nflmain_wrap .content-item05.main-rank .tab-head .tabs-wrap .tabs {
@@ -2899,6 +2921,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   .nflmain_wrap .content-item05.main-rank .ranking-tabcont {
     display: block;
     margin-bottom: 0;
+    padding: 0 24px;
   }
   .nflmain_wrap .content-item05.main-rank .ranking-tabcont .btn-wrap {
     position: absolute;
@@ -2907,7 +2930,8 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
     transform: translateX(-50%);
   }
   .nflmain_wrap .content-item05.main-rank .ty03Swiper {
-    padding: 12px 0 48px 0;
+    width: 100%;
+    padding: 12px 24px 48px 24px;
   }
   .nflmain_wrap .content-item05.main-rank .ty03Swiper .swiper-slide {
     max-width: 100%;
@@ -3779,6 +3803,10 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
     padding: 14px 24px;
   }
 
+  .popup-wrapper .popup-footer .btn-wrap-type3 button {
+    width: 100%;
+  }
+
   .popup-wrapper .popup-footer .box-result.pd-sm {
     /* 팝업 중에서 progress 있는 바텀시트의 간격 조절 */
     padding: 14px 24px;
@@ -3807,6 +3835,10 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
 
   .popup-wrapper .popup-footer .box-confirm .wrap-reaction-icon {
     width: 100%;
+  }
+
+  .popup-wrapper .popup-footer .box-confirm .wrap-reaction-icon.wrap-reaction-between > div {
+    gap: 20px;
   }
 
   .popup-wrapper
