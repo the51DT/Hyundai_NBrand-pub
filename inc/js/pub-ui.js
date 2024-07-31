@@ -77,19 +77,7 @@ var pubUi = {
       var videoChk = targetSwiper.find(".swiper-slide-active video");
       var swiperIndex = targetSwiper.find(".swiper-slide-active").index();
 
-      if (targetSwiper.hasClass("ty02Swiper")) {
-        if ($(this).hasClass("on")) {
-          // console.log("정지버튼 클릭!");
-          $(this).removeClass("on");
-          $(this).attr("title", "정지");
-          targetSwiper[0].swiper.autoplay.stop();
-        } else {
-          // console.log("재생버튼 클릭!");
-          $(this).addClass("on");
-          $(this).attr("title", "재생");
-          targetSwiper[0].swiper.autoplay.start();
-        }
-      } else if (targetSwiper.hasClass("ty01Swiper")) {
+      if (targetSwiper.hasClass("ty01Swiper")) {
         if ($(this).hasClass("on")) {
           // console.log("정지버튼 클릭!");
           $(this).removeClass("on");
@@ -119,6 +107,18 @@ var pubUi = {
               "image"
             );
           }
+        }
+      } else {
+        if ($(this).hasClass("on")) {
+          // console.log("정지버튼 클릭!");
+          $(this).removeClass("on");
+          $(this).attr("title", "정지");
+          targetSwiper[0].swiper.autoplay.stop();
+        } else {
+          // console.log("재생버튼 클릭!");
+          $(this).addClass("on");
+          $(this).attr("title", "재생");
+          targetSwiper[0].swiper.autoplay.start();
         }
       }
     });
