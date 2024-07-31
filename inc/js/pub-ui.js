@@ -1845,7 +1845,7 @@ function perforSlideMoveFun() {
 function modelsVideoPlay() {
   $(".models-wrap .content-item02 .btn-only-icon-bg01-square").click(
     function () {
-      console.log("비디오 재생 ing");
+      // console.log("비디오 재생 ing");
       var videoPc = $(this).siblings("video.pc-only").get(0);
       var videoMo = $(this).siblings("video.mo-only").get(0);
       var icon = $(this).children(".btn-icon24");
@@ -1888,7 +1888,7 @@ function modelsVideoPlay() {
 
   // 비디오가 끝났을 때 썸네일 나오도록
   $(".models-wrap .content-item02 video").on("ended", function () {
-    console.log("비디오 끝 / 썸넬 시작");
+    // console.log("비디오 끝 / 썸넬 시작");
     var icon = $(this).siblings("button").children(".btn-icon24");
     icon.attr("class", "btn-icon24 icon-play-wh");
   });
@@ -2173,7 +2173,7 @@ function scrollEvent() {
         } else if (scrollTop <= historyItemOffset[0]) {
           moveItemTop = historyItemPosition[0];
         }
-        console.log(_this.attr("class"));
+        // console.log(_this.attr("class"));
       }
       moveItem.css("top", moveItemTop + dateGap);
     });

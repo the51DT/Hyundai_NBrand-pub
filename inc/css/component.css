@@ -2357,7 +2357,7 @@ input[type="radio"]:focus + label {
 }
 
 .ty03Swiper .swiper-pagination-bullet {
-  background: #808080;
+  /* background: #808080; */
   opacity: 1;
   transition: width 0.3s;
 }
@@ -2367,7 +2367,7 @@ input[type="radio"]:focus + label {
 }
 .ty03Swiper .swiper-button-prev,
 .ty03Swiper .swiper-button-next {
-  top: 43%;
+  top: 50%;
 }
 
 .ty04Swiper .swiper-slide ul li {
@@ -3312,8 +3312,7 @@ input[type="radio"]:focus + label {
 .dropdown.centered .dropdown-menu .wrap-filter {
   padding: 0 40px;
   overflow-y: auto;
-  /* max-height: 40rem; */
-  max-height: 34rem;
+  max-height: 41.5rem;
   background-color: #fff;
 }
 .dropdown.centered
