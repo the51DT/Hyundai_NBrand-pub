@@ -23,6 +23,12 @@ var pubUi = {
         typeChk = "image";
       } else {
         typeChk = "video";
+        $(".ty01Swiper:not(.banner-swiper) .swiper-slide-active")
+          .find("video")
+          .get(0)
+          .addEventListener("loadeddata", function () {
+            self.videoBulletChk(".ty01Swiper:not(.banner-swiper)", 0, typeChk);
+          });
       }
       self.videoBulletChk(".ty01Swiper:not(.banner-swiper)", 0, typeChk);
     }
@@ -81,7 +87,7 @@ var pubUi = {
         if ($(this).hasClass("on")) {
           // console.log("정지버튼 클릭!");
           $(this).removeClass("on");
-          $(this).attr("title", "정지");
+          $(this).attr("title", "재생");
           if (videoChk.length > 0) {
             videoChk[0].pause();
             videoChk[0].currentTime = 0;
@@ -92,7 +98,7 @@ var pubUi = {
         } else {
           // console.log("재생버튼 클릭!");
           $(this).addClass("on");
-          $(this).attr("title", "재생");
+          $(this).attr("title", "정지");
           if (videoChk.length > 0) {
             videoChk[0].play();
             pubUi.videoBulletChk(
@@ -112,12 +118,12 @@ var pubUi = {
         if ($(this).hasClass("on")) {
           // console.log("정지버튼 클릭!");
           $(this).removeClass("on");
-          $(this).attr("title", "정지");
+          $(this).attr("title", "재생");
           targetSwiper[0].swiper.autoplay.stop();
         } else {
           // console.log("재생버튼 클릭!");
           $(this).addClass("on");
-          $(this).attr("title", "재생");
+          $(this).attr("title", "정지");
           targetSwiper[0].swiper.autoplay.start();
         }
       }
@@ -131,12 +137,12 @@ var pubUi = {
       if (self.$btnSound.hasClass("on")) {
         // console.log("소리 끄기 버튼 클릭!");
         self.$btnSound.removeClass("on");
-        self.$btnSound.attr("title", "소리 끄기");
+        self.$btnSound.attr("title", "소리 켜기");
         targetSwiper.find("video").prop("muted", true);
       } else {
         // console.log("소리 켜기버튼 클릭!");
         self.$btnSound.addClass("on");
-        self.$btnSound.attr("title", "소리 켜기");
+        self.$btnSound.attr("title", "소리 끄기");
         targetSwiper.find("video").prop("muted", false);
       }
     });
@@ -478,6 +484,10 @@ var pubUi = {
       spaceBetween: 80,
       centeredSlides: true,
       loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
       pagination: {
         el: ".swiper-pagination-custom",
         clickable: true,
@@ -782,9 +792,19 @@ var pubUi = {
     ).offsetHeight;
 
     var navHeight = headerHeight + navBarHeight;
+    
 
     contentItem.forEach((evt, idx) => {
-      contentItem[idx].setAttribute("data-scroll", idx + 1); // 각 콘텐츠에 data-scroll 생성
+      if (contentItem[idx].querySelector(".blue-title")) {
+        contentItem[idx].classList.add("active");
+      }
+      //contentItem[idx].setAttribute("data-scroll", idx + 1); // 각 콘텐츠에 data-scroll 생성
+    });
+
+    var contentActiveItem = document.querySelectorAll(".content-area > [class*=content-item].active");      
+
+    contentActiveItem.forEach((evt, idx) => {
+      contentActiveItem[idx].setAttribute("data-scroll", idx + 1); // 각 콘텐츠에 data-scroll 생성
 
       if (evt.dataset.scroll == dataScroll) {
         //nav data-scroll과 값비교 후 동일 대상 체크
@@ -793,6 +813,7 @@ var pubUi = {
 
       $("body").animate({ scrollTop: offsetTopVal }, 300);
     });
+    
   },
   listContsActive: function (target) {
     var targetSwiper = $(target).parents(".swiper-slide");
@@ -907,20 +928,12 @@ $(document).ready(function () {
   pubUi.overScroll(".related-wrap .models-nofull-box");
 
   toggleFullscreen();
-  swiper4SlideEvt();
+
   btnNaviCheck();
   $(window).resize(function () {
     if ($(window).innerWidth() < 1024) {
-      if (self.swiper2.length > 0) {
-        for (var i = 0; i < self.swiper2.length; i++) {
-          self.swiper2[i].destroy();
-          // console.log("swiper2 destroy!!!");
-        }
-      } else {
-        if (self.swiper2.slides.length > 0 && self.swiper2 != undefined) {
-          self.swiper2.destroy();
-          // console.log("swiper2 destroy")
-        }
+      if ($(".ty02Swiper").length > 0) {
+        self.swiper2.destroy();
       }
 
       swiper2SlideEvt();
@@ -928,18 +941,6 @@ $(document).ready(function () {
       //07.29 추가
       if ($(".evt-map-wrap").length > 0) {
         scrollToCenter(".event-box .evt-map-img");
-      }
-    }
-
-    if (self.swiper4.length > 0) {
-      for (var i = 0; i < self.swiper4.length; i++) {
-        self.swiper4[i].destroy();
-        // console.log("swiper4 destroy!!!");
-      }
-    } else {
-      if (self.swiper4.slides.length > 0 && self.swiper4 != undefined) {
-        self.swiper4.destroy();
-        // console.log("swiper4 destroy");
       }
     }
   });
@@ -1007,10 +1008,10 @@ function swiper2SlideEvt() {
     grabCursor: true,
     centeredSlides: true,
     slidesPerView: "auto",
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
+    // autoplay: {
+    //   delay: 3000,
+    //   disableOnInteraction: false,
+    // },
     loop: loopVal,
     coverflowEffect: {
       rotate: 0, //각도
@@ -1839,7 +1840,7 @@ function perforSlideMoveFun() {
 function modelsVideoPlay() {
   $(".models-wrap .content-item02 .btn-only-icon-bg01-square").click(
     function () {
-      console.log("비디오 재생 ing");
+      // console.log("비디오 재생 ing");
       var videoPc = $(this).siblings("video.pc-only").get(0);
       var videoMo = $(this).siblings("video.mo-only").get(0);
       var icon = $(this).children(".btn-icon24");
@@ -1882,7 +1883,7 @@ function modelsVideoPlay() {
 
   // 비디오가 끝났을 때 썸네일 나오도록
   $(".models-wrap .content-item02 video").on("ended", function () {
-    console.log("비디오 끝 / 썸넬 시작");
+    // console.log("비디오 끝 / 썸넬 시작");
     var icon = $(this).siblings("button").children(".btn-icon24");
     icon.attr("class", "btn-icon24 icon-play-wh");
   });
@@ -2116,6 +2117,9 @@ function scrollEvent() {
     $(".navigation_bar-wrap .gage.on").css("--bar", `${scrollY}%`);
 
     contentItem.forEach((evt, idx) => {
+      if (contentItem[idx].querySelector(".blue-title")) {
+        contentItem[idx].classList.add("active");
+      }
       contentItem[idx].setAttribute("data-scroll", idx + 1); // 각 콘텐츠에 data-scroll 생성
     });
 
@@ -2167,7 +2171,7 @@ function scrollEvent() {
         } else if (scrollTop <= historyItemOffset[0]) {
           moveItemTop = historyItemPosition[0];
         }
-        console.log(_this.attr("class"));
+        // console.log(_this.attr("class"));
       }
       moveItem.css("top", moveItemTop + dateGap);
     });

@@ -2,6 +2,12 @@
 .models-wrap {
   font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
 }
+
+.models-wrap .ty02Swiper .swiper-status-wrap {
+  position: unset;
+  justify-content: center;
+  transform: none;
+}
 .models-wrap .content-item03 {
   padding: 240px 80px 0 80px;
   margin-bottom: 240px;
@@ -12,6 +18,40 @@
   width: 100%;
   max-height: calc(var(--vh, 1vh) * 100 - 70px);
 }
+
+.models-wrap
+  [class*="content-item"]
+  [class*="max1440"]
+  .btn-wrap:last-child
+  .btn[class*="lg-txt-btn"],
+.btn-wrap-default:last-child .btn[class*="lg-txt-btn"],
+.brand .motor_tab .motor_tab_con .lg-txt-btn01 {
+  padding: 12px 0;
+}
+
+.brand .motor_tab .motor_tab_con .lg-txt-btn01:hover::after,
+.brand .motor_tab .motor_tab_con .lg-txt-btn01:active::after,
+.btn-wrap-default:last-child .btn[class*="lg-txt-btn"]:hover::after,
+.btn-wrap-default:last-child .btn[class*="lg-txt-btn"]:active::after,
+.models-wrap
+  [class*="content-item"]
+  [class*="max1440"]
+  .btn-wrap:last-child
+  .btn[class*="lg-txt-btn"]:hover::after,
+.models-wrap
+  [class*="content-item"]
+  [class*="max1440"]
+  .btn-wrap:last-child
+  .btn[class*="lg-txt-btn"]:active::after {
+  width: 100%;
+  height: 3px;
+  background-color: #de3111;
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+}
+
 .models-wrap [class*="max1440"] {
   margin: 0 auto;
   display: flex;
@@ -665,6 +705,10 @@
   color: #fff;
   padding: 240px 80px;
 }
+
+.models-wrap .tech-wrap .kona-tech .max1440 {
+  max-width: 1440px;
+}
 .models-wrap .tech-wrap .kona-tech .blue-title {
   color: #000;
 }
@@ -833,6 +877,7 @@
   color: #fff;
 }
 .models-wrap .kona-notice-wrap .max1440 {
+  max-width: 1440px;
   align-items: flex-start;
   gap: 20px;
 }
@@ -1698,13 +1743,49 @@
     margin-left: 0;
   }
 
-  .models-wrap .ty02Swiper .swiper-slide .img-area img {
-    height: auto;
+  .models-wrap .ty02Swiper .swiper-wrapper {
+    padding-bottom: 38px;
+  }
+  .models-wrap .ty02Swiper .swiper-bottom-wrap {
+    display: none;
+  }
+  .models-wrap .ty02Swiper .swiper-slide .img-area {
+    min-height: 234px;
   }
   .models-wrap .ty02Swiper .swiper-status-wrap {
     position: unset;
     justify-content: center;
     transform: none;
-    margin-top: 40px;
+  }
+
+  .models-wrap
+    [class*="content-item"]
+    [class*="max1440"]
+    .btn-wrap:last-child
+    .btn[class*="lg-txt-btn"],
+  .models-wrap .btn-wrap-default:last-child .btn[class*="lg-txt-btn"],
+  .brand .motor_tab .motor_tab_con .lg-txt-btn01 {
+    padding: 8px 0;
+  }
+
+  .brand .motor_tab .motor_tab_con .lg-txt-btn01:hover::after,
+  .brand .motor_tab .motor_tab_con .lg-txt-btn01:active::after,
+  .models-wrap
+    .btn-wrap-default:last-child
+    .btn[class*="lg-txt-btn"]:hover::after,
+  .models-wrap
+    .btn-wrap-default:last-child
+    .btn[class*="lg-txt-btn"]:active::after,
+  .models-wrap
+    [class*="content-item"]
+    [class*="max1440"]
+    .btn-wrap:last-child
+    .btn[class*="lg-txt-btn"]:hover::after,
+  .models-wrap
+    [class*="content-item"]
+    [class*="max1440"]
+    .btn-wrap:last-child
+    .btn[class*="lg-txt-btn"]:active::after {
+    bottom: 3px;
   }
 }

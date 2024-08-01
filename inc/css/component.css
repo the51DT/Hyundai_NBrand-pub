@@ -483,6 +483,7 @@ input[type="radio"]:focus + label {
 .btn[class*="txt-btn"]:hover [class*="icon-link"],
 .btn[class*="txt-btn"]:active [class*="icon-link"] {
   background: url(../../inc/images/icon/icon-link_red.svg);
+  background-size: contain;
 }
 .icon-link-wh {
   background: url(../../inc/images/icon/icon-link_white.svg);
@@ -991,9 +992,9 @@ input[type="radio"]:focus + label {
 }
 .conts-key-visual .text-area .desc {
   font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
-  font-size: 32px;
+  font-size: 20px;
   font-weight: 700;
-  line-height: 44.8px;
+  line-height: 140%;
   margin-top: 16px;
   text-align: center;
 }
@@ -1100,7 +1101,7 @@ input[type="radio"]:focus + label {
 }
 
 .conts-box-wrap .bg-img-wrap .more_btn {
-  margin-top: 60px;
+  margin-top: 40px;
 }
 .txt-list-wrap {
   display: flex;
@@ -1710,7 +1711,9 @@ input[type="radio"]:focus + label {
   white-space: nowrap;
   text-align: left;
 }
-.card_type04 .card-hashtag button.txt-type04:hover {
+.card_type04 .card-hashtag button.txt-type04:hover, 
+.card_video .card_tag button:hover,
+.ty02Swiper .text-area .list-box button:hover {
   text-decoration: underline;
 }
 .card_type04 .card_date {
@@ -1968,15 +1971,34 @@ input[type="radio"]:focus + label {
   display: none;
 }
 .swiper-pagination-bullet {
-  opacity: 0.5;
   width: 8px;
   height: 4px;
   border-radius: 0;
   transition: width 0.3s;
+  opacity: 1;
+  position: relative;
+  background: transparent;
+}
+.swiper-pagination-bullet::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  background: #000;
+}
+.ty01Swiper .swiper-pagination-bullet::after {
+  background: #fff;
 }
 
 .swiper-pagination-bullet:not(:last-child) {
-  margin-right: 6px !important;
+  margin: 0 6px 0 0 !important;
+}
+
+.swiper-pagination-bullet:last-child {
+  margin: 0 !important;
 }
 
 .swiper-slide img {
@@ -1986,7 +2008,6 @@ input[type="radio"]:focus + label {
   object-fit: cover;
 }
 .ty01Swiper .swiper-pagination-bullet {
-  background: #fff;
 }
 
 /* .swiper-pagination-custom .swiper-pagination-bullet{} */
@@ -1994,18 +2015,17 @@ input[type="radio"]:focus + label {
   width: 84px;
   height: 4px;
   position: relative;
-  background: #808080;
-  opacity: 1;
+  background: transparent;
+  /* opacity: 1; */
 }
 
-.ty01Swiper.banner-swiper
-  .swiper-pagination-custom
-  .swiper-pagination-bullet-active {
+.swiper-pagination-bullet-active::after {
   background: #de3111;
 }
 
 .swiper-pagination-custom .swiper-pagination-bullet-active .seek-bar {
   background: #de3111;
+  z-index: 1;
   height: 4px;
   position: absolute;
   top: 0;
@@ -2096,7 +2116,7 @@ input[type="radio"]:focus + label {
 
 .swiper-status-wrap .btn-wrap {
   display: flex;
-  flex: 1;
+  /* flex: 1; */
   padding-left: 24px;
 }
 .swiper-status-wrap .btn-wrap .btn {
@@ -2339,7 +2359,7 @@ input[type="radio"]:focus + label {
 }
 
 .ty03Swiper .swiper-pagination-bullet {
-  background: #808080;
+  /* background: #808080; */
   opacity: 1;
   transition: width 0.3s;
 }
@@ -2349,7 +2369,7 @@ input[type="radio"]:focus + label {
 }
 .ty03Swiper .swiper-button-prev,
 .ty03Swiper .swiper-button-next {
-  top: 43%;
+  top: 50%;
 }
 
 .ty04Swiper .swiper-slide ul li {
@@ -2624,7 +2644,7 @@ input[type="radio"]:focus + label {
 
 /* bottom list start (list01, list02, list05 only) */
 .wrap-list .__bottom {
-  border-top: 2px solid #787d80;
+  border-top: 2px solid #AAA;
   margin-top: 40px;
   margin-bottom: 60px;
 }
@@ -3294,8 +3314,7 @@ input[type="radio"]:focus + label {
 .dropdown.centered .dropdown-menu .wrap-filter {
   padding: 0 40px;
   overflow-y: auto;
-  /* max-height: 40rem; */
-  max-height: 34rem;
+  max-height: 41.5rem;
   background-color: #fff;
 }
 .dropdown.centered
@@ -4455,11 +4474,11 @@ table {
 } */
 .table-type01 thead tr,
 .table-type02 thead tr {
-  border-bottom: 2px solid #787d80;
+  border-bottom: 2px solid #AAA;
 }
 .table-type03 thead tr {
-  border-top: 2px solid #787d80;
-  border-bottom: 2px solid #787d80;
+  border-top: 2px solid #AAA;
+  border-bottom: 2px solid #AAA;
   background-color: #b0c5e0;
 }
 .table-type01 thead th {

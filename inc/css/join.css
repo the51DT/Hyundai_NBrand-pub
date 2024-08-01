@@ -126,6 +126,22 @@
   display: flex;
   justify-content: center;
 }
+.mypage-wrap .mypage-nav .btn-wrap .btn {
+  padding: 12px 0;
+  position: relative;
+}
+.mypage-wrap .mypage-nav .btn-wrap .btn[class*="md-txt-btn"]:hover:after,
+.mypage-wrap .mypage-nav .btn-wrap .btn[class*="md-txt-btn"]:active:after {
+  content: "";
+  display: block !important;
+  width: 100%;
+  height: 2px;
+  background-color: #de3111;
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+}
+
 .mypage-wrap .mypage-content {
   display: flex;
   flex-direction: column;
@@ -141,6 +157,20 @@
 .mypage-wrap .mypage-content .move-wrap {
   margin-top: 16px;
   text-align: end;
+}
+.mypage-wrap .mypage-content .move-wrap a {
+  padding: 12px 0;
+}
+.mypage-wrap .mypage-content .move-wrap a:hover::after,
+.mypage-wrap .mypage-content .move-wrap a:active::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #de3111;
+  position: absolute;
+  bottom: 7px;
+  left: 0;
 }
 /* 로그인 팝업 */
 .logout_popup_wrap {
@@ -407,6 +437,9 @@
   display: flex;
   column-gap: 12px;
 }
+.mypage-eachbox-top + .mypost-wrap {
+  margin-bottom: 40px;
+}
 .mypost-wrap .mypost-box {
   flex-shrink: 0;
   width: calc(20% - 10px);
@@ -454,7 +487,7 @@
   text-align: end;
 }
 .mymsission-wrap {
-  border-top: 1px solid #787d80;
+  border-top: 2px solid #AAA;
 }
 .mymsission-wrap + .mymsission-wrap {
   border-top: 0;
@@ -622,7 +655,7 @@
 .mypage-eachbox-top {
   display: flex;
   justify-content: space-between;
-  border-bottom: 2px solid #787d80;
+  border-bottom: 2px solid #AAA;
 }
 .mypage-eachbox-top.type2 {
   display: block;
@@ -652,6 +685,9 @@
   display: flex;
   flex-direction: column;
   border-bottom: 0;
+}
+.mypage-eachbox-top + .mypage-eachbox-point {
+  margin-top: -40px;
 }
 .mypage-subtit-box {
   display: flex;
@@ -933,6 +969,9 @@
 .tab-container.mypage-community-tab .tabs {
   text-align: center;
 }
+.mypage-community-tab .tab-content {
+  margin-top: 24px;
+}
 @media screen and (max-width: 1080px) {
   .mypage-community-tab .tabs {
     flex-direction: column;
@@ -994,10 +1033,17 @@
   font-size: 24px;
   font-weight: 700;
   line-height: 33.6px;
-  padding-bottom: 12px;
+  padding-bottom: 24px;
 }
 /* 모바일 */
 @media screen and (max-width: 1023px) {
+  .mypage-wrap .mypage-content .move-wrap a {
+    padding: 8px 0;
+  }
+  .mypage-wrap .mypage-content .move-wrap a:hover::after,
+  .mypage-wrap .mypage-content .move-wrap a:active::after {
+    bottom: 5px;
+  }
   .content-top.join_top_wrap .tit-type01 {
     font-size: 2.5rem;
     line-height: 125%;
@@ -1015,6 +1061,9 @@
     font-size: 24px;
     font-weight: 700;
     line-height: 33.6px;
+  }
+  .mypage-wrap .mypage-titlebox p {
+    padding-bottom: 8px;
   }
   .mypage-wrap .content-item01 {
     padding: 24px;
@@ -1099,6 +1148,9 @@
     display: flex;
     justify-content: center;
   }
+  .mypage-wrap .mypage-nav .btn-wrap .btn {
+    padding: 8px 0;
+  }
   .mypage-wrap .mypage-content {
     padding: 0 24px;
     gap: 44px;
@@ -1143,6 +1195,13 @@
     display: flex;
     gap: 12px;
     flex-wrap: wrap;
+  }
+  .mypage-eachbox-top + .mypost-wrap {
+    margin-bottom: 40px;
+  }
+  .mypost-wrap:last-child {
+    margin-bottom: 4px;
+    margin-top: 16px;
   }
   .mypost-wrap .mypost-box,
   .mypost-wrap .mypost-box.width3,
@@ -1313,6 +1372,9 @@
   .mypage-eachbox-top + .mypage-nodata-onlytext p {
     padding-top: 86px;
   }
+  .mypage-eachbox-top + .mypage-eachbox-point {
+    margin-top: 0;
+  }
   .mypage-nodata-box {
     gap: 20px;
   }
@@ -1333,7 +1395,6 @@
   .mypage-subtit-box.type2,
   .mypage-subtit-box.type3 {
     gap: 8px;
-    padding-bottom: 28px;
   }
   .mypost-wrap + .mypost-contents.type3 {
     margin-top: 32px;
@@ -1448,7 +1509,8 @@
     width: fit-content;
   }
   .mypage-community-info {
-    margin-top: -32px;
+    margin-top: 0;
+    margin-bottom: 20px;
   }
   .mypage-community-info .info-top {
     padding: 20px 24px;
@@ -1487,7 +1549,10 @@
     position: static;
   }
   .mypage-community-tab .mymsission-wrap {
-    margin-top: 20px;
+    margin-top: 24px;
+  }
+  .mypage-community-tab .tab-content {
+    margin-top: 4px;
   }
   .mypage-community-des .btn-only-icon-bg03-square {
     width: 24px;
@@ -1537,5 +1602,8 @@
   }
   .mypage-wrap .mypage-eachbox-top.type3 + .mymsission-wrap li .btn-wrap-type1 {
     margin-top: 16px;
+  }
+  .mypage-wrap .mypage-eachbox-top.type4 .btn-wrap-type6 {
+    margin-bottom: 20px;
   }
 }

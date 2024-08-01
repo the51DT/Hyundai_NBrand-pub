@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name=" format-detection" content="telephone=no" />
-    <title>N브랜드 | Join_MyPage_Main</title>
+    <title>N브랜드 | Brand_N Merchandise</title>
     <link
       type="text/css"
       rel="stylesheet"
@@ -16,7 +16,7 @@
 
   <body>
     <div class="wrap">
-      <!-- 07.18 수정 : header 추가 -->
+      <!-- 07.17 수정 : header 추가 -->
       <header class="header-wrap">
         <div class="header-cont">
           <h1 class="logo">
@@ -103,7 +103,9 @@
                           >
                         </li>
                         <li>
-                          <a href="#" class="gnb__tab02-btn04">N Merchandise</a>
+                          <a href="#" class="gnb__tab02-btn04 active"
+                            >N Merchandise</a
+                          >
                         </li>
                         <li><a href="#" class="gnb__tab02-btn05">Press</a></li>
                       </ul>
@@ -1025,20 +1027,14 @@
                 aria-haspopup="true"
                 aria-expanded="false"
               >
-                Mypage
+                N Merchandise
               </button>
               <ul class="navigation-menu" id="navigationMenu">
-                <li><a href="#" class="active">Mypage</a></li>
-                <li><a href="#">Notification</a></li>
-                <li><a href="#">Post</a></li>
-                <li><a href="#">Missions</a></li>
-                <li><a href="#">Rewards</a></li>
-                <li><a href="#">Point</a></li>
-                <li><a href="#">N Community</a></li>
-                <li><a href="#">N Community management</a></li>
-                <li><a href="#">1:1 Inquiry</a></li>
-                <li><a href="#">Invite friends</a></li>
-                <li><a href="#">Withdrawal</a></li>
+                <li><a href="#">Hyundai N</a></li>
+                <li><a href="#">Motorsports</a></li>
+                <li><a href="#">N Performance Parts</a></li>
+                <li><a href="#" class="active">N Merchandise</a></li>
+                <li><a href="#">Press</a></li>
               </ul>
             </div>
             <div class="navigation-item03">
@@ -1085,1059 +1081,1091 @@
           <span class="gage"></span>
         </div>
       </header>
-      <!-- //07.18 수정 : header 추가 -->
-      <section class="content-wrap mypage-wrap">
-        <div class="content-area">
+      <!-- //07.17 수정 : header 추가 -->
+      <section class="content-wrap brand">
+        <!-- 07.18 수정 : brand 클래스 위치 변경 -->
+        <div class="content-area merchandise-wrap">
           <div class="content-item01">
-            <!-- 07.30 수정 (해당 케이스 공통 적용 필요) : 커뮤니티(클럽) 가입 케이스 일 경우, 아닌 경우 마크업 다르게 적용 필요 (가입 된 경우 button 활성화) -->
-
-            <div class="mypage-top">
-              <!-- v.101 기획서 p.15 : 커뮤니티 미가입 -->
-              <div class="mypage-profile">
-                <img
-                  src="../../inc/images/img/img_profile_default.png"
-                  loading="lazy"
-                  alt="프로필 이미지"
-                />
-                <p class="mypage-name ellipsis2">Olivia Marie Johnson</p>
-              </div>
-
-              <!-- v.101 기획서 p.15 : 커뮤니티 가입 / 클럽 아이콘 클릭 시 N Community 레이어 노출 (EP040401M01) -->
-              <!-- <div class="profile-btn-box">
-              <button class="profile-open" aria-controls="pop-page" aria-haspopup="true" aria-expanded="false" title="팝업오픈">
-                <div class="mypage-profile">
-                  <img src="../../inc/images/img/img_profile_default.png" loading="lazy" alt="프로필 이미지" />
-                  <div>
-                    <p class="mypage-name ellipsis2">Olivia Marie Johnson</p>
-                    <p class="mypage-club">i30N_Club</p>
+            <div class="content-item01 content-top">
+              <p class="tit-type01 fw-type03">N 머천다이즈</p>
+              <p class="tit-type03 fw-type03">
+                드라이빙 그 이상의 즐거움을 선사합니다
+              </p>
+            </div>
+          </div>
+          <div class="cotent-item02 merchandise-kv">
+            <div class="swiper-container">
+              <!-- Swiper -->
+              <div class="swiper merchandise_swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img
+                      src="../../inc/images/content/img_Merchandise_kv01.png"
+                      alt="N Merchandise 이미지"
+                      class="pc-only"
+                    />
+                    <img
+                      src="../../inc/images/content/img_Merchandise_kv01_mo.png"
+                      alt="N Merchandise 이미지"
+                      class="mo-only"
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="../../inc/images/content/img_Merchandise_kv02.png"
+                      alt="N Merchandise 이미지"
+                      class="pc-only"
+                    />
+                    <img
+                      src="../../inc/images/content/img_Merchandise_kv02_mo.png"
+                      alt="N Merchandise 이미지"
+                      class="mo-only"
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="../../inc/images/content/img_Merchandise_kv03.png"
+                      alt="N Merchandise 이미지"
+                      class="pc-only"
+                    />
+                    <img
+                      src="../../inc/images/content/img_Merchandise_kv03_mo.png"
+                      alt="N Merchandise 이미지"
+                      class="mo-only"
+                    />
                   </div>
                 </div>
-              </button>
-              <div class="popup club-popup" role="dialog" aria-modal="true" aria-labelledby="tit-type04" data-pop="pop-page">
-                <div class="popup-wrapper">
-                  <div class="popup-header pop-profile_wrap">
-                    <div class="pop-profile">
-                      <img src="../../inc/images/img/img_Nful_profile_01.png" loading="lazy"
-                        alt="N Community가입자의 프로필 이미지" />
-                      <p class="pop-profile_club">i30N_Club</p>
-                    </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-status-wrap">
+                  <div class="swiper-pagination-custom">
+                    <span class="swiper-pagination-bullet-active"></span>
                   </div>
-                  <div class="popup-body">
-                    <div class="pop-gray">
-                      <div>
-                        <p class="txt-left">Ranking</p>
-                        <p class="txt-right">1</p>
-                      </div>
-                      <div>
-                        <p class="txt-left">Point</p>
-                        <p class="txt-right">3,000</p>
-                      </div>
-                      <div>
-                        <p class="txt-left">Members</p>
-                        <p class="txt-right">1,234</p>
-                      </div>
-                    </div>
-                    <div class="pop-des">
-                      <p>Welcome!</p>
-                      <p>Hyundai i30 N Performance</p>
-                      <p>You can join immediately</p>
-                      <p>Actively participate in club missions</p>
-                      <p>Club cafe in operation</p>
-                    </div>
+                  <div class="btn-wrap">
+                    <button
+                      class="btn btn-play on"
+                      type="button"
+                      title="정지"
+                    ></button>
+                  </div>
+                </div>
+              </div>
+              <!-- //swiper -->
+            </div>
+            <!-- //swiper-container -->
+          </div>
+          <div class="content-item03 collection-wrap">
+            <div class="merchandise-w1440">
+              <p class="contitle-type01 fw-type03 merchandise-w1096">
+                모든 순간을 멋지게 즐기세요.<br />
+                N 컬렉션에서 새로운 영감을 찾아보세요.
+              </p>
+              <div class="collection-box">
+                <div class="collection-col">
+                  <div class="collection-each">
+                    <img
+                      src="../../inc/images/content/img_Merchandise_collection_01.png"
+                      alt="N Merchandise 이미지"
+                      class="pc-only"
+                    />
+                    <img
+                      src="../../inc/images/content/img_Merchandise_collection_01_mo.png"
+                      alt="N Merchandise 이미지"
+                      class="mo-only"
+                    />
                     <div class="btn-wrap">
-                      <a href="#" target="_blank" rel="noopener" class="btn sm-txt-btn01">
-                        <span class="btn-icon16 icon-copylink" aria-hidden="true"></span>
-                        N Community
+                      <a
+                        href="https://collection.hyundai.com/category.do?cate_id=C0300000&child_cate_id=&parent_cate_id=C0300000"
+                        class="btn xl-txt-btn02"
+                        target="_blank"
+                        rel="noopener"
+                      >
+                        모두 보기
+                        <span
+                          class="btn-icon24 icon-right-wh"
+                          aria-hidden="true"
+                        ></span>
                       </a>
                     </div>
-                    <div class="popup-footer">
-                      <div class="btn-wrap">
-                        <button type="button" class="btn btn-md-primary01">
-                          Join
-                          <span class="btn-icon16 icon-right-wh" aria-hidden="true"></span>
-                        </button>
-                        <button type="button" class="btn btn-md-outline01 profile-close">
-                          Close
-                        </button>
-                      </div>
+                  </div>
+                  <div class="collection-each">
+                    <img
+                      src="../../inc/images/content/img_Merchandise_collection_02.png"
+                      alt="N Merchandise 이미지"
+                      class="pc-only"
+                    />
+                    <img
+                      src="../../inc/images/content/img_Merchandise_collection_02_mo.png"
+                      alt="N Merchandise 이미지"
+                      class="mo-only"
+                    />
+                    <div class="btn-wrap">
+                      <!-- https://collection.hyundai.com/items/prd_detail.do?item_id=I000000223 -->
+                      <a
+                        href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000185"
+                        class="btn xl-txt-btn02"
+                        target="_blank"
+                        rel="noopener"
+                      >
+                        미니카
+                        <span
+                          class="btn-icon24 icon-right-wh"
+                          aria-hidden="true"
+                        ></span>
+                      </a>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div> -->
-              <!--//07.30 수정 : 레이어팝업 & 버튼 추가 -->
-
-              <div class="mypage-info">
-                <dl>
-                  <div>
-                    <dt>Point</dt>
-                    <dd>84</dd>
+                <div class="collection-col">
+                  <div class="collection-each">
+                    <img
+                      src="../../inc/images/content/img_Merchandise_collection_03.png"
+                      alt="N Merchandise 이미지"
+                      class="pc-only"
+                    />
+                    <img
+                      src="../../inc/images/content/img_Merchandise_collection_03_mo.png"
+                      alt="N Merchandise 이미지"
+                      class="mo-only"
+                    />
+                    <div class="btn-wrap">
+                      <!-- https://collection.hyundai.com/items/prd_detail.do?item_id=I000000185 -->
+                      <a
+                        href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000225"
+                        class="btn xl-txt-btn02"
+                        target="_blank"
+                        rel="noopener"
+                      >
+                        라이프
+                        <span
+                          class="btn-icon24 icon-right-wh"
+                          aria-hidden="true"
+                        ></span>
+                      </a>
+                    </div>
                   </div>
-                  <div>
-                    <dt>Nthusiasts Ranking</dt>
-                    <dd>5,844</dd>
+                  <div class="collection-each">
+                    <img
+                      src="../../inc/images/content/img_Merchandise_collection_04.png"
+                      alt="N Merchandise 이미지"
+                      class="pc-only"
+                    />
+                    <img
+                      src="../../inc/images/content/img_Merchandise_collection_04_mo.png"
+                      alt="N Merchandise 이미지"
+                      class="mo-only"
+                    />
+                    <div class="btn-wrap">
+                      <!-- 기존 url : https://collection.hyundai.com/items/prd_detail.do?item_id=I000000225 -->
+                      <a
+                        href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000223"
+                        class="btn xl-txt-btn02"
+                        target="_blank"
+                        rel="noopener"
+                      >
+                        의류
+                        <span
+                          class="btn-icon24 icon-right-wh"
+                          aria-hidden="true"
+                        ></span>
+                      </a>
+                    </div>
                   </div>
-                </dl>
-                <div class="btn-wrap">
-                  <a
-                    href="/html/experience/EP040401.html"
-                    class="btn md-txt-btn01"
-                  >
-                    Create or join an N Community
-                    <span
-                      class="btn-icon16 icon-right"
-                      aria-hidden="true"
-                    ></span>
-                  </a>
                 </div>
               </div>
             </div>
-            <!--//07.30 수정 : 레이어팝업 & 버튼 추가 -->
           </div>
-          <div class="content-item02">
-            <div class="mypage-box">
-              <div class="mypage-nav">
-                <h4 class="pc-only">Mypage</h4>
-                <ul>
-                  <li>
-                    <a class="btn lg-txt-btn01" href="./CM040201.html">
-                      Notification
-                      <span
-                        class="btn-icon16 icon-right"
-                        aria-hidden="true"
-                      ></span></a
-                    ><!-- 화면 ID :  CM040201 -->
-                  </li>
-                  <li>
-                    <a class="btn lg-txt-btn01" href="./CM040301.html">
-                      Post
-                      <span
-                        class="btn-icon16 icon-right"
-                        aria-hidden="true"
-                      ></span></a
-                    ><!-- 화면 ID :  CM040301 -->
-                  </li>
-                  <li>
-                    <a class="btn lg-txt-btn01" href="./CM040401.html">
-                      Missions
-                      <span
-                        class="btn-icon16 icon-right"
-                        aria-hidden="true"
-                      ></span> </a
-                    ><!-- 화면 ID :  CM040401 -->
-                  </li>
-                  <li>
-                    <a class="btn lg-txt-btn01" href="./CM040501.html">
-                      Rewards
-                      <span
-                        class="btn-icon16 icon-right"
-                        aria-hidden="true"
-                      ></span> </a
-                    ><!-- 화면 ID :  CM040501 -->
-                  </li>
-                  <li>
-                    <a class="btn lg-txt-btn01" href="./CM040601.html">
-                      Point
-                      <span
-                        class="btn-icon16 icon-right"
-                        aria-hidden="true"
-                      ></span> </a
-                    ><!-- 화면 ID :  CM040601 -->
-                  </li>
-                  <li>
-                    <a class="btn lg-txt-btn01" href="./CM040701.html">
-                      N Community
-                      <span
-                        class="btn-icon16 icon-right"
-                        aria-hidden="true"
-                      ></span> </a
-                    ><!-- 화면 ID :  CM040701 -->
-                  </li>
-                  <li>
-                    <a class="btn lg-txt-btn01" href="./CM041101.html">
-                      N Community management
-                      <span
-                        class="btn-icon16 icon-right"
-                        aria-hidden="true"
-                      ></span> </a
-                    ><!-- 화면 ID :  CM041101 -->
-                  </li>
-                  <li>
-                    <a class="btn lg-txt-btn01" href="./CM040801.html">
-                      1:1 Inquiry
-                      <span
-                        class="btn-icon16 icon-right"
-                        aria-hidden="true"
-                      ></span> </a
-                    ><!-- 화면 ID :  CM040801 -->
-                  </li>
-                  <li>
-                    <a class="btn lg-txt-btn01" href="./CM040901.html">
-                      Invite friends
-                      <span
-                        class="btn-icon16 icon-right"
-                        aria-hidden="true"
-                      ></span> </a
-                    ><!-- 화면 ID :  CM040901 -->
-                  </li>
-                  <li>
-                    <a class="btn lg-txt-btn01" href="./CM041001.html">
-                      Membership withdrawal
-                      <span
-                        class="btn-icon16 icon-right"
-                        aria-hidden="true"
-                      ></span> </a
-                    ><!-- 화면 ID :  CM041001 -->
-                  </li>
-                </ul>
-                <div class="btn-wrap">
-                  <a href="#" class="btn md-txt-btn01">
-                    Log out
-                    <span
-                      class="btn-icon16 icon-right"
-                      aria-hidden="true"
-                    ></span>
-                  </a>
+          <div class="content-item04 collectiontab-wrap tab01-bg">
+            <div class="merchandise-w1440">
+              <div class="tab-container">
+                <p class="contitle-type01 fw-type03 merchandise-w1096">
+                  Hyundai N Collection
+                </p>
+                <div class="tab-head ty04">
+                  <div class="tabs-wrap">
+                    <ul class="tabs ty-black" data-contents="탭카테고리">
+                      <li class="on">
+                        <a
+                          href="javascript:;"
+                          aria-controls="tab1-01"
+                          role="tab"
+                          aria-selected="true"
+                          >2024 현대 N 컬렉션</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="javascript:;"
+                          aria-controls="tab1-02"
+                          role="tab"
+                          aria-selected="false"
+                          >2023 현대 N 컬렉션</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="javascript:;"
+                          aria-controls="tab1-03"
+                          role="tab"
+                          aria-selected="false"
+                          >현대 N 베이직 컬렉션</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="javascript:;"
+                          aria-controls="tab1-04"
+                          role="tab"
+                          aria-selected="false"
+                          >아이오닉 5 N 컬렉션</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="javascript:;"
+                          aria-controls="tab1-05"
+                          role="tab"
+                          aria-selected="false"
+                          >현대 N 겨울 컬렉션</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="tab-content on" id="tab1-01" role="tabpanel">
+                  <div class="collection-tabcont">
+                    <div class="swiper-container">
+                      <!-- Swiper -->
+                      <div class="swiper collection_swiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <a
+                              href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000320"
+                              target="_blank"
+                              rel="noopener"
+                            >
+                              <img
+                                src="../../inc/images/content/img_Merchandise_tabcont_01_01.png"
+                                alt="엽서 (시즌 2) 이미지"
+                            /></a>
+                            <p class="collection_swiper-txt">엽서 (시즌 2)</p>
+                          </div>
+                          <div class="swiper-slide">
+                            <a
+                              href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000321"
+                              target="_blank"
+                              rel="noopener"
+                            >
+                              <img
+                                src="../../inc/images/content/img_Merchandise_tabcont_01_02.png"
+                                alt="N현대 N 장우산 이미지"
+                              />
+                            </a>
+                            <p class="collection_swiper-txt">현대 N 장우산</p>
+                          </div>
+                          <div class="swiper-slide">
+                            <a
+                              href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000351"
+                              target="_blank"
+                              rel="noopener"
+                            >
+                              <img
+                                src="../../inc/images/content/img_Merchandise_tabcont_01_03.png"
+                                alt="Hyundai N Never Just Drive Keyring 이미지"
+                              />
+                            </a>
+                            <p class="collection_swiper-txt">
+                              현대 N '네버 저스트 드라이브' 키링
+                            </p>
+                          </div>
+                        </div>
+                        <div class="swiper-status-wrap">
+                          <div class="swiper-pagination-custom">
+                            <span
+                              class="swiper-pagination-bullet-active"
+                            ></span>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- //swiper -->
+                    </div>
+                    <!-- //swiper-container -->
+                  </div>
+                </div>
+                <div class="tab-content" id="tab1-02" role="tabpanel">
+                  <div class="collection-tabcont">
+                    <div class="swiper-container">
+                      <!-- Swiper -->
+                      <div class="swiper collection_swiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <a
+                              href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000291"
+                              target="_blank"
+                              rel="noopener"
+                            >
+                              <img
+                                src="../../inc/images/content/img_Merchandise_tabcont_02_01.png"
+                                alt="Apparel 이미지"
+                              />
+                            </a>
+                            <p class="collection_swiper-txt">의류</p>
+                          </div>
+                          <div class="swiper-slide">
+                            <a
+                              href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000302"
+                              target="_blank"
+                              rel="noopener"
+                            >
+                              <img
+                                src="../../inc/images/content/img_Merchandise_tabcont_02_02.png"
+                                alt="Mini Car 이미지"
+                            /></a>
+                            <p class="collection_swiper-txt">미니카</p>
+                          </div>
+                          <div class="swiper-slide">
+                            <a
+                              href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000164"
+                              target="_blank"
+                              rel="noopener"
+                            >
+                              <img
+                                src="../../inc/images/content/img_Merchandise_tabcont_02_03.png"
+                                alt="Collaboration 이미지"
+                              />
+                            </a>
+                            <p class="collection_swiper-txt">콜라보</p>
+                          </div>
+                          <div class="swiper-slide">
+                            <a
+                              href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000266"
+                              target="_blank"
+                              rel="noopener"
+                            >
+                              <img
+                                src="../../inc/images/content/img_Merchandise_tabcont_02_04.png"
+                                alt="Life 이미지"
+                              />
+                            </a>
+                            <p class="collection_swiper-txt">라이프</p>
+                          </div>
+                          <div class="swiper-slide">
+                            <a
+                              href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000320"
+                              target="_blank"
+                              rel="noopener"
+                            >
+                              <img
+                                src="../../inc/images/content/img_Merchandise_tabcont_02_05.png"
+                                alt="Stationary 이미지"
+                              />
+                            </a>
+                            <p class="collection_swiper-txt">문구</p>
+                          </div>
+                        </div>
+                        <div class="swiper-bottom-wrap">
+                          <div class="swiper-button-next"></div>
+                          <div class="swiper-button-prev"></div>
+                        </div>
+                        <div class="swiper-status-wrap">
+                          <div class="swiper-pagination-custom">
+                            <span
+                              class="swiper-pagination-bullet-active"
+                            ></span>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- //swiper -->
+                    </div>
+                    <!-- //swiper-container -->
+                  </div>
+                </div>
+                <div class="tab-content" id="tab1-03" role="tabpanel">
+                  <div class="collection-tabcont">
+                    <div class="swiper-container">
+                      <!-- Swiper -->
+                      <div class="swiper collection_swiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <a
+                              href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000256"
+                              target="_blank"
+                              rel="noopener"
+                            >
+                              <img
+                                src="../../inc/images/content/img_Merchandise_tabcont_03_01.png"
+                                alt="현대 N 브랜드 랜야드 이미지"
+                              />
+                            </a>
+                            <p class="collection_swiper-txt">
+                              현대 N 브랜드 랜야드
+                            </p>
+                          </div>
+                          <div class="swiper-slide">
+                            <a
+                              href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000257"
+                              target="_blank"
+                              rel="noopener"
+                            >
+                              <img
+                                src="../../inc/images/content/img_Merchandise_tabcont_03_02.png"
+                                alt="현대 N 브랜드 라운드 티셔츠 이미지"
+                              />
+                            </a>
+                            <p class="collection_swiper-txt">
+                              현대 N 브랜드 라운드 티셔츠
+                            </p>
+                          </div>
+                          <div class="swiper-slide">
+                            <a
+                              href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000258"
+                              target="_blank"
+                              rel="noopener"
+                            >
+                              <img
+                                src="../../inc/images/content/img_Merchandise_tabcont_03_03.png"
+                                alt="현대 N 브랜드 폴로셔츠 이미지"
+                              />
+                            </a>
+                            <p class="collection_swiper-txt">
+                              현대 N 브랜드 폴로셔츠
+                            </p>
+                          </div>
+                          <div class="swiper-slide">
+                            <a
+                              href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000259"
+                              target="_blank"
+                              rel="noopener"
+                            >
+                              <img
+                                src="../../inc/images/content/img_Merchandise_tabcont_03_04.png"
+                                alt="현대 N 브랜드 윈드브레이커 이미지"
+                              />
+                            </a>
+                            <p class="collection_swiper-txt">
+                              현대 N 브랜드 윈드브레이커
+                            </p>
+                          </div>
+                          <div class="swiper-slide">
+                            <a
+                              href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000260"
+                              target="_blank"
+                              rel="noopener"
+                            >
+                              <img
+                                src="../../inc/images/content/img_Merchandise_tabcont_03_05.png"
+                                alt="현대 N 브랜드 소프트쉘 이미지"
+                              />
+                            </a>
+                            <p class="collection_swiper-txt">
+                              현대 N 브랜드 소프트쉘
+                            </p>
+                          </div>
+                          <div class="swiper-slide">
+                            <a
+                              href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000262"
+                              target="_blank"
+                              rel="noopener"
+                            >
+                              <img
+                                src="../../inc/images/content/img_Merchandise_tabcont_03_06.png"
+                                alt="현대 N 브랜드 스트링 백팩 이미지"
+                              />
+                            </a>
+                            <p class="collection_swiper-txt">
+                              현대 N 브랜드 스트링 백팩
+                            </p>
+                          </div>
+                          <div class="swiper-slide">
+                            <a
+                              href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000263"
+                              target="_blank"
+                              rel="noopener"
+                            >
+                              <img
+                                src="../../inc/images/content/img_Merchandise_tabcont_03_07.png"
+                                alt="현대 N 브랜드 짐색 이미지"
+                              />
+                            </a>
+                            <p class="collection_swiper-txt">
+                              현대 N 브랜드 짐색
+                            </p>
+                          </div>
+                        </div>
+                        <div class="swiper-bottom-wrap">
+                          <div class="swiper-button-next"></div>
+                          <div class="swiper-button-prev"></div>
+                        </div>
+                        <div class="swiper-status-wrap">
+                          <div class="swiper-pagination-custom">
+                            <span
+                              class="swiper-pagination-bullet-active"
+                            ></span>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- //swiper -->
+                    </div>
+                    <!-- //swiper-container -->
+                  </div>
+                </div>
+                <div class="tab-content" id="tab1-04" role="tabpanel">
+                  <div class="collection-tabcont">
+                    <div class="swiper-container">
+                      <!-- Swiper -->
+                      <div class="swiper collection_swiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <a
+                              href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000267"
+                              target="_blank"
+                              rel="noopener"
+                            >
+                              <img
+                                src="../../inc/images/content/img_Merchandise_tabcont_04_01.png"
+                                alt="IONIQ 5 N 그래픽 티셔츠 이미지"
+                              />
+                            </a>
+                            <p class="collection_swiper-txt">
+                              IONIQ 5 N 그래픽 티셔츠
+                            </p>
+                          </div>
+                          <div class="swiper-slide">
+                            <a
+                              href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000268"
+                              target="_blank"
+                              rel="noopener"
+                            >
+                              <img
+                                src="../../inc/images/content/img_Merchandise_tabcont_04_02.png"
+                                alt="IONIQ 5 N 그래픽 맨투맨 이미지"
+                              />
+                            </a>
+                            <p class="collection_swiper-txt">
+                              IONIQ 5 N 그래픽 맨투맨
+                            </p>
+                          </div>
+                          <div class="swiper-slide">
+                            <a
+                              href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000264"
+                              target="_blank"
+                              rel="noopener"
+                            >
+                              <img
+                                src="../../inc/images/content/img_Merchandise_tabcont_04_03.png"
+                                alt="IONIQ 5 N 카모플라주 박스테이프 이미지"
+                              />
+                            </a>
+                            <p class="collection_swiper-txt">
+                              IONIQ 5 N 카모플라주 박스테이프
+                            </p>
+                          </div>
+                          <div class="swiper-slide">
+                            <a
+                              href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000265"
+                              target="_blank"
+                              rel="noopener"
+                            >
+                              <img
+                                src="../../inc/images/content/img_Merchandise_tabcont_04_04.png"
+                                alt="IONIQ 5 N 카모플라주 리유저블백 이미지"
+                              />
+                            </a>
+                            <p class="collection_swiper-txt">
+                              IONIQ 5 N 카모플라주 리유저블백
+                            </p>
+                          </div>
+                          <div class="swiper-slide">
+                            <a
+                              href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000269"
+                              target="_blank"
+                              rel="noopener"
+                            >
+                              <img
+                                src="../../inc/images/content/img_Merchandise_tabcont_04_05.png"
+                                alt="IONIQ 5 N 그래픽 타월 이미지"
+                              />
+                            </a>
+                            <p class="collection_swiper-txt">
+                              IONIQ 5 N 그래픽 타월
+                            </p>
+                          </div>
+                          <div class="swiper-slide">
+                            <a
+                              href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000270"
+                              target="_blank"
+                              rel="noopener"
+                            >
+                              <img
+                                src="../../inc/images/content/img_Merchandise_tabcont_04_06.png"
+                                alt="IONIQ 5 N 스티커 팩 이미지"
+                              />
+                            </a>
+                            <p class="collection_swiper-txt">
+                              IONIQ 5 N 스티커 팩
+                            </p>
+                          </div>
+                          <div class="swiper-slide">
+                            <a
+                              href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000271"
+                              target="_blank"
+                              rel="noopener"
+                            >
+                              <img
+                                src="../../inc/images/content/img_Merchandise_tabcont_04_07.png"
+                                alt="IONIQ 5 N 키링 이미지"
+                              />
+                            </a>
+                            <p class="collection_swiper-txt">IONIQ 5 N 키링</p>
+                          </div>
+                        </div>
+                        <div class="swiper-bottom-wrap">
+                          <div class="swiper-button-next"></div>
+                          <div class="swiper-button-prev"></div>
+                        </div>
+                        <div class="swiper-status-wrap">
+                          <div class="swiper-pagination-custom">
+                            <span
+                              class="swiper-pagination-bullet-active"
+                            ></span>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- //swiper -->
+                    </div>
+                    <!-- //swiper-container -->
+                  </div>
+                </div>
+                <div class="tab-content" id="tab1-05" role="tabpanel">
+                  <div>
+                    <div class="collection-tabcont">
+                      <div class="swiper-container">
+                        <!-- Swiper -->
+                        <div class="swiper collection_swiper">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              <a
+                                href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000292"
+                                target="_blank"
+                                rel="noopener"
+                              >
+                                <img
+                                  src="../../inc/images/content/img_Merchandise_tabcont_05_01.png"
+                                  alt="현대 N 브랜드 경량패딩 이미지"
+                                />
+                              </a>
+                              <p class="collection_swiper-txt">
+                                <span class="swiper-txt-red">현대 </span> N
+                                브랜드 경량패딩
+                              </p>
+                            </div>
+                            <div class="swiper-slide">
+                              <a
+                                href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000291"
+                                target="_blank"
+                                rel="noopener"
+                              >
+                                <img
+                                  src="../../inc/images/content/img_Merchandise_tabcont_05_02.png"
+                                  alt="현대 N 브랜드 MA-1 이미지"
+                                />
+                              </a>
+                              <p class="collection_swiper-txt">
+                                <span class="swiper-txt-red">현대</span> N
+                                브랜드 MA-1
+                              </p>
+                            </div>
+                          </div>
+                          <div class="swiper-status-wrap">
+                            <div class="swiper-pagination-custom">
+                              <span
+                                class="swiper-pagination-bullet-active"
+                              ></span>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- //swiper -->
+                      </div>
+                      <!-- //swiper-container -->
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="mypage-content mypage-allbox">
-                <div>
-                  <h4>Notice</h4>
-                  <ul class="mynotice-wrap">
-                    <!-- 안읽음 경우 -->
-                    <li class="mynotice-box unread-box">
-                      <p class="mynotice-type">Missions - Nthusiasts</p>
-                      <!-- v1.02 p.16 알림 클릭 시 : Post, 미션 상세 페이지 팝업 노출 -->
-                      <button class="mynotice-title ellipsis3">
-                        Beauty shot! Participation was [rejected].
-                      </button>
-                      <div class="mynotice-btm">
-                        <p class="mynotice-date">03.28.2024</p>
-                        <button class="btn sm-txt-btn01">
-                          <span
-                            class="btn-icon16 icon-check"
-                            aria-hidden="true"
-                          ></span>
-                          Unread
-                        </button>
-                      </div>
-                      <!-- 삭제 버튼 -->
-                      <button
-                        type="button"
-                        class="btn btn-only-icon-notbg"
-                        title="close"
-                      >
-                        <span class="visually-hidden">close</span>
-                        <span
-                          class="btn-icon20 icon-close"
-                          aria-hidden="true"
-                        ></span>
-                      </button>
-                    </li>
-                    <!-- 읽음 경우 -->
-                    <li class="mynotice-box read-box">
-                      <p class="mynotice-type">Missions - Nthusiasts</p>
-                      <!-- v1.02 p.16 알림 클릭 시 : Post, 미션 상세 페이지 팝업 노출 -->
-                      <button class="mynotice-title ellipsis3">
-                        If there is no Master transfer application by May 5th,
-                        it will be closed. You can apply for transfer at [My
-                        Page > N Community > Settings Menu].
-                      </button>
-                      <div class="mynotice-btm">
-                        <p class="mynotice-date">03.28.2024</p>
-                        <p class="mynotice-read">
-                          <i
-                            class="btn-icon16 icon-check"
-                            aria-hidden="true"
-                          ></i
-                          >Read
-                        </p>
-                      </div>
-                      <!-- 삭제 버튼 -->
-                      <button
-                        type="button"
-                        class="btn btn-only-icon-notbg"
-                        title="close"
-                      >
-                        <span class="visually-hidden">close</span>
-                        <span
-                          class="btn-icon20 icon-close"
-                          aria-hidden="true"
-                        ></span>
-                      </button>
-                    </li>
-                    <!-- 읽음 경우 -->
-                    <li class="mynotice-box read-box">
-                      <p class="mynotice-type">Missions - Nthusiasts</p>
-                      <!-- v1.02 p.16 알림 클릭 시 : Post, 미션 상세 페이지 팝업 노출 -->
-                      <button class="mynotice-title ellipsis3">
-                        The post has been approved.
-                      </button>
-                      <div class="mynotice-btm">
-                        <p class="mynotice-date">03.28.2024</p>
-                        <p class="mynotice-read">
-                          <i
-                            class="btn-icon16 icon-check"
-                            aria-hidden="true"
-                          ></i
-                          >Read
-                        </p>
-                      </div>
-                      <!-- 삭제 버튼 -->
-                      <button
-                        type="button"
-                        class="btn btn-only-icon-notbg"
-                        title="close"
-                      >
-                        <span class="visually-hidden">close</span>
-                        <span
-                          class="btn-icon20 icon-close"
-                          aria-hidden="true"
-                        ></span>
-                      </button>
-                    </li>
-                  </ul>
-                  <div class="btn-wrap move-wrap">
-                    <a href="./CM040201.html" class="btn md-txt-btn01">
-                      View all
-                      <span
-                        class="btn-icon16 icon-right"
-                        aria-hidden="true"
-                      ></span>
-                    </a>
+            </div>
+          </div>
+          <div class="content-item05 productlist-wrap">
+            <div class="merchandise-w1440">
+              <p class="contitle-type01 fw-type03 merchandise-w1096">
+                Collection<br class="mo-only" />
+                Product List
+              </p>
+              <div class="productlist-bigbox">
+                <div class="productlist-col1">
+                  <div>
+                    <p>의류</p>
+                    <ul class="productlist-subbox">
+                      <li>
+                        <a
+                          href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000291"
+                          >Hyundai N MA-1Jacket</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000292"
+                          >Hyundai N Lightweight Padded Jacket</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000267"
+                          >IONIQ 5 N 그래픽 티셔츠</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000268"
+                          >IONIQ 5 N 그래픽 맨투맨</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000257"
+                          >현대 N 브랜드 라운드 티셔츠</a
+                        >
+                      </li>
+                    </ul>
+                    <ul class="productlist-subbox">
+                      <li>
+                        <a
+                          href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000258"
+                          >현대 N 브랜드 폴로셔츠</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000259"
+                          >현대 N 브랜드 윈드브레이커</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000260"
+                          >현대 N 브랜드 소프트쉘</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000222"
+                          >RN22e Illust T-Shirt</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000223"
+                          >N Vision 74 Illust T-Shirt (Season 2)</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <p>Mini Car</p>
+                    <ul class="productlist-subbox">
+                      <li>
+                        <a
+                          href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000302"
+                          >N Vision 74 RC Car(1:10)</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000254"
+                          >AVANTE N Diecast (1:38)</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000185"
+                          >Mini GT AVANTE N Diecast (1:64)</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000186"
+                          >Mini GT Kona N Diecast (1:64)</a
+                        >
+                      </li>
+                    </ul>
                   </div>
                 </div>
-                <div>
-                  <h4>Post</h4>
-                  <!-- 0627 기획서 v1.03 p.16 : 목록 최신 3개 노출로 변경 -->
-                  <ul class="mymsission-wrap">
-                    <li>
-                      <div class="mymsission-col">
-                        <!-- 제목 클릭 시 : 상세 화면 노출 (화면 ID : CM040301P01) -->
-                        <button class="mymsission-title ellipsis2">
-                          You’ll see me in hindsight
-                        </button>
-                        <p class="mymsission-date">04.01.2024</p>
-                      </div>
-                      <p class="mymsission-status">Made Hidden</p>
-                    </li>
-                    <li>
-                      <div class="mymsission-col">
-                        <!-- 제목 클릭 시 : 상세 화면 노출 (화면 ID : CM040301P01) -->
-                        <button class="mymsission-title ellipsis2">
-                          Nürburgring 24H Race
-                        </button>
-                        <p class="mymsission-date">04.01.2024</p>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="mymsission-col">
-                        <!-- 제목 클릭 시 : 상세 화면 노출 (화면 ID : CM040301P01) -->
-                        <button class="mymsission-title ellipsis2">
-                          N Activity Verification(1/3)
-                        </button>
-                        <p class="mymsission-date">04.01.2024</p>
-                      </div>
-                    </li>
-                  </ul>
-                  <div class="btn-wrap move-wrap">
-                    <a href="./CM040301.html" class="btn md-txt-btn01">
-                      Learn More
-                      <span
-                        class="btn-icon16 icon-right"
-                        aria-hidden="true"
-                      ></span>
-                    </a>
-                  </div>
-                </div>
-                <div>
-                  <h4>Missions</h4>
-                  <ul class="mymsission-wrap">
-                    <li>
-                      <p class="mymsission-type">Nthusiasts</p>
-                      <div class="mymsission-col">
-                        <!-- v1.02 p.8 미션명 클릭 시 : 상세 화면 노출 (화면 ID : CM040401P01) -->
-                        <button class="mymsission-title ellipsis2">
-                          Beauty shot!
-                        </button>
-                        <p class="mymsission-date">04.01.2024</p>
-                      </div>
-                      <p class="mymsission-status">Reject</p>
-                    </li>
-                    <li>
-                      <p class="mymsission-type">N Community Members</p>
-                      <div class="mymsission-col">
-                        <!-- v1.02 p.8 미션명 클릭 시 : 상세 화면 노출 (화면 ID : CM040401P01) -->
-                        <button class="mymsission-title ellipsis2">
-                          Nürburgring 24H Race Cheering
-                        </button>
-                        <p class="mymsission-date">04.01.2024</p>
-                      </div>
-                      <p class="mymsission-status">Wait</p>
-                    </li>
-                    <li>
-                      <p class="mymsission-type">N Community Master</p>
-                      <div class="mymsission-col">
-                        <!-- v1.02 p.8 미션명 클릭 시 : 상세 화면 노출 (화면 ID : CM040401P01) -->
-                        <button class="mymsission-title ellipsis2">
-                          N Activity Verification(1/3)
-                        </button>
-                        <p class="mymsission-date">04.01.2024</p>
-                      </div>
-                      <p class="mymsission-status">Reject</p>
-                    </li>
-                  </ul>
-                  <div class="btn-wrap move-wrap">
-                    <a href="#" class="btn md-txt-btn01">
-                      <!-- CM040401 -->
-                      Learn More
-                      <span
-                        class="btn-icon16 icon-right"
-                        aria-hidden="true"
-                      ></span>
-                    </a>
-                  </div>
-                </div>
-                <div>
-                  <h4>Rewards</h4>
-                  <ul class="mymsission-wrap">
-                    <li>
-                      <p class="mymsission-type">Nthusiasts</p>
-                      <div class="mymsission-col">
-                        <p class="mymsission-title ellipsis2">Beauty shot!</p>
-                        <p class="mymsission-date">04.01.2024</p>
-                      </div>
-                      <p class="mymsission-status">Reject</p>
-                    </li>
-                    <li>
-                      <p class="mymsission-type">N Community Members</p>
-                      <div class="mymsission-col">
-                        <p class="mymsission-title ellipsis2">
-                          Nürburgring 24H Race Cheering
-                        </p>
-                        <p class="mymsission-date">04.01.2024</p>
-                      </div>
-                      <p class="mymsission-status">Wait</p>
-                    </li>
-                    <li>
-                      <p class="mymsission-type">N Community Master</p>
-                      <div class="mymsission-col">
-                        <p class="mymsission-title ellipsis2">
-                          N Activity Verification(1/3)
-                        </p>
-                        <p class="mymsission-date">04.01.2024</p>
-                      </div>
-                      <p class="mymsission-status">Reject</p>
-                    </li>
-                  </ul>
-                  <div class="btn-wrap move-wrap">
-                    <a href="#" class="btn md-txt-btn01">
-                      <!-- CM040501 -->
-                      Learn More
-                      <span
-                        class="btn-icon16 icon-right"
-                        aria-hidden="true"
-                      ></span>
-                    </a>
-                  </div>
-                </div>
-                <div>
-                  <h4>Points</h4>
-                  <ul class="mymsission-wrap">
-                    <li>
-                      <p class="mymsission-type">Nthusiasts</p>
-                      <div class="mymsission-col">
-                        <p class="mymsission-title ellipsis2">Beauty shot!</p>
-                        <p class="mymsission-date">04.01.2024</p>
-                      </div>
-                      <p class="mypoint-minus">-200</p>
-                    </li>
-                    <li>
-                      <p class="mymsission-type">N Community Members</p>
-                      <div class="mymsission-col">
-                        <p class="mymsission-title ellipsis2">
-                          Nürburgring 24H Race Cheering
-                        </p>
-                        <p class="mymsission-date">
-                          04.01.2024<span class="mypoint-reject">Reject</span>
-                        </p>
-                      </div>
-                      <p class="mypoint-minus mypoint-reject">-500</p>
-                    </li>
-                    <li>
-                      <p class="mymsission-type">N Community Master</p>
-                      <div class="mymsission-col">
-                        <p class="mymsission-title ellipsis2">
-                          N Activity Verification(1/3)
-                        </p>
-                        <p class="mymsission-date">04.01.2024</p>
-                      </div>
-                      <p class="mypoint-plus">+300</p>
-                    </li>
-                  </ul>
-                  <div class="btn-wrap move-wrap">
-                    <a href="#" class="btn md-txt-btn01">
-                      <!-- CM040601 -->
-                      Learn More
-                      <span
-                        class="btn-icon16 icon-right"
-                        aria-hidden="true"
-                      ></span>
-                    </a>
-                  </div>
-                </div>
-                <!-- 0701 N Community > 생성요청현황, 가입요청현황 영역 작업 -->
-                <div>
-                  <div class="mypage-titlebox">
-                    <h4>N Community</h4>
-                    <p>Creation Request Status</p>
-                  </div>
-                  <ul class="mymsission-wrap">
-                    <li>
-                      <div class="mymsission-col">
-                        <p class="mymsission-title ellipsis2">Beauty shot!</p>
-                        <p class="mymsission-date">04.01.2024</p>
-                      </div>
-                      <p class="mymsission-status">Awaiting Approval</p>
-                    </li>
-                    <li>
-                      <div class="mymsission-col">
-                        <button class="mymsission-title ellipsis2">
-                          Nürburgring 24H Race Cheering
-                        </button>
-                        <p class="mymsission-date">04.01.2024</p>
-                      </div>
-                      <p class="mymsission-status">Wait</p>
-                    </li>
-                    <li>
-                      <div class="mymsission-col">
-                        <button class="mymsission-title ellipsis2">
-                          N Activity Verification(1/3)
-                        </button>
-                        <p class="mymsission-date">04.01.2024</p>
-                      </div>
-                      <p class="mymsission-status">Reject</p>
-                    </li>
-                  </ul>
-                  <div class="btn-wrap move-wrap">
-                    <a href="./CM040701.html" class="btn md-txt-btn01">
-                      Learn More
-                      <span
-                        class="btn-icon16 icon-right"
-                        aria-hidden="true"
-                      ></span>
-                    </a>
-                  </div>
-                </div>
-                <div>
-                  <div class="mypage-titlebox">
-                    <h4>N Community</h4>
-                    <p>Membership Request Status</p>
-                  </div>
-                  <ul class="mymsission-wrap">
-                    <li>
-                      <div class="mymsission-col">
-                        <p class="mymsission-title ellipsis2">Beauty shot!</p>
-                        <p class="mymsission-date">04.01.2024</p>
-                      </div>
-                      <div class="btn-wrap-type1">
-                        <button type="button" class="btn btn-xs-outline01">
-                          Cancel Joining
-                        </button>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="mymsission-col">
-                        <p class="mymsission-title ellipsis2">
-                          Nürburgring 24H Race Cheering
-                        </p>
-                        <p class="mymsission-date">04.01.2024</p>
-                      </div>
-                      <div class="btn-wrap-type1">
-                        <button type="button" class="btn btn-xs-outline01">
-                          Cancel Joining
-                        </button>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="mymsission-col">
-                        <button class="mymsission-title ellipsis2">
-                          N Activity Verification(1/3)
-                        </button>
-                        <p class="mymsission-date">04.01.2024</p>
-                      </div>
-                      <p class="mymsission-status">Reject</p>
-                      <div class="btn-wrap-type1">
-                        <button type="button" class="btn btn-xs-outline01">
-                          Delete
-                        </button>
-                      </div>
-                    </li>
-                  </ul>
-                  <div class="btn-wrap move-wrap">
-                    <a href="./CM040701.html" class="btn md-txt-btn01">
-                      Learn More
-                      <span
-                        class="btn-icon16 icon-right"
-                        aria-hidden="true"
-                      ></span>
-                    </a>
-                  </div>
-                </div>
-                <div>
-                  <div class="tab-container mycommunity-wrap">
-                    <div class="tab-head ty03">
-                      <h4>N Community</h4>
-                      <div class="tabs-wrap">
-                        <ul class="tabs ty-black" data-contents="탭카테고리">
-                          <li class="on">
-                            <a
-                              href="javascript:;"
-                              aria-controls="tab1-01"
-                              role="tab"
-                              aria-selected="true"
-                              >Subscription status</a
-                            >
-                          </li>
-                          <li>
-                            <a
-                              href="javascript:;"
-                              aria-controls="tab1-02"
-                              role="tab"
-                              aria-selected="false"
-                              >Activity status</a
-                            >
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="tab-content on" id="tab1-01" role="tabpanel">
-                      <!-- v1.02 p.18 (디자인 미수정 / 마크업만 했음) -->
-                      <ul class="mymsission-wrap">
+                <div class="productlist-col2">
+                  <p>Life</p>
+                  <div>
+                    <div>
+                      <ul class="productlist-subbox">
                         <li>
-                          <div class="mymsission-col">
-                            <p class="mymsission-title ellipsis2">
-                              Beauty shot!
-                            </p>
-                            <p class="mymsission-date">04.01.2024</p>
-                          </div>
-                          <div class="btn-wrap-type2">
-                            <button type="button" class="btn btn-xs-outline01">
-                              Reject
-                            </button>
-                            <button type="button" class="btn btn-xs-primary01">
-                              Confirm
-                            </button>
-                          </div>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000350"
+                            >Hyundai N Mug Cup</a
+                          >
                         </li>
                         <li>
-                          <div class="mymsission-col">
-                            <p class="mymsission-title ellipsis2">
-                              Nürburgring 24H Race Cheering
-                            </p>
-                            <p class="mymsission-date">04.01.2024</p>
-                          </div>
-                          <p class="mymsission-status">Unsubscribe</p>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000351"
+                            >Hyundai N Never just drive Key Ring</a
+                          >
                         </li>
                         <li>
-                          <div class="mymsission-col">
-                            <p class="mymsission-title ellipsis2">
-                              Olivia Marie Johnson
-                            </p>
-                            <p class="mymsission-date">04.01.2024</p>
-                          </div>
-                          <p class="mymsission-status">Join</p>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000321"
+                            >Hyundai N Umbrella</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000320"
+                            >24 New Postcard(Season 2)</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000349"
+                            >Hyundai N Tire Pattern Pen</a
+                          >
+                        </li>
+                      </ul>
+                      <ul class="productlist-subbox">
+                        <li>
+                          <a
+                            href=" https://collection.hyundai.com/items/prd_detail.do?item_id=I000000288"
+                            >Hyundai N Pin Badge</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000289"
+                            >Hyundai N Gear Knob Umbrella</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000269"
+                            >IONIQ 5 N Graphic Towel</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000270"
+                            >IONIQ 5 N Sticker Pack</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000271"
+                            >IONIQ 5 N Key Ring</a
+                          >
+                        </li>
+                      </ul>
+                      <ul class="productlist-subbox">
+                        <li>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000264"
+                            >IONIQ 5 N Camouflage Box Tape</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000265"
+                            >IONIQ 5 N Camouflage Reusable Bag (S)</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000266"
+                            >IONIQ 5 N Camouflage Reusable Bag (L)</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000256"
+                            >Hyundai N Lanyard</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000262"
+                            >Hyundai N String Backpack</a
+                          >
+                        </li>
+                      </ul>
+                      <ul class="productlist-subbox">
+                        <li>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000263"
+                            >Hyundai N Gymsack</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000224"
+                            >Hyundai N Strap Grille Bottle Opener</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000225"
+                            >Hyundai N Tumbler</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000226"
+                            >Never just drive Key Strap</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000191"
+                            >Performance Blue AirPods Case</a
+                          >
                         </li>
                       </ul>
                     </div>
-                    <div class="tab-content" id="tab1-02" role="tabpanel">
-                      <ul class="mymsission-wrap">
+                    <div>
+                      <ul class="productlist-subbox">
                         <li>
-                          <p class="mymsission-type">Nthusiasts</p>
-                          <div class="mymsission-col">
-                            <p class="mymsission-title">
-                              n.ck | Korea invitation ticket! Your application
-                              has been
-                            </p>
-                            <p class="mymsission-date">04.01.2024</p>
-                          </div>
-                          <p class="mypoint-minus">-500</p>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000162"
+                            >Hyundai N x Pelican 3310PL Flashlight</a
+                          >
                         </li>
                         <li>
-                          <p class="mymsission-type">N Community Members</p>
-                          <div class="mymsission-col">
-                            <p class="mymsission-title">
-                              Hyndai_n_only | Participation in community content
-                              has been [completed].
-                            </p>
-                            <p class="mymsission-date">
-                              04.01.2024<span class="mypoint-reject"
-                                >Reject</span
-                              >
-                            </p>
-                          </div>
-                          <p class="mypoint-plus mypoint-reject">+300</p>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000164"
+                            >Hyundai N x Pelican 1535 Air Travel Case</a
+                          >
                         </li>
                         <li>
-                          <p class="mymsission-type">N Community Master</p>
-                          <div class="mymsission-col">
-                            <p class="mymsission-title">
-                              n.ck | Korea invitation ticket! Your application
-                              has been [completed].
-                            </p>
-                            <p class="mymsission-date">04.01.2024</p>
-                          </div>
-                          <p class="mypoint-minus">-3,000</p>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000190"
+                            >N Logo Magnet</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000189"
+                            >N Car Wash Mitt</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000166"
+                            >Postcard</a
+                          >
+                        </li>
+                      </ul>
+                      <ul class="productlist-subbox">
+                        <li>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000169"
+                            >ABC Book for Little Nthusiasts</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000170"
+                            >N Camouflage iPhone Case</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000171"
+                            >Mini Handheld Fan</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000161"
+                            >Hyundai N Playing Cards</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000159"
+                            >Performance Blue Shopping Bag (Horizontal)</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000160"
+                            >Performance Blue Shopping Bag (Vertical)</a
+                          >
+                        </li>
+                      </ul>
+                      <ul class="productlist-subbox">
+                        <li>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000144"
+                            >N Car Sticker</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000142"
+                            >Box Tape</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000153"
+                            >Korean Alphabet Car Sticker</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000154"
+                            >Never just drive License Plate Guard</a
+                          >
                         </li>
                       </ul>
                     </div>
                   </div>
-                  <div class="btn-wrap move-wrap">
-                    <a href="./CM040701.html" class="btn md-txt-btn01">
-                      Learn More
-                      <span
-                        class="btn-icon16 icon-right"
-                        aria-hidden="true"
-                      ></span>
-                    </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content-item06 merchandise_related-wrap">
+            <div class="merchandise-w1440">
+              <p class="merchandise-w1096">Related</p>
+              <div class="merchandise_related">
+                <div>
+                  <img
+                    src="../../inc/images/Models/ioniq5N/ioniq5N_Related_01.png"
+                    loading="lazy"
+                    alt="ioniq5N 이미지"
+                  />
+                  <div>
+                    <p>Models</p>
                   </div>
                 </div>
                 <div>
-                  <h4>N Community management</h4>
-                  <ul class="mymsission-wrap">
-                    <li>
-                      <div class="mymsission-col">
-                        <p class="mymsission-title ellipsis2">
-                          n.ck | Korea invitation ticket! Your application has
-                          been [completed].
-                        </p>
-                        <p class="mymsission-date">04.01.2024</p>
-                      </div>
-                      <div class="btn-wrap-type2">
-                        <button type="button" class="btn btn-xs-outline01">
-                          Reject
-                        </button>
-                        <button type="button" class="btn btn-xs-primary01">
-                          Confirm
-                        </button>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="mymsission-col">
-                        <p class="mymsission-title ellipsis2">
-                          Hyndai_n_only | Participation in community content has
-                          been [completed].
-                        </p>
-                        <p class="mymsission-date">04.01.2024</p>
-                      </div>
-                      <div class="btn-wrap-type2">
-                        <button type="button" class="btn btn-xs-outline01">
-                          Reject
-                        </button>
-                        <button type="button" class="btn btn-xs-primary01">
-                          Confirm
-                        </button>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="mymsission-col">
-                        <p class="mymsission-title ellipsis2">
-                          n.ck | N Community Activity verification!!
-                          Participation has been [completed].
-                        </p>
-                        <p class="mymsission-date">04.01.2024</p>
-                      </div>
-                      <div class="btn-wrap-type2">
-                        <button type="button" class="btn btn-xs-outline01">
-                          Reject
-                        </button>
-                        <button type="button" class="btn btn-xs-primary01">
-                          Confirm
-                        </button>
-                      </div>
-                    </li>
-                  </ul>
-                  <div class="btn-wrap move-wrap">
-                    <a href="./CM041101.html" class="btn md-txt-btn01">
-                      Learn More
-                      <span
-                        class="btn-icon16 icon-right"
-                        aria-hidden="true"
-                      ></span>
-                    </a>
+                  <img
+                    src="../../inc/images/Models/ioniq5N/ioniq5N_Related_02.png"
+                    loading="lazy"
+                    alt="ioniq5N 이미지"
+                  />
+                  <div>
+                    <p>Motorsports</p>
                   </div>
                 </div>
                 <div>
-                  <h4>1:1 Inquiry</h4>
-                  <ul class="mymsission-wrap">
-                    <li>
-                      <div class="mymsission-col">
-                        <!-- v1.02 p.20 제목 클릭 시 해당 상세 화면 이동 (화면 ID : CM040802) -->
-                        <a class="mymsission-title" href="./CM040802.html"
-                          >Beauty shot!</a
-                        >
-                        <p class="mymsission-date">04.01.2024</p>
-                      </div>
-                      <p class="mymsission-status">Waiting for reply</p>
-                    </li>
-                    <li>
-                      <div class="mymsission-col">
-                        <!-- v1.02 p.20 제목 클릭 시 해당 상세 화면 이동 (화면 ID : CM040802) -->
-                        <a class="mymsission-title" href="./CM040802.html"
-                          >Nürburgring 24H Race Cheering</a
-                        >
-                        <p class="mymsission-date">04.01.2024</p>
-                      </div>
-                      <p class="mymsission-status">Answer complete</p>
-                    </li>
-                    <li>
-                      <div class="mymsission-col">
-                        <!-- v1.02 p.20 제목 클릭 시 해당 상세 화면 이동 (화면 ID : CM040802) -->
-                        <a class="mymsission-title" href="./CM040802.html"
-                          >N Activity Verification(1/3)</a
-                        >
-                        <p class="mymsission-date">04.01.2024</p>
-                      </div>
-                      <p class="mymsission-status">Replying</p>
-                    </li>
-                  </ul>
-                  <div class="btn-wrap move-wrap">
-                    <a href="./CM040801.html" class="btn md-txt-btn01">
-                      Learn More
-                      <span
-                        class="btn-icon16 icon-right"
-                        aria-hidden="true"
-                      ></span>
-                    </a>
-                  </div>
-                </div>
-                <div>
-                  <h4>Friend invited</h4>
-                  <ul class="mymsission-wrap">
-                    <li>
-                      <div class="mymsission-col">
-                        <p class="mymsission-title ellipsis2">Jin Dragon</p>
-                        <p class="mymsission-date">04.01.2024</p>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="mymsission-col">
-                        <p class="mymsission-title ellipsis2">Youngbizzi</p>
-                        <p class="mymsission-date">04.01.2024</p>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="mymsission-col">
-                        <p class="mymsission-title ellipsis2">i20n.mrs1step</p>
-                        <p class="mymsission-date">04.01.2024</p>
-                      </div>
-                    </li>
-                  </ul>
-                  <div class="btn-wrap move-wrap">
-                    <a href="./CM040901.html" class="btn md-txt-btn01">
-                      Learn More
-                      <span
-                        class="btn-icon16 icon-right"
-                        aria-hidden="true"
-                      ></span>
-                    </a>
-                  </div>
-                </div>
-                <!-- 영역별 데이터 없을 경우 케이스 -->
-                <div class="mypage-nodata-onlytext">
-                  <h4>Notice</h4>
-                  <p>There are no notifications.</p>
-                </div>
-                <div class="mypage-nodata-wrap">
-                  <h4>Post</h4>
-                  <div class="mypage-nodata-box">
-                    <p>
-                      There are no posts you wrote!<br class="pc-only" />
-                      Write a post and communicate with N Brand members.
-                    </p>
-                    <div class="btn-wrap-type2">
-                      <a
-                        href="../../html/experience/EP040201.html"
-                        class="btn btn-md-outline01"
-                      >
-                        Go to Hub
-                        <span
-                          class="btn-icon16 icon-right"
-                          aria-hidden="true"
-                        ></span>
-                      </a>
-                      <a
-                        href="../../html/experience/EP040201P02.html"
-                        class="btn btn-md-outline01"
-                        >+ Post</a
-                      >
-                    </div>
-                  </div>
-                </div>
-                <div class="mypage-nodata-wrap">
-                  <h4>Missions</h4>
-                  <div class="mypage-nodata-box">
-                    <p>
-                      You haven't participated in any missions!<br
-                        class="pc-only"
-                      />
-                      Participate in missions and receive points.<br
-                        class="pc-only"
-                      />
-                      You can receive special rewards with points.
-                    </p>
-                    <div class="btn-wrap-type1">
-                      <a
-                        href="../../html/experience/EP040301.html"
-                        class="btn btn-md-outline01"
-                      >
-                        Go to Missions
-                        <span
-                          class="btn-icon16 icon-right"
-                          aria-hidden="true"
-                        ></span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="mypage-nodata-wrap">
-                  <h4>Rewards</h4>
-                  <div class="mypage-nodata-box">
-                    <p>
-                      You don't have the reward you applied for!<br
-                        class="pc-only"
-                      />Receive rewards exclusive to N Brand.<br
-                        class="pc-only"
-                      />You can collect points through missions.
-                    </p>
-                    <div class="btn-wrap-type2">
-                      <a
-                        href="../../html/experience/EP040501.html"
-                        class="btn btn-md-outline01"
-                      >
-                        See Rewards
-                        <span
-                          class="btn-icon16 icon-right"
-                          aria-hidden="true"
-                        ></span>
-                      </a>
-                      <a
-                        href="../../html/experience/EP040301.html"
-                        class="btn btn-md-outline01"
-                      >
-                        Go to Missions
-                        <span
-                          class="btn-icon16 icon-right"
-                          aria-hidden="true"
-                        ></span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="mypage-nodata-wrap">
-                  <h4>Point</h4>
-                  <div class="mypage-nodata-box">
-                    <p>
-                      You don't have the reward you applied for!
-                      <br class="pc-only" />rewards exclusive to N Brand.
-                      <br class="pc-only" />You can collect points through
-                      missions.
-                    </p>
-                    <div class="btn-wrap-type1">
-                      <a
-                        href="../../html/experience/EP040301.html"
-                        class="btn btn-md-outline01"
-                      >
-                        Go to Missions
-                        <span
-                          class="btn-icon16 icon-right"
-                          aria-hidden="true"
-                        ></span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="mypage-nodata-wrap">
-                  <h4>N Community</h4>
-                  <div class="mypage-nodata-box">
-                    <p>
-                      There is no N Community you have created or joined!<br
-                        class="pc-only"
-                      />Participate in various activities and missions unique to
-                      N Community.<br class="pc-only" />ou can also receive
-                      rewards exclusive to N Community.
-                    </p>
-                    <div class="btn-wrap-type2">
-                      <a
-                        href="../../html/experience/EP040401.html"
-                        class="btn btn-md-outline01"
-                      >
-                        See N Community
-                        <span
-                          class="btn-icon16 icon-right"
-                          aria-hidden="true"
-                        ></span>
-                      </a>
-                      <a
-                        href="../../html/experience/EP040401P01.html"
-                        class="btn btn-md-outline01"
-                      >
-                        Go to N Community
-                        <span
-                          class="btn-icon16 icon-right"
-                          aria-hidden="true"
-                        ></span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="mypage-nodata-wrap">
-                  <h4>1:1 Inquiry</h4>
-                  <div class="mypage-nodata-box">
-                    <p>
-                      Need help?<br class="pc-only" />Do you have any
-                      questions?<br class="pc-only" />Please use 1:1 inquiry.
-                    </p>
-                    <div class="btn-wrap-type1">
-                      <a
-                        href="../../html/join/CM070102.html"
-                        class="btn btn-md-outline01"
-                      >
-                        1:1 inquiry
-                        <span
-                          class="btn-icon16 icon-right"
-                          aria-hidden="true"
-                        ></span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="mypage-nodata-wrap">
-                  <h4>Friend invited</h4>
-                  <div class="mypage-nodata-box">
-                    <p>
-                      Enjoy N Brand with your friends!<br class="pc-only" />You
-                      can receive points by inviting friends.<br
-                        class="pc-only"
-                      />Referral Code: <span class="color-red">qpco0938.</span>
-                    </p>
-                    <div class="btn-wrap-type1">
-                      <!-- v1.02 p.13 : 버튼 클릭 시 토스트 팝업 노출 -->
-                      <button class="btn btn-md-outline01">
-                        Copy referral code
-                        <span
-                          class="btn-icon16 icon-right"
-                          aria-hidden="true"
-                        ></span>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <!-- v1.03 : 커뮤니티 관리 영역 : 데이터 없을 경우 케이스 추가작업 -->
-                <div class="mypage-nodata-wrap">
-                  <h4>N Community management</h4>
-                  <div class="mypage-nodata-box">
-                    <p>가입 요청이 없습니다.</p>
+                  <img
+                    src="../../inc/images/Models/ioniq5N/ioniq5N_Related_03.png"
+                    loading="lazy"
+                    alt="ioniq5N 이미지"
+                  />
+                  <div>
+                    <p>N festival</p>
                   </div>
                 </div>
               </div>
@@ -2146,14 +2174,14 @@
         </div>
       </section>
     </div>
-
     <script
       type="text/javascript"
       src="../../inc/js/jquery-3.7.1.slim.min.js"
     ></script>
     <script type="text/javascript" src="../../inc/js/swiper.min.js"></script>
-    <script type="text/javascript" src="../../inc/js/plugins.js"></script>
-    <script type="text/javascript" src="../../inc/js/com-ui.js"></script>
     <script type="text/javascript" src="../../inc/js/pub-ui.js"></script>
+    <!-- 07.17 수정 : com-ui.js / plugins.js 파일 import -->
+    <script type="text/javascript" src="../../inc/js/com-ui.js"></script>
+    <script type="text/javascript" src="../../inc/js/plugins.js"></script>
   </body>
 </html>

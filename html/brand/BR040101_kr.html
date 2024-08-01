@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name=" format-detection" content="telephone=no" />
-    <title>N브랜드 | Join_MyPage_Main</title>
+    <title>N브랜드 | N_Performance_Parts</title>
     <link
       type="text/css"
       rel="stylesheet"
@@ -16,7 +16,7 @@
 
   <body>
     <div class="wrap">
-      <!-- 07.18 수정 : header 추가 -->
+      <!-- 07.17 수정 : header 추가 -->
       <header class="header-wrap">
         <div class="header-cont">
           <h1 class="logo">
@@ -98,12 +98,12 @@
                           <a href="#" class="gnb__tab02-btn02">Motorsports</a>
                         </li>
                         <li>
-                          <a href="#" class="gnb__tab02-btn03"
-                            >N Performance Parts</a
+                          <a href="#" class="gnb__tab02-btn03 active"
+                            >N 퍼포먼스 부품</a
                           >
                         </li>
                         <li>
-                          <a href="#" class="gnb__tab02-btn04">N Merchandise</a>
+                          <a href="#" class="gnb__tab02-btn04">N 머천다이즈</a>
                         </li>
                         <li><a href="#" class="gnb__tab02-btn05">Press</a></li>
                       </ul>
@@ -1025,20 +1025,14 @@
                 aria-haspopup="true"
                 aria-expanded="false"
               >
-                Mypage
+                N 퍼포먼스 부품
               </button>
               <ul class="navigation-menu" id="navigationMenu">
-                <li><a href="#" class="active">Mypage</a></li>
-                <li><a href="#">Notification</a></li>
-                <li><a href="#">Post</a></li>
-                <li><a href="#">Missions</a></li>
-                <li><a href="#">Rewards</a></li>
-                <li><a href="#">Point</a></li>
-                <li><a href="#">N Community</a></li>
-                <li><a href="#">N Community management</a></li>
-                <li><a href="#">1:1 Inquiry</a></li>
-                <li><a href="#">Invite friends</a></li>
-                <li><a href="#">Withdrawal</a></li>
+                <li><a href="#">Hyundai N</a></li>
+                <li><a href="#">Motorsports</a></li>
+                <li><a href="#" class="active">N 퍼포먼스 부품</a></li>
+                <li><a href="#">N 머천다이즈</a></li>
+                <li><a href="#">Press</a></li>
               </ul>
             </div>
             <div class="navigation-item03">
@@ -1085,1075 +1079,981 @@
           <span class="gage"></span>
         </div>
       </header>
-      <!-- //07.18 수정 : header 추가 -->
-      <section class="content-wrap mypage-wrap">
+      <!-- //07.17 수정 : header 추가 -->
+      <section class="content-wrap models-wrap performance_wrap brand">
+        <!-- 07.18 수정 : brand 클래스 위치 변경 -->
         <div class="content-area">
-          <div class="content-item01">
-            <!-- 07.30 수정 (해당 케이스 공통 적용 필요) : 커뮤니티(클럽) 가입 케이스 일 경우, 아닌 경우 마크업 다르게 적용 필요 (가입 된 경우 button 활성화) -->
-
-            <div class="mypage-top">
-              <!-- v.101 기획서 p.15 : 커뮤니티 미가입 -->
-              <div class="mypage-profile">
-                <img
-                  src="../../inc/images/img/img_profile_default.png"
-                  loading="lazy"
-                  alt="프로필 이미지"
+          <!-- 07.29 마크업 수정 : model 레이아웃 공통 적용 -->
+          <div class="smooth-wrap">
+            <div class="content-item01 content-top">
+              <p class="tit-type01">N 퍼포먼스 부품</p>
+              <p class="tit-type03">
+                N 퍼포먼스 부품을 선택하여 성능을 높이고 자신만의 N을 만드세요.
+              </p>
+            </div>
+            <!-- key visual -->
+            <div class="content-item02">
+              <!-- video 케이스일 경우 -->
+              <video
+                class="video pc-only"
+                data-js="video"
+                id="video1"
+                playsinline
+                autoplay
+                muted
+                poster="../../inc/images/content/nperformanceparts_poster.png"
+                aria-hidden="false"
+              >
+                <source
+                  src="../../inc/videos/nperformanceparts.mp4"
+                  type="video/mp4"
                 />
-                <p class="mypage-name ellipsis2">Olivia Marie Johnson</p>
-              </div>
+              </video>
+              <video
+                class="video mo-only"
+                data-js="video"
+                id="video2"
+                playsinline
+                autoplay
+                muted
+                poster="../../inc/images/content/nperformanceparts_poster_mo.png"
+                aria-hidden="true"
+              >
+                <source
+                  src="../../inc/videos/nperformanceparts.mp4"
+                  type="video/mp4"
+                />
+              </video>
+              <img
+                src="../../inc/images/content/nperformanceparts_poster.png"
+                alt="N Performance Parts 썸네일"
+                style="display: none"
+                class="video_poster pc-only"
+              />
+              <img
+                src="../../inc/images/content/nperformanceparts_poster_mo.png"
+                alt="N Performance Parts 썸네일"
+                style="display: none"
+                class="video_poster mo-only"
+              />
+              <button
+                type="button"
+                class="btn btn-only-icon-bg01-square"
+                title="pause"
+              >
+                <span class="visually-hidden">pause</span>
+                <span
+                  class="btn-icon24 icon-pause-wh"
+                  aria-hidden="true"
+                ></span>
+              </button>
+              <!-- img 케이스일 경우 -->
+              <!-- <img src="../../inc/images/content/img_jeonju_visual-pc.png"
+                  alt="N Performance Parts Visual Banner PC 이미지" class="pc-only" loading="lazy">
+              <img src="../../inc/images/content/img_jeonju_visual-mo.png"
+                alt="N Performance Parts Visual Banner Mobile 이미지" class="mo-only" loading="lazy"> -->
+            </div>
+          </div>
+          <!-- //07.29 마크업 수정 : model 레이아웃 공통 적용 -->
 
-              <!-- v.101 기획서 p.15 : 커뮤니티 가입 / 클럽 아이콘 클릭 시 N Community 레이어 노출 (EP040401M01) -->
-              <!-- <div class="profile-btn-box">
-              <button class="profile-open" aria-controls="pop-page" aria-haspopup="true" aria-expanded="false" title="팝업오픈">
-                <div class="mypage-profile">
-                  <img src="../../inc/images/img/img_profile_default.png" loading="lazy" alt="프로필 이미지" />
-                  <div>
-                    <p class="mypage-name ellipsis2">Olivia Marie Johnson</p>
-                    <p class="mypage-club">i30N_Club</p>
+          <div class="content-item03">
+            <!-- .max1440 : gap: 80px;  / .max1440.type2 : gap: 200px; -->
+            <div class="conts-section-wrap">
+              <div class="max1440">
+                <button
+                  type="button"
+                  class="btn btn-lg-primary01 performance_config_btn"
+                >
+                  Configurator로 이동
+                  <span
+                    class="btn-icon20 icon-link-wh"
+                    aria-hidden="true"
+                  ></span>
+                </button>
+                <div class="text-col">
+                  <p class="text-strong motor_tit">
+                    매 순간 운전의 즐거움을 놓치지 마세요.
+                  </p>
+                  <!-- 07.19 수정 : 문구 변경 -->
+                  <p class="text-normal">
+                    N 퍼포먼스 파츠는 WRC, TCR 등 N 브랜드만의 글로벌 모터스포츠
+                    노하우를 기반으로 검증된 브랜드와의 협업을 통해 개발된
+                    파츠입니다.
+                    <br /><br />
+                    N 퍼포먼스 파츠는 고성능 N 고객들이 차량 구매 이후에도 성능
+                    튜닝을 위한 파츠 및액세서리를 손쉽게 접할 수 있도록 노력하고
+                    있습니다.
+                  </p>
+                  <!-- //07.19 수정 : 문구 변경 -->
+                </div>
+                <!-- 이미지 수급 필요 -->
+                <div class="img-wrap info-bnr-wrap">
+                  <img
+                    src="../../inc/images/content/img_performance_conts01_pc.png"
+                    loading="lazy"
+                    alt="Love the Rally, Go crazy PC 이미지"
+                    class="pc-only"
+                  />
+                  <img
+                    src="../../inc/images/content/img_performance_conts01_mo.png"
+                    loading="lazy"
+                    alt="Love the Rally, Go crazy Mobile 이미지"
+                    class="mo-only"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-item04 bg-gray performance_tab_area">
+            <div class="max1440">
+              <div class="tab-container motor_tab">
+                <div class="tab-head">
+                  <div class="tabs-wrap">
+                    <ul class="tabs ty-black" data-contents="탭카테고리">
+                      <li class="on">
+                        <a
+                          href="javascript:;"
+                          aria-controls="tab1-01"
+                          role="tab"
+                          aria-selected="true"
+                          >IONIQ 5 N</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="javascript:;"
+                          aria-controls="tab1-02"
+                          role="tab"
+                          aria-selected="false"
+                          >AVANTE N</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="javascript:;"
+                          aria-controls="tab1-03"
+                          role="tab"
+                          aria-selected="false"
+                          >KONA N</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="javascript:;"
+                          aria-controls="tab1-04"
+                          role="tab"
+                          aria-selected="false"
+                          >VELOSTER N</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="javascript:;"
+                          aria-controls="tab1-05"
+                          role="tab"
+                          aria-selected="false"
+                          >Accessory</a
+                        >
+                      </li>
+                    </ul>
                   </div>
                 </div>
-              </button>
-              <div class="popup club-popup" role="dialog" aria-modal="true" aria-labelledby="tit-type04" data-pop="pop-page">
-                <div class="popup-wrapper">
-                  <div class="popup-header pop-profile_wrap">
-                    <div class="pop-profile">
-                      <img src="../../inc/images/img/img_Nful_profile_01.png" loading="lazy"
-                        alt="N Community가입자의 프로필 이미지" />
-                      <p class="pop-profile_club">i30N_Club</p>
-                    </div>
-                  </div>
-                  <div class="popup-body">
-                    <div class="pop-gray">
+                <div class="tab-content on" id="tab1-01" role="tabpanel">
+                  <div class="motor_tab_con">
+                    <div class="performance_tab_tit">
                       <div>
-                        <p class="txt-left">Ranking</p>
-                        <p class="txt-right">1</p>
+                        <p class="text-strong motor_tit">IONIQ 5 N</p>
+                        <p class="text-normal">Electrifying Driving Passion</p>
+                        <p class="performance_tab_notice">
+                          * N Performance Parts are available only in Korea for
+                          now.
+                        </p>
                       </div>
-                      <div>
-                        <p class="txt-left">Point</p>
-                        <p class="txt-right">3,000</p>
-                      </div>
-                      <div>
-                        <p class="txt-left">Members</p>
-                        <p class="txt-right">1,234</p>
-                      </div>
-                    </div>
-                    <div class="pop-des">
-                      <p>Welcome!</p>
-                      <p>Hyundai i30 N Performance</p>
-                      <p>You can join immediately</p>
-                      <p>Actively participate in club missions</p>
-                      <p>Club cafe in operation</p>
-                    </div>
-                    <div class="btn-wrap">
-                      <a href="#" target="_blank" rel="noopener" class="btn sm-txt-btn01">
-                        <span class="btn-icon16 icon-copylink" aria-hidden="true"></span>
-                        N Community
+                      <!-- 국문에서만 버튼 노출 -->
+                      <a
+                        href="https://nperformanceshop.com/product/list.html?cate_no=24"
+                        target="_blank"
+                        rel="noopener"
+                        class="btn btn-lg-outline01"
+                      >
+                        Go to Shop
+                        <span
+                          class="btn-icon20 icon-link"
+                          aria-hidden="true"
+                        ></span>
                       </a>
                     </div>
-                    <div class="popup-footer">
-                      <div class="btn-wrap">
-                        <button type="button" class="btn btn-md-primary01">
-                          Join
-                          <span class="btn-icon16 icon-right-wh" aria-hidden="true"></span>
-                        </button>
-                        <button type="button" class="btn btn-md-outline01 profile-close">
-                          Close
-                        </button>
+                    <ul class="grid_3 grid_mo_drop">
+                      <li>
+                        <img
+                          src="../../inc/images/content/img_performance_model01_parts01.png"
+                          alt="모델 파츠 이미지"
+                        />
+                        <p>BRAID 20인치 경량 단조 휠 [화이트]</p>
+                        <!-- 07.19 수정 : 문구 변경 -->
+                      </li>
+                      <li>
+                        <img
+                          src="../../inc/images/content/img_performance_model01_parts02.png"
+                          alt="모델 파츠 이미지"
+                        />
+                        <p>H&R 로워링 스프링</p>
+                      </li>
+                      <li>
+                        <img
+                          src="../../inc/images/content/img_performance_model01_parts03.png"
+                          alt="모델 파츠 이미지"
+                        />
+                        <p>N 퍼포먼스 스마트 카드 키</p>
+                      </li>
+                    </ul>
+                    <a
+                      href="./BR040101P01.html"
+                      target="_blank"
+                      rel="noopener"
+                      class="btn lg-txt-btn01"
+                    >
+                      Learn more
+                      <span
+                        class="btn-icon20 icon-right"
+                        aria-hidden="true"
+                      ></span>
+                    </a>
+                  </div>
+                </div>
+                <div class="tab-content" id="tab1-02" role="tabpanel">
+                  <div class="motor_tab_con">
+                    <div class="performance_tab_tit">
+                      <div>
+                        <p class="text-strong motor_tit">AVANTE N</p>
+                        <p class="text-normal">The Perfect Balance</p>
+                        <p class="performance_tab_notice">
+                          * N Performance Parts are available only in Korea for
+                          now.
+                        </p>
                       </div>
+                      <!-- 국문에서만 버튼 노출 -->
+                      <a
+                        href="https://nperformanceshop.com/product/list.html?cate_no=25"
+                        target="_blank"
+                        rel="noopener"
+                        class="btn btn-lg-outline01"
+                      >
+                        Go to Shop
+                        <span
+                          class="btn-icon20 icon-link"
+                          aria-hidden="true"
+                        ></span>
+                      </a>
                     </div>
+                    <ul class="grid_3 grid_mo_drop">
+                      <li>
+                        <img
+                          src="../../inc/images/content/img_performance_model02_parts01.png"
+                          alt="모델 파츠 이미지"
+                        />
+                        <p>Sabelt 토우 스트랩</p>
+                      </li>
+                      <li>
+                        <img
+                          src="../../inc/images/content/img_performance_model02_parts02.png"
+                          alt="모델 파츠 이미지"
+                        />
+                        <p>N 퍼포먼스 18인치 단조 휠 [화이트]</p>
+                        <!-- 07.19 수정 : 문구 변경 -->
+                      </li>
+                      <li>
+                        <img
+                          src="../../inc/images/content/img_performance_model02_parts03.png"
+                          alt="모델 파츠 이미지"
+                        />
+                        <p>Ferodo 브레이크 패드 (스트릿) (4P)</p>
+                        <!-- 07.19 수정 : 문구 변경 -->
+                      </li>
+                    </ul>
+                    <a
+                      href="./BR040101P02.html"
+                      target="_blank"
+                      rel="noopener"
+                      class="btn lg-txt-btn01"
+                    >
+                      Learn more
+                      <span
+                        class="btn-icon20 icon-right"
+                        aria-hidden="true"
+                      ></span>
+                    </a>
+                  </div>
+                </div>
+                <div class="tab-content" id="tab1-03" role="tabpanel">
+                  <div class="motor_tab_con">
+                    <div class="performance_tab_tit">
+                      <div>
+                        <p class="text-strong motor_tit">KONA N</p>
+                        <p class="text-normal">Yes. It's N.</p>
+                        <p class="performance_tab_notice">
+                          * N Performance Parts are available only in Korea for
+                          now.
+                        </p>
+                      </div>
+                      <!-- 국문에서만 버튼 노출 -->
+                      <a
+                        href="https://nperformanceshop.com/product/list.html?cate_no=26"
+                        target="_blank"
+                        rel="noopener"
+                        class="btn btn-lg-outline01"
+                      >
+                        Go to Shop
+                        <span
+                          class="btn-icon20 icon-link"
+                          aria-hidden="true"
+                        ></span>
+                      </a>
+                    </div>
+                    <ul class="grid_3 grid_mo_drop">
+                      <li>
+                        <img
+                          src="../../inc/images/content/img_performance_model03_parts01.png"
+                          alt="모델 파츠 이미지"
+                        />
+                        <p>N 퍼포먼스 전용 매트</p>
+                        <!-- 07.19 수정 : 문구 변경 -->
+                      </li>
+                    </ul>
+                    <a
+                      href="./BR040101P03.html"
+                      target="_blank"
+                      rel="noopener"
+                      class="btn lg-txt-btn01"
+                    >
+                      Learn more
+                      <span
+                        class="btn-icon20 icon-right"
+                        aria-hidden="true"
+                      ></span>
+                    </a>
+                  </div>
+                </div>
+                <div class="tab-content" id="tab1-04" role="tabpanel">
+                  <div class="motor_tab_con">
+                    <div class="performance_tab_tit">
+                      <div>
+                        <p class="text-strong motor_tit">Veloster N</p>
+                        <p class="text-normal">Shift the Moment.</p>
+                        <p class="performance_tab_notice">
+                          * N Performance Parts are available only in Korea for
+                          now.
+                        </p>
+                      </div>
+                      <!-- 국문에서만 버튼 노출 -->
+                      <a
+                        href="https://nperformanceshop.com/product/list.html?cate_no=27"
+                        target="_blank"
+                        rel="noopener"
+                        class="btn btn-lg-outline01"
+                      >
+                        Go to Shop
+                        <span
+                          class="btn-icon20 icon-link"
+                          aria-hidden="true"
+                        ></span>
+                      </a>
+                    </div>
+                    <ul class="grid_3 grid_mo_drop">
+                      <li>
+                        <img
+                          src="../../inc/images/content/img_performance_model04_parts01.png"
+                          alt="모델 파츠 이미지"
+                        />
+                        <p>리얼 카본 스트럿 바</p>
+                        <!-- 07.19 수정 : 문구 변경 -->
+                      </li>
+                      <li>
+                        <img
+                          src="../../inc/images/content/img_performance_model04_parts02.png"
+                          alt="모델 파츠 이미지"
+                        />
+                        <p>알칸타라 센터콘솔</p>
+                        <!-- 07.19 수정 : 문구 변경 -->
+                      </li>
+                      <li>
+                        <img
+                          src="../../inc/images/content/img_performance_model04_parts03.png"
+                          alt="모델 파츠 이미지"
+                        />
+                        <p>고성능 흡기 시스템</p>
+                        <!-- 07.19 수정 : 문구 변경 -->
+                      </li>
+                    </ul>
+                    <a
+                      href="./BR040101P04.html"
+                      target="_blank"
+                      rel="noopener"
+                      class="btn lg-txt-btn01"
+                    >
+                      Learn more
+                      <span
+                        class="btn-icon20 icon-right"
+                        aria-hidden="true"
+                      ></span>
+                    </a>
+                  </div>
+                </div>
+                <div class="tab-content" id="tab1-05" role="tabpanel">
+                  <div class="motor_tab_con">
+                    <div class="performance_tab_tit">
+                      <div>
+                        <p class="text-strong motor_tit">Accessory</p>
+                        <p class="text-normal">Racing Gear</p>
+                        <p class="performance_tab_notice">
+                          * N Performance Parts are available only in Korea for
+                          now.
+                        </p>
+                      </div>
+                      <!-- 국문에서만 버튼 노출 -->
+                      <a
+                        href="https://nperformanceshop.com/product/list.html?cate_no=42"
+                        target="_blank"
+                        rel="noopener"
+                        class="btn btn-lg-outline01"
+                      >
+                        Go to Shop
+                        <span
+                          class="btn-icon20 icon-link"
+                          aria-hidden="true"
+                        ></span>
+                      </a>
+                    </div>
+                    <ul class="grid_3 grid_mo_drop">
+                      <li>
+                        <img
+                          src="../../inc/images/content/img_performance_model05_parts01.png"
+                          alt="모델 파츠 이미지"
+                        />
+                        <p>Stilo Venti Trophy 헬멧</p>
+                        <!-- 07.19 수정 : 문구 변경 -->
+                      </li>
+                      <li>
+                        <img
+                          src="../../inc/images/content/img_performance_model05_parts02.png"
+                          alt="모델 파츠 이미지"
+                        />
+                        <p>Stilo Venti WRC 헬멧</p>
+                        <!-- 07.19 수정 : 문구 변경 -->
+                      </li>
+                      <li>
+                        <img
+                          src="../../inc/images/content/img_performance_model05_parts03.png"
+                          alt="모델 파츠 이미지"
+                        />
+                        <p>Sabelt 6점식 시트벨트</p>
+                        <!-- 07.19 수정 : 문구 변경 -->
+                      </li>
+                    </ul>
+                    <a
+                      href="./BR040101P05.html"
+                      target="_blank"
+                      rel="noopener"
+                      class="btn lg-txt-btn01"
+                    >
+                      Learn more
+                      <span
+                        class="btn-icon20 icon-right"
+                        aria-hidden="true"
+                      ></span>
+                    </a>
                   </div>
                 </div>
               </div>
-            </div> -->
-              <!--//07.30 수정 : 레이어팝업 & 버튼 추가 -->
+            </div>
+          </div>
 
-              <div class="mypage-info">
-                <dl>
-                  <div>
-                    <dt>Point</dt>
-                    <dd>84</dd>
+          <!-- 이미지 수급 필요 -->
+          <div class="content-item05 gallery-wrap">
+            <div class="motor_paddig_wrap">
+              <div class="performance_slide_wrap">
+                <div class="max1440">
+                  <div class="text-col">
+                    <p class="text-strong motor_tit">
+                      N 퍼포먼스 스페셜 에디션
+                    </p>
+                    <p class="text-normal">
+                      디자인, 성능에 변화를 주어 기본 모델과 차별화된 한정판
+                      차량
+                      <!-- 07.19 수정 : 문구 변경 -->
+                    </p>
+                    <p class="performance_slide_tit">i30 N Project C</p>
                   </div>
-                  <div>
-                    <dt>Nthusiasts Ranking</dt>
-                    <dd>5,844</dd>
+                </div>
+                <div class="swiper-container">
+                  <!-- Swiper -->
+                  <div class="swiper ty02Swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="img-area">
+                          <img
+                            src="../../inc/images/content/img_performance_swiper1_no_data.png"
+                            loading="lazy"
+                            alt="이미지 슬라이드1"
+                          />
+                          <a href="#" class="btn lg-txt-btn02" download>
+                            <span class="pc-only">Download</span>
+                            <span
+                              class="btn-icon24 icon-download-wh"
+                              aria-hidden="true"
+                            ></span>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="img-area">
+                          <img
+                            src="../../inc/images/content/img_performance_swiper1_no_data.png"
+                            loading="lazy"
+                            alt="이미지 슬라이드2"
+                          />
+                          <a href="#" class="btn lg-txt-btn02" download>
+                            <span class="pc-only">Download</span>
+                            <span
+                              class="btn-icon24 icon-download-wh"
+                              aria-hidden="true"
+                            ></span>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="img-area">
+                          <img
+                            src="../../inc/images/content/img_performance_swiper1_no_data.png"
+                            loading="lazy"
+                            alt="이미지 슬라이드3"
+                          />
+                          <a href="#" class="btn lg-txt-btn02" download>
+                            <span class="pc-only">Download</span>
+                            <span
+                              class="btn-icon24 icon-download-wh"
+                              aria-hidden="true"
+                            ></span>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="img-area">
+                          <img
+                            src="../../inc/images/content/img_performance_swiper1_no_data.png"
+                            loading="lazy"
+                            alt="이미지 슬라이드4"
+                          />
+                          <a href="#" class="btn lg-txt-btn02" download>
+                            <span class="pc-only">Download</span>
+                            <span
+                              class="btn-icon24 icon-download-wh"
+                              aria-hidden="true"
+                            ></span>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="img-area">
+                          <img
+                            src="../../inc/images/content/img_performance_swiper1_no_data.png"
+                            loading="lazy"
+                            alt="이미지 슬라이드5"
+                          />
+                          <a href="#" class="btn lg-txt-btn02" download>
+                            <span class="pc-only">Download</span>
+                            <span
+                              class="btn-icon24 icon-download-wh"
+                              aria-hidden="true"
+                            ></span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- //swiper-wrapper -->
+                    <!-- 07.03 추가 : swiper-arrow wrap 수정 -->
+                    <div class="swiper-bottom-wrap ty02">
+                      <div
+                        class="swiper-button-next"
+                        tabindex="0"
+                        role="button"
+                        aria-controls="swiper-wrapper-d1f642c19f1cdd98"
+                        aria-disabled="false"
+                        aria-label="다음 슬라이드"
+                      ></div>
+                      <div
+                        class="swiper-button-prev swiper-button-disabled"
+                        tabindex="-1"
+                        role="button"
+                        aria-controls="swiper-wrapper-d1f642c19f1cdd98"
+                        aria-disabled="true"
+                        aria-label="이전 슬라이드"
+                      ></div>
+                    </div>
+                    <!-- //07.03 추가 : swiper-arrow wrap 수정 -->
+                    <div class="swiper-status-wrap">
+                      <div class="swiper-pagination-custom">
+                        <span class="swiper-pagination-bullet-active"></span>
+                      </div>
+                    </div>
+                    <!-- //swiper-status-wrap -->
                   </div>
-                </dl>
-                <div class="btn-wrap">
-                  <a
-                    href="/html/experience/EP040401.html"
-                    class="btn md-txt-btn01"
-                  >
-                    Create or join an N Community
+                  <!-- //swiper -->
+                </div>
+                <!-- //swiper-container -->
+              </div>
+              <div class="performance_slide_wrap">
+                <div class="max1440">
+                  <div class="text-col">
+                    <p class="text-strong motor_tit">N 퍼포먼스 콘셉트 카</p>
+                    <p class="text-normal">
+                      N 퍼포먼스의 방향성을 제시하는 콘셉트카
+                    </p>
+                    <p class="performance_slide_tit">NPX 1</p>
+                  </div>
+                </div>
+                <div class="swiper-container">
+                  <!-- Swiper -->
+                  <div class="swiper ty02Swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="img-area">
+                          <img
+                            src="../../inc/images/content/img_performance_swiper2_slide01_pc.png"
+                            class="pc-only"
+                            loading="lazy"
+                            alt="이미지 슬라이드1 pc"
+                          />
+                          <img
+                            src="../../inc/images/content/img_performance_swiper2_slide01_mo.png"
+                            class="mo-only"
+                            loading="lazy"
+                            alt="이미지 슬라이드1 mo"
+                          />
+                          <a href="#" class="btn lg-txt-btn02" download>
+                            <span class="pc-only">Download</span>
+                            <span
+                              class="btn-icon24 icon-download-wh"
+                              aria-hidden="true"
+                            ></span>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="img-area">
+                          <img
+                            src="../../inc/images/content/img_performance_swiper2_slide02_pc.png"
+                            class="pc-only"
+                            loading="lazy"
+                            alt="이미지 슬라이드2 pc"
+                          />
+                          <img
+                            src="../../inc/images/content/img_performance_swiper2_slide02_mo.png"
+                            class="mo-only"
+                            loading="lazy"
+                            alt="이미지 슬라이드2 mo"
+                          />
+                          <a href="#" class="btn lg-txt-btn02" download>
+                            <span class="pc-only">Download</span>
+                            <span
+                              class="btn-icon24 icon-download-wh"
+                              aria-hidden="true"
+                            ></span>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="img-area">
+                          <img
+                            src="../../inc/images/content/img_performance_swiper2_slide03_pc.png"
+                            class="pc-only"
+                            loading="lazy"
+                            alt="이미지 슬라이드3 pc"
+                          />
+                          <img
+                            src="../../inc/images/content/img_performance_swiper2_slide03_mo.png"
+                            class="mo-only"
+                            loading="lazy"
+                            alt="이미지 슬라이드3 mo"
+                          />
+                          <a href="#" class="btn lg-txt-btn02" download>
+                            <span class="pc-only">Download</span>
+                            <span
+                              class="btn-icon24 icon-download-wh"
+                              aria-hidden="true"
+                            ></span>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="img-area">
+                          <img
+                            src="../../inc/images/content/img_performance_swiper2_slide04_pc.png"
+                            class="pc-only"
+                            loading="lazy"
+                            alt="이미지 슬라이드4 pc"
+                          />
+                          <img
+                            src="../../inc/images/content/img_performance_swiper2_slide04_mo.png"
+                            class="mo-only"
+                            loading="lazy"
+                            alt="이미지 슬라이드4 mo"
+                          />
+                          <a href="#" class="btn lg-txt-btn02" download>
+                            <span class="pc-only">Download</span>
+                            <span
+                              class="btn-icon24 icon-download-wh"
+                              aria-hidden="true"
+                            ></span>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="img-area">
+                          <img
+                            src="../../inc/images/content/img_performance_swiper2_slide05_pc.png"
+                            class="pc-only"
+                            loading="lazy"
+                            alt="이미지 슬라이드5 pc"
+                          />
+                          <img
+                            src="../../inc/images/content/img_performance_swiper2_slide05_mo.png"
+                            class="mo-only"
+                            loading="lazy"
+                            alt="이미지 슬라이드5 mo"
+                          />
+                          <a href="#" class="btn lg-txt-btn02" download>
+                            <span class="pc-only">Download</span>
+                            <span
+                              class="btn-icon24 icon-download-wh"
+                              aria-hidden="true"
+                            ></span>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="img-area">
+                          <img
+                            src="../../inc/images/content/img_performance_swiper2_slide06_pc.png"
+                            class="pc-only"
+                            loading="lazy"
+                            alt="이미지 슬라이드6 pc"
+                          />
+                          <img
+                            src="../../inc/images/content/img_performance_swiper2_slide06_mo.png"
+                            class="mo-only"
+                            loading="lazy"
+                            alt="이미지 슬라이드6 mo"
+                          />
+                          <a href="#" class="btn lg-txt-btn02" download>
+                            <span class="pc-only">Download</span>
+                            <span
+                              class="btn-icon24 icon-download-wh"
+                              aria-hidden="true"
+                            ></span>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="img-area">
+                          <img
+                            src="../../inc/images/content/img_performance_swiper2_slide07_pc.png"
+                            class="pc-only"
+                            loading="lazy"
+                            alt="이미지 슬라이드7 pc"
+                          />
+                          <img
+                            src="../../inc/images/content/img_performance_swiper2_slide07_mo.png"
+                            class="mo-only"
+                            loading="lazy"
+                            alt="이미지 슬라이드7 mo"
+                          />
+                          <a href="#" class="btn lg-txt-btn02" download>
+                            <span class="pc-only">Download</span>
+                            <span
+                              class="btn-icon24 icon-download-wh"
+                              aria-hidden="true"
+                            ></span>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="img-area">
+                          <img
+                            src="../../inc/images/content/img_performance_swiper2_slide08_pc.png"
+                            class="pc-only"
+                            loading="lazy"
+                            alt="이미지 슬라이드8 pc"
+                          />
+                          <img
+                            src="../../inc/images/content/img_performance_swiper2_slide08_mo.png"
+                            class="mo-only"
+                            loading="lazy"
+                            alt="이미지 슬라이드8 mo"
+                          />
+                          <a href="#" class="btn lg-txt-btn02" download>
+                            <span class="pc-only">Download</span>
+                            <span
+                              class="btn-icon24 icon-download-wh"
+                              aria-hidden="true"
+                            ></span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- //swiper-wrapper -->
+                    <!-- 07.03 추가 : swiper-arrow wrap 수정 -->
+                    <div class="swiper-bottom-wrap ty02">
+                      <div
+                        class="swiper-button-next"
+                        tabindex="0"
+                        role="button"
+                        aria-controls="swiper-wrapper-d1f642c19f1cdd98"
+                        aria-disabled="false"
+                        aria-label="다음 슬라이드"
+                      ></div>
+                      <div
+                        class="swiper-button-prev swiper-button-disabled"
+                        tabindex="-1"
+                        role="button"
+                        aria-controls="swiper-wrapper-d1f642c19f1cdd98"
+                        aria-disabled="true"
+                        aria-label="이전 슬라이드"
+                      ></div>
+                    </div>
+                    <!-- //07.03 추가 : swiper-arrow wrap 수정 -->
+                    <div class="swiper-status-wrap">
+                      <div class="swiper-pagination-custom">
+                        <span class="swiper-pagination-bullet-active"></span>
+                      </div>
+                    </div>
+                    <!-- //swiper-status-wrap -->
+                  </div>
+                  <!-- //swiper -->
+                </div>
+                <!-- //swiper-container -->
+                <div class="btn-wrap-default">
+                  <!-- 07.31 수정 : 링크 추가 -->
+                  <a href="/en/models/concept/npx1.do" class="btn lg-txt-btn01">
+                    Learn More
                     <span
-                      class="btn-icon16 icon-right"
+                      class="btn-icon20 icon-right"
                       aria-hidden="true"
                     ></span>
                   </a>
                 </div>
               </div>
             </div>
-            <!--//07.30 수정 : 레이어팝업 & 버튼 추가 -->
           </div>
-          <div class="content-item02">
-            <div class="mypage-box">
-              <div class="mypage-nav">
-                <h4 class="pc-only">Mypage</h4>
-                <ul>
-                  <li>
-                    <a class="btn lg-txt-btn01" href="./CM040201.html">
-                      Notification
-                      <span
-                        class="btn-icon16 icon-right"
-                        aria-hidden="true"
-                      ></span></a
-                    ><!-- 화면 ID :  CM040201 -->
-                  </li>
-                  <li>
-                    <a class="btn lg-txt-btn01" href="./CM040301.html">
-                      Post
-                      <span
-                        class="btn-icon16 icon-right"
-                        aria-hidden="true"
-                      ></span></a
-                    ><!-- 화면 ID :  CM040301 -->
-                  </li>
-                  <li>
-                    <a class="btn lg-txt-btn01" href="./CM040401.html">
-                      Missions
-                      <span
-                        class="btn-icon16 icon-right"
-                        aria-hidden="true"
-                      ></span> </a
-                    ><!-- 화면 ID :  CM040401 -->
-                  </li>
-                  <li>
-                    <a class="btn lg-txt-btn01" href="./CM040501.html">
-                      Rewards
-                      <span
-                        class="btn-icon16 icon-right"
-                        aria-hidden="true"
-                      ></span> </a
-                    ><!-- 화면 ID :  CM040501 -->
-                  </li>
-                  <li>
-                    <a class="btn lg-txt-btn01" href="./CM040601.html">
-                      Point
-                      <span
-                        class="btn-icon16 icon-right"
-                        aria-hidden="true"
-                      ></span> </a
-                    ><!-- 화면 ID :  CM040601 -->
-                  </li>
-                  <li>
-                    <a class="btn lg-txt-btn01" href="./CM040701.html">
-                      N Community
-                      <span
-                        class="btn-icon16 icon-right"
-                        aria-hidden="true"
-                      ></span> </a
-                    ><!-- 화면 ID :  CM040701 -->
-                  </li>
-                  <li>
-                    <a class="btn lg-txt-btn01" href="./CM041101.html">
-                      N Community management
-                      <span
-                        class="btn-icon16 icon-right"
-                        aria-hidden="true"
-                      ></span> </a
-                    ><!-- 화면 ID :  CM041101 -->
-                  </li>
-                  <li>
-                    <a class="btn lg-txt-btn01" href="./CM040801.html">
-                      1:1 Inquiry
-                      <span
-                        class="btn-icon16 icon-right"
-                        aria-hidden="true"
-                      ></span> </a
-                    ><!-- 화면 ID :  CM040801 -->
-                  </li>
-                  <li>
-                    <a class="btn lg-txt-btn01" href="./CM040901.html">
-                      Invite friends
-                      <span
-                        class="btn-icon16 icon-right"
-                        aria-hidden="true"
-                      ></span> </a
-                    ><!-- 화면 ID :  CM040901 -->
-                  </li>
-                  <li>
-                    <a class="btn lg-txt-btn01" href="./CM041001.html">
-                      Membership withdrawal
-                      <span
-                        class="btn-icon16 icon-right"
-                        aria-hidden="true"
-                      ></span> </a
-                    ><!-- 화면 ID :  CM041001 -->
-                  </li>
-                </ul>
-                <div class="btn-wrap">
-                  <a href="#" class="btn md-txt-btn01">
-                    Log out
+
+          <!-- 이미지 수급 필요 -->
+          <div class="content-item06 performance_garage_wrap">
+            <div class="conts-section-wrap">
+              <div class="max1440">
+                <div class="text-col">
+                  <p class="text-strong motor_tit">N 퍼포먼스 개러지</p>
+                  <p class="text-normal">
+                    N 퍼포먼스 개러지에서 전문적인 튜닝 상담을 받고, N 퍼포먼스
+                    파츠를 구매하거나 장착해 보세요.
+                  </p>
+                  <a
+                    href="https://nperformanceshop.com/garage.html"
+                    target="_blank"
+                    rel="noopener"
+                    class="btn btn-lg-outline02"
+                  >
+                    Learn More
                     <span
-                      class="btn-icon16 icon-right"
+                      class="btn-icon20 icon-right-wh"
                       aria-hidden="true"
                     ></span>
                   </a>
                 </div>
               </div>
-              <div class="mypage-content mypage-allbox">
-                <div>
-                  <h4>Notice</h4>
-                  <ul class="mynotice-wrap">
-                    <!-- 안읽음 경우 -->
-                    <li class="mynotice-box unread-box">
-                      <p class="mynotice-type">Missions - Nthusiasts</p>
-                      <!-- v1.02 p.16 알림 클릭 시 : Post, 미션 상세 페이지 팝업 노출 -->
-                      <button class="mynotice-title ellipsis3">
-                        Beauty shot! Participation was [rejected].
-                      </button>
-                      <div class="mynotice-btm">
-                        <p class="mynotice-date">03.28.2024</p>
-                        <button class="btn sm-txt-btn01">
-                          <span
-                            class="btn-icon16 icon-check"
-                            aria-hidden="true"
-                          ></span>
-                          Unread
-                        </button>
-                      </div>
-                      <!-- 삭제 버튼 -->
-                      <button
-                        type="button"
-                        class="btn btn-only-icon-notbg"
-                        title="close"
-                      >
-                        <span class="visually-hidden">close</span>
-                        <span
-                          class="btn-icon20 icon-close"
-                          aria-hidden="true"
-                        ></span>
-                      </button>
-                    </li>
-                    <!-- 읽음 경우 -->
-                    <li class="mynotice-box read-box">
-                      <p class="mynotice-type">Missions - Nthusiasts</p>
-                      <!-- v1.02 p.16 알림 클릭 시 : Post, 미션 상세 페이지 팝업 노출 -->
-                      <button class="mynotice-title ellipsis3">
-                        If there is no Master transfer application by May 5th,
-                        it will be closed. You can apply for transfer at [My
-                        Page > N Community > Settings Menu].
-                      </button>
-                      <div class="mynotice-btm">
-                        <p class="mynotice-date">03.28.2024</p>
-                        <p class="mynotice-read">
-                          <i
-                            class="btn-icon16 icon-check"
-                            aria-hidden="true"
-                          ></i
-                          >Read
-                        </p>
-                      </div>
-                      <!-- 삭제 버튼 -->
-                      <button
-                        type="button"
-                        class="btn btn-only-icon-notbg"
-                        title="close"
-                      >
-                        <span class="visually-hidden">close</span>
-                        <span
-                          class="btn-icon20 icon-close"
-                          aria-hidden="true"
-                        ></span>
-                      </button>
-                    </li>
-                    <!-- 읽음 경우 -->
-                    <li class="mynotice-box read-box">
-                      <p class="mynotice-type">Missions - Nthusiasts</p>
-                      <!-- v1.02 p.16 알림 클릭 시 : Post, 미션 상세 페이지 팝업 노출 -->
-                      <button class="mynotice-title ellipsis3">
-                        The post has been approved.
-                      </button>
-                      <div class="mynotice-btm">
-                        <p class="mynotice-date">03.28.2024</p>
-                        <p class="mynotice-read">
-                          <i
-                            class="btn-icon16 icon-check"
-                            aria-hidden="true"
-                          ></i
-                          >Read
-                        </p>
-                      </div>
-                      <!-- 삭제 버튼 -->
-                      <button
-                        type="button"
-                        class="btn btn-only-icon-notbg"
-                        title="close"
-                      >
-                        <span class="visually-hidden">close</span>
-                        <span
-                          class="btn-icon20 icon-close"
-                          aria-hidden="true"
-                        ></span>
-                      </button>
-                    </li>
-                  </ul>
-                  <div class="btn-wrap move-wrap">
-                    <a href="./CM040201.html" class="btn md-txt-btn01">
-                      View all
-                      <span
-                        class="btn-icon16 icon-right"
-                        aria-hidden="true"
-                      ></span>
-                    </a>
-                  </div>
-                </div>
-                <div>
-                  <h4>Post</h4>
-                  <!-- 0627 기획서 v1.03 p.16 : 목록 최신 3개 노출로 변경 -->
-                  <ul class="mymsission-wrap">
-                    <li>
-                      <div class="mymsission-col">
-                        <!-- 제목 클릭 시 : 상세 화면 노출 (화면 ID : CM040301P01) -->
-                        <button class="mymsission-title ellipsis2">
-                          You’ll see me in hindsight
-                        </button>
-                        <p class="mymsission-date">04.01.2024</p>
-                      </div>
-                      <p class="mymsission-status">Made Hidden</p>
-                    </li>
-                    <li>
-                      <div class="mymsission-col">
-                        <!-- 제목 클릭 시 : 상세 화면 노출 (화면 ID : CM040301P01) -->
-                        <button class="mymsission-title ellipsis2">
-                          Nürburgring 24H Race
-                        </button>
-                        <p class="mymsission-date">04.01.2024</p>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="mymsission-col">
-                        <!-- 제목 클릭 시 : 상세 화면 노출 (화면 ID : CM040301P01) -->
-                        <button class="mymsission-title ellipsis2">
-                          N Activity Verification(1/3)
-                        </button>
-                        <p class="mymsission-date">04.01.2024</p>
-                      </div>
-                    </li>
-                  </ul>
-                  <div class="btn-wrap move-wrap">
-                    <a href="./CM040301.html" class="btn md-txt-btn01">
-                      Learn More
-                      <span
-                        class="btn-icon16 icon-right"
-                        aria-hidden="true"
-                      ></span>
-                    </a>
-                  </div>
-                </div>
-                <div>
-                  <h4>Missions</h4>
-                  <ul class="mymsission-wrap">
-                    <li>
-                      <p class="mymsission-type">Nthusiasts</p>
-                      <div class="mymsission-col">
-                        <!-- v1.02 p.8 미션명 클릭 시 : 상세 화면 노출 (화면 ID : CM040401P01) -->
-                        <button class="mymsission-title ellipsis2">
-                          Beauty shot!
-                        </button>
-                        <p class="mymsission-date">04.01.2024</p>
-                      </div>
-                      <p class="mymsission-status">Reject</p>
-                    </li>
-                    <li>
-                      <p class="mymsission-type">N Community Members</p>
-                      <div class="mymsission-col">
-                        <!-- v1.02 p.8 미션명 클릭 시 : 상세 화면 노출 (화면 ID : CM040401P01) -->
-                        <button class="mymsission-title ellipsis2">
-                          Nürburgring 24H Race Cheering
-                        </button>
-                        <p class="mymsission-date">04.01.2024</p>
-                      </div>
-                      <p class="mymsission-status">Wait</p>
-                    </li>
-                    <li>
-                      <p class="mymsission-type">N Community Master</p>
-                      <div class="mymsission-col">
-                        <!-- v1.02 p.8 미션명 클릭 시 : 상세 화면 노출 (화면 ID : CM040401P01) -->
-                        <button class="mymsission-title ellipsis2">
-                          N Activity Verification(1/3)
-                        </button>
-                        <p class="mymsission-date">04.01.2024</p>
-                      </div>
-                      <p class="mymsission-status">Reject</p>
-                    </li>
-                  </ul>
-                  <div class="btn-wrap move-wrap">
-                    <a href="#" class="btn md-txt-btn01">
-                      <!-- CM040401 -->
-                      Learn More
-                      <span
-                        class="btn-icon16 icon-right"
-                        aria-hidden="true"
-                      ></span>
-                    </a>
-                  </div>
-                </div>
-                <div>
-                  <h4>Rewards</h4>
-                  <ul class="mymsission-wrap">
-                    <li>
-                      <p class="mymsission-type">Nthusiasts</p>
-                      <div class="mymsission-col">
-                        <p class="mymsission-title ellipsis2">Beauty shot!</p>
-                        <p class="mymsission-date">04.01.2024</p>
-                      </div>
-                      <p class="mymsission-status">Reject</p>
-                    </li>
-                    <li>
-                      <p class="mymsission-type">N Community Members</p>
-                      <div class="mymsission-col">
-                        <p class="mymsission-title ellipsis2">
-                          Nürburgring 24H Race Cheering
-                        </p>
-                        <p class="mymsission-date">04.01.2024</p>
-                      </div>
-                      <p class="mymsission-status">Wait</p>
-                    </li>
-                    <li>
-                      <p class="mymsission-type">N Community Master</p>
-                      <div class="mymsission-col">
-                        <p class="mymsission-title ellipsis2">
-                          N Activity Verification(1/3)
-                        </p>
-                        <p class="mymsission-date">04.01.2024</p>
-                      </div>
-                      <p class="mymsission-status">Reject</p>
-                    </li>
-                  </ul>
-                  <div class="btn-wrap move-wrap">
-                    <a href="#" class="btn md-txt-btn01">
-                      <!-- CM040501 -->
-                      Learn More
-                      <span
-                        class="btn-icon16 icon-right"
-                        aria-hidden="true"
-                      ></span>
-                    </a>
-                  </div>
-                </div>
-                <div>
-                  <h4>Points</h4>
-                  <ul class="mymsission-wrap">
-                    <li>
-                      <p class="mymsission-type">Nthusiasts</p>
-                      <div class="mymsission-col">
-                        <p class="mymsission-title ellipsis2">Beauty shot!</p>
-                        <p class="mymsission-date">04.01.2024</p>
-                      </div>
-                      <p class="mypoint-minus">-200</p>
-                    </li>
-                    <li>
-                      <p class="mymsission-type">N Community Members</p>
-                      <div class="mymsission-col">
-                        <p class="mymsission-title ellipsis2">
-                          Nürburgring 24H Race Cheering
-                        </p>
-                        <p class="mymsission-date">
-                          04.01.2024<span class="mypoint-reject">Reject</span>
-                        </p>
-                      </div>
-                      <p class="mypoint-minus mypoint-reject">-500</p>
-                    </li>
-                    <li>
-                      <p class="mymsission-type">N Community Master</p>
-                      <div class="mymsission-col">
-                        <p class="mymsission-title ellipsis2">
-                          N Activity Verification(1/3)
-                        </p>
-                        <p class="mymsission-date">04.01.2024</p>
-                      </div>
-                      <p class="mypoint-plus">+300</p>
-                    </li>
-                  </ul>
-                  <div class="btn-wrap move-wrap">
-                    <a href="#" class="btn md-txt-btn01">
-                      <!-- CM040601 -->
-                      Learn More
-                      <span
-                        class="btn-icon16 icon-right"
-                        aria-hidden="true"
-                      ></span>
-                    </a>
-                  </div>
-                </div>
-                <!-- 0701 N Community > 생성요청현황, 가입요청현황 영역 작업 -->
-                <div>
-                  <div class="mypage-titlebox">
-                    <h4>N Community</h4>
-                    <p>Creation Request Status</p>
-                  </div>
-                  <ul class="mymsission-wrap">
-                    <li>
-                      <div class="mymsission-col">
-                        <p class="mymsission-title ellipsis2">Beauty shot!</p>
-                        <p class="mymsission-date">04.01.2024</p>
-                      </div>
-                      <p class="mymsission-status">Awaiting Approval</p>
-                    </li>
-                    <li>
-                      <div class="mymsission-col">
-                        <button class="mymsission-title ellipsis2">
-                          Nürburgring 24H Race Cheering
-                        </button>
-                        <p class="mymsission-date">04.01.2024</p>
-                      </div>
-                      <p class="mymsission-status">Wait</p>
-                    </li>
-                    <li>
-                      <div class="mymsission-col">
-                        <button class="mymsission-title ellipsis2">
-                          N Activity Verification(1/3)
-                        </button>
-                        <p class="mymsission-date">04.01.2024</p>
-                      </div>
-                      <p class="mymsission-status">Reject</p>
-                    </li>
-                  </ul>
-                  <div class="btn-wrap move-wrap">
-                    <a href="./CM040701.html" class="btn md-txt-btn01">
-                      Learn More
-                      <span
-                        class="btn-icon16 icon-right"
-                        aria-hidden="true"
-                      ></span>
-                    </a>
-                  </div>
-                </div>
-                <div>
-                  <div class="mypage-titlebox">
-                    <h4>N Community</h4>
-                    <p>Membership Request Status</p>
-                  </div>
-                  <ul class="mymsission-wrap">
-                    <li>
-                      <div class="mymsission-col">
-                        <p class="mymsission-title ellipsis2">Beauty shot!</p>
-                        <p class="mymsission-date">04.01.2024</p>
-                      </div>
-                      <div class="btn-wrap-type1">
-                        <button type="button" class="btn btn-xs-outline01">
-                          Cancel Joining
-                        </button>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="mymsission-col">
-                        <p class="mymsission-title ellipsis2">
-                          Nürburgring 24H Race Cheering
-                        </p>
-                        <p class="mymsission-date">04.01.2024</p>
-                      </div>
-                      <div class="btn-wrap-type1">
-                        <button type="button" class="btn btn-xs-outline01">
-                          Cancel Joining
-                        </button>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="mymsission-col">
-                        <button class="mymsission-title ellipsis2">
-                          N Activity Verification(1/3)
-                        </button>
-                        <p class="mymsission-date">04.01.2024</p>
-                      </div>
-                      <p class="mymsission-status">Reject</p>
-                      <div class="btn-wrap-type1">
-                        <button type="button" class="btn btn-xs-outline01">
-                          Delete
-                        </button>
-                      </div>
-                    </li>
-                  </ul>
-                  <div class="btn-wrap move-wrap">
-                    <a href="./CM040701.html" class="btn md-txt-btn01">
-                      Learn More
-                      <span
-                        class="btn-icon16 icon-right"
-                        aria-hidden="true"
-                      ></span>
-                    </a>
-                  </div>
-                </div>
-                <div>
-                  <div class="tab-container mycommunity-wrap">
-                    <div class="tab-head ty03">
-                      <h4>N Community</h4>
-                      <div class="tabs-wrap">
-                        <ul class="tabs ty-black" data-contents="탭카테고리">
-                          <li class="on">
-                            <a
-                              href="javascript:;"
-                              aria-controls="tab1-01"
-                              role="tab"
-                              aria-selected="true"
-                              >Subscription status</a
-                            >
-                          </li>
-                          <li>
-                            <a
-                              href="javascript:;"
-                              aria-controls="tab1-02"
-                              role="tab"
-                              aria-selected="false"
-                              >Activity status</a
-                            >
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="tab-content on" id="tab1-01" role="tabpanel">
-                      <!-- v1.02 p.18 (디자인 미수정 / 마크업만 했음) -->
-                      <ul class="mymsission-wrap">
-                        <li>
-                          <div class="mymsission-col">
-                            <p class="mymsission-title ellipsis2">
-                              Beauty shot!
-                            </p>
-                            <p class="mymsission-date">04.01.2024</p>
-                          </div>
-                          <div class="btn-wrap-type2">
-                            <button type="button" class="btn btn-xs-outline01">
-                              Reject
-                            </button>
-                            <button type="button" class="btn btn-xs-primary01">
-                              Confirm
-                            </button>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="mymsission-col">
-                            <p class="mymsission-title ellipsis2">
-                              Nürburgring 24H Race Cheering
-                            </p>
-                            <p class="mymsission-date">04.01.2024</p>
-                          </div>
-                          <p class="mymsission-status">Unsubscribe</p>
-                        </li>
-                        <li>
-                          <div class="mymsission-col">
-                            <p class="mymsission-title ellipsis2">
-                              Olivia Marie Johnson
-                            </p>
-                            <p class="mymsission-date">04.01.2024</p>
-                          </div>
-                          <p class="mymsission-status">Join</p>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="tab-content" id="tab1-02" role="tabpanel">
-                      <ul class="mymsission-wrap">
-                        <li>
-                          <p class="mymsission-type">Nthusiasts</p>
-                          <div class="mymsission-col">
-                            <p class="mymsission-title">
-                              n.ck | Korea invitation ticket! Your application
-                              has been
-                            </p>
-                            <p class="mymsission-date">04.01.2024</p>
-                          </div>
-                          <p class="mypoint-minus">-500</p>
-                        </li>
-                        <li>
-                          <p class="mymsission-type">N Community Members</p>
-                          <div class="mymsission-col">
-                            <p class="mymsission-title">
-                              Hyndai_n_only | Participation in community content
-                              has been [completed].
-                            </p>
-                            <p class="mymsission-date">
-                              04.01.2024<span class="mypoint-reject"
-                                >Reject</span
-                              >
-                            </p>
-                          </div>
-                          <p class="mypoint-plus mypoint-reject">+300</p>
-                        </li>
-                        <li>
-                          <p class="mymsission-type">N Community Master</p>
-                          <div class="mymsission-col">
-                            <p class="mymsission-title">
-                              n.ck | Korea invitation ticket! Your application
-                              has been [completed].
-                            </p>
-                            <p class="mymsission-date">04.01.2024</p>
-                          </div>
-                          <p class="mypoint-minus">-3,000</p>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="btn-wrap move-wrap">
-                    <a href="./CM040701.html" class="btn md-txt-btn01">
-                      Learn More
-                      <span
-                        class="btn-icon16 icon-right"
-                        aria-hidden="true"
-                      ></span>
-                    </a>
-                  </div>
-                </div>
-                <div>
-                  <h4>N Community management</h4>
-                  <ul class="mymsission-wrap">
-                    <li>
-                      <div class="mymsission-col">
-                        <p class="mymsission-title ellipsis2">
-                          n.ck | Korea invitation ticket! Your application has
-                          been [completed].
-                        </p>
-                        <p class="mymsission-date">04.01.2024</p>
-                      </div>
-                      <div class="btn-wrap-type2">
-                        <button type="button" class="btn btn-xs-outline01">
-                          Reject
-                        </button>
-                        <button type="button" class="btn btn-xs-primary01">
-                          Confirm
-                        </button>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="mymsission-col">
-                        <p class="mymsission-title ellipsis2">
-                          Hyndai_n_only | Participation in community content has
-                          been [completed].
-                        </p>
-                        <p class="mymsission-date">04.01.2024</p>
-                      </div>
-                      <div class="btn-wrap-type2">
-                        <button type="button" class="btn btn-xs-outline01">
-                          Reject
-                        </button>
-                        <button type="button" class="btn btn-xs-primary01">
-                          Confirm
-                        </button>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="mymsission-col">
-                        <p class="mymsission-title ellipsis2">
-                          n.ck | N Community Activity verification!!
-                          Participation has been [completed].
-                        </p>
-                        <p class="mymsission-date">04.01.2024</p>
-                      </div>
-                      <div class="btn-wrap-type2">
-                        <button type="button" class="btn btn-xs-outline01">
-                          Reject
-                        </button>
-                        <button type="button" class="btn btn-xs-primary01">
-                          Confirm
-                        </button>
-                      </div>
-                    </li>
-                  </ul>
-                  <div class="btn-wrap move-wrap">
-                    <a href="./CM041101.html" class="btn md-txt-btn01">
-                      Learn More
-                      <span
-                        class="btn-icon16 icon-right"
-                        aria-hidden="true"
-                      ></span>
-                    </a>
-                  </div>
-                </div>
-                <div>
-                  <h4>1:1 Inquiry</h4>
-                  <ul class="mymsission-wrap">
-                    <li>
-                      <div class="mymsission-col">
-                        <!-- v1.02 p.20 제목 클릭 시 해당 상세 화면 이동 (화면 ID : CM040802) -->
-                        <a class="mymsission-title" href="./CM040802.html"
-                          >Beauty shot!</a
-                        >
-                        <p class="mymsission-date">04.01.2024</p>
-                      </div>
-                      <p class="mymsission-status">Waiting for reply</p>
-                    </li>
-                    <li>
-                      <div class="mymsission-col">
-                        <!-- v1.02 p.20 제목 클릭 시 해당 상세 화면 이동 (화면 ID : CM040802) -->
-                        <a class="mymsission-title" href="./CM040802.html"
-                          >Nürburgring 24H Race Cheering</a
-                        >
-                        <p class="mymsission-date">04.01.2024</p>
-                      </div>
-                      <p class="mymsission-status">Answer complete</p>
-                    </li>
-                    <li>
-                      <div class="mymsission-col">
-                        <!-- v1.02 p.20 제목 클릭 시 해당 상세 화면 이동 (화면 ID : CM040802) -->
-                        <a class="mymsission-title" href="./CM040802.html"
-                          >N Activity Verification(1/3)</a
-                        >
-                        <p class="mymsission-date">04.01.2024</p>
-                      </div>
-                      <p class="mymsission-status">Replying</p>
-                    </li>
-                  </ul>
-                  <div class="btn-wrap move-wrap">
-                    <a href="./CM040801.html" class="btn md-txt-btn01">
-                      Learn More
-                      <span
-                        class="btn-icon16 icon-right"
-                        aria-hidden="true"
-                      ></span>
-                    </a>
-                  </div>
-                </div>
-                <div>
-                  <h4>Friend invited</h4>
-                  <ul class="mymsission-wrap">
-                    <li>
-                      <div class="mymsission-col">
-                        <p class="mymsission-title ellipsis2">Jin Dragon</p>
-                        <p class="mymsission-date">04.01.2024</p>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="mymsission-col">
-                        <p class="mymsission-title ellipsis2">Youngbizzi</p>
-                        <p class="mymsission-date">04.01.2024</p>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="mymsission-col">
-                        <p class="mymsission-title ellipsis2">i20n.mrs1step</p>
-                        <p class="mymsission-date">04.01.2024</p>
-                      </div>
-                    </li>
-                  </ul>
-                  <div class="btn-wrap move-wrap">
-                    <a href="./CM040901.html" class="btn md-txt-btn01">
-                      Learn More
-                      <span
-                        class="btn-icon16 icon-right"
-                        aria-hidden="true"
-                      ></span>
-                    </a>
-                  </div>
-                </div>
-                <!-- 영역별 데이터 없을 경우 케이스 -->
-                <div class="mypage-nodata-onlytext">
-                  <h4>Notice</h4>
-                  <p>There are no notifications.</p>
-                </div>
-                <div class="mypage-nodata-wrap">
-                  <h4>Post</h4>
-                  <div class="mypage-nodata-box">
-                    <p>
-                      There are no posts you wrote!<br class="pc-only" />
-                      Write a post and communicate with N Brand members.
-                    </p>
-                    <div class="btn-wrap-type2">
-                      <a
-                        href="../../html/experience/EP040201.html"
-                        class="btn btn-md-outline01"
-                      >
-                        Go to Hub
-                        <span
-                          class="btn-icon16 icon-right"
-                          aria-hidden="true"
-                        ></span>
-                      </a>
-                      <a
-                        href="../../html/experience/EP040201P02.html"
-                        class="btn btn-md-outline01"
-                        >+ Post</a
-                      >
-                    </div>
-                  </div>
-                </div>
-                <div class="mypage-nodata-wrap">
-                  <h4>Missions</h4>
-                  <div class="mypage-nodata-box">
-                    <p>
-                      You haven't participated in any missions!<br
-                        class="pc-only"
-                      />
-                      Participate in missions and receive points.<br
-                        class="pc-only"
-                      />
-                      You can receive special rewards with points.
-                    </p>
-                    <div class="btn-wrap-type1">
-                      <a
-                        href="../../html/experience/EP040301.html"
-                        class="btn btn-md-outline01"
-                      >
-                        Go to Missions
-                        <span
-                          class="btn-icon16 icon-right"
-                          aria-hidden="true"
-                        ></span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="mypage-nodata-wrap">
-                  <h4>Rewards</h4>
-                  <div class="mypage-nodata-box">
-                    <p>
-                      You don't have the reward you applied for!<br
-                        class="pc-only"
-                      />Receive rewards exclusive to N Brand.<br
-                        class="pc-only"
-                      />You can collect points through missions.
-                    </p>
-                    <div class="btn-wrap-type2">
-                      <a
-                        href="../../html/experience/EP040501.html"
-                        class="btn btn-md-outline01"
-                      >
-                        See Rewards
-                        <span
-                          class="btn-icon16 icon-right"
-                          aria-hidden="true"
-                        ></span>
-                      </a>
-                      <a
-                        href="../../html/experience/EP040301.html"
-                        class="btn btn-md-outline01"
-                      >
-                        Go to Missions
-                        <span
-                          class="btn-icon16 icon-right"
-                          aria-hidden="true"
-                        ></span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="mypage-nodata-wrap">
-                  <h4>Point</h4>
-                  <div class="mypage-nodata-box">
-                    <p>
-                      You don't have the reward you applied for!
-                      <br class="pc-only" />rewards exclusive to N Brand.
-                      <br class="pc-only" />You can collect points through
-                      missions.
-                    </p>
-                    <div class="btn-wrap-type1">
-                      <a
-                        href="../../html/experience/EP040301.html"
-                        class="btn btn-md-outline01"
-                      >
-                        Go to Missions
-                        <span
-                          class="btn-icon16 icon-right"
-                          aria-hidden="true"
-                        ></span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="mypage-nodata-wrap">
-                  <h4>N Community</h4>
-                  <div class="mypage-nodata-box">
-                    <p>
-                      There is no N Community you have created or joined!<br
-                        class="pc-only"
-                      />Participate in various activities and missions unique to
-                      N Community.<br class="pc-only" />ou can also receive
-                      rewards exclusive to N Community.
-                    </p>
-                    <div class="btn-wrap-type2">
-                      <a
-                        href="../../html/experience/EP040401.html"
-                        class="btn btn-md-outline01"
-                      >
-                        See N Community
-                        <span
-                          class="btn-icon16 icon-right"
-                          aria-hidden="true"
-                        ></span>
-                      </a>
-                      <a
-                        href="../../html/experience/EP040401P01.html"
-                        class="btn btn-md-outline01"
-                      >
-                        Go to N Community
-                        <span
-                          class="btn-icon16 icon-right"
-                          aria-hidden="true"
-                        ></span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="mypage-nodata-wrap">
-                  <h4>1:1 Inquiry</h4>
-                  <div class="mypage-nodata-box">
-                    <p>
-                      Need help?<br class="pc-only" />Do you have any
-                      questions?<br class="pc-only" />Please use 1:1 inquiry.
-                    </p>
-                    <div class="btn-wrap-type1">
-                      <a
-                        href="../../html/join/CM070102.html"
-                        class="btn btn-md-outline01"
-                      >
-                        1:1 inquiry
-                        <span
-                          class="btn-icon16 icon-right"
-                          aria-hidden="true"
-                        ></span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="mypage-nodata-wrap">
-                  <h4>Friend invited</h4>
-                  <div class="mypage-nodata-box">
-                    <p>
-                      Enjoy N Brand with your friends!<br class="pc-only" />You
-                      can receive points by inviting friends.<br
-                        class="pc-only"
-                      />Referral Code: <span class="color-red">qpco0938.</span>
-                    </p>
-                    <div class="btn-wrap-type1">
-                      <!-- v1.02 p.13 : 버튼 클릭 시 토스트 팝업 노출 -->
-                      <button class="btn btn-md-outline01">
-                        Copy referral code
-                        <span
-                          class="btn-icon16 icon-right"
-                          aria-hidden="true"
-                        ></span>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <!-- v1.03 : 커뮤니티 관리 영역 : 데이터 없을 경우 케이스 추가작업 -->
-                <div class="mypage-nodata-wrap">
-                  <h4>N Community management</h4>
-                  <div class="mypage-nodata-box">
-                    <p>가입 요청이 없습니다.</p>
-                  </div>
-                </div>
+            </div>
+          </div>
+
+          <!-- 이미지 수급 필요 -->
+          <div class="content-item07">
+            <div class="performance_garage">
+              <div class="grid_3 grid_mo_drop">
+                <img
+                  src="../../inc/images/content/img_performance_garage01.png"
+                  loading="lazy"
+                  alt="차고 이미지"
+                />
+                <img
+                  src="../../inc/images/content/img_performance_garage02.png"
+                  loading="lazy"
+                  alt="차고 이미지"
+                />
+                <img
+                  src="../../inc/images/content/img_performance_garage03.png"
+                  loading="lazy"
+                  alt="차고 이미지"
+                />
               </div>
+            </div>
+          </div>
+
+          <div class="content-item08 bg-gray">
+            <div class="related-conts-wrap">
+              <h2 class="tit tit-type02">Related</h2>
+              <ul class="grid_3 grid_mo_scroll">
+                <li>
+                  <a href="#" class="card_type04" title="페이지 이동">
+                    <div class="card_thumbnail">
+                      <img
+                        src="../../inc/images/content/img_performance_more01.png"
+                        alt="썸네일 이미지"
+                      />
+                    </div>
+                    <div class="card_con">
+                      <p class="tit-type03 fw-type03">Models</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="card_type04" title="페이지 이동">
+                    <div class="card_thumbnail">
+                      <img
+                        src="../../inc/images/content/img_performance_more02.png"
+                        alt="썸네일 이미지"
+                      />
+                    </div>
+                    <div class="card_con">
+                      <p class="tit-type03 fw-type03">Motorsports</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="card_type04" title="페이지 이동">
+                    <div class="card_thumbnail">
+                      <img
+                        src="../../inc/images/content/img_performance_more03.png"
+                        alt="썸네일 이미지"
+                      />
+                    </div>
+                    <div class="card_con">
+                      <p class="tit-type03 fw-type03">N festival</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
     </div>
-
     <script
       type="text/javascript"
       src="../../inc/js/jquery-3.7.1.slim.min.js"
     ></script>
     <script type="text/javascript" src="../../inc/js/swiper.min.js"></script>
-    <script type="text/javascript" src="../../inc/js/plugins.js"></script>
-    <script type="text/javascript" src="../../inc/js/com-ui.js"></script>
     <script type="text/javascript" src="../../inc/js/pub-ui.js"></script>
+    <!-- 07.17 수정 : com-ui.js / plugins.js 파일 import -->
+    <script type="text/javascript" src="../../inc/js/com-ui.js"></script>
+    <script type="text/javascript" src="../../inc/js/plugins.js"></script>
   </body>
 </html>

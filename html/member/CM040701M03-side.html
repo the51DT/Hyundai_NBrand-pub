@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name=" format-detection" content="telephone=no" />
-    <title>N브랜드 | CM040701M03 side</title>
-    <link
-      type="text/css"
-      rel="stylesheet"
-      href="../../inc/css/swiper.min.css"
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="initial-scale=1.0, minimum-scale=1.0, width=device-width, viewport-fit=cover"
     />
-    <link type="text/css" rel="stylesheet" href="../../inc/css/common.css" />
+    <title>CM040701M03-side</title>
+
+    <script
+      type="text/javascript"
+      src="../../inc/js/jquery-3.7.1.slim.min.js"
+    ></script>
+    <script type="text/javascript" src="../../inc/js/swiper.min.js"></script>
+    <script type="text/javascript" src="../../inc/js/plugins.js"></script>
+    <script type="text/javascript" src="../../inc/js/com-ui.js"></script>
+    <script type="text/javascript" src="../../inc/js/pub-ui.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../../inc/css/common.css" />
   </head>
 
   <body>
@@ -67,7 +73,17 @@
       </header>
       <!--  -->
       <section id="container" class="content-wrap">
-        <div class="content-area"></div>
+        <div class="content-area">
+          <button
+            class="pop-open"
+            aria-controls="pop-page"
+            aria-haspopup="true"
+            aria-expanded="false"
+            title="팝업오픈"
+          >
+            팝업 열기
+          </button>
+        </div>
       </section>
       <footer class="footer-wrap">
         <div class="footer-area"></div>
@@ -80,25 +96,26 @@
       aria-modal="true"
       aria-labelledby="tit-type04"
       data-pop="pop-page"
-      style="display: block"
     >
+      <!-- EP040401C01, EP040401C02는 푸터가 .popup-body 안에 들어가있습니다! -->
+
       <div class="popup-wrapper">
         <!-- <p class="temp-header">Hub_Write a post ID : EP040201P02</p> -->
 
         <div class="popup-header">
-          <h3 class="tit-type04">Write a post</h3>
+          <h3 class="tit-type05">CM040701M03-side</h3>
         </div>
 
         <div class="popup-body">
           <div class="popup-body-innerbox">
             <button
-              class="pop-open"
+              onClick="NbrandUI.popOpen(this)"
               aria-controls="pop-bottom"
               aria-haspopup="true"
               aria-expanded="false"
               title="팝업오픈"
             >
-              하단 팝업 열기
+              CM040701M03-side 하단 팝업 열기
             </button>
           </div>
         </div>
@@ -159,19 +176,19 @@
             </div>
           </div>
         </div>
-        <!-- // .popup-wrapper -->
+        <div class="btn-wrap">
+          <!-- pop-close 해당 팝업 닫기 -->
+          <!-- <button
+            type="button"
+            class="btn btn-only-icon-notbg popup-close-btn-x pop-close"
+            title="close"
+          >
+            <span class="visually-hidden">close</span>
+            <span class="btn-icon36 icon-close" aria-hidden="true"></span>
+          </button> -->
+        </div>
       </div>
     </div>
-    <div class="dimmed" aria-hidden="true"></div>
-    <!-- //model-popup -->
-
-    <script
-      type="text/javascript"
-      src="../../inc/js/jquery-3.7.1.slim.min.js"
-    ></script>
-    <script type="text/javascript" src="../../inc/js/swiper.min.js"></script>
-    <script type="text/javascript" src="../../inc/js/plugins.js"></script>
-    <script type="text/javascript" src="../../inc/js/com-ui.js"></script>
-    <script type="text/javascript" src="../../inc/js/pub-ui.js"></script>
+    <!-- <div class="dimmed" aria-hidden="true"></div> -->
   </body>
 </html>
