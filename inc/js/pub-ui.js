@@ -87,7 +87,7 @@ var pubUi = {
         if ($(this).hasClass("on")) {
           // console.log("정지버튼 클릭!");
           $(this).removeClass("on");
-          $(this).attr("title", "정지");
+          $(this).attr("title", "재생");
           if (videoChk.length > 0) {
             videoChk[0].pause();
             videoChk[0].currentTime = 0;
@@ -98,7 +98,7 @@ var pubUi = {
         } else {
           // console.log("재생버튼 클릭!");
           $(this).addClass("on");
-          $(this).attr("title", "재생");
+          $(this).attr("title", "정지");
           if (videoChk.length > 0) {
             videoChk[0].play();
             pubUi.videoBulletChk(
@@ -118,12 +118,12 @@ var pubUi = {
         if ($(this).hasClass("on")) {
           // console.log("정지버튼 클릭!");
           $(this).removeClass("on");
-          $(this).attr("title", "정지");
+          $(this).attr("title", "재생");
           targetSwiper[0].swiper.autoplay.stop();
         } else {
           // console.log("재생버튼 클릭!");
           $(this).addClass("on");
-          $(this).attr("title", "재생");
+          $(this).attr("title", "정지");
           targetSwiper[0].swiper.autoplay.start();
         }
       }
@@ -137,12 +137,12 @@ var pubUi = {
       if (self.$btnSound.hasClass("on")) {
         // console.log("소리 끄기 버튼 클릭!");
         self.$btnSound.removeClass("on");
-        self.$btnSound.attr("title", "소리 끄기");
+        self.$btnSound.attr("title", "소리 켜기");
         targetSwiper.find("video").prop("muted", true);
       } else {
         // console.log("소리 켜기버튼 클릭!");
         self.$btnSound.addClass("on");
-        self.$btnSound.attr("title", "소리 켜기");
+        self.$btnSound.attr("title", "소리 끄기");
         targetSwiper.find("video").prop("muted", false);
       }
     });
@@ -484,6 +484,10 @@ var pubUi = {
       spaceBetween: 80,
       centeredSlides: true,
       loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
       pagination: {
         el: ".swiper-pagination-custom",
         clickable: true,
