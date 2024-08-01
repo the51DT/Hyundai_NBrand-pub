@@ -1711,7 +1711,9 @@ input[type="radio"]:focus + label {
   white-space: nowrap;
   text-align: left;
 }
-.card_type04 .card-hashtag button.txt-type04:hover, .card_video .card_tag button:hover {
+.card_type04 .card-hashtag button.txt-type04:hover, 
+.card_video .card_tag button:hover,
+.ty02Swiper .text-area .list-box button:hover {
   text-decoration: underline;
 }
 .card_type04 .card_date {
