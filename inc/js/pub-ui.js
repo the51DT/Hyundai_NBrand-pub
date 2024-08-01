@@ -551,6 +551,10 @@ var pubUi = {
     var swiper10 = new Swiper(".wrc_swiper", {
       slidesPerView: 1,
       centeredSlides: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
       navigation: {
         nextEl: ".wrc_swiper .swiper-button-next",
         prevEl: ".wrc_swiper .swiper-button-prev",
