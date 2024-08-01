@@ -1115,6 +1115,10 @@
   .configurator_popup.pop-wrap {
     font-size: 1rem;
   }
+
+  .configurator_popup [class*="btn-md"] {
+    padding: 12px 15px; /* configurator 팝업에서 버튼 텍스트길이 길 경우, 텍스트 간격 이슈 있어 좌우 간격 수정함 */
+  }
 }
 @media print {
   .configurator_header {

@@ -354,6 +354,31 @@
   padding-bottom: 0;
 }
 
+.track_list .card_type02 .track-img {
+  width: 13.9rem;
+  height: 13.9rem;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: contain;
+  margin: 0 auto;
+}
+
+.track_list .card_type02.TR_01_01 .track-img {
+  background-image: url("../../inc/images//N_Festival/track/img_Inje_Speedium-223.png");
+}
+.track_list .card_type02.TR_02_05 .track-img {
+  background-image: url("../../inc/images//N_Festival/track/img_Yongin_Everland_SPEEDWAY(S)-223.png");
+}
+.track_list .card_type02.TR_03_06 .track-img {
+  background-image: url("../../inc/images//N_Festival/track/img_Korea_International_Circuit-223.png");
+}
+.track_list .card_type02.TR_02_04 .track-img {
+  background-image: url("../../inc/images//N_Festival/track/img_Yongin_Everland_SPEEDWAY-223.png");
+}
+.track_list .card_type02.TR_01_02 .track-img {
+  background-image: url("../../inc/images//N_Festival/track/img_Inje_Speedium(S)-223.png");
+}
+
 /* EP010302 */
 .result_top {
   padding: 7.5rem 5rem;
