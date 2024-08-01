@@ -114,10 +114,13 @@ min-width : 1024 css
   .btn[class*="-outline"] [class*="btn-icon20"] {
     margin-left: 4px;
   }
+  .btn[class*="btn-lg-outline"] .btn-paging {
+    margin-left: 4px;
+  }
   .btn[class*="btn-lg-outline"] .btn-paging ~ .btn-icon20 {
     width: 20px;
     height: 20px;
-    margin-left: 8px;
+    margin-left: 4px;
   }
   .btn-wrap-type1 > .btn {
     width: 100%;

@@ -551,6 +551,10 @@ var pubUi = {
     var swiper10 = new Swiper(".wrc_swiper", {
       slidesPerView: 1,
       centeredSlides: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
       navigation: {
         nextEl: ".wrc_swiper .swiper-button-next",
         prevEl: ".wrc_swiper .swiper-button-prev",
@@ -1613,7 +1617,7 @@ function footerScrollTop() {
     $("html, body").animate({ scrollTop: 0 }, 500);
   });
 }
-
+// not($(this)).removeClass("ellipsis");
 // [Start] : hashTag 말줄임
 function hasTagFun() {
   $(".card-hashtag button").each(function (e) {
@@ -1622,19 +1626,25 @@ function hasTagFun() {
     var cardConRightEdge = $setUl.outerWidth();
     var liRightEdge =
       $set.offset().left - $setUl.offset().left + $set.outerWidth(true);
+    // $set.removeClass("ellipsis");
+
     if (liRightEdge >= cardConRightEdge) {
       $(this).addClass("ellipsis");
-    } else {
-      $(this).removeClass("ellipsis");
     }
 
-    $set.siblings(".ellipsis").first().show();
-    $set.siblings(".ellipsis").nextAll().hide(); // EP040501 - Pony Magazine 제목 참고 (안하면 button.ellipsis 뒤에 li들 다 살아있음 - 그래서 button.ellipsis 너비 줄어듦)
+    // alert($(this).html());
+    if ($(this).offset().left - cardConRightEdge > 30) {
+      $(".card-hashtag button.ellipsis").nextAll().hide();
+      $(".card-hashtag button.ellipsis").hide();
+    } else {
+      $(".card-hashtag button.ellipsis").nextAll().hide();
+    }
+    //
   });
 }
 
 function hasTagFunResize() {
-  $("div.card-hashtag button").show().removeClass("ellipsis");
+  $("div.card-hashtag button").removeClass("ellipsis").show();
   // alert("d");
   hasTagFun();
 }
@@ -1884,54 +1894,41 @@ function modelsVideoPlay() {
   // 비디오가 끝났을 때 썸네일 나오도록
   $(".models-wrap .content-item02 video").on("ended", function () {
     // console.log("비디오 끝 / 썸넬 시작");
+    // $(this).get(0).currentTime = 0;
     var icon = $(this).siblings("button").children(".btn-icon24");
     icon.attr("class", "btn-icon24 icon-play-wh");
   });
-  $(window)
-    .resize(function () {
-      if (window.innerWidth <= 1023) {
-        // mo 영상 살리기 & pc 영상 hidden
-        $(".models-wrap .content-item02 video.mo-only").attr(
-          "aria-hidden",
-          false
-        );
-        $(".models-wrap .content-item02 video.pc-only").attr(
-          "aria-hidden",
-          true
-        );
-        // mo 영상 끝났을 때
-        $(".models-wrap .content-item02 video.mo-only").on(
-          "ended",
-          function () {
-            $(this).siblings(".video_poster.mo-only").show();
-            $(this).siblings(".video_poster.pc-only").hide();
-            // mo 비디오 hidden
-            $(this).attr("aria-hidden", true);
-          }
-        );
-      } else if (window.innerWidth > 1023) {
-        // pc 영상 살리기 & mo 영상 hidden
-        $(".models-wrap .content-item02 video.pc-only").attr(
-          "aria-hidden",
-          false
-        );
-        $(".models-wrap .content-item02 video.mo-only").attr(
-          "aria-hidden",
-          true
-        );
-        // pc 영상 끝났을 때
-        $(".models-wrap .content-item02 video.pc-only").on(
-          "ended",
-          function () {
-            $(this).siblings(".video_poster.pc-only").show();
-            $(this).siblings(".video_poster.mo-only").hide();
-            // pc 비디오 hidden
-            $(this).attr("aria-hidden", true);
-          }
-        );
-      }
-    })
-    .resize();
+  $(window).resize(function () {
+    if (window.innerWidth <= 1023) {
+      // mo 영상 살리기 & pc 영상 hidden
+      $(".models-wrap .content-item02 video.mo-only").attr(
+        "aria-hidden",
+        false
+      );
+      $(".models-wrap .content-item02 video.pc-only").attr("aria-hidden", true);
+      // mo 영상 끝났을 때
+      // $(".models-wrap .content-item02 video.mo-only").on("ended", function () {
+      //   $(this).siblings(".video_poster.mo-only").show();
+      //   $(this).siblings(".video_poster.pc-only").hide();
+      //   // mo 비디오 hidden
+      //   $(this).attr("aria-hidden", true);
+      // });
+    } else if (window.innerWidth > 1023) {
+      // pc 영상 살리기 & mo 영상 hidden
+      $(".models-wrap .content-item02 video.pc-only").attr(
+        "aria-hidden",
+        false
+      );
+      $(".models-wrap .content-item02 video.mo-only").attr("aria-hidden", true);
+      // pc 영상 끝났을 때
+      // $(".models-wrap .content-item02 video.pc-only").on("ended", function () {
+      //   $(this).siblings(".video_poster.pc-only").show();
+      //   $(this).siblings(".video_poster.mo-only").hide();
+      //   // pc 비디오 hidden
+      //   $(this).attr("aria-hidden", true);
+      // });
+    }
+  });
 }
 // [End] : Models > 영상 버튼 클릭 시 재생 혹은 멈춤 작업 & 한 번 재생 후 포스터 나와야함
 
