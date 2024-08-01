@@ -1154,6 +1154,13 @@
   font-size: 40px;
 }
 
+.popup-wrapper .popup-body .instruct-wrap {
+  /* CM040701M03, 시안에 없어 임의 적용함 */
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
 .popup-wrapper .popup-con:last-child {
   margin-bottom: 60px;
 }
@@ -3609,6 +3616,11 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   .popup-wrapper .popup-body.body-pop-mobile {
     /* CM040701P02, CM040701P04  popup in mypage */
     max-height: calc(100vh - 200px);
+  }
+
+  .popup-wrapper .popup-body .instruct-wrap {
+    /* CM040701M03, 시안에 없어 임의 적용함 */
+    gap: 24px;
   }
 
   .popup-wrapper .popup-body .m20 .wrap-label-reward .tit-type04 {
