@@ -788,9 +788,19 @@ var pubUi = {
     ).offsetHeight;
 
     var navHeight = headerHeight + navBarHeight;
+    
 
     contentItem.forEach((evt, idx) => {
-      contentItem[idx].setAttribute("data-scroll", idx + 1); // 각 콘텐츠에 data-scroll 생성
+      if (contentItem[idx].querySelector(".blue-title")) {
+        contentItem[idx].classList.add("active");
+      }
+      //contentItem[idx].setAttribute("data-scroll", idx + 1); // 각 콘텐츠에 data-scroll 생성
+    });
+
+    var contentActiveItem = document.querySelectorAll(".content-area > [class*=content-item].active");      
+
+    contentActiveItem.forEach((evt, idx) => {
+      contentActiveItem[idx].setAttribute("data-scroll", idx + 1); // 각 콘텐츠에 data-scroll 생성
 
       if (evt.dataset.scroll == dataScroll) {
         //nav data-scroll과 값비교 후 동일 대상 체크
@@ -799,6 +809,7 @@ var pubUi = {
 
       $("body").animate({ scrollTop: offsetTopVal }, 300);
     });
+    
   },
   listContsActive: function (target) {
     var targetSwiper = $(target).parents(".swiper-slide");
@@ -2102,6 +2113,9 @@ function scrollEvent() {
     $(".navigation_bar-wrap .gage.on").css("--bar", `${scrollY}%`);
 
     contentItem.forEach((evt, idx) => {
+      if (contentItem[idx].querySelector(".blue-title")) {
+        contentItem[idx].classList.add("active");
+      }
       contentItem[idx].setAttribute("data-scroll", idx + 1); // 각 콘텐츠에 data-scroll 생성
     });
 
