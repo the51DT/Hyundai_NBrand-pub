@@ -770,7 +770,7 @@
 }
 .mypage-inquiry-wrap .mypage-inquiry-area {
   padding: 2.5rem;
-  border-bottom: 1px solid #AAA;
+  border-bottom: 1px solid #aaa;
 }
 .mypage-inquiry-wrap .mypage-inquiry-btn {
   display: flex;
@@ -836,7 +836,7 @@
   clip-path: polygon(0 0, 0 0, 0 0);
 }
 .mypage-withdrawal-table tbody tr:first-of-type {
-  border-top: 2px solid #AAA;
+  border-top: 2px solid #aaa;
 }
 .mypage-withdrawal-table tbody tr {
   border-bottom: 1px solid #bbbbbb;
@@ -862,7 +862,7 @@
   flex-direction: column;
   row-gap: 2rem;
   padding: 2rem 0;
-  border-bottom: 1px solid #AAA;
+  border-bottom: 1px solid #aaa;
   font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   font-size: 1.25rem;
   font-weight: 700;
@@ -952,6 +952,7 @@
   background-color: #f0f0f0;
   display: flex;
   justify-content: space-between;
+  gap: 12px;
 }
 .mypage-community-des .des-toggle {
   font-size: 16px;

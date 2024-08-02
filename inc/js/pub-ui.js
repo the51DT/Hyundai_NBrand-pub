@@ -1670,10 +1670,22 @@ $(".unread-box .mynotice-btm>button.sm-txt-btn01").click(function () {
 // [End] : CM040101 > unread 버튼 클릭 시 배경색, read 문구 변경
 
 //[Start] : CM040701 > 아코디언 토글
-$("#ToggleDesBtn").click(function () {
-  $(".des-toggle").toggleClass("rotate");
-  $("#ToggleDesBtn").children(".icon-down").toggleClass("rotate");
-});
+function toggleAboutMe() {
+  var aboutMeArea = $(".des-toggle");
+  var aboutMeAreaBtn = $(".mypage-community-des").find(".btn");
+  var aboutMeAreaH = aboutMeArea.prop("scrollHeight");
+  if (aboutMeAreaH > 45) {
+    aboutMeArea.removeClass("rotate");
+    aboutMeAreaBtn.show();
+    aboutMeAreaBtn.off("click").on("click", function () {
+      $(".des-toggle").toggleClass("rotate");
+      $(this).children(".icon-down").toggleClass("rotate");
+    });
+  } else {
+    aboutMeAreaBtn.hide();
+  }
+}
+
 //[End] : CM040701 > 아코디언 토글
 
 // [Start] : 풀스크린
@@ -2211,8 +2223,9 @@ window.onload = function () {
   hasTagFun();
   $(window).resize(() => {
     setVh();
+    toggleAboutMe();
   });
-
+  toggleAboutMe();
   // 07.30 추가 - 모바일에서 navigation-bar 존재 시, 컨텐츠영역 상단 짤림 현상 방지
   if ($(".navigation_bar-wrap").length > 0) {
     $(".wrap .content-area").css("padding-top", "48px");
