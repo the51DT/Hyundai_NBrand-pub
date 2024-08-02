@@ -796,7 +796,6 @@ var pubUi = {
     ).offsetHeight;
 
     var navHeight = headerHeight + navBarHeight;
-    
 
     contentItem.forEach((evt, idx) => {
       if (contentItem[idx].querySelector(".blue-title")) {
@@ -805,7 +804,9 @@ var pubUi = {
       //contentItem[idx].setAttribute("data-scroll", idx + 1); // 각 콘텐츠에 data-scroll 생성
     });
 
-    var contentActiveItem = document.querySelectorAll(".content-area > [class*=content-item].active");      
+    var contentActiveItem = document.querySelectorAll(
+      ".content-area > [class*=content-item].active"
+    );
 
     contentActiveItem.forEach((evt, idx) => {
       contentActiveItem[idx].setAttribute("data-scroll", idx + 1); // 각 콘텐츠에 data-scroll 생성
@@ -817,10 +818,11 @@ var pubUi = {
 
       $("body").animate({ scrollTop: offsetTopVal }, 300);
     });
-    
   },
   listContsActive: function (target) {
     var targetSwiper = $(target).parents(".swiper-slide");
+    var targetData = targetSwiper.attr("data-content");
+    var targetContent = $(".list-content[data-content=" + targetData + "]");
 
     // ty05Swiper, 슬라이드 클릭 시, active 처리
     targetSwiper.siblings().removeClass("active");
@@ -829,6 +831,8 @@ var pubUi = {
     setTimeout(function () {
       document.querySelector(".ty05Swiper").swiper.update();
     }, 500);
+    $(".list-content").removeClass("active");
+    targetContent.addClass("active");
 
     // 사용 안함 - 개발에서 제어
     // var raceRank = targetSwiper.find(".card_top .card_rank").text();
@@ -838,8 +842,8 @@ var pubUi = {
 
     // console.log(raceRank, raceMonth, raceDay, raceLocation);
 
-    //swiperContents.removeClass("active");
-    // 보고용
+    // swiperContents.removeClass("active");
+    // //보고용
     // swiperContents.hide();
     // swiperContents.find(".evtLayout-type").removeClass(raceLocation);
 
