@@ -1067,6 +1067,8 @@
 .popup-wrapper .wrap-navigation .modal-btn {
   background: rgba(255, 255, 255, 0.5);
   border-radius: 0;
+  width: 60px;
+  height: 60px;
 }
 
 .popup-wrapper .modal-btn.left {
@@ -2129,13 +2131,16 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
 .popup-wrapper .popup-body.for-switch .switch-to-select {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 36px;
 }
 .popup-wrapper
   .popup-body.for-switch
   .switch-to-select
   .wrap-switch:first-child {
-  margin-top: 32px;
+  margin-top: 34px;
+}
+.popup-wrapper .popup-body.for-switch .switch-to-select:last-child {
+  margin-bottom: 22px;
 }
 
 /** CM040701P01 팝업 시작 **/
@@ -3627,6 +3632,10 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
     font-size: 24px;
   }
 
+  .popup-wrapper .popup-body .m20.mo-m12 {
+    gap: 12px 0;
+  }
+
   .popup-wrapper .popup-footer {
     padding: 16px 24px;
     bottom: 0%;
@@ -3973,7 +3982,14 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
     justify-content: space-between;
     grid-template-columns: 60% auto;
   }
+  .popup-wrapper .popup-body.for-switch .wrap-switch .wrap-switch:first-child {
+    margin-top: 32px;
+  }
+  .popup-wrapper .popup-body.for-switch .wrap-switch .wrap-switch:last-child {
+    margin-bottom: 0;
+  }
 
+  .popup-wrapper .popup-body.for-switch .wrap-switch.all p,
   .popup-wrapper .popup-body.for-switch .wrap-switch p {
     font-size: 18px;
   }
