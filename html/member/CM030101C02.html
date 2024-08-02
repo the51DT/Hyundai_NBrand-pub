@@ -1,105 +1,156 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="initial-scale=1.0, minimum-scale=1.0, width=device-width, viewport-fit=cover"
+    />
+    <title>N브랜드 | Join_Logout_Notifications_Popup</title>
+    <script
+      type="text/javascript"
+      src="../../inc/js/jquery-3.7.1.slim.min.js"
+    ></script>
+    <script type="text/javascript" src="../../inc/js/plugins.js"></script>
+    <script type="text/javascript" src="../../inc/js/com-ui.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../inc/css/common.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, width=device-width, viewport-fit=cover" />
-  <title>N브랜드 | Join_Logout_Notifications_Popup</title>
-  <script type="text/javascript" src="../../inc/js/jquery-3.7.1.slim.min.js"></script>
-  <script type="text/javascript" src="../../inc/js/plugins.js"></script>
-  <script type="text/javascript" src="../../inc/js/com-ui.js"></script>
-  <link rel="stylesheet" type="text/css" href="../../inc/css/common.css" />
-</head>
+  <body>
+    <div class="skip-navigation">
+      <a href="#container">본문 바로가기</a>
+    </div>
+    <div class="wrap">
+      <header class="header-wrap">
+        <div class="header-cont">
+          <h1 class="logo">
+            <a href="/"
+              ><img
+                src="../../inc/images/img/img_logo.svg"
+                loading="lazy"
+                alt="N브랜드"
+            /></a>
+          </h1>
+          <div class="sitemap-wrap">
+            <button
+              class="nav-btn"
+              data-label="전체 메뉴 닫기"
+              aria-label="전체 메뉴 열기"
+              aria-expanded="true"
+              aria-controls="navWrap"
+            >
+              <span class="line"></span>
+              <span class="line"></span>
+              <span class="line"></span>
+            </button>
+          </div>
 
-<body>
-  <div class="skip-navigation">
-    <a href="#container">본문 바로가기</a>
-  </div>
-  <div class="wrap">
-    <header class="header-wrap">
-      <div class="header-cont">
-        <h1 class="logo">
-          <a href="/"><img src="../../inc/images/img/img_logo.svg" loading="lazy" alt="N브랜드" /></a>
-        </h1>
-        <div class="sitemap-wrap">
-          <button class="nav-btn" data-label="전체 메뉴 닫기" aria-label="전체 메뉴 열기" aria-expanded="true"
-            aria-controls="navWrap">
-            <span class="line"></span>
-            <span class="line"></span>
-            <span class="line"></span>
-          </button>
-        </div>
+          <div class="utile-wrap">
+            <div class="utile-cont">
+              <div class="utile-item">
+                <button
+                  class="lang-btn"
+                  data-txt="KR"
+                  data-label="현재 국문, 영문로 변경하기"
+                  aria-label="현재 영문, 국문으로 변경하기"
+                >
+                  <span>EU</span>
+                </button>
+              </div>
+              <div class="utile-item02">
+                <button class="login-btn" title="로그인"></button>
 
-        <div class="utile-wrap">
-          <div class="utile-cont">
-            <div class="utile-item">
-              <button class="lang-btn" data-txt="KR" data-label="현재 국문, 영문로 변경하기" aria-label="현재 영문, 국문으로 변경하기">
-                <span>EU</span>
-              </button>
-            </div>
-            <div class="utile-item02">
-              <button class="login-btn" title="로그인"></button>
-
-              <!-- 로그인 이후 -->
-              <!-- <button class="alarm-btn" title="미확인 알림"></button> -->
+                <!-- 로그인 이후 -->
+                <!-- <button class="alarm-btn" title="미확인 알림"></button> -->
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </header>
-    <!--  -->
-    <section id="container" class="content-wrap">
-      <div class="content-area"></div>
-    </section>
-    <footer class="footer-wrap">
-      <div class="footer-area"></div>
-    </footer>
-  </div>
-  <div class="popup model-popup" id="pop-page" role="dialog" aria-modal="true" aria-labelledby="tit-type04"
-    data-pop="pop-page" style="display: block">
-    <div class="popup-wrapper">
-      <!-- <p class="temp-header">Hub_Write a post ID : EP040201P02</p> -->
-
-      <div class="popup-header">
-        <h3 class="tit-type04">Write a post</h3>
-      </div>
-
-      <div class="popup-body">
-        <div class="popup-body-innerbox">
-          <button class="pop-open" aria-controls="pop-bottom" aria-haspopup="true" aria-expanded="false" title="팝업오픈">
+      </header>
+      <!--  -->
+      <section id="container" class="content-wrap">
+        <div class="content-area">
+          <button
+            class="pop-open"
+            aria-controls="pop-page"
+            aria-haspopup="true"
+            aria-expanded="false"
+            title="팝업오픈"
+          >
             CM030101C02 하단 팝업 열기
           </button>
         </div>
-      </div>
+      </section>
+      <footer class="footer-wrap">
+        <div class="footer-area"></div>
+      </footer>
+    </div>
+    <div
+      class="popup model-popup"
+      id="pop-page"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="tit-type04"
+      data-pop="pop-page"
+    >
+      <div class="popup-wrapper">
+        <!-- <p class="temp-header">Hub_Write a post ID : EP040201P02</p> -->
 
-      <div class="popup-footer"></div>
-      <div class="btn-wrap">
-        <!-- pop-close 해당 팝업 닫기 -->
-        <button type="button" class="btn btn-only-icon-notbg popup-close-btn-x pop-close" title="close">
-          <span class="visually-hidden">close</span>
-          <span class="btn-icon36 icon-close" aria-hidden="true"></span>
-        </button>
+        <div class="popup-header">
+          <h3 class="tit-type04">CM030101C02</h3>
+        </div>
+
+        <div class="popup-body">
+          <div class="popup-body-innerbox">
+            <button
+              onClick="NbrandUI.popOpen(this)"
+              aria-controls="pop-bottom"
+              aria-haspopup="true"
+              aria-expanded="false"
+              title="팝업오픈"
+            >
+              하단 팝업 열기
+            </button>
+          </div>
+        </div>
+
+        <div class="popup-footer"></div>
+        <div class="btn-wrap">
+          <!-- pop-close 해당 팝업 닫기 -->
+          <button
+            type="button"
+            class="btn btn-only-icon-notbg popup-close-btn-x pop-close"
+            title="close"
+          >
+            <span class="visually-hidden">close</span>
+            <span class="btn-icon36 icon-close" aria-hidden="true"></span>
+          </button>
+        </div>
       </div>
     </div>
-  </div>
-  <!-- //model-popup -->
-  <div id="pop-bottom" class="popup bottom-popup" role="dialog" aria-modal="true" aria-labelledby="tit">
-    <div class="pop-wrap logout_popup_wrap ty02">
-      <!-- 07/15기준 메세지 갯수 위치 관련 내용을 찾을 수 없어 임의 배치함.  -->
-      <p class="logout_popup_text">unread <span>124</span> messages</p>
-      <div class="btn-wrap-type3">
-        <button type="button" class="btn btn-md-outline01 pop-close">
-          Cancel
-          <span class="btn-icon16 icon-right" aria-hidden="true"></span>
-        </button>
-        <a href="#" class="btn btn-md-primary01">
-          View Notifications
-          <span class="btn-icon16 icon-right-wh" aria-hidden="true"></span>
-        </a>
+    <!-- //model-popup -->
+    <div
+      id="pop-bottom"
+      class="popup bottom-popup"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="tit"
+    >
+      <div class="pop-wrap logout_popup_wrap ty02">
+        <!-- 07/15기준 메세지 갯수 위치 관련 내용을 찾을 수 없어 임의 배치함.  -->
+        <p class="logout_popup_text">unread <span>124</span> messages</p>
+        <div class="btn-wrap-type3">
+          <button type="button" class="btn btn-md-outline01 pop-close">
+            Cancel
+            <span class="btn-icon16 icon-right" aria-hidden="true"></span>
+          </button>
+          <a href="#" class="btn btn-md-primary01">
+            View Notifications
+            <span class="btn-icon16 icon-right-wh" aria-hidden="true"></span>
+          </a>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="dimmed" aria-hidden="true"></div>
-</body>
-
+    <!-- <div class="dimmed" aria-hidden="true"></div> -->
+  </body>
 </html>
