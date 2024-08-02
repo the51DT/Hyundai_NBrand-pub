@@ -180,11 +180,11 @@ pathApp.initTotalCount = function () {
     });
 
     $check.each(function () {
-      if ($(this).attr("class") != "comp icon-state") count++;
+      if ($(this).hasClass(".comp")) count++;
     });
 
     $guideCheck.each(function () {
-      if ($(this).attr("class") != "comp icon-state") countG++;
+      if ($(this).hasClass(".comp")) countG++;
     });
 
     count = sum - sumG + (sumMinus - sumMinusG) - (count - countG);
@@ -217,14 +217,16 @@ pathApp.initSectionCount = function () {
   $count.text(setCount);
 
   pathApp.$pathTbl.find("tbody tr").each(function (idx) {
-    if ($(this).find(".check span").attr("class") === "comp icon-state")
-      setCount += 1;
+    if ($(this).find(".icon-state").attr("class") == "icon-state comp")
+      setCount++;
+    // alert(setCount);
     if ($(this).find("th").hasClass("dep1")) {
       setIndex += 1;
       setCount = 0;
-      if ($(this).find(".check span").attr("class") === "comp icon-state")
-        setCount += 1;
+      if ($(this).find(".icon-state").attr("class") == "icon-state comp")
+        setCount++;
     }
+
     $count.eq(setIndex).text(setCount);
   });
 
