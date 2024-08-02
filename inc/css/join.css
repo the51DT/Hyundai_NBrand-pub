@@ -496,7 +496,7 @@
   text-align: end;
 }
 .mymsission-wrap {
-  border-top: 2px solid #AAA;
+  border-top: 2px solid #aaa;
 }
 .mymsission-wrap + .mymsission-wrap {
   border-top: 0;
@@ -663,7 +663,7 @@
 .mypage-eachbox-top {
   display: flex;
   justify-content: space-between;
-  border-bottom: 2px solid #AAA;
+  border-bottom: 2px solid #aaa;
 }
 .mypage-eachbox-top.type2 {
   display: block;
