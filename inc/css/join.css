@@ -238,11 +238,13 @@
 }
 .join_wrap .join_tit {
   margin: 0.75rem 0 3.75rem 0;
-  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   font-size: 3.5rem;
   font-weight: 700;
   line-height: 125%;
   text-align: center;
+}
+.join_wrap .join_tit p {
+  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
 }
 .join_wrap .join_subtit {
   margin-top: 1.25rem;
