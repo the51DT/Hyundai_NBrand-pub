@@ -1016,10 +1016,10 @@ function swiper2SlideEvt() {
     grabCursor: true,
     centeredSlides: true,
     slidesPerView: "auto",
-    // autoplay: {
-    //   delay: 3000,
-    //   disableOnInteraction: false,
-    // },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
     loop: loopVal,
     coverflowEffect: {
       rotate: 0, //각도
@@ -2229,6 +2229,12 @@ window.onload = function () {
   // 07.30 추가 - 모바일에서 navigation-bar 존재 시, 컨텐츠영역 상단 짤림 현상 방지
   if ($(".navigation_bar-wrap").length > 0) {
     $(".wrap .content-area").css("padding-top", "48px");
+  }
+
+  // Jira - 359 이슈 대응
+  if ($(".related-wrap .models-cardbox").length > 0) {
+    var relatedItemSize =  $(".related-wrap .models-cardbox > div").length;
+    $(".related-wrap .models-cardbox").css("--size", relatedItemSize);
   }
 };
 
