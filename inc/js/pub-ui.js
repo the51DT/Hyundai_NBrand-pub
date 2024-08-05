@@ -904,6 +904,7 @@ $(window).resize(function () {
   resizeTimer = setTimeout(hasTagFunResize(), perforSlideMoveFun(), 10);
 });
 $(document).ready(function () {
+  deviceChk();
   pubUi.init();
   $(window).on("resize", pubUi.masonryLayout);
   $(window).resize(() => DropdownFooter());
