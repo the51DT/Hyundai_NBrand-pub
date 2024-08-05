@@ -275,6 +275,11 @@
   flex: 1 1 586px;
 }
 
+/* 240805 동영상 추가될 경우 (동영상 감싸는 a 링크) */
+.history-box .history-list li .img-wrap a {
+  position: relative;
+}
+
 .swiper-card-type .card_type01.bg-gray .card_rank,
 .swiper-card-type .card_type01.bg-gray .card_tit,
 .swiper-card-type .card_type01.bg-gray .card_info,
@@ -912,6 +917,11 @@
   .history-box .history-list li .img-wrap .ico-video-play {
     width: 67px;
     height: 67px;
+  }
+
+  /* 240805 동영상 추가될 경우 (동영상 감싸는 a 링크) */
+  .history-box .history-list li .img-wrap a {
+    position: static;
   }
 
   .intro-race-box {
