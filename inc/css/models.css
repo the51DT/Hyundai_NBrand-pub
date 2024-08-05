@@ -944,7 +944,36 @@
   background: url(../../inc/images/icon/icon-btn-move.svg) no-repeat;
   background-size: 100%;
 }
-
+.model-mo-full {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  padding: 0 80px;
+}
+.model-mo-full.middle {
+  margin-top: -40px;
+  margin-bottom: -200px;
+}
+.model-mo-full:last-child {
+  margin-bottom: 240px;
+}
+.models-nofull + .model-mo-full {
+  margin-top: -40px;
+}
+.models-full + .model-mo-full {
+  margin-top: 200px;
+}
+.model-mo-full .text-col,
+.model-mo-full img {
+  margin: 0 auto;
+  max-width: 1440px;
+}
+.model-mo-full .img-wrap .text-col {
+    margin-top: 40px;
+    padding: 0 16px;
+  }
 /* 제목 + kv모션 작업 영역 */
 @keyframes modelSmooth {
   0% {
@@ -1787,5 +1816,33 @@
     .btn-wrap:last-child
     .btn[class*="lg-txt-btn"]:active::after {
     bottom: 3px;
+  }
+
+  .model-mo-full {
+    gap: 44px;
+    padding: 0;
+  }
+  .model-mo-full.middle {
+    margin-top: -32px;
+    margin-bottom: -76px;
+  }
+  .model-mo-full:last-child {
+    margin-bottom: 152px;
+  }
+  .models-nofull + .model-mo-full {
+    margin-top: -32px;
+  }
+  .models-full + .model-mo-full {
+    margin-top: 120px;
+  }
+  .model-mo-full .text-col {
+    padding: 0 24px;
+  }
+  .model-mo-full .img-wrap .text-col {
+    margin-top: 28px;
+    padding: 0 24px;
+  }
+  .model-mo-full .tech-des {
+    padding: 0 24px;
   }
 }
