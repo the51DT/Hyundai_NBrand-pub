@@ -1,410 +1,567 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name=" format-detection" content="telephone=no" />
+    <title>N브랜드 | Hyundai N_About N</title>
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="../../inc/css/swiper.min.css"
+    />
+    <link type="text/css" rel="stylesheet" href="../../inc/css/common.css" />
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name=" format-detection" content="telephone=no" />
-  <title>N브랜드 | Hyundai N_About N</title>
-  <link type="text/css" rel="stylesheet" href="../../inc/css/swiper.min.css" />
-  <link type="text/css" rel="stylesheet" href="../../inc/css/common.css" />
-</head>
-
-<body>
-  <div class="wrap">
-    <section class="content-wrap models-wrap brand">
-      <!-- 07.18 수정 : brand 클래스 위치 변경 -->
-      <div class="content-area">
-        <div class="content-item02">
-          <!-- key visual01 : video (예시로 영역잡은 영상 / 영상은 교체 필요 및 width=100% 삭제) -->
-          <div class="video_thumnail_wrap">
-            <!-- 07.19 수정 : 키비주얼 이미지 추가 -->
-            <!-- <div class="video_thumnail_img">
+  <body>
+    <div class="wrap">
+      <section class="content-wrap models-wrap brand">
+        <!-- 07.18 수정 : brand 클래스 위치 변경 -->
+        <div class="content-area">
+          <div class="content-item02">
+            <!-- key visual01 : video (예시로 영역잡은 영상 / 영상은 교체 필요 및 width=100% 삭제) -->
+            <div class="video_thumnail_wrap">
+              <!-- 07.19 수정 : 키비주얼 이미지 추가 -->
+              <!-- <div class="video_thumnail_img">
               <img class="img_pc" src="../../inc/images/img/conts_aboutN_img.png" loading="lazy" alt="커버 pc 이미지"
                 aria-hidden="true" />
               <img class="img_mo" src="../../inc/images/img/conts_aboutN_img.png" loading="lazy" alt="커버 mo 이미지"
                 aria-hidden="true" />
             </div> -->
-            <!-- //07.19 수정 : 키비주얼 이미지 추가 -->
-            <div class="video-wrap">
-              <video class="video pc-only" data-js="video" id="video1" playsinline="" autoplay="" muted=""
-                poster="../../inc/images/Models/RN_22e/RN_22e_poster.png" aria-hidden="false">
-                <source src="../../inc/images/Models/RN_22e/rn22e.mp4" type="video/mp4" />
-              </video>
-              <video class="video mo-only" data-js="video" id="video2" playsinline="" autoplay="" muted=""
-                poster="../../inc/images/Models/RN_22e/RN_22e_poster_mo.png" aria-hidden="true">
-                <source src="../../inc/images/Models/RN_22e/rn22emo.mp4" type="video/mp4" />
-              </video>
-              <img src="../../inc/images/Models/RN_22e/RN_22e_poster.png" alt="RN 22e 영상 썸네일" style="display: none"
-                class="video_poster pc-only" />
-              <img src="../../inc/images/Models/RN_22e/RN_22e_poster_mo.png" alt="RN 22e 영상 썸네일" style="display: none"
-                class="video_poster mo-only" />
-              <button type="button" class="btn btn-only-icon-bg01-square" title="pause">
-                <span class="visually-hidden">pause</span>
-                <span class="btn-icon24 icon-pause-wh" aria-hidden="true"></span>
-              </button>
-            </div>
-            <div class="video_tit_wrap">
-              <p class="video_tit">About N</p>
-              <p class="video_subtit">Passion For Performance by Hyundai</p>
-            </div>
-            <p class="video_date">04.30. 2024</p>
-            <div class="tag_list_wrap">
-              <ul class="tag_list">
-                <li>
-                  <a href="/en/media/press.do?searchKeyword=Elantra N" class="tag_item"><span>#About N</span></a>
-                </li>
-                <li>
-                  <a href="/en/media/press.do?searchKeyword=TCR" class="tag_item"><span>#History</span></a>
-                </li>
-                <li>
-                  <a href="/en/media/press.do?searchKeyword=TCR" class="tag_item"><span>#DNA</span></a>
-                </li>
-                <li>
-                  <a href="/en/media/press.do?searchKeyword=Nürburgring 24 Hours"
-                    class="tag_item"><span>#People</span></a>
-                </li>
-                <li>
-                  <a href="/en/media/press.do?searchKeyword=Nürburgring 24 Hours"
-                    class="tag_item"><span>#GWFoS</span></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <!-- overview -->
-        <div class="content-item03">
-          <!-- .max1440 : gap: 80px;  / .max1440.type2 : gap: 200px; -->
-          <div class="conts-section-wrap">
-            <div class="max1440 conts-bnr-box">
-              <div class="text-col">
-                <p class="text-strong motor_tit">Never just drive.</p>
-                <p class="text-normal">
-                  Do more than simply drive. Enjoy every second of it.
-                </p>
+              <!-- //07.19 수정 : 키비주얼 이미지 추가 -->
+              <div class="video-wrap">
+                <video
+                  class="video pc-only"
+                  data-js="video"
+                  id="video1"
+                  playsinline=""
+                  autoplay=""
+                  muted=""
+                  poster="../../inc/images/Models/RN_22e/RN_22e_poster.png"
+                  aria-hidden="false"
+                >
+                  <source
+                    src="../../inc/images/Models/RN_22e/rn22e.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+                <video
+                  class="video mo-only"
+                  data-js="video"
+                  id="video2"
+                  playsinline=""
+                  autoplay=""
+                  muted=""
+                  poster="../../inc/images/Models/RN_22e/RN_22e_poster_mo.png"
+                  aria-hidden="true"
+                >
+                  <source
+                    src="../../inc/images/Models/RN_22e/rn22emo.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+                <img
+                  src="../../inc/images/Models/RN_22e/RN_22e_poster.png"
+                  alt="RN 22e 영상 썸네일"
+                  style="display: none"
+                  class="video_poster pc-only"
+                />
+                <img
+                  src="../../inc/images/Models/RN_22e/RN_22e_poster_mo.png"
+                  alt="RN 22e 영상 썸네일"
+                  style="display: none"
+                  class="video_poster mo-only"
+                />
+                <button
+                  type="button"
+                  class="btn btn-only-icon-bg01-square"
+                  title="pause"
+                >
+                  <span class="visually-hidden">pause</span>
+                  <span
+                    class="btn-icon24 icon-pause-wh"
+                    aria-hidden="true"
+                  ></span>
+                </button>
               </div>
-              <div class="img-wrap">
-                <img src="../../inc/images/img/img_aboutN_conts01_pc.png" loading="lazy" alt="Never just drive PC 이미지"
-                  class="pc-only" />
-                <img src="../../inc/images/img/img_aboutN_conts01_mo.png" loading="lazy"
-                  alt="Never just drive Mobile 이미지" class="mo-only" />
+              <div class="video_tit_wrap">
+                <p class="video_tit">About N</p>
+                <p class="video_subtit">Passion For Performance by Hyundai</p>
               </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="content-item04 bg-gray">
-          <div class="conts-section-wrap">
-            <div class="max1440 pyramid-box">
-              <div class="text-col">
-                <p class="text-strong motor_tit">HYUNDAI N<br />PYRAMID</p>
-              </div>
-              <div class="img-wrap">
-                <img src="../../inc/images/img/img_aboutN_conts02_pc.png" loading="lazy" alt="PYRAMID PC 이미지"
-                  class="pc-only" />
-                <img src="../../inc/images/img/img_aboutN_conts02_mo.png" loading="lazy" alt="PYRAMID Mobile 이미지"
-                  class="mo-only" />
-              </div>
-              <div class="bnr-info-wrap mo-only">
-                <ul class="info-list">
+              <p class="video_date">04.30. 2024</p>
+              <div class="tag_list_wrap">
+                <ul class="tag_list">
                   <li>
-                    <a href="#" class="link" title="자세히 보러가기">
-                      <div class="img-area">
-                        <img src="../../inc/images/img/img_model-01.png" loading="lazy" alt="MOTORSPORTS 이미지" />
-                      </div>
-                      <div class="text-area">
-                        <h5 class="model_title color-type02">
-                          <strong>MOTORSPORTS</strong>
-                        </h5>
-                        <p class="model_info">CRADLE OF N</p>
-                      </div>
-                    </a>
+                    <a
+                      href="/en/media/press.do?searchKeyword=Elantra N"
+                      class="tag_item"
+                      ><span>#About N</span></a
+                    >
                   </li>
                   <li>
-                    <a href="#" class="link" title="자세히 보러가기">
-                      <div class="img-area">
-                        <img src="../../inc/images/img/img_model-02.png" loading="lazy" alt="ROLLING RAP 이미지" />
-                      </div>
-                      <div class="text-area">
-                        <h5 class="model_title color-type02">
-                          <strong>ROLLING RAP</strong>
-                        </h5>
-                        <p class="model_info">TECHNOLOGY PLAY ROUND</p>
-                      </div>
-                    </a>
+                    <a
+                      href="/en/media/press.do?searchKeyword=TCR"
+                      class="tag_item"
+                      ><span>#History</span></a
+                    >
                   </li>
                   <li>
-                    <a href="#" class="link" title="자세히 보러가기">
-                      <div class="img-area">
-                        <img src="../../inc/images/img/img_model-03.png" loading="lazy" alt="HIGH PERFORMANCE 이미지" />
-                      </div>
-                      <div class="text-area">
-                        <div class="model_logo">
-                          <img src="../../inc/images/img/logo_N.png" loading="lazy" alt="logo_N 이미지" />
-                        </div>
-                        <h5 class="model_title">HIGH PERFORMANCE</h5>
-                      </div>
-                    </a>
+                    <a
+                      href="/en/media/press.do?searchKeyword=TCR"
+                      class="tag_item"
+                      ><span>#DNA</span></a
+                    >
                   </li>
                   <li>
-                    <a href="#" class="link" title="자세히 보러가기">
-                      <div class="img-area">
-                        <img src="../../inc/images/img/img_model-04.png" loading="lazy" alt="THE GATEWAY TO N 이미지" />
-                      </div>
-                      <div class="text-area">
-                        <div class="model_logo">
-                          <img src="../../inc/images/img/logo_Nline.png" loading="lazy" alt="logo_N Line 이미지" />
-                        </div>
-                        <h5 class="model_title">THE GATEWAY TO N</h5>
-                      </div>
-                    </a>
+                    <a
+                      href="/en/media/press.do?searchKeyword=Nürburgring 24 Hours"
+                      class="tag_item"
+                      ><span>#People</span></a
+                    >
                   </li>
                   <li>
-                    <a href="#" class="link" title="자세히 보러가기">
-                      <div class="img-area">
-                        <img src="../../inc/images/img/img_model-05.png" loading="lazy" alt="HYUDAI MODELS 이미지" />
-                      </div>
-                      <div class="text-area">
-                        <h5 class="model_title">HYUDAI MODELS</h5>
-                      </div>
-                    </a>
+                    <a
+                      href="/en/media/press.do?searchKeyword=Nürburgring 24 Hours"
+                      class="tag_item"
+                      ><span>#GWFoS</span></a
+                    >
                   </li>
                 </ul>
               </div>
             </div>
           </div>
-        </div>
-
-        <div class="content-item05">
-          <div class="models-nofull">
-            <div class="max1440 n-story-box">
-              <!-- type-col > models-cardbox : 텍스트(제목 - 설명 행으로 구성됨) + 이미지 + 카드박스 -->
-              <div class="models-nofull-box">
-                <div class="text-col max1200">
-                  <p class="text-strong motor_tit">
-                    Born in Namyang,<br />
-                    Honed at Nürburgring
-                  </p>
+          <!-- overview -->
+          <div class="content-item03">
+            <!-- .max1440 : gap: 80px;  / .max1440.type2 : gap: 200px; -->
+            <div class="conts-section-wrap">
+              <div class="max1440 conts-bnr-box">
+                <div class="text-col">
+                  <p class="text-strong motor_tit">Never just drive.</p>
                   <p class="text-normal">
-                    Every High-performance N is designed by passionate experts
-                    and born here at the Hyundai Motor Namyang R&D Center.
-                    <br /><br />
-                    Afterward, the performance cars go off to the Nürburgring
-                    in Germany, one of the world’s most grueling race tracks,
-                    to undergo rigorous testing and inspection. Through this
-                    painstaking process, N technology has been refined and
-                    reborn.
+                    Do more than simply drive. Enjoy every second of it.
                   </p>
                 </div>
+                <div class="img-wrap">
+                  <img
+                    src="../../inc/images/img/img_aboutN_conts01_pc.png"
+                    loading="lazy"
+                    alt="Never just drive PC 이미지"
+                    class="pc-only"
+                  />
+                  <img
+                    src="../../inc/images/img/img_aboutN_conts01_mo.png"
+                    loading="lazy"
+                    alt="Never just drive Mobile 이미지"
+                    class="mo-only"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
 
-                <div class="img-conts-wrap max1440">
-                  <div class="img-area">
-                    <img src="../../inc/images/img/img_aboutN_conts03-pc.png" loading="lazy"
-                      alt="Born in Namyang, Honed at Nürburgring background image pc" class="pc-only" />
-                    <img src="../../inc/images/img/img_aboutN_conts03-mo.png" loading="lazy"
-                      alt="Born in Namyang, Honed at Nürburgring background image mobile" class="mo-only" />
-                    <div class="ico-logo">
-                      <img src="../../inc/images/img/logo_N.png" loading="lazy" alt="N logo image" />
+          <div class="content-item04 bg-gray">
+            <div class="conts-section-wrap">
+              <div class="max1440 pyramid-box">
+                <div class="text-col">
+                  <p class="text-strong motor_tit">HYUNDAI N<br />PYRAMID</p>
+                </div>
+                <div class="img-wrap">
+                  <img
+                    src="../../inc/images/img/img_aboutN_conts02_pc.png"
+                    loading="lazy"
+                    alt="PYRAMID PC 이미지"
+                    class="pc-only"
+                  />
+                  <img
+                    src="../../inc/images/img/img_aboutN_conts02_mo.png"
+                    loading="lazy"
+                    alt="PYRAMID Mobile 이미지"
+                    class="mo-only"
+                  />
+                </div>
+                <div class="bnr-info-wrap mo-only">
+                  <ul class="info-list">
+                    <li>
+                      <a href="#" class="link" title="자세히 보러가기">
+                        <div class="img-area">
+                          <img
+                            src="../../inc/images/img/img_model-01.png"
+                            loading="lazy"
+                            alt="MOTORSPORTS 이미지"
+                          />
+                        </div>
+                        <div class="text-area">
+                          <h5 class="model_title color-type02">
+                            <strong>MOTORSPORTS</strong>
+                          </h5>
+                          <p class="model_info">CRADLE OF N</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="link" title="자세히 보러가기">
+                        <div class="img-area">
+                          <img
+                            src="../../inc/images/img/img_model-02.png"
+                            loading="lazy"
+                            alt="ROLLING RAP 이미지"
+                          />
+                        </div>
+                        <div class="text-area">
+                          <h5 class="model_title color-type02">
+                            <strong>ROLLING RAP</strong>
+                          </h5>
+                          <p class="model_info">TECHNOLOGY PLAY GROUND</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="link" title="자세히 보러가기">
+                        <div class="img-area">
+                          <img
+                            src="../../inc/images/img/img_model-03.png"
+                            loading="lazy"
+                            alt="HIGH PERFORMANCE 이미지"
+                          />
+                        </div>
+                        <div class="text-area">
+                          <div class="model_logo">
+                            <img
+                              src="../../inc/images/img/logo_N.png"
+                              loading="lazy"
+                              alt="logo_N 이미지"
+                            />
+                          </div>
+                          <h5 class="model_title">HIGH PERFORMANCE</h5>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="link" title="자세히 보러가기">
+                        <div class="img-area">
+                          <img
+                            src="../../inc/images/img/img_model-04.png"
+                            loading="lazy"
+                            alt="THE GATEWAY TO N 이미지"
+                          />
+                        </div>
+                        <div class="text-area">
+                          <div class="model_logo">
+                            <img
+                              src="../../inc/images/img/logo_Nline.png"
+                              loading="lazy"
+                              alt="logo_N Line 이미지"
+                            />
+                          </div>
+                          <h5 class="model_title">THE GATEWAY TO N</h5>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="link" title="자세히 보러가기">
+                        <div class="img-area">
+                          <img
+                            src="../../inc/images/img/img_model-05.png"
+                            loading="lazy"
+                            alt="HYUDAI MODELS 이미지"
+                          />
+                        </div>
+                        <div class="text-area">
+                          <h5 class="model_title">HYUDAI MODELS</h5>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-item05">
+            <div class="models-nofull">
+              <div class="max1440 n-story-box">
+                <!-- type-col > models-cardbox : 텍스트(제목 - 설명 행으로 구성됨) + 이미지 + 카드박스 -->
+                <div class="models-nofull-box">
+                  <div class="text-col max1200">
+                    <p class="text-strong motor_tit">
+                      Born in Namyang,<br />
+                      Honed at Nürburgring
+                    </p>
+                    <p class="text-normal">
+                      Every High-performance N is designed by passionate experts
+                      and born here at the Hyundai Motor Namyang R&D Center.
+                      <br /><br />
+                      Afterward, the performance cars go off to the Nürburgring
+                      in Germany, one of the world’s most grueling race tracks,
+                      to undergo rigorous testing and inspection. Through this
+                      painstaking process, N technology has been refined and
+                      reborn.
+                    </p>
+                  </div>
+
+                  <div class="img-conts-wrap max1440">
+                    <div class="img-area">
+                      <img
+                        src="../../inc/images/img/img_aboutN_conts03-pc.png"
+                        loading="lazy"
+                        alt="Born in Namyang, Honed at Nürburgring background image pc"
+                        class="pc-only"
+                      />
+                      <img
+                        src="../../inc/images/img/img_aboutN_conts03-mo.png"
+                        loading="lazy"
+                        alt="Born in Namyang, Honed at Nürburgring background image mobile"
+                        class="mo-only"
+                      />
+                      <div class="ico-logo">
+                        <img
+                          src="../../inc/images/img/logo_N.png"
+                          loading="lazy"
+                          alt="N logo image"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="text-col max1200">
+                    <div>
+                      <p class="text-strong">
+                        N Takes its Name from <br class="pc-only" />Namyang and
+                        Nürburgring
+                      </p>
+                      <p class="text-normal-s">
+                        Being born in Namyang and honed at Nürburgring, the N
+                        logo got inspired by the curves of a racetrack.
+                      </p>
                     </div>
                   </div>
                 </div>
-                <div class="text-col max1200">
-                  <div>
-                    <p class="text-strong">
-                      N Takes its Name from <br class="pc-only" />Namyang and Nürburgring
-                    </p>
-                    <p class="text-normal-s">
-                      Being born in Namyang and honed at Nürburgring, the N
-                      logo got inspired by the curves of a racetrack.
-                    </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-item06 location-wrap">
+            <div class="models-full icon20 full-1600">
+              <div class="max1440">
+                <div class="text-col">
+                  <p class="text-strong txt-left">
+                    The Birthplace of N <br class="pc-only" />Namyang R&D Center
+                  </p>
+                  <p class="text-sub">Namyang, Korea</p>
+                  <p class="text-normal txt-left">
+                    The Namyang R&D Center in South Korea is the heart of
+                    Hyundai Motor's global R&D network, and the birthplace of
+                    the new i30 N. It consists of a multitude of facilities and
+                    test roads that cover over 3.3 million square meters of
+                    land. With world-class researchers and facilities, Namyang
+                    serves as the ultimate think tank for the development of
+                    High-Performance N.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-item07">
+            <div class="models-nofull">
+              <div class="max1440">
+                <!-- type-col > models-cardbox : 텍스트(제목 - 설명 행으로 구성됨) + 이미지 + 카드박스 -->
+                <div class="models-nofull-box">
+                  <div class="img-conts-wrap max1440">
+                    <div class="img-area">
+                      <img
+                        src="../../inc/images/img/img_aboutN_conts04.png"
+                        loading="lazy"
+                        alt="European Technical Center at Nürburgring background image pc"
+                        class="pc-only"
+                      />
+                      <img
+                        src="../../inc/images/img/img_aboutN_conts04_mo.png"
+                        loading="lazy"
+                        alt="European Technical Center at Nürburgring background image mobile"
+                        class="mo-only"
+                      />
+                    </div>
+                  </div>
+                  <div class="text-col max1200">
+                    <div>
+                      <p class="text-strong">
+                        European Technical Center at Nürburgring
+                      </p>
+                      <p class="text-normal-s">
+                        The Nürburgring Nordschleife is also home to the Hyundai
+                        Motor European Technical Center where accelerated
+                        durability tests are conducted. The creation of this
+                        test center in the middle of a battlefield that pits the
+                        world’s most advanced automotive technologies against
+                        the harshest road conditions,serves as a sign of
+                        Hyundai’s aggressive dedication towards the development
+                        of high-performance vehicle technology.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="content-item06 location-wrap">
-          <div class="models-full icon20 full-1600">
-            <div class="max1440">
+          <div class="content-item08">
+            <div class="models-full icon20 full-1600"></div>
+            <div class="max1200">
               <div class="text-col">
-                <p class="text-strong txt-left">
-                  The Birthplace of N <br class="pc-only">Namyang R&D Center
+                <p class="text-strong motor_tit txt-center">
+                  The Proving Grounds of N, The Nürburgring
                 </p>
-                <p class="text-sub">Namyang, Korea</p>
-                <p class="text-normal txt-left">
-                  The Namyang R&D Center in South Korea is the heart of
-                  Hyundai Motor's global R&D network, and the birthplace of
-                  the new i30 N. It consists of a multitude of facilities and
-                  test roads that cover over 3.3 million square meters of
-                  land. With world-class researchers and facilities, Namyang
-                  serves as the ultimate think tank for the development of
-                  High-Performance N.
+                <p class="text-sub txt-center">Nürburgring, Germany</p>
+                <p class="text-normal txt-center">
+                  The Nürburgring Nordschleife is the place where Hyundai N
+                  hones its high-performance N technologies. It is one of the
+                  world’s most challenging race tracks, with 73 corners covering
+                  20.8 km of tarmac and repeated stretches of steep, sudden,
+                  uphill and downhill roads. The elevation varies between 320
+                  and 617 meters, with a maximum difference of 300 meters,
+                  making it quite possibly the harshest on-road environment on
+                  Earth.
                 </p>
               </div>
             </div>
-          </div>
-        </div>
-
-        <div class="content-item07">
-          <div class="models-nofull">
-            <div class="max1440">
-              <!-- type-col > models-cardbox : 텍스트(제목 - 설명 행으로 구성됨) + 이미지 + 카드박스 -->
-              <div class="models-nofull-box">
-                <div class="img-conts-wrap max1440">
-                  <div class="img-area">
-                    <img src="../../inc/images/img/img_aboutN_conts04.png" loading="lazy"
-                      alt="European Technical Center at Nürburgring background image pc" class="pc-only" />
-                    <img src="../../inc/images/img/img_aboutN_conts04_mo.png" loading="lazy"
-                      alt="European Technical Center at Nürburgring background image mo" class="mo-only" />
-                  </div>
-                </div>
-                <div class="text-col max1200">
-                  <div>
-                    <p class="text-strong">
-                      European Technical Center at Nürburgring
-                    </p>
-                    <p class="text-normal-s">
-                      The Nürburgring Nordschleife is also home to the Hyundai
-                      Motor European Technical Center where accelerated
-                      durability tests are conducted. The creation of this
-                      test center in the middle of a battlefield that pits the
-                      world’s most advanced automotive technologies against
-                      the harshest road conditions,serves as a sign of
-                      Hyundai’s aggressive dedication towards the development
-                      of high-performance vehicle technology.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="content-item08">
-          <div class="models-full icon20 full-1600"></div>
-          <div class="max1200">
-            <div class="text-col">
-              <p class="text-strong motor_tit txt-center">
-                The Proving Grounds of N, The Nürburgring
-              </p>
-              <p class="text-sub txt-center">Nürburgring, Germany</p>
-              <p class="text-normal txt-center">
-                The Nürburgring Nordschleife is the place where Hyundai N
-                hones its high-performance N technologies. It is one of the
-                world’s most challenging race tracks, with 73 corners covering
-                20.8 km of tarmac and repeated stretches of steep, sudden,
-                uphill and downhill roads. The elevation varies between 320
-                and 617 meters, with a maximum difference of 300 meters,
-                making it quite possibly the harshest on-road environment on
-                Earth.
-              </p>
-            </div>
-          </div>
-          <div class="press-sns-wrap">
-            <div class="sns-box">
-              <button type="button" class="btn btn-only-icon-bg01-circle" title="copy">
-                <span class="visually-hidden">copy</span>
-                <span class="btn-icon20 icon-copylink-wh" aria-hidden="true"></span>
-              </button>
-              <a href="https://www.facebook.com/" class="btn btn-only-icon-bg01-circle" title="facebook">
-                <span class="visually-hidden">facebook</span>
-                <span class="btn-icon20 icon-facebook-wh" aria-hidden="true"></span>
-              </a>
-              <!-- 
+            <div class="press-sns-wrap">
+              <div class="sns-box">
+                <button
+                  type="button"
+                  class="btn btn-only-icon-bg01-circle"
+                  title="copy"
+                >
+                  <span class="visually-hidden">copy</span>
+                  <span
+                    class="btn-icon20 icon-copylink-wh"
+                    aria-hidden="true"
+                  ></span>
+                </button>
+                <a
+                  href="https://www.facebook.com/"
+                  class="btn btn-only-icon-bg01-circle"
+                  title="facebook"
+                >
+                  <span class="visually-hidden">facebook</span>
+                  <span
+                    class="btn-icon20 icon-facebook-wh"
+                    aria-hidden="true"
+                  ></span>
+                </a>
+                <!-- 
                   <a href="https://www.instagram.com/" class="btn btn-only-icon-bg01-circle" title="instagram">
                     <span class="visually-hidden">instagram</span>
                     <span class="btn-icon20 icon-instagram-wh" aria-hidden="true"></span>
                   </a> 
                 -->
-              <a href="https://x.com/" class="btn btn-only-icon-bg01-circle" title="twitter">
-                <span class="visually-hidden">twitter</span>
-                <span class="btn-icon20 icon-twitter-wh" aria-hidden="true"></span>
-              </a>
+                <a
+                  href="https://x.com/"
+                  class="btn btn-only-icon-bg01-circle"
+                  title="twitter"
+                >
+                  <span class="visually-hidden">twitter</span>
+                  <span
+                    class="btn-icon20 icon-twitter-wh"
+                    aria-hidden="true"
+                  ></span>
+                </a>
+              </div>
+              <div class="btn-wrap btn-back">
+                <a
+                  href="https://www.hyundai.com/worldwide/ko/brand-journal/mobility-solution/n-story"
+                  class="btn lg-txt-btn01"
+                >
+                  <span class="btn-icon20 icon-left" aria-hidden="true"></span>
+                  Back to List
+                </a>
+              </div>
             </div>
-            <div class="btn-wrap btn-back">
-              <a href="https://www.hyundai.com/worldwide/ko/brand-journal/mobility-solution/n-story"
-                class="btn lg-txt-btn01">
-                <span class="btn-icon20 icon-left" aria-hidden="true"></span>
-                Back to List
-              </a>
+          </div>
+
+          <div class="content-item09 bg-gray">
+            <div class="related-conts-wrap">
+              <h2 class="tit tit-type02">More from Hyundai N</h2>
+              <!-- 07.19 수정 : 문구 변경 -->
+              <ul class="grid_3 grid_mo_scroll">
+                <li>
+                  <div class="card_type04">
+                    <a href="#" class="card_thumbnail">
+                      <img
+                        src="../../inc/images/img/img_aboutN_Related01.png"
+                        alt="썸네일 이미지"
+                      />
+
+                      <div class="card_con">
+                        <p class="tit-type03 fw-type03">
+                          The story of electrifying N
+                        </p>
+                        <!-- <div class="card-hashtag">
+                      <button class="txt-type04">#WRC</button>
+                      <button class="txt-type04">#Rally_Croatia</button>
+                      <button class="txt-type04">#Motorsport</button>
+                    </div> -->
+                        <p class="card_date">11.09.2023</p>
+                      </div>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="card_type04">
+                    <a href="#" class="card_thumbnail">
+                      <img
+                        src="../../inc/images/img/img_aboutN_Related02.png"
+                        alt="썸네일 이미지"
+                      />
+
+                      <div class="card_con">
+                        <p class="tit-type03 fw-type03">
+                          N Vision 74 : Envisioning the Future of N brand
+                        </p>
+                        <!-- <div class="card-hashtag">
+                      <button class="txt-type04">#WRC</button>
+                      <button class="txt-type04">#Rally_Croatia</button>
+                      <button class="txt-type04">#Motorsport</button>
+                    </div> -->
+                        <p class="card_date">09.07.2022</p>
+                      </div>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="card_type04">
+                    <a href="#" class="card_thumbnail">
+                      <img
+                        src="../../inc/images/img/img_aboutN_Related03.png"
+                        alt="썸네일 이미지"
+                      />
+
+                      <div class="card_con">
+                        <p class="tit-type03 fw-type03">
+                          RN22e : Presenting the Vision of High-Performance
+                        </p>
+                        <!-- <div class="card-hashtag">
+                      <button class="txt-type04">#WRC</button>
+                      <button class="txt-type04">#Rally_Croatia</button>
+                      <button class="txt-type04">#Motorsport</button>
+                    </div> -->
+                        <p class="card_date">09.07.2022</p>
+                      </div>
+                    </a>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
-
-        <div class="content-item09 bg-gray">
-          <div class="related-conts-wrap">
-            <h2 class="tit tit-type02">More from Hyundai N</h2>
-            <!-- 07.19 수정 : 문구 변경 -->
-            <ul class="grid_3 grid_mo_scroll">
-              <li>
-                <div class="card_type04">
-                  <a href="#" class="card_thumbnail">
-                    <img src="../../inc/images/img/img_aboutN_Related01.png" alt="썸네일 이미지" />
-
-                    <div class="card_con">
-                      <p class="tit-type03 fw-type03">
-                        The story of electrifying N
-                      </p>
-                      <!-- <div class="card-hashtag">
-                      <button class="txt-type04">#WRC</button>
-                      <button class="txt-type04">#Rally_Croatia</button>
-                      <button class="txt-type04">#Motorsport</button>
-                    </div> -->
-                      <p class="card_date">11.09.2023</p>
-                    </div>
-                  </a>
-                </div>
-              </li>
-              <li>
-                <div class="card_type04">
-                  <a href="#" class="card_thumbnail">
-                    <img src="../../inc/images/img/img_aboutN_Related02.png" alt="썸네일 이미지" />
-
-                    <div class="card_con">
-                      <p class="tit-type03 fw-type03">
-                        N Vision 74 : Envisioning the Future of N brand
-                      </p>
-                      <!-- <div class="card-hashtag">
-                      <button class="txt-type04">#WRC</button>
-                      <button class="txt-type04">#Rally_Croatia</button>
-                      <button class="txt-type04">#Motorsport</button>
-                    </div> -->
-                      <p class="card_date">09.07.2022</p>
-                    </div>
-                  </a>
-                </div>
-              </li>
-              <li>
-                <div class="card_type04">
-                  <a href="#" class="card_thumbnail">
-                    <img src="../../inc/images/img/img_aboutN_Related03.png" alt="썸네일 이미지" />
-
-                    <div class="card_con">
-                      <p class="tit-type03 fw-type03">
-                        RN22e : Presenting the Vision of High-Performance
-                      </p>
-                      <!-- <div class="card-hashtag">
-                      <button class="txt-type04">#WRC</button>
-                      <button class="txt-type04">#Rally_Croatia</button>
-                      <button class="txt-type04">#Motorsport</button>
-                    </div> -->
-                      <p class="card_date">09.07.2022</p>
-                    </div>
-                  </a>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <!-- //content-area -->
-    </section>
-  </div>
-  <script type="text/javascript" src="../../inc/js/jquery-3.7.1.slim.min.js"></script>
-  <script type="text/javascript" src="../../inc/js/swiper.min.js"></script>
-  <script type="text/javascript" src="../../inc/js/pub-ui.js"></script>
-</body>
-
+        <!-- //content-area -->
+      </section>
+    </div>
+    <script
+      type="text/javascript"
+      src="../../inc/js/jquery-3.7.1.slim.min.js"
+    ></script>
+    <script type="text/javascript" src="../../inc/js/swiper.min.js"></script>
+    <script type="text/javascript" src="../../inc/js/pub-ui.js"></script>
+  </body>
 </html>
