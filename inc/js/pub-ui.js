@@ -1011,16 +1011,28 @@ function swiper2SlideEvt() {
     loopVal = false;
   }
 
+  // if ($(".ty02Swiper .swiper-slide").length == 3) {
+  //   console.log($(".ty02Swiper .swiper-slide:first-child").html());
+  //   $(".ty02Swiper .swiper-wrapper").append(
+  //     '<div class="swiper-slide">' +
+  //       $(".ty02Swiper .swiper-slide:first-child").html() +
+  //       "</div>"
+  //   );
+  // }
   self.swiper2 = new Swiper(".ty02Swiper", {
     effect: "coverflow",
     grabCursor: true,
     centeredSlides: true,
-    slidesPerView: "auto",
-    // autoplay: {
-    //   delay: 3000,
-    //   disableOnInteraction: false,
-    // },
-    loop: loopVal,
+    // slidesPerView: "auto",
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    loop: true,
+    loopedSlides: 1,
+    // loopAdditionalSlides: 1,
+    // loopAddBlankSlides: false,
+    // maxBackfaceHiddenSlides: 3,
     coverflowEffect: {
       rotate: 0, //각도
       // stretch: -80, //간격
@@ -1061,7 +1073,7 @@ function swiper2SlideEvt() {
       1399: {
         effect: "coverflow",
         slidesPerView: "auto",
-        spaceBetween: 60,
+        spaceBetween: 12,
       },
     },
     on: {
@@ -2229,6 +2241,12 @@ window.onload = function () {
   // 07.30 추가 - 모바일에서 navigation-bar 존재 시, 컨텐츠영역 상단 짤림 현상 방지
   if ($(".navigation_bar-wrap").length > 0) {
     $(".wrap .content-area").css("padding-top", "48px");
+  }
+
+  // Jira - 359 이슈 대응
+  if ($(".related-wrap .models-cardbox").length > 0) {
+    var relatedItemSize = $(".related-wrap .models-cardbox > div").length;
+    $(".related-wrap .models-cardbox").css("--size", relatedItemSize);
   }
 };
 
