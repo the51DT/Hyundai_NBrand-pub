@@ -1,1140 +1,732 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name=" format-detection" content="telephone=no" />
-    <title>N브랜드 | Models_i30 Fastback N</title>
-    <link
-      type="text/css"
-      rel="stylesheet"
-      href="../../inc/css/swiper.min.css"
-    />
-    <link type="text/css" rel="stylesheet" href="../../inc/css/common.css" />
-  </head>
 
-  <body>
-    <div class="wrap">
-      <header class="header-wrap">
-        <div class="header-cont">
-          <h1 class="logo">
-            <a href="/"
-              ><img
-                src="../../inc/images/img/img_logo.svg"
-                loading="lazy"
-                alt="N브랜드"
-            /></a>
-          </h1>
-          <div class="sitemap-wrap">
-            <button
-              class="nav-btn"
-              data-label="전체 메뉴 닫기"
-              aria-label="전체 메뉴 열기"
-              aria-expanded="true"
-              aria-controls="navWrap"
-            >
-              <span class="line"></span>
-              <span class="line"></span>
-              <span class="line"></span>
-            </button>
-            <div class="nav-wrap" id="navWrap" aria-hidden="true">
-              <nav>
-                <!-- gnb 1dep -->
-                <!-- 현재 페이지 dep버튼에 active class 삽입.  gnb__tab02 첫번째 메뉴는 항상오픈, 활성화 클래스 on -->
-                <ul class="gnb__tab-btn-wrap">
-                  <li>
-                    <button
-                      class="gnb__tab-btn01"
-                      id="gnb__tabBtn01"
-                      role="tab"
-                      aria-controls="gnbTab1"
-                      aria-selected="false"
-                    >
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name=" format-detection" content="telephone=no" />
+  <title>N브랜드 | Models_i30 Fastback N</title>
+  <link type="text/css" rel="stylesheet" href="../../inc/css/swiper.min.css" />
+  <link type="text/css" rel="stylesheet" href="../../inc/css/common.css" />
+</head>
+
+<body>
+  <div class="wrap">
+    <header class="header-wrap">
+      <div class="header-cont">
+        <h1 class="logo">
+          <a href="/"><img src="../../inc/images/img/img_logo.svg" loading="lazy" alt="N브랜드" /></a>
+        </h1>
+        <div class="sitemap-wrap">
+          <button class="nav-btn" data-label="전체 메뉴 닫기" aria-label="전체 메뉴 열기" aria-expanded="true"
+            aria-controls="navWrap">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </button>
+          <div class="nav-wrap" id="navWrap" aria-hidden="true">
+            <nav>
+              <!-- gnb 1dep -->
+              <!-- 현재 페이지 dep버튼에 active class 삽입.  gnb__tab02 첫번째 메뉴는 항상오픈, 활성화 클래스 on -->
+              <ul class="gnb__tab-btn-wrap">
+                <li>
+                  <button class="gnb__tab-btn01" id="gnb__tabBtn01" role="tab" aria-controls="gnbTab1"
+                    aria-selected="false">
+                    Brand
+                  </button>
+                </li>
+                <li>
+                  <button class="gnb__tab-btn02" id="gnb__tabBtn02" role="tab" aria-controls="gnbTab2"
+                    aria-selected="false">
+                    Models
+                  </button>
+                </li>
+                <li>
+                  <button class="gnb__tab-btn03" id="gnb__tabBtn03" role="tab" aria-controls="gnbTab3"
+                    aria-selected="false">
+                    Experience
+                  </button>
+                </li>
+                <li><a href="#" class="gnb__tab-btn04">Configurator</a></li>
+              </ul>
+              <!-- g nb 1dep panel -->
+              <div class="gnb__tab-cont-wrap">
+                <div class="gnb__tab-cont01" id="gnbTab1" role="tabpanel" aria-labelledby="gnb__tabBtn01">
+                  <!-- gnb 2-1 dep-->
+                  <div class="gnb__tab02-wrap">
+                    <ul class="gnb__tab02">
+                      <!-- 현재 페이지 dep버튼에 active class 삽입. -->
+                      <li>
+                        <a href="#" class="gnb__tab02-btn01">Hyundai N</a>
+                      </li>
+                      <li>
+                        <a href="#" class="gnb__tab02-btn02">Motorsports</a>
+                      </li>
+                      <li>
+                        <a href="#" class="gnb__tab02-btn03">N Performance Parts</a>
+                      </li>
+                      <li>
+                        <a href="#" class="gnb__tab02-btn04">N Merchandise</a>
+                      </li>
+                      <li><a href="#" class="gnb__tab02-btn05">Press</a></li>
+                    </ul>
+                    <button class="mo-gnb__back-btn" title="이전메뉴로 가기">
                       Brand
                     </button>
-                  </li>
-                  <li>
-                    <button
-                      class="gnb__tab-btn02"
-                      id="gnb__tabBtn02"
-                      role="tab"
-                      aria-controls="gnbTab2"
-                      aria-selected="false"
-                    >
-                      Models
-                    </button>
-                  </li>
-                  <li>
-                    <button
-                      class="gnb__tab-btn03"
-                      id="gnb__tabBtn03"
-                      role="tab"
-                      aria-controls="gnbTab3"
-                      aria-selected="false"
-                    >
-                      Experience
-                    </button>
-                  </li>
-                  <li><a href="#" class="gnb__tab-btn04">Configurator</a></li>
-                </ul>
-                <!-- g nb 1dep panel -->
-                <div class="gnb__tab-cont-wrap">
-                  <div
-                    class="gnb__tab-cont01"
-                    id="gnbTab1"
-                    role="tabpanel"
-                    aria-labelledby="gnb__tabBtn01"
-                  >
-                    <!-- gnb 2-1 dep-->
-                    <div class="gnb__tab02-wrap">
-                      <ul class="gnb__tab02">
-                        <!-- 현재 페이지 dep버튼에 active class 삽입. -->
-                        <li>
-                          <a href="#" class="gnb__tab02-btn01">Hyundai N</a>
-                        </li>
-                        <li>
-                          <a href="#" class="gnb__tab02-btn02">Motorsports</a>
-                        </li>
-                        <li>
-                          <a href="#" class="gnb__tab02-btn03"
-                            >N Performance Parts</a
-                          >
-                        </li>
-                        <li>
-                          <a href="#" class="gnb__tab02-btn04">N Merchandise</a>
-                        </li>
-                        <li><a href="#" class="gnb__tab02-btn05">Press</a></li>
-                      </ul>
-                      <button class="mo-gnb__back-btn" title="이전메뉴로 가기">
-                        Brand
-                      </button>
-                    </div>
-                    <div class="gnb-content__dep2">
-                      <div class="img-area">
-                        <img
-                          src="../../inc/images/img/img_gnb_dep2_content.png"
-                          loading="lazy"
-                          alt="N Cup - Round 1"
-                        />
-                      </div>
-                      <div class="text-area">
-                        <h3>N Cup - Round 1</h3>
-                        <p>Inje SPEEDIUM, 04.27 - 04.28</p>
-                        <div class="link-area">
-                          <a href="#" class="link-btn"
-                            >Learn More<span class="icon-right-wh"></span
-                          ></a>
-                          <a href="#" class="link-btn"
-                            >Configrator <span class="icon-right-wh"></span
-                          ></a>
-                        </div>
-                      </div>
-                    </div>
                   </div>
-                  <div
-                    class="gnb__tab-cont02"
-                    id="gnbTab2"
-                    role="tabpanel"
-                    aria-labelledby="gnb__tabBtn02"
-                  >
-                    <!-- gnb 2-2dep-->
-                    <div class="gnb__tab02-wrap">
-                      <!-- 모바일 타이틀 -->
-                      <ul class="gnb__tab02">
-                        <li>
-                          <button
-                            class="gnb__tab02-btn01 on"
-                            role="tab"
-                            id="gnb-tab2_2_1"
-                            aria-controls="gnbTab2_1"
-                            aria-selected="true"
-                          >
-                            N
-                          </button>
-                        </li>
-                        <li>
-                          <button
-                            class="gnb__tab02-btn02"
-                            role="tab"
-                            id="gnb-tab2_2_2"
-                            aria-controls="gnbTab2_2"
-                            aria-selected="false"
-                          >
-                            Motorsports
-                          </button>
-                        </li>
-                        <li>
-                          <button
-                            class="gnb__tab02-btn03"
-                            role="tab"
-                            id="gnb-tab2_2_3"
-                            aria-controls="gnbTab2_3"
-                            aria-selected="false"
-                          >
-                            Rolling Lab
-                          </button>
-                        </li>
-                        <li>
-                          <button
-                            class="gnb__tab02-btn04"
-                            role="tab"
-                            id="gnb-tab2_2_4"
-                            aria-controls="gnbTab2_4"
-                            aria-selected="false"
-                          >
-                            Concept
-                          </button>
-                        </li>
-                        <li>
-                          <button
-                            class="gnb__tab02-btn05"
-                            role="tab"
-                            id="gnb-tab2_2_5"
-                            aria-controls="gnbTab2_5"
-                            aria-selected="false"
-                          >
-                            Legacy
-                          </button>
-                        </li>
-                      </ul>
-                      <div class="gnb__panel02">
-                        <div
-                          id="gnbTab2_1"
-                          class="type-thumbnail"
-                          role="tabpanel"
-                          aria-labelledby="gnb-tab2_2_1"
-                        >
-                          <ul class="gnb__tab02_2">
-                            <li class="dep3_item">
-                              <div>
-                                <div class="img-area">
-                                  <img
-                                    src="../../inc/images/img/img_gnb_dep3.png"
-                                    loading="lazy"
-                                    alt="IONIQ 5 N 차량"
-                                  />
-                                </div>
-                                <div class="text-area">
-                                  <h3>IONIQ 5 N</h3>
-                                  <p>Electrifying Driving Passion</p>
-                                  <div class="link-area">
-                                    <a href="#" class="link-btn"
-                                      >Learn More<span class="icon-right"></span
-                                    ></a>
-                                    <a href="#" class="link-btn"
-                                      >Configrator<span
-                                        class="icon-right"
-                                      ></span>
-                                      <!--<span class="icon-link"></span>--></a
-                                    >
-                                  </div>
-                                </div>
-                              </div>
-                            </li>
-                            <li class="dep3_item">
-                              <div>
-                                <div class="img-area">
-                                  <img
-                                    src="../../inc/images/img/img_gnb_dep3.png"
-                                    loading="lazy"
-                                    alt="ELANTRA N 차량"
-                                  />
-                                </div>
-                                <div class="text-area">
-                                  <h3>ELANTRA N</h3>
-                                  <p>The Perfect Balance</p>
-                                  <div class="link-area">
-                                    <a href="#" class="link-btn"
-                                      >Learn More<span class="icon-right"></span
-                                    ></a>
-                                    <a href="#" class="link-btn"
-                                      >Configrator<span
-                                        class="icon-right"
-                                      ></span>
-                                      <!--<span class="icon-link"></span>--></a
-                                    >
-                                  </div>
-                                </div>
-                              </div>
-                            </li>
-                            <li class="dep3_item">
-                              <div>
-                                <div class="img-area">
-                                  <img
-                                    src="../../inc/images/img/img_gnb_dep3.png"
-                                    loading="lazy"
-                                    alt="i20 N 차량"
-                                  />
-                                </div>
-                                <div class="text-area">
-                                  <h3>i20 N</h3>
-                                  <p>This is my stage</p>
-                                  <div class="link-area">
-                                    <a href="#" class="link-btn"
-                                      >Learn More<span class="icon-right"></span
-                                    ></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </li>
-                            <li class="dep3_item">
-                              <div>
-                                <div class="img-area">
-                                  <img
-                                    src="../../inc/images/img/img_gnb_dep3.png"
-                                    loading="lazy"
-                                    alt="i30 N 차량"
-                                  />
-                                </div>
-                                <div class="text-area">
-                                  <h3>i30 N</h3>
-                                  <p>Shift the moment</p>
-                                  <div class="link-area">
-                                    <a href="#" class="link-btn"
-                                      >Learn More<span class="icon-right"></span
-                                    ></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </li>
-                            <li class="dep3_item">
-                              <div>
-                                <div class="img-area">
-                                  <img
-                                    src="../../inc/images/img/img_gnb_dep3.png"
-                                    loading="lazy"
-                                    alt="i30 Fastback N 차량"
-                                  />
-                                </div>
-                                <div class="text-area">
-                                  <h3>i30 Fastback N</h3>
-                                  <p>Elegant Adrenaline</p>
-                                  <div class="link-area">
-                                    <a href="#" class="link-btn"
-                                      >Learn More<span class="icon-right"></span
-                                    ></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </li>
-                            <li class="dep3_item">
-                              <div>
-                                <div class="img-area">
-                                  <img
-                                    src="../../inc/images/img/img_gnb_dep3.png"
-                                    loading="lazy"
-                                    alt="Technologies 차량"
-                                  />
-                                </div>
-                                <div class="text-area">
-                                  <h3>Technologies</h3>
-                                  <p>Passion For Performance by Hyundai</p>
-                                  <div class="link-area">
-                                    <a href="#" class="link-btn"
-                                      >Learn More<span class="icon-right"></span
-                                    ></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </li>
-                          </ul>
-                          <button
-                            class="mo-gnb__back-btn"
-                            title="이전메뉴로 가기"
-                          >
-                            N
-                          </button>
-                        </div>
-                        <div
-                          id="gnbTab2_2"
-                          class="type-thumbnail"
-                          role="tabpanel"
-                          aria-labelledby="gnb-tab2_2_2"
-                        >
-                          <ul class="gnb__tab02_2">
-                            <li class="dep3_item">
-                              <div>
-                                <div class="img-area">
-                                  <img
-                                    src="../../inc/images/img/img_gnb_dep3.png"
-                                    loading="lazy"
-                                    alt="eN1 Cup Car 차량"
-                                  />
-                                </div>
-                                <div class="text-area">
-                                  <h3>eN1 Cup Car</h3>
-                                  <p>
-                                    Shaping the future of motorsports with an EV
-                                  </p>
-                                  <div class="link-area">
-                                    <a href="#" class="link-btn"
-                                      >Learn More<span class="icon-right"></span
-                                    ></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </li>
-                            <li class="dep3_item">
-                              <div>
-                                <div class="img-area">
-                                  <img
-                                    src="../../inc/images/img/img_gnb_dep3.png"
-                                    loading="lazy"
-                                    alt="IONIQ 5 N TA Spec 차량"
-                                  />
-                                </div>
-                                <div class="text-area">
-                                  <h3>IONIQ 5 N TA Spec</h3>
-                                  <p>The Perfect Balance</p>
-                                  <div class="link-area">
-                                    <a href="#" class="link-btn"
-                                      >Learn More<span class="icon-right"></span
-                                    ></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </li>
-                            <li class="dep3_item">
-                              <div>
-                                <div class="img-area">
-                                  <img
-                                    src="../../inc/images/img/img_gnb_dep3.png"
-                                    loading="lazy"
-                                    alt="i20 N Rally 1 차량"
-                                  />
-                                </div>
-                                <div class="text-area">
-                                  <h3>i20 N Rally 1</h3>
-                                  <p>The Perfect Balance</p>
-                                  <div class="link-area">
-                                    <a href="#" class="link-btn"
-                                      >Learn More<span class="icon-right"></span
-                                    ></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </li>
-                            <li class="dep3_item">
-                              <div>
-                                <div class="img-area">
-                                  <img
-                                    src="../../inc/images/img/img_gnb_dep3.png"
-                                    loading="lazy"
-                                    alt="ELANTRA N TCR 차량"
-                                  />
-                                </div>
-                                <div class="text-area">
-                                  <h3>ELANTRA N TCR</h3>
-                                  <p>The Perfect Balance</p>
-                                  <div class="link-area">
-                                    <a href="#" class="link-btn"
-                                      >Learn More<span class="icon-right"></span
-                                    ></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </li>
-                          </ul>
-                          <button
-                            class="mo-gnb__back-btn"
-                            title="이전메뉴로 가기"
-                          >
-                            Motorsports
-                          </button>
-                        </div>
-                        <div
-                          id="gnbTab2_3"
-                          class="type-thumbnail"
-                          role="tabpanel"
-                          aria-labelledby="gnb-tab2_2_3"
-                        >
-                          <ul class="gnb__tab02_2">
-                            <li class="dep3_item">
-                              <div>
-                                <div class="img-area">
-                                  <img
-                                    src="../../inc/images/img/img_gnb_dep3.png"
-                                    loading="lazy"
-                                    alt="N Vision 74 차량"
-                                  />
-                                </div>
-                                <div class="text-area">
-                                  <h3>N Vision 74</h3>
-                                  <p>First Hydrogen Hybrid Rolling Lab</p>
-                                  <div class="link-area">
-                                    <a href="#" class="link-btn"
-                                      >Learn More<span class="icon-right"></span
-                                    ></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </li>
-                            <li class="dep3_item">
-                              <div>
-                                <div class="img-area">
-                                  <img
-                                    src="../../inc/images/img/img_gnb_dep3.png"
-                                    loading="lazy"
-                                    alt="RN22e 차량"
-                                  />
-                                </div>
-                                <div class="text-area">
-                                  <h3>RN22e</h3>
-                                  <p>
-                                    Rolling Lab with Maximized EGMP Potential
-                                  </p>
-                                  <div class="link-area">
-                                    <a href="#" class="link-btn"
-                                      >Learn More<span class="icon-right"></span
-                                    ></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </li>
-                          </ul>
-                          <button
-                            class="mo-gnb__back-btn"
-                            title="이전메뉴로 가기"
-                          >
-                            Rolling Lab
-                          </button>
-                        </div>
-                        <div
-                          id="gnbTab2_4"
-                          class="type-thumbnail"
-                          role="tabpanel"
-                          aria-labelledby="gnb-tab2_2_4"
-                        >
-                          <ul class="gnb__tab02_2">
-                            <li class="dep3_item">
-                              <div>
-                                <div class="img-area">
-                                  <img
-                                    src="../../inc/images/img/img_gnb_dep3.png"
-                                    loading="lazy"
-                                    alt="NPX1 차량"
-                                  />
-                                </div>
-                                <div class="text-area">
-                                  <h3>NPX1</h3>
-                                  <p>N Performance eXperimental 1</p>
-                                  <div class="link-area">
-                                    <a href="#" class="link-btn"
-                                      >Learn More<span class="icon-right"></span
-                                    ></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </li>
-                          </ul>
-                          <button
-                            class="mo-gnb__back-btn"
-                            title="이전메뉴로 가기"
-                          >
-                            Concept
-                          </button>
-                        </div>
-                        <div
-                          id="gnbTab2_5"
-                          class="type-thumbnail"
-                          role="tabpanel"
-                          aria-labelledby="gnb-tab2_2_5"
-                        >
-                          <ul class="gnb__tab02_2">
-                            <li class="dep3_item">
-                              <div>
-                                <div class="img-area">
-                                  <img
-                                    src="../../inc/images/img/img_gnb_dep3.png"
-                                    loading="lazy"
-                                    alt="RN20e 차량"
-                                  />
-                                </div>
-                                <div class="text-area">
-                                  <h3>RN20e</h3>
-                                  <p>Performance, Electrified</p>
-                                  <div class="link-area">
-                                    <a href="#" class="link-btn"
-                                      >Learn More<span class="icon-right"></span
-                                    ></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </li>
-                            <li class="dep3_item">
-                              <div>
-                                <div class="img-area">
-                                  <img
-                                    src="../../inc/images/img/img_gnb_dep3.png"
-                                    loading="lazy"
-                                    alt="RM19 차량"
-                                  />
-                                </div>
-                                <div class="text-area">
-                                  <h3>RM19</h3>
-                                  <p>Proof of Continuous Development</p>
-                                  <div class="link-area">
-                                    <a href="#" class="link-btn"
-                                      >Learn More<span class="icon-right"></span
-                                    ></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </li>
-                            <li class="dep3_item">
-                              <div>
-                                <div class="img-area">
-                                  <img
-                                    src="../../inc/images/img/img_gnb_dep3.png"
-                                    loading="lazy"
-                                    alt="Project RM 차량"
-                                  />
-                                </div>
-                                <div class="text-area">
-                                  <h3>Project RM</h3>
-                                  <p>Developing High Performance</p>
-                                  <div class="linKONA Nk-area">
-                                    <a href="#" class="link-btn"
-                                      >Learn More<span class="icon-right"></span
-                                    ></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </li>
-                            <li class="dep3_item">
-                              <div>
-                                <div class="img-area">
-                                  <img
-                                    src="../../inc/images/img/img_gnb_dep3.png"
-                                    loading="lazy"
-                                    alt="N 2025 Vision Gran Turismo 차량"
-                                  />
-                                </div>
-                                <div class="text-area">
-                                  <h3>N 2025 Vision Gran Turismo</h3>
-                                  <p>The Potential and Vision of N</p>
-                                  <div class="link-area">
-                                    <a href="#" class="link-btn"
-                                      >Learn More<span class="icon-right"></span
-                                    ></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </li>
-                            <li class="dep3_item">
-                              <div>
-                                <div class="img-area">
-                                  <img
-                                    src="../../inc/images/img/img_gnb_dep3.png"
-                                    loading="lazy"
-                                    alt="RN30 차량"
-                                  />
-                                </div>
-                                <div class="text-area">
-                                  <h3>RN30</h3>
-                                  <p>
-                                    The Exceptional N Racing Machine Concept
-                                  </p>
-                                  <div class="link-area">
-                                    <a href="#" class="link-btn"
-                                      >Learn More<span class="icon-right"></span
-                                    ></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </li>
-                            <li class="dep3_item">
-                              <div>
-                                <div class="img-area">
-                                  <img
-                                    src="../../inc/images/img/img_gnb_dep3.png"
-                                    loading="lazy"
-                                    alt="VELOSTER N Performance Car 차량"
-                                  />
-                                </div>
-
-                                <div class="text-area">
-                                  <h3>VELOSTER N Performance Car</h3>
-                                  <p>2019 Seoul Motor Show Car</p>
-                                  <div class="link-area">
-                                    <a href="#" class="link-btn"
-                                      >Learn More<span class="icon-right"></span
-                                    ></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </li>
-                            <li class="dep3_item">
-                              <div>
-                                <div class="img-area">
-                                  <img
-                                    src="../../inc/images/img/img_gnb_dep3.png"
-                                    loading="lazy"
-                                    alt="N Option Show Car 차량"
-                                  />
-                                </div>
-
-                                <div class="text-area">
-                                  <h3>N Option Show Car</h3>
-                                  <p>Unveiled at 2018 Paris Motor Show</p>
-                                  <div class="link-area">
-                                    <a href="#" class="link-btn"
-                                      >Learn More<span class="icon-right"></span
-                                    ></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </li>
-                            <li class="dep3_item">
-                              <div>
-                                <div class="img-area">
-                                  <img
-                                    src="../../inc/images/img/img_gnb_dep3.png"
-                                    loading="lazy"
-                                    alt="Veloster N 차량"
-                                  />
-                                </div>
-
-                                <div class="text-area">
-                                  <h3>Veloster N</h3>
-                                  <p>Shift the Moment.</p>
-                                  <div class="link-area">
-                                    <a href="#" class="link-btn"
-                                      >Learn More<span class="icon-right"></span
-                                    ></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </li>
-                            <li class="dep3_item">
-                              <div>
-                                <div class="img-area">
-                                  <img
-                                    src="../../inc/images/img/img_gnb_dep3.png"
-                                    loading="lazy"
-                                    alt="KONA N 차량"
-                                  />
-                                </div>
-
-                                <div class="text-area">
-                                  <h3>KONA N</h3>
-                                  <p>Elegant Adrenaline</p>
-                                  <div class="link-area">
-                                    <a href="#" class="link-btn"
-                                      >Yes. It's N<span
-                                        class="icon-right"
-                                      ></span
-                                    ></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </li>
-                          </ul>
-                          <button
-                            class="mo-gnb__back-btn"
-                            title="이전메뉴로 가기"
-                          >
-                            Legacy
-                          </button>
-                        </div>
-                      </div>
-                      <button class="mo-gnb__back-btn" title="이전메뉴로 가기">
-                        Models
-                      </button>
-                    </div>
-                  </div>
-                  <div
-                    class="gnb__tab-cont03"
-                    id="gnbTab3"
-                    role="tabpanel"
-                    aria-labelledby="gnb-tab2_2_1"
-                  >
-                    <div class="gnb__tab02-wrap">
-                      <ul class="gnb__tab02">
-                        <!-- 현재 페이지 dep버튼에 active class 삽입. -->
-                        <li>
-                          <button
-                            class="gnb__tab02-btn01"
-                            role="tab"
-                            id="gnb-tab2_3_1"
-                            aria-controls="gnbTab3_1"
-                            aria-selected="true"
-                          >
-                            N Festival
-                          </button>
-                        </li>
-                        <li>
-                          <button
-                            class="gnb__tab02-btn02"
-                            role="tab"
-                            id="gnb-tab2_3_2"
-                            aria-controls="gnbTab3_2"
-                            aria-selected="true"
-                          >
-                            N Channel
-                          </button>
-                        </li>
-                        <li>
-                          <a class="gnb__tab02-btn03" id="gnb-tab2_3_3"
-                            >N e-Festival</a
-                          >
-                        </li>
-                        <li>
-                          <button
-                            class="gnb__tab02-btn04"
-                            role="tab"
-                            id="gnb-tab2_3_4"
-                            aria-controls="gnbTab3_4"
-                            aria-selected="true"
-                          >
-                            NFluencer
-                          </button>
-                        </li>
-                      </ul>
-                      <button class="mo-gnb__back-btn" title="이전메뉴로 가기">
-                        Experience
-                      </button>
-                      <div class="gnb__panel02">
-                        <div
-                          id="gnbTab3_1"
-                          class="panel2_3_1"
-                          role="tabpanel"
-                          aria-labelledby="gnb-tab2_3_1"
-                        >
-                          <ul class="gnb__tab02_3">
-                            <li>
-                              <a href="#" class="gnb__tab02-btn">N Festival</a>
-                            </li>
-                            <li>
-                              <a href="#" class="gnb__tab02-btn">Event Guide</a>
-                            </li>
-                            <li>
-                              <a href="#" class="gnb__tab02-btn">Calendar</a>
-                            </li>
-                            <li>
-                              <a href="#" class="gnb__tab02-btn">Standing</a>
-                            </li>
-                            <li>
-                              <a href="#" class="gnb__tab02-btn">Drivers</a>
-                            </li>
-                            <li>
-                              <a href="#" class="gnb__tab02-btn">Teams</a>
-                            </li>
-                            <li>
-                              <a href="#" class="gnb__tab02-btn">About</a>
-                            </li>
-                            <li>
-                              <a href="#" class="gnb__tab02-btn">Video</a>
-                            </li>
-                          </ul>
-                          <button
-                            class="mo-gnb__back-btn"
-                            title="이전메뉴로 가기"
-                          >
-                            N Festival
-                          </button>
-                        </div>
-                        <div
-                          id="gnbTab3_2"
-                          class="panel2_3_2"
-                          role="tabpanel"
-                          aria-labelledby="gnb-tab2_3_2"
-                        >
-                          <ul class="gnb__tab02_3">
-                            <li>
-                              <a href="#" class="gnb__tab02-btn">N Channel</a>
-                            </li>
-                            <li>
-                              <a href="#" class="gnb__tab02-btn"
-                                >N Performance Parts Garage</a
-                              >
-                            </li>
-                            <li>
-                              <a href="#" class="gnb__tab02-btn">N Lounge</a>
-                            </li>
-                          </ul>
-                          <button
-                            class="mo-gnb__back-btn"
-                            title="이전메뉴로 가기"
-                          >
-                            N Channel
-                          </button>
-                        </div>
-                        <div
-                          id="gnbTab3_4"
-                          class="panel2_3_4"
-                          role="tabpanel"
-                          aria-labelledby="gnb-tab2_3_4"
-                        >
-                          <ul class="gnb__tab02_3">
-                            <li>
-                              <a href="#" class="gnb__tab02-btn">Nfluencer</a>
-                            </li>
-                            <li><a href="#" class="gnb__tab02-btn">Hub</a></li>
-                            <li>
-                              <a href="#" class="gnb__tab02-btn">Missions</a>
-                            </li>
-                            <li>
-                              <a href="#" class="gnb__tab02-btn">Ranking</a>
-                            </li>
-                            <li>
-                              <a href="#" class="gnb__tab02-btn">Rewards</a>
-                            </li>
-                            <li>
-                              <a href="#" class="gnb__tab02-btn">Notice</a>
-                            </li>
-                          </ul>
-                          <button
-                            class="mo-gnb__back-btn"
-                            title="이전메뉴로 가기"
-                          >
-                            NFluencer
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="gnb-content__dep2">
-                      <div class="img-area">
-                        <img
-                          src="../../inc/images/img/img_gnb_dep2_content.png"
-                          loading="lazy"
-                          alt="N Cup - Round 1"
-                        />
-                      </div>
-                      <div class="text-area">
-                        <h3>N Cup - Round 1</h3>
-                        <p>Inje SPEEDIUM, 04.27 - 04.28</p>
-                        <div class="link-area">
-                          <a href="#" class="link-btn"
-                            >Learn More<span class="icon-right-wh"></span
-                          ></a>
-                          <a href="#" class="link-btn"
-                            >Configrator <span class="icon-right-wh"></span
-                          ></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </nav>
-              <div class="header__event-wrap">
-                <ul class="header__event-area">
-                  <li class="header__event-item01">
+                  <div class="gnb-content__dep2">
                     <div class="img-area">
-                      <img
-                        src="../../inc/images/img/img_header-event01.png"
-                        loading="lazy"
-                        alt="N Cup - Round 1"
-                      />
+                      <img src="../../inc/images/img/img_gnb_dep2_content.png" loading="lazy" alt="N Cup - Round 1" />
                     </div>
                     <div class="text-area">
                       <h3>N Cup - Round 1</h3>
                       <p>Inje SPEEDIUM, 04.27 - 04.28</p>
                       <div class="link-area">
-                        <a href="#" class="link-btn"
-                          >Learn More<span class="icon-right-wh"></span
-                        ></a>
-                        <a href="#" class="link-btn"
-                          >Configrator <span class="icon-right-wh"></span
-                        ></a>
+                        <a href="#" class="link-btn">Learn More<span class="icon-right-wh"></span></a>
+                        <a href="#" class="link-btn">Configrator <span class="icon-right-wh"></span></a>
                       </div>
                     </div>
-                  </li>
-                  <li class="header__event-item02">
-                    <div class="img-area">
-                      <img
-                        src="../../inc/images/img/img_header-event02.png"
-                        loading="lazy"
-                        alt="IONIQ 5 N"
-                      />
-                    </div>
-                    <div class="text-area">
-                      <h3>IONIQ 5 N</h3>
-                      <p>Electrifying Driving Passion</p>
-                      <div class="link-area">
-                        <a href="#" class="link-btn"
-                          >Learn More<span class="icon-right-wh"></span
-                        ></a>
-                        <a href="#" class="link-btn"
-                          >Configrator<span class="icon-right-wh"></span
-                        ></a>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="header__event-item03">
-                    <div class="img-area">
-                      <img
-                        src="../../inc/images/img/img_header-event03.png"
-                        loading="lazy"
-                        alt="ELANTRA N"
-                      />
-                    </div>
-                    <div class="text-area">
-                      <h3>ELANTRA N</h3>
-                      <p>The Perfect Balance</p>
-                      <div class="link-area">
-                        <a href="#" class="link-btn"
-                          >Learn More<span class="icon-right-wh"></span
-                        ></a>
-                        <a href="#" class="link-btn"
-                          >Configrator<span class="icon-right-wh"></span
-                        ></a>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="utile-wrap">
-            <div class="utile-cont">
-              <div class="utile-item">
-                <button
-                  class="lang-btn"
-                  data-txt="KR"
-                  data-label="현재 국문, 영문로 변경하기"
-                  aria-label="현재 영문, 국문으로 변경하기"
-                >
-                  <span>EU</span>
-                </button>
-              </div>
-              <div class="utile-item02">
-                <button class="login-btn" title="로그인"></button>
-
-                <!-- 로그인 이후 -->
-                <!-- <button class="alarm-btn" title="미확인 알림"></button> -->
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="navigation_bar-wrap">
-          <div class="navigation_bar">
-            <div class="navigation-item01">
-              <!-- 동적 호출 필요시 NbrandUI.navigationBar(this) navi_event-btn클래스 제거 -->
-              <button
-                class="navigation-btn navi_event-btn"
-                aria-controls="navigationMenu"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                i30 Fastback N
-              </button>
-              <ul class="navigation-menu" id="navigationMenu">
-                <li><a href="#">IONIQ 5 N</a></li>
-                <li><a href="#">ELANTRA N</a></li>
-                <li><a href="#">i20 N</a></li>
-                <li><a href="#">i30 N</a></li>
-                <li>
-                  <a href="#" class="active">i30 Fastback N</a>
-                  <div class="navigation-item02 nav-mo mo-only">
-                    <ul class="rending-wrap">
+                  </div>
+                </div>
+                <div class="gnb__tab-cont02" id="gnbTab2" role="tabpanel" aria-labelledby="gnb__tabBtn02">
+                  <!-- gnb 2-2dep-->
+                  <div class="gnb__tab02-wrap">
+                    <!-- 모바일 타이틀 -->
+                    <ul class="gnb__tab02">
                       <li>
-                        <button
-                          class="rending-btn on"
-                          data-scroll="1"
-                          title="스크롤 바로가기"
-                          aria-current="true"
-                        >
-                          Overview
+                        <button class="gnb__tab02-btn01 on" role="tab" id="gnb-tab2_2_1" aria-controls="gnbTab2_1"
+                          aria-selected="true">
+                          N
                         </button>
                       </li>
                       <li>
-                        <button
-                          class="rending-btn"
-                          data-scroll="2"
-                          title="스크롤 바로가기"
-                        >
-                          Performance
+                        <button class="gnb__tab02-btn02" role="tab" id="gnb-tab2_2_2" aria-controls="gnbTab2_2"
+                          aria-selected="false">
+                          Motorsports
                         </button>
                       </li>
                       <li>
-                        <button
-                          class="rending-btn"
-                          data-scroll="3"
-                          title="스크롤 바로가기"
-                        >
-                          Design
+                        <button class="gnb__tab02-btn03" role="tab" id="gnb-tab2_2_3" aria-controls="gnbTab2_3"
+                          aria-selected="false">
+                          Rolling Lab
                         </button>
                       </li>
                       <li>
-                        <button
-                          class="rending-btn"
-                          data-scroll="4"
-                          title="스크롤 바로가기"
-                        >
-                          Specification
+                        <button class="gnb__tab02-btn04" role="tab" id="gnb-tab2_2_4" aria-controls="gnbTab2_4"
+                          aria-selected="false">
+                          Concept
                         </button>
                       </li>
                       <li>
-                        <button
-                          class="rending-btn"
-                          data-scroll="5"
-                          title="스크롤 바로가기"
-                        >
-                          Gallery
+                        <button class="gnb__tab02-btn05" role="tab" id="gnb-tab2_2_5" aria-controls="gnbTab2_5"
+                          aria-selected="false">
+                          Legacy
                         </button>
                       </li>
                     </ul>
+                    <div class="gnb__panel02">
+                      <div id="gnbTab2_1" class="type-thumbnail" role="tabpanel" aria-labelledby="gnb-tab2_2_1">
+                        <ul class="gnb__tab02_2">
+                          <li class="dep3_item">
+                            <div>
+                              <div class="img-area">
+                                <img src="../../inc/images/img/img_gnb_dep3.png" loading="lazy" alt="IONIQ 5 N 차량" />
+                              </div>
+                              <div class="text-area">
+                                <h3>IONIQ 5 N</h3>
+                                <p>Electrifying Driving Passion</p>
+                                <div class="link-area">
+                                  <a href="#" class="link-btn">Learn More<span class="icon-right"></span></a>
+                                  <a href="#" class="link-btn">Configrator<span class="icon-right"></span>
+                                    <!--<span class="icon-link"></span>--></a>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="dep3_item">
+                            <div>
+                              <div class="img-area">
+                                <img src="../../inc/images/img/img_gnb_dep3.png" loading="lazy" alt="ELANTRA N 차량" />
+                              </div>
+                              <div class="text-area">
+                                <h3>ELANTRA N</h3>
+                                <p>The Perfect Balance</p>
+                                <div class="link-area">
+                                  <a href="#" class="link-btn">Learn More<span class="icon-right"></span></a>
+                                  <a href="#" class="link-btn">Configrator<span class="icon-right"></span>
+                                    <!--<span class="icon-link"></span>--></a>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="dep3_item">
+                            <div>
+                              <div class="img-area">
+                                <img src="../../inc/images/img/img_gnb_dep3.png" loading="lazy" alt="i20 N 차량" />
+                              </div>
+                              <div class="text-area">
+                                <h3>i20 N</h3>
+                                <p>This is my stage</p>
+                                <div class="link-area">
+                                  <a href="#" class="link-btn">Learn More<span class="icon-right"></span></a>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="dep3_item">
+                            <div>
+                              <div class="img-area">
+                                <img src="../../inc/images/img/img_gnb_dep3.png" loading="lazy" alt="i30 N 차량" />
+                              </div>
+                              <div class="text-area">
+                                <h3>i30 N</h3>
+                                <p>Shift the moment</p>
+                                <div class="link-area">
+                                  <a href="#" class="link-btn">Learn More<span class="icon-right"></span></a>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="dep3_item">
+                            <div>
+                              <div class="img-area">
+                                <img src="../../inc/images/img/img_gnb_dep3.png" loading="lazy"
+                                  alt="i30 Fastback N 차량" />
+                              </div>
+                              <div class="text-area">
+                                <h3>i30 Fastback N</h3>
+                                <p>Elegant Adrenaline</p>
+                                <div class="link-area">
+                                  <a href="#" class="link-btn">Learn More<span class="icon-right"></span></a>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="dep3_item">
+                            <div>
+                              <div class="img-area">
+                                <img src="../../inc/images/img/img_gnb_dep3.png" loading="lazy" alt="Technologies 차량" />
+                              </div>
+                              <div class="text-area">
+                                <h3>Technologies</h3>
+                                <p>Passion For Performance by Hyundai</p>
+                                <div class="link-area">
+                                  <a href="#" class="link-btn">Learn More<span class="icon-right"></span></a>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                        <button class="mo-gnb__back-btn" title="이전메뉴로 가기">
+                          N
+                        </button>
+                      </div>
+                      <div id="gnbTab2_2" class="type-thumbnail" role="tabpanel" aria-labelledby="gnb-tab2_2_2">
+                        <ul class="gnb__tab02_2">
+                          <li class="dep3_item">
+                            <div>
+                              <div class="img-area">
+                                <img src="../../inc/images/img/img_gnb_dep3.png" loading="lazy" alt="eN1 Cup Car 차량" />
+                              </div>
+                              <div class="text-area">
+                                <h3>eN1 Cup Car</h3>
+                                <p>
+                                  Shaping the future of motorsports with an EV
+                                </p>
+                                <div class="link-area">
+                                  <a href="#" class="link-btn">Learn More<span class="icon-right"></span></a>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="dep3_item">
+                            <div>
+                              <div class="img-area">
+                                <img src="../../inc/images/img/img_gnb_dep3.png" loading="lazy"
+                                  alt="IONIQ 5 N TA Spec 차량" />
+                              </div>
+                              <div class="text-area">
+                                <h3>IONIQ 5 N TA Spec</h3>
+                                <p>The Perfect Balance</p>
+                                <div class="link-area">
+                                  <a href="#" class="link-btn">Learn More<span class="icon-right"></span></a>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="dep3_item">
+                            <div>
+                              <div class="img-area">
+                                <img src="../../inc/images/img/img_gnb_dep3.png" loading="lazy"
+                                  alt="i20 N Rally 1 차량" />
+                              </div>
+                              <div class="text-area">
+                                <h3>i20 N Rally 1</h3>
+                                <p>The Perfect Balance</p>
+                                <div class="link-area">
+                                  <a href="#" class="link-btn">Learn More<span class="icon-right"></span></a>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="dep3_item">
+                            <div>
+                              <div class="img-area">
+                                <img src="../../inc/images/img/img_gnb_dep3.png" loading="lazy"
+                                  alt="ELANTRA N TCR 차량" />
+                              </div>
+                              <div class="text-area">
+                                <h3>ELANTRA N TCR</h3>
+                                <p>The Perfect Balance</p>
+                                <div class="link-area">
+                                  <a href="#" class="link-btn">Learn More<span class="icon-right"></span></a>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                        <button class="mo-gnb__back-btn" title="이전메뉴로 가기">
+                          Motorsports
+                        </button>
+                      </div>
+                      <div id="gnbTab2_3" class="type-thumbnail" role="tabpanel" aria-labelledby="gnb-tab2_2_3">
+                        <ul class="gnb__tab02_2">
+                          <li class="dep3_item">
+                            <div>
+                              <div class="img-area">
+                                <img src="../../inc/images/img/img_gnb_dep3.png" loading="lazy" alt="N Vision 74 차량" />
+                              </div>
+                              <div class="text-area">
+                                <h3>N Vision 74</h3>
+                                <p>First Hydrogen Hybrid Rolling Lab</p>
+                                <div class="link-area">
+                                  <a href="#" class="link-btn">Learn More<span class="icon-right"></span></a>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="dep3_item">
+                            <div>
+                              <div class="img-area">
+                                <img src="../../inc/images/img/img_gnb_dep3.png" loading="lazy" alt="RN22e 차량" />
+                              </div>
+                              <div class="text-area">
+                                <h3>RN22e</h3>
+                                <p>
+                                  Rolling Lab with Maximized EGMP Potential
+                                </p>
+                                <div class="link-area">
+                                  <a href="#" class="link-btn">Learn More<span class="icon-right"></span></a>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                        <button class="mo-gnb__back-btn" title="이전메뉴로 가기">
+                          Rolling Lab
+                        </button>
+                      </div>
+                      <div id="gnbTab2_4" class="type-thumbnail" role="tabpanel" aria-labelledby="gnb-tab2_2_4">
+                        <ul class="gnb__tab02_2">
+                          <li class="dep3_item">
+                            <div>
+                              <div class="img-area">
+                                <img src="../../inc/images/img/img_gnb_dep3.png" loading="lazy" alt="NPX1 차량" />
+                              </div>
+                              <div class="text-area">
+                                <h3>NPX1</h3>
+                                <p>N Performance eXperimental 1</p>
+                                <div class="link-area">
+                                  <a href="#" class="link-btn">Learn More<span class="icon-right"></span></a>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                        <button class="mo-gnb__back-btn" title="이전메뉴로 가기">
+                          Concept
+                        </button>
+                      </div>
+                      <div id="gnbTab2_5" class="type-thumbnail" role="tabpanel" aria-labelledby="gnb-tab2_2_5">
+                        <ul class="gnb__tab02_2">
+                          <li class="dep3_item">
+                            <div>
+                              <div class="img-area">
+                                <img src="../../inc/images/img/img_gnb_dep3.png" loading="lazy" alt="RN20e 차량" />
+                              </div>
+                              <div class="text-area">
+                                <h3>RN20e</h3>
+                                <p>Performance, Electrified</p>
+                                <div class="link-area">
+                                  <a href="#" class="link-btn">Learn More<span class="icon-right"></span></a>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="dep3_item">
+                            <div>
+                              <div class="img-area">
+                                <img src="../../inc/images/img/img_gnb_dep3.png" loading="lazy" alt="RM19 차량" />
+                              </div>
+                              <div class="text-area">
+                                <h3>RM19</h3>
+                                <p>Proof of Continuous Development</p>
+                                <div class="link-area">
+                                  <a href="#" class="link-btn">Learn More<span class="icon-right"></span></a>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="dep3_item">
+                            <div>
+                              <div class="img-area">
+                                <img src="../../inc/images/img/img_gnb_dep3.png" loading="lazy" alt="Project RM 차량" />
+                              </div>
+                              <div class="text-area">
+                                <h3>Project RM</h3>
+                                <p>Developing High Performance</p>
+                                <div class="linKONA Nk-area">
+                                  <a href="#" class="link-btn">Learn More<span class="icon-right"></span></a>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="dep3_item">
+                            <div>
+                              <div class="img-area">
+                                <img src="../../inc/images/img/img_gnb_dep3.png" loading="lazy"
+                                  alt="N 2025 Vision Gran Turismo 차량" />
+                              </div>
+                              <div class="text-area">
+                                <h3>N 2025 Vision Gran Turismo</h3>
+                                <p>The Potential and Vision of N</p>
+                                <div class="link-area">
+                                  <a href="#" class="link-btn">Learn More<span class="icon-right"></span></a>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="dep3_item">
+                            <div>
+                              <div class="img-area">
+                                <img src="../../inc/images/img/img_gnb_dep3.png" loading="lazy" alt="RN30 차량" />
+                              </div>
+                              <div class="text-area">
+                                <h3>RN30</h3>
+                                <p>
+                                  The Exceptional N Racing Machine Concept
+                                </p>
+                                <div class="link-area">
+                                  <a href="#" class="link-btn">Learn More<span class="icon-right"></span></a>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="dep3_item">
+                            <div>
+                              <div class="img-area">
+                                <img src="../../inc/images/img/img_gnb_dep3.png" loading="lazy"
+                                  alt="VELOSTER N Performance Car 차량" />
+                              </div>
+
+                              <div class="text-area">
+                                <h3>VELOSTER N Performance Car</h3>
+                                <p>2019 Seoul Motor Show Car</p>
+                                <div class="link-area">
+                                  <a href="#" class="link-btn">Learn More<span class="icon-right"></span></a>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="dep3_item">
+                            <div>
+                              <div class="img-area">
+                                <img src="../../inc/images/img/img_gnb_dep3.png" loading="lazy"
+                                  alt="N Option Show Car 차량" />
+                              </div>
+
+                              <div class="text-area">
+                                <h3>N Option Show Car</h3>
+                                <p>Unveiled at 2018 Paris Motor Show</p>
+                                <div class="link-area">
+                                  <a href="#" class="link-btn">Learn More<span class="icon-right"></span></a>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="dep3_item">
+                            <div>
+                              <div class="img-area">
+                                <img src="../../inc/images/img/img_gnb_dep3.png" loading="lazy" alt="Veloster N 차량" />
+                              </div>
+
+                              <div class="text-area">
+                                <h3>Veloster N</h3>
+                                <p>Shift the Moment.</p>
+                                <div class="link-area">
+                                  <a href="#" class="link-btn">Learn More<span class="icon-right"></span></a>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="dep3_item">
+                            <div>
+                              <div class="img-area">
+                                <img src="../../inc/images/img/img_gnb_dep3.png" loading="lazy" alt="KONA N 차량" />
+                              </div>
+
+                              <div class="text-area">
+                                <h3>KONA N</h3>
+                                <p>Elegant Adrenaline</p>
+                                <div class="link-area">
+                                  <a href="#" class="link-btn">Yes. It's N<span class="icon-right"></span></a>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                        <button class="mo-gnb__back-btn" title="이전메뉴로 가기">
+                          Legacy
+                        </button>
+                      </div>
+                    </div>
+                    <button class="mo-gnb__back-btn" title="이전메뉴로 가기">
+                      Models
+                    </button>
+                  </div>
+                </div>
+                <div class="gnb__tab-cont03" id="gnbTab3" role="tabpanel" aria-labelledby="gnb-tab2_2_1">
+                  <div class="gnb__tab02-wrap">
+                    <ul class="gnb__tab02">
+                      <!-- 현재 페이지 dep버튼에 active class 삽입. -->
+                      <li>
+                        <button class="gnb__tab02-btn01" role="tab" id="gnb-tab2_3_1" aria-controls="gnbTab3_1"
+                          aria-selected="true">
+                          N Festival
+                        </button>
+                      </li>
+                      <li>
+                        <button class="gnb__tab02-btn02" role="tab" id="gnb-tab2_3_2" aria-controls="gnbTab3_2"
+                          aria-selected="true">
+                          N Channel
+                        </button>
+                      </li>
+                      <li>
+                        <a class="gnb__tab02-btn03" id="gnb-tab2_3_3">N e-Festival</a>
+                      </li>
+                      <li>
+                        <button class="gnb__tab02-btn04" role="tab" id="gnb-tab2_3_4" aria-controls="gnbTab3_4"
+                          aria-selected="true">
+                          NFluencer
+                        </button>
+                      </li>
+                    </ul>
+                    <button class="mo-gnb__back-btn" title="이전메뉴로 가기">
+                      Experience
+                    </button>
+                    <div class="gnb__panel02">
+                      <div id="gnbTab3_1" class="panel2_3_1" role="tabpanel" aria-labelledby="gnb-tab2_3_1">
+                        <ul class="gnb__tab02_3">
+                          <li>
+                            <a href="#" class="gnb__tab02-btn">N Festival</a>
+                          </li>
+                          <li>
+                            <a href="#" class="gnb__tab02-btn">Event Guide</a>
+                          </li>
+                          <li>
+                            <a href="#" class="gnb__tab02-btn">Calendar</a>
+                          </li>
+                          <li>
+                            <a href="#" class="gnb__tab02-btn">Standing</a>
+                          </li>
+                          <li>
+                            <a href="#" class="gnb__tab02-btn">Drivers</a>
+                          </li>
+                          <li>
+                            <a href="#" class="gnb__tab02-btn">Teams</a>
+                          </li>
+                          <li>
+                            <a href="#" class="gnb__tab02-btn">About</a>
+                          </li>
+                          <li>
+                            <a href="#" class="gnb__tab02-btn">Video</a>
+                          </li>
+                        </ul>
+                        <button class="mo-gnb__back-btn" title="이전메뉴로 가기">
+                          N Festival
+                        </button>
+                      </div>
+                      <div id="gnbTab3_2" class="panel2_3_2" role="tabpanel" aria-labelledby="gnb-tab2_3_2">
+                        <ul class="gnb__tab02_3">
+                          <li>
+                            <a href="#" class="gnb__tab02-btn">N Channel</a>
+                          </li>
+                          <li>
+                            <a href="#" class="gnb__tab02-btn">N Performance Parts Garage</a>
+                          </li>
+                          <li>
+                            <a href="#" class="gnb__tab02-btn">N Lounge</a>
+                          </li>
+                        </ul>
+                        <button class="mo-gnb__back-btn" title="이전메뉴로 가기">
+                          N Channel
+                        </button>
+                      </div>
+                      <div id="gnbTab3_4" class="panel2_3_4" role="tabpanel" aria-labelledby="gnb-tab2_3_4">
+                        <ul class="gnb__tab02_3">
+                          <li>
+                            <a href="#" class="gnb__tab02-btn">Nfluencer</a>
+                          </li>
+                          <li><a href="#" class="gnb__tab02-btn">Hub</a></li>
+                          <li>
+                            <a href="#" class="gnb__tab02-btn">Missions</a>
+                          </li>
+                          <li>
+                            <a href="#" class="gnb__tab02-btn">Ranking</a>
+                          </li>
+                          <li>
+                            <a href="#" class="gnb__tab02-btn">Rewards</a>
+                          </li>
+                          <li>
+                            <a href="#" class="gnb__tab02-btn">Notice</a>
+                          </li>
+                        </ul>
+                        <button class="mo-gnb__back-btn" title="이전메뉴로 가기">
+                          NFluencer
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="gnb-content__dep2">
+                    <div class="img-area">
+                      <img src="../../inc/images/img/img_gnb_dep2_content.png" loading="lazy" alt="N Cup - Round 1" />
+                    </div>
+                    <div class="text-area">
+                      <h3>N Cup - Round 1</h3>
+                      <p>Inje SPEEDIUM, 04.27 - 04.28</p>
+                      <div class="link-area">
+                        <a href="#" class="link-btn">Learn More<span class="icon-right-wh"></span></a>
+                        <a href="#" class="link-btn">Configrator <span class="icon-right-wh"></span></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </nav>
+            <div class="header__event-wrap">
+              <ul class="header__event-area">
+                <li class="header__event-item01">
+                  <div class="img-area">
+                    <img src="../../inc/images/img/img_header-event01.png" loading="lazy" alt="N Cup - Round 1" />
+                  </div>
+                  <div class="text-area">
+                    <h3>N Cup - Round 1</h3>
+                    <p>Inje SPEEDIUM, 04.27 - 04.28</p>
+                    <div class="link-area">
+                      <a href="#" class="link-btn">Learn More<span class="icon-right-wh"></span></a>
+                      <a href="#" class="link-btn">Configrator <span class="icon-right-wh"></span></a>
+                    </div>
+                  </div>
+                </li>
+                <li class="header__event-item02">
+                  <div class="img-area">
+                    <img src="../../inc/images/img/img_header-event02.png" loading="lazy" alt="IONIQ 5 N" />
+                  </div>
+                  <div class="text-area">
+                    <h3>IONIQ 5 N</h3>
+                    <p>Electrifying Driving Passion</p>
+                    <div class="link-area">
+                      <a href="#" class="link-btn">Learn More<span class="icon-right-wh"></span></a>
+                      <a href="#" class="link-btn">Configrator<span class="icon-right-wh"></span></a>
+                    </div>
+                  </div>
+                </li>
+                <li class="header__event-item03">
+                  <div class="img-area">
+                    <img src="../../inc/images/img/img_header-event03.png" loading="lazy" alt="ELANTRA N" />
+                  </div>
+                  <div class="text-area">
+                    <h3>ELANTRA N</h3>
+                    <p>The Perfect Balance</p>
+                    <div class="link-area">
+                      <a href="#" class="link-btn">Learn More<span class="icon-right-wh"></span></a>
+                      <a href="#" class="link-btn">Configrator<span class="icon-right-wh"></span></a>
+                    </div>
                   </div>
                 </li>
               </ul>
             </div>
-            <div class="navigation-item02 pc-only">
-              <ul class="rending-wrap">
-                <li>
-                  <button
-                    class="rending-btn on"
-                    data-scroll="1"
-                    title="스크롤 바로가기"
-                    aria-current="true"
-                  >
-                    Overview
-                  </button>
-                </li>
-                <li>
-                  <button
-                    class="rending-btn"
-                    data-scroll="2"
-                    title="스크롤 바로가기"
-                  >
-                    Performance
-                  </button>
-                </li>
-                <li>
-                  <button
-                    class="rending-btn"
-                    data-scroll="3"
-                    title="스크롤 바로가기"
-                  >
-                    Design
-                  </button>
-                </li>
-                <li>
-                  <button
-                    class="rending-btn"
-                    data-scroll="4"
-                    title="스크롤 바로가기"
-                  >
-                    Specification
-                  </button>
-                </li>
-                <li>
-                  <button
-                    class="rending-btn"
-                    data-scroll="5"
-                    title="스크롤 바로가기"
-                  >
-                    Gallery
-                  </button>
-                </li>
-              </ul>
+          </div>
+        </div>
+
+        <div class="utile-wrap">
+          <div class="utile-cont">
+            <div class="utile-item">
+              <button class="lang-btn" data-txt="KR" data-label="현재 국문, 영문로 변경하기" aria-label="현재 영문, 국문으로 변경하기">
+                <span>EU</span>
+              </button>
             </div>
-            <div class="navigation-item03">
-              <!-- 07.16 수정 : 버튼 마크업 구조 변경 -->
-              <div class="btn-navi-wrap">
-                <!-- <div class="btn-box" style="display: none;">
+            <div class="utile-item02">
+              <button class="login-btn" title="로그인"></button>
+
+              <!-- 로그인 이후 -->
+              <!-- <button class="alarm-btn" title="미확인 알림"></button> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="navigation_bar-wrap">
+        <div class="navigation_bar">
+          <div class="navigation-item01">
+            <!-- 동적 호출 필요시 NbrandUI.navigationBar(this) navi_event-btn클래스 제거 -->
+            <button class="navigation-btn navi_event-btn" aria-controls="navigationMenu" aria-haspopup="true"
+              aria-expanded="false">
+              i30 Fastback N
+            </button>
+            <ul class="navigation-menu" id="navigationMenu">
+              <li><a href="#">IONIQ 5 N</a></li>
+              <li><a href="#">ELANTRA N</a></li>
+              <li><a href="#">i20 N</a></li>
+              <li><a href="#">i30 N</a></li>
+              <li>
+                <a href="#" class="active">i30 Fastback N</a>
+              </li>
+            </ul>
+          </div>
+          <div class="navigation-item02">
+            <ul class="rending-wrap">
+              <li>
+                <button class="rending-btn on" data-scroll="1" title="스크롤 바로가기" aria-current="true">
+                  Overview
+                </button>
+              </li>
+              <li>
+                <button class="rending-btn" data-scroll="2" title="스크롤 바로가기">
+                  Performance
+                </button>
+              </li>
+              <li>
+                <button class="rending-btn" data-scroll="3" title="스크롤 바로가기">
+                  Design
+                </button>
+              </li>
+              <li>
+                <button class="rending-btn" data-scroll="4" title="스크롤 바로가기">
+                  Specification
+                </button>
+              </li>
+              <li>
+                <button class="rending-btn" data-scroll="5" title="스크롤 바로가기">
+                  Gallery
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div class="navigation-item03">
+            <!-- 07.16 수정 : 버튼 마크업 구조 변경 -->
+            <div class="btn-navi-wrap">
+              <!-- <div class="btn-box" style="display: none;">
                   <button type="button" class="btn btn-md-primary01">
                     My Post
                     <span class="btn-icon16 icon-right-wh" aria-hidden="true"></span>
@@ -1144,118 +736,77 @@
                     <span class="btn-icon16 icon-right-wh" aria-hidden="true"></span>
                   </button>
                 </div> -->
-                <button
-                  class="sharing-btn pop-open"
-                  aria-controls="sharing-page"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                  title="sharing 팝업오픈"
-                >
-                  Sharing
-                </button>
-              </div>
-              <!--//btn-navi -->
+              <button class="sharing-btn pop-open" aria-controls="sharing-page" aria-haspopup="true"
+                aria-expanded="false" title="sharing 팝업오픈">
+                Sharing
+              </button>
             </div>
+            <!--//btn-navi -->
           </div>
-          <span class="gage"></span>
         </div>
-      </header>
-      <section class="content-wrap models-wrap">
-        <div class="content-area">
-          <div class="smooth-wrap">
-            <div class="content-item01 content-top">
-              <p class="tit-type01 fw-type03">i30 Fastback N</p>
-              <p class="tit-type03 fw-type03">Elegant Adrenaline</p>
-            </div>
-            <!-- key visual -->
-            <div class="content-item02">
-              <video
-                class="video pc-only"
-                data-js="video"
-                id="video1"
-                playsinline
-                autoplay
-                muted
-                poster="../../inc/images/Models/i30NFastbackN/i30NFastbackN_poster.png"
-                aria-hidden="false"
-              >
-                <source
-                  src="../../inc/images/Models/i30NFastbackN/i30fastbackn2.mp4"
-                  type="video/mp4"
-                />
-              </video>
-              <video
-                class="video mo-only"
-                data-js="video"
-                id="video2"
-                playsinline
-                autoplay
-                muted
-                poster="../../inc/images/Models/i30NFastbackN/i30NFastbackN_poster_mo.png"
-                aria-hidden="true"
-              >
-                <source
-                  src="../../inc/images/Models/i30NFastbackN/i30fastbackn2mo.mp4"
-                  type="video/mp4"
-                />
-              </video>
-              <img
-                src="../../inc/images/Models/i30NFastbackN/i30NFastbackN_poster.png"
-                alt="i30 Fastback N 영상 썸네일"
-                style="display: none"
-                class="video_poster pc-only"
-              />
-              <img
-                src="../../inc/images/Models/i30NFastbackN/i30NFastbackN_poster_mo.png"
-                alt="i30 Fastback N 영상 썸네일"
-                style="display: none"
-                class="video_poster mo-only"
-              />
-              <!-- 비디오 소리 켜기/끄기 버튼 추가 (8/6) -->
-              <div class="btn-groups">
-                <button type="button" class="btn btn-only-icon-bg01-square sound" title="sound-off">
-                  <span class="visually-hidden">sound off</span>
-                  <span class="btn-icon24 icon-soundoff-wh" aria-hidden="true"></span>
-                </button>
-                <button type="button" class="btn btn-only-icon-bg01-square play" title="pause">
-                  <span class="visually-hidden">pause</span>
-                  <span class="btn-icon24 icon-pause-wh" aria-hidden="true"></span>
-                </button>
-              </div>
-              <!-- //비디오 소리 켜기/끄기 버튼 추가 (8/6) -->
-              <!-- 0703 : kv가 img인 경우 주석처리 작업 -->
-              <!-- <img src="../../inc/images/Models/i20N/i20N_poster.png" loading="lazy" alt="i20N 이미지" class="only-kvimg pc-only" />
-              <img src="../../inc/images/Models/i20N/i20N_poster_mo.png" loading="lazy" alt="i20N 이미지" class="only-kvimg mo-only" /> -->
-            </div>
+        <span class="gage"></span>
+      </div>
+    </header>
+    <section class="content-wrap models-wrap">
+      <div class="content-area">
+        <div class="smooth-wrap">
+          <div class="content-item01 content-top">
+            <p class="tit-type01 fw-type03">i30 Fastback N</p>
+            <p class="tit-type03 fw-type03">Elegant Adrenaline</p>
           </div>
-          <!-- overview -->
-          <div class="content-item03 overview-wrap">
-            <div class="max1440">
-              <h6 class="blue-title">Overview</h6>
-              <div class="text-col">
-                <p class="text-strong">The Refined Rebel</p>
-                <p class="text-normal">
-                  Developed based on the ‘form follows function’ principle, the
-                  optimal ratio between the car’s downforce, drag and
-                  aerodynamics provides the best possible driving experience.
-                  The hot five-door coupe is longer and slender at the rear
-                  which gives it a striking silhouette and sporty stance.
-                </p>
-              </div>
-              <img
-                src="../../inc/images/Models/i30NFastbackN/i30NFastbackN_overview.png"
-                loading="lazy"
-                alt="i30NFastbackN 이미지"
-                class="pc-only"
-              />
-              <img
-                src="../../inc/images/Models/i30NFastbackN/i30NFastbackN_overview_mo.png"
-                loading="lazy"
-                alt="i30NFastbackN 이미지"
-                class="mo-only"
-              />
-              <div class="btn-wrap">
-                <!-- <a
+          <!-- key visual -->
+          <div class="content-item02">
+            <video class="video pc-only" data-js="video" id="video1" playsinline autoplay muted
+              poster="../../inc/images/Models/i30NFastbackN/i30NFastbackN_poster.png" aria-hidden="false">
+              <source src="../../inc/images/Models/i30NFastbackN/i30fastbackn2.mp4" type="video/mp4" />
+            </video>
+            <video class="video mo-only" data-js="video" id="video2" playsinline autoplay muted
+              poster="../../inc/images/Models/i30NFastbackN/i30NFastbackN_poster_mo.png" aria-hidden="true">
+              <source src="../../inc/images/Models/i30NFastbackN/i30fastbackn2mo.mp4" type="video/mp4" />
+            </video>
+            <img src="../../inc/images/Models/i30NFastbackN/i30NFastbackN_poster.png" alt="i30 Fastback N 영상 썸네일"
+              style="display: none" class="video_poster pc-only" />
+            <img src="../../inc/images/Models/i30NFastbackN/i30NFastbackN_poster_mo.png" alt="i30 Fastback N 영상 썸네일"
+              style="display: none" class="video_poster mo-only" />
+            <!-- 비디오 소리 켜기/끄기 버튼 추가 (8/6) -->
+            <div class="btn-groups">
+              <button type="button" class="btn btn-only-icon-bg01-square sound" title="sound-off">
+                <span class="visually-hidden">sound off</span>
+                <span class="btn-icon24 icon-soundoff-wh" aria-hidden="true"></span>
+              </button>
+              <button type="button" class="btn btn-only-icon-bg01-square play" title="pause">
+                <span class="visually-hidden">pause</span>
+                <span class="btn-icon24 icon-pause-wh" aria-hidden="true"></span>
+              </button>
+            </div>
+            <!-- //비디오 소리 켜기/끄기 버튼 추가 (8/6) -->
+            <!-- 0703 : kv가 img인 경우 주석처리 작업 -->
+            <!-- <img src="../../inc/images/Models/i20N/i20N_poster.png" loading="lazy" alt="i20N 이미지" class="only-kvimg pc-only" />
+              <img src="../../inc/images/Models/i20N/i20N_poster_mo.png" loading="lazy" alt="i20N 이미지" class="only-kvimg mo-only" /> -->
+          </div>
+          <!--//btn-navi -->
+        </div>
+      </div>
+      <!-- overview -->
+      <div class="content-item03 overview-wrap">
+        <div class="max1440">
+          <h6 class="blue-title">Overview</h6>
+          <div class="text-col">
+            <p class="text-strong">The Refined Rebel</p>
+            <p class="text-normal">
+              Developed based on the ‘form follows function’ principle, the
+              optimal ratio between the car’s downforce, drag and
+              aerodynamics provides the best possible driving experience.
+              The hot five-door coupe is longer and slender at the rear
+              which gives it a striking silhouette and sporty stance.
+            </p>
+          </div>
+          <img src="../../inc/images/Models/i30NFastbackN/i30NFastbackN_overview.png" loading="lazy"
+            alt="i30NFastbackN 이미지" class="pc-only" />
+          <img src="../../inc/images/Models/i30NFastbackN/i30NFastbackN_overview_mo.png" loading="lazy"
+            alt="i30NFastbackN 이미지" class="mo-only" />
+          <div class="btn-wrap">
+            <!-- <a
                   href="./MD010501t01P01.html"
                   target="_blank"
                   rel="noopener"
@@ -1268,121 +819,89 @@
                   ></span>
                 </a> -->
 
-                <button
-                  class="btn lg-txt-btn04 pop-open"
-                  aria-controls="MD010501t01P01"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                  title="팝업오픈"
-                >
-                  Sportiness of the i30 N Fastback
-                  <span
-                    class="btn-icon20 icon-right-red"
-                    aria-hidden="true"
-                  ></span>
-                </button>
-              </div>
+            <button class="btn lg-txt-btn04 pop-open" aria-controls="MD010501t01P01" aria-haspopup="true"
+              aria-expanded="false" title="팝업오픈">
+              Sportiness of the i30 N Fastback
+              <span class="btn-icon20 icon-right-red" aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Performance -->
+      <div class="content-item04 perfor-wrap">
+        <div class="models-full icon30fast">
+          <div class="max1440">
+            <h6 class="blue-title">Performance</h6>
+            <div class="text-col">
+              <p class="text-strong">N Power Sense Axle</p>
+              <p class="text-normal">
+                Front axle benefits from an enhanced lateral stiffness and
+                reduced weight compared to the standard model. The N Power
+                Sense Axle sends fast and precise feedback from the front
+                axle to the driver, improving grip and transferring engine
+                power to the road effectively.
+              </p>
             </div>
           </div>
-          <!-- Performance -->
-          <div class="content-item04 perfor-wrap">
-            <div class="models-full icon30fast">
-              <div class="max1440">
-                <h6 class="blue-title">Performance</h6>
-                <div class="text-col">
-                  <p class="text-strong">N Power Sense Axle</p>
-                  <p class="text-normal">
-                    Front axle benefits from an enhanced lateral stiffness and
-                    reduced weight compared to the standard model. The N Power
-                    Sense Axle sends fast and precise feedback from the front
-                    axle to the driver, improving grip and transferring engine
-                    power to the road effectively.
-                  </p>
-                </div>
-              </div>
+        </div>
+      </div>
+      <!-- Desgin -->
+      <div class="content-item05 desgin-wrap">
+        <div class="models-full icon30fast">
+          <div class="max1440">
+            <h6 class="blue-title">Design</h6>
+            <div class="text-col">
+              <p class="text-strong">Elegantly Untamed</p>
+              <p class="text-normal">
+                A sophisticated and elegant design with the proven N
+                fun-to-drive factor. The unique N feeling which leaves that
+                special smile on your face.
+              </p>
             </div>
           </div>
-          <!-- Desgin -->
-          <div class="content-item05 desgin-wrap">
-            <div class="models-full icon30fast">
-              <div class="max1440">
-                <h6 class="blue-title">Design</h6>
-                <div class="text-col">
-                  <p class="text-strong">Elegantly Untamed</p>
-                  <p class="text-normal">
-                    A sophisticated and elegant design with the proven N
-                    fun-to-drive factor. The unique N feeling which leaves that
-                    special smile on your face.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="models-nofull type2">
-              <div class="max1440">
-                <div class="models-nofull-box">
-                  <div class="models-cardbox w30">
-                    <div>
-                      <img
-                        src="../../inc/images/Models/i30NFastbackN/i30NFastbackN_desgin_01.png"
-                        loading="lazy"
-                        alt="i30NFastbackN 이미지"
-                        class="pc-only"
-                      />
-                      <img
-                        src="../../inc/images/Models/i30NFastbackN/i30NFastbackN_desgin_01_mo.png"
-                        loading="lazy"
-                        alt="i30NFastbackN 이미지"
-                        class="mo-only"
-                      />
-                      <div>
-                        <p class="text-strong-md txt-left">Front</p>
-                        <p class="text-normal-xs txt-left">
-                          New LED headlamps with V-shaped Daytime Running Lights
-                        </p>
-                      </div>
-                    </div>
-                    <div>
-                      <img
-                        src="../../inc/images/Models/i30NFastbackN/i30NFastbackN_desgin_02.png"
-                        loading="lazy"
-                        alt="i30NFastbackN 이미지"
-                        class="pc-only"
-                      />
-                      <img
-                        src="../../inc/images/Models/i30NFastbackN/i30NFastbackN_desgin_02_mo.png"
-                        loading="lazy"
-                        alt="i30NFastbackN 이미지"
-                        class="mo-only"
-                      />
-                      <div>
-                        <p class="text-strong-md txt-left">Side</p>
-                        <p class="text-normal-xs txt-left">
-                          Seen from the side, one of the new highlights are
-                          Hyundai’s first-ever 19” forged alloy wheels
-                        </p>
-                      </div>
-                    </div>
-                    <div>
-                      <img
-                        src="../../inc/images/Models/i30NFastbackN/i30NFastbackN_desgin_03.png"
-                        loading="lazy"
-                        alt="i30NFastbackN 이미지"
-                        class="pc-only"
-                      />
-                      <img
-                        src="../../inc/images/Models/i30NFastbackN/i30NFastbackN_desgin_03_mo.png"
-                        loading="lazy"
-                        alt="i30NFastbackN 이미지"
-                        class="mo-only"
-                      />
-                      <div>
-                        <p class="text-strong-md txt-left">Rear</p>
-                        <p class="text-normal-xs txt-left">Bigger and better</p>
-                      </div>
-                    </div>
+        </div>
+        <div class="models-nofull type2">
+          <div class="max1440">
+            <div class="models-nofull-box">
+              <div class="models-cardbox w30">
+                <div>
+                  <img src="../../inc/images/Models/i30NFastbackN/i30NFastbackN_desgin_01.png" loading="lazy"
+                    alt="i30NFastbackN 이미지" class="pc-only" />
+                  <img src="../../inc/images/Models/i30NFastbackN/i30NFastbackN_desgin_01_mo.png" loading="lazy"
+                    alt="i30NFastbackN 이미지" class="mo-only" />
+                  <div>
+                    <p class="text-strong-md txt-left">Front</p>
+                    <p class="text-normal-xs txt-left">
+                      New LED headlamps with V-shaped Daytime Running Lights
+                    </p>
                   </div>
-                  <div class="btn-wrap">
-                    <!-- <a
+                </div>
+                <div>
+                  <img src="../../inc/images/Models/i30NFastbackN/i30NFastbackN_desgin_02.png" loading="lazy"
+                    alt="i30NFastbackN 이미지" class="pc-only" />
+                  <img src="../../inc/images/Models/i30NFastbackN/i30NFastbackN_desgin_02_mo.png" loading="lazy"
+                    alt="i30NFastbackN 이미지" class="mo-only" />
+                  <div>
+                    <p class="text-strong-md txt-left">Side</p>
+                    <p class="text-normal-xs txt-left">
+                      Seen from the side, one of the new highlights are
+                      Hyundai’s first-ever 19” forged alloy wheels
+                    </p>
+                  </div>
+                </div>
+                <div>
+                  <img src="../../inc/images/Models/i30NFastbackN/i30NFastbackN_desgin_03.png" loading="lazy"
+                    alt="i30NFastbackN 이미지" class="pc-only" />
+                  <img src="../../inc/images/Models/i30NFastbackN/i30NFastbackN_desgin_03_mo.png" loading="lazy"
+                    alt="i30NFastbackN 이미지" class="mo-only" />
+                  <div>
+                    <p class="text-strong-md txt-left">Rear</p>
+                    <p class="text-normal-xs txt-left">Bigger and better</p>
+                  </div>
+                </div>
+              </div>
+              <div class="btn-wrap">
+                <!-- <a
                       href="./MD010501t03P01.html"
                       target="_blank"
                       rel="noopener"
@@ -1395,603 +914,434 @@
                       ></span>
                     </a> -->
 
-                    <button
-                      class="btn lg-txt-btn04 pop-open"
-                      aria-controls="MD010501t03P01"
-                      aria-haspopup="true"
-                      aria-expanded="false"
-                      title="팝업오픈"
-                    >
-                      Exterior design of the i30 fastback N
-                      <span
-                        class="btn-icon20 icon-right-red"
-                        aria-hidden="true"
-                      ></span>
-                    </button>
-                  </div>
-                </div>
-                <div class="models-nofull-box">
-                  <div class="text-col">
-                    <p class="text-strong txt-left">
-                      Elegance wherever you look
-                    </p>
-                    <p class="text-normal txt-left">
-                      The interior of the new i30 Fastback N provides a
-                      connection between the car and the driver at all touch
-                      points. The essence of this connectivity is dedicated to
-                      those who truly love cars.
-                    </p>
-                  </div>
-                  <div class="models-cardbox">
-                    <div>
-                      <img
-                        src="../../inc/images/Models/i30NFastbackN/i30NFastbackN_desgin_04.png"
-                        loading="lazy"
-                        alt="i30NFastbackN 이미지"
-                        class="pc-only"
-                      />
-                      <img
-                        src="../../inc/images/Models/i30NFastbackN/i30NFastbackN_desgin_04_mo.png"
-                        loading="lazy"
-                        alt="i30NFastbackN 이미지"
-                        class="mo-only"
-                      />
-                      <div>
-                        <p class="text-strong-md txt-left">N steering wheel</p>
-                        <p class="text-normal-xs txt-left">
-                          Featuring exclusive blue stitching and the N logo, the
-                          leather N steering wheel puts driving performance
-                          features right at your fingertips – like for example,
-                          the dedicated buttons for N Mode and N Grin Shift.
-                        </p>
-                      </div>
-                    </div>
-                    <div>
-                      <img
-                        src="../../inc/images/Models/i30NFastbackN/i30NFastbackN_desgin_05.png"
-                        loading="lazy"
-                        alt="i30NFastbackN 이미지"
-                        class="pc-only"
-                      />
-                      <img
-                        src="../../inc/images/Models/i30NFastbackN/i30NFastbackN_desgin_05_mo.png"
-                        loading="lazy"
-                        alt="i30NFastbackN 이미지"
-                        class="mo-only"
-                      />
-                      <div>
-                        <p class="text-strong-md txt-left">
-                          N Light Seats - Sit like a pro.
-                        </p>
-                        <p class="text-normal-xs txt-left">
-                          Covered in premium leather and Alcantara® materials,
-                          the lightweight, high-performance monoform seats
-                          feature an illuminated N logo and pronounced bolsters
-                          for excellent lateral support.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <button class="btn lg-txt-btn04 pop-open" aria-controls="MD010501t03P01" aria-haspopup="true"
+                  aria-expanded="false" title="팝업오픈">
+                  Exterior design of the i30 fastback N
+                  <span class="btn-icon20 icon-right-red" aria-hidden="true"></span>
+                </button>
               </div>
             </div>
-          </div>
-          <!-- Specification : tab 경우 -->
-          <div class="content-item06 specification-wrap">
-            <div class="max1440">
-              <h6 class="blue-title">Specification</h6>
-              <div class="specification-box">
-                <p class="text-strong">Specification</p>
-                <!-- tab -->
-                <div class="tab-container">
-                  <div class="tab-head">
-                    <div class="tabs-wrap">
-                      <ul class="tabs tab2 ty-black" data-contents="탭카테고리">
-                        <li class="on">
-                          <a
-                            href="javascript:;"
-                            aria-controls="tab1-01"
-                            role="tab"
-                            aria-selected="true"
-                            >The new i30 Fastback N<br />standard</a
-                          >
-                        </li>
-                        <li>
-                          <a
-                            href="javascript:;"
-                            aria-controls="tab1-02"
-                            role="tab"
-                            aria-selected="false"
-                            >The new i30 Fastback N w/<br />performance
-                            package</a
-                          >
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="tab-content on" id="tab1-01" role="tabpanel">
-                    <img
-                      src="../../inc/images/Models/i30NFastbackN/i30NFastbackN_Specification_01.png"
-                      loading="lazy"
-                      alt="i30NFastbackN 이미지"
-                      class="pc-only"
-                    />
-                    <img
-                      src="../../inc/images/Models/i30NFastbackN/i30NFastbackN_Specification_01_mo.png"
-                      loading="lazy"
-                      alt="i30NFastbackN 이미지"
-                      class="mo-only"
-                    />
-                    <dl>
-                      <dt>Engine</dt>
-                      <dd>2.0T GDi</dd>
-                      <dt>Transmissions</dt>
-                      <dd>6 MT</dd>
-                      <dt>Power (PS)</dt>
-                      <dd>250</dd>
-                      <dt>Max. torque(Nm)</dt>
-                      <dd>36.0</dd>
-                      <dt>Top speed (km/h)</dt>
-                      <dd>250</dd>
-                    </dl>
-                    <p class="specification-txt">
-                      * Performance summer tires may cause moderate noise in
-                      ambient temperatures under 7º C.<br />
-                      * Winter tires recommended for optimal performance in low
-                      temperature conditions.
-                    </p>
-                  </div>
-                  <div class="tab-content" id="tab1-02" role="tabpanel">
-                    <img
-                      src="../../inc/images/Models/i30NFastbackN/i30NFastbackN_Specification_02.png"
-                      loading="lazy"
-                      alt="i30NFastbackN 이미지"
-                      class="pc-only"
-                    />
-                    <img
-                      src="../../inc/images/Models/i30NFastbackN/i30NFastbackN_Specification_02_mo.png"
-                      loading="lazy"
-                      alt="i30NFastbackN 이미지"
-                      class="mo-only"
-                    />
-                    <dl>
-                      <dt>Engine</dt>
-                      <dd>2.0T GDi</dd>
-                      <dt>Transmissions</dt>
-                      <dd>6 MT or N DCT</dd>
-                      <dt>Power (PS)</dt>
-                      <dd>280</dd>
-                      <dt>Max. torque(Nm)</dt>
-                      <dd>40.0</dd>
-                      <dt>Top speed (km/h)</dt>
-                      <dd>250</dd>
-                    </dl>
-                    <p class="specification-txt">
-                      * Performance summer tires may cause moderate noise in
-                      ambient temperatures under 7º C.<br />
-                      * Winter tires recommended for optimal performance in low
-                      temperature conditions.
+            <div class="models-nofull-box">
+              <div class="text-col">
+                <p class="text-strong txt-left">
+                  Elegance wherever you look
+                </p>
+                <p class="text-normal txt-left">
+                  The interior of the new i30 Fastback N provides a
+                  connection between the car and the driver at all touch
+                  points. The essence of this connectivity is dedicated to
+                  those who truly love cars.
+                </p>
+              </div>
+              <div class="models-cardbox">
+                <div>
+                  <img src="../../inc/images/Models/i30NFastbackN/i30NFastbackN_desgin_04.png" loading="lazy"
+                    alt="i30NFastbackN 이미지" class="pc-only" />
+                  <img src="../../inc/images/Models/i30NFastbackN/i30NFastbackN_desgin_04_mo.png" loading="lazy"
+                    alt="i30NFastbackN 이미지" class="mo-only" />
+                  <div>
+                    <p class="text-strong-md txt-left">N steering wheel</p>
+                    <p class="text-normal-xs txt-left">
+                      Featuring exclusive blue stitching and the N logo, the
+                      leather N steering wheel puts driving performance
+                      features right at your fingertips – like for example,
+                      the dedicated buttons for N Mode and N Grin Shift.
                     </p>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <!-- Gallery -->
-          <div class="content-item07 gallery-wrap">
-            <div class="max1440">
-              <h6 class="blue-title">Gallery</h6>
-              <p class="text-strong">Gallery</p>
-            </div>
-            <div class="swiper-container">
-              <!-- Swiper -->
-              <div class="swiper ty02Swiper">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <div class="img-area">
-                      <img
-                        src="../../inc/images/Models/i30NFastbackN/i30NFastbackN_gallery_01.png"
-                        loading="lazy"
-                        alt="이미지 슬라이드1"
-                      />
-                      <a href="#" class="btn lg-txt-btn02" download>
-                        <span class="pc-only">Download</span>
-                        <span
-                          class="btn-icon24 icon-download-wh"
-                          aria-hidden="true"
-                        ></span>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="img-area">
-                      <img
-                        src="../../inc/images/Models/i30NFastbackN/i30NFastbackN_gallery_02.png"
-                        loading="lazy"
-                        alt="이미지 슬라이드1"
-                      />
-                      <a href="#" class="btn lg-txt-btn02" download>
-                        <span class="pc-only">Download</span>
-                        <span
-                          class="btn-icon24 icon-download-wh"
-                          aria-hidden="true"
-                        ></span>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="img-area">
-                      <img
-                        src="../../inc/images/Models/i30NFastbackN/i30NFastbackN_gallery_03.png"
-                        loading="lazy"
-                        alt="이미지 슬라이드1"
-                      />
-                      <a href="#" class="btn lg-txt-btn02" download>
-                        <span class="pc-only">Download</span>
-                        <span
-                          class="btn-icon24 icon-download-wh"
-                          aria-hidden="true"
-                        ></span>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="img-area">
-                      <img
-                        src="../../inc/images/Models/i30NFastbackN/i30NFastbackN_gallery_04.png"
-                        loading="lazy"
-                        alt="이미지 슬라이드1"
-                      />
-                      <a href="#" class="btn lg-txt-btn02" download>
-                        <span class="pc-only">Download</span>
-                        <span
-                          class="btn-icon24 icon-download-wh"
-                          aria-hidden="true"
-                        ></span>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="img-area">
-                      <img
-                        src="../../inc/images/Models/i30NFastbackN/i30NFastbackN_gallery_05.png"
-                        loading="lazy"
-                        alt="이미지 슬라이드1"
-                      />
-                      <a href="#" class="btn lg-txt-btn02" download>
-                        <span class="pc-only">Download</span>
-                        <span
-                          class="btn-icon24 icon-download-wh"
-                          aria-hidden="true"
-                        ></span>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="img-area">
-                      <img
-                        src="../../inc/images/Models/i30NFastbackN/i30NFastbackN_gallery_06.png"
-                        loading="lazy"
-                        alt="이미지 슬라이드1"
-                      />
-                      <a href="#" class="btn lg-txt-btn02" download>
-                        <span class="pc-only">Download</span>
-                        <span
-                          class="btn-icon24 icon-download-wh"
-                          aria-hidden="true"
-                        ></span>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="img-area">
-                      <img
-                        src="../../inc/images/Models/i30NFastbackN/i30NFastbackN_gallery_07.png"
-                        loading="lazy"
-                        alt="이미지 슬라이드1"
-                      />
-                      <a href="#" class="btn lg-txt-btn02" download>
-                        <span class="pc-only">Download</span>
-                        <span
-                          class="btn-icon24 icon-download-wh"
-                          aria-hidden="true"
-                        ></span>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="img-area">
-                      <img
-                        src="../../inc/images/Models/i30NFastbackN/i30NFastbackN_gallery_08.png"
-                        loading="lazy"
-                        alt="이미지 슬라이드1"
-                      />
-                      <a href="#" class="btn lg-txt-btn02" download>
-                        <span class="pc-only">Download</span>
-                        <span
-                          class="btn-icon24 icon-download-wh"
-                          aria-hidden="true"
-                        ></span>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="img-area">
-                      <img
-                        src="../../inc/images/Models/i30NFastbackN/i30NFastbackN_gallery_09.png"
-                        loading="lazy"
-                        alt="이미지 슬라이드1"
-                      />
-                      <a href="#" class="btn lg-txt-btn02" download>
-                        <span class="pc-only">Download</span>
-                        <span
-                          class="btn-icon24 icon-download-wh"
-                          aria-hidden="true"
-                        ></span>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="img-area">
-                      <img
-                        src="../../inc/images/Models/i30NFastbackN/i30NFastbackN_gallery_10.png"
-                        loading="lazy"
-                        alt="이미지 슬라이드1"
-                      />
-                      <a href="#" class="btn lg-txt-btn02" download>
-                        <span class="pc-only">Download</span>
-                        <span
-                          class="btn-icon24 icon-download-wh"
-                          aria-hidden="true"
-                        ></span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <!-- //swiper-wrapper -->
-
-                <!-- 07.03 추가 : swiper-arrow wrap 수정 -->
-                <div class="swiper-bottom-wrap ty02">
-                  <div
-                    class="swiper-button-next"
-                    tabindex="0"
-                    role="button"
-                    aria-controls="swiper-wrapper-d1f642c19f1cdd98"
-                    aria-disabled="false"
-                    aria-label="다음 슬라이드"
-                  ></div>
-                  <div
-                    class="swiper-button-prev swiper-button-disabled"
-                    tabindex="-1"
-                    role="button"
-                    aria-controls="swiper-wrapper-d1f642c19f1cdd98"
-                    aria-disabled="true"
-                    aria-label="이전 슬라이드"
-                  ></div>
-                </div>
-                <!-- //07.03 추가 : swiper-arrow wrap 수정 -->
-
-                <div class="swiper-status-wrap">
-                  <div class="swiper-pagination-custom">
-                    <span class="swiper-pagination-bullet-active"></span>
-                  </div>
-                </div>
-                <!-- //swiper-status-wrap -->
-              </div>
-              <!-- //swiper -->
-            </div>
-            <!-- //swiper-container -->
-          </div>
-          <!-- Related -->
-          <div class="content-item09 related-wrap">
-            <div class="max1440">
-              <p class="text-strong">Related</p>
-              <div class="models-nofull-box">
-                <div class="models-cardbox w30">
+                <div>
+                  <img src="../../inc/images/Models/i30NFastbackN/i30NFastbackN_desgin_05.png" loading="lazy"
+                    alt="i30NFastbackN 이미지" class="pc-only" />
+                  <img src="../../inc/images/Models/i30NFastbackN/i30NFastbackN_desgin_05_mo.png" loading="lazy"
+                    alt="i30NFastbackN 이미지" class="mo-only" />
                   <div>
-                    <img
-                      src="../../inc/images/Models/i30NFastbackN/i30NFastbackN_Related_01.png"
-                      loading="lazy"
-                      alt="i30NFastbackN 이미지"
-                    />
-                    <div>
-                      <p class="text-strong-xs txt-left">i30 N</p>
-                    </div>
-                  </div>
-                  <div>
-                    <img
-                      src="../../inc/images/Models/i30NFastbackN/i30NFastbackN_Related_02.png"
-                      loading="lazy"
-                      alt="i30NFastbackN 이미지"
-                    />
-                    <div>
-                      <p class="text-strong-xs txt-left">
-                        i30 Fastback N Won Auto Bild Sports Car of the Year
-                      </p>
-                    </div>
-                  </div>
-                  <div>
-                    <img
-                      src="../../inc/images/Models/i30NFastbackN/i30NFastbackN_Related_03.png"
-                      loading="lazy"
-                      alt="i30NFastbackN 이미지"
-                    />
-                    <div>
-                      <p class="text-strong-xs txt-left">
-                        Mastering Japanese tracks, one drift at
-                      </p>
-                    </div>
+                    <p class="text-strong-md txt-left">
+                      N Light Seats - Sit like a pro.
+                    </p>
+                    <p class="text-normal-xs txt-left">
+                      Covered in premium leather and Alcantara® materials,
+                      the lightweight, high-performance monoform seats
+                      feature an illuminated N logo and pronounced bolsters
+                      for excellent lateral support.
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
-    </div>
-    <!-- 팝업 시작 -->
-    <!-- 01 MD010501t01P01 -->
-    <div
-      class="popup model-popup forModel"
-      id="MD010501t01P01"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="tit-type04"
-      data-pop="pop-page"
-    >
-      <div class="popup-wrapper">
-        <!-- <p class="temp-header">Hub_Write a post ID : EP040201P02</p> -->
-
-        <div class="popup-header">
-          <div class="inner-header-txt">
-            <h3 class="tit-type04">The Refined Rebel</h3>
+      </div>
+      <!-- Specification : tab 경우 -->
+      <div class="content-item06 specification-wrap">
+        <div class="max1440">
+          <h6 class="blue-title">Specification</h6>
+          <div class="specification-box">
+            <p class="text-strong">Specification</p>
+            <!-- tab -->
+            <div class="tab-container">
+              <div class="tab-head">
+                <div class="tabs-wrap">
+                  <ul class="tabs tab2 ty-black" data-contents="탭카테고리">
+                    <li class="on">
+                      <a href="javascript:;" aria-controls="tab1-01" role="tab" aria-selected="true">The new i30
+                        Fastback N<br />standard</a>
+                    </li>
+                    <li>
+                      <a href="javascript:;" aria-controls="tab1-02" role="tab" aria-selected="false">The new i30
+                        Fastback N w/<br />performance
+                        package</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="tab-content on" id="tab1-01" role="tabpanel">
+                <img src="../../inc/images/Models/i30NFastbackN/i30NFastbackN_Specification_01.png" loading="lazy"
+                  alt="i30NFastbackN 이미지" class="pc-only" />
+                <img src="../../inc/images/Models/i30NFastbackN/i30NFastbackN_Specification_01_mo.png" loading="lazy"
+                  alt="i30NFastbackN 이미지" class="mo-only" />
+                <dl>
+                  <dt>Engine</dt>
+                  <dd>2.0T GDi</dd>
+                  <dt>Transmissions</dt>
+                  <dd>6 MT</dd>
+                  <dt>Power (PS)</dt>
+                  <dd>250</dd>
+                  <dt>Max. torque(Nm)</dt>
+                  <dd>36.0</dd>
+                  <dt>Top speed (km/h)</dt>
+                  <dd>250</dd>
+                </dl>
+                <p class="specification-txt">
+                  * Performance summer tires may cause moderate noise in
+                  ambient temperatures under 7º C.<br />
+                  * Winter tires recommended for optimal performance in low
+                  temperature conditions.
+                </p>
+              </div>
+              <div class="tab-content" id="tab1-02" role="tabpanel">
+                <img src="../../inc/images/Models/i30NFastbackN/i30NFastbackN_Specification_02.png" loading="lazy"
+                  alt="i30NFastbackN 이미지" class="pc-only" />
+                <img src="../../inc/images/Models/i30NFastbackN/i30NFastbackN_Specification_02_mo.png" loading="lazy"
+                  alt="i30NFastbackN 이미지" class="mo-only" />
+                <dl>
+                  <dt>Engine</dt>
+                  <dd>2.0T GDi</dd>
+                  <dt>Transmissions</dt>
+                  <dd>6 MT or N DCT</dd>
+                  <dt>Power (PS)</dt>
+                  <dd>280</dd>
+                  <dt>Max. torque(Nm)</dt>
+                  <dd>40.0</dd>
+                  <dt>Top speed (km/h)</dt>
+                  <dd>250</dd>
+                </dl>
+                <p class="specification-txt">
+                  * Performance summer tires may cause moderate noise in
+                  ambient temperatures under 7º C.<br />
+                  * Winter tires recommended for optimal performance in low
+                  temperature conditions.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
-
-        <div class="popup-body single">
-          <div class="inner-body-model">
-            <div class="popup-body-innerbox">
-              <div class="model-video-wrap">
-                <div class="img-wrap">
-                  <a
-                    href=""
-                    target="_blank"
-                    rel="noopener"
-                    title="각 모델 유튜브 영상 연결 링크"
-                  >
-                    <img
-                      src="../../inc/images/Models/i30NFastbackN/i30FastbackN_popup_poster01.png"
-                      alt="각 모델 유튜브 영상 연결 이미지"
-                    />
+      </div>
+      <!-- Gallery -->
+      <div class="content-item07 gallery-wrap">
+        <div class="max1440">
+          <h6 class="blue-title">Gallery</h6>
+          <p class="text-strong">Gallery</p>
+        </div>
+        <div class="swiper-container">
+          <!-- Swiper -->
+          <div class="swiper ty02Swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="img-area">
+                  <img src="../../inc/images/Models/i30NFastbackN/i30NFastbackN_gallery_01.png" loading="lazy"
+                    alt="이미지 슬라이드1" />
+                  <a href="#" class="btn lg-txt-btn02" download>
+                    <span class="pc-only">Download</span>
+                    <span class="btn-icon24 icon-download-wh" aria-hidden="true"></span>
                   </a>
                 </div>
               </div>
+              <div class="swiper-slide">
+                <div class="img-area">
+                  <img src="../../inc/images/Models/i30NFastbackN/i30NFastbackN_gallery_02.png" loading="lazy"
+                    alt="이미지 슬라이드1" />
+                  <a href="#" class="btn lg-txt-btn02" download>
+                    <span class="pc-only">Download</span>
+                    <span class="btn-icon24 icon-download-wh" aria-hidden="true"></span>
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="img-area">
+                  <img src="../../inc/images/Models/i30NFastbackN/i30NFastbackN_gallery_03.png" loading="lazy"
+                    alt="이미지 슬라이드1" />
+                  <a href="#" class="btn lg-txt-btn02" download>
+                    <span class="pc-only">Download</span>
+                    <span class="btn-icon24 icon-download-wh" aria-hidden="true"></span>
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="img-area">
+                  <img src="../../inc/images/Models/i30NFastbackN/i30NFastbackN_gallery_04.png" loading="lazy"
+                    alt="이미지 슬라이드1" />
+                  <a href="#" class="btn lg-txt-btn02" download>
+                    <span class="pc-only">Download</span>
+                    <span class="btn-icon24 icon-download-wh" aria-hidden="true"></span>
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="img-area">
+                  <img src="../../inc/images/Models/i30NFastbackN/i30NFastbackN_gallery_05.png" loading="lazy"
+                    alt="이미지 슬라이드1" />
+                  <a href="#" class="btn lg-txt-btn02" download>
+                    <span class="pc-only">Download</span>
+                    <span class="btn-icon24 icon-download-wh" aria-hidden="true"></span>
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="img-area">
+                  <img src="../../inc/images/Models/i30NFastbackN/i30NFastbackN_gallery_06.png" loading="lazy"
+                    alt="이미지 슬라이드1" />
+                  <a href="#" class="btn lg-txt-btn02" download>
+                    <span class="pc-only">Download</span>
+                    <span class="btn-icon24 icon-download-wh" aria-hidden="true"></span>
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="img-area">
+                  <img src="../../inc/images/Models/i30NFastbackN/i30NFastbackN_gallery_07.png" loading="lazy"
+                    alt="이미지 슬라이드1" />
+                  <a href="#" class="btn lg-txt-btn02" download>
+                    <span class="pc-only">Download</span>
+                    <span class="btn-icon24 icon-download-wh" aria-hidden="true"></span>
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="img-area">
+                  <img src="../../inc/images/Models/i30NFastbackN/i30NFastbackN_gallery_08.png" loading="lazy"
+                    alt="이미지 슬라이드1" />
+                  <a href="#" class="btn lg-txt-btn02" download>
+                    <span class="pc-only">Download</span>
+                    <span class="btn-icon24 icon-download-wh" aria-hidden="true"></span>
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="img-area">
+                  <img src="../../inc/images/Models/i30NFastbackN/i30NFastbackN_gallery_09.png" loading="lazy"
+                    alt="이미지 슬라이드1" />
+                  <a href="#" class="btn lg-txt-btn02" download>
+                    <span class="pc-only">Download</span>
+                    <span class="btn-icon24 icon-download-wh" aria-hidden="true"></span>
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="img-area">
+                  <img src="../../inc/images/Models/i30NFastbackN/i30NFastbackN_gallery_10.png" loading="lazy"
+                    alt="이미지 슬라이드1" />
+                  <a href="#" class="btn lg-txt-btn02" download>
+                    <span class="pc-only">Download</span>
+                    <span class="btn-icon24 icon-download-wh" aria-hidden="true"></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- //swiper-wrapper -->
 
-              <div class="container-desc">
-                <div class="wrap-desc lg">
-                  <p class="tit-type04">Tailored to your wild side</p>
-                  <p class="txt-type03">
-                    Sleek and sophisticated, the All-New i30 Fastback N is a
-                    unique statement of style – and performance.
+            <!-- 07.03 추가 : swiper-arrow wrap 수정 -->
+            <div class="swiper-bottom-wrap ty02">
+              <div class="swiper-button-next" tabindex="0" role="button" aria-controls="swiper-wrapper-d1f642c19f1cdd98"
+                aria-disabled="false" aria-label="다음 슬라이드"></div>
+              <div class="swiper-button-prev swiper-button-disabled" tabindex="-1" role="button"
+                aria-controls="swiper-wrapper-d1f642c19f1cdd98" aria-disabled="true" aria-label="이전 슬라이드"></div>
+            </div>
+            <!-- //07.03 추가 : swiper-arrow wrap 수정 -->
+
+            <div class="swiper-status-wrap">
+              <div class="swiper-pagination-custom">
+                <span class="swiper-pagination-bullet-active"></span>
+              </div>
+            </div>
+            <!-- //swiper-status-wrap -->
+          </div>
+          <!-- //swiper -->
+        </div>
+        <!-- //swiper-container -->
+      </div>
+      <!-- Related -->
+      <div class="content-item09 related-wrap">
+        <div class="max1440">
+          <p class="text-strong">Related</p>
+          <div class="models-nofull-box">
+            <div class="models-cardbox w30">
+              <div>
+                <img src="../../inc/images/Models/i30NFastbackN/i30NFastbackN_Related_01.png" loading="lazy"
+                  alt="i30NFastbackN 이미지" />
+                <div>
+                  <p class="text-strong-xs txt-left">i30 N</p>
+                </div>
+              </div>
+              <div>
+                <img src="../../inc/images/Models/i30NFastbackN/i30NFastbackN_Related_02.png" loading="lazy"
+                  alt="i30NFastbackN 이미지" />
+                <div>
+                  <p class="text-strong-xs txt-left">
+                    i30 Fastback N Won Auto Bild Sports Car of the Year
+                  </p>
+                </div>
+              </div>
+              <div>
+                <img src="../../inc/images/Models/i30NFastbackN/i30NFastbackN_Related_03.png" loading="lazy"
+                  alt="i30NFastbackN 이미지" />
+                <div>
+                  <p class="text-strong-xs txt-left">
+                    Mastering Japanese tracks, one drift at
                   </p>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-
-        <div class="btn-wrap">
-          <!-- pop-close 해당 팝업 닫기 -->
-          <button
-            type="button"
-            class="btn btn-only-icon-notbg popup-close-btn-x pop-close"
-            title="close"
-          >
-            <span class="visually-hidden">close</span>
-            <span class="btn-icon36 icon-close" aria-hidden="true"></span>
-          </button>
         </div>
       </div>
-    </div>
+  </div>
+  </section>
+  </div>
+  <!-- 팝업 시작 -->
+  <!-- 01 MD010501t01P01 -->
+  <div class="popup model-popup forModel" id="MD010501t01P01" role="dialog" aria-modal="true"
+    aria-labelledby="tit-type04" data-pop="pop-page">
+    <div class="popup-wrapper">
+      <!-- <p class="temp-header">Hub_Write a post ID : EP040201P02</p> -->
 
-    <!-- 02 MD010501t03P01 -->
-    <div
-      class="popup model-popup forModel"
-      id="MD010501t03P01"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="tit-type04"
-      data-pop="pop-page"
-    >
-      <div class="popup-wrapper">
-        <!-- <p class="temp-header">Hub_Write a post ID : EP040201P02</p> -->
-
-        <div class="popup-header">
-          <div class="inner-header-txt">
-            <h3 class="tit-type04">Elegantly Untamed</h3>
-          </div>
-        </div>
-
-        <div class="popup-body">
-          <div class="inner-body-model">
-            <div class="popup-body-innerbox">
-              <div class="wrap-popmedia only-pic">
-                <img
-                  src="../../inc/images/Models/i30N/i30N_fastbackN_popup01.png"
-                  alt="팝업 사진 이미지"
-                />
-              </div>
-              <div class="container-desc">
-                <div class="wrap-desc lg">
-                  <p class="tit-type04">Front</p>
-                  <p class="txt-type03">
-                    flow out of the wide new N grille which is optimised to
-                    allow efficient engine cooling.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="popup-body-innerbox">
-              <div class="wrap-popmedia only-pic">
-                <img
-                  src="../../inc/images/Models/i30N/i30N_fastbackN_popup02.png"
-                  alt="팝업 사진 이미지"
-                />
-              </div>
-              <div class="container-desc">
-                <div class="wrap-desc lg">
-                  <p class="tit-type04">Side</p>
-                  <p class="txt-type03">
-                    which are paired with Pirelli P Zero tyres tailor-made for
-                    i30 Fastback N.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="popup-body-innerbox">
-              <div class="wrap-popmedia only-pic">
-                <img
-                  src="../../inc/images/Models/i30N/i30N_fastbackN_popup03.png"
-                  alt="팝업 사진 이미지"
-                />
-              </div>
-              <div class="container-desc">
-                <div class="wrap-desc lg">
-                  <p class="tit-type04">Rear</p>
-                  <p class="txt-type03">
-                    the new double muffler exhaust system is now even larger for
-                    a sporty, muscular look that really makes a statement.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="btn-wrap">
-          <!-- pop-close 해당 팝업 닫기 -->
-          <button
-            type="button"
-            class="btn btn-only-icon-notbg popup-close-btn-x pop-close"
-            title="close"
-          >
-            <span class="visually-hidden">close</span>
-            <span class="btn-icon36 icon-close" aria-hidden="true"></span>
-          </button>
+      <div class="popup-header">
+        <div class="inner-header-txt">
+          <h3 class="tit-type04">The Refined Rebel</h3>
         </div>
       </div>
-    </div>
 
-    <!-- 팝업 끝 -->
-    <script
-      type="text/javascript"
-      src="../../inc/js/jquery-3.7.1.slim.min.js"
-    ></script>
-    <script type="text/javascript" src="../../inc/js/swiper.min.js"></script>
-    <script type="text/javascript" src="../../inc/js/pub-ui.js"></script>
-    <script type="text/javascript" src="../../inc/js/com-ui.js"></script>
-    <script type="text/javascript" src="../../inc/js/plugins.js"></script>
-  </body>
+      <div class="popup-body single">
+        <div class="inner-body-model">
+          <div class="popup-body-innerbox">
+            <div class="model-video-wrap">
+              <div class="img-wrap">
+                <a href="" target="_blank" rel="noopener" title="각 모델 유튜브 영상 연결 링크">
+                  <img src="../../inc/images/Models/i30NFastbackN/i30FastbackN_popup_poster01.png"
+                    alt="각 모델 유튜브 영상 연결 이미지" />
+                </a>
+              </div>
+            </div>
+
+            <div class="container-desc">
+              <div class="wrap-desc lg">
+                <p class="tit-type04">Tailored to your wild side</p>
+                <p class="txt-type03">
+                  Sleek and sophisticated, the All-New i30 Fastback N is a
+                  unique statement of style – and performance.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="btn-wrap">
+        <!-- pop-close 해당 팝업 닫기 -->
+        <button type="button" class="btn btn-only-icon-notbg popup-close-btn-x pop-close" title="close">
+          <span class="visually-hidden">close</span>
+          <span class="btn-icon36 icon-close" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 02 MD010501t03P01 -->
+  <div class="popup model-popup forModel" id="MD010501t03P01" role="dialog" aria-modal="true"
+    aria-labelledby="tit-type04" data-pop="pop-page">
+    <div class="popup-wrapper">
+      <!-- <p class="temp-header">Hub_Write a post ID : EP040201P02</p> -->
+
+      <div class="popup-header">
+        <div class="inner-header-txt">
+          <h3 class="tit-type04">Elegantly Untamed</h3>
+        </div>
+      </div>
+
+      <div class="popup-body">
+        <div class="inner-body-model">
+          <div class="popup-body-innerbox">
+            <div class="wrap-popmedia only-pic">
+              <img src="../../inc/images/Models/i30N/i30N_fastbackN_popup01.png" alt="팝업 사진 이미지" />
+            </div>
+            <div class="container-desc">
+              <div class="wrap-desc lg">
+                <p class="tit-type04">Front</p>
+                <p class="txt-type03">
+                  flow out of the wide new N grille which is optimised to
+                  allow efficient engine cooling.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="popup-body-innerbox">
+            <div class="wrap-popmedia only-pic">
+              <img src="../../inc/images/Models/i30N/i30N_fastbackN_popup02.png" alt="팝업 사진 이미지" />
+            </div>
+            <div class="container-desc">
+              <div class="wrap-desc lg">
+                <p class="tit-type04">Side</p>
+                <p class="txt-type03">
+                  which are paired with Pirelli P Zero tyres tailor-made for
+                  i30 Fastback N.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="popup-body-innerbox">
+            <div class="wrap-popmedia only-pic">
+              <img src="../../inc/images/Models/i30N/i30N_fastbackN_popup03.png" alt="팝업 사진 이미지" />
+            </div>
+            <div class="container-desc">
+              <div class="wrap-desc lg">
+                <p class="tit-type04">Rear</p>
+                <p class="txt-type03">
+                  the new double muffler exhaust system is now even larger for
+                  a sporty, muscular look that really makes a statement.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="btn-wrap">
+        <!-- pop-close 해당 팝업 닫기 -->
+        <button type="button" class="btn btn-only-icon-notbg popup-close-btn-x pop-close" title="close">
+          <span class="visually-hidden">close</span>
+          <span class="btn-icon36 icon-close" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 팝업 끝 -->
+  <script type="text/javascript" src="../../inc/js/jquery-3.7.1.slim.min.js"></script>
+  <script type="text/javascript" src="../../inc/js/swiper.min.js"></script>
+  <script type="text/javascript" src="../../inc/js/pub-ui.js"></script>
+  <script type="text/javascript" src="../../inc/js/com-ui.js"></script>
+  <script type="text/javascript" src="../../inc/js/plugins.js"></script>
+</body>
+
 </html>
