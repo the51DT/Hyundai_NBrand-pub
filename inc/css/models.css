@@ -530,6 +530,10 @@
   /* margin-top: 80px; */
   max-width: 1440px;
 }
+.text-strong + .models-cardbox-bigimg,
+.text-col + .models-cardbox-bigimg {
+  margin-top: 80px;
+}
 .models-wrap .models-cardbox > div,
 .models-wrap .models-cardbox .models-card {
   display: flex;
@@ -788,6 +792,9 @@
   text-align: left;
   max-width: 864px;
   margin: 20px auto 0 auto;
+}
+.models-wrap .specification-wrap .specification-box {
+  width: 100%;
 }
 .models-wrap .specification-wrap .specification-box > img {
   margin-top: 40px;
@@ -1291,6 +1298,10 @@
   }
   .models-cardbox-bigimg {
     /* margin-top: 44px; */
+  }
+  .text-strong + .models-cardbox-bigimg,
+  .text-col + .models-cardbox-bigimg {
+    margin-top: 44px;
   }
   .models-wrap .models-cardbox > div,
   .models-wrap .models-cardbox .models-card {

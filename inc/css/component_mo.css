@@ -463,6 +463,9 @@ min-width : 1024 css
     height: 20rem;
     max-width: 100%;
   }
+  .grid_mo_drop .card_type01:hover {
+    height: 23.719rem;
+  }
   .grid_mo_drop .card_type01 .card_profile img {
     width: 10rem;
     height: 10rem;

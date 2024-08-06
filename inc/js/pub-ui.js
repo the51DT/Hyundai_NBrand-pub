@@ -2299,7 +2299,9 @@ window.onload = function () {
 
   // Jira - 359 대응 : 관련된 컨텐츠 갯수에 따라 css 적용 (레이아웃 깨짐 방지)
   if ($(".related-wrap .models-cardbox").length > 0) {
-    var relatedItemSize = $(".related-wrap .models-cardbox > div").length;
+    var relatedItemSize = $(
+      ".related-wrap .models-cardbox .models-card"
+    ).length;
     $(".related-wrap .models-cardbox").css("--size", relatedItemSize);
   }
 
