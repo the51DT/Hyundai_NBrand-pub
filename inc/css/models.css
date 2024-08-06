@@ -73,11 +73,19 @@
   position: relative;
   text-align: center; /* 임시로 함 */
 }
-.models-wrap .content-item02 .btn.btn-only-icon-bg01-square {
+.models-wrap .content-item02 .btn-groups {
   position: absolute;
   bottom: 20px;
   right: 20px;
 }
+.models-wrap .content-item02 .btn-groups .btn:not(:last-child) {
+  margin-right: 14px;
+}
+/* .models-wrap .content-item02 .btn.btn-only-icon-bg01-square {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+} */
 .models-wrap .content-item02 img.video_poster {
   position: absolute;
   top: 0;
@@ -1009,6 +1017,11 @@
   .models-wrap .content-item02 img.only-kvimg {
     height: 360px;
     object-fit: cover;
+  }
+
+  .models-wrap .content-item02 .btn-groups {
+    bottom: 12px;    
+    right: 12px;
   }
   .models-wrap .content-item03 {
     padding: 152px 24px 0 24px;

@@ -2191,8 +2191,9 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
 }
 
 .share-popup.popup-wrapper .popup-body.share-icn-wrap .box-row {
+  --count : 0;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(var(--count), 1fr);
   gap: 48px;
   justify-content: center;
   align-items: center;

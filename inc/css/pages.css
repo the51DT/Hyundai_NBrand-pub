@@ -463,6 +463,7 @@
 .video-wrap,
 .video-wrap video {
   max-height: calc(var(--vh, 1vh) * 100 - 70px);
+  position: relative;
 }
 .conts-head {
   display: flex;

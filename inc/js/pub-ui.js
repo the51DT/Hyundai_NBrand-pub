@@ -1877,14 +1877,14 @@ function perforSlideMoveFun() {
 
 // [Start] : Models > 영상 버튼 클릭 시 재생 혹은 멈춤 작업 & 한 번 재생 후 포스터 나와야함
 function modelsVideoPlay() {
-  $(".models-wrap .content-item02 .btn-only-icon-bg01-square").click(
+  $(".models-wrap .content-item02 .btn-only-icon-bg01-square.play").click(
     function () {
       // console.log("비디오 재생 ing");
-      var videoPc = $(this).siblings("video.pc-only").get(0);
-      var videoMo = $(this).siblings("video.mo-only").get(0);
+      var videoPc = $(this).closest(".btn-groups").siblings("video.pc-only").get(0);
+      var videoMo = $(this).closest(".btn-groups").siblings("video.mo-only").get(0);
       var icon = $(this).children(".btn-icon24");
-      var pcPoster = $(this).siblings(".video_poster.pc-only");
-      var moPoster = $(this).siblings(".video_poster.mo-only");
+      var pcPoster = $(this).closest(".btn-groups").siblings(".video_poster.pc-only");
+      var moPoster = $(this).closest(".btn-groups").siblings(".video_poster.mo-only");
 
       if (videoPc.paused && videoMo.paused) {
         icon.attr("class", "btn-icon24 icon-pause-wh");
@@ -1895,7 +1895,7 @@ function modelsVideoPlay() {
           $(".models-wrap .content-item02 video.mo-only").attr(
             "aria-hidden",
             false
-          );
+          );          
         } else {
           videoPc.play();
           moPoster.hide();
@@ -1903,8 +1903,9 @@ function modelsVideoPlay() {
           $(".models-wrap .content-item02 video.pc-only").attr(
             "aria-hidden",
             false
-          );
+          );          
         }
+        $(this).attr("title","pause");
       } else {
         icon.attr("class", "btn-icon24 icon-play-wh");
         if (window.innerWidth <= 1023) {
@@ -1916,6 +1917,34 @@ function modelsVideoPlay() {
           moPoster.hide();
           pcPoster.hide();
         }
+        $(this).attr("title", "play");
+      }
+    }
+  );
+
+  $(".models-wrap .content-item02 .btn-only-icon-bg01-square.sound").click(
+    function () {
+      // console.log("비디오 재생 ing");
+      var videoPc = $(this).closest(".btn-groups").siblings("video.pc-only").get(0);
+      var videoMo = $(this).closest(".btn-groups").siblings("video.mo-only").get(0);
+      var icon = $(this).children(".btn-icon24");
+      
+      if (videoPc.muted && videoMo.muted) {
+        icon.attr("class", "btn-icon24 icon-soundon-wh");
+        if (window.innerWidth <= 1023) {
+          videoMo.muted = false; //음소거 해제
+        } else {
+          videoPc.muted = false;
+        }
+        $(this).attr("title", "sound on");
+      } else {
+        icon.attr("class", "btn-icon24 icon-soundoff-wh");
+        if (window.innerWidth <= 1023) {
+          videoMo.muted = true; //음소거
+        } else {
+          videoPc.muted = true;
+        }
+        $(this).attr("title", "sound off");
       }
     }
   );
@@ -2244,10 +2273,30 @@ window.onload = function () {
     $(".wrap .content-area").css("padding-top", "48px");
   }
 
-  // Jira - 359 이슈 대응
+  // Jira - 359 대응 : 관련된 컨텐츠 갯수에 따라 css 적용 (레이아웃 깨짐 방지)
   if ($(".related-wrap .models-cardbox").length > 0) {
     var relatedItemSize = $(".related-wrap .models-cardbox > div").length;
     $(".related-wrap .models-cardbox").css("--size", relatedItemSize);
+  }
+
+  // Jira - 426 대응 : SNS 갯수 크기별 css 적용
+  if (
+    $(".share-popup.popup-wrapper .popup-body.share-icn-wrap .box-row").length >
+    0
+  ) {
+    var shareSnsIcon = $(".share-popup .share-icn-wrap .box-icn");
+
+    if (shareSnsIcon.length >= 4) {
+      $(".share-popup.popup-wrapper .popup-body.share-icn-wrap .box-row").css(
+        "--count",
+        "4"
+      );
+    } else {
+      $(".share-popup.popup-wrapper .popup-body.share-icn-wrap .box-row").css(
+        "--count",
+        shareSnsIcon.length
+      );
+    }
   }
 };
 
