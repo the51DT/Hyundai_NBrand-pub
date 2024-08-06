@@ -112,6 +112,7 @@
 .main_Nfestival_wrap .swiper-slide {
   flex-grow: 1;
   max-height: calc(var(--vh, 1vh) * 100 - 70px);
+  min-height: 744px;
 }
 
 .main_model_wrap {
@@ -231,6 +232,10 @@
   .main_model_swiper .swiper,
   .main_Nfestival_wrap .swiper {
     height: 35rem;
+  }
+  .main_model_swiper .swiper-slide,
+  .main_Nfestival_wrap .swiper-slide {
+    min-height: 0;
   }
   .main_swiper .swiper-slide .text-area button,
   .main_model_swiper .swiper-slide .text-area button,

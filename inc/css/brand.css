@@ -1958,6 +1958,9 @@ article.info-bnr-wrap + article.info-video-wrap {
     display: flex;
     flex-direction: column;
   }
+  .brand .motor_technical li:not(.on) {
+    border: 1px solid #777;
+  }
   .brand .motor_tab .motor_tab_img {
     width: 100%;
   }
