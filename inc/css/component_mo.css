@@ -702,6 +702,9 @@ min-width : 1024 css
     margin-right: auto;
     max-width: 168px;
   }
+  .wrap-list .__bottom .wrap-lists .list-box:nth-child(2) {
+    height: 100%;
+  }
   .wrap-list .__bottom .wrap-lists .list-box:nth-child(2) p {
     padding: 0;
     font-size: 18px;
