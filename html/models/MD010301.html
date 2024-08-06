@@ -1231,17 +1231,18 @@
                 style="display: none"
                 class="video_poster mo-only"
               />
-              <button
-                type="button"
-                class="btn btn-only-icon-bg01-square"
-                title="pause"
-              >
-                <span class="visually-hidden">pause</span>
-                <span
-                  class="btn-icon24 icon-pause-wh"
-                  aria-hidden="true"
-                ></span>
-              </button>
+              <!-- 비디오 소리 켜기/끄기 버튼 추가 (8/6) -->
+              <div class="btn-groups">
+                <button type="button" class="btn btn-only-icon-bg01-square sound" title="sound-off">
+                  <span class="visually-hidden">sound off</span>
+                  <span class="btn-icon24 icon-soundoff-wh" aria-hidden="true"></span>
+                </button>
+                <button type="button" class="btn btn-only-icon-bg01-square play" title="pause">
+                  <span class="visually-hidden">pause</span>
+                  <span class="btn-icon24 icon-pause-wh" aria-hidden="true"></span>
+                </button>
+              </div>
+              <!-- //비디오 소리 켜기/끄기 버튼 추가 (8/6) -->
               <!-- 0703 : kv가 img인 경우 주석처리 작업 -->
               <!-- <img src="../../inc/images/Models/i20N/i20N_poster.png" loading="lazy" alt="i20N 이미지" class="only-kvimg pc-only" />
               <img src="../../inc/images/Models/i20N/i20N_poster_mo.png" loading="lazy" alt="i20N 이미지" class="only-kvimg mo-only" /> -->
@@ -2131,7 +2132,10 @@
         <!-- <p class="temp-header">Hub_Write a post ID : EP040201P02</p> -->
 
         <div class="popup-header">
-          <h3 class="tit-type04">Uncompromised Exterior Design</h3>
+          <!-- 마크업 수정_말줄임 처리 : (8/5) -->
+          <div class="inner-header-txt">
+            <h3 class="tit-type04 ellip">Uncompromised Exterior Design</h3>
+          </div><!-- //마크업 수정_말줄임 처리 : (8/5) -->
         </div>
 
         <div class="popup-body">
@@ -2214,6 +2218,120 @@
           </button>
         </div>
       </div>
+    </div>
+
+    <!-- sns 공유하기 팝업 추가 : 확인용 -->
+    <div class="popup bottom-popup" id="sharing-page" role="dialog" aria-model="true" aria-labelledby="tit" data-pop="pop-page">
+      <div class="popup-wrapper share-popup">
+          <!-- <p class="temp-header">Hub_Write a post ID : EP040201P02</p> -->
+
+          <div class="popup-header">
+            <h3 class="tit-type04">Share</h3>
+          </div>
+
+          <div class="popup-body share-icn-wrap">
+            <div class="box-row">
+              <!-- row 1 -->
+              <!--             
+              <div class="box-icn">
+                <a
+                  href=""
+                  class="btn btn-only-icon-bg01-circle"
+                  title="instagram"
+                >
+                  <span class="visually-hidden">instagram</span>
+                  <span
+                    class="btn-icon20 icon-instagram-wh"
+                    aria-hidden="true"
+                  ></span>
+                </a>
+              </div> -->
+
+              <!-- <div class="box-icn">
+                <a href="" class="btn btn-only-icon-bg01-circle" title="twitter">
+                  <span class="visually-hidden">twitter</span>
+                  <span
+                    class="btn-icon20 icon-twitter-wh"
+                    aria-hidden="true"
+                  ></span>
+                </a>
+              </div>
+
+              <div class="box-icn">
+                <a href="" class="btn btn-only-icon-bg01-circle" title="facebook">
+                  <span class="visually-hidden">facebook</span>
+                  <span
+                    class="btn-icon20 icon-facebook-wh"
+                    aria-hidden="true"
+                  ></span>
+                </a>
+              </div>
+
+              <div class="box-icn">
+                <a href="" class="btn btn-only-icon-bg01-circle" title="share">
+                  <span class="visually-hidden">share</span>
+                  <span
+                    class="btn-icon20 icon-copylink-wh"
+                    aria-hidden="true"
+                  ></span>
+                </a>
+              </div> -->
+
+              <!-- row 2: 공유 사이트가 중국 대상일 경우  -->
+              <div class="box-icn link-btn-china">
+                <a href="" class="btn btn-only-icon-bg01-circle" title="wechat">
+                  <span class="visually-hidden">wechat</span>
+                  <span
+                    class="btn-icon20 icon-wechat-wh"
+                    aria-hidden="true"
+                  ></span>
+                </a>
+              </div>
+
+              <div class="box-icn link-btn-china">
+                <a href="" class="btn btn-only-icon-bg01-circle" title="weibo">
+                  <span class="visually-hidden">weibo</span>
+                  <span
+                    class="btn-icon20 icon-weibo-wh"
+                    aria-hidden="true"
+                  ></span>
+                </a>
+              </div>
+
+              <div class="box-icn link-btn-china">
+                <a href="" class="btn btn-only-icon-bg01-circle" title="tiktok">
+                  <span class="visually-hidden">tiktok</span>
+                  <span
+                    class="btn-icon20 icon-tiktok-wh"
+                    aria-hidden="true"
+                  ></span
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 토스트 팝업 내 텍스트 시작 -->
+          <!-- 
+              You have copied the link. Paste it where you want it.
+              (링크를 복사했습니다. 원하는 곳에 붙여넣기 해주세요.)
+
+              Copy the link (링크 복사) 
+            -->
+          <!-- 토스트 팝업 내 텍스트 끝 -->
+
+          <div class="btn-wrap">
+            <!-- pop-close 해당 팝업 닫기 -->
+            <button
+              type="button"
+              class="btn btn-only-icon-notbg popup-close-btn-x smallX"
+              onclick="NbrandUI.popClose(this)"
+              title="close"
+            >
+              <span class="visually-hidden">close</span>
+              <span class="btn-icon36 icon-close" aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
     </div>
     <!-- 팝업 끝 -->
     <script
