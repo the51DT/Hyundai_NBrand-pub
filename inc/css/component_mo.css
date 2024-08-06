@@ -684,7 +684,7 @@ min-width : 1024 css
   }
   .wrap-list .__bottom .wrap-lists {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     text-align: left;
     border: none;
