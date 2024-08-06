@@ -1730,7 +1730,7 @@ input[type="radio"]:focus + label {
   white-space: nowrap;
   text-align: left;
 }
-.card_type04 .card-hashtag button.txt-type04:hover, 
+.card_type04 .card-hashtag button.txt-type04:hover,
 .card_video .card_tag button:hover,
 .ty02Swiper .text-area .list-box button:hover {
   text-decoration: underline;
@@ -2185,9 +2185,6 @@ input[type="radio"]:focus + label {
   margin-left: 6px;
   flex: 0;
 }
-.swiper-arrow-wrap {
-  display: none;
-}
 .ty01Swiper {
   /* max-width: 1920px; */
   margin: 0 auto;
@@ -2590,10 +2587,6 @@ input[type="radio"]:focus + label {
 
 /* swiper 반응형 예외 케이스 처리 */
 @media screen and (max-width: 1480px) {
-  .swiper-arrow-wrap {
-    display: block;
-  }
-
   .ty04Swiper .swiper-button-prev {
     left: 80px;
   }
@@ -2663,7 +2656,7 @@ input[type="radio"]:focus + label {
 
 /* bottom list start (list01, list02, list05 only) */
 .wrap-list .__bottom {
-  border-top: 2px solid #AAA;
+  border-top: 2px solid #aaa;
   margin-top: 40px;
   margin-bottom: 60px;
 }
@@ -4493,11 +4486,11 @@ table {
 } */
 .table-type01 thead tr,
 .table-type02 thead tr {
-  border-bottom: 2px solid #AAA;
+  border-bottom: 2px solid #aaa;
 }
 .table-type03 thead tr {
-  border-top: 2px solid #AAA;
-  border-bottom: 2px solid #AAA;
+  border-top: 2px solid #aaa;
+  border-bottom: 2px solid #aaa;
   background-color: #b0c5e0;
 }
 .table-type01 thead th {

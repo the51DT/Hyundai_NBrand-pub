@@ -797,6 +797,7 @@ var pubUi = {
 
     var navHeight = headerHeight + navBarHeight;
 
+    // var leftScrollData = $(this).offset().left;
     contentItem.forEach((evt, idx) => {
       if (contentItem[idx].querySelector(".blue-title")) {
         contentItem[idx].classList.add("active");
@@ -1005,8 +1006,9 @@ function btnNaviCheck() {
 // ty02Swiper swiper 이벤트 분리
 function swiper2SlideEvt() {
   // console.log("swiper2 이벤트 실행");
-
-  if ($(".ty02Swiper .swiper-slide").length >= 3) {
+  // alert("d");
+  var slideLenth = $(".ty02Swiper .swiper-slide").length;
+  if (slideLenth >= 3) {
     loopVal = true;
   } else {
     loopVal = false;
@@ -1024,16 +1026,20 @@ function swiper2SlideEvt() {
     effect: "coverflow",
     grabCursor: true,
     centeredSlides: true,
-    // slidesPerView: "auto",
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
+    slidesPerView: "auto",
+    // autoplay: {
+    //   delay: 3000,
+    //   disableOnInteraction: false,
+    // },
+
     loop: true,
-    loopedSlides: 1,
-    // loopAdditionalSlides: 1,
-    // loopAddBlankSlides: false,
-    // maxBackfaceHiddenSlides: 3,
+    // slideToClickedSlide: true,
+    // loopFillGroupWithBlank: true,
+    // loopedSlides: 1,
+    // loopAdditionallidSes: 1,
+    // grid: {
+    //   row: 3,
+    // },
     coverflowEffect: {
       rotate: 0, //각도
       // stretch: -80, //간격
@@ -1044,7 +1050,7 @@ function swiper2SlideEvt() {
     },
     pagination: {
       el: ".swiper-pagination-custom",
-      clickable: true,
+      // clickable: true,
     },
     navigation: {
       nextEl: ".ty02Swiper .swiper-button-next",
@@ -2115,7 +2121,8 @@ function scrollEvent() {
   var scrollWrap = $("body"),
     sectionItem = [],
     historyItemOffset = [],
-    historyItemPosition = [];
+    historyItemPosition = [],
+    leftScrollData = [];
   headerNavHeight = $(".navigation_bar-wrap").height();
   let scrollPrev = 0,
     scrollTop = 1;
@@ -2180,7 +2187,7 @@ function scrollEvent() {
 
     for (var i = 0; i < sectionLength; i++) {
       if (sectionItem[i] <= nowScroll + 40) {
-        $(".navigation-item02.pc-only li")
+        $(".navigation-item02 li")
           .eq(i)
           .find("button")
           .addClass("on")
@@ -2189,6 +2196,23 @@ function scrollEvent() {
           .find("button")
           .removeClass("on");
       }
+    }
+
+    if ($(".navigation-item02").scrollLeft() > 0) {
+      $(".navigation-item02")
+        .stop()
+        .animate({
+          scrollLeft:
+            $(".navigation-item02 li button.on").offset().left +
+            $(".navigation-item02").scrollLeft() -
+            24,
+        });
+    } else {
+      $(".navigation-item02")
+        .stop()
+        .animate({
+          scrollLeft: $(".navigation-item02 li button.on").offset().left - 24,
+        });
     }
   });
 
@@ -2351,25 +2375,3 @@ function stopTimer(video, type) {
   $(".swiper-pagination-bullet .seek-bar").css("width", 0);
   clearInterval(self.timer);
 }
-
-// history
-// function historyFx() {
-//   let historyList = document.querySelectorAll(".history-list");
-//   historyList.forEach((list) => {
-//     let historyTit = $(list).children("li");
-//     let historyPointer = list.previousElementSibling;
-//     let pos = [];
-//     let count = 0;
-//     for (let i = 0; i < historyTit.length; i++) {
-//       pos.push(window.pageYOffset + historyTit[i].getBoundingClientRect().top);
-//       pos.push($(historyTit[i]).offset().top);
-//     }
-//     $("body").scroll(() => {
-//       console.log($(historyPointer).offsetParent());
-//       if (($(historyPointer).offset().top = 118)) {
-//         $(historyPointer).css("top", `${pos[count] - 1689}px`);
-//         count += 1;
-//       }
-//     });
-//   });
-// }

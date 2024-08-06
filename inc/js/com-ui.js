@@ -15,7 +15,7 @@ $(document).ready(function () {
   NbrandUI.profileOpenClose(".profile-open", ".profile-close");
   NbrandUI.modalClose(".pop-close");
   NbrandUI.naviClick(".navi_event-btn");
-  NbrandUI.rendingClick(".rending-btn");
+  // NbrandUI.rendingClick(".rending-btn");
   resizeDone();
   // NbrandUI.inputClear(".input-del");
   NbrandSwiper.swiper9(".configurator_swiper");

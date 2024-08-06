@@ -398,6 +398,31 @@
     flex-grow: 0;
     flex-basis: auto;
   }
+  .navigation_bar {
+    display: block;
+  }
+  .navigation_bar .navigation-item01 {
+    position: relative;
+    z-index: 1;
+  }
+  .navigation_bar .navigation-item02 {
+    width: 100%;
+    height: 48px;
+    background-color: #fff;
+    padding: 0 24px;
+    overflow-x: scroll;
+  }
+  .navigation_bar .navigation-item02 .rending-wrap {
+    flex-wrap: nowrap;
+  }
+  .navigation_bar .navigation-item02 .rending-wrap {
+    width: max-content;
+  }
+  .navigation_bar .navigation-item03 {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
 
   /* 07.16 추가 */
   .btn-navi-wrap {
@@ -419,5 +444,13 @@
   }
   .btn-navi-wrap.mo-only .btn-box .btn [class*="btn-icon"] {
     position: absolute;
+  }
+
+  .navigation_bar .sharing-btn {
+    font-size: xx-small;
+    overflow: hidden;
+    color: transparent;
+    width: 48px;
+    height: 48px;
   }
 }
