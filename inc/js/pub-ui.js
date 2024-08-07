@@ -51,6 +51,7 @@ var pubUi = {
 
     // swiper
     self.swiper2;
+    self.swiper3;
     self.swiper4;
     self.typeChk = $(".ty01Swiper").find(".swiper-slide video");
 
@@ -363,50 +364,6 @@ var pubUi = {
       },
     });
     swiper2SlideEvt(); //swiper2 이벤트 실행
-
-    var swiper3 = new Swiper(".ty03Swiper", {
-      slidesPerView: 3,
-      spaceBetween: 24,
-      loop: true,
-      watchOverflow: true,
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: ".swiper-pagination-custom",
-        clickable: true,
-      },
-      navigation: {
-        nextEl: ".ty03Swiper .swiper-button-next",
-        prevEl: ".ty03Swiper .swiper-button-prev",
-      },
-      on: {
-        slideChangeTransitionStart: function () {
-          if ($(".ty03Swiper .profile-open").length) {
-            NbrandUI.profileCloseOption($(".ty03Swiper .club-popup"));
-          }
-        },
-      },
-      breakpoints: {
-        360: {
-          slidesPerView: 1,
-          spaceBetween: 12,
-        },
-        400: {
-          slidesPerView: 1.2,
-          spaceBetween: 12,
-        },
-        768: {
-          slidesPerView: 1.5,
-          spaceBetween: 12,
-        },
-        1024: {
-          slidesPerView: 3,
-          spaceBetween: 24,
-        },
-      },
-    });
 
     swiper4SlideEvt(); //swiper4 이벤트 실행
 
@@ -929,6 +886,7 @@ $(document).ready(function () {
         scrollToCenter(".event-box .evt-map-img");
       }
     }
+    btnNaviCheck();
   });
 
   // 07.03 추가 - models-wrap 클래스 존재하는 페이지 일 경우, 하단 img loading 속성 제거
@@ -1924,11 +1882,21 @@ function modelsVideoPlay() {
   $(".models-wrap .content-item02 .btn-only-icon-bg01-square.play").click(
     function () {
       // console.log("비디오 재생 ing");
-      var videoPc = $(this).closest(".btn-groups").siblings("video.pc-only").get(0);
-      var videoMo = $(this).closest(".btn-groups").siblings("video.mo-only").get(0);
+      var videoPc = $(this)
+        .closest(".btn-groups")
+        .siblings("video.pc-only")
+        .get(0);
+      var videoMo = $(this)
+        .closest(".btn-groups")
+        .siblings("video.mo-only")
+        .get(0);
       var icon = $(this).children(".btn-icon24");
-      var pcPoster = $(this).closest(".btn-groups").siblings(".video_poster.pc-only");
-      var moPoster = $(this).closest(".btn-groups").siblings(".video_poster.mo-only");
+      var pcPoster = $(this)
+        .closest(".btn-groups")
+        .siblings(".video_poster.pc-only");
+      var moPoster = $(this)
+        .closest(".btn-groups")
+        .siblings(".video_poster.mo-only");
 
       if (videoPc.paused && videoMo.paused) {
         icon.attr("class", "btn-icon24 icon-pause-wh");
@@ -1939,7 +1907,7 @@ function modelsVideoPlay() {
           $(".models-wrap .content-item02 video.mo-only").attr(
             "aria-hidden",
             false
-          );          
+          );
         } else {
           videoPc.play();
           moPoster.hide();
@@ -1947,9 +1915,9 @@ function modelsVideoPlay() {
           $(".models-wrap .content-item02 video.pc-only").attr(
             "aria-hidden",
             false
-          );          
+          );
         }
-        $(this).attr("title","pause");
+        $(this).attr("title", "pause");
       } else {
         icon.attr("class", "btn-icon24 icon-play-wh");
         if (window.innerWidth <= 1023) {
@@ -1969,10 +1937,16 @@ function modelsVideoPlay() {
   $(".models-wrap .content-item02 .btn-only-icon-bg01-square.sound").click(
     function () {
       // console.log("비디오 재생 ing");
-      var videoPc = $(this).closest(".btn-groups").siblings("video.pc-only").get(0);
-      var videoMo = $(this).closest(".btn-groups").siblings("video.mo-only").get(0);
+      var videoPc = $(this)
+        .closest(".btn-groups")
+        .siblings("video.pc-only")
+        .get(0);
+      var videoMo = $(this)
+        .closest(".btn-groups")
+        .siblings("video.mo-only")
+        .get(0);
       var icon = $(this).children(".btn-icon24");
-      
+
       if (videoPc.muted && videoMo.muted) {
         icon.attr("class", "btn-icon24 icon-soundon-wh");
         if (window.innerWidth <= 1023) {
@@ -2235,22 +2209,23 @@ function scrollEvent() {
           .removeClass("on");
       }
     }
-
-    if ($(".navigation-item02").scrollLeft() > 0) {
-      $(".navigation-item02")
-        .stop()
-        .animate({
-          scrollLeft:
-            $(".navigation-item02 li button.on").offset().left +
-            $(".navigation-item02").scrollLeft() -
-            24,
-        });
-    } else {
-      $(".navigation-item02")
-        .stop()
-        .animate({
-          scrollLeft: $(".navigation-item02 li button.on").offset().left - 24,
-        });
+    if ($(".navigation-item02").length) {
+      if ($(".navigation-item02").scrollLeft() > 0) {
+        $(".navigation-item02")
+          .stop()
+          .animate({
+            scrollLeft:
+              $(".navigation-item02 li button.on").offset().left +
+              $(".navigation-item02").scrollLeft() -
+              24,
+          });
+      } else {
+        $(".navigation-item02")
+          .stop()
+          .animate({
+            scrollLeft: $(".navigation-item02 li button.on").offset().left - 24,
+          });
+      }
     }
   });
 
