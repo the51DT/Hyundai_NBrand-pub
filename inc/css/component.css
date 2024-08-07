@@ -1475,7 +1475,7 @@ input[type="radio"]:focus + label {
   }
 
   .card_type03.card_ranker .card_bottom {
-    height:revert !important;
+    height: revert !important;
   }
   .card_type03.card_ranker .card_bottom img {
     width: 80px !important;
@@ -2863,6 +2863,9 @@ input[type="radio"]:focus + label {
 }
 .wrap-list.list04 .box.wrap-multi-box + .box.wrap-multi-box {
   /* margin-top: 32px; */
+}
+.wrap-list.list04 .box.wrap-multi-box:nth-child(4n-1) {
+  margin: 32px 0 0 0;
 }
 .wrap-list.list04 .inner .box.box01 {
   border-bottom: 1px solid #bbb;

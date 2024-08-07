@@ -836,6 +836,16 @@ min-width : 1024 css
 
   .wrap-list.list04 .inner .box .box-desc.right .desc-location {
     margin-top: 1.25rem;
+    font-size: 1.063rem;
+    max-width: 100%;
+  }
+
+  .wrap-list.list04 .inner .box.wrap-multi-box .box-desc.right .desc-location {
+    margin-top: 15px;
+  }
+
+  .wrap-list.list04 .inner .box.box01 h3.tit {
+    font-size: 1.25rem;
   }
 
   .wrap-list.list04 .inner .box.box01 h3.tit.fullwidth,
@@ -852,9 +862,8 @@ min-width : 1024 css
     margin-bottom: 28px;
   }
 
-  .wrap-list.list04 .inner .box .box-desc.right .desc-location {
-    font-size: 1.063rem;
-    max-width: 100%;
+  .wrap-list.list04 .box.wrap-multi-box:nth-child(4n-1) {
+    margin: 0;
   }
 
   .wrap-list.list04 .inner .box.box02 .box-desc.left h3.tit {
