@@ -2697,6 +2697,12 @@ input[type="radio"]:focus + label {
   /* grid-template-columns: 15% 50% 33%; */
   grid-template-columns: 15% 52% 28%;
 }
+.wrap-list.list02 .__bottom .wrap-lists.noticeTxt{
+  grid-template-columns: auto;
+    text-align: left;
+    justify-content: flex-start;
+    border: none;
+}
 .wrap-list .__bottom .wrap-lists .list-box:nth-child(1) {
   width: 14rem;
 }
