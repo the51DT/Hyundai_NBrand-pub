@@ -950,71 +950,69 @@
                               <!-- 07.12 수정 : select-type 클래스 정의
                               selectbox 2개이상일 경우 select-type02 클래스 추가
                               selectbox 1개일 때는 select-type01 클래스 추가 -->
-                              <div
-                                class="selectbox-wrap select-type01 evtLayout-type"
-                              >
+                              
+                              <div class="selectbox-wrap select-type01 evtLayout-type">
+                                <!-- 1번째 selectbox만 존재할 경우 -->
                                 <div>
-                                  <button
-                                    class="selectbox-trigger selectbox-js txt-type03 fw-type03"
-                                    aria-haspopup="listbox"
-                                    aria-expanded="false"
-                                    aria-labelledby="typeSelect02"
-                                  >
-                                    N Lounge
-                                  </button>
-                                  <ul
-                                    class="selectbox-options 02"
-                                    role="listbox"
-                                    id="typeSelect02"
-                                    aria-hidden="true"
-                                    style="display: none"
-                                  >
-                                    <li
-                                      class="moclose-btn"
-                                      style="display: none"
-                                    >
-                                      <button
-                                        type="button"
-                                        class="btn btn-only-icon"
-                                        title="close"
-                                      >
-                                        <span class="visually-hidden"
-                                          >close</span
-                                        >
-                                        <span
-                                          class="btn-icon24 icon-close"
-                                          aria-hidden="true"
-                                        ></span>
+                                  <button class="selectbox-trigger selectbox-js txt-type03 fw-type03"
+                                    aria-haspopup="listbox" aria-expanded="false" aria-labelledby="typeSelect02">N
+                                    Lounge</button>
+                                  <ul class="selectbox-options 02" role="listbox" id="typeSelect02" aria-hidden="true"
+                                    style="display: none">
+                                    <li class="moclose-btn" style="display: none">
+                                      <button type="button" class="btn btn-only-icon" title="close">
+                                        <span class="visually-hidden">close</span>
+                                        <span class="btn-icon24 icon-close" aria-hidden="true"></span>
                                       </button>
                                     </li>
-                                    <li
-                                      class="option option-click fw- type03 active"
-                                      role="option"
-                                      aria-selected="true"
-                                    >
-                                      N Lounge
-                                    </li>
-                                    <li
-                                      class="option option-click fw-type03"
-                                      role="option"
-                                      aria-selected="false"
-                                    >
-                                      Motorsport Experience
-                                    </li>
-                                    <li
-                                      class="option option-click fw-type03"
-                                      role="option"
-                                      aria-selected="false"
-                                    >
-                                      Viewing zone
-                                    </li>
+                                    <li class="option option-click fw-
+                                    type03 active" role="option" aria-selected="true">N Lounge</li>
+                                    <li class="option option-click fw-type03" role="option" aria-selected="false">
+                                      Motorsport Experience</li>
+                                    <li class="option option-click fw-type03" role="option" aria-selected="false">Viewing
+                                      zone</li>
                                   </ul>
                                 </div>
+
+                                <!-- 08.06 수정 : selectbox-group 추가 : 2번째 항목 값 (2번째 selectbox 존재할 경우에만) : N Cup 2 Round -->
+                                <!-- <div class="selectbox-group">
+                                  <div class="on">
+                                    <button class="selectbox-trigger selectbox-js txt-type03 fw-type03"
+                                      aria-haspopup="listbox" aria-expanded="false" aria-labelledby="typeSelect04">N
+                                      Zone</button>
+                                    <ul class="selectbox-options 02" role="listbox" id="typeSelect04" aria-hidden="true"
+                                      style="display: none">
+                                      <li class="moclose-btn" style="display: none">
+                                        <button type="button" class="btn btn-only-icon" title="close">
+                                          <span class="visually-hidden">close</span>
+                                          <span class="btn-icon24 icon-close" aria-hidden="true"></span>
+                                        </button>
+                                      </li>
+                                      <li class="option option-click fw-type03 active" role="option" aria-selected="true">N
+                                        Zone</li>
+                                      <li class="option option-click fw-type03" role="option" aria-selected="false">N
+                                        Experience zone</li>
+                                    </ul>
+                                  </div>
+                                  <div>
+                                    <button class="selectbox-trigger selectbox-js txt-type03 fw-type03"
+                                      aria-haspopup="listbox" aria-expanded="false" aria-labelledby="typeSelect04">N Fan
+                                        Zone</button>
+                                    <ul class="selectbox-options 02" role="listbox" id="typeSelect04" aria-hidden="true"
+                                      style="display: none">
+                                      <li class="moclose-btn" style="display: none">
+                                        <button type="button" class="btn btn-only-icon" title="close">
+                                          <span class="visually-hidden">close</span>
+                                          <span class="btn-icon24 icon-close" aria-hidden="true"></span>
+                                        </button>
+                                      </li>
+                                      <li class="option option-click fw-type03 active" role="option" aria-selected="false">N Fan Zone</li>
+                                    </ul>
+                                  </div>
+                                </div>   -->
+                                <!--//selectbox-group-->
                               </div>
-                              <div
-                                class="selectbox-overlay"
-                                style="display: none"
-                              ></div>
+                              <div class="selectbox-overlay" style="display: none"></div>
                             </div>
                             <div class="conts-body">
                               <!-- 07.30 수정 : evt-map-wrap 마크업 구조 변경 : 선택한 selectbox 옵션값에 따른 하드코딩 노출 형태로 변경 (스크립트 로 동적생성 X) -->
@@ -1036,77 +1034,43 @@
                                     </button>
                                   </div>
                                 </div>
+                                
+                                <!-- 08.06 수정 : evt-map-default-box & btn-evtmap-pop에 active 클래스 추가 -->
                                 <div class="evt-map-img">
-                                  <!-- 07.12 추가 : 레이어팝업 버튼 추가 -->
-                                  <!-- Inje N Cup - Round1 이벤트레이아웃 기본 이미지 -->
-                                  <button
-                                    class="pop-open btn-evtmap-pop"
-                                    aria-controls="pop-nLounge"
-                                    aria-haspopup="true"
-                                    aria-expanded="false"
-                                    title="팝업오픈"
-                                  >
-                                    <span class="visually-hidden"
-                                      >side-popup1 열기</span
-                                    >
-                                    <img
-                                      src="../../inc/images/eventLayout/evtLayout_min_shortImg01.png"
-                                      alt="이벤트 레이아웃 N lounge 확대 이미지"
-                                    />
-                                  </button>
-
-                                  <div class="evt-map-active-box">
-                                    <!-- n lounge -->
-                                    <button
-                                      class="pop-open btn-evtmap-pop"
-                                      aria-controls="pop-nLounge"
-                                      aria-haspopup="true"
-                                      aria-expanded="false"
-                                      title="팝업오픈"
-                                    >
-                                      <span class="visually-hidden"
-                                        >side-popup1 열기</span
-                                      >
-                                      <img
-                                        src="../../inc/images/eventLayout/evtLayout_max_nLounge.png"
-                                        alt="이벤트 레이아웃 N lounge 확대 이미지"
-                                      />
-                                    </button>
-                                    <!-- motorsport experience -->
-                                    <button
-                                      class="pop-open btn-evtmap-pop"
-                                      aria-controls="pop-motorExperience"
-                                      aria-haspopup="true"
-                                      aria-expanded="false"
-                                      title="팝업오픈"
-                                    >
-                                      <span class="visually-hidden"
-                                        >side-popup1 열기</span
-                                      >
-                                      <img
-                                        src="../../inc/images/eventLayout/evtLayout_max_motorExperience.png"
-                                        alt="이벤트 레이아웃 Motorsport Experience 확대 이미지"
-                                      />
-                                    </button>
-                                    <!-- viewing-zone -->
-                                    <button
-                                      class="pop-open btn-evtmap-pop"
-                                      aria-controls="pop-viewingZone"
-                                      aria-haspopup="true"
-                                      aria-expanded="false"
-                                      title="팝업오픈"
-                                    >
-                                      <span class="visually-hidden"
-                                        >side-popup1 열기</span
-                                      >
-                                      <img
-                                        src="../../inc/images/eventLayout/evtLayout_max_viewingZone.png"
-                                        alt="이벤트 레이아웃 viewing zone 확대 이미지"
-                                      />
+                                  <div class="evt-map-default-box">
+                                    <!-- Inje N Cup - Round1 이벤트레이아웃 기본 이미지 -->
+                                    <button class="pop-open btn-evtmap-pop active" aria-controls="pop-nLounge" aria-haspopup="true"
+                                      aria-expanded="false" title="팝업오픈">
+                                      <span class="visually-hidden">side-popup1 열기</span>
+                                      <img src="../../inc/images/eventLayout/evtLayout_min_shortImg01.png"
+                                        alt="이벤트 레이아웃 N lounge 확대 이미지" />
                                     </button>
                                   </div>
-                                  <!-- //07.12 추가 : 레이어팝업 버튼 추가 -->
-                                </div>
+                                  <div class="evt-map-active-box">
+                                  <!-- n lounge -->
+                                    <button class="pop-open btn-evtmap-pop" aria-controls="pop-nLounge" aria-haspopup="true"
+                                      aria-expanded="false" title="팝업오픈">
+                                      <span class="visually-hidden">side-popup1 열기</span>
+                                      <img src="../../inc/images/eventLayout/evtLayout_max_nLounge.png"
+                                        alt="이벤트 레이아웃 N lounge 확대 이미지" />
+                                    </button>
+                                    <!-- motorsport experience -->
+                                    <button class="pop-open btn-evtmap-pop" aria-controls="pop-motorExperience" aria-haspopup="true"
+                                      aria-expanded="false" title="팝업오픈">
+                                      <span class="visually-hidden">side-popup1 열기</span>
+                                      <img src="../../inc/images/eventLayout/evtLayout_max_motorExperience.png"
+                                        alt="이벤트 레이아웃 Motorsport Experience 확대 이미지" />
+                                    </button>
+                                    <!-- viewing-zone -->
+                                    <button class="pop-open btn-evtmap-pop" aria-controls="pop-viewingZone" aria-haspopup="true"
+                                      aria-expanded="false" title="팝업오픈">
+                                      <span class="visually-hidden">side-popup1 열기</span>
+                                      <img src="../../inc/images/eventLayout/evtLayout_max_viewingZone.png"
+                                        alt="이벤트 레이아웃 viewing zone 확대 이미지" />
+                                    </button>
+                                  </div>
+                                </div>                                                          
+                                <!-- //08.06 수정 : evt-map-default-box & btn-evtmap-pop에 active 클래스 추가 -->
                               </div>
                               <!-- //07.30 수정 -->
                             </div>
