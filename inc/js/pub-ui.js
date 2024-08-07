@@ -942,7 +942,9 @@ function swiper2SlideEvt() {
   // console.log("swiper2 이벤트 실행");
   // alert("d");
   var slideLenth = $(".ty02Swiper .swiper-slide").length;
-  if (slideLenth >= 3) {
+
+  // 08.07 수정 : jira 422 대응 : 3개보다 클 경우 loop:true 실행 -> 3개미만일 때 결함 체크하기 위함/ 3개 이하 컨텐츠일시 loop가 true상태로 적용되면 autoplay 안되는 문제 있어 3개보다 클 경우 loop 적용되도록 수정하였음
+  if (slideLenth > 3) {
     loopVal = true;
   } else {
     loopVal = false;
@@ -961,12 +963,11 @@ function swiper2SlideEvt() {
     grabCursor: true,
     centeredSlides: true,
     slidesPerView: "auto",
+    loop: loopVal, // 08.07 수정
     autoplay: {
       delay: 3000,
       disableOnInteraction: false,
     },
-
-    loop: true,
     // slideToClickedSlide: true,
     // loopFillGroupWithBlank: true,
     // loopedSlides: 1,
@@ -1015,11 +1016,6 @@ function swiper2SlideEvt() {
         effect: "coverflow",
         slidesPerView: "auto",
         spaceBetween: 12,
-      },
-    },
-    on: {
-      activeIndexChange: function () {
-        slideInx = this.realIndex; //현재 슬라이드 index 갱신
       },
     },
   });
