@@ -1573,14 +1573,31 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
 .popup-wrapper .wrap-popup-profile > button:hover .groupname {
   text-decoration: underline;
 }
+.popup-wrapper .wrap-popup-profile button {
+  cursor: pointer;
+}
 .popup-wrapper .wrap-popup-profile .box-profile-img {
   width: 40px;
   height: 40px;
-  cursor: pointer;
+  background: url("../../inc/images/img/img_Nful_profile_default.png") center
+    no-repeat;
+  background-size: contain;
+  position: relative;
+}
+
+/* 0627 패쇄된 커뮤니티 프로필 경우 : dimmed 처리 해야함 */
+.popup-wrapper .wrap-popup-profile .box-profile-img.close::after {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  content: "";
+  top: 0;
+  left: 0;
 }
 
 .popup-wrapper .wrap-popup-profile .box-profile-img img {
-  z-index: -1;
+  /* z-index: -1; */
   position: relative;
   width: 40px;
   height: 40px;
@@ -3433,7 +3450,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   .video_list:last-of-type {
     padding-top: 6.25rem;
   }
-  .search-result-list .video_list:last-of-type { 
+  .search-result-list .video_list:last-of-type {
     padding-top: 0;
   }
   .video_list .grid_2,

@@ -1647,10 +1647,11 @@ function hasTagFun() {
       $(this).addClass("ellipsis");
     }
 
-    // alert($(this).html());
-    if ($(this).offset().left - cardConRightEdge > 30) {
+    if ($setUl.offset().left + cardConRightEdge - $(this).offset().left < 20) {
       $(".card-hashtag button.ellipsis").nextAll().hide();
-      $(".card-hashtag button.ellipsis").hide();
+      if ($(this).hasClass("ellipsis")) {
+        $(this).hide();
+      }
     } else {
       $(".card-hashtag button.ellipsis").nextAll().hide();
     }
