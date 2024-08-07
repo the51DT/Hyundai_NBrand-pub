@@ -503,7 +503,10 @@
                         <div class="event-box">
                           <div class="conts-head ty02">
                             <h2 class="tit contitle-type01 fw-type03">Event Layout</h2>
+                            <!-- selectbox 2개일 경우, 1번째 selectbox 선택 값에 따라 2번째 selectbox가 노출되는 구조로 변경 -->
+                            <!-- 08.06 수정 : selectbox-group 추가 : 2번째 항목 값 케이스 일때 (2번째 selectbox 값 존재할 경우에만) -->
                             <div class="selectbox-wrap select-type02 evtLayout-type">
+                              <!-- 1번째 selectbox만 존재할 경우 -->
                               <div>
                                 <button class="selectbox-trigger selectbox-js txt-type03 fw-type03"
                                   aria-haspopup="listbox" aria-expanded="false" aria-labelledby="typeSelect03">A
@@ -522,28 +525,49 @@
                                     Paddock</li>
                                 </ul>
                               </div>
-                              <div>
-                                <button class="selectbox-trigger selectbox-js txt-type03 fw-type03"
-                                  aria-haspopup="listbox" aria-expanded="false" aria-labelledby="typeSelect04">N
-                                  Zone</button>
-                                <ul class="selectbox-options 02" role="listbox" id="typeSelect04" aria-hidden="true"
-                                  style="display: none">
-                                  <li class="moclose-btn" style="display: none">
-                                    <button type="button" class="btn btn-only-icon" title="close">
-                                      <span class="visually-hidden">close</span>
-                                      <span class="btn-icon24 icon-close" aria-hidden="true"></span>
-                                    </button>
-                                  </li>
-                                  <li class="option option-click fw-type03 active" role="option" aria-selected="true">N
-                                    Zone</li>
-                                  <li class="option option-click fw-type03" role="option" aria-selected="false">N
-                                    Experience zone</li>
-                                  <li class="option option-click fw-type03" role="option" aria-selected="false">N Fan
-                                    Zone</li>
-                                </ul>
-                              </div>
+                              
+                              <!-- 08.06 수정 : selectbox-group 추가 : 2번째 항목 값 (2번째 selectbox 존재할 경우에만) -->
+                              <div class="selectbox-group">
+                                <!-- A Paddock의 2번째 selectbox 옵션 값 -->
+                                <div class="on"> <!-- 활성화시 on 클래스 추가 -->
+                                  <button class="selectbox-trigger selectbox-js txt-type03 fw-type03"
+                                    aria-haspopup="listbox" aria-expanded="false" aria-labelledby="typeSelect04">N
+                                    Zone</button>
+                                  <ul class="selectbox-options 02" role="listbox" id="typeSelect04" aria-hidden="true"
+                                    style="display: none">
+                                    <li class="moclose-btn" style="display: none">
+                                      <button type="button" class="btn btn-only-icon" title="close">
+                                        <span class="visually-hidden">close</span>
+                                        <span class="btn-icon24 icon-close" aria-hidden="true"></span>
+                                      </button>
+                                    </li>
+                                    <li class="option option-click fw-type03 active" role="option" aria-selected="true">N
+                                      Zone</li>
+                                    <li class="option option-click fw-type03" role="option" aria-selected="false">N
+                                      Experience zone</li>
+                                  </ul>
+                                </div>
+
+                                <!-- B Paddock의 2번째 selectbox 옵션 값 -->
+                                <div>
+                                  <button class="selectbox-trigger selectbox-js txt-type03 fw-type03"
+                                    aria-haspopup="listbox" aria-expanded="false" aria-labelledby="typeSelect04">N Fan
+                                      Zone</button>
+                                  <ul class="selectbox-options 02" role="listbox" id="typeSelect04" aria-hidden="true"
+                                    style="display: none">
+                                    <li class="moclose-btn" style="display: none">
+                                      <button type="button" class="btn btn-only-icon" title="close">
+                                        <span class="visually-hidden">close</span>
+                                        <span class="btn-icon24 icon-close" aria-hidden="true"></span>
+                                      </button>
+                                    </li>
+                                    <li class="option option-click fw-type03 active" role="option" aria-selected="false">N Fan Zone</li>
+                                  </ul>
+                                </div>
+                              </div>  <!--//selectbox-group-->
                             </div>
                             <div class="selectbox-overlay" style="display: none"></div>
+                            <!-- //08.06 수정 : selectbox-group 추가 : 2번째 항목 값 케이스 일때(2번째 selectbox 존재할 경우에만) -->                            
                           </div>
                           <div class="conts-body">
                             <!-- 07.30 수정 : evt-map-wrap 마크업 구조 변경 : 선택한 selectbox 옵션값에 따른 하드코딩 노출 형태로 변경 (스크립트 로 동적생성 X) -->
@@ -562,15 +586,34 @@
                               </div>
 
                               
-                              <div class="evt-map-img">
+                              <div class="evt-map-img"> 
                                 <!-- 07.12 추가 : 레이어팝업 버튼 추가 -->
                                 <!-- N Cup - Round2 이벤트레이아웃 기본 이미지 -->
-                                <button class="pop-open btn-evtmap-pop" aria-controls="pop-nZone" aria-haspopup="true"
-                                  aria-expanded="false" title="팝업오픈">
-                                  <span class="visually-hidden">side-popup1 열기</span>
-                                  <img src="../../inc/images/eventLayout/evtLayout_min_shortImg02.png"
-                                    alt="이벤트 레이아웃 N lounge 확대 이미지" />
-                                </button>
+                                
+                                <!-- 08.06 수정 : evt-map-default-box & btn-evtmap-pop에 active 클래스 추가 -->
+                                <div class="evt-map-default-box">
+                                  <button class="pop-open btn-evtmap-pop active" aria-controls="pop-nZone" aria-haspopup="true"
+                                    aria-expanded="false" title="팝업오픈"> <!-- active 클래스 추가 : 노출시 active 추가됨 -->
+                                    <span class="visually-hidden">side-popup1 열기</span>
+                                    <img src="../../inc/images/eventLayout/evtLayout_min_shortImg02.png"
+                                      alt="이벤트 레이아웃 nZone 기본 이미지" />
+                                  </button>
+
+                                  <button class="pop-open btn-evtmap-pop" aria-controls="pop-nExperZone" aria-haspopup="true"
+                                    aria-expanded="false" title="팝업오픈"> <!-- active 클래스 추가 : 노출시 active 추가됨 -->
+                                    <span class="visually-hidden">side-popup1 열기</span>
+                                    <img src="../../inc/images/eventLayout/evtLayout_min_shortImg02.png"
+                                      alt="이벤트 레이아웃 nExperZone 기본 이미지" />
+                                  </button>
+
+                                  <!-- B Paddock-->
+                                  <button class="pop-open btn-evtmap-pop" aria-controls="pop-nFanZone" aria-haspopup="true"
+                                    aria-expanded="false" title="팝업오픈">
+                                    <span class="visually-hidden">side-popup1 열기</span>
+                                    <img src="../../inc/images/eventLayout/evtLayout_min_shortImg03.png"
+                                      alt="이벤트 레이아웃 nFanZone 기본 이미지" />
+                                  </button>
+                                </div>
 
                                 <div class="evt-map-active-box">
                                   <!-- A paddock && N zone --> 
@@ -596,6 +639,8 @@
                                       alt="이벤트 레이아웃 B Paddock - N Fan zone 확대 이미지" />
                                   </button>
                                 </div>
+                                <!--// 08.06 수정 : evt-map-default-box & btn-evtmap-pop에 active 클래스 추가 -->
+                              
                                 <!-- //07.12 추가 : 레이어팝업 버튼 추가 -->
                               </div>
                             </div>

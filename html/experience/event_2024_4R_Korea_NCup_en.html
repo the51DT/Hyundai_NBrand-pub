@@ -556,16 +556,19 @@
                                 </div>
                               </div>
 
-                              
+                              <!-- 08.06 수정 : evt-map-default-box & btn-evtmap-pop에 active 클래스 추가 -->
                               <div class="evt-map-img">
-                                <!-- 07.12 추가 : 레이어팝업 버튼 추가 -->
-                                <!-- N Cup - Round4 이벤트레이아웃 기본 이미지 -->
-                                <button class="pop-open btn-evtmap-pop" aria-controls="pop-yeongamExperZone" aria-haspopup="true"
-                                  aria-expanded="false" title="팝업오픈">
-                                  <span class="visually-hidden">side-popup1 열기</span>
-                                  <img src="../../inc/images/eventLayout/evtLayout_min_shortImg04.png"
-                                    alt="이벤트 레이아웃 N lounge 확대 이미지" />
-                                </button>
+                                <!-- evt-map-default-box 추가 -->
+                                <div class="evt-map-default-box">
+                                <!-- N Cup - Round4 이벤트레이아웃 기본 이미지 : 활성화 원하는 곳에 default active 클래스 값 추가 -->
+                                  <button class="pop-open btn-evtmap-pop active" aria-controls="pop-yeongamExperZone" aria-haspopup="true"
+                                    aria-expanded="false" title="팝업오픈">
+                                    <span class="visually-hidden">side-popup1 열기</span>
+                                    <img src="../../inc/images/eventLayout/evtLayout_min_shortImg04.png"
+                                      alt="이벤트 레이아웃 N lounge 확대 이미지" />
+                                  </button>
+                                </div><!-- //evt-map-default-box 추가 -->
+
 
                                 <div class="evt-map-active-box">
                                   <!-- yeongam - Experience Zone --> 
@@ -591,8 +594,9 @@
                                       alt="yeongam - viewing zone 확대 이미지" />
                                   </button>
                                 </div>
-                                <!-- //07.12 추가 : 레이어팝업 버튼 추가 -->
+                                
                               </div>
+                              <!-- //08.06 수정 : evt-map-default-box & btn-evtmap-pop에 active 클래스 추가 -->
                             </div>
                             <!-- //07.30 수정 -->
                           </div>

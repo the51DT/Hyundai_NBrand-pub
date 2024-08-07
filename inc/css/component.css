@@ -5157,6 +5157,13 @@ p.text-num-chk {
 .select-type04 .selectbox-options {
   top: 36px;
 }
+.selectbox-wrap.evtLayout-type .selectbox-group > div {
+  display: none;
+}
+.selectbox-wrap.evtLayout-type .selectbox-group > div.on {
+  display: block;
+}
+
 /* toggle */
 .switch {
   position: relative;
