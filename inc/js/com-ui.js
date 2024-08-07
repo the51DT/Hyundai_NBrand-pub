@@ -19,6 +19,7 @@ $(document).ready(function () {
   resizeDone();
   // NbrandUI.inputClear(".input-del");
   NbrandSwiper.swiper9(".configurator_swiper");
+  NbrandSwiper.swiper3(".ty03Swiper:not(.rankswiper)");
 });
 
 let $win_W = $(window).width();
@@ -26,6 +27,7 @@ const delta = 100;
 let timer = null;
 let $popDate = 0;
 let swiperConfigurator;
+let swiperProfile;
 
 $(window).resize(function () {
   $win_W = $(window).width();
@@ -622,9 +624,14 @@ var NbrandUI = {
     function event() {
       openprofile.on("click", function () {
         eventBtn = $(this);
+        swiperEvent = eventBtn.parents(".ty03Swiper");
         openWrap = eventBtn.siblings(".club-popup");
         NbrandUI.profileCloseOption($(".club-popup"));
         eventBtn.addClass("open-profile-btn");
+        if (swiperEvent.length) {
+          swiperEvent[0].swiper.autoplay.stop();
+          swiperEvent.find(".btn-play").removeClass("on");
+        }
         openWrap.addClass("on").stop().fadeIn(200);
         tparent = openWrap;
         Nbrand.uiFocusTab({
@@ -637,6 +644,10 @@ var NbrandUI = {
           .on("click", function () {
             closeWrap = $(this).parents(".club-popup");
             NbrandUI.profileClose(closeWrap);
+            if (swiperEvent.length) {
+              swiperEvent[0].swiper.autoplay.start();
+              swiperEvent.find(".btn-play").addClass("on");
+            }
           });
       });
     }
@@ -765,6 +776,54 @@ var NbrandSwiper = {
       pagination: {
         el: ".configurator_swiper .swiper-pagination-custom",
         clickable: true,
+      },
+    });
+  },
+  swiper3: function (obj) {
+    if (!NbrandUI.checkObj(obj)) {
+      return;
+    }
+    swiperProfile = new Swiper(obj, {
+      slidesPerView: 3,
+      spaceBetween: 24,
+      loop: true,
+      watchOverflow: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination-custom",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".ty03Swiper .swiper-button-next",
+        prevEl: ".ty03Swiper .swiper-button-prev",
+      },
+      on: {
+        slideChangeTransitionStart: function () {
+          if ($(".ty03Swiper .profile-open").length) {
+            NbrandUI.profileCloseOption($(".ty03Swiper .club-popup"));
+          }
+        },
+      },
+      breakpoints: {
+        360: {
+          slidesPerView: 1,
+          spaceBetween: 12,
+        },
+        400: {
+          slidesPerView: 1.2,
+          spaceBetween: 12,
+        },
+        768: {
+          slidesPerView: 1.5,
+          spaceBetween: 12,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 24,
+        },
       },
     });
   },
