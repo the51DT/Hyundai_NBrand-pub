@@ -314,6 +314,9 @@ var pubUi = {
             videoAll.currentTime = 0;
             // alert(videoAll.duration);
             //  = 0;
+            if (!$(".btn-play").hasClass("on")) {
+              videoAll.pause();
+            }
           });
           if (
             $(".ty01Swiper:not(.swiper-banner) .swiper-slide")[
