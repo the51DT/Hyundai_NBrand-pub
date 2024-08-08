@@ -185,10 +185,10 @@ var pubUi = {
     $(".event-box .btn-wrap.plus").click(function (e) {
       var options = [];
       var option1 = $(
-        ".evtLayout-type div:not('.selectbox-group') .selectbox-options"
+        ".list-content.active .evtLayout-type div:not('.selectbox-group') .selectbox-options"
       ).find(".option-click.active");
       var option2 = $(
-        ".evtLayout-type .selectbox-group > div.on .selectbox-options"
+        ".list-content.active .evtLayout-type .selectbox-group > div.on .selectbox-options"
       ).find(".option-click.active");
 
       var selectedArea = document.querySelector(
@@ -213,10 +213,10 @@ var pubUi = {
     $(".event-box .btn-wrap.minus").click(function (e) {
       var options = [];
       var option1 = $(
-        ".evtLayout-type div:not('.selectbox-group') .selectbox-options"
+        ".list-content.active .evtLayout-type div:not('.selectbox-group') .selectbox-options"
       ).find(".option-click.active");
       var option2 = $(
-        ".evtLayout-type .selectbox-group > div.on .selectbox-options"
+        ".list-content.active .evtLayout-type .selectbox-group > div.on .selectbox-options"
       ).find(".option-click.active");
 
       var selectedArea = document.querySelector(
@@ -760,47 +760,19 @@ var pubUi = {
     var targetSwiper = $(target).parents(".swiper-slide");
     var targetData = targetSwiper.attr("data-content");
     var targetContent = $(".list-content[data-content=" + targetData + "]");
+    
 
     // ty05Swiper, 슬라이드 클릭 시, active 처리
     targetSwiper.siblings().removeClass("active");
     targetSwiper.addClass("active");
+
 
     setTimeout(function () {
       document.querySelector(".ty05Swiper").swiper.update();
     }, 500);
     $(".list-content").removeClass("active");
     targetContent.addClass("active");
-
-    // 사용 안함 - 개발에서 제어
-    // var raceRank = targetSwiper.find(".card_top .card_rank").text();
-    // var raceMonth = targetSwiper.find(".card_bottom .card_badge").text();
-    // var raceDay = targetSwiper.find(".card_bottom .card_tit").text();
-    // var raceLocation = targetSwiper.find(".card_bottom .card_subtit").text();
-
-    // console.log(raceRank, raceMonth, raceDay, raceLocation);
-
-    // swiperContents.removeClass("active");
-    // //보고용
-    // swiperContents.hide();
-    // swiperContents.find(".evtLayout-type").removeClass(raceLocation);
-
-    // for (var i = 0; i < swiperContents.length; i++) {
-    //   contentDataCont = swiperContents[i].dataset.content;
-
-    //   if (swiperDataCont == contentDataCont) {
-    //     // 보고용
-    //     // swiperContents[i].style.display = "block";
-    //     swiperContents[i].classList.add("active");
-    //   }
-    // }
-
-    // if (!swiperContents.hasClass("active")) {
-    //   alert("Comming soon !");
-    //   // 보고용
-    //   // targetSwiper.removeClass("active");
-    //   // 보고용
-    //   $(".section_list .list-content.conts03").addClass("active");
-    // }
+  
   },
   overScroll: function (cl) {
     const slider = document.querySelectorAll(cl);
@@ -1189,12 +1161,10 @@ function handleOptionClick(event) {
   if ($selectboxWrap.hasClass("evtLayout-type")) {
     var options = [];
 
-    var option1 = $(
-      ".selectbox-wrap.evtLayout-type > div:not('.selectbox-group') .selectbox-options"
+    var option1 = $(".list-content.active .selectbox-wrap.evtLayout-type > div:not('.selectbox-group') .selectbox-options"
     ).find(".option-click.active");
-    var option2 = $(".selectbox-group > div.on .selectbox-options").find(
-      ".option-click.active"
-    );
+    var option2 = $(".list-content.active .selectbox-group > div.on .selectbox-options"
+    ).find(".option-click.active");
     // if($(event.target).closest(".selectbox-group").length <= 0) {
     //   //var option1 = $(event.target).closest(".selectbox-wrap > div:not('.selectbox-group') .selectbox-options").find(".option-click.active");
     // } else {
@@ -1226,8 +1196,8 @@ function handleOptionClick(event) {
 
 function evtImgMapChk(options, area, ntype, option1, option2) {
   var evtMapWrap = $(".evt-map-wrap");
-  var evtMapDefultBtn = $(".evt-map-default-box > button");
-  var evtMapActiveBox = $(".evt-map-active-box > button");
+  var evtMapDefultBtn = $(".list-content.active .evt-map-default-box > button");
+  var evtMapActiveBox = $(".list-content.active .evt-map-active-box > button");
   var selectboxEvtLayout = $(option1).closest(".selectbox-wrap.evtLayout-type");
   var selectboxGroupItem = selectboxEvtLayout.find(".selectbox-group > div");
   var option1Idx = option1.index();
