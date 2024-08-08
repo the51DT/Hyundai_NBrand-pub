@@ -760,19 +760,16 @@ var pubUi = {
     var targetSwiper = $(target).parents(".swiper-slide");
     var targetData = targetSwiper.attr("data-content");
     var targetContent = $(".list-content[data-content=" + targetData + "]");
-    
 
     // ty05Swiper, 슬라이드 클릭 시, active 처리
     targetSwiper.siblings().removeClass("active");
     targetSwiper.addClass("active");
-
 
     setTimeout(function () {
       document.querySelector(".ty05Swiper").swiper.update();
     }, 500);
     $(".list-content").removeClass("active");
     targetContent.addClass("active");
-  
   },
   overScroll: function (cl) {
     const slider = document.querySelectorAll(cl);
@@ -922,7 +919,7 @@ function swiper2SlideEvt() {
   var slideLenth = $(".ty02Swiper .swiper-slide").length;
 
   // 08.07 수정 : jira 422 대응 : 3개보다 클 경우 loop:true 실행 -> 3개미만일 때 결함 체크하기 위함/ 3개 이하 컨텐츠일시 loop가 true상태로 적용되면 autoplay 안되는 문제 있어 3개보다 클 경우 loop 적용되도록 수정하였음
-  if (slideLenth > 4) {
+  if (slideLenth >= 4) {
     loopVal = true;
   } else {
     loopVal = false;
@@ -1157,9 +1154,11 @@ function handleOptionClick(event) {
   if ($selectboxWrap.hasClass("evtLayout-type")) {
     var options = [];
 
-    var option1 = $(".list-content.active .selectbox-wrap.evtLayout-type > div:not('.selectbox-group') .selectbox-options"
+    var option1 = $(
+      ".list-content.active .selectbox-wrap.evtLayout-type > div:not('.selectbox-group') .selectbox-options"
     ).find(".option-click.active");
-    var option2 = $(".list-content.active .selectbox-group > div.on .selectbox-options"
+    var option2 = $(
+      ".list-content.active .selectbox-group > div.on .selectbox-options"
     ).find(".option-click.active");
     // if($(event.target).closest(".selectbox-group").length <= 0) {
     //   //var option1 = $(event.target).closest(".selectbox-wrap > div:not('.selectbox-group') .selectbox-options").find(".option-click.active");
