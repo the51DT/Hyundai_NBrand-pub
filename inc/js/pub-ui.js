@@ -69,13 +69,12 @@ var pubUi = {
   bindEvents: function () {
     var self = this;
 
-    for (var i = 0; i < self.$tabList.length; i++) {
-      self.$tabList[i].addEventListener("click", function (e) {
-        var tabContainer = $(this).closest(".tab-container");
-        e.preventDefault();
-        pubUi.tabBtnEvent(e, tabContainer);
-      });
-    }
+    // 탭버튼 수정
+    $(".tabs li").on("click", function (e) {
+      e.preventDefault();
+      var tabContainer = $(this).closest(".tab-container");
+      tabBtnEvent(e, tabContainer);
+    });
 
     // 스와이퍼 재생 버튼 클릭시, 동영상 재생, 정지
     $(".btn-play").on("click", function (e) {
@@ -573,54 +572,6 @@ var pubUi = {
     stopTimer(video, type);
     if (slideActive) {
       startTimer(slide, video, self.maxVideoW, type, targetIdx);
-    }
-  },
-  tabBtnEvent: function (e, tabContainer) {
-    const target = e.target;
-    const tabLabel = target.getAttribute("aria-controls");
-    const tabList = tabContainer.find(".tabs li");
-    const tabConts = tabContainer.find(".tab-content");
-    const contentItem = document.querySelector(
-      ".content-item04.collectiontab-wrap"
-    );
-
-    if (tabLabel != null) {
-      for (let i = 0; i < tabList.length; i++) {
-        tabList[i].classList.remove("on");
-      }
-      target.parentNode.classList.add("on");
-
-      for (let i = 0; i < tabConts.length; i++) {
-        tabConts[i].classList.remove("on");
-      }
-
-      document.querySelector("#" + tabLabel).classList.add("on");
-    }
-
-    // BR050101 : Brand_N Merchandise tab 배경 때문에 추가
-    if (contentItem) {
-      contentItem.classList.remove(
-        "tab01-bg",
-        "tab02-bg",
-        "tab03-bg",
-        "tab04-bg",
-        "tab05-bg"
-      );
-      if (tabLabel === "tab1-01") {
-        contentItem.classList.add("tab01-bg");
-      }
-      if (tabLabel === "tab1-02") {
-        contentItem.classList.add("tab02-bg");
-      }
-      if (tabLabel === "tab1-03") {
-        contentItem.classList.add("tab03-bg");
-      }
-      if (tabLabel === "tab1-04") {
-        contentItem.classList.add("tab04-bg");
-      }
-      if (tabLabel === "tab1-05") {
-        contentItem.classList.add("tab05-bg");
-      }
     }
   },
   tagBtnEvent: function (e, list, param) {
@@ -1167,6 +1118,8 @@ function handleOptionClick(event) {
     //   var option2 = $(".selectbox-group > div.on .selectbox-options").find(".option-click.active");
     // }
 
+
+
     var selectedArea = document.querySelector(
       ".ty05Swiper .swiper-slide.active .card_info .card_subtit"
     ).innerText;
@@ -1189,13 +1142,17 @@ function handleOptionClick(event) {
 }
 // [End] : selectbox 컴포넌트
 
+// event guide > event layout 함수
 function evtImgMapChk(options, area, ntype, option1, option2) {
   var evtMapWrap = $(".evt-map-wrap");
   var evtMapDefultBtn = $(".list-content.active .evt-map-default-box > button");
   var evtMapActiveBox = $(".list-content.active .evt-map-active-box > button");
   var selectboxEvtLayout = $(option1).closest(".selectbox-wrap.evtLayout-type");
   var selectboxGroupItem = selectboxEvtLayout.find(".selectbox-group > div");
+  
   var option1Idx = option1.index();
+
+  var selectboxOption = selectboxEvtLayout.find(".selectbox-group > div.on .selectbox-options .option");
 
   if (option2 != undefined) {
     var option2Idx = option2.index();
@@ -1239,10 +1196,11 @@ function evtImgMapChk(options, area, ntype, option1, option2) {
         if (selectboxGroupItem[i].classList.contains("on")) {
           selectboxGroupItem[i].classList.remove("on");
         }
-
         if (option1Idx == 1) {
           selectboxGroupItem[option1Idx - 1].classList.add("on");
         } else if (option1Idx == 2) {
+          // if(option2Idx )
+          // option2Idx = 1;
           selectboxGroupItem[option1Idx - 1].classList.add("on");
 
           // option2Idx 존재시 초기화 check용 - 보완필요
@@ -1461,6 +1419,56 @@ dropdownFilter.forEach((filter) => {
     }
   });
 });
+
+// 탭버튼 : 외부 접근 가능 하도록 실행함수로 변경
+function tabBtnEvent(e, tabContainer) {
+    const target = e.target;
+    const targetListItem = $(target.parentNode);
+    const targetIdx = targetListItem.index();
+    const tabLabel = target.getAttribute("aria-controls");
+    const tabList = tabContainer.find(".tabs li");
+    const tabConts = tabContainer.find(".tab-content");
+    const contentItem = document.querySelector(".content-item04.collectiontab-wrap");
+
+    if (tabLabel != null) {
+      for (let i = 0; i < tabList.length; i++) {
+        tabList[i].classList.remove("on");
+      }      
+
+      for (let i = 0; i < tabConts.length; i++) {
+        tabConts[i].classList.remove("on");
+      }
+      
+      target.parentNode.classList.add("on");
+      targetListItem.closest(".tab-container").find(".tab-content")[targetIdx].classList.add("on");      
+    }    
+
+    // BR050101 : Brand_N Merchandise tab 배경 때문에 추가
+    if (contentItem) {
+      contentItem.classList.remove(
+        "tab01-bg",
+        "tab02-bg",
+        "tab03-bg",
+        "tab04-bg",
+        "tab05-bg"
+      );
+      if (tabLabel === "tab1-01") {
+        contentItem.classList.add("tab01-bg");
+      }
+      if (tabLabel === "tab1-02") {
+        contentItem.classList.add("tab02-bg");
+      }
+      if (tabLabel === "tab1-03") {
+        contentItem.classList.add("tab03-bg");
+      }
+      if (tabLabel === "tab1-04") {
+        contentItem.classList.add("tab04-bg");
+      }
+      if (tabLabel === "tab1-05") {
+        contentItem.classList.add("tab05-bg");
+      }
+    }
+  }
 
 // 드롭다운 아코디언
 function dropdownAccordion() {
