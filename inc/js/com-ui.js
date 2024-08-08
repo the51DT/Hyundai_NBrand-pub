@@ -60,15 +60,6 @@ var NbrandUI = {
     return $(obj).length == 0 ? false : true;
   },
 
-  // startSet: function () {
-  //   if (NbrandUI.windowSize()) {
-  //     $(".type-thumbnail, .gnb__tab-cont02 .gnb__tab02-btn01").removeClass("on");
-  //     alert($(".gnb__tab-cont02 .gnb__tab02-btn01").html());
-  //   } else {
-  //     $(".type-thumbnail, .gnb__tab-cont02 .gnb__tab02-btn01").addClass("on");
-  //   }
-  // },
-
   windowSize: function () {
     return $win_W >= 1024 ? false : true;
   },
@@ -308,8 +299,17 @@ var NbrandUI = {
     resetParent.removeClass("menu-on");
     resetTparent = resetParent.find(".sitemap-wrap");
     resetCont.attr("aria-hidden", "true");
-    resetTparent.children(".ui-fctab-s").remove();
-    resetTparent.children(".ui-fctab-e").remove();
+    $(".gnb__panel02").show();
+    $(".gnb__tab02").show();
+    if (NbrandUI.windowSize()) {
+      $(".mo-gnb__back-btn").show();
+    } else {
+      // $(".gnb__tab02").();
+      $(".mo-gnb__back-btn").hide();
+    }
+
+    resetTparent.find(".ui-fctab-s").remove();
+    resetTparent.find(".ui-fctab-e").remove();
     resetCont.hide();
     resetTparent.find(".on").removeClass("on");
     $(".header__event-wrap").show();
@@ -384,6 +384,7 @@ var NbrandUI = {
             tparent.children(".ui-fctab-s").remove();
             tparent.children(".ui-fctab-e").remove();
             NbrandUI.headerDimdOff();
+            NbrandUI.headerReset(".nav-btn", ".nav-wrap", ".header-wrap");
             bodyControll(false);
             eventCont.stop().slideUp(100);
             tparent.find(".on").removeClass("on");
@@ -445,6 +446,14 @@ var NbrandUI = {
         gnb3depBtn = $(this);
         gnb3depData = $(this).attr("aria-controls");
         gnb3depTarget = gnbPanel02.find("#" + gnb3depData);
+        if (NbrandUI.windowSize()) {
+          gnb3depBtn.parents(".gnb__tab02").hide();
+          gnb3depBtn
+            .parents(".gnb__tab02")
+            .siblings(".mo-gnb__back-btn")
+            .hide();
+        }
+
         // gnb2depArea = $(".header__event-wrap");
         if (gnb3depTarget.hasClass("type-thumbnail")) {
           $(this).parents(".gnb__tab02-wrap").addClass("thumbnail-ui");
@@ -479,6 +488,12 @@ var NbrandUI = {
         .off("click")
         .on("click", function () {
           tparent = $(this).parent();
+          tparent.parents(".gnb__tab02-wrap").find(".gnb__tab02").show();
+          tparent
+            .parents(".gnb__tab02-wrap")
+            .find(".gnb__tab02")
+            .siblings(".mo-gnb__back-btn")
+            .show();
           tparent.removeClass("on");
           tparent.children(".ui-fctab-s").remove();
           tparent.children(".ui-fctab-e").remove();
