@@ -724,7 +724,7 @@ var pubUi = {
   },
   pageScrollChk: function (dataScroll) {
     var contentItem = document.querySelectorAll(
-      ".content-area > [class*=content-item]"
+      ".content-wrap > [class*=content-item]"
     );
     var headerHeight = document.querySelector(".header-cont").offsetHeight;
     var navBarHeight = document.querySelector(
@@ -742,7 +742,7 @@ var pubUi = {
     });
 
     var contentActiveItem = document.querySelectorAll(
-      ".content-area > [class*=content-item].active"
+      ".content-wrap > [class*=content-item].active"
     );
 
     contentActiveItem.forEach((evt, idx) => {
@@ -2138,7 +2138,7 @@ function scrollEvent() {
   headerNavHeight = $(".navigation_bar-wrap").height();
   let scrollPrev = 0,
     scrollTop = 1;
-  scrollWrap.find(".content-area > [class*=content-item]").each(function (e) {
+  scrollWrap.find(".content-wrap > [class*=content-item]").each(function (e) {
     ($this = $(this)),
       (sectionItem[e] = $this.position().top - headerNavHeight);
   });
@@ -2150,7 +2150,7 @@ function scrollEvent() {
     }
     // alert('d')
     var thisScrArea = $(this),
-      scrItem = thisScrArea.find(".content-area > [class*=content-item]"),
+      scrItem = thisScrArea.find(".content-wrap > [class*=content-item]"),
       nowScroll = thisScrArea.scrollTop(),
       sectionLength = scrItem.length;
 
@@ -2160,9 +2160,9 @@ function scrollEvent() {
     ).toFixed(3);
     scrollTop = scrollWrap.scrollTop();
 
-    var contentItem = document.querySelectorAll(
-      ".content-area > [class*=content-item]"
-    );
+    // var contentItem = document.querySelectorAll(
+    //   ".content-wrap > [class*=content-item]"
+    // );
 
     if (scrollTop > 0) {
       $(".navigation_bar-wrap .gage").addClass("on");
@@ -2190,12 +2190,12 @@ function scrollEvent() {
     $(".header-wrap").addClass("scroll-ing");
     $(".navigation_bar-wrap .gage.on").css("--bar", `${scrollY}%`);
 
-    contentItem.forEach((evt, idx) => {
-      if (contentItem[idx].querySelector(".blue-title")) {
-        contentItem[idx].classList.add("active");
-      }
-      contentItem[idx].setAttribute("data-scroll", idx + 1); // 각 콘텐츠에 data-scroll 생성
-    });
+    // contentItem.forEach((evt, idx) => {
+    //   if (contentItem[idx].querySelector(".blue-title")) {
+    //     contentItem[idx].classList.add("active");
+    //   }
+    //   contentItem[idx].setAttribute("data-scroll", idx + 1); // 각 콘텐츠에 data-scroll 생성
+    // });
 
     for (var i = 0; i < sectionLength; i++) {
       if (sectionItem[i] <= nowScroll + 40) {
