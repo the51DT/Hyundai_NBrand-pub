@@ -81,7 +81,7 @@ var pubUi = {
       e.preventDefault();
       var targetSwiper = $(this).closest(".swiper");
       var videoChk = targetSwiper.find(".swiper-slide-active video");
-      var swiperIndex = targetSwiper.find(".swiper-slide-active").index();
+      // var swiperIndex = targetSwiper.find(".swiper-slide-active").index();
 
       if (targetSwiper.hasClass("ty01Swiper")) {
         if ($(this).hasClass("on")) {
@@ -103,13 +103,13 @@ var pubUi = {
             videoChk[0].play();
             pubUi.videoBulletChk(
               ".ty01Swiper:not(.banner-swiper)",
-              swiperIndex,
+              self.typeIdx,
               "video"
             );
           } else {
             pubUi.videoBulletChk(
               ".ty01Swiper:not(.banner-swiper)",
-              swiperIndex,
+              self.typeIdx,
               "image"
             );
           }
@@ -799,10 +799,13 @@ $(document).ready(function () {
   toggleFullscreen();
 
   btnNaviCheck();
+  ty02Swiper = $(".ty02Swiper");
   $(window).resize(function () {
     if ($(window).innerWidth() < 1024) {
-      if ($(".ty02Swiper").length > 0) {
-        self.swiper2.destroy();
+      if (ty02Swiper.length > 0) {
+        for (var i = 0; i < ty02Swiper.length; i++) {
+          ty02Swiper[i].swiper.destroy();
+        }
       }
 
       swiper2SlideEvt();
@@ -870,7 +873,7 @@ function swiper2SlideEvt() {
   var slideLenth = $(".ty02Swiper .swiper-slide").length;
 
   // 08.07 수정 : jira 422 대응 : 3개보다 클 경우 loop:true 실행 -> 3개미만일 때 결함 체크하기 위함/ 3개 이하 컨텐츠일시 loop가 true상태로 적용되면 autoplay 안되는 문제 있어 3개보다 클 경우 loop 적용되도록 수정하였음
-  if (slideLenth > 3) {
+  if (slideLenth > 4) {
     loopVal = true;
   } else {
     loopVal = false;
@@ -894,13 +897,6 @@ function swiper2SlideEvt() {
       delay: 3000,
       disableOnInteraction: false,
     },
-    // slideToClickedSlide: true,
-    // loopFillGroupWithBlank: true,
-    // loopedSlides: 1,
-    // loopAdditionallidSes: 1,
-    // grid: {
-    //   row: 3,
-    // },
     coverflowEffect: {
       rotate: 0, //각도
       // stretch: -80, //간격

@@ -151,6 +151,7 @@
   font-size: 24px;
   font-weight: 700;
   line-height: 33.6px;
+  word-break: keep-all;
 }
 .models-wrap .text-normal-s {
   font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
@@ -986,9 +987,9 @@
   max-width: 1440px;
 }
 .model-mo-full .img-wrap .text-col {
-    margin-top: 40px;
-    padding: 0 16px;
-  }
+  margin-top: 40px;
+  padding: 0 16px;
+}
 /* 제목 + kv모션 작업 영역 */
 @keyframes modelSmooth {
   0% {
@@ -1027,7 +1028,7 @@
   }
 
   .models-wrap .content-item02 .btn-groups {
-    bottom: 12px;    
+    bottom: 12px;
     right: 12px;
   }
   .models-wrap .content-item03 {
@@ -1478,7 +1479,7 @@
     padding-left: 24px;
   }
   .models-wrap .related-wrap .models-cardbox {
-    --size : 0;
+    --size: 0;
     flex-direction: row;
     flex-wrap: nowrap;
     overflow-y: auto;
