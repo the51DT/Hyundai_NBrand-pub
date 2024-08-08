@@ -3334,7 +3334,7 @@ input[type="radio"]:focus + label {
 /* 필터(.dropdown.centered) */
 .dropdown.centered .dropdown-menu .wrap-filter {
   padding: 0 40px;
-  overflow-y: auto;
+  /* overflow-y: auto; */
   max-height: 41.5rem;
   background-color: #fff;
 }

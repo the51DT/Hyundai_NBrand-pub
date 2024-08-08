@@ -3990,7 +3990,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
     align-items: center;
   }
 
-  .popup-wrapper .popup-footer .box-confirm button.btn {
+  .popup-wrapper .popup-footer .box-confirm > button.btn {
     width: 100%;
   }
 
