@@ -657,7 +657,7 @@ var pubUi = {
     });
 
     var contentActiveItem = document.querySelectorAll(
-      ".content-wrap > [class*=content-item].active"
+      ".content-wrap [class*=content-item].active"
     );
 
     contentActiveItem.forEach((evt, idx) => {
@@ -844,6 +844,20 @@ function swiper2SlideEvt() {
   // console.log("swiper2 이벤트 실행");
   // alert("d");
   var slideLenth = $(".ty02Swiper .swiper-slide").length;
+  var ty02SwiperPlayBtn = $(".ty02Swiper .swiper-status-wrap .btn-play");
+  var autoplayVal = "";
+
+  // 08.09 추가 : 재생 버튼 여부에 따라, autoplay 값 다르게 적용
+  if (ty02SwiperPlayBtn.length > 0) {
+    //재생 버튼 있는 ty02Swiper 케이스
+    autoplayVal = {
+      delay: 3000,
+      disableOnInteraction: false,
+    };    
+  } else {
+    //재생 버튼 없는 ty02Swiper 케이스
+    autoplayVal = false;
+  }
 
   // 08.07 수정 : jira 422 대응 : 3개보다 클 경우 loop:true 실행 -> 3개미만일 때 결함 체크하기 위함/ 3개 이하 컨텐츠일시 loop가 true상태로 적용되면 autoplay 안되는 문제 있어 3개보다 클 경우 loop 적용되도록 수정하였음
   if (slideLenth >= 4) {
@@ -866,10 +880,7 @@ function swiper2SlideEvt() {
     centeredSlides: true,
     slidesPerView: "auto",
     loop: loopVal, // 08.07 수정
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
+    autoplay: autoplayVal,
     coverflowEffect: {
       rotate: 0, //각도
       // stretch: -80, //간격
@@ -1979,7 +1990,7 @@ function scrollEvent() {
   headerNavHeight = $(".navigation_bar-wrap").height();
   let scrollPrev = 0,
     scrollTop = 1;
-  scrollWrap.find(".content-wrap > [class*=content-item]").each(function (e) {
+  scrollWrap.find(".content-wrap [class*=content-item]").each(function (e) {
     ($this = $(this)),
       (sectionItem[e] = $this.position().top - headerNavHeight);
   });
@@ -1991,7 +2002,7 @@ function scrollEvent() {
     }
     // alert('d')
     var thisScrArea = $(this),
-      scrItem = thisScrArea.find(".content-wrap > [class*=content-item]"),
+      scrItem = thisScrArea.find(".content-wrap [class*=content-item]"),
       nowScroll = thisScrArea.scrollTop(),
       sectionLength = scrItem.length;
 
@@ -2002,7 +2013,7 @@ function scrollEvent() {
     scrollTop = scrollWrap.scrollTop();
 
     // var contentItem = document.querySelectorAll(
-    //   ".content-wrap > [class*=content-item]"
+    //   ".content-wrap [class*=content-item]"
     // );
 
     if (scrollTop > 0) {
