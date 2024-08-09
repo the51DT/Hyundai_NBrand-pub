@@ -190,12 +190,15 @@
 }
 .configurator_list_swiper .configurator_num {
   margin-bottom: 1rem;
-  width: 5.5rem;
+  /* width: 5.5rem; */
   margin: 0 auto;
   font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   font-size: 2.5rem;
   font-weight: 700;
   line-height: 125%;
+}
+.configurator_list_swiper .configurator_num span {
+  font-size: 20px;
 }
 .configurator_list_swiper .configurator_unit {
   font-size: 1rem;
@@ -875,6 +878,9 @@
     margin-bottom: 0.25rem;
     font-size: 1.5rem;
     line-height: 140%;
+  }
+  .configurator_list_swiper .configurator_num span {
+    font-size: 16px;
   }
   .configurator_list_swiper .configurator_btn_wrap {
     bottom: 2.25rem;

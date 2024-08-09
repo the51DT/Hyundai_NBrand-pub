@@ -1329,14 +1329,14 @@
                         <!-- 07.12 수정 : select-type 클래스 정의
                           selectbox 2개이상일 경우 select-type02 클래스 추가
                           selectbox 1개일 때는 select-type01 클래스 추가 -->
-                        
+
                         <!-- selectbox 2개일 경우, 1번째 selectbox 선택 값에 따라 2번째 selectbox가 노출되는 구조로 변경 -->
                         <!-- 08.06 수정 : selectbox-group 추가 : 2번째 항목 값 케이스 일때 (2번째 selectbox 값 존재할 경우에만) (Round 2 NCup sample 케이스 - 상세 마크업은 각 라운드별 마크업 참고해주세요) -->
                         <div class="selectbox-wrap select-type01 evtLayout-type">
                           <!-- 1번째 selectbox만 존재할 경우 -->
                           <div>
-                            <button class="selectbox-trigger selectbox-js txt-type03 fw-type03"
-                              aria-haspopup="listbox" aria-expanded="false" aria-labelledby="typeSelect02">
+                            <button class="selectbox-trigger selectbox-js txt-type03 fw-type03" aria-haspopup="listbox"
+                              aria-expanded="false" aria-labelledby="typeSelect02">
                               N Lounge
                             </button>
                             <ul class="selectbox-options 02" role="listbox" id="typeSelect02" aria-hidden="true"
@@ -1399,7 +1399,8 @@
                         </div>
                         <div class="selectbox-overlay" style="display: none"></div>
                         <!-- //08.06 수정 : selectbox-group 추가 : 2번째 항목 값 케이스 일때(2번째 selectbox 존재할 경우에만) -->
-                      </div> <!--//conts-head -->
+                      </div>
+                      <!--//conts-head -->
                       <div class="conts-body">
                         <!-- 07.29 수정 : evt-map-wrap 마크업 구조 변경 : 선택한 selectbox 옵션값에 따른 하드코딩 노출 형태로 변경 (스크립트 로 동적생성 X) -->
                         <div class="evt-map-wrap">
@@ -1416,7 +1417,7 @@
                               </button>
                             </div>
                           </div>
-                          
+
 
                           <!-- 08.06 수정 : evt-map-default-box & btn-evtmap-pop에 active 클래스 추가 -->
                           <div class="evt-map-img">
@@ -1431,8 +1432,8 @@
                             </div>
                             <div class="evt-map-active-box">
                               <!-- n lounge -->
-                              <button class="pop-open btn-evtmap-pop" aria-controls="pop-nLounge"
-                                aria-haspopup="true" aria-expanded="false" title="팝업오픈">
+                              <button class="pop-open btn-evtmap-pop" aria-controls="pop-nLounge" aria-haspopup="true"
+                                aria-expanded="false" title="팝업오픈">
                                 <span class="visually-hidden">side-popup1 열기</span>
                                 <img src="../../inc/images/eventLayout/evtLayout_max_nLounge.png"
                                   alt="이벤트 레이아웃 N lounge 확대 이미지" />
@@ -2453,7 +2454,7 @@
                           </div>
                           <div class="conts-body">
                             <!-- 07.30 수정 : evt-map-wrap 마크업 구조 변경 : 선택한 selectbox 옵션값에 따른 하드코딩 노출 형태로 변경 (스크립트 로 동적생성 X) -->
-                            <div class="evt-map-wrap">
+                            <div class="evt-map-wrap on">
                               <!-- on 클래스 : 상세맵 활성화시(+ 버튼 클릭시) on 클래스 추가 -->
                               <div class="btn-area">
                                 <div class="btn-wrap plus">
@@ -2528,6 +2529,7 @@
                                 <!-- //07.12 추가 : 레이어팝업 버튼 추가 -->
                               </div>
                             </div>
+
                             <!-- //07.30 수정 -->
                           </div>
                         </div>
@@ -9119,7 +9121,7 @@
   </div>
 
   <!-- 08.08 수정 : 각 라운드별 레이어 상세팝업 적용 -->
-  
+
   <!-- *********** N CUP *********** -->
   <!-- inje -->
   <!-- N Lounge -->
@@ -10604,7 +10606,7 @@
   </div><!-- // -->
   <!-- //event_2024_1R_Korea_NTT_en.html 상세 팝업 -->
 
-  <!-- event_2024_2R_Korea_NTT_en.html 상세 팝업 -->  
+  <!-- event_2024_2R_Korea_NTT_en.html 상세 팝업 -->
   <!-- ntt side popup - N Experience Zone -->
   <div id="pop-nTTMoterExper0" class="popup side-popup" role="dialog" aria-modal="true" aria-labelledby="tit">
     <div class="pop-wrap">

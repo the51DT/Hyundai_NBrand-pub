@@ -1118,8 +1118,6 @@ function handleOptionClick(event) {
     //   var option2 = $(".selectbox-group > div.on .selectbox-options").find(".option-click.active");
     // }
 
-
-
     var selectedArea = document.querySelector(
       ".ty05Swiper .swiper-slide.active .card_info .card_subtit"
     ).innerText;
@@ -1149,10 +1147,12 @@ function evtImgMapChk(options, area, ntype, option1, option2) {
   var evtMapActiveBox = $(".list-content.active .evt-map-active-box > button");
   var selectboxEvtLayout = $(option1).closest(".selectbox-wrap.evtLayout-type");
   var selectboxGroupItem = selectboxEvtLayout.find(".selectbox-group > div");
-  
+
   var option1Idx = option1.index();
 
-  var selectboxOption = selectboxEvtLayout.find(".selectbox-group > div.on .selectbox-options .option");
+  var selectboxOption = selectboxEvtLayout.find(
+    ".selectbox-group > div.on .selectbox-options .option"
+  );
 
   if (option2 != undefined) {
     var option2Idx = option2.index();
@@ -1204,7 +1204,7 @@ function evtImgMapChk(options, area, ntype, option1, option2) {
           selectboxGroupItem[option1Idx - 1].classList.add("on");
 
           // option2Idx 존재시 초기화 check용 - 보완필요
-          if (option1Idx == 2 && option2Idx == 2) {
+          if (option2Idx != 1) {
             option2Idx = 1;
           }
         }
@@ -1422,53 +1422,58 @@ dropdownFilter.forEach((filter) => {
 
 // 탭버튼 : 외부 접근 가능 하도록 실행함수로 변경
 function tabBtnEvent(e, tabContainer) {
-    const target = e.target;
-    const targetListItem = $(target.parentNode);
-    const targetIdx = targetListItem.index();
-    const tabLabel = target.getAttribute("aria-controls");
-    const tabList = tabContainer.find(".tabs li");
-    const tabConts = tabContainer.find(".tab-content");
-    const contentItem = document.querySelector(".content-item04.collectiontab-wrap");
+  const target = e.target;
+  const targetListItem = $(target.parentNode);
+  const targetIdx = targetListItem.index();
+  const tabLabel = target.getAttribute("aria-controls");
+  const tabList = tabContainer.find(".tabs li");
+  const tabConts = tabContainer.find(".tab-content");
+  const contentItem = document.querySelector(
+    ".content-item04.collectiontab-wrap"
+  );
 
-    if (tabLabel != null) {
-      for (let i = 0; i < tabList.length; i++) {
-        tabList[i].classList.remove("on");
-      }      
+  if (tabLabel != null) {
+    for (let i = 0; i < tabList.length; i++) {
+      tabList[i].classList.remove("on");
+    }
 
-      for (let i = 0; i < tabConts.length; i++) {
-        tabConts[i].classList.remove("on");
-      }
-      
-      target.parentNode.classList.add("on");
-      targetListItem.closest(".tab-container").find(".tab-content")[targetIdx].classList.add("on");      
-    }    
+    for (let i = 0; i < tabConts.length; i++) {
+      tabConts[i].classList.remove("on");
+    }
 
-    // BR050101 : Brand_N Merchandise tab 배경 때문에 추가
-    if (contentItem) {
-      contentItem.classList.remove(
-        "tab01-bg",
-        "tab02-bg",
-        "tab03-bg",
-        "tab04-bg",
-        "tab05-bg"
-      );
-      if (tabLabel === "tab1-01") {
-        contentItem.classList.add("tab01-bg");
-      }
-      if (tabLabel === "tab1-02") {
-        contentItem.classList.add("tab02-bg");
-      }
-      if (tabLabel === "tab1-03") {
-        contentItem.classList.add("tab03-bg");
-      }
-      if (tabLabel === "tab1-04") {
-        contentItem.classList.add("tab04-bg");
-      }
-      if (tabLabel === "tab1-05") {
-        contentItem.classList.add("tab05-bg");
-      }
+    target.parentNode.classList.add("on");
+    targetListItem
+      .closest(".tab-container")
+      .find(".tab-content")
+      [targetIdx].classList.add("on");
+  }
+
+  // BR050101 : Brand_N Merchandise tab 배경 때문에 추가
+  if (contentItem) {
+    contentItem.classList.remove(
+      "tab01-bg",
+      "tab02-bg",
+      "tab03-bg",
+      "tab04-bg",
+      "tab05-bg"
+    );
+    if (tabLabel === "tab1-01") {
+      contentItem.classList.add("tab01-bg");
+    }
+    if (tabLabel === "tab1-02") {
+      contentItem.classList.add("tab02-bg");
+    }
+    if (tabLabel === "tab1-03") {
+      contentItem.classList.add("tab03-bg");
+    }
+    if (tabLabel === "tab1-04") {
+      contentItem.classList.add("tab04-bg");
+    }
+    if (tabLabel === "tab1-05") {
+      contentItem.classList.add("tab05-bg");
     }
   }
+}
 
 // 드롭다운 아코디언
 function dropdownAccordion() {
