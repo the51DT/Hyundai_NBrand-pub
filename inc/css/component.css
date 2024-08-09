@@ -2176,10 +2176,10 @@ button.card_detail:hover {
   background-image: url(../../inc/images/icon/icon-pause_white.svg);
 }
 .swiper-status-wrap .btn-wrap .btn-sound::before {
-  background-image: url(../../inc/images/icon/icon-soundon_white.svg);
+  background-image: url(../../inc/images/icon/icon-soundoff_white.svg);  
 }
 .swiper-status-wrap .btn-wrap .btn-sound.on::before {
-  background-image: url(../../inc/images/icon/icon-soundoff_white.svg);
+  background-image: url(../../inc/images/icon/icon-soundon_white.svg);
 }
 
 .swiper-status-wrap .swiper-pagination,
