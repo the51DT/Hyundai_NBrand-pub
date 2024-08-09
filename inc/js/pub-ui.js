@@ -209,7 +209,12 @@ var pubUi = {
     $(".rending-wrap > li button").on("click", function (e) {
       e.preventDefault();
       var scrollTarget = $(this).data("scroll");
-      pubUi.pageScrollChk(scrollTarget);
+      
+      // 08.09 수정 : 선택한 네비게이션 메뉴의 rending-btn 활성화
+      $(this).parent().siblings().find("button").removeClass("on");
+      $(this).addClass("on");
+
+      pubUi.pageScrollChk(scrollTarget);            
     });
 
     $("#topBtn").on("click", function () {
@@ -639,7 +644,7 @@ var pubUi = {
   },
   pageScrollChk: function (dataScroll) {
     var contentItem = document.querySelectorAll(
-      ".content-wrap > [class*=content-item]"
+      ".content-wrap [class*=content-item]"
     );
     var headerHeight = document.querySelector(".header-cont").offsetHeight;
     var navBarHeight = document.querySelector(
@@ -2049,18 +2054,13 @@ function scrollEvent() {
     //   contentItem[idx].setAttribute("data-scroll", idx + 1); // 각 콘텐츠에 data-scroll 생성
     // });
 
-    for (var i = 0; i < sectionLength; i++) {
-      if (sectionItem[i] <= nowScroll + 40) {
-        $(".navigation-item02 li")
-          .eq(i)
-          .find("button")
-          .addClass("on")
-          .parent()
-          .siblings()
-          .find("button")
-          .removeClass("on");
-      }
-    }
+    // 08.09 'rending-btn' 버튼 클릭 시, 클릭한 위치 못 찾는 문제로 클릭 이벤트 발생시, 적용되도록 내용 수정하였음
+    // for (var i = 0; i < sectionLength; i++) {
+    //   if (sectionItem[i] <= nowScroll + 40) {
+    //     $(".navigation-item02 li").eq(i).find("button").addClass("on").parent().siblings().find("button").removeClass("on");
+    //   }
+    // }
+
     if ($(".navigation-item02").length) {
       if ($(".navigation-item02").scrollLeft() > 0) {
         $(".navigation-item02")
