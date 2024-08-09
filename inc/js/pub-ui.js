@@ -760,7 +760,9 @@ $(document).ready(function () {
   toggleFullscreen();
 
   btnNaviCheck();
-  ty02Swiper = $(".ty02Swiper");
+  var ty02Swiper = $(".ty02Swiper");
+  var ty04Swiper = $(".ty04Swiper");
+
   $(window).resize(function () {
     if ($(window).innerWidth() < 1024) {
       if (ty02Swiper.length > 0) {
@@ -776,6 +778,16 @@ $(document).ready(function () {
         scrollToCenter(".event-box .evt-map-img");
       }
     }
+
+    // 08.09 추가 - EP010101 (N Festival 메인에 resize 시 발생하는 Next races 영역 결함 처리 위함 - destory 후 ty04Swiper 재호출)
+    if (ty04Swiper.length > 0) {
+      for (var i = 0; i < ty04Swiper.length; i++) {
+        ty04Swiper[i].swiper.destroy();
+      }
+      swiper4SlideEvt();
+    }
+    
+
     btnNaviCheck();
   });
 
