@@ -254,7 +254,7 @@
                 </div><!-- //swiper-container -->
               </section> <!-- //section_tab -->
               <section class="section_list">
-                <div class="list-content conts06" data-content="6">
+                <div class="list-content conts06 active" data-content="6">
                   <!-- 07.22 수정 : th:block 추가 -->
                   <th:block th:fragment="roundInfo">
                     <th:block th:if="${race != null}">
@@ -387,9 +387,9 @@
                                       <span class="btn-icon24 icon-close" aria-hidden="true"></span>
                                     </button>
                                   </li>
-                                  <li class="option option-click fw-type03 active" role="option" aria-selected="false">
+                                  <li class="option option-click fw-type03 active" role="option" aria-selected="false" data-type="1">
                                     Motorsport Experience</li>
-                                  <li class="option option-click fw-type03" role="option" aria-selected="false">Viewing
+                                  <li class="option option-click fw-type03" role="option" aria-selected="false" data-type="2">Viewing
                                     zone</li>
                                 </ul>
                               </div>
@@ -399,8 +399,8 @@
                           </div>
                           <div class="conts-body">
                             <!-- 07.30 수정 : evt-map-wrap 마크업 구조 변경 : 선택한 selectbox 옵션값에 따른 하드코딩 노출 형태로 변경 (스크립트 로 동적생성 X) -->
-                            <div class="evt-map-wrap">
-                              <!-- on 클래스 : 상세맵 활성화시(+ 버튼 클릭시) on 클래스 추가 -->
+                            <div class="evt-map-wrap on" data-type="1">
+                              
                               <div class="btn-area">
                                 <div class="btn-wrap plus">
                                   <button type="button">
@@ -414,8 +414,8 @@
                                 </div>
                               </div>
 
-                              <!-- 08.06 수정 : evt-map-default-box & btn-evtmap-pop에 active 클래스 추가 -->
-                              <div class="evt-map-img">
+                              
+                              <div class="evt-map-img active">
                                 <div class="evt-map-default-box">
                                   <!-- N Cup - Round6 이벤트레이아웃 기본 이미지 -->
                                   <button class="pop-open btn-evtmap-pop active" aria-controls="pop-yeongamMotorExper2"
@@ -435,6 +435,40 @@
                                     <img src="../../inc/images/eventLayout/evtLayout_max_yeongam_MotorExper2.png"
                                       alt="yeongam - Motorsport Experience 확대 이미지" />
                                   </button>
+                                </div>
+                                <!-- //07.12 추가 : 레이어팝업 버튼 추가 -->
+                              </div>
+                              
+                            </div>
+
+                            <div class="evt-map-wrap" data-type="2">
+                              
+                              <div class="btn-area">
+                                <div class="btn-wrap plus">
+                                  <button type="button">
+                                    <span class="visually-hidden">+ 확대 버튼</span>
+                                  </button>
+                                </div>
+                                <div class="btn-wrap minus">
+                                  <button type="button">
+                                    <span class="visually-hidden">- 축소 버튼</span>
+                                  </button>
+                                </div>
+                              </div>
+
+                              
+                              <div class="evt-map-img">
+                                <div class="evt-map-default-box">
+                                  <!-- N Cup - Round6 이벤트레이아웃 기본 이미지 -->
+                                  <button class="pop-open btn-evtmap-pop active" aria-controls="pop-yeongamViewingZone"
+                                    aria-haspopup="true" aria-expanded="false" title="팝업오픈">
+                                    <span class="visually-hidden">side-popup1 열기</span>
+                                    <img src="../../inc/images/eventLayout/evtLayout_min_shortImg04.png"
+                                      alt="이벤트 레이아웃 N lounge 확대 이미지" />
+                                  </button>
+                                </div>
+
+                                <div class="evt-map-active-box">              
                                   <!--  yeongam - viewing Zone  -->
                                   <button class="pop-open btn-evtmap-pop" aria-controls="pop-yeongamViewingZone"
                                     aria-haspopup="true" aria-expanded="false" title="팝업오픈">
@@ -445,7 +479,7 @@
                                 </div>
                                 <!-- //07.12 추가 : 레이어팝업 버튼 추가 -->
                               </div>
-                              <!-- //08.06 수정 : evt-map-default-box & btn-evtmap-pop에 active 클래스 추가 -->
+                              
                             </div>
                             <!-- //07.30 수정 -->
                           </div>

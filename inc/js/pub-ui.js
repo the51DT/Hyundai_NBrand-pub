@@ -182,52 +182,16 @@ var pubUi = {
 
     // 이벤트 레이아웃 + 버튼 클릭시,
     $(".event-box .btn-wrap.plus").click(function (e) {
-      var options = [];
-      var option1 = $(
-        ".list-content.active .evtLayout-type div:not('.selectbox-group') .selectbox-options"
-      ).find(".option-click.active");
-      var option2 = $(
-        ".list-content.active .evtLayout-type .selectbox-group > div.on .selectbox-options"
-      ).find(".option-click.active");
-
-      var selectedArea = document.querySelector(
-        ".ty05Swiper .swiper-slide.active .card_info .card_subtit"
-      ).innerText;
-
-      var selectedNType = document.querySelector(
-        "#countrySelect li.active"
-      ).innerText;
-
-      if ($(".evt-map-wrap").hasClass("on")) {
-        alert(
-          "현재 이미지보다 큰 이미지를 볼 수 없습니다. \n이전 이미지로 돌아가려면 - 버튼을 눌러주세요. "
-        );
-      } else {
-        $(".evt-map-wrap").addClass("on");
-        evtImgMapChk(options, selectedArea, selectedNType, option1, option2);
-      }
+      $(this).closest(".evt-map-wrap").addClass("active");
+      $(this).closest(".evt-map-wrap").find(".evt-map-img.active .evt-map-default-box").hide();
+      $(this).closest(".evt-map-wrap").find(".evt-map-img.active .evt-map-active-box > button").show();
     });
 
     // 이벤트 레이아웃 - 버튼 클릭시,
     $(".event-box .btn-wrap.minus").click(function (e) {
-      var options = [];
-      var option1 = $(
-        ".list-content.active .evtLayout-type div:not('.selectbox-group') .selectbox-options"
-      ).find(".option-click.active");
-      var option2 = $(
-        ".list-content.active .evtLayout-type .selectbox-group > div.on .selectbox-options"
-      ).find(".option-click.active");
-
-      var selectedArea = document.querySelector(
-        ".ty05Swiper .swiper-slide.active .card_info .card_subtit"
-      ).innerText;
-
-      var selectedNType = document.querySelector(
-        "#countrySelect li.active"
-      ).innerText;
-
-      $(".evt-map-wrap").removeClass("on");
-      evtImgMapChk(options, selectedArea, selectedNType, option1, option2);
+      $(this).closest(".evt-map-wrap").removeClass("active");
+      $(this).closest(".evt-map-wrap").find(".evt-map-img.active .evt-map-default-box").show();
+      $(this).closest(".evt-map-wrap").find(".evt-map-img.active .evt-map-active-box > button").hide();
     });
 
     $(".tit-btn-wrap button").click(function (e) {
@@ -1103,206 +1067,93 @@ function handleOptionClick(event) {
     .resize();
 
   if ($selectboxWrap.hasClass("evtLayout-type")) {
-    var options = [];
-
     var option1 = $(
       ".list-content.active .selectbox-wrap.evtLayout-type > div:not('.selectbox-group') .selectbox-options"
     ).find(".option-click.active");
-    var option2 = $(
-      ".list-content.active .selectbox-group > div.on .selectbox-options"
-    ).find(".option-click.active");
-    // if($(event.target).closest(".selectbox-group").length <= 0) {
-    //   //var option1 = $(event.target).closest(".selectbox-wrap > div:not('.selectbox-group') .selectbox-options").find(".option-click.active");
-    // } else {
-    //   var option1 = $(".selectbox-wrap.evtLayout-type > div:not('.selectbox-group') .selectbox-options").find(".option-click.active");
-    //   var option2 = $(".selectbox-group > div.on .selectbox-options").find(".option-click.active");
-    // }
 
-    var selectedArea = document.querySelector(
-      ".ty05Swiper .swiper-slide.active .card_info .card_subtit"
-    ).innerText;
-    var selectedNType = document.querySelector(
-      "#countrySelect li.active"
-    ).innerText;
+    var optionDataType = $(
+      ".list-content.active .selectbox-wrap.evtLayout-type > div:not('.selectbox-group') .selectbox-options"
+    )
+      .find(".option-click.active")
+      .data("type");
 
-    if (option2 == "" || option2 == undefined) {
-      options.push(option1);
-    } else {
-      options.push(option1, option2);
+    var evtMapWrap = $(".list-content.active .evt-map-wrap");
+
+    for (var i = 0; i < evtMapWrap.length; i++) {
+      if (evtMapWrap[i].classList.contains("active")) {
+        $(evtMapWrap[i])
+          .find(".evt-map-img .evt-map-active-box > button")
+          .hide();
+        $(evtMapWrap[i]).find(".evt-map-img .evt-map-default-box").show();
+        $(evtMapWrap[i]).removeClass("active");
+      }
     }
-
-    // console.log(options);
-
-    if (option1 != undefined || option2 != undefined) {
-      evtImgMapChk(options, selectedArea, selectedNType, option1, option2);
-    }
+    evtImgMapChk(optionDataType, option1);
   }
 }
 // [End] : selectbox 컴포넌트
 
 // event guide > event layout 함수
-function evtImgMapChk(options, area, ntype, option1, option2) {
-  var evtMapWrap = $(".evt-map-wrap");
-  var evtMapDefultBtn = $(".list-content.active .evt-map-default-box > button");
-  var evtMapActiveBox = $(".list-content.active .evt-map-active-box > button");
-  var selectboxEvtLayout = $(option1).closest(".selectbox-wrap.evtLayout-type");
+function evtImgMapChk(optionDataType, option1) {
+  var evtMapWrap = $(".list-content.active .evt-map-wrap");
+  var selectboxEvtLayout = $(
+    ".list-content.active .selectbox-wrap.evtLayout-type"
+  );
   var selectboxGroupItem = selectboxEvtLayout.find(".selectbox-group > div");
 
   var option1Idx = option1.index();
 
-  var selectboxOption = selectboxEvtLayout.find(
-    ".selectbox-group > div.on .selectbox-options .option"
-  );
+  if (selectboxGroupItem.length > 0) {
+    // 2번째 selectbox 존재할 경우,
+    selectboxGroupItem.removeClass("on");
+    for (var i = 0; i < selectboxGroupItem.length; i++) {
+      var selectbox2Idx = $(selectboxGroupItem[i]).index() + 1;
+      var activeOption = "";
 
-  if (option2 != undefined) {
-    var option2Idx = option2.index();
-  }
-
-  area = area.toLowerCase();
-  ntype = ntype.toLowerCase();
-
-  //console.log("selected option idx값 : " + option1Idx + ", " + option2Idx + ", " + area + ", " + ntype);
-
-  if (selectboxEvtLayout.hasClass("select-type01")) {
-    // selectbox 1개 일 경우,
-    if (evtMapWrap.hasClass("on")) {
-      // 상세이미지 활성화일 경우,
-      if (option1Idx > 0) {
-        evtMapDefultBtn.hide();
-        for (var i = 0; i < evtMapActiveBox.length; i++) {
-          if (option1Idx == i + 1) {
-            evtMapActiveBox[i].style.display = "block";
-          } else {
-            evtMapActiveBox[i].style.display = "none";
-          }
-        }
-      }
-    } else {
-      evtMapActiveBox.hide();
-      evtMapDefultBtn.show();
-      for (var i = 0; i < evtMapActiveBox.length; i++) {
-        if (option1Idx == i + 1) {
-          var ariaControl = evtMapActiveBox[i].getAttribute("aria-controls");
-          evtMapDefultBtn.attr("aria-controls", ariaControl);
-        }
-      }
-    }
-  } else if (selectboxEvtLayout.hasClass("select-type02")) {
-    // selectbox 2개 일 경우,
-
-    // selectbox 1번째 값에 따라 , 2번째 selectbox 노출
-    if (selectboxGroupItem.length > 0) {
-      for (var i = 0; i < selectboxGroupItem.length; i++) {
-        if (selectboxGroupItem[i].classList.contains("on")) {
-          selectboxGroupItem[i].classList.remove("on");
-        }
-        if (option1Idx == 1) {
-          selectboxGroupItem[option1Idx - 1].classList.add("on");
-        } else if (option1Idx == 2) {
-          // if(option2Idx )
-          // option2Idx = 1;
-          selectboxGroupItem[option1Idx - 1].classList.add("on");
-
-          // option2Idx 존재시 초기화 check용 - 보완필요
-          if (option2Idx != 1) {
-            option2Idx = 1;
-          }
-        }
-      }
-    } else {
-      alert("selectbox 2번째 항목 없음");
-    }
-
-    if (option2Idx > 0) {
-      if (evtMapWrap.hasClass("on")) {
-        // + 버튼 활성화 이미지 노출 케이스일 경우,
-        evtMapDefultBtn.hide();
-        if (option1Idx == 1 && option2Idx == 1) {
-          for (var i = 0; i < evtMapActiveBox.length; i++) {
-            if (
-              evtMapActiveBox[i].getAttribute("aria-controls") == "pop-nZone"
-            ) {
-              evtMapActiveBox[i].style.display = "block";
-            } else {
-              evtMapActiveBox[i].style.display = "none";
-            }
-          }
-        } else if (option1Idx == 1 && option2Idx == 2) {
-          for (var i = 0; i < evtMapActiveBox.length; i++) {
-            if (
-              evtMapActiveBox[i].getAttribute("aria-controls") ==
-              "pop-nExperZone"
-            ) {
-              evtMapActiveBox[i].style.display = "block";
-            } else {
-              evtMapActiveBox[i].style.display = "none";
-            }
-          }
-        } else if (option1Idx == 2 && option2Idx == 1) {
-          for (var i = 0; i < evtMapActiveBox.length; i++) {
-            if (
-              evtMapActiveBox[i].getAttribute("aria-controls") == "pop-nFanZone"
-            ) {
-              evtMapActiveBox[i].style.display = "block";
-            } else {
-              evtMapActiveBox[i].style.display = "none";
-            }
-          }
-        }
+      if (option1Idx == selectbox2Idx) {
+        // selectbox 1번 선택한 인덱스값과 2번째 index값 비교
+        $(selectboxGroupItem[i]).addClass("on"); // 1번째 선택한 인덱스 값에 맞는 2번째 selectbox 활성화
       } else {
-        // - 버튼 클릭 or 기본 이미지 노출 케이스일 경우,
-        evtMapActiveBox.hide();
-        if (evtMapDefultBtn.length > 1) {
-          // 기본 이미지 2개이상 노출될 경우
-          if (option1Idx == 1 && option2Idx == 1) {
-            for (var i = 0; i < evtMapDefultBtn.length; i++) {
-              if (
-                evtMapDefultBtn[i].getAttribute("aria-controls") == "pop-nZone"
-              ) {
-                evtMapDefultBtn[i].classList.add("active");
-                evtMapDefultBtn[i].style.display = "block";
-              } else {
-                evtMapDefultBtn[i].classList.remove("active");
-                evtMapDefultBtn[i].style.display = "none";
-              }
-            }
-          } else if (option1Idx == 1 && option2Idx == 2) {
-            for (var i = 0; i < evtMapDefultBtn.length; i++) {
-              if (
-                evtMapDefultBtn[i].getAttribute("aria-controls") ==
-                "pop-nExperZone"
-              ) {
-                evtMapDefultBtn[i].classList.add("active");
-                evtMapDefultBtn[i].style.display = "block";
-              } else {
-                evtMapDefultBtn[i].classList.remove("active");
-                evtMapDefultBtn[i].style.display = "none";
-              }
-            }
-          } else if (option1Idx == 2 && option2Idx == 1) {
-            for (var i = 0; i < evtMapDefultBtn.length; i++) {
-              if (
-                evtMapDefultBtn[i].getAttribute("aria-controls") ==
-                "pop-nFanZone"
-              ) {
-                evtMapDefultBtn[i].classList.add("active");
-                evtMapDefultBtn[i].style.display = "block";
-              } else {
-                evtMapDefultBtn[i].classList.remove("active");
-                evtMapDefultBtn[i].style.display = "none";
-              }
-            }
-          }
-        } else {
-          // 기본 이미지 1개인 경우
-          if (option1Idx == 1 && option2Idx == 1) {
-            evtMapDefultBtn.attr("aria-controls", "pop-nZone");
-          } else if (option1Idx == 1 && option2Idx == 2) {
-            evtMapDefultBtn.attr("aria-controls", "pop-nExperZone");
-          } else if (option1Idx == 2 && option2Idx == 1) {
-            evtMapDefultBtn.attr("aria-controls", "pop-nFanZone");
+        $(selectboxGroupItem[i]).removeClass("on");
+      }
+
+      if ($(selectboxGroupItem[i]).hasClass("on")) {
+        var selbox2Option = $(
+          ".list-content.active .selectbox-group > div.on .selectbox-options .option"
+        );
+        for (var i = 0; i < selbox2Option.length; i++) {
+          if ($(selbox2Option[i]).hasClass("active")) {
+            activeOption = $(selbox2Option[i]).index();
+            //console.log(activeOption);
           }
         }
+
+        // 클래스 초기화
+        evtMapWrap.removeClass("on");
+        evtMapWrap.find(".evt-map-img").removeClass("active");
+
+        for (var i = 0; i < evtMapWrap.length; i++) {
+          var mapDataType = Math.floor(evtMapWrap[i].dataset.type);
+          if (mapDataType == optionDataType) {
+            evtMapWrap[i].classList.add("on");
+            $(evtMapWrap[i])
+              .find(".evt-map-img")
+              .eq(activeOption - 1)
+              .addClass("active");
+          }
+        }
+      }
+    }
+  } else {
+    // 1번째 selectbox만 존재할 경우,
+    for (var i = 0; i < evtMapWrap.length; i++) {
+      var mapDataType = Math.floor(evtMapWrap[i].dataset.type);
+      if (mapDataType == optionDataType) {
+        evtMapWrap[i].classList.add("on");
+        $(evtMapWrap[i]).find(".evt-map-img").addClass("active");
+      } else {
+        evtMapWrap[i].classList.remove("on");
+        $(evtMapWrap[i]).find(".evt-map-img").removeClass("active");
       }
     }
   }

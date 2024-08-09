@@ -737,7 +737,7 @@
                                     </div>
                                     <div class="list-box">
                                       <p class="txt-type01">
-                                        [N1] AVANTE N Cup Final (Live)
+                                           [N1] AVANTE N Cup Final (Live)
                                       </p>
                                     </div>
                                     <div class="list-box">
@@ -878,10 +878,10 @@
                                       <span class="btn-icon24 icon-close" aria-hidden="true"></span>
                                     </button>
                                   </li>
-                                  <li class="option option-click fw-type03 active" role="option" aria-selected="true">
+                                  <li class="option option-click fw-type03 active" role="option" aria-selected="true" data-type="1">
                                     A Paddock
                                   </li>
-                                  <li class="option option-click fw-type03" role="option" aria-selected="false">
+                                  <li class="option option-click fw-type03" role="option" aria-selected="false" data-type="2">
                                     B Paddock
                                   </li>
                                 </ul>
@@ -889,6 +889,7 @@
 
                               <!-- 08.06 수정 : selectbox-group 추가 : 2번째 항목 값 (2번째 selectbox 존재할 경우에만) -->
                               <div class="selectbox-group">
+                                
                                 <!-- A Paddock의 2번째 selectbox 옵션 값 -->
                                 <div class="on">
                                   <!-- 활성화시 on 클래스 추가 -->
@@ -941,7 +942,9 @@
                           </div>
                           <div class="conts-body">
                             <!-- 07.30 수정 : evt-map-wrap 마크업 구조 변경 : 선택한 selectbox 옵션값에 따른 하드코딩 노출 형태로 변경 (스크립트 로 동적생성 X) -->
-                            <div class="evt-map-wrap">
+
+                            <!-- A Paddock 맵 정보 -->
+                            <div class="evt-map-wrap on" data-type="1"><!-- 활성화 시 on 클래스 추가 --> <!-- data-type 값 부모 첫번째 selectbox 대상과 동일하게 적용 필요 -->
                               <!-- on 클래스 : 상세맵 활성화시(+ 버튼 클릭시) on 클래스 추가 -->
                               <div class="btn-area">
                                 <div class="btn-wrap plus">
@@ -956,34 +959,14 @@
                                 </div>
                               </div>
 
-                              <div class="evt-map-img">
-                                <!-- 07.12 추가 : 레이어팝업 버튼 추가 -->
-                                <!-- N Cup - Round2 이벤트레이아웃 기본 이미지 -->
-
-                                <!-- 08.06 수정 : evt-map-default-box & btn-evtmap-pop에 active 클래스 추가 -->
+                              <!-- A paddock && N zone -->
+                              <div class="evt-map-img active"> <!-- 활성화 맵일 시, active 클래스 추가 -->
                                 <div class="evt-map-default-box">
-                                  <button class="pop-open btn-evtmap-pop active" aria-controls="pop-nZone"
+                                  <button class="pop-open btn-evtmap-pop" aria-controls="pop-nZone"
                                     aria-haspopup="true" aria-expanded="false" title="팝업오픈">
-                                    <!-- active 클래스 추가 : 노출시 active 추가됨 -->
                                     <span class="visually-hidden">side-popup1 열기</span>
                                     <img src="../../inc/images/eventLayout/evtLayout_min_shortImg02.png"
                                       alt="이벤트 레이아웃 nZone 기본 이미지" />
-                                  </button>
-
-                                  <button class="pop-open btn-evtmap-pop" aria-controls="pop-nExperZone"
-                                    aria-haspopup="true" aria-expanded="false" title="팝업오픈">
-                                    <!-- active 클래스 추가 : 노출시 active 추가됨 -->
-                                    <span class="visually-hidden">side-popup1 열기</span>
-                                    <img src="../../inc/images/eventLayout/evtLayout_min_shortImg02.png"
-                                      alt="이벤트 레이아웃 nExperZone 기본 이미지" />
-                                  </button>
-
-                                  <!-- B Paddock-->
-                                  <button class="pop-open btn-evtmap-pop" aria-controls="pop-nFanZone"
-                                    aria-haspopup="true" aria-expanded="false" title="팝업오픈">
-                                    <span class="visually-hidden">side-popup1 열기</span>
-                                    <img src="../../inc/images/eventLayout/evtLayout_min_shortImg03.png"
-                                      alt="이벤트 레이아웃 nFanZone 기본 이미지" />
                                   </button>
                                 </div>
 
@@ -993,9 +976,23 @@
                                     aria-expanded="false" title="팝업오픈">
                                     <span class="visually-hidden">side-popup1 열기</span>
                                     <img src="../../inc/images/eventLayout/evtLayout_max_A_NZone.png"
-                                      alt="이벤트 레이아웃 A paddock - N lounge 확대 이미지" />
+                                      alt="이벤트 레이아웃 A paddock - N Zone 확대 이미지" />
                                   </button>
+                                </div>
+                              </div>
 
+                              <!-- A paddock && N Experience zone -->
+                              <div class="evt-map-img"> <!-- 활성화 맵일 시, active 클래스 추가 -->
+                                <div class="evt-map-default-box">
+                                  <!-- A paddock && N Experience zone 기본 이미지 -->
+                                  <button class="pop-open btn-evtmap-pop" aria-controls="pop-nExperZone"
+                                    aria-haspopup="true" aria-expanded="false" title="팝업오픈">
+                                    <span class="visually-hidden">side-popup1 열기</span>
+                                    <img src="../../inc/images/eventLayout/evtLayout_min_shortImg02.png"
+                                      alt="이벤트 레이아웃 nZone 기본 이미지" />
+                                  </button>
+                                </div>
+                                <div class="evt-map-active-box">
                                   <!-- A paddock && N Experience zone -->
                                   <button class="pop-open btn-evtmap-pop" aria-controls="pop-nExperZone"
                                     aria-haspopup="true" aria-expanded="false" title="팝업오픈">
@@ -1003,6 +1000,39 @@
                                     <img src="../../inc/images/eventLayout/evtLayout_max_A_ExperZone.png"
                                       alt="이벤트 레이아웃 A Paddock - N Experience zone 확대 이미지" />
                                   </button>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!-- B Paddock 맵 정보 -->
+                            <div class="evt-map-wrap" data-type="2">
+                              <!-- on 클래스 : 상세맵 활성화시(+ 버튼 클릭시) on 클래스 추가 -->
+                              <div class="btn-area">
+                                <div class="btn-wrap plus">
+                                  <button type="button">
+                                    <span class="visually-hidden">+ 확대 버튼</span>
+                                  </button>
+                                </div>
+                                <div class="btn-wrap minus">
+                                  <button type="button">
+                                    <span class="visually-hidden">- 축소 버튼</span>
+                                  </button>
+                                </div>
+                              </div>
+
+                              <div class="evt-map-img active"> <!-- 활성화 맵일 시, active 클래스 추가 -->
+                                <!-- 08.06 수정 : evt-map-default-box -->
+                                <div class="evt-map-default-box">
+                                  <!--  "B Paddock" && "N Fan Zone" 기본 이미지  -->
+                                  <button class="pop-open btn-evtmap-pop" aria-controls="pop-nFanZone"
+                                    aria-haspopup="true" aria-expanded="false" title="팝업오픈">
+                                    <span class="visually-hidden">side-popup1 열기</span>
+                                    <img src="../../inc/images/eventLayout/evtLayout_min_shortImg03.png"
+                                      alt="이벤트 레이아웃 nFanZone 기본 이미지" />
+                                  </button>
+                                </div>
+
+                                <div class="evt-map-active-box">
                                   <!--  "B Paddock" && "N Fan Zone"  -->
                                   <button class="pop-open btn-evtmap-pop" aria-controls="pop-nFanZone"
                                     aria-haspopup="true" aria-expanded="false" title="팝업오픈">
@@ -1011,8 +1041,6 @@
                                       alt="이벤트 레이아웃 B Paddock - N Fan zone 확대 이미지" />
                                   </button>
                                 </div>
-                                <!--// 08.06 수정 : evt-map-default-box & btn-evtmap-pop에 active 클래스 추가 -->
-
                                 <!-- //07.12 추가 : 레이어팝업 버튼 추가 -->
                               </div>
                             </div>

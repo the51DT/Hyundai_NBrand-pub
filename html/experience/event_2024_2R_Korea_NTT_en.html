@@ -270,7 +270,7 @@
               </section>
               <!-- //section_tab -->
               <section class="section_list">
-                <div class="list-content conts08" data-content="8">
+                <div class="list-content conts08 active" data-content="8">
                   <!-- 07.22 수정 : th:block 추가 -->
                   <th:block th:fragment="roundInfo">
                     <th:block th:if="${race != null}">
@@ -458,7 +458,7 @@
                                       <span class="btn-icon24 icon-close" aria-hidden="true"></span>
                                     </button>
                                   </li>
-                                  <li class="option option-click fw-type03 active" role="option" aria-selected="false">
+                                  <li class="option option-click fw-type03 active" role="option" aria-selected="false" data-type="1">
                                     N Experience Zone
                                   </li>
                                 </ul>
@@ -468,7 +468,7 @@
                           </div>
                           <div class="conts-body">
                             <!-- 07.30 수정 : evt-map-wrap 마크업 구조 변경 : 선택한 selectbox 옵션값에 따른 하드코딩 노출 형태로 변경 (스크립트 로 동적생성 X) -->
-                            <div class="evt-map-wrap">
+                            <div class="evt-map-wrap on" data-type="1">
                               <!-- on 클래스 : 상세맵 활성화시(+ 버튼 클릭시) on 클래스 추가 -->
                               <div class="btn-area">
                                 <div class="btn-wrap plus">
@@ -484,7 +484,7 @@
                               </div>
 
                               <!-- 08.06 수정 : evt-map-default-box & btn-evtmap-pop에 active 클래스 추가 -->
-                              <div class="evt-map-img">
+                              <div class="evt-map-img active">
                                 <div class="evt-map-default-box">
                                   <!-- N Cup - Round6 이벤트레이아웃 기본 이미지 : 활성화 원하는 곳에 default active 클래스 값 추가 -->
                                   <button class="pop-open btn-evtmap-pop active" aria-controls="pop-nTTMoterExper0"

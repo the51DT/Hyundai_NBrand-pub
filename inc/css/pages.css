@@ -578,6 +578,15 @@
 
 .event-box .evt-map-wrap {
   position: relative;
+  display: none;
+}
+
+.event-box .evt-map-img {
+  display: none;
+}
+
+.event-box .evt-map-img.active {
+  display: block;
 }
 
 .event-box .evt-map-img img {
@@ -585,17 +594,22 @@
   object-fit: cover;
 }
 
-.event-box .evt-map-default-box > button {
+/* .event-box .evt-map-default-box .btn-evtmap-pop {
   display: none;
 }
 
 .event-box .evt-map-default-box .btn-evtmap-pop.active {
   display: block;
-}
+} 
 
-.event-box .evt-map-active-box > button {
+.event-box .evt-map-active-box .btn-evtmap-pop.active {
+  display: block;
+} */
+
+.event-box .evt-map-active-box .btn-evtmap-pop {
   display: none;
 }
+
 
 .event-box .btn-area {
   position: absolute;
@@ -612,7 +626,10 @@
   position: relative;
 }
 
-.event-box .evt-map-wrap.on .btn-wrap.plus {
+.event-box .evt-map-wrap.on {
+  display: block;
+}
+.event-box .evt-map-wrap.active .btn-wrap.plus {
   background: #acacac;
   opacity: 0.2;
 }

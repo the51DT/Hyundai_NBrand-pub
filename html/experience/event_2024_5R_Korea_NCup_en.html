@@ -253,7 +253,7 @@
                 </div><!-- //swiper-container -->
               </section> <!-- //section_tab -->
               <section class="section_list">
-                <div class="list-content conts05" data-content="5">
+                <div class="list-content conts05 active" data-content="5">
                   <!-- 07.22 수정 : th:block 추가 -->
                   <th:block th:fragment="roundInfo">
                     <th:block th:if="${race != null}">
@@ -384,10 +384,10 @@
                                     </button>
                                   </li>
                                   <li class="option option-click fw-
-                                  type03 active" role="option" aria-selected="true">N Lounge</li>
-                                  <li class="option option-click fw-type03" role="option" aria-selected="false">
+                                  type03 active" role="option" aria-selected="true" data-type="1">N Lounge</li>
+                                  <li class="option option-click fw-type03" role="option" aria-selected="false" data-type="2">
                                     Motorsport Experience</li>
-                                  <li class="option option-click fw-type03" role="option" aria-selected="false">Viewing
+                                  <li class="option option-click fw-type03" role="option" aria-selected="false" data-type="3">Viewing
                                     zone</li>
                                 </ul>
                               </div>
@@ -396,8 +396,11 @@
                             <div class="selectbox-overlay" style="display: none"></div>
                           </div>
                           <div class="conts-body">
-                            <!-- 07.30 수정 : evt-map-wrap 마크업 구조 변경 : 선택한 selectbox 옵션값에 따른 하드코딩 노출 형태로 변경 (스크립트 로 동적생성 X) -->
-                            <div class="evt-map-wrap">
+                            <!-- 08.08 수정사항 -->
+                            <!-- 활성화시 on 클래스 -->
+                            <!-- data-type 값 부모 첫번째 selectbox 대상과 동일하게 적용 필요 -->
+                            <!-- active 클래스 : 상세맵 활성화시(+ 버튼 클릭시) active 클래스 추가 -->
+                            <div class="evt-map-wrap on" data-type="1">
                               <!-- on 클래스 : 상세맵 활성화시(+ 버튼 클릭시) on 클래스 추가 -->
                               <div class="btn-area">
                                 <div class="btn-wrap plus">
@@ -412,8 +415,8 @@
                                 </div>
                               </div>
 
-                              <!-- 08.06 수정 : evt-map-default-box & btn-evtmap-pop에 active 클래스 추가 -->
-                              <div class="evt-map-img">
+                              <!-- 활성화 맵일 시, active 클래스 추가 -->
+                              <div class="evt-map-img active">
                                 <!-- evt-map-default-box 추가 -->
                                 <div class="evt-map-default-box">
                                   <!-- Inje N Cup - Round5 이벤트레이아웃 기본 이미지 : 활성화 원하는 곳에 default active 클래스 값 추가 -->
@@ -434,6 +437,41 @@
                                     <img src="../../inc/images/eventLayout/evtLayout_max_nLounge_inje.png"
                                       alt="이벤트 레이아웃 N lounge 확대 이미지" />
                                   </button>
+                                </div>
+                                <!-- //07.12 추가 : 레이어팝업 버튼 추가 -->
+                              </div>
+                            </div>
+
+                            <div class="evt-map-wrap" data-type="2">
+                              <!-- on 클래스 : 상세맵 활성화시(+ 버튼 클릭시) on 클래스 추가 -->
+                              <div class="btn-area">
+                                <div class="btn-wrap plus">
+                                  <button type="button">
+                                    <span class="visually-hidden">+ 확대 버튼</span>
+                                  </button>
+                                </div>
+                                <div class="btn-wrap minus">
+                                  <button type="button">
+                                    <span class="visually-hidden">- 축소 버튼</span>
+                                  </button>
+                                </div>
+                              </div>
+
+                              <!-- 08.06 수정 : evt-map-default-box & btn-evtmap-pop에 active 클래스 추가 -->
+                              <div class="evt-map-img">
+                                <!-- evt-map-default-box 추가 -->
+                                <div class="evt-map-default-box">
+                                  <!-- Inje N Cup - Round5 이벤트레이아웃 기본 이미지 : 활성화 원하는 곳에 default active 클래스 값 추가 -->
+                                  <button class="pop-open btn-evtmap-pop active" aria-controls="pop-motorExperience"
+                                    aria-haspopup="true" aria-expanded="false" title="팝업오픈">
+                                    <span class="visually-hidden">side-popup1 열기</span>
+                                    <img src="../../inc/images/eventLayout/evtLayout_min_shortImg01.png"
+                                      alt="이벤트 레이아웃 N lounge 확대 이미지" />
+                                  </button>
+                                </div>
+                                <!--//evt-map-default-box -->
+
+                                <div class="evt-map-active-box">
                                   <!-- motorsport experience -->
                                   <button class="pop-open btn-evtmap-pop" aria-controls="pop-motorExperience"
                                     aria-haspopup="true" aria-expanded="false" title="팝업오픈">
@@ -441,6 +479,41 @@
                                     <img src="../../inc/images/eventLayout/evtLayout_max_motorExperience_inje.png"
                                       alt="이벤트 레이아웃 Motorsport Experience 확대 이미지" />
                                   </button>
+                                </div>
+                                <!-- //07.12 추가 : 레이어팝업 버튼 추가 -->
+                              </div>
+                            </div>
+
+                            <div class="evt-map-wrap" data-type="3">
+                              <!-- on 클래스 : 상세맵 활성화시(+ 버튼 클릭시) on 클래스 추가 -->
+                              <div class="btn-area">
+                                <div class="btn-wrap plus">
+                                  <button type="button">
+                                    <span class="visually-hidden">+ 확대 버튼</span>
+                                  </button>
+                                </div>
+                                <div class="btn-wrap minus">
+                                  <button type="button">
+                                    <span class="visually-hidden">- 축소 버튼</span>
+                                  </button>
+                                </div>
+                              </div>
+
+                              <!-- 08.06 수정 : evt-map-default-box & btn-evtmap-pop에 active 클래스 추가 -->
+                              <div class="evt-map-img">
+                                <!-- evt-map-default-box 추가 -->
+                                <div class="evt-map-default-box">
+                                  <!-- Inje N Cup - Round5 이벤트레이아웃 기본 이미지 : 활성화 원하는 곳에 default active 클래스 값 추가 -->
+                                  <button class="pop-open btn-evtmap-pop active" aria-controls="pop-viewingZone"
+                                    aria-haspopup="true" aria-expanded="false" title="팝업오픈">
+                                    <span class="visually-hidden">side-popup1 열기</span>
+                                    <img src="../../inc/images/eventLayout/evtLayout_min_shortImg01.png"
+                                      alt="이벤트 레이아웃 N lounge 확대 이미지" />
+                                  </button>
+                                </div>
+                                <!--//evt-map-default-box -->
+
+                                <div class="evt-map-active-box">
                                   <!-- viewing-zone -->
                                   <button class="pop-open btn-evtmap-pop" aria-controls="pop-viewingZone"
                                     aria-haspopup="true" aria-expanded="false" title="팝업오픈">
