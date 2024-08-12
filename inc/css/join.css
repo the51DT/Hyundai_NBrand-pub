@@ -521,7 +521,7 @@
   column-gap: 30px;
 }
 .tab-container.mycommunity-wrap .tab-head .tabs li {
-  width: 12.95rem;
+  /* width: 12.95rem; */
   text-align: center;
 }
 @media screen and (max-width: 1455px) {
