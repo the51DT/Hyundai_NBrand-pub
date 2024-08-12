@@ -470,8 +470,9 @@ var pubUi = {
       slidesPerView: 1.15,
       spaceBetween: 24,
       watchOverflow: true,
-      slidesOffsetBefore: 24,
-      slidesOffsetAfter: 24,
+      centeredSlides: true,
+      // slidesOffsetBefore: 24,
+      // slidesOffsetAfter: 24,
       pagination: {
         el: ".collection_swiper .swiper-pagination-custom",
         clickable: true,
@@ -484,26 +485,26 @@ var pubUi = {
         360: {
           slidesPerView: 1.13,
           spaceBetween: 12,
-          slidesOffsetBefore: 24,
-          slidesOffsetAfter: 24,
+          // slidesOffsetBefore: 24,
+          // slidesOffsetAfter: 24,
         },
         400: {
           slidesPerView: 1.1,
           spaceBetween: 12,
-          slidesOffsetBefore: 24,
-          slidesOffsetAfter: 24,
+          // slidesOffsetBefore: 24,
+          // slidesOffsetAfter: 24,
         },
         550: {
           slidesPerView: 1.07,
           spaceBetween: 12,
-          slidesOffsetBefore: 24,
-          slidesOffsetAfter: 24,
+          // slidesOffsetBefore: 24,
+          // slidesOffsetAfter: 24,
         },
         1024: {
           slidesPerView: 3,
           spaceBetween: 24,
-          slidesOffsetBefore: 0,
-          slidesOffsetAfter: 0,
+          // slidesOffsetBefore: 0,
+          // slidesOffsetAfter: 0,
         },
       },
     });
@@ -773,7 +774,6 @@ $(document).ready(function () {
       }
       swiper4SlideEvt();
     }
-    
 
     btnNaviCheck();
   });
@@ -840,7 +840,7 @@ function swiper2SlideEvt() {
     autoplayVal = {
       delay: 3000,
       disableOnInteraction: false,
-    };    
+    };
   } else {
     //재생 버튼 없는 ty02Swiper 케이스
     autoplayVal = false;
@@ -854,7 +854,7 @@ function swiper2SlideEvt() {
   }
 
   // swiper-slide 배너 1개 이하일 경우 재생/멈춤 버튼 삭제
-  if(slideLenth < 2) {
+  if (slideLenth < 2) {
     $(".ty02Swiper .btn-play").hide();
   }
 
