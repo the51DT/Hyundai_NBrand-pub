@@ -1123,8 +1123,7 @@ function evtImgMapChk(optionDataType, option1) {
       ".list-content.active .selectbox-wrap.evtLayout-type > div:not('.selectbox-group') .selectbox-options"
     )
       .find(".option-click.active")
-      .data("type");
-    alert(optionDataType);
+      .data("type");    
   }
 
   if (option1 == "") {
@@ -1133,7 +1132,6 @@ function evtImgMapChk(optionDataType, option1) {
     )
       .find(".option-click.active")
       .index();
-    alert(option1Idx);
   } else {
     option1Idx = option1.index();
   }
@@ -1314,12 +1312,10 @@ function tabBtnEvent(target, tabContainer) {
     for (var i = 0; i < targets.length; i++) {
       target = targets[i];
     }
-    alert(target);
   }
 
   if (tabContainer == "") {
     tabContainer = $(".list-content.active .tab-container");
-    alert(tabContainer);
   }
 
   const targetListItem = $(target.parentNode);
