@@ -183,15 +183,27 @@ var pubUi = {
     // 이벤트 레이아웃 + 버튼 클릭시,
     $(".event-box .btn-wrap.plus").click(function (e) {
       $(this).closest(".evt-map-wrap").addClass("active");
-      $(this).closest(".evt-map-wrap").find(".evt-map-img.active .evt-map-default-box").hide();
-      $(this).closest(".evt-map-wrap").find(".evt-map-img.active .evt-map-active-box > button").show();
+      $(this)
+        .closest(".evt-map-wrap")
+        .find(".evt-map-img.active .evt-map-default-box")
+        .hide();
+      $(this)
+        .closest(".evt-map-wrap")
+        .find(".evt-map-img.active .evt-map-active-box > button")
+        .show();
     });
 
     // 이벤트 레이아웃 - 버튼 클릭시,
     $(".event-box .btn-wrap.minus").click(function (e) {
       $(this).closest(".evt-map-wrap").removeClass("active");
-      $(this).closest(".evt-map-wrap").find(".evt-map-img.active .evt-map-default-box").show();
-      $(this).closest(".evt-map-wrap").find(".evt-map-img.active .evt-map-active-box > button").hide();
+      $(this)
+        .closest(".evt-map-wrap")
+        .find(".evt-map-img.active .evt-map-default-box")
+        .show();
+      $(this)
+        .closest(".evt-map-wrap")
+        .find(".evt-map-img.active .evt-map-active-box > button")
+        .hide();
     });
 
     $(".tit-btn-wrap button").click(function (e) {
@@ -209,12 +221,12 @@ var pubUi = {
     $(".rending-wrap > li button").on("click", function (e) {
       e.preventDefault();
       var scrollTarget = $(this).data("scroll");
-      
+
       // 08.09 수정 : 선택한 네비게이션 메뉴의 rending-btn 활성화
       $(this).parent().siblings().find("button").removeClass("on");
       $(this).addClass("on");
 
-      pubUi.pageScrollChk(scrollTarget);            
+      pubUi.pageScrollChk(scrollTarget);
     });
 
     $("#topBtn").on("click", function () {
@@ -457,8 +469,9 @@ var pubUi = {
       slidesPerView: 1.15,
       spaceBetween: 24,
       watchOverflow: true,
-      slidesOffsetBefore: 24,
-      slidesOffsetAfter: 24,
+      centeredSlides: true,
+      // slidesOffsetBefore: 24,
+      // slidesOffsetAfter: 24,
       pagination: {
         el: ".collection_swiper .swiper-pagination-custom",
         clickable: true,
@@ -471,26 +484,26 @@ var pubUi = {
         360: {
           slidesPerView: 1.13,
           spaceBetween: 12,
-          slidesOffsetBefore: 24,
-          slidesOffsetAfter: 24,
+          // slidesOffsetBefore: 24,
+          // slidesOffsetAfter: 24,
         },
         400: {
           slidesPerView: 1.1,
           spaceBetween: 12,
-          slidesOffsetBefore: 24,
-          slidesOffsetAfter: 24,
+          // slidesOffsetBefore: 24,
+          // slidesOffsetAfter: 24,
         },
         550: {
           slidesPerView: 1.07,
           spaceBetween: 12,
-          slidesOffsetBefore: 24,
-          slidesOffsetAfter: 24,
+          // slidesOffsetBefore: 24,
+          // slidesOffsetAfter: 24,
         },
         1024: {
           slidesPerView: 3,
           spaceBetween: 24,
-          slidesOffsetBefore: 0,
-          slidesOffsetAfter: 0,
+          // slidesOffsetBefore: 0,
+          // slidesOffsetAfter: 0,
         },
       },
     });
@@ -760,7 +773,6 @@ $(document).ready(function () {
       }
       swiper4SlideEvt();
     }
-    
 
     btnNaviCheck();
   });
@@ -827,7 +839,7 @@ function swiper2SlideEvt() {
     autoplayVal = {
       delay: 3000,
       disableOnInteraction: false,
-    };    
+    };
   } else {
     //재생 버튼 없는 ty02Swiper 케이스
     autoplayVal = false;
@@ -841,7 +853,7 @@ function swiper2SlideEvt() {
   }
 
   // swiper-slide 배너 1개 이하일 경우 재생/멈춤 버튼 삭제
-  if(slideLenth < 2) {
+  if (slideLenth < 2) {
     $(".ty02Swiper .btn-play").hide();
   }
 
