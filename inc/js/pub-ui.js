@@ -352,37 +352,6 @@ var pubUi = {
       },
       on: {},
     });
-    var swiper3Card = new Swiper(".ty03Swiper.rankswiper", {
-      slidesPerView: 3,
-      spaceBetween: 24,
-      watchOverflow: true,
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: ".swiper-pagination-custom",
-        clickable: true,
-      },
-      navigation: {
-        nextEl: ".ty03Swiper .swiper-button-next",
-        prevEl: ".ty03Swiper .swiper-button-prev",
-      },
-      breakpoints: {
-        360: {
-          slidesPerView: 1.2,
-          spaceBetween: 12,
-        },
-        768: {
-          slidesPerView: 1.2,
-          spaceBetween: 12,
-        },
-        1024: {
-          slidesPerView: 3,
-          spaceBetween: 24,
-        },
-      },
-    });
     var swiper6 = new Swiper(".onlyOneSwiper", {
       slidesPerView: 1,
       spaceBetween: 80,
