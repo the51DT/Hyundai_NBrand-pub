@@ -3,7 +3,6 @@ if ($.isFunction("checkCommonJs")) {
 }
 /* 퍼블리셔 JS 셋팅 */
 $(document).ready(function () {
-  // NbrandUI.startSet();
   NbrandUI.headerNav(".nav-btn", ".nav-wrap", ".header-wrap");
   NbrandUI.headerNavdep(
     "button[class^='gnb__tab-btn']",
@@ -15,9 +14,7 @@ $(document).ready(function () {
   NbrandUI.profileOpenClose(".profile-open", ".profile-close");
   NbrandUI.modalClose(".pop-close");
   NbrandUI.naviClick(".navi_event-btn");
-  // NbrandUI.rendingClick(".rending-btn");
   resizeDone();
-  // NbrandUI.inputClear(".input-del");
   NbrandSwiper.swiper9(".configurator_swiper");
   NbrandSwiper.swiper3(".ty03Swiper:not(.rankswiper)");
 });
@@ -37,13 +34,8 @@ $(window).resize(function () {
 
 function resizeDone() {
   if (NbrandUI.windowSize()) {
-    // $("[class^=panel2_2]").removeClass("on");
-    // $(".gnb__panel02").hide();
-    // $(".type-thumbnail, .gnb__tab-cont02 .gnb__tab02-btn01").removeClass("on");
     NbrandUI.headerReset(".nav-btn", ".nav-wrap", ".header-wrap");
   } else {
-    // $(".gnb__panel02").show();
-    // $(".type-thumbnail, .gnb__tab-cont02 .gnb__tab02-btn01").addClass("on");
     NbrandUI.headerReset(".nav-btn", ".nav-wrap", ".header-wrap");
   }
 }
