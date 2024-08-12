@@ -871,6 +871,11 @@ function swiper2SlideEvt() {
     loopVal = false;
   }
 
+  // swiper-slide 배너 1개 이하일 경우 재생/멈춤 버튼 삭제
+  if(slideLenth < 2) {
+    $(".ty02Swiper .btn-play").hide();
+  }
+
   // if ($(".ty02Swiper .swiper-slide").length == 3) {
   //   console.log($(".ty02Swiper .swiper-slide:first-child").html());
   //   $(".ty02Swiper .swiper-wrapper").append(
