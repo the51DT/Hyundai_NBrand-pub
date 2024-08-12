@@ -72,8 +72,9 @@ var pubUi = {
     // 탭버튼 수정
     $(".tabs li").on("click", function (e) {
       e.preventDefault();
+      var target = e.target;
       var tabContainer = $(this).closest(".tab-container");
-      tabBtnEvent(e, tabContainer);
+      tabBtnEvent(target, tabContainer);
     });
 
     // 스와이퍼 재생 버튼 클릭시, 동영상 재생, 정지
@@ -183,15 +184,27 @@ var pubUi = {
     // 이벤트 레이아웃 + 버튼 클릭시,
     $(".event-box .btn-wrap.plus").click(function (e) {
       $(this).closest(".evt-map-wrap").addClass("active");
-      $(this).closest(".evt-map-wrap").find(".evt-map-img.active .evt-map-default-box").hide();
-      $(this).closest(".evt-map-wrap").find(".evt-map-img.active .evt-map-active-box > button").show();
+      $(this)
+        .closest(".evt-map-wrap")
+        .find(".evt-map-img.active .evt-map-default-box")
+        .hide();
+      $(this)
+        .closest(".evt-map-wrap")
+        .find(".evt-map-img.active .evt-map-active-box > button")
+        .show();
     });
 
     // 이벤트 레이아웃 - 버튼 클릭시,
     $(".event-box .btn-wrap.minus").click(function (e) {
       $(this).closest(".evt-map-wrap").removeClass("active");
-      $(this).closest(".evt-map-wrap").find(".evt-map-img.active .evt-map-default-box").show();
-      $(this).closest(".evt-map-wrap").find(".evt-map-img.active .evt-map-active-box > button").hide();
+      $(this)
+        .closest(".evt-map-wrap")
+        .find(".evt-map-img.active .evt-map-default-box")
+        .show();
+      $(this)
+        .closest(".evt-map-wrap")
+        .find(".evt-map-img.active .evt-map-active-box > button")
+        .hide();
     });
 
     $(".tit-btn-wrap button").click(function (e) {
@@ -209,12 +222,12 @@ var pubUi = {
     $(".rending-wrap > li button").on("click", function (e) {
       e.preventDefault();
       var scrollTarget = $(this).data("scroll");
-      
+
       // 08.09 수정 : 선택한 네비게이션 메뉴의 rending-btn 활성화
       $(this).parent().siblings().find("button").removeClass("on");
       $(this).addClass("on");
 
-      pubUi.pageScrollChk(scrollTarget);            
+      pubUi.pageScrollChk(scrollTarget);
     });
 
     $("#topBtn").on("click", function () {
@@ -1103,7 +1116,27 @@ function evtImgMapChk(optionDataType, option1) {
   );
   var selectboxGroupItem = selectboxEvtLayout.find(".selectbox-group > div");
 
-  var option1Idx = option1.index();
+  var option1Idx = "";
+
+  if (optionDataType == "") {
+    optionDataType = $(
+      ".list-content.active .selectbox-wrap.evtLayout-type > div:not('.selectbox-group') .selectbox-options"
+    )
+      .find(".option-click.active")
+      .data("type");
+    alert(optionDataType);
+  }
+
+  if (option1 == "") {
+    option1Idx = $(
+      ".list-content.active .selectbox-wrap.evtLayout-type > div:not('.selectbox-group') .selectbox-options"
+    )
+      .find(".option-click.active")
+      .index();
+    alert(option1Idx);
+  } else {
+    option1Idx = option1.index();
+  }
 
   if (selectboxGroupItem.length > 0) {
     // 2번째 selectbox 존재할 경우,
@@ -1274,8 +1307,21 @@ dropdownFilter.forEach((filter) => {
 });
 
 // 탭버튼 : 외부 접근 가능 하도록 실행함수로 변경
-function tabBtnEvent(e, tabContainer) {
-  const target = e.target;
+function tabBtnEvent(target, tabContainer) {
+  // 빈 값일 경우, 예외처리
+  if (target == "") {
+    targets = $(".list-content.active .tabs li.on");
+    for (var i = 0; i < targets.length; i++) {
+      target = targets[i];
+    }
+    alert(target);
+  }
+
+  if (tabContainer == "") {
+    tabContainer = $(".list-content.active .tab-container");
+    alert(tabContainer);
+  }
+
   const targetListItem = $(target.parentNode);
   const targetIdx = targetListItem.index();
   const tabLabel = target.getAttribute("aria-controls");

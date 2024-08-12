@@ -1102,7 +1102,7 @@
                                   based on 650-HP IONIQ 5 N
                                 </p>
                                 <div class="btn-wrap">
-                                  <a href="#" class="btn md-txt-btn01">
+                                  <a href="about-korea.do" class="btn md-txt-btn01">
                                     Learn More
                                     <span class="btn-icon16 icon-right" aria-hidden="true"></span>
                                   </a>
@@ -1122,7 +1122,7 @@
                                   N1 Cup car, purpose-built for racing
                                 </p>
                                 <div class="btn-wrap">
-                                  <a href="#" class="btn md-txt-btn01">
+                                  <a href="about-korea.do" class="btn md-txt-btn01">
                                     Learn More
                                     <span class="btn-icon16 icon-right" aria-hidden="true"></span>
                                   </a>
@@ -1143,7 +1143,7 @@
                                   drivers compete
                                 </p>
                                 <div class="btn-wrap">
-                                  <a href="#" class="btn md-txt-btn01">
+                                  <a href="about-korea.do" class="btn md-txt-btn01">
                                     Learn More
                                     <span class="btn-icon16 icon-right" aria-hidden="true"></span>
                                   </a>
@@ -1165,11 +1165,11 @@
                             <div class="tabs-wrap">
                               <ul class="tabs ty-black" data-contents="탭카테고리">
                                 <li class="on">
-                                  <a href="javascript:;" aria-controls="tab1-011" role="tab"
+                                  <a href="#" aria-controls="tab1-011" role="tab"
                                     aria-selected="true">Saturday</a>
                                 </li>
                                 <li>
-                                  <a href="javascript:;" aria-controls="tab1-021" role="tab" aria-selected="false">
+                                  <a href="#" aria-controls="tab1-021" role="tab" aria-selected="false">
                                     Sunday
                                   </a>
                                 </li>
@@ -1364,9 +1364,7 @@
                       <div class="conts-body">
                         <!-- 활성화시 on 클래스 -->
                         <!-- data-type 값 부모 첫번째 selectbox 대상과 동일하게 적용 필요 -->
-                        <!-- active 클래스 : 상세맵 활성화시(+ 버튼 클릭시) active 클래스 추가 -->
-                        <div class="evt-map-wrap on" data-type="1">
-                          <!-- on 클래스 : 맵 활성화시 on 클래스 추가 필요 -->
+                        <div class="evt-map-wrap on" data-type="1"><!-- on 클래스 : 맵 활성화시 on 클래스 추가 필요 -->                          
                           <div class="btn-area">
                             <div class="btn-wrap plus">
                               <button type="button">
@@ -1378,13 +1376,21 @@
                                 <span class="visually-hidden">- 축소 버튼</span>
                               </button>
                             </div>
-                          </div>
-                          
+                          </div>                          
 
                           
-                          <div class="evt-map-img active">
+                          <div class="evt-map-img active"> <!-- 기본 default값 으로 노출하고싶은 evt-map-img에 active클래스 추가하기 -->
                             <div class="evt-map-default-box">
-                              <!-- Inje N Cup - Round1 이벤트레이아웃 기본 이미지 -->
+                              <!-- 
+                                comment!
+                                ****************************************************************                                        
+                                1. 레이어팝업 실행 함수 : NbrandUI.modalOpen(".pop-open"); -> 팝업이벤트 개발 호출 후 실행 원할 경우 해당 이벤트 실행 하시면 됩니다.
+                                
+                                2. 각 이벤트맵 button의 aria-controls 속성값과 매핑하고자하는 popup id값과 동일한 값 매핑 필요! 
+                                ex). nLounge 이벤트맵이면 button의 aria-controls="pop-nLounge" 여야하고,
+                                popup id="pop-nLounge" id값과 동일해야 정상적으로 팝업이 노출됨
+                                ****************************************************************
+                              -->
                               <button class="pop-open btn-evtmap-pop active" aria-controls="pop-nLounge"
                                 aria-haspopup="true" aria-expanded="false" title="팝업오픈">
                                 <span class="visually-hidden">side-popup1 열기</span>
@@ -1489,17 +1495,29 @@
                   <div class="content-item07">
                     <div class="schedule-box">
                       <div class="wrap-list list02">
+                        <!-- 
+                          comment!
+                          ****************************************************************      
+                          1. tab-btn 전환 
+                          - tab 이벤트 클릭한 값 기준으로 이벤트 실행되도록 구조 변경 하였음
+
+                          2. tab 이벤트 실행 함수
+                          - tabBtnEvent("","") 
+                          //외부 호출 필요할 경우, 빈 값으로 실행 시켜주세요
+
+                          ****************************************************************
+                        -->
                         <div class="tab-container">
                           <div class="tab-head">
                             <h2 class="title">Event Schedule</h2>
                             <div class="tabs-wrap">
                               <ul class="tabs ty-black" data-contents="탭카테고리">
                                 <li class="on">
-                                  <a href="javascript:;" aria-controls="tab2-011" role="tab"
+                                  <a href="#" aria-controls="tab2-011" role="tab"
                                     aria-selected="true">Saturday</a>
                                 </li>
                                 <li>
-                                  <a href="javascript:;" aria-controls="tab2-021" role="tab" aria-selected="false">
+                                  <a href="#" aria-controls="tab2-021" role="tab" aria-selected="false">
                                     Sunday
                                   </a>
                                 </li>
@@ -1799,29 +1817,30 @@
                 </div>
                 <!-- //conts01-->
                 <div class="list-content conts02" data-content="2">
-                  <!-- 07.22 수정 : th:block 추가 -->
+                  
+                  <div class="n-race-box-conts content-item03">
+                    <h2 class="title-w1440 contitle-type01 fw-type03">
+                      N CUP Round 2
+                    </h2>
+                    <div class="conts-box-wrap">
+                      <div class="bg-img-wrap" style="
+                            background-image: url('../../inc/images/img/r2_evtGuide_kv_pc.png');
+                          ">
+                        <h3 class="tit">N Festival<br />N Cup Round 2</h3>
+                        <p class="desc">
+                          05.11 ~ 05.12<br /> Youngin Everland SPEEDIUM
+                        </p>
+                        <a href="#" target="_blank" rel="noopener" class="more_btn btn btn-md-primary02">
+                          Tickets
+                          <span class="btn-icon16 icon-right" aria-hidden="true"></span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>  
+
+                  <!-- 08.12 수정 : th:block 위치 변경 -->
                   <th:block th:fragment="roundInfo">
                     <th:block th:if="${race != null}">
-                      <div class="n-race-box-conts content-item03">
-                        <h2 class="title-w1440 contitle-type01 fw-type03">
-                          N CUP Round 2
-                        </h2>
-                        <div class="conts-box-wrap">
-                          <div class="bg-img-wrap" style="
-                                background-image: url('../../inc/images/img/r2_evtGuide_kv_pc.png');
-                              ">
-                            <h3 class="tit">N Festival<br />N Cup Round 2</h3>
-                            <p class="desc">
-                              05.11 ~ 05.12<br /> Youngin Everland SPEEDIUM
-                            </p>
-                            <a href="#" target="_blank" rel="noopener" class="more_btn btn btn-md-primary02">
-                              Tickets
-                              <span class="btn-icon16 icon-right" aria-hidden="true"></span>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-
                       <div class="content-item04 bg-gray">
                         <div class="class-info-box">
                           <h2 class="title-w1440 contitle-type01 fw-type03 ta-ctr">
@@ -1897,7 +1916,7 @@
                       </div>
 
                       <div class="content-item05">
-                        <div class="schedule-box th:utext=${race.raceDetail}">
+                        <div class="schedule-box" th:utext="${race.raceDetail}">
                           <div class="wrap-list list01">
                             <div class="tab-container">
                               <div class="tab-head">
@@ -1905,11 +1924,11 @@
                                 <div class="tabs-wrap">
                                   <ul class="tabs ty-black" data-contents="탭카테고리">
                                     <li class="on">
-                                      <a href="javascript:;" aria-controls="tab3-011" role="tab"
+                                      <a href="#" aria-controls="tab3-011" role="tab"
                                         aria-selected="true">Saturday</a>
                                     </li>
                                     <li>
-                                      <a href="javascript:;" aria-controls="tab3-021" role="tab" aria-selected="false">
+                                      <a href="#" aria-controls="tab3-021" role="tab" aria-selected="false">
                                         Sunday
                                       </a>
                                     </li>
@@ -2481,7 +2500,19 @@
                             <!-- //08.06 수정 : selectbox-group 추가 : 2번째 항목 값 케이스 일때(2번째 selectbox 존재할 경우에만) -->
                           </div>
                           <div class="conts-body">
-                            <!-- 07.30 수정 : evt-map-wrap 마크업 구조 변경 : 선택한 selectbox 옵션값에 따른 하드코딩 노출 형태로 변경 (스크립트 로 동적생성 X) -->
+                          <!-- 
+                          comment!
+                          ****************************************************************      
+                          1. event Layout 영역 event Map 호출 실행 함수 
+                          라운드별 컨텐츠 변경 후, event Layout 정상 동작 안하는 경우, evtImgMapChk 함수 한번 더 호출해주세요.
+                          - plus, minus 버튼 클릭 이벤트 경우, 해당 함수 호출 되어 있을 시 문제 없어 따로 외부 실행함수로 변경하지 않았습니다. 참고 부탁드려요-!
+
+                          2. event Map 호출 실행 함수 
+                          - evtImgMapChk("", "");
+                          //외부 호출 필요할 경우, 빈 값으로 실행 시켜주세요
+
+                          ****************************************************************
+                          -->
                             
                             <!-- 08.08 수정사항 -->
                             <!-- 활성화시 on 클래스 -->
@@ -2593,7 +2624,7 @@
                       </section>
 
                       <div class="content-item07">
-                        <div class="schedule-box th:utext=${race.eventDetail}">
+                        <div class="schedule-box" th:utext="${race.eventDetail}">
                           <div class="wrap-list list02">
                             <div class="tab-container">
                               <div class="tab-head">
@@ -2601,11 +2632,11 @@
                                 <div class="tabs-wrap">
                                   <ul class="tabs ty-black" data-contents="탭카테고리">
                                     <li class="on">
-                                      <a href="javascript:;" aria-controls="tab4-011" role="tab"
+                                      <a href="#" aria-controls="tab4-011" role="tab"
                                         aria-selected="true">Saturday</a>
                                     </li>
                                     <li>
-                                      <a href="javascript:;" aria-controls="tab4-021" role="tab" aria-selected="false">
+                                      <a href="#" aria-controls="tab4-021" role="tab" aria-selected="false">
                                         Sunday
                                       </a>
                                     </li>
@@ -3315,31 +3346,30 @@
                       </section>
                     </th:block>
                   </th:block>
-                  <!-- //07.22 수정 : th:block 추가 -->
+                  <!-- //08.12 수정 : th:block 위치 변경 -->
                 </div>
                 <!-- //conts02-->
                 <div class="list-content conts03" data-content="3">
-                  <!-- 07.22 수정 : th:block 추가 -->
+                  <div class="n-race-box-conts content-item03">
+                    <h2 class="title-w1440 contitle-type01 fw-type03">
+                      N CUP Round 3
+                    </h2>
+                    <div class="conts-box-wrap">
+                      <div class="bg-img-wrap" style="
+                            background-image: url('../../inc/images/img/r3_evtGuide_kv_pc.png');
+                          ">
+                        <h3 class="tit">N Festival<br />N Cup Round 3</h3>
+                        <p class="desc">06.22 ~ 06.23<br /> Korea International Circuit</p>
+                        <a href="#" target="_blank" rel="noopener" class="more_btn btn btn-md-primary02">
+                          Tickets
+                          <span class="btn-icon16 icon-right" aria-hidden="true"></span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 08.12 수정 : th:block 위치 변경 -->
                   <th:block th:fragment="roundInfo">
                     <th:block th:if="${race != null}">
-                      <div class="n-race-box-conts content-item03">
-                        <h2 class="title-w1440 contitle-type01 fw-type03">
-                          N CUP Round 3
-                        </h2>
-                        <div class="conts-box-wrap">
-                          <div class="bg-img-wrap" style="
-                                background-image: url('../../inc/images/img/r3_evtGuide_kv_pc.png');
-                              ">
-                            <h3 class="tit">N Festival<br />N Cup Round 3</h3>
-                            <p class="desc">06.22 ~ 06.23<br /> Korea International Circuit</p>
-                            <a href="#" target="_blank" rel="noopener" class="more_btn btn btn-md-primary02">
-                              Tickets
-                              <span class="btn-icon16 icon-right" aria-hidden="true"></span>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-
                       <div class="content-item04 bg-gray">
                         <div class="class-info-box">
                           <h2 class="title-w1440 contitle-type01 fw-type03 ta-ctr">
@@ -3411,7 +3441,7 @@
                       </div>
 
                       <div class="content-item05">
-                        <div class="schedule-box th:utext=${race.raceDetail}">
+                        <div class="schedule-box" th:utext="${race.raceDetail}">
                           <div class="wrap-list list01">
                             <div class="tab-container">
                               <div class="tab-head">
@@ -3419,11 +3449,11 @@
                                 <div class="tabs-wrap">
                                   <ul class="tabs ty-black" data-contents="탭카테고리">
                                     <li class="on">
-                                      <a href="javascript:;" aria-controls="tab5-011" role="tab"
+                                      <a href="#" aria-controls="tab5-011" role="tab"
                                         aria-selected="true">Saturday</a>
                                     </li>
                                     <li>
-                                      <a href="javascript:;" aria-controls="tab5-021" role="tab" aria-selected="false">
+                                      <a href="#" aria-controls="tab5-021" role="tab" aria-selected="false">
                                         Sunday </a>
                                     </li>
                                   </ul>
@@ -3951,7 +3981,7 @@
                       </section>
 
                       <div class="content-item07">
-                        <div class="schedule-box th:utext=${race.eventDetail}">
+                        <div class="schedule-box" th:utext="${race.eventDetail}">
                           <div class="wrap-list list02">
                             <div class="tab-container">
                               <div class="tab-head">
@@ -3959,11 +3989,11 @@
                                 <div class="tabs-wrap">
                                   <ul class="tabs ty-black" data-contents="탭카테고리">
                                     <li class="on">
-                                      <a href="javascript:;" aria-controls="tab6-011" role="tab"
+                                      <a href="#" aria-controls="tab6-011" role="tab"
                                         aria-selected="true">Saturday</a>
                                     </li>
                                     <li>
-                                      <a href="javascript:;" aria-controls="tab6-021" role="tab" aria-selected="false">
+                                      <a href="#" aria-controls="tab6-021" role="tab" aria-selected="false">
                                         Sunday </a>
                                     </li>
                                   </ul>
@@ -4197,33 +4227,32 @@
                       </section>
                     </th:block>
                   </th:block>
-                  <!-- //07.22 수정 : th:block 추가 -->
+                  <!-- //08.12 수정 : th:block 위치 변경 -->
                 </div> <!-- //conts03-->
                 <div class="list-content conts04" data-content="4">
-                  <!-- 07.22 수정 : th:block 추가 -->
+                  <div class="n-race-box-conts content-item03">
+                    <h2 class="title-w1440 contitle-type01 fw-type03">
+                      N CUP Round 4
+                    </h2>
+                    <div class="conts-box-wrap">
+                      <div class="bg-img-wrap" style="
+                            background-image: url('../../inc/images/img/r4_evtGuide_kv_pc.png');
+                          ">
+                        <h3 class="tit">N Festival<br />N Cup Round 4</h3>
+                        <p class="desc">
+                          09.28 - 09.29<br />
+                          Yongin Everland SPEEDWAY
+                        </p>
+                        <a href="#" target="_blank" rel="noopener" class="more_btn btn btn-md-primary02">
+                          Tickets
+                          <span class="btn-icon16 icon-right" aria-hidden="true"></span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 08.12 수정 : th:block 위치 변경 -->
                   <th:block th:fragment="roundInfo">
                     <th:block th:if="${race != null}">
-                      <div class="n-race-box-conts content-item03">
-                        <h2 class="title-w1440 contitle-type01 fw-type03">
-                          N CUP Round 4
-                        </h2>
-                        <div class="conts-box-wrap">
-                          <div class="bg-img-wrap" style="
-                                background-image: url('../../inc/images/img/r4_evtGuide_kv_pc.png');
-                              ">
-                            <h3 class="tit">N Festival<br />N Cup Round 4</h3>
-                            <p class="desc">
-                              09.28 - 09.29<br />
-                              Yongin Everland SPEEDWAY
-                            </p>
-                            <a href="#" target="_blank" rel="noopener" class="more_btn btn btn-md-primary02">
-                              Tickets
-                              <span class="btn-icon16 icon-right" aria-hidden="true"></span>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-
                       <div class="content-item04 bg-gray">
                         <div class="class-info-box">
                           <h2 class="title-w1440 contitle-type01 fw-type03 ta-ctr">
@@ -4300,7 +4329,7 @@
                       </div>
 
                       <div class="content-item05">
-                        <div class="schedule-box th:utext=${race.raceDetail}">
+                        <div class="schedule-box" th:utext="${race.raceDetail}">
                           <div class="wrap-list list01">
                             <div class="tab-container">
                               <div class="tab-head">
@@ -4308,11 +4337,11 @@
                                 <div class="tabs-wrap">
                                   <ul class="tabs ty-black" data-contents="탭카테고리">
                                     <li class="on">
-                                      <a href="javascript:;" aria-controls="tab7-011" role="tab"
+                                      <a href="#" aria-controls="tab7-011" role="tab"
                                         aria-selected="true">Saturday</a>
                                     </li>
                                     <li>
-                                      <a href="javascript:;" aria-controls="tab7-021" role="tab" aria-selected="false">
+                                      <a href="#" aria-controls="tab7-021" role="tab" aria-selected="false">
                                         Sunday </a>
                                     </li>
                                   </ul>
@@ -4474,10 +4503,10 @@
                                     </button>
                                   </li>
                                   <li class="option option-click fw-
-                                  type03 active" role="option" aria-selected="true">Experience Zone</li>
-                                  <li class="option option-click fw-type03" role="option" aria-selected="false">
+                                  type03 active" role="option" aria-selected="true" data-type="1">Experience Zone</li>
+                                  <li class="option option-click fw-type03" role="option" aria-selected="false" data-type="2">
                                     Motorsport Experience</li>
-                                  <li class="option option-click fw-type03" role="option" aria-selected="false">Viewing
+                                  <li class="option option-click fw-type03" role="option" aria-selected="false" data-type="3">Viewing
                                     zone</li>
                                 </ul>
                               </div>
@@ -4550,7 +4579,7 @@
                       </section>
 
                       <div class="content-item07">
-                        <div class="schedule-box th:utext=${race.eventDetail}">
+                        <div class="schedule-box" th:utext="${race.eventDetail}">
                           <div class="wrap-list list02">
                             <div class="tab-container">
                               <div class="tab-head">
@@ -4558,11 +4587,11 @@
                                 <div class="tabs-wrap">
                                   <ul class="tabs ty-black" data-contents="탭카테고리">
                                     <li class="on">
-                                      <a href="javascript:;" aria-controls="tab8-011" role="tab"
+                                      <a href="#" aria-controls="tab8-011" role="tab"
                                         aria-selected="true">Saturday</a>
                                     </li>
                                     <li>
-                                      <a href="javascript:;" aria-controls="tab8-021" role="tab" aria-selected="false">
+                                      <a href="#" aria-controls="tab8-021" role="tab" aria-selected="false">
                                         Sunday </a>
                                     </li>
                                   </ul>
@@ -4855,30 +4884,29 @@
                       </section>
                     </th:block>
                   </th:block>
-                  <!-- //07.22 수정 : th:block 추가 -->
+                  <!-- //08.12 수정 : th:block 위치 변경 -->
                 </div> <!-- //conts04-->
                 <div class="list-content conts05" data-content="5">
-                  <!-- 07.22 수정 : th:block 추가 -->
+                  <div class="n-race-box-conts content-item03">
+                    <h2 class="title-w1440 contitle-type01 fw-type03">
+                      N CUP Round 5
+                    </h2>
+                    <div class="conts-box-wrap">
+                      <div class="bg-img-wrap" style="
+                            background-image: url('../../inc/images/img/r5_evtGuide_kv_pc.png');
+                          ">
+                        <h3 class="tit">N Festival<br />N Cup Round 5</h3>
+                        <p class="desc">10.19 - 10.20<br />Inje SPEEDIUM</p>
+                        <a href="#" target="_blank" rel="noopener" class="more_btn btn btn-md-primary02">
+                          Tickets
+                          <span class="btn-icon16 icon-right" aria-hidden="true"></span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 08.12 수정 : th:block 위치 변경 -->
                   <th:block th:fragment="roundInfo">
                     <th:block th:if="${race != null}">
-                      <div class="n-race-box-conts content-item03">
-                        <h2 class="title-w1440 contitle-type01 fw-type03">
-                          N CUP Round 5
-                        </h2>
-                        <div class="conts-box-wrap">
-                          <div class="bg-img-wrap" style="
-                                background-image: url('../../inc/images/img/r5_evtGuide_kv_pc.png');
-                              ">
-                            <h3 class="tit">N Festival<br />N Cup Round 5</h3>
-                            <p class="desc">10.19 - 10.20<br />Inje SPEEDIUM</p>
-                            <a href="#" target="_blank" rel="noopener" class="more_btn btn btn-md-primary02">
-                              Tickets
-                              <span class="btn-icon16 icon-right" aria-hidden="true"></span>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-
                       <div class="content-item04 bg-gray">
                         <div class="class-info-box">
                           <h2 class="title-w1440 contitle-type01 fw-type03 ta-ctr">
@@ -4955,7 +4983,7 @@
                       </div>
 
                       <div class="content-item05">
-                        <div class="schedule-box th:utext=${race.raceDetail}">
+                        <div class="schedule-box" th:utext="${race.raceDetail}">
                           <div class="wrap-list list01">
                             <div class="tab-container">
                               <div class="tab-head">
@@ -5135,7 +5163,7 @@
                       </section>
 
                       <div class="content-item07">
-                        <div class="schedule-box th:utext=${race.eventDetail}">
+                        <div class="schedule-box" th:utext="${race.eventDetail}">
                           <div class="wrap-list list02">
                             <div class="tab-container">
                               <div class="tab-head">
@@ -5240,33 +5268,32 @@
                       </section>
                     </th:block>
                   </th:block>
-                  <!-- //07.22 수정 : th:block 추가 -->
+                  <!-- //08.12 수정 : th:block 위치 변경 -->
                 </div> <!-- //conts05-->
                 <div class="list-content conts06" data-content="6">
-                  <!-- 07.22 수정 : th:block 추가 -->
+                  <div class="n-race-box-conts content-item03">
+                    <h2 class="title-w1440 contitle-type01 fw-type03">
+                      N CUP Round 6
+                    </h2>
+                    <div class="conts-box-wrap">
+                      <div class="bg-img-wrap" style="
+                            background-image: url('../../inc/images/img/r5_evtGuide_kv_pc.png');
+                          ">
+                        <h3 class="tit">N Festival<br />N Cup Round 6</h3>
+                        <p class="desc">
+                          11.9 - 11.10<br />
+                          Korea International Circuit
+                        </p>
+                        <a href="#" target="_blank" rel="noopener" class="more_btn btn btn-md-primary02">
+                          Tickets
+                          <span class="btn-icon16 icon-right" aria-hidden="true"></span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 08.12 수정 : th:block 위치 변경 -->
                   <th:block th:fragment="roundInfo">
                     <th:block th:if="${race != null}">
-                      <div class="n-race-box-conts content-item03">
-                        <h2 class="title-w1440 contitle-type01 fw-type03">
-                          N CUP Round 6
-                        </h2>
-                        <div class="conts-box-wrap">
-                          <div class="bg-img-wrap" style="
-                                background-image: url('../../inc/images/img/r5_evtGuide_kv_pc.png');
-                              ">
-                            <h3 class="tit">N Festival<br />N Cup Round 6</h3>
-                            <p class="desc">
-                              11.9 - 11.10<br />
-                              Korea International Circuit
-                            </p>
-                            <a href="#" target="_blank" rel="noopener" class="more_btn btn btn-md-primary02">
-                              Tickets
-                              <span class="btn-icon16 icon-right" aria-hidden="true"></span>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-
                       <div class="content-item04 bg-gray">
                         <div class="class-info-box">
                           <h2 class="title-w1440 contitle-type01 fw-type03 ta-ctr">
@@ -5343,7 +5370,7 @@
                       </div>
 
                       <div class="content-item05">
-                        <div class="schedule-box th:utext=${race.raceDetail}">
+                        <div class="schedule-box" th:utext="${race.raceDetail}">
                           <div class="wrap-list list01">
                             <div class="tab-container">
                               <div class="tab-head">
@@ -5351,11 +5378,11 @@
                                 <div class="tabs-wrap">
                                   <ul class="tabs ty-black" data-contents="탭카테고리">
                                     <li class="on">
-                                      <a href="javascript:;" aria-controls="tab11-011" role="tab"
+                                      <a href="#" aria-controls="tab11-011" role="tab"
                                         aria-selected="true">Saturday</a>
                                     </li>
                                     <li>
-                                      <a href="javascript:;" aria-controls="tab11-021" role="tab" aria-selected="false">
+                                      <a href="#" aria-controls="tab11-021" role="tab" aria-selected="false">
                                         Sunday </a>
                                     </li>
                                   </ul>
@@ -5616,7 +5643,7 @@
                       </section>
 
                       <div class="content-item07">
-                        <div class="schedule-box th:utext=${race.eventDetail}">
+                        <div class="schedule-box" th:utext="${race.eventDetail}">
                           <div class="wrap-list list02">
                             <div class="tab-container">
                               <div class="tab-head">
@@ -5624,11 +5651,11 @@
                                 <div class="tabs-wrap">
                                   <ul class="tabs ty-black" data-contents="탭카테고리">
                                     <li class="on">
-                                      <a href="javascript:;" aria-controls="tab12-011" role="tab"
+                                      <a href="#" aria-controls="tab12-011" role="tab"
                                         aria-selected="true">Saturday</a>
                                     </li>
                                     <li>
-                                      <a href="javascript:;" aria-controls="tab12-021" role="tab" aria-selected="false">
+                                      <a href="#" aria-controls="tab12-021" role="tab" aria-selected="false">
                                         Sunday </a>
                                     </li>
                                   </ul>
@@ -5921,30 +5948,30 @@
                       </section>
                     </th:block>
                   </th:block>
-                  <!-- //07.22 수정 : th:block 추가 -->
+                  <!-- //08.12 수정 : th:block 위치 변경 -->
                 </div> <!-- //conts06-->
                 <div class="list-content conts07" data-content="7">
-                  <!-- 07.22 수정 : th:block 추가 -->
+                  
+                  <div class="n-race-box-conts content-item03">
+                    <h2 class="title-w1440 contitle-type01 fw-type03">
+                      N TT Round 1
+                    </h2>
+                    <div class="conts-box-wrap">
+                      <div class="bg-img-wrap" style="
+                            background-image: url('../../inc/images/img/ntt_r1_evtGuide_kv_pc.png');
+                          ">
+                        <h3 class="tit">N Festival<br />N TT Round 1</h3>
+                        <p class="desc">05.25<br />Inje Speedium</p>
+                        <a href="#" target="_blank" rel="noopener" class="more_btn btn btn-md-primary02">
+                          Tickets
+                          <span class="btn-icon16 icon-right" aria-hidden="true"></span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 08.12 수정 : th:block 위치 변경 -->
                   <th:block th:fragment="roundInfo">
                     <th:block th:if="${race != null}">
-                      <div class="n-race-box-conts content-item03">
-                        <h2 class="title-w1440 contitle-type01 fw-type03">
-                          N TT Round 1
-                        </h2>
-                        <div class="conts-box-wrap">
-                          <div class="bg-img-wrap" style="
-                                background-image: url('../../inc/images/img/ntt_r1_evtGuide_kv_pc.png');
-                              ">
-                            <h3 class="tit">N Festival<br />N TT Round 1</h3>
-                            <p class="desc">05.25<br />Inje Speedium</p>
-                            <a href="#" target="_blank" rel="noopener" class="more_btn btn btn-md-primary02">
-                              Tickets
-                              <span class="btn-icon16 icon-right" aria-hidden="true"></span>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-
                       <div class="content-item04 bg-gray">
                         <div class="class-info-box">
                           <h2 class="title-w1440 contitle-type01 fw-type03 ta-ctr">
@@ -5980,7 +6007,7 @@
                       </div>
 
                       <div class="content-item05">
-                        <div class="schedule-box th:utext=${race.raceDetail}">
+                        <div class="schedule-box" th:utext="${race.raceDetail}">
                           <div class="wrap-list list01">
                             <div class="tab-container">
                               <div class="tab-head">
@@ -5988,11 +6015,11 @@
                                 <div class="tabs-wrap">
                                   <ul class="tabs ty-black" data-contents="탭카테고리">
                                     <li class="on">
-                                      <a href="javascript:;" aria-controls="tab13-011" role="tab"
+                                      <a href="#" aria-controls="tab13-011" role="tab"
                                         aria-selected="true">Saturday</a>
                                     </li>
                                     <li>
-                                      <a href="javascript:;" aria-controls="tab13-021" role="tab" aria-selected="false">
+                                      <a href="#" aria-controls="tab13-021" role="tab" aria-selected="false">
                                         Sunday
                                       </a>
                                     </li>
@@ -6310,7 +6337,7 @@
                       </section>
 
                       <div class="content-item07">
-                        <div class="schedule-box th:utext=${race.eventDetail}">
+                        <div class="schedule-box" th:utext="${race.eventDetail}">
                           <div class="wrap-list list02">
                             <div class="tab-container">
                               <div class="tab-head">
@@ -6318,11 +6345,11 @@
                                 <div class="tabs-wrap">
                                   <ul class="tabs ty-black" data-contents="탭카테고리">
                                     <li class="on">
-                                      <a href="javascript:;" aria-controls="tab14-011" role="tab"
+                                      <a href="#" aria-controls="tab14-011" role="tab"
                                         aria-selected="true">Saturday</a>
                                     </li>
                                     <li>
-                                      <a href="javascript:;" aria-controls="tab14-021" role="tab" aria-selected="false">
+                                      <a href="#" aria-controls="tab14-021" role="tab" aria-selected="false">
                                         Sunday
                                       </a>
                                     </li>
@@ -6635,33 +6662,32 @@
                       </section>
                     </th:block>
                   </th:block>
-                  <!-- //07.22 수정 : th:block 추가 -->
+                  <!-- //08.12 수정 : th:block 위치 변경 -->
                 </div>
                 <!-- //conts07-->
                 <div class="list-content conts08" data-content="8">
-                  <!-- 07.22 수정 : th:block 추가 -->
+                  <div class="n-race-box-conts content-item03">
+                    <h2 class="title-w1440 contitle-type01 fw-type03">
+                      N TT Round 2
+                    </h2>
+                    <div class="conts-box-wrap">
+                      <div class="bg-img-wrap" style="
+                            background-image: url('../../inc/images/img/ntt_r2_evtGuide_kv_pc.png');
+                          ">
+                        <h3 class="tit">N Festival<br />N TT Round 2</h3>
+                        <p class="desc">
+                          7.20<br />Yongin Everland SPEEDWAY
+                        </p>
+                        <a href="#" target="_blank" rel="noopener" class="more_btn btn btn-md-primary02">
+                          Tickets
+                          <span class="btn-icon16 icon-right" aria-hidden="true"></span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 08.12 수정 : th:block 위치 변경 -->
                   <th:block th:fragment="roundInfo">
                     <th:block th:if="${race != null}">
-                      <div class="n-race-box-conts content-item03">
-                        <h2 class="title-w1440 contitle-type01 fw-type03">
-                          N TT Round 2
-                        </h2>
-                        <div class="conts-box-wrap">
-                          <div class="bg-img-wrap" style="
-                                background-image: url('../../inc/images/img/ntt_r2_evtGuide_kv_pc.png');
-                              ">
-                            <h3 class="tit">N Festival<br />N TT Round 2</h3>
-                            <p class="desc">
-                              7.20<br />Yongin Everland SPEEDWAY
-                            </p>
-                            <a href="#" target="_blank" rel="noopener" class="more_btn btn btn-md-primary02">
-                              Tickets
-                              <span class="btn-icon16 icon-right" aria-hidden="true"></span>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-
                       <div class="content-item04 bg-gray">
                         <div class="class-info-box">
                           <h2 class="title-w1440 contitle-type01 fw-type03 ta-ctr">
@@ -6697,7 +6723,7 @@
                       </div>
 
                       <div class="content-item05">
-                        <div class="schedule-box th:utext=${race.raceDetail}">
+                        <div class="schedule-box" th:utext="${race.raceDetail}">
                           <div class="wrap-list list01">
                             <div class="tab-container">
                               <div class="tab-head">
@@ -6705,11 +6731,11 @@
                                 <div class="tabs-wrap">
                                   <ul class="tabs ty-black" data-contents="탭카테고리">
                                     <li class="on">
-                                      <a href="javascript:;" aria-controls="tab15-011" role="tab"
+                                      <a href="#" aria-controls="tab15-011" role="tab"
                                         aria-selected="true">Saturday</a>
                                     </li>
                                     <li>
-                                      <a href="javascript:;" aria-controls="tab15-021" role="tab" aria-selected="false">
+                                      <a href="#" aria-controls="tab15-021" role="tab" aria-selected="false">
                                         Sunday
                                       </a>
                                     </li>
@@ -6939,7 +6965,7 @@
                       </section>
 
                       <div class="content-item07">
-                        <div class="schedule-box th:utext=${race.eventDetail}">
+                        <div class="schedule-box" th:utext="${race.eventDetail}">
                           <div class="wrap-list list02">
                             <div class="tab-container">
                               <div class="tab-head">
@@ -6947,11 +6973,11 @@
                                 <div class="tabs-wrap">
                                   <ul class="tabs ty-black" data-contents="탭카테고리">
                                     <li class="on">
-                                      <a href="javascript:;" aria-controls="tab16-011" role="tab"
+                                      <a href="#" aria-controls="tab16-011" role="tab"
                                         aria-selected="true">Saturday</a>
                                     </li>
                                     <li>
-                                      <a href="javascript:;" aria-controls="tab16-021" role="tab" aria-selected="false">
+                                      <a href="#" aria-controls="tab16-021" role="tab" aria-selected="false">
                                         Sunday
                                       </a>
                                     </li>
@@ -7266,33 +7292,32 @@
                       </section>
                     </th:block>
                   </th:block>
-                  <!-- //07.22 수정 : th:block 추가 -->
+                  <!-- //08.12 수정 : th:block 위치 변경 -->
                 </div>
                 <!-- //conts08-->
                 <div class="list-content conts09" data-content="9">
-                  <!-- 07.22 수정 : th:block 추가 -->
+                  <div class="n-race-box-conts content-item03">
+                    <h2 class="title-w1440 contitle-type01 fw-type03">
+                      N TT Round 3
+                    </h2>
+                    <div class="conts-box-wrap">
+                      <div class="bg-img-wrap" style="
+                            background-image: url('../../inc/images/img/ntt_r3_evtGuide_kv_pc.png');
+                          ">
+                        <h3 class="tit">N Festival<br />N TT Round 3</h3>
+                        <p class="desc">
+                          8.17<br />Yongin Everland SPEEDWAY
+                        </p>
+                        <a href="#" target="_blank" rel="noopener" class="more_btn btn btn-md-primary02">
+                          Tickets
+                          <span class="btn-icon16 icon-right" aria-hidden="true"></span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 08.12 수정 : th:block 위치 변경 -->
                   <th:block th:fragment="roundInfo">
                     <th:block th:if="${race != null}">
-                      <div class="n-race-box-conts content-item03">
-                        <h2 class="title-w1440 contitle-type01 fw-type03">
-                          N TT Round 3
-                        </h2>
-                        <div class="conts-box-wrap">
-                          <div class="bg-img-wrap" style="
-                                background-image: url('../../inc/images/img/ntt_r3_evtGuide_kv_pc.png');
-                              ">
-                            <h3 class="tit">N Festival<br />N TT Round 3</h3>
-                            <p class="desc">
-                              8.17<br />Yongin Everland SPEEDWAY
-                            </p>
-                            <a href="#" target="_blank" rel="noopener" class="more_btn btn btn-md-primary02">
-                              Tickets
-                              <span class="btn-icon16 icon-right" aria-hidden="true"></span>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-
                       <div class="content-item04 bg-gray">
                         <div class="class-info-box">
                           <h2 class="title-w1440 contitle-type01 fw-type03 ta-ctr">
@@ -7328,7 +7353,7 @@
                       </div>
 
                       <div class="content-item05">
-                        <div class="schedule-box th:utext=${race.raceDetail}">
+                        <div class="schedule-box" th:utext="${race.raceDetail}">
                           <div class="wrap-list list01">
                             <div class="tab-container">
                               <div class="tab-head">
@@ -7420,7 +7445,7 @@
                       </section>
 
                       <div class="content-item07">
-                        <div class="schedule-box th:utext=${race.eventDetail}">
+                        <div class="schedule-box" th:utext="${race.eventDetail}">
                           <div class="wrap-list list02">
                             <div class="tab-container">
                               <div class="tab-head">
@@ -7539,31 +7564,30 @@
                       </section>
                     </th:block>
                   </th:block>
-                  <!-- //07.22 수정 : th:block 추가 -->
+                  <!-- //08.12 수정 : th:block 위치 변경 -->
                 </div>
                 <!-- //conts09-->
                 <div class="list-content conts10" data-content="10">
-                  <!-- 07.22 수정 : th:block 추가 -->
+                  <div class="n-race-box-conts content-item03">
+                    <h2 class="title-w1440 contitle-type01 fw-type03">
+                      N TT Round 4
+                    </h2>
+                    <div class="conts-box-wrap">
+                      <div class="bg-img-wrap" style="
+                            background-image: url('../../inc/images/img/ntt_r4_evtGuide_kv_pc.png');
+                          ">
+                        <h3 class="tit">N Festival<br />N TT Round 4</h3>
+                        <p class="desc">9.7<br />Inje SPEEDIUM</p>
+                        <a href="#" target="_blank" rel="noopener" class="more_btn btn btn-md-primary02">
+                          Tickets
+                          <span class="btn-icon16 icon-right" aria-hidden="true"></span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 08.12 수정 : th:block 위치 변경 -->
                   <th:block th:fragment="roundInfo">
                     <th:block th:if="${race != null}">
-                      <div class="n-race-box-conts content-item03">
-                        <h2 class="title-w1440 contitle-type01 fw-type03">
-                          N TT Round 4
-                        </h2>
-                        <div class="conts-box-wrap">
-                          <div class="bg-img-wrap" style="
-                                background-image: url('../../inc/images/img/ntt_r4_evtGuide_kv_pc.png');
-                              ">
-                            <h3 class="tit">N Festival<br />N TT Round 4</h3>
-                            <p class="desc">9.7<br />Inje SPEEDIUM</p>
-                            <a href="#" target="_blank" rel="noopener" class="more_btn btn btn-md-primary02">
-                              Tickets
-                              <span class="btn-icon16 icon-right" aria-hidden="true"></span>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-
                       <div class="content-item04 bg-gray">
                         <div class="class-info-box">
                           <h2 class="title-w1440 contitle-type01 fw-type03 ta-ctr">
@@ -7599,7 +7623,7 @@
                       </div>
 
                       <div class="content-item05">
-                        <div class="schedule-box th:utext=${race.raceDetail}">
+                        <div class="schedule-box" th:utext="${race.raceDetail}">
                           <div class="wrap-list list01">
                             <div class="tab-container">
                               <div class="tab-head">
@@ -7780,7 +7804,7 @@
                       </section>
 
                       <div class="content-item07">
-                        <div class="schedule-box th:utext=${race.eventDetail}">
+                        <div class="schedule-box" th:utext="${race.eventDetail}">
                           <div class="wrap-list list02">
                             <div class="tab-container">
                               <div class="tab-head">
@@ -7914,31 +7938,30 @@
                       </section>
                     </th:block>
                   </th:block>
-                  <!-- //07.22 수정 : th:block 추가 -->
+                  <!-- //08.12 수정 : th:block 위치 변경 -->
                 </div>
                 <!-- //conts10-->
                 <div class="list-content conts11" data-content="11">
-                  <!-- 07.22 수정 : th:block 추가 -->
+                  <div class="n-race-box-conts content-item03">
+                    <h2 class="title-w1440 contitle-type01 fw-type03">
+                      N TT Round 5
+                    </h2>
+                    <div class="conts-box-wrap">
+                      <div class="bg-img-wrap" style="
+                            background-image: url('../../inc/images/img/ntt_r5_evtGuide_kv_pc.png');
+                          ">
+                        <h3 class="tit">N Festival<br />N TT Round 5</h3>
+                        <p class="desc">10.26<br />Inje SPEEDIUM</p>
+                        <a href="#" target="_blank" rel="noopener" class="more_btn btn btn-md-primary02">
+                          Tickets
+                          <span class="btn-icon16 icon-right" aria-hidden="true"></span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 08.12 수정 : th:block 위치 변경 -->
                   <th:block th:fragment="roundInfo">
                     <th:block th:if="${race != null}">
-                      <div class="n-race-box-conts content-item03">
-                        <h2 class="title-w1440 contitle-type01 fw-type03">
-                          N TT Round 5
-                        </h2>
-                        <div class="conts-box-wrap">
-                          <div class="bg-img-wrap" style="
-                                background-image: url('../../inc/images/img/ntt_r5_evtGuide_kv_pc.png');
-                              ">
-                            <h3 class="tit">N Festival<br />N TT Round 5</h3>
-                            <p class="desc">10.26<br />Inje SPEEDIUM</p>
-                            <a href="#" target="_blank" rel="noopener" class="more_btn btn btn-md-primary02">
-                              Tickets
-                              <span class="btn-icon16 icon-right" aria-hidden="true"></span>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-
                       <div class="content-item04 bg-gray">
                         <div class="class-info-box">
                           <h2 class="title-w1440 contitle-type01 fw-type03 ta-ctr">
@@ -7974,7 +7997,7 @@
                       </div>
 
                       <div class="content-item05">
-                        <div class="schedule-box th:utext=${race.raceDetail}">
+                        <div class="schedule-box" th:utext="${race.raceDetail}">
                           <div class="wrap-list list01">
                             <div class="tab-container">
                               <div class="tab-head">
@@ -8157,7 +8180,7 @@
                       </section>
 
                       <div class="content-item07">
-                        <div class="schedule-box th:utext=${race.eventDetail}">
+                        <div class="schedule-box" th:utext="${race.eventDetail}">
                           <div class="wrap-list list02">
                             <div class="tab-container">
                               <div class="tab-head">
@@ -8291,7 +8314,7 @@
                       </section>
                     </th:block>
                   </th:block>
-                  <!-- //07.22 수정 : th:block 추가 -->
+                  <!-- //08.12 수정 : th:block 위치 변경 -->
                 </div>
                 <!-- //conts11-->
               </section>
