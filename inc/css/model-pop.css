@@ -431,7 +431,7 @@
   position: relative;
 }
 
-.model-video-wrap .img-wrap:before {
+.model-video-wrap .img-wrap a:before {
   content: "";
   display: block;
   width: 138px;
@@ -445,7 +445,7 @@
   cursor: pointer;
 }
 
-.model-video-wrap:hover .img-wrap::before {
+.model-video-wrap:hover .img-wrap a::before {
   background-image: url(../images/icon/icon-play-video-hover.svg);
 }
 /** 모델 팝업 내 영상 끝 **/
