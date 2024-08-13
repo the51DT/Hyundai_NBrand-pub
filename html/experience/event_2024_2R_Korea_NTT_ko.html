@@ -175,44 +175,44 @@
                           </div>
                         </a>
                       </div>
-                      <div class="swiper-slide item" data-content="8">
+                      <div class="swiper-slide item active" data-content="8">
                         <a role="button" onclick="pubUi.listContsActive(this);" class="card_type01 bg-black">
                           <div class="card_cover">
                             <img src="../../inc/images/img/ntt_r2_eg_pc.png" alt="NTT R2" />
                           </div>
                           <div class="card_top">
                             <p class="card_rank">
-                              R2<br />
+                              Round 2<br />
                               <span class="ntt-val">N TT</span>
                             </p>
                           </div>
                           <div class="card_bottom">
                             <div class="card_info">
-                              <strong class="card_badge">JUL</strong>
+                              <strong class="card_badge">July</strong>
                               <p class="card_tit">20</p>
-                              <p class="card_subtit">Yongin</p>
+                              <p class="card_subtit">
+                                Yongin Everland SPEEDWAY
+                              </p>
                             </div>
                           </div>
                         </a>
                       </div>
-                      <div class="swiper-slide item active" data-content="9">
+                      <div class="swiper-slide item" data-content="9">
                         <a role="button" onclick="pubUi.listContsActive(this);" class="card_type01 bg-black">
                           <div class="card_cover">
                             <img src="../../inc/images/img/ntt_r3_eg_pc.png" alt="NTT R3" />
                           </div>
                           <div class="card_top">
                             <p class="card_rank">
-                              Round 3<br />
+                              R3<br />
                               <span class="ntt-val">N TT</span>
                             </p>
                           </div>
                           <div class="card_bottom">
                             <div class="card_info">
-                              <strong class="card_badge">August</strong>
+                              <strong class="card_badge">AUG</strong>
                               <p class="card_tit">17</p>
-                              <p class="card_subtit">
-                                Yongin Everland SPEEDWAY
-                              </p>
+                              <p class="card_subtit">Yongin</p>
                             </div>
                           </div>
                         </a>
@@ -270,30 +270,29 @@
               </section>
               <!-- //section_tab -->
               <section class="section_list">
-                <div class="list-content conts09" data-content="9">
+                <div class="list-content conts08 active" data-content="8">
+                  <div class="n-race-box-conts content-item03">
+                    <h2 class="title-w1440 contitle-type01 fw-type03">
+                      N TT Round 2
+                    </h2>
+                    <div class="conts-box-wrap">
+                      <div class="bg-img-wrap" style="
+                            background-image: url('../../inc/images/img/ntt_r2_evtGuide_kv_pc.png');
+                          ">
+                        <h3 class="tit">N Festival<br />N TT Round 2</h3>
+                        <p class="desc">
+                          7.20<br />Yongin Everland SPEEDWAY
+                        </p>
+                        <a href="#" target="_blank" rel="noopener" class="more_btn btn btn-md-primary02">
+                          Tickets
+                          <span class="btn-icon16 icon-right" aria-hidden="true"></span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                   <!-- 07.22 수정 : th:block 추가 -->
                   <th:block th:fragment="roundInfo">
                     <th:block th:if="${race != null}">
-                      <div class="n-race-box-conts content-item03">
-                        <h2 class="title-w1440 contitle-type01 fw-type03">
-                          N TT Round 3
-                        </h2>
-                        <div class="conts-box-wrap">
-                          <div class="bg-img-wrap" style="
-                                background-image: url('../../inc/images/img/ntt_r3_evtGuide_kv_pc.png');
-                              ">
-                            <h3 class="tit">N Festival<br />N TT Round 3</h3>
-                            <p class="desc">
-                              8.17<br />Yongin Everland SPEEDWAY
-                            </p>
-                            <a href="#" target="_blank" rel="noopener" class="more_btn btn btn-md-primary02">
-                              Tickets
-                              <span class="btn-icon16 icon-right" aria-hidden="true"></span>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-
                       <div class="content-item04 bg-gray">
                         <div class="class-info-box">
                           <h2 class="title-w1440 contitle-type01 fw-type03 ta-ctr">
@@ -327,13 +326,107 @@
                       </div>
 
                       <div class="content-item05">
-                        <div class="schedule-box th:utext=${race.raceDetail}">
+                        <div class="schedule-box" th:utext="${race.raceDetail}">
                           <div class="wrap-list list01">
                             <div class="tab-container">
                               <div class="tab-head">
                                 <h2 class="title">레이스 일정</h2>
+                                <div class="tabs-wrap">
+                                  <ul class="tabs ty-black" data-contents="탭카테고리">
+                                    <li class="on">
+                                      <a href="javascript:;" aria-controls="tab15-011" role="tab"
+                                        aria-selected="true">토</a>
+                                    </li>
+                                  </ul>
+                                </div>
                               </div>
-                              <p class="wrap-list-no-data">타임테이블은 향후 업데이트를 통해 안내될 예정입니다</p>
+                              <div class="tab-content on" id="tab15-011" role="tabpanel">
+                                <div class="__bottom">
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">10:30 ~ 11:00</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">
+                                        N TT - 연습주행
+                                      </p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">N TT</p>
+                                    </div>
+                                  </div>
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">11:10 ~ 12:00</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">
+                                        Break Time
+                                      </p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">-</p>
+                                    </div>
+                                  </div>
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">12:10 ~ 12:40</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">
+                                        N TT - 1차 주행
+                                      </p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">N TT</p>
+                                    </div>
+                                  </div>
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">14:20 ~ 14:50</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">
+                                        N TT - 2차 주행
+                                      </p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">N TT</p>
+                                    </div>
+                                  </div>
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">16:00 ~ 16:30</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">
+                                        N TT - 3차 주행
+                                      </p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">N TT</p>
+                                    </div>
+                                  </div>
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">17:10</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">
+                                        시상식
+                                      </p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">-</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <button type="button" class="btn btn-md-outline01">
+                                View More
+                                <span class="btn-icon16 icon-down" aria-hidden="true">
+                                </span>
+                              </button>
                             </div>
                           </div>
                         </div>
@@ -362,8 +455,8 @@
                                       <span class="btn-icon24 icon-close" aria-hidden="true"></span>
                                     </button>
                                   </li>
-                                  <li class="option option-click fw-type03 active" role="option" aria-selected="false">
-                                    N 익스리피언스 존
+                                  <li class="option option-click fw-type03 active" role="option" aria-selected="false" data-type="1">
+                                    N 익스피리언스 존
                                   </li>
                                 </ul>
                               </div>
@@ -372,8 +465,8 @@
                           </div>
                           <div class="conts-body">
                             <!-- 07.30 수정 : evt-map-wrap 마크업 구조 변경 : 선택한 selectbox 옵션값에 따른 하드코딩 노출 형태로 변경 (스크립트 로 동적생성 X) -->
-                            <div class="evt-map-wrap">
-                              <!-- on 클래스 : 상세맵 활성화시(+ 버튼 클릭시) on 클래스 추가 -->
+                            <div class="evt-map-wrap on active" data-type="1">
+                              
                               <div class="btn-area">
                                 <div class="btn-wrap plus">
                                   <button type="button">
@@ -387,22 +480,21 @@
                                 </div>
                               </div>
 
-                              <!-- 08.06 수정 : evt-map-default-box & btn-evtmap-pop에 active 클래스 추가 -->
-                              <div class="evt-map-img">
+                              
+                              <div class="evt-map-img active">
                                 <div class="evt-map-default-box">
-                                  <!-- N Cup - Round6 이벤트레이아웃 기본 이미지 : 활성화 원하는 곳에 default active 클래스 값 -->
-                                  <button class="pop-open btn-evtmap-pop active" aria-controls="pop-nTTMoterExper1"
+                                  <!-- N Cup - Round6 이벤트레이아웃 기본 이미지 : 활성화 원하는 곳에 default active 클래스 값 추가 -->
+                                  <button class="pop-open btn-evtmap-pop active" aria-controls="pop-nTTMoterExper0"
                                     aria-haspopup="true" aria-expanded="false" title="팝업오픈">
                                     <span class="visually-hidden">side-popup1 열기</span>
-                                    <img src="../../inc/images/eventLayout/evtLayout_min_com_ntt.png"
+                                    <img src="../../inc/images/eventLayout/evtLayout_min_shortImg03.png"
                                       alt="NTT 이벤트 레이아웃01 축소 이미지" />
                                   </button>
-                                </div>
-                                <!--//evt-map-default-box-->
+                                </div><!-- //evt-map-default-box 추가 -->
 
                                 <div class="evt-map-active-box">
                                   <!-- N TT - yongin - N Experience zone -->
-                                  <button class="pop-open btn-evtmap-pop" aria-controls="pop-nTTMoterExper1"
+                                  <button class="pop-open btn-evtmap-pop" aria-controls="pop-nTTMoterExper0"
                                     aria-haspopup="true" aria-expanded="false" title="팝업오픈">
                                     <span class="visually-hidden">side-popup1 열기</span>
                                     <img src="../../inc/images/eventLayout/evtLayout_max_nExperzone_ntt.png"
@@ -411,21 +503,46 @@
                                 </div>
                                 <!-- //07.12 추가 : 레이어팝업 버튼 추가 -->
                               </div>
-                              <!-- //08.06 수정 : evt-map-default-box & btn-evtmap-pop에 active 클래스 추가 -->
+                              
                             </div>
                             <!-- //07.30 수정 -->
+
                           </div>
                         </div>
                       </section>
 
                       <div class="content-item07">
-                        <div class="schedule-box th:utext=${race.eventDetail}">
+                        <div class="schedule-box" th:utext="${race.eventDetail}">
                           <div class="wrap-list list02">
                             <div class="tab-container">
                               <div class="tab-head">
                                 <h2 class="title">이벤트 타임테이블</h2>
+                                <div class="tabs-wrap">
+                                  <ul class="tabs ty-black" data-contents="탭카테고리">
+                                    <li class="on">
+                                      <a href="javascript:;" aria-controls="tab16-011" role="tab"
+                                        aria-selected="true">토</a>
+                                    </li>
+                                  </ul>
+                                </div>
                               </div>
-                              <p class="wrap-list-no-data">타임테이블은 향후 업데이트를 통해 안내될 예정입니다</p>
+                              <div class="tab-content on" id="tab16-011" role="tabpanel">
+                                <div class="__bottom">
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">10:00 ~ 17:00</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">심 레이싱</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">
+                                        10번 피트 / 상시운영
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -531,7 +648,7 @@
                   </th:block>
                   <!-- //07.22 수정 : th:block 추가 -->
                 </div>
-                <!-- //conts09-->
+                <!-- //conts08-->
               </section>
               <!--//section_list-content -->
             </div>
@@ -543,8 +660,8 @@
   </div>
   <!-- ntt POPup : 07.22 추가 -->
 
-  <!-- ntt side popup - Motorsport Experience -->
-  <div id="pop-nTTMoterExper1" class="popup side-popup" role="dialog" aria-modal="true" aria-labelledby="tit">
+  <!-- ntt side popup - N Experience Zone -->
+  <div id="pop-nTTMoterExper0" class="popup side-popup" role="dialog" aria-modal="true" aria-labelledby="tit">
     <div class="pop-wrap">
       <div class="popup-header">
         <h3 class="tit tit-type03">N 익스피리언스 존</h3>
@@ -587,7 +704,6 @@
             </div>
           </div>
         </article>
-
         <!-- //  -->
       </div>
       <div class="btn-wrap">

@@ -275,27 +275,26 @@
               <!-- //section_tab -->
               <section class="section_list">
                 <div class="list-content conts10 active" data-content="10">
-                  <!-- 07.22 수정 : th:block 추가 -->
+                  <div class="n-race-box-conts content-item03">
+                    <h2 class="title-w1440 contitle-type01 fw-type03">
+                      N TT Round 4
+                    </h2>
+                    <div class="conts-box-wrap">
+                      <div class="bg-img-wrap" style="
+                            background-image: url('../../inc/images/img/ntt_r4_evtGuide_kv_pc.png');
+                          ">
+                        <h3 class="tit">N Festival<br />N TT Round 4</h3>
+                        <p class="desc">9.7<br />Inje SPEEDIUM</p>
+                        <a href="#" target="_blank" rel="noopener" class="more_btn btn btn-md-primary02">
+                          Tickets
+                          <span class="btn-icon16 icon-right" aria-hidden="true"></span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 08.12 수정 : th:block 위치 변경 -->
                   <th:block th:fragment="roundInfo">
                     <th:block th:if="${race != null}">
-                      <div class="n-race-box-conts content-item03">
-                        <h2 class="title-w1440 contitle-type01 fw-type03">
-                          N TT Round 4
-                        </h2>
-                        <div class="conts-box-wrap">
-                          <div class="bg-img-wrap" style="
-                                background-image: url('../../inc/images/img/ntt_r4_evtGuide_kv_pc.png');
-                              ">
-                            <h3 class="tit">N Festival<br />N TT Round 4</h3>
-                            <p class="desc">9.7<br />Inje SPEEDIUM</p>
-                            <a href="#" target="_blank" rel="noopener" class="more_btn btn btn-md-primary02">
-                              Tickets
-                              <span class="btn-icon16 icon-right" aria-hidden="true"></span>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-
                       <div class="content-item04 bg-gray">
                         <div class="class-info-box">
                           <h2 class="title-w1440 contitle-type01 fw-type03 ta-ctr">
@@ -316,7 +315,7 @@
                                       fastest record.
                                     </p>
                                     <div class="btn-wrap">
-                                      <a href="https://www.hyundai.com/worldwide/ko/brand-journal/mobility-solution/n-story"
+                                      <a href="about-korea.do"
                                         class="btn md-txt-btn01">
                                         Learn More
                                         <span class="btn-icon16 icon-right" aria-hidden="true"></span>
@@ -331,7 +330,7 @@
                       </div>
 
                       <div class="content-item05">
-                        <div class="schedule-box th:utext=${race.raceDetail}">
+                        <div class="schedule-box" th:utext="${race.raceDetail}">
                           <div class="wrap-list list01">
                             <div class="tab-container">
                               <div class="tab-head">
@@ -382,7 +381,7 @@
                           </div>
                           <div class="conts-body">
                             <!-- 07.30 수정 : evt-map-wrap 마크업 구조 변경 : 선택한 selectbox 옵션값에 따른 하드코딩 노출 형태로 변경 (스크립트 로 동적생성 X) -->
-                            <div class="evt-map-wrap on" data-type="1">
+                            <div class="evt-map-wrap on active" data-type="1">
                               
                               <div class="btn-area">
                                 <div class="btn-wrap plus">
@@ -512,7 +511,7 @@
                       </section>
 
                       <div class="content-item07">
-                        <div class="schedule-box th:utext=${race.eventDetail}">
+                        <div class="schedule-box" th:utext="${race.eventDetail}">
                           <div class="wrap-list list02">
                             <div class="tab-container">
                               <div class="tab-head">
@@ -646,7 +645,7 @@
                       </section>
                     </th:block>
                   </th:block>
-                  <!-- //07.22 수정 : th:block 추가 -->
+                  <!-- //08.12 수정 : th:block 위치 변경 -->
                 </div>
                 <!-- //conts10-->
               </section>

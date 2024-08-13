@@ -606,7 +606,7 @@
   display: block;
 } */
 
-.event-box .evt-map-active-box .btn-evtmap-pop {
+.event-box .evt-map-default-box .btn-evtmap-pop {
   display: none;
 }
 

@@ -269,27 +269,26 @@
               <!-- //section_tab -->
               <section class="section_list">
                 <div class="list-content conts01 active" data-content="1">
+                  <div class="n-race-box-conts content-item03">
+                    <h2 class="title-w1440 contitle-type01 fw-type03">
+                      N TT Round 1
+                    </h2>
+                    <div class="conts-box-wrap">
+                      <div class="bg-img-wrap" style="
+                            background-image: url('../../inc/images/img/ntt_r1_evtGuide_kv_pc.png');
+                          ">
+                        <h3 class="tit">N Festival<br />N TT Round 1</h3>
+                        <p class="desc">05.25<br />Inje Speedium</p>
+                        <a href="#" target="_blank" rel="noopener" class="more_btn btn btn-md-primary02">
+                          Tickets
+                          <span class="btn-icon16 icon-right" aria-hidden="true"></span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                   <!-- 07.22 수정 : th:block 추가 -->
                   <th:block th:fragment="roundInfo">
                     <th:block th:if="${race != null}">
-                      <div class="n-race-box-conts content-item03">
-                        <h2 class="title-w1440 contitle-type01 fw-type03">
-                          N TT Round 1
-                        </h2>
-                        <div class="conts-box-wrap">
-                          <div class="bg-img-wrap" style="
-                                background-image: url('../../inc/images/img/ntt_r1_evtGuide_kv_pc.png');
-                              ">
-                            <h3 class="tit">N Festival<br />N TT Round 1</h3>
-                            <p class="desc">05.25<br />Inje Speedium</p>
-                            <a href="#" target="_blank" rel="noopener" class="more_btn btn btn-md-primary02">
-                              Tickets
-                              <span class="btn-icon16 icon-right" aria-hidden="true"></span>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-
                       <div class="content-item04 bg-gray">
                         <div class="class-info-box">
                           <h2 class="title-w1440 contitle-type01 fw-type03 ta-ctr">
@@ -308,7 +307,7 @@
                                       일상에서의 아반떼 N으로 가장 빠른 기록을 내는 타임 트라이얼 대회
                                     </p>
                                     <div class="btn-wrap">
-                                      <a href="https://www.hyundai.com/worldwide/ko/brand-journal/mobility-solution/n-story"
+                                      <a href="about-korea.do"
                                         class="btn md-txt-btn01">
                                         자세히 보기
                                         <span class="btn-icon16 icon-right" aria-hidden="true"></span>
@@ -323,7 +322,7 @@
                       </div>
 
                       <div class="content-item05">
-                        <div class="schedule-box th:utext=${race.raceDetail}">
+                        <div class="schedule-box" th:utext="${race.raceDetail}">
                           <div class="wrap-list list01">
                             <div class="tab-container">
                               <div class="tab-head">
@@ -645,13 +644,13 @@
                                       <span class="btn-icon24 icon-close" aria-hidden="true"></span>
                                     </button>
                                   </li>
-                                  <li class="option option-click fw-type03 active" role="option" aria-selected="false">
+                                  <li class="option option-click fw-type03 active" role="option" aria-selected="false" data-type="1">
                                     모터스포츠 경험
                                   </li>
-                                  <li class="option option-click fw-type03" role="option" aria-selected="false">
+                                  <li class="option option-click fw-type03" role="option" aria-selected="false" data-type="2">
                                     N 라운지
                                   </li>
-                                  <li class="option option-click fw-type03" role="option" aria-selected="false">
+                                  <li class="option option-click fw-type03" role="option" aria-selected="false" data-type="3">
                                     휴식존
                                   </li>
                                 </ul>
@@ -660,9 +659,12 @@
                             <div class="selectbox-overlay" style="display: none"></div>
                           </div>
                           <div class="conts-body">
-                            <!-- 07.30 수정 : evt-map-wrap 마크업 구조 변경 : 선택한 selectbox 옵션값에 따른 하드코딩 노출 형태로 변경 (스크립트 로 동적생성 X) -->
-                            <div class="evt-map-wrap">
-                              <!-- on 클래스 : 상세맵 활성화시(+ 버튼 클릭시) on 클래스 추가 -->
+                            <!-- 08.08 수정사항 -->
+                            <!-- 활성화시 on 클래스 -->
+                            <!-- data-type 값 부모 첫번째 selectbox 대상과 동일하게 적용 필요 -->
+                            <!-- active 클래스 : 상세맵 활성화시(+ 버튼 클릭시) active 클래스 추가 -->
+                            <div class="evt-map-wrap on active" data-type="1">
+                              
                               <div class="btn-area">
                                 <div class="btn-wrap plus">
                                   <button type="button">
@@ -675,8 +677,8 @@
                                   </button>
                                 </div>
                               </div>
-                              <!-- 08.06 수정 : evt-map-default-box & btn-evtmap-pop에 active 클래스 추가 -->
-                              <div class="evt-map-img">
+                              <!-- 활성화 맵일 시, active 클래스 추가 -->
+                              <div class="evt-map-img active">
                                 <div class="evt-map-default-box">
                                   <!-- N Cup - Round6 이벤트레이아웃 기본 이미지 : 활성화 원하는 곳에 default active 클래스 값 추가  -->
                                   <button class="pop-open btn-evtmap-pop active" aria-controls="pop-nTTMoterExper"
@@ -696,6 +698,39 @@
                                     <img src="../../inc/images/eventLayout/evtLayout_max_inje_ntt.png"
                                       alt="inje - Motorsport Experience 확대 이미지" />
                                   </button>
+                                </div>
+                                <!-- //07.12 추가 : 레이어팝업 버튼 추가 -->
+                              </div>
+                            </div>
+
+                            <!-- N TT - inje - N Lounge -->
+                            <div class="evt-map-wrap" data-type="2">
+                              
+                              <div class="btn-area">
+                                <div class="btn-wrap plus">
+                                  <button type="button">
+                                    <span class="visually-hidden">+ 확대 버튼</span>
+                                  </button>
+                                </div>
+                                <div class="btn-wrap minus">
+                                  <button type="button">
+                                    <span class="visually-hidden">- 축소 버튼</span>
+                                  </button>
+                                </div>
+                              </div>
+                              <!-- 활성화 맵일 시, active 클래스 추가 -->
+                              <div class="evt-map-img">
+                                <div class="evt-map-default-box">
+                                  
+                                  <button class="pop-open btn-evtmap-pop active" aria-controls="pop-nTTNLounge"
+                                    aria-haspopup="true" aria-expanded="false" title="팝업오픈">
+                                    <span class="visually-hidden">side-popup1 열기</span>
+                                    <img src="../../inc/images/eventLayout/evtLayout_min_com_ntt.png"
+                                      alt="NTT 이벤트 레이아웃01 축소 이미지" />
+                                  </button>
+                                </div><!-- //evt-map-default-box 추가 -->
+
+                                <div class="evt-map-active-box">
                                   <!-- N TT - inje - N Lounge -->
                                   <button class="pop-open btn-evtmap-pop" aria-controls="pop-nTTNLounge"
                                     aria-haspopup="true" aria-expanded="false" title="팝업오픈">
@@ -703,6 +738,40 @@
                                     <img src="../../inc/images/eventLayout/evtLayout_max_nlounge_ntt.png"
                                       alt="inje - N Lounge 확대 이미지" />
                                   </button>
+                                </div>
+                                <!-- //07.12 추가 : 레이어팝업 버튼 추가 -->
+                              </div>
+                              
+                            </div>
+
+                            <!-- N TT - inje - Rest zone -->
+                            <div class="evt-map-wrap" data-type="3">
+                              
+                              <div class="btn-area">
+                                <div class="btn-wrap plus">
+                                  <button type="button">
+                                    <span class="visually-hidden">+ 확대 버튼</span>
+                                  </button>
+                                </div>
+                                <div class="btn-wrap minus">
+                                  <button type="button">
+                                    <span class="visually-hidden">- 축소 버튼</span>
+                                  </button>
+                                </div>
+                              </div>
+                              <!-- 활성화 맵일 시, active 클래스 추가 -->
+                              <div class="evt-map-img">
+                                <div class="evt-map-default-box">
+                                  <!-- N Cup - Round6 이벤트레이아웃 기본 이미지 : 활성화 원하는 곳에 default active 클래스 값 추가  -->
+                                  <button class="pop-open btn-evtmap-pop active" aria-controls="pop-nTTRestZone"
+                                    aria-haspopup="true" aria-expanded="false" title="팝업오픈">
+                                    <span class="visually-hidden">side-popup1 열기</span>
+                                    <img src="../../inc/images/eventLayout/evtLayout_min_com_ntt.png"
+                                      alt="NTT 이벤트 레이아웃01 축소 이미지" />
+                                  </button>
+                                </div><!-- //evt-map-default-box 추가 -->
+
+                                <div class="evt-map-active-box">
                                   <!-- N TT - inje - Rest zone -->
                                   <button class="pop-open btn-evtmap-pop" aria-controls="pop-nTTRestZone"
                                     aria-haspopup="true" aria-expanded="false" title="팝업오픈">
@@ -713,7 +782,6 @@
                                 </div>
                                 <!-- //07.12 추가 : 레이어팝업 버튼 추가 -->
                               </div>
-                              <!-- //08.06 수정 : evt-map-default-box & btn-evtmap-pop에 active 클래스 추가 -->
                             </div>
                             <!-- //07.30 수정 -->
                           </div>
@@ -721,7 +789,7 @@
                       </section>
 
                       <div class="content-item07">
-                        <div class="schedule-box th:utext=${race.eventDetail}">
+                        <div class="schedule-box" th:utext="${race.eventDetail}">
                           <div class="wrap-list list02">
                             <div class="tab-container">
                               <div class="tab-head">

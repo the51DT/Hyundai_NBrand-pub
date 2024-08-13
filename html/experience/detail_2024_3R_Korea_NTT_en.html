@@ -105,6 +105,8 @@
             </ul>
           </div>
         </div>
+        <!-- 08.12 수정 : th:block 위치 변경 -->
+        <th:block th:fragment="roundInfo">
         <div class="content-item03">
           <div class="issue_wrap">
             <p class="contitle-type01 fw-type03">
@@ -161,7 +163,7 @@
                       A time trial competition featuring everyday Avante N cars aiming to set the fastest record.
                     </p>
                     <div class="btn-wrap">
-                      <a href="https://www.hyundai.com/worldwide/ko/brand-journal/mobility-solution/n-story"
+                      <a href="about-korea.do"
                         class="btn md-txt-btn01">
                         Learn More
                         <span class="btn-icon16 icon-right" aria-hidden="true"></span>
@@ -174,7 +176,7 @@
           </div>
         </div>
         <div class="content-item05">
-          <div class="standing_wrap">
+          <div class="standing_wrap" th:insert="~{experience/nFestival/component/standing}">
             <div class="title_flex tilte_padding">
               <p class="contitle-type01 fw-type03 color-white">
                 Standing<br />Top 3
@@ -347,7 +349,7 @@
           </div>
         </div>
         <div class="content-item06">
-          <div class="schedule_wrap th:utext=${rv.raceDetail}">
+          <div class="schedule_wrap" th:utext="${rv.raceDetail}">
             <div class="wrap-list list01">
               <div class="tab-container">
                 <div class="tab-head">
@@ -527,7 +529,7 @@
           </div>
         </div>
         <div class="content-item08">
-          <div class="schedule_wrap th:utext=${rv.eventDetail}">
+          <div class="schedule_wrap" th:utext="${rv.eventDetail}">
             <div class="wrap-list list02">
               <div class="tab-container">
                 <div class="tab-head">
@@ -699,13 +701,14 @@
               </div>
             </div>
             <div class="btn-wrap-default">
-              <a href="#" class="btn lg-txt-btn01">
+              <a th:href="|/${lang}/experience/nFestival/calendar.do|" class="btn lg-txt-btn01">
                 <span class="btn-icon20 icon-left" aria-hidden="true"></span>
                 Back to List
               </a>
             </div>
           </div>
-        </div>
+        </div>        
+        </th:block>
       </div>
     </section>
   </div>

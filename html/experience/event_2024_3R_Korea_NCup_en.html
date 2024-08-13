@@ -248,27 +248,26 @@
               </section> <!-- //section_tab -->
               <section class="section_list">
                 <div class="list-content conts03 active" data-content="3">
-                  <!-- 07.22 수정 : th:block 추가 -->
+                  <div class="n-race-box-conts content-item03">
+                    <h2 class="title-w1440 contitle-type01 fw-type03">
+                      N CUP Round 3
+                    </h2>
+                    <div class="conts-box-wrap">
+                      <div class="bg-img-wrap" style="
+                            background-image: url('../../inc/images/img/r3_evtGuide_kv_pc.png');
+                          ">
+                        <h3 class="tit">N Festival<br />N Cup Round 3</h3>
+                        <p class="desc">06.22 ~ 06.23<br /> Korea International Circuit</p>
+                        <a href="#" target="_blank" rel="noopener" class="more_btn btn btn-md-primary02">
+                          Tickets
+                          <span class="btn-icon16 icon-right" aria-hidden="true"></span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 08.12 수정 : th:block 위치 변경 -->
                   <th:block th:fragment="roundInfo">
                     <th:block th:if="${race != null}">
-                      <div class="n-race-box-conts content-item03">
-                        <h2 class="title-w1440 contitle-type01 fw-type03">
-                          N CUP Round 3
-                        </h2>
-                        <div class="conts-box-wrap">
-                          <div class="bg-img-wrap" style="
-                                background-image: url('../../inc/images/img/r3_evtGuide_kv_pc.png');
-                              ">
-                            <h3 class="tit">N Festival<br />N Cup Round 3</h3>
-                            <p class="desc">06.22 ~ 06.23<br /> Korea International Circuit</p>
-                            <a href="#" target="_blank" rel="noopener" class="more_btn btn btn-md-primary02">
-                              Tickets
-                              <span class="btn-icon16 icon-right" aria-hidden="true"></span>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-
                       <div class="content-item04 bg-gray">
                         <div class="class-info-box">
                           <h2 class="title-w1440 contitle-type01 fw-type03 ta-ctr">
@@ -287,7 +286,7 @@
                                       Korea's first one-make electric motorsport based on 650-HP IONIQ 5 N
                                     </p>
                                     <div class="btn-wrap">
-                                      <a href="#" class="btn md-txt-btn01">
+                                      <a href="about-korea.do" class="btn md-txt-btn01">
                                         Learn More
                                         <span class="btn-icon16 icon-right" aria-hidden="true"></span>
                                       </a>
@@ -306,7 +305,7 @@
                                       Professional racing series howcasing AVANTE N1 Cup car, purpose-built for racing
                                     </p>
                                     <div class="btn-wrap">
-                                      <a href="#" class="btn md-txt-btn01">
+                                      <a href="about-korea.do" class="btn md-txt-btn01">
                                         Learn More
                                         <span class="btn-icon16 icon-right" aria-hidden="true"></span>
                                       </a>
@@ -326,7 +325,7 @@
                                       drivers compete
                                     </p>
                                     <div class="btn-wrap">
-                                      <a href="#" class="btn md-txt-btn01">
+                                      <a href="about-korea.do" class="btn md-txt-btn01">
                                         Learn More
                                         <span class="btn-icon16 icon-right" aria-hidden="true"></span>
                                       </a>
@@ -340,7 +339,7 @@
                       </div>
 
                       <div class="content-item05">
-                        <div class="schedule-box th:utext=${race.raceDetail}">
+                        <div class="schedule-box" th:utext="${race.raceDetail}">
                           <div class="wrap-list list01">
                             <div class="tab-container">
                               <div class="tab-head">
@@ -348,11 +347,11 @@
                                 <div class="tabs-wrap">
                                   <ul class="tabs ty-black" data-contents="탭카테고리">
                                     <li class="on">
-                                      <a href="javascript:;" aria-controls="tab5-011" role="tab"
+                                      <a href="#" aria-controls="tab5-011" role="tab"
                                         aria-selected="true">Saturday</a>
                                     </li>
                                     <li>
-                                      <a href="javascript:;" aria-controls="tab5-021" role="tab" aria-selected="false">
+                                      <a href="#" aria-controls="tab5-021" role="tab" aria-selected="false">
                                         Sunday </a>
                                     </li>
                                   </ul>
@@ -754,8 +753,8 @@
                             <!-- data-type 값 부모 첫번째 selectbox 대상과 동일하게 적용 필요 -->
                             <!-- active 클래스 : 상세맵 활성화시(+ 버튼 클릭시) active 클래스 추가 -->
 
-                            <div class="evt-map-wrap on" data-type="1">
-                              <!-- on 클래스 : 상세맵 활성화시(+ 버튼 클릭시) on 클래스 추가 -->
+                            <div class="evt-map-wrap on active" data-type="1">
+                              
                               <div class="btn-area">
                                 <div class="btn-wrap plus">
                                   <button type="button">
@@ -795,7 +794,7 @@
                             </div>
 
                             <div class="evt-map-wrap" data-type="2">
-                              <!-- on 클래스 : 상세맵 활성화시(+ 버튼 클릭시) on 클래스 추가 -->
+                              
                               <div class="btn-area">
                                 <div class="btn-wrap plus">
                                   <button type="button">
@@ -808,11 +807,11 @@
                                   </button>
                                 </div>
                               </div>                              
-                              <div class="evt-map-img active">
+                              <div class="evt-map-img">
                                 <!-- evt-map-default-box 추가 -->
                                 <div class="evt-map-default-box">
                                   <!-- N Cup - Round3 이벤트레이아웃 기본 이미지 : 활성화 원하는 곳에 default active 클래스 값 추가 필요 -->
-                                  <button class="pop-open btn-evtmap-pop active" aria-controls="pop-yeongamExperZone"
+                                  <button class="pop-open btn-evtmap-pop active" aria-controls="pop-yeongamMotorExper"
                                     aria-haspopup="true" aria-expanded="false" title="팝업오픈">
                                     <span class="visually-hidden">side-popup1 열기</span>
                                     <img src="../../inc/images/eventLayout/evtLayout_min_shortImg04.png"
@@ -836,7 +835,7 @@
                             </div>
 
                             <div class="evt-map-wrap" data-type="3">
-                              <!-- on 클래스 : 상세맵 활성화시(+ 버튼 클릭시) on 클래스 추가 -->
+                              
                               <div class="btn-area">
                                 <div class="btn-wrap plus">
                                   <button type="button">
@@ -853,7 +852,7 @@
                                 <!-- evt-map-default-box 추가 -->
                                 <div class="evt-map-default-box">
                                   <!-- N Cup - Round3 이벤트레이아웃 기본 이미지 : 활성화 원하는 곳에 default active 클래스 값 추가 필요 -->
-                                  <button class="pop-open btn-evtmap-pop active" aria-controls="pop-yeongamExperZone"
+                                  <button class="pop-open btn-evtmap-pop active" aria-controls="pop-yeongamViewingZone"
                                     aria-haspopup="true" aria-expanded="false" title="팝업오픈">
                                     <span class="visually-hidden">side-popup1 열기</span>
                                     <img src="../../inc/images/eventLayout/evtLayout_min_shortImg04.png"
@@ -880,7 +879,7 @@
                       </section>
 
                       <div class="content-item07">
-                        <div class="schedule-box th:utext=${race.eventDetail}">
+                        <div class="schedule-box" th:utext="${race.eventDetail}">
                           <div class="wrap-list list02">
                             <div class="tab-container">
                               <div class="tab-head">
@@ -888,11 +887,11 @@
                                 <div class="tabs-wrap">
                                   <ul class="tabs ty-black" data-contents="탭카테고리">
                                     <li class="on">
-                                      <a href="javascript:;" aria-controls="tab6-011" role="tab"
+                                      <a href="#" aria-controls="tab6-011" role="tab"
                                         aria-selected="true">Saturday</a>
                                     </li>
                                     <li>
-                                      <a href="javascript:;" aria-controls="tab6-021" role="tab" aria-selected="false">
+                                      <a href="#" aria-controls="tab6-021" role="tab" aria-selected="false">
                                         Sunday </a>
                                     </li>
                                   </ul>
@@ -1126,7 +1125,7 @@
                       </section>
                     </th:block>
                   </th:block>
-                  <!-- //07.22 수정 : th:block 추가 -->
+                  <!-- //08.12 수정 : th:block 위치 변경 -->
                 </div> <!-- //conts03-->
               </section>
               <!--//section_list-content -->

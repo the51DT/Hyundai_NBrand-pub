@@ -269,27 +269,27 @@
               <!-- //section_tab -->
               <section class="section_list">
                 <div class="list-content conts07 active" data-content="7">
-                  <!-- 07.22 수정 : th:block 추가 -->
+                  
+                  <div class="n-race-box-conts content-item03">
+                    <h2 class="title-w1440 contitle-type01 fw-type03">
+                      N TT Round 1
+                    </h2>
+                    <div class="conts-box-wrap">
+                      <div class="bg-img-wrap" style="
+                            background-image: url('../../inc/images/img/ntt_r1_evtGuide_kv_pc.png');
+                          ">
+                        <h3 class="tit">N Festival<br />N TT Round 1</h3>
+                        <p class="desc">05.25<br />Inje Speedium</p>
+                        <a href="#" target="_blank" rel="noopener" class="more_btn btn btn-md-primary02">
+                          Tickets
+                          <span class="btn-icon16 icon-right" aria-hidden="true"></span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 08.12 수정 : th:block 위치 변경 -->
                   <th:block th:fragment="roundInfo">
                     <th:block th:if="${race != null}">
-                      <div class="n-race-box-conts content-item03">
-                        <h2 class="title-w1440 contitle-type01 fw-type03">
-                          N TT Round 1
-                        </h2>
-                        <div class="conts-box-wrap">
-                          <div class="bg-img-wrap" style="
-                                background-image: url('../../inc/images/img/ntt_r1_evtGuide_kv_pc.png');
-                              ">
-                            <h3 class="tit">N Festival<br />N TT Round 1</h3>
-                            <p class="desc">05.25<br />Inje Speedium</p>
-                            <a href="#" target="_blank" rel="noopener" class="more_btn btn btn-md-primary02">
-                              Tickets
-                              <span class="btn-icon16 icon-right" aria-hidden="true"></span>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-
                       <div class="content-item04 bg-gray">
                         <div class="class-info-box">
                           <h2 class="title-w1440 contitle-type01 fw-type03 ta-ctr">
@@ -310,7 +310,7 @@
                                       fastest record.
                                     </p>
                                     <div class="btn-wrap">
-                                      <a href="https://www.hyundai.com/worldwide/ko/brand-journal/mobility-solution/n-story"
+                                      <a href="about-korea.do"
                                         class="btn md-txt-btn01">
                                         Learn More
                                         <span class="btn-icon16 icon-right" aria-hidden="true"></span>
@@ -325,7 +325,7 @@
                       </div>
 
                       <div class="content-item05">
-                        <div class="schedule-box th:utext=${race.raceDetail}">
+                        <div class="schedule-box" th:utext="${race.raceDetail}">
                           <div class="wrap-list list01">
                             <div class="tab-container">
                               <div class="tab-head">
@@ -333,11 +333,11 @@
                                 <div class="tabs-wrap">
                                   <ul class="tabs ty-black" data-contents="탭카테고리">
                                     <li class="on">
-                                      <a href="javascript:;" aria-controls="tab13-011" role="tab"
+                                      <a href="#" aria-controls="tab13-011" role="tab"
                                         aria-selected="true">Saturday</a>
                                     </li>
                                     <li>
-                                      <a href="javascript:;" aria-controls="tab13-021" role="tab" aria-selected="false">
+                                      <a href="#" aria-controls="tab13-021" role="tab" aria-selected="false">
                                         Sunday
                                       </a>
                                     </li>
@@ -529,8 +529,8 @@
                             <!-- 활성화시 on 클래스 -->
                             <!-- data-type 값 부모 첫번째 selectbox 대상과 동일하게 적용 필요 -->
                             <!-- active 클래스 : 상세맵 활성화시(+ 버튼 클릭시) active 클래스 추가 -->
-                            <div class="evt-map-wrap on" data-type="1">
-                              <!-- on 클래스 : 상세맵 활성화시(+ 버튼 클릭시) on 클래스 추가 -->
+                            <div class="evt-map-wrap on active" data-type="1">
+                              
                               <div class="btn-area">
                                 <div class="btn-wrap plus">
                                   <button type="button">
@@ -570,8 +570,8 @@
                             </div>
 
                             <!-- N TT - inje - N Lounge -->
-                            <div class="evt-map-wrap on" data-type="2">
-                              <!-- on 클래스 : 상세맵 활성화시(+ 버튼 클릭시) on 클래스 추가 -->
+                            <div class="evt-map-wrap" data-type="2">
+                              
                               <div class="btn-area">
                                 <div class="btn-wrap plus">
                                   <button type="button">
@@ -611,8 +611,8 @@
                             </div>
 
                             <!-- N TT - inje - Rest zone -->
-                            <div class="evt-map-wrap on" data-type="3">
-                              <!-- on 클래스 : 상세맵 활성화시(+ 버튼 클릭시) on 클래스 추가 -->
+                            <div class="evt-map-wrap" data-type="3">
+                              
                               <div class="btn-area">
                                 <div class="btn-wrap plus">
                                   <button type="button">
@@ -655,7 +655,7 @@
                       </section>
 
                       <div class="content-item07">
-                        <div class="schedule-box th:utext=${race.eventDetail}">
+                        <div class="schedule-box" th:utext="${race.eventDetail}">
                           <div class="wrap-list list02">
                             <div class="tab-container">
                               <div class="tab-head">
@@ -663,11 +663,11 @@
                                 <div class="tabs-wrap">
                                   <ul class="tabs ty-black" data-contents="탭카테고리">
                                     <li class="on">
-                                      <a href="javascript:;" aria-controls="tab14-011" role="tab"
+                                      <a href="#" aria-controls="tab14-011" role="tab"
                                         aria-selected="true">Saturday</a>
                                     </li>
                                     <li>
-                                      <a href="javascript:;" aria-controls="tab14-021" role="tab" aria-selected="false">
+                                      <a href="#" aria-controls="tab14-021" role="tab" aria-selected="false">
                                         Sunday
                                       </a>
                                     </li>
@@ -980,7 +980,7 @@
                       </section>
                     </th:block>
                   </th:block>
-                  <!-- //07.22 수정 : th:block 추가 -->
+                  <!-- //08.12 수정 : th:block 위치 변경 -->
                 </div>
                 <!-- //conts07-->
               </section>

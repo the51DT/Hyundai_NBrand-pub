@@ -254,27 +254,26 @@
               </section> <!-- //section_tab -->
               <section class="section_list">
                 <div class="list-content conts05 active" data-content="5">
-                  <!-- 07.22 수정 : th:block 추가 -->
+                  <div class="n-race-box-conts content-item03">
+                    <h2 class="title-w1440 contitle-type01 fw-type03">
+                      N CUP Round 5
+                    </h2>
+                    <div class="conts-box-wrap">
+                      <div class="bg-img-wrap" style="
+                            background-image: url('../../inc/images/img/r5_evtGuide_kv_pc.png');
+                          ">
+                        <h3 class="tit">N Festival<br />N Cup Round 5</h3>
+                        <p class="desc">10.19 - 10.20<br />Inje SPEEDIUM</p>
+                        <a href="#" target="_blank" rel="noopener" class="more_btn btn btn-md-primary02">
+                          Tickets
+                          <span class="btn-icon16 icon-right" aria-hidden="true"></span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 08.12 수정 : th:block 위치 변경 -->
                   <th:block th:fragment="roundInfo">
                     <th:block th:if="${race != null}">
-                      <div class="n-race-box-conts content-item03">
-                        <h2 class="title-w1440 contitle-type01 fw-type03">
-                          N CUP Round 5
-                        </h2>
-                        <div class="conts-box-wrap">
-                          <div class="bg-img-wrap" style="
-                                background-image: url('../../inc/images/img/r5_evtGuide_kv_pc.png');
-                              ">
-                            <h3 class="tit">N Festival<br />N Cup Round 5</h3>
-                            <p class="desc">10.19 - 10.20<br />Inje SPEEDIUM</p>
-                            <a href="#" target="_blank" rel="noopener" class="more_btn btn btn-md-primary02">
-                              Tickets
-                              <span class="btn-icon16 icon-right" aria-hidden="true"></span>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-
                       <div class="content-item04 bg-gray">
                         <div class="class-info-box">
                           <h2 class="title-w1440 contitle-type01 fw-type03 ta-ctr">
@@ -294,7 +293,7 @@
                                       650-HP IONIQ 5 N
                                     </p>
                                     <div class="btn-wrap">
-                                      <a href="https://www.hyundai.com/worldwide/ko/brand-journal/mobility-solution/n-story"
+                                      <a href="about-korea.do"
                                         class="btn md-txt-btn01">
                                         Learn More
                                         <span class="btn-icon16 icon-right" aria-hidden="true"></span>
@@ -315,7 +314,7 @@
                                       purpose-built for racing
                                     </p>
                                     <div class="btn-wrap">
-                                      <a href="https://www.hyundai.com/worldwide/ko/brand-journal/mobility-solution/n-story"
+                                      <a href="about-korea.do"
                                         class="btn md-txt-btn01">
                                         Learn More
                                         <span class="btn-icon16 icon-right" aria-hidden="true"></span>
@@ -336,7 +335,7 @@
                                       AVANTE N cars, where drivers compete
                                     </p>
                                     <div class="btn-wrap">
-                                      <a href="https://www.hyundai.com/worldwide/ko/brand-journal/mobility-solution/n-story"
+                                      <a href="about-korea.do"
                                         class="btn md-txt-btn01">
                                         Learn More
                                         <span class="btn-icon16 icon-right" aria-hidden="true"></span>
@@ -351,7 +350,7 @@
                       </div>
 
                       <div class="content-item05">
-                        <div class="schedule-box th:utext=${race.raceDetail}">
+                        <div class="schedule-box" th:utext="${race.raceDetail}">
                           <div class="wrap-list list01">
                             <div class="tab-container">
                               <div class="tab-head">
@@ -401,7 +400,7 @@
                             <!-- data-type 값 부모 첫번째 selectbox 대상과 동일하게 적용 필요 -->
                             <!-- active 클래스 : 상세맵 활성화시(+ 버튼 클릭시) active 클래스 추가 -->
                             <div class="evt-map-wrap on" data-type="1">
-                              <!-- on 클래스 : 상세맵 활성화시(+ 버튼 클릭시) on 클래스 추가 -->
+                              
                               <div class="btn-area">
                                 <div class="btn-wrap plus">
                                   <button type="button">
@@ -443,7 +442,7 @@
                             </div>
 
                             <div class="evt-map-wrap" data-type="2">
-                              <!-- on 클래스 : 상세맵 활성화시(+ 버튼 클릭시) on 클래스 추가 -->
+                              
                               <div class="btn-area">
                                 <div class="btn-wrap plus">
                                   <button type="button">
@@ -485,7 +484,7 @@
                             </div>
 
                             <div class="evt-map-wrap" data-type="3">
-                              <!-- on 클래스 : 상세맵 활성화시(+ 버튼 클릭시) on 클래스 추가 -->
+                              
                               <div class="btn-area">
                                 <div class="btn-wrap plus">
                                   <button type="button">
@@ -531,7 +530,7 @@
                       </section>
 
                       <div class="content-item07">
-                        <div class="schedule-box th:utext=${race.eventDetail}">
+                        <div class="schedule-box" th:utext="${race.eventDetail}">
                           <div class="wrap-list list02">
                             <div class="tab-container">
                               <div class="tab-head">
@@ -636,7 +635,7 @@
                       </section>
                     </th:block>
                   </th:block>
-                  <!-- //07.22 수정 : th:block 추가 -->
+                  <!-- //08.12 수정 : th:block 위치 변경 -->
                 </div> <!-- //conts05-->
               </section>
               <!--//section_list-content -->

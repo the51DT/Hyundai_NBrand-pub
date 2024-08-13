@@ -34,15 +34,9 @@
                         <span class="btn-icon24 icon-close" aria-hidden="true"></span>
                       </button>
                     </li>
-                    <li class="option option-click fw-type03 active" role="option" aria-selected="true">
-                      All
-                    </li>
-                    <li class="option option-click fw-type03" role="option">
-                      China
-                    </li>
-                    <li class="option option-click fw-type03" role="option">
-                      USA
-                    </li>
+                    <li class="option option-click fw-type03 active" role="option" aria-selected="true">All</li>
+                    <li class="option option-click fw-type03" role="option">N CUP</li>
+                    <li class="option option-click fw-type03" role="option">N TT</li>
                   </ul>
                 </div>
               </div>
@@ -201,22 +195,24 @@
                           </div>
                         </a>
                       </div>
-                      <div class="swiper-slide item" data-content="9">
+                      <div class="swiper-slide item active" data-content="9">
                         <a role="button" onclick="pubUi.listContsActive(this);" class="card_type01 bg-black">
                           <div class="card_cover">
                             <img src="../../inc/images/img/ntt_r3_eg_pc.png" alt="NTT R3" />
                           </div>
                           <div class="card_top">
                             <p class="card_rank">
-                              R3<br />
+                              Round 3<br />
                               <span class="ntt-val">N TT</span>
                             </p>
                           </div>
                           <div class="card_bottom">
                             <div class="card_info">
-                              <strong class="card_badge">AUG</strong>
+                              <strong class="card_badge">August</strong>
                               <p class="card_tit">17</p>
-                              <p class="card_subtit">Yongin</p>
+                              <p class="card_subtit">
+                                Yongin Everland SPEEDWAY
+                              </p>
                             </div>
                           </div>
                         </a>
@@ -241,22 +237,22 @@
                           </div>
                         </a>
                       </div>
-                      <div class="swiper-slide item active" data-content="11">
+                      <div class="swiper-slide item" data-content="11">
                         <a role="button" onclick="pubUi.listContsActive(this);" class="card_type01 bg-black">
                           <div class="card_cover">
                             <img src="../../inc/images/img/ntt_r5_eg_pc.png" alt="NTT R5" />
                           </div>
                           <div class="card_top">
                             <p class="card_rank">
-                              Round 5<br />
+                              R5<br />
                               <span class="ntt-val">N TT</span>
                             </p>
                           </div>
                           <div class="card_bottom">
                             <div class="card_info">
-                              <strong class="card_badge">October</strong>
+                              <strong class="card_badge">OCT</strong>
                               <p class="card_tit">26</p>
-                              <p class="card_subtit">Inje SPEEDIUM</p>
+                              <p class="card_subtit">Inje</p>
                             </div>
                           </div>
                         </a>
@@ -274,28 +270,29 @@
               </section>
               <!-- //section_tab -->
               <section class="section_list">
-                <div class="list-content conts11" data-content="11">
+                <div class="list-content conts09 active" data-content="9">
+                  <div class="n-race-box-conts content-item03">
+                    <h2 class="title-w1440 contitle-type01 fw-type03">
+                      N TT Round 3
+                    </h2>
+                    <div class="conts-box-wrap">
+                      <div class="bg-img-wrap" style="
+                            background-image: url('../../inc/images/img/ntt_r3_evtGuide_kv_pc.png');
+                          ">
+                        <h3 class="tit">N Festival<br />N TT Round 3</h3>
+                        <p class="desc">
+                          8.17<br />Yongin Everland SPEEDWAY
+                        </p>
+                        <a href="#" target="_blank" rel="noopener" class="more_btn btn btn-md-primary02">
+                          Tickets
+                          <span class="btn-icon16 icon-right" aria-hidden="true"></span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                   <!-- 07.22 수정 : th:block 추가 -->
                   <th:block th:fragment="roundInfo">
                     <th:block th:if="${race != null}">
-                      <div class="n-race-box-conts content-item03">
-                        <h2 class="title-w1440 contitle-type01 fw-type03">
-                          N TT Round 5
-                        </h2>
-                        <div class="conts-box-wrap">
-                          <div class="bg-img-wrap" style="
-                                background-image: url('../../inc/images/img/ntt_r5_evtGuide_kv_pc.png');
-                              ">
-                            <h3 class="tit">N Festival<br />N TT Round 5</h3>
-                            <p class="desc">10.26<br />Inje SPEEDIUM</p>
-                            <a href="#" target="_blank" rel="noopener" class="more_btn btn btn-md-primary02">
-                              Tickets
-                              <span class="btn-icon16 icon-right" aria-hidden="true"></span>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-
                       <div class="content-item04 bg-gray">
                         <div class="class-info-box">
                           <h2 class="title-w1440 contitle-type01 fw-type03 ta-ctr">
@@ -345,7 +342,7 @@
                         <div class="event-box">
                           <div class="conts-head ty02">
                             <h2 class="tit contitle-type01 fw-type03">
-                              행사 지도
+                              서킷 소개
                             </h2>
                             <!-- 07.12 수정 : select-type 클래스 정의
                               selectbox 2개이상일 경우 select-type02 클래스 추가
@@ -354,7 +351,7 @@
                               <div>
                                 <button class="selectbox-trigger selectbox-js txt-type03 fw-type03"
                                   aria-haspopup="listbox" aria-expanded="false" aria-labelledby="typeSelect02">
-                                  모터스포츠 경험
+                                  N 익스피리언스 존
                                 </button>
                                 <ul class="selectbox-options 02" role="listbox" id="typeSelect02" aria-hidden="true"
                                   style="display: none">
@@ -364,14 +361,8 @@
                                       <span class="btn-icon24 icon-close" aria-hidden="true"></span>
                                     </button>
                                   </li>
-                                  <li class="option option-click fw-type03 active" role="option" aria-selected="false">
-                                    모터스포츠 경험
-                                  </li>
-                                  <li class="option option-click fw-type03" role="option" aria-selected="false">
-                                    N 라운지
-                                  </li>
-                                  <li class="option option-click fw-type03" role="option" aria-selected="false">
-                                    휴식존
+                                  <li class="option option-click fw-type03 active" role="option" aria-selected="false" data-type="1">
+                                    N 익스리피언스 존
                                   </li>
                                 </ul>
                               </div>
@@ -380,7 +371,7 @@
                           </div>
                           <div class="conts-body">
                             <!-- 07.30 수정 : evt-map-wrap 마크업 구조 변경 : 선택한 selectbox 옵션값에 따른 하드코딩 노출 형태로 변경 (스크립트 로 동적생성 X) -->
-                            <div class="evt-map-wrap">
+                            <div class="evt-map-wrap on active" data-type="1">
                               <!-- on 클래스 : 상세맵 활성화시(+ 버튼 클릭시) on 클래스 추가 -->
                               <div class="btn-area">
                                 <div class="btn-wrap plus">
@@ -396,40 +387,25 @@
                               </div>
 
                               <!-- 08.06 수정 : evt-map-default-box & btn-evtmap-pop에 active 클래스 추가 -->
-                              <div class="evt-map-img">
+                              <div class="evt-map-img active">
                                 <div class="evt-map-default-box">
-                                  <!-- N Cup - Round6 이벤트레이아웃 기본 이미지 : 활성화 원하는 곳에 default active 클래스 값 추가-->
-                                  <button class="pop-open btn-evtmap-pop active" aria-controls="pop-nTTMoterExper"
+                                  <!-- N Cup - Round6 이벤트레이아웃 기본 이미지 : 활성화 원하는 곳에 default active 클래스 값 -->
+                                  <button class="pop-open btn-evtmap-pop active" aria-controls="pop-nTTMoterExper1"
                                     aria-haspopup="true" aria-expanded="false" title="팝업오픈">
                                     <span class="visually-hidden">side-popup1 열기</span>
-                                    <img src="../../inc/images/eventLayout/evtLayout_min_com_ntt.png"
+                                    <img src="../../inc/images/eventLayout/evtLayout_min_shortImg03.png"
                                       alt="NTT 이벤트 레이아웃01 축소 이미지" />
                                   </button>
                                 </div>
                                 <!--//evt-map-default-box-->
 
                                 <div class="evt-map-active-box">
-
-                                  <!-- N TT - inje - Motorsport Experience -->
-                                  <button class="pop-open btn-evtmap-pop" aria-controls="pop-nTTMoterExper"
+                                  <!-- N TT - yongin - N Experience zone -->
+                                  <button class="pop-open btn-evtmap-pop" aria-controls="pop-nTTMoterExper1"
                                     aria-haspopup="true" aria-expanded="false" title="팝업오픈">
                                     <span class="visually-hidden">side-popup1 열기</span>
-                                    <img src="../../inc/images/eventLayout/evtLayout_max_motorExper_ntt.png"
+                                    <img src="../../inc/images/eventLayout/evtLayout_max_nExperzone_ntt.png"
                                       alt="inje - Motorsport Experience 확대 이미지" />
-                                  </button>
-                                  <!-- N TT - inje - N Lounge -->
-                                  <button class="pop-open btn-evtmap-pop" aria-controls="pop-nTTNLounge"
-                                    aria-haspopup="true" aria-expanded="false" title="팝업오픈">
-                                    <span class="visually-hidden">side-popup2 열기</span>
-                                    <img src="../../inc/images/eventLayout/evtLayout_max_nlounge_ntt.png"
-                                      alt="inje - N Lounge 확대 이미지" />
-                                  </button>
-                                  <!-- N TT - inje - Rest zone -->
-                                  <button class="pop-open btn-evtmap-pop" aria-controls="pop-nTTRestZone"
-                                    aria-haspopup="true" aria-expanded="false" title="팝업오픈">
-                                    <span class="visually-hidden">side-popup3 열기</span>
-                                    <img src="../../inc/images/eventLayout/evtLayout_max_rest_ntt.png"
-                                      alt="inje - rest zone 확대 이미지" />
                                   </button>
                                 </div>
                                 <!-- //07.12 추가 : 레이어팝업 버튼 추가 -->
@@ -464,7 +440,7 @@
                           - track-ty04 : Yongin SPEEDWAY
                         -->
                         <!-- 07.22 수정 : 마크업 변경 / Round detail page와 통일 -->
-                        <div class="guide_wrap track-ty01">
+                        <div class="guide_wrap track-ty04">
                           <div class="wrap-list list03">
                             <div class="left imgwrap">
                               <div class="track-img">
@@ -474,25 +450,27 @@
                             <!-- ex) track-ty01 정보 -->
                             <div class="right descwrap">
                               <h2 class="tit">서킷 소개</h2>
-                              <h2 class="sub-tit">인제 스피디움(Short Course)</h2>
+                              <h2 class="sub-tit">
+                                용인 에버랜드 스피드웨이
+                              </h2>
                               <div class="list-trackinfo">
                                 <div class="inner">
-                                  <p class="txt-type03">트랙 길이</p>
-                                  <p class="txt-type03">3.908km</p>
+                                  <p class="txt-type03">트랙길이</p>
+                                  <p class="txt-type03">4.346km</p>
                                 </div>
                                 <div class="inner">
                                   <p class="txt-type03">코너 수</p>
-                                  <p class="txt-type03">19개</p>
+                                  <p class="txt-type03">16</p>
                                 </div>
                                 <div class="inner">
                                   <p class="txt-type03">트랙 폭</p>
-                                  <p class="txt-type03">14m</p>
+                                  <p class="txt-type03">11~15m</p>
                                 </div>
                                 <div class="inner">
                                   <p class="txt-type03">
                                     스탠딩 스타트 폴 포지션
                                   </p>
-                                  <p class="txt-type03">Right</p>
+                                  <p class="txt-type03">Left</p>
                                 </div>
                               </div>
                             </div>
@@ -511,10 +489,9 @@
                                 </div>
                                 <div class="box-desc right">
                                   <p class="desc-location">
-                                    인제시외버스터미널 | 인제, 현리(덕다리)방향 승차 → 하답교 하차 → 인제스피디움
-                                  </p>
-                                  <p class="desc-note">
-                                    ※ 교통 상황에 따라 도착 시간 차이가 발생합니다.
+                                    에버랜드 주차장으로 목적지로 설정하여 주차하신 후 에버랜드 자체 셔틀버스를 이용하세요.<br>
+                                    주차 장소 : 에버랜드 주차장<br>
+                                    에버랜드 자체 셔틀버스 운영 시간 : 09:00 ~ 19:00 상시 운영
                                   </p>
                                 </div>
                               </div>
@@ -525,45 +502,22 @@
 
                                 <div class="box wrap-multi-box">
                                   <div class="box-desc left">
-                                    <h3 class="tit">인제시외버스터미널</h3>
+                                    <h3 class="tit">버스 이용</h3>
                                   </div>
                                   <div class="box-desc right">
                                     <p class="desc-location">
-                                      인제, 현리(덕다리)방향 승차 → 하답교 하차 → 인제스피디움
+                                      서울 출발 : 5002번, 5700번, 1500-2번, 1113번 버스 이용<br>
+                                      인천 및 경기도 출발 : 8862번, 8839번, 66번, 66-4번 버스 이용 → 에버랜드 정문 앞 셔틀버스 이용
                                     </p>
                                   </div>
                                 </div>
                                 <div class="box wrap-multi-box">
                                   <div class="box-desc left">
-                                    <h3 class="tit">현리 버스터미널</h3>
+                                    <h3 class="tit">지하철 이용</h3>
                                   </div>
                                   <div class="box-desc right">
                                     <p class="desc-location">
-                                      인제 방향 승차 → 하답교 하차 → 인제스피디움
-                                    </p>
-                                  </div>
-                                </div>
-                                <div class="box wrap-multi-box">
-                                  <div class="box-desc left">
-                                    <h3 class="tit">숙박 안내</h3>
-                                  </div>
-                                  <div class="box-desc right">
-                                    <p class="desc-location">
-                                      인제 스피디움 호텔, 콘도
-                                    </p>
-                                  </div>
-                                </div>
-                                <div class="box wrap-multi-box">
-                                  <div class="box-desc left">
-                                    <h3 class="tit">취재 안내</h3>
-                                  </div>
-                                  <div class="box-desc right">
-                                    <p class="desc-location">
-                                      미디어 신청은 사전 접수인원에 한하여 신청을 받습니다.<br>
-                                      명시된 기간내에 사전 신청 접수를 해주시면 감사하겠습니다.<br>
-                                      사전 신청을 하지 않은 경우 행사 당일 취재가 제한될 수 있는 점 양해드립니다<br>
-                                      06.10 - 06.17<br>
-                                      사전 신청 문의처 : taehoo@playgroundkorea.com
+                                      분당선 기흥역 → 에버라인(경전철) 종점에 내려서 셔틀버스(무료)로 에버랜드 까지 이동 → 에버랜드 정문 앞 셔틀버스 이용
                                     </p>
                                   </div>
                                 </div>
@@ -576,7 +530,7 @@
                   </th:block>
                   <!-- //07.22 수정 : th:block 추가 -->
                 </div>
-                <!-- //conts11-->
+                <!-- //conts09-->
               </section>
               <!--//section_list-content -->
             </div>
@@ -589,121 +543,10 @@
   <!-- ntt POPup : 07.22 추가 -->
 
   <!-- ntt side popup - Motorsport Experience -->
-  <div id="pop-nTTMoterExper" class="popup side-popup" role="dialog" aria-modal="true" aria-labelledby="tit">
+  <div id="pop-nTTMoterExper1" class="popup side-popup" role="dialog" aria-modal="true" aria-labelledby="tit">
     <div class="pop-wrap">
       <div class="popup-header">
-        <h3 class="tit tit-type03">모터스포츠 경험</h3>
-      </div>
-
-      <div class="popup-body">
-        <article>
-          <div class="wrap-image-reward">
-            <img src="../../inc/images/eventLayout/img_ntt_motorExp_popup01.png" loading="lazy" alt="사이드 팝업 이미지1" />
-          </div>
-
-          <div class="wrap-popup-title">
-            <p class="tit-type04">짐카나</p>
-
-            <div class="wrap-desc">
-              <p class="txt-type03">
-                N 차량으로 선을 긋거나 콘으로 코스를 복잡하게 만들어 놓고 코스를 달려 시간을 겨루는 경기
-              </p>
-            </div>
-          </div>
-
-          <div class="wrap-zone-info">
-            <div class="box-info">
-              <p class="tit-type05">참여 방법</p>
-              <p class="txt-type02">
-                홈페이지 내 사전 결제<br>
-                홈페이지 접수 링크 :
-                <a href="https://url.kr/b9hf25" target="_blank" rel="noopener">https://url.kr/b9hf25</a>
-              </p>
-            </div>
-            <div class="box-info">
-              <p class="tit-type05">운영 시간</p>
-              <p class="txt-type02">추후 업데이트</p>
-            </div>
-            <div class="box-info">
-              <p class="tit-type05">참가 비용</p>
-              <p class="txt-type02">100,000원</p>
-            </div>
-          </div>
-          <div class="box-info full">
-            <p class="tit-type05">유의 사항</p>
-            <p class="txt-type02">
-              모든 참가자는 긴팔티, 긴바지, 장갑, 헬멧, 운동화를 반드시 착용하여야 합니다.<br>
-              동승자 또한 위의 장갑 제외 안전 장구류를 반드시 착용하여야 합니다.<br>
-              동승자는 조수석만 동승 가능합니다.
-            </p>
-          </div>
-        </article>
-
-        <article>
-          <div class="wrap-image-reward">
-            <img src="../../inc/images/eventLayout/img_motoExper_popup02.png" loading="lazy" alt="사이드 팝업 이미지2" />
-          </div>
-
-          <div class="wrap-popup-title">
-            <p class="tit-type04">N 택시</p>
-
-            <div class="wrap-desc">
-              <p class="txt-type03">
-                프로 드라이버가 운전하는 레이스카를 직접 체험해 볼 수 있는 기회
-              </p>
-            </div>
-          </div>
-
-          <div class="wrap-zone-info">
-            <div class="box-info">
-              <p class="tit-type05">참여 방법</p>
-              <p class="txt-type02">
-                종합안내소 현장 접수
-              </p>
-            </div>
-            <div class="box-info">
-              <p class="tit-type05">운영 시간</p>
-              <p class="txt-type02">
-                동호회 체험 주행시간 1타임 약 5분 소요
-              </p>
-            </div>
-            <div class="box-info">
-              <p class="tit-type05">참여 인원</p>
-              <p class="txt-type02">
-                1타임에 최대 6명(차량 총 2대 운용)
-              </p>
-            </div>
-            <div class="box-info">
-              <p class="tit-type05">참가 비용</p>
-              <p class="txt-type02">무료</p>
-            </div>
-          </div>
-          <div class="box-info full">
-            <p class="tit-type05">참여 유의사항</p>
-            <p class="txt-type02">
-              안전상의 이유로 만 13세 ~ 만 65세 이용 가능
-            </p>
-          </div>
-        </article>
-
-        <!-- //  -->
-      </div>
-      <div class="btn-wrap">
-        <!-- pop-close 해당 팝업 닫기 -->
-        <button type="button" class="btn btn-only-icon-notbg popup-close-btn-x pop-close" title="close">
-          <!-- 07.12 수정 : 누락 클래스 추가 (popup-close-btn-x) -->
-          <span class="visually-hidden">close</span>
-          <span class="btn-icon36 icon-close" aria-hidden="true"></span>
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <!-- ntt side popup - N Lounge -->
-  <div id="pop-nTTNLounge" class="popup side-popup" role="dialog" aria-modal="true" aria-labelledby="tit">
-    <div class="pop-wrap">
-      <div class="popup-header">
-        <h3 class="tit tit-type03">N 라운지</h3>
+        <h3 class="tit tit-type03">N 익스피리언스 존</h3>
       </div>
 
       <div class="popup-body">
@@ -724,19 +567,17 @@
 
           <div class="wrap-zone-info">
             <div class="box-info">
-              <p class="tit-type05">참여 방법</p>
-              <p class="txt-type02">N라운지 내 현장 접수</p>
+              <p class="tit-type05">참여 장소</p>
+              <p class="txt-type02">10번 피트</p>
             </div>
             <div class="box-info">
               <p class="tit-type05">운영 시간</p>
               <p class="txt-type02">상시 운영</p>
             </div>
-
             <div class="box-info">
               <p class="tit-type05">참가 비용</p>
               <p class="txt-type02">무료</p>
             </div>
-
             <div class="box-info">
               <p class="tit-type05">참여 유의사항</p>
               <p class="txt-type02">
@@ -746,47 +587,6 @@
           </div>
         </article>
 
-        <article>
-          <div class="wrap-image-reward">
-            <img src="../../inc/images/eventLayout/img_ntt_nLounge_popup01.png" loading="lazy" alt="사이드 팝업 이미지2" />
-          </div>
-
-          <div class="wrap-popup-title">
-            <p class="tit-type04">N 카밋</p>
-
-            <div class="wrap-desc">
-              <p class="txt-type03">
-                낮에는 Cars & Coffee, 밤에는 바비큐를 즐기며 N Fan들과 함께 할 수 있는 기회
-              </p>
-            </div>
-          </div>
-
-          <div class="wrap-zone-info">
-            <div class="box-info">
-              <p class="tit-type05">참여 방법</p>
-              <p class="txt-type02">
-                N 타임트라이얼 참가자 및 N 동호회, 일반고객
-              </p>
-            </div>
-            <div class="box-info">
-              <p class="tit-type05">운영 장소</p>
-              <p class="txt-type02">
-                DAY : N 라운지 내, Cars & Coffee<br>
-                NIGHT : N 라운지 앞, 바비큐 파티(우천시 , N라운지 내 실내 공간 이용)
-              </p>
-            </div>
-          </div>
-
-          <div class="box-info full">
-            <p class="tit-type05">운영 계획</p>
-            <p class="txt-type02">
-              ① N 타임트라이얼 참가자 및 N 동호회 / N 일반 고객 대상으로 N 카밋에 참가하고 싶은 분들은 자유롭게 참가 가능<br>
-              ② DAY에는 N라운지 내에서 Car & Coffee, NIGHT에는 바비큐(닭강정 등) 파티 예정<br>
-              ③ 약 200인분 준비 및 테이블 + 의자 준비 예정
-            </p>
-          </div>
-        </article>
-
         <!-- //  -->
       </div>
       <div class="btn-wrap">
@@ -799,82 +599,7 @@
       </div>
     </div>
   </div>
-
-  <!-- ntt side popup - Rest Zone  -->
-  <div id="pop-nTTRestZone" class="popup side-popup" role="dialog" aria-modal="true" aria-labelledby="tit">
-    <div class="pop-wrap">
-      <div class="popup-header">
-        <h3 class="tit tit-type03">휴식존</h3>
-      </div>
-
-      <div class="popup-body">
-        <article>
-          <div class="wrap-image-reward">
-            <img src="../../inc/images/eventLayout/img_yeongamViewing_popup01.png" loading="lazy" alt="사이드 팝업 이미지1" />
-          </div>
-
-          <div class="wrap-popup-title">
-            <p class="tit-type04">홍보 부스</p>
-
-            <div class="wrap-desc">
-              <p class="txt-type03">
-                현대N페스티벌에 참여하는 스폰서와 업체의 다양한 아이템을 경험해 볼 수 있는 공간
-              </p>
-            </div>
-          </div>
-
-          <div class="wrap-zone-info">
-            <div class="box-info">
-              <p class="tit-type05">참여 방법</p>
-              <p class="txt-type02">현장 상시 관람 가능</p>
-            </div>
-            <div class="box-info">
-              <p class="tit-type05">운영 시간</p>
-              <p class="txt-type02">상시 운영</p>
-            </div>
-          </div>
-        </article>
-
-        <article>
-          <div class="wrap-image-reward">
-            <img src="../../inc/images/eventLayout/img_viewing_popup02.png" loading="lazy" alt="사이드 팝업 이미지1" />
-          </div>
-
-          <div class="wrap-popup-title">
-            <p class="tit-type04">푸드 트럭</p>
-
-            <div class="wrap-desc">
-              <p class="txt-type03">
-                경기가 진행되는 동안 다양한 먹거리를 즐길 수 있는 공간
-              </p>
-            </div>
-          </div>
-
-          <div class="wrap-zone-info">
-            <div class="box-info">
-              <p class="tit-type05">이벤트 상세 설명</p>
-              <p class="txt-type02">
-                다양한 식음료가 준비되어 있는 푸드 트럭에서 맛있는 먹거리를 레이싱 경기와 함께 즐겨보세요
-              </p>
-            </div>
-            <div class="box-info">
-              <p class="tit-type05">참여 장소</p>
-              <p class="txt-type02">상시 운영</p>
-            </div>
-          </div>
-        </article>
-        <!-- //  -->
-      </div>
-      <div class="btn-wrap">
-        <!-- pop-close 해당 팝업 닫기 -->
-        <button type="button" class="btn btn-only-icon-notbg popup-close-btn-x pop-close" title="close">
-          <!-- 07.12 수정 : 누락 클래스 추가 (popup-close-btn-x) -->
-          <span class="visually-hidden">close</span>
-          <span class="btn-icon36 icon-close" aria-hidden="true"></span>
-        </button>
-      </div>
-    </div>
-  </div>
+  <!-- // -->
 
   <script type="text/javascript" src="../../inc/js/jquery-3.7.1.slim.min.js"></script>
   <script type="text/javascript" src="../../inc/js/swiper.min.js"></script>

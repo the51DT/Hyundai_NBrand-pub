@@ -254,31 +254,30 @@
                 </div><!-- //swiper-container -->
               </section> <!-- //section_tab -->
               <section class="section_list">
-                <div class="list-content conts06 active" data-content="6">
-                  <!-- 07.22 수정 : th:block 추가 -->
+                <div class="list-content conts06" data-content="6">
+                  <div class="n-race-box-conts content-item03">
+                    <h2 class="title-w1440 contitle-type01 fw-type03">
+                      N CUP Round 6
+                    </h2>
+                    <div class="conts-box-wrap">
+                      <div class="bg-img-wrap" style="
+                            background-image: url('../../inc/images/img/r5_evtGuide_kv_pc.png');
+                          ">
+                        <h3 class="tit">N Festival<br />N Cup Round 6</h3>
+                        <p class="desc">
+                          11.9 - 11.10<br />
+                          Korea International Circuit
+                        </p>
+                        <a href="#" target="_blank" rel="noopener" class="more_btn btn btn-md-primary02">
+                          Tickets
+                          <span class="btn-icon16 icon-right" aria-hidden="true"></span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 08.12 수정 : th:block 위치 변경 -->
                   <th:block th:fragment="roundInfo">
                     <th:block th:if="${race != null}">
-                      <div class="n-race-box-conts content-item03">
-                        <h2 class="title-w1440 contitle-type01 fw-type03">
-                          N CUP Round 6
-                        </h2>
-                        <div class="conts-box-wrap">
-                          <div class="bg-img-wrap" style="
-                                background-image: url('../../inc/images/img/r5_evtGuide_kv_pc.png');
-                              ">
-                            <h3 class="tit">N Festival<br />N Cup Round 6</h3>
-                            <p class="desc">
-                              11.9 - 11.10<br />
-                              Korea International Circuit
-                            </p>
-                            <a href="#" target="_blank" rel="noopener" class="more_btn btn btn-md-primary02">
-                              Tickets
-                              <span class="btn-icon16 icon-right" aria-hidden="true"></span>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-
                       <div class="content-item04 bg-gray">
                         <div class="class-info-box">
                           <h2 class="title-w1440 contitle-type01 fw-type03 ta-ctr">
@@ -292,13 +291,13 @@
                                     <img src="../../inc/images/img/img_class_info01.png" loading="lazy" alt="eN1" />
                                   </div>
                                   <div class="card_bottom">
-                                    <p class="card_tit">eN1</p>
+                                    <p class="card_tit">EN1</p>
                                     <p class="card_detail">
                                       Korea's first one-make electric motorsport based on
                                       650-HP IONIQ 5 N
                                     </p>
                                     <div class="btn-wrap">
-                                      <a href="https://www.hyundai.com/worldwide/ko/brand-journal/mobility-solution/n-story"
+                                      <a href="about-korea.do"
                                         class="btn md-txt-btn01">
                                         Learn More
                                         <span class="btn-icon16 icon-right" aria-hidden="true"></span>
@@ -319,7 +318,7 @@
                                       purpose-built for racing
                                     </p>
                                     <div class="btn-wrap">
-                                      <a href="https://www.hyundai.com/worldwide/ko/brand-journal/mobility-solution/n-story"
+                                      <a href="about-korea.do"
                                         class="btn md-txt-btn01">
                                         Learn More
                                         <span class="btn-icon16 icon-right" aria-hidden="true"></span>
@@ -340,7 +339,7 @@
                                       AVANTE N cars, where drivers compete
                                     </p>
                                     <div class="btn-wrap">
-                                      <a href="https://www.hyundai.com/worldwide/ko/brand-journal/mobility-solution/n-story"
+                                      <a href="about-korea.do"
                                         class="btn md-txt-btn01">
                                         Learn More
                                         <span class="btn-icon16 icon-right" aria-hidden="true"></span>
@@ -355,13 +354,154 @@
                       </div>
 
                       <div class="content-item05">
-                        <div class="schedule-box th:utext=${race.raceDetail}">
+                        <div class="schedule-box" th:utext="${race.raceDetail}">
                           <div class="wrap-list list01">
                             <div class="tab-container">
                               <div class="tab-head">
                                 <h2 class="title">Race Schedule</h2>
+                                <div class="tabs-wrap">
+                                  <ul class="tabs ty-black" data-contents="탭카테고리">
+                                    <li class="on">
+                                      <a href="#" aria-controls="tab11-011" role="tab"
+                                        aria-selected="true">Saturday</a>
+                                    </li>
+                                    <li>
+                                      <a href="#" aria-controls="tab11-021" role="tab" aria-selected="false">
+                                        Sunday </a>
+                                    </li>
+                                  </ul>
+                                </div>
                               </div>
-                              <p class="wrap-list-no-data">Events will be updated and made available in due time.</p>
+                              <div class="tab-content on" id="tab11-011" role="tabpanel">
+                                <div class="__bottom">
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">09:10 ~ 09:30</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">[eN1] IONIQ 5 N Cup Practice</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">eN1</p>
+                                    </div>
+                                  </div>
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">09:40 ~ 10:00</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">
+                                        [N2] AVANTE N Cup - Practice A
+                                      </p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">eN1</p>
+                                    </div>
+                                  </div>
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">10:10 ~ 10:30</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">
+                                        [N2] AVANTE N Cup - Practice B
+                                      </p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">eN1</p>
+                                    </div>
+                                  </div>
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">10:40 ~ 11:00</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">[eN1] IONIQ 5 N Cup Practice</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">eN1</p>
+                                    </div>
+                                  </div>
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">11:10 ~ 11:30</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">
+                                        [N2] AVANTE N Cup - Practice A
+                                      </p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">eN1</p>
+                                    </div>
+                                  </div>
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">11:40 ~ 12:00</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">
+                                        [N2] AVANTE N Cup - Practice B
+                                      </p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">eN1</p>
+                                    </div>
+                                  </div>
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">12:10 ~ 12:30</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">[eN1] IONIQ 5 N Cup Practice</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">eN1</p>
+                                    </div>
+                                  </div>
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">12:30 ~ 13:30</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">Lunch</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">eN1</p>
+                                    </div>
+                                  </div>
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">14:00 ~ 14:20</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">[N1] AVANTE N Cup Practice</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">eN1</p>
+                                    </div>
+                                  </div>
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">15:40 ~ 16:00</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">
+                                        [N1] AVANTE N Cup Qualifying (Live)
+                                      </p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">eN1</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="tab-content" id="tab11-021" role="tabpanel"></div>
+                              <button type="button" class="btn btn-md-outline01">
+                                View More
+                                <span class="btn-icon16 icon-down" aria-hidden="true">
+                                </span>
+                              </button>
                             </div>
                           </div>
                         </div>
@@ -399,7 +539,7 @@
                           </div>
                           <div class="conts-body">
                             <!-- 07.30 수정 : evt-map-wrap 마크업 구조 변경 : 선택한 selectbox 옵션값에 따른 하드코딩 노출 형태로 변경 (스크립트 로 동적생성 X) -->
-                            <div class="evt-map-wrap on" data-type="1">
+                            <div class="evt-map-wrap on active" data-type="1">
                               
                               <div class="btn-area">
                                 <div class="btn-wrap plus">
@@ -487,13 +627,206 @@
                       </section>
 
                       <div class="content-item07">
-                        <div class="schedule-box th:utext=${race.eventDetail}">
+                        <div class="schedule-box" th:utext="${race.eventDetail}">
                           <div class="wrap-list list02">
                             <div class="tab-container">
                               <div class="tab-head">
                                 <h2 class="title">Event Schedule</h2>
+                                <div class="tabs-wrap">
+                                  <ul class="tabs ty-black" data-contents="탭카테고리">
+                                    <li class="on">
+                                      <a href="#" aria-controls="tab12-011" role="tab"
+                                        aria-selected="true">Saturday</a>
+                                    </li>
+                                    <li>
+                                      <a href="#" aria-controls="tab12-021" role="tab" aria-selected="false">
+                                        Sunday </a>
+                                    </li>
+                                  </ul>
+                                </div>
                               </div>
-                              <p class="wrap-list-no-data">Events will be updated and made available in due time.</p>
+                              <div class="tab-content on" id="tab12-011" role="tabpanel">
+                                <div class="__bottom">
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">10:00 ~ 17:00</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">Sim Racing</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">
+                                        N Lounge / All spectators, Open around the clock
+                                      </p>
+                                    </div>
+                                  </div>
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">10:00 ~ 17:00</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">Paper Craft</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">
+                                        N Lounge / All spectators, Open around the clock
+                                      </p>
+                                    </div>
+                                  </div>
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">10:00 ~ 17:00</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">Exhibition Booths</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">
+                                        Viewing zone / All spectators, Open around the clock
+                                      </p>
+                                    </div>
+                                  </div>
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">12:40 ~ 13:10</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">N Taxi</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">
+                                        Viewing zone / All spectators, Open around the clock
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="tab-content" id="tab12-021" role="tabpanel">
+                                <div class="__bottom">
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">09:10 ~ 09:30</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">
+                                        [테스트] IONIQ 5 N Cup Practice
+                                      </p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">eN1</p>
+                                    </div>
+                                  </div>
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">09:40 ~ 10:00</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">
+                                        [N2] AVANTE N Cup - Practice A
+                                      </p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">eN1</p>
+                                    </div>
+                                  </div>
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">10:10 ~ 10:30</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">
+                                        [N2] AVANTE N Cup - Practice B
+                                      </p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">eN1</p>
+                                    </div>
+                                  </div>
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">10:40 ~ 11:00</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">[eN1] IONIQ 5 N Cup Practice</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">eN1</p>
+                                    </div>
+                                  </div>
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">11:10 ~ 11:30</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">
+                                        [N2] AVANTE N Cup - Practice A
+                                      </p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">eN1</p>
+                                    </div>
+                                  </div>
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">11:40 ~ 12:00</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">
+                                        [N2] AVANTE N Cup - Practice B
+                                      </p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">eN1</p>
+                                    </div>
+                                  </div>
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">12:10 ~ 12:30</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">[eN1] IONIQ 5 N Cup Practice</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">eN1</p>
+                                    </div>
+                                  </div>
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">12:30 ~ 13:30</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">Lunch</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">eN1</p>
+                                    </div>
+                                  </div>
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">14:00 ~ 14:20</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">[N1] AVANTE N Cup Practice</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">eN1</p>
+                                    </div>
+                                  </div>
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">15:40 ~ 16:00</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">
+                                        [N1] AVANTE N Cup Qualifying (Live)
+                                      </p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">eN1</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -555,7 +888,8 @@
                                 </div>
                                 <div class="box-desc right">
                                   <p class="desc-location">
-                                    Set your destination to 2, F1-ro, Samho-eup, Yeongam-gun, Jeollanam-do
+                                    Set your destination to Everland SPEEDWAY or 310
+                                    Jeondaeli, Pogok-eup, Cheoin-gu, Yongin-si, Gyeonggi-do
                                   </p>
                                   <p class="desc-note">
                                     ※ Arrival time may vary depending on traffic conditions.
@@ -567,28 +901,27 @@
 
                                 <div class="box wrap-multi-box">
                                   <div class="box-desc left">
+                                    <h3 class="tit">By bus</h3>
                                   </div>
                                   <div class="box-desc right">
                                     <p class="desc-location">
-                                      Mokpo Station (KTX) → Bus number 300 at the KT Mokpo Building bus stop → Get off at Hachon Village → Walk for 10 minutes<br>
-                                      Mokpo Station (KTX) → Bus number 300A at the KT Mokpo Building bus stop → Get off at the entrance of F1 Circuit → Walk for 10 minutes
+                                      From Seoul: Take bus 5002, 5700, 1500-2 or 1113<br />From
+                                      Incheon or Gyeonggi-do: Take bus 8862, 8839, 66, or
+                                      66-4 → Then, take the shuttle in front of the main
+                                      gate of Everland
                                     </p>
                                   </div>
                                 </div>
                                 <div class="box wrap-multi-box">
                                   <div class="box-desc left">
-                                    <h3 class="tit">Press Guidelines</h3>
+                                    <h3 class="tit">By subway</h3>
                                   </div>
                                   <div class="box-desc right">
                                     <p class="desc-location">
-                                      Media applications are only open to pre-registered individuals.<br>
-                                      We kindly request advance registration within the designated timeframe.<br>
-                                      Please note that press coverage may be restricted on the event day if you haven't pre-registered.<br>
-                                      06.10 - 06.17<br>
-                                      Pre-registration Enquiry : taehoo@playgroundkorea.com 
-                                    </p>
-                                    <p class="desc-note">
-                                      ※ Arrival time may vary depending on traffic conditions.
+                                      Take Bundang Line and get off at Giheung Station →
+                                      Take EverLine and get off at the last stop, and take
+                                      the shuttle bus (for free) to get to Everland → Take
+                                      the shuttle bus on front gate
                                     </p>
                                   </div>
                                 </div>
@@ -599,7 +932,7 @@
                       </section>
                     </th:block>
                   </th:block>
-                  <!-- //07.22 수정 : th:block 추가 -->
+                  <!-- //08.12 수정 : th:block 위치 변경 -->
                 </div> <!-- //conts06-->
               </section>
               <!--//section_list-content -->

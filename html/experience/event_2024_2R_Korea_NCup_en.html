@@ -260,29 +260,30 @@
               <!-- //section_tab -->
               <section class="section_list">
                 <div class="list-content conts02 active" data-content="2">
-                  <!-- 07.22 수정 : th:block 추가 -->
+                  
+                  <div class="n-race-box-conts content-item03">
+                    <h2 class="title-w1440 contitle-type01 fw-type03">
+                      N CUP Round 2
+                    </h2>
+                    <div class="conts-box-wrap">
+                      <div class="bg-img-wrap" style="
+                            background-image: url('../../inc/images/img/r2_evtGuide_kv_pc.png');
+                          ">
+                        <h3 class="tit">N Festival<br />N Cup Round 2</h3>
+                        <p class="desc">
+                          05.11 ~ 05.12<br /> Youngin Everland SPEEDIUM
+                        </p>
+                        <a href="#" target="_blank" rel="noopener" class="more_btn btn btn-md-primary02">
+                          Tickets
+                          <span class="btn-icon16 icon-right" aria-hidden="true"></span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>  
+
+                  <!-- 08.12 수정 : th:block 위치 변경 -->
                   <th:block th:fragment="roundInfo">
                     <th:block th:if="${race != null}">
-                      <div class="n-race-box-conts content-item03">
-                        <h2 class="title-w1440 contitle-type01 fw-type03">
-                          N CUP Round 2
-                        </h2>
-                        <div class="conts-box-wrap">
-                          <div class="bg-img-wrap" style="
-                                background-image: url('../../inc/images/img/r2_evtGuide_kv_pc.png');
-                              ">
-                            <h3 class="tit">N Festival<br />N Cup Round 2</h3>
-                            <p class="desc">
-                              05.11 ~ 05.12<br /> Youngin Everland SPEEDIUM
-                            </p>
-                            <a href="#" target="_blank" rel="noopener" class="more_btn btn btn-md-primary02">
-                              Tickets
-                              <span class="btn-icon16 icon-right" aria-hidden="true"></span>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-
                       <div class="content-item04 bg-gray">
                         <div class="class-info-box">
                           <h2 class="title-w1440 contitle-type01 fw-type03 ta-ctr">
@@ -302,7 +303,7 @@
                                       motorsport based on 650-HP IONIQ 5 N
                                     </p>
                                     <div class="btn-wrap">
-                                      <a href="#" class="btn md-txt-btn01">
+                                      <a href="about-korea.do" class="btn md-txt-btn01">
                                         Learn More
                                         <span class="btn-icon16 icon-right" aria-hidden="true"></span>
                                       </a>
@@ -323,7 +324,7 @@
                                       racing
                                     </p>
                                     <div class="btn-wrap">
-                                      <a href="#" class="btn md-txt-btn01">
+                                      <a href="about-korea.do" class="btn md-txt-btn01">
                                         Learn More
                                         <span class="btn-icon16 icon-right" aria-hidden="true"></span>
                                       </a>
@@ -344,7 +345,7 @@
                                       drivers compete
                                     </p>
                                     <div class="btn-wrap">
-                                      <a href="#" class="btn md-txt-btn01">
+                                      <a href="about-korea.do" class="btn md-txt-btn01">
                                         Learn More
                                         <span class="btn-icon16 icon-right" aria-hidden="true"></span>
                                       </a>
@@ -358,7 +359,7 @@
                       </div>
 
                       <div class="content-item05">
-                        <div class="schedule-box th:utext=${race.raceDetail}">
+                        <div class="schedule-box" th:utext="${race.raceDetail}">
                           <div class="wrap-list list01">
                             <div class="tab-container">
                               <div class="tab-head">
@@ -366,11 +367,11 @@
                                 <div class="tabs-wrap">
                                   <ul class="tabs ty-black" data-contents="탭카테고리">
                                     <li class="on">
-                                      <a href="javascript:;" aria-controls="tab3-011" role="tab"
+                                      <a href="#" aria-controls="tab3-011" role="tab"
                                         aria-selected="true">Saturday</a>
                                     </li>
                                     <li>
-                                      <a href="javascript:;" aria-controls="tab3-021" role="tab" aria-selected="false">
+                                      <a href="#" aria-controls="tab3-021" role="tab" aria-selected="false">
                                         Sunday
                                       </a>
                                     </li>
@@ -878,6 +879,7 @@
                                       <span class="btn-icon24 icon-close" aria-hidden="true"></span>
                                     </button>
                                   </li>
+                                  <!-- 08.08 수정 : data-type 추가 필요 -->
                                   <li class="option option-click fw-type03 active" role="option" aria-selected="true" data-type="1">
                                     A Paddock
                                   </li>
@@ -941,11 +943,26 @@
                             <!-- //08.06 수정 : selectbox-group 추가 : 2번째 항목 값 케이스 일때(2번째 selectbox 존재할 경우에만) -->
                           </div>
                           <div class="conts-body">
-                            <!-- 07.30 수정 : evt-map-wrap 마크업 구조 변경 : 선택한 selectbox 옵션값에 따른 하드코딩 노출 형태로 변경 (스크립트 로 동적생성 X) -->
+                          <!-- 
+                          comment!
+                          ****************************************************************      
+                          1. event Layout 영역 event Map 호출 실행 함수 
+                          라운드별 컨텐츠 변경 후, event Layout 정상 동작 안하는 경우, evtImgMapChk 함수 한번 더 호출해주세요.
+                          - plus, minus 버튼 클릭 이벤트 경우, 해당 함수 호출 되어 있을 시 문제 없어 따로 외부 실행함수로 변경하지 않았습니다. 참고 부탁드려요-!
+
+                          2. event Map 호출 실행 함수 
+                          - evtImgMapChk("", "");
+                          //외부 호출 필요할 경우, 빈 값으로 실행 시켜주세요
+
+                          ****************************************************************
+                          -->
+                            
+                            <!-- 08.08 수정사항 -->
+                            <!-- 활성화시 on 클래스 -->
+                            <!-- active 클래스 : 상세맵 활성화시(+ 버튼 클릭시) active 클래스 추가 -->
 
                             <!-- A Paddock 맵 정보 -->
-                            <div class="evt-map-wrap on" data-type="1"><!-- 활성화 시 on 클래스 추가 --> <!-- data-type 값 부모 첫번째 selectbox 대상과 동일하게 적용 필요 -->
-                              <!-- on 클래스 : 상세맵 활성화시(+ 버튼 클릭시) on 클래스 추가 -->
+                            <div class="evt-map-wrap on active" data-type="1"> 
                               <div class="btn-area">
                                 <div class="btn-wrap plus">
                                   <button type="button">
@@ -1006,7 +1023,7 @@
 
                             <!-- B Paddock 맵 정보 -->
                             <div class="evt-map-wrap" data-type="2">
-                              <!-- on 클래스 : 상세맵 활성화시(+ 버튼 클릭시) on 클래스 추가 -->
+                              
                               <div class="btn-area">
                                 <div class="btn-wrap plus">
                                   <button type="button">
@@ -1050,7 +1067,7 @@
                       </section>
 
                       <div class="content-item07">
-                        <div class="schedule-box th:utext=${race.eventDetail}">
+                        <div class="schedule-box" th:utext="${race.eventDetail}">
                           <div class="wrap-list list02">
                             <div class="tab-container">
                               <div class="tab-head">
@@ -1058,11 +1075,11 @@
                                 <div class="tabs-wrap">
                                   <ul class="tabs ty-black" data-contents="탭카테고리">
                                     <li class="on">
-                                      <a href="javascript:;" aria-controls="tab4-011" role="tab"
+                                      <a href="#" aria-controls="tab4-011" role="tab"
                                         aria-selected="true">Saturday</a>
                                     </li>
                                     <li>
-                                      <a href="javascript:;" aria-controls="tab4-021" role="tab" aria-selected="false">
+                                      <a href="#" aria-controls="tab4-021" role="tab" aria-selected="false">
                                         Sunday
                                       </a>
                                     </li>
@@ -1772,7 +1789,7 @@
                       </section>
                     </th:block>
                   </th:block>
-                  <!-- //07.22 수정 : th:block 추가 -->
+                  <!-- //08.12 수정 : th:block 위치 변경 -->
                 </div>
                 <!-- //conts02-->
               </section>

@@ -186,7 +186,7 @@ var pubUi = {
       $(this).closest(".evt-map-wrap").addClass("active");
       $(this)
         .closest(".evt-map-wrap")
-        .find(".evt-map-img.active .evt-map-default-box")
+        .find(".evt-map-img.active .evt-map-default-box > button")
         .hide();
       $(this)
         .closest(".evt-map-wrap")
@@ -199,7 +199,7 @@ var pubUi = {
       $(this).closest(".evt-map-wrap").removeClass("active");
       $(this)
         .closest(".evt-map-wrap")
-        .find(".evt-map-img.active .evt-map-default-box")
+        .find(".evt-map-img.active .evt-map-default-box > button")
         .show();
       $(this)
         .closest(".evt-map-wrap")
@@ -1098,12 +1098,14 @@ function handleOptionClick(event) {
     var evtMapWrap = $(".list-content.active .evt-map-wrap");
 
     for (var i = 0; i < evtMapWrap.length; i++) {
-      if (evtMapWrap[i].classList.contains("active")) {
+      if (evtMapWrap[i].classList.contains("active") == false) {
+        $(evtMapWrap[i]).addClass("active");
+        $(evtMapWrap[i])
+          .find(".evt-map-img .evt-map-default-box > button")
+          .hide();
         $(evtMapWrap[i])
           .find(".evt-map-img .evt-map-active-box > button")
-          .hide();
-        $(evtMapWrap[i]).find(".evt-map-img .evt-map-default-box").show();
-        $(evtMapWrap[i]).removeClass("active");
+          .show();
       }
     }
     evtImgMapChk(optionDataType, option1);
@@ -1166,12 +1168,14 @@ function evtImgMapChk(optionDataType, option1) {
 
         // 클래스 초기화
         evtMapWrap.removeClass("on");
+        evtMapWrap.removeClass("active");
         evtMapWrap.find(".evt-map-img").removeClass("active");
 
         for (var i = 0; i < evtMapWrap.length; i++) {
           var mapDataType = Math.floor(evtMapWrap[i].dataset.type);
           if (mapDataType == optionDataType) {
             evtMapWrap[i].classList.add("on");
+            evtMapWrap[i].classList.add("active");
             $(evtMapWrap[i])
               .find(".evt-map-img")
               .eq(activeOption - 1)
@@ -1186,9 +1190,11 @@ function evtImgMapChk(optionDataType, option1) {
       var mapDataType = Math.floor(evtMapWrap[i].dataset.type);
       if (mapDataType == optionDataType) {
         evtMapWrap[i].classList.add("on");
+        evtMapWrap[i].classList.add("active");
         $(evtMapWrap[i]).find(".evt-map-img").addClass("active");
       } else {
         evtMapWrap[i].classList.remove("on");
+        evtMapWrap[i].classList.remove("active");
         $(evtMapWrap[i]).find(".evt-map-img").removeClass("active");
       }
     }

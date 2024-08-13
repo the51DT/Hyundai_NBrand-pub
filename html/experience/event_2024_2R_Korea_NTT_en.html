@@ -271,29 +271,28 @@
               <!-- //section_tab -->
               <section class="section_list">
                 <div class="list-content conts08 active" data-content="8">
-                  <!-- 07.22 수정 : th:block 추가 -->
+                  <div class="n-race-box-conts content-item03">
+                    <h2 class="title-w1440 contitle-type01 fw-type03">
+                      N TT Round 2
+                    </h2>
+                    <div class="conts-box-wrap">
+                      <div class="bg-img-wrap" style="
+                            background-image: url('../../inc/images/img/ntt_r2_evtGuide_kv_pc.png');
+                          ">
+                        <h3 class="tit">N Festival<br />N TT Round 2</h3>
+                        <p class="desc">
+                          7.20<br />Yongin Everland SPEEDWAY
+                        </p>
+                        <a href="#" target="_blank" rel="noopener" class="more_btn btn btn-md-primary02">
+                          Tickets
+                          <span class="btn-icon16 icon-right" aria-hidden="true"></span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 08.12 수정 : th:block 위치 변경 -->
                   <th:block th:fragment="roundInfo">
                     <th:block th:if="${race != null}">
-                      <div class="n-race-box-conts content-item03">
-                        <h2 class="title-w1440 contitle-type01 fw-type03">
-                          N TT Round 2
-                        </h2>
-                        <div class="conts-box-wrap">
-                          <div class="bg-img-wrap" style="
-                                background-image: url('../../inc/images/img/ntt_r2_evtGuide_kv_pc.png');
-                              ">
-                            <h3 class="tit">N Festival<br />N TT Round 2</h3>
-                            <p class="desc">
-                              7.20<br />Yongin Everland SPEEDWAY
-                            </p>
-                            <a href="#" target="_blank" rel="noopener" class="more_btn btn btn-md-primary02">
-                              Tickets
-                              <span class="btn-icon16 icon-right" aria-hidden="true"></span>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-
                       <div class="content-item04 bg-gray">
                         <div class="class-info-box">
                           <h2 class="title-w1440 contitle-type01 fw-type03 ta-ctr">
@@ -314,7 +313,7 @@
                                       fastest record.
                                     </p>
                                     <div class="btn-wrap">
-                                      <a href="https://www.hyundai.com/worldwide/ko/brand-journal/mobility-solution/n-story"
+                                      <a href="about-korea.do"
                                         class="btn md-txt-btn01">
                                         Learn More
                                         <span class="btn-icon16 icon-right" aria-hidden="true"></span>
@@ -329,7 +328,7 @@
                       </div>
 
                       <div class="content-item05">
-                        <div class="schedule-box th:utext=${race.raceDetail}">
+                        <div class="schedule-box" th:utext="${race.raceDetail}">
                           <div class="wrap-list list01">
                             <div class="tab-container">
                               <div class="tab-head">
@@ -337,8 +336,13 @@
                                 <div class="tabs-wrap">
                                   <ul class="tabs ty-black" data-contents="탭카테고리">
                                     <li class="on">
-                                      <a href="javascript:;" aria-controls="tab15-011" role="tab"
+                                      <a href="#" aria-controls="tab15-011" role="tab"
                                         aria-selected="true">Saturday</a>
+                                    </li>
+                                    <li>
+                                      <a href="#" aria-controls="tab15-021" role="tab" aria-selected="false">
+                                        Sunday
+                                      </a>
                                     </li>
                                   </ul>
                                 </div>
@@ -347,84 +351,135 @@
                                 <div class="__bottom">
                                   <div class="wrap-lists">
                                     <div class="list-box">
-                                      <p class="txt-type03">10:30 ~ 11:00</p>
+                                      <p class="txt-type03">09:10 ~ 09:30</p>
                                     </div>
                                     <div class="list-box">
                                       <p class="txt-type01">
-                                        N TT - Practice
+                                        [eN1] IONIQ 5 N Cup Practice
                                       </p>
                                     </div>
                                     <div class="list-box">
-                                      <p class="txt-type03">N TT</p>
+                                      <p class="txt-type03">eN1</p>
                                     </div>
                                   </div>
                                   <div class="wrap-lists">
                                     <div class="list-box">
-                                      <p class="txt-type03">11:10 ~ 12:00</p>
+                                      <p class="txt-type03">09:40 ~ 10:00</p>
                                     </div>
                                     <div class="list-box">
                                       <p class="txt-type01">
-                                        Break Time
+                                        [N2] AVANTE N Cup - Practice A
                                       </p>
                                     </div>
                                     <div class="list-box">
-                                      <p class="txt-type03">-</p>
+                                      <p class="txt-type03">eN1</p>
                                     </div>
                                   </div>
                                   <div class="wrap-lists">
                                     <div class="list-box">
-                                      <p class="txt-type03">12:10 ~ 12:40</p>
+                                      <p class="txt-type03">10:10 ~ 10:30</p>
                                     </div>
                                     <div class="list-box">
                                       <p class="txt-type01">
-                                        N TT - 1st
+                                        [N2] AVANTE N Cup - Practice B
                                       </p>
                                     </div>
                                     <div class="list-box">
-                                      <p class="txt-type03">N TT</p>
+                                      <p class="txt-type03">eN1</p>
                                     </div>
                                   </div>
                                   <div class="wrap-lists">
                                     <div class="list-box">
-                                      <p class="txt-type03">14:20 ~ 14:50</p>
+                                      <p class="txt-type03">10:40 ~ 11:00</p>
                                     </div>
                                     <div class="list-box">
                                       <p class="txt-type01">
-                                        N TT - 2nd
+                                        [eN1] IONIQ 5 N Cup Practice
                                       </p>
                                     </div>
                                     <div class="list-box">
-                                      <p class="txt-type03">N TT</p>
+                                      <p class="txt-type03">eN1</p>
                                     </div>
                                   </div>
                                   <div class="wrap-lists">
                                     <div class="list-box">
-                                      <p class="txt-type03">16:00 ~ 16:30</p>
+                                      <p class="txt-type03">11:10 ~ 11:30</p>
                                     </div>
                                     <div class="list-box">
                                       <p class="txt-type01">
-                                        N TT - 3rd
+                                        [N2] AVANTE N Cup - Practice A
                                       </p>
                                     </div>
                                     <div class="list-box">
-                                      <p class="txt-type03">N TT</p>
+                                      <p class="txt-type03">eN1</p>
                                     </div>
                                   </div>
                                   <div class="wrap-lists">
                                     <div class="list-box">
-                                      <p class="txt-type03">17:10</p>
+                                      <p class="txt-type03">11:40 ~ 12:00</p>
                                     </div>
                                     <div class="list-box">
                                       <p class="txt-type01">
-                                        N TT Ceremony
+                                        [N2] AVANTE N Cup - Practice B
                                       </p>
                                     </div>
                                     <div class="list-box">
-                                      <p class="txt-type03">-</p>
+                                      <p class="txt-type03">eN1</p>
+                                    </div>
+                                  </div>
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">12:10 ~ 12:30</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">
+                                        [eN1] IONIQ 5 N Cup Practice
+                                      </p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">eN1</p>
+                                    </div>
+                                  </div>
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">12:30 ~ 13:30</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">Lunch</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">eN1</p>
+                                    </div>
+                                  </div>
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">14:00 ~ 14:20</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">
+                                        [N1] AVANTE N Cup Practice
+                                      </p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">eN1</p>
+                                    </div>
+                                  </div>
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">15:40 ~ 16:00</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">
+                                        [N1] AVANTE N Cup Qualifying (Live)
+                                      </p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">eN1</p>
                                     </div>
                                   </div>
                                 </div>
                               </div>
+                              <div class="tab-content" id="tab15-021" role="tabpanel"></div>
                               <button type="button" class="btn btn-md-outline01">
                                 View More
                                 <span class="btn-icon16 icon-down" aria-hidden="true">
@@ -468,8 +523,8 @@
                           </div>
                           <div class="conts-body">
                             <!-- 07.30 수정 : evt-map-wrap 마크업 구조 변경 : 선택한 selectbox 옵션값에 따른 하드코딩 노출 형태로 변경 (스크립트 로 동적생성 X) -->
-                            <div class="evt-map-wrap on" data-type="1">
-                              <!-- on 클래스 : 상세맵 활성화시(+ 버튼 클릭시) on 클래스 추가 -->
+                            <div class="evt-map-wrap on active" data-type="1">
+                              
                               <div class="btn-area">
                                 <div class="btn-wrap plus">
                                   <button type="button">
@@ -483,7 +538,7 @@
                                 </div>
                               </div>
 
-                              <!-- 08.06 수정 : evt-map-default-box & btn-evtmap-pop에 active 클래스 추가 -->
+                              
                               <div class="evt-map-img active">
                                 <div class="evt-map-default-box">
                                   <!-- N Cup - Round6 이벤트레이아웃 기본 이미지 : 활성화 원하는 곳에 default active 클래스 값 추가 -->
@@ -506,7 +561,7 @@
                                 </div>
                                 <!-- //07.12 추가 : 레이어팝업 버튼 추가 -->
                               </div>
-                              <!-- //08.06 수정 : evt-map-default-box & btn-evtmap-pop에 active 클래스 추가 -->
+                              
                             </div>
                             <!-- //07.30 수정 -->
 
@@ -515,7 +570,7 @@
                       </section>
 
                       <div class="content-item07">
-                        <div class="schedule-box th:utext=${race.eventDetail}">
+                        <div class="schedule-box" th:utext="${race.eventDetail}">
                           <div class="wrap-list list02">
                             <div class="tab-container">
                               <div class="tab-head">
@@ -523,8 +578,13 @@
                                 <div class="tabs-wrap">
                                   <ul class="tabs ty-black" data-contents="탭카테고리">
                                     <li class="on">
-                                      <a href="javascript:;" aria-controls="tab16-011" role="tab"
+                                      <a href="#" aria-controls="tab16-011" role="tab"
                                         aria-selected="true">Saturday</a>
+                                    </li>
+                                    <li>
+                                      <a href="#" aria-controls="tab16-021" role="tab" aria-selected="false">
+                                        Sunday
+                                      </a>
                                     </li>
                                   </ul>
                                 </div>
@@ -540,8 +600,185 @@
                                     </div>
                                     <div class="list-box">
                                       <p class="txt-type03">
-                                        Pit 10 / Operating by time
+                                        N Lounge / All spectators, Open around
+                                        the clock
                                       </p>
+                                    </div>
+                                  </div>
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">10:00 ~ 17:00</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">Paper Craft</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">
+                                        N Lounge / All spectators, Open around
+                                        the clock
+                                      </p>
+                                    </div>
+                                  </div>
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">10:00 ~ 17:00</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">
+                                        Exhibition Booths
+                                      </p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">
+                                        Viewing zone / All spectators, Open
+                                        around the clock
+                                      </p>
+                                    </div>
+                                  </div>
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">12:40 ~ 13:10</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">N Taxi</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">
+                                        Viewing zone / All spectators, Open
+                                        around the clock
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="tab-content" id="tab16-021" role="tabpanel">
+                                <div class="__bottom">
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">09:10 ~ 09:30</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">
+                                        [테스트] IONIQ 5 N Cup Practice
+                                      </p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">eN1</p>
+                                    </div>
+                                  </div>
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">09:40 ~ 10:00</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">
+                                        [N2] AVANTE N Cup - Practice A
+                                      </p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">eN1</p>
+                                    </div>
+                                  </div>
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">10:10 ~ 10:30</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">
+                                        [N2] AVANTE N Cup - Practice B
+                                      </p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">eN1</p>
+                                    </div>
+                                  </div>
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">10:40 ~ 11:00</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">
+                                        [eN1] IONIQ 5 N Cup Practice
+                                      </p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">eN1</p>
+                                    </div>
+                                  </div>
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">11:10 ~ 11:30</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">
+                                        [N2] AVANTE N Cup - Practice A
+                                      </p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">eN1</p>
+                                    </div>
+                                  </div>
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">11:40 ~ 12:00</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">
+                                        [N2] AVANTE N Cup - Practice B
+                                      </p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">eN1</p>
+                                    </div>
+                                  </div>
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">12:10 ~ 12:30</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">
+                                        [eN1] IONIQ 5 N Cup Practice
+                                      </p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">eN1</p>
+                                    </div>
+                                  </div>
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">12:30 ~ 13:30</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">Lunch</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">eN1</p>
+                                    </div>
+                                  </div>
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">14:00 ~ 14:20</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">
+                                        [N1] AVANTE N Cup Practice
+                                      </p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">eN1</p>
+                                    </div>
+                                  </div>
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">15:40 ~ 16:00</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">
+                                        [N1] AVANTE N Cup Qualifying (Live)
+                                      </p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">eN1</p>
                                     </div>
                                   </div>
                                 </div>
@@ -610,7 +847,9 @@
                                 </div>
                                 <div class="box-desc right">
                                   <p class="desc-location">
-                                    Set your destination to Everland Parking Lot and take the shuttle bus in front of the main gate of Everland and enter Everland Speedway across
+                                    Set your destination to Everland SPEEDWAY
+                                    or 310 Jeondaeli, Pogok-eup, Cheoin-gu,
+                                    Yongin-si, Gyeonggi-do
                                   </p>
                                   <p class="desc-note">
                                     ※ Arrival time may vary depending on
@@ -658,7 +897,7 @@
                       </section>
                     </th:block>
                   </th:block>
-                  <!-- //07.22 수정 : th:block 추가 -->
+                  <!-- //08.12 수정 : th:block 위치 변경 -->
                 </div>
                 <!-- //conts08-->
               </section>
