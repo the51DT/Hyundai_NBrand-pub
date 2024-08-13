@@ -470,7 +470,7 @@ var pubUi = {
       slidesPerView: 1.15,
       spaceBetween: 24,
       watchOverflow: true,
-      centeredSlides: true,
+      // centeredSlides: true,
       // slidesOffsetBefore: 24,
       // slidesOffsetAfter: 24,
       pagination: {
@@ -487,18 +487,21 @@ var pubUi = {
           spaceBetween: 12,
           // slidesOffsetBefore: 24,
           // slidesOffsetAfter: 24,
+          centeredSlides: true,
         },
         400: {
           slidesPerView: 1.1,
           spaceBetween: 12,
           // slidesOffsetBefore: 24,
           // slidesOffsetAfter: 24,
+          centeredSlides: true,
         },
         550: {
           slidesPerView: 1.07,
           spaceBetween: 12,
           // slidesOffsetBefore: 24,
           // slidesOffsetAfter: 24,
+          centeredSlides: true,
         },
         1024: {
           slidesPerView: 3,
@@ -1123,7 +1126,7 @@ function evtImgMapChk(optionDataType, option1) {
       ".list-content.active .selectbox-wrap.evtLayout-type > div:not('.selectbox-group') .selectbox-options"
     )
       .find(".option-click.active")
-      .data("type");    
+      .data("type");
   }
 
   if (option1 == "") {
