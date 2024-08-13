@@ -1872,11 +1872,3 @@
     padding: 0 24px;
   }
 }
-
-
-@media screen and (max-width: 360px) {
-  .models-wrap .tit-type01 {
-    padding : 0 15px;
-  }
-
-}
