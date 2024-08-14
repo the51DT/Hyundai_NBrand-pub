@@ -1996,7 +1996,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   display: flex;
   align-items: center;
 }
-.popup-wrapper .popup-footer .box-paticipants button.participant-nums:hover{
+.popup-wrapper .popup-footer .box-paticipants button.participant-nums:hover {
   text-decoration: underline;
 }
 
@@ -2849,6 +2849,21 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
     url(../images/content/img_eFestival_schedule_card06_bg.png) lightgray 50% /
       cover no-repeat;
   color: #fff;
+}
+
+/* EP010702 */
+.content-area.about .tab-container {
+  max-width: 100%;
+}
+.content-area.about .tab-container article {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.content-area.about .tab-container article:last-of-type {
+  border-bottom: 0;
+  padding-bottom: 200px;
 }
 /* 끝 */
 
