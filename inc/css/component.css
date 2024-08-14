@@ -1403,6 +1403,9 @@ input[type="radio"]:focus + label {
 }
 .grid_mo_drop .card_type01 .card_num {
   font-size: 3.5rem;
+  position: absolute;
+  right: 1.5rem;
+  bottom: 0;
 }
 
 .card_item a {
@@ -2176,7 +2179,7 @@ button.card_detail:hover {
   background-image: url(../../inc/images/icon/icon-pause_white.svg);
 }
 .swiper-status-wrap .btn-wrap .btn-sound::before {
-  background-image: url(../../inc/images/icon/icon-soundoff_white.svg);  
+  background-image: url(../../inc/images/icon/icon-soundoff_white.svg);
 }
 .swiper-status-wrap .btn-wrap .btn-sound.on::before {
   background-image: url(../../inc/images/icon/icon-soundon_white.svg);
@@ -3250,8 +3253,8 @@ button.card_detail:hover {
   margin-top: 40px;
   padding: 275px 80px 276px 80px;
   width: 100%;
-  border-top: 1px solid #AAA;
-  border-bottom: 1px solid #AAA;
+  border-top: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
   font-family: "Hyundai Sans Head";
   font-size: 24px;
   font-weight: 700;

@@ -224,8 +224,8 @@ var pubUi = {
       var scrollTarget = $(this).data("scroll");
 
       // 08.09 수정 : 선택한 네비게이션 메뉴의 rending-btn 활성화
-      $(this).parent().siblings().find("button").removeClass("on");
-      $(this).addClass("on");
+      // $(this).parent().siblings().find("button").removeClass("on");
+      // $(this).addClass("on");
 
       pubUi.pageScrollChk(scrollTarget);
     });
@@ -633,10 +633,8 @@ var pubUi = {
       ".content-wrap [class*=content-item]"
     );
     var headerHeight = document.querySelector(".header-cont").offsetHeight;
-    var navBarHeight = document.querySelector(
-      ".navigation_bar-wrap"
-    ).offsetHeight;
-
+    var navBarHeight = document.querySelector(".header-wrap").offsetHeight;
+    var scrllNow = document.querySelector("body").scrollTop;
     var navHeight = headerHeight + navBarHeight;
 
     // var leftScrollData = $(this).offset().left;
@@ -648,7 +646,7 @@ var pubUi = {
     });
 
     var contentActiveItem = document.querySelectorAll(
-      ".content-wrap [class*=content-item].active"
+      ".content-wrap [class*=content-item].active .blue-title"
     );
 
     contentActiveItem.forEach((evt, idx) => {
@@ -656,7 +654,9 @@ var pubUi = {
 
       if (evt.dataset.scroll == dataScroll) {
         //nav data-scroll과 값비교 후 동일 대상 체크
-        var offsetTopVal = evt.offsetTop - navBarHeight;
+        var offsetTopVal =
+          evt.getBoundingClientRect().top - navBarHeight - 150 + scrllNow;
+        // alert(evt);
       }
 
       $("body").animate({ scrollTop: offsetTopVal }, 300);
@@ -1853,10 +1853,11 @@ function modelsVideoPlay() {
   $(".models-wrap .content-item02 video").on("ended", function () {
     // console.log("비디오 끝 / 썸넬 시작");
     // $(this).get(0).currentTime = 0;
-    var icon = $(this).siblings("button").children(".btn-icon24");
+    var icon = $(this).siblings(".btn-groups").find(".icon-pause-wh");
     icon.attr("class", "btn-icon24 icon-play-wh");
   });
   $(window).resize(function () {
+    $win_width = window.innerWidth;
     if (window.innerWidth <= 1023) {
       // mo 영상 살리기 & pc 영상 hidden
       $(".models-wrap .content-item02 video.mo-only").attr(
@@ -1879,12 +1880,10 @@ function modelsVideoPlay() {
       );
       $(".models-wrap .content-item02 video.mo-only").attr("aria-hidden", true);
       // pc 영상 끝났을 때
-      // $(".models-wrap .content-item02 video.pc-only").on("ended", function () {
-      //   $(this).siblings(".video_poster.pc-only").show();
-      //   $(this).siblings(".video_poster.mo-only").hide();
-      //   // pc 비디오 hidden
-      //   $(this).attr("aria-hidden", true);
-      // });
+      // $(".models-wrap .content-item02 video.pc-only").on(
+      //   "ended",
+      //   function () {}
+      // );
     }
   });
 }
@@ -2008,22 +2007,52 @@ function configuratorScroll() {
 }
 // [End] : configuratorScroll
 
+function scrollIndicator(obj) {
+  var thisScrArea = $(obj),
+    contentItem = document.querySelectorAll(".content-wrap .blue-title"),
+    // scrItem = thisScrArea.find(".content-wrap [class*=content-item]"),
+    nowScroll = thisScrArea.scrollTop(),
+    sectionLength = contentItem.length,
+    headerNavHeight = $(".header-wrap").height();
+  sectionItem = [];
+
+  contentItem.forEach((evt, idx) => {
+    if (contentItem[idx].querySelector(".blue-title")) {
+      contentItem[idx].classList.add("active");
+    }
+    contentItem[idx].setAttribute("data-scroll", idx + 1); // 각 콘텐츠에 data-scroll 생성
+    sectionItem[idx] =
+      evt.getBoundingClientRect().top + nowScroll - headerNavHeight - 150;
+    // console.log(contentItem[0].getBoundingClientRect().top);
+  });
+
+  // 08.09 'rending-btn' 버튼 클릭 시, 클릭한 위치 못 찾는 문제로 클릭 이벤트 발생시, 적용되도록 내용 수정하였음
+  for (var i = 0; i < sectionLength; i++) {
+    if (sectionItem[i] <= nowScroll + 40) {
+      $(".navigation-item02 li")
+        .eq(i)
+        .find("button")
+        .addClass("on")
+        .parent()
+        .siblings()
+        .find("button")
+        .removeClass("on");
+    }
+  }
+}
+
 // scroll 이벤트 추가
 // masonryLayout 높이 추가로 잡기
 let $firstScroll = true;
+let $win_width = window.innerWidth;
 function scrollEvent() {
   var scrollWrap = $("body"),
-    sectionItem = [],
     historyItemOffset = [],
     historyItemPosition = [],
     leftScrollData = [];
-  headerNavHeight = $(".navigation_bar-wrap").height();
+
   let scrollPrev = 0,
     scrollTop = 1;
-  scrollWrap.find(".content-wrap [class*=content-item]").each(function (e) {
-    ($this = $(this)),
-      (sectionItem[e] = $this.position().top - headerNavHeight);
-  });
 
   scrollWrap.scroll(function () {
     if ($firstScroll) {
@@ -2031,21 +2060,13 @@ function scrollEvent() {
       $firstScroll = false;
     }
     // alert('d')
-    var thisScrArea = $(this),
-      scrItem = thisScrArea.find(".content-wrap [class*=content-item]"),
-      nowScroll = thisScrArea.scrollTop(),
-      sectionLength = scrItem.length;
-
     let scrollY = (
       (scrollWrap.scrollTop() / ($(".wrap").height() - scrollWrap.height())) *
       100
     ).toFixed(3);
     scrollTop = scrollWrap.scrollTop();
 
-    // var contentItem = document.querySelectorAll(
-    //   ".content-wrap [class*=content-item]"
-    // );
-
+    _this = $(this);
     if (scrollTop > 0) {
       $(".navigation_bar-wrap .gage").addClass("on");
       // $(".header-wrap").addClass("scroll-on");
@@ -2071,21 +2092,7 @@ function scrollEvent() {
 
     $(".header-wrap").addClass("scroll-ing");
     $(".navigation_bar-wrap .gage.on").css("--bar", `${scrollY}%`);
-
-    // contentItem.forEach((evt, idx) => {
-    //   if (contentItem[idx].querySelector(".blue-title")) {
-    //     contentItem[idx].classList.add("active");
-    //   }
-    //   contentItem[idx].setAttribute("data-scroll", idx + 1); // 각 콘텐츠에 data-scroll 생성
-    // });
-
-    // 08.09 'rending-btn' 버튼 클릭 시, 클릭한 위치 못 찾는 문제로 클릭 이벤트 발생시, 적용되도록 내용 수정하였음
-    // for (var i = 0; i < sectionLength; i++) {
-    //   if (sectionItem[i] <= nowScroll + 40) {
-    //     $(".navigation-item02 li").eq(i).find("button").addClass("on").parent().siblings().find("button").removeClass("on");
-    //   }
-    // }
-
+    scrollIndicator(_this);
     if ($(".navigation-item02").length) {
       if ($(".navigation-item02").scrollLeft() > 0) {
         $(".navigation-item02")
@@ -2094,13 +2101,17 @@ function scrollEvent() {
             scrollLeft:
               $(".navigation-item02 li button.on").offset().left +
               $(".navigation-item02").scrollLeft() -
-              24,
+              $win_width / 2 +
+              30,
           });
       } else {
         $(".navigation-item02")
           .stop()
           .animate({
-            scrollLeft: $(".navigation-item02 li button.on").offset().left - 24,
+            scrollLeft:
+              $(".navigation-item02 li button.on").offset().left -
+              $win_width / 2 +
+              30,
           });
       }
     }
