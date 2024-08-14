@@ -1327,13 +1327,16 @@
                             <h2 class="tit contitle-type01 fw-type03">
                               행사 지도
                             </h2>
-                            <div class="selectbox-wrap select-type02 evtLayout-type">
+                            <!-- 07.12 수정 : select-type 클래스 정의
+                              selectbox 2개이상일 경우 select-type02 클래스 추가
+                              selectbox 1개일 때는 select-type01 클래스 추가 -->
+                            <div class="selectbox-wrap select-type01 evtLayout-type">
                               <div>
-                                <button class="selectbox-trigger selectbox-js txt-type03 fw-type03" aria-haspopup="listbox"
-                                  aria-expanded="false" aria-labelledby="typeSelect03">
-                                  모터스포츠 경험
+                                <button class="selectbox-trigger selectbox-js txt-type03 fw-type03"
+                                  aria-haspopup="listbox" aria-expanded="false" aria-labelledby="typeSelect02">
+                                  N 라운지
                                 </button>
-                                <ul class="selectbox-options 02" role="listbox" id="typeSelect03" aria-hidden="true"
+                                <ul class="selectbox-options 02" role="listbox" id="typeSelect02" aria-hidden="true"
                                   style="display: none">
                                   <li class="moclose-btn" style="display: none">
                                     <button type="button" class="btn btn-only-icon" title="close">
@@ -1341,8 +1344,14 @@
                                       <span class="btn-icon24 icon-close" aria-hidden="true"></span>
                                     </button>
                                   </li>
-                                  <li class="option option-click fw-type03 active" role="option" aria-selected="true">
-                                    Motorsport Experience
+                                  <li class="option option-click fw- type03 active" role="option" aria-selected="true" data-type="1">
+                                    N 라운지
+                                  </li>
+                                  <li class="option option-click fw-type03" role="option" aria-selected="false" data-type="2">
+                                    모터스포츠 경험
+                                  </li>
+                                  <li class="option option-click fw-type03" role="option" aria-selected="false" data-type="3">
+                                    관람존
                                   </li>
                                 </ul>
                               </div>
@@ -1350,80 +1359,137 @@
                             <div class="selectbox-overlay" style="display: none"></div>
                           </div>
                           <div class="conts-body">
-                            <div class="btn-area">
-                              <div class="btn-wrap plus">
-                                <button type="button">
-                                  <span class="visually-hidden">+ 확대 버튼</span>
-                                </button>
-                              </div>
-                              <div class="btn-wrap minus">
-                                <button type="button">
-                                  <span class="visually-hidden">- 축소 버튼</span>
-                                </button>
+                            <!-- data-type 값 부모 첫번째 selectbox 대상과 동일하게 적용 필요 -->
+                            <!-- on 클래스 : 맵 활성화시 on 클래스 추가 필요 -->
+                            <!-- active 클래스 : 추가되어 있을 경우 + 버튼 disabled 처리됨 -->
+                            <!-- 1번째 data option 맵 영역 -->
+                            <div class="evt-map-wrap on active" data-type="1">
+                              <div class="btn-area">
+                                <div class="btn-wrap plus">
+                                  <button type="button">
+                                    <span class="visually-hidden">+ 확대 버튼</span>
+                                  </button>
+                                </div>
+                                <div class="btn-wrap minus">
+                                  <button type="button">
+                                    <span class="visually-hidden">- 축소 버튼</span>
+                                  </button>
+                                </div>
+                              </div>                          
+
+                              
+                              <div class="evt-map-img active"> <!-- 기본 default값 으로 노출하고싶은 evt-map-img에 active클래스 추가하기 -->
+                                <div class="evt-map-default-box">
+                                  <!-- 
+                                    comment!
+                                    ****************************************************************                                        
+                                    1. 레이어팝업 실행 함수 : NbrandUI.modalOpen(".pop-open"); -> 팝업이벤트 개발 호출 후 실행 원할 경우 해당 이벤트 실행 하시면 됩니다.
+                                    
+                                    2. 각 이벤트맵 button의 aria-controls 속성값과 매핑하고자하는 popup id값과 동일한 값 매핑 필요! 
+                                    ex). nLounge 이벤트맵이면 button의 aria-controls="pop-nLounge" 여야하고,
+                                    popup id="pop-nLounge" id값과 동일해야 정상적으로 팝업이 노출됨
+                                    ****************************************************************
+                                  -->
+                                  <button class="pop-open btn-evtmap-pop active" aria-controls="pop-nLounge"
+                                    aria-haspopup="true" aria-expanded="false" title="팝업오픈">
+                                    <span class="visually-hidden">side-popup1 열기</span>
+                                    <img src="../../inc/images/eventLayout/evtLayout_min_shortImg01.png"
+                                      alt="이벤트 레이아웃 N lounge 확대 이미지" />
+                                  </button>
+                                </div>
+                                <div class="evt-map-active-box">
+                                  <!-- n lounge -->
+                                  <button class="pop-open btn-evtmap-pop" aria-controls="pop-nLounge"
+                                    aria-haspopup="true" aria-expanded="false" title="팝업오픈">
+                                    <span class="visually-hidden">side-popup1 열기</span>
+                                    <img src="../../inc/images/eventLayout/evtLayout_max_nLounge.png"
+                                      alt="이벤트 레이아웃 N lounge 확대 이미지" />
+                                  </button>
+                                </div>
                               </div>
                             </div>
-                            <div class="evt-map-wrap">
+                            <!-- //1번째 data option 맵 영역 -->
+                            
+                            <!-- 2번째 data option 맵 영역 -->
+                            <div class="evt-map-wrap" data-type="2">                          
+                              <div class="btn-area">
+                                <div class="btn-wrap plus">
+                                  <button type="button">
+                                    <span class="visually-hidden">+ 확대 버튼</span>
+                                  </button>
+                                </div>
+                                <div class="btn-wrap minus">
+                                  <button type="button">
+                                    <span class="visually-hidden">- 축소 버튼</span>
+                                  </button>
+                                </div>
+                              </div>
+                              
+
+                              
+                              <div class="evt-map-img"> <!-- 활성화 맵일 시, active 클래스 추가됨 -->
+                                <div class="evt-map-default-box">
+                                  <!-- Inje N Cup - Round1 이벤트레이아웃 기본 이미지 -->
+                                  <button class="pop-open btn-evtmap-pop active" aria-controls="pop-motorExperience"
+                                    aria-haspopup="true" aria-expanded="false" title="팝업오픈">
+                                    <span class="visually-hidden">side-popup1 열기</span>
+                                    <img src="../../inc/images/eventLayout/evtLayout_min_shortImg01.png"
+                                      alt="이벤트 레이아웃 N lounge 확대 이미지" />
+                                  </button>
+                                </div>
+                                <div class="evt-map-active-box">
+                                  <!-- motorsport experience -->
+                                  <button class="pop-open btn-evtmap-pop" aria-controls="pop-motorExperience"
+                                    aria-haspopup="true" aria-expanded="false" title="팝업오픈">
+                                    <span class="visually-hidden">side-popup1 열기</span>
+                                    <img src="../../inc/images/eventLayout/evtLayout_max_motorExperience.png"
+                                      alt="이벤트 레이아웃 Motorsport Experience 확대 이미지" />
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- //2번째 data option 맵 영역 -->
+
+                            <!-- 3번째 data option 맵 영역 -->
+                            <div class="evt-map-wrap" data-type="3">
+                              <!-- on 클래스 : 맵 활성화시 on 클래스 추가 필요 -->
+                              <div class="btn-area">
+                                <div class="btn-wrap plus">
+                                  <button type="button">
+                                    <span class="visually-hidden">+ 확대 버튼</span>
+                                  </button>
+                                </div>
+                                <div class="btn-wrap minus">
+                                  <button type="button">
+                                    <span class="visually-hidden">- 축소 버튼</span>
+                                  </button>
+                                </div>
+                              </div>
+                              
+
+                              
                               <div class="evt-map-img">
-                                <img src="../../inc/images/content/event-map_img.svg" alt="이벤트 레이아웃 선택 이미지" />
+                                <div class="evt-map-default-box">
+                                  <!-- Inje N Cup - Round1 이벤트레이아웃 기본 이미지 -->
+                                  <button class="pop-open btn-evtmap-pop active" aria-controls="pop-viewingZone"
+                                    aria-haspopup="true" aria-expanded="false" title="팝업오픈">
+                                    <span class="visually-hidden">side-popup1 열기</span>
+                                    <img src="../../inc/images/eventLayout/evtLayout_min_shortImg01.png"
+                                      alt="이벤트 레이아웃 N lounge 확대 이미지" />
+                                  </button>
+                                </div>
+                                <div class="evt-map-active-box">
+                                  <!-- viewing-zone -->
+                                  <button class="pop-open btn-evtmap-pop" aria-controls="pop-viewingZone"
+                                    aria-haspopup="true" aria-expanded="false" title="팝업오픈">
+                                    <span class="visually-hidden">side-popup1 열기</span>
+                                    <img src="../../inc/images/eventLayout/evtLayout_max_viewingZone.png"
+                                      alt="이벤트 레이아웃 viewing zone 확대 이미지" />
+                                  </button>
+                                </div>
                               </div>
-                              <!-- aria-controls="pop-side" 과  id="pop-side" 값이 같은 팝업 오픈 -->
-                              <!-- <ul class="evt-map-area">
-                                <li>                    
-                                  <button class="pop-open" aria-controls="pop-side" aria-haspopup="true" aria-expanded="false"
-                                    title="이벤트 팝업 열기">
-                                    <strong class="num">1</strong>
-                                    <h5 class="tit">
-                                      피트 개러지
-                                      <span class="btn-icon20 icon-right" aria-hidden="true"></span>
-                                    </h5>
-                                  </button>
-                                </li>
-                                <li>
-                                  
-                                  <button class="pop-open" aria-controls="pop-side" aria-haspopup="true" aria-expanded="false"
-                                    title="이벤트 팝업 열기">
-                                    <strong class="num">2</strong>
-                                    <h5 class="tit">
-                                      드라이버 미팅
-                                      <span class="btn-icon20 icon-right" aria-hidden="true"></span>
-                                    </h5>
-                                  </button>
-                                </li>
-                                <li>
-                                  
-                                  <button class="pop-open" aria-controls="pop-side" aria-haspopup="true" aria-expanded="false"
-                                    title="이벤트 팝업 열기">
-                                    <strong class="num">3</strong>
-                                    <h5 class="tit">
-                                      N 전시
-                                      <span class="btn-icon20 icon-right" aria-hidden="true"></span>
-                                    </h5>
-                                  </button>
-                                </li>
-                                <li>
-                                  
-                                  <button class="pop-open" aria-controls="pop-side" aria-haspopup="true" aria-expanded="false"
-                                    title="이벤트 팝업 열기">
-                                    <strong class="num">4</strong>
-                                    <h5 class="tit">
-                                      포토존
-                                      <span class="btn-icon20 icon-right" aria-hidden="true"></span>
-                                    </h5>
-                                  </button>
-                                </li>
-                                <li>
-                                  
-                                  <button class="pop-open" aria-controls="pop-side" aria-haspopup="true" aria-expanded="false"
-                                    title="이벤트 팝업 열기">
-                                    <strong class="num">5</strong>
-                                    <h5 class="tit">
-                                      N 커스터마이즈 숍
-                                      <span class="btn-icon20 icon-right" aria-hidden="true"></span>
-                                    </h5>
-                                  </button>
-                                </li>
-                              </ul> -->
                             </div>
+                            <!-- //3번째 data option 맵 영역 -->
                           </div>
                         </div>
                       </section>
