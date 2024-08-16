@@ -107,36 +107,34 @@
         </div>
         <!-- 08.12 수정 : th:block 위치 변경 -->
         <th:block th:fragment="roundInfo">
-        <div class="content-item03">
-          <div class="issue_wrap">
-            <p class="contitle-type01 fw-type03">
-              <span>Round 3</span> <br class="mo-only" />Hot Issue
-            </p>
-            <p class="tit-type04">
-              Grand opening of the new Hyundai N Festival season at Inje
-              SPEEDIUM. Don’t miss the debut of an electrifying new class and
-              vehicle!
-            </p>
-            <ul class="txt-list-wrap">
-              <li>
-                <div class="txt-box">
-                  <h5 class="num">01</h5>
-                  <p class="desc">
-                    Official practice of Korea's first one-make electric car
-                    race, eN1 Cup starts!
-                  </p>
-                </div>
-              </li>
-              <li>
-                <div class="txt-box">
-                  <h5 class="num">02</h5>
-                  <p class="desc">
-                    The debut of Team KUMHO SLM at the Hyundai N Festival &
-                    The return of Jun-ui Park & Jun-sung Park!
-                  </p>
-                </div>
-              </li>
-              <li>
+          <div class="content-item03">
+            <div class="issue_wrap">
+              <p class="contitle-type01 fw-type03">
+                <span>Round 3</span> <br class="mo-only" />Hot Issue
+              </p>
+              <p class="tit-type04">
+                A festival for everyone who enjoys motorsports -
+                from the intense time trials competition to thrill-filled sim racing!
+
+              </p>
+              <ul class="txt-list-wrap">
+                <li>
+                  <div class="txt-box">
+                    <h5 class="num">01</h5>
+                    <p class="desc">
+                      Feel the real dynamics of motorsports in the virtual world with the latest racing simulators!
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <div class="txt-box">
+                    <h5 class="num">02</h5>
+                    <p class="desc">
+                      The nail-biting fastest lap competition of time trial racers!
+                    </p>
+                  </div>
+                </li>
+                <!-- <li>
                 <div class="txt-box">
                   <h5 class="num">03</h5>
                   <p class="desc">
@@ -144,465 +142,266 @@
                     race!
                   </p>
                 </div>
-              </li>
-            </ul>
+              </li> -->
+              </ul>
+            </div>
           </div>
-        </div>
-        <div class="content-item04">
-          <div class="info_wrap">
-            <p class="contitle-type01 fw-type03">Class Information</p>
-            <ul class="grid_3 grid_mo_scroll">
-              <li>
-                <div class="card_type05">
-                  <div class="card_top">
-                    <img src="../../inc/images/img/ntt_r1_class_img1.png" loading="lazy" alt="N TT" />
-                  </div>
-                  <div class="card_bottom">
-                    <p class="card_tit">N TT</p>
-                    <p class="card_detail">
-                      A time trial competition featuring everyday Avante N cars aiming to set the fastest record.
-                    </p>
-                    <div class="btn-wrap">
-                      <a href="about-korea.do"
-                        class="btn md-txt-btn01">
-                        Learn More
-                        <span class="btn-icon16 icon-right" aria-hidden="true"></span>
-                      </a>
+          <div class="content-item04">
+            <div class="info_wrap">
+              <p class="contitle-type01 fw-type03">Class Information</p>
+              <ul class="grid_3 grid_mo_scroll">
+                <li>
+                  <div class="card_type05">
+                    <div class="card_top">
+                      <img src="../../inc/images/img/ntt_r1_class_img1.png" loading="lazy" alt="N TT" />
+                    </div>
+                    <div class="card_bottom">
+                      <p class="card_tit">N TT</p>
+                      <p class="card_detail">
+                        A time trial competition featuring everyday Avante N cars aiming to set the fastest record.
+                      </p>
+                      <div class="btn-wrap">
+                        <a href="about-korea.do" class="btn md-txt-btn01">
+                          Learn More
+                          <span class="btn-icon16 icon-right" aria-hidden="true"></span>
+                        </a>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </li>
-            </ul>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-        <div class="content-item05">
-          <div class="standing_wrap" th:insert="~{experience/nFestival/component/standing}">
-            <div class="title_flex tilte_padding">
-              <p class="contitle-type01 fw-type03 color-white">
-                Standing<br />Top 3
-              </p>
-              <div class="selectbox-wrap select-type02">
-                <div>
-                  <button class="selectbox-trigger selectbox-js txt-type03 fw-type03 color-white"
-                    aria-haspopup="listbox" aria-expanded="false" aria-labelledby="kindSelect">
-                    Drivers
-                  </button>
-                  <ul class="selectbox-options 03" role="listbox" id="kindSelect" aria-hidden="true"
-                    style="display: none">
-                    <li class="moclose-btn" style="display: none">
-                      <button type="button" class="btn btn-only-icon" title="close">
-                        <span class="visually-hidden">close</span>
-                        <span class="btn-icon24 icon-close" aria-hidden="true"></span>
-                      </button>
-                    </li>
-                    <li class="option option-click fw-type03 active" role="option" aria-selected="true">
+          <div class="content-item05">
+            <div class="standing_wrap" th:insert="~{experience/nFestival/component/standing}">
+              <div class="title_flex tilte_padding">
+                <p class="contitle-type01 fw-type03 color-white">
+                  Standing<br />Top 3
+                </p>
+                <div class="selectbox-wrap select-type02">
+                  <div>
+                    <button class="selectbox-trigger selectbox-js txt-type03 fw-type03 color-white"
+                      aria-haspopup="listbox" aria-expanded="false" aria-labelledby="kindSelect">
                       Drivers
-                    </li>
-                    <li class="option option-click fw-type03" role="option">
-                      Teams
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <button class="selectbox-trigger selectbox-js txt-type03 fw-type03 color-white"
-                    aria-haspopup="listbox" aria-expanded="false" aria-labelledby="classSelect">
-                    eN1
-                  </button>
-                  <ul class="selectbox-options 04" role="listbox" id="classSelect" aria-hidden="true"
-                    style="display: none">
-                    <li class="moclose-btn" style="display: none">
-                      <button type="button" class="btn btn-only-icon" title="close">
-                        <span class="visually-hidden">close</span>
-                        <span class="btn-icon24 icon-close" aria-hidden="true"></span>
-                      </button>
-                    </li>
-                    <li class="option option-click fw-type03 active" role="option" aria-selected="true">
+                    </button>
+                    <ul class="selectbox-options 03" role="listbox" id="kindSelect" aria-hidden="true"
+                      style="display: none">
+                      <li class="moclose-btn" style="display: none">
+                        <button type="button" class="btn btn-only-icon" title="close">
+                          <span class="visually-hidden">close</span>
+                          <span class="btn-icon24 icon-close" aria-hidden="true"></span>
+                        </button>
+                      </li>
+                      <li class="option option-click fw-type03 active" role="option" aria-selected="true">
+                        Drivers
+                      </li>
+                      <li class="option option-click fw-type03" role="option">
+                        Teams
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <button class="selectbox-trigger selectbox-js txt-type03 fw-type03 color-white"
+                      aria-haspopup="listbox" aria-expanded="false" aria-labelledby="classSelect">
                       eN1
-                    </li>
-                    <li class="option option-click fw-type03" role="option">
-                      N1
-                    </li>
-                    <li class="option option-click fw-type03" role="option">
-                      N2
-                    </li>
-                    <li class="option option-click fw-type03" role="option">
-                      N TT
-                    </li>
-                  </ul>
+                    </button>
+                    <ul class="selectbox-options 04" role="listbox" id="classSelect" aria-hidden="true"
+                      style="display: none">
+                      <li class="moclose-btn" style="display: none">
+                        <button type="button" class="btn btn-only-icon" title="close">
+                          <span class="visually-hidden">close</span>
+                          <span class="btn-icon24 icon-close" aria-hidden="true"></span>
+                        </button>
+                      </li>
+                      <li class="option option-click fw-type03 active" role="option" aria-selected="true">
+                        eN1
+                      </li>
+                      <li class="option option-click fw-type03" role="option">
+                        N1
+                      </li>
+                      <li class="option option-click fw-type03" role="option">
+                        N2
+                      </li>
+                      <li class="option option-click fw-type03" role="option">
+                        N TT
+                      </li>
+                    </ul>
+                  </div>
                 </div>
+                <div class="selectbox-overlay" style="display: none"></div>
               </div>
-              <div class="selectbox-overlay" style="display: none"></div>
-            </div>
-            <ul class="grid_3 grid_mo_scroll">
-              <li>
-                <a class="card_type01" href="#" title="선수 상세페이지 이동">
-                  <div class="card_top">
-                    <p class="card_rank">1</p>
-                    <div class="card_profile">
-                      <img src="../../inc/images/N_Festival/driver/img_N1_01_김규민-512.png" loading="lazy"
-                        alt="선수 프로필사진" />
+              <ul class="grid_3 grid_mo_scroll">
+                <li>
+                  <a class="card_type01" href="#" title="선수 상세페이지 이동">
+                    <div class="card_top">
+                      <p class="card_rank">1</p>
+                      <div class="card_profile">
+                        <img src="../../inc/images/N_Festival/driver/img_N1_01_김규민-512.png" loading="lazy"
+                          alt="선수 프로필사진" />
+                      </div>
+                      <p class="card_num">72</p>
                     </div>
-                    <p class="card_num">72</p>
-                  </div>
-                  <div class="card_bottom">
-                    <div class="card_info">
-                      <p class="card_tit">Kim Gyu min</p>
-                      <p class="card_subtit">SEOHAN GP</p>
+                    <div class="card_bottom">
+                      <div class="card_info">
+                        <p class="card_tit">Kim Gyu min</p>
+                        <p class="card_subtit">SEOHAN GP</p>
+                      </div>
+                      <ul class="card_detail">
+                        <li>
+                          <span>Point</span>
+                          <span>99</span>
+                        </li>
+                        <li>
+                          <span>Wins</span>
+                          <span>0</span>
+                        </li>
+                        <li>
+                          <span>Podiums</span>
+                          <span>3</span>
+                        </li>
+                      </ul>
                     </div>
-                    <ul class="card_detail">
-                      <li>
-                        <span>Point</span>
-                        <span>99</span>
-                      </li>
-                      <li>
-                        <span>Wins</span>
-                        <span>0</span>
-                      </li>
-                      <li>
-                        <span>Podiums</span>
-                        <span>3</span>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="card_more">
-                    <span>Learn More</span>
-                  </div>
+                    <div class="card_more">
+                      <span>Learn More</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="card_type01" href="#" title="선수 상세페이지 이동">
+                    <div class="card_top">
+                      <p class="card_rank">2</p>
+                      <div class="card_profile">
+                        <img src="../../inc/images/N_Festival/driver/img_N1_10_장준호-512.png" loading="lazy"
+                          alt="선수 프로필사진" />
+                      </div>
+                      <p class="card_num">22</p>
+                    </div>
+                    <div class="card_bottom">
+                      <div class="card_info">
+                        <p class="card_tit">Jang Jun ho</p>
+                        <p class="card_subtit">SEOHAN GP</p>
+                      </div>
+                      <ul class="card_detail">
+                        <li>
+                          <span>Point</span>
+                          <span>99</span>
+                        </li>
+                        <li>
+                          <span>Wins</span>
+                          <span>0</span>
+                        </li>
+                        <li>
+                          <span>Podiums</span>
+                          <span>3</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="card_more">
+                      <span>Learn More</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="card_type01" href="#" title="선수 상세페이지 이동">
+                    <div class="card_top">
+                      <p class="card_rank">3</p>
+                      <div class="card_profile">
+                        <img src="../../inc/images/N_Festival/driver/img_N1_03_신우진-512.png" loading="lazy"
+                          alt="선수 프로필사진" />
+                      </div>
+                      <p class="card_num">42</p>
+                    </div>
+                    <div class="card_bottom">
+                      <div class="card_info">
+                        <p class="card_tit">Jeon Tae yeon</p>
+                        <p class="card_subtit">DCT RACING</p>
+                      </div>
+                      <ul class="card_detail">
+                        <li>
+                          <span>Point</span>
+                          <span>99</span>
+                        </li>
+                        <li>
+                          <span>Wins</span>
+                          <span>0</span>
+                        </li>
+                        <li>
+                          <span>Podiums</span>
+                          <span>3</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="card_more">
+                      <span>Learn More</span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+              <div class="btn-wrap info_more">
+                <a href="#" class="btn md-txt-btn02">
+                  Learn More
+                  <span class="btn-icon16 icon-right-wh" aria-hidden="true"></span>
                 </a>
-              </li>
-              <li>
-                <a class="card_type01" href="#" title="선수 상세페이지 이동">
-                  <div class="card_top">
-                    <p class="card_rank">2</p>
-                    <div class="card_profile">
-                      <img src="../../inc/images/N_Festival/driver/img_N1_10_장준호-512.png" loading="lazy"
-                        alt="선수 프로필사진" />
-                    </div>
-                    <p class="card_num">22</p>
-                  </div>
-                  <div class="card_bottom">
-                    <div class="card_info">
-                      <p class="card_tit">Jang Jun ho</p>
-                      <p class="card_subtit">SEOHAN GP</p>
-                    </div>
-                    <ul class="card_detail">
-                      <li>
-                        <span>Point</span>
-                        <span>99</span>
-                      </li>
-                      <li>
-                        <span>Wins</span>
-                        <span>0</span>
-                      </li>
-                      <li>
-                        <span>Podiums</span>
-                        <span>3</span>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="card_more">
-                    <span>Learn More</span>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="card_type01" href="#" title="선수 상세페이지 이동">
-                  <div class="card_top">
-                    <p class="card_rank">3</p>
-                    <div class="card_profile">
-                      <img src="../../inc/images/N_Festival/driver/img_N1_03_신우진-512.png" loading="lazy"
-                        alt="선수 프로필사진" />
-                    </div>
-                    <p class="card_num">42</p>
-                  </div>
-                  <div class="card_bottom">
-                    <div class="card_info">
-                      <p class="card_tit">Jeon Tae yeon</p>
-                      <p class="card_subtit">DCT RACING</p>
-                    </div>
-                    <ul class="card_detail">
-                      <li>
-                        <span>Point</span>
-                        <span>99</span>
-                      </li>
-                      <li>
-                        <span>Wins</span>
-                        <span>0</span>
-                      </li>
-                      <li>
-                        <span>Podiums</span>
-                        <span>3</span>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="card_more">
-                    <span>Learn More</span>
-                  </div>
-                </a>
-              </li>
-            </ul>
-            <div class="btn-wrap info_more">
-              <a href="#" class="btn md-txt-btn02">
-                Learn More
-                <span class="btn-icon16 icon-right-wh" aria-hidden="true"></span>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="content-item06">
-          <div class="schedule_wrap" th:utext="${rv.raceDetail}">
-            <div class="wrap-list list01">
-              <div class="tab-container">
-                <div class="tab-head">
-                  <h2 class="title">Race Schedule</h2>
-                  <div class="tabs-wrap">
-                    <ul class="tabs ty-black" data-contents="탭카테고리">
-                      <li class="on">
-                        <a href="javascript:;" aria-controls="tab1-011" role="tab" aria-selected="true">Saturday</a>
-                      </li>
-                      <li>
-                        <a href="javascript:;" aria-controls="tab1-021" role="tab" aria-selected="false">
-                          Sunday
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="tab-content on" id="tab1-011" role="tabpanel">
-                  <div class="__bottom">
-                    <div class="wrap-lists">
-                      <div class="list-box">
-                        <p class="txt-type03">09:10 ~ 09:30</p>
-                      </div>
-                      <div class="list-box">
-                        <p class="txt-type01">[eN1] IONIQ 5 N Cup Practice</p>
-                      </div>
-                      <div class="list-box">
-                        <p class="txt-type03">eN1</p>
-                      </div>
-                    </div>
-                    <div class="wrap-lists">
-                      <div class="list-box">
-                        <p class="txt-type03">09:40 ~ 10:00</p>
-                      </div>
-                      <div class="list-box">
-                        <p class="txt-type01">
-                          [N2] AVANTE N Cup - Practice A
-                        </p>
-                      </div>
-                      <div class="list-box">
-                        <p class="txt-type03">eN1</p>
-                      </div>
-                    </div>
-                    <div class="wrap-lists">
-                      <div class="list-box">
-                        <p class="txt-type03">10:10 ~ 10:30</p>
-                      </div>
-                      <div class="list-box">
-                        <p class="txt-type01">
-                          [N2] AVANTE N Cup - Practice B
-                        </p>
-                      </div>
-                      <div class="list-box">
-                        <p class="txt-type03">eN1</p>
-                      </div>
-                    </div>
-                    <div class="wrap-lists">
-                      <div class="list-box">
-                        <p class="txt-type03">10:40 ~ 11:00</p>
-                      </div>
-                      <div class="list-box">
-                        <p class="txt-type01">[eN1] IONIQ 5 N Cup Practice</p>
-                      </div>
-                      <div class="list-box">
-                        <p class="txt-type03">eN1</p>
-                      </div>
-                    </div>
-                    <div class="wrap-lists">
-                      <div class="list-box">
-                        <p class="txt-type03">11:10 ~ 11:30</p>
-                      </div>
-                      <div class="list-box">
-                        <p class="txt-type01">
-                          [N2] AVANTE N Cup - Practice A
-                        </p>
-                      </div>
-                      <div class="list-box">
-                        <p class="txt-type03">eN1</p>
-                      </div>
-                    </div>
-                    <div class="wrap-lists">
-                      <div class="list-box">
-                        <p class="txt-type03">11:40 ~ 12:00</p>
-                      </div>
-                      <div class="list-box">
-                        <p class="txt-type01">
-                          [N2] AVANTE N Cup - Practice B
-                        </p>
-                      </div>
-                      <div class="list-box">
-                        <p class="txt-type03">eN1</p>
-                      </div>
-                    </div>
-                    <div class="wrap-lists">
-                      <div class="list-box">
-                        <p class="txt-type03">12:10 ~ 12:30</p>
-                      </div>
-                      <div class="list-box">
-                        <p class="txt-type01">[eN1] IONIQ 5 N Cup Practice</p>
-                      </div>
-                      <div class="list-box">
-                        <p class="txt-type03">eN1</p>
-                      </div>
-                    </div>
-                    <div class="wrap-lists">
-                      <div class="list-box">
-                        <p class="txt-type03">12:30 ~ 13:30</p>
-                      </div>
-                      <div class="list-box">
-                        <p class="txt-type01">Lunch</p>
-                      </div>
-                      <div class="list-box">
-                        <p class="txt-type03">eN1</p>
-                      </div>
-                    </div>
-                    <div class="wrap-lists">
-                      <div class="list-box">
-                        <p class="txt-type03">14:00 ~ 14:20</p>
-                      </div>
-                      <div class="list-box">
-                        <p class="txt-type01">[N1] AVANTE N Cup Practice</p>
-                      </div>
-                      <div class="list-box">
-                        <p class="txt-type03">eN1</p>
-                      </div>
-                    </div>
-                    <div class="wrap-lists">
-                      <div class="list-box">
-                        <p class="txt-type03">15:40 ~ 16:00</p>
-                      </div>
-                      <div class="list-box">
-                        <p class="txt-type01">
-                          [N1] AVANTE N Cup Qualifying (Live)
-                        </p>
-                      </div>
-                      <div class="list-box">
-                        <p class="txt-type03">eN1</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="tab-content" id="tab1-021" role="tabpanel"></div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="content-item07">
-          <div class="info_wrap">
-            <p class="contitle-type01 fw-type03">Event Information</p>
-            <!-- 정보 수급 되지 않음 : 추후 컨텐츠 현행화 필요 -->
-            <ul class="grid_3 grid_mo_scroll">
-              <li>
-                <div class="card_type05">
-                  <div class="card_top">
-                    <img src="../../inc/images/img/ntt_r2_evt_img1.png" loading="lazy" alt="Racing" />
+          <div class="content-item06">
+            <div class="schedule_wrap" th:utext="${rv.raceDetail}">
+              <div class="wrap-list list01">
+                <div class="tab-container">
+                  <div class="tab-head">
+                    <h2 class="title">Race Schedule</h2>
                   </div>
-                  <div class="card_bottom">
-                    <p class="card_tit">Sim Racing</p>
-                    <p class="card_detail">
-                      Experience a hyper-realistic circuit with our racing simulator
-                    </p>
+                  <div class="tab-content on" id="tab1-011" role="tabpanel">
+                    <p class="txt-type01">Events will be updated and made available in due time.</p>
                   </div>
                 </div>
-              </li>
-            </ul>
-            <div class="btn-wrap info_more">
-              <a href="#" class="btn md-txt-btn01">
-                Learn More
-                <span class="btn-icon16 icon-right" aria-hidden="true"></span>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="content-item08">
-          <div class="schedule_wrap" th:utext="${rv.eventDetail}">
-            <div class="wrap-list list02">
-              <div class="tab-container">
-                <div class="tab-head">
-                  <h2 class="title">Event Schedule</h2>
-                  <div class="tabs-wrap">
-                    <ul class="tabs ty-black" data-contents="탭카테고리">
-                      <li class="on">
-                        <a href="javascript:;" aria-controls="tab13" role="tab" aria-selected="true">Saturday</a>
-                      </li>
-                      <li>
-                        <a href="javascript:;" aria-controls="tab14" role="tab" aria-selected="false">
-                          Sunday
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="tab-content on" id="tab13" role="tabpanel" data-panel="1">
-                  <div class="__bottom list02">
-                    <div class="wrap-lists">
-                      <div class="list-box">
-                        <p class="txt-type03">10:00 ~ 17:00</p>
-                      </div>
-                      <div class="list-box">
-                        <p class="txt-type01">Sim Racing</p>
-                      </div>
-                      <div class="list-box">
-                        <p class="txt-type03">
-                          N Lounge / All spectators, Open around the clock
-                        </p>
-                      </div>
-                    </div>
-                    <div class="wrap-lists">
-                      <div class="list-box">
-                        <p class="txt-type03">10:00 ~ 17:00</p>
-                      </div>
-                      <div class="list-box">
-                        <p class="txt-type01">Paper Craft</p>
-                      </div>
-                      <div class="list-box">
-                        <p class="txt-type03">
-                          N Lounge / All spectators, Open around the clock
-                        </p>
-                      </div>
-                    </div>
-                    <div class="wrap-lists">
-                      <div class="list-box">
-                        <p class="txt-type03">10:00 ~ 17:00</p>
-                      </div>
-                      <div class="list-box">
-                        <p class="txt-type01">Exhibition Booths</p>
-                      </div>
-                      <div class="list-box">
-                        <p class="txt-type03">
-                          Viewing zone / All spectators, Open around the clock
-                        </p>
-                      </div>
-                    </div>
-                    <div class="wrap-lists">
-                      <div class="list-box">
-                        <p class="txt-type03">12:40 ~ 13:10</p>
-                      </div>
-                      <div class="list-box">
-                        <p class="txt-type01">N Taxi</p>
-                      </div>
-                      <div class="list-box">
-                        <p class="txt-type03">N Lounge / On-site reception</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="tab-content" id="tab14" role="tabpanel" data-panel="2"></div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="content-item09">
-          <!-- 
+          <div class="content-item07">
+            <div class="info_wrap">
+              <p class="contitle-type01 fw-type03">Event Information</p>
+              <!-- 정보 수급 되지 않음 : 추후 컨텐츠 현행화 필요 -->
+              <ul class="grid_3 grid_mo_scroll">
+                <li>
+                  <div class="card_type05">
+                    <div class="card_top">
+                      <img src="../../inc/images/img/ntt_r2_evt_img1.png" loading="lazy" alt="Racing" />
+                    </div>
+                    <div class="card_bottom">
+                      <p class="card_tit">Sim Racing</p>
+                      <p class="card_detail">
+                        Experience a hyper-realistic circuit with our racing simulator
+                      </p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <div class="btn-wrap info_more">
+                <a href="#" class="btn md-txt-btn01">
+                  Learn More
+                  <span class="btn-icon16 icon-right" aria-hidden="true"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="content-item08">
+            <div class="schedule_wrap" th:utext="${rv.eventDetail}">
+              <div class="wrap-list list02">
+                <div class="tab-container">
+                  <div class="tab-head">
+                    <h2 class="title">Event Schedule</h2>
+                  </div>
+                  <div class="tab-content on" id="tab13" role="tabpanel" data-panel="1">
+                    <p class="txt-type01">Events will be updated and made available in due time.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content-item09">
+            <!-- 
             * guide-wrap 클래스 정의 설명 
             - 각, 하단의 클래스별로 이미지와 내용 달라짐.
             - track-ty01 : Inje Speedium
@@ -611,98 +410,98 @@
             - track-ty04 : Yongin Everland SPEEDWAY
             - track-ty05 : Inje SPEEDIUM (Short course)
             -->
-          <div class="guide_wrap track-ty04">
-            <div class="wrap-list list03">
-              <div class="left imgwrap">
-                <div class="track-img">
-                  <span class="visually-hidden">Track Guide 트랙 이미지</span>
+            <div class="guide_wrap track-ty04">
+              <div class="wrap-list list03">
+                <div class="left imgwrap">
+                  <div class="track-img">
+                    <span class="visually-hidden">Track Guide 트랙 이미지</span>
+                  </div>
                 </div>
-              </div>
-              <!-- ex) track-ty01 정보 -->
-              <div class="right descwrap">
-                <h2 class="tit">Track guide</h2>
-                <h2 class="sub-tit">Yongin Everland SPEEDWAY</h2>
-                <div class="list-trackinfo">
-                  <div class="inner">
-                    <p class="txt-type03">Track Length</p>
-                    <p class="txt-type03">4.346km</p>
-                  </div>
-                  <div class="inner">
-                    <p class="txt-type03">Number of Corners</p>
-                    <p class="txt-type03">16</p>
-                  </div>
-                  <div class="inner">
-                    <p class="txt-type03">Track Width</p>
-                    <p class="txt-type03">11~15m</p>
-                  </div>
-                  <div class="inner">
-                    <p class="txt-type03">Standing Start Pole Position</p>
-                    <p class="txt-type03">Left</p>
+                <!-- ex) track-ty01 정보 -->
+                <div class="right descwrap">
+                  <h2 class="tit">Track guide</h2>
+                  <h2 class="sub-tit">Yongin Everland SPEEDWAY</h2>
+                  <div class="list-trackinfo">
+                    <div class="inner">
+                      <p class="txt-type03">Track Length</p>
+                      <p class="txt-type03">4.346km</p>
+                    </div>
+                    <div class="inner">
+                      <p class="txt-type03">Number of Corners</p>
+                      <p class="txt-type03">16</p>
+                    </div>
+                    <div class="inner">
+                      <p class="txt-type03">Track Width</p>
+                      <p class="txt-type03">11~15m</p>
+                    </div>
+                    <div class="inner">
+                      <p class="txt-type03">Standing Start Pole Position</p>
+                      <p class="txt-type03">Left</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="content-item10">
-          <div class="visit_wrap">
-            <!-- list04 -->
-            <div class="wrap-list list04">
-              <h3 class="tit large">Plan your visit</h3>
-              <div class="inner">
-                <div class="box box01">
-                  <div class="box-desc left">
-                    <h3 class="tit">By car</h3>
-                  </div>
-                  <div class="box-desc right">
-                    <p class="desc-location">
-                      Set your destination to Everland SPEEDWAY or 310
-                      Jeondaeli, Pogok-eup, Cheoin-gu, Yongin-si, Gyeonggi-do
-                    </p>
-                    <p class="desc-note">
-                      ※ Arrival time may vary depending on traffic conditions.
-                    </p>
-                  </div>
-                </div>
-                <div class="box box02">
-                  <h3 class="tit fullwidth">By public transport</h3>
-                  <div class="box wrap-multi-box">
+          <div class="content-item10">
+            <div class="visit_wrap">
+              <!-- list04 -->
+              <div class="wrap-list list04">
+                <h3 class="tit large">Plan your visit</h3>
+                <div class="inner">
+                  <div class="box box01">
                     <div class="box-desc left">
-                      <h3 class="tit">By bus</h3>
+                      <h3 class="tit">By car</h3>
                     </div>
                     <div class="box-desc right">
                       <p class="desc-location">
-                        From Seoul: Take bus 5002, 5700, 1500-2 or 1113<br />From
-                        Incheon or Gyeonggi-do: Take bus 8862, 8839, 66, or
-                        66-4 → Then, take the shuttle in front of the main
-                        gate of Everland
+                        Set your destination to Everland Parking Lot and take the shuttle bus in front of the main gate
+                        of Everland and enter Everland Speedway across
+                      </p>
+                      <p class="desc-note">
+                        ※ Arrival time may vary depending on traffic conditions.
                       </p>
                     </div>
                   </div>
-                  <div class="box wrap-multi-box">
-                    <div class="box-desc left">
-                      <h3 class="tit">By subway</h3>
+                  <div class="box box02">
+                    <h3 class="tit fullwidth">By public transport</h3>
+                    <div class="box wrap-multi-box">
+                      <div class="box-desc left">
+                        <h3 class="tit">By bus</h3>
+                      </div>
+                      <div class="box-desc right">
+                        <p class="desc-location">
+                          From Seoul: Take bus 5002, 5700, 1500-2 or 1113<br />From
+                          Incheon or Gyeonggi-do: Take bus 8862, 8839, 66, or
+                          66-4 → Then, take the shuttle in front of the main
+                          gate of Everland
+                        </p>
+                      </div>
                     </div>
-                    <div class="box-desc right">
-                      <p class="desc-location">
-                        Take Bundang Line and get off at Giheung Station →
-                        Take EverLine and get off at the last stop, and take
-                        the shuttle bus (for free) to get to Everland → Take
-                        the shuttle bus on front gate
-                      </p>
+                    <div class="box wrap-multi-box">
+                      <div class="box-desc left">
+                        <h3 class="tit">By subway</h3>
+                      </div>
+                      <div class="box-desc right">
+                        <p class="desc-location">
+                          Take Bundang Line and get off at Giheung Station →
+                          Take EverLine and get off at the last stop, and take
+                          the shuttle bus (for free) to get to Everland → Take
+                          the shuttle bus on front gate
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="btn-wrap-default">
-              <a th:href="|/${lang}/experience/nFestival/calendar.do|" class="btn lg-txt-btn01">
-                <span class="btn-icon20 icon-left" aria-hidden="true"></span>
-                Back to List
-              </a>
+              <div class="btn-wrap-default">
+                <a th:href="|/${lang}/experience/nFestival/calendar.do|" class="btn lg-txt-btn01">
+                  <span class="btn-icon20 icon-left" aria-hidden="true"></span>
+                  Back to List
+                </a>
+              </div>
             </div>
           </div>
-        </div>        
         </th:block>
       </div>
     </section>
