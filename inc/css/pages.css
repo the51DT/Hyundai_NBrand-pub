@@ -493,7 +493,9 @@
 .evtGuide {
   overflow: hidden;
 }
-
+.evtGuide .section_list {
+  padding-bottom: 80px;
+}
 .subMain .content-item04,
 .evtGuide .content-item08 {
   padding-top: 160px;
@@ -505,7 +507,7 @@
 
 .evtGuide .content-item09 {
   padding-top: 160px;
-  padding-bottom: 240px;
+  padding-bottom: 160px;
 }
 
 .subMain .content-item02 {
@@ -609,7 +611,6 @@
 .event-box .evt-map-default-box .btn-evtmap-pop {
   display: none;
 }
-
 
 .event-box .btn-area {
   position: absolute;
