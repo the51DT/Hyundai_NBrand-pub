@@ -13,7 +13,7 @@
 
 <body>
   <div class="wrap">
-    <section class="content-wrap models-wrap brand">
+    <section class="content-wrap models-wrap brand" id="container">
       <!-- 07.18 수정 : brand 클래스 위치 변경 -->
       <div class="content-area">
         <div class="content-item02">
@@ -21,14 +21,18 @@
           <!-- 08.07 수정 : 컨텐츠 현행화 , 동영상 추가 -->
           <div class="video_thumnail_wrap">
             <div class="video-wrap">
-              <video class="video pc-only" data-js="video" id="video1" playsinline="" autoplay="" muted="" poster="../../inc/images/content/histroy_pc.png" aria-hidden="false" >
+              <video class="video pc-only" data-js="video" id="video1" playsinline="" autoplay="" muted=""
+                poster="../../inc/images/content/histroy_pc.png" aria-hidden="false">
                 <source src="../../inc/videos/history.mp4" type="video/mp4" />
               </video>
-              <video class="video mo-only" data-js="video" id="video2" playsinline="" autoplay="" muted="" poster="../../inc/images/content/histroy_mo.png" aria-hidden="true">
+              <video class="video mo-only" data-js="video" id="video2" playsinline="" autoplay="" muted=""
+                poster="../../inc/images/content/histroy_mo.png" aria-hidden="true">
                 <source src="../../inc/videos/history.mp4" type="video/mp4" />
               </video>
-              <img src="../../inc/images/content/histroy_pc.png" alt="history pc 영상 썸네일 이미지" style="display: none" class="video_poster pc-only"/>
-              <img src="../../inc/images/content/histroy_mo.png" alt="history mobile 영상 썸네일 이미지" style="display: none" class="video_poster mo-only" />
+              <img src="../../inc/images/content/histroy_pc.png" alt="history pc 영상 썸네일 이미지" style="display: none"
+                class="video_poster pc-only" />
+              <img src="../../inc/images/content/histroy_mo.png" alt="history mobile 영상 썸네일 이미지" style="display: none"
+                class="video_poster mo-only" />
               <!-- 비디오 소리 켜기/끄기 버튼 추가 (8/6) -->
               <div class="btn-groups">
                 <button type="button" class="btn btn-only-icon-bg01-square sound" title="sound-off">
