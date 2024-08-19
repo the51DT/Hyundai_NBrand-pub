@@ -1923,8 +1923,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
 }
 
 .popup-wrapper .popup-footer .box-result.bg-gray {
-  background: #f0f0f0;
-  color: #777;
+  background: #bbb !important;
 }
 
 .popup-wrapper .popup-footer .box-result.bg-blk {
