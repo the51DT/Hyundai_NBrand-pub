@@ -4338,12 +4338,16 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
     display: block;
     padding-top: 16px;
   }
+  .info-container-wrap .left-area {
+    width: 100%;
+  }
   .info-container-wrap .left-area .title {
     font-size: 20px;
     line-height: 28px;
   }
   .info-container-wrap .right-area {
     margin-top: 28px;
+    width: 100%;
   }
   .info-container-wrap .right-area .info-container {
     padding: 0;
