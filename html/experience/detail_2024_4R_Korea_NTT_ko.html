@@ -107,47 +107,47 @@
         </div>
         <!-- 08.12 수정 : th:block 위치 변경 -->
         <th:block th:fragment="roundInfo">
-          <div class="content-item03">
+          <!-- <div class="content-item03">
             <div class="issue_wrap">
               <p class="contitle-type01 fw-type03">
                 <span>Round 4</span> <br class="mo-only" />Hot Issue
               </p>
-              <!-- <p class="tit-type04">
+              <p class="tit-type04">
               Grand opening of the new Hyundai N Festival season at Inje
               SPEEDIUM. Don’t miss the debut of an electrifying new class and
               vehicle!
-            </p> -->
-              <!-- <ul class="txt-list-wrap">
-              <li>
-                <div class="txt-box">
-                  <h5 class="num">01</h5>
-                  <p class="desc">
-                    Official practice of Korea's first one-make electric car
-                    race, eN1 Cup starts!
-                  </p>
-                </div>
-              </li>
-              <li>
-                <div class="txt-box">
-                  <h5 class="num">02</h5>
-                  <p class="desc">
-                    The debut of Team KUMHO SLM at the Hyundai N Festival &
-                    The return of Jun-ui Park & Jun-sung Park!
-                  </p>
-                </div>
-              </li>
-              <li>
-                <div class="txt-box">
-                  <h5 class="num">03</h5>
-                  <p class="desc">
-                    A lineup of influencers and celebrities taking part in the
-                    race!
-                  </p>
-                </div>
-              </li>
-            </ul> -->
+             </p> 
+              <ul class="txt-list-wrap">
+                <li>
+                  <div class="txt-box">
+                    <h5 class="num">01</h5>
+                    <p class="desc">
+                      Official practice of Korea's first one-make electric car
+                      race, eN1 Cup starts!
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <div class="txt-box">
+                    <h5 class="num">02</h5>
+                    <p class="desc">
+                      The debut of Team KUMHO SLM at the Hyundai N Festival &
+                      The return of Jun-ui Park & Jun-sung Park!
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <div class="txt-box">
+                    <h5 class="num">03</h5>
+                    <p class="desc">
+                      A lineup of influencers and celebrities taking part in the
+                      race!
+                    </p>
+                  </div>
+                </li>
+              </ul>
             </div>
-          </div>
+          </div> -->
           <div class="content-item04">
             <div class="info_wrap">
               <p class="contitle-type01 fw-type03">클래스 소개</p>
@@ -179,7 +179,7 @@
             <div class="standing_wrap" th:insert="~{experience/nFestival/component/standing}">
               <div class="title_flex tilte_padding">
                 <p class="contitle-type01 fw-type03 color-white">
-                  Standing<br />Top 3
+                  상위<br />Top 3
                 </p>
                 <div class="selectbox-wrap select-type02">
                   <div>
@@ -196,10 +196,10 @@
                         </button>
                       </li>
                       <li class="option option-click fw-type03 active" role="option" aria-selected="true">
-                        Drivers
+                        드라이버
                       </li>
                       <li class="option option-click fw-type03" role="option">
-                        Teams
+                        팀
                       </li>
                     </ul>
                   </div>
@@ -368,7 +368,7 @@
                     </div> -->
                   </div>
                   <div class="tab-content on" id="tab1-011" role="tabpanel">
-                    <p class="txt-type01">타임테이블은 향후 업데이트를 통해 안내될 예정입니다.</p>
+                    <p class="txt-type01 post-nodata">타임테이블은 향후 업데이트를 통해 안내될 예정입니다.</p>
                     <!-- <div class="__bottom">
                       <div class="wrap-lists">
                         <div class="list-box">
@@ -499,20 +499,17 @@
           </div>
           <div class="content-item07">
             <div class="info_wrap">
-              <p class="contitle-type01 fw-type03">Event Information</p>
-              <!-- 정보 수급 되지 않음 : 추후 컨텐츠 현행화 필요 -->
+              <p class="contitle-type01 fw-type03">주요 행사</p>
               <ul class="grid_3 grid_mo_scroll">
                 <li>
                   <div class="card_type05">
                     <div class="card_top">
-                      <img src="../../inc/images/img/ntt_r4_evt_img1.png" loading="lazy" alt="Racing" />
+                      <img src="../../inc/images/img/ntt_r1_evt_img1.png" loading="lazy" alt="Gymkhana" />
                     </div>
                     <div class="card_bottom">
                       <p class="card_tit">짐카나</p>
                       <p class="card_detail">
-                        N 차량으로 선을 긋거나 콘으로 코스를
-                        복잡하게 만들어 놓고 코스를 달려
-                        시간을 겨루는 경기
+                        N 차량으로 선을 긋거나 콘으로 코스를 복잡하게 만들어 놓고 코스를 달려 시간을 겨루는 경기
                       </p>
                     </div>
                   </div>
@@ -520,7 +517,7 @@
                 <li>
                   <div class="card_type05">
                     <div class="card_top">
-                      <img src="../../inc/images/img/ntt_r4_evt_img2.png" loading="lazy" alt="Racing" />
+                      <img src="../../inc/images/img/ntt_r1_evt_img2.png" loading="lazy" alt="Track Day" />
                     </div>
                     <div class="card_bottom">
                       <p class="card_tit">트랙데이</p>
@@ -533,12 +530,13 @@
                 <li>
                   <div class="card_type05">
                     <div class="card_top">
-                      <img src="../../inc/images/img/ntt_r4_evt_img3.png" loading="lazy" alt="Racing" />
+                      <img src="../../inc/images/img/r3_evt_img3.png" loading="lazy" alt="Sim Racing" />
                     </div>
                     <div class="card_bottom">
                       <p class="card_tit">심 레이싱</p>
                       <p class="card_detail">
                         레이싱 시뮬레이터로 눈 앞의 서킷을 타볼 수 있는 특별한 경험
+
                       </p>
                     </div>
                   </div>
@@ -546,14 +544,12 @@
                 <li>
                   <div class="card_type05">
                     <div class="card_top">
-                      <img src="../../inc/images/img/ntt_r4_evt_img3.png" loading="lazy" alt="Racing" />
+                      <img src="../../inc/images/img/ntt_r1_evt_img3.jpg" loading="lazy" alt="N Car Meet" />
                     </div>
                     <div class="card_bottom">
                       <p class="card_tit">N 카밋</p>
                       <p class="card_detail">
-                        낮에는 Cars & Coffee,
-                        밤에는 바비큐를 즐기며 N Fan들과
-                        함께 할 수 있는 기회
+                        낮에는 Cars & Coffee, 밤에는 바비큐를 즐기며 N Fan들과 함께 할 수 있는 기회
                       </p>
                     </div>
                   </div>
@@ -572,7 +568,7 @@
               <div class="wrap-list list02">
                 <div class="tab-container">
                   <div class="tab-head">
-                    <h2 class="title">Event Schedule</h2>
+                    <h2 class="title">이벤트 타임테이블</h2>
                     <!-- <div class="tabs-wrap">
                       <ul class="tabs ty-black" data-contents="탭카테고리">
                         <li class="on">
@@ -587,7 +583,7 @@
                     </div> -->
                   </div>
                   <div class="tab-content on" id="tab13" role="tabpanel" data-panel="1">
-                    <p class="txt-type01">Events will be updated and made available in due time.
+                    <p class="txt-type01 post-nodata">타임테이블은 향후 업데이트를 통해 안내될 예정입니다.
                     </p>
                     <!-- <div class="__bottom list02">
                       <div class="wrap-lists">
@@ -765,7 +761,7 @@
               <div class="btn-wrap-default">
                 <a th:href="|/${lang}/experience/nFestival/calendar.do|" class="btn lg-txt-btn01">
                   <span class="btn-icon20 icon-left" aria-hidden="true"></span>
-                  Back to List
+                  목록으로
                 </a>
               </div>
             </div>

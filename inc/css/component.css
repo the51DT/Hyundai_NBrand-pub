@@ -2711,7 +2711,10 @@ button.card_detail:hover {
   grid-template-columns: auto;
   text-align: left;
   justify-content: flex-start;
-  border: none;
+  border: none;  
+}
+.wrap-list.list02 .wrap-lists.noticeTxt {
+  margin-top: 16px;
 }
 .wrap-list .__bottom .wrap-lists .list-box:nth-child(1) {
   width: 14rem;

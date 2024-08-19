@@ -167,13 +167,13 @@
             <div class="standing_wrap" th:insert="~{experience/nFestival/component/standing}">
               <div class="title_flex tilte_padding">
                 <p class="contitle-type01 fw-type03 color-white">
-                  Standing<br />Top 3
+                  상위<br />Top 3
                 </p>
                 <div class="selectbox-wrap select-type02">
                   <div>
                     <button class="selectbox-trigger selectbox-js txt-type03 fw-type03 color-white"
                       aria-haspopup="listbox" aria-expanded="false" aria-labelledby="kindSelect">
-                      Drivers
+                      드라이버
                     </button>
                     <ul class="selectbox-options 03" role="listbox" id="kindSelect" aria-hidden="true"
                       style="display: none">
@@ -184,10 +184,10 @@
                         </button>
                       </li>
                       <li class="option option-click fw-type03 active" role="option" aria-selected="true">
-                        Drivers
+                        드라이버
                       </li>
                       <li class="option option-click fw-type03" role="option">
-                        Teams
+                        팀
                       </li>
                     </ul>
                   </div>
@@ -342,9 +342,89 @@
                 <div class="tab-container">
                   <div class="tab-head">
                     <h2 class="title">레이스 일정</h2>
+                    <div class="tabs-wrap">
+                      <ul class="tabs ty-black" data-contents="탭카테고리">
+                        <li class="on">
+                          <a href="javascript:;" aria-controls="tab1-011" role="tab" aria-selected="true">토</a>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                   <div class="tab-content on" id="tab1-011" role="tabpanel">
-                    <p class="txt-type01">타임테이블은 향후 업데이트를 통해 안내될 예정입니다.</p>
+                    <div class="__bottom">
+                      <div class="wrap-lists">
+                        <div class="list-box">
+                          <p class="txt-type03">10:35 ~ 11:00</p>
+                        </div>
+                        <div class="list-box">
+                          <p class="txt-type01">N TT - 연습주행</p>
+                        </div>
+                        <div class="list-box">
+                          <p class="txt-type03">N TT</p>
+                        </div>
+                      </div>
+                      <div class="wrap-lists">
+                        <div class="list-box">
+                          <p class="txt-type03">11:35 ~ 12:25</p>
+                        </div>
+                        <div class="list-box">
+                          <p class="txt-type01">Break Time
+                          </p>
+                        </div>
+                        <div class="list-box">
+                          <p class="txt-type03">-</p>
+                        </div>
+                      </div>
+                      <div class="wrap-lists">
+                        <div class="list-box">
+                          <p class="txt-type03">12:35 ~ 13:00</p>
+                        </div>
+                        <div class="list-box">
+                          <p class="txt-type01">
+                            N TT - 1차 주행
+                          </p>
+                        </div>
+                        <div class="list-box">
+                          <p class="txt-type03">N TT</p>
+                        </div>
+                      </div>
+                      <div class="wrap-lists">
+                        <div class="list-box">
+                          <p class="txt-type03">14:25 ~ 14:50</p>
+                        </div>
+                        <div class="list-box">
+                          <p class="txt-type01">N TT - 2차 주행</p>
+                        </div>
+                        <div class="list-box">
+                          <p class="txt-type03">N TT</p>
+                        </div>
+                      </div>
+                      <div class="wrap-lists">
+                        <div class="list-box">
+                          <p class="txt-type03">16:15 ~ 16:40</p>
+                        </div>
+                        <div class="list-box">
+                          <p class="txt-type01">N TT - 3차 주행
+                          </p>
+                        </div>
+                        <div class="list-box">
+                          <p class="txt-type03">N TT</p>
+                        </div>
+                      </div>
+                      <div class="wrap-lists">
+                        <div class="list-box">
+                          <p class="txt-type03">17:10</p>
+                        </div>
+                        <div class="list-box">
+                          <p class="txt-type01">
+                            시상식
+                          </p>
+                        </div>
+                        <div class="list-box">
+                          <p class="txt-type03">-</p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -352,7 +432,7 @@
           </div>
           <div class="content-item07">
             <div class="info_wrap">
-              <p class="contitle-type01 fw-type03">Event Information</p>
+              <p class="contitle-type01 fw-type03">주요 행사</p>
               <!-- 정보 수급 되지 않음 : 추후 컨텐츠 현행화 필요 -->
               <ul class="grid_3 grid_mo_scroll">
                 <li>
@@ -385,9 +465,29 @@
                 <div class="tab-container">
                   <div class="tab-head">
                     <h2 class="title">이벤트 타임테이블</h2>
+                    <div class="tabs-wrap">
+                      <ul class="tabs ty-black" data-contents="탭카테고리">
+                        <li class="on">
+                          <a href="javascript:;" aria-controls="tab13" role="tab" aria-selected="true">토</a>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                   <div class="tab-content on" id="tab13" role="tabpanel" data-panel="1">
-                    <p class="txt-type01">타임테이블은 향후 업데이트를 통해 안내될 예정입니다</p>
+                    <div class="__bottom list02">
+                      <div class="wrap-lists">
+                        <div class="list-box">
+                          <p class="txt-type03">10:00 ~ 17:00</p>
+                        </div>
+                        <div class="list-box">
+                          <p class="txt-type01">심 레이싱</p>
+                        </div>
+                        <div class="list-box">
+                          <p class="txt-type03">10번 피트 / 상시운영
+                          </p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -484,7 +584,7 @@
               <div class="btn-wrap-default">
                 <a th:href="|/${lang}/experience/nFestival/calendar.do|" class="btn lg-txt-btn01">
                   <span class="btn-icon20 icon-left" aria-hidden="true"></span>
-                  Back to List
+                  목록으로
                 </a>
               </div>
             </div>

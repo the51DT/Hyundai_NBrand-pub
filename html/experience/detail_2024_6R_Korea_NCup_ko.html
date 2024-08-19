@@ -107,13 +107,13 @@
         </div>
         <!-- 08.12 수정 : th:block 위치 변경 -->
         <th:block th:fragment="roundInfo">
-          <div class="content-item03">
-            <!-- 해당 영역 컨텐츠 수급 안되어 추 후, 현행화 작업 필요함) -->
+          <!-- <div class="content-item03">
             <div class="issue_wrap">
               <p class="contitle-type01 fw-type03">
                 <span>Round 6</span> <br class="mo-only" />Hot Issue
               </p>
-              <p class="tit-type04">
+              컨텐츠 없음 : 현행화 되지 않아, 추 후 반영 필요함
+                <p class="tit-type04">
                 Grand opening of the new Hyundai N Festival season at Inje
                 SPEEDIUM. Don’t miss the debut of an electrifying new class and
                 vehicle!
@@ -148,7 +148,7 @@
                 </li>
               </ul>
             </div>
-          </div>
+          </div> -->
           <div class="content-item04">
             <div class="info_wrap">
               <p class="contitle-type01 fw-type03">클래스 소개</p>
@@ -220,7 +220,7 @@
             <div class="standing_wrap" th:insert="~{experience/nFestival/component/standing}">
               <div class="title_flex tilte_padding">
                 <p class="contitle-type01 fw-type03 color-white">
-                  Standing<br />Top 3
+                  상위<br />Top 3
                 </p>
                 <div class="selectbox-wrap select-type02">
                   <div>
@@ -306,7 +306,7 @@
                       </ul>
                     </div>
                     <div class="card_more">
-                      <span>Learn More</span>
+                      <span>자세히 보기</span>
                     </div>
                   </a>
                 </li>
@@ -341,7 +341,7 @@
                       </ul>
                     </div>
                     <div class="card_more">
-                      <span>Learn More</span>
+                      <span>자세히 보기</span>
                     </div>
                   </a>
                 </li>
@@ -376,14 +376,14 @@
                       </ul>
                     </div>
                     <div class="card_more">
-                      <span>Learn More</span>
+                      <span>자세히 보기</span>
                     </div>
                   </a>
                 </li>
               </ul>
               <div class="btn-wrap info_more">
                 <a href="#" class="btn md-txt-btn02">
-                  Learn More
+                  자세히 보기
                   <span class="btn-icon16 icon-right-wh" aria-hidden="true"></span>
                 </a>
               </div>
@@ -403,7 +403,7 @@
           </div>
           <div class="content-item07">
             <div class="info_wrap">
-              <p class="contitle-type01 fw-type03">Event Information</p>
+              <p class="contitle-type01 fw-type03">주요 행사</p>
               <ul class="grid_3 grid_mo_scroll">
                 <li>
                   <div class="card_type05">
@@ -413,8 +413,7 @@
                     <div class="card_bottom">
                       <p class="card_tit">N 택시</p>
                       <p class="card_detail">
-                        국문 수급 안됨
-
+                        프로 드라이버가 운전하는 레이스카를 직접 체험해 볼 수 있는 기회
                       </p>
                     </div>
                   </div>
@@ -441,7 +440,7 @@
                     <div class="card_bottom">
                       <p class="card_tit">서킷사파리</p>
                       <p class="card_detail">
-                        국문 수급 안됨
+                        대형 버스를 타고 서킷을 돌며 현대 N 페스티벌 참가 선수들의 레이스 카를 눈 앞에서 볼 수 있는 기회
                       </p>
                     </div>
                   </div>
@@ -571,7 +570,7 @@
               <div class="btn-wrap-default">
                 <a th:href="|/${lang}/experience/nFestival/calendar.do|" class="btn lg-txt-btn01">
                   <span class="btn-icon20 icon-left" aria-hidden="true"></span>
-                  Back to List
+                  목록으로
                 </a>
               </div>
             </div>
