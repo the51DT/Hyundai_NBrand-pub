@@ -481,7 +481,7 @@ input[type="radio"]:focus + label {
 .btn:hover [class*="icon-link"],
 .btn:active [class*="icon-link"] {
   background: url(../../inc/images/icon/icon-link_white.svg);
-  background-size:contain;
+  background-size: contain;
 }
 .btn[class*="txt-btn"]:hover [class*="icon-link"],
 .btn[class*="txt-btn"]:active [class*="icon-link"] {
@@ -781,6 +781,22 @@ input[type="radio"]:focus + label {
 }
 .icon-tiktok-wh {
   background: url(../../inc/images/icon/icon-tiktok-wh.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.icon-user {
+  background: url(../../inc/images/icon/icon-user.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.icon-user-wh {
+  background: url(../../inc/images/icon/icon-user_white.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.icon-user-gray {
+  background: url(../../inc/images/icon/icon-user_gray.svg);
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -2712,7 +2728,7 @@ button.card_detail:hover {
   grid-template-columns: auto;
   text-align: left;
   justify-content: flex-start;
-  border: none;  
+  border: none;
 }
 .wrap-list.list02 .wrap-lists.noticeTxt {
   margin-top: 16px;
