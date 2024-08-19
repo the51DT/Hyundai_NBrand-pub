@@ -1,2131 +1,1242 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name=" format-detection" content="telephone=no" />
-    <title>N브랜드 | Configurator_Configurator</title>
-    <link
-      type="text/css"
-      rel="stylesheet"
-      href="../../inc/css/swiper.min.css"
-    />
-    <link type="text/css" rel="stylesheet" href="../../inc/css/common.css" />
-  </head>
 
-  <body>
-    <div class="wrap">
-      <section class="content-wrap">
-        <div class="content-area">
-          <div class="content-item01">
-            <!-- ELANTRA N 모델 선택 시 나오는 컨텐츠 확인용 파일 -->
-            <div
-              id="EP050501P02"
-              class="popup configurator_area ELANTRA exterior"
-            >
-              <!-- IONIQ 클래스 추가 시 IONIQ 5 N 모델 레이아웃 노출 / ELANTRA 클래스 추가 시 ELANTRA N 모델 레이아웃 노출 -->
-              <!-- exterior 추가 시 exterior 레이아웃 노출 / interior 클래스 추가 시 interior 레이아웃 노출 / summary 클래스 추가 시 summary 레이아웃 노출 -->
-              <div class="configurator_header_wrap">
-                <div class="configurator_header">
-                  <div class="configurator_header_left">
-                    <img src="../../inc/images/img/img_logo.svg" alt="logo" />
-                    <button
-                      type="button"
-                      class="configurator_header_tit btn txt-btn IONIQ"
-                    >
-                      IONIQ 5 N
-                      <span
-                        class="btn-icon20 icon-right"
-                        aria-hidden="true"
-                      ></span>
-                    </button>
-                    <button
-                      type="button"
-                      class="configurator_header_tit btn txt-btn ELANTRA"
-                    >
-                      ELANTRA N
-                      <span
-                        class="btn-icon20 icon-right"
-                        aria-hidden="true"
-                      ></span>
-                    </button>
-                  </div>
-                  <button
-                    type="button"
-                    class="btn btn-only-icon-notbg pop-close"
-                    title="close"
-                  >
-                    <span class="visually-hidden">close</span>
-                    <span
-                      class="btn-icon20 icon-close"
-                      aria-hidden="true"
-                    ></span>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name=" format-detection" content="telephone=no" />
+  <title>N브랜드 | Configurator_Configurator</title>
+  <link type="text/css" rel="stylesheet" href="../../inc/css/swiper.min.css" />
+  <link type="text/css" rel="stylesheet" href="../../inc/css/common.css" />
+</head>
+
+<body>
+  <div class="wrap">
+    <section class="content-wrap" id="container">
+      <div class="content-area">
+        <div class="content-item01">
+          <!-- ELANTRA N 모델 선택 시 나오는 컨텐츠 확인용 파일 -->
+          <div id="EP050501P02" class="popup configurator_area ELANTRA exterior">
+            <!-- IONIQ 클래스 추가 시 IONIQ 5 N 모델 레이아웃 노출 / ELANTRA 클래스 추가 시 ELANTRA N 모델 레이아웃 노출 -->
+            <!-- exterior 추가 시 exterior 레이아웃 노출 / interior 클래스 추가 시 interior 레이아웃 노출 / summary 클래스 추가 시 summary 레이아웃 노출 -->
+            <div class="configurator_header_wrap">
+              <div class="configurator_header">
+                <div class="configurator_header_left">
+                  <img src="../../inc/images/img/img_logo.svg" alt="logo" />
+                  <button type="button" class="configurator_header_tit btn txt-btn IONIQ">
+                    IONIQ 5 N
+                    <span class="btn-icon20 icon-right" aria-hidden="true"></span>
+                  </button>
+                  <button type="button" class="configurator_header_tit btn txt-btn ELANTRA">
+                    ELANTRA N
+                    <span class="btn-icon20 icon-right" aria-hidden="true"></span>
                   </button>
                 </div>
-                <div class="configurator_header_menu_wrap">
-                  <!-- .configurator_header_menu 에 .on 이 어디에 붙느냐에 따라 .configurator_area에 붙는 클래스가 달라짐 -->
-                  <button
-                    type="button"
-                    class="configurator_header_menu configurator_menu_exterior on"
-                  >
-                    <span class="configurator_header_menu_step"
-                      ><span class="visually-hidden">1</span></span
-                    >
-                    <span class="configurator_header_menu_text">Exterior</span>
-                  </button>
-                  <button
-                    type="button"
-                    class="configurator_header_menu configurator_menu_interior"
-                  >
-                    <span class="configurator_header_menu_step"
-                      ><span class="visually-hidden">2</span></span
-                    >
-                    <span class="configurator_header_menu_text">Interior</span>
-                  </button>
-                  <button
-                    type="button"
-                    class="configurator_header_menu configurator_menu_summary"
-                  >
-                    <span class="configurator_header_menu_step"
-                      ><span class="visually-hidden">3</span></span
-                    >
-                    <span class="configurator_header_menu_text">Summary</span>
-                  </button>
-                </div>
+                <button type="button" class="btn btn-only-icon-notbg pop-close" title="close">
+                  <span class="visually-hidden">close</span>
+                  <span class="btn-icon20 icon-close" aria-hidden="true"></span>
+                </button>
               </div>
-              <div class="configurator_con_wrap">
-                <div class="configurator_con_flex">
-                  <div class="configurator_swiper_wrap fullscreenContainer">
-                    <div class="swiper-container">
-                      <!-- Swiper -->
-                      <div class="swiper configurator_swiper">
-                        <!-- .configurator_menu on 에 따라 .configurator_area 에 붙은 클래스가 바뀌면서 각 .configurator_con_tit display none <-> block -->
-                        <p class="configurator_con_tit tit_exterior">
-                          Exterior
-                        </p>
-                        <p class="configurator_con_tit tit_interior">
-                          Interior
-                        </p>
-                        <p class="configurator_con_tit tit_summary">Summary</p>
-                        <div class="swiper-wrapper">
-                          <div class="swiper-slide">
-                            <img
-                              src="../../inc/images/Configurator/p911.jpg"
-                              loading="lazy"
-                              alt="차량 이미지"
-                            />
-                          </div>
-                          <div class="swiper-slide">
-                            <img
-                              src="../../inc/images/Configurator/p911.jpg"
-                              loading="lazy"
-                              alt="차량 이미지"
-                            />
-                          </div>
-                          <div class="swiper-slide">
-                            <img
-                              src="../../inc/images/Configurator/p911.jpg"
-                              loading="lazy"
-                              alt="차량 이미지"
-                            />
-                          </div>
-                          <div class="swiper-slide">
-                            <img
-                              src="../../inc/images/Configurator/p911.jpg"
-                              loading="lazy"
-                              alt="차량 이미지"
-                            />
-                          </div>
-                          <div class="swiper-slide">
-                            <img
-                              src="../../inc/images/Configurator/p911.jpg"
-                              loading="lazy"
-                              alt="차량 이미지"
-                            />
-                          </div>
+              <div class="configurator_header_menu_wrap">
+                <!-- .configurator_header_menu 에 .on 이 어디에 붙느냐에 따라 .configurator_area에 붙는 클래스가 달라짐 -->
+                <button type="button" class="configurator_header_menu configurator_menu_exterior on">
+                  <span class="configurator_header_menu_step"><span class="visually-hidden">1</span></span>
+                  <span class="configurator_header_menu_text">Exterior</span>
+                </button>
+                <button type="button" class="configurator_header_menu configurator_menu_interior">
+                  <span class="configurator_header_menu_step"><span class="visually-hidden">2</span></span>
+                  <span class="configurator_header_menu_text">Interior</span>
+                </button>
+                <button type="button" class="configurator_header_menu configurator_menu_summary">
+                  <span class="configurator_header_menu_step"><span class="visually-hidden">3</span></span>
+                  <span class="configurator_header_menu_text">Summary</span>
+                </button>
+              </div>
+            </div>
+            <div class="configurator_con_wrap">
+              <div class="configurator_con_flex">
+                <div class="configurator_swiper_wrap fullscreenContainer">
+                  <div class="swiper-container">
+                    <!-- Swiper -->
+                    <div class="swiper configurator_swiper">
+                      <!-- .configurator_menu on 에 따라 .configurator_area 에 붙은 클래스가 바뀌면서 각 .configurator_con_tit display none <-> block -->
+                      <p class="configurator_con_tit tit_exterior">
+                        Exterior
+                      </p>
+                      <p class="configurator_con_tit tit_interior">
+                        Interior
+                      </p>
+                      <p class="configurator_con_tit tit_summary">Summary</p>
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <img src="../../inc/images/Configurator/p911.jpg" loading="lazy" alt="차량 이미지" />
                         </div>
-                        <div class="swiper-bottom-wrap">
-                          <div class="swiper-button-next"></div>
-                          <div class="swiper-button-prev"></div>
+                        <div class="swiper-slide">
+                          <img src="../../inc/images/Configurator/p911.jpg" loading="lazy" alt="차량 이미지" />
                         </div>
-                        <div class="swiper-status-wrap">
-                          <div class="swiper-pagination-custom">
-                            <span
-                              class="swiper-pagination-bullet-active"
-                            ></span>
-                          </div>
+                        <div class="swiper-slide">
+                          <img src="../../inc/images/Configurator/p911.jpg" loading="lazy" alt="차량 이미지" />
                         </div>
-                        <div class="configurator_fx_wrap">
-                          <button type="button" class="btn_background">
-                            <span class="visually-hidden"
-                              >Change Background Image</span
-                            >
-                            <span class="btn-icon24" aria-hidden="true"></span>
-                          </button>
-                          <button type="button" class="btn_time">
-                            <span class="visually-hidden">Change Time</span>
-                            <span class="btn-icon24" aria-hidden="true"></span>
-                          </button>
-                          <button type="button" class="btn_zoom">
-                            <span class="visually-hidden">Zoom Image</span>
-                            <span class="btn-icon24" aria-hidden="true"></span>
-                          </button>
-                          <button type="button" class="btn_save">
-                            <span class="visually-hidden">Save Screenshot</span>
-                            <span class="btn-icon24" aria-hidden="true"></span>
-                          </button>
-                          <button
-                            type="button"
-                            class="btn_full toggleFullscreenBtn"
-                          >
-                            <span class="visually-hidden"
-                              >Full Screen Conversion</span
-                            >
-                            <span class="btn-icon24" aria-hidden="true"></span>
-                          </button>
+                        <div class="swiper-slide">
+                          <img src="../../inc/images/Configurator/p911.jpg" loading="lazy" alt="차량 이미지" />
                         </div>
-                        <div class="configurator_scroll_tooltip">
+                        <div class="swiper-slide">
+                          <img src="../../inc/images/Configurator/p911.jpg" loading="lazy" alt="차량 이미지" />
+                        </div>
+                      </div>
+                      <div class="swiper-bottom-wrap">
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                      </div>
+                      <div class="swiper-status-wrap">
+                        <div class="swiper-pagination-custom">
+                          <span class="swiper-pagination-bullet-active"></span>
+                        </div>
+                      </div>
+                      <div class="configurator_fx_wrap">
+                        <button type="button" class="btn_background">
+                          <span class="visually-hidden">Change Background Image</span>
                           <span class="btn-icon24" aria-hidden="true"></span>
-                          <span>Scroll Down</span>
-                        </div>
+                        </button>
+                        <button type="button" class="btn_time">
+                          <span class="visually-hidden">Change Time</span>
+                          <span class="btn-icon24" aria-hidden="true"></span>
+                        </button>
+                        <button type="button" class="btn_zoom">
+                          <span class="visually-hidden">Zoom Image</span>
+                          <span class="btn-icon24" aria-hidden="true"></span>
+                        </button>
+                        <button type="button" class="btn_save">
+                          <span class="visually-hidden">Save Screenshot</span>
+                          <span class="btn-icon24" aria-hidden="true"></span>
+                        </button>
+                        <button type="button" class="btn_full toggleFullscreenBtn">
+                          <span class="visually-hidden">Full Screen Conversion</span>
+                          <span class="btn-icon24" aria-hidden="true"></span>
+                        </button>
                       </div>
-                      <!-- //swiper -->
+                      <div class="configurator_scroll_tooltip">
+                        <span class="btn-icon24" aria-hidden="true"></span>
+                        <span>Scroll Down</span>
+                      </div>
                     </div>
-                    <!-- //swiper-container -->
+                    <!-- //swiper -->
                   </div>
-                  <!-- input type checkbox/radio인 경우 클래스 따로 없고 li.menuitem 내부의 인풋 타입만 바꿔주시면 됩니다. -->
-                  <div class="configurator_select_wrap">
-                    <div class="configurator_select_area">
-                      <!-- exterior 파츠 선택 영역 / .configurator_menu_exterior on 시 노출 -->
-                      <!-- .exterior.IONIQ -->
-                      <div class="configurator_select_exterior IONIQ">
-                        <div class="dropdown">
-                          <button
-                            class="wrap-dropdown-selected dropdown-btn dropdown-trigger"
-                            aria-haspopup="true"
-                            aria-expanded="true"
-                            aria-controls="dropdown-menu"
-                            title="파츠 더보기"
-                          >
-                            Color
-                            <span
-                              class="btn-icon20 icon-down dropdown-icon rotate"
-                              aria-hidden="true"
-                            >
-                            </span>
-                          </button>
-                          <ul
-                            class="dropdown-menu dropdown-on configurator_list"
-                            role="menu"
-                          >
-                            <li role="menuitem">
-                              <input
-                                id="IONIQ_color1"
-                                name="color"
-                                value="blue"
-                                type="radio"
-                              />
-                              <label
-                                for="IONIQ_color1"
-                                class="configurator_label_list"
-                              >
-                                <img
-                                  src="../../inc/images/img/img_config_color1.png"
-                                  loading="lazy"
-                                  alt="파츠 이미지"
-                                />
-                                <p>Performance<br />Blue</p>
-                              </label>
-                            </li>
-                            <li role="menuitem">
-                              <input
-                                id="IONIQ_color2"
-                                name="color"
-                                value="grayPearl"
-                                type="checkbox"
-                              />
-                              <label
-                                for="IONIQ_color2"
-                                class="configurator_label_list"
-                              >
-                                <img
-                                  src="../../inc/images/img/img_config_color2.png"
-                                  loading="lazy"
-                                  alt="파츠 이미지"
-                                />
-                                <p>Ecotronic Gray<br />Pearl</p>
-                              </label>
-                            </li>
-                            <li role="menuitem">
-                              <input
-                                id="IONIQ_color3"
-                                name="color"
-                                value="orangePearl"
-                                type="checkbox"
-                              />
-                              <label
-                                for="IONIQ_color3"
-                                class="configurator_label_list"
-                              >
-                                <img
-                                  src="../../inc/images/img/img_config_color3.png"
-                                  loading="lazy"
-                                  alt="파츠 이미지"
-                                />
-                                <p>Soultronic<br />Orange Pearl</p>
-                              </label>
-                            </li>
-                            <li role="menuitem">
-                              <input
-                                id="IONIQ_color4"
-                                name="color"
-                                value="white"
-                                type="checkbox"
-                              />
-                              <label
-                                for="IONIQ_color4"
-                                class="configurator_label_list"
-                              >
-                                <img
-                                  src="../../inc/images/img/img_config_color4.png"
-                                  loading="lazy"
-                                  alt="파츠 이미지"
-                                />
-                                <p>Atlas<br />White</p>
-                              </label>
-                            </li>
-                            <li role="menuitem">
-                              <input
-                                id="IONIQ_color5"
-                                name="color"
-                                value="blackPearl"
-                                type="checkbox"
-                              />
-                              <label
-                                for="IONIQ_color5"
-                                class="configurator_label_list"
-                              >
-                                <img
-                                  src="../../inc/images/img/img_config_color5.png"
-                                  loading="lazy"
-                                  alt="파츠 이미지"
-                                />
-                                <p>Abyss Black<br />Pearl</p>
-                              </label>
-                            </li>
-                            <li role="menuitem">
-                              <input
-                                id="IONIQ_color6"
-                                name="color"
-                                value="grayMetallic"
-                                type="checkbox"
-                              />
-                              <label
-                                for="IONIQ_color6"
-                                class="configurator_label_list"
-                              >
-                                <img
-                                  src="../../inc/images/img/img_config_color6.png"
-                                  loading="lazy"
-                                  alt="파츠 이미지"
-                                />
-                                <p>Cyber Gray<br />Metallic</p>
-                              </label>
-                            </li>
-                            <li role="menuitem">
-                              <input
-                                id="IONIQ_color7"
-                                name="color"
-                                value="grayMatte"
-                                type="checkbox"
-                              />
-                              <label
-                                for="IONIQ_color7"
-                                class="configurator_label_list"
-                              >
-                                <img
-                                  src="../../inc/images/img/img_config_color7.png"
-                                  loading="lazy"
-                                  alt="파츠 이미지"
-                                />
-                                <p>Ecotronic Gray<br />Matte</p>
-                              </label>
-                            </li>
-                            <li role="menuitem">
-                              <input
-                                id="IONIQ_color8"
-                                name="color"
-                                value="goldMatte"
-                                type="checkbox"
-                              />
-                              <label
-                                for="IONIQ_color8"
-                                class="configurator_label_list"
-                              >
-                                <img
-                                  src="../../inc/images/img/img_config_color8.png"
-                                  loading="lazy"
-                                  alt="파츠 이미지"
-                                />
-                                <p>Gravity Gold<br />Matte</p>
-                              </label>
-                            </li>
-                            <li role="menuitem">
-                              <input
-                                id="IONIQ_color9"
-                                name="color"
-                                value="whiteMatte"
-                                type="checkbox"
-                              />
-                              <label
-                                for="IONIQ_color9"
-                                class="configurator_label_list"
-                              >
-                                <img
-                                  src="../../inc/images/img/img_config_color9.png"
-                                  loading="lazy"
-                                  alt="파츠 이미지"
-                                />
-                                <p>Atlas White<br />Matte</p>
-                              </label>
-                            </li>
-                            <li role="menuitem">
-                              <input
-                                id="IONIQ_color10"
-                                name="color"
-                                value="blueMatte"
-                                type="checkbox"
-                              />
-                              <label
-                                for="IONIQ_color10"
-                                class="configurator_label_list"
-                              >
-                                <img
-                                  src="../../inc/images/img/img_config_color10.png"
-                                  loading="lazy"
-                                  alt="파츠 이미지"
-                                />
-                                <p>Performance<br />Blue Matte</p>
-                              </label>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="dropdown">
-                          <button
-                            class="wrap-dropdown-selected dropdown-btn dropdown-trigger"
-                            aria-haspopup="true"
-                            aria-expanded="true"
-                            aria-controls="dropdown-menu"
-                            title="파츠 더보기"
-                          >
-                            Wheel
-                            <span
-                              class="btn-icon20 icon-down dropdown-icon rotate"
-                              aria-hidden="true"
-                            >
-                            </span>
-                          </button>
-                          <ul class="dropdown-menu dropdown-on" role="menu">
-                            <li role="menuitem">
-                              <input
-                                id="IONIQ_wheel1"
-                                name="wheel"
-                                value="R20W"
-                                type="checkbox"
-                              />
-                              <label
-                                for="IONIQ_wheel1"
-                                class="configurator_label_radio"
-                              >
-                                <div>
-                                  <img
-                                    src="../../inc/images/img/img_config_wheel_white.png"
-                                    loading="lazy"
-                                    alt="파츠 이미지"
-                                  />
-                                </div>
-                                <div>
-                                  <p class="configurator_label_tit">
-                                    BRAID 20inch Lightweight Forged Wheel
-                                    [White]
-                                  </p>
-                                  <p class="configurator_label_price">
-                                    ₩ 5,350,000
-                                  </p>
-                                </div>
-                              </label>
-                            </li>
-                            <li role="menuitem">
-                              <input
-                                id="IONIQ_wheel2"
-                                name="wheel"
-                                value="R20B"
-                                type="checkbox"
-                              />
-                              <label
-                                for="IONIQ_wheel2"
-                                class="configurator_label_radio"
-                              >
-                                <div>
-                                  <img
-                                    src="../../inc/images/img/img_config_wheel_balck.png"
-                                    loading="lazy"
-                                    alt="파츠 이미지"
-                                  />
-                                </div>
-                                <div>
-                                  <p class="configurator_label_tit">
-                                    BRAID 20inch Lightweight Forged Wheel
-                                    [Black]
-                                  </p>
-                                  <p class="configurator_label_price">
-                                    ₩ 5,350,000
-                                  </p>
-                                </div>
-                              </label>
-                            </li>
-                            <li role="menuitem">
-                              <input
-                                id="IONIQ_wheel3"
-                                name="wheel"
-                                value="R21B"
-                                type="checkbox"
-                              />
-                              <label
-                                for="IONIQ_wheel3"
-                                class="configurator_label_radio"
-                              >
-                                <div>
-                                  <img
-                                    src="../../inc/images/img/img_config_wheel_carbon.png"
-                                    loading="lazy"
-                                    alt="파츠 이미지"
-                                  />
-                                </div>
-                                <div>
-                                  <p class="configurator_label_tit">
-                                    Dymag 21inch Carbon Hybrid Wheel
-                                  </p>
-                                  <p class="configurator_label_price">
-                                    ₩ 5,350,000
-                                  </p>
-                                </div>
-                              </label>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="dropdown">
-                          <button
-                            class="wrap-dropdown-selected dropdown-btn dropdown-trigger"
-                            aria-haspopup="true"
-                            aria-expanded="true"
-                            aria-controls="dropdown-menu"
-                            title="파츠 더보기"
-                          >
-                            Tow Strap
-                            <span
-                              class="btn-icon20 icon-down dropdown-icon rotate"
-                              aria-hidden="true"
-                            >
-                            </span>
-                          </button>
-                          <ul class="dropdown-menu dropdown-on" role="menu">
-                            <li role="menuitem">
-                              <input
-                                id="IONIQ_towstrap"
-                                name="towstrap"
-                                value="TOW"
-                                type="checkbox"
-                              />
-                              <label
-                                for="IONIQ_towstrap"
-                                class="configurator_label_radio"
-                              >
-                                <div>
-                                  <img
-                                    src="../../inc/images/img/img_config_towstrap.png"
-                                    loading="lazy"
-                                    alt="파츠 이미지"
-                                  />
-                                </div>
-                                <div>
-                                  <p class="configurator_label_tit">
-                                    Sabelt toe strap
-                                  </p>
-                                  <p class="configurator_label_price">
-                                    ₩ 5,350,000
-                                  </p>
-                                </div>
-                              </label>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <!-- .exterior.ELANTRA -->
-                      <div class="configurator_select_exterior ELANTRA">
-                        <div class="dropdown">
-                          <button
-                            class="wrap-dropdown-selected dropdown-btn dropdown-trigger"
-                            aria-haspopup="true"
-                            aria-expanded="true"
-                            aria-controls="dropdown-menu"
-                            title="파츠 더보기"
-                          >
-                            Color
-                            <span
-                              class="btn-icon20 icon-down dropdown-icon rotate"
-                              aria-hidden="true"
-                            >
-                            </span>
-                          </button>
-                          <ul
-                            class="dropdown-menu dropdown-on configurator_list"
-                            role="menu"
-                          >
-                            <li role="menuitem">
-                              <input
-                                id="ELANTRA_color1"
-                                name="color"
-                                value="blue"
-                                type="checkbox"
-                              />
-                              <label
-                                for="ELANTRA_color1"
-                                class="configurator_label_list"
-                              >
-                                <img
-                                  src="../../inc/images/img/img_config_color1_2.png"
-                                  loading="lazy"
-                                  alt="파츠 이미지"
-                                />
-                                <p>Performance<br />Blue</p>
-                              </label>
-                            </li>
-                            <li role="menuitem">
-                              <input
-                                id="ELANTRA_color2"
-                                name="color"
-                                value="grayPearl"
-                                type="checkbox"
-                              />
-                              <label
-                                for="ELANTRA_color2"
-                                class="configurator_label_list"
-                              >
-                                <img
-                                  src="../../inc/images/img/img_config_color2_2.png"
-                                  loading="lazy"
-                                  alt="파츠 이미지"
-                                />
-                                <p>Atlas<br />White</p>
-                              </label>
-                            </li>
-                            <li role="menuitem">
-                              <input
-                                id="ELANTRA_color3"
-                                name="color"
-                                value="orangePearl"
-                                type="checkbox"
-                              />
-                              <label
-                                for="ELANTRA_color3"
-                                class="configurator_label_list"
-                              >
-                                <img
-                                  src="../../inc/images/img/img_config_color3_2.png"
-                                  loading="lazy"
-                                  alt="파츠 이미지"
-                                />
-                                <p>Ecotronic Gray<br />Pearl</p>
-                              </label>
-                            </li>
-                            <li role="menuitem">
-                              <input
-                                id="ELANTRA_color4"
-                                name="color"
-                                value="white"
-                                type="checkbox"
-                              />
-                              <label
-                                for="ELANTRA_color4"
-                                class="configurator_label_list"
-                              >
-                                <img
-                                  src="../../inc/images/img/img_config_color4_2.png"
-                                  loading="lazy"
-                                  alt="파츠 이미지"
-                                />
-                                <p>Ultimate Red<br />Metallic</p>
-                              </label>
-                            </li>
-                            <li role="menuitem">
-                              <input
-                                id="ELANTRA_color5"
-                                name="color"
-                                value="blackPearl"
-                                type="checkbox"
-                              />
-                              <label
-                                for="ELANTRA_color5"
-                                class="configurator_label_list"
-                              >
-                                <img
-                                  src="../../inc/images/img/img_config_color5_2.png"
-                                  loading="lazy"
-                                  alt="파츠 이미지"
-                                />
-                                <p>Abyss Black<br />Pearl</p>
-                              </label>
-                            </li>
-                            <li role="menuitem">
-                              <input
-                                id="ELANTRA_color6"
-                                name="color"
-                                value="grayMetallic"
-                                type="checkbox"
-                              />
-                              <label
-                                for="ELANTRA_color6"
-                                class="configurator_label_list"
-                              >
-                                <img
-                                  src="../../inc/images/img/img_config_color6_2.png"
-                                  loading="lazy"
-                                  alt="파츠 이미지"
-                                />
-                                <p>Meta Blue<br />Pearl</p>
-                              </label>
-                            </li>
-                            <li role="menuitem">
-                              <input
-                                id="ELANTRA_color7"
-                                name="color"
-                                value="grayMatte"
-                                type="checkbox"
-                              />
-                              <label
-                                for="ELANTRA_color7"
-                                class="configurator_label_list"
-                              >
-                                <img
-                                  src="../../inc/images/img/img_config_color7_2.png"
-                                  loading="lazy"
-                                  alt="파츠 이미지"
-                                />
-                                <p>Cyber Gray<br />Metallic</p>
-                              </label>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="dropdown">
-                          <button
-                            class="wrap-dropdown-selected dropdown-btn dropdown-trigger"
-                            aria-haspopup="true"
-                            aria-expanded="true"
-                            aria-controls="dropdown-menu"
-                            title="파츠 더보기"
-                          >
-                            Wheel
-                            <span
-                              class="btn-icon20 icon-down dropdown-icon rotate"
-                              aria-hidden="true"
-                            >
-                            </span>
-                          </button>
-                          <ul class="dropdown-menu dropdown-on" role="menu">
-                            <li role="menuitem">
-                              <input
-                                id="ELANTRA_wheel1"
-                                name="wheel"
-                                value="wheel1"
-                                type="checkbox"
-                              />
-                              <label
-                                for="ELANTRA_wheel1"
-                                class="configurator_label_radio"
-                              >
-                                <div>
-                                  <img
-                                    src="../../inc/images/img/img_config_elantra_wheel1.png"
-                                    loading="lazy"
-                                    alt="파츠 이미지"
-                                  />
-                                </div>
-                                <div>
-                                  <p class="configurator_label_tit">
-                                    18-inch forged wheels - matte black18-inch
-                                    forged wheels - matte black18-inch forged
-                                    wheels - matte black18-inch forged wheels -
-                                    matte black
-                                  </p>
-                                  <p class="configurator_label_price">
-                                    ₩ 5,350,000
-                                  </p>
-                                </div>
-                              </label>
-                            </li>
-                            <li role="menuitem">
-                              <input
-                                id="ELANTRA_wheel2"
-                                name="wheel"
-                                value="wheel2"
-                                type="checkbox"
-                              />
-                              <label
-                                for="ELANTRA_wheel2"
-                                class="configurator_label_radio"
-                              >
-                                <div>
-                                  <img
-                                    src="../../inc/images/img/img_config_elantra_wheel2.png"
-                                    loading="lazy"
-                                    alt="파츠 이미지"
-                                  />
-                                </div>
-                                <div>
-                                  <p class="configurator_label_tit">
-                                    Black matte forged wheels
-                                  </p>
-                                  <p class="configurator_label_price">
-                                    ₩ 5,350,000
-                                  </p>
-                                </div>
-                              </label>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="dropdown">
-                          <button
-                            class="wrap-dropdown-selected dropdown-btn dropdown-trigger"
-                            aria-haspopup="true"
-                            aria-expanded="true"
-                            aria-controls="dropdown-menu"
-                            title="파츠 더보기"
-                          >
-                            Brake
-                            <span
-                              class="btn-icon20 icon-down dropdown-icon rotate"
-                              aria-hidden="true"
-                            >
-                            </span>
-                          </button>
-                          <ul class="dropdown-menu dropdown-on" role="menu">
-                            <li role="menuitem">
-                              <input
-                                id="ELANTRA_brake"
-                                name="brake"
-                                value="brake"
-                                type="checkbox"
-                              />
-                              <label
-                                for="ELANTRA_brake"
-                                class="configurator_label_radio"
-                              >
-                                <div>
-                                  <img
-                                    src="../../inc/images/img/img_config_brake.png"
-                                    loading="lazy"
-                                    alt="파츠 이미지"
-                                  />
-                                </div>
-                                <div>
-                                  <p class="configurator_label_tit">
-                                    Brake system
-                                  </p>
-                                  <p class="configurator_label_price">
-                                    ₩ 5,350,000
-                                  </p>
-                                </div>
-                              </label>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="dropdown">
-                          <button
-                            class="wrap-dropdown-selected dropdown-btn dropdown-trigger"
-                            aria-haspopup="true"
-                            aria-expanded="true"
-                            aria-controls="dropdown-menu"
-                            title="파츠 더보기"
-                          >
-                            Spoiler
-                            <span
-                              class="btn-icon20 icon-down dropdown-icon rotate"
-                              aria-hidden="true"
-                            >
-                            </span>
-                          </button>
-                          <ul class="dropdown-menu dropdown-on" role="menu">
-                            <li role="menuitem">
-                              <input
-                                id="ELANTRA_spoiler"
-                                name="spoiler"
-                                value="spoiler"
-                                type="checkbox"
-                              />
-                              <label
-                                for="ELANTRA_spoiler"
-                                class="configurator_label_radio"
-                              >
-                                <div>
-                                  <img
-                                    src="../../inc/images/img/img_config_spoiler.png"
-                                    loading="lazy"
-                                    alt="파츠 이미지"
-                                  />
-                                </div>
-                                <div>
-                                  <p class="configurator_label_tit">
-                                    Carbon side mirror
-                                  </p>
-                                  <p class="configurator_label_price">
-                                    ₩ 5,350,000
-                                  </p>
-                                </div>
-                              </label>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="dropdown">
-                          <button
-                            class="wrap-dropdown-selected dropdown-btn dropdown-trigger"
-                            aria-haspopup="true"
-                            aria-expanded="true"
-                            aria-controls="dropdown-menu"
-                            title="파츠 더보기"
-                          >
-                            Side Mirror
-                            <span
-                              class="btn-icon20 icon-down dropdown-icon rotate"
-                              aria-hidden="true"
-                            >
-                            </span>
-                          </button>
-                          <ul class="dropdown-menu dropdown-on" role="menu">
-                            <li role="menuitem">
-                              <input
-                                id="ELANTRA_sideMirror"
-                                name="sideMirror"
-                                value="sideMirror"
-                                type="checkbox"
-                              />
-                              <label
-                                for="ELANTRA_sideMirror"
-                                class="configurator_label_radio"
-                              >
-                                <div>
-                                  <img
-                                    src="../../inc/images/img/img_config_sidemirror.png"
-                                    loading="lazy"
-                                    alt="파츠 이미지"
-                                  />
-                                </div>
-                                <div>
-                                  <p class="configurator_label_tit">
-                                    Carbon side mirror
-                                  </p>
-                                  <p class="configurator_label_price">
-                                    ₩ 5,350,000
-                                  </p>
-                                </div>
-                              </label>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="dropdown">
-                          <button
-                            class="wrap-dropdown-selected dropdown-btn dropdown-trigger"
-                            aria-haspopup="true"
-                            aria-expanded="true"
-                            aria-controls="dropdown-menu"
-                            title="파츠 더보기"
-                          >
-                            Rear Muffler Tip
-                            <span
-                              class="btn-icon20 icon-down dropdown-icon rotate"
-                              aria-hidden="true"
-                            >
-                            </span>
-                          </button>
-                          <ul class="dropdown-menu dropdown-on" role="menu">
-                            <li role="menuitem">
-                              <input
-                                id="ELANTRA_rearMufflerTip"
-                                name="rearMufflerTip"
-                                value="rearMufflerTip"
-                                type="checkbox"
-                              />
-                              <label
-                                for="ELANTRA_rearMufflerTip"
-                                class="configurator_label_radio"
-                              >
-                                <div>
-                                  <img
-                                    src="../../inc/images/img/img_config_muffler.png"
-                                    loading="lazy"
-                                    alt="파츠 이미지"
-                                  />
-                                </div>
-                                <div>
-                                  <p class="configurator_label_tit">
-                                    Carbon rear muffler tip
-                                  </p>
-                                  <p class="configurator_label_price">
-                                    ₩ 5,350,000
-                                  </p>
-                                </div>
-                              </label>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="dropdown">
-                          <button
-                            class="wrap-dropdown-selected dropdown-btn dropdown-trigger"
-                            aria-haspopup="true"
-                            aria-expanded="true"
-                            aria-controls="dropdown-menu"
-                            title="파츠 더보기"
-                          >
-                            Towstrap
-                            <span
-                              class="btn-icon20 icon-down dropdown-icon rotate"
-                              aria-hidden="true"
-                            >
-                            </span>
-                          </button>
-                          <ul class="dropdown-menu dropdown-on" role="menu">
-                            <li role="menuitem">
-                              <input
-                                id="ELANTRA_towstrap"
-                                name="towstrap"
-                                value="towstrap"
-                                type="checkbox"
-                              />
-                              <label
-                                for="ELANTRA_towstrap"
-                                class="configurator_label_radio"
-                              >
-                                <div>
-                                  <img
-                                    src="../../inc/images/img/img_config_towstrap_elantra.png"
-                                    loading="lazy"
-                                    alt="파츠 이미지"
-                                  />
-                                </div>
-                                <div>
-                                  <p class="configurator_label_tit">
-                                    Sabelt towstrap
-                                  </p>
-                                  <p class="configurator_label_price">
-                                    ₩ 5,350,000
-                                  </p>
-                                </div>
-                              </label>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <!-- interior 파츠 선택 영역 / .configurator_menu_interior on 시 노출 -->
-                      <!-- .interior.IONIQ -->
-                      <div class="configurator_select_interior IONIQ">
-                        <div class="dropdown">
-                          <button
-                            class="wrap-dropdown-selected dropdown-btn dropdown-trigger"
-                            aria-haspopup="true"
-                            aria-expanded="true"
-                            aria-controls="dropdown-menu"
-                            title="파츠 더보기"
-                          >
-                            Color
-                            <span
-                              class="btn-icon20 icon-down dropdown-icon rotate"
-                              aria-hidden="true"
-                            >
-                            </span>
-                          </button>
-                          <ul class="dropdown-menu dropdown-on" role="menu">
-                            <li role="menuitem">
-                              <input
-                                id="IONIQ_color_interior"
-                                name="color"
-                                value="blue"
-                                type="checkbox"
-                              />
-                              <label
-                                for="IONIQ_color_interior"
-                                class="configurator_label_list"
-                              >
-                                <img
-                                  src="../../inc/images/img/img_config_color_interior.png"
-                                  loading="lazy"
-                                  alt="파츠 이미지"
-                                />
-                                <p>Black Monotone</p>
-                              </label>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="dropdown">
-                          <button
-                            class="wrap-dropdown-selected dropdown-btn dropdown-trigger"
-                            aria-haspopup="true"
-                            aria-expanded="true"
-                            aria-controls="dropdown-menu"
-                            title="파츠 더보기"
-                          >
-                            Transmission
-                            <span
-                              class="btn-icon20 icon-down dropdown-icon rotate"
-                              aria-hidden="true"
-                            >
-                            </span>
-                          </button>
-                          <ul class="dropdown-menu dropdown-on" role="menu">
-                            <li role="menuitem">
-                              <input
-                                id="IONIQ_transmission1"
-                                name="transmission"
-                                value="transmission1"
-                                type="checkbox"
-                              />
-                              <label
-                                for="IONIQ_transmission1"
-                                class="configurator_label_radio"
-                              >
-                                <div>
-                                  <p class="configurator_label_tit">
-                                    8-speed DCT
-                                  </p>
-                                </div>
-                              </label>
-                            </li>
-                            <li role="menuitem">
-                              <input
-                                id="IONIQ_transmission2"
-                                name="transmission"
-                                value="transmission2"
-                                type="checkbox"
-                              />
-                              <label
-                                for="IONIQ_transmission2"
-                                class="configurator_label_radio"
-                              >
-                                <div>
-                                  <p class="configurator_label_tit">
-                                    4 manual 6-speed
-                                  </p>
-                                </div>
-                              </label>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="dropdown">
-                          <button
-                            class="wrap-dropdown-selected dropdown-btn dropdown-trigger"
-                            aria-haspopup="true"
-                            aria-expanded="true"
-                            aria-controls="dropdown-menu"
-                            title="파츠 더보기"
-                          >
-                            Alcantara Package
-                            <span
-                              class="btn-icon20 icon-down dropdown-icon rotate"
-                              aria-hidden="true"
-                            >
-                            </span>
-                          </button>
-                          <ul class="dropdown-menu dropdown-on" role="menu">
-                            <li role="menuitem">
-                              <input
-                                id="IONIQ_alcantaraPackage1"
-                                name="alcantaraPackage1"
-                                value="alcantaraPackage1"
-                                type="checkbox"
-                              />
-                              <label
-                                for="IONIQ_alcantaraPackage1"
-                                class="configurator_label_radio"
-                              >
-                                <div>
-                                  <img
-                                    src="../../inc/images/img/img_config_alcantara1.png"
-                                    loading="lazy"
-                                    alt="파츠 이미지"
-                                  />
-                                </div>
-                                <div>
-                                  <p class="configurator_label_tit">
-                                    Alcantara package - DCT
-                                  </p>
-                                  <p class="configurator_label_price">
-                                    ₩ 5,350,000
-                                  </p>
-                                </div>
-                              </label>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="dropdown none">
-                          <button
-                            class="wrap-dropdown-selected dropdown-btn dropdown-trigger"
-                            aria-haspopup="true"
-                            aria-expanded="true"
-                            aria-controls="dropdown-menu"
-                            title="파츠 더보기"
-                          >
-                            Alcantara Package
-                            <span
-                              class="btn-icon20 icon-down dropdown-icon rotate"
-                              aria-hidden="true"
-                            >
-                            </span>
-                          </button>
-                          <ul class="dropdown-menu dropdown-on" role="menu">
-                            <li role="menuitem">
-                              <input
-                                id="IONIQ_alcantaraPackage2"
-                                name="alcantaraPackage2"
-                                value="alcantaraPackage2"
-                                type="checkbox"
-                              />
-                              <label
-                                for="IONIQ_alcantaraPackage2"
-                                class="configurator_label_radio"
-                              >
-                                <div>
-                                  <img
-                                    src="../../inc/images/img/img_config_alcantara2.png"
-                                    loading="lazy"
-                                    alt="파츠 이미지"
-                                  />
-                                </div>
-                                <div>
-                                  <p class="configurator_label_tit">
-                                    Alcantara Package (MT)
-                                  </p>
-                                  <p class="configurator_label_price">
-                                    ₩ 5,350,000
-                                  </p>
-                                </div>
-                              </label>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="dropdown">
-                          <button
-                            class="wrap-dropdown-selected dropdown-btn dropdown-trigger"
-                            aria-haspopup="true"
-                            aria-expanded="true"
-                            aria-controls="dropdown-menu"
-                            title="파츠 더보기"
-                          >
-                            Car Mat
-                            <span
-                              class="btn-icon20 icon-down dropdown-icon rotate"
-                              aria-hidden="true"
-                            >
-                            </span>
-                          </button>
-                          <ul class="dropdown-menu dropdown-on" role="menu">
-                            <li role="menuitem">
-                              <input
-                                id="IONIQ_carMat"
-                                name="carMat"
-                                value="NFM"
-                                type="checkbox"
-                              />
-                              <label
-                                for="IONIQ_carMat"
-                                class="configurator_label_radio"
-                              >
-                                <div>
-                                  <img
-                                    src="../../inc/images/img/img_config_mat.png"
-                                    loading="lazy"
-                                    alt="파츠 이미지"
-                                  />
-                                </div>
-                                <div>
-                                  <p class="configurator_label_tit">
-                                    N Performance Mats
-                                  </p>
-                                  <p class="configurator_label_price">
-                                    ₩ 5,350,000
-                                  </p>
-                                </div>
-                              </label>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="dropdown">
-                          <button
-                            class="wrap-dropdown-selected dropdown-btn dropdown-trigger"
-                            aria-haspopup="true"
-                            aria-expanded="true"
-                            aria-controls="dropdown-menu"
-                            title="파츠 더보기"
-                          >
-                            Door Scuff
-                            <span
-                              class="btn-icon20 icon-down dropdown-icon rotate"
-                              aria-hidden="true"
-                            >
-                            </span>
-                          </button>
-                          <ul class="dropdown-menu dropdown-on" role="menu">
-                            <li role="menuitem">
-                              <input
-                                id="IONIQ_doorScuff"
-                                name="doorScuff"
-                                value="NSP"
-                                type="checkbox"
-                              />
-                              <label
-                                for="IONIQ_doorScuff"
-                                class="configurator_label_radio"
-                              >
-                                <div>
-                                  <img
-                                    src="../../inc/images/img/img_config_door.png"
-                                    loading="lazy"
-                                    alt="파츠 이미지"
-                                  />
-                                </div>
-                                <div>
-                                  <p class="configurator_label_tit">
-                                    Metal Door Scuff
-                                  </p>
-                                  <p class="configurator_label_price">
-                                    ₩ 5,350,000
-                                  </p>
-                                </div>
-                              </label>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="dropdown">
-                          <button
-                            class="wrap-dropdown-selected dropdown-btn dropdown-trigger"
-                            aria-haspopup="true"
-                            aria-expanded="true"
-                            aria-controls="dropdown-menu"
-                            title="파츠 더보기"
-                          >
-                            Steering Wheel
-                            <span
-                              class="btn-icon20 icon-down dropdown-icon rotate"
-                              aria-hidden="true"
-                            >
-                            </span>
-                          </button>
-                          <ul class="dropdown-menu dropdown-on" role="menu">
-                            <li role="menuitem">
-                              <input
-                                id="IONIQ_steeringWheel"
-                                name="steeringWheel"
-                                value="ASW"
-                                type="checkbox"
-                              />
-                              <label
-                                for="IONIQ_steeringWheel"
-                                class="configurator_label_radio"
-                              >
-                                <div>
-                                  <img
-                                    src="../../inc/images/img/img_config_steering.png"
-                                    loading="lazy"
-                                    alt="파츠 이미지"
-                                  />
-                                </div>
-                                <div>
-                                  <p class="configurator_label_tit">
-                                    Alcantara Steering Wheel
-                                  </p>
-                                  <p class="configurator_label_price">
-                                    ₩ 5,350,000
-                                  </p>
-                                </div>
-                              </label>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="dropdown">
-                          <button
-                            class="wrap-dropdown-selected dropdown-btn dropdown-trigger"
-                            aria-haspopup="true"
-                            aria-expanded="true"
-                            aria-controls="dropdown-menu"
-                            title="파츠 더보기"
-                          >
-                            Seat Belt
-                            <span
-                              class="btn-icon20 icon-down dropdown-icon rotate"
-                              aria-hidden="true"
-                            >
-                            </span>
-                          </button>
-                          <ul class="dropdown-menu dropdown-on" role="menu">
-                            <li role="menuitem">
-                              <input
-                                id="IONIQ_seatBelt1"
-                                name="seatBelt"
-                                value="4PSB"
-                                type="checkbox"
-                              />
-                              <label
-                                for="IONIQ_seatBelt1"
-                                class="configurator_label_radio"
-                              >
-                                <div>
-                                  <img
-                                    src="../../inc/images/img/img_config_belt_4p.png"
-                                    loading="lazy"
-                                    alt="파츠 이미지"
-                                  />
-                                </div>
-                                <div>
-                                  <p class="configurator_label_tit">
-                                    Sabelt 4-Point Harness
-                                  </p>
-                                  <p class="configurator_label_price">
-                                    ₩ 5,350,000
-                                  </p>
-                                </div>
-                              </label>
-                            </li>
-                            <li role="menuitem">
-                              <input
-                                id="IONIQ_seatBelt2"
-                                name="seatBelt"
-                                value="6PSB"
-                                type="checkbox"
-                              />
-                              <label
-                                for="IONIQ_seatBelt2"
-                                class="configurator_label_radio"
-                              >
-                                <div>
-                                  <img
-                                    src="../../inc/images/img/img_config_belt_6p.png"
-                                    loading="lazy"
-                                    alt="파츠 이미지"
-                                  />
-                                </div>
-                                <div>
-                                  <p class="configurator_label_tit">
-                                    Sabelt 6-Point Harness
-                                  </p>
-                                  <p class="configurator_label_price">
-                                    ₩ 5,350,000
-                                  </p>
-                                </div>
-                              </label>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <!-- .interior.ELANTRA -->
-                      <div class="configurator_select_interior ELANTRA">
-                        <div class="dropdown">
-                          <button
-                            class="wrap-dropdown-selected dropdown-btn dropdown-trigger"
-                            aria-haspopup="true"
-                            aria-expanded="true"
-                            aria-controls="dropdown-menu"
-                            title="파츠 더보기"
-                          >
-                            Color
-                            <span
-                              class="btn-icon20 icon-down dropdown-icon rotate"
-                              aria-hidden="true"
-                            >
-                            </span>
-                          </button>
-                          <ul class="dropdown-menu dropdown-on" role="menu">
-                            <li role="menuitem">
-                              <input
-                                id="ELANTRA_color_interior"
-                                name="color"
-                                value="blue"
-                                type="checkbox"
-                              />
-                              <label
-                                for="ELANTRA_color_interior"
-                                class="configurator_label_list"
-                              >
-                                <img
-                                  src="../../inc/images/img/img_config_color_interior_2.png"
-                                  loading="lazy"
-                                  alt="파츠 이미지"
-                                />
-                                <p>Black one-tone</p>
-                              </label>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="dropdown">
-                          <button
-                            class="wrap-dropdown-selected dropdown-btn dropdown-trigger"
-                            aria-haspopup="true"
-                            aria-expanded="true"
-                            aria-controls="dropdown-menu"
-                            title="파츠 더보기"
-                          >
-                            Transmission
-                            <span
-                              class="btn-icon20 icon-down dropdown-icon rotate"
-                              aria-hidden="true"
-                            >
-                            </span>
-                          </button>
-                          <ul class="dropdown-menu dropdown-on" role="menu">
-                            <li role="menuitem">
-                              <input
-                                id="ELANTRA_transmission1"
-                                name="transmission"
-                                value="transmission1"
-                                type="checkbox"
-                              />
-                              <label
-                                for="ELANTRA_transmission1"
-                                class="configurator_label_radio"
-                              >
-                                <div>
-                                  <p class="configurator_label_tit">
-                                    8-speed DCT
-                                  </p>
-                                </div>
-                              </label>
-                            </li>
-                            <li role="menuitem">
-                              <input
-                                id="ELANTRA_transmission2"
-                                name="transmission"
-                                value="transmission2"
-                                type="checkbox"
-                              />
-                              <label
-                                for="ELANTRA_transmission2"
-                                class="configurator_label_radio"
-                              >
-                                <div>
-                                  <p class="configurator_label_tit">
-                                    4 manual 6-speed
-                                  </p>
-                                </div>
-                              </label>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="dropdown">
-                          <button
-                            class="wrap-dropdown-selected dropdown-btn dropdown-trigger"
-                            aria-haspopup="true"
-                            aria-expanded="true"
-                            aria-controls="dropdown-menu"
-                            title="파츠 더보기"
-                          >
-                            Alcantara Package
-                            <span
-                              class="btn-icon20 icon-down dropdown-icon rotate"
-                              aria-hidden="true"
-                            >
-                            </span>
-                          </button>
-                          <ul class="dropdown-menu dropdown-on" role="menu">
-                            <li role="menuitem">
-                              <input
-                                id="ELANTRA_alcantaraPackage1"
-                                name="alcantaraPackage1"
-                                value="alcantaraPackage1"
-                                type="checkbox"
-                              />
-                              <label
-                                for="ELANTRA_alcantaraPackage1"
-                                class="configurator_label_radio"
-                              >
-                                <div>
-                                  <img
-                                    src="../../inc/images/img/img_config_alcantara1.png"
-                                    loading="lazy"
-                                    alt="파츠 이미지"
-                                  />
-                                </div>
-                                <div>
-                                  <p class="configurator_label_tit">
-                                    Alcantara Package (AT)
-                                  </p>
-                                  <p class="configurator_label_price">
-                                    ₩ 5,350,000
-                                  </p>
-                                </div>
-                              </label>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="dropdown none">
-                          <button
-                            class="wrap-dropdown-selected dropdown-btn dropdown-trigger"
-                            aria-haspopup="true"
-                            aria-expanded="true"
-                            aria-controls="dropdown-menu"
-                            title="파츠 더보기"
-                          >
-                            Alcantara Package
-                            <span
-                              class="btn-icon20 icon-down dropdown-icon rotate"
-                              aria-hidden="true"
-                            >
-                            </span>
-                          </button>
-                          <ul class="dropdown-menu dropdown-on" role="menu">
-                            <li role="menuitem">
-                              <input
-                                id="ELANTRA_alcantaraPackage2"
-                                name="alcantaraPackage2"
-                                value="alcantaraPackage2"
-                                type="checkbox"
-                              />
-                              <label
-                                for="ELANTRA_alcantaraPackage2"
-                                class="configurator_label_radio"
-                              >
-                                <div>
-                                  <img
-                                    src="../../inc/images/img/img_config_alcantara2.png"
-                                    loading="lazy"
-                                    alt="파츠 이미지"
-                                  />
-                                </div>
-                                <div>
-                                  <p class="configurator_label_tit">
-                                    Alcantara Package (MT)
-                                  </p>
-                                  <p class="configurator_label_price">
-                                    ₩ 5,350,000
-                                  </p>
-                                </div>
-                              </label>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="dropdown">
-                          <button
-                            class="wrap-dropdown-selected dropdown-btn dropdown-trigger"
-                            aria-haspopup="true"
-                            aria-expanded="true"
-                            aria-controls="dropdown-menu"
-                            title="파츠 더보기"
-                          >
-                            Car Mat
-                            <span
-                              class="btn-icon20 icon-down dropdown-icon rotate"
-                              aria-hidden="true"
-                            >
-                            </span>
-                          </button>
-                          <ul class="dropdown-menu dropdown-on" role="menu">
-                            <li role="menuitem">
-                              <input
-                                id="ELANTRA_carMat"
-                                name="carMat"
-                                value="carMat"
-                                type="checkbox"
-                              />
-                              <label
-                                for="ELANTRA_carMat"
-                                class="configurator_label_radio"
-                              >
-                                <div>
-                                  <img
-                                    src="../../inc/images/img/img_config_elantra_mat.png"
-                                    loading="lazy"
-                                    alt="파츠 이미지"
-                                  />
-                                </div>
-                                <div>
-                                  <p class="configurator_label_tit">
-                                    N Performance Mats
-                                  </p>
-                                  <p class="configurator_label_price">
-                                    ₩ 5,350,000
-                                  </p>
-                                </div>
-                              </label>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="dropdown">
-                          <button
-                            class="wrap-dropdown-selected dropdown-btn dropdown-trigger"
-                            aria-haspopup="true"
-                            aria-expanded="true"
-                            aria-controls="dropdown-menu"
-                            title="파츠 더보기"
-                          >
-                            Door Scuff
-                            <span
-                              class="btn-icon20 icon-down dropdown-icon rotate"
-                              aria-hidden="true"
-                            >
-                            </span>
-                          </button>
-                          <ul class="dropdown-menu dropdown-on" role="menu">
-                            <li role="menuitem">
-                              <input
-                                id="ELANTRA_doorScuff"
-                                name="doorScuff"
-                                value="doorScuff"
-                                type="checkbox"
-                              />
-                              <label
-                                for="ELANTRA_doorScuff"
-                                class="configurator_label_radio"
-                              >
-                                <div>
-                                  <img
-                                    src="../../inc/images/img/img_config_elantra_mat.png"
-                                    loading="lazy"
-                                    alt="파츠 이미지"
-                                  />
-                                </div>
-                                <div>
-                                  <p class="configurator_label_tit">
-                                    Metal Door Scuff
-                                  </p>
-                                  <p class="configurator_label_price">
-                                    ₩ 5,350,000
-                                  </p>
-                                </div>
-                              </label>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="dropdown">
-                          <button
-                            class="wrap-dropdown-selected dropdown-btn dropdown-trigger"
-                            aria-haspopup="true"
-                            aria-expanded="true"
-                            aria-controls="dropdown-menu"
-                            title="파츠 더보기"
-                          >
-                            Seat Belt
-                            <span
-                              class="btn-icon20 icon-down dropdown-icon rotate"
-                              aria-hidden="true"
-                            >
-                            </span>
-                          </button>
-                          <ul class="dropdown-menu dropdown-on" role="menu">
-                            <li role="menuitem">
-                              <input
-                                id="ELANTRA_seatBelt1"
-                                name="seatBelt"
-                                value="seatBelt1"
-                                type="checkbox"
-                              />
-                              <label
-                                for="ELANTRA_seatBelt1"
-                                class="configurator_label_radio"
-                              >
-                                <div>
-                                  <img
-                                    src="../../inc/images/img/img_config_belt_4p.png"
-                                    loading="lazy"
-                                    alt="파츠 이미지"
-                                  />
-                                </div>
-                                <div>
-                                  <p class="configurator_label_tit">
-                                    Sabelt 4-Point Harness
-                                  </p>
-                                  <p class="configurator_label_price">
-                                    ₩ 5,350,000
-                                  </p>
-                                </div>
-                              </label>
-                            </li>
-                            <li role="menuitem">
-                              <input
-                                id="ELANTRA_seatBelt2"
-                                name="seatBelt"
-                                value="seatBelt2"
-                                type="checkbox"
-                              />
-                              <label
-                                for="ELANTRA_seatBelt2"
-                                class="configurator_label_radio"
-                              >
-                                <div>
-                                  <img
-                                    src="../../inc/images/img/img_config_belt_6p.png"
-                                    loading="lazy"
-                                    alt="파츠 이미지"
-                                  />
-                                </div>
-                                <div>
-                                  <p class="configurator_label_tit">
-                                    Sabelt 6-Point Harness
-                                  </p>
-                                  <p class="configurator_label_price">
-                                    ₩ 5,350,000
-                                  </p>
-                                </div>
-                              </label>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <!-- summary 파츠 선택 영역 / .configurator_menu_summary on 시 노출 -->
-                      <!-- .summary.IONIQ -->
-                      <div class="configurator_select_summary IONIQ">
-                        <p class="configurator_summary_tit">Exterior</p>
-                        <ul class="configurator_summary_list">
-                          <li>
-                            <div class="configurator_summary_list_top">
-                              <p class="configurator_summary_parts">Color</p>
-                              <div>
-                                <button type="button" class="btn txt-btn">
-                                  <span
-                                    class="btn-icon20 icon-change-gray"
-                                    aria-hidden="true"
-                                  ></span>
-                                  <span class="visually-hidden">Change</span>
-                                </button>
-                              </div>
-                            </div>
-                            <div class="configurator_summary_list_bottom">
-                              <img
-                                class="configurator_summary_img"
-                                src="../../inc/images/img/img_config_color1.png"
-                                loading="lazy"
-                                alt="옵션 썸네일 이미지"
-                              />
-                              <div>
-                                <p class="configurator_summary_item">
-                                  Performance Blue
-                                </p>
-                                <p class="configurator_summary_price">₩ 0</p>
-                              </div>
-                            </div>
+                  <!-- //swiper-container -->
+                </div>
+                <!-- input type checkbox/radio인 경우 클래스 따로 없고 li.menuitem 내부의 인풋 타입만 바꿔주시면 됩니다. -->
+                <div class="configurator_select_wrap">
+                  <div class="configurator_select_area">
+                    <!-- exterior 파츠 선택 영역 / .configurator_menu_exterior on 시 노출 -->
+                    <!-- .exterior.IONIQ -->
+                    <div class="configurator_select_exterior IONIQ">
+                      <div class="dropdown">
+                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger" aria-haspopup="true"
+                          aria-expanded="true" aria-controls="dropdown-menu" title="파츠 더보기">
+                          Color
+                          <span class="btn-icon20 icon-down dropdown-icon rotate" aria-hidden="true">
+                          </span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-on configurator_list" role="menu">
+                          <li role="menuitem">
+                            <input id="IONIQ_color1" name="color" value="blue" type="radio" />
+                            <label for="IONIQ_color1" class="configurator_label_list">
+                              <img src="../../inc/images/img/img_config_color1.png" loading="lazy" alt="파츠 이미지" />
+                              <p>Performance<br />Blue</p>
+                            </label>
                           </li>
-                          <li>
-                            <div class="configurator_summary_list_top">
-                              <p class="configurator_summary_parts">Wheel</p>
-                              <div>
-                                <button type="button" class="btn txt-btn">
-                                  <span
-                                    class="btn-icon20 icon-change-gray"
-                                    aria-hidden="true"
-                                  ></span>
-                                  <span class="visually-hidden">Change</span>
-                                </button>
-                                <button type="button" class="btn txt-btn">
-                                  <span
-                                    class="btn-icon20 icon-close-gray"
-                                    aria-hidden="true"
-                                  ></span>
-                                  <span class="visually-hidden">Delete</span>
-                                </button>
-                              </div>
-                            </div>
-                            <div class="configurator_summary_list_bottom">
-                              <img
-                                class="configurator_summary_img"
-                                src="../../inc/images/img/img_config_wheel_white.png"
-                                loading="lazy"
-                                alt="옵션 썸네일 이미지"
-                              />
-                              <div>
-                                <p class="configurator_summary_item">
-                                  Braid 20-inch lightweight forged wheel - white
-                                </p>
-                                <p class="configurator_summary_price">
-                                  ₩ 5,350,000
-                                </p>
-                              </div>
-                            </div>
+                          <li role="menuitem">
+                            <input id="IONIQ_color2" name="color" value="grayPearl" type="checkbox" />
+                            <label for="IONIQ_color2" class="configurator_label_list">
+                              <img src="../../inc/images/img/img_config_color2.png" loading="lazy" alt="파츠 이미지" />
+                              <p>Ecotronic Gray<br />Pearl</p>
+                            </label>
                           </li>
-                          <li>
-                            <div class="configurator_summary_list_top">
-                              <p class="configurator_summary_parts">Towstrap</p>
-                              <div>
-                                <button type="button" class="btn txt-btn">
-                                  <span
-                                    class="btn-icon20 icon-close-gray"
-                                    aria-hidden="true"
-                                  ></span>
-                                  <span class="visually-hidden">Delete</span>
-                                </button>
-                              </div>
-                            </div>
-                            <div class="configurator_summary_list_bottom">
-                              <img
-                                class="configurator_summary_img"
-                                src="../../inc/images/img/img_config_towstrap.png"
-                                loading="lazy"
-                                alt="옵션 썸네일 이미지"
-                              />
-                              <div>
-                                <p class="configurator_summary_item">
-                                  Sabelt toe strap
-                                </p>
-                                <p class="configurator_summary_price">
-                                  ₩ 5,350,000
-                                </p>
-                              </div>
-                            </div>
+                          <li role="menuitem">
+                            <input id="IONIQ_color3" name="color" value="orangePearl" type="checkbox" />
+                            <label for="IONIQ_color3" class="configurator_label_list">
+                              <img src="../../inc/images/img/img_config_color3.png" loading="lazy" alt="파츠 이미지" />
+                              <p>Soultronic<br />Orange Pearl</p>
+                            </label>
+                          </li>
+                          <li role="menuitem">
+                            <input id="IONIQ_color4" name="color" value="white" type="checkbox" />
+                            <label for="IONIQ_color4" class="configurator_label_list">
+                              <img src="../../inc/images/img/img_config_color4.png" loading="lazy" alt="파츠 이미지" />
+                              <p>Atlas<br />White</p>
+                            </label>
+                          </li>
+                          <li role="menuitem">
+                            <input id="IONIQ_color5" name="color" value="blackPearl" type="checkbox" />
+                            <label for="IONIQ_color5" class="configurator_label_list">
+                              <img src="../../inc/images/img/img_config_color5.png" loading="lazy" alt="파츠 이미지" />
+                              <p>Abyss Black<br />Pearl</p>
+                            </label>
+                          </li>
+                          <li role="menuitem">
+                            <input id="IONIQ_color6" name="color" value="grayMetallic" type="checkbox" />
+                            <label for="IONIQ_color6" class="configurator_label_list">
+                              <img src="../../inc/images/img/img_config_color6.png" loading="lazy" alt="파츠 이미지" />
+                              <p>Cyber Gray<br />Metallic</p>
+                            </label>
+                          </li>
+                          <li role="menuitem">
+                            <input id="IONIQ_color7" name="color" value="grayMatte" type="checkbox" />
+                            <label for="IONIQ_color7" class="configurator_label_list">
+                              <img src="../../inc/images/img/img_config_color7.png" loading="lazy" alt="파츠 이미지" />
+                              <p>Ecotronic Gray<br />Matte</p>
+                            </label>
+                          </li>
+                          <li role="menuitem">
+                            <input id="IONIQ_color8" name="color" value="goldMatte" type="checkbox" />
+                            <label for="IONIQ_color8" class="configurator_label_list">
+                              <img src="../../inc/images/img/img_config_color8.png" loading="lazy" alt="파츠 이미지" />
+                              <p>Gravity Gold<br />Matte</p>
+                            </label>
+                          </li>
+                          <li role="menuitem">
+                            <input id="IONIQ_color9" name="color" value="whiteMatte" type="checkbox" />
+                            <label for="IONIQ_color9" class="configurator_label_list">
+                              <img src="../../inc/images/img/img_config_color9.png" loading="lazy" alt="파츠 이미지" />
+                              <p>Atlas White<br />Matte</p>
+                            </label>
+                          </li>
+                          <li role="menuitem">
+                            <input id="IONIQ_color10" name="color" value="blueMatte" type="checkbox" />
+                            <label for="IONIQ_color10" class="configurator_label_list">
+                              <img src="../../inc/images/img/img_config_color10.png" loading="lazy" alt="파츠 이미지" />
+                              <p>Performance<br />Blue Matte</p>
+                            </label>
                           </li>
                         </ul>
-                        <p class="configurator_summary_tit">Interior</p>
-                        <ul class="configurator_summary_list">
-                          <li>
-                            <div class="configurator_summary_list_top">
-                              <p class="configurator_summary_parts">
-                                Transmission
-                              </p>
+                      </div>
+                      <div class="dropdown">
+                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger" aria-haspopup="true"
+                          aria-expanded="true" aria-controls="dropdown-menu" title="파츠 더보기">
+                          Wheel
+                          <span class="btn-icon20 icon-down dropdown-icon rotate" aria-hidden="true">
+                          </span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-on" role="menu">
+                          <li role="menuitem">
+                            <input id="IONIQ_wheel1" name="wheel" value="R20W" type="checkbox" />
+                            <label for="IONIQ_wheel1" class="configurator_label_radio">
+                              <div>
+                                <img src="../../inc/images/img/img_config_wheel_white.png" loading="lazy"
+                                  alt="파츠 이미지" />
+                              </div>
+                              <div>
+                                <p class="configurator_label_tit">
+                                  BRAID 20inch Lightweight Forged Wheel
+                                  [White]
+                                </p>
+                                <p class="configurator_label_price">
+                                  ₩ 5,350,000
+                                </p>
+                              </div>
+                            </label>
+                          </li>
+                          <li role="menuitem">
+                            <input id="IONIQ_wheel2" name="wheel" value="R20B" type="checkbox" />
+                            <label for="IONIQ_wheel2" class="configurator_label_radio">
+                              <div>
+                                <img src="../../inc/images/img/img_config_wheel_balck.png" loading="lazy"
+                                  alt="파츠 이미지" />
+                              </div>
+                              <div>
+                                <p class="configurator_label_tit">
+                                  BRAID 20inch Lightweight Forged Wheel
+                                  [Black]
+                                </p>
+                                <p class="configurator_label_price">
+                                  ₩ 5,350,000
+                                </p>
+                              </div>
+                            </label>
+                          </li>
+                          <li role="menuitem">
+                            <input id="IONIQ_wheel3" name="wheel" value="R21B" type="checkbox" />
+                            <label for="IONIQ_wheel3" class="configurator_label_radio">
+                              <div>
+                                <img src="../../inc/images/img/img_config_wheel_carbon.png" loading="lazy"
+                                  alt="파츠 이미지" />
+                              </div>
+                              <div>
+                                <p class="configurator_label_tit">
+                                  Dymag 21inch Carbon Hybrid Wheel
+                                </p>
+                                <p class="configurator_label_price">
+                                  ₩ 5,350,000
+                                </p>
+                              </div>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="dropdown">
+                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger" aria-haspopup="true"
+                          aria-expanded="true" aria-controls="dropdown-menu" title="파츠 더보기">
+                          Tow Strap
+                          <span class="btn-icon20 icon-down dropdown-icon rotate" aria-hidden="true">
+                          </span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-on" role="menu">
+                          <li role="menuitem">
+                            <input id="IONIQ_towstrap" name="towstrap" value="TOW" type="checkbox" />
+                            <label for="IONIQ_towstrap" class="configurator_label_radio">
+                              <div>
+                                <img src="../../inc/images/img/img_config_towstrap.png" loading="lazy" alt="파츠 이미지" />
+                              </div>
+                              <div>
+                                <p class="configurator_label_tit">
+                                  Sabelt toe strap
+                                </p>
+                                <p class="configurator_label_price">
+                                  ₩ 5,350,000
+                                </p>
+                              </div>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- .exterior.ELANTRA -->
+                    <div class="configurator_select_exterior ELANTRA">
+                      <div class="dropdown">
+                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger" aria-haspopup="true"
+                          aria-expanded="true" aria-controls="dropdown-menu" title="파츠 더보기">
+                          Color
+                          <span class="btn-icon20 icon-down dropdown-icon rotate" aria-hidden="true">
+                          </span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-on configurator_list" role="menu">
+                          <li role="menuitem">
+                            <input id="ELANTRA_color1" name="color" value="blue" type="checkbox" />
+                            <label for="ELANTRA_color1" class="configurator_label_list">
+                              <img src="../../inc/images/img/img_config_color1_2.png" loading="lazy" alt="파츠 이미지" />
+                              <p>Performance<br />Blue</p>
+                            </label>
+                          </li>
+                          <li role="menuitem">
+                            <input id="ELANTRA_color2" name="color" value="grayPearl" type="checkbox" />
+                            <label for="ELANTRA_color2" class="configurator_label_list">
+                              <img src="../../inc/images/img/img_config_color2_2.png" loading="lazy" alt="파츠 이미지" />
+                              <p>Atlas<br />White</p>
+                            </label>
+                          </li>
+                          <li role="menuitem">
+                            <input id="ELANTRA_color3" name="color" value="orangePearl" type="checkbox" />
+                            <label for="ELANTRA_color3" class="configurator_label_list">
+                              <img src="../../inc/images/img/img_config_color3_2.png" loading="lazy" alt="파츠 이미지" />
+                              <p>Ecotronic Gray<br />Pearl</p>
+                            </label>
+                          </li>
+                          <li role="menuitem">
+                            <input id="ELANTRA_color4" name="color" value="white" type="checkbox" />
+                            <label for="ELANTRA_color4" class="configurator_label_list">
+                              <img src="../../inc/images/img/img_config_color4_2.png" loading="lazy" alt="파츠 이미지" />
+                              <p>Ultimate Red<br />Metallic</p>
+                            </label>
+                          </li>
+                          <li role="menuitem">
+                            <input id="ELANTRA_color5" name="color" value="blackPearl" type="checkbox" />
+                            <label for="ELANTRA_color5" class="configurator_label_list">
+                              <img src="../../inc/images/img/img_config_color5_2.png" loading="lazy" alt="파츠 이미지" />
+                              <p>Abyss Black<br />Pearl</p>
+                            </label>
+                          </li>
+                          <li role="menuitem">
+                            <input id="ELANTRA_color6" name="color" value="grayMetallic" type="checkbox" />
+                            <label for="ELANTRA_color6" class="configurator_label_list">
+                              <img src="../../inc/images/img/img_config_color6_2.png" loading="lazy" alt="파츠 이미지" />
+                              <p>Meta Blue<br />Pearl</p>
+                            </label>
+                          </li>
+                          <li role="menuitem">
+                            <input id="ELANTRA_color7" name="color" value="grayMatte" type="checkbox" />
+                            <label for="ELANTRA_color7" class="configurator_label_list">
+                              <img src="../../inc/images/img/img_config_color7_2.png" loading="lazy" alt="파츠 이미지" />
+                              <p>Cyber Gray<br />Metallic</p>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="dropdown">
+                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger" aria-haspopup="true"
+                          aria-expanded="true" aria-controls="dropdown-menu" title="파츠 더보기">
+                          Wheel
+                          <span class="btn-icon20 icon-down dropdown-icon rotate" aria-hidden="true">
+                          </span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-on" role="menu">
+                          <li role="menuitem">
+                            <input id="ELANTRA_wheel1" name="wheel" value="wheel1" type="checkbox" />
+                            <label for="ELANTRA_wheel1" class="configurator_label_radio">
+                              <div>
+                                <img src="../../inc/images/img/img_config_elantra_wheel1.png" loading="lazy"
+                                  alt="파츠 이미지" />
+                              </div>
+                              <div>
+                                <p class="configurator_label_tit">
+                                  18-inch forged wheels - matte black18-inch
+                                  forged wheels - matte black18-inch forged
+                                  wheels - matte black18-inch forged wheels -
+                                  matte black
+                                </p>
+                                <p class="configurator_label_price">
+                                  ₩ 5,350,000
+                                </p>
+                              </div>
+                            </label>
+                          </li>
+                          <li role="menuitem">
+                            <input id="ELANTRA_wheel2" name="wheel" value="wheel2" type="checkbox" />
+                            <label for="ELANTRA_wheel2" class="configurator_label_radio">
+                              <div>
+                                <img src="../../inc/images/img/img_config_elantra_wheel2.png" loading="lazy"
+                                  alt="파츠 이미지" />
+                              </div>
+                              <div>
+                                <p class="configurator_label_tit">
+                                  Black matte forged wheels
+                                </p>
+                                <p class="configurator_label_price">
+                                  ₩ 5,350,000
+                                </p>
+                              </div>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="dropdown">
+                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger" aria-haspopup="true"
+                          aria-expanded="true" aria-controls="dropdown-menu" title="파츠 더보기">
+                          Brake
+                          <span class="btn-icon20 icon-down dropdown-icon rotate" aria-hidden="true">
+                          </span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-on" role="menu">
+                          <li role="menuitem">
+                            <input id="ELANTRA_brake" name="brake" value="brake" type="checkbox" />
+                            <label for="ELANTRA_brake" class="configurator_label_radio">
+                              <div>
+                                <img src="../../inc/images/img/img_config_brake.png" loading="lazy" alt="파츠 이미지" />
+                              </div>
+                              <div>
+                                <p class="configurator_label_tit">
+                                  Brake system
+                                </p>
+                                <p class="configurator_label_price">
+                                  ₩ 5,350,000
+                                </p>
+                              </div>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="dropdown">
+                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger" aria-haspopup="true"
+                          aria-expanded="true" aria-controls="dropdown-menu" title="파츠 더보기">
+                          Spoiler
+                          <span class="btn-icon20 icon-down dropdown-icon rotate" aria-hidden="true">
+                          </span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-on" role="menu">
+                          <li role="menuitem">
+                            <input id="ELANTRA_spoiler" name="spoiler" value="spoiler" type="checkbox" />
+                            <label for="ELANTRA_spoiler" class="configurator_label_radio">
+                              <div>
+                                <img src="../../inc/images/img/img_config_spoiler.png" loading="lazy" alt="파츠 이미지" />
+                              </div>
+                              <div>
+                                <p class="configurator_label_tit">
+                                  Carbon side mirror
+                                </p>
+                                <p class="configurator_label_price">
+                                  ₩ 5,350,000
+                                </p>
+                              </div>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="dropdown">
+                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger" aria-haspopup="true"
+                          aria-expanded="true" aria-controls="dropdown-menu" title="파츠 더보기">
+                          Side Mirror
+                          <span class="btn-icon20 icon-down dropdown-icon rotate" aria-hidden="true">
+                          </span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-on" role="menu">
+                          <li role="menuitem">
+                            <input id="ELANTRA_sideMirror" name="sideMirror" value="sideMirror" type="checkbox" />
+                            <label for="ELANTRA_sideMirror" class="configurator_label_radio">
+                              <div>
+                                <img src="../../inc/images/img/img_config_sidemirror.png" loading="lazy" alt="파츠 이미지" />
+                              </div>
+                              <div>
+                                <p class="configurator_label_tit">
+                                  Carbon side mirror
+                                </p>
+                                <p class="configurator_label_price">
+                                  ₩ 5,350,000
+                                </p>
+                              </div>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="dropdown">
+                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger" aria-haspopup="true"
+                          aria-expanded="true" aria-controls="dropdown-menu" title="파츠 더보기">
+                          Rear Muffler Tip
+                          <span class="btn-icon20 icon-down dropdown-icon rotate" aria-hidden="true">
+                          </span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-on" role="menu">
+                          <li role="menuitem">
+                            <input id="ELANTRA_rearMufflerTip" name="rearMufflerTip" value="rearMufflerTip"
+                              type="checkbox" />
+                            <label for="ELANTRA_rearMufflerTip" class="configurator_label_radio">
+                              <div>
+                                <img src="../../inc/images/img/img_config_muffler.png" loading="lazy" alt="파츠 이미지" />
+                              </div>
+                              <div>
+                                <p class="configurator_label_tit">
+                                  Carbon rear muffler tip
+                                </p>
+                                <p class="configurator_label_price">
+                                  ₩ 5,350,000
+                                </p>
+                              </div>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="dropdown">
+                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger" aria-haspopup="true"
+                          aria-expanded="true" aria-controls="dropdown-menu" title="파츠 더보기">
+                          Towstrap
+                          <span class="btn-icon20 icon-down dropdown-icon rotate" aria-hidden="true">
+                          </span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-on" role="menu">
+                          <li role="menuitem">
+                            <input id="ELANTRA_towstrap" name="towstrap" value="towstrap" type="checkbox" />
+                            <label for="ELANTRA_towstrap" class="configurator_label_radio">
+                              <div>
+                                <img src="../../inc/images/img/img_config_towstrap_elantra.png" loading="lazy"
+                                  alt="파츠 이미지" />
+                              </div>
+                              <div>
+                                <p class="configurator_label_tit">
+                                  Sabelt towstrap
+                                </p>
+                                <p class="configurator_label_price">
+                                  ₩ 5,350,000
+                                </p>
+                              </div>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- interior 파츠 선택 영역 / .configurator_menu_interior on 시 노출 -->
+                    <!-- .interior.IONIQ -->
+                    <div class="configurator_select_interior IONIQ">
+                      <div class="dropdown">
+                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger" aria-haspopup="true"
+                          aria-expanded="true" aria-controls="dropdown-menu" title="파츠 더보기">
+                          Color
+                          <span class="btn-icon20 icon-down dropdown-icon rotate" aria-hidden="true">
+                          </span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-on" role="menu">
+                          <li role="menuitem">
+                            <input id="IONIQ_color_interior" name="color" value="blue" type="checkbox" />
+                            <label for="IONIQ_color_interior" class="configurator_label_list">
+                              <img src="../../inc/images/img/img_config_color_interior.png" loading="lazy"
+                                alt="파츠 이미지" />
+                              <p>Black Monotone</p>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="dropdown">
+                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger" aria-haspopup="true"
+                          aria-expanded="true" aria-controls="dropdown-menu" title="파츠 더보기">
+                          Transmission
+                          <span class="btn-icon20 icon-down dropdown-icon rotate" aria-hidden="true">
+                          </span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-on" role="menu">
+                          <li role="menuitem">
+                            <input id="IONIQ_transmission1" name="transmission" value="transmission1" type="checkbox" />
+                            <label for="IONIQ_transmission1" class="configurator_label_radio">
+                              <div>
+                                <p class="configurator_label_tit">
+                                  8-speed DCT
+                                </p>
+                              </div>
+                            </label>
+                          </li>
+                          <li role="menuitem">
+                            <input id="IONIQ_transmission2" name="transmission" value="transmission2" type="checkbox" />
+                            <label for="IONIQ_transmission2" class="configurator_label_radio">
+                              <div>
+                                <p class="configurator_label_tit">
+                                  4 manual 6-speed
+                                </p>
+                              </div>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="dropdown">
+                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger" aria-haspopup="true"
+                          aria-expanded="true" aria-controls="dropdown-menu" title="파츠 더보기">
+                          Alcantara Package
+                          <span class="btn-icon20 icon-down dropdown-icon rotate" aria-hidden="true">
+                          </span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-on" role="menu">
+                          <li role="menuitem">
+                            <input id="IONIQ_alcantaraPackage1" name="alcantaraPackage1" value="alcantaraPackage1"
+                              type="checkbox" />
+                            <label for="IONIQ_alcantaraPackage1" class="configurator_label_radio">
+                              <div>
+                                <img src="../../inc/images/img/img_config_alcantara1.png" loading="lazy" alt="파츠 이미지" />
+                              </div>
+                              <div>
+                                <p class="configurator_label_tit">
+                                  Alcantara package - DCT
+                                </p>
+                                <p class="configurator_label_price">
+                                  ₩ 5,350,000
+                                </p>
+                              </div>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="dropdown none">
+                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger" aria-haspopup="true"
+                          aria-expanded="true" aria-controls="dropdown-menu" title="파츠 더보기">
+                          Alcantara Package
+                          <span class="btn-icon20 icon-down dropdown-icon rotate" aria-hidden="true">
+                          </span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-on" role="menu">
+                          <li role="menuitem">
+                            <input id="IONIQ_alcantaraPackage2" name="alcantaraPackage2" value="alcantaraPackage2"
+                              type="checkbox" />
+                            <label for="IONIQ_alcantaraPackage2" class="configurator_label_radio">
+                              <div>
+                                <img src="../../inc/images/img/img_config_alcantara2.png" loading="lazy" alt="파츠 이미지" />
+                              </div>
+                              <div>
+                                <p class="configurator_label_tit">
+                                  Alcantara Package (MT)
+                                </p>
+                                <p class="configurator_label_price">
+                                  ₩ 5,350,000
+                                </p>
+                              </div>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="dropdown">
+                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger" aria-haspopup="true"
+                          aria-expanded="true" aria-controls="dropdown-menu" title="파츠 더보기">
+                          Car Mat
+                          <span class="btn-icon20 icon-down dropdown-icon rotate" aria-hidden="true">
+                          </span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-on" role="menu">
+                          <li role="menuitem">
+                            <input id="IONIQ_carMat" name="carMat" value="NFM" type="checkbox" />
+                            <label for="IONIQ_carMat" class="configurator_label_radio">
+                              <div>
+                                <img src="../../inc/images/img/img_config_mat.png" loading="lazy" alt="파츠 이미지" />
+                              </div>
+                              <div>
+                                <p class="configurator_label_tit">
+                                  N Performance Mats
+                                </p>
+                                <p class="configurator_label_price">
+                                  ₩ 5,350,000
+                                </p>
+                              </div>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="dropdown">
+                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger" aria-haspopup="true"
+                          aria-expanded="true" aria-controls="dropdown-menu" title="파츠 더보기">
+                          Door Scuff
+                          <span class="btn-icon20 icon-down dropdown-icon rotate" aria-hidden="true">
+                          </span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-on" role="menu">
+                          <li role="menuitem">
+                            <input id="IONIQ_doorScuff" name="doorScuff" value="NSP" type="checkbox" />
+                            <label for="IONIQ_doorScuff" class="configurator_label_radio">
+                              <div>
+                                <img src="../../inc/images/img/img_config_door.png" loading="lazy" alt="파츠 이미지" />
+                              </div>
+                              <div>
+                                <p class="configurator_label_tit">
+                                  Metal Door Scuff
+                                </p>
+                                <p class="configurator_label_price">
+                                  ₩ 5,350,000
+                                </p>
+                              </div>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="dropdown">
+                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger" aria-haspopup="true"
+                          aria-expanded="true" aria-controls="dropdown-menu" title="파츠 더보기">
+                          Steering Wheel
+                          <span class="btn-icon20 icon-down dropdown-icon rotate" aria-hidden="true">
+                          </span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-on" role="menu">
+                          <li role="menuitem">
+                            <input id="IONIQ_steeringWheel" name="steeringWheel" value="ASW" type="checkbox" />
+                            <label for="IONIQ_steeringWheel" class="configurator_label_radio">
+                              <div>
+                                <img src="../../inc/images/img/img_config_steering.png" loading="lazy" alt="파츠 이미지" />
+                              </div>
+                              <div>
+                                <p class="configurator_label_tit">
+                                  Alcantara Steering Wheel
+                                </p>
+                                <p class="configurator_label_price">
+                                  ₩ 5,350,000
+                                </p>
+                              </div>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="dropdown">
+                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger" aria-haspopup="true"
+                          aria-expanded="true" aria-controls="dropdown-menu" title="파츠 더보기">
+                          Seat Belt
+                          <span class="btn-icon20 icon-down dropdown-icon rotate" aria-hidden="true">
+                          </span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-on" role="menu">
+                          <li role="menuitem">
+                            <input id="IONIQ_seatBelt1" name="seatBelt" value="4PSB" type="checkbox" />
+                            <label for="IONIQ_seatBelt1" class="configurator_label_radio">
+                              <div>
+                                <img src="../../inc/images/img/img_config_belt_4p.png" loading="lazy" alt="파츠 이미지" />
+                              </div>
+                              <div>
+                                <p class="configurator_label_tit">
+                                  Sabelt 4-Point Harness
+                                </p>
+                                <p class="configurator_label_price">
+                                  ₩ 5,350,000
+                                </p>
+                              </div>
+                            </label>
+                          </li>
+                          <li role="menuitem">
+                            <input id="IONIQ_seatBelt2" name="seatBelt" value="6PSB" type="checkbox" />
+                            <label for="IONIQ_seatBelt2" class="configurator_label_radio">
+                              <div>
+                                <img src="../../inc/images/img/img_config_belt_6p.png" loading="lazy" alt="파츠 이미지" />
+                              </div>
+                              <div>
+                                <p class="configurator_label_tit">
+                                  Sabelt 6-Point Harness
+                                </p>
+                                <p class="configurator_label_price">
+                                  ₩ 5,350,000
+                                </p>
+                              </div>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- .interior.ELANTRA -->
+                    <div class="configurator_select_interior ELANTRA">
+                      <div class="dropdown">
+                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger" aria-haspopup="true"
+                          aria-expanded="true" aria-controls="dropdown-menu" title="파츠 더보기">
+                          Color
+                          <span class="btn-icon20 icon-down dropdown-icon rotate" aria-hidden="true">
+                          </span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-on" role="menu">
+                          <li role="menuitem">
+                            <input id="ELANTRA_color_interior" name="color" value="blue" type="checkbox" />
+                            <label for="ELANTRA_color_interior" class="configurator_label_list">
+                              <img src="../../inc/images/img/img_config_color_interior_2.png" loading="lazy"
+                                alt="파츠 이미지" />
+                              <p>Black one-tone</p>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="dropdown">
+                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger" aria-haspopup="true"
+                          aria-expanded="true" aria-controls="dropdown-menu" title="파츠 더보기">
+                          Transmission
+                          <span class="btn-icon20 icon-down dropdown-icon rotate" aria-hidden="true">
+                          </span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-on" role="menu">
+                          <li role="menuitem">
+                            <input id="ELANTRA_transmission1" name="transmission" value="transmission1"
+                              type="checkbox" />
+                            <label for="ELANTRA_transmission1" class="configurator_label_radio">
+                              <div>
+                                <p class="configurator_label_tit">
+                                  8-speed DCT
+                                </p>
+                              </div>
+                            </label>
+                          </li>
+                          <li role="menuitem">
+                            <input id="ELANTRA_transmission2" name="transmission" value="transmission2"
+                              type="checkbox" />
+                            <label for="ELANTRA_transmission2" class="configurator_label_radio">
+                              <div>
+                                <p class="configurator_label_tit">
+                                  4 manual 6-speed
+                                </p>
+                              </div>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="dropdown">
+                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger" aria-haspopup="true"
+                          aria-expanded="true" aria-controls="dropdown-menu" title="파츠 더보기">
+                          Alcantara Package
+                          <span class="btn-icon20 icon-down dropdown-icon rotate" aria-hidden="true">
+                          </span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-on" role="menu">
+                          <li role="menuitem">
+                            <input id="ELANTRA_alcantaraPackage1" name="alcantaraPackage1" value="alcantaraPackage1"
+                              type="checkbox" />
+                            <label for="ELANTRA_alcantaraPackage1" class="configurator_label_radio">
+                              <div>
+                                <img src="../../inc/images/img/img_config_alcantara1.png" loading="lazy" alt="파츠 이미지" />
+                              </div>
+                              <div>
+                                <p class="configurator_label_tit">
+                                  Alcantara Package (AT)
+                                </p>
+                                <p class="configurator_label_price">
+                                  ₩ 5,350,000
+                                </p>
+                              </div>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="dropdown none">
+                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger" aria-haspopup="true"
+                          aria-expanded="true" aria-controls="dropdown-menu" title="파츠 더보기">
+                          Alcantara Package
+                          <span class="btn-icon20 icon-down dropdown-icon rotate" aria-hidden="true">
+                          </span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-on" role="menu">
+                          <li role="menuitem">
+                            <input id="ELANTRA_alcantaraPackage2" name="alcantaraPackage2" value="alcantaraPackage2"
+                              type="checkbox" />
+                            <label for="ELANTRA_alcantaraPackage2" class="configurator_label_radio">
+                              <div>
+                                <img src="../../inc/images/img/img_config_alcantara2.png" loading="lazy" alt="파츠 이미지" />
+                              </div>
+                              <div>
+                                <p class="configurator_label_tit">
+                                  Alcantara Package (MT)
+                                </p>
+                                <p class="configurator_label_price">
+                                  ₩ 5,350,000
+                                </p>
+                              </div>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="dropdown">
+                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger" aria-haspopup="true"
+                          aria-expanded="true" aria-controls="dropdown-menu" title="파츠 더보기">
+                          Car Mat
+                          <span class="btn-icon20 icon-down dropdown-icon rotate" aria-hidden="true">
+                          </span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-on" role="menu">
+                          <li role="menuitem">
+                            <input id="ELANTRA_carMat" name="carMat" value="carMat" type="checkbox" />
+                            <label for="ELANTRA_carMat" class="configurator_label_radio">
+                              <div>
+                                <img src="../../inc/images/img/img_config_elantra_mat.png" loading="lazy"
+                                  alt="파츠 이미지" />
+                              </div>
+                              <div>
+                                <p class="configurator_label_tit">
+                                  N Performance Mats
+                                </p>
+                                <p class="configurator_label_price">
+                                  ₩ 5,350,000
+                                </p>
+                              </div>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="dropdown">
+                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger" aria-haspopup="true"
+                          aria-expanded="true" aria-controls="dropdown-menu" title="파츠 더보기">
+                          Door Scuff
+                          <span class="btn-icon20 icon-down dropdown-icon rotate" aria-hidden="true">
+                          </span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-on" role="menu">
+                          <li role="menuitem">
+                            <input id="ELANTRA_doorScuff" name="doorScuff" value="doorScuff" type="checkbox" />
+                            <label for="ELANTRA_doorScuff" class="configurator_label_radio">
+                              <div>
+                                <img src="../../inc/images/img/img_config_elantra_mat.png" loading="lazy"
+                                  alt="파츠 이미지" />
+                              </div>
+                              <div>
+                                <p class="configurator_label_tit">
+                                  Metal Door Scuff
+                                </p>
+                                <p class="configurator_label_price">
+                                  ₩ 5,350,000
+                                </p>
+                              </div>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="dropdown">
+                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger" aria-haspopup="true"
+                          aria-expanded="true" aria-controls="dropdown-menu" title="파츠 더보기">
+                          Seat Belt
+                          <span class="btn-icon20 icon-down dropdown-icon rotate" aria-hidden="true">
+                          </span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-on" role="menu">
+                          <li role="menuitem">
+                            <input id="ELANTRA_seatBelt1" name="seatBelt" value="seatBelt1" type="checkbox" />
+                            <label for="ELANTRA_seatBelt1" class="configurator_label_radio">
+                              <div>
+                                <img src="../../inc/images/img/img_config_belt_4p.png" loading="lazy" alt="파츠 이미지" />
+                              </div>
+                              <div>
+                                <p class="configurator_label_tit">
+                                  Sabelt 4-Point Harness
+                                </p>
+                                <p class="configurator_label_price">
+                                  ₩ 5,350,000
+                                </p>
+                              </div>
+                            </label>
+                          </li>
+                          <li role="menuitem">
+                            <input id="ELANTRA_seatBelt2" name="seatBelt" value="seatBelt2" type="checkbox" />
+                            <label for="ELANTRA_seatBelt2" class="configurator_label_radio">
+                              <div>
+                                <img src="../../inc/images/img/img_config_belt_6p.png" loading="lazy" alt="파츠 이미지" />
+                              </div>
+                              <div>
+                                <p class="configurator_label_tit">
+                                  Sabelt 6-Point Harness
+                                </p>
+                                <p class="configurator_label_price">
+                                  ₩ 5,350,000
+                                </p>
+                              </div>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- summary 파츠 선택 영역 / .configurator_menu_summary on 시 노출 -->
+                    <!-- .summary.IONIQ -->
+                    <div class="configurator_select_summary IONIQ">
+                      <p class="configurator_summary_tit">Exterior</p>
+                      <ul class="configurator_summary_list">
+                        <li>
+                          <div class="configurator_summary_list_top">
+                            <p class="configurator_summary_parts">Color</p>
+                            <div>
+                              <button type="button" class="btn txt-btn">
+                                <span class="btn-icon20 icon-change-gray" aria-hidden="true"></span>
+                                <span class="visually-hidden">Change</span>
+                              </button>
                             </div>
-                            <div class="configurator_summary_list_bottom">
+                          </div>
+                          <div class="configurator_summary_list_bottom">
+                            <img class="configurator_summary_img" src="../../inc/images/img/img_config_color1.png"
+                              loading="lazy" alt="옵션 썸네일 이미지" />
+                            <div>
                               <p class="configurator_summary_item">
-                                8-speed DCT
+                                Performance Blue
                               </p>
                               <p class="configurator_summary_price">₩ 0</p>
                             </div>
-                          </li>
-                          <li>
-                            <div class="configurator_summary_list_top">
-                              <p class="configurator_summary_parts">Car Mat</p>
-                              <div>
-                                <button type="button" class="btn txt-btn">
-                                  <span
-                                    class="btn-icon20 icon-close-gray"
-                                    aria-hidden="true"
-                                  ></span>
-                                  <span class="visually-hidden">Delete</span>
-                                </button>
-                              </div>
-                            </div>
-                            <div class="configurator_summary_list_bottom">
-                              <img
-                                class="configurator_summary_img"
-                                src="../../inc/images/img/img_config_mat.png"
-                                loading="lazy"
-                                alt="옵션 썸네일 이미지"
-                              />
-                              <div>
-                                <p class="configurator_summary_item">
-                                  Sports car mat
-                                </p>
-                                <p class="configurator_summary_price">
-                                  ₩ 5,350,000
-                                </p>
-                              </div>
-                            </div>
-                          </li>
-                        </ul>
-                        <div class="btn-wrap">
-                          <button type="button" class="btn btn-lg-outline01">
-                            View Vehicle Details
-                            <span
-                              class="btn-icon20 icon-right"
-                              aria-hidden="true"
-                            ></span>
-                          </button>
-                          <div class="btn-wrap-type2">
-                            <a href="#" class="btn btn-lg-outline01">
-                              Buy Parts
-                              <span
-                                class="btn-icon20 icon-right"
-                                aria-hidden="true"
-                              ></span>
-                            </a>
-                            <button type="button" class="btn btn-lg-outline01">
-                              Save Quote
-                              <span
-                                class="btn-icon20 icon-download"
-                                aria-hidden="true"
-                              ></span>
-                            </button>
                           </div>
-                        </div>
-                      </div>
-                      <!-- .summary.ELANTRA -->
-                      <div class="configurator_select_summary ELANTRA">
-                        <p class="configurator_summary_tit">Exterior</p>
-                        <ul class="configurator_summary_list">
-                          <li>
-                            <div class="configurator_summary_list_top">
-                              <p class="configurator_summary_parts">Wheel</p>
-                              <div>
-                                <button type="button" class="btn txt-btn">
-                                  <span
-                                    class="btn-icon20 icon-change-gray"
-                                    aria-hidden="true"
-                                  ></span>
-                                  <span class="visually-hidden">Change</span>
-                                </button>
-                                <button type="button" class="btn txt-btn">
-                                  <span
-                                    class="btn-icon20 icon-close-gray"
-                                    aria-hidden="true"
-                                  ></span>
-                                  <span class="visually-hidden">Delete</span>
-                                </button>
-                              </div>
+                        </li>
+                        <li>
+                          <div class="configurator_summary_list_top">
+                            <p class="configurator_summary_parts">Wheel</p>
+                            <div>
+                              <button type="button" class="btn txt-btn">
+                                <span class="btn-icon20 icon-change-gray" aria-hidden="true"></span>
+                                <span class="visually-hidden">Change</span>
+                              </button>
+                              <button type="button" class="btn txt-btn">
+                                <span class="btn-icon20 icon-close-gray" aria-hidden="true"></span>
+                                <span class="visually-hidden">Delete</span>
+                              </button>
                             </div>
-                            <div class="configurator_summary_list_bottom">
-                              <img
-                                class="configurator_summary_img"
-                                src="../../inc/images/img/img_config_elantra_wheel2.png"
-                                loading="lazy"
-                                alt="옵션 썸네일 이미지"
-                              />
-                              <div>
-                                <p class="configurator_summary_item">
-                                  Black matte forged wheels
-                                </p>
-                                <p class="configurator_summary_price">
-                                  ₩ 5,350,000
-                                </p>
-                              </div>
-                            </div>
-                          </li>
-                          <li>
-                            <div class="configurator_summary_list_top">
-                              <p class="configurator_summary_parts">Spoiler</p>
-                              <div>
-                                <button type="button" class="btn txt-btn">
-                                  <span
-                                    class="btn-icon20 icon-close-gray"
-                                    aria-hidden="true"
-                                  ></span>
-                                  <span class="visually-hidden">Delete</span>
-                                </button>
-                              </div>
-                            </div>
-                            <div class="configurator_summary_list_bottom">
-                              <img
-                                class="configurator_summary_img"
-                                src="../../inc/images/img/img_config_spoiler.png"
-                                loading="lazy"
-                                alt="옵션 썸네일 이미지"
-                              />
-                              <div>
-                                <p class="configurator_summary_item">
-                                  Carbon side mirror
-                                </p>
-                                <p class="configurator_summary_price">
-                                  ₩ 5,350,000
-                                </p>
-                              </div>
-                            </div>
-                          </li>
-                        </ul>
-                        <p class="configurator_summary_tit">Interior</p>
-                        <ul class="configurator_summary_list">
-                          <li>
-                            <div class="configurator_summary_list_top">
-                              <p class="configurator_summary_parts">Car Mat</p>
-                              <div>
-                                <button type="button" class="btn txt-btn">
-                                  <span
-                                    class="btn-icon20 icon-close-gray"
-                                    aria-hidden="true"
-                                  ></span>
-                                  <span class="visually-hidden">Delete</span>
-                                </button>
-                              </div>
-                            </div>
-                            <div class="configurator_summary_list_bottom">
-                              <img
-                                class="configurator_summary_img"
-                                src="../../inc/images/img/img_config_elantra_mat.png"
-                                loading="lazy"
-                                alt="옵션 썸네일 이미지"
-                              />
-                              <div>
-                                <p class="configurator_summary_item">
-                                  Sports car mat
-                                </p>
-                                <p class="configurator_summary_price">
-                                  ₩ 5,350,000
-                                </p>
-                              </div>
-                            </div>
-                          </li>
-                        </ul>
-                        <div class="btn-wrap">
-                          <button type="button" class="btn btn-lg-outline01">
-                            View Vehicle Details
-                            <span
-                              class="btn-icon20 icon-right"
-                              aria-hidden="true"
-                            ></span>
-                          </button>
-                          <div>
-                            <a href="#" class="btn btn-lg-outline01">
-                              Buy Parts
-                              <span
-                                class="btn-icon20 icon-right"
-                                aria-hidden="true"
-                              ></span>
-                            </a>
-                            <button type="button" class="btn btn-lg-outline01">
-                              Save Quote
-                              <span
-                                class="btn-icon20 icon-download"
-                                aria-hidden="true"
-                              ></span>
-                            </button>
                           </div>
+                          <div class="configurator_summary_list_bottom">
+                            <img class="configurator_summary_img" src="../../inc/images/img/img_config_wheel_white.png"
+                              loading="lazy" alt="옵션 썸네일 이미지" />
+                            <div>
+                              <p class="configurator_summary_item">
+                                Braid 20-inch lightweight forged wheel - white
+                              </p>
+                              <p class="configurator_summary_price">
+                                ₩ 5,350,000
+                              </p>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="configurator_summary_list_top">
+                            <p class="configurator_summary_parts">Towstrap</p>
+                            <div>
+                              <button type="button" class="btn txt-btn">
+                                <span class="btn-icon20 icon-close-gray" aria-hidden="true"></span>
+                                <span class="visually-hidden">Delete</span>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="configurator_summary_list_bottom">
+                            <img class="configurator_summary_img" src="../../inc/images/img/img_config_towstrap.png"
+                              loading="lazy" alt="옵션 썸네일 이미지" />
+                            <div>
+                              <p class="configurator_summary_item">
+                                Sabelt toe strap
+                              </p>
+                              <p class="configurator_summary_price">
+                                ₩ 5,350,000
+                              </p>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                      <p class="configurator_summary_tit">Interior</p>
+                      <ul class="configurator_summary_list">
+                        <li>
+                          <div class="configurator_summary_list_top">
+                            <p class="configurator_summary_parts">
+                              Transmission
+                            </p>
+                          </div>
+                          <div class="configurator_summary_list_bottom">
+                            <p class="configurator_summary_item">
+                              8-speed DCT
+                            </p>
+                            <p class="configurator_summary_price">₩ 0</p>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="configurator_summary_list_top">
+                            <p class="configurator_summary_parts">Car Mat</p>
+                            <div>
+                              <button type="button" class="btn txt-btn">
+                                <span class="btn-icon20 icon-close-gray" aria-hidden="true"></span>
+                                <span class="visually-hidden">Delete</span>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="configurator_summary_list_bottom">
+                            <img class="configurator_summary_img" src="../../inc/images/img/img_config_mat.png"
+                              loading="lazy" alt="옵션 썸네일 이미지" />
+                            <div>
+                              <p class="configurator_summary_item">
+                                Sports car mat
+                              </p>
+                              <p class="configurator_summary_price">
+                                ₩ 5,350,000
+                              </p>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                      <div class="btn-wrap">
+                        <button type="button" class="btn btn-lg-outline01">
+                          View Vehicle Details
+                          <span class="btn-icon20 icon-right" aria-hidden="true"></span>
+                        </button>
+                        <div class="btn-wrap-type2">
+                          <a href="#" class="btn btn-lg-outline01">
+                            Buy Parts
+                            <span class="btn-icon20 icon-right" aria-hidden="true"></span>
+                          </a>
+                          <button type="button" class="btn btn-lg-outline01">
+                            Save Quote
+                            <span class="btn-icon20 icon-download" aria-hidden="true"></span>
+                          </button>
                         </div>
                       </div>
                     </div>
-                    <!-- 바텀시트 영역 -->
-                    <div class="configurator_price_wrap scroll-on">
-                      <div class="configurator_price_summary">
-                        <div class="configurator_select_total_wrap">
-                          <span>Select parts</span>
-                          <p class="configurator_select_total">3</p>
-                        </div>
-                        <div class="configurator_price">
-                          <p class="configurator_price_tit">Estimated Price</p>
-                          <div>
-                            <p class="configurator_price_total">
-                              ₩ <span>0</span>
-                            </p>
-                            <button
-                              type="button"
-                              class="btn btn-only-icon-notbg"
-                              title="reset"
-                            >
-                              <span class="visually-hidden">Reset</span>
-                              <span
-                                class="btn-icon36"
-                                aria-hidden="true"
-                              ></span>
-                            </button>
+                    <!-- .summary.ELANTRA -->
+                    <div class="configurator_select_summary ELANTRA">
+                      <p class="configurator_summary_tit">Exterior</p>
+                      <ul class="configurator_summary_list">
+                        <li>
+                          <div class="configurator_summary_list_top">
+                            <p class="configurator_summary_parts">Wheel</p>
+                            <div>
+                              <button type="button" class="btn txt-btn">
+                                <span class="btn-icon20 icon-change-gray" aria-hidden="true"></span>
+                                <span class="visually-hidden">Change</span>
+                              </button>
+                              <button type="button" class="btn txt-btn">
+                                <span class="btn-icon20 icon-close-gray" aria-hidden="true"></span>
+                                <span class="visually-hidden">Delete</span>
+                              </button>
+                            </div>
                           </div>
-                        </div>
-                      </div>
+                          <div class="configurator_summary_list_bottom">
+                            <img class="configurator_summary_img"
+                              src="../../inc/images/img/img_config_elantra_wheel2.png" loading="lazy"
+                              alt="옵션 썸네일 이미지" />
+                            <div>
+                              <p class="configurator_summary_item">
+                                Black matte forged wheels
+                              </p>
+                              <p class="configurator_summary_price">
+                                ₩ 5,350,000
+                              </p>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="configurator_summary_list_top">
+                            <p class="configurator_summary_parts">Spoiler</p>
+                            <div>
+                              <button type="button" class="btn txt-btn">
+                                <span class="btn-icon20 icon-close-gray" aria-hidden="true"></span>
+                                <span class="visually-hidden">Delete</span>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="configurator_summary_list_bottom">
+                            <img class="configurator_summary_img" src="../../inc/images/img/img_config_spoiler.png"
+                              loading="lazy" alt="옵션 썸네일 이미지" />
+                            <div>
+                              <p class="configurator_summary_item">
+                                Carbon side mirror
+                              </p>
+                              <p class="configurator_summary_price">
+                                ₩ 5,350,000
+                              </p>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                      <p class="configurator_summary_tit">Interior</p>
+                      <ul class="configurator_summary_list">
+                        <li>
+                          <div class="configurator_summary_list_top">
+                            <p class="configurator_summary_parts">Car Mat</p>
+                            <div>
+                              <button type="button" class="btn txt-btn">
+                                <span class="btn-icon20 icon-close-gray" aria-hidden="true"></span>
+                                <span class="visually-hidden">Delete</span>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="configurator_summary_list_bottom">
+                            <img class="configurator_summary_img" src="../../inc/images/img/img_config_elantra_mat.png"
+                              loading="lazy" alt="옵션 썸네일 이미지" />
+                            <div>
+                              <p class="configurator_summary_item">
+                                Sports car mat
+                              </p>
+                              <p class="configurator_summary_price">
+                                ₩ 5,350,000
+                              </p>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
                       <div class="btn-wrap">
                         <button type="button" class="btn btn-lg-outline01">
-                          Previous
+                          View Vehicle Details
+                          <span class="btn-icon20 icon-right" aria-hidden="true"></span>
                         </button>
-                        <button type="button" class="btn btn-lg-primary01">
-                          Next
-                          <span
-                            class="btn-icon20 icon-right-wh"
-                            aria-hidden="true"
-                          ></span>
-                        </button>
-                        <!-- 비활성화 -->
-                        <!-- <button type="button" class="btn btn-lg-primary01 disabled" disabled>
+                        <div>
+                          <a href="#" class="btn btn-lg-outline01">
+                            Buy Parts
+                            <span class="btn-icon20 icon-right" aria-hidden="true"></span>
+                          </a>
+                          <button type="button" class="btn btn-lg-outline01">
+                            Save Quote
+                            <span class="btn-icon20 icon-download" aria-hidden="true"></span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 바텀시트 영역 -->
+                  <div class="configurator_price_wrap scroll-on">
+                    <div class="configurator_price_summary">
+                      <div class="configurator_select_total_wrap">
+                        <span>Select parts</span>
+                        <p class="configurator_select_total">3</p>
+                      </div>
+                      <div class="configurator_price">
+                        <p class="configurator_price_tit">Estimated Price</p>
+                        <div>
+                          <p class="configurator_price_total">
+                            ₩ <span>0</span>
+                          </p>
+                          <button type="button" class="btn btn-only-icon-notbg" title="reset">
+                            <span class="visually-hidden">Reset</span>
+                            <span class="btn-icon36" aria-hidden="true"></span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="btn-wrap">
+                      <button type="button" class="btn btn-lg-outline01">
+                        Previous
+                      </button>
+                      <button type="button" class="btn btn-lg-primary01">
+                        Next
+                        <span class="btn-icon20 icon-right-wh" aria-hidden="true"></span>
+                      </button>
+                      <!-- 비활성화 -->
+                      <!-- <button type="button" class="btn btn-lg-primary01 disabled" disabled>
                         Next
                         <span class="btn-icon20 icon-right-wh icon-disabled" aria-hidden="true"></span>
                       </button> -->
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -2133,108 +1244,85 @@
             </div>
           </div>
         </div>
-      </section>
-    </div>
-    <!-- popup -->
-    <!-- 초기화 버튼 클릭 시 -->
-    <div
-      id="reset"
-      class="popup bottom-popup"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="tit"
-    >
-      <div class="pop-wrap configurator_popup">
-        <p>
-          <!-- The selected model and parts will be initialized. Do you want to
+      </div>
+    </section>
+  </div>
+  <!-- popup -->
+  <!-- 초기화 버튼 클릭 시 -->
+  <div id="reset" class="popup bottom-popup" role="dialog" aria-modal="true" aria-labelledby="tit">
+    <div class="pop-wrap configurator_popup">
+      <p>
+        <!-- The selected model and parts will be initialized. Do you want to
           reset? -->
-          The selected model and its parts will be reset. Do you want to reset?
-        </p>
-        <div class="btn-wrap-type2">
-          <button type="button" class="btn btn btn-md-outline01 pop-close">
-            Cancel
-            <span class="btn-icon16 icon-right" aria-hidden="true"></span>
-          </button>
-          <button type="button" class="btn btn btn-md-primary01">
-            Confirmation
-            <span class="btn-icon16 icon-right-wh" aria-hidden="true"></span>
-          </button>
-        </div>
+        The selected model and its parts will be reset. Do you want to reset?
+      </p>
+      <div class="btn-wrap-type2">
+        <button type="button" class="btn btn btn-md-outline01 pop-close">
+          Cancel
+          <span class="btn-icon16 icon-right" aria-hidden="true"></span>
+        </button>
+        <button type="button" class="btn btn btn-md-primary01">
+          Confirmation
+          <span class="btn-icon16 icon-right-wh" aria-hidden="true"></span>
+        </button>
       </div>
     </div>
-    <!-- 이전, 모델 변경 버튼 클릭 시 -->
-    <div
-      id="back"
-      class="popup bottom-popup"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="tit"
-    >
-      <div class="pop-wrap configurator_popup">
-        <p>
-          <!-- The selected model and parts will be initialized. Would you like to go
+  </div>
+  <!-- 이전, 모델 변경 버튼 클릭 시 -->
+  <div id="back" class="popup bottom-popup" role="dialog" aria-modal="true" aria-labelledby="tit">
+    <div class="pop-wrap configurator_popup">
+      <p>
+        <!-- The selected model and parts will be initialized. Would you like to go
           to the model selection screen? -->
-          The selected vehicle and its parts will be reset. Do you want to go to
-          the model selection screen?
-        </p>
-        <div class="btn-wrap-type2">
-          <button type="button" class="btn btn btn-md-outline01 pop-close">
-            Cancel
-            <span class="btn-icon16 icon-right" aria-hidden="true"></span>
-          </button>
-          <button type="button" class="btn btn btn-md-primary01">
-            Confirmation
-            <span class="btn-icon16 icon-right-wh" aria-hidden="true"></span>
-          </button>
-        </div>
+        The selected vehicle and its parts will be reset. Do you want to go to
+        the model selection screen?
+      </p>
+      <div class="btn-wrap-type2">
+        <button type="button" class="btn btn btn-md-outline01 pop-close">
+          Cancel
+          <span class="btn-icon16 icon-right" aria-hidden="true"></span>
+        </button>
+        <button type="button" class="btn btn btn-md-primary01">
+          Confirmation
+          <span class="btn-icon16 icon-right-wh" aria-hidden="true"></span>
+        </button>
       </div>
     </div>
-    <!-- 파츠 선택하지 않고 Summary 메뉴 클릭 시 -->
-    <div
-      id="parts"
-      class="popup bottom-popup"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="tit"
-    >
-      <div class="pop-wrap configurator_popup">
-        <p>Please select parts.</p>
-        <div class="btn-wrap-default">
-          <button type="button" class="btn btn btn-md-primary01 pop-close">
-            Confirmation
-            <span class="btn-icon16 icon-right-wh" aria-hidden="true"></span>
-          </button>
-        </div>
+  </div>
+  <!-- 파츠 선택하지 않고 Summary 메뉴 클릭 시 -->
+  <div id="parts" class="popup bottom-popup" role="dialog" aria-modal="true" aria-labelledby="tit">
+    <div class="pop-wrap configurator_popup">
+      <p>Please select parts.</p>
+      <div class="btn-wrap-default">
+        <button type="button" class="btn btn btn-md-primary01 pop-close">
+          Confirmation
+          <span class="btn-icon16 icon-right-wh" aria-hidden="true"></span>
+        </button>
       </div>
     </div>
-    <!-- 초기화 버튼 클릭 시 -->
-    <div
-      id="delete"
-      class="popup bottom-popup"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="tit"
-    >
-      <div class="pop-wrap configurator_popup">
-        <p>
-          <!-- Are you sure you want to delete? -->
-          Do you want to exit from Configurator?
-        </p>
-        <div class="btn-wrap-type2">
-          <button type="button" class="btn btn btn-md-outline01 pop-close">
-            Cancel
-            <span class="btn-icon16 icon-right" aria-hidden="true"></span>
-          </button>
-          <button type="button" class="btn btn btn-md-primary01">
-            Confirmation
-            <span class="btn-icon16 icon-right-wh" aria-hidden="true"></span>
-          </button>
-        </div>
+  </div>
+  <!-- 초기화 버튼 클릭 시 -->
+  <div id="delete" class="popup bottom-popup" role="dialog" aria-modal="true" aria-labelledby="tit">
+    <div class="pop-wrap configurator_popup">
+      <p>
+        <!-- Are you sure you want to delete? -->
+        Do you want to exit from Configurator?
+      </p>
+      <div class="btn-wrap-type2">
+        <button type="button" class="btn btn btn-md-outline01 pop-close">
+          Cancel
+          <span class="btn-icon16 icon-right" aria-hidden="true"></span>
+        </button>
+        <button type="button" class="btn btn btn-md-primary01">
+          Confirmation
+          <span class="btn-icon16 icon-right-wh" aria-hidden="true"></span>
+        </button>
       </div>
     </div>
-    <!-- <div class='dimmed' aria-hidden='true'></div> -->
+  </div>
+  <!-- <div class='dimmed' aria-hidden='true'></div> -->
 
-    <!-- 
+  <!-- 
     alert: 
   
     The selected vehicle and its parts will be reset. Do you want to go to the model selection screen?
@@ -2247,89 +1335,87 @@
     The selected model and its parts will be reset. Do you want to reset?	( 선택하신 모델 및 파츠가 초기화됩니다. 초기화하시겠습니까? )
   
   -->
-    <script
-      type="text/javascript"
-      src="../../inc/js/jquery-3.7.1.slim.min.js"
-    ></script>
-    <script type="text/javascript" src="../../inc/js/swiper.min.js"></script>
-    <script type="text/javascript" src="../../inc/js/com-ui.js"></script>
-    <script type="text/javascript" src="../../inc/js/pub-ui.js"></script>
-    <script>
-      $(document).ready(function () {
-        $(".configurator_header_menu").click((el) => {
-          configuratorHeader(el);
-        });
+  <script type="text/javascript" src="../../inc/js/jquery-3.7.1.slim.min.js"></script>
+  <script type="text/javascript" src="../../inc/js/swiper.min.js"></script>
+  <script type="text/javascript" src="../../inc/js/com-ui.js"></script>
+  <script type="text/javascript" src="../../inc/js/pub-ui.js"></script>
+  <script>
+    $(document).ready(function () {
+      $(".configurator_header_menu").click((el) => {
+        configuratorHeader(el);
       });
-      // [Start] : configurator_header_menu 확인용 스크립트 / 체크값 확인 후 넘어가기 필요
-      function configuratorHeader(el) {
-        $(".configurator_header_menu").removeClass("on");
-        el.target.closest(".configurator_header_menu").classList.add("on");
-        const menuName = ["exterior", "interior", "summary"];
-        for (let i = 0; i < menuName.length; i++) {
-          if ($(`.configurator_menu_${menuName[i]}`).hasClass("on")) {
-            $(".configurator_area").addClass(menuName[i]);
-          } else {
-            $(".configurator_area").removeClass(menuName[i]);
-          }
+    });
+    // [Start] : configurator_header_menu 확인용 스크립트 / 체크값 확인 후 넘어가기 필요
+    function configuratorHeader(el) {
+      $(".configurator_header_menu").removeClass("on");
+      el.target.closest(".configurator_header_menu").classList.add("on");
+      const menuName = ["exterior", "interior", "summary"];
+      for (let i = 0; i < menuName.length; i++) {
+        if ($(`.configurator_menu_${menuName[i]}`).hasClass("on")) {
+          $(".configurator_area").addClass(menuName[i]);
+        } else {
+          $(".configurator_area").removeClass(menuName[i]);
         }
       }
-      // [End] : configurator_header_menu 확인용 스크립트 / 체크값 확인 후 넘어가기 필요
+    }
+    // [End] : configurator_header_menu 확인용 스크립트 / 체크값 확인 후 넘어가기 필요
 
-      // [Start] : configurator 이미지
-      // 기본값 - 디폴트로 체크된 값 있으면 변경 필요
-      // let configObjEx = {
-      //   wheel: "",
-      //   towstrap: "",
-      //   brake: "", // ELANTRA N
-      //   spoiler: "", // ELANTRA N
-      //   sideMirror: "", // ELANTRA N
-      //   rearMufflerTip: "", // ELANTRA N
-      // };
-      // let configObjIn = {
-      //   carMat: "",
-      //   doorScuff: "",
-      //   seatBelt: "",
-      //   steeringWheel: "", // IONIQ 5 N
-      //   alcantaraPackage: "", // ELANTRA N
-      // };
-      // let configObj = {
-      //   model: "IONIQ5", // 임시 값 모델 바뀜에 따라 변경 필요 / IONIQ5 <-> ELANTRA
-      //   background: "_studio", // 디폴트 값 _studio / _studio <-> _track
-      //   time: "_day", // 디폴트 값 _day / _day <-> _night
-      //   exterior: "",
-      //   interior: "",
-      // };
-      // let valueEx = "";
-      // let valueIn = "";
+    // [Start] : configurator 이미지
+    // 기본값 - 디폴트로 체크된 값 있으면 변경 필요
+    // let configObjEx = {
+    //   wheel: "",
+    //   towstrap: "",
+    //   brake: "", // ELANTRA N
+    //   spoiler: "", // ELANTRA N
+    //   sideMirror: "", // ELANTRA N
+    //   rearMufflerTip: "", // ELANTRA N
+    // };
+    // let configObjIn = {
+    //   carMat: "",
+    //   doorScuff: "",
+    //   seatBelt: "",
+    //   steeringWheel: "", // IONIQ 5 N
+    //   alcantaraPackage: "", // ELANTRA N
+    // };
+    // let configObj = {
+    //   model: "IONIQ5", // 임시 값 모델 바뀜에 따라 변경 필요 / IONIQ5 <-> ELANTRA
+    //   background: "_studio", // 디폴트 값 _studio / _studio <-> _track
+    //   time: "_day", // 디폴트 값 _day / _day <-> _night
+    //   exterior: "",
+    //   interior: "",
+    // };
+    // let valueEx = "";
+    // let valueIn = "";
 
-      // function configuratorImg() {
-      //   // configObjEx 값 configObj.exterior 로 옮기기
-      //   configObj.exterior = "";
-      //   for (let i in Object.keys(configObjEx)) {
-      //     configObj.exterior += configObjEx[Object.keys(configObjEx)[i]];
-      //   }
+    // function configuratorImg() {
+    //   // configObjEx 값 configObj.exterior 로 옮기기
+    //   configObj.exterior = "";
+    //   for (let i in Object.keys(configObjEx)) {
+    //     configObj.exterior += configObjEx[Object.keys(configObjEx)[i]];
+    //   }
 
-      //   // configObjIn 값 configObj.interior 로 옮기기
-      //   configObj.interior = "";
-      //   for (let i in Object.keys(configObjIn)) {
-      //     configObj.interior += configObjIn[Object.keys(configObjIn)[i]];
-      //   }
+    //   // configObjIn 값 configObj.interior 로 옮기기
+    //   configObj.interior = "";
+    //   for (let i in Object.keys(configObjIn)) {
+    //     configObj.interior += configObjIn[Object.keys(configObjIn)[i]];
+    //   }
 
-      //   // exterior 네이밍 규칙
-      //   // 모델_배경이미지_시간_옵션1_옵션2 ... _옵션 으로 추가
-      //   // interior 네이밍 규칙
-      //   // 모델_in_옵션1_옵션2 ... _옵션 으로 추가
-      //   valueEx =
-      //     configObj.model +
-      //     configObj.background +
-      //     configObj.time +
-      //     configObj.exterior;
-      //   valueIn = configObj.model + "_in" + configObj.interior;
+    //   // exterior 네이밍 규칙
+    //   // 모델_배경이미지_시간_옵션1_옵션2 ... _옵션 으로 추가
+    //   // interior 네이밍 규칙
+    //   // 모델_in_옵션1_옵션2 ... _옵션 으로 추가
+    //   valueEx =
+    //     configObj.model +
+    //     configObj.background +
+    //     configObj.time +
+    //     configObj.exterior;
+    //   valueIn = configObj.model + "_in" + configObj.interior;
 
-      //   console.log("valueEx : " + valueEx + " / valueIn : " + valueIn);
-      // }
-      // configuratorImg();
-      // [End] : configurator 이미지
-    </script>
-  </body>
+    //   console.log("valueEx : " + valueEx + " / valueIn : " + valueIn);
+    // }
+    // configuratorImg();
+    // [End] : configurator 이미지
+  </script>
+</body>
+
 </html>

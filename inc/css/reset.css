@@ -243,12 +243,12 @@ body {
 *::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(transparent, #00c6ff, transparent);
 } */
-body * {
+/* body * {
   outline: none;
 }
 body *:focus {
   outline: none;
-}
+} */
 
 a,
 button {

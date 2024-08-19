@@ -14,7 +14,7 @@
 
 <body>
   <div class="wrap">
-    <section class="content-wrap">
+    <section class="content-wrap" id="container">
       <div class="content-area evtGuide">
         <section class="content-item02">
           <div class="n-race-box">
@@ -263,560 +263,564 @@
               <!-- //section_tab -->
               <section class="section_list">
                 <div class="list-content conts01 active" data-content="1">
-                    <div class="n-race-box-conts content-item03">
-                      <h2 class="title-w1440 contitle-type01 fw-type03">
-                        N CUP Round 1
-                      </h2>
-                      <div class="conts-box-wrap">
-                        <div class="bg-img-wrap" style="
+                  <div class="n-race-box-conts content-item03">
+                    <h2 class="title-w1440 contitle-type01 fw-type03">
+                      N CUP Round 1
+                    </h2>
+                    <div class="conts-box-wrap">
+                      <div class="bg-img-wrap" style="
                               background-image: url('../../inc/images/content/conts-nrace_img01.svg');
                             ">
-                          <h3 class="tit">N Festival<br />N Cup Round 1</h3>
-                          <p class="desc">
-                            04.27 ~ 04.28<br /> Inje Speedium
-                          </p>
-                          <a href="" target="_blank" rel="noopener" class="more_btn btn btn-md-primary02">
-                            Tickets
-                            <span class="btn-icon16 icon-right" aria-hidden="true"></span>
-                          </a>
-                        </div>
+                        <h3 class="tit">N Festival<br />N Cup Round 1</h3>
+                        <p class="desc">
+                          04.27 ~ 04.28<br /> Inje Speedium
+                        </p>
+                        <a href="" target="_blank" rel="noopener" class="more_btn btn btn-md-primary02">
+                          Tickets
+                          <span class="btn-icon16 icon-right" aria-hidden="true"></span>
+                        </a>
                       </div>
                     </div>
-                    <!-- 08.12 수정 : th:block 위치 변경 -->
-                    <th:block th:fragment="roundInfo">
-                      <th:block th:if="${race != null}">
-                        <div class="content-item04 bg-gray">
-                          <div class="class-info-box">
-                            <h2 class="title-w1440 contitle-type01 fw-type03 ta-ctr">
-                              클래스 소개
-                            </h2>
-                            <div class="conts-card-wrap">
-                              <ul class="grid_3 grid_mo_scroll">
-                                <li>
-                                  <div class="card_type05">
-                                    <div class="card_top">
-                                      <img src="../../inc/images/content/class-info_img01.svg" loading="lazy" alt="eN1" />
-                                    </div>
-                                    <div class="card_bottom">
-                                      <p class="card_tit">eN1</p>
-                                      <p class="card_detail">
-                                        650 마력 IONIQ 5N을 기반으로 한 국내 최초
-                                        레이스 전용 전기차 대회
-                                      </p>
-                                      <div class="btn-wrap">
-                                        <a href="about-korea.do" class="btn md-txt-btn01">
-                                          자세히 보기
-                                          <span class="btn-icon16 icon-right" aria-hidden="true"></span>
-                                        </a>
-                                      </div>
-                                    </div>
+                  </div>
+                  <!-- 08.12 수정 : th:block 위치 변경 -->
+                  <th:block th:fragment="roundInfo">
+                    <th:block th:if="${race != null}">
+                      <div class="content-item04 bg-gray">
+                        <div class="class-info-box">
+                          <h2 class="title-w1440 contitle-type01 fw-type03 ta-ctr">
+                            클래스 소개
+                          </h2>
+                          <div class="conts-card-wrap">
+                            <ul class="grid_3 grid_mo_scroll">
+                              <li>
+                                <div class="card_type05">
+                                  <div class="card_top">
+                                    <img src="../../inc/images/content/class-info_img01.svg" loading="lazy" alt="eN1" />
                                   </div>
-                                </li>
-                                <li>
-                                  <div class="card_type05">
-                                    <div class="card_top">
-                                      <img src="../../inc/images/content/class-info_img02.png" loading="lazy" alt="N1" />
-                                    </div>
-                                    <div class="card_bottom">
-                                      <p class="card_tit">N1</p>
-                                      <p class="card_detail">
-                                        레이스 전용 AVANTE N의 경쟁이 펼쳐지는
-                                        본격 프로 레이스 대회
-                                      </p>
-                                      <div class="btn-wrap">
-                                        <a href="about-korea.do" class="btn md-txt-btn01">
-                                          자세히 보기
-                                          <span class="btn-icon16 icon-right" aria-hidden="true"></span>
-                                        </a>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </li>
-                                <li>
-                                  <div class="card_type05">
-                                    <div class="card_top">
-                                      <img src="../../inc/images/content/class-info_img03.png" loading="lazy" alt="N2" />
-                                    </div>
-                                    <div class="card_bottom">
-                                      <p class="card_tit">N2</p>
-                                      <p class="card_detail">
-                                        일상에서의 AVANTE N으로 즐길 수 있는
-                                        대표적인 원메이크 레이스 대회
-                                      </p>
-                                      <div class="btn-wrap">
-                                        <a href="about-korea.do" class="btn md-txt-btn01">
-                                          자세히 보기
-                                          <span class="btn-icon16 icon-right" aria-hidden="true"></span>
-                                        </a>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="content-item05">
-                          <div class="schedule-box" th:utext="${race.raceDetail}">
-                            <div class="wrap-list list01">
-                              <div class="tab-container">
-                                <div class="tab-head">
-                                  <h2 class="title">레이스 일정</h2>
-                                  <div class="tabs-wrap">
-                                    <ul class="tabs ty-black" data-contents="탭카테고리">
-                                      <li class="on">
-                                        <a href="javascript:;" aria-controls="tab1-011" role="tab"
-                                          aria-selected="true">토</a>
-                                      </li>
-                                      <li>
-                                        <a href="javascript:;" aria-controls="tab1-021" role="tab" aria-selected="false">
-                                          일
-                                        </a>
-                                      </li>
-                                    </ul>
-                                  </div>
-                                </div>
-                                <div class="tab-content on" id="tab1-011" role="tabpanel">
-                                  <div class="__bottom">
-                                    <div class="wrap-lists">
-                                      <div class="list-box">
-                                        <p class="txt-type03">09:10 ~ 09:30</p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type01">
-                                          [eN1] IONIQ 5 N Cup 연습 1차
-                                        </p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type03">eN1</p>
-                                      </div>
-                                    </div>
-                                    <div class="wrap-lists">
-                                      <div class="list-box">
-                                        <p class="txt-type03">09:40 ~ 10:00</p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type01">
-                                          [N2] AVANTE N Cup - A 연습 1차
-                                        </p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type03">N2</p>
-                                      </div>
-                                    </div>
-                                    <div class="wrap-lists">
-                                      <div class="list-box">
-                                        <p class="txt-type03">10:10 ~ 10:30</p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type01">
-                                          [N2] AVANTE N Cup - B 연습 1차
-                                        </p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type03">N2</p>
-                                      </div>
-                                    </div>
-                                    <div class="wrap-lists">
-                                      <div class="list-box">
-                                        <p class="txt-type03">10:40 ~ 11:00</p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type01">
-                                          [N1] AVANTE N Cup 연습 1차
-                                        </p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type03">N1</p>
-                                      </div>
-                                    </div>
-                                    <div class="wrap-lists">
-                                      <div class="list-box">
-                                        <p class="txt-type03">11:10 ~ 11:30</p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type01">
-                                          [N2] AVANTE N Cup - A 연습 2차
-                                        </p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type03">N2</p>
-                                      </div>
-                                    </div>
-                                    <div class="wrap-lists">
-                                      <div class="list-box">
-                                        <p class="txt-type03">11:40 ~ 12:00</p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type01">
-                                          [N2] AVANTE N Cup - B 연습 2차
-                                        </p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type03">N2</p>
-                                      </div>
-                                    </div>
-                                    <div class="wrap-lists">
-                                      <div class="list-box">
-                                        <p class="txt-type03">12:10 ~ 12:30</p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type01">
-                                          [eN1] IONIQ 5 N Cup 연습 2차
-                                        </p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type03">eN1</p>
-                                      </div>
-                                    </div>
-                                    <div class="wrap-lists">
-                                      <div class="list-box">
-                                        <p class="txt-type03">12:30 ~ 13:30</p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type01">점심시간</p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type03">전 클래스</p>
-                                      </div>
-                                    </div>
-                                    <div class="wrap-lists">
-                                      <div class="list-box">
-                                        <p class="txt-type03">14:00 ~ 14:20</p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type01">
-                                          [N1] AVANTE N Cup 연습 2차
-                                        </p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type03">eN1</p>
-                                      </div>
-                                    </div>
-                                    <!-- 14:30 ~ 15:30 국문에만 적용, 영문에는 x -->
-                                    <div class="wrap-lists">
-                                      <div class="list-box">
-                                        <p class="txt-type03">14:30 ~ 15:30</p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type01">
-                                          [N2] AVANTE N Cup 통합 예선 (생중계)
-                                        </p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type03">N2</p>
-                                      </div>
-                                    </div>
-                                    <div class="wrap-lists">
-                                      <div class="list-box">
-                                        <p class="txt-type03">15:40 ~ 16:00</p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type01">
-                                          [N1] AVANTE N Cup 예선 (생중계)
-                                        </p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type03">N1</p>
-                                      </div>
-                                    </div>
-
-                                    <div class="wrap-lists">
-                                      <div class="list-box">
-                                        <p class="txt-type03">16:10 ~ 16:30</p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type01">
-                                          [N2] AVANTE N Cup - 웜업
-                                        </p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type03">
-                                          N2 <br />(Challenge 2)
-                                        </p>
-                                      </div>
-                                    </div>
-
-                                    <div class="wrap-lists">
-                                      <div class="list-box">
-                                        <p class="txt-type03">16:35 ~ 17:05</p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type01">
-                                          [N2] AVANTE N Cup 결승
-                                        </p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type03">
-                                          N2 <br />(Challenge 2)
-                                        </p>
-                                      </div>
-                                    </div>
-
-                                    <div class="wrap-lists">
-                                      <div class="list-box">
-                                        <p class="txt-type03">17:10 ~ 17:30</p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type01">
-                                          [N2] AVANTE N Cup 예선 (생중계)
-                                        </p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type03">
-                                          N2 <br />(Masters)
-                                        </p>
-                                      </div>
-                                    </div>
-
-                                    <div class="wrap-lists">
-                                      <div class="list-box">
-                                        <p class="txt-type03">17:40 ~ 18:00</p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type01">
-                                          [eN1] IONIQ 5 N Cup 연습 3차
-                                        </p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type03">eN1</p>
-                                      </div>
+                                  <div class="card_bottom">
+                                    <p class="card_tit">eN1</p>
+                                    <p class="card_detail">
+                                      650 마력 IONIQ 5N을 기반으로 한 국내 최초
+                                      레이스 전용 전기차 대회
+                                    </p>
+                                    <div class="btn-wrap">
+                                      <a href="about-korea.do" class="btn md-txt-btn01">
+                                        자세히 보기
+                                        <span class="btn-icon16 icon-right" aria-hidden="true"></span>
+                                      </a>
                                     </div>
                                   </div>
                                 </div>
-                                <div class="tab-content" id="tab1-021" role="tabpanel">
-                                  <div class="__bottom">
-                                    <div class="wrap-lists">
-                                      <div class="list-box">
-                                        <p class="txt-type03">09:10 ~ 09:30</p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type01">
-                                          [N1] AVANTE N Cup 웜업
-                                        </p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type03">N1</p>
-                                      </div>
-                                    </div>
-                                    <div class="wrap-lists">
-                                      <div class="list-box">
-                                        <p class="txt-type03">09:40 ~ 10:00</p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type01">
-                                          [eN1] IONIQ 5 N Cup 연습 1차
-                                        </p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type03">eN1</p>
-                                      </div>
-                                    </div>
-                                    <div class="wrap-lists">
-                                      <div class="list-box">
-                                        <p class="txt-type03">10:10 ~ 10:40</p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type01">
-                                          [N2] AVANTE N Cup(Challenge) 웜업
-                                        </p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type03">N2</p>
-                                      </div>
-                                    </div>
-                                    <div class="wrap-lists">
-                                      <div class="list-box">
-                                        <p class="txt-type03">10:50 ~ 11:20</p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type01">
-                                          [N2] AVANTE N Cup(Masters) 웜업
-                                        </p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type03">N2</p>
-                                      </div>
-                                    </div>
-                                    <div class="wrap-lists">
-                                      <div class="list-box">
-                                        <p class="txt-type03">11:30 ~ 12:50</p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type01">
-                                          개막식 및 그리드워크
-                                        </p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type03">전 클래스</p>
-                                      </div>
-                                    </div>
-                                    <div class="wrap-lists">
-                                      <div class="list-box">
-                                        <p class="txt-type03">13:20 ~ 13:40</p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type01">
-                                          [N2] AVANTE N Cup(Masters) 2차 웜업
-                                        </p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type03">N2</p>
-                                      </div>
-                                    </div>
-                                    <div class="wrap-lists">
-                                      <div class="list-box">
-                                        <p class="txt-type03">13:45 ~ 14:40</p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type01">
-                                          [N2] AVANTE N Cup(Masters) 결승
-                                          (생중계)
-                                        </p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type03">
-                                          N2<br />(Masters)
-                                        </p>
-                                      </div>
-                                    </div>
-                                    <div class="wrap-lists">
-                                      <div class="list-box">
-                                        <p class="txt-type03">14:40 ~ 15:00</p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type01">
-                                          [eN1] IONIQ 5 N Cup 연습 2차 (생중계)
-                                        </p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type03">eN1</p>
-                                      </div>
-                                    </div>
-                                    <div class="wrap-lists">
-                                      <div class="list-box">
-                                        <p class="txt-type03">15:10 ~ 16:25</p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type01">
-                                          [N1] AVANTE N Cup 결승 (생중계)
-                                        </p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type03">N1</p>
-                                      </div>
-                                    </div>
-                                    <div class="wrap-lists">
-                                      <div class="list-box">
-                                        <p class="txt-type03">16:25 ~ 16:45</p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type01">
-                                          [N2] AVANTE N Cup(Challenge) 2차 웜업
-                                        </p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type03">N2</p>
-                                      </div>
-                                    </div>
-
-                                    <div class="wrap-lists">
-                                      <div class="list-box">
-                                        <p class="txt-type03">16:50 ~ 17:35</p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type01">
-                                          [N2] AVANTE N Cup(Challenge) (생중계)
-                                        </p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type03">
-                                          N2<br />(Challenge)
-                                        </p>
-                                      </div>
-                                    </div>
-
-                                    <div class="wrap-lists">
-                                      <div class="list-box">
-                                        <p class="txt-type03">17:35 ~ 18:00</p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type01">
-                                          [eN1] IONIQ 5 N Cup 연습 3차
-                                        </p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type03">eN1</p>
-                                      </div>
+                              </li>
+                              <li>
+                                <div class="card_type05">
+                                  <div class="card_top">
+                                    <img src="../../inc/images/content/class-info_img02.png" loading="lazy" alt="N1" />
+                                  </div>
+                                  <div class="card_bottom">
+                                    <p class="card_tit">N1</p>
+                                    <p class="card_detail">
+                                      레이스 전용 AVANTE N의 경쟁이 펼쳐지는
+                                      본격 프로 레이스 대회
+                                    </p>
+                                    <div class="btn-wrap">
+                                      <a href="about-korea.do" class="btn md-txt-btn01">
+                                        자세히 보기
+                                        <span class="btn-icon16 icon-right" aria-hidden="true"></span>
+                                      </a>
                                     </div>
                                   </div>
-                                </div>   
-                              </div>
-                            </div>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="card_type05">
+                                  <div class="card_top">
+                                    <img src="../../inc/images/content/class-info_img03.png" loading="lazy" alt="N2" />
+                                  </div>
+                                  <div class="card_bottom">
+                                    <p class="card_tit">N2</p>
+                                    <p class="card_detail">
+                                      일상에서의 AVANTE N으로 즐길 수 있는
+                                      대표적인 원메이크 레이스 대회
+                                    </p>
+                                    <div class="btn-wrap">
+                                      <a href="about-korea.do" class="btn md-txt-btn01">
+                                        자세히 보기
+                                        <span class="btn-icon16 icon-right" aria-hidden="true"></span>
+                                      </a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                            </ul>
                           </div>
                         </div>
+                      </div>
 
-                        <section class="content-item06 bg-gray">
-                          <div class="event-box">
-                            <div class="conts-head ty02">
-                              <h2 class="tit contitle-type01 fw-type03">
-                                행사 지도
-                              </h2>
-                              <!-- 07.12 수정 : select-type 클래스 정의
-                                selectbox 2개이상일 경우 select-type02 클래스 추가
-                                selectbox 1개일 때는 select-type01 클래스 추가 -->
-                              <div class="selectbox-wrap select-type01 evtLayout-type">
-                                <div>
-                                  <button class="selectbox-trigger selectbox-js txt-type03 fw-type03"
-                                    aria-haspopup="listbox" aria-expanded="false" aria-labelledby="typeSelect02">
-                                    N 라운지
-                                  </button>
-                                  <ul class="selectbox-options 02" role="listbox" id="typeSelect02" aria-hidden="true"
-                                    style="display: none">
-                                    <li class="moclose-btn" style="display: none">
-                                      <button type="button" class="btn btn-only-icon" title="close">
-                                        <span class="visually-hidden">close</span>
-                                        <span class="btn-icon24 icon-close" aria-hidden="true"></span>
-                                      </button>
+                      <div class="content-item05">
+                        <div class="schedule-box" th:utext="${race.raceDetail}">
+                          <div class="wrap-list list01">
+                            <div class="tab-container">
+                              <div class="tab-head">
+                                <h2 class="title">레이스 일정</h2>
+                                <div class="tabs-wrap">
+                                  <ul class="tabs ty-black" data-contents="탭카테고리">
+                                    <li class="on">
+                                      <a href="javascript:;" aria-controls="tab1-011" role="tab"
+                                        aria-selected="true">토</a>
                                     </li>
-                                    <li class="option option-click fw- type03 active" role="option" aria-selected="true" data-type="1">
-                                      N 라운지
-                                    </li>
-                                    <li class="option option-click fw-type03" role="option" aria-selected="false" data-type="2">
-                                      모터스포츠 경험
-                                    </li>
-                                    <li class="option option-click fw-type03" role="option" aria-selected="false" data-type="3">
-                                      관람존
+                                    <li>
+                                      <a href="javascript:;" aria-controls="tab1-021" role="tab" aria-selected="false">
+                                        일
+                                      </a>
                                     </li>
                                   </ul>
                                 </div>
                               </div>
-                              <div class="selectbox-overlay" style="display: none"></div>
-                            </div>
-                            <div class="conts-body">
-                              <!-- data-type 값 부모 첫번째 selectbox 대상과 동일하게 적용 필요 -->
-                              <!-- on 클래스 : 맵 활성화시 on 클래스 추가 필요 -->
-                              <!-- active 클래스 : 추가되어 있을 경우 + 버튼 disabled 처리됨 -->
-                              <!-- 1번째 data option 맵 영역 -->
-                              <div class="evt-map-wrap on active" data-type="1">
-                                <div class="btn-area">
-                                  <div class="btn-wrap plus">
-                                    <button type="button">
-                                      <span class="visually-hidden">+ 확대 버튼</span>
-                                    </button>
+                              <div class="tab-content on" id="tab1-011" role="tabpanel">
+                                <div class="__bottom">
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">09:10 ~ 09:30</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">
+                                        [eN1] IONIQ 5 N Cup 연습 1차
+                                      </p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">eN1</p>
+                                    </div>
                                   </div>
-                                  <div class="btn-wrap minus">
-                                    <button type="button">
-                                      <span class="visually-hidden">- 축소 버튼</span>
-                                    </button>
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">09:40 ~ 10:00</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">
+                                        [N2] AVANTE N Cup - A 연습 1차
+                                      </p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">N2</p>
+                                    </div>
                                   </div>
-                                </div>                          
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">10:10 ~ 10:30</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">
+                                        [N2] AVANTE N Cup - B 연습 1차
+                                      </p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">N2</p>
+                                    </div>
+                                  </div>
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">10:40 ~ 11:00</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">
+                                        [N1] AVANTE N Cup 연습 1차
+                                      </p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">N1</p>
+                                    </div>
+                                  </div>
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">11:10 ~ 11:30</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">
+                                        [N2] AVANTE N Cup - A 연습 2차
+                                      </p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">N2</p>
+                                    </div>
+                                  </div>
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">11:40 ~ 12:00</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">
+                                        [N2] AVANTE N Cup - B 연습 2차
+                                      </p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">N2</p>
+                                    </div>
+                                  </div>
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">12:10 ~ 12:30</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">
+                                        [eN1] IONIQ 5 N Cup 연습 2차
+                                      </p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">eN1</p>
+                                    </div>
+                                  </div>
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">12:30 ~ 13:30</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">점심시간</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">전 클래스</p>
+                                    </div>
+                                  </div>
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">14:00 ~ 14:20</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">
+                                        [N1] AVANTE N Cup 연습 2차
+                                      </p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">eN1</p>
+                                    </div>
+                                  </div>
+                                  <!-- 14:30 ~ 15:30 국문에만 적용, 영문에는 x -->
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">14:30 ~ 15:30</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">
+                                        [N2] AVANTE N Cup 통합 예선 (생중계)
+                                      </p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">N2</p>
+                                    </div>
+                                  </div>
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">15:40 ~ 16:00</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">
+                                        [N1] AVANTE N Cup 예선 (생중계)
+                                      </p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">N1</p>
+                                    </div>
+                                  </div>
 
-                                
-                                <div class="evt-map-img active"> <!-- 기본 default값 으로 노출하고싶은 evt-map-img에 active클래스 추가하기 -->
-                                  <div class="evt-map-default-box">
-                                    <!-- 
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">16:10 ~ 16:30</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">
+                                        [N2] AVANTE N Cup - 웜업
+                                      </p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">
+                                        N2 <br />(Challenge 2)
+                                      </p>
+                                    </div>
+                                  </div>
+
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">16:35 ~ 17:05</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">
+                                        [N2] AVANTE N Cup 결승
+                                      </p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">
+                                        N2 <br />(Challenge 2)
+                                      </p>
+                                    </div>
+                                  </div>
+
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">17:10 ~ 17:30</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">
+                                        [N2] AVANTE N Cup 예선 (생중계)
+                                      </p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">
+                                        N2 <br />(Masters)
+                                      </p>
+                                    </div>
+                                  </div>
+
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">17:40 ~ 18:00</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">
+                                        [eN1] IONIQ 5 N Cup 연습 3차
+                                      </p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">eN1</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="tab-content" id="tab1-021" role="tabpanel">
+                                <div class="__bottom">
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">09:10 ~ 09:30</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">
+                                        [N1] AVANTE N Cup 웜업
+                                      </p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">N1</p>
+                                    </div>
+                                  </div>
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">09:40 ~ 10:00</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">
+                                        [eN1] IONIQ 5 N Cup 연습 1차
+                                      </p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">eN1</p>
+                                    </div>
+                                  </div>
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">10:10 ~ 10:40</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">
+                                        [N2] AVANTE N Cup(Challenge) 웜업
+                                      </p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">N2</p>
+                                    </div>
+                                  </div>
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">10:50 ~ 11:20</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">
+                                        [N2] AVANTE N Cup(Masters) 웜업
+                                      </p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">N2</p>
+                                    </div>
+                                  </div>
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">11:30 ~ 12:50</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">
+                                        개막식 및 그리드워크
+                                      </p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">전 클래스</p>
+                                    </div>
+                                  </div>
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">13:20 ~ 13:40</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">
+                                        [N2] AVANTE N Cup(Masters) 2차 웜업
+                                      </p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">N2</p>
+                                    </div>
+                                  </div>
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">13:45 ~ 14:40</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">
+                                        [N2] AVANTE N Cup(Masters) 결승
+                                        (생중계)
+                                      </p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">
+                                        N2<br />(Masters)
+                                      </p>
+                                    </div>
+                                  </div>
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">14:40 ~ 15:00</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">
+                                        [eN1] IONIQ 5 N Cup 연습 2차 (생중계)
+                                      </p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">eN1</p>
+                                    </div>
+                                  </div>
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">15:10 ~ 16:25</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">
+                                        [N1] AVANTE N Cup 결승 (생중계)
+                                      </p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">N1</p>
+                                    </div>
+                                  </div>
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">16:25 ~ 16:45</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">
+                                        [N2] AVANTE N Cup(Challenge) 2차 웜업
+                                      </p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">N2</p>
+                                    </div>
+                                  </div>
+
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">16:50 ~ 17:35</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">
+                                        [N2] AVANTE N Cup(Challenge) (생중계)
+                                      </p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">
+                                        N2<br />(Challenge)
+                                      </p>
+                                    </div>
+                                  </div>
+
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">17:35 ~ 18:00</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">
+                                        [eN1] IONIQ 5 N Cup 연습 3차
+                                      </p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">eN1</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <section class="content-item06 bg-gray">
+                        <div class="event-box">
+                          <div class="conts-head ty02">
+                            <h2 class="tit contitle-type01 fw-type03">
+                              행사 지도
+                            </h2>
+                            <!-- 07.12 수정 : select-type 클래스 정의
+                                selectbox 2개이상일 경우 select-type02 클래스 추가
+                                selectbox 1개일 때는 select-type01 클래스 추가 -->
+                            <div class="selectbox-wrap select-type01 evtLayout-type">
+                              <div>
+                                <button class="selectbox-trigger selectbox-js txt-type03 fw-type03"
+                                  aria-haspopup="listbox" aria-expanded="false" aria-labelledby="typeSelect02">
+                                  N 라운지
+                                </button>
+                                <ul class="selectbox-options 02" role="listbox" id="typeSelect02" aria-hidden="true"
+                                  style="display: none">
+                                  <li class="moclose-btn" style="display: none">
+                                    <button type="button" class="btn btn-only-icon" title="close">
+                                      <span class="visually-hidden">close</span>
+                                      <span class="btn-icon24 icon-close" aria-hidden="true"></span>
+                                    </button>
+                                  </li>
+                                  <li class="option option-click fw- type03 active" role="option" aria-selected="true"
+                                    data-type="1">
+                                    N 라운지
+                                  </li>
+                                  <li class="option option-click fw-type03" role="option" aria-selected="false"
+                                    data-type="2">
+                                    모터스포츠 경험
+                                  </li>
+                                  <li class="option option-click fw-type03" role="option" aria-selected="false"
+                                    data-type="3">
+                                    관람존
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="selectbox-overlay" style="display: none"></div>
+                          </div>
+                          <div class="conts-body">
+                            <!-- data-type 값 부모 첫번째 selectbox 대상과 동일하게 적용 필요 -->
+                            <!-- on 클래스 : 맵 활성화시 on 클래스 추가 필요 -->
+                            <!-- active 클래스 : 추가되어 있을 경우 + 버튼 disabled 처리됨 -->
+                            <!-- 1번째 data option 맵 영역 -->
+                            <div class="evt-map-wrap on active" data-type="1">
+                              <div class="btn-area">
+                                <div class="btn-wrap plus">
+                                  <button type="button">
+                                    <span class="visually-hidden">+ 확대 버튼</span>
+                                  </button>
+                                </div>
+                                <div class="btn-wrap minus">
+                                  <button type="button">
+                                    <span class="visually-hidden">- 축소 버튼</span>
+                                  </button>
+                                </div>
+                              </div>
+
+
+                              <div class="evt-map-img active">
+                                <!-- 기본 default값 으로 노출하고싶은 evt-map-img에 active클래스 추가하기 -->
+                                <div class="evt-map-default-box">
+                                  <!-- 
                                       comment!
                                       ****************************************************************                                        
                                       1. 레이어팝업 실행 함수 : NbrandUI.modalOpen(".pop-open"); -> 팝업이벤트 개발 호출 후 실행 원할 경우 해당 이벤트 실행 하시면 됩니다.
@@ -826,258 +830,258 @@
                                       popup id="pop-nLounge" id값과 동일해야 정상적으로 팝업이 노출됨
                                       ****************************************************************
                                     -->
-                                    <button class="pop-open btn-evtmap-pop active" aria-controls="pop-nLounge"
-                                      aria-haspopup="true" aria-expanded="false" title="팝업오픈">
-                                      <span class="visually-hidden">side-popup1 열기</span>
-                                      <img src="../../inc/images/eventLayout/evtLayout_min_shortImg01.png"
-                                        alt="이벤트 레이아웃 N lounge 확대 이미지" />
-                                    </button>
-                                  </div>
-                                  <div class="evt-map-active-box">
-                                    <!-- n lounge -->
-                                    <button class="pop-open btn-evtmap-pop" aria-controls="pop-nLounge"
-                                      aria-haspopup="true" aria-expanded="false" title="팝업오픈">
-                                      <span class="visually-hidden">side-popup1 열기</span>
-                                      <img src="../../inc/images/eventLayout/evtLayout_max_nLounge.png"
-                                        alt="이벤트 레이아웃 N lounge 확대 이미지" />
-                                    </button>
-                                  </div>
+                                  <button class="pop-open btn-evtmap-pop active" aria-controls="pop-nLounge"
+                                    aria-haspopup="true" aria-expanded="false" title="팝업오픈">
+                                    <span class="visually-hidden">side-popup1 열기</span>
+                                    <img src="../../inc/images/eventLayout/evtLayout_min_shortImg01.png"
+                                      alt="이벤트 레이아웃 N lounge 확대 이미지" />
+                                  </button>
+                                </div>
+                                <div class="evt-map-active-box">
+                                  <!-- n lounge -->
+                                  <button class="pop-open btn-evtmap-pop" aria-controls="pop-nLounge"
+                                    aria-haspopup="true" aria-expanded="false" title="팝업오픈">
+                                    <span class="visually-hidden">side-popup1 열기</span>
+                                    <img src="../../inc/images/eventLayout/evtLayout_max_nLounge.png"
+                                      alt="이벤트 레이아웃 N lounge 확대 이미지" />
+                                  </button>
                                 </div>
                               </div>
-                              <!-- //1번째 data option 맵 영역 -->
-                              
-                              <!-- 2번째 data option 맵 영역 -->
-                              <div class="evt-map-wrap" data-type="2">                          
-                                <div class="btn-area">
-                                  <div class="btn-wrap plus">
-                                    <button type="button">
-                                      <span class="visually-hidden">+ 확대 버튼</span>
-                                    </button>
-                                  </div>
-                                  <div class="btn-wrap minus">
-                                    <button type="button">
-                                      <span class="visually-hidden">- 축소 버튼</span>
-                                    </button>
-                                  </div>
-                                </div>
-                                
-
-                                
-                                <div class="evt-map-img"> <!-- 활성화 맵일 시, active 클래스 추가됨 -->
-                                  <div class="evt-map-default-box">
-                                    <!-- Inje N Cup - Round1 이벤트레이아웃 기본 이미지 -->
-                                    <button class="pop-open btn-evtmap-pop active" aria-controls="pop-motorExperience"
-                                      aria-haspopup="true" aria-expanded="false" title="팝업오픈">
-                                      <span class="visually-hidden">side-popup1 열기</span>
-                                      <img src="../../inc/images/eventLayout/evtLayout_min_shortImg01.png"
-                                        alt="이벤트 레이아웃 N lounge 확대 이미지" />
-                                    </button>
-                                  </div>
-                                  <div class="evt-map-active-box">
-                                    <!-- motorsport experience -->
-                                    <button class="pop-open btn-evtmap-pop" aria-controls="pop-motorExperience"
-                                      aria-haspopup="true" aria-expanded="false" title="팝업오픈">
-                                      <span class="visually-hidden">side-popup1 열기</span>
-                                      <img src="../../inc/images/eventLayout/evtLayout_max_motorExperience.png"
-                                        alt="이벤트 레이아웃 Motorsport Experience 확대 이미지" />
-                                    </button>
-                                  </div>
-                                </div>
-                              </div>
-                              <!-- //2번째 data option 맵 영역 -->
-
-                              <!-- 3번째 data option 맵 영역 -->
-                              <div class="evt-map-wrap" data-type="3">
-                                <!-- on 클래스 : 맵 활성화시 on 클래스 추가 필요 -->
-                                <div class="btn-area">
-                                  <div class="btn-wrap plus">
-                                    <button type="button">
-                                      <span class="visually-hidden">+ 확대 버튼</span>
-                                    </button>
-                                  </div>
-                                  <div class="btn-wrap minus">
-                                    <button type="button">
-                                      <span class="visually-hidden">- 축소 버튼</span>
-                                    </button>
-                                  </div>
-                                </div>
-                                
-
-                                
-                                <div class="evt-map-img">
-                                  <div class="evt-map-default-box">
-                                    <!-- Inje N Cup - Round1 이벤트레이아웃 기본 이미지 -->
-                                    <button class="pop-open btn-evtmap-pop active" aria-controls="pop-viewingZone"
-                                      aria-haspopup="true" aria-expanded="false" title="팝업오픈">
-                                      <span class="visually-hidden">side-popup1 열기</span>
-                                      <img src="../../inc/images/eventLayout/evtLayout_min_shortImg01.png"
-                                        alt="이벤트 레이아웃 N lounge 확대 이미지" />
-                                    </button>
-                                  </div>
-                                  <div class="evt-map-active-box">
-                                    <!-- viewing-zone -->
-                                    <button class="pop-open btn-evtmap-pop" aria-controls="pop-viewingZone"
-                                      aria-haspopup="true" aria-expanded="false" title="팝업오픈">
-                                      <span class="visually-hidden">side-popup1 열기</span>
-                                      <img src="../../inc/images/eventLayout/evtLayout_max_viewingZone.png"
-                                        alt="이벤트 레이아웃 viewing zone 확대 이미지" />
-                                    </button>
-                                  </div>
-                                </div>
-                              </div>
-                              <!-- //3번째 data option 맵 영역 -->
                             </div>
-                          </div>
-                        </section>
+                            <!-- //1번째 data option 맵 영역 -->
 
-                        <div class="content-item07">
-                          <div class="schedule-box" th:utext="${race.eventDetail}">
-                            <div class="wrap-list list02">
-                              <div class="tab-container">
-                                <div class="tab-head">
-                                  <h2 class="title">이벤트 타임테이블</h2>
-                                  <div class="tabs-wrap">
-                                    <ul class="tabs ty-black" data-contents="탭카테고리">
-                                      <li class="on">
-                                        <a href="javascript:;" aria-controls="tab2-011" role="tab"
-                                          aria-selected="true">토</a>
-                                      </li>
-                                      <li>
-                                        <a href="javascript:;" aria-controls="tab2-021" role="tab" aria-selected="false">
-                                          일
-                                        </a>
-                                      </li>
-                                    </ul>
+                            <!-- 2번째 data option 맵 영역 -->
+                            <div class="evt-map-wrap" data-type="2">
+                              <div class="btn-area">
+                                <div class="btn-wrap plus">
+                                  <button type="button">
+                                    <span class="visually-hidden">+ 확대 버튼</span>
+                                  </button>
+                                </div>
+                                <div class="btn-wrap minus">
+                                  <button type="button">
+                                    <span class="visually-hidden">- 축소 버튼</span>
+                                  </button>
+                                </div>
+                              </div>
+
+
+
+                              <div class="evt-map-img">
+                                <!-- 활성화 맵일 시, active 클래스 추가됨 -->
+                                <div class="evt-map-default-box">
+                                  <!-- Inje N Cup - Round1 이벤트레이아웃 기본 이미지 -->
+                                  <button class="pop-open btn-evtmap-pop active" aria-controls="pop-motorExperience"
+                                    aria-haspopup="true" aria-expanded="false" title="팝업오픈">
+                                    <span class="visually-hidden">side-popup1 열기</span>
+                                    <img src="../../inc/images/eventLayout/evtLayout_min_shortImg01.png"
+                                      alt="이벤트 레이아웃 N lounge 확대 이미지" />
+                                  </button>
+                                </div>
+                                <div class="evt-map-active-box">
+                                  <!-- motorsport experience -->
+                                  <button class="pop-open btn-evtmap-pop" aria-controls="pop-motorExperience"
+                                    aria-haspopup="true" aria-expanded="false" title="팝업오픈">
+                                    <span class="visually-hidden">side-popup1 열기</span>
+                                    <img src="../../inc/images/eventLayout/evtLayout_max_motorExperience.png"
+                                      alt="이벤트 레이아웃 Motorsport Experience 확대 이미지" />
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- //2번째 data option 맵 영역 -->
+
+                            <!-- 3번째 data option 맵 영역 -->
+                            <div class="evt-map-wrap" data-type="3">
+                              <!-- on 클래스 : 맵 활성화시 on 클래스 추가 필요 -->
+                              <div class="btn-area">
+                                <div class="btn-wrap plus">
+                                  <button type="button">
+                                    <span class="visually-hidden">+ 확대 버튼</span>
+                                  </button>
+                                </div>
+                                <div class="btn-wrap minus">
+                                  <button type="button">
+                                    <span class="visually-hidden">- 축소 버튼</span>
+                                  </button>
+                                </div>
+                              </div>
+
+
+
+                              <div class="evt-map-img">
+                                <div class="evt-map-default-box">
+                                  <!-- Inje N Cup - Round1 이벤트레이아웃 기본 이미지 -->
+                                  <button class="pop-open btn-evtmap-pop active" aria-controls="pop-viewingZone"
+                                    aria-haspopup="true" aria-expanded="false" title="팝업오픈">
+                                    <span class="visually-hidden">side-popup1 열기</span>
+                                    <img src="../../inc/images/eventLayout/evtLayout_min_shortImg01.png"
+                                      alt="이벤트 레이아웃 N lounge 확대 이미지" />
+                                  </button>
+                                </div>
+                                <div class="evt-map-active-box">
+                                  <!-- viewing-zone -->
+                                  <button class="pop-open btn-evtmap-pop" aria-controls="pop-viewingZone"
+                                    aria-haspopup="true" aria-expanded="false" title="팝업오픈">
+                                    <span class="visually-hidden">side-popup1 열기</span>
+                                    <img src="../../inc/images/eventLayout/evtLayout_max_viewingZone.png"
+                                      alt="이벤트 레이아웃 viewing zone 확대 이미지" />
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- //3번째 data option 맵 영역 -->
+                          </div>
+                        </div>
+                      </section>
+
+                      <div class="content-item07">
+                        <div class="schedule-box" th:utext="${race.eventDetail}">
+                          <div class="wrap-list list02">
+                            <div class="tab-container">
+                              <div class="tab-head">
+                                <h2 class="title">이벤트 타임테이블</h2>
+                                <div class="tabs-wrap">
+                                  <ul class="tabs ty-black" data-contents="탭카테고리">
+                                    <li class="on">
+                                      <a href="javascript:;" aria-controls="tab2-011" role="tab"
+                                        aria-selected="true">토</a>
+                                    </li>
+                                    <li>
+                                      <a href="javascript:;" aria-controls="tab2-021" role="tab" aria-selected="false">
+                                        일
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                              <div class="tab-content on" id="tab2-011" role="tabpanel">
+                                <div class="__bottom">
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">12:40 ~ 13:10</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">N 택시</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">
+                                        N 라운지 / 현장 접수
+                                      </p>
+                                    </div>
+                                  </div>
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">10:00 ~ 17:00</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">심 레이싱</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">
+                                        N 라운지 / 모든 갤러리, 상시운영
+                                      </p>
+                                    </div>
+                                  </div>
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">10:00 ~ 17:00</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">
+                                        페이퍼 크래프트
+                                      </p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">
+                                        N 라운지 / 모든 갤러리, 상시운영
+                                      </p>
+                                    </div>
+                                  </div>
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">10:00 ~ 17:00</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">홍보 부스</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">
+                                        관람 존 / 모든 갤러리, 상시운영
+                                      </p>
+                                    </div>
                                   </div>
                                 </div>
-                                <div class="tab-content on" id="tab2-011" role="tabpanel">
-                                  <div class="__bottom">
-                                    <div class="wrap-lists">
-                                      <div class="list-box">
-                                        <p class="txt-type03">12:40 ~ 13:10</p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type01">N 택시</p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type03">
-                                          N 라운지 / 현장 접수
-                                        </p>
-                                      </div>
+                              </div>
+                              <div class="tab-content" id="tab2-021" role="tabpanel">
+                                <div class="__bottom">
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">11:30 ~ 12:50</p>
                                     </div>
-                                    <div class="wrap-lists">
-                                      <div class="list-box">
-                                        <p class="txt-type03">10:00 ~ 17:00</p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type01">심 레이싱</p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type03">
-                                          N 라운지 / 모든 갤러리, 상시운영
-                                        </p>
-                                      </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">
+                                        개막식 및 그리드 위크
+                                      </p>
                                     </div>
-                                    <div class="wrap-lists">
-                                      <div class="list-box">
-                                        <p class="txt-type03">10:00 ~ 17:00</p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type01">
-                                          페이퍼 크래프트
-                                        </p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type03">
-                                          N 라운지 / 모든 갤러리, 상시운영
-                                        </p>
-                                      </div>
-                                    </div>
-                                    <div class="wrap-lists">
-                                      <div class="list-box">
-                                        <p class="txt-type03">10:00 ~ 17:00</p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type01">홍보 부스</p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type03">
-                                          관람 존 / 모든 갤러리, 상시운영
-                                        </p>
-                                      </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">
+                                        그리드 / 모든 갤러리
+                                      </p>
                                     </div>
                                   </div>
-                                </div>
-                                <div class="tab-content" id="tab2-021" role="tabpanel">
-                                  <div class="__bottom">
-                                    <div class="wrap-lists">
-                                      <div class="list-box">
-                                        <p class="txt-type03">11:30 ~ 12:50</p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type01">
-                                          개막식 및 그리드 위크
-                                        </p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type03">
-                                          그리드 / 모든 갤러리
-                                        </p>
-                                      </div>
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">11:30 ~ 11:50</p>
                                     </div>
-                                    <div class="wrap-lists">
-                                      <div class="list-box">
-                                        <p class="txt-type03">11:30 ~ 11:50</p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type01">서킷 사파리</p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type03">
-                                          24번 피트 앞 승차 / 현장접수
-                                        </p>
-                                      </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">서킷 사파리</p>
                                     </div>
-                                    <div class="wrap-lists">
-                                      <div class="list-box">
-                                        <p class="txt-type03">10:00 ~ 17:00</p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type01">심 레이싱</p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type03">
-                                          N라운지 / 모든 갤러리, 상시운영
-                                        </p>
-                                      </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">
+                                        24번 피트 앞 승차 / 현장접수
+                                      </p>
                                     </div>
-                                    <div class="wrap-lists">
-                                      <div class="list-box">
-                                        <p class="txt-type03">10:00 ~ 17:00</p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type01">
-                                          페이퍼 크래프트
-                                        </p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type03">
-                                          N라운지 / 모든 갤러리, 상시운영
-                                        </p>
-                                      </div>
+                                  </div>
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">10:00 ~ 17:00</p>
                                     </div>
-                                    <div class="wrap-lists">
-                                      <div class="list-box">
-                                        <p class="txt-type03">10:00 ~ 17:00</p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type01">홍보 부스</p>
-                                      </div>
-                                      <div class="list-box">
-                                        <p class="txt-type03">
-                                          관람존 / 모든 갤러리, 상시 운영
-                                        </p>
-                                      </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">심 레이싱</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">
+                                        N라운지 / 모든 갤러리, 상시운영
+                                      </p>
+                                    </div>
+                                  </div>
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">10:00 ~ 17:00</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">
+                                        페이퍼 크래프트
+                                      </p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">
+                                        N라운지 / 모든 갤러리, 상시운영
+                                      </p>
+                                    </div>
+                                  </div>
+                                  <div class="wrap-lists">
+                                    <div class="list-box">
+                                      <p class="txt-type03">10:00 ~ 17:00</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type01">홍보 부스</p>
+                                    </div>
+                                    <div class="list-box">
+                                      <p class="txt-type03">
+                                        관람존 / 모든 갤러리, 상시 운영
+                                      </p>
                                     </div>
                                   </div>
                                 </div>
@@ -1085,9 +1089,10 @@
                             </div>
                           </div>
                         </div>
+                      </div>
 
-                        <section class="content-item08 bg-gray">
-                          <!-- 
+                      <section class="content-item08 bg-gray">
+                        <!-- 
                           * guide-wrap 클래스 정의 설명 
                           - 각, 하단의 클래스별로 이미지와 내용 달라짐.
                           - track-ty01 : Inje Speedium 
@@ -1095,100 +1100,100 @@
                           - track-ty03 : Yeongam Korea International Circuit
                           - track-ty04 : Yongin SPEEDWAY
                           -->
-                          <!-- 07.22 수정 : 마크업 변경 / Round detail page와 통일 -->
-                          <div class="guide_wrap track-ty01">
-                            <div class="wrap-list list03">
-                              <div class="left imgwrap">
-                                <div class="track-img">
-                                  <span class="visually-hidden">Track Guide 트랙 이미지</span>
-                                </div>
+                        <!-- 07.22 수정 : 마크업 변경 / Round detail page와 통일 -->
+                        <div class="guide_wrap track-ty01">
+                          <div class="wrap-list list03">
+                            <div class="left imgwrap">
+                              <div class="track-img">
+                                <span class="visually-hidden">Track Guide 트랙 이미지</span>
                               </div>
-                              <!-- ex) track-ty01 정보 -->
-                              <div class="right descwrap">
-                                <h2 class="tit">서킷 소개</h2>
-                                <h2 class="sub-tit">
-                                  인제 스피디움(Short Course)
-                                </h2>
-                                <div class="list-trackinfo">
-                                  <div class="inner">
-                                    <p class="txt-type03">트랙 길이</p>
-                                    <p class="txt-type03">2.577km</p>
-                                  </div>
-                                  <div class="inner">
-                                    <p class="txt-type03">코너 수</p>
-                                    <p class="txt-type03">12개</p>
-                                  </div>
-                                  <div class="inner">
-                                    <p class="txt-type03">트랙 폭</p>
-                                    <p class="txt-type03">14m</p>
-                                  </div>
-                                  <div class="inner">
-                                    <p class="txt-type03">
-                                      스탠딩 스타트 폴 포지션
-                                    </p>
-                                    <p class="txt-type03">Right</p>
-                                  </div>
+                            </div>
+                            <!-- ex) track-ty01 정보 -->
+                            <div class="right descwrap">
+                              <h2 class="tit">서킷 소개</h2>
+                              <h2 class="sub-tit">
+                                인제 스피디움(Short Course)
+                              </h2>
+                              <div class="list-trackinfo">
+                                <div class="inner">
+                                  <p class="txt-type03">트랙 길이</p>
+                                  <p class="txt-type03">2.577km</p>
+                                </div>
+                                <div class="inner">
+                                  <p class="txt-type03">코너 수</p>
+                                  <p class="txt-type03">12개</p>
+                                </div>
+                                <div class="inner">
+                                  <p class="txt-type03">트랙 폭</p>
+                                  <p class="txt-type03">14m</p>
+                                </div>
+                                <div class="inner">
+                                  <p class="txt-type03">
+                                    스탠딩 스타트 폴 포지션
+                                  </p>
+                                  <p class="txt-type03">Right</p>
                                 </div>
                               </div>
                             </div>
                           </div>
-                        </section>
+                        </div>
+                      </section>
 
-                        <section class="content-item09">
-                          <div class="info-guide-box">
-                            <div class="wrap-list list04">
-                              <h3 class="tit large">방문 안내</h3>
-                              <div class="inner">
-                                <div class="box box01">
+                      <section class="content-item09">
+                        <div class="info-guide-box">
+                          <div class="wrap-list list04">
+                            <h3 class="tit large">방문 안내</h3>
+                            <div class="inner">
+                              <div class="box box01">
+                                <div class="box-desc left">
+                                  <h3 class="tit">자가용으로 오시는 법</h3>
+                                </div>
+                                <div class="box-desc right">
+                                  <p class="desc-location">
+                                    인제, 현리(덕다리)방향 승차 → 하답교 하차
+                                    → 인제스피디움
+                                  </p>
+                                  <p class="desc-note">
+                                    ※ 교통 상황에 따라 도착 시간 차이가
+                                    발생합니다.
+                                  </p>
+                                </div>
+                              </div>
+                              <div class="box box02">
+                                <h3 class="tit fullwidth">
+                                  대중교통으로 오시는 법
+                                </h3>
+
+                                <div class="box wrap-multi-box">
                                   <div class="box-desc left">
-                                    <h3 class="tit">자가용으로 오시는 법</h3>
+                                    <h3 class="tit">인제시외버스터미널</h3>
                                   </div>
                                   <div class="box-desc right">
                                     <p class="desc-location">
-                                      인제, 현리(덕다리)방향 승차 → 하답교 하차
-                                      → 인제스피디움
-                                    </p>
-                                    <p class="desc-note">
-                                      ※ 교통 상황에 따라 도착 시간 차이가
-                                      발생합니다.
+                                      인제, 현리(덕다리)방향 승차 → 하답교
+                                      하차 → 인제스피디움
                                     </p>
                                   </div>
                                 </div>
-                                <div class="box box02">
-                                  <h3 class="tit fullwidth">
-                                    대중교통으로 오시는 법
-                                  </h3>
-
-                                  <div class="box wrap-multi-box">
-                                    <div class="box-desc left">
-                                      <h3 class="tit">인제시외버스터미널</h3>
-                                    </div>
-                                    <div class="box-desc right">
-                                      <p class="desc-location">
-                                        인제, 현리(덕다리)방향 승차 → 하답교
-                                        하차 → 인제스피디움
-                                      </p>
-                                    </div>
+                                <div class="box wrap-multi-box">
+                                  <div class="box-desc left">
+                                    <h3 class="tit">현리 버스터미널</h3>
                                   </div>
-                                  <div class="box wrap-multi-box">
-                                    <div class="box-desc left">
-                                      <h3 class="tit">현리 버스터미널</h3>
-                                    </div>
-                                    <div class="box-desc right">
-                                      <p class="desc-location">
-                                        인제 방향 승차 → 하답교 하차 →
-                                        인제스피디움
-                                      </p>
-                                    </div>
+                                  <div class="box-desc right">
+                                    <p class="desc-location">
+                                      인제 방향 승차 → 하답교 하차 →
+                                      인제스피디움
+                                    </p>
                                   </div>
                                 </div>
                               </div>
                             </div>
                           </div>
-                        </section>
-                      </th:block>
+                        </div>
+                      </section>
                     </th:block>
-                    <!-- //08.12 수정 : th:block 위치 변경 -->
+                  </th:block>
+                  <!-- //08.12 수정 : th:block 위치 변경 -->
                 </div>
                 <!-- //conts01-->
               </section>

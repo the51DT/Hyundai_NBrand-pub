@@ -14,7 +14,7 @@
 
 <body>
   <div class="wrap">
-    <section class="content-wrap">
+    <section class="content-wrap" id="container">
       <div class="content-area evtGuide">
         <section class="content-item02">
           <div class="n-race-box">
@@ -260,7 +260,7 @@
               <!-- //section_tab -->
               <section class="section_list">
                 <div class="list-content conts02 active" data-content="2">
-                  
+
                   <div class="n-race-box-conts content-item03">
                     <h2 class="title-w1440 contitle-type01 fw-type03">
                       N CUP Round 2
@@ -279,7 +279,7 @@
                         </a>
                       </div>
                     </div>
-                  </div>  
+                  </div>
 
                   <!-- 08.12 수정 : th:block 위치 변경 -->
                   <th:block th:fragment="roundInfo">
@@ -367,8 +367,7 @@
                                 <div class="tabs-wrap">
                                   <ul class="tabs ty-black" data-contents="탭카테고리">
                                     <li class="on">
-                                      <a href="#" aria-controls="tab3-011" role="tab"
-                                        aria-selected="true">Saturday</a>
+                                      <a href="#" aria-controls="tab3-011" role="tab" aria-selected="true">Saturday</a>
                                     </li>
                                     <li>
                                       <a href="#" aria-controls="tab3-021" role="tab" aria-selected="false">
@@ -738,7 +737,7 @@
                                     </div>
                                     <div class="list-box">
                                       <p class="txt-type01">
-                                           [N1] AVANTE N Cup Final (Live)
+                                        [N1] AVANTE N Cup Final (Live)
                                       </p>
                                     </div>
                                     <div class="list-box">
@@ -880,10 +879,12 @@
                                     </button>
                                   </li>
                                   <!-- 08.08 수정 : data-type 추가 필요 -->
-                                  <li class="option option-click fw-type03 active" role="option" aria-selected="true" data-type="1">
+                                  <li class="option option-click fw-type03 active" role="option" aria-selected="true"
+                                    data-type="1">
                                     A Paddock
                                   </li>
-                                  <li class="option option-click fw-type03" role="option" aria-selected="false" data-type="2">
+                                  <li class="option option-click fw-type03" role="option" aria-selected="false"
+                                    data-type="2">
                                     B Paddock
                                   </li>
                                 </ul>
@@ -891,7 +892,7 @@
 
                               <!-- 08.06 수정 : selectbox-group 추가 : 2번째 항목 값 (2번째 selectbox 존재할 경우에만) -->
                               <div class="selectbox-group">
-                                
+
                                 <!-- A Paddock의 2번째 selectbox 옵션 값 -->
                                 <div class="on">
                                   <!-- 활성화시 on 클래스 추가 -->
@@ -943,7 +944,7 @@
                             <!-- //08.06 수정 : selectbox-group 추가 : 2번째 항목 값 케이스 일때(2번째 selectbox 존재할 경우에만) -->
                           </div>
                           <div class="conts-body">
-                          <!-- 
+                            <!-- 
                           comment!
                           ****************************************************************      
                           1. event Layout 영역 event Map 호출 실행 함수 
@@ -956,13 +957,13 @@
 
                           ****************************************************************
                           -->
-                            
+
                             <!-- 08.08 수정사항 -->
                             <!-- 활성화시 on 클래스 -->
                             <!-- active 클래스 : 상세맵 활성화시(+ 버튼 클릭시) active 클래스 추가 -->
 
                             <!-- A Paddock 맵 정보 -->
-                            <div class="evt-map-wrap on active" data-type="1"> 
+                            <div class="evt-map-wrap on active" data-type="1">
                               <div class="btn-area">
                                 <div class="btn-wrap plus">
                                   <button type="button">
@@ -977,10 +978,11 @@
                               </div>
 
                               <!-- A paddock && N zone -->
-                              <div class="evt-map-img active"> <!-- 활성화 맵일 시, active 클래스 추가 -->
+                              <div class="evt-map-img active">
+                                <!-- 활성화 맵일 시, active 클래스 추가 -->
                                 <div class="evt-map-default-box">
-                                  <button class="pop-open btn-evtmap-pop" aria-controls="pop-nZone"
-                                    aria-haspopup="true" aria-expanded="false" title="팝업오픈">
+                                  <button class="pop-open btn-evtmap-pop" aria-controls="pop-nZone" aria-haspopup="true"
+                                    aria-expanded="false" title="팝업오픈">
                                     <span class="visually-hidden">side-popup1 열기</span>
                                     <img src="../../inc/images/eventLayout/evtLayout_min_shortImg02.png"
                                       alt="이벤트 레이아웃 nZone 기본 이미지" />
@@ -999,7 +1001,8 @@
                               </div>
 
                               <!-- A paddock && N Experience zone -->
-                              <div class="evt-map-img"> <!-- 활성화 맵일 시, active 클래스 추가 -->
+                              <div class="evt-map-img">
+                                <!-- 활성화 맵일 시, active 클래스 추가 -->
                                 <div class="evt-map-default-box">
                                   <!-- A paddock && N Experience zone 기본 이미지 -->
                                   <button class="pop-open btn-evtmap-pop" aria-controls="pop-nExperZone"
@@ -1023,7 +1026,7 @@
 
                             <!-- B Paddock 맵 정보 -->
                             <div class="evt-map-wrap" data-type="2">
-                              
+
                               <div class="btn-area">
                                 <div class="btn-wrap plus">
                                   <button type="button">
@@ -1037,7 +1040,8 @@
                                 </div>
                               </div>
 
-                              <div class="evt-map-img active"> <!-- 활성화 맵일 시, active 클래스 추가 -->
+                              <div class="evt-map-img active">
+                                <!-- 활성화 맵일 시, active 클래스 추가 -->
                                 <!-- 08.06 수정 : evt-map-default-box -->
                                 <div class="evt-map-default-box">
                                   <!--  "B Paddock" && "N Fan Zone" 기본 이미지  -->
@@ -1075,8 +1079,7 @@
                                 <div class="tabs-wrap">
                                   <ul class="tabs ty-black" data-contents="탭카테고리">
                                     <li class="on">
-                                      <a href="#" aria-controls="tab4-011" role="tab"
-                                        aria-selected="true">Saturday</a>
+                                      <a href="#" aria-controls="tab4-011" role="tab" aria-selected="true">Saturday</a>
                                     </li>
                                     <li>
                                       <a href="#" aria-controls="tab4-021" role="tab" aria-selected="false">

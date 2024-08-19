@@ -15,7 +15,7 @@
 <body>
   <div class="wrap">
     <!-- N CUP - Round4 컨텐츠 수급 안됨, 추후 적용 필요 -->
-    <section class="content-wrap">
+    <section class="content-wrap" id="container">
       <div class="content-area evtGuide">
 
         <section class="content-item02">
@@ -359,7 +359,7 @@
                       </div>
 
                       <!-- 이벤트 레이아웃 영역 -->
-                      
+
                       <!-- event layout : 임시 컨텐츠 (수급안됨) -->
                       <section class="content-item06 bg-gray">
                         <div class="event-box">
@@ -383,9 +383,11 @@
                                   </li>
                                   <li class="option option-click fw-
                                   type03 active" role="option" aria-selected="true" data-type="1">Experience Zone</li>
-                                  <li class="option option-click fw-type03" role="option" aria-selected="false" data-type="2">
+                                  <li class="option option-click fw-type03" role="option" aria-selected="false"
+                                    data-type="2">
                                     Motorsport Experience</li>
-                                  <li class="option option-click fw-type03" role="option" aria-selected="false" data-type="3">Viewing
+                                  <li class="option option-click fw-type03" role="option" aria-selected="false"
+                                    data-type="3">Viewing
                                     zone</li>
                                 </ul>
                               </div>
@@ -400,7 +402,7 @@
                             <!-- active 클래스 : 상세맵 활성화시(+ 버튼 클릭시) active 클래스 추가 -->
 
                             <div class="evt-map-wrap on active" data-type="1">
-                              
+
                               <div class="btn-area">
                                 <div class="btn-wrap plus">
                                   <button type="button">
@@ -412,8 +414,9 @@
                                     <span class="visually-hidden">- 축소 버튼</span>
                                   </button>
                                 </div>
-                              </div>                              
-                              <div class="evt-map-img active"> <!-- 활성화 맵일 시, active 클래스 추가 -->
+                              </div>
+                              <div class="evt-map-img active">
+                                <!-- 활성화 맵일 시, active 클래스 추가 -->
                                 <!-- evt-map-default-box 추가됨 -->
                                 <div class="evt-map-default-box">
                                   <!-- N Cup - Round3 이벤트레이아웃 기본 이미지 : 활성화 원하는 곳에 default active 클래스 값 추가 필요 -->
@@ -440,7 +443,7 @@
                             </div>
 
                             <div class="evt-map-wrap" data-type="2">
-                              
+
                               <div class="btn-area">
                                 <div class="btn-wrap plus">
                                   <button type="button">
@@ -452,7 +455,7 @@
                                     <span class="visually-hidden">- 축소 버튼</span>
                                   </button>
                                 </div>
-                              </div>                              
+                              </div>
                               <div class="evt-map-img">
                                 <!-- evt-map-default-box 추가 -->
                                 <div class="evt-map-default-box">
@@ -466,7 +469,7 @@
                                 </div><!-- //evt-map-default-box 추가 -->
 
                                 <div class="evt-map-active-box">
-                                  
+
                                   <!-- yeongam - Motorsport Experience Zone -->
                                   <button class="pop-open btn-evtmap-pop" aria-controls="pop-yeongamMotorExper"
                                     aria-haspopup="true" aria-expanded="false" title="팝업오픈">
@@ -481,7 +484,7 @@
                             </div>
 
                             <div class="evt-map-wrap" data-type="3">
-                              
+
                               <div class="btn-area">
                                 <div class="btn-wrap plus">
                                   <button type="button">
@@ -493,7 +496,7 @@
                                     <span class="visually-hidden">- 축소 버튼</span>
                                   </button>
                                 </div>
-                              </div>                              
+                              </div>
                               <div class="evt-map-img active">
                                 <!-- evt-map-default-box 추가 -->
                                 <div class="evt-map-default-box">
@@ -524,7 +527,7 @@
                         </div>
                       </section>
                       <!-- //event laout : 임시 컨텐츠 -->
-                      
+
                       <div class="content-item07">
                         <div class="schedule-box th:utext=${race.eventDetail}">
                           <div class="wrap-list list02">
