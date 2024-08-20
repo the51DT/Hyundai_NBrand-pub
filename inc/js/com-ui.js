@@ -311,6 +311,7 @@ var NbrandUI = {
     //   }
     // }, 300);
     NbrandUI.headerDimdOff();
+    $(".navigation_bar-wrap").show();
   },
   videoAutoPlay: function (videoWrap) {
     var eventContainer = $(videoWrap);
@@ -366,6 +367,7 @@ var NbrandUI = {
               eventCont.css("height", "auto").fadeIn(100);
               eventCont.slideDown(100);
             }
+            $(".navigation_bar-wrap").hide();
 
             // $(".type-thumbnail, .gnb__tab-cont02 .gnb__tab02-btn01").addClass(
             //   "on"
