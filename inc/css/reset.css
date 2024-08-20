@@ -220,23 +220,22 @@ textarea::placeholder {
   -webkit-box-shadow: 0 0 0 1000px #fff inset;
   box-shadow: 0 0 0 1000px #fff inset;
 }
-/* ::-webkit-scrollbar {
+::-webkit-scrollbar {
   display: none;
-} */
+}
 body {
   word-break: break-all;
   padding: 0 !important;
   box-sizing: border-box;
 }
 
-*::-webkit-scrollbar {
+/* *::-webkit-scrollbar {
   background-color: transparent;
   width: 4px;
   height: 4px;
 }
 
 *::-webkit-scrollbar-thumb {
-  /* width: 10px; */
   background: #999;
   border-radius: 6px;
   border-radius: 20px;
@@ -244,7 +243,7 @@ body {
 
 *::-webkit-scrollbar-thumb:hover {
   background: #aacae6;
-}
+} */
 
 /* body * {
   outline: none;
