@@ -240,6 +240,16 @@ var pubUi = {
         ".nflmain_wrap .content-item03 .banner-box .swiper-container .swiper"
       ).addClass("onlyone-swiper");
     }
+
+
+    //configurator 관련 함수 - 0820
+    // $(".configurator_summary_list .configurator_summary_list_top .btn:first-child").on("click", function (e) {
+    //     var target = $(this);
+    //     if (target.find(".btn-icon20").hasClass("icon-change-gray")) {
+    //       targetScrollConfig(target);
+    //     }
+    //   }
+    // );
   },
   swiperSlideEvent: function () {
     var self = this;
@@ -676,6 +686,8 @@ var pubUi = {
     }, 500);
     $(".list-content").removeClass("active");
     targetContent.addClass("active");
+
+    contsItemGridSizeChk(); // jira ICTQMSCHE-6339 대응 : event guide에서 상단 스와이퍼 클릭 시, 해당 함수(contsItemGridSizeChk) 호출
   },
   overScroll: function (cl) {
     const slider = document.querySelectorAll(cl);
@@ -791,14 +803,8 @@ $(document).ready(function () {
     }
   }
 
-  // 07.22 수정
-  if ($(".content-item04 .grid_3 li").length == 1) {
-    $(".content-item04 .grid_3").css("grid-template-columns", "revert");
-  }
-
-  if ($(".content-item07 .grid_3 li").length == 1) {
-    $(".content-item07 .grid_3").css("grid-template-columns", "revert");
-  }
+  // 08.20 수정 : 함수 형태로 구조 변경
+  contsItemGridSizeChk();
 });
 
 function btnNaviCheck() {
@@ -1219,6 +1225,8 @@ function scrollToCenter(el) {
     $element.scrollLeft = calWidth;
   }
 }
+
+
 
 // 필터 컴포넌트 아코디언
 const dropdownFilter = document.querySelectorAll(
@@ -2013,7 +2021,7 @@ function scrollIndicator(obj) {
     // scrItem = thisScrArea.find(".content-wrap [class*=content-item]"),
     nowScroll = thisScrArea.scrollTop(),
     sectionLength = contentItem.length,
-    headerNavHeight = $(".header-wrap").height();
+    headerNavHeight = $(".header-wrap").height();    
   sectionItem = [];
 
   contentItem.forEach((evt, idx) => {
@@ -2277,4 +2285,65 @@ function stopTimer(video, type) {
   }
   $(".swiper-pagination-bullet .seek-bar").css("width", 0);
   clearInterval(self.timer);
+}
+
+// contsItemGridSizeChk() - grid 형식의 컨텐츠 아이템 사이즈 1개일 경우, grid 속성 제거
+function contsItemGridSizeChk() {
+  if ($(".content-item04 .grid_3 li").length == 1) {
+    $(".content-item04 .grid_3").css("grid-template-columns", "revert");
+  }
+
+  if ($(".content-item07 .grid_3 li").length == 1) {
+    $(".content-item07 .grid_3").css("grid-template-columns", "revert");
+  }
+}
+
+// scroll 이동하고자하는 영역의 상단 header-menu에 대한 value 값과, configurator_select_area 영역의 data-type 값(type) 전달
+// targetScrollConfig(value, type);  -> ex) targetScrollConfig('exterior', 'color');
+// value : exterior 또는 interior 전달 / type : dropdown-btn의  data-type 값 전달
+function targetScrollConfig(value, type) {
+
+  // console.log(value, type);
+
+  var configuratorArea = $(".configurator_area");
+  var configSelectItem = $(".configurator_select_area > [class*=configurator_select_" + value + "]");
+  var configHeaderHeight = $(".configurator_header_wrap").height();
+  var configSwiperHeight = $(".configurator_swiper_wrap").height();
+  var configuratorAreaModel = configuratorArea.data("model");
+  var dropdownItem;
+
+  //$(".configurator_menu_" + targetSummaryType).trigger("click");
+
+  var nowScrollTop = configSelectItem.scrollTop();
+  console.log("nowScroll : " + nowScrollTop);
+
+  for (var i = 0; i < configSelectItem.length; i++) {
+    var configSelectItemModel = configSelectItem[i].dataset.model;
+
+    if (configSelectItemModel == configuratorAreaModel) {
+      dropdownItem = $(configSelectItem[i]).find(".dropdown");
+    }
+  }
+  for (var i = 0; i < dropdownItem.length; i++) {
+    var dropdownBtnDataType = $(dropdownItem[i]).find(".dropdown-btn").data("type");
+    if (dropdownBtnDataType == type) {
+      $(dropdownItem[i]).addClass("on");
+      
+      if ($(dropdownItem[i]).hasClass("on")) {
+        var dropDownOffsetTop = $(dropdownItem[i]).offset().top;
+        var calOffsetTopPc = dropDownOffsetTop + nowScrollTop - configHeaderHeight;
+        var calOffsetTopMo = dropDownOffsetTop + nowScrollTop - (configHeaderHeight + configSwiperHeight);
+
+        if (pubUi.windowSize()) {
+          // pc
+          configSelectItem.animate({ scrollTop: calOffsetTopPc }, 1000);
+        } else {
+          // mobile
+          configuratorArea.animate({ scrollTop: calOffsetTopMo }, 1000);
+        }
+      }
+    } else {
+      $(dropdownItem[i]).removeClass("on");
+    }
+  }
 }
