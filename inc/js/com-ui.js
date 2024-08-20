@@ -299,7 +299,7 @@ var NbrandUI = {
       // $(".gnb__tab02").();
       $(".mo-gnb__back-btn").hide();
     }
-
+    $(".gnb__tab02-wrap").removeClass("thumbnail-ui");
     resetTparent.find(".ui-fctab-s").remove();
     resetTparent.find(".ui-fctab-e").remove();
     resetCont.hide();

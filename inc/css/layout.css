@@ -728,6 +728,9 @@ body.fix {
 .gnb__tab02-wrap.thumbnail-ui .gnb__panel02 {
   width: calc(75vw - 24px);
 }
+.gnb__tab02-wrap.thumbnail-ui + .gnb-content__dep2 {
+  display: none;
+}
 .gnb__tab02-wrap [class*="gnb__tab02-btn"] {
   width: 100%;
   text-align: left;
@@ -797,7 +800,7 @@ body.fix {
   animation-fill-mode: forwards;
 }
 .gnb__panel02 .type-thumbnail {
-  width: calc(75vw - 24px);
+  width: calc(75vw - 28px);
   display: none;
 }
 .gnb__panel02 .type-thumbnail ul {
@@ -1056,13 +1059,13 @@ body.fix {
 }
 
 iframe {
-    position:absolute; 
-    top:0; 
-    left:0; 
-    right:0; 
-    bottom:0; 
-    width:100%; 
-    height:100%; 
-    border:none; 
-    z-index:1; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  z-index: 1;
 }
