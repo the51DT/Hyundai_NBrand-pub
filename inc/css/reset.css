@@ -228,29 +228,29 @@ body {
   padding: 0 !important;
   box-sizing: border-box;
 }
+@media screen and (min-width: 1024px) {
+  *::-webkit-scrollbar {
+    background-color: transparent;
+    width: 4px;
+    height: 4px;
+  }
 
-*::-webkit-scrollbar {
-  background-color: transparent;
-  width: 4px;
-  height: 4px;
+  *::-webkit-scrollbar-thumb {
+    background: #999;
+    border-radius: 6px;
+    border-radius: 20px;
+  }
+
+  *::-webkit-scrollbar-thumb:hover {
+    background: #aacae6;
+  }
 }
-
-*::-webkit-scrollbar-thumb {
-  background: #999;
-  border-radius: 6px;
-  border-radius: 20px;
-}
-
-*::-webkit-scrollbar-thumb:hover {
-  background: #aacae6;
-}
-
-/* body * {
+body * {
   outline: none;
 }
 body *:focus {
   outline: none;
-} */
+}
 
 a,
 button {
