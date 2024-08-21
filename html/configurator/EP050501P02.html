@@ -1000,8 +1000,14 @@
                             <div class="configurator_summary_list_top">
                               <p class="configurator_summary_parts">Color</p>
                               <div>
+                                <!--
+                                  - scroll 이동하고자하는 영역의 상단 header-menu에 대한 value 값과, configurator_select_area 영역의 data-type 값(type) 전달
+                                  - targetScrollConfig(value, type);  -> ex) targetScrollConfig('exterior', 'color');
+                                  - value : exterior 또는 interior 전달 / type : dropdown-btn의  data-type 값 전달
+                                  - 페이지 전환 후 해당 함수(targetScrollConfig(value, type) 호출시 해당 영역으로 화면 스크롤 됨! 
+                                -->
                                 <button type="button" class="btn txt-btn">
-                                  <span class="btn-icon20 icon-change-gray" aria-hidden="true" onclick="targetScrollConfig($(this));"></span>
+                                  <span class="btn-icon20 icon-change-gray" aria-hidden="true"></span>
                                   <span class="visually-hidden">Change</span>
                                 </button>
                               </div>
@@ -1022,7 +1028,7 @@
                               <p class="configurator_summary_parts">Color</p>
                               <div>
                                 <button type="button" class="btn txt-btn">
-                                  <span class="btn-icon20 icon-change-gray" aria-hidden="true" onclick="targetScrollConfig($(this));"></span>
+                                  <span class="btn-icon20 icon-change-gray" aria-hidden="true"></span>
                                   <span class="visually-hidden">Change</span>
                                 </button>
                               </div>
@@ -1043,7 +1049,7 @@
                               <p class="configurator_summary_parts">Color</p>
                               <div>
                                 <button type="button" class="btn txt-btn">
-                                  <span class="btn-icon20 icon-change-gray" aria-hidden="true" onclick="targetScrollConfig($(this));"></span>
+                                  <span class="btn-icon20 icon-change-gray" aria-hidden="true" ></span>
                                   <span class="visually-hidden">Change</span>
                                 </button>
                               </div>
@@ -1064,7 +1070,7 @@
                               <p class="configurator_summary_parts">Wheel</p>
                               <div>
                                 <button type="button" class="btn txt-btn">
-                                  <span class="btn-icon20 icon-change-gray" aria-hidden="true" onclick="targetScrollConfig($(this));"></span>
+                                  <span class="btn-icon20 icon-change-gray" aria-hidden="true"></span>
                                   <span class="visually-hidden">Change</span>
                                 </button>
                                 <button type="button" class="btn txt-btn">
@@ -1092,7 +1098,7 @@
                               <p class="configurator_summary_parts">Wheel</p>
                               <div>
                                 <button type="button" class="btn txt-btn">
-                                  <span class="btn-icon20 icon-change-gray" aria-hidden="true" onclick="targetScrollConfig($(this));"></span>
+                                  <span class="btn-icon20 icon-change-gray" aria-hidden="true"></span>
                                   <span class="visually-hidden">Change</span>
                                 </button>
                                 <button type="button" class="btn txt-btn">
@@ -1120,7 +1126,7 @@
                               <p class="configurator_summary_parts">Wheel</p>
                               <div>
                                 <button type="button" class="btn txt-btn">
-                                  <span class="btn-icon20 icon-change-gray" aria-hidden="true" onclick="targetScrollConfig($(this));"></span>
+                                  <span class="btn-icon20 icon-change-gray" aria-hidden="true"></span>
                                   <span class="visually-hidden">Change</span>
                                 </button>
                                 <button type="button" class="btn txt-btn">
@@ -1148,7 +1154,7 @@
                               <p class="configurator_summary_parts">Wheel</p>
                               <div>
                                 <button type="button" class="btn txt-btn">
-                                  <span class="btn-icon20 icon-change-gray" aria-hidden="true" onclick="targetScrollConfig($(this));"></span>
+                                  <span class="btn-icon20 icon-change-gray" aria-hidden="true"></span>
                                   <span class="visually-hidden">Change</span>
                                 </button>
                                 <button type="button" class="btn txt-btn">
@@ -1196,7 +1202,7 @@
                               </p>
                               <div>
                                 <button type="button" class="btn txt-btn">
-                                  <span class="btn-icon20 icon-change-gray" aria-hidden="true" onclick="targetScrollConfig('interior','carmat');"></span>
+                                  <span class="btn-icon20 icon-change-gray" aria-hidden="true"></span>
                                   <span class="visually-hidden">Change</span>
                                 </button>
                                 <button type="button" class="btn txt-btn">

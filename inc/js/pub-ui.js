@@ -2312,7 +2312,7 @@ function targetScrollConfig(value, type) {
   var configuratorAreaModel = configuratorArea.data("model");
   var dropdownItem;
 
-  //$(".configurator_menu_" + targetSummaryType).trigger("click");
+  //$(".configurator_menu_" + value).trigger("click");
 
   var nowScrollTop = configSelectItem.scrollTop();
   console.log("nowScroll : " + nowScrollTop);
