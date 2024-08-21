@@ -565,6 +565,9 @@
 .standing_bottom .page_wrap {
   margin-top: 5rem;
 }
+.page_btn_wrap {
+  margin-top:80px;
+}
 
 /* EP010501 */
 .drivers_box {
@@ -3306,6 +3309,9 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   }
   .standing_bottom .btn-wrap-default {
     margin-top: 2.75rem;
+  }
+  .page_btn_wrap {
+    margin-top: 0;
   }
 
   /* EP010501 */
