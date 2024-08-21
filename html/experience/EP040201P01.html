@@ -228,8 +228,7 @@
                     </div>
                     <div class="box-profile-txt">
                       <p class="txt-type04 nickname">Hyundai N</p>
-                      <!-- 
-                소속 그룹 텍스트 -->
+                      <!-- 소속 그룹 텍스트 -->
                       <p class="txt-type04 groupname">Hyundai N</p>
                     </div>
                   </button>
@@ -440,7 +439,7 @@
               </div>
             </div>
             <!-- 08/13 변경 관리자에 의해 비공개 처리 된 경우 -->
-            <div class="wrap-comment">
+            <div class="wrap-comment private"> <!-- 08.21 : 비공개 케이스 일경우, private 클래스 추가 -->
               <div class="box-userinfo">
                 <div class="wrap-popup-profile">
                   <button class="profile-open" aria-controls="pop-bottom" aria-haspopup="true" aria-expanded="false"
@@ -528,17 +527,26 @@
                     </div>
                   </div>
 
-                  <button type="button" class="btn btn-only-icon-bg01-circle" title="close">
+                  <button type="button" class="btn btn-only-icon-bg04-circle" title="close"> <!-- bg04-circle : 회색 배경 -->
                     <span class="visually-hidden">close</span>
                     <span class="btn-icon16 icon-close-wh" aria-hidden="true"></span>
                   </button>
                 </div>
               </div>
-
+              <!-- 08.21 수정 : 디자인 & 문구 변경 : 관리자 비공개 처리 케이스 디자인 추가 -->
               <div class="box-comment">
                 <p>
-                  It has been made private by the administrator.
+                  This content has been blocked by your administrator.
                 </p>
+              </div>
+
+              <div class="box-date">
+                <p class="txt-type05">03.13.2024</p>
+
+                <!-- <button type="button" class="btn btn-only-icon-notbg" title="translation">
+                  <span class="visually-hidden">Translation button</span>
+                  <span class="btn-icon20 icon-trans" aria-hidden="true"></span>
+                </button> -->
               </div>
 
             </div>

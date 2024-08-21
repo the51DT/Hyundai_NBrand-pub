@@ -1823,7 +1823,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
 .popup-wrapper .wrap-popup-profile .box-profile-txt div {
   display: block;
 }
-.popup-wrapper .wrap-comment .box-userinfo button.btn-only-icon-bg01-circle {
+.popup-wrapper .wrap-comment .box-userinfo [class*="btn-only-icon-bg"] {
   width: 16px;
   height: 16px;
   margin-left: auto;
@@ -1845,6 +1845,23 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   display: flex;
   gap: 20px;
   align-items: flex-end;
+}
+
+.popup-wrapper .wrap-comment.private .box-comment p {
+  color:#777;
+  position: relative;
+  padding-left:20px;
+}
+.popup-wrapper .wrap-comment.private .box-comment p:before {
+  content:'';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url(../images/icon/icon-noti-gray.svg) no-repeat center top / 100%;
+  position: absolute;  
+  top:50%;
+  left:0;  
+  transform: translateY(-50%);
 }
 
 /** 신청 결과 안내 문구 박스, 하단 진행상태 박스 시작 **/
