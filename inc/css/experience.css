@@ -885,6 +885,7 @@
   text-align: center;
   color: #fff;
   height: calc(var(--vh, 1vh) * 100 - 70px);
+  background-color: #000000;
 }
 .video_thumnail_wrap .video_thumnail_img {
   height: 100%;
@@ -3483,6 +3484,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   .video_thumnail_wrap {
     height: auto;
     color: #000;
+    background: transparent;
   }
   .video_thumnail_wrap::after {
     content: "";

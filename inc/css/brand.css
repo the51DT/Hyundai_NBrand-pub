@@ -148,6 +148,7 @@
 
 .models-wrap .video_thumnail_wrap {
   position: static;
+  background: transparent;
 }
 
 .models-nofull-box .img-conts-wrap .img-area > img {
@@ -2660,11 +2661,11 @@ article.info-bnr-wrap + article.info-video-wrap {
   }
   .featured_wrap .ty02Swiper .text-area .date {
     margin-top: 16px;
-  }  
+  }
 }
 
 @media screen and (max-width: 360px) {
   .video_list [class^="grid_"] .card_type04 {
-    width:calc(100vw - 48px);
+    width: calc(100vw - 48px);
   }
 }
