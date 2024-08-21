@@ -241,7 +241,6 @@ var pubUi = {
       ).addClass("onlyone-swiper");
     }
 
-
     //configurator 관련 함수 - 0820
     // $(".configurator_summary_list .configurator_summary_list_top .btn:first-child").on("click", function (e) {
     //     var target = $(this);
@@ -892,7 +891,7 @@ function swiper2SlideEvt() {
     },
     pagination: {
       el: ".swiper-pagination-custom",
-      // clickable: true,
+      clickable: true,
     },
     navigation: {
       nextEl: ".ty02Swiper .swiper-button-next",
@@ -1225,8 +1224,6 @@ function scrollToCenter(el) {
     $element.scrollLeft = calWidth;
   }
 }
-
-
 
 // 필터 컴포넌트 아코디언
 const dropdownFilter = document.querySelectorAll(
@@ -2021,7 +2018,7 @@ function scrollIndicator(obj) {
     // scrItem = thisScrArea.find(".content-wrap [class*=content-item]"),
     nowScroll = thisScrArea.scrollTop(),
     sectionLength = contentItem.length,
-    headerNavHeight = $(".header-wrap").height();    
+    headerNavHeight = $(".header-wrap").height();
   sectionItem = [];
 
   contentItem.forEach((evt, idx) => {
@@ -2302,11 +2299,12 @@ function contsItemGridSizeChk() {
 // targetScrollConfig(value, type);  -> ex) targetScrollConfig('exterior', 'color');
 // value : exterior 또는 interior 전달 / type : dropdown-btn의  data-type 값 전달
 function targetScrollConfig(value, type) {
-
   // console.log(value, type);
 
   var configuratorArea = $(".configurator_area");
-  var configSelectItem = $(".configurator_select_area > [class*=configurator_select_" + value + "]");
+  var configSelectItem = $(
+    ".configurator_select_area > [class*=configurator_select_" + value + "]"
+  );
   var configHeaderHeight = $(".configurator_header_wrap").height();
   var configSwiperHeight = $(".configurator_swiper_wrap").height();
   var configuratorAreaModel = configuratorArea.data("model");
@@ -2325,14 +2323,20 @@ function targetScrollConfig(value, type) {
     }
   }
   for (var i = 0; i < dropdownItem.length; i++) {
-    var dropdownBtnDataType = $(dropdownItem[i]).find(".dropdown-btn").data("type");
+    var dropdownBtnDataType = $(dropdownItem[i])
+      .find(".dropdown-btn")
+      .data("type");
     if (dropdownBtnDataType == type) {
       $(dropdownItem[i]).addClass("on");
-      
+
       if ($(dropdownItem[i]).hasClass("on")) {
         var dropDownOffsetTop = $(dropdownItem[i]).offset().top;
-        var calOffsetTopPc = dropDownOffsetTop + nowScrollTop - configHeaderHeight;
-        var calOffsetTopMo = dropDownOffsetTop + nowScrollTop - (configHeaderHeight + configSwiperHeight);
+        var calOffsetTopPc =
+          dropDownOffsetTop + nowScrollTop - configHeaderHeight;
+        var calOffsetTopMo =
+          dropDownOffsetTop +
+          nowScrollTop -
+          (configHeaderHeight + configSwiperHeight);
 
         if (pubUi.windowSize()) {
           // pc
