@@ -1223,6 +1223,9 @@ article.info-bnr-wrap + article.info-video-wrap {
   left: 4.5px;
   content: "";
 }
+.merchandise-wrap .productlist-wrap .productlist-subbox li a:hover {
+  text-decoration: underline;
+}
 .merchandise-wrap .merchandise_related-wrap {
   padding: 95.56px 80px 120px 80px;
   background-color: #f0f0f0;
