@@ -34,6 +34,7 @@
 .footer-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  row-gap: 2rem;
 }
 .footer-list-tit {
   font-size: 1.25rem;
@@ -54,6 +55,7 @@
   font-size: 1rem;
   font-weight: 500;
   line-height: 140%;
+  padding-right: 1rem;
 }
 .footer-link {
   display: flex;
