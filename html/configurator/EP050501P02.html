@@ -1631,13 +1631,13 @@
   <script type="text/javascript" src="../../inc/js/pub-ui.js"></script>
   <script>
     $(document).ready(function () {
-      $(".configurator_header_menu").click((el) => {
+      $("#configurator .configurator_header_menu").click((el) => {
         configuratorHeader(el);
       });
     });
     // [Start] : configurator_header_menu 확인용 스크립트 / 체크값 확인 후 넘어가기 필요
     function configuratorHeader(el) {
-      $(".configurator_header_menu").removeClass("on");
+      $("#configurator .configurator_header_menu").removeClass("on");
 
       if (el) {
         el.target.closest(".configurator_header_menu").classList.add("on");
@@ -1645,9 +1645,9 @@
       const menuName = ["exterior", "interior", "summary"];
       for (let i = 0; i < menuName.length; i++) {
         if ($(`.configurator_menu_${menuName[i]}`).hasClass("on")) {
-          $(".configurator_area").addClass(menuName[i]);
+          $("#configurator .configurator_area").addClass(menuName[i]);
         } else {
-          $(".configurator_area").removeClass(menuName[i]);
+          $("#configurator .configurator_area").removeClass(menuName[i]);
         }
       }
     }
