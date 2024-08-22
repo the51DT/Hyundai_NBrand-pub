@@ -1989,7 +1989,7 @@ $(".btn_full").click(() => {
 
 // [Start] : configuratorScroll
 function configuratorScroll() {
-  var scrollWrap = $(".configurator_area");
+  var scrollWrap = $("#configurator");
   let scrollPrev = 0,
     scrollTop = 1;
 
@@ -1999,14 +1999,14 @@ function configuratorScroll() {
     if (scrollTop > 0) {
       if (scrollTop >= scrollPrev) {
         // 스크롤 위치 증가
-        $(".configurator_header_wrap").addClass("scroll-on");
-        $(".configurator_swiper_wrap").removeClass("scroll-on");
-        $(".configurator_price_wrap").removeClass("scroll-on");
+        scrollWrap.find(".configurator_header_wrap").addClass("scroll-on");
+        scrollWrap.find(".configurator_swiper_wrap").removeClass("scroll-on");
+        scrollWrap.find(".configurator_price_wrap").removeClass("scroll-on");
       } else {
         // 스크롤 위치 감소
-        $(".configurator_header_wrap").removeClass("scroll-on");
-        $(".configurator_swiper_wrap").addClass("scroll-on");
-        $(".configurator_price_wrap").addClass("scroll-on");
+        scrollWrap.find(".configurator_header_wrap").removeClass("scroll-on");
+        scrollWrap.find(".configurator_swiper_wrap").addClass("scroll-on");
+        scrollWrap.find(".configurator_price_wrap").addClass("scroll-on");
       }
       setTimeout(function () {
         scrollPrev = scrollTop;
@@ -2293,13 +2293,19 @@ function contsItemGridSizeChk() {
   ) {
     $(".content-item04 .grid_3").css("grid-template-columns", "revert");
   } else {
-    $(".content-item04 .grid_3").css("grid-template-columns", "repeat(3, minmax(0, 29rem))");
+    $(".content-item04 .grid_3").css(
+      "grid-template-columns",
+      "repeat(3, minmax(0, 29rem))"
+    );
   }
 
   if ($(".content-item07 .grid_3 li").length == 1) {
     $(".content-item07 .grid_3").css("grid-template-columns", "revert");
   } else {
-    $(".content-item07 .grid_3").css("grid-template-columns", "repeat(3, minmax(0, 29rem))");
+    $(".content-item07 .grid_3").css(
+      "grid-template-columns",
+      "repeat(3, minmax(0, 29rem))"
+    );
   }
 }
 
