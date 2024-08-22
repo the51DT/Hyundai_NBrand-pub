@@ -8,7 +8,7 @@ var pubUi = {
     btnNaviCheck();
 
     if ($(".evt-map-wrap").length > 0) {
-      scrollToCenter(".event-box .evt-map-img");
+      scrollToCenter(".list-content.active .event-box .evt-map-img");
     }
 
     if (
@@ -687,6 +687,7 @@ var pubUi = {
     targetContent.addClass("active");
 
     contsItemGridSizeChk(); // jira ICTQMSCHE-6339 대응 : event guide에서 상단 스와이퍼 클릭 시, 해당 함수(contsItemGridSizeChk) 호출
+    scrollToCenter(".list-content.active .event-box .evt-map-img");
   },
   overScroll: function (cl) {
     const slider = document.querySelectorAll(cl);
@@ -777,7 +778,7 @@ $(document).ready(function () {
 
       //07.29 추가
       if ($(".evt-map-wrap").length > 0) {
-        scrollToCenter(".event-box .evt-map-img");
+        scrollToCenter(".list-content.active .event-box .evt-map-img");
       }
     }
 
@@ -1205,7 +1206,7 @@ function evtImgMapChk(optionDataType, option1) {
     }
   }
 
-  scrollToCenter(".event-box .evt-map-img");
+  scrollToCenter(".list-content.active .event-box .evt-map-img");
 }
 
 // 07.29 추가 : mobile 일 경우, 스크롤 가운데 위치하도록 적용
@@ -2286,12 +2287,12 @@ function stopTimer(video, type) {
 
 // contsItemGridSizeChk() - grid 형식의 컨텐츠 아이템 사이즈 1개일 경우, grid 속성 제거
 function contsItemGridSizeChk() {
-  if ($(".content-item04 .grid_3 li").length == 1) {
-    $(".content-item04 .grid_3").css("grid-template-columns", "revert");
+  if ($(".list-content.active .content-item04 .grid_3 li").length == 1 || $(".content-item04 .grid_3 li").length == 1) {
+    $(".content-item04 .grid_3").css("grid-template-columns","revert");
   }
 
   if ($(".content-item07 .grid_3 li").length == 1) {
-    $(".content-item07 .grid_3").css("grid-template-columns", "revert");
+    $(".content-item07 .grid_3").css("grid-template-columns","revert");
   }
 }
 
