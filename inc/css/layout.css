@@ -297,7 +297,7 @@ body.fix {
 }
 .header__event-wrap .text-area {
   position: absolute;
-  bottom: -48px;
+  bottom: -58px;
   left: 0;
   width: 100%;
   color: #fff;
@@ -308,6 +308,12 @@ body.fix {
 .header__event-wrap [class*="header__event-item"]:hover .text-area,
 .header__event-wrap [class*="header__event-item"]:focus .text-area {
   bottom: 0;
+}
+
+.header__event-wrap [class*="header__event-item"]:active .link-area,
+.header__event-wrap [class*="header__event-item"]:hover .link-area,
+.header__event-wrap [class*="header__event-item"]:focus .link-area {
+  margin-top: 0;
 }
 
 .header__event-wrap .text-area h3 {
@@ -331,6 +337,8 @@ body.fix {
   padding: 14px;
   gap: 24px;
   justify-content: center;
+  margin-top: 10px;
+  transition: margin 0.2s;
 }
 
 .header__event-wrap .link-area a {
@@ -660,7 +668,7 @@ body.fix {
 
 .gnb-content__dep2 .text-area {
   position: absolute;
-  bottom: -48px;
+  bottom: -58px;
   left: 0;
   width: 100%;
   color: #fff;
@@ -671,6 +679,12 @@ body.fix {
 .gnb-content__dep2:hover .text-area,
 .gnb-content__dep2:focus .text-area {
   bottom: 0;
+}
+
+.gnb-content__dep2:active .link-area,
+.gnb-content__dep2:hover .link-area,
+.gnb-content__dep2:focus .link-area {
+  margin-top: 0;
 }
 
 .gnb-content__dep2 .text-area h3 {
@@ -695,6 +709,8 @@ body.fix {
   padding: 14px;
   gap: 24px;
   justify-content: center;
+  margin-top: 10px;
+  transition: margin 0.2s;
 }
 
 .gnb-content__dep2 .link-area a {
