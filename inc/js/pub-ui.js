@@ -2292,10 +2292,14 @@ function contsItemGridSizeChk() {
     $(".content-item04 .grid_3 li").length == 1
   ) {
     $(".content-item04 .grid_3").css("grid-template-columns", "revert");
+  } else {
+    $(".content-item04 .grid_3").css("grid-template-columns", "repeat(3, minmax(0, 29rem))");
   }
 
   if ($(".content-item07 .grid_3 li").length == 1) {
     $(".content-item07 .grid_3").css("grid-template-columns", "revert");
+  } else {
+    $(".content-item07 .grid_3").css("grid-template-columns", "repeat(3, minmax(0, 29rem))");
   }
 }
 
