@@ -2315,12 +2315,16 @@ function contsItemGridSizeChk() {
 function targetScrollConfig(value, type) {
   // console.log(value, type);
 
-  var configuratorArea = $(".configurator_area");
-  var configSelectItem = $(
+  var configuratorArea = $("#configurator");
+  var configSelectItem = configuratorArea.find(
     ".configurator_select_area > [class*=configurator_select_" + value + "]"
   );
-  var configHeaderHeight = $(".configurator_header_wrap").height();
-  var configSwiperHeight = $(".configurator_swiper_wrap").height();
+  var configHeaderHeight = configuratorArea
+    .find(".configurator_header_wrap")
+    .height();
+  var configSwiperHeight = configuratorArea
+    .find(".configurator_swiper_wrap")
+    .height();
   var configuratorAreaModel = configuratorArea.data("model");
   var dropdownItem;
 
