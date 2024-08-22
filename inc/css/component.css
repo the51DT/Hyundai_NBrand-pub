@@ -1106,6 +1106,16 @@ input[type="radio"]:focus + label {
   position: relative;
   color: #fff;
 }
+
+.conts-box-wrap .bg-img-wra02 {
+  width: 100%;
+  max-width: 1440px;
+  overflow: hidden;
+}
+
+.conts-box-wrap .bg-img-wra02 a {
+  display: block;
+}
 .conts-box-wrap .bg-img-wrap .tit {
   font-size: 56px;
   line-height: 125%;
