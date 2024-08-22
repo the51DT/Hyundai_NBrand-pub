@@ -2126,20 +2126,11 @@ function scrollEvent() {
   if ($(".history-list").length) {
     moveItem = $(".history-pointer");
     historyItemLength = $(".history-list > li").length;
-    $(".history-list > li").each(function (e) {
-      _this = $(this);
-      historyItemOffset[e] = _this.offset().top;
-      historyItemPosition[e] = _this.position().top;
-    });
-    $(".history-list")
-      .find("img")
-      .ready(function () {
-        $(".history-list > li").each(function (e) {
-          _this = $(this);
-          historyItemOffset[e] = _this.offset().top;
-          historyItemPosition[e] = _this.position().top;
-        });
-      });
+    // $(".history-list > li").each(function (e) {
+    //   _this = $(this);
+    //   historyItemOffset[e] = _this.offset().top;
+    //   historyItemPosition[e] = _this.position().top;
+    // });
     if ($(window).width() >= 1024) {
       dateGap = 120;
       dateGapScroll = 80;
@@ -2150,15 +2141,21 @@ function scrollEvent() {
     moveItemTop = moveItem.position().top;
     // alert(historyItemLength);
     scrollWrap.scroll(function () {
+      $(".history-list > li").each(function (e) {
+        _this = $(this);
+        historyItemOffset[e] = _this.offset().top;
+        historyItemPosition[e] = _this.position().top;
+        // console.log(historyItemOffset[e]);
+      });
       scrollTop = scrollWrap.scrollTop();
       for (var i = 0; i < historyItemLength; i++) {
-        if (scrollTop + dateGapScroll > historyItemOffset[i]) {
+        if (0 >= historyItemOffset[i]) {
           moveItemTop = historyItemPosition[i + 1];
-        } else if (scrollTop <= historyItemOffset[0]) {
+        } else if (0 < historyItemOffset[0]) {
           moveItemTop = historyItemPosition[0];
         }
-        // console.log(_this.attr("class"));
       }
+      // console.log(moveItemTop);
       moveItem.css("top", moveItemTop + dateGap);
     });
   }
@@ -2287,12 +2284,15 @@ function stopTimer(video, type) {
 
 // contsItemGridSizeChk() - grid 형식의 컨텐츠 아이템 사이즈 1개일 경우, grid 속성 제거
 function contsItemGridSizeChk() {
-  if ($(".list-content.active .content-item04 .grid_3 li").length == 1 || $(".content-item04 .grid_3 li").length == 1) {
-    $(".content-item04 .grid_3").css("grid-template-columns","revert");
+  if (
+    $(".list-content.active .content-item04 .grid_3 li").length == 1 ||
+    $(".content-item04 .grid_3 li").length == 1
+  ) {
+    $(".content-item04 .grid_3").css("grid-template-columns", "revert");
   }
 
   if ($(".content-item07 .grid_3 li").length == 1) {
-    $(".content-item07 .grid_3").css("grid-template-columns","revert");
+    $(".content-item07 .grid_3").css("grid-template-columns", "revert");
   }
 }
 
