@@ -302,11 +302,14 @@ var pubUi = {
             var videoIdEach = $(this).attr("id");
             var videoAll = document.querySelector(`#${videoIdEach}`);
             videoAll.currentTime = 0;
+            // videoAll.play();
             // alert(videoAll.duration);
             //  = 0;
-            if (!$(".btn-play").hasClass("on")) {
-              videoAll.pause();
-            }
+            videoAll.pause();
+            // if (!$(".btn-play").hasClass("on")) {
+            //   videoAll.pause();
+            //   alert("d");
+            // }
           });
           if (
             $(".ty01Swiper:not(.swiper-banner) .swiper-slide")[
