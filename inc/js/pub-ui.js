@@ -2199,6 +2199,8 @@ window.onload = function () {
     toggleAboutMe();
   });
   toggleAboutMe();
+  pagingNumCheck();
+
   // 07.30 추가 - 모바일에서 navigation-bar 존재 시, 컨텐츠영역 상단 짤림 현상 방지
   if ($(".navigation_bar-wrap").length > 0) {
     $(".wrap .content-area").css("padding-top", "48px");
@@ -2368,4 +2370,29 @@ function targetScrollConfig(value, type) {
       $(dropdownItem[i]).removeClass("on");
     }
   }
+}
+
+function pagingNumCheck() {
+  var pageList = $(".page_list");
+  // var pageNum = $(".page_list > li").length;
+
+  for(var i=0; i < pageList.length; i++) {
+    var pageNum = pageList[i].children.length;
+
+    if (pubUi.windowSize()) {
+      //pc
+    } else {
+      //mobile
+      if (pageNum >= 4) {
+        for(var j=0; j < pageNum; j++) {
+          pageList[i].children[j].children[0].style.setProperty("--num", 4);
+        }
+      } else {
+        for (var j = 0; j < pageNum; j++) {
+          pageList[i].children[j].children[0].style.setProperty("--num", pageNum);
+        }
+        
+      }
+    }
+  }  
 }

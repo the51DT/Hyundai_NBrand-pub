@@ -1856,8 +1856,9 @@ min-width : 1024 css
     height: 48px;
   }
   .page_wrap .page_list button {
+    --num : 0;
     float: left;
-    width: 25%;
+    width: calc(100% / var(--num));
     height: 48px;
     padding: 0;
   }
