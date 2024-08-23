@@ -1810,7 +1810,7 @@
     display: none;
   }
   .models-wrap .ty02Swiper .swiper-slide .img-area {
-    min-height: 234px;
+    /* min-height: 234px; */
   }
   .models-wrap .ty02Swiper .swiper-status-wrap {
     position: unset;
