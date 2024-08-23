@@ -1645,9 +1645,9 @@
       const menuName = ["exterior", "interior", "summary"];
       for (let i = 0; i < menuName.length; i++) {
         if ($(`.configurator_menu_${menuName[i]}`).hasClass("on")) {
-          $("#configurator .configurator_area").addClass(menuName[i]);
+          $("#configurator").addClass(menuName[i]);
         } else {
-          $("#configurator .configurator_area").removeClass(menuName[i]);
+          $("#configurator").removeClass(menuName[i]);
         }
       }
     }
