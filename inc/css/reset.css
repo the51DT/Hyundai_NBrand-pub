@@ -245,14 +245,30 @@ body {
     background: #aacae6;
   }
 }
+<<<<<<< Updated upstream
 body * {
+=======
+
+*::-webkit-scrollbar-thumb {
+  width: 30px;
+  background: linear-gradient(transparent, #30ff00);
+  border-radius: 6px;
+  border-radius: 20px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(transparent, #00c6ff, transparent);
+} */
+/* body * {
+>>>>>>> Stashed changes
   outline: none;
 }
 body *:focus {
   outline: none;
-}
+} */
 
 a,
 button {
   cursor: pointer;
+  color: #000;
 }
