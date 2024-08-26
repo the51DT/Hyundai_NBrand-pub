@@ -65,6 +65,7 @@
 .main_summery_card img {
   width: 100%;
   height: auto;
+  min-height: 365px;
 }
 .main_summery_card div {
   display: flex;
@@ -187,6 +188,11 @@
   margin-top: 76px;
 }
 
+@media screen and (min-width:1024px) and (max-width: 1440px) {
+  .main_summery_card img {
+    min-height: 214px;
+  }
+}
 @media screen and (max-width: 1023px) {
   .main_summery_wrap {
     padding: 6.25rem 0;
@@ -305,5 +311,9 @@
   }
   .main_Nfluencer_wrap .grid_masonry + .btn-wrap-default {
     margin-top: 64px;
+  }
+
+  .main_summery_card img {
+    min-height: 203px;
   }
 }
