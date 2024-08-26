@@ -793,7 +793,7 @@ $(document).ready(function () {
       swiper4SlideEvt();
     }
 
-    btnNaviCheck();
+    btnNaviCheck();    
   });
 
   // 07.03 추가 - models-wrap 클래스 존재하는 페이지 일 경우, 하단 img loading 속성 제거
@@ -2200,6 +2200,7 @@ window.onload = function () {
   });
   toggleAboutMe();
   pagingNumCheck();
+  CheckNextRaces();
 
   // 07.30 추가 - 모바일에서 navigation-bar 존재 시, 컨텐츠영역 상단 짤림 현상 방지
   if ($(".navigation_bar-wrap").length > 0) {
@@ -2395,4 +2396,83 @@ function pagingNumCheck() {
       }
     }
   }  
+}
+
+function CheckNextRaces() {  
+  const cardSlide = document.querySelectorAll(".ty04Swiper .swiper-slide");
+  const currentDate = new Date();
+
+  // let year = currentDate.getFullYear();
+  let month = currentDate.getMonth() + 1;
+  let day = currentDate.getDate();
+
+  $(cardSlide).removeClass("swiper-slide-active");
+
+  for (var i = 0; i < cardSlide.length; i++) {
+    var cardMonth = $(cardSlide[i]).find(".card_bottom .card_badge").text();
+    var cardTit = $(cardSlide[i]).find(".card_bottom .card_tit").text();
+    var cardDay = cardTit.split("~");
+    var cardFirstDay = parseInt(cardDay[0]);
+
+    cardMonth = cardMonth.toLowerCase();
+
+    switch (cardMonth) {
+      case "january":
+        cardMonth = 1;
+        break;
+      case "faburary":
+        cardMonth = 2;
+        break;
+      case "march":
+        cardMonth = 3;
+        break;
+      case "april":
+        cardMonth = 4;
+        break;
+      case "may":
+        cardMonth = 5;
+        break;
+      case "june":
+        cardMonth = 6;
+        break;
+      case "july":
+        cardMonth = 7;
+        break;
+      case "august":
+        cardMonth = 8;
+        break;
+      case "september":
+        cardMonth = 9;
+        break;
+      case "october":
+        cardMonth = 10;
+        break;
+      case "november":
+        cardMonth = 11;
+        break;
+      case "december":
+        cardMonth = 12;
+        break;
+    }
+
+    // console.log(cardDay, cardFirstDay);
+
+    if (cardMonth >= month) {
+      if (cardMonth > month) {
+        // cardMonth 가 현재 month 보다 큰 경우, 해당 swiper-slide에 active 추가
+        $(cardSlide[i]).addClass("swiper-slide-active");
+      } else {
+        // cardMonth 가 현재 month 같은 경우, day 값 비교 후 active 추가
+        if (cardFirstDay > day) {
+          $(cardSlide[i]).addClass("swiper-slide-active");
+        }
+      }
+
+      if ($(cardSlide[i]).hasClass("swiper-slide-active")) {
+        var cardIndex = $(cardSlide[i]).index();
+        $(".ty04Swiper")[0].swiper.slideTo(cardIndex, 1000, false);
+      }
+      return false;
+    }
+  }
 }
