@@ -379,6 +379,7 @@
   height: 320px;
   justify-content: space-between;
   padding: 24px 15px 32px 15px;
+  cursor: default;
 }
 .card-wrap-list .card-list li .card_top {
   padding: 0;
