@@ -93,7 +93,6 @@ body.fix {
   z-index: 9999;
   width: 100%;
 }
-.skip-navigation a:active,
 .skip-navigation a:hover,
 .skip-navigation a:focus {
   top: 0;
@@ -761,7 +760,7 @@ body.fix {
   align-items: center;
   position: relative;
 }
-.gnb__tab02-wrap [class*="gnb__tab02-btn"]::after {
+.gnb__tab02-wrap button[class*="gnb__tab02-btn"]::after {
   content: "";
   display: block;
   width: 20px;
@@ -772,6 +771,11 @@ body.fix {
   transform: translateY(-50%);
   background: url(../images/icon/icon-arrow01_right_gray.svg) no-repeat center;
 }
+
+.gnb__tab02-wrap a[class*="gnb__tab02-btn"]::after {
+  display: none;
+}
+
 .gnb__tab02-wrap [class*="gnb__tab02-btn"].on,
 .gnb__tab02-wrap [class*="gnb__tab02-btn"].active,
 .gnb__tab02-wrap [class*="gnb__tab02-btn"]:hover,

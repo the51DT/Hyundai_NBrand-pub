@@ -286,7 +286,7 @@ var NbrandUI = {
   headerReset: function (obj, com, par) {
     resetCont = $(com);
     resetParent = $(par);
-    $(obj).removeClass("on");
+    $(obj).removeClass("on").attr("aria-expanded", "false");
     bodyControll(false);
     resetParent.removeClass("menu-on");
     resetTparent = resetParent.find(".sitemap-wrap");
@@ -351,7 +351,7 @@ var NbrandUI = {
           eventItem = $(this);
           NbrandUI.toggleBtn();
           eventParent.toggleClass("menu-on");
-          NbrandUI.expandedAria();
+          NbrandUI.expandedAria(eventItem);
 
           if (eventItem.hasClass("on")) {
             //열때
