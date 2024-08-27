@@ -83,7 +83,7 @@
 .fw-type03 {
   font-weight: 700;
 }
-
+.tit-type01 + .tit-type03,
 .fw-type03 + .fw-type03 {
   font-weight: 500;
 }
@@ -2269,7 +2269,7 @@ button.card_detail:hover {
 .key-visual-wrap .text-area .desc {
   font-size: 20px;
   line-height: 28px;
-  font-weight: 700;
+  font-weight: 500;
   margin-top: 12px;
 }
 .ty01Swiper .text-area .btn-wrap,

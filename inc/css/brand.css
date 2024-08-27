@@ -180,7 +180,7 @@
 .models-wrap .text-col .text-sub {
   font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   font-size: 32px;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 44.8px;
   color: #fff;
   margin-top: 40px;
@@ -870,7 +870,7 @@ article.info-bnr-wrap + article.info-video-wrap {
   column-gap: 0.75rem;
   font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 140%;
 }
 .motor_team_list_detail li + li {
@@ -1138,7 +1138,7 @@ article.info-bnr-wrap + article.info-video-wrap {
 .merchandise-wrap .collectiontab-wrap .collection_swiper-txt {
   font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   font-size: 24px;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 33.6px;
   color: #fff;
   margin-top: 20px;
