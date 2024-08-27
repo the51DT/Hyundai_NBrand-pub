@@ -762,7 +762,7 @@ min-width : 1024 css
 
   .wrap-list.list03 .right.descwrap h2.sub-tit {
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 25.2px;
     text-align: left;
     margin-top: 0;
@@ -1856,7 +1856,7 @@ min-width : 1024 css
     height: 48px;
   }
   .page_wrap .page_list button {
-    --num : 0;
+    --num: 0;
     float: left;
     width: calc(100% / var(--num));
     height: 48px;
