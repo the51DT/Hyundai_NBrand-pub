@@ -4561,6 +4561,11 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
     flex-direction: column;
     row-gap: 20px;
   }
+
+  /* EP010702 */
+  .content-area.about .tab-container article:last-of-type { 
+    padding-bottom: 120px;
+  }
 }
 
 @media screen and (max-width: 500px) {

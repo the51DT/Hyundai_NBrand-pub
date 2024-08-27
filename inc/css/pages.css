@@ -316,6 +316,7 @@
 }
 .about .class-info-box {
   padding-top: 160px;
+  padding-bottom:0;
 }
 .about .class-info-box .tabs-wrap .tabs li a {
   min-width: 154px;
@@ -374,11 +375,13 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
-.card-wrap-list .card-list li a {
+.card-wrap-list .card-list li a, 
+.card-wrap-list .card-list li button {
   min-width: 237px;
   height: 320px;
   justify-content: space-between;
   padding: 24px 15px 32px 15px;
+  text-align: left;
   cursor: default;
 }
 .card-wrap-list .card-list li .card_top {
@@ -688,7 +691,6 @@
     left: 80px;
   }
 }
-
 /* min-width : 1024 css */
 @media screen and (max-width: 1280px) and (min-width: 1024px) {
   .next-race-box .conts-head {
@@ -703,20 +705,32 @@
     padding:0 80px; */
   }
 }
+
+@media screen and (max-width: 1800px) and (min-width: 1024px) {
+  .class-info-box .tab-head.ty02 {
+    padding-left:80px;
+    padding-right:80px;
+  }
+
+  .class-info-box .tab-content .conts-box-wrap > article, 
+  .class-info-box .tab-content .conts-box-wrap > section {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
 @media screen and (min-width: 1800px) {
   .n-race-box .event-box .conts-head {
     padding-right: 0;
   }
 }
-
 @media screen and (max-width: 1800px) {
   .evtGuide .track-guide-box .wrap-list {
     padding-left: 80px;
     padding-right: 80px;
     justify-content: space-between;
   }
-}
-@media screen and (max-width: 1800px) {
+
   .n-race-box .conts-head,
   .next-race-box .conts-head {
     margin: 0 80px 100px 80px;
@@ -987,10 +1001,20 @@
     padding-right: 0;
   }
 
+  .class-info-box .tab-head.ty02 {
+    padding-left: 24px;
+    padding-right:24px;
+  }
+
   .class-info-box .tab-head.ty02 .tabs {
     margin-top: 0;
   }
 
+  .class-info-box .tab-content .conts-box-wrap > article,
+  .class-info-box .tab-content .conts-box-wrap > section {
+    padding-left:24px;
+    padding-right:24px;
+  } 
   .class-info-box .tab-content .txt-area {
     margin-right: -24px;
   }
@@ -1006,7 +1030,8 @@
     margin-right: 24px;
   }
 
-  .card-wrap-list .card-list li a {
+  .card-wrap-list .card-list li a,
+  .card-wrap-list .card-list li button {
     min-width: 160px;
     height: 265px;
     padding: 20px 12px 12px 12px;
