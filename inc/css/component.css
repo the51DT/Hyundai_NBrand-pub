@@ -2934,6 +2934,10 @@ button.card_detail:hover {
   width: 100%;
   font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
 }
+.wrap-list.list04 .inner .box .box-desc.right a.desc-location:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
 .wrap-list.list04 .inner .box .box-desc.right .desc-note {
   font-size: 14px;
   font-weight: 500;

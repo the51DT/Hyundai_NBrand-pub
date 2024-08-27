@@ -456,7 +456,7 @@
 }
 .key-visual-wrap .img-wrap img {
   object-fit: cover;
-  max-height: 100%;
+  height: 100%;
 }
 .key-visual-wrap .text-wrap {
   color: #fff;
