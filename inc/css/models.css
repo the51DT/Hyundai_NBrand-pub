@@ -149,7 +149,7 @@
 .models-wrap .text-normal {
   font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   font-size: 24px;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 33.6px;
   word-break: keep-all;
 }
@@ -1139,7 +1139,7 @@
   }
   .models-wrap .text-normal {
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 25.2px;
   }
   .models-wrap .text-normal-xs {

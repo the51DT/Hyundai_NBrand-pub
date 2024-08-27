@@ -84,6 +84,10 @@
   font-weight: 700;
 }
 
+.fw-type03 + .fw-type03 {
+  font-weight: 500;
+}
+
 /* 말줄임 */
 .ellipsis {
   text-overflow: ellipsis;
