@@ -2888,6 +2888,16 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
 }
 /* 끝 */
 
+.content-item04 .grid_3,
+.content-item07 .grid_3 {
+  --size: 0;
+  grid-template-columns: repeat(var(--size), minmax(0, 29rem));  
+}
+.content-item04 .grid_3.center,
+.content-item07 .grid_3.center {
+  justify-content: center;
+}
+
 /* 모바일 */
 @media screen and (max-width: 1023px) {
   /* Experience  common */

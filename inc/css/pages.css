@@ -376,7 +376,7 @@
   scrollbar-width: none;
 }
 .card-wrap-list .card-list li a, 
-.card-wrap-list .card-list li button {
+.card-wrap-list .card-list li > div.card_type01 {
   min-width: 237px;
   height: 320px;
   justify-content: space-between;
@@ -1031,7 +1031,7 @@
   }
 
   .card-wrap-list .card-list li a,
-  .card-wrap-list .card-list li button {
+  .card-wrap-list .card-list li > div.card_type01 {
     min-width: 160px;
     height: 265px;
     padding: 20px 12px 12px 12px;
