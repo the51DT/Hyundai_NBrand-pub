@@ -77,6 +77,30 @@
   color: #de3111;
 }
 
+/* Cookies Policy 페이지 */
+.cookies-area {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding-bottom: 15rem;
+}
+.cookies-item:not(:first-of-type) {
+  margin-top: 5rem;
+}
+.cookies-item a {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.cookies-item a:hover {
+  color: #de3111;
+}
+.cookies-area .tit-type05 {
+  margin-top: 1.25rem;
+}
+.cookies-area .txt-type03 {
+  margin-top: 1.25rem;
+  font-weight: 500;
+}
+
 /* 모바일 */
 @media screen and (max-width: 1023px) {
   /* 공통 */
@@ -90,7 +114,7 @@
 
   .inquiry_wrap {
     padding: 0;
-    padding-bottom:10rem;
+    padding-bottom: 10rem;
   }
   .inquiry_form {
     padding-bottom: 3.75rem;

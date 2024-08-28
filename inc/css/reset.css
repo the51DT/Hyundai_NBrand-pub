@@ -53,7 +53,7 @@ section,
 aside {
   margin: 0;
   padding: 0;
-  word-break: break-word;
+  word-break: keep-all;
   word-wrap: break-word;
   white-space: normal;
   font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
@@ -245,29 +245,13 @@ body {
     background: #aacae6;
   }
 }
-<<<<<<< Updated upstream
 body * {
-=======
-
-*::-webkit-scrollbar-thumb {
-  width: 30px;
-  background: linear-gradient(transparent, #30ff00);
-  border-radius: 6px;
-  border-radius: 20px;
-}
-
-*::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(transparent, #00c6ff, transparent);
-} */
-/* body * {
->>>>>>> Stashed changes
   outline: none;
 }
 body *:focus {
   outline: none;
-} */
-
-a,
+}
+*/ a,
 button {
   cursor: pointer;
   color: #000;
