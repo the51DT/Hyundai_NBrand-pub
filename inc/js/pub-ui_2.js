@@ -6,18 +6,31 @@ var pubUi = {
     self.swiperSlideEvent();
     self.masonryLayout();
     btnNaviCheck();
-    // self.videoControlerChk("");
 
-    if ($(".ty01Swiper") != undefined && $(".ty01Swiper").length > 0) {
+    if ($(".evt-map-wrap").length > 0) {
+      scrollToCenter(".list-content.active .event-box .evt-map-img");
+    }
+
+    if (
+      $(".ty01Swiper:not(.banner-swiper)") != undefined &&
+      $(".ty01Swiper:not(.banner-swiper)").length > 0
+    ) {
       var typeChk = "";
       if (
         $(".ty01Swiper:not(.banner-swiper) .swiper-slide-active").find("img")
+          .length
       ) {
         typeChk = "image";
       } else {
         typeChk = "video";
+        $(".ty01Swiper:not(.banner-swiper) .swiper-slide-active")
+          .find("video")
+          .get(0)
+          .addEventListener("loadeddata", function () {
+            self.videoBulletChk(".ty01Swiper:not(.banner-swiper)", 0, typeChk);
+          });
       }
-      self.videoBulletChk(".ty01Swiper", 0, typeChk);
+      self.videoBulletChk(".ty01Swiper:not(.banner-swiper)", 0, typeChk);
     }
   },
   settings: function () {
@@ -38,6 +51,7 @@ var pubUi = {
 
     // swiper
     self.swiper2;
+    self.swiper3;
     self.swiper4;
     self.typeChk = $(".ty01Swiper").find(".swiper-slide video");
 
@@ -49,64 +63,69 @@ var pubUi = {
     self.dataSecond = 0;
     self.curTime = 0;
     self.per = 0;
+    self.typeIdx = 0;
     // self.perWrap = 0;
   },
   bindEvents: function () {
     var self = this;
 
-    for (var i = 0; i < self.$tabList.length; i++) {
-      self.$tabList[i].addEventListener("click", function (e) {
-        var tabContainer = $(this).closest(".tab-container");
-        e.preventDefault();
-        pubUi.tabBtnEvent(e, tabContainer);
-      });
-    }
+    // 탭버튼 수정
+    $(".tabs li").on("click", function (e) {
+      e.preventDefault();
+      var target = e.target;
+      var tabContainer = $(this).closest(".tab-container");
+      tabBtnEvent(target, tabContainer);
+    });
 
     // 스와이퍼 재생 버튼 클릭시, 동영상 재생, 정지
     $(".btn-play").on("click", function (e) {
       e.preventDefault();
       var targetSwiper = $(this).closest(".swiper");
-      var videoChk = targetSwiper.find(".swiper-slide video");
+      var videoChk = targetSwiper.find(".swiper-slide-active video");
+      // var swiperIndex = targetSwiper.find(".swiper-slide-active").index();
 
-      if (targetSwiper.hasClass("ty02Swiper")) {
+      if (targetSwiper.hasClass("ty01Swiper")) {
         if ($(this).hasClass("on")) {
-          l;
           // console.log("정지버튼 클릭!");
           $(this).removeClass("on");
-          $(this).find(".visually-hidden").text("정지");
+          $(this).attr("title", "재생");
+          if (videoChk.length > 0) {
+            videoChk[0].pause();
+            videoChk[0].currentTime = 0;
+            stopTimer("", "video");
+          } else {
+            stopTimer("", "image");
+          }
+        } else {
+          // console.log("재생버튼 클릭!");
+          $(this).addClass("on");
+          $(this).attr("title", "정지");
+          if (videoChk.length > 0) {
+            videoChk[0].play();
+            pubUi.videoBulletChk(
+              ".ty01Swiper:not(.banner-swiper)",
+              self.typeIdx,
+              "video"
+            );
+          } else {
+            pubUi.videoBulletChk(
+              ".ty01Swiper:not(.banner-swiper)",
+              self.typeIdx,
+              "image"
+            );
+          }
+        }
+      } else {
+        if ($(this).hasClass("on")) {
+          // console.log("정지버튼 클릭!");
+          $(this).removeClass("on");
+          $(this).attr("title", "재생");
           targetSwiper[0].swiper.autoplay.stop();
         } else {
           // console.log("재생버튼 클릭!");
           $(this).addClass("on");
-          $(this).find(".visually-hidden").text("재생");
+          $(this).attr("title", "정지");
           targetSwiper[0].swiper.autoplay.start();
-        }
-      } else if (targetSwiper.hasClass("ty01Swiper")) {
-        // ty01Swiper - video 케이스 아닐 경우,
-        if (videoChk.length > 0) {
-          if ($(this).hasClass("on")) {
-            // console.log("정지버튼 클릭!");
-            $(this).removeClass("on");
-            $(this).find(".visually-hidden").text("정지");
-          } else {
-            // console.log("재생버튼 클릭!");
-            $(this).addClass("on");
-            $(this).find(".visually-hidden").text("재생");
-          }
-
-          self.videoControlerChk(targetSwiper);
-        } else {
-          if ($(this).hasClass("on")) {
-            // console.log("정지버튼 클릭!");
-            $(this).removeClass("on");
-            $(this).find(".visually-hidden").text("정지");
-            targetSwiper[0].swiper.autoplay.stop();
-          } else {
-            // console.log("재생버튼 클릭!");
-            $(this).addClass("on");
-            $(this).find(".visually-hidden").text("재생");
-            targetSwiper[0].swiper.autoplay.start();
-          }
         }
       }
     });
@@ -119,12 +138,12 @@ var pubUi = {
       if (self.$btnSound.hasClass("on")) {
         // console.log("소리 끄기 버튼 클릭!");
         self.$btnSound.removeClass("on");
-        self.$btnSound.find(".visually-hidden").text("소리 끄기");
+        self.$btnSound.attr("title", "소리 켜기");
         targetSwiper.find("video").prop("muted", true);
       } else {
         // console.log("소리 켜기버튼 클릭!");
         self.$btnSound.addClass("on");
-        self.$btnSound.find(".visually-hidden").text("소리 켜기");
+        self.$btnSound.attr("title", "소리 끄기");
         targetSwiper.find("video").prop("muted", false);
       }
     });
@@ -162,72 +181,30 @@ var pubUi = {
       self.tagBtnEvent(e.target, tagList);
     });
 
-    // 이벤트 레이아웃 마이너스 버튼 클릭시, 추 후 요건 확정 후 재작업 예정
+    // 이벤트 레이아웃 + 버튼 클릭시,
     $(".event-box .btn-wrap.plus").click(function (e) {
-      var options = [];
-      var option1 = $(".list-content.active .evtLayout-type div")
-        .filter(":first-child")
-        .find(".option-click.active")
-        .text();
-      var option2 = $(".list-content.active .evtLayout-type div")
-        .filter(":last-child")
-        .find(".option-click.active")
-        .text();
-
-      var selectedArea = document.querySelector(
-        ".ty05Swiper .swiper-slide.active .card_info .card_subtit"
-      ).innerText;
-      console.log(selectedArea);
-
-      if ($(".evt-map-wrap").hasClass("on")) {
-        alert(
-          "현재 이미지보다 큰 이미지를 볼 수 없습니다. \n이전 이미지로 돌아가려면 - 버튼을 눌러주세요. "
-        );
-      } else {
-        if (option2 == "" || option2 == undefined) {
-          options.push(option1);
-        } else {
-          options.push(option1, option2);
-        }
-
-        console.log(options);
-
-        if (options) {
-          $(".evt-map-wrap").addClass("on");
-          evtImgMapChk(options, selectedArea);
-        }
-      }
+      $(this).closest(".evt-map-wrap").addClass("active");
+      $(this)
+        .closest(".evt-map-wrap")
+        .find(".evt-map-img.active .evt-map-default-box > button")
+        .hide();
+      $(this)
+        .closest(".evt-map-wrap")
+        .find(".evt-map-img.active .evt-map-active-box > button")
+        .show();
     });
 
+    // 이벤트 레이아웃 - 버튼 클릭시,
     $(".event-box .btn-wrap.minus").click(function (e) {
-      var options = [];
-
-      var option1 = $(".list-content.active .evtLayout-type div")
-        .filter(":first-child")
-        .find(".option-click.active")
-        .text();
-      var option2 = $(".list-content.active .evtLayout-type div")
-        .filter(":last-child")
-        .find(".option-click.active")
-        .text();
-
-      var selectedArea = document.querySelector(
-        ".ty05Swiper .swiper-slide.active .card_info .card_subtit"
-      ).innerText;
-      console.log(selectedArea);
-
-      if (option2 == "" || option2 == undefined) {
-        options.push(option1);
-      } else {
-        options.push(option1, option2);
-      }
-
-      console.log(options);
-
-      if (options) {
-        $(".evt-map-wrap").removeClass("on");
-        evtImgMapChk(options, selectedArea);
-      }
+      $(this).closest(".evt-map-wrap").removeClass("active");
+      $(this)
+        .closest(".evt-map-wrap")
+        .find(".evt-map-img.active .evt-map-default-box > button")
+        .show();
+      $(this)
+        .closest(".evt-map-wrap")
+        .find(".evt-map-img.active .evt-map-active-box > button")
+        .hide();
     });
 
     $(".tit-btn-wrap button").click(function (e) {
@@ -245,6 +222,11 @@ var pubUi = {
     $(".rending-wrap > li button").on("click", function (e) {
       e.preventDefault();
       var scrollTarget = $(this).data("scroll");
+
+      // 08.09 수정 : 선택한 네비게이션 메뉴의 rending-btn 활성화
+      // $(this).parent().siblings().find("button").removeClass("on");
+      // $(this).addClass("on");
+
       pubUi.pageScrollChk(scrollTarget);
     });
 
@@ -258,6 +240,15 @@ var pubUi = {
         ".nflmain_wrap .content-item03 .banner-box .swiper-container .swiper"
       ).addClass("onlyone-swiper");
     }
+
+    //configurator 관련 함수 - 0820
+    // $(".configurator_summary_list .configurator_summary_list_top .btn:first-child").on("click", function (e) {
+    //     var target = $(this);
+    //     if (target.find(".btn-icon20").hasClass("icon-change-gray")) {
+    //       targetScrollConfig(target);
+    //     }
+    //   }
+    // );
   },
   swiperSlideEvent: function () {
     var self = this;
@@ -280,15 +271,16 @@ var pubUi = {
       };
     }
 
-    // console.log("스와이퍼 이벤트 진입");
-
     var swiper1 = new Swiper(".ty01Swiper:not(.banner-swiper)", {
       slidesPerView: 1,
       watchOverflow: true, //pagination 1개 일 경우, 숨김
       initialSlide: 0,
-      touchRatio: touchFlag, // 드래그 X : 0 , 드래그 O : 1
+      touchRatio: 1, // 드래그 X : 0 , 드래그 O : 1
       loop: true,
-      autoplay: autoplayVal,
+      // autoplay: {
+      //   delay: 3000,
+      //   disableOnInteraction: false,
+      // },
       pagination: {
         el: ".swiper-pagination-custom",
         clickable: true,
@@ -305,7 +297,20 @@ var pubUi = {
         },
         slideChangeTransitionEnd: function () {
           var currentIndex = swiper1.activeIndex;
-
+          self.typeIdx = this.realIndex;
+          $(".ty01Swiper:not(.swiper-banner) video").each(function () {
+            var videoIdEach = $(this).attr("id");
+            var videoAll = document.querySelector(`#${videoIdEach}`);
+            videoAll.currentTime = 0;
+            // videoAll.play();
+            // alert(videoAll.duration);
+            //  = 0;
+            videoAll.pause();
+            // if (!$(".btn-play").hasClass("on")) {
+            //   videoAll.pause();
+            //   alert("d");
+            // }
+          });
           if (
             $(".ty01Swiper:not(.swiper-banner) .swiper-slide")[
               currentIndex
@@ -327,12 +332,12 @@ var pubUi = {
       },
     });
 
-    swiper2SlideEvt(); //swiper2 이벤트 실행
-
-    var swiper3 = new Swiper(".ty03Swiper", {
-      slidesPerView: 3,
-      spaceBetween: 24,
-      watchOverflow: true,
+    var swiper1_1 = new Swiper(".banner-swiper", {
+      slidesPerView: 1,
+      watchOverflow: true, //pagination 1개 일 경우, 숨김
+      initialSlide: 0,
+      touchRatio: 1, // 드래그 X : 0 , 드래그 O : 1
+      loop: true,
       autoplay: {
         delay: 3000,
         disableOnInteraction: false,
@@ -342,24 +347,19 @@ var pubUi = {
         clickable: true,
       },
       navigation: {
-        nextEl: ".ty03Swiper .swiper-button-next",
-        prevEl: ".ty03Swiper .swiper-button-prev",
+        nextEl: ".ty01Swiper .swiper-button-next",
+        prevEl: ".ty01Swiper .swiper-button-prev",
       },
       breakpoints: {
         360: {
-          slidesPerView: 1.2,
-          spaceBetween: 12,
+          //touchRatio: 1, // 드래그 O
         },
         768: {
-          slidesPerView: 1.5,
-          spaceBetween: 12,
-        },
-        1024: {
-          slidesPerView: 3,
-          spaceBetween: 24,
+          //touchRatio: 1, // 드래그 O
         },
       },
     });
+    swiper2SlideEvt(); //swiper2 이벤트 실행
 
     swiper4SlideEvt(); //swiper4 이벤트 실행
 
@@ -377,45 +377,15 @@ var pubUi = {
       },
       on: {},
     });
-    var swiper3Card = new Swiper(".ty03Swiper.rankswiper", {
-      slidesPerView: 3,
-      spaceBetween: 24,
-      watchOverflow: true,
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: ".swiper-pagination-custom",
-        clickable: true,
-      },
-      navigation: {
-        nextEl: ".ty03Swiper .swiper-button-next",
-        prevEl: ".ty03Swiper .swiper-button-prev",
-      },
-      breakpoints: {
-        360: {
-          slidesPerView: 1.2,
-          spaceBetween: 12,
-        },
-        768: {
-          slidesPerView: 1.2,
-          spaceBetween: 12,
-        },
-        1024: {
-          slidesPerView: 3,
-          spaceBetween: 24,
-        },
-      },
-    });
     var swiper6 = new Swiper(".onlyOneSwiper", {
       slidesPerView: 1,
       spaceBetween: 80,
       centeredSlides: true,
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
+      loop: true,
+      // autoplay: {
+      //   delay: 3000,
+      //   disableOnInteraction: false,
+      // },
       pagination: {
         el: ".swiper-pagination-custom",
         clickable: true,
@@ -476,21 +446,13 @@ var pubUi = {
         },
       },
     });
-    // var swiper9 = new Swiper(".configurator_swiper", {
-    //   slidesPerView: 1,
-    //   centeredSlides: true,
-    //   navigation: {
-    //     nextEl: ".configurator_swiper .swiper-button-next",
-    //     prevEl: ".configurator_swiper .swiper-button-prev",
-    //   },
-    //   pagination: {
-    //     el: ".configurator_swiper .swiper-pagination-custom",
-    //     clickable: true,
-    //   },
-    // });
     var swiper10 = new Swiper(".wrc_swiper", {
       slidesPerView: 1,
       centeredSlides: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
       navigation: {
         nextEl: ".wrc_swiper .swiper-button-next",
         prevEl: ".wrc_swiper .swiper-button-prev",
@@ -517,9 +479,12 @@ var pubUi = {
       },
     });
     var swiper12 = new Swiper(".collection_swiper", {
-      slidesPerView: 3,
+      slidesPerView: 1.15,
       spaceBetween: 24,
       watchOverflow: true,
+      // centeredSlides: true,
+      // slidesOffsetBefore: 24,
+      // slidesOffsetAfter: 24,
       pagination: {
         el: ".collection_swiper .swiper-pagination-custom",
         clickable: true,
@@ -530,20 +495,31 @@ var pubUi = {
       },
       breakpoints: {
         360: {
-          slidesPerView: 1.07,
+          slidesPerView: 1.13,
           spaceBetween: 12,
-          slidesOffsetBefore: 24,
-          slidesOffsetAfter: 24,
+          // slidesOffsetBefore: 24,
+          // slidesOffsetAfter: 24,
+          centeredSlides: true,
         },
-        768: {
+        400: {
+          slidesPerView: 1.1,
+          spaceBetween: 12,
+          // slidesOffsetBefore: 24,
+          // slidesOffsetAfter: 24,
+          centeredSlides: true,
+        },
+        550: {
           slidesPerView: 1.07,
           spaceBetween: 12,
-          slidesOffsetBefore: 24,
-          slidesOffsetAfter: 24,
+          // slidesOffsetBefore: 24,
+          // slidesOffsetAfter: 24,
+          centeredSlides: true,
         },
         1024: {
           slidesPerView: 3,
           spaceBetween: 24,
+          // slidesOffsetBefore: 0,
+          // slidesOffsetAfter: 0,
         },
       },
     });
@@ -559,81 +535,10 @@ var pubUi = {
 
     var videoId = slideActive.find(".video").attr("id");
     var video = document.querySelector(`#${videoId}`);
-
+    // alert("d");
     stopTimer(video, type);
     if (slideActive) {
       startTimer(slide, video, self.maxVideoW, type, targetIdx);
-    }
-  },
-  videoControlerChk: function (targetSwiper) {
-    var swiperActiveVideo = targetSwiper.find(".swiper-slide-active video");
-    var targetBulletActive = targetSwiper.find(
-      ".swiper-pagination-custom .swiper-pagination-bullet-active .seek-bar"
-    );
-    // var targetBulletWidth = "";
-
-    if (swiperActiveVideo.length > 0) {
-      var curTime = swiperActiveVideo[0].currentTime;
-      var duration = swiperActiveVideo[0].duration;
-      var per = (curTime / duration) * 100;
-      const playBtnOn = targetSwiper.find(".btn-play").hasClass("on");
-      const soundBtnOn = targetSwiper.find(".btn-sound").hasClass("on");
-
-      if (swiperActiveVideo[0].paused) {
-        swiperActiveVideo[0].play();
-        //console.log("영상 재생!!!!!!!");
-      } else {
-        swiperActiveVideo[0].pause();
-        //console.log("영상 정지!!!!!!!");
-      }
-    }
-  },
-  tabBtnEvent: function (e, tabContainer) {
-    const target = e.target;
-    const tabLabel = target.getAttribute("aria-controls");
-    const tabList = tabContainer.find(".tabs li");
-    const tabConts = tabContainer.find(".tab-content");
-    const contentItem = document.querySelector(
-      ".content-item04.collectiontab-wrap"
-    );
-
-    if (tabLabel != null) {
-      for (let i = 0; i < tabList.length; i++) {
-        tabList[i].classList.remove("on");
-      }
-      target.parentNode.classList.add("on");
-
-      for (let i = 0; i < tabConts.length; i++) {
-        tabConts[i].classList.remove("on");
-      }
-
-      document.querySelector("#" + tabLabel).classList.add("on");
-    }
-
-    // BR050101 : Brand_N Merchandise tab 배경 때문에 추가
-    if (contentItem) {
-      contentItem.classList.remove(
-        "tab01-bg",
-        "tab02-bg",
-        "tab03-bg",
-        "tab04-bg",
-        "tab05-bg"
-      );
-      if (tabLabel === "tab1-01") {
-        contentItem.classList.add("tab01-bg");
-      }
-      if (tabLabel === "tab1-02") {
-        contentItem.classList.add("tab02-bg");
-      }
-      if (tabLabel === "tab1-03") {
-        contentItem.classList.add("tab03-bg");
-      }
-      if (tabLabel === "tab1-04") {
-        contentItem.classList.add("tab04-bg");
-      }
-      if (tabLabel === "tab1-05") {
-        contentItem.classList.add("tab05-bg");
-      }
     }
   },
   tagBtnEvent: function (e, list, param) {
@@ -737,21 +642,33 @@ var pubUi = {
   },
   pageScrollChk: function (dataScroll) {
     var contentItem = document.querySelectorAll(
-      ".content-area > [class*=content-item]"
+      ".content-wrap [class*=content-item]"
     );
     var headerHeight = document.querySelector(".header-cont").offsetHeight;
-    var navBarHeight = document.querySelector(
-      ".navigation_bar-wrap"
-    ).offsetHeight;
-
+    var navBarHeight = document.querySelector(".header-wrap").offsetHeight;
+    var scrllNow = document.querySelector("body").scrollTop;
     var navHeight = headerHeight + navBarHeight;
 
+    // var leftScrollData = $(this).offset().left;
     contentItem.forEach((evt, idx) => {
-      contentItem[idx].setAttribute("data-scroll", idx + 1); // 각 콘텐츠에 data-scroll 생성
+      if (contentItem[idx].querySelector(".blue-title")) {
+        contentItem[idx].classList.add("active");
+      }
+      //contentItem[idx].setAttribute("data-scroll", idx + 1); // 각 콘텐츠에 data-scroll 생성
+    });
+
+    var contentActiveItem = document.querySelectorAll(
+      ".content-wrap [class*=content-item].active .blue-title"
+    );
+
+    contentActiveItem.forEach((evt, idx) => {
+      contentActiveItem[idx].setAttribute("data-scroll", idx + 1); // 각 콘텐츠에 data-scroll 생성
 
       if (evt.dataset.scroll == dataScroll) {
         //nav data-scroll과 값비교 후 동일 대상 체크
-        var offsetTopVal = evt.offsetTop - navBarHeight;
+        var offsetTopVal =
+          evt.getBoundingClientRect().top - navBarHeight - 150 + scrllNow;
+        // alert(evt);
       }
 
       $("body").animate({ scrollTop: offsetTopVal }, 300);
@@ -759,9 +676,8 @@ var pubUi = {
   },
   listContsActive: function (target) {
     var targetSwiper = $(target).parents(".swiper-slide");
-    var swiperDataCont = targetSwiper.data("content");
-    var swiperContents = $(".section_list .list-content");
-    var contentDataCont;
+    var targetData = targetSwiper.attr("data-content");
+    var targetContent = $(".list-content[data-content=" + targetData + "]");
 
     // ty05Swiper, 슬라이드 클릭 시, active 처리
     targetSwiper.siblings().removeClass("active");
@@ -770,32 +686,11 @@ var pubUi = {
     setTimeout(function () {
       document.querySelector(".ty05Swiper").swiper.update();
     }, 500);
+    $(".list-content").removeClass("active");
+    targetContent.addClass("active");
 
-    // 사용 안함 - 개발에서 제어
-    var raceRank = targetSwiper.find(".card_top .card_rank").text();
-    var raceMonth = targetSwiper.find(".card_bottom .card_badge").text();
-    var raceDay = targetSwiper.find(".card_bottom .card_tit").text();
-    var raceLocation = targetSwiper.find(".card_bottom .card_subtit").text();
-
-    // console.log(raceRank, raceMonth, raceDay, raceLocation);
-
-    swiperContents.removeClass("active");
-    swiperContents.hide();
-    swiperContents.find(".evtLayout-type").removeClass(raceLocation);
-
-    for (var i = 0; i < swiperContents.length; i++) {
-      contentDataCont = swiperContents[i].dataset.content;
-
-      if (swiperDataCont == contentDataCont) {
-        swiperContents[i].style.display = "block";
-        swiperContents[i].classList.add("active");
-      }
-    }
-
-    if (!swiperContents.hasClass("active")) {
-      alert("Comming soon !");
-      targetSwiper.removeClass("active");
-    }
+    contsItemGridSizeChk(); // jira ICTQMSCHE-6339 대응 : event guide에서 상단 스와이퍼 클릭 시, 해당 함수(contsItemGridSizeChk) 호출
+    scrollToCenter(".list-content.active .event-box .evt-map-img");
   },
   overScroll: function (cl) {
     const slider = document.querySelectorAll(cl);
@@ -829,13 +724,14 @@ var pubUi = {
     });
   },
 };
-
 let resizeTimer = null;
 $(window).resize(function () {
   clearTimeout(resizeTimer);
+  deviceChk();
   resizeTimer = setTimeout(hasTagFunResize(), perforSlideMoveFun(), 10);
 });
 $(document).ready(function () {
+  deviceChk();
   pubUi.init();
   $(window).on("resize", pubUi.masonryLayout);
   $(window).resize(() => DropdownFooter());
@@ -850,7 +746,7 @@ $(document).ready(function () {
   $(".option-click").click(function () {
     handleOptionClick(event);
   });
-  hasTagFun();
+  //hasTagFun();
   perforSlideMoveFun();
   footerScrollTop();
   modelsVideoPlay();
@@ -865,38 +761,37 @@ $(document).ready(function () {
   pubUi.overScroll(".header__event-wrap");
   pubUi.overScroll(".table-scrollx");
   pubUi.overScroll(".roundresult-wrap");
+  pubUi.overScroll(".related-wrap .models-nofull-box");
 
   toggleFullscreen();
 
+  btnNaviCheck();
+  var ty02Swiper = $(".ty02Swiper");
+  var ty04Swiper = $(".ty04Swiper");
+
   $(window).resize(function () {
     if ($(window).innerWidth() < 1024) {
-      if (self.swiper2.length > 0) {
-        for (var i = 0; i < self.swiper2.length; i++) {
-          self.swiper2[i].destroy();
-          // console.log("swiper2 destroy!!!");
-        }
-      } else {
-        if (self.swiper2.slides.length > 0 && self.swiper2 != undefined) {
-          self.swiper2.destroy();
-          // console.log("swiper2 destroy")
+      if (ty02Swiper.length > 0) {
+        for (var i = 0; i < ty02Swiper.length; i++) {
+          ty02Swiper[i].swiper.destroy();
         }
       }
 
       swiper2SlideEvt();
+
+      //07.29 추가
+      if ($(".evt-map-wrap").length > 0) {
+        scrollToCenter(".list-content.active .event-box .evt-map-img");
+      }
     }
 
-    if (self.swiper4.length > 0) {
-      for (var i = 0; i < self.swiper4.length; i++) {
-        self.swiper4[i].destroy();
-        // console.log("swiper4 destroy!!!");
+    // 08.09 추가 - EP010101 (N Festival 메인에 resize 시 발생하는 Next races 영역 결함 처리 위함 - destory 후 ty04Swiper 재호출)
+    if (ty04Swiper.length > 0) {
+      for (var i = 0; i < ty04Swiper.length; i++) {
+        ty04Swiper[i].swiper.destroy();
       }
-    } else {
-      if (self.swiper4.slides.length > 0 && self.swiper4 != undefined) {
-        self.swiper4.destroy();
-        // console.log("swiper4 destroy");
-      }
+      swiper4SlideEvt();
     }
-    swiper4SlideEvt();
 
     btnNaviCheck();
   });
@@ -943,16 +838,50 @@ function btnNaviCheck() {
 // ty02Swiper swiper 이벤트 분리
 function swiper2SlideEvt() {
   // console.log("swiper2 이벤트 실행");
+  // alert("d");
+  var slideLenth = $(".ty02Swiper .swiper-slide").length;
+  var ty02SwiperPlayBtn = $(".ty02Swiper .swiper-status-wrap .btn-play");
+  var autoplayVal = "";
+
+  // 08.09 추가 : 재생 버튼 여부에 따라, autoplay 값 다르게 적용
+  if (ty02SwiperPlayBtn.length > 0) {
+    //재생 버튼 있는 ty02Swiper 케이스
+    autoplayVal = {
+      delay: 3000,
+      disableOnInteraction: false,
+    };
+  } else {
+    //재생 버튼 없는 ty02Swiper 케이스
+    autoplayVal = false;
+  }
+
+  // 08.07 수정 : jira 422 대응 : 3개보다 클 경우 loop:true 실행 -> 3개미만일 때 결함 체크하기 위함/ 3개 이하 컨텐츠일시 loop가 true상태로 적용되면 autoplay 안되는 문제 있어 3개보다 클 경우 loop 적용되도록 수정하였음
+  if (slideLenth >= 4) {
+    loopVal = true;
+  } else {
+    loopVal = false;
+  }
+
+  // swiper-slide 배너 1개 이하일 경우 재생/멈춤 버튼 삭제
+  if (slideLenth < 2) {
+    $(".ty02Swiper .btn-play").hide();
+  }
+
+  // if ($(".ty02Swiper .swiper-slide").length == 3) {
+  //   console.log($(".ty02Swiper .swiper-slide:first-child").html());
+  //   $(".ty02Swiper .swiper-wrapper").append(
+  //     '<div class="swiper-slide">' +
+  //       $(".ty02Swiper .swiper-slide:first-child").html() +
+  //       "</div>"
+  //   );
+  // }
   self.swiper2 = new Swiper(".ty02Swiper", {
     effect: "coverflow",
     grabCursor: true,
     centeredSlides: true,
     slidesPerView: "auto",
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
-    loop: true,
+    loop: loopVal, // 08.07 수정
+    autoplay: autoplayVal,
     coverflowEffect: {
       rotate: 0, //각도
       // stretch: -80, //간격
@@ -993,12 +922,7 @@ function swiper2SlideEvt() {
       1399: {
         effect: "coverflow",
         slidesPerView: "auto",
-        spaceBetween: 60,
-      },
-    },
-    on: {
-      activeIndexChange: function () {
-        slideInx = this.realIndex; //현재 슬라이드 index 갱신
+        spaceBetween: 12,
       },
     },
   });
@@ -1043,21 +967,21 @@ function swiper4SlideEvt() {
         slidesOffsetBefore: 24,
         slidesOffsetAfter: 24,
       },
-      1023: {
+      1024: {
         slidesPerView: "auto",
-        spaceBetween: 12,
+        spaceBetween: 24,
         slidesOffsetBefore: leftSpaceVal,
         slidesOffsetAfter: 80,
       },
       1280: {
         slidesPerView: "auto",
-        spaceBetween: 12,
+        spaceBetween: 24,
         slidesOffsetBefore: leftSpaceVal,
         slidesOffsetAfter: 80,
       },
       2100: {
         slidesPerView: "auto",
-        spaceBetween: 12,
+        spaceBetween: 24,
         slidesOffsetBefore: leftSpaceVal,
         slidesOffsetAfter: 80,
       },
@@ -1167,223 +1091,138 @@ function handleOptionClick(event) {
     .resize();
 
   if ($selectboxWrap.hasClass("evtLayout-type")) {
-    var options = [];
-    var option1 = $(".list-content.active .evtLayout-type div")
-      .filter(":first-child")
+    var option1 = $(
+      ".list-content.active .selectbox-wrap.evtLayout-type > div:not('.selectbox-group') .selectbox-options"
+    ).find(".option-click.active");
+
+    var optionDataType = $(
+      ".list-content.active .selectbox-wrap.evtLayout-type > div:not('.selectbox-group') .selectbox-options"
+    )
       .find(".option-click.active")
-      .text();
-    var option2 = $(".list-content.active .evtLayout-type div")
-      .filter(":last-child")
-      .find(".option-click.active")
-      .text();
+      .data("type");
 
-    var selectedArea = document.querySelector(
-      ".ty05Swiper .swiper-slide.active .card_info .card_subtit"
-    ).innerText;
+    var evtMapWrap = $(".list-content.active .evt-map-wrap");
 
-    if (option2 == "" || option2 == undefined) {
-      options.push(option1);
-    } else {
-      options.push(option1, option2);
+    for (var i = 0; i < evtMapWrap.length; i++) {
+      if (evtMapWrap[i].classList.contains("active") == false) {
+        $(evtMapWrap[i]).addClass("active");
+        $(evtMapWrap[i])
+          .find(".evt-map-img .evt-map-default-box > button")
+          .hide();
+        $(evtMapWrap[i])
+          .find(".evt-map-img .evt-map-active-box > button")
+          .show();
+      }
     }
-
-    // console.log(options);
-
-    if (option1 != undefined && option2 != undefined) {
-      evtImgMapChk(options, selectedArea);
-    }
+    evtImgMapChk(optionDataType, option1);
   }
 }
 // [End] : selectbox 컴포넌트
 
-// 추 후 이미지 교체 필요
-function evtImgMapChk(options, area) {
-  var evtMapImage = $(".evt-map-wrap .evt-map-img img");
-  var swiperContentsActive = $(".section_list .list-content.active");
-  var evtSelect = swiperContentsActive.find(".evtLayout-type > div");
+// event guide > event layout 함수
+function evtImgMapChk(optionDataType, option1) {
+  var evtMapWrap = $(".list-content.active .evt-map-wrap");
+  var selectboxEvtLayout = $(
+    ".list-content.active .selectbox-wrap.evtLayout-type"
+  );
+  var selectboxGroupItem = selectboxEvtLayout.find(".selectbox-group > div");
 
-  var evtMapPopBtn = $(".evt-map-wrap .evt-map-img .btn-evtmap-pop");
-  var evtMapPopLayerId = $(".side-popup").attr("id");
+  var option1Idx = "";
 
-  console.log(evtMapImage);
-  var option1 = options[0];
-  var option2 = options[1];
+  if (optionDataType == "") {
+    optionDataType = $(
+      ".list-content.active .selectbox-wrap.evtLayout-type > div:not('.selectbox-group') .selectbox-options"
+    )
+      .find(".option-click.active")
+      .data("type");
+  }
 
-  var selectedArea = area.toLowerCase();
-  console.log(selectedArea);
+  if (option1 == "") {
+    option1Idx = $(
+      ".list-content.active .selectbox-wrap.evtLayout-type > div:not('.selectbox-group') .selectbox-options"
+    )
+      .find(".option-click.active")
+      .index();
+  } else {
+    option1Idx = option1.index();
+  }
 
-  if ($(".evt-map-wrap").hasClass("on")) {
-    if (evtSelect.length > 1) {
-      console.log("셀렉트 박스 2개");
-      if (
-        selectedArea == "yongin" ||
-        selectedArea == "youngin everland speedium"
-      ) {
-        if (option1 == "A Paddock" && option2 == "N Zone") {
-          evtMapImage.attr(
-            "src",
-            "../../inc/images/eventLayout/evtLayout_max_A_NZone.png"
-          );
-          evtMapPopBtn.attr("aria-controls", "pop-nZone");
-        } else if (option1 == "A Paddock" && option2 == "N Experience zone") {
-          evtMapImage.attr(
-            "src",
-            "../../inc/images/eventLayout/evtLayout_max_A_ExperZone.png"
-          );
-          evtMapPopBtn.attr("aria-controls", "pop-nExperZone");
-        } else if (option1 == "B Paddock" && option2 == "N Fan Zone") {
-          evtMapImage.attr(
-            "src",
-            "../../inc/images/eventLayout/evtLayout_max_B_FanZone.png"
-          );
-          evtMapPopBtn.attr("aria-controls", "pop-nFanZone");
-        } else {
-          alert(
-            "조건에 맞지 않습니다. 지역에 맞는 이벤트 옵션을 선택해주세요."
-          );
-        }
+  if (selectboxGroupItem.length > 0) {
+    // 2번째 selectbox 존재할 경우,
+    selectboxGroupItem.removeClass("on");
+    for (var i = 0; i < selectboxGroupItem.length; i++) {
+      var selectbox2Idx = $(selectboxGroupItem[i]).index() + 1;
+      var activeOption = "";
+
+      if (option1Idx == selectbox2Idx) {
+        // selectbox 1번 선택한 인덱스값과 2번째 index값 비교
+        $(selectboxGroupItem[i]).addClass("on"); // 1번째 선택한 인덱스 값에 맞는 2번째 selectbox 활성화
+      } else {
+        $(selectboxGroupItem[i]).removeClass("on");
       }
-    } else {
-      console.log("셀렉트 박스 1개");
-      if (selectedArea == "inje" || selectedArea == "inje speedium") {
-        if (option1 == "N Lounge") {
-          evtMapImage.attr(
-            "src",
-            "../../inc/images/eventLayout/evtLayout_max_nLounge.png"
-          );
-          evtMapPopBtn.attr("aria-controls", "pop-nLounge");
-        } else if (option1 == "Motorsport Experience") {
-          evtMapImage.attr(
-            "src",
-            "../../inc/images/eventLayout/evtLayout_max_motorExperience.png"
-          );
-          evtMapPopBtn.attr("aria-controls", "pop-motorExperience");
-        } else if (option1 == "Viewing zone") {
-          evtMapImage.attr(
-            "src",
-            "../../inc/images/eventLayout/evtLayout_max_viewingZone.png"
-          );
-          evtMapPopBtn.attr("aria-controls", "pop-viewingZone");
-        } else {
-          alert(
-            "조건에 맞지 않습니다. 지역에 맞는 이벤트 옵션을 선택해주세요."
-          );
+
+      if ($(selectboxGroupItem[i]).hasClass("on")) {
+        var selbox2Option = $(
+          ".list-content.active .selectbox-group > div.on .selectbox-options .option"
+        );
+        for (var i = 0; i < selbox2Option.length; i++) {
+          if ($(selbox2Option[i]).hasClass("active")) {
+            activeOption = $(selbox2Option[i]).index();
+            //console.log(activeOption);
+          }
         }
-      } else if (
-        selectedArea == "yeongam" ||
-        selectedArea == "korea international circuit"
-      ) {
-        if (option1 == "Experience Zone") {
-          evtMapImage.attr(
-            "src",
-            "../../inc/images/eventLayout/evtLayout_max_yeongam_ExperZone.png"
-          );
-          evtMapPopBtn.attr("aria-controls", "pop-yeongamExperZone");
-        } else if (option1 == "Motorsport Experience") {
-          evtMapImage.attr(
-            "src",
-            "../../inc/images/eventLayout/evtLayout_max_yeongam_MotorExper.png"
-          );
-          evtMapPopBtn.attr("aria-controls", "pop-yeongamMotorExper");
-        } else if (option1 == "Viewing zone") {
-          evtMapImage.attr(
-            "src",
-            "../../inc/images/eventLayout/evtLayout_max_yeongam_ViewingZone.png"
-          );
-          evtMapPopBtn.attr("aria-controls", "pop-yeongamViewingZone");
-        } else {
-          alert(
-            "조건에 맞지 않습니다. 지역에 맞는 이벤트 옵션을 선택해주세요."
-          );
+
+        // 클래스 초기화
+        evtMapWrap.removeClass("on");
+        evtMapWrap.removeClass("active");
+        evtMapWrap.find(".evt-map-img").removeClass("active");
+
+        for (var i = 0; i < evtMapWrap.length; i++) {
+          var mapDataType = Math.floor(evtMapWrap[i].dataset.type);
+          if (mapDataType == optionDataType) {
+            evtMapWrap[i].classList.add("on");
+            evtMapWrap[i].classList.add("active");
+            $(evtMapWrap[i])
+              .find(".evt-map-img")
+              .eq(activeOption - 1)
+              .addClass("active");
+          }
         }
       }
     }
   } else {
-    if (evtSelect.length > 1) {
-      console.log("셀렉트 박스 2개");
-      if (
-        selectedArea == "yongin" ||
-        selectedArea == "youngin everland speedium"
-      ) {
-        if (option1 == "A Paddock" && option2 == "N Zone") {
-          evtMapImage.attr(
-            "src",
-            "../../inc/images/eventLayout/evtLayout_min_shortImg02.png"
-          );
-          evtMapPopBtn.attr("aria-controls", "pop-nZone");
-        } else if (option1 == "A Paddock" && option2 == "N Experience zone") {
-          evtMapImage.attr(
-            "src",
-            "../../inc/images/eventLayout/evtLayout_min_shortImg02.png"
-          );
-          evtMapPopBtn.attr("aria-controls", "pop-nExperZone");
-        } else if (option1 == "B Paddock" && option2 == "N Fan Zone") {
-          evtMapImage.attr(
-            "src",
-            "../../inc/images/eventLayout/evtLayout_min_shortImg03.png"
-          );
-          evtMapPopBtn.attr("aria-controls", "pop-nFanZone");
-        } else {
-          alert(
-            "조건에 맞지 않습니다. 지역에 맞는 이벤트 옵션을 선택해주세요."
-          );
-        }
-      }
-    } else {
-      console.log("셀렉트 박스 1개");
-      if (selectedArea == "inje" || selectedArea == "inje speedium") {
-        if (option1 == "N Lounge") {
-          evtMapImage.attr(
-            "src",
-            "../../inc/images/eventLayout/evtLayout_min_shortImg01.png"
-          );
-          evtMapPopBtn.attr("aria-controls", "pop-nLounge");
-        } else if (option1 == "Motorsport Experience") {
-          evtMapImage.attr(
-            "src",
-            "../../inc/images/eventLayout/evtLayout_min_shortImg01.png"
-          );
-          evtMapPopBtn.attr("aria-controls", "pop-motorExperience");
-        } else if (option1 == "Viewing zone") {
-          evtMapImage.attr(
-            "src",
-            "../../inc/images/eventLayout/evtLayout_min_shortImg01.png"
-          );
-          evtMapPopBtn.attr("aria-controls", "pop-viewingZone");
-        } else {
-          alert(
-            "조건에 맞지 않습니다. 지역에 맞는 이벤트 옵션을 선택해주세요."
-          );
-        }
-      } else if (
-        selectedArea == "yeongam" ||
-        selectedArea == "korea international circuit"
-      ) {
-        if (option1 == "Experience Zone") {
-          evtMapImage.attr(
-            "src",
-            "../../inc/images/eventLayout/evtLayout_min_shortImg04.png"
-          );
-          evtMapPopBtn.attr("aria-controls", "pop-yeongamExperZone");
-        } else if (option1 == "Motorsport Experience") {
-          evtMapImage.attr(
-            "src",
-            "../../inc/images/eventLayout/evtLayout_min_shortImg04.png"
-          );
-          evtMapPopBtn.attr("aria-controls", "pop-yeongamMotorExper");
-        } else if (option1 == "Viewing zone") {
-          evtMapImage.attr(
-            "src",
-            "../../inc/images/eventLayout/evtLayout_min_shortImg04.png"
-          );
-          evtMapPopBtn.attr("aria-controls", "pop-yeongamViewingZone");
-        } else {
-          alert(
-            "조건에 맞지 않습니다. 지역에 맞는 이벤트 옵션을 선택해주세요."
-          );
-        }
+    // 1번째 selectbox만 존재할 경우,
+    for (var i = 0; i < evtMapWrap.length; i++) {
+      var mapDataType = Math.floor(evtMapWrap[i].dataset.type);
+      if (mapDataType == optionDataType) {
+        evtMapWrap[i].classList.add("on");
+        evtMapWrap[i].classList.add("active");
+        $(evtMapWrap[i]).find(".evt-map-img").addClass("active");
+      } else {
+        evtMapWrap[i].classList.remove("on");
+        evtMapWrap[i].classList.remove("active");
+        $(evtMapWrap[i]).find(".evt-map-img").removeClass("active");
       }
     }
+  }
+
+  scrollToCenter(".list-content.active .event-box .evt-map-img");
+}
+
+// 07.29 추가 : mobile 일 경우, 스크롤 가운데 위치하도록 적용
+function scrollToCenter(el) {
+  let $element = document.querySelector(el);
+  let scrollFullWidth = $element.scrollWidth;
+  let scrollClientWidth = $element.clientWidth;
+  let calWidth = (scrollFullWidth - scrollClientWidth) / 2;
+
+  //console.log(calWidth);
+  if (pubUi.windowSize()) {
+    // pc
+    // console.log("pc");
+  } else {
+    // mobile
+    $element.scrollLeft = calWidth;
   }
 }
 
@@ -1479,6 +1318,72 @@ dropdownFilter.forEach((filter) => {
     }
   });
 });
+
+// 탭버튼 : 외부 접근 가능 하도록 실행함수로 변경
+function tabBtnEvent(target, tabContainer) {
+  // 빈 값일 경우, 예외처리
+  if (target == "") {
+    targets = $(".list-content.active .tabs li.on");
+    for (var i = 0; i < targets.length; i++) {
+      target = targets[i];
+    }
+  }
+
+  if (tabContainer == "") {
+    tabContainer = $(".list-content.active .tab-container");
+  }
+
+  const targetListItem = $(target.parentNode);
+  const targetIdx = targetListItem.index();
+  const tabLabel = target.getAttribute("aria-controls");
+  const tabList = tabContainer.find(".tabs li");
+  const tabConts = tabContainer.find(".tab-content");
+  const contentItem = document.querySelector(
+    ".content-item04.collectiontab-wrap"
+  );
+
+  if (tabLabel != null) {
+    for (let i = 0; i < tabList.length; i++) {
+      tabList[i].classList.remove("on");
+    }
+
+    for (let i = 0; i < tabConts.length; i++) {
+      tabConts[i].classList.remove("on");
+    }
+
+    target.parentNode.classList.add("on");
+    targetListItem
+      .closest(".tab-container")
+      .find(".tab-content")
+      [targetIdx].classList.add("on");
+  }
+
+  // BR050101 : Brand_N Merchandise tab 배경 때문에 추가
+  if (contentItem) {
+    contentItem.classList.remove(
+      "tab01-bg",
+      "tab02-bg",
+      "tab03-bg",
+      "tab04-bg",
+      "tab05-bg"
+    );
+    if (tabLabel === "tab1-01") {
+      contentItem.classList.add("tab01-bg");
+    }
+    if (tabLabel === "tab1-02") {
+      contentItem.classList.add("tab02-bg");
+    }
+    if (tabLabel === "tab1-03") {
+      contentItem.classList.add("tab03-bg");
+    }
+    if (tabLabel === "tab1-04") {
+      contentItem.classList.add("tab04-bg");
+    }
+    if (tabLabel === "tab1-05") {
+      contentItem.classList.add("tab05-bg");
+    }
+  }
+}
 
 // 드롭다운 아코디언
 function dropdownAccordion() {
@@ -1618,7 +1523,7 @@ function footerScrollTop() {
     $("html, body").animate({ scrollTop: 0 }, 500);
   });
 }
-
+// not($(this)).removeClass("ellipsis");
 // [Start] : hashTag 말줄임
 function hasTagFun() {
   $(".card-hashtag button").each(function (e) {
@@ -1627,19 +1532,26 @@ function hasTagFun() {
     var cardConRightEdge = $setUl.outerWidth();
     var liRightEdge =
       $set.offset().left - $setUl.offset().left + $set.outerWidth(true);
+    // $set.removeClass("ellipsis");
+
     if (liRightEdge >= cardConRightEdge) {
       $(this).addClass("ellipsis");
-    } else {
-      $(this).removeClass("ellipsis");
     }
 
-    $set.siblings(".ellipsis").first().show();
-    $set.siblings(".ellipsis").nextAll().hide(); // EP040501 - Pony Magazine 제목 참고 (안하면 button.ellipsis 뒤에 li들 다 살아있음 - 그래서 button.ellipsis 너비 줄어듦)
+    if ($setUl.offset().left + cardConRightEdge - $(this).offset().left < 20) {
+      $(".card-hashtag button.ellipsis").nextAll().hide();
+      if ($(this).hasClass("ellipsis")) {
+        $(this).hide();
+      }
+    } else {
+      $(".card-hashtag button.ellipsis").nextAll().hide();
+    }
+    //
   });
 }
 
 function hasTagFunResize() {
-  $("div.card-hashtag button").show().removeClass("ellipsis");
+  $("div.card-hashtag button").removeClass("ellipsis").show();
   // alert("d");
   hasTagFun();
 }
@@ -1661,10 +1573,22 @@ $(".unread-box .mynotice-btm>button.sm-txt-btn01").click(function () {
 // [End] : CM040101 > unread 버튼 클릭 시 배경색, read 문구 변경
 
 //[Start] : CM040701 > 아코디언 토글
-$("#ToggleDesBtn").click(function () {
-  $(".des-toggle").toggleClass("rotate");
-  $("#ToggleDesBtn").children(".icon-down").toggleClass("rotate");
-});
+function toggleAboutMe() {
+  var aboutMeArea = $(".des-toggle");
+  var aboutMeAreaBtn = $(".mypage-community-des").find(".btn");
+  var aboutMeAreaH = aboutMeArea.prop("scrollHeight");
+  if (aboutMeAreaH > 45) {
+    aboutMeArea.removeClass("rotate");
+    aboutMeAreaBtn.show();
+    aboutMeAreaBtn.off("click").on("click", function () {
+      $(".des-toggle").toggleClass("rotate");
+      $(this).children(".icon-down").toggleClass("rotate");
+    });
+  } else {
+    aboutMeAreaBtn.hide();
+  }
+}
+
 //[End] : CM040701 > 아코디언 토글
 
 // [Start] : 풀스크린
@@ -1721,9 +1645,21 @@ function toggleFullscreen() {
 // [End] : 풀스크린
 
 // [Start] : MD010301t01 > 기획서 v0.18 p.68 AS-IS과 동일한 슬라이드 기능 적용 (AS-IS 그대로 사용 / 클래스만 변경)
+
+let _viewType = "";
+// alert(user);
+
+function deviceChk() {
+  let user = navigator.userAgent;
+  if (user.indexOf("iPhone") > -1 || user.indexOf("Android") > -1) {
+    _viewType = "mobile";
+  } else {
+    _viewType = "web";
+  }
+}
 function perforSlideMoveFun() {
   var _$this = $(this),
-    _viewType = "web",
+    // _viewType = "web",
     _$btnBox = $(".img-move-btn"),
     _$moveBtn = _$btnBox.find(".handler"),
     _$maskBox = $(".mask"),
@@ -1740,13 +1676,10 @@ function perforSlideMoveFun() {
   _$this.mousedown = false;
   _$this.touchstart = false;
 
-  if (document.documentElement.clientWidth == 1024) {
-    _viewType = "tablet";
-  }
-
   evtMove();
   function evtMove() {
     _$moveBtn.on("mousedown keydown touchstart", function (e) {
+      // alert("d");
       if (_viewType == "web") {
         if (e.type === "mousedown") {
           _$btnBox.css({ "z-index": 100 });
@@ -1789,7 +1722,7 @@ function perforSlideMoveFun() {
         }
       } else if (_viewType == "mobile" || _viewType == "tablet") {
         if (_$this.touchstart) {
-          console.log(_offset);
+          // console.log(_offset);
           var event = e.originalEvent,
             _touch = event.touches[0].clientX;
           if (_touch >= 0 && _touch <= _maxWid) {
@@ -1834,14 +1767,24 @@ function perforSlideMoveFun() {
 
 // [Start] : Models > 영상 버튼 클릭 시 재생 혹은 멈춤 작업 & 한 번 재생 후 포스터 나와야함
 function modelsVideoPlay() {
-  $(".models-wrap .content-item02 .btn-only-icon-bg01-square").click(
+  $(".models-wrap .content-item02 .btn-only-icon-bg01-square.play").click(
     function () {
-      console.log("비디오 재생 ing");
-      var videoPc = $(this).siblings("video.pc-only").get(0);
-      var videoMo = $(this).siblings("video.mo-only").get(0);
+      // console.log("비디오 재생 ing");
+      var videoPc = $(this)
+        .closest(".btn-groups")
+        .siblings("video.pc-only")
+        .get(0);
+      var videoMo = $(this)
+        .closest(".btn-groups")
+        .siblings("video.mo-only")
+        .get(0);
       var icon = $(this).children(".btn-icon24");
-      var pcPoster = $(this).siblings(".video_poster.pc-only");
-      var moPoster = $(this).siblings(".video_poster.mo-only");
+      var pcPoster = $(this)
+        .closest(".btn-groups")
+        .siblings(".video_poster.pc-only");
+      var moPoster = $(this)
+        .closest(".btn-groups")
+        .siblings(".video_poster.mo-only");
 
       if (videoPc.paused && videoMo.paused) {
         icon.attr("class", "btn-icon24 icon-pause-wh");
@@ -1862,6 +1805,7 @@ function modelsVideoPlay() {
             false
           );
         }
+        $(this).attr("title", "pause");
       } else {
         icon.attr("class", "btn-icon24 icon-play-wh");
         if (window.innerWidth <= 1023) {
@@ -1873,61 +1817,81 @@ function modelsVideoPlay() {
           moPoster.hide();
           pcPoster.hide();
         }
+        $(this).attr("title", "play");
+      }
+    }
+  );
+
+  $(".models-wrap .content-item02 .btn-only-icon-bg01-square.sound").click(
+    function () {
+      // console.log("비디오 재생 ing");
+      var videoPc = $(this)
+        .closest(".btn-groups")
+        .siblings("video.pc-only")
+        .get(0);
+      var videoMo = $(this)
+        .closest(".btn-groups")
+        .siblings("video.mo-only")
+        .get(0);
+      var icon = $(this).children(".btn-icon24");
+
+      if (videoPc.muted && videoMo.muted) {
+        icon.attr("class", "btn-icon24 icon-soundon-wh");
+        if (window.innerWidth <= 1023) {
+          videoMo.muted = false; //음소거 해제
+        } else {
+          videoPc.muted = false;
+        }
+        $(this).attr("title", "sound on");
+      } else {
+        icon.attr("class", "btn-icon24 icon-soundoff-wh");
+        if (window.innerWidth <= 1023) {
+          videoMo.muted = true; //음소거
+        } else {
+          videoPc.muted = true;
+        }
+        $(this).attr("title", "sound off");
       }
     }
   );
 
   // 비디오가 끝났을 때 썸네일 나오도록
   $(".models-wrap .content-item02 video").on("ended", function () {
-    console.log("비디오 끝 / 썸넬 시작");
-    var icon = $(this).siblings("button").children(".btn-icon24");
+    // console.log("비디오 끝 / 썸넬 시작");
+    // $(this).get(0).currentTime = 0;
+    var icon = $(this).siblings(".btn-groups").find(".icon-pause-wh");
     icon.attr("class", "btn-icon24 icon-play-wh");
   });
-  $(window)
-    .resize(function () {
-      if (window.innerWidth <= 1023) {
-        // mo 영상 살리기 & pc 영상 hidden
-        $(".models-wrap .content-item02 video.mo-only").attr(
-          "aria-hidden",
-          false
-        );
-        $(".models-wrap .content-item02 video.pc-only").attr(
-          "aria-hidden",
-          true
-        );
-        // mo 영상 끝났을 때
-        $(".models-wrap .content-item02 video.mo-only").on(
-          "ended",
-          function () {
-            $(this).siblings(".video_poster.mo-only").show();
-            $(this).siblings(".video_poster.pc-only").hide();
-            // mo 비디오 hidden
-            $(this).attr("aria-hidden", true);
-          }
-        );
-      } else if (window.innerWidth > 1023) {
-        // pc 영상 살리기 & mo 영상 hidden
-        $(".models-wrap .content-item02 video.pc-only").attr(
-          "aria-hidden",
-          false
-        );
-        $(".models-wrap .content-item02 video.mo-only").attr(
-          "aria-hidden",
-          true
-        );
-        // pc 영상 끝났을 때
-        $(".models-wrap .content-item02 video.pc-only").on(
-          "ended",
-          function () {
-            $(this).siblings(".video_poster.pc-only").show();
-            $(this).siblings(".video_poster.mo-only").hide();
-            // pc 비디오 hidden
-            $(this).attr("aria-hidden", true);
-          }
-        );
-      }
-    })
-    .resize();
+  $(window).resize(function () {
+    $win_width = window.innerWidth;
+    if (window.innerWidth <= 1023) {
+      // mo 영상 살리기 & pc 영상 hidden
+      $(".models-wrap .content-item02 video.mo-only").attr(
+        "aria-hidden",
+        false
+      );
+      $(".models-wrap .content-item02 video.pc-only").attr("aria-hidden", true);
+      // mo 영상 끝났을 때
+      // $(".models-wrap .content-item02 video.mo-only").on("ended", function () {
+      //   $(this).siblings(".video_poster.mo-only").show();
+      //   $(this).siblings(".video_poster.pc-only").hide();
+      //   // mo 비디오 hidden
+      //   $(this).attr("aria-hidden", true);
+      // });
+    } else if (window.innerWidth > 1023) {
+      // pc 영상 살리기 & mo 영상 hidden
+      $(".models-wrap .content-item02 video.pc-only").attr(
+        "aria-hidden",
+        false
+      );
+      $(".models-wrap .content-item02 video.mo-only").attr("aria-hidden", true);
+      // pc 영상 끝났을 때
+      // $(".models-wrap .content-item02 video.pc-only").on(
+      //   "ended",
+      //   function () {}
+      // );
+    }
+  });
 }
 // [End] : Models > 영상 버튼 클릭 시 재생 혹은 멈춤 작업 & 한 번 재생 후 포스터 나와야함
 
@@ -2022,7 +1986,7 @@ $(".btn_full").click(() => {
 
 // [Start] : configuratorScroll
 function configuratorScroll() {
-  var scrollWrap = $(".configurator_area");
+  var scrollWrap = $("#configurator");
   let scrollPrev = 0,
     scrollTop = 1;
 
@@ -2032,14 +1996,14 @@ function configuratorScroll() {
     if (scrollTop > 0) {
       if (scrollTop >= scrollPrev) {
         // 스크롤 위치 증가
-        $(".configurator_header_wrap").addClass("scroll-on");
-        $(".configurator_swiper_wrap").removeClass("scroll-on");
-        $(".configurator_price_wrap").removeClass("scroll-on");
+        scrollWrap.find(".configurator_header_wrap").addClass("scroll-on");
+        scrollWrap.find(".configurator_swiper_wrap").removeClass("scroll-on");
+        scrollWrap.find(".configurator_price_wrap").removeClass("scroll-on");
       } else {
         // 스크롤 위치 감소
-        $(".configurator_header_wrap").removeClass("scroll-on");
-        $(".configurator_swiper_wrap").addClass("scroll-on");
-        $(".configurator_price_wrap").addClass("scroll-on");
+        scrollWrap.find(".configurator_header_wrap").removeClass("scroll-on");
+        scrollWrap.find(".configurator_swiper_wrap").addClass("scroll-on");
+        scrollWrap.find(".configurator_price_wrap").addClass("scroll-on");
       }
       setTimeout(function () {
         scrollPrev = scrollTop;
@@ -2049,92 +2013,152 @@ function configuratorScroll() {
 }
 // [End] : configuratorScroll
 
+function scrollIndicator(obj) {
+  var thisScrArea = $(obj),
+    contentItem = document.querySelectorAll(".content-wrap .blue-title"),
+    // scrItem = thisScrArea.find(".content-wrap [class*=content-item]"),
+    nowScroll = thisScrArea.scrollTop(),
+    sectionLength = contentItem.length,
+    headerNavHeight = $(".header-wrap").height();
+  sectionItem = [];
+
+  contentItem.forEach((evt, idx) => {
+    if (contentItem[idx].querySelector(".blue-title")) {
+      contentItem[idx].classList.add("active");
+    }
+    contentItem[idx].setAttribute("data-scroll", idx + 1); // 각 콘텐츠에 data-scroll 생성
+    sectionItem[idx] =
+      evt.getBoundingClientRect().top + nowScroll - headerNavHeight - 150;
+    // console.log(contentItem[0].getBoundingClientRect().top);
+  });
+
+  // 08.09 'rending-btn' 버튼 클릭 시, 클릭한 위치 못 찾는 문제로 클릭 이벤트 발생시, 적용되도록 내용 수정하였음
+  for (var i = 0; i < sectionLength; i++) {
+    if (sectionItem[i] <= nowScroll + 40) {
+      $(".navigation-item02 li")
+        .eq(i)
+        .find("button")
+        .addClass("on")
+        .parent()
+        .siblings()
+        .find("button")
+        .removeClass("on");
+    }
+  }
+}
+
 // scroll 이벤트 추가
 // masonryLayout 높이 추가로 잡기
 let $firstScroll = true;
+let $win_width = window.innerWidth;
 function scrollEvent() {
   var scrollWrap = $("body"),
-    sectionItem = [],
-    headerNavHeight = $(".navigation_bar-wrap").height();
+    historyItemOffset = [],
+    historyItemPosition = [],
+    leftScrollData = [];
+
   let scrollPrev = 0,
     scrollTop = 1;
-  scrollWrap.find(".content-area > [class*=content-item]").each(function (e) {
-    ($this = $(this)),
-      (sectionItem[e] = $this.position().top - headerNavHeight);
 
-    scrollWrap.scroll(function () {
-      if ($firstScroll) {
-        pubUi.masonryLayout();
-        $firstScroll = false;
-      }
-      // alert('d')
-      var thisScrArea = $(this),
-        scrItem = thisScrArea.find(".content-area > [class*=content-item]"),
-        nowScroll = thisScrArea.scrollTop(),
-        sectionLength = scrItem.length;
+  scrollWrap.scroll(function () {
+    if ($firstScroll) {
+      pubUi.masonryLayout();
+      $firstScroll = false;
+    }
+    // alert('d')
+    let scrollY = (
+      (scrollWrap.scrollTop() / ($(".wrap").height() - scrollWrap.height())) *
+      100
+    ).toFixed(3);
+    scrollTop = scrollWrap.scrollTop();
 
-      let scrollY = (
-        (scrollWrap.scrollTop() / ($(".wrap").height() - scrollWrap.height())) *
-        100
-      ).toFixed(3);
-      scrollTop = scrollWrap.scrollTop();
-
-      var contentItem = document.querySelectorAll(
-        ".content-area > [class*=content-item]"
-      );
-
-      // console.log(
-      //   "스크롤 좌표값 체크 - scrollTop : ",
-      //   scrollTop + " scrollY % 값 : ",
-      //   scrollY + "%"
-      // );
-
-      // console.log(scrollTop, scrollPrev);
-
-      if (scrollTop > 0) {
-        $(".navigation_bar-wrap .gage").addClass("on");
-        // $(".header-wrap").addClass("scroll-on");
-        $("#topBtn").fadeIn("slow");
-        $("#topBtn").css("display", "flex");
-        if (scrollTop >= scrollPrev) {
-          // 스크롤 위치 증가
-          $(".header-wrap").addClass("scroll-on");
-          // console.log(scrollTop, scrollPrev);
-        } else {
-          // 스크롤 위치 감소
-          $(".header-wrap").removeClass("scroll-on");
-        }
-        setTimeout(function () {
-          scrollPrev = scrollTop;
-        }, 10);
+    _this = $(this);
+    if (scrollTop > 0) {
+      $(".navigation_bar-wrap .gage").addClass("on");
+      // $(".header-wrap").addClass("scroll-on");
+      $("#topBtn").fadeIn("slow");
+      $("#topBtn").css("display", "flex");
+      if (scrollTop >= scrollPrev) {
+        // 스크롤 위치 증가
+        $(".header-wrap").addClass("scroll-on");
+        // console.log(scrollTop, scrollPrev);
       } else {
-        $(".navigation_bar-wrap .gage").removeClass("on");
-        // $(".header-wrap").removeClass("scroll-on");
-        $("#topBtn").fadeOut("slow");
-        $("#topBtn").css("display", "none");
+        // 스크롤 위치 감소
+        $(".header-wrap").removeClass("scroll-on");
       }
+      setTimeout(function () {
+        scrollPrev = scrollTop;
+      }, 10);
+    } else {
+      $(".navigation_bar-wrap .gage").removeClass("on");
+      // $(".header-wrap").removeClass("scroll-on");
+      $("#topBtn").fadeOut("slow");
+      $("#topBtn").css("display", "none");
+    }
 
-      $(".header-wrap").addClass("scroll-ing");
-      $(".navigation_bar-wrap .gage.on").css("--bar", `${scrollY}%`);
+    $(".header-wrap").addClass("scroll-ing");
+    $(".navigation_bar-wrap .gage.on").css("--bar", `${scrollY}%`);
+    scrollIndicator(_this);
+    if ($(".navigation-item02").length) {
+      if ($(".navigation-item02").scrollLeft() > 0) {
+        $(".navigation-item02")
+          .stop()
+          .animate({
+            scrollLeft:
+              $(".navigation-item02 li button.on").offset().left +
+              $(".navigation-item02").scrollLeft() -
+              $win_width / 2 +
+              30,
+          });
+      } else {
+        $(".navigation-item02")
+          .stop()
+          .animate({
+            scrollLeft:
+              $(".navigation-item02 li button.on").offset().left -
+              $win_width / 2 +
+              30,
+          });
+      }
+    }
+  });
 
-      contentItem.forEach((evt, idx) => {
-        contentItem[idx].setAttribute("data-scroll", idx + 1); // 각 콘텐츠에 data-scroll 생성
+  if ($(".history-list").length) {
+    moveItem = $(".history-pointer");
+    historyItemLength = $(".history-list > li").length;
+    // $(".history-list > li").each(function (e) {
+    //   _this = $(this);
+    //   historyItemOffset[e] = _this.offset().top;
+    //   historyItemPosition[e] = _this.position().top;
+    // });
+    if ($(window).width() >= 1024) {
+      dateGap = 120;
+      dateGapScroll = 80;
+    } else {
+      dateGapScroll = 18;
+      dateGap = 18;
+    }
+    moveItemTop = moveItem.position().top;
+    // alert(historyItemLength);
+    scrollWrap.scroll(function () {
+      $(".history-list > li").each(function (e) {
+        _this = $(this);
+        historyItemOffset[e] = _this.offset().top;
+        historyItemPosition[e] = _this.position().top;
+        // console.log(historyItemOffset[e]);
       });
-
-      for (var i = 0; i < sectionLength; i++) {
-        if (sectionItem[i] <= nowScroll + 40) {
-          $(".navigation-item02.pc-only li")
-            .eq(i)
-            .find("button")
-            .addClass("on")
-            .parent()
-            .siblings()
-            .find("button")
-            .removeClass("on");
+      scrollTop = scrollWrap.scrollTop();
+      for (var i = 0; i < historyItemLength; i++) {
+        if (0 >= historyItemOffset[i]) {
+          moveItemTop = historyItemPosition[i + 1];
+        } else if (0 < historyItemOffset[0]) {
+          moveItemTop = historyItemPosition[0];
         }
       }
+      // console.log(moveItemTop);
+      moveItem.css("top", moveItemTop + dateGap);
     });
-  });
+  }
 }
 
 // 스크를 종료 감지
@@ -2166,21 +2190,71 @@ window.onload = function () {
   configuratorScroll();
   setVh();
   dropdownAccordion();
+  hasTagFun();
   $(window).resize(() => {
     setVh();
+    toggleAboutMe();
   });
+  toggleAboutMe();
+  pagingNumCheck();
+  CheckNextRaces();
+  // 08.20 수정 : 함수 형태로 구조 변경
+  contsItemGridSizeChk();
+
+  // 07.30 추가 - 모바일에서 navigation-bar 존재 시, 컨텐츠영역 상단 짤림 현상 방지
+  if ($(".navigation_bar-wrap").length > 0) {
+    $(".wrap .content-area").css("padding-top", "48px");
+  }
+
+  // Jira - 359 대응 : 관련된 컨텐츠 갯수에 따라 css 적용 (레이아웃 깨짐 방지)
+  if ($(".related-wrap .models-cardbox").length > 0) {
+    var relatedItemSize = $(
+      ".related-wrap .models-cardbox .models-card"
+    ).length;
+    $(".related-wrap .models-cardbox").css("--size", relatedItemSize);
+  }
+
+  // Jira - 426 대응 : SNS 갯수 크기별 css 적용
+  if (
+    $(".share-popup.popup-wrapper .popup-body.share-icn-wrap .box-row").length >
+    0
+  ) {
+    var shareSnsIcon = $(".share-popup .share-icn-wrap .box-icn");
+
+    if (shareSnsIcon.length >= 4) {
+      $(".share-popup.popup-wrapper .popup-body.share-icn-wrap .box-row").css(
+        "--count",
+        "4"
+      );
+    } else {
+      $(".share-popup.popup-wrapper .popup-body.share-icn-wrap .box-row").css(
+        "--count",
+        shareSnsIcon.length
+      );
+    }
+  }
 };
 
 function startTimer(slide, video, maxVideoW, type, targetIdx) {
   let duration = 0;
   self.dataSecond = 0;
+
   var playBtn = slide.find(".btn-play").hasClass("on");
   if (type == "image") {
-    duration = Math.floor(3);
+    if (playBtn) {
+      duration = Math.floor(3);
+    } else {
+      duration = 0;
+      return false;
+    }
   } else {
     if (playBtn) {
+      // video.currentTime = 0;
       video.play();
       duration = Math.floor(video.duration); // 동영상 전체 길이
+    } else {
+      duration = 0; // 동영상 전체 길이
+      return false;
     }
   }
 
@@ -2204,12 +2278,211 @@ function stopTimer(video, type) {
   self.dataSecond = 0;
   self.per = 0;
   if (type !== "image") {
-    // alert(type);
-    video.pause();
-    video.currentTime = 0;
+    if ((video.paused = false)) {
+      video.pause();
+      video.currentTime = 0;
+    }
   }
   $(".swiper-pagination-bullet .seek-bar").css("width", 0);
-
-  // ).style.width = 0;
   clearInterval(self.timer);
+}
+
+// contsItemGridSizeChk() - grid 형식의 컨텐츠 아이템 사이즈 1개일 경우, grid 속성 제거
+function contsItemGridSizeChk() {
+  var contItem04Size = $(
+    ".list-content.active .content-item04 .grid_3 li"
+  ).length;
+  var contItem07Size = $(".content-item07 .grid_3 li").length;
+
+  var contItem04Grid3 = document.querySelector(".content-item04 .grid_3");
+  var contItem07Grid3 = document.querySelector(".content-item07 .grid_3");
+
+  if (
+    $(".list-content.active .content-item04 .grid_3 li").length == 1 ||
+    $(".content-item04 .grid_3 li").length == 1
+  ) {
+    $(".content-item04 .grid_3").css("grid-template-columns", "revert");
+  } else {
+    if (contItem04Size.length > 0) {
+      contItem04Grid3.style.setProperty("--size", contItem04Size);
+    } else {
+      var contItem04Size2 = $(".content-item04 .grid_3 li").length;
+      contItem04Grid3.style.setProperty("--size", contItem04Size2);
+    }
+  }
+
+  if ($(".content-item07 .grid_3 li").length == 1) {
+    $(".content-item07 .grid_3").css("grid-template-columns", "revert");
+  } else {
+    if (contItem07Size.length > 0) {
+      contItem07Grid3.style.setProperty("--size", contItem07Size);
+    }
+  }
+}
+
+// scroll 이동하고자하는 영역의 상단 header-menu에 대한 value 값과, configurator_select_area 영역의 data-type 값(type) 전달
+// targetScrollConfig(value, type);  -> ex) targetScrollConfig('exterior', 'color');
+// value : exterior 또는 interior 전달 / type : dropdown-btn의  data-type 값 전달
+function targetScrollConfig(value, type) {
+  // console.log(value, type);
+
+  var configuratorArea = $("#configurator");
+  var configSelectItem = configuratorArea.find(
+    ".configurator_select_area > [class*=configurator_select_" + value + "]"
+  );
+  var configHeaderHeight = configuratorArea
+    .find(".configurator_header_wrap")
+    .height();
+  var configSwiperHeight = configuratorArea
+    .find(".configurator_swiper_wrap")
+    .height();
+  var configuratorAreaModel = configuratorArea.data("model");
+  var dropdownItem;
+
+  //$(".configurator_menu_" + value).trigger("click");
+
+  var nowScrollTop = configSelectItem.scrollTop();
+  console.log("nowScroll : " + nowScrollTop);
+
+  for (var i = 0; i < configSelectItem.length; i++) {
+    var configSelectItemModel = configSelectItem[i].dataset.model;
+
+    if (configSelectItemModel == configuratorAreaModel) {
+      dropdownItem = $(configSelectItem[i]).find(".dropdown");
+    }
+  }
+  for (var i = 0; i < dropdownItem.length; i++) {
+    var dropdownBtnDataType = $(dropdownItem[i])
+      .find(".dropdown-btn")
+      .data("type");
+    if (dropdownBtnDataType == type) {
+      $(dropdownItem[i]).addClass("on");
+
+      if ($(dropdownItem[i]).hasClass("on")) {
+        var dropDownOffsetTop = $(dropdownItem[i]).offset().top;
+        var calOffsetTopPc =
+          dropDownOffsetTop + nowScrollTop - configHeaderHeight;
+        var calOffsetTopMo =
+          dropDownOffsetTop +
+          nowScrollTop -
+          (configHeaderHeight + configSwiperHeight);
+
+        if (pubUi.windowSize()) {
+          // pc
+          configSelectItem.animate({ scrollTop: calOffsetTopPc }, 1000);
+        } else {
+          // mobile
+          configuratorArea.animate({ scrollTop: calOffsetTopMo }, 1000);
+        }
+      }
+    } else {
+      $(dropdownItem[i]).removeClass("on");
+    }
+  }
+}
+
+function pagingNumCheck() {
+  var pageList = $(".page_list");
+  // var pageNum = $(".page_list > li").length;
+
+  for (var i = 0; i < pageList.length; i++) {
+    var pageNum = pageList[i].children.length;
+
+    if (pubUi.windowSize()) {
+      //pc
+    } else {
+      //mobile
+      if (pageNum >= 4) {
+        for (var j = 0; j < pageNum; j++) {
+          pageList[i].children[j].children[0].style.setProperty("--num", 4);
+        }
+      } else {
+        for (var j = 0; j < pageNum; j++) {
+          pageList[i].children[j].children[0].style.setProperty(
+            "--num",
+            pageNum
+          );
+        }
+      }
+    }
+  }
+}
+
+function CheckNextRaces() {
+  const cardSlide = document.querySelectorAll(".ty04Swiper .swiper-slide");
+  const currentDate = new Date();
+
+  // let year = currentDate.getFullYear();
+  let month = currentDate.getMonth() + 1;
+  let day = currentDate.getDate();
+
+  $(cardSlide).removeClass("swiper-slide-active");
+
+  for (var i = 0; i < cardSlide.length; i++) {
+    var cardMonth = $(cardSlide[i]).find(".card_bottom .card_badge").text();
+    var cardTit = $(cardSlide[i]).find(".card_bottom .card_tit").text();
+    var cardDay = cardTit.split("~");
+    var cardFirstDay = parseInt(cardDay[0]);
+
+    cardMonth = cardMonth.toLowerCase();
+
+    switch (cardMonth) {
+      case "january":
+        cardMonth = 1;
+        break;
+      case "faburary":
+        cardMonth = 2;
+        break;
+      case "march":
+        cardMonth = 3;
+        break;
+      case "april":
+        cardMonth = 4;
+        break;
+      case "may":
+        cardMonth = 5;
+        break;
+      case "june":
+        cardMonth = 6;
+        break;
+      case "july":
+        cardMonth = 7;
+        break;
+      case "august":
+        cardMonth = 8;
+        break;
+      case "september":
+        cardMonth = 9;
+        break;
+      case "october":
+        cardMonth = 10;
+        break;
+      case "november":
+        cardMonth = 11;
+        break;
+      case "december":
+        cardMonth = 12;
+        break;
+    }
+
+    // console.log(cardDay, cardFirstDay);
+
+    if (cardMonth >= month) {
+      if (cardMonth > month) {
+        // cardMonth 가 현재 month 보다 큰 경우, 해당 swiper-slide에 active 추가
+        $(cardSlide[i]).addClass("swiper-slide-active");
+      } else {
+        // cardMonth 가 현재 month 같은 경우, day 값 비교 후 active 추가
+        if (cardFirstDay > day) {
+          $(cardSlide[i]).addClass("swiper-slide-active");
+        }
+      }
+
+      if ($(cardSlide[i]).hasClass("swiper-slide-active")) {
+        var cardIndex = $(cardSlide[i]).index();
+        $(".ty04Swiper")[0].swiper.slideTo(cardIndex, 1000, false);
+      }
+      return false;
+    }
+  }
 }

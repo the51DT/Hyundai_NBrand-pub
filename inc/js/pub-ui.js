@@ -2310,47 +2310,51 @@ function contsItemGridSizeChk() {
   var contItem04Grid3 = document.querySelector(".content-item04 .grid_3");
   var contItem07Grid3 = document.querySelector(".content-item07 .grid_3");
 
-  if (
-    $(".list-content.active .content-item04 .grid_3 li").length == 1 ||
-    $(".content-item04 .grid_3 li").length == 1
-  ) {
-    $(".content-item04 .grid_3").css("grid-template-columns", "revert");
-  } else {
-    if (contItem04Size.length > 0) {
-      if (contItem04Size >= 3) {
-        contItem04Grid3.style.setProperty("--size", 3);
-      } else {
-        contItem04Grid3.style.setProperty("--size", contItem04Size);
-        if (pubUi.windowSize()) {
-          //pc
-          contItem04Grid3.classList.add("center");
-        }
-      }
+
+  if ($(".content-item04 .grid_3 li").length > 0) {
+    if (
+      $(".list-content.active .content-item04 .grid_3 li").length == 1 ||
+      $(".content-item04 .grid_3 li").length == 1
+    ) {
+      $(".content-item04 .grid_3").css("grid-template-columns", "revert");
     } else {
-      var contItem04Size2 = $(".content-item04 .grid_3 li").length;
-      if (contItem04Size2 >= 3) {
-        contItem04Grid3.style.setProperty("--size", 3);
+      if (contItem04Size.length > 0) {
+        if (contItem04Size >= 3) {
+          contItem04Grid3.style.setProperty("--size", 3);
+        } else {
+          contItem04Grid3.style.setProperty("--size", contItem04Size);
+          if (pubUi.windowSize()) {
+            //pc
+            contItem04Grid3.classList.add("center");
+          }
+        }
       } else {
-        contItem04Grid3.style.setProperty("--size", contItem04Size2);
-        if (pubUi.windowSize()) {
-          //pc
-          contItem04Grid3.classList.add("center");
+        var contItem04Size2 = $(".content-item04 .grid_3 li").length;
+        if (contItem04Size2 >= 3) {
+          contItem04Grid3.style.setProperty("--size", 3);
+        } else {
+          contItem04Grid3.style.setProperty("--size", contItem04Size2);
+          if (pubUi.windowSize()) {
+            //pc
+            contItem04Grid3.classList.add("center");
+          }
         }
       }
-      
     }
   }
 
-  if ($(".content-item07 .grid_3 li").length == 1) {
-    $(".content-item07 .grid_3").css("grid-template-columns", "revert");
-  } else {
-    if (contItem07Size.length >= 3) {
-      contItem07Grid3.style.setProperty("--size", 3);
+  if ($(".content-item07 .grid_3 li").length > 0) {
+    if ($(".content-item07 .grid_3 li").length == 1) {
+      $(".content-item07 .grid_3").css("grid-template-columns", "revert");
     } else {
-      contItem07Grid3.style.setProperty("--size", contItem07Size);
-      if (pubUi.windowSize()) {
-        //pc
-        contItem07Grid3.classList.add("center");
+      if (contItem07Size.length >= 3) {
+        contItem07Grid3.style.setProperty("--size", 3);
+      } else {
+        contItem07Grid3.style.setProperty("--size", contItem07Size);
+        if (pubUi.windowSize()) {
+          //pc
+          contItem07Grid3.classList.add("center");
+        }
       }
     }
   }
