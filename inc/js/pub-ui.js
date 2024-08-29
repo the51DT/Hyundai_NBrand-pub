@@ -2468,7 +2468,7 @@ function CheckNextRaces() {
       case "january":
         cardMonth = 1;
         break;
-      case "faburary":
+      case "february":
         cardMonth = 2;
         break;
       case "march":
