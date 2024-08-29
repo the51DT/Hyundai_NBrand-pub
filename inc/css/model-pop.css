@@ -112,6 +112,14 @@
   .popup-wrapper
   .popup-body
   .inner-body-model
+  .container-desc:first-child {
+  padding: 0 0 60px 0;
+}
+
+.popup.model-popup.forModel
+  .popup-wrapper
+  .popup-body
+  .inner-body-model
   .popup-body-innerbox:last-child
   .container-desc:not(.video-func) {
   padding: 24px 0 0 0;
