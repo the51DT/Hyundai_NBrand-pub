@@ -728,7 +728,9 @@ min-width : 1024 css
     width: 220px;
     margin-left: 0;
   }
-
+  .wrap-list.list02 .wrap-lists.noticeTxt {
+    padding:0 1.5rem;
+  }
   .wrap-list .__bottom .wrap-lists p {
     padding: 0;
   }
