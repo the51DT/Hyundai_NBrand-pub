@@ -496,6 +496,10 @@ input[type="radio"]:focus + label {
   background: url(../../inc/images/icon/icon-link_white.svg);
   background-size: contain;
 }
+a:hover .icon-link-wh {
+  background: url(../../inc/images/icon/icon-link_white_hover.svg);
+  background-size: contain;
+}
 .icon-down {
   background: url(../../inc/images/icon/icon-arrow01_down.svg);
   background-size: contain;
@@ -650,6 +654,10 @@ input[type="radio"]:focus + label {
   background: url(../../inc/images/icon/icon-Instagram_white.svg);
   background-size: contain;
 }
+a:hover .icon-instagram-wh {
+  background: url(../../inc/images/icon/icon-instagram_white_hover.svg);
+  background-size: contain;
+}
 .icon-instagram.icon-disabled {
   background: url(../../inc/images/icon/icon-Instagram_disabled.svg);
   background-size: contain;
@@ -678,6 +686,10 @@ input[type="radio"]:focus + label {
 }
 .icon-youtube-wh {
   background: url(../../inc/images/icon/icon-youtube_white.svg);
+  background-size: contain;
+}
+a:hover .icon-youtube-wh {
+  background: url(../../inc/images/icon/icon-youtube_white_hover.svg);
   background-size: contain;
 }
 .icon-close {
