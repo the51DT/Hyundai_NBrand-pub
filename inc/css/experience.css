@@ -2888,13 +2888,17 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
 }
 /* 끝 */
 
-.content-item04 .grid_3,
-.content-item07 .grid_3 {
-  --size: 0;
+.evtGuide .content-item04 .grid_3,
+.evtGuide .content-item07 .grid_3,
+.content-item04 .info_wrap .grid_3,
+.content-item07 .info_wrap .grid_3 {
+  --size: 3;
   grid-template-columns: repeat(var(--size), minmax(0, 29rem));  
 }
-.content-item04 .grid_3.center,
-.content-item07 .grid_3.center {
+.evtGuide .content-item04 .grid_3.center,
+.evtGuide .content-item07 .grid_3.center,
+.content-item04 .info_wrap .grid_3.center,
+.content-item07 .info_wrap .grid_3.center {
   justify-content: center;
 }
 

@@ -782,11 +782,10 @@ $(document).ready(function () {
       //07.29 추가
       if ($(".evt-map-wrap").length > 0) {
         scrollToCenter(".list-content.active .event-box .evt-map-img");
-      }      
+      }
     }
 
-
-    if($(window).innerWidth() < 600) {
+    if ($(window).innerWidth() < 600) {
       if ($(".content-item04 .grid_3").hasClass("center")) {
         $(".content-item04 .grid_3.center").removeClass("center");
       }
@@ -794,7 +793,6 @@ $(document).ready(function () {
         $(".content-item07 .grid_3.center").removeClass("center");
       }
     } else {
-      console.log($(window).innerWidth());
       contsItemGridSizeChk();
     }
     // 08.09 추가 - EP010101 (N Festival 메인에 resize 시 발생하는 Next races 영역 결함 처리 위함 - destory 후 ty04Swiper 재호출)
@@ -805,7 +803,7 @@ $(document).ready(function () {
       swiper4SlideEvt();
     }
 
-    btnNaviCheck();    
+    btnNaviCheck();
   });
 
   // 07.03 추가 - models-wrap 클래스 존재하는 페이지 일 경우, 하단 img loading 속성 제거
@@ -2302,52 +2300,67 @@ function stopTimer(video, type) {
 
 // contsItemGridSizeChk() - grid 형식의 컨텐츠 아이템 사이즈 1개일 경우, grid 속성 제거
 function contsItemGridSizeChk() {
-  var contItem04Size = $(
-    ".list-content.active .content-item04 .grid_3 li"
-  ).length;
-  var contItem07Size = $(".content-item07 .grid_3 li").length;
+  var contArea = document.querySelector(".content-area");
 
-  var contItem04Grid3 = document.querySelector(".content-item04 .grid_3");
-  var contItem07Grid3 = document.querySelector(".content-item07 .grid_3");
+  var contItem04Size = "";
+  var contItem07Size = "";
 
+  var contItem04Grid3 = "";
+  var contItem07Grid3 = "";
 
-  if ($(".content-item04 .grid_3 li").length > 0) {
-    if (
-      $(".list-content.active .content-item04 .grid_3 li").length == 1 ||
-      $(".content-item04 .grid_3 li").length == 1
-    ) {
-      $(".content-item04 .grid_3").css("grid-template-columns", "revert");
+  if (contArea.classList.contains("evtGuide")) {
+    // event guide
+    contItem04Size = document.querySelectorAll(
+      ".evtGuide .list-content.active .content-item04 .grid_3 li"
+    ).length;
+    contItem07Size = document.querySelectorAll(
+      ".evtGuide .content-item07 .grid_3 li"
+    ).length;
+
+    contItem04Grid3 = document.querySelector(
+      ".evtGuide .content-item04 .grid_3"
+    );
+    contItem07Grid3 = document.querySelector(
+      ".evtGuide .content-item07 .grid_3"
+    );
+  } else {
+    // round detail
+    contItem04Size = document.querySelectorAll(
+      ".content-item04 .info_wrap .grid_3 li"
+    ).length;
+    contItem07Size = document.querySelectorAll(
+      ".content-item07 .info_wrap .grid_3 li"
+    ).length;
+
+    contItem04Grid3 = document.querySelector(
+      ".content-item04 .info_wrap .grid_3"
+    );
+    contItem07Grid3 = document.querySelector(
+      ".content-item07 .info_wrap .grid_3"
+    );
+  }
+
+  if (contItem04Size > 0) {
+    if (contItem04Size == 1) {
+      contItem04Grid3.style.gridTemplateColumns = "revert";
     } else {
-      if (contItem04Size.length > 0) {
-        if (contItem04Size >= 3) {
-          contItem04Grid3.style.setProperty("--size", 3);
-        } else {
-          contItem04Grid3.style.setProperty("--size", contItem04Size);
-          if (pubUi.windowSize()) {
-            //pc
-            contItem04Grid3.classList.add("center");
-          }
-        }
+      if (contItem04Size >= 3) {
+        contItem04Grid3.style.setProperty("--size", 3);
       } else {
-        var contItem04Size2 = $(".content-item04 .grid_3 li").length;
-        if (contItem04Size2 >= 3) {
-          contItem04Grid3.style.setProperty("--size", 3);
-        } else {
-          contItem04Grid3.style.setProperty("--size", contItem04Size2);
-          if (pubUi.windowSize()) {
-            //pc
-            contItem04Grid3.classList.add("center");
-          }
+        contItem04Grid3.style.setProperty("--size", contItem04Size);
+        if (pubUi.windowSize()) {
+          //pc
+          contItem04Grid3.classList.add("center");
         }
       }
     }
   }
 
-  if ($(".content-item07 .grid_3 li").length > 0) {
-    if ($(".content-item07 .grid_3 li").length == 1) {
-      $(".content-item07 .grid_3").css("grid-template-columns", "revert");
+  if (contItem07Size > 0) {
+    if (contItem07Size == 1) {
+      contItem07Grid3.style.gridTemplateColumns = "revert";
     } else {
-      if (contItem07Size.length >= 3) {
+      if (contItem07Size >= 3) {
         contItem07Grid3.style.setProperty("--size", 3);
       } else {
         contItem07Grid3.style.setProperty("--size", contItem07Size);
@@ -2425,7 +2438,7 @@ function pagingNumCheck() {
   var pageList = $(".page_list");
   // var pageNum = $(".page_list > li").length;
 
-  for(var i=0; i < pageList.length; i++) {
+  for (var i = 0; i < pageList.length; i++) {
     var pageNum = pageList[i].children.length;
 
     if (pubUi.windowSize()) {
@@ -2433,20 +2446,22 @@ function pagingNumCheck() {
     } else {
       //mobile
       if (pageNum >= 4) {
-        for(var j=0; j < pageNum; j++) {
+        for (var j = 0; j < pageNum; j++) {
           pageList[i].children[j].children[0].style.setProperty("--num", 4);
         }
       } else {
         for (var j = 0; j < pageNum; j++) {
-          pageList[i].children[j].children[0].style.setProperty("--num", pageNum);
+          pageList[i].children[j].children[0].style.setProperty(
+            "--num",
+            pageNum
+          );
         }
-        
       }
     }
-  }  
+  }
 }
 
-function CheckNextRaces() {  
+function CheckNextRaces() {
   const cardSlide = document.querySelectorAll(".ty04Swiper .swiper-slide");
   const currentDate = new Date();
 
