@@ -996,6 +996,16 @@
   margin-top: 40px;
   padding: 0 16px;
 }
+.models-nofull .img-wrap .text-col {
+  margin-top: 40px;
+  padding: 0 16px;
+}
+.models-nofull .img-wrap {
+  margin-top: 80px;
+}
+.models-nofull .img-wrap + .btn-wrap {
+  margin-top: 80px;
+}
 /* 제목 + kv모션 작업 영역 */
 @keyframes modelSmooth {
   0% {
@@ -1876,5 +1886,15 @@
   }
   .model-mo-full .tech-des {
     padding: 0 24px;
+  }
+  .models-nofull .img-wrap {
+    margin-top: 44px;
+  }
+  .models-nofull .img-wrap .text-col {
+    margin-top: 28px;
+    padding: 0;
+  }
+  .models-nofull .img-wrap + .btn-wrap {
+    margin-top: 44px;
   }
 }
