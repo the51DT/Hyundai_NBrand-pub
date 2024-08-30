@@ -442,7 +442,7 @@ var pubUi = {
       },
       breakpoints: {
         1024: {
-          slidesPerView: 1.8,
+          slidesPerView: 2,
         },
       },
     });
@@ -2209,7 +2209,7 @@ window.onload = function () {
     toggleAboutMe();
   });
   toggleAboutMe();
-  pagingNumCheck();
+  // pagingNumCheck();
   CheckNextRaces();
 
   // 07.30 추가 - 모바일에서 navigation-bar 존재 시, 컨텐츠영역 상단 짤림 현상 방지
@@ -2434,32 +2434,32 @@ function targetScrollConfig(value, type) {
   }
 }
 
-function pagingNumCheck() {
-  var pageList = $(".page_list");
-  // var pageNum = $(".page_list > li").length;
+// function pagingNumCheck() {
+//   var pageList = $(".page_list");
+//   // var pageNum = $(".page_list > li").length;
 
-  for (var i = 0; i < pageList.length; i++) {
-    var pageNum = pageList[i].children.length;
+//   for (var i = 0; i < pageList.length; i++) {
+//     var pageNum = pageList[i].children.length;
 
-    if (pubUi.windowSize()) {
-      //pc
-    } else {
-      //mobile
-      if (pageNum >= 4) {
-        for (var j = 0; j < pageNum; j++) {
-          pageList[i].children[j].children[0].style.setProperty("--num", 4);
-        }
-      } else {
-        for (var j = 0; j < pageNum; j++) {
-          pageList[i].children[j].children[0].style.setProperty(
-            "--num",
-            pageNum
-          );
-        }
-      }
-    }
-  }
-}
+//     if (pubUi.windowSize()) {
+//       //pc
+//     } else {
+//       //mobile
+//       if (pageNum >= 4) {
+//         for (var j = 0; j < pageNum; j++) {
+//           pageList[i].children[j].children[0].style.setProperty("--num", 4);
+//         }
+//       } else {
+//         for (var j = 0; j < pageNum; j++) {
+//           pageList[i].children[j].children[0].style.setProperty(
+//             "--num",
+//             pageNum
+//           );
+//         }
+//       }
+//     }
+//   }
+// }
 
 function CheckNextRaces() {
   const cardSlide = document.querySelectorAll(".ty04Swiper .swiper-slide");

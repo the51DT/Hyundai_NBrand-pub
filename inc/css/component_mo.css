@@ -729,7 +729,7 @@ min-width : 1024 css
     margin-left: 0;
   }
   .wrap-list.list02 .wrap-lists.noticeTxt {
-    padding:0 1.5rem;
+    padding: 0 1.5rem;
   }
   .wrap-list .__bottom .wrap-lists p {
     padding: 0;
@@ -1844,25 +1844,44 @@ min-width : 1024 css
   .tag-list-wrap [class^="tag-list"][class*="multi"] li:not(:last-child) {
     margin-right: 8px;
   }
+  .page_wrap {
+    position: relative;
+  }
   .page_wrap .page_prev_btn,
   .page_wrap .page_next_btn {
     max-width: 48px;
     flex: 1 0 64.35px;
     margin: 0;
+    position: absolute;
+    top: 0;
+  }
+  .page_wrap .page_prev_btn {
+    left: 0;
+  }
+  .page_wrap .page_next_btn {
+    right: 0;
   }
 
   .page_wrap .page_list {
-    display: block;
+    display: flex;
     overflow: hidden;
     width: 100%;
     height: 48px;
+    justify-content: center;
+    padding: 0 48px;
+    margin: 0;
   }
   .page_wrap .page_list button {
-    --num: 0;
-    float: left;
-    width: calc(100% / var(--num));
+    /* --num: 0; */
+    /* float: left; */
+    width: 48px;
+    /* width: calc(100% / var(--num)); */
     height: 48px;
     padding: 0;
+  }
+
+  .page_wrap .page_list li:nth-child(n + 5) {
+    display: none;
   }
 
   /* EP040401M01 (프로필 [02.N Community 가입 한 경우], [05. N Community 폐쇄 된 경우] > 레이어 나오도록 ) ,
