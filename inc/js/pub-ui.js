@@ -2314,14 +2314,14 @@ function contsItemGridSizeChk() {
       ".evtGuide .list-content.active .content-item04 .grid_3 li"
     ).length;
     contItem07Size = document.querySelectorAll(
-      ".evtGuide .content-item07 .grid_3 li"
+      ".evtGuide .list-content.active .content-item07 .grid_3 li"
     ).length;
 
     contItem04Grid3 = document.querySelector(
-      ".evtGuide .content-item04 .grid_3"
+      ".evtGuide .list-content.active .content-item04 .grid_3"
     );
     contItem07Grid3 = document.querySelector(
-      ".evtGuide .content-item07 .grid_3"
+      ".evtGuide .list-content.active .content-item07 .grid_3"
     );
   } else {
     // round detail
