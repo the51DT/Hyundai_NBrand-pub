@@ -197,6 +197,7 @@
   font-size: 2.5rem;
   font-weight: 700;
   line-height: 125%;
+  text-shadow: -1px -1px #f0f0f0;
 }
 .configurator_list_swiper .configurator_num span {
   font-size: 20px;
