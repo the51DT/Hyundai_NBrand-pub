@@ -787,7 +787,6 @@
 .press-view__editor .press__table td {
   padding: 10px;
   text-align: center;
-  word-break: break-word;
 }
 
 .press-view__editor .press__table strong {
@@ -1520,7 +1519,6 @@
   }
   [data-name="sns-list__visual"] .thumbnail__list .txt__tit {
     padding: 0 14%;
-    word-break: break-word;
   }
 }
 
