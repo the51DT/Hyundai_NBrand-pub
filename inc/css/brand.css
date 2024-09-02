@@ -1099,6 +1099,7 @@ article.info-bnr-wrap + article.info-video-wrap {
   color: #fff;
   text-align: center;
   vertical-align: middle;
+  cursor: pointer;
 }
 .merchandise-wrap .collectiontab-wrap .tab-head.ty04 .tabs-wrap .tabs li.on a {
   background-color: #fff;

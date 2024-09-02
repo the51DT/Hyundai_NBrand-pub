@@ -287,7 +287,7 @@ input[type="radio"]:focus + label {
 }
 .btn:not(.btn-only-icon-notbg):hover [class*="icon-instagram"],
 .btn:not(.btn-only-icon-notbg):active [class*="icon-instagram"] {
-  background: url(../../inc/images/icon/icon-Instagram_white.svg);
+  background: url(../../inc/images/icon/Icon-Instagram_white.svg);
   background-size: contain;
 }
 .btn:not(.btn-only-icon-notbg):hover [class*="icon-twitter"],
@@ -647,24 +647,24 @@ a:hover .icon-link-wh {
   background-size: contain;
 }
 .icon-instagram {
-  background: url(../../inc/images/icon/icon-Instagram.svg);
+  background: url(../../inc/images/icon/Icon-Instagram.svg);
   background-size: contain;
 }
 .icon-instagram-wh {
-  background: url(../../inc/images/icon/icon-Instagram_white.svg);
+  background: url(../../inc/images/icon/Icon-Instagram_white.svg);
   background-size: contain;
 }
 a:hover .icon-instagram-wh {
-  background: url(../../inc/images/icon/icon-instagram_white_hover.svg);
+  background: url(../../inc/images/icon/Icon-Instagram_white_hover.svg);
   background-size: contain;
 }
 .icon-instagram.icon-disabled {
-  background: url(../../inc/images/icon/icon-Instagram_disabled.svg);
+  background: url(../../inc/images/icon/Icon-Instagram_disabled.svg);
   background-size: contain;
 }
 .btn:hover [class*="icon-instagram"].icon-disabled,
 .btn:active [class*="icon-instagram"].icon-disabled {
-  background: url(../../inc/images/icon/icon-Instagram_disabled.svg);
+  background: url(../../inc/images/icon/Icon-Instagram_disabled.svg);
   background-size: contain;
 }
 .icon-twitter {
