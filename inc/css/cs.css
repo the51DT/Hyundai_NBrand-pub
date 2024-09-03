@@ -78,7 +78,8 @@
 }
 
 /* Cookies Policy 페이지 */
-.cookies-area {
+.cookies-area,
+.privacy-area {
   max-width: 60rem;
   margin: 0 auto;
   padding-bottom: 15rem;
