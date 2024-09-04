@@ -1929,4 +1929,7 @@ min-width : 1024 css
     top: 80px;
     left: 0;
   }
+  .sub-text-list li:before {
+    top: 9px;
+  }
 }
