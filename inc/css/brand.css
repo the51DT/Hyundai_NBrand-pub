@@ -989,7 +989,7 @@ article.info-bnr-wrap + article.info-video-wrap {
   /* padding: 0.75rem 0; */
 }
 .performance_garage_wrap {
-  height: 90rem;
+  height: 1080px;
   background-image: url(../images/content/img_performance_garage_bg_pc.png);
   background-position: bottom center;
   background-size: cover;

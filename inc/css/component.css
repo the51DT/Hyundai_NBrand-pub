@@ -1305,6 +1305,7 @@ a:hover .icon-youtube-wh {
   z-index: 1;
 }
 .card_type01 .card_num {
+  display: none;
   color: #de3111;
   text-align: right;
   font-size: 4.25rem;
