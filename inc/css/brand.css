@@ -829,13 +829,11 @@ article.info-bnr-wrap + article.info-video-wrap {
   text-align: center;
 }
 .honed_wrap {
-  background: linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0.8) 0%,
-      rgba(0, 0, 0, 0.8) 100%
-    ),
-    url(../../inc/images/content/img_24h_conts02_bg.png) lightgray 50% / cover
-      no-repeat;
+  width: 1440px;
+  max-width: 100%;
+  margin: 0 auto;
+  background: url(../../inc/images/content/img_24h_conts02_bg.png) lightgray 50% /
+    cover no-repeat;
 }
 .honed_wrap .motor_tit {
   text-align: center;
@@ -2180,6 +2178,9 @@ article.info-bnr-wrap + article.info-video-wrap {
   .brand.models-wrap .motor_tit_wrap .text-normal {
     font-size: 1.0625rem;
     line-height: 140%;
+  }
+  .honed_wrap {
+    width: 100%;
   }
   .honed_wrap .img-wrap {
     margin-top: 4rem;
