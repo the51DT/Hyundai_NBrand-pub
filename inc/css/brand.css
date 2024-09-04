@@ -40,6 +40,12 @@
   max-width: 1440px;
   margin: 100px auto;
 }
+.content-box .banner-box + .video_list {
+  margin-top: 0;
+}
+.content-box .video_list {
+  margin-top: 100px;
+}
 .content-box .banner-box .banner-txt-wrap {
   position: absolute;
   width: 100%;
@@ -683,6 +689,9 @@ article.info-bnr-wrap + article.info-video-wrap {
 .brand .gallery-wrap .btn-wrap-default.sns_wrap {
   gap: 2rem;
   margin-top: 12.5rem;
+}
+.brand .gallery-wrap + .press-sns-wrap {
+  padding: 0 0 240px 0;
 }
 .brand .gallery-wrap .lg-txt-btn01 {
   font-size: 1.25rem;
@@ -1575,7 +1584,12 @@ article.info-bnr-wrap + article.info-video-wrap {
   .content-box .banner-box {
     margin: 64px 0;
   }
-
+  .content-box .banner-box + .video_list {
+    margin-top: 0;
+  }
+  .content-box .video_list {
+    margin-top: 64px;
+  }
   .content-box .banner-box img {
     height: 400px;
     object-fit: cover;
