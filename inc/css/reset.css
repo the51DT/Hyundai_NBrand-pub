@@ -245,12 +245,12 @@ body {
     background: #aacae6;
   }
 }
-body * {
+/* body * {
   outline: none;
 }
 body *:focus {
   outline: none;
-}
+} */
 */ a,
 button {
   cursor: pointer;
