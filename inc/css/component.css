@@ -287,7 +287,7 @@ input[type="radio"]:focus + label {
 }
 .btn:not(.btn-only-icon-notbg):hover [class*="icon-instagram"],
 .btn:not(.btn-only-icon-notbg):active [class*="icon-instagram"] {
-  background: url(../../inc/images/icon/Icon-Instagram_white.svg);
+  background: url(../../inc/images/icon/icon-Instagram_white.svg);
   background-size: contain;
 }
 .btn:not(.btn-only-icon-notbg):hover [class*="icon-twitter"],
