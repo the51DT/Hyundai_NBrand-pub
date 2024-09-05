@@ -328,8 +328,15 @@
   line-height: 140%;
 }
 .join_form_sub {
+  margin-left: 2.75rem;
+  font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 140%;
   padding: 1rem;
   width: calc(100% - 2.75rem);
+  max-height: 200px;
+  overflow-y: auto;
   max-width: 57.3rem;
   border: 1px solid #000;
   color: #777;

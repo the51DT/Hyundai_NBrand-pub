@@ -1344,7 +1344,7 @@ a:hover .icon-youtube-wh {
 }
 .card_type01 .card_tit {
   margin-bottom: 0.25rem;
-  font-family: "Hyundai Sans Head";
+  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 140%;
@@ -3311,7 +3311,7 @@ button.card_detail:hover {
   width: 100%;
   border-top: 1px solid #aaa;
   border-bottom: 1px solid #aaa;
-  font-family: "Hyundai Sans Head";
+  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
   font-size: 24px;
   font-weight: 700;
   line-height: 140%;
@@ -4300,7 +4300,7 @@ button.card_detail:hover {
   .dropdown.centered .dropdown-menu .wrap-category .major-category .tit-type05 {
     max-width: 183px;
     width: 110px;
-    font-family: "Hyundai Sans Head";
+    font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
     font-size: 18px;
     font-weight: 700;
     line-height: 25.2px;
