@@ -676,7 +676,37 @@
         </section>
         <section class="content-item02">
           <div class="privacy-area">
-            123123123
+            <div class="inner">
+              <!-- 09/04 수정 : selectbox 현행화 -->
+              <!-- to-be source -->
+              <div class="selectbox-wrap select-type01">
+                  <div>
+                      <!-- handleSelectboxClick(event): 동적구동을 위한 실행함수  / selectbox-js : 기본 이벤트를 받는 클래스 -->
+                      <button class="selectbox-trigger selectbox-js txt-type03 fw-type03" aria-haspopup="listbox"
+                              aria-expanded="false" aria-labelledby="privacySelect">2023-01-01 ~ 현재</button>
+                      <!-- handleOptionClick(event): 동적구동을 위한 실행함수  / option-js : 기본 이벤트를 받는 클래스 -->
+                      <ul class="selectbox-options" role="listbox" id="privacySelect" aria-hidden="true"
+                          style="display: none;">
+                          <li class="moclose-btn" style="display: none;">
+                              <button type="button" class="btn btn-only-icon" title="close">
+                                  <span class="visually-hidden">close</span>
+                                  <span class="btn-icon24 icon-close" aria-hidden="true"></span>
+                              </button>
+                          </li>
+                          <li class="option option-click txt-type03 fw-type03 active" role="option" aria-selected="true">
+                              2023-01-01 ~ 현재
+                          </li>
+                          <li class="option option-click txt-type03 fw-type03" role="option" onclick="onclickPreviousPolicy()">
+                              2023-01-01 ~ 2024-09-02
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="selectbox-overlay" style="display: none;"></div>
+              <!-- //to-be source -->
+              <!-- content api 호출 데이터 노출 -->
+              <div class="text_desc">content api 호출 데이터 노출</div>
+            </div>
           </div>
         </section>
       </div>

@@ -79,7 +79,8 @@
 
 /* Cookies Policy 페이지 */
 .cookies-area,
-.privacy-area {
+.privacy-area,
+.terms-area {
   max-width: 60rem;
   margin: 0 auto;
   padding-bottom: 15rem;
@@ -107,6 +108,41 @@
 }
 .cookies-area .btn-wrap-default {
   margin-top: 5rem;
+}
+
+
+/* 약관 - terms */
+.terms-area > .terms-item {
+  margin-bottom: 32px;
+}
+.terms-item h4 {
+  margin-bottom: 24px;
+}
+.terms-item .terms-item-list h5 {
+  font-size: 18px;
+}
+.terms-item-list > li {
+  margin-bottom: 22px;
+}
+.terms-item-list > li:last-child {
+  margin-bottom: 0;
+}
+
+.terms-item-list > li .terms-tit {
+  margin-bottom: 10px;
+}
+
+.terms-desc-list {
+  margin-top: 12px;
+}
+
+.terms-desc-list > li:not(:last-child) {
+  margin-bottom:8px;
+}
+
+.terms-desc-list ol > li {
+  padding-left: 20px;
+  margin-top:4px;
 }
 
 /* 모바일 */
