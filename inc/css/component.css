@@ -3772,7 +3772,7 @@ button.card_detail:hover {
   input[type="radio"]
   + .radio-label {
   box-shadow: none !important;
-  outline: none;
+  /* outline: none; */
   border: none;
   position: relative;
   width: 100%;
@@ -5061,7 +5061,7 @@ p.text-num-chk {
 
 .radio input[type="radio"]:checked + .radio-label {
   box-shadow: none !important;
-  outline: none;
+  /* outline: none; */
   border: none;
   position: relative;
 }
@@ -5097,7 +5097,7 @@ p.text-num-chk {
 }
 
 .radio input[type="radio"] + .radio-label:focus + .radio-label:before {
-  outline: none;
+  /* outline: none; */
   border: none;
 }
 .radio label.radio-label span.txt {
