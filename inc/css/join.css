@@ -396,6 +396,12 @@
   border-bottom: none;
 }
 
+/* CM050105 */
+.join_noti {
+  margin: 0.625rem 0 0 2.75rem;
+  font-size: 1rem;
+}
+
 /* CM040101 */
 .mynotice-wrap {
   display: flex;

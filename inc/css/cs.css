@@ -110,6 +110,26 @@
   margin-top: 5rem;
 }
 
+/* privacy area */
+.privacy-area .text_desc > div:not(:last-child) {
+  margin-bottom:32px;  
+}
+
+.privacy-area .text_desc > div  h4 {
+  font-size: 24px;
+  font-weight: 700;
+}
+.privacy-area .text_desc > div  h5 {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 10px 0;
+}
+.privacy-area .text_desc > div  p {
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 6px;
+}
+
 
 /* 약관 - terms */
 .terms-area > .terms-item {
