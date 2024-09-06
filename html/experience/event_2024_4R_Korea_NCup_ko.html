@@ -354,16 +354,18 @@
 
                       <!-- 이벤트 레이아웃 영역 -->
 
-                      <!-- event layout : 임시 컨텐츠 (수급안됨) -->
-                      <!-- <section class="content-item06 bg-gray">
+                      <!-- 09/06 수정 : evt-map-img 태그 내 각각 케이스별 이미지 컨텐츠 현행화 -->
+                      <section class="content-item06 bg-gray">
                         <div class="event-box">
                           <div class="conts-head ty02">
-                            <h2 class="tit contitle-type01 fw-type03">Event Layout</h2>
+                            <h2 class="tit contitle-type01 fw-type03">행사 지도</h2>
+                            <!-- //select-type 클래스 정의
+                              selectbox 2개이상일 경우 select-type02 클래스 추가
+                              selectbox 1개일 때는 select-type01 클래스 추가 -->
                             <div class="selectbox-wrap select-type01 evtLayout-type">
                               <div>
                                 <button class="selectbox-trigger selectbox-js txt-type03 fw-type03"
-                                  aria-haspopup="listbox" aria-expanded="false"
-                                  aria-labelledby="typeSelect02">Experience Zone</button>
+                                  aria-haspopup="listbox" aria-expanded="false" aria-labelledby="typeSelect02">N Event</button>
                                 <ul class="selectbox-options 02" role="listbox" id="typeSelect02" aria-hidden="true"
                                   style="display: none">
                                   <li class="moclose-btn" style="display: none">
@@ -373,11 +375,14 @@
                                     </button>
                                   </li>
                                   <li class="option option-click fw-
-                                  type03 active" role="option" aria-selected="true" data-type="1">Experience Zone</li>
-                                  <li class="option option-click fw-type03" role="option" aria-selected="false" data-type="2">
-                                    Motorsport Experience</li>
-                                  <li class="option option-click fw-type03" role="option" aria-selected="false" data-type="3">Viewing
-                                    zone</li>
+                                  type03 active" role="option" aria-selected="true" data-type="1">N Event</li>
+                                  <li class="option option-click fw-type03" role="option" aria-selected="false"
+                                    data-type="2">
+                                    N Zone</li>
+                                  <li class="option option-click fw-type03" role="option" aria-selected="false"
+                                    data-type="3">N Experience zone</li>
+                                  <li class="option option-click fw-type03" role="option" aria-selected="false"
+                                    data-type="4">N FanZone</li>
                                 </ul>
                               </div>
 
@@ -385,8 +390,24 @@
                             <div class="selectbox-overlay" style="display: none"></div>
                           </div>
                           <div class="conts-body">
+                            <!-- comment!
+**************************************************************************************************************
+1. event Layout 영역 event Map 호출 실행 함수 
+라운드별 컨텐츠 변경 후, event Layout 정상 동작 안하는 경우, evtImgMapChk 함수 한번 더 호출해주세요.
+- plus, minus 버튼 클릭 이벤트 경우, 해당 함수 호출 되어 있을 시 문제 없어 따로 외부 실행함수로 변경하지 않았습니다. 참고 부탁드려요-!
+
+2. event Map 호출 실행 함수 
+- evtImgMapChk("", "");
+//외부 호출 필요할 경우, 빈 값으로 실행 시켜주세요
+
+**************************************************************************************************************
+                            -->
+                          
+                            <!-- 활성화시 on 클래스 -->
+                            <!-- active 클래스 : 상세맵 활성화시(+ 버튼 클릭시) active 클래스 추가 -->
+
+                            <!-- N Event 맵 정보 -->
                             <div class="evt-map-wrap on active" data-type="1">
-                              
                               <div class="btn-area">
                                 <div class="btn-wrap plus">
                                   <button type="button">
@@ -396,103 +417,157 @@
                                 <div class="btn-wrap minus">
                                   <button type="button">
                                     <span class="visually-hidden">- 축소 버튼</span>
-                                  </button>
-                                </div>
-                              </div>                              
-                              <div class="evt-map-img active"> 
-                                <div class="evt-map-default-box">
-                                  <button class="pop-open btn-evtmap-pop active" aria-controls="pop-yeongamExperZone"
-                                    aria-haspopup="true" aria-expanded="false" title="팝업오픈">
-                                    <span class="visually-hidden">side-popup1 열기</span>
-                                    <img src="../../inc/images/eventLayout/evtLayout_min_shortImg04.png"
-                                      alt="이벤트 레이아웃 N lounge 확대 이미지" />
-                                  </button>
-                                </div>
-
-                                <div class="evt-map-active-box">
-                                  <button class="pop-open btn-evtmap-pop" aria-controls="pop-yeongamExperZone"
-                                    aria-haspopup="true" aria-expanded="false" title="팝업오픈">
-                                    <span class="visually-hidden">side-popup1 열기</span>
-                                    <img src="../../inc/images/eventLayout/evtLayout_max_yeongam_ExperZone.png"
-                                      alt="yeongam - Experience Zone 확대 이미지" />
                                   </button>
                                 </div>
                               </div>
-                            </div>
 
-                            <div class="evt-map-wrap" data-type="2">
-                              
-                              <div class="btn-area">
-                                <div class="btn-wrap plus">
-                                  <button type="button">
-                                    <span class="visually-hidden">+ 확대 버튼</span>
-                                  </button>
-                                </div>
-                                <div class="btn-wrap minus">
-                                  <button type="button">
-                                    <span class="visually-hidden">- 축소 버튼</span>
-                                  </button>
-                                </div>
-                              </div>                              
-                              <div class="evt-map-img">
-                                <div class="evt-map-default-box">
-                                  <button class="pop-open btn-evtmap-pop active" aria-controls="pop-yeongamMotorExper"
-                                    aria-haspopup="true" aria-expanded="false" title="팝업오픈">
-                                    <span class="visually-hidden">side-popup1 열기</span>
-                                    <img src="../../inc/images/eventLayout/evtLayout_min_shortImg04.png"
-                                      alt="이벤트 레이아웃 N lounge 확대 이미지" />
-                                  </button>
-                                </div>
-
-                                <div class="evt-map-active-box">
-                                  <button class="pop-open btn-evtmap-pop" aria-controls="pop-yeongamMotorExper"
-                                    aria-haspopup="true" aria-expanded="false" title="팝업오픈">
-                                    <span class="visually-hidden">side-popup2 열기</span>
-                                    <img src="../../inc/images/eventLayout/evtLayout_max_yeongam_MotorExper.png"
-                                      alt="yeongam - Motorsport Experience 확대 이미지" />
-                                  </button>
-                                </div>
-                              </div>
-                            </div>
-
-                            <div class="evt-map-wrap" data-type="3">
-                              
-                              <div class="btn-area">
-                                <div class="btn-wrap plus">
-                                  <button type="button">
-                                    <span class="visually-hidden">+ 확대 버튼</span>
-                                  </button>
-                                </div>
-                                <div class="btn-wrap minus">
-                                  <button type="button">
-                                    <span class="visually-hidden">- 축소 버튼</span>
-                                  </button>
-                                </div>
-                              </div>                              
+                              <!-- N Event -->
                               <div class="evt-map-img active">
+                                <!-- 활성화 맵일 시, active 클래스 추가 -->
                                 <div class="evt-map-default-box">
-                                  <button class="pop-open btn-evtmap-pop active" aria-controls="pop-yeongamViewingZone"
-                                    aria-haspopup="true" aria-expanded="false" title="팝업오픈">
+                                  <button class="pop-open btn-evtmap-pop" aria-controls="pop-nEvent" aria-haspopup="true"
+                                    aria-expanded="false" title="팝업오픈">
                                     <span class="visually-hidden">side-popup1 열기</span>
-                                    <img src="../../inc/images/eventLayout/evtLayout_min_shortImg04.png"
-                                      alt="이벤트 레이아웃 N lounge 확대 이미지" />
+                                    <img src="../../inc/images/eventLayout/evtLayout_min_4r_ncup_ko.png"
+                                      alt="이벤트 레이아웃 N Event 기본 이미지" />
                                   </button>
                                 </div>
 
                                 <div class="evt-map-active-box">
-                                  <button class="pop-open btn-evtmap-pop" aria-controls="pop-yeongamViewingZone"
+                                  <button class="pop-open btn-evtmap-pop" aria-controls="pop-nEvent" aria-haspopup="true"
+                                    aria-expanded="false" title="팝업오픈">
+                                    <span class="visually-hidden">side-popup1 열기</span>
+                                    <img src="../../inc/images/eventLayout/evtLayount_max_ncup_r4_nEvent_ko.png"
+                                      alt="이벤트 레이아웃 N Event 확대 이미지" />
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!-- N Zone 맵 정보 -->
+                            <div class="evt-map-wrap" data-type="2">
+
+                              <div class="btn-area">
+                                <div class="btn-wrap plus">
+                                  <button type="button">
+                                    <span class="visually-hidden">+ 확대 버튼</span>
+                                  </button>
+                                </div>
+                                <div class="btn-wrap minus">
+                                  <button type="button">
+                                    <span class="visually-hidden">- 축소 버튼</span>
+                                  </button>
+                                </div>
+                              </div>
+
+                              <div class="evt-map-img">
+                                <!-- 활성화 맵일 시, active 클래스 추가 -->
+                                <!-- 08.06 수정 : evt-map-default-box -->
+                                <div class="evt-map-default-box">
+                                  <button class="pop-open btn-evtmap-pop" aria-controls="pop-nNzone"
+                                    aria-haspopup="true" aria-expanded="false" title="팝업오픈">
+                                    <span class="visually-hidden">side-popup1 열기</span>
+                                    <img src="../../inc/images/eventLayout/evtLayout_min_4r_ncup_ko.png"
+                                      alt="이벤트 레이아웃 nZone 기본 이미지" />
+                                  </button>
+                                </div>
+
+                                <div class="evt-map-active-box">
+                                  <button class="pop-open btn-evtmap-pop" aria-controls="pop-nNzone"
                                     aria-haspopup="true" aria-expanded="false" title="팝업오픈">
                                     <span class="visually-hidden">side-popup3 열기</span>
-                                    <img src="../../inc/images/eventLayout/evtLayout_max_yeongam_ViewingZone.png"
-                                      alt="yeongam - viewing zone 확대 이미지" />
+                                    <img src="../../inc/images/eventLayout/evtLayount_max_ncup_r4_nZone_ko.png"
+                                      alt="이벤트 레이아웃 nZone 확대 이미지" />
+                                  </button>
+                                </div>
+                                <!-- //07.12 추가 : 레이어팝업 버튼 추가 -->
+                              </div>
+                            </div>
+
+                            <!-- N Experience zone 맵 정보 -->
+                            <div class="evt-map-wrap" data-type="3">
+
+                              <div class="btn-area">
+                                <div class="btn-wrap plus">
+                                  <button type="button">
+                                    <span class="visually-hidden">+ 확대 버튼</span>
+                                  </button>
+                                </div>
+                                <div class="btn-wrap minus">
+                                  <button type="button">
+                                    <span class="visually-hidden">- 축소 버튼</span>
                                   </button>
                                 </div>
                               </div>
+
+                              <div class="evt-map-img">
+                                <!-- 활성화 맵일 시, active 클래스 추가 -->
+                                <!-- 08.06 수정 : evt-map-default-box -->
+                                <div class="evt-map-default-box">
+                                  <button class="pop-open btn-evtmap-pop" aria-controls="pop-nNExperZone"
+                                    aria-haspopup="true" aria-expanded="false" title="팝업오픈">
+                                    <span class="visually-hidden">side-popup1 열기</span>
+                                    <img src="../../inc/images/eventLayout/evtLayout_min_4r_ncup_ko.png"
+                                      alt="이벤트 레이아웃 N Experience zone 기본 이미지" />
+                                  </button>
+                                </div>
+
+                                <div class="evt-map-active-box">
+                                  <button class="pop-open btn-evtmap-pop" aria-controls="pop-nNExperZone"
+                                    aria-haspopup="true" aria-expanded="false" title="팝업오픈">
+                                    <span class="visually-hidden">side-popup3 열기</span>
+                                    <img src="../../inc/images/eventLayout/evtLayount_max_ncup_r4_nExper_ko.png"
+                                      alt="이벤트 레이아웃 N Experience zone 확대 이미지" />
+                                  </button>
+                                </div>
+                                <!-- //07.12 추가 : 레이어팝업 버튼 추가 -->
+                              </div>
                             </div>
+
+                            <!-- N Fan zone 맵 정보 -->
+                            <div class="evt-map-wrap" data-type="4">
+
+                              <div class="btn-area">
+                                <div class="btn-wrap plus">
+                                  <button type="button">
+                                    <span class="visually-hidden">+ 확대 버튼</span>
+                                  </button>
+                                </div>
+                                <div class="btn-wrap minus">
+                                  <button type="button">
+                                    <span class="visually-hidden">- 축소 버튼</span>
+                                  </button>
+                                </div>
+                              </div>
+
+                              <div class="evt-map-img">
+                                <!-- 활성화 맵일 시, active 클래스 추가 -->
+                                <!-- 08.06 수정 : evt-map-default-box -->
+                                <div class="evt-map-default-box">
+                                  <button class="pop-open btn-evtmap-pop" aria-controls="pop-nNFanZone"
+                                    aria-haspopup="true" aria-expanded="false" title="팝업오픈">
+                                    <span class="visually-hidden">side-popup1 열기</span>
+                                    <img src="../../inc/images/eventLayout/evtLayout_min_4r_ncup_ko.png"
+                                      alt="이벤트 레이아웃 N Fan zone 기본 이미지" />
+                                  </button>
+                                </div>
+
+                                <div class="evt-map-active-box">
+                                  <button class="pop-open btn-evtmap-pop" aria-controls="pop-nNFanZone"
+                                    aria-haspopup="true" aria-expanded="false" title="팝업오픈">
+                                    <span class="visually-hidden">side-popup3 열기</span>
+                                    <img src="../../inc/images/eventLayout/evtLayount_max_ncup_r4_nFan_ko.png"
+                                      alt="이벤트 레이아웃 N Fan zone 확대 이미지" />
+                                  </button>
+                                </div>
+                                <!-- //07.12 추가 : 레이어팝업 버튼 추가 -->
+                              </div>
+                            </div>
+                            
                           </div>
                         </div>
-                      </section> -->
-                      <!-- //event laout : 임시 컨텐츠 -->
+                      </section>
+                      <!-- //09/06 수정 : evt-map-img 태그 내 각각 케이스별 이미지 컨텐츠 현행화 -->
 
                       <div class="content-item07">
                         <div class="schedule-box th:utext=${race.eventDetail}">
@@ -634,232 +709,115 @@
     </section>
   </div>
 
-  <!--07.12 수정 : 레이어팝업 콘텐츠 추가 -->
-  <!-- inje -->
-  <!-- N Lounge -->
-  <div id="pop-nLounge" class="popup side-popup" role="dialog" aria-modal="true" aria-labelledby="tit">
+  <!--09/06 수정 : 레이어팝업 콘텐츠 추가 (NCup 4 Round 국문) -->
+  <!-- N Event -->
+  <div id="pop-nEvent" class="popup side-popup" role="dialog" aria-modal="true" aria-labelledby="tit">
     <div class="pop-wrap">
       <div class="popup-header">
-        <h3 class="tit tit-type03">N Lounge</h3>
+        <h3 class="tit tit-type03">N Event</h3>
       </div>
 
       <div class="popup-body">
         <article>
           <div class="wrap-image-reward">
-            <img src="../../inc/images/eventLayout/img_nlounge_popup01.png" loading="lazy" alt="사이드 팝업 이미지1" />
+            <img src="../../inc/images/eventLayout/img_nEvent_popup01.png" loading="lazy" alt="사이드 팝업 이미지1" /> 
           </div>
 
           <div class="wrap-popup-title">
-            <p class="tit-type04">Sim Racing</p>
+            <p class="tit-type04">WRC 드라이버 다니 소르도 쇼런</p>
 
             <div class="wrap-desc">
               <p class="txt-type03">
-                Experience a hyper-realistic circuit with our racing simulator
+                현대 팀으로 10년간 활동한 베테랑 드라이버, ‘다니 소르도’가 직접 i20 WRC 대회 차량으로 쇼런 드라이빙 하는 모습을 직관할 수 있는 기회
               </p>
             </div>
           </div>
 
           <div class="wrap-zone-info">
             <div class="box-info">
-              <p class="tit-type05">How to participate</p>
-              <p class="txt-type02">On-site registration at N Lounge</p>
-            </div>
-            <div class="box-info">
-              <p class="tit-type05">Operating hours</p>
-              <p class="txt-type02">Open around the clock</p>
-            </div>
-
-            <div class="box-info">
-              <p class="tit-type05">Cost</p>
-              <p class="txt-type02">Free</p>
-            </div>
-
-            <div class="box-info">
-              <p class="tit-type05">Participation guideline</p>
-              <p class="txt-type02">Please take off your shoes before using the simulator.</p>
+              <p class="tit-type05">운영 시간</p>
+              <p class="txt-type02">이벤트 타임테이블 참고</p>
             </div>
           </div>
         </article>
 
         <article>
           <div class="wrap-image-reward">
-            <img src="../../inc/images/eventLayout/img_nlounge_popup02.png" loading="lazy" alt="사이드 팝업 이미지2" />
+            <img src="../../inc/images/eventLayout/img_nEvent_popup02.png" loading="lazy" alt="사이드 팝업 이미지2" />
           </div>
 
           <div class="wrap-popup-title">
-            <p class="tit-type04">Paper Craft</p>
+            <p class="tit-type04">N Birthday Party</p>
 
             <div class="wrap-desc">
               <p class="txt-type03">
-                Be creative and make a paper WRC rally car with your family
+                N 브랜드의 9주년을 기념하는 다양한 세레모니와 생일 파티 이벤트
               </p>
             </div>
           </div>
 
           <div class="wrap-zone-info">
             <div class="box-info">
-              <p class="tit-type05">How to participate</p>
-              <p class="txt-type02">On-site registration at N Lounge</p>
+              <p class="tit-type05">참여 방법</p>
+              <p class="txt-type02">현장 접수</p>
             </div>
             <div class="box-info">
-              <p class="tit-type05">Operating hours</p>
-              <p class="txt-type02">Open around the clock</p>
-            </div>
-
-            <div class="box-info">
-              <p class="tit-type05">Capacity</p>
-              <p class="txt-type02">Maximum 16 people</p>
-            </div>
-
-            <div class="box-info">
-              <p class="tit-type05">Cost</p>
-              <p class="txt-type02">Free</p>
-            </div>
-
-            <div class="box-info">
-              <p class="tit-type05">Participation guideline</p>
-              <p class="txt-type02">We kindly request that parents accompany preschool-aged children.</p>
-            </div>
-          </div>
-        </article>
-
-        <!-- //  -->
-      </div>
-      <div class="btn-wrap">
-        <!-- pop-close 해당 팝업 닫기 -->
-        <button type="button" class="btn btn-only-icon-notbg popup-close-btn-x pop-close" title="close">
-          <!-- 07.12 수정 : 누락 클래스 추가 (popup-close-btn-x) -->
-          <span class="visually-hidden">close</span>
-          <span class="btn-icon36 icon-close" aria-hidden="true"></span>
-        </button>
-      </div>
-    </div>
-  </div>
-  <!-- Motorsport Experience -->
-  <div id="pop-motorExperience" class="popup side-popup" role="dialog" aria-modal="true" aria-labelledby="tit">
-    <div class="pop-wrap">
-      <div class="popup-header">
-        <h3 class="tit tit-type03">Motorsport Experience</h3>
-      </div>
-
-      <div class="popup-body">
-        <article>
-          <div class="wrap-image-reward">
-            <img src="../../inc/images/eventLayout/img_motoExper_popup01.png" loading="lazy" alt="사이드 팝업 이미지1" />
-          </div>
-
-          <div class="wrap-popup-title">
-            <p class="tit-type04">Grid Walk</p>
-
-            <div class="wrap-desc">
-              <p class="txt-type03">
-                Meet all the drivers of the Hyundai N Festival and their race cars in person right on the grid
-              </p>
-            </div>
-          </div>
-
-          <div class="wrap-zone-info">
-            <div class="box-info">
-              <p class="tit-type05">How to participate</p>
-              <p class="txt-type02">On-site participation during operating hours</p>
-            </div>
-            <div class="box-info">
-              <p class="tit-type05">Location</p>
-              <p class="txt-type02">Enter the grid through Pit no. 24</p>
-            </div>
-
-            <div class="box-info">
-              <p class="tit-type05">Operating hours</p>
-              <p class="txt-type02">Lunch time</p>
-            </div>
-
-            <div class="box-info">
-              <p class="tit-type05">Cost</p>
-              <p class="txt-type02">Free</p>
+              <p class="tit-type05">운영 시간</p>
+              <p class="txt-type02">이벤트 타임테이블 참고</p>
             </div>
           </div>
         </article>
 
         <article>
           <div class="wrap-image-reward">
-            <img src="../../inc/images/eventLayout/img_motoExper_popup02.png" loading="lazy" alt="사이드 팝업 이미지2" />
+            <img src="../../inc/images/eventLayout/img_nEvent_popup03.png" loading="lazy" alt="사이드 팝업 이미지3" />
           </div>
 
           <div class="wrap-popup-title">
-            <p class="tit-type04">N Taxi</p>
+            <p class="tit-type04">퍼레이드 랩</p>
 
             <div class="wrap-desc">
               <p class="txt-type03">
-                Jump on a co-pilot ride in our race cars driven by professional drivers
+                모터스포츠에서 영감 받은 N 차량의 리드 하에, ‘N 오너’들과 함께 만드는 99대 N의 환상적인 대규모 퍼레이드 랩
               </p>
             </div>
           </div>
 
           <div class="wrap-zone-info">
             <div class="box-info">
-              <p class="tit-type05">How to participate</p>
-              <p class="txt-type02">On-site reception at information</p>
-            </div>
-            <div class="box-info">
-              <p class="tit-type05">Operating hours</p>
-              <p class="txt-type02">Open around the clock</p>
-            </div>
-
-            <div class="box-info">
-              <p class="tit-type05">Capacity</p>
-              <p class="txt-type02">Max 6 people at each ride<br />(Two cars operational)</p>
-            </div>
-
-            <div class="box-info">
-              <p class="tit-type05">Cost</p>
-              <p class="txt-type02">Free</p>
-            </div>
-
-            <div class="box-info">
-              <p class="tit-type05">Participation guideline</p>
-              <p class="txt-type02">For safety reasons, it is available<br class="pc-only"> for ages 13 to 65 only</p>
+              <p class="tit-type05">운영 시간</p>
+              <p class="txt-type02">9/28 토요일  eN1 클래스 시상식 이후</p>
             </div>
           </div>
         </article>
 
         <article>
           <div class="wrap-image-reward">
-            <img src="../../inc/images/eventLayout/img_motoExper_popup03.png" loading="lazy" alt="사이드 팝업 이미지3" />
+            <img src="../../inc/images/eventLayout/img_nEvent_popup04.png" loading="lazy" alt="사이드 팝업 이미지4" />
           </div>
 
           <div class="wrap-popup-title">
-            <p class="tit-type04">Circuit Safari</p>
+            <p class="tit-type04">팬 사인회</p>
 
             <div class="wrap-desc">
               <p class="txt-type03">
-                Jump aboard a large bus for a circuit tour and get an up-close view of the Hyundai N Festival race cars
+                현대 WRC 모터스포츠팀으로 10여년간 활동한 ‘다니 소르도’의 사인을 직접 사인을 받을 수 있는 이벤트
               </p>
             </div>
           </div>
 
           <div class="wrap-zone-info">
             <div class="box-info">
-              <p class="tit-type05">How to participate</p>
-              <p class="txt-type02">On-site reception at information</p>
+              <p class="tit-type05">운영 시간</p>
+              <p class="txt-type02">추후 업데이트</p>
             </div>
             <div class="box-info">
-              <p class="tit-type05">Location</p>
-              <p class="txt-type02">Wait in front of Pit no. 24 for the bus</p>
+              <p class="tit-type05">참여 장소</p>
+              <p class="txt-type02">N 차량 전시 존(M 구역)</p>
             </div>
-
             <div class="box-info">
-              <p class="tit-type05">Operating hours</p>
-              <p class="txt-type02">Lunch time</p>
-            </div>
-
-            <div class="box-info">
-              <p class="tit-type05">Capacity</p>
-              <p class="txt-type02">38 people</p>
-            </div>
-
-            <div class="box-info">
-              <p class="tit-type05">Cost</p>
-              <p class="txt-type02">Free</p>
+              <p class="tit-type05">참가 비용</p>
+              <p class="txt-type02">무료</p>
             </div>
           </div>
         </article>
@@ -877,86 +835,8 @@
     </div>
   </div>
 
-  <!-- Viewing Zone -->
-  <div id="pop-viewingZone" class="popup side-popup" role="dialog" aria-modal="true" aria-labelledby="tit">
-    <div class="pop-wrap">
-      <div class="popup-header">
-        <!-- 09/03 문구변경 -->
-        <h3 class="tit tit-type03">Viewing Zone</h3>
-      </div>
-
-      <div class="popup-body">
-        <article>
-          <div class="wrap-image-reward">
-            <img src="../../inc/images/eventLayout/img_viewing_popup01.png" loading="lazy" alt="사이드 팝업 이미지1" />
-          </div>
-
-          <div class="wrap-popup-title">
-            <!-- 09/03 문구변경 -->
-            <p class="tit-type04">Viewing Zone</p>
-
-            <div class="wrap-desc">
-              <p class="txt-type03">
-                Watch the race on a large screen while enjoying a variety of menu options
-              </p>
-            </div>
-          </div>
-
-          <div class="wrap-zone-info">
-            <div class="box-info">
-              <p class="tit-type05">Location</p>
-              <p class="txt-type02">In front of N Lounge</p>
-            </div>
-            <div class="box-info">
-              <p class="tit-type05">Operating hours</p>
-              <p class="txt-type02">Open around the clock</p>
-            </div>
-          </div>
-        </article>
-
-        <article>
-          <div class="wrap-image-reward">
-            <img src="../../inc/images/eventLayout/img_viewing_popup02.png" loading="lazy" alt="사이드 팝업 이미지2" />
-          </div>
-
-          <div class="wrap-popup-title">
-            <p class="tit-type04">Food Trucks</p>
-
-            <div class="wrap-desc">
-              <p class="txt-type03">
-                Choose from a variety of menus while enjoying the race
-              </p>
-            </div>
-          </div>
-
-          <div class="wrap-zone-info">
-            <div class="box-info">
-              <p class="tit-type05">About Food Trucks</p>
-              <p class="txt-type02">You can enjoy a range of food and beverages offered at the food trucks while
-                watching the race.</p>
-            </div>
-            <div class="box-info">
-              <p class="tit-type05">Operating hours</p>
-              <p class="txt-type02">Open around the clock</p>
-            </div>
-          </div>
-        </article>
-        <!-- //  -->
-      </div>
-      <div class="btn-wrap">
-        <!-- pop-close 해당 팝업 닫기 -->
-        <button type="button" class="btn btn-only-icon-notbg popup-close-btn-x pop-close" title="close">
-          <!-- 07.12 수정 : 누락 클래스 추가 (popup-close-btn-x) -->
-          <span class="visually-hidden">close</span>
-          <span class="btn-icon36 icon-close" aria-hidden="true"></span>
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <!-- yongin -->
-  <!-- A Paddock - N Zone -->
-  <div id="pop-nZone" class="popup side-popup" role="dialog" aria-modal="true" aria-labelledby="tit">
+  <!-- N Zone -->
+  <div id="pop-nNzone" class="popup side-popup" role="dialog" aria-modal="true" aria-labelledby="tit">
     <div class="pop-wrap">
       <div class="popup-header">
         <h3 class="tit tit-type03">N Zone</h3>
@@ -965,175 +845,128 @@
       <div class="popup-body">
         <article>
           <div class="wrap-image-reward">
-            <img src="../../inc/images/eventLayout/img_nZone_popup01.png" loading="lazy" alt="사이드 팝업 이미지1" />
+            <img src="../../inc/images/eventLayout/img_nNZone_popup01.png" loading="lazy" alt="사이드 팝업 이미지1" /> 
           </div>
 
           <div class="wrap-popup-title">
-            <p class="tit-type04">Pit Garage</p>
+            <p class="tit-type04">N 차량 전시 존</p>
 
             <div class="wrap-desc">
               <p class="txt-type03">
-                Team pit area, recreated to mirror the authentic environment of motorsports.This is where the racers
-                pause for refueling, new tires, repairs, mechanical adjustment and etc.
+                현대 N 브랜드가 모터스포츠를 통해 축적한 기술력으로 탄생한 N 차량들을 한 눈에 볼 수 있는 공간
               </p>
             </div>
           </div>
 
           <div class="wrap-zone-info">
             <div class="box-info">
-              <p class="tit-type05">Operating hours</p>
-              <p class="txt-type02">Around the clock</p>
+              <p class="tit-type05">참여 방법</p>
+              <p class="txt-type02">현장 접수</p>
             </div>
             <div class="box-info">
-              <p class="tit-type05">Location</p>
-              <p class="txt-type02">N Zone</p>
+              <p class="tit-type05">운영 장소</p>
+              <p class="txt-type02">N Zone(M구역)</p>
             </div>
             <div class="box-info">
-              <p class="tit-type05">Capacity</p>
-              <p class="txt-type02">No restriction</p>
+              <p class="tit-type05">참여 인원</p>
+              <p class="txt-type02">참여 인원 제한 없음</p>
             </div>
             <div class="box-info">
-              <p class="tit-type05">Cost</p>
-              <p class="txt-type02">Free</p>
+              <p class="tit-type05">참가 비용</p>
+              <p class="txt-type02">무료</p>
             </div>
           </div>
         </article>
 
         <article>
           <div class="wrap-image-reward">
-            <img src="../../inc/images/eventLayout/img_nZone_popup02.png" loading="lazy" alt="사이드 팝업 이미지2" />
+            <img src="../../inc/images/eventLayout/img_nNZone_popup02.png" loading="lazy" alt="사이드 팝업 이미지2" />
           </div>
 
           <div class="wrap-popup-title">
-            <p class="tit-type04">Driver Meet & Greet</p>
+            <p class="tit-type04">N 퍼포먼스 파츠 존</p>
 
             <div class="wrap-desc">
               <p class="txt-type03">
-                Engage in a personal meet and greet with the drivers of the N1 and N2 classes at the Hyundai N Festival!
-                Connect with your favorite drivers during this interactive session.
+                새롭게 런칭한 퍼포먼스 트럭과 다양한 N 퍼포먼스 파츠들을 구경하고 해시태그 이벤트에도 참여할 수 있는 공간
               </p>
             </div>
           </div>
 
           <div class="wrap-zone-info">
             <div class="box-info">
-              <p class="tit-type05">Operating hours</p>
-              <p class="txt-type02">Saturday - 1:15 PM /<br />Sunday - 1:15 PM</p>
+              <p class="tit-type05">운영 장소</p>
+              <p class="txt-type02">N Zone(Q 구역)</p>
             </div>
             <div class="box-info">
-              <p class="tit-type05">Location</p>
-              <p class="txt-type02">Game Zone in the N Zone</p>
+              <p class="tit-type05">운영 시간</p>
+              <p class="txt-type02">상시 운영</p>
             </div>
             <div class="box-info">
-              <p class="tit-type05">Capacity</p>
-              <p class="txt-type02">No restriction</p>
-            </div>
-            <div class="box-info">
-              <p class="tit-type05">Cost</p>
-              <p class="txt-type02">Free</p>
+              <p class="tit-type05">참가 비용</p>
+              <p class="txt-type02">무료</p>
             </div>
           </div>
         </article>
 
         <article>
           <div class="wrap-image-reward">
-            <img src="../../inc/images/eventLayout/img_nZone_popup03.png" loading="lazy" alt="사이드 팝업 이미지3" />
+            <img src="../../inc/images/eventLayout/img_nNZone_popup03.png" loading="lazy" alt="사이드 팝업 이미지3" />
           </div>
 
           <div class="wrap-popup-title">
-            <p class="tit-type04">N Exhibition</p>
+            <p class="tit-type04">내 N 차 만들기</p>
 
             <div class="wrap-desc">
               <p class="txt-type03">
-                Encounter the motorsports ethos of the Hyundai N brand, witness the shift towards electrification
-                through the Rolling Labs, and check out the race-spec Hyundai IONIQ 5 N eN1 Cup car.
+                N 차량을 견적 내고 구매와 관련된 상담을 할 수 있는 부스
               </p>
             </div>
           </div>
 
           <div class="wrap-zone-info">
             <div class="box-info">
-              <p class="tit-type05">Operating hours</p>
-              <p class="txt-type02">Around the clock</p>
+              <p class="tit-type05">운영 장소</p>
+              <p class="txt-type02">N Zone(P 구역)</p>
             </div>
             <div class="box-info">
-              <p class="tit-type05">Location</p>
-              <p class="txt-type02">N Zone</p>
-            </div>
-            <div class="box-info">
-              <p class="tit-type05">Capacity</p>
-              <p class="txt-type02">No restriction</p>
-            </div>
-            <div class="box-info">
-              <p class="tit-type05">Cost</p>
-              <p class="txt-type02">Free</p>
+              <p class="tit-type05">운영 시간</p>
+              <p class="txt-type02">상시 운영</p>
             </div>
           </div>
         </article>
+
         <article>
           <div class="wrap-image-reward">
-            <img src="../../inc/images/eventLayout/img_nZone_popup04.png" loading="lazy" alt="사이드 팝업 이미지4" />
+            <img src="../../inc/images/eventLayout/img_nNZone_popup04.png" loading="lazy" alt="사이드 팝업 이미지4" />
           </div>
 
           <div class="wrap-popup-title">
-            <p class="tit-type04">Photo Spot</p>
+            <p class="tit-type04">내 N 굿즈 만들기</p>
 
             <div class="wrap-desc">
               <p class="txt-type03">
-                Capture the special memories with your beloved family, partner, and friends at the photo spot
+                신상 N 머천다이즈를 구매하고 나만의 N 굿즈를 커스터마이즈 할 수 있는 공간
               </p>
             </div>
           </div>
 
           <div class="wrap-zone-info">
             <div class="box-info">
-              <p class="tit-type05">Operating hours</p>
-              <p class="txt-type02">Around the clock</p>
+              <p class="tit-type05">운영 장소</p>
+              <p class="txt-type02">N Zone(N 구역)</p>
             </div>
             <div class="box-info">
-              <p class="tit-type05">Location</p>
-              <p class="txt-type02">N Zone</p>
+              <p class="tit-type05">운영 시간</p>
+              <p class="txt-type02">추후 업데이트</p>
             </div>
             <div class="box-info">
-              <p class="tit-type05">Capacity</p>
-              <p class="txt-type02">-</p>
-            </div>
-            <div class="box-info">
-              <p class="tit-type05">Cost</p>
-              <p class="txt-type02">Free</p>
+              <p class="tit-type05">가격</p>
+              <p class="txt-type02">제품별 가격이 상이</p>
             </div>
           </div>
         </article>
-        <article>
-          <div class="wrap-image-reward">
-            <img src="../../inc/images/eventLayout/img_nZone_popup05.png" loading="lazy" alt="사이드 팝업 이미지5" />
-          </div>
 
-          <div class="wrap-popup-title">
-            <p class="tit-type04">N Customization Store</p>
-
-            <div class="wrap-desc">
-              <p class="txt-type03">
-                Create your own custom N-goods and shop for a variety of N-merchandise.
-              </p>
-            </div>
-          </div>
-
-          <div class="wrap-zone-info">
-            <div class="box-info">
-              <p class="tit-type05">Operating hours</p>
-              <p class="txt-type02">Around the clock</p>
-            </div>
-            <div class="box-info">
-              <p class="tit-type05">Location</p>
-              <p class="txt-type02">N Zone</p>
-            </div>
-            <div class="box-info">
-              <p class="tit-type05">Cost</p>
-              <p class="txt-type02">Prices vary by product</p>
-            </div>
-          </div>
-        </article>
         <!-- //  -->
       </div>
       <div class="btn-wrap">
@@ -1147,8 +980,8 @@
     </div>
   </div>
 
-  <!-- A Paddock - N Experience zone -->
-  <div id="pop-nExperZone" class="popup side-popup" role="dialog" aria-modal="true" aria-labelledby="tit">
+  <!-- N Experience Zone -->
+  <div id="pop-nNExperZone" class="popup side-popup" role="dialog" aria-modal="true" aria-labelledby="tit">
     <div class="pop-wrap">
       <div class="popup-header">
         <h3 class="tit tit-type03">N Experience Zone</h3>
@@ -1157,191 +990,224 @@
       <div class="popup-body">
         <article>
           <div class="wrap-image-reward">
-            <img src="../../inc/images/eventLayout/img_nExper_popup01.png" loading="lazy" alt="사이드 팝업 이미지1" />
+            <img src="../../inc/images/eventLayout/img_nNExperZone_popup01.png" loading="lazy" alt="사이드 팝업 이미지1" /> 
           </div>
 
           <div class="wrap-popup-title">
-            <p class="tit-type04">Test Driving</p>
+            <p class="tit-type04">그리드 워크</p>
 
             <div class="wrap-desc">
               <p class="txt-type03">
-                Treat yourself to various Hyundai N models like IONIQ 5 N, Elantran N through an unforgettable driving
-                experience!
+                경기 시작 전, 팬들이 직접 트랙 안에 들어가 레이스카를 가까이서 둘러보고 드라이버와 직접 호흡할 수 있는 이벤트
               </p>
             </div>
           </div>
 
           <div class="wrap-zone-info">
             <div class="box-info">
-              <p class="tit-type05">How to participate</p>
-              <p class="txt-type02">Select your program at the information center upon entering the SPEEDIUM</p>
+              <p class="tit-type05">참여 방법</p>
+              <p class="txt-type02">운영 시간에 맞춰 현장에서 참여</p>
             </div>
             <div class="box-info">
-              <p class="tit-type05">Location</p>
-              <p class="txt-type02">N Experience Zone</p>
-            </div>
-            <div class="box-info">
-              <p class="tit-type05">Operating hours</p>
+              <p class="tit-type05">참여 장소</p>
               <p class="txt-type02">
-                10:00 - 15:00<br />
-                Operations scheduled as per the timetable for each time slot
+                1. 종합안내소 앞 그리드를 통해 출입<br/>
+                2. A 관람석 내 계단을 통해 그리드 출입
               </p>
             </div>
             <div class="box-info">
-              <p class="tit-type05">Cost</p>
-              <p class="txt-type02">Complimentary tickets provided for paid ticket holders</p>
+              <p class="tit-type05">운영 시간</p>
+              <p class="txt-type02">추후 업데이트</p>
+            </div>
+            <div class="box-info">
+              <p class="tit-type05">참가 비용</p>
+              <p class="txt-type02">무료</p>
             </div>
           </div>
         </article>
 
         <article>
           <div class="wrap-image-reward">
-            <img src="../../inc/images/eventLayout/img_nExper_popup02.png" loading="lazy" alt="사이드 팝업 이미지2" />
+            <img src="../../inc/images/eventLayout/img_nNExperZone_popup02.png" loading="lazy" alt="사이드 팝업 이미지2" />
           </div>
 
           <div class="wrap-popup-title">
-            <p class="tit-type04">Grid Walk</p>
+            <p class="tit-type04">서킷 사파리</p>
 
             <div class="wrap-desc">
               <p class="txt-type03">
-                Get an exclusive up-close encounter with the drivers and their race cars on the track before the start
-                of the race
+                현대 N 페스티벌 선수들이 경쟁을 펼칠 서킷 코스를 버스를 타고  따라 달리며 코스 파악과 이해를 돕는 기회
               </p>
             </div>
           </div>
 
           <div class="wrap-zone-info">
             <div class="box-info">
-              <p class="tit-type05">How to participate</p>
-              <p class="txt-type02">Freely join the event during operating hours no registration required</p>
+              <p class="tit-type05">참여 방법</p>
+              <p class="txt-type02">패독클럽 / 서킷클럽 티켓 구매자</p>
             </div>
             <div class="box-info">
-              <p class="tit-type05">Location</p>
-              <p class="txt-type02">Access through the information center to reach the grid area</p>
+              <p class="tit-type05">참여 장소</p>
+              <p class="txt-type02">X구역</p>
             </div>
             <div class="box-info">
-              <p class="tit-type05">Operating hours</p>
-              <p class="txt-type02">At noon (12:00)</p>
+              <p class="tit-type05">운영 시간</p>
+              <p class="txt-type02">추후 업데이트</p>
             </div>
             <div class="box-info">
-              <p class="tit-type05">Cost</p>
-              <p class="txt-type02">Free</p>
+              <p class="tit-type05">참여 인원</p>
+              <p class="txt-type02">38명</p>
             </div>
           </div>
         </article>
 
         <article>
           <div class="wrap-image-reward">
-            <img src="../../inc/images/eventLayout/img_nExper_popup03.png" loading="lazy" alt="사이드 팝업 이미지3" />
+            <img src="../../inc/images/eventLayout/img_nNExperZone_popup03.png" loading="lazy" alt="사이드 팝업 이미지3" />
           </div>
 
           <div class="wrap-popup-title">
-            <p class="tit-type04">N Taxi ∙ IONIQ 5 N Drift Taxi</p>
+            <p class="tit-type04">N e-Festival</p>
 
             <div class="wrap-desc">
               <p class="txt-type03">
-                Experience top-tier driving skills and heart-pounding drifts guided by experts
+                시뮬레이터를 통해 누구든지 드라이버가 될 수 있는 이벤트
               </p>
             </div>
           </div>
 
           <div class="wrap-zone-info">
             <div class="box-info">
-              <p class="tit-type05">How to participate</p>
-              <p class="txt-type02">Select your program at the information center upon entering the SPEEDIUM</p>
+              <p class="tit-type05">참여 방법</p>
+              <p class="txt-type02">현장 신청</p>
             </div>
             <div class="box-info">
-              <p class="tit-type05">Operating hours</p>
-              <p class="txt-type02">10:00 - 17:00<br />Operations scheduled as per the timetable for each time slot</p>
+              <p class="tit-type05">참여 장소</p>
+              <p class="txt-type02">N e-Festival(O 구역)</p>
             </div>
             <div class="box-info">
-              <p class="tit-type05">Capacity</p>
-              <p class="txt-type02">Max 4 people per group</p>
+              <p class="tit-type05">운영 시간</p>
+              <p class="txt-type02">상시 운영</p>
             </div>
             <div class="box-info">
-              <p class="tit-type05">Cost</p>
-              <p class="txt-type02">Complimentary tickets provided for paid ticket holders</p>
+              <p class="tit-type05">참여 인원</p>
+              <p class="txt-type02">1일 약 400명</p>
             </div>
             <div class="box-info">
-              <p class="tit-type05">Participation guideline</p>
-              <p class="txt-type02">We kindly request that parents accompany preschool-aged children.</p>
+              <p class="tit-type05">참가 비용</p>
+              <p class="txt-type02">무료</p>
             </div>
           </div>
         </article>
+
         <article>
           <div class="wrap-image-reward">
-            <img src="../../inc/images/eventLayout/img_nExper_popup04.png" loading="lazy" alt="사이드 팝업 이미지4" />
+            <img src="../../inc/images/eventLayout/img_nNExperZone_popup04.png" loading="lazy" alt="사이드 팝업 이미지4" />
           </div>
 
           <div class="wrap-popup-title">
-            <p class="tit-type04">Circuit Safari</p>
+            <p class="tit-type04">N 미니카 존</p>
 
             <div class="wrap-desc">
               <p class="txt-type03">
-                Circuit safari will give fans the opportunity to seat in a bus on track alongside a selection of race
-                cars during the Hyundai N festival
+                현대 N 페스티벌 내의 작은 현대 N 페스티벌! 4륜 미니카로 미니카 트랙위를 질주해보세요!
               </p>
             </div>
           </div>
 
           <div class="wrap-zone-info">
             <div class="box-info">
-              <p class="tit-type05">How to participate</p>
-              <p class="txt-type02">Select your program at the information center upon entering the SPEEDIUM</p>
+              <p class="tit-type05">참여 방법</p>
+              <p class="txt-type02">현장 접수</p>
             </div>
             <div class="box-info">
-              <p class="tit-type05">Location</p>
-              <p class="txt-type02">Information Center</p>
+              <p class="tit-type05">참여 장소</p>
+              <p class="txt-type02">N Experience Zone(U 구역)</p>
             </div>
             <div class="box-info">
-              <p class="tit-type05">Operating hours</p>
-              <p class="txt-type02">At noon (12:00)</p>
+              <p class="tit-type05">운영 시간</p>
+              <p class="txt-type02">상시 운영</p>
             </div>
             <div class="box-info">
-              <p class="tit-type05">Capacity</p>
-              <p class="txt-type02">38 people</p>
-            </div>
-            <div class="box-info">
-              <p class="tit-type05">Cost</p>
-              <p class="txt-type02">Complimentary tickets provided for paid ticket holders</p>
+              <p class="tit-type05">참가 비용</p>
+              <p class="txt-type02">
+                미니카 구매 시 트랙이용 무료<br>
+                미니카 대여 및 트랙이용 : 10,000원(N 쿠폰 사용 가능)
+              </p>
             </div>
           </div>
         </article>
+
         <article>
           <div class="wrap-image-reward">
-            <img src="../../inc/images/eventLayout/img_nExper_popup05.png" loading="lazy" alt="사이드 팝업 이미지5" />
+            <img src="../../inc/images/eventLayout/img_nNExperZone_popup05.png" loading="lazy" alt="사이드 팝업 이미지5" />
           </div>
 
           <div class="wrap-popup-title">
-            <p class="tit-type04">Kids' safe driving academy</p>
+            <p class="tit-type04">N 포토 존</p>
 
             <div class="wrap-desc">
               <p class="txt-type03">
-                A program to educate future drivers, young children, about the importance of safe driving
+                현대 N 페스티벌의 추억을 사진으로 남겨보세요
               </p>
             </div>
           </div>
 
           <div class="wrap-zone-info">
             <div class="box-info">
-              <p class="tit-type05">How to participate</p>
-              <p class="txt-type02">Head to the Kids safe driving academy booth and experience the academy</p>
+              <p class="tit-type05">참여 장소</p>
+              <p class="txt-type02">N Experience Zone(L 구역)</p>
             </div>
             <div class="box-info">
-              <p class="tit-type05">Location</p>
-              <p class="txt-type02">N Experience Zone</p>
+              <p class="tit-type05">참여 대상</p>
+              <p class="txt-type02">누구나</p>
             </div>
             <div class="box-info">
-              <p class="tit-type05">Operating hours</p>
-              <p class="txt-type02">50 min per session from 10:00 to 18:00<br />
-                Operations scheduled as per the timetable for each time slot</p>
-            </div>
-            <div class="box-info">
-              <p class="tit-type05">Cost</p>
-              <p class="txt-type02">Free</p>
+              <p class="tit-type05">참가 비용</p>
+              <p class="txt-type02">
+                무료
+              </p>
             </div>
           </div>
         </article>
+
+        <article>
+          <div class="wrap-image-reward">
+            <img src="../../inc/images/eventLayout/img_nNExperZone_popup06.png" loading="lazy" alt="사이드 팝업 이미지6" />
+          </div>
+
+          <div class="wrap-popup-title">
+            <p class="tit-type04">N 키즈 존</p>
+
+            <div class="wrap-desc">
+              <p class="txt-type03">
+                미래의 N 꿈나무들을 위한 어린이 운전 액티비티와 함께, 유아동 고객을 위한 N감 만족 놀이 프로그램까지 마련되어 있는 공간
+              </p>
+            </div>
+          </div>
+
+          <div class="wrap-zone-info">
+            <div class="box-info">
+              <p class="tit-type05">참여 방법</p>
+              <p class="txt-type02">현장 접수</p>
+            </div>
+            <div class="box-info">
+              <p class="tit-type05">참여 장소</p>
+              <p class="txt-type02">N Experience Zone(T 구역)</p>
+            </div>
+            <div class="box-info">
+              <p class="tit-type05">운영 시간</p>
+              <p class="txt-type02">상시 운영</p>
+            </div>
+            <div class="box-info">
+              <p class="tit-type05">참가 비용</p>
+              <p class="txt-type02">
+                무료
+              </p>
+            </div>
+          </div>
+        </article>
+
         <!-- //  -->
       </div>
       <div class="btn-wrap">
@@ -1355,8 +1221,8 @@
     </div>
   </div>
 
-  <!-- B Paddock - Fan zone -->
-  <div id="pop-nFanZone" class="popup side-popup" role="dialog" aria-modal="true" aria-labelledby="tit">
+  <!--N Fan Zone -->
+  <div id="pop-nNFanZone" class="popup side-popup" role="dialog" aria-modal="true" aria-labelledby="tit">
     <div class="pop-wrap">
       <div class="popup-header">
         <h3 class="tit tit-type03">N Fan Zone</h3>
@@ -1365,34 +1231,55 @@
       <div class="popup-body">
         <article>
           <div class="wrap-image-reward">
-            <img src="../../inc/images/eventLayout/img_fanZone_popup01.png" loading="lazy" alt="사이드 팝업 이미지1" />
+            <img src="../../inc/images/eventLayout/img_nNFanZone_popup01.png" loading="lazy" alt="사이드 팝업 이미지1" />
           </div>
 
           <div class="wrap-popup-title">
-            <p class="tit-type04">N Meet Up</p>
+            <!-- 09/03 문구변경 -->
+            <p class="tit-type04">N Car Meet</p>
 
             <div class="wrap-desc">
               <p class="txt-type03">
-                A space infused with N-cultures rooted in N-thusiasts! Encounter custom-tuned N cars curated by N
-                owners, and discover the power of N performance parts
+                N 오너들의 개성이 넘치는 N 차량을 만날 수 있는 곳
               </p>
             </div>
           </div>
 
           <div class="wrap-zone-info">
             <div class="box-info">
-              <p class="tit-type05">Location</p>
-              <p class="txt-type02">N Fan Zone in B Paddock area</p>
+              <p class="tit-type05">참여 장소</p>
+              <p class="txt-type02">N Fan Zone(S 구역)</p>
             </div>
-            <div class="box-info">
-              <p class="tit-type05">Participants</p>
-              <p class="txt-type02">Exclusively invited guests of the N-club</p>
-            </div>
-            <div class="box-info">
-              <p class="tit-type05">Participation guideline</p>
-              <p class="txt-type02">
-                This event is exclusively for members of the N-club.
+          </div>
+        </article>
+
+        <article>
+          <div class="wrap-image-reward">
+            <img src="../../inc/images/eventLayout/img_nNFanZone_popup02.png" loading="lazy" alt="사이드 팝업 이미지2" />
+          </div>
+
+          <div class="wrap-popup-title">
+            <p class="tit-type04">Show N Shine</p>
+
+            <div class="wrap-desc">
+              <p class="txt-type03">
+                NPX1 와 컴플리트 카를 만나보고 N 오너들의 취향을 가득 반영한 N 튜닝 차량 중 나만의 베스트 카를 투표하는 공간
               </p>
+            </div>
+          </div>
+
+          <div class="wrap-zone-info">
+            <div class="box-info">
+              <p class="tit-type05">참여 장소</p>
+              <p class="txt-type02">N Fan Zone(V 구역)</p>
+            </div>
+            <div class="box-info">
+              <p class="tit-type05">참여 대상</p>
+              <p class="txt-type02">누구나</p>
+            </div>
+            <div class="box-info">
+              <p class="tit-type05">참여 방법</p>
+              <p class="txt-type02">N 오너들의 취향이 가득 담긴 튜닝 차량을 구경하고 베스트카를 스티커로 투표하세요!</p>
             </div>
           </div>
         </article>
@@ -1408,276 +1295,7 @@
       </div>
     </div>
   </div>
-
-  <!-- yeongam -->
-  <!-- Motorsport Experience -->
-  <div id="pop-yeongamMotorExper" class="popup side-popup" role="dialog" aria-modal="true" aria-labelledby="tit">
-    <div class="pop-wrap">
-      <div class="popup-header">
-        <h3 class="tit tit-type03">Motorsport Experience</h3>
-      </div>
-
-      <div class="popup-body">
-        <article>
-          <div class="wrap-image-reward">
-            <img src="../../inc/images/eventLayout/img_motoExper_popup01.png" loading="lazy" alt="사이드 팝업 이미지1" />
-          </div>
-
-          <div class="wrap-popup-title">
-            <p class="tit-type04">Grid Walk</p>
-
-            <div class="wrap-desc">
-              <p class="txt-type03">
-                Get an exclusive up-close encounter with the drivers participating at Hyundai N Festival and their race
-                cars on the track
-              </p>
-            </div>
-          </div>
-
-          <div class="wrap-zone-info">
-            <div class="box-info">
-              <p class="tit-type05">How to participate</p>
-              <p class="txt-type02">Enter during the grid walk time : no registration required</p>
-            </div>
-            <div class="box-info">
-              <p class="tit-type05">Location</p>
-              <p class="txt-type02">Access through Pit 19</p>
-            </div>
-            <div class="box-info">
-              <p class="tit-type05">Operating hours</p>
-              <p class="txt-type02">At noon (12:00)</p>
-            </div>
-            <div class="box-info">
-              <p class="tit-type05">Cost</p>
-              <p class="txt-type02">Free</p>
-            </div>
-          </div>
-        </article>
-
-        <article>
-          <div class="wrap-image-reward">
-            <img src="../../inc/images/eventLayout/img_motoExper_popup02.png" loading="lazy" alt="사이드 팝업 이미지2" />
-          </div>
-
-          <div class="wrap-popup-title">
-            <p class="tit-type04">N Taxi</p>
-
-            <div class="wrap-desc">
-              <p class="txt-type03">
-                Jump on a co-pilot ride in our race cars driven by professional drivers
-              </p>
-            </div>
-          </div>
-
-          <div class="wrap-zone-info">
-            <div class="box-info">
-              <p class="tit-type05">How to participate</p>
-              <p class="txt-type02">On-site registration : At the information desk</p>
-            </div>
-            <div class="box-info">
-              <p class="tit-type05">Operating hours</p>
-              <p class="txt-type02">During Fan club's Interactive Driving Experience<br class="pc-only"> Approximately 5
-                minutes per ride</p>
-            </div>
-            <div class="box-info">
-              <p class="tit-type05">Capacity</p>
-              <p class="txt-type02">Max 6 people at each ride (Two cars operational)</p>
-            </div>
-            <div class="box-info">
-              <p class="tit-type05">Cost</p>
-              <p class="txt-type02">Free</p>
-            </div>
-            <div class="box-info">
-              <p class="tit-type05">Participation guideline</p>
-              <p class="txt-type02">For safety reasons, it is available for ages 13 to 65 only</p>
-            </div>
-          </div>
-        </article>
-
-        <article>
-          <div class="wrap-image-reward">
-            <img src="../../inc/images/eventLayout/img_motoExper_popup03.png" loading="lazy" alt="사이드 팝업 이미지3" />
-          </div>
-
-          <div class="wrap-popup-title">
-            <p class="tit-type04">Circuit Safari</p>
-
-            <div class="wrap-desc">
-              <p class="txt-type03">
-                Experience the thrill of the Hyundai N Festival race circuit on our bus and look at the race cars up
-                close
-              </p>
-            </div>
-          </div>
-
-          <div class="wrap-zone-info">
-            <div class="box-info">
-              <p class="tit-type05">How to participate</p>
-              <p class="txt-type02">On-site registration at the information center</p>
-            </div>
-            <div class="box-info">
-              <p class="tit-type05">Location</p>
-              <p class="txt-type02">In front of Pit 19</p>
-            </div>
-            <div class="box-info">
-              <p class="tit-type05">Operating hours</p>
-              <p class="txt-type02">At noon (12:00)</p>
-            </div>
-            <div class="box-info">
-              <p class="tit-type05">Capacity</p>
-              <p class="txt-type02">38 people</p>
-            </div>
-            <div class="box-info">
-              <p class="tit-type05">Cost</p>
-              <p class="txt-type02">Free</p>
-            </div>
-          </div>
-        </article>
-
-        <!-- //  -->
-      </div>
-      <div class="btn-wrap">
-        <!-- pop-close 해당 팝업 닫기 -->
-        <button type="button" class="btn btn-only-icon-notbg popup-close-btn-x pop-close" title="close">
-          <!-- 07.12 수정 : 누락 클래스 추가 (popup-close-btn-x) -->
-          <span class="visually-hidden">close</span>
-          <span class="btn-icon36 icon-close" aria-hidden="true"></span>
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Experience Zone -->
-  <div id="pop-yeongamExperZone" class="popup side-popup" role="dialog" aria-modal="true" aria-labelledby="tit">
-    <div class="pop-wrap">
-      <div class="popup-header">
-        <h3 class="tit tit-type03">Experience Zone</h3>
-      </div>
-
-      <div class="popup-body">
-        <article>
-          <div class="wrap-image-reward">
-            <img src="../../inc/images/eventLayout/img_nlounge_popup01.png" loading="lazy" alt="사이드 팝업 이미지1" />
-          </div>
-
-          <div class="wrap-popup-title">
-            <p class="tit-type04">Sim Racing</p>
-
-            <div class="wrap-desc">
-              <p class="txt-type03">
-                Experience a hyper-realistic circuit with our racing simulator
-              </p>
-            </div>
-          </div>
-
-          <div class="wrap-zone-info">
-            <div class="box-info">
-              <p class="tit-type05">How to participate</p>
-              <p class="txt-type02">On-site registration at N Lounge</p>
-            </div>
-            <div class="box-info">
-              <p class="tit-type05">Operating hours</p>
-              <p class="txt-type02">Open around the clock</p>
-            </div>
-            <div class="box-info">
-              <p class="tit-type05">Cost</p>
-              <p class="txt-type02">Free</p>
-            </div>
-            <div class="box-info">
-              <p class="tit-type05">Participation guideline</p>
-              <p class="txt-type02">
-                Please take off your shoes before using the simulator.
-              </p>
-            </div>
-          </div>
-        </article>
-        <!-- //  -->
-      </div>
-      <div class="btn-wrap">
-        <!-- pop-close 해당 팝업 닫기 -->
-        <button type="button" class="btn btn-only-icon-notbg popup-close-btn-x pop-close" title="close">
-          <!-- 07.12 수정 : 누락 클래스 추가 (popup-close-btn-x) -->
-          <span class="visually-hidden">close</span>
-          <span class="btn-icon36 icon-close" aria-hidden="true"></span>
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Viewing zone -->
-  <div id="pop-yeongamViewingZone" class="popup side-popup" role="dialog" aria-modal="true" aria-labelledby="tit">
-    <div class="pop-wrap">
-      <div class="popup-header">
-        <h3 class="tit tit-type03">Viewing Zone</h3>
-      </div>
-
-      <div class="popup-body">
-        <article>
-          <div class="wrap-image-reward">
-            <img src="../../inc/images/eventLayout/img_yeongamViewing_popup01.png" loading="lazy" alt="사이드 팝업 이미지1" />
-          </div>
-
-          <div class="wrap-popup-title">
-            <p class="tit-type04">Exhibition Booths</p>
-
-            <div class="wrap-desc">
-              <p class="txt-type03">
-                Experience various items from sponsors and companies participating in the Hyundai N Festival
-              </p>
-            </div>
-          </div>
-
-          <div class="wrap-zone-info">
-            <div class="box-info">
-              <p class="tit-type05">Location</p>
-              <p class="txt-type02">In front of N Lounge</p>
-            </div>
-            <div class="box-info">
-              <p class="tit-type05">Operating hours</p>
-              <p class="txt-type02">Open around the clock</p>
-            </div>
-          </div>
-        </article>
-
-        <article>
-          <div class="wrap-image-reward">
-            <img src="../../inc/images/eventLayout/img_viewing_popup02.png" loading="lazy" alt="사이드 팝업 이미지1" />
-          </div>
-
-          <div class="wrap-popup-title">
-            <p class="tit-type04">Food Trucks</p>
-
-            <div class="wrap-desc">
-              <p class="txt-type03">
-                Choose from a variety of menus while enjoying the race
-              </p>
-            </div>
-          </div>
-
-          <div class="wrap-zone-info">
-            <div class="box-info">
-              <p class="tit-type05">About Food Trucks</p>
-              <p class="txt-type02">You can enjoy a range of food and beverages offered at the food trucks while
-                watching the race.</p>
-            </div>
-            <div class="box-info">
-              <p class="tit-type05">Operating hours</p>
-              <p class="txt-type02">Open around the clock</p>
-            </div>
-          </div>
-        </article>
-        <!-- //  -->
-      </div>
-      <div class="btn-wrap">
-        <!-- pop-close 해당 팝업 닫기 -->
-        <button type="button" class="btn btn-only-icon-notbg popup-close-btn-x pop-close" title="close">
-          <!-- 07.12 수정 : 누락 클래스 추가 (popup-close-btn-x) -->
-          <span class="visually-hidden">close</span>
-          <span class="btn-icon36 icon-close" aria-hidden="true"></span>
-        </button>
-      </div>
-    </div>
-  </div>
+  <!--//09/06 수정 : 레이어팝업 콘텐츠 추가 (NCup 4 Round 국문) -->
 
 
   <script type="text/javascript" src="../../inc/js/jquery-3.7.1.slim.min.js"></script>
