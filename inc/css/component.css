@@ -188,7 +188,7 @@ input[type="radio"]:focus + label {
 }
 .btn[class*="txt-btn"]:hover,
 .btn[class*="txt-btn"]:active {
-  color: #de3111;
+  color: #de3111 !important;
   position: relative;
   background-color: transparent !important;
 }
