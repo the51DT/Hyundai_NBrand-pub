@@ -2062,7 +2062,7 @@ function scrollIndicator(obj) {
 
 // scroll 이벤트 추가
 // masonryLayout 높이 추가로 잡기
-let $firstScroll = true;
+let $firstScroll = 0;
 let $win_width = window.innerWidth;
 function scrollEvent() {
   var scrollWrap = $("body"),
@@ -2074,9 +2074,9 @@ function scrollEvent() {
     scrollTop = 1;
 
   scrollWrap.scroll(function () {
-    if ($firstScroll) {
+    if ($firstScroll < 100) {
       pubUi.masonryLayout();
-      $firstScroll = false;
+      $firstScroll++;
     }
     // alert('d')
     let scrollY = (
