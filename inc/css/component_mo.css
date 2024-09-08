@@ -1108,11 +1108,13 @@ min-width : 1024 css
     align-items: flex-start;
   }
 
+  .conts-body .wrap-list-no-data,
   .wrap-list .wrap-list-no-data {
     margin: 0 24px;
     margin-top: 28px;
     padding: 185px 0 185px 0;
     font-size: 18px;
+    width: calc(100% - 48px);
   }
 
   /* cont08 accordion */

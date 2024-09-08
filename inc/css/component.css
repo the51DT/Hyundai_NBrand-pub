@@ -3305,6 +3305,7 @@ button.card_detail:hover {
   font-weight: 700;
 }
 
+.conts-body .wrap-list-no-data,
 .wrap-list .wrap-list-no-data {
   margin-top: 40px;
   padding: 275px 80px 276px 80px;

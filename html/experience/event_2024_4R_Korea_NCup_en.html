@@ -360,7 +360,7 @@
                             <!-- //select-type 클래스 정의
                               selectbox 2개이상일 경우 select-type02 클래스 추가
                               selectbox 1개일 때는 select-type01 클래스 추가 -->
-                            <div class="selectbox-wrap select-type01 evtLayout-type">
+                            <!-- <div class="selectbox-wrap select-type01 evtLayout-type">
                               <div>
                                 <button class="selectbox-trigger selectbox-js txt-type03 fw-type03"
                                   aria-haspopup="listbox" aria-expanded="false" aria-labelledby="typeSelect02">N
@@ -385,8 +385,8 @@
                                 </ul>
                               </div>
 
-                            </div>
-                            <div class="selectbox-overlay" style="display: none"></div>
+                            </div> -->
+                            <!-- <div class="selectbox-overlay" style="display: none"></div> -->
                           </div>
                           <div class="conts-body">
                             <!-- comment!
@@ -406,7 +406,7 @@
                             <!-- active 클래스 : 상세맵 활성화시(+ 버튼 클릭시) active 클래스 추가 -->
 
                             <!-- N Event 맵 정보 -->
-                            <div class="evt-map-wrap on active" data-type="1">
+                            <!-- <div class="evt-map-wrap on active" data-type="1">
                               <div class="btn-area">
                                 <div class="btn-wrap plus">
                                   <button type="button">
@@ -418,11 +418,11 @@
                                     <span class="visually-hidden">- 축소 버튼</span>
                                   </button>
                                 </div>
-                              </div>
+                              </div> -->
 
-                              <!-- N Event -->
-                              <div class="evt-map-img active">
-                                <!-- 활성화 맵일 시, active 클래스 추가 -->
+                            <!-- N Event -->
+                            <!-- 활성화 맵일 시, active 클래스 추가 -->
+                            <!-- <div class="evt-map-img active">
                                 <div class="evt-map-default-box">
                                   <button class="pop-open btn-evtmap-pop" aria-controls="pop-nEvent"
                                     aria-haspopup="true" aria-expanded="false" title="팝업오픈">
@@ -440,151 +440,152 @@
                                       alt="이벤트 레이아웃 N Event 확대 이미지" />
                                   </button>
                                 </div>
-                              </div>
-                            </div>
-
-                            <!-- N Zone 맵 정보 -->
-                            <div class="evt-map-wrap" data-type="2">
-
-                              <div class="btn-area">
-                                <div class="btn-wrap plus">
-                                  <button type="button">
-                                    <span class="visually-hidden">+ 확대 버튼</span>
-                                  </button>
-                                </div>
-                                <div class="btn-wrap minus">
-                                  <button type="button">
-                                    <span class="visually-hidden">- 축소 버튼</span>
-                                  </button>
-                                </div>
-                              </div>
-
-                              <div class="evt-map-img">
-                                <!-- 활성화 맵일 시, active 클래스 추가 -->
-                                <!-- 08.06 수정 : evt-map-default-box -->
-                                <div class="evt-map-default-box">
-                                  <button class="pop-open btn-evtmap-pop" aria-controls="pop-nNzone"
-                                    aria-haspopup="true" aria-expanded="false" title="팝업오픈">
-                                    <span class="visually-hidden">side-popup1 열기</span>
-                                    <img src="../../inc/images/eventLayout/evtLayout_min_4r_ncup_en.png"
-                                      alt="이벤트 레이아웃 nZone 기본 이미지" />
-                                  </button>
-                                </div>
-
-                                <div class="evt-map-active-box">
-                                  <button class="pop-open btn-evtmap-pop" aria-controls="pop-nNzone"
-                                    aria-haspopup="true" aria-expanded="false" title="팝업오픈">
-                                    <span class="visually-hidden">side-popup3 열기</span>
-                                    <img src="../../inc/images/eventLayout/evtLayount_max_ncup_r4_nZone_en.png"
-                                      alt="이벤트 레이아웃 nZone 확대 이미지" />
-                                  </button>
-                                </div>
-                                <!-- //07.12 추가 : 레이어팝업 버튼 추가 -->
-                              </div>
-                            </div>
-
-                            <!-- N Experience zone 맵 정보 -->
-                            <div class="evt-map-wrap" data-type="3">
-
-                              <div class="btn-area">
-                                <div class="btn-wrap plus">
-                                  <button type="button">
-                                    <span class="visually-hidden">+ 확대 버튼</span>
-                                  </button>
-                                </div>
-                                <div class="btn-wrap minus">
-                                  <button type="button">
-                                    <span class="visually-hidden">- 축소 버튼</span>
-                                  </button>
-                                </div>
-                              </div>
-
-                              <div class="evt-map-img">
-                                <!-- 활성화 맵일 시, active 클래스 추가 -->
-                                <!-- 08.06 수정 : evt-map-default-box -->
-                                <div class="evt-map-default-box">
-                                  <button class="pop-open btn-evtmap-pop" aria-controls="pop-nNExperZone"
-                                    aria-haspopup="true" aria-expanded="false" title="팝업오픈">
-                                    <span class="visually-hidden">side-popup1 열기</span>
-                                    <img src="../../inc/images/eventLayout/evtLayout_min_4r_ncup_en.png"
-                                      alt="이벤트 레이아웃 N Experience zone 기본 이미지" />
-                                  </button>
-                                </div>
-
-                                <div class="evt-map-active-box">
-                                  <button class="pop-open btn-evtmap-pop" aria-controls="pop-nNExperZone"
-                                    aria-haspopup="true" aria-expanded="false" title="팝업오픈">
-                                    <span class="visually-hidden">side-popup3 열기</span>
-                                    <img src="../../inc/images/eventLayout/evtLayount_max_ncup_r4_nExpereno.png"
-                                      alt="이벤트 레이아웃 N Experience zone 확대 이미지" />
-                                  </button>
-                                </div>
-                                <!-- //07.12 추가 : 레이어팝업 버튼 추가 -->
-                              </div>
-                            </div>
-
-                            <!-- N Fan zone 맵 정보 -->
-                            <div class="evt-map-wrap" data-type="4">
-
-                              <div class="btn-area">
-                                <div class="btn-wrap plus">
-                                  <button type="button">
-                                    <span class="visually-hidden">+ 확대 버튼</span>
-                                  </button>
-                                </div>
-                                <div class="btn-wrap minus">
-                                  <button type="button">
-                                    <span class="visually-hidden">- 축소 버튼</span>
-                                  </button>
-                                </div>
-                              </div>
-
-                              <div class="evt-map-img">
-                                <!-- 활성화 맵일 시, active 클래스 추가 -->
-                                <!-- 08.06 수정 : evt-map-default-box -->
-                                <div class="evt-map-default-box">
-                                  <button class="pop-open btn-evtmap-pop" aria-controls="pop-nNFanZone"
-                                    aria-haspopup="true" aria-expanded="false" title="팝업오픈">
-                                    <span class="visually-hidden">side-popup1 열기</span>
-                                    <img src="../../inc/images/eventLayout/evtLayout_min_4r_ncup_en.png"
-                                      alt="이벤트 레이아웃 N Fan zone 기본 이미지" />
-                                  </button>
-                                </div>
-
-                                <div class="evt-map-active-box">
-                                  <button class="pop-open btn-evtmap-pop" aria-controls="pop-nNFanZone"
-                                    aria-haspopup="true" aria-expanded="false" title="팝업오픈">
-                                    <span class="visually-hidden">side-popup3 열기</span>
-                                    <img src="../../inc/images/eventLayout/evtLayount_max_ncup_r4_nFan_ken.png"
-                                      alt="이벤트 레이아웃 N Fan zone 확대 이미지" />
-                                  </button>
-                                </div>
-                                <!-- //07.12 추가 : 레이어팝업 버튼 추가 -->
-                              </div>
-                            </div>
-
+                              </div> -->
+                            <p class="wrap-list-no-data">Events will be updated and made available in due time.</p>
                           </div>
-                        </div>
-                      </section>
-                      <!-- //09/06 수정 : evt-map-img 태그 내 각각 케이스별 이미지 컨텐츠 현행화 (영문 컨텐츠 수급 이후 변경 필요) -->
 
-                      <div class="content-item07">
-                        <div class="schedule-box" th:utext="${race.eventDetail}">
-                          <div class="wrap-list list02">
-                            <div class="tab-container">
-                              <div class="tab-head">
-                                <h2 class="title">Event Schedule</h2>
+                          <!-- N Zone 맵 정보 -->
+                          <div class="evt-map-wrap" data-type="2">
+
+                            <div class="btn-area">
+                              <div class="btn-wrap plus">
+                                <button type="button">
+                                  <span class="visually-hidden">+ 확대 버튼</span>
+                                </button>
                               </div>
-                              <p class="wrap-list-no-data">Events will be updated and made available in due time.</p>
+                              <div class="btn-wrap minus">
+                                <button type="button">
+                                  <span class="visually-hidden">- 축소 버튼</span>
+                                </button>
+                              </div>
+                            </div>
+
+                            <div class="evt-map-img">
+                              <!-- 활성화 맵일 시, active 클래스 추가 -->
+                              <!-- 08.06 수정 : evt-map-default-box -->
+                              <div class="evt-map-default-box">
+                                <button class="pop-open btn-evtmap-pop" aria-controls="pop-nNzone" aria-haspopup="true"
+                                  aria-expanded="false" title="팝업오픈">
+                                  <span class="visually-hidden">side-popup1 열기</span>
+                                  <img src="../../inc/images/eventLayout/evtLayout_min_4r_ncup_en.png"
+                                    alt="이벤트 레이아웃 nZone 기본 이미지" />
+                                </button>
+                              </div>
+
+                              <div class="evt-map-active-box">
+                                <button class="pop-open btn-evtmap-pop" aria-controls="pop-nNzone" aria-haspopup="true"
+                                  aria-expanded="false" title="팝업오픈">
+                                  <span class="visually-hidden">side-popup3 열기</span>
+                                  <img src="../../inc/images/eventLayout/evtLayount_max_ncup_r4_nZone_en.png"
+                                    alt="이벤트 레이아웃 nZone 확대 이미지" />
+                                </button>
+                              </div>
+                              <!-- //07.12 추가 : 레이어팝업 버튼 추가 -->
                             </div>
                           </div>
+
+                          <!-- N Experience zone 맵 정보 -->
+                          <div class="evt-map-wrap" data-type="3">
+
+                            <div class="btn-area">
+                              <div class="btn-wrap plus">
+                                <button type="button">
+                                  <span class="visually-hidden">+ 확대 버튼</span>
+                                </button>
+                              </div>
+                              <div class="btn-wrap minus">
+                                <button type="button">
+                                  <span class="visually-hidden">- 축소 버튼</span>
+                                </button>
+                              </div>
+                            </div>
+
+                            <div class="evt-map-img">
+                              <!-- 활성화 맵일 시, active 클래스 추가 -->
+                              <!-- 08.06 수정 : evt-map-default-box -->
+                              <div class="evt-map-default-box">
+                                <button class="pop-open btn-evtmap-pop" aria-controls="pop-nNExperZone"
+                                  aria-haspopup="true" aria-expanded="false" title="팝업오픈">
+                                  <span class="visually-hidden">side-popup1 열기</span>
+                                  <img src="../../inc/images/eventLayout/evtLayout_min_4r_ncup_en.png"
+                                    alt="이벤트 레이아웃 N Experience zone 기본 이미지" />
+                                </button>
+                              </div>
+
+                              <div class="evt-map-active-box">
+                                <button class="pop-open btn-evtmap-pop" aria-controls="pop-nNExperZone"
+                                  aria-haspopup="true" aria-expanded="false" title="팝업오픈">
+                                  <span class="visually-hidden">side-popup3 열기</span>
+                                  <img src="../../inc/images/eventLayout/evtLayount_max_ncup_r4_nExpereno.png"
+                                    alt="이벤트 레이아웃 N Experience zone 확대 이미지" />
+                                </button>
+                              </div>
+                              <!-- //07.12 추가 : 레이어팝업 버튼 추가 -->
+                            </div>
+                          </div>
+
+                          <!-- N Fan zone 맵 정보 -->
+                          <div class="evt-map-wrap" data-type="4">
+
+                            <div class="btn-area">
+                              <div class="btn-wrap plus">
+                                <button type="button">
+                                  <span class="visually-hidden">+ 확대 버튼</span>
+                                </button>
+                              </div>
+                              <div class="btn-wrap minus">
+                                <button type="button">
+                                  <span class="visually-hidden">- 축소 버튼</span>
+                                </button>
+                              </div>
+                            </div>
+
+                            <div class="evt-map-img">
+                              <!-- 활성화 맵일 시, active 클래스 추가 -->
+                              <!-- 08.06 수정 : evt-map-default-box -->
+                              <div class="evt-map-default-box">
+                                <button class="pop-open btn-evtmap-pop" aria-controls="pop-nNFanZone"
+                                  aria-haspopup="true" aria-expanded="false" title="팝업오픈">
+                                  <span class="visually-hidden">side-popup1 열기</span>
+                                  <img src="../../inc/images/eventLayout/evtLayout_min_4r_ncup_en.png"
+                                    alt="이벤트 레이아웃 N Fan zone 기본 이미지" />
+                                </button>
+                              </div>
+
+                              <div class="evt-map-active-box">
+                                <button class="pop-open btn-evtmap-pop" aria-controls="pop-nNFanZone"
+                                  aria-haspopup="true" aria-expanded="false" title="팝업오픈">
+                                  <span class="visually-hidden">side-popup3 열기</span>
+                                  <img src="../../inc/images/eventLayout/evtLayount_max_ncup_r4_nFan_ken.png"
+                                    alt="이벤트 레이아웃 N Fan zone 확대 이미지" />
+                                </button>
+                              </div>
+                              <!-- //07.12 추가 : 레이어팝업 버튼 추가 -->
+                            </div>
+                          </div>
+
                         </div>
+                </div>
+              </section>
+              <!-- //09/06 수정 : evt-map-img 태그 내 각각 케이스별 이미지 컨텐츠 현행화 (영문 컨텐츠 수급 이후 변경 필요) -->
+
+              <div class="content-item07">
+                <div class="schedule-box" th:utext="${race.eventDetail}">
+                  <div class="wrap-list list02">
+                    <div class="tab-container">
+                      <div class="tab-head">
+                        <h2 class="title">Event Schedule</h2>
                       </div>
+                      <p class="wrap-list-no-data">Events will be updated and made available in due time.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
 
-                      <section class="content-item08 bg-gray">
+              <section class="content-item08 bg-gray">
 
-                        <!-- 
+                <!-- 
                           * guide-wrap 클래스 정의 설명 
                           - 각, 하단의 클래스별로 이미지와 내용 달라짐.
                           - track-ty01 : Inje Speedium
@@ -592,111 +593,111 @@
                           - track-ty03 : Yeongam Korea International Circuit
                           - track-ty04 : Yongin SPEEDWAY
                         -->
-                        <!-- 07.22 수정 : 마크업 변경 / Round detail page와 통일 -->
-                        <div class="guide_wrap track-ty04">
-                          <div class="wrap-list list03">
-                            <div class="left imgwrap">
-                              <div class="track-img">
-                                <span class="visually-hidden">Track Guide 트랙 이미지</span>
-                              </div>
-                            </div>
-                            <!-- ex) track-ty01 정보 -->
-                            <div class="right descwrap">
-                              <!-- 09/03 문구변경 -->
-                              <h2 class="tit">Track Guide</h2>
-                              <h2 class="sub-tit">Yongin Everland SPEEDWAY</h2>
-                              <div class="list-trackinfo">
-                                <div class="inner">
-                                  <p class="txt-type03">Track Length</p>
-                                  <p class="txt-type03">4.346km</p>
-                                </div>
-                                <div class="inner">
-                                  <p class="txt-type03">Number of Corners</p>
-                                  <p class="txt-type03">16</p>
-                                </div>
-                                <div class="inner">
-                                  <p class="txt-type03">Track Width</p>
-                                  <p class="txt-type03">11~15m</p>
-                                </div>
-                                <div class="inner">
-                                  <p class="txt-type03">Standing Start Pole Position</p>
-                                  <p class="txt-type03">Left</p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
+                <!-- 07.22 수정 : 마크업 변경 / Round detail page와 통일 -->
+                <div class="guide_wrap track-ty04">
+                  <div class="wrap-list list03">
+                    <div class="left imgwrap">
+                      <div class="track-img">
+                        <span class="visually-hidden">Track Guide 트랙 이미지</span>
+                      </div>
+                    </div>
+                    <!-- ex) track-ty01 정보 -->
+                    <div class="right descwrap">
+                      <!-- 09/03 문구변경 -->
+                      <h2 class="tit">Track Guide</h2>
+                      <h2 class="sub-tit">Yongin Everland SPEEDWAY</h2>
+                      <div class="list-trackinfo">
+                        <div class="inner">
+                          <p class="txt-type03">Track Length</p>
+                          <p class="txt-type03">4.346km</p>
                         </div>
-                      </section>
-
-                      <section class="content-item09">
-                        <div class="info-guide-box">
-                          <div class="wrap-list list04">
-                            <h3 class="tit large">Plan Your Visit</h3>
-                            <div class="inner">
-                              <div class="box box01">
-                                <div class="box-desc left">
-                                  <!-- 09/03 문구변경 -->
-                                  <h3 class="tit">By Car</h3>
-                                </div>
-                                <div class="box-desc right">
-                                  <p class="desc-location">
-                                    Set your destination to Everland SPEEDWAY or 310
-                                    Jeondaeli, Pogok-eup, Cheoin-gu, Yongin-si, Gyeonggi-do
-                                  </p>
-                                  <p class="desc-note">
-                                    ※ Arrival time may vary depending on traffic conditions.
-                                  </p>
-                                </div>
-                              </div>
-                              <div class="box box02">
-                                <!-- 09/03 문구변경 -->
-                                <h3 class="tit fullwidth">By Public Transport</h3>
-
-                                <div class="box wrap-multi-box">
-                                  <div class="box-desc left">
-                                    <!-- 09/03 문구변경 -->
-                                    <h3 class="tit">By Bus</h3>
-                                  </div>
-                                  <div class="box-desc right">
-                                    <p class="desc-location">
-                                      From Seoul: Take bus 5002, 5700, 1500-2 or 1113<br />From
-                                      Incheon or Gyeonggi-do: Take bus 8862, 8839, 66, or
-                                      66-4 → Then, take the shuttle in front of the main
-                                      gate of Everland
-                                    </p>
-                                  </div>
-                                </div>
-                                <div class="box wrap-multi-box">
-                                  <div class="box-desc left">
-                                    <!-- 09/03 문구변경 -->
-                                    <h3 class="tit">By Subway</h3>
-                                  </div>
-                                  <div class="box-desc right">
-                                    <p class="desc-location">
-                                      Take Bundang Line and get off at Giheung Station →
-                                      Take EverLine and get off at the last stop, and take
-                                      the shuttle bus (for free) to get to Everland → Take
-                                      the shuttle bus on front gate
-                                    </p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
+                        <div class="inner">
+                          <p class="txt-type03">Number of Corners</p>
+                          <p class="txt-type03">16</p>
                         </div>
-                      </section>
-                    </th:block>
-                  </th:block>
-                  <!-- //08.12 수정 : th:block 위치 변경 -->
-                </div> <!-- //conts04-->
+                        <div class="inner">
+                          <p class="txt-type03">Track Width</p>
+                          <p class="txt-type03">11~15m</p>
+                        </div>
+                        <div class="inner">
+                          <p class="txt-type03">Standing Start Pole Position</p>
+                          <p class="txt-type03">Left</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </section>
-              <!--//section_list-content -->
-            </div>
-            <!--//conts-body -->
-          </div>
+
+              <section class="content-item09">
+                <div class="info-guide-box">
+                  <div class="wrap-list list04">
+                    <h3 class="tit large">Plan Your Visit</h3>
+                    <div class="inner">
+                      <div class="box box01">
+                        <div class="box-desc left">
+                          <!-- 09/03 문구변경 -->
+                          <h3 class="tit">By Car</h3>
+                        </div>
+                        <div class="box-desc right">
+                          <p class="desc-location">
+                            Set your destination to Everland SPEEDWAY or 310
+                            Jeondaeli, Pogok-eup, Cheoin-gu, Yongin-si, Gyeonggi-do
+                          </p>
+                          <p class="desc-note">
+                            ※ Arrival time may vary depending on traffic conditions.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="box box02">
+                        <!-- 09/03 문구변경 -->
+                        <h3 class="tit fullwidth">By Public Transport</h3>
+
+                        <div class="box wrap-multi-box">
+                          <div class="box-desc left">
+                            <!-- 09/03 문구변경 -->
+                            <h3 class="tit">By Bus</h3>
+                          </div>
+                          <div class="box-desc right">
+                            <p class="desc-location">
+                              From Seoul: Take bus 5002, 5700, 1500-2 or 1113<br />From
+                              Incheon or Gyeonggi-do: Take bus 8862, 8839, 66, or
+                              66-4 → Then, take the shuttle in front of the main
+                              gate of Everland
+                            </p>
+                          </div>
+                        </div>
+                        <div class="box wrap-multi-box">
+                          <div class="box-desc left">
+                            <!-- 09/03 문구변경 -->
+                            <h3 class="tit">By Subway</h3>
+                          </div>
+                          <div class="box-desc right">
+                            <p class="desc-location">
+                              Take Bundang Line and get off at Giheung Station →
+                              Take EverLine and get off at the last stop, and take
+                              the shuttle bus (for free) to get to Everland → Take
+                              the shuttle bus on front gate
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              </th:block>
+              </th:block>
+              <!-- //08.12 수정 : th:block 위치 변경 -->
+            </div> <!-- //conts04-->
         </section>
+        <!--//section_list-content -->
       </div>
-    </section>
+      <!--//conts-body -->
+  </div>
+  </section>
+  </div>
+  </section>
   </div>
 
   <!--09/06 수정 : 레이어팝업 콘텐츠 추가 (NCup 4 Round 국문) (영문 컨텐츠 수급 이후 변경 필요) -->
