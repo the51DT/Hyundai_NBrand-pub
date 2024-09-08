@@ -3504,12 +3504,13 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   .video_wrap {
     padding: 5rem 1.5rem 10rem 1.5rem;
   }
-  .video_list:first-of-type {
+  /* 임시 수정 */
+  /* .video_list:first-of-type {
     padding-bottom: 6.25rem;
   }
   .video_list:last-of-type {
     padding-top: 6.25rem;
-  }
+  } */
   .search-result-list .video_list:last-of-type {
     padding-top: 0;
   }
