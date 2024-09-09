@@ -1620,7 +1620,7 @@ a:hover .icon-youtube-wh {
 .card_type03.card_ranker .card_bottom .card_detail {
   gap: 0.25rem;
   padding-right: 1.5rem;
-  max-width: calc(100% - 164px);
+  max-width: calc(100% - 110px);
 }
 .card_type03 .card_name {
   font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
@@ -1880,13 +1880,14 @@ button.card_detail:hover {
   line-height: 19.6px;
   overflow: hidden;
   text-overflow: ellipsis;
-  display: -webkit-box;
+  /* display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-  word-wrap: break-word;
-  max-height: calc(2.8em);
+  max-height: calc(2.8em); */
+  word-wrap: break-word;  
   text-align: left;
   width: 100%;
+  white-space: nowrap;
 }
 .card_type04 .card_profile .profile_des .profile_club {
   font-size: 12px;
