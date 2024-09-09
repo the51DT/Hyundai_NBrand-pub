@@ -1579,6 +1579,7 @@ a:hover .icon-youtube-wh {
   min-height: 5rem;
   max-height: 8.75rem;
   background-color: #000000;
+  max-width: 100%;
 }
 .card_type03 .card_bottom > button {
   display: flex;
@@ -1588,6 +1589,7 @@ a:hover .icon-youtube-wh {
   min-height: 5rem;
   max-height: 8.75rem;
   background-color: #000000;
+  max-width: 100%;
 }
 
 .card_type03 .card_bottom > button:hover .card_community {
@@ -1618,6 +1620,7 @@ a:hover .icon-youtube-wh {
 .card_type03.card_ranker .card_bottom .card_detail {
   gap: 0.25rem;
   padding-right: 1.5rem;
+  max-width: calc(100% - 164px);
 }
 .card_type03 .card_name {
   font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
@@ -1625,6 +1628,11 @@ a:hover .icon-youtube-wh {
   font-weight: 700;
   line-height: 140%;
   word-break: break-all;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+  overflow: hidden;
+  max-width: 100%;
 }
 .card_type03 .card_community {
   font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
@@ -1633,6 +1641,12 @@ a:hover .icon-youtube-wh {
   line-height: 140%;
   opacity: 0.8;
   text-align: left;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+  overflow: hidden;
+  max-width: 100%;
 }
 
 /* card_type04 */

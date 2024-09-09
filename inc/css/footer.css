@@ -183,7 +183,7 @@
   .footer-etc {
     flex-wrap: wrap;
     row-gap: 1rem;
-    width: 14.5rem;
+    width: 100%;
   }
   .footer-etc li {
     position: relative;

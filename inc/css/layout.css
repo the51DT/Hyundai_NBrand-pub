@@ -274,12 +274,15 @@ body.fix {
 }
 .header__event-wrap .header__event-area {
   display: flex;
+  justify-content: space-between;
   gap: 8px;
 }
 .header__event-wrap [class*="header__event-item"] {
   flex: 1;
   position: relative;
   overflow: hidden;
+  width: 100%;
+  min-width: 16.5rem;
 }
 .header__event-wrap .img-area {
   height: 534px;
