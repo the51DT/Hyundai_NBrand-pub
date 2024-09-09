@@ -200,11 +200,11 @@
     background-color: #595c5f;
   }
   .footer-etc li:first-of-type::before,
-  .footer-etc li:nth-of-type(3):before {
+  .footer-etc li:nth-of-type(4):before {
     content: none;
   }
   .footer-etc li:first-of-type,
-  .footer-etc li:nth-of-type(3) {
+  .footer-etc li:nth-of-type(4) {
     padding-left: 0;
   }
   .footer-etc li:last-of-type {

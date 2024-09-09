@@ -1777,7 +1777,7 @@ button.card_detail:hover {
 }
 .card_type04 .card-hashtag {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   width: 100%;
   margin-top: 20px;
   column-gap: 12px;

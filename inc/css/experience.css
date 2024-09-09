@@ -864,13 +864,14 @@
   margin: 0 auto;
   max-width: 90rem;
 }
-.video_list:first-of-type {
+/* 임시 수정 */
+/* .video_list:first-of-type {
   padding-bottom: 10rem;
 }
 .video_list + .video_list {
   padding-top: 10rem;
   border-top: 2px solid #bbb;
-}
+} */
 .video_list .grid_2,
 .video_list .grid_3 {
   row-gap: 5rem;
