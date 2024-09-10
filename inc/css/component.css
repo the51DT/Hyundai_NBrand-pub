@@ -2100,7 +2100,9 @@ button.card_detail:hover {
   height: 100%;
   object-fit: cover;
 }
-.ty01Swiper .swiper-pagination-bullet {
+
+.swiper-slide .mo-only {
+  display: none;
 }
 
 /* .swiper-pagination-custom .swiper-pagination-bullet{} */

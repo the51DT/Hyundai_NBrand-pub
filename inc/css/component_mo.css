@@ -1555,6 +1555,9 @@ min-width : 1024 css
     width: 28px;
     height: 28px;
   }
+  .swiper-slide .pc-only {
+    display: none;
+  }
   .swiper-slide .mo-only {
     display: block;
   }
