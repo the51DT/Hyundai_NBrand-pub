@@ -28,7 +28,6 @@
           <li class="nav-item nav-item6"><a href="path02.html">Path_kr</a></li>
           <li class="nav-item nav-item2"><a class="on">Setting</a></li>
           <li class="nav-item nav-item3"><a href="ui-guide.html">Component</a></li>
-          <li class="nav-item nav-item4"><a href="#">Layout</a></li>
           <li class="nav-item nav-item5"><a href="issue.html">Issue</a></li>
         </ul>
       </div>
@@ -81,14 +80,19 @@
             </div>
           </div>
           <div class="subSection">
-            <h3 class="guideSubTit">Images Naming</h3>
-            <p>이미지의 특성에 맞게 파일명 적용</p>
+            <h3 class="guideSubTit">Images 경로</h3>
+            <p>이미지의 폴더</p>
             <ul class="listDot">
-              <li>백그라운드 - <em>bg_파일명</em></li>
-              <li>아이콘 - <em>icon_파일명</em></li>
-              <li>버튼 - <em>btn_파일명</em></li>
-              <li>기호 - <em>bul_파일명</em></li>
-              <li>이미지 - <em>img_파일명</em></li>
+              <li>경로 - inc > images</li>
+            </ul>
+            <br />
+            <p>폴더 이름</p>
+            <ul class="listDot">
+              <li>icon - 아이콘 폴더</li>
+              <li>img, content - 전체 페이지에 사용되는 이미지 폴더</li>
+              <li>eventLayout - eventLayout 이미지</li>
+              <li>Models - 모델 차량별 이미지, 동영상</li>
+              <li>Configurator - Configurator 이미지</li>
             </ul>
           </div>
 
@@ -97,19 +101,30 @@
             <ul class="listDot">
               <li>reset.css - 브라우저 별 속성 초기화</li>
               <li>font.css - 폰트 설정</li>
-              <li>common.css - 공통 정의</li>
+              <li>common.css - css 호출</li>
+              <li>icon.css - icon css정의</li>
               <li>layout.css - 공통 레이아웃 정의</li>
+              <li>layout_mo.css - 공통 모바일 레이아웃 정의</li>
+              <li>footer.css - footer 레이아웃 css정의</li>
               <li>component.css - 공통 컴포넌트 정의</li>
-              <li>pages.css - 페이지 css정의</li>
+              <li>component_mo.css - 공통 모바일 컴포넌트 정의</li>
+              <li>pages.css - 전체 pages css정의</li>
+              <li>brand.css - brand 페이지 css정의</li>
+              <li>configurator.css - configurator 페이지 css정의</li>
+              <li>cs.css - cs 페이지 css정의</li>
+              <li>experience.css - experience 페이지 css정의</li>
+              <li>join.css - join 페이지 css정의</li>
+              <li>main.css - main 페이지 css정의</li>
+              <li>models.css, model_pop.css - model 페이지 css정의</li>
+              <li>common_asIs.css, nzine.css, press.css - n zine, press 페이지 asis css 파일 정비</li>
             </ul>
           </div>
 
           <div class="subSection">
             <h3 class="guideSubTit">JS 라이브러리</h3>
             <ul class="listDot">
-              <li>jquery-1.12.4.min.js</li>
-              <li>swiper 11.1.1.js</li>
-              <li></li>
+              <li>jQuery v3.7.1</li>
+              <li>swiper 11.1.3.js</li>
             </ul>
           </div>
         </div>
@@ -122,12 +137,7 @@
         <div class="info">
           <div class="subSection">
             <h3 class="guideSubTit">Cross Browsing</h3>
-            <p>
-              Edge, Chrome, Safari 5년 전 버전까지 확인,<br />
-              Edge 2019년도 - v79.0.309.11<br />
-              Chrome 2019년도 - v74.0.3729<br />
-              Safari 2019년도 - Version 12.1 (14607.1.40)
-            </p>
+            <p></p>
           </div>
 
           <div class="subSection">
@@ -144,8 +154,10 @@
             <h3 class="guideSubTit">Font</h3>
             <p>기본 폰트 사이즈<em>16px</em>기준 단위 <em>rem</em>사용</p>
             <ul class="listDot">
-              <li>font-family: <em>"Hyundai Sans Head Office"</em>;</li>
-              <li>font-family: <em>"Hyundai Sans Text Office"</em>;</li>
+              <li>font-family: <em>"Hyundai Sans Head"</em>;</li>
+              <li>font-family: <em>"Hyundai Sans Text"</em>;</li>
+              <li>font-family: <em>"Hyundai Sans Head KR"</em>;</li>
+              <li>font-family: <em>"Hyundai Sans Text KR"</em>;</li>
             </ul>
           </div>
         </div>
@@ -189,13 +201,26 @@
 	<meta name="format-detection" content="telephone=no" />
 </pre>
                 </div>
+                <div class="code">
+                  <p class="discription">세이프 영역 호환</p>
+                  <pre class="brush: js;">
+  function setVh() {
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty("--vh", `${vh}px`);
+  }
+
+  //css
+   max-height: calc(var(--vh, 1vh) * 100 - 70px);
+</pre>
+                </div>
               </li>
             </ul>
           </div>
 
           <div class="subSection">
             <h3 class="guideSubTit">모바일 웹을 위한 텍스트 크기 설정</h3>
-            <p>다양한 해상도 대응을 위해 모바일 폰트 단위는 pt, in 등 절대적인 크기를 나타내는 속성값보다 px, em, rem, % 등의 상위 요소의 크기에 영향을 받는 상대적인 크기를 나타내는
+            <p>다양한 해상도 대응을 위해 모바일 폰트 단위는 pt, in 등 절대적인 크기를 나타내는 속성값보다 px, vh, vx, em, rem, % 등의 상위 요소의 크기에 영향을 받는 상대적인
+              크기를 나타내는
               속성을 사용</p>
           </div>
         </div>

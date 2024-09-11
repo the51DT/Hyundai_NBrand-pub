@@ -28,7 +28,7 @@
           <li class="nav-item nav-item6"><a href="path02.html">Path_kr</a></li>
           <li class="nav-item nav-item2"><a href="setting.html">Setting</a></li>
           <li class="nav-item nav-item3"><a href="ui-guide.html">Component</a></li>
-          <li class="nav-item nav-item4"><a href="#">Layout</a></li>
+
           <li class="nav-item nav-item5"><a class="on">Issue</a></li>
         </ul>
       </div>
@@ -40,13 +40,16 @@
     <div id="guideContents" class="guide_cont_wrap">
       <!-- Section -->
       <div class="section">
-        <h2 class="guideTit">Default</h2>
+        <h2 class="guideTit">Issue</h2>
         <div class="info">
           <div class="subSection">
             <h3 class="guideSubTit">반응형 웹</h3>
             <div class="code">
               <pre class="brush: js;">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+// 브레이크 포인트
+@media screen and (max-width: 1023px)
 </pre>
             </div>
           </div>
@@ -55,19 +58,20 @@
             <h3 class="guideSubTit">접근성</h3>
             <ul class="listDot">
               <li>
-                마크취득
+                웹와치 마크 취득
               </li>
               <li>
-                일정(미정)
+                alt, aria, title, role, scope 등을 활용 하여 정확한 접근성 안내 제공.
               </li>
               <li>
-                aria, title, role, scope 등을 활용 하여 정확한 접근성 안내 제공.
+                팝업 내에 tab 키보드 클릭 시 포인터 이동 제어
               </li>
             </ul>
           </div>
           <div class="subSection">
             <h3 class="guideSubTit">Interaction</h3>
             <ul class="listDot">
+              <li>swiper.js 를 커스텀한 스와이프 액션</li>
               <li>스크롤 이벤트를 활용한 부드러운 액션</li>
             </ul>
           </div>
