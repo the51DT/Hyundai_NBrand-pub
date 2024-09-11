@@ -663,7 +663,11 @@
   height: 1920px;
 }
 .models-wrap .desgin-wrap .models-full.rn30 {
-  background: linear-gradient(90deg, #D9E1F0 0%, #F3F5F8 100%) !important;
+  background: url(../../inc/images/Models/RN30/RN30_design_bg.png) center bottom
+    no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 1920px;
 }
 .models-wrap .desgin-wrap .models-full.veloster_n {
   background: url(../../inc/images/Models/VELOSTER_N/VELOSTER_N_design_bg.png)
@@ -1574,49 +1578,18 @@
     margin-right: -21px;
   }
   .models-wrap .perfor-wrap .models-full,
-  .models-wrap .desgin-wrap .models-full {
+  .models-wrap .desgin-wrap .models-full,
+  .models-wrap .tech-wrap .models-full.ty02 {
     position: relative;
     background: #000 !important;
     padding: 0 !important;
     height: auto !important;
   }
-  .models-wrap .perfor-wrap .models-full.kona_n {
-    background: url(../../inc/images/Models/kona_N/kona_N_performance_bg_mo.png)
-      center top no-repeat;
-    background-size: cover;
-    position: relative;
-    height: 1415px;
-  }
-  .models-wrap .perfor-wrap .models-full.ioniq5n {
-    background: url(../../inc/images/Models/ioniq5N/ioniq5N_performance_bg_mo.png)
-      center top no-repeat;
-    background-size: cover;
-    position: relative;
-    height: 1026px;
-  }
     
   /* design */
-  .models-wrap .desgin-wrap .models-full.icon20 {
-    background: url(../../inc/images/Models/i20N/i20N_desgin_bg_mo.png) center
-      bottom no-repeat;
-    background-size: cover;
-    position: relative;
-    height: 920px;
+  .models-wrap .desgin-wrap .models-full.rn30 {
+    background: linear-gradient(90deg, #D9E1F0 0%, #F3F5F8 100%) !important;
   }
-  .models-wrap .tech-wrap .models-full.icon20 {
-    background: url(../../inc/images/Models/i20N/i20N_technology_bg_mo.png) center bottom no-repeat;
-    background-size: cover;
-    position: relative;
-    height: 920px;
-  }
-  .models-wrap .desgin-wrap .models-full.kona_n {
-    background: url(../../inc/images/Models/kona_N/kona_N_design_bg_mo.png)
-      center bottom no-repeat;
-    background-size: cover;
-    position: relative;
-    height: 920px;
-  }
-  
   .models-wrap
     .models-nofull-box.type-col2
     .text-col
