@@ -214,7 +214,10 @@ min-width : 1024 css
   .tab-head.ty03 .tabs-wrap .tabs li {
     width: 50%;
   }
-  .tab-head.ty03 .tabs-wrap .tabs li a {
+  .tabs-wrap .tabs.tab3 li  {
+    flex: 1;
+  }
+  .tab-head.ty03 .tabs-wrap .tabs li a , .tabs-wrap .tabs.tab3 li a {
     text-align: center;
     padding: 11px 0;
   }
