@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -774,16 +775,20 @@
           <h2 class="guideTit">Contents article</h2>
           <div class="info">
             <div class="subSection">
-              <h3 class="guideSubTit">case 0 :: key-visual 케이스</h3>
+              <h3 class="guideSubTit">case 0-1 :: key-visual 케이스</h3>
               <div class="ui-item">
                 <div class="conts-key-visual">
                   <div class="img-area">
-                    <img src="../../../inc/images/content/key-visual-about01.svg" loading="lazy" alt="키비주얼 이미지" />
+                    <!-- 09/05 이미지 변경 모바일 추가 -->
+                    <img src="../inc/images/content/key-visual-about02.svg" class="pc-only" alt="키비주얼 이미지" />
+                    <img src="../inc/images/content/key-visual-about02_mo.svg" class="mo-only" alt="키비주얼 이미지" />
                   </div>
-                  <div class="text-area">
-                    <h3 class="tit">KOREA<br>Hyundai N Festival</h3>
-                    <p class="desc">Korea's largest one-make race that overcomes speed limitations and challenges new
-                      possibilities.</p>
+                  <div class="text-area align-ctr">
+                    <h3 class="tit">KOREA<br />Hyundai N Festival</h3>
+                    <p class="desc">
+                      속도 한계를 극복하고 새로운 가능성에 도전하는 국내 최대 규모의
+                      원메이크 레이스입니다.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -793,7 +798,34 @@
               </div>
             </div>
             <div class="subSection">
-              <h3 class="guideSubTit">case 1 :: bg 이미지 케이스</h3>
+              <h3 class="guideSubTit">case 0-2 :: key-visual 케이스 - ty02</h3>
+              <div class="ui-item">
+                <div class="conts-key-visual ty02">
+                  <div class="img-area">
+                    <img class="img_pc pc-only" alt="pc 비주얼 이미지" src="../inc/images/content/key-visual-about01_pc.png"
+                      aria-hidden="true">
+                    <img class="img_mo mo-only" alt="mobile 비주얼 이미지" src="../inc/images/content/key-visual-about01_mo.png"
+                      aria-hidden="true">
+                  </div>
+                  <div class="text-area">
+                    <h3 class="tit">KOREA<br>Hyundai N Festival</h3>
+                    <p class="desc">Korea's largest one-make race that overcomes speed<br>
+                      limitations and challenges new possibilities.</p>
+                    <button type="button" class="btn btn-md-primary02">
+                      Learn More
+                      <span class="btn-icon16 icon-right" aria-hidden="true"></span>
+                    </button>
+                  </div>
+
+                </div>
+              </div>
+              <div class="code">
+                <pre class="brush: js;">
+</pre>
+              </div>
+            </div>
+            <div class="subSection">
+              <h3 class="guideSubTit">case 1-1 :: bg 이미지 케이스_bg-img-wrap</h3>
               <div class="ui-item">
                 <div class="conts-box-wrap">
                   <div class="bg-img-wrap">
@@ -806,6 +838,22 @@
                         <span class="btn-icon16 icon-right" aria-hidden="true"></span>
                       </button>
                     </div>
+                  </div>
+                </div>
+              </div>
+              <div class="code">
+                <pre class="brush: js;">
+</pre>
+              </div>
+            </div>
+            <!--  -->
+            <div class="subSection">
+              <h3 class="guideSubTit">case 1-2 :: bg 이미지 케이스_bg-img-wrap02</h3>
+              <div class="ui-item">
+                <div class="conts-box-wrap">
+                  <div class="bg-img-wrap02">
+                    <img src="../inc/images/content/event_2024_4R_Korea_NCup_en_kv.svg" alt="2024 hyundai Nfestival N cup round4 9.28(sat)-29(sun) korea internationaazal circuit asa
+                      삼다수 제이앤이 kumho tire milwaukee nexen tire samsung s.pellecrino zic">
                   </div>
                 </div>
               </div>
@@ -908,7 +956,7 @@
           <h2 class="guideTit">Card</h2>
           <div class="info">
             <div class="subSection">
-              <h3 class="guideSubTit">MO-scroll Type / card_type01</h3>
+              <h3 class="guideSubTit">MO-scroll Type / card_type01 - case1</h3>
               <div class="ui-item">
                 <!-- card list - scroll -->
                 <ul class="grid_3 grid_mo_scroll">
@@ -978,7 +1026,53 @@
                       </div>
                     </a>
                   </li>
-                  <!-- siwper용 카드 - card_swiper -->
+                  <li>
+                    <a class="card_type01" href="#" title="선수 상세페이지 이동">
+                      <div class="card_top">
+                        <p class="card_rank">3</p>
+                        <div class="card_profile"><img src="../inc/images/N_Festival/driver/img_N1_02_강동우-512.png"
+                            loading="lazy" alt="선수 프로필사진"></div>
+                        <p class="card_num">72</p>
+                      </div>
+                      <div class="card_bottom">
+                        <div class="card_info">
+                          <p class="card_tit">Kang Dong wu</p>
+                          <p class="card_subtit">SEOHAN GP</p>
+                        </div>
+                        <ul class="card_detail">
+                          <li>
+                            <span>Point</span>
+                            <span>99</span>
+                          </li>
+                          <li>
+                            <span>Wins</span>
+                            <span>0</span>
+                          </li>
+                          <li>
+                            <span>Podiums</span>
+                            <span>3</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="card_more">
+                        <span>Learn More</span>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="code">
+                <pre class="brush: js;">
+</pre>
+              </div>
+            </div>
+            <!-- -->
+            <div class="subSection">
+              <h3 class="guideSubTit">MO-scroll Type / card_type01 - case2</h3>
+              <div class="ui-item">
+                <!-- card list - scroll -->
+                <ul class="grid_3 grid_mo_scroll">
+                  <!-- swiper용 카드 - card_swiper -->
                   <li>
                     <a class="card_type01 card_swiper" href="#" title="선수 상세페이지 이동">
                       <div class="card_top">
@@ -996,6 +1090,46 @@
                         <span>Learn More</span>
                       </div>
                     </a>
+                  </li>
+                  <li>
+                    <a class="card_type01 card_swiper" href="#" title="선수 상세페이지 이동">
+                        <div class="card_top">
+                          <div class="card_profile">
+                            <img src="../inc/images/N_Festival/driver/img_N1_08_이정웅-512.png" loading="lazy"
+                              alt="선수 프로필사진" />
+                          </div>
+                          <p class="card_num">44</p>
+                        </div>
+                        <div class="card_bottom">
+                          <div class="card_info">
+                            <p class="card_tit">이정웅</p>
+                            <p class="card_subtit">N1</p>
+                          </div>
+                        </div>
+                        <div class="card_more">
+                          <span>더보기</span>
+                        </div>
+                      </a>
+                  </li>
+                  <li>
+                    <a class="card_type01 card_swiper" href="#" title="선수 상세페이지 이동">
+                        <div class="card_top">
+                          <div class="card_profile">
+                            <img src="../inc/images/N_Festival/driver/img_N1_09_박동섭-512.png" loading="lazy"
+                              alt="선수 프로필사진" />
+                          </div>
+                          <p class="card_num">02</p>
+                        </div>
+                        <div class="card_bottom">
+                          <div class="card_info">
+                            <p class="card_tit">박동섭</p>
+                            <p class="card_subtit">N1</p>
+                          </div>
+                        </div>
+                        <div class="card_more">
+                          <span>더보기</span>
+                        </div>
+                      </a>
                   </li>
                 </ul>
               </div>
@@ -3146,22 +3280,23 @@
           <h2 class="guideTit">Swiper</h2>
           <div class="info">
             <div class="subSection">
-              <h3 class="guideSubTit">case 1 :: 비주얼 배너 스와이퍼</h3>
+              <h3 class="guideSubTit">case 1-1 :: 비주얼 메인 스와이퍼</h3>
               <div class="ui-item">
                 <div class="swiper-container">
                   <!-- Swiper -->
                   <div class="swiper ty01Swiper">
-                    <div class="swiper-wrapper">
+                    <div class="swiper-wrapper" id="swiper-wrapper-902b5f6a11b7f514" aria-live="off">
                       <div class="swiper-slide">
                         <div class="kv-video-area">
                           <video class="video" data-js="video" id="video1" playsinline muted>
-                            <source src="../../inc/videos/24hnbr24.mp4" type="video/mp4">
+                            <source src="../inc/videos/24hnbr24.mp4" type="video/mp4">
                           </video>
                         </div>
                         <div class="text-area">
-                          <h2 class="title">222222222<br />N Cup Round 1</h2>
+                          <h2 class="title">Hyundai N Festival<br />N Cup Round 1</h2>
                           <p class="desc">4.27 - 4.28 / Inje Speedium</p>
                           <div class="btn-wrap">
+                            <!-- 09/05 버튼 사이즈 통일 -->
                             <button type="button" class="btn btn-md-primary02" aria-label="Label Name Button">
                               Event Guide
                               <span class="btn-icon16 icon-right" aria-hidden="true"></span>
@@ -3169,6 +3304,26 @@
                             <button type="button" class="btn btn-md-primary02" aria-label="Label Name Button">
                               Purchase Tickets
                               <span class="btn-icon16 icon-right" aria-hidden="true"></span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="img-area">
+                          <img src="../inc/images/img/conts_bg_img01.svg" alt="비주얼 커버이미지" />
+                        </div>
+                        <div class="text-area">
+                          <h2 class="title">The all-new<br />IONIQ 5 N</h2>
+                          <p class="desc">Electrifying motorsport passion</p>
+                          <div class="btn-wrap">
+                            <!-- 09/05 버튼 사이즈 통일 -->
+                            <button type="button" class="btn btn-md-primary02">
+                              Learn More
+                              <span class="btn-icon20 icon-right" aria-hidden="true"></span>
+                            </button>
+                            <button type="button" class="btn btn-md-primary02">
+                              Configrator
+                              <span class="btn-icon20 icon-right" aria-hidden="true"></span>
                             </button>
                           </div>
                         </div>
@@ -3176,13 +3331,14 @@
                       <div class="swiper-slide">
                         <div class="kv-video-area">
                           <video class="video" data-js="video" id="video2" playsinline muted>
-                            <source src="../../inc/videos/2024wrc.mp4" type="video/mp4">
+                            <source src="../inc/videos/24hnbr24.mp4" type="video/mp4">
                           </video>
                         </div>
                         <div class="text-area">
-                          <h2 class="title">222222222<br />N Cup Round 1</h2>
+                          <h2 class="title">Hyundai N Festival<br />N Cup Round 1</h2>
                           <p class="desc">4.27 - 4.28 / Inje Speedium</p>
                           <div class="btn-wrap">
+                            <!-- 09/05 버튼 사이즈 통일 -->
                             <button type="button" class="btn btn-md-primary02" aria-label="Label Name Button">
                               Event Guide
                               <span class="btn-icon16 icon-right" aria-hidden="true"></span>
@@ -3195,58 +3351,115 @@
                         </div>
                       </div>
                       <div class="swiper-slide">
-                        <div class="kv-video-area">
-                          <video class="video" data-js="video" id="video3" playsinline muted>
-                            <source src="../../inc/videos/24hnbr24.mp4" type="video/mp4">
-                          </video>
+                        <div class="img-area">
+                          <img src="../inc/images/img/conts_bg_img01.svg" alt="비주얼 커버이미지" />
                         </div>
                         <div class="text-area">
-                          <h2 class="title">222222222<br />N Cup Round 1</h2>
-                          <p class="desc">4.27 - 4.28 / Inje Speedium</p>
+                          <h2 class="title">22The all-new<br />IONIQ 5 N</h2>
+                          <p class="desc">Electrifying motorsport passion</p>
                           <div class="btn-wrap">
-                            <button type="button" class="btn btn-md-primary02" aria-label="Label Name Button">
-                              Event Guide
-                              <span class="btn-icon16 icon-right" aria-hidden="true"></span>
+                            <!-- 09/05 버튼 사이즈 통일 -->
+                            <button type="button" class="btn btn-md-primary02">
+                              Learn More
+                              <span class="btn-icon20 icon-right" aria-hidden="true"></span>
                             </button>
-                            <button type="button" class="btn btn-md-primary02" aria-label="Label Name Button">
-                              Purchase Tickets
-                              <span class="btn-icon16 icon-right" aria-hidden="true"></span>
+                            <button type="button" class="btn btn-md-primary02">
+                              Configrator
+                              <span class="btn-icon20 icon-right" aria-hidden="true"></span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="img-area">
+                          <img src="../inc/images/img/conts_bg_img01.svg" alt="비주얼 커버이미지" />
+                        </div>
+                        <div class="text-area">
+                          <h2 class="title">33The all-new<br />IONIQ 5 N</h2>
+                          <p class="desc">Electrifying motorsport passion</p>
+                          <div class="btn-wrap">
+                            <!-- 09/05 버튼 사이즈 통일 -->
+                            <button type="button" class="btn btn-md-primary02">
+                              Learn More
+                              <span class="btn-icon20 icon-right" aria-hidden="true"></span>
+                            </button>
+                            <button type="button" class="btn btn-md-primary02">
+                              Configrator
+                              <span class="btn-icon20 icon-right" aria-hidden="true"></span>
                             </button>
                           </div>
                         </div>
                       </div>
                     </div>
                     <div class="swiper-bottom-wrap">
-                      <div class="swiper-button-next" tabindex="0" role="button"
-                        aria-controls="swiper-wrapper-d1f642c19f1cdd98" aria-disabled="false" aria-label="다음 슬라이드">
-                      </div>
-                      <div class="swiper-button-prev swiper-button-disabled" tabindex="-1" role="button"
-                        aria-controls="swiper-wrapper-d1f642c19f1cdd98" aria-disabled="true" aria-label="이전 슬라이드"></div>
+                      <div class="swiper-button-next"></div>
+                      <div class="swiper-button-prev"></div>
                       <div class="swiper-status-wrap">
-                        <!-- <div id="paging"></div> -->
-                        <div
-                          class="swiper-pagination-custom swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
-                          <span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0"
-                            role="button" aria-current="true" aria-label="첫번째 슬라이드"></span>
-                          <span class="swiper-pagination-bullet" tabindex="0" role="button"
-                            aria-label="두번째 슬라이드"></span>
-                          <span class="swiper-pagination-bullet" tabindex="0" role="button"
-                            aria-label="세번째 슬라이드"></span>
-                          <span class="swiper-pagination-bullet" tabindex="0" role="button"
-                            aria-label="네번째 슬라이드"></span>
-                          <span class="swiper-pagination-bullet" tabindex="0" role="button"
-                            aria-label="다섯번째 슬라이드"></span>
-                          <span class="swiper-pagination-bullet" tabindex="0" role="button"
-                            aria-label="여섯번째 슬라이드"></span>
-                        </div>
+                        <!-- <div class="autoplay-progress">
+                        <div class="bar"></div>
+                      </div> -->
+                        <div class="swiper-pagination-custom"></div>
                         <div class="btn-wrap">
                           <button class="btn btn-sound" type="button" title="소리켜기"></button>
                           <button class="btn btn-play on" type="button" title="정지"></button>
                         </div>
                       </div>
-
                     </div>
-                  </div> <!-- //swiper -->
+                    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                  </div>
+                </div><!-- //swiper-container -->
+              </div>
+              <div class="code">
+                <pre class="brush: js;">
+</pre>
+              </div>
+            </div>
+            <!--  -->
+            <div class="subSection">
+              <h3 class="guideSubTit">case 1-2 :: 배너 스와이퍼</h3>
+              <div class="ui-item">
+                <div class="swiper-container">
+                  <!-- Swiper -->
+                  <div class="swiper ty01Swiper banner-swiper">
+                    <!-- <p class="swiper-title">모델</p> -->
+                    <div class="swiper-wrapper" id="swiper-wrapper-d1f642c19f1cdd98" aria-live="off">
+                      <div class="swiper-slide slide-item swiper-slide-next" role="group" style="width: 1631px">
+                        <!-- 09/10 수정 - 이미지 케이스일 때,  pc-only / mo-only 용 분리 -->
+                        <div class="img-area">
+                          <img src="../inc/images/img/conts_bg_img02.png" loading="lazy" alt="모델 영역 키 비주얼 이미지 PC" class="pc-only"/>
+                          <img src="../inc/images/img/conts_kv_img02-mo.png" loading="lazy" alt="모델 영역 키 비주얼 이미지 Mobile" class="mo-only"/> 
+                        </div><!-- //09/10 수정 - 이미지 케이스일 때,  pc-only / mo-only 용 분리 -->
+                        <div class="text-area">
+                          <h2 class="title">N Vision 74</h2>
+                          <p class="desc">First Hydrogen Hybrid Rolling Lab</p>
+                          <!-- 09/05 버튼 사이즈 통일 -->
+                          <div class="btn-wrap">
+                            <button type="button" class="btn btn-md-primary02">
+                              자세히보기
+                              <span class="btn-icon20 icon-right" aria-hidden="true"></span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-bottom-wrap">
+                      <div class="swiper-button-next"></div>
+                      <div class="swiper-button-prev"></div>
+                      <div class="swiper-status-wrap">
+                        <!-- <div class="autoplay-progress">
+                            <div class="bar"></div>
+                          </div> -->
+                        <div class="swiper-pagination-custom"></div>
+                        <!-- <div class="btn-wrap">
+                          <button class="btn btn-sound" type="button">
+                            <span class="visually-hidden">소리켜기</span>
+                          </button>
+                        </div> -->
+                      </div>
+                    </div>
+                    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                  </div>
+                  <!-- //swiper -->
                 </div><!-- //swiper-container -->
               </div>
               <div class="code">
@@ -3266,19 +3479,16 @@
                         <a href="#">
                           <div class="img-ico"></div>
                           <div class="img-area">
-                            <img src="../inc/images/img/conts_bg_img01.svg" loading="lazy" alt="이미지 슬라이드1">
+                            <img src="../inc/images/img/conts_bg_img01.svg" alt="이미지 슬라이드1" />
+                            <!-- <video class="video" data-js="video" id="video1" playsinline autoplay muted style="width: 100%; height: 100%; object-fit: cover;">
+                                  <source src="../inc/videos/24hnbr24.mp4" type="video/mp4">
+                              </video> -->
                           </div>
                           <div class="text-area">
-                            <h4 class="title">1 – Round2 BEGINNER’S GUIDE 04.25.2024</h4>
-                            <div class="list-box">
-                              <ul>
-                                <li>#Ncommunity</li>
-                                <li>#Drive</li>
-                                <li>#ShowN</li>
-                                <li>#NBrand</li>
-                                <li>#NBrand2</li>
-                              </ul>
-                            </div>
+                            <h4 class="title">
+                              HYUNDAI N FESTIVAL N CUP – Round2 BEGINNER’S GUIDE
+                              04.25.2024
+                            </h4>
                             <div class="date">04.30. 2024</div>
                           </div>
                         </a>
@@ -3287,19 +3497,12 @@
                         <a href="#">
                           <div class="img-ico"></div>
                           <div class="img-area">
-                            <img src="../inc/images/img/conts_bg_img01.svg" loading="lazy" alt="이미지 슬라이드1">
+                            <img src="../inc/images/img/conts_bg_img01.svg" alt="이미지 슬라이드2" />
                           </div>
                           <div class="text-area">
-                            <h4 class="title">1 – Round2 BEGINNER’S GUIDE 04.25.2024</h4>
-                            <div class="list-box">
-                              <ul>
-                                <li>#Ncommunity</li>
-                                <li>#Drive</li>
-                                <li>#ShowN</li>
-                                <li>#NBrand</li>
-                                <li>#NBrand2</li>
-                              </ul>
-                            </div>
+                            <h4 class="title">
+                              2 – Round2 BEGINNER’S GUIDE 04.25.2024
+                            </h4>
                             <div class="date">04.30. 2024</div>
                           </div>
                         </a>
@@ -3308,19 +3511,12 @@
                         <a href="#">
                           <div class="img-ico"></div>
                           <div class="img-area">
-                            <img src="../inc/images/img/conts_bg_img01.svg" loading="lazy" alt="이미지 슬라이드1">
+                            <img src="../inc/images/img/conts_bg_img01.svg" alt="이미지 슬라이드1" />
                           </div>
                           <div class="text-area">
-                            <h4 class="title">1 – Round2 BEGINNER’S GUIDE 04.25.2024</h4>
-                            <div class="list-box">
-                              <ul>
-                                <li>#Ncommunity</li>
-                                <li>#Drive</li>
-                                <li>#ShowN</li>
-                                <li>#NBrand</li>
-                                <li>#NBrand2</li>
-                              </ul>
-                            </div>
+                            <h4 class="title">
+                              3 – Round2 BEGINNER’S GUIDE 04.25.2024
+                            </h4>
                             <div class="date">04.30. 2024</div>
                           </div>
                         </a>
@@ -3329,34 +3525,22 @@
                         <a href="#">
                           <div class="img-ico"></div>
                           <div class="img-area">
-                            <img src="../inc/images/img/conts_bg_img01.svg" loading="lazy" alt="이미지 슬라이드1">
+                            <img src="../inc/images/img/conts_bg_img01.svg" alt="이미지 슬라이드1" />
                           </div>
                           <div class="text-area">
-                            <h4 class="title">1 – Round2 BEGINNER’S GUIDE 04.25.2024</h4>
-                            <div class="list-box">
-                              <ul>
-                                <li>#Ncommunity</li>
-                                <li>#Drive</li>
-                                <li>#ShowN</li>
-                                <li>#NBrand</li>
-                                <li>#NBrand2</li>
-                              </ul>
-                            </div>
+                            <h4 class="title">
+                              4 – Round2 BEGINNER’S GUIDE 04.25.2024
+                            </h4>
                             <div class="date">04.30. 2024</div>
                           </div>
                         </a>
                       </div>
-                    </div> <!-- //swiper-wrapper -->
+                    </div>
+                    <!-- //swiper-wrapper -->
+
 
                     <!-- 07.03 추가 : swiper-arrow wrap 수정 -->
-                    <!-- 
-                      swiper-bottom-wrap 클래스 정의 설명
-                      - swiper-bottom-wrap : 기본 타입 - top:40% 적용
-                      - swiper-bottom-wrap ty02 : ty02 클래스 추가 시, top:50%; 적용                      
-                      - swiper-bottom-wrap ty03 : ty03 클래스 추가 시, top:0;
-                    -->
                     <div class="swiper-bottom-wrap">
-                      <!-- ty02 추가 시 top 속성값 변경 (ty02Swiper의 swiper-bottom-wrap 클래스에만 해당) -->
                       <div class="swiper-button-next" tabindex="0" role="button"
                         aria-controls="swiper-wrapper-d1f642c19f1cdd98" aria-disabled="false" aria-label="다음 슬라이드">
                       </div>
@@ -3364,14 +3548,12 @@
                         aria-controls="swiper-wrapper-d1f642c19f1cdd98" aria-disabled="true" aria-label="이전 슬라이드"></div>
                     </div>
                     <!-- //07.03 추가 : swiper-arrow wrap 수정 -->
+
                     <div class="swiper-status-wrap">
-                      <!-- <div class="autoplay-progress">
-                          <div class="bar"></div>
-                        </div> -->
                       <div
                         class="swiper-pagination-custom swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
-                        <span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0"
-                          role="button" aria-current="true" aria-label="첫번째 슬라이드"></span>
+                        <span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button"
+                          aria-current="true" aria-label="첫번째 슬라이드"></span>
                         <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="두번째 슬라이드"></span>
                         <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="세번째 슬라이드"></span>
                         <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="네번째 슬라이드"></span>
@@ -3379,10 +3561,14 @@
                         <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="여섯번째 슬라이드"></span>
                       </div>
                       <div class="btn-wrap">
-                        <button class="btn btn-play on" type="button" title="정지"></button>
+                        <button class="btn btn-play on" type="button">
+                          <span class="visually-hidden">정지</span>
+                        </button>
                       </div>
-                    </div><!-- //swiper-status-wrap -->
-                  </div> <!-- //swiper -->
+                    </div>
+
+                  </div>
+                  <!-- //swiper -->
                 </div><!-- //swiper-container -->
               </div>
             </div>
@@ -3395,192 +3581,136 @@
                   <div class="swiper ty03Swiper">
                     <div class="swiper-wrapper">
                       <div class="swiper-slide">
-                        <!-- card list - scroll -->
-                        <a class="card_type01" href="#" title="카드 상세페이지 이동">
+                        <a class="card_type01 card_swiper" href="#" title="선수 상세페이지 이동">
                           <div class="card_top">
-                            <p class="card_rank">1</p>
-                            <div class="card_profile"><img src="../inc/images/N_Festival/driver/img_N1_01_김규민-512.png"
-                                loading="lazy" alt="선수 프로필사진"></div>
-                            <p class="card_num">72</p>
+                            <div class="card_profile"><img src="../inc/images/N_Festival/driver/img_N1_09_박동섭-512.png"
+                                loading="lazy" alt="선수 프로필사진" /></div>
+                            <p class="card_num">02</p>
                           </div>
                           <div class="card_bottom">
                             <div class="card_info">
-                              <p class="card_tit">Kim Gyu min</p>
-                              <p class="card_subtit">SEOHAN GP</p>
+                              <p class="card_tit">Park Dong sup</p>
+                              <p class="card_subtit">N1</p>
                             </div>
-                            <ul class="card_detail">
-                              <li>
-                                <span>Point</span>
-                                <span>99</span>
-                              </li>
-                              <li>
-                                <span>Wins</span>
-                                <span>0</span>
-                              </li>
-                              <li>
-                                <span>Podiums</span>
-                                <span>3</span>
-                              </li>
-                            </ul>
+                          </div>
+                          <div class="card_more">
+                            <span>Learn More</span>
                           </div>
                         </a>
                       </div>
                       <div class="swiper-slide">
-                        <!-- card list - scroll -->
-                        <a class="card_type01" href="#" title="카드 상세페이지 이동">
+                        <a class="card_type01 card_swiper" href="#" title="선수 상세페이지 이동">
                           <div class="card_top">
-                            <p class="card_rank">1</p>
-                            <div class="card_profile"><img src="../inc/images/N_Festival/driver/img_N1_01_김규민-512.png"
-                                loading="lazy" alt="선수 프로필사진"></div>
-                            <p class="card_num">72</p>
+                            <div class="card_profile"><img
+                                src="../inc/images/N_Festival/driver/img_profile_default-512.png" loading="lazy"
+                                alt="선수 프로필사진" /></div>
+                            <p class="card_num">90</p>
                           </div>
                           <div class="card_bottom">
                             <div class="card_info">
-                              <p class="card_tit">Kim Gyu min</p>
-                              <p class="card_subtit">SEOHAN GP</p>
+                              <p class="card_tit">Le Du hee</p>
+                              <p class="card_subtit">N1</p>
                             </div>
-                            <ul class="card_detail">
-                              <li>
-                                <span>Point</span>
-                                <span>99</span>
-                              </li>
-                              <li>
-                                <span>Wins</span>
-                                <span>0</span>
-                              </li>
-                              <li>
-                                <span>Podiums</span>
-                                <span>3</span>
-                              </li>
-                            </ul>
+                          </div>
+                          <div class="card_more">
+                            <span>Learn More</span>
                           </div>
                         </a>
                       </div>
                       <div class="swiper-slide">
-                        <!-- card list - scroll -->
-                        <a class="card_type01" href="#" title="카드 상세페이지 이동">
+                        <a class="card_type01 card_swiper" href="#" title="선수 상세페이지 이동">
                           <div class="card_top">
-                            <p class="card_rank">1</p>
-                            <div class="card_profile"><img src="../inc/images/N_Festival/driver/img_N1_01_김규민-512.png"
-                                loading="lazy" alt="선수 프로필사진"></div>
-                            <p class="card_num">72</p>
+                            <div class="card_profile"><img src="../inc/images/N_Festival/driver/img_N1_08_이정웅-512.png"
+                                loading="lazy" alt="선수 프로필사진" /></div>
+                            <p class="card_num">44</p>
                           </div>
                           <div class="card_bottom">
                             <div class="card_info">
-                              <p class="card_tit">Kim Gyu min</p>
-                              <p class="card_subtit">SEOHAN GP</p>
+                              <p class="card_tit">Lee Jung woong</p>
+                              <p class="card_subtit">N1</p>
                             </div>
-                            <ul class="card_detail">
-                              <li>
-                                <span>Point</span>
-                                <span>99</span>
-                              </li>
-                              <li>
-                                <span>Wins</span>
-                                <span>0</span>
-                              </li>
-                              <li>
-                                <span>Podiums</span>
-                                <span>3</span>
-                              </li>
-                            </ul>
+                          </div>
+                          <div class="card_more">
+                            <span>Learn More</span>
                           </div>
                         </a>
                       </div>
                       <div class="swiper-slide">
-                        <!-- card list - scroll -->
-                        <a class="card_type01" href="#" title="카드 상세페이지 이동">
+                        <a class="card_type01 card_swiper" href="#" title="선수 상세페이지 이동">
                           <div class="card_top">
-                            <p class="card_rank">1</p>
-                            <div class="card_profile"><img src="../inc/images/N_Festival/driver/img_N1_01_김규민-512.png"
-                                loading="lazy" alt="선수 프로필사진"></div>
-                            <p class="card_num">72</p>
+                            <div class="card_profile"><img src="../inc/images/N_Festival/driver/img_N1_09_박동섭-512.png"
+                                loading="lazy" alt="선수 프로필사진" /></div>
+                            <p class="card_num">02</p>
                           </div>
                           <div class="card_bottom">
                             <div class="card_info">
-                              <p class="card_tit">Kim Gyu min</p>
-                              <p class="card_subtit">SEOHAN GP</p>
+                              <p class="card_tit">Park Dong sup</p>
+                              <p class="card_subtit">N1</p>
                             </div>
-                            <ul class="card_detail">
-                              <li>
-                                <span>Point</span>
-                                <span>99</span>
-                              </li>
-                              <li>
-                                <span>Wins</span>
-                                <span>0</span>
-                              </li>
-                              <li>
-                                <span>Podiums</span>
-                                <span>3</span>
-                              </li>
-                            </ul>
+                          </div>
+                          <div class="card_more">
+                            <span>Learn More</span>
                           </div>
                         </a>
                       </div>
                       <div class="swiper-slide">
-                        <!-- card list - scroll -->
-                        <a class="card_type01" href="#" title="카드 상세페이지 이동">
+                        <a class="card_type01 card_swiper" href="#" title="선수 상세페이지 이동">
                           <div class="card_top">
-                            <p class="card_rank">1</p>
-                            <div class="card_profile"><img src="../inc/images/N_Festival/driver/img_N1_01_김규민-512.png"
-                                loading="lazy" alt="선수 프로필사진"></div>
-                            <p class="card_num">72</p>
+                            <div class="card_profile"><img
+                                src="../inc/images/N_Festival/driver/img_profile_default-512.png" loading="lazy"
+                                alt="선수 프로필사진" /></div>
+                            <p class="card_num">90</p>
                           </div>
                           <div class="card_bottom">
                             <div class="card_info">
-                              <p class="card_tit">Kim Gyu min</p>
-                              <p class="card_subtit">SEOHAN GP</p>
+                              <p class="card_tit">Le Du hee</p>
+                              <p class="card_subtit">N1</p>
                             </div>
-                            <ul class="card_detail">
-                              <li>
-                                <span>Point</span>
-                                <span>99</span>
-                              </li>
-                              <li>
-                                <span>Wins</span>
-                                <span>0</span>
-                              </li>
-                              <li>
-                                <span>Podiums</span>
-                                <span>3</span>
-                              </li>
-                            </ul>
+                          </div>
+                          <div class="card_more">
+                            <span>Learn More</span>
                           </div>
                         </a>
                       </div>
                       <div class="swiper-slide">
-                        <!-- card list - scroll -->
-                        <a class="card_type01" href="#" title="카드 상세페이지 이동">
+                        <a class="card_type01 card_swiper" href="#" title="선수 상세페이지 이동">
                           <div class="card_top">
-                            <p class="card_rank">1</p>
-                            <div class="card_profile"><img src="../inc/images/N_Festival/driver/img_N1_01_김규민-512.png"
-                                loading="lazy" alt="선수 프로필사진"></div>
-                            <p class="card_num">72</p>
+                            <div class="card_profile"><img src="../inc/images/N_Festival/driver/img_N1_08_이정웅-512.png"
+                                loading="lazy" alt="선수 프로필사진" /></div>
+                            <p class="card_num">44</p>
                           </div>
                           <div class="card_bottom">
                             <div class="card_info">
-                              <p class="card_tit">Kim Gyu min</p>
-                              <p class="card_subtit">SEOHAN GP</p>
+                              <p class="card_tit">Lee Jung woong</p>
+                              <p class="card_subtit">N1</p>
                             </div>
-                            <ul class="card_detail">
-                              <li>
-                                <span>Point</span>
-                                <span>99</span>
-                              </li>
-                              <li>
-                                <span>Wins</span>
-                                <span>0</span>
-                              </li>
-                              <li>
-                                <span>Podiums</span>
-                                <span>3</span>
-                              </li>
-                            </ul>
+                          </div>
+                          <div class="card_more">
+                            <span>Learn More</span>
                           </div>
                         </a>
                       </div>
-                    </div> <!-- //swiper-wrapper -->
+                      <div class="swiper-slide">
+                        <a class="card_type01 card_swiper" href="#" title="선수 상세페이지 이동">
+                          <div class="card_top">
+                            <div class="card_profile"><img
+                                src="../inc/images/N_Festival/driver/img_profile_default-512.png" loading="lazy"
+                                alt="선수 프로필사진" /></div>
+                            <p class="card_num">90</p>
+                          </div>
+                          <div class="card_bottom">
+                            <div class="card_info">
+                              <p class="card_tit">Le Du hee</p>
+                              <p class="card_subtit">N1</p>
+                            </div>
+                          </div>
+                          <div class="card_more">
+                            <span>Learn More</span>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- //swiper-wrapper -->
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-status-wrap">
@@ -3588,7 +3718,8 @@
                         <span class="swiper-pagination-bullet-active"></span>
                       </div>
                     </div>
-                  </div> <!-- //swiper -->
+                  </div>
+                  <!-- //swiper -->
                 </div><!-- //swiper-container -->
               </div>
             </div>
@@ -3603,97 +3734,222 @@
                   <div class="swiper ty04Swiper swiper-card-type">
                     <div class="swiper-wrapper">
                       <div class="swiper-slide">
-                        <a class="card_type01" href="#" title="카드 상세페이지 이동">
-                          <div class="card_cover"><img src="../inc/images/img/img_card-content.svg"></div>
+                        <div class="card_type01">
+                          <div class="card_cover"><img src="../inc/images/img/submain_r1_img.png" loading="lazy"
+                              alt="Round 1 Sub main img"></div>
                           <div class="card_top">
                             <p class="card_rank">N CUP<br />Round 1</p>
                           </div>
                           <div class="card_bottom">
                             <div class="card_info">
                               <strong class="card_badge">April</strong>
-                              <p class="card_tit">17~18</p>
+                              <p class="card_tit">27~28</p>
                               <p class="card_subtit">Inje SPEEDIUM</p>
                             </div>
                           </div>
-                          <div class="card_more">
+                          <a href="#" class="card_more">
                             <span>Learn More</span>
-                          </div>
-                        </a>
+                          </a>
+                        </div>
                       </div>
                       <div class="swiper-slide">
-                        <a class="card_type01 bg-blue" href="#" title="카드 상세페이지 이동">
+                        <div class="card_type01">
+                          <div class="card_cover"><img src="../inc/images/img/submain_r2_img.png" loading="lazy"
+                              alt="Round 2 Sub main img"></div>
                           <div class="card_top">
                             <p class="card_rank">N CUP<br />Round 2</p>
                           </div>
                           <div class="card_bottom">
                             <div class="card_info">
                               <strong class="card_badge">May</strong>
-                              <p class="card_tit">17~18</p>
-                              <p class="card_subtit">Inje SPEEDIUM</p>
+                              <p class="card_tit">11~12</p>
+                              <p class="card_subtit">Youngin Everland SPEEDIUM</p>
                             </div>
                           </div>
-                          <div class="card_more">
+                          <a href="#" class="card_more">
                             <span>Learn More</span>
-                          </div>
-                          <div class="card_more ty02">
+                          </a>
+                          <a href="#" class="card_more ty02">
                             <span>Tickets</span>
-                          </div>
-                        </a>
+                          </a>
+                        </div>
                       </div>
                       <div class="swiper-slide">
-                        <a class="card_type01 bg-black" href="#" title="카드 상세페이지 이동">
+                        <div class="card_type01 bg-black">
+                          <div class="card_cover"><img src="../inc/images/img/submain_r3_img.png" loading="lazy"
+                              alt="Round 3 Sub main img"></div>
                           <div class="card_top">
                             <p class="card_rank">N CUP<br />Round 3</p>
                           </div>
                           <div class="card_bottom">
                             <div class="card_info">
-                              <strong class="card_badge">May</strong>
-                              <p class="card_tit">11~12</p>
-                              <p class="card_subtit">Inje SPEEDIUM</p>
+                              <strong class="card_badge">June</strong>
+                              <p class="card_tit">22~23</p>
+                              <p class="card_subtit">Korea International Circuit</p>
                             </div>
                           </div>
-                          <div class="card_more">
+                          <a href="#" class="card_more">
                             <span>Learn More</span>
-                          </div>
-                        </a>
+                          </a>
+                        </div>
                       </div>
                       <div class="swiper-slide">
-                        <a class="card_type01 bg-black" href="#" title="카드 상세페이지 이동">
+                        <div class="card_type01 bg-black">
+                          <!-- <div class="card_cover"><img src="../inc/images/img/submain_r4_img.png" loading="lazy"
+                              alt="Round 4 Sub main img"></div> -->
                           <div class="card_top">
                             <p class="card_rank">N CUP<br />Round 4</p>
                           </div>
                           <div class="card_bottom">
                             <div class="card_info">
-                              <strong class="card_badge">June</strong>
-                              <p class="card_tit">11~12</p>
-                              <p class="card_subtit">Inje SPEEDIUM</p>
+                              <strong class="card_badge">September</strong>
+                              <p class="card_tit">28~29</p>
+                              <p class="card_subtit">Yongin Everland SPEEDWAY</p>
                             </div>
                           </div>
-                          <div class="card_more">
+                          <a href="#" class="card_more">
                             <span>Learn More</span>
-                          </div>
-                        </a>
+                          </a>
+                        </div>
                       </div>
                       <div class="swiper-slide">
-                        <a class="card_type01 bg-red" href="#" title="카드 상세페이지 이동">
+                        <div class="card_type01 bg-red">
+                          <!-- <div class="card_cover"><img src="../inc/images/img/submain_r5_img.png" loading="lazy"
+                              alt="Round 5 Sub main img"></div> -->
                           <div class="card_top">
                             <p class="card_rank">N CUP<br />Round 5</p>
                           </div>
                           <div class="card_bottom">
                             <div class="card_info">
-                              <strong class="card_badge">July</strong>
-                              <p class="card_tit">11~12</p>
+                              <strong class="card_badge">October</strong>
+                              <p class="card_tit">19~20</p>
                               <p class="card_subtit">Inje SPEEDIUM</p>
                             </div>
                           </div>
-                          <div class="card_more">
+                          <a href="#" class="card_more">
                             <span>Learn More</span>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="card_type01 bg-red">
+                          <div class="card_cover"><img src="../inc/images/img/submain_r6_img.png" loading="lazy"
+                              alt="Round 6 Sub main img"></div>
+                          <div class="card_top">
+                            <p class="card_rank">N CUP<br />Round 6</p>
                           </div>
-                        </a>
+                          <div class="card_bottom">
+                            <div class="card_info">
+                              <strong class="card_badge">November</strong>
+                              <p class="card_tit">9~10</p>
+                              <p class="card_subtit">Korea International Circuit</p>
+                            </div>
+                          </div>
+                          <a href="#" class="card_more">
+                            <span>Learn More</span>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="card_type01 bg-red">
+                          <div class="card_cover"><img src="../inc/images/img/submain_ntt_r1_img.png" loading="lazy"
+                              alt="NTT Round 1 Sub main img"></div>
+                          <div class="card_top">
+                            <p class="card_rank">N TT<br />Round 1</p>
+                          </div>
+                          <div class="card_bottom">
+                            <div class="card_info">
+                              <strong class="card_badge">May</strong>
+                              <p class="card_tit">25</p>
+                              <p class="card_subtit">Inje SPEEDIUM</p>
+                            </div>
+                          </div>
+                          <a href="#" class="card_more">
+                            <span>Learn More</span>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="card_type01">
+                          <div class="card_cover"><img src="../inc/images/img/submain_ntt_r2_img.png" loading="lazy"
+                              alt="NTT Round 2 Sub main img"></div>
+                          <div class="card_top">
+                            <p class="card_rank">N TT<br />Round 2</p>
+                          </div>
+                          <div class="card_bottom">
+                            <div class="card_info">
+                              <strong class="card_badge">July</strong>
+                              <p class="card_tit">20</p>
+                              <p class="card_subtit">Yongin Everland SPEEDWAY</p>
+                            </div>
+                          </div>
+                          <a href="#" class="card_more">
+                            <span>Learn More</span>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="card_type01 bg-blue">
+                          <!-- <div class="card_cover"><img src="../inc/images/img/submain_ntt_r3_img.png" loading="lazy"
+                              alt="NTT Round 3 Sub main img"></div> -->
+                          <div class="card_top">
+                            <p class="card_rank">N TT<br />Round 3</p>
+                          </div>
+                          <div class="card_bottom">
+                            <div class="card_info">
+                              <strong class="card_badge">Auguest</strong>
+                              <p class="card_tit">17</p>
+                              <p class="card_subtit">Yongin Everland SPEEDWAY</p>
+                            </div>
+                          </div>
+                          <a href="#" class="card_more">
+                            <span>Learn More</span>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="card_type01 bg-red">
+                          <div class="card_cover"><img src="../inc/images/img/submain_ntt_r4_img.png" loading="lazy"
+                              alt="NTT Round 4 Sub main img"></div>
+                          <div class="card_top">
+                            <p class="card_rank">N TT<br />Round 4</p>
+                          </div>
+                          <div class="card_bottom">
+                            <div class="card_info">
+                              <strong class="card_badge">September</strong>
+                              <p class="card_tit">7</p>
+                              <p class="card_subtit">Inje SPEEDIUM</p>
+                            </div>
+                          </div>
+                          <a href="#" class="card_more">
+                            <span>Learn More</span>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="card_type01 bg-red">
+                          <div class="card_cover"><img src="../inc/images/img/submain_ntt_r5_img.png" loading="lazy"
+                              alt="NTT Round 5 Sub main img"></div>
+                          <div class="card_top">
+                            <p class="card_rank">N TT<br />Round 5</p>
+                          </div>
+                          <div class="card_bottom">
+                            <div class="card_info">
+                              <strong class="card_badge">October</strong>
+                              <p class="card_tit">26</p>
+                              <p class="card_subtit">Inje SPEEDIUM</p>
+                            </div>
+                          </div>
+                          <a href="#" class="card_more">
+                            <span>Learn More</span>
+                          </a>
+                        </div>
                       </div>
                     </div> <!-- //swiper-wrapper -->
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-arrow-wrap">
+                      <div class="swiper-button-next"></div>
+                      <div class="swiper-button-prev"></div>
+                    </div>
                   </div> <!-- //swiper -->
                 </div><!-- //swiper-container -->
               </div>
@@ -3706,359 +3962,210 @@
                 <div class="swiper ty05Swiper swiper-card-type">
                   <div class="card-list-wrap swiper-wrapper">
                     <!-- active 케이스 -->
-                    <div class="swiper-slide item active">
+                    <div class="swiper-slide item active" data-content="1">
                       <!-- active 클래스 추가 -->
-                      <a role="button" class="card_type01 bg-blue">
+                      <a role="button" onclick="pubUi.listContsActive(this);" class="card_type01 bg-blue">
                         <div class="card_cover">
-                          <img src="../../inc/images/img/img_card-content.svg" alt="N CUP">
+                          <img src="../inc/images/img/img_card-content.svg" alt="N CUP" />
                         </div>
                         <div class="card_top">
-                          <p class="card_rank">R1<br />N CUP</p>
+                          <p class="card_rank">Round 1<br />N CUP</p>
                         </div>
                         <div class="card_bottom">
                           <div class="card_info">
-                            <strong class="card_badge">APR</strong>
+                            <strong class="card_badge">April</strong>
                             <p class="card_tit">27~28</p>
-                            <p class="card_subtit">Inje</p>
+                            <p class="card_subtit">Inje Speedium</p>
                           </div>
                         </div>
                       </a>
                     </div>
-                    <div class="swiper-slide item ">
-                      <a role="button" class="card_type01 bg-blue">
+                    <div class="swiper-slide item" data-content="2">
+                      <a role="button" onclick="pubUi.listContsActive(this);" class="card_type01 bg-blue">
                         <div class="card_cover">
-                          <img src="../../inc/images/img/img_card-content.svg" alt="N CUP">
+                          <img src="../inc/images/img/r2_eg_pc.png" alt="N CUP R2" />
                         </div>
                         <div class="card_top">
-                          <p class="card_rank">Round 2<br />N CUP</p>
+                          <p class="card_rank">R2<br />N CUP</p>
                         </div>
                         <div class="card_bottom">
                           <div class="card_info">
                             <strong class="card_badge">MAY</strong>
                             <p class="card_tit">11~12</p>
-                            <p class="card_subtit">Inje STADIUM</p>
+                            <p class="card_subtit">
+                              Youngin
+                            </p>
                           </div>
                         </div>
                       </a>
                     </div>
-                    <div class="swiper-slide item">
-                      <a role="button" class="card_type01 bg-blue">
+                    <div class="swiper-slide item" data-content="3">
+                      <a role="button" onclick="pubUi.listContsActive(this);" class="card_type01 bg-blue">
                         <div class="card_cover">
-                          <img src="../../inc/images/img/img_card-content.svg" alt="N CUP">
+                          <img src="../inc/images/img/r3_eg_pc.png" alt="N CUP R3">
                         </div>
                         <div class="card_top">
-                          <p class="card_rank">R1<br />N CUP</p>
+                          <p class="card_rank">R3<br />N CUP</p>
                         </div>
                         <div class="card_bottom">
                           <div class="card_info">
-                            <strong class="card_badge">APR</strong>
-                            <p class="card_tit">27~28</p>
+                            <strong class="card_badge">JUN</strong>
+                            <p class="card_tit">22~23</p>
+                            <p class="card_subtit">Yeongam</p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="swiper-slide item" data-content="4">
+                      <a role="button" onclick="pubUi.listContsActive(this);" class="card_type01 bg-blue">
+                        <div class="card_cover">
+                          <img src="../inc/images/img/r4_eg_pc.png" alt="N CUP R4">
+                        </div>
+                        <div class="card_top">
+                          <p class="card_rank">R4<br />N CUP</p>
+                        </div>
+                        <div class="card_bottom">
+                          <div class="card_info">
+                            <strong class="card_badge">SEP</strong>
+                            <p class="card_tit">28~29</p>
+                            <p class="card_subtit">Yongin</p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="swiper-slide item" data-content="5">
+                      <a role="button" onclick="pubUi.listContsActive(this);" class="card_type01 bg-blue">
+                        <div class="card_cover">
+                          <img src="../inc/images/img/r5_eg_pc.png" alt="N CUP R5">
+                        </div>
+                        <div class="card_top">
+                          <p class="card_rank">R5<br />N CUP</p>
+                        </div>
+                        <div class="card_bottom">
+                          <div class="card_info">
+                            <strong class="card_badge">OCT</strong>
+                            <p class="card_tit">19~20</p>
                             <p class="card_subtit">Inje</p>
                           </div>
                         </div>
                       </a>
                     </div>
-                    <div class="swiper-slide item">
-                      <a role="button" class="card_type01 bg-blue">
+                    <div class="swiper-slide item" data-content="6">
+                      <a role="button" onclick="pubUi.listContsActive(this);" class="card_type01 bg-black">
                         <div class="card_cover">
-                          <img src="../../inc/images/img/img_card-content.svg" alt="N CUP">
+                          <img src="../inc/images/img/r6_eg_pc.png" alt="N CUP R6">
                         </div>
                         <div class="card_top">
-                          <p class="card_rank">R1<br />N CUP</p>
+                          <p class="card_rank">R6<br />N CUP</p>
                         </div>
                         <div class="card_bottom">
                           <div class="card_info">
-                            <strong class="card_badge">APR</strong>
-                            <p class="card_tit">27~28</p>
+                            <strong class="card_badge">NOV</strong>
+                            <p class="card_tit">9~10</p>
+                            <p class="card_subtit">Yeongam</p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="swiper-slide item" data-content="7">
+                      <a role="button" onclick="pubUi.listContsActive(this);" class="card_type01 bg-black">
+                        <div class="card_cover">
+                          <img src="../inc/images/img/ntt_r1_eg_pc.png" alt="NTT R1" />
+                        </div>
+                        <div class="card_top">
+                          <p class="card_rank">
+                            R1<br />
+                            <span class="ntt-val">N TT</span>
+                          </p>
+                        </div>
+                        <div class="card_bottom">
+                          <div class="card_info">
+                            <strong class="card_badge">MAY</strong>
+                            <p class="card_tit">25</p>
                             <p class="card_subtit">Inje</p>
                           </div>
                         </div>
                       </a>
                     </div>
-                    <div class="swiper-slide item">
-                      <a role="button" class="card_type01 bg-blue">
+                    <div class="swiper-slide item" data-content="8">
+                      <a role="button" onclick="pubUi.listContsActive(this);" class="card_type01 bg-black">
                         <div class="card_cover">
-                          <img src="../../inc/images/img/img_card-content.svg" alt="N CUP">
+                          <img src="../inc/images/img/ntt_r2_eg_pc.png" alt="NTT R2" />
                         </div>
                         <div class="card_top">
-                          <p class="card_rank">R1<br />N CUP</p>
+                          <p class="card_rank">
+                            R2<br />
+                            <span class="ntt-val">N TT</span>
+                          </p>
                         </div>
                         <div class="card_bottom">
                           <div class="card_info">
-                            <strong class="card_badge">APR</strong>
-                            <p class="card_tit">27~28</p>
+                            <strong class="card_badge">JUL</strong>
+                            <p class="card_tit">20</p>
+                            <p class="card_subtit">
+                              Yongin
+                            </p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="swiper-slide item" data-content="9">
+                      <a role="button" onclick="pubUi.listContsActive(this);" class="card_type01 bg-black">
+                        <div class="card_cover">
+                          <img src="../inc/images/img/ntt_r3_eg_pc.png" alt="NTT R3" />
+                        </div>
+                        <div class="card_top">
+                          <p class="card_rank">
+                            R3<br />
+                            <span class="ntt-val">N TT</span>
+                          </p>
+                        </div>
+                        <div class="card_bottom">
+                          <div class="card_info">
+                            <strong class="card_badge">AUG</strong>
+                            <p class="card_tit">17</p>
+                            <p class="card_subtit">
+                              Yongin
+                            </p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="swiper-slide item" data-content="10">
+                      <a role="button" onclick="pubUi.listContsActive(this);" class="card_type01 bg-black">
+                        <div class="card_cover">
+                          <img src="../inc/images/img/ntt_r4_eg_pc.png" alt="NTT R4" />
+                        </div>
+                        <div class="card_top">
+                          <p class="card_rank">
+                            R4<br />
+                            <span class="ntt-val">N TT</span>
+                          </p>
+                        </div>
+                        <div class="card_bottom">
+                          <div class="card_info">
+                            <strong class="card_badge">SEP</strong>
+                            <p class="card_tit">7</p>
                             <p class="card_subtit">Inje</p>
                           </div>
                         </div>
                       </a>
                     </div>
-                    <div class="swiper-slide item">
-                      <a role="button" class="card_type01 bg-blue">
+                    <div class="swiper-slide item" data-content="11">
+                      <a role="button" onclick="pubUi.listContsActive(this);" class="card_type01 bg-black">
                         <div class="card_cover">
-                          <img src="../../inc/images/img/img_card-content.svg" alt="N CUP">
+                          <img src="../inc/images/img/ntt_r5_eg_pc.png" alt="NTT R5" />
                         </div>
                         <div class="card_top">
-                          <p class="card_rank">R1<br />N CUP</p>
+                          <p class="card_rank">
+                            R5<br />
+                            <span class="ntt-val">N TT</span>
+                          </p>
                         </div>
                         <div class="card_bottom">
                           <div class="card_info">
-                            <strong class="card_badge">APR</strong>
-                            <p class="card_tit">27~28</p>
-                            <p class="card_subtit">Inje</p>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="swiper-slide item">
-                      <a role="button" class="card_type01 bg-blue">
-                        <div class="card_cover">
-                          <img src="../../inc/images/img/img_card-content.svg" alt="N CUP">
-                        </div>
-                        <div class="card_top">
-                          <p class="card_rank">R1<br />N CUP</p>
-                        </div>
-                        <div class="card_bottom">
-                          <div class="card_info">
-                            <strong class="card_badge">APR</strong>
-                            <p class="card_tit">27~28</p>
-                            <p class="card_subtit">Inje</p>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="swiper-slide item">
-                      <a role="button" class="card_type01 bg-blue">
-                        <div class="card_cover">
-                          <img src="../../inc/images/img/img_card-content.svg" alt="N CUP">
-                        </div>
-                        <div class="card_top">
-                          <p class="card_rank">R1<br />N CUP</p>
-                        </div>
-                        <div class="card_bottom">
-                          <div class="card_info">
-                            <strong class="card_badge">APR</strong>
-                            <p class="card_tit">27~28</p>
-                            <p class="card_subtit">Inje</p>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="swiper-slide item">
-                      <a role="button" class="card_type01 bg-blue">
-                        <div class="card_cover">
-                          <img src="../../inc/images/img/img_card-content.svg" alt="N CUP">
-                        </div>
-                        <div class="card_top">
-                          <p class="card_rank">R1<br />N CUP</p>
-                        </div>
-                        <div class="card_bottom">
-                          <div class="card_info">
-                            <strong class="card_badge">APR</strong>
-                            <p class="card_tit">27~28</p>
-                            <p class="card_subtit">Inje</p>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="swiper-slide item">
-                      <a role="button" class="card_type01 bg-black">
-                        <div class="card_cover">
-                          <img src="../../inc/images/img/img_card-content.svg" alt="N CUP">
-                        </div>
-                        <div class="card_top">
-                          <p class="card_rank">R1<br />N CUP</p>
-                        </div>
-                        <div class="card_bottom">
-                          <div class="card_info">
-                            <strong class="card_badge">APR</strong>
-                            <p class="card_tit">27~28</p>
-                            <p class="card_subtit">Inje</p>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="swiper-slide item">
-                      <a role="button" class="card_type01 bg-black">
-                        <div class="card_cover">
-                          <img src="../../inc/images/img/img_card-content.svg" alt="N CUP">
-                        </div>
-                        <div class="card_top">
-                          <p class="card_rank">R1<br />N CUP</p>
-                        </div>
-                        <div class="card_bottom">
-                          <div class="card_info">
-                            <strong class="card_badge">APR</strong>
-                            <p class="card_tit">27~28</p>
-                            <p class="card_subtit">Inje</p>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="swiper-slide item">
-                      <a role="button" class="card_type01 bg-black">
-                        <div class="card_cover">
-                          <img src="../../inc/images/img/img_card-content.svg" alt="N CUP">
-                        </div>
-                        <div class="card_top">
-                          <p class="card_rank">R1<br />N CUP</p>
-                        </div>
-                        <div class="card_bottom">
-                          <div class="card_info">
-                            <strong class="card_badge">APR</strong>
-                            <p class="card_tit">27~28</p>
-                            <p class="card_subtit">Inje</p>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="swiper-slide item">
-                      <a role="button" class="card_type01 bg-black">
-                        <div class="card_cover">
-                          <img src="../../inc/images/img/img_card-content.svg" alt="N CUP">
-                        </div>
-                        <div class="card_top">
-                          <p class="card_rank">R1<br />N CUP</p>
-                        </div>
-                        <div class="card_bottom">
-                          <div class="card_info">
-                            <strong class="card_badge">APR</strong>
-                            <p class="card_tit">27~28</p>
-                            <p class="card_subtit">Inje</p>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="swiper-slide item">
-                      <a role="button" class="card_type01 bg-black">
-                        <div class="card_cover">
-                          <img src="../../inc/images/img/img_card-content.svg" alt="N CUP">
-                        </div>
-                        <div class="card_top">
-                          <p class="card_rank">R1<br />N CUP</p>
-                        </div>
-                        <div class="card_bottom">
-                          <div class="card_info">
-                            <strong class="card_badge">APR</strong>
-                            <p class="card_tit">27~28</p>
-                            <p class="card_subtit">Inje</p>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="swiper-slide item">
-                      <a role="button" class="card_type01 bg-black">
-                        <div class="card_cover">
-                          <img src="../../inc/images/img/img_card-content.svg" alt="N CUP">
-                        </div>
-                        <div class="card_top">
-                          <p class="card_rank">R1<br />N CUP</p>
-                        </div>
-                        <div class="card_bottom">
-                          <div class="card_info">
-                            <strong class="card_badge">APR</strong>
-                            <p class="card_tit">27~28</p>
-                            <p class="card_subtit">Inje</p>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="swiper-slide item">
-                      <a role="button" class="card_type01 bg-black">
-                        <div class="card_cover">
-                          <img src="../../inc/images/img/img_card-content.svg" alt="N CUP">
-                        </div>
-                        <div class="card_top">
-                          <p class="card_rank">R1<br />N CUP</p>
-                        </div>
-                        <div class="card_bottom">
-                          <div class="card_info">
-                            <strong class="card_badge">APR</strong>
-                            <p class="card_tit">27~28</p>
-                            <p class="card_subtit">Inje</p>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="swiper-slide item">
-                      <a role="button" class="card_type01 bg-black">
-                        <div class="card_cover">
-                          <img src="../../inc/images/img/img_card-content.svg" alt="N CUP">
-                        </div>
-                        <div class="card_top">
-                          <p class="card_rank">R1<br />N CUP</p>
-                        </div>
-                        <div class="card_bottom">
-                          <div class="card_info">
-                            <strong class="card_badge">APR</strong>
-                            <p class="card_tit">27~28</p>
-                            <p class="card_subtit">Inje</p>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="swiper-slide item">
-                      <a role="button" class="card_type01 bg-black">
-                        <div class="card_cover">
-                          <img src="../../inc/images/img/img_card-content.svg" alt="N CUP">
-                        </div>
-                        <div class="card_top">
-                          <p class="card_rank">R1<br />N CUP</p>
-                        </div>
-                        <div class="card_bottom">
-                          <div class="card_info">
-                            <strong class="card_badge">APR</strong>
-                            <p class="card_tit">27~28</p>
-                            <p class="card_subtit">Inje</p>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="swiper-slide item">
-                      <a role="button" class="card_type01 bg-black">
-                        <div class="card_cover">
-                          <img src="../../inc/images/img/img_card-content.svg" alt="N CUP">
-                        </div>
-                        <div class="card_top">
-                          <p class="card_rank">R1<br />N CUP</p>
-                        </div>
-                        <div class="card_bottom">
-                          <div class="card_info">
-                            <strong class="card_badge">APR</strong>
-                            <p class="card_tit">27~28</p>
-                            <p class="card_subtit">Inje</p>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="swiper-slide item">
-                      <a role="button" class="card_type01 bg-black">
-                        <div class="card_cover">
-                          <img src="../../inc/images/img/img_card-content.svg" alt="N CUP">
-                        </div>
-                        <div class="card_top">
-                          <p class="card_rank">R1<br />N CUP</p>
-                        </div>
-                        <div class="card_bottom">
-                          <div class="card_info">
-                            <strong class="card_badge">APR</strong>
-                            <p class="card_tit">27~28</p>
-                            <p class="card_subtit">Inje</p>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="swiper-slide item">
-                      <a role="button" class="card_type01 bg-black">
-                        <div class="card_cover">
-                          <img src="../../inc/images/img/img_card-content.svg" alt="N CUP">
-                        </div>
-                        <div class="card_top">
-                          <p class="card_rank">R1<br />N CUP</p>
-                        </div>
-                        <div class="card_bottom">
-                          <div class="card_info">
-                            <strong class="card_badge">APR</strong>
-                            <p class="card_tit">27~28</p>
+                            <strong class="card_badge">OCT</strong>
+                            <p class="card_tit">26</p>
                             <p class="card_subtit">Inje</p>
                           </div>
                         </div>
@@ -4072,6 +4179,758 @@
                     </div>
                     <div class="swiper-button-prev swiper-button-disabled" tabindex="-1" role="button"
                       aria-controls="swiper-wrapper-d1f642c19f1cdd98" aria-disabled="true" aria-label="이전 슬라이드"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+
+            <div class="subSection">
+              <h3 class="guideSubTit">case 6 :: onlyOneSwiper</h3>
+              <div class="ui-item">
+                <div class="banner-box">
+                  <div class="swiper-container">
+                    <!-- Swiper -->
+                    <div class="swiper onlyOneSwiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="banner-inner">
+                            <img src="../../inc/images/img/img_nfluencer_banner01.png" loading="lazy" alt="ENJOY EVERY SECOND"
+                              class="pc-only" />
+                            <img src="../../inc/images/img/img_nfluencer_banner01_mo.png" loading="lazy"
+                              alt="ENJOY EVERY SECOND" class="mo-only" />
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="banner-inner">
+                            <img src="../../inc/images/img/img_nfluencer_banner01.png" loading="lazy" alt="ENJOY EVERY SECOND"
+                              class="pc-only" />
+                            <img src="../../inc/images/img/img_nfluencer_banner01_mo.png" loading="lazy"
+                              alt="ENJOY EVERY SECOND" class="mo-only" />
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="banner-inner">
+                            <img src="../../inc/images/img/img_nfluencer_banner01.png" loading="lazy" alt="ENJOY EVERY SECOND"
+                              class="pc-only" />
+                            <img src="../../inc/images/img/img_nfluencer_banner01_mo.png" loading="lazy"
+                              alt="ENJOY EVERY SECOND" class="mo-only" />
+                          </div>
+                        </div>
+                      </div>
+                      <!-- //swiper-wrapper -->
+                      <div class="swiper-button-next"></div>
+                      <div class="swiper-button-prev"></div>
+                      <div class="swiper-status-wrap">
+                        <div class="swiper-pagination-custom">
+                          <span class="swiper-pagination-bullet-active"></span>
+                        </div>
+                        <div class="btn-wrap">
+                          <button class="btn btn-play on" type="button">
+                            <span class="visually-hidden">정지</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- //swiper -->
+                  </div>
+                  <!-- //swiper-container -->
+                </div>
+              </div>
+            </div>
+            <!--  -->            
+
+            <div class="subSection">
+              <h3 class="guideSubTit">case 7 :: WRC Swiper</h3>
+              <div class="ui-item">
+                <div class="swiper-container">
+                  <!-- Swiper -->
+                  <div class="swiper wrc_swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="lineup_wrap">
+                          <img src="../../inc/images/content/img_wrc_lineUp_profile01.png" alt="선수 프로필 사진" />
+                          <img src="../../inc/images/content/img_wrc_lineUp_profile02.png" alt="선수 프로필 사진" />
+                        </div>
+                        <div class="lineup_box">
+                          <div class="lineup_info">
+                            <p class="lineup_subtit">Driver</p>
+                            <p class="lineup_tit">THIERRY NEUVILLE</p>
+                            <p class="lineup_subtit">June 16, 1988 / Belgium</p>
+                            <p class="lineup_detail">
+                              WRC debut: 2009, Rallye de Catalunya<br />
+                              WRC wins: 19<br />
+                              Podiums: 63<br />
+                              WRC starts: 155 (end of 2023)
+                            </p>
+                          </div>
+                          <div class="lineup_info">
+                            <!-- 09/02 최종 문구변경 -->
+                            <p class="lineup_subtit">Co-Driver</p>
+                            <p class="lineup_tit">MARTIJN WYDAEGHE</p>
+                            <p class="lineup_subtit">
+                              September 1, 1992 / Belgium
+                            </p>
+                            <p class="lineup_detail">
+                              WRC debut: 2013, Rallye de France-Alsace<br />
+                              WRC wins: 6<br />
+                              Podiums: 20<br />
+                              WRC starts: 56 (end of 2023)
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="lineup_wrap">
+                          <img src="../../inc/images/content/img_wrc_lineUp_profile03.png" alt="선수 프로필 사진" />
+                          <img src="../../inc/images/content/img_wrc_lineUp_profile04.png" alt="선수 프로필 사진" />
+                        </div>
+                        <div class="lineup_box">
+                          <div class="lineup_info">
+                            <p class="lineup_subtit">Driver</p>
+                            <p class="lineup_tit">OTT TÄNAK</p>
+                            <p class="lineup_subtit">
+                              October 15, 1987 / Estonia
+                            </p>
+                            <p class="lineup_detail">
+                              WRC debut: 2011, Wales Rally GB<br />
+                              WRC wins: 19<br />
+                              Podiums: 43<br />
+                              WRC starts: 149 (end of 2023)
+                            </p>
+                          </div>
+                          <div class="lineup_info">
+                            <!-- 09/02 최종 문구변경 -->
+                            <p class="lineup_subtit">Co-Driver</p>
+                            <p class="lineup_tit">MARTIN JÄRVEOJA</p>
+                            <p class="lineup_subtit">
+                              August 18, 1987/ Estonia
+                            </p>
+                            <p class="lineup_detail">
+                              WRC debut: 2010, Rally Jordan<br />
+                              WRC wins: 19<br />
+                              Podiums: 42<br />
+                              WRC starts: 120 (end of 2023)
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="lineup_wrap">
+                          <img src="../../inc/images/content/img_wrc_lineUp_profile05.png" alt="선수 프로필 사진" />
+                          <img src="../../inc/images/content/img_wrc_lineUp_profile06.png" alt="선수 프로필 사진" />
+                        </div>
+                        <div class="lineup_box">
+                          <div class="lineup_info">
+                            <p class="lineup_subtit">Driver</p>
+                            <p class="lineup_tit">DANI SORDO</p>
+                            <p class="lineup_subtit">May 2, 1983 / Spain</p>
+                            <p class="lineup_detail">
+                              WRC debut: 2003, Rally Catalunya<br />
+                              WRC wins: 3<br />
+                              Podiums: 56<br />
+                              WRC starts: 189 (end of 2023)
+                            </p>
+                          </div>
+                          <div class="lineup_info">
+                            <!-- 09/02 최종 문구변경 -->
+                            <p class="lineup_subtit">Co-Driver</p>
+                            <p class="lineup_tit">CÁNDIDO CARRERA</p>
+                            <p class="lineup_subtit">March 24, 1980/ Spain</p>
+                            <p class="lineup_detail">
+                              WRC debut: 2010, Rally de Espana<br />
+                              WRC wins: 0<br />
+                              Podiums: 7<br />
+                              WRC starts: 48 (end of 2023)
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="lineup_wrap">
+                          <img src="../../inc/images/content/img_wrc_lineUp_profile07.png" alt="선수 프로필 사진" />
+                          <img src="../../inc/images/content/img_wrc_lineUp_profile08.png" alt="선수 프로필 사진" />
+                        </div>
+                        <div class="lineup_box">
+                          <div class="lineup_info">
+                            <p class="lineup_subtit">Driver</p>
+                            <p class="lineup_tit">ESAPEKKA LAPPI</p>
+                            <p class="lineup_subtit">
+                              January 17, 1991/ Finland
+                            </p>
+                            <p class="lineup_detail">
+                              WRC debut: 2011, Rally Finland<br />
+                              WRC wins: 1<br />
+                              Podiums: 14<br />
+                              WRC starts: 85 (end of 2023)
+                            </p>
+                          </div>
+                          <div class="lineup_info">
+                            <!-- 09/02 최종 문구변경 -->
+                            <p class="lineup_subtit">Co-Driver</p>
+                            <p class="lineup_tit">JANNE FERM</p>
+                            <p class="lineup_subtit">
+                              August 29, 1980/ Finland
+                            </p>
+                            <p class="lineup_detail">
+                              WRC debut: 2011, Rally Finland<br />
+                              WRC wins: 1<br />
+                              Podiums: 14<br />
+                              WRC starts: 85 (end of 2023)
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-bottom-wrap">
+                      <div class="swiper-button-next"></div>
+                      <div class="swiper-button-prev"></div>
+                    </div>
+                    <div class="swiper-status-wrap">
+                      <div class="swiper-pagination-custom">
+                        <span class="swiper-pagination-bullet-active"></span>
+                      </div>
+                      <!-- 재생,정지 버튼 추가 (8/5) -->
+                      <div class="btn-wrap">
+                        <button class="btn btn-play on" type="button">
+                          <span class="visually-hidden">정지</span>
+                        </button>
+                      </div><!-- //재생,정지 버튼 추가 (8/5) -->
+                    </div>
+                  </div>
+                  <!-- //swiper -->
+                </div>
+                <!-- //swiper-container -->
+              </div>
+            </div>
+            <!--  -->
+
+            <div class="subSection">
+              <h3 class="guideSubTit">case 8 :: Merchandise Swiper</h3>
+              <div class="ui-item">
+                <div class="swiper-container">
+                  <!-- Swiper -->
+                  <div class="swiper merchandise_swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="../../inc/images/content/img_Merchandise_kv01.png" alt="N Collection 이미지" class="pc-only" />
+                        <img src="../../inc/images/content/img_Merchandise_kv01_mo.png" alt="N Collection 이미지"
+                          class="mo-only" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="../../inc/images/content/img_Merchandise_kv02.png" alt="N Collection 이미지" class="pc-only" />
+                        <img src="../../inc/images/content/img_Merchandise_kv02_mo.png" alt="N Collection 이미지"
+                          class="mo-only" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="../../inc/images/content/img_Merchandise_kv03.png" alt="N Collection 이미지" class="pc-only" />
+                        <img src="../../inc/images/content/img_Merchandise_kv03_mo.png" alt="N Collection 이미지"
+                          class="mo-only" />
+                      </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-status-wrap">
+                      <div class="swiper-pagination-custom">
+                        <span class="swiper-pagination-bullet-active"></span>
+                      </div>
+                      <div class="btn-wrap">
+                        <button class="btn btn-play on" type="button" title="정지"></button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- //swiper -->
+                </div>
+                <!-- //swiper-container -->
+              </div>
+            </div>
+            <!--  -->
+
+            <div class="subSection">
+              <h3 class="guideSubTit">case 9 :: Collection Swiper</h3>
+              <div class="ui-item">
+                <div class="content-wrap brand">
+                  <div class="content-area merchandise-wrap">
+                    <div class="content-item04 collectiontab-wrap tab01-bg">
+                      <div class="merchandise-w1440">
+                        <div class="tab-container">
+                          <p class="contitle-type01 fw-type03 merchandise-w1096">
+                            Hyundai N Collection
+                          </p>
+                          <div class="tab-head ty04">
+                            <div class="tabs-wrap">
+                              <ul class="tabs ty-black" data-contents="탭카테고리">
+                                <li class="on">
+                                  <a href="javascript:;" aria-controls="tab1-01" role="tab" aria-selected="true">2024 Hyundai N
+                                    Collection</a>
+                                </li>
+                                <li>
+                                  <a href="javascript:;" aria-controls="tab1-02" role="tab" aria-selected="false">2023 Hyundai N
+                                    Collection</a>
+                                </li>
+                                <li>
+                                  <!-- 09/02 최종 문구변경 -->
+                                  <a href="javascript:;" aria-controls="tab1-03" role="tab" aria-selected="false">N Basic
+                                    Collection</a>
+                                </li>
+                                <li>
+                                  <a href="javascript:;" aria-controls="tab1-04" role="tab" aria-selected="false">IONIQ 5 N
+                                    Collection</a>
+                                </li>
+                                <li>
+                                  <!-- 09/02 최종 문구변경 -->
+                                  <a href="javascript:;" aria-controls="tab1-05" role="tab" aria-selected="false">N Winter
+                                    Collection</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="tab-content on" id="tab1-01" role="tabpanel">
+                            <div class="collection-tabcont">
+                              <div class="swiper-container">
+                                <!-- Swiper -->
+                                <div class="swiper collection_swiper">
+                                  <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                      <a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000320"
+                                        target="_blank" rel="noopener">
+                                        <img src="../../inc/images/content/img_Merchandise_tabcont_01_01.png"
+                                          alt="N Brand Postcard (Season 2) 이미지" /></a>
+                                      <p class="collection_swiper-txt">
+                                        N Brand Postcard (Season 2)
+                                      </p>
+                                    </div>
+                                    <div class="swiper-slide">
+                                      <a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000321"
+                                        target="_blank" rel="noopener">
+                                        <img src="../../inc/images/content/img_Merchandise_tabcont_01_02.png"
+                                          alt="Hyundai N Long Umbrella 이미지" />
+                                      </a>
+                                      <p class="collection_swiper-txt">
+                                        Hyundai N Long Umbrella
+                                      </p>
+                                    </div>
+                                    <div class="swiper-slide">
+                                      <a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000351"
+                                        target="_blank" rel="noopener">
+                                        <img src="../../inc/images/content/img_Merchandise_tabcont_01_03.png"
+                                          alt="Hyundai N Never Just Drive Keyring 이미지" />
+                                      </a>
+                                      <p class="collection_swiper-txt">
+                                        Hyundai N Never Just Drive Key Ring
+                                      </p>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                      <a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000353"
+                                        target="_blank" rel="noopener">
+                                        <img src="../../inc/images/content/img_Merchandise_tabcont_01_04.png"
+                                          alt="IONIQ 5 N Illust T-Shirt 이미지" /></a>
+                                      <p class="collection_swiper-txt">
+                                        IONIQ 5 N Illust T-Shirt
+                                      </p>
+                                    </div>
+                                    <div class="swiper-slide">
+                                      <a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000352"
+                                        target="_blank" rel="noopener">
+                                        <img src="../../inc/images/content/img_Merchandise_tabcont_01_05.png"
+                                          alt="Hyundai N Long Sleeve T-Shirt 이미지" />
+                                      </a>
+                                      <p class="collection_swiper-txt">
+                                        Hyundai N Long Sleeve T-Shirt
+                                      </p>
+                                    </div>
+                                    <div class="swiper-slide">
+                                      <a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000357"
+                                        target="_blank" rel="noopener">
+                                        <img src="../../inc/images/content/img_Merchandise_tabcont_01_06.png"
+                                          alt="Hyundai N Bucket Hat 이미지" />
+                                      </a>
+                                      <p class="collection_swiper-txt">
+                                        Hyundai N Bucket Hat
+                                      </p>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                      <a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000355"
+                                        target="_blank" rel="noopener">
+                                        <img src="../../inc/images/content/img_Merchandise_tabcont_01_07.png"
+                                          alt="Hyundai N Duffle Bag 이미지" /></a>
+                                      <p class="collection_swiper-txt">
+                                        Hyundai N Duffle Bag
+                                      </p>
+                                    </div>
+                                    <div class="swiper-slide">
+                                      <a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000354"
+                                        target="_blank" rel="noopener">
+                                        <img src="../../inc/images/content/img_Merchandise_tabcont_01_08.png"
+                                          alt="Hyundai N Rain Pancho 이미지" />
+                                      </a>
+                                      <p class="collection_swiper-txt">
+                                        Hyundai N Rain Pancho
+                                      </p>
+                                    </div>
+                                    <div class="swiper-slide">
+                                      <a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000356"
+                                        target="_blank" rel="noopener">
+                                        <img src="../../inc/images/content/img_Merchandise_tabcont_01_09.png"
+                                          alt="Hyundai N Cushion Blanket 이미지" />
+                                      </a>
+                                      <p class="collection_swiper-txt">
+                                        Hyundai N Cushion Blanket
+                                      </p>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                      <a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000359"
+                                        target="_blank" rel="noopener">
+                                        <img src="../../inc/images/content/img_Merchandise_tabcont_01_10.png"
+                                          alt="IONIQ 5 N Mini Car (AR Chassis) 이미지" />
+                                      </a>
+                                      <p class="collection_swiper-txt">
+                                        IONIQ 5 N Mini Car (AR Chassis)
+                                      </p>
+                                    </div>
+                                    <div class="swiper-slide">
+                                      <a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000360"
+                                        target="_blank" rel="noopener">
+                                        <img src="../../inc/images/content/img_Merchandise_tabcont_01_11.png"
+                                          alt="Hyundai N Jigsaw Puzzle 이미지" /></a>
+                                      <p class="collection_swiper-txt">
+                                        Hyundai N Jigsaw Puzzle
+                                      </p>
+                                    </div>
+                                    <div class="swiper-slide">
+                                      <a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000358"
+                                        target="_blank" rel="noopener">
+                                        <img src="../../inc/images/content/img_Merchandise_tabcont_01_12.png"
+                                          alt="Hyundai N Wheel Cap Griptok 이미지" />
+                                      </a>
+                                      <p class="collection_swiper-txt">
+                                        Hyundai N Wheel Cap Griptok
+                                      </p>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                      <a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000350"
+                                        target="_blank" rel="noopener">
+                                        <img src="../../inc/images/content/img_Merchandise_tabcont_01_13.png"
+                                          alt="Hyundai N Mug 이미지" />
+                                      </a>
+                                      <p class="collection_swiper-txt">
+                                        Hyundai N Mug
+                                      </p>
+                                    </div>
+                                  </div>
+                                  <div class="swiper-bottom-wrap">
+                                    <div class="swiper-button-next"></div>
+                                    <div class="swiper-button-prev"></div>
+                                  </div>
+                                  <div class="swiper-status-wrap">
+                                    <div class="swiper-pagination-custom">
+                                      <span class="swiper-pagination-bullet-active"></span>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- //swiper -->
+                              </div>
+                              <!-- //swiper-container -->
+                            </div>
+                          </div>
+                          <div class="tab-content" id="tab1-02" role="tabpanel">
+                            <div class="collection-tabcont">
+                              <div class="swiper-container">
+                                <!-- Swiper -->
+                                <div class="swiper collection_swiper">
+                                  <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                      <a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000291"
+                                        target="_blank" rel="noopener">
+                                        <img src="../../inc/images/content/img_Merchandise_tabcont_02_01.png" alt="Apparel 이미지" />
+                                      </a>
+                                      <p class="collection_swiper-txt">Apparel</p>
+                                    </div>
+                                    <div class="swiper-slide">
+                                      <a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000302"
+                                        target="_blank" rel="noopener">
+                                        <img src="../../inc/images/content/img_Merchandise_tabcont_02_02.png"
+                                          alt="Mini Car 이미지" /></a>
+                                      <p class="collection_swiper-txt">Mini Car</p>
+                                    </div>
+                                    <div class="swiper-slide">
+                                      <a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000164"
+                                        target="_blank" rel="noopener">
+                                        <img src="../../inc/images/content/img_Merchandise_tabcont_02_03.png"
+                                          alt="Collaboration 이미지" />
+                                      </a>
+                                      <p class="collection_swiper-txt">Collaboration</p>
+                                    </div>
+                                    <div class="swiper-slide">
+                                      <a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000266"
+                                        target="_blank" rel="noopener">
+                                        <img src="../../inc/images/content/img_Merchandise_tabcont_02_04.png" alt="Life 이미지" />
+                                      </a>
+                                      <p class="collection_swiper-txt">Life</p>
+                                    </div>
+                                    <div class="swiper-slide">
+                                      <a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000320"
+                                        target="_blank" rel="noopener">
+                                        <img src="../../inc/images/content/img_Merchandise_tabcont_02_05.png"
+                                          alt="Stationary 이미지" />
+                                      </a>
+                                      <p class="collection_swiper-txt">Stationary</p>
+                                    </div>
+                                  </div>
+                                  <div class="swiper-bottom-wrap">
+                                    <div class="swiper-button-next"></div>
+                                    <div class="swiper-button-prev"></div>
+                                  </div>
+                                  <div class="swiper-status-wrap">
+                                    <div class="swiper-pagination-custom">
+                                      <span class="swiper-pagination-bullet-active"></span>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- //swiper -->
+                              </div>
+                              <!-- //swiper-container -->
+                            </div>
+                          </div>
+                          <div class="tab-content" id="tab1-03" role="tabpanel">
+                            <div class="collection-tabcont">
+                              <div class="swiper-container">
+                                <!-- Swiper -->
+                                <div class="swiper collection_swiper">
+                                  <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                      <a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000256"
+                                        target="_blank" rel="noopener">
+                                        <img src="../../inc/images/content/img_Merchandise_tabcont_03_01.png"
+                                          alt="Hyundai N Brand Lanyard 이미지" />
+                                      </a>
+                                      <p class="collection_swiper-txt">
+                                        N Brand Lanyard
+                                      </p>
+                                    </div>
+                                    <div class="swiper-slide">
+                                      <a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000257"
+                                        target="_blank" rel="noopener">
+                                        <img src="../../inc/images/content/img_Merchandise_tabcont_03_02.png"
+                                          alt="Hyundai N Brand Round T-Shirt 이미지" />
+                                      </a>
+                                      <p class="collection_swiper-txt">
+                                        <!-- 09/02 최종 문구변경 -->
+                                        N Brand Round T-Shirt
+                                      </p>
+                                    </div>
+                                    <div class="swiper-slide">
+                                      <a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000258"
+                                        target="_blank" rel="noopener">
+                                        <img src="../../inc/images/content/img_Merchandise_tabcont_03_03.png"
+                                          alt="Hyundai N brand polo shirt 이미지" />
+                                      </a>
+                                      <p class="collection_swiper-txt">
+                                        <!-- 09/02 최종 문구변경 -->
+                                        N Brand Polo Shirt
+                                      </p>
+                                    </div>
+                                    <div class="swiper-slide">
+                                      <a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000259"
+                                        target="_blank" rel="noopener">
+                                        <img src="../../inc/images/content/img_Merchandise_tabcont_03_04.png"
+                                          alt="Hyundai N Brand Windbreaker 이미지" />
+                                      </a>
+                                      <p class="collection_swiper-txt">
+                                        <!-- 09/02 최종 문구변경 -->
+                                        N Brand Windbreaker
+                                      </p>
+                                    </div>
+                                    <div class="swiper-slide">
+                                      <a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000260"
+                                        target="_blank" rel="noopener">
+                                        <img src="../../inc/images/content/img_Merchandise_tabcont_03_05.png"
+                                          alt="Hyundai N Brand Softshell 이미지" />
+                                      </a>
+                                      <p class="collection_swiper-txt">
+                                        <!-- 09/02 최종 문구변경 -->
+                                        N Brand Softshell
+                                      </p>
+                                    </div>
+                                    <div class="swiper-slide">
+                                      <a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000262"
+                                        target="_blank" rel="noopener">
+                                        <img src="../../inc/images/content/img_Merchandise_tabcont_03_06.png"
+                                          alt="Hyundai N Brand String Backpack 이미지" />
+                                      </a>
+                                      <p class="collection_swiper-txt">
+                                        <!-- 09/02 최종 문구변경 -->
+                                        N Brand String Backpack
+                                      </p>
+                                    </div>
+                                    <div class="swiper-slide">
+                                      <a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000263"
+                                        target="_blank" rel="noopener">
+                                        <img src="../../inc/images/content/img_Merchandise_tabcont_03_07.png"
+                                          alt="Hyundai N Brand Gimsaek 이미지" />
+                                      </a>
+                                      <p class="collection_swiper-txt">
+                                        <!-- 09/02 최종 문구변경 -->
+                                        N Brand Round Gymsack
+                                      </p>
+                                    </div>
+                                  </div>
+                                  <div class="swiper-bottom-wrap">
+                                    <div class="swiper-button-next"></div>
+                                    <div class="swiper-button-prev"></div>
+                                  </div>
+                                  <div class="swiper-status-wrap">
+                                    <div class="swiper-pagination-custom">
+                                      <span class="swiper-pagination-bullet-active"></span>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- //swiper -->
+                              </div>
+                              <!-- //swiper-container -->
+                            </div>
+                          </div>
+                          <div class="tab-content" id="tab1-04" role="tabpanel">
+                            <div class="collection-tabcont">
+                              <div class="swiper-container">
+                                <!-- Swiper -->
+                                <div class="swiper collection_swiper">
+                                  <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                      <a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000267"
+                                        target="_blank" rel="noopener">
+                                        <img src="../../inc/images/content/img_Merchandise_tabcont_04_01.png"
+                                          alt="IONIQ 5 N graphic t-shirt 이미지" />
+                                      </a>
+                                      <p class="collection_swiper-txt">
+                                        IONIQ 5 N graphic t-shirt
+                                      </p>
+                                    </div>
+                                    <div class="swiper-slide">
+                                      <a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000268"
+                                        target="_blank" rel="noopener">
+                                        <img src="../../inc/images/content/img_Merchandise_tabcont_04_02.png"
+                                          alt="IONIQ 5 N Graphic Sweatshirt 이미지" />
+                                      </a>
+                                      <p class="collection_swiper-txt">
+                                        IONIQ 5 N Graphic Sweatshirt
+                                      </p>
+                                    </div>
+                                    <div class="swiper-slide">
+                                      <a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000264"
+                                        target="_blank" rel="noopener">
+                                        <img src="../../inc/images/content/img_Merchandise_tabcont_04_03.png"
+                                          alt="IONIQ 5 N Camouflage Box Tape 이미지" />
+                                      </a>
+                                      <p class="collection_swiper-txt">
+                                        IONIQ 5 N Camouflage Box Tape
+                                      </p>
+                                    </div>
+                                    <div class="swiper-slide">
+                                      <a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000265"
+                                        target="_blank" rel="noopener">
+                                        <img src="../../inc/images/content/img_Merchandise_tabcont_04_04.png"
+                                          alt="IONIQ 5 N Camouflage Reusable Bag 이미지" />
+                                      </a>
+                                      <p class="collection_swiper-txt">
+                                        IONIQ 5 N Camouflage Reusable Bag
+                                      </p>
+                                    </div>
+                                    <div class="swiper-slide">
+                                      <a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000269"
+                                        target="_blank" rel="noopener">
+                                        <img src="../../inc/images/content/img_Merchandise_tabcont_04_05.png"
+                                          alt="IONIQ 5 N graphic towel 이미지" />
+                                      </a>
+                                      <p class="collection_swiper-txt">
+                                        IONIQ 5 N graphic towel
+                                      </p>
+                                    </div>
+                                    <div class="swiper-slide">
+                                      <a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000270"
+                                        target="_blank" rel="noopener">
+                                        <img src="../../inc/images/content/img_Merchandise_tabcont_04_06.png"
+                                          alt="IONIQ 5 N Sticker Pack 이미지" />
+                                      </a>
+                                      <p class="collection_swiper-txt">
+                                        IONIQ 5 N Sticker Pack
+                                      </p>
+                                    </div>
+                                    <div class="swiper-slide">
+                                      <a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000271"
+                                        target="_blank" rel="noopener">
+                                        <img src="../../inc/images/content/img_Merchandise_tabcont_04_07.png"
+                                          alt="IONIQ 5 N Keyring 이미지" />
+                                      </a>
+                                      <p class="collection_swiper-txt">
+                                        IONIQ 5 N Keyring
+                                      </p>
+                                    </div>
+                                  </div>
+                                  <div class="swiper-bottom-wrap">
+                                    <div class="swiper-button-next"></div>
+                                    <div class="swiper-button-prev"></div>
+                                  </div>
+                                  <div class="swiper-status-wrap">
+                                    <div class="swiper-pagination-custom">
+                                      <span class="swiper-pagination-bullet-active"></span>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- //swiper -->
+                              </div>
+                              <!-- //swiper-container -->
+                            </div>
+                          </div>
+                          <div class="tab-content" id="tab1-05" role="tabpanel">
+                            <div>
+                              <div class="collection-tabcont">
+                                <div class="swiper-container">
+                                  <!-- Swiper -->
+                                  <div class="swiper collection_swiper">
+                                    <div class="swiper-wrapper">
+                                      <div class="swiper-slide">
+                                        <a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000292"
+                                          target="_blank" rel="noopener">
+                                          <img src="../../inc/images/content/img_Merchandise_tabcont_05_01.png"
+                                            alt="Hyundai N brand lightweight padding 이미지" />
+                                        </a>
+                                        <p class="collection_swiper-txt">
+                                          <!-- 09/02 최종 문구변경 -->
+                                          N Brand Lightweight Padded Jacket
+                                        </p>
+                                      </div>
+                                      <div class="swiper-slide">
+                                        <a href="https://collection.hyundai.com/items/prd_detail.do?item_id=I000000291"
+                                          target="_blank" rel="noopener">
+                                          <img src="../../inc/images/content/img_Merchandise_tabcont_05_02.png"
+                                            alt="Hyundai N Brand MA-1 이미지" />
+                                        </a>
+                                        <p class="collection_swiper-txt">
+                                          <!-- 09/02 최종 문구변경 -->
+                                          N Brand MA-1
+                                        </p>
+                                      </div>
+                                    </div>
+                                    <div class="swiper-status-wrap">
+                                      <div class="swiper-pagination-custom">
+                                        <span class="swiper-pagination-bullet-active"></span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!-- //swiper -->
+                                </div>
+                                <!-- //swiper-container -->
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -4858,6 +5717,7 @@
 <script type="text/javascript" src="./inc/js/shCore.js"></script>
 <script type="text/javascript" src="./inc/js/shBrushJScript.js"></script>
 <script type="text/javascript" src="./inc/js/guideUi.js"></script>
+<script type="text/javascript" src="../inc/js/com-ui.js"></script>
 <script type="text/javascript" src="../inc/js/pub-ui.js"></script>
 <script>
   function scrollEvent() {
