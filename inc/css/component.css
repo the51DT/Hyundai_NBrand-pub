@@ -1631,7 +1631,7 @@ a:hover .icon-youtube-wh {
   width: 100%;
   overflow: hidden;
 }
-.card_type03.card_ranker .card_bottom .card_detail {
+.card_type03 .card_bottom .card_detail {
   gap: 0.25rem;
   padding-right: 1.5rem;
   max-width: calc(100% - 110px);
