@@ -208,7 +208,7 @@ header {
 .nav-wrap {
   margin: 50px 0 10px 0;
   padding-right: 50px;
-  display: flex;
+  display: flex !important;
   justify-content: flex-end;
 }
 .nav-wrap .nav {
