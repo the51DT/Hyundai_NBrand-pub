@@ -314,6 +314,7 @@
   content: "";
   display: block;
   width: 2rem;
+  min-width: 2rem;
   height: 2rem;
   background-image: url(../images/icon/icon-checkbox.svg);
 }
@@ -340,6 +341,16 @@
   max-width: 57.3rem;
   border: 1px solid #000;
   color: #777;
+}
+
+.join_wrap .join_form_sub td {
+  border: 1px solid #000;
+}
+
+.join_wrap .join_form_sub table tr:not(:first-child) td:nth-child(3) {
+  text-decoration: underline;
+  font-size: 18px;
+  font-weight: 800;
 }
 
 /* CM050102 */
