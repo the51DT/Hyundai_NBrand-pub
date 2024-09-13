@@ -3004,9 +3004,9 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
     padding-bottom: 28px;
   }
   .ranking-wrap .card_type03 .card_bottom > button {
-    width: 100%;
+    /* width: 100%; */
     height: 100%;
-    max-width: 100%;
+    /* max-width: 100%; */
     overflow: hidden;
   }
   .ranking-wrap .ranking-center .ranking-inner2box.ranking-nologin,
