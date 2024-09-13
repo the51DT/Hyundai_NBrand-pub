@@ -345,6 +345,7 @@
 
 .join_wrap .join_form_sub td {
   border: 1px solid #000;
+  padding: 5px 10px;
 }
 
 .join_wrap .join_form_sub table tr:not(:first-child) td:nth-child(4) {

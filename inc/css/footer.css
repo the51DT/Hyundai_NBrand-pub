@@ -105,7 +105,7 @@
   line-height: 140%;
   color: #b3b3b3;
 }
-.footer-etc li:first-child a {
+.footer-etc li:nth-child(3) a {
   color: #fff;
   font-weight: 800;
 }
