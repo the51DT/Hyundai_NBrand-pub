@@ -453,6 +453,7 @@
   }
   .btn-navi-wrap.mo-only .btn-box {
     display: flex;
+    margin-right: 0;
   }
   .btn-navi-wrap.mo-only .btn-box .btn {
     display: block;
