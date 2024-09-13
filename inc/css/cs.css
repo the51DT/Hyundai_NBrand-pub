@@ -112,24 +112,44 @@
 
 /* privacy area */
 .privacy-area .text_desc > div:not(:last-child) {
-  margin-bottom:32px;  
+  margin-bottom: 32px;
+}
+.privacy-area .table_scroll-wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+.privacy-area table {
+  margin: 10px 0;
+  min-width: 500px;
+}
+.privacy-area table thead th {
+  background-color: #aacae6;
+  font-weight: 800;
+}
+.privacy-area table td,
+th {
+  border: 1px solid #000;
+  min-height: 16px;
+  padding: 5px 10px;
+}
+.privacy-area table td a:hover {
+  text-decoration: underline;
 }
 
-.privacy-area .text_desc > div  h4 {
+.privacy-area .text_desc > div h4 {
   font-size: 24px;
   font-weight: 700;
 }
-.privacy-area .text_desc > div  h5 {
+.privacy-area .text_desc > div h5 {
   font-size: 18px;
   font-weight: 500;
   margin: 10px 0;
 }
-.privacy-area .text_desc > div  p {
+.privacy-area .text_desc > div p {
   font-size: 16px;
   font-weight: 400;
   margin-top: 6px;
 }
-
 
 /* 약관 - terms */
 .terms-area > .terms-item {
@@ -158,12 +178,12 @@
 }
 
 .terms-desc-list > li:not(:last-child) {
-  margin-bottom:8px;
+  margin-bottom: 8px;
 }
 
 .terms-desc-list ol > li {
   padding-left: 20px;
-  margin-top:4px;
+  margin-top: 4px;
 }
 
 /* 모바일 */
