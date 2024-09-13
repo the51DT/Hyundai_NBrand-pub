@@ -347,7 +347,7 @@
   border: 1px solid #000;
 }
 
-.join_wrap .join_form_sub table tr:not(:first-child) td:nth-child(3) {
+.join_wrap .join_form_sub table tr:not(:first-child) td:nth-child(4) {
   text-decoration: underline;
   font-size: 18px;
   font-weight: 800;
