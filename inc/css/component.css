@@ -5621,6 +5621,7 @@ input:checked + .slider:before {
   display: flex;
   gap: 8px;
   align-items: center;
+  width: 100%;
 }
 .club-popup .popup-wrapper .popup-header.pop-profile_wrap .pop-profile img {
   width: 40px;
@@ -5637,6 +5638,7 @@ input:checked + .slider:before {
   -webkit-box-orient: vertical;
   word-wrap: break-word;
   max-height: calc(2.8em);
+  max-width: calc(100% - 80px);
 }
 .club-popup .popup-wrapper .popup-body {
   padding: 0;
