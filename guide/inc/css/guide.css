@@ -539,7 +539,7 @@ header {
 
 .mark-wrap {
   display: flex;
-  flex: 0 350px;
+  flex: 0 0 400px;
   align-items: center;
   justify-content: space-between;
   margin: 10px 0;

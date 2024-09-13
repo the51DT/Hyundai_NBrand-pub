@@ -214,10 +214,11 @@ min-width : 1024 css
   .tab-head.ty03 .tabs-wrap .tabs li {
     width: 50%;
   }
-  .tabs-wrap .tabs.tab3 li  {
+  .tabs-wrap .tabs.tab3 li {
     flex: 1;
   }
-  .tab-head.ty03 .tabs-wrap .tabs li a , .tabs-wrap .tabs.tab3 li a {
+  .tab-head.ty03 .tabs-wrap .tabs li a,
+  .tabs-wrap .tabs.tab3 li a {
     text-align: center;
     padding: 11px 0;
   }
@@ -528,6 +529,7 @@ min-width : 1024 css
   /* card_type03 */
   .card_type03 {
     height: 14rem;
+    width: calc(100vw - 48px);
   }
   .card_type03.card_ranker {
     height: 17.5625rem;
@@ -560,6 +562,7 @@ min-width : 1024 css
   }
   .card_type03 .card_name {
     font-size: 1.25rem;
+    max-width: 100%;
   }
 
   /* card_type04 */
