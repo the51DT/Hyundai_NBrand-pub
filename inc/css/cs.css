@@ -127,7 +127,7 @@
   font-weight: 800;
 }
 .privacy-area table td,
-th {
+.privacy-area table th {
   border: 1px solid #000;
   min-height: 16px;
   padding: 5px 10px;
