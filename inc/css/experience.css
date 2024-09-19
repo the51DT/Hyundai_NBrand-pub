@@ -1142,6 +1142,17 @@
   max-width: 100%;
 }
 
+.popup-wrapper .popup-body.height-longer-mobile * {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}
+
 .popup-wrapper .popup-body .m10 {
   display: flex;
   gap: 10px;
@@ -3715,6 +3726,14 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
 
   .popup-wrapper .popup-body.height-longer-mobile * {
     max-width: 100%;
+    -webkit-user-select: all;
+    -moz-user-select: all;
+    -ms-user-select: all;
+    user-select: all;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
   }
 
   .popup-wrapper .popup-body.body-pop-mobile {
