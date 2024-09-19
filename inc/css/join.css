@@ -1327,7 +1327,7 @@
 
   /* 회원가입 공통 */
 
-  .join-wrap.content-top {
+  .join-wrap .content-top {
     padding: 153px 24px;
   }
   .join-wrap .content-top p.tit-type01:first-child {
