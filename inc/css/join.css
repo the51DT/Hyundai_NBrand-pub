@@ -887,6 +887,9 @@
   font-weight: 700;
   line-height: 140%;
 }
+.mypage-checkbox-group .mypage-withdrawal-checkbox-wrap:last-child {
+  border-bottom: 0;
+}
 .mypage-withdrawal-checkbox {
   position: relative;
 }

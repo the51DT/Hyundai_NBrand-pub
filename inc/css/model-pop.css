@@ -743,7 +743,7 @@
     height: 12px;
   }
 
-  .model-video-wrap .img-wrap:before {
+  .model-video-wrap .img-wrap a:before {
     width: 66px;
     height: 66px;
   }

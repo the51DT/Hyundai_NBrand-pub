@@ -1,10 +1,6 @@
 @charset "utf-8";
 /* 공통 */
-.content-top {
-  padding: 139.5px 0;
-  text-align: center;
-  background: #fff;
-}
+
 .content-top p + p {
   margin-top: 16px;
 }
@@ -188,10 +184,7 @@
 
 /* 모바일 */
 @media screen and (max-width: 1023px) {
-  /* 공통 */
-  .content-top {
-    padding: 153px 24px;
-  }
+  /* 공통 */  
   .content-top p:last-child {
     font-size: 20px;
     line-height: 28px;
