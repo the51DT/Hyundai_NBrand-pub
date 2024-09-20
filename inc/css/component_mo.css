@@ -19,6 +19,21 @@ min-width : 1024 css
   .mo-only {
     display: block;
   }
+  
+  /*******
+   padding   
+  **********/
+  .pd0-mo {
+    padding: 0 !important;
+  }
+
+  /*******
+   align   
+  **********/
+  .txt-center-mo {
+    text-align: center;
+  }
+
   /*********
     font
   **********/

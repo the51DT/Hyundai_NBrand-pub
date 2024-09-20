@@ -752,7 +752,7 @@
 /* 이하 팝업 헤더의 제목 말줄임 처리 */
 /* .ellip.small의 경우 제목이 조금 더 길 때 작업  */
 @media screen and (max-width: 1280px) {
-  .popup-wrapper .popup-header .ellip {
+  .popup-wrapper .popup-header .inner-header-txt h3 {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;

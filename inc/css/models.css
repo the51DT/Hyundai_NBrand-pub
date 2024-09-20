@@ -1187,7 +1187,9 @@
     max-width: 100%;
   }
   .models-wrap .text-col .text-strong:not(.txt-left),
-  .models-wrap .text-col .text-normal:not(.txt-left) {
+  .models-wrap .text-col .text-normal:not(.txt-left),
+  .models-wrap .text-col:not(.txt-left) .text-strong:not(.txt-left),
+  .models-wrap .text-col:not(.txt-left) .text-normal:not(.txt-left) {
     text-align: center;
   }
   .models-wrap .models-full {
