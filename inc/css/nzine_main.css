@@ -626,7 +626,7 @@
 }
 .txt-cont .nzine-paragraph .txt-bold {
   display: block;
-  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head KR", "Hyundai Sans Head", sans-serif;
   margin-bottom: 10px;
 }
 .box-img .txt-cont {
@@ -4364,7 +4364,7 @@ html.no-handy .media-nzine-typeC .scroll-area .img-roll {
     width: 33%;
     margin: 0;
     font-size: 2.5vw;
-    font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
+    font-family: "Hyundai Sans Head KR", "Hyundai Sans Head", sans-serif;
     vertical-align: middle;
   }
   .media-nzine .tit-nfluencer span {
@@ -5108,7 +5108,7 @@ html.no-handy .media-nzine-typeC .scroll-area .img-roll {
   text-align: center;
 }
 .box-wrap__type-pdr.box-half .img-txt strong {
-  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head KR", "Hyundai Sans Head", sans-serif;
 }
 .media-nzine [data-name="section_default"] .box-wrap__type-pdr {
   padding: 0 9.94vw;
@@ -5242,7 +5242,7 @@ html.no-handy .media-nzine-typeC .scroll-area .img-roll {
 }
 .media-nzine .sub-tit {
   font-size: 5.2vw;
-  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head KR", "Hyundai Sans Head", sans-serif;
 }
 .media-nzine .sub-tit + .default-txt {
   margin-top: 1vw !important;
@@ -6321,13 +6321,13 @@ html.no-handy [data-name="section_year"] .content__img {
   display: none;
 }
 .box-slide .quotation__caption {
-  font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
+  font-family: "Hyundai Sans Text KR", "Hyundai Sans Text", sans-serif;
   font-style: italic;
   font-size: 4.444vw;
   line-height: 1.5;
 }
 .box-slide .quotation__quote {
-  font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
+  font-family: "Hyundai Sans Text KR", "Hyundai Sans Text", sans-serif;
   font-size: 4.444vw;
 }
 .box-slide .quotation__author {
@@ -6339,7 +6339,7 @@ html.no-handy [data-name="section_year"] .content__img {
   width: 50%;
   margin-top: 2.62vw;
   margin-left: -4px;
-  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head KR", "Hyundai Sans Head", sans-serif;
   font-size: 4.444vw;
 }
 .box-slide .quotation__author li:first-child {
@@ -6352,7 +6352,7 @@ html.no-handy [data-name="section_year"] .content__img {
 }
 .box-slide .quotation__author .quotation__author--label {
   display: block;
-  font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
+  font-family: "Hyundai Sans Text KR", "Hyundai Sans Text", sans-serif;
   font-size: 3.889vw;
 }
 .swiper-button-prev.swiper-button--small,
@@ -6401,7 +6401,7 @@ html.no-handy [data-name="section_year"] .content__img {
     font-size: 1.875vw;
   }
   .box-slide .quotation__quote {
-    font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
+    font-family: "Hyundai Sans Text KR", "Hyundai Sans Text", sans-serif;
     font-size: 1.25vw;
   }
   .box-slide .quotation__area > div {

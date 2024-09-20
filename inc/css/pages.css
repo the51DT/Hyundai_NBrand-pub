@@ -87,7 +87,7 @@
   font-weight: 700;
   line-height: 44.8px;
   color: #555;
-  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head KR", "Hyundai Sans Head", sans-serif;
 }
 .tit-btn-wrap .tit.on,
 .tit-btn-wrap .tit:hover {
@@ -119,7 +119,7 @@
 .conts-key-visual.ty02 .text-area .desc {
   padding-right: 1.5rem;
   text-align: left;
-  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head KR", "Hyundai Sans Head", sans-serif;
 }
 .conts-key-visual.ty02 .text-area button {
   margin-top: 32px;
@@ -199,7 +199,7 @@
   font-weight: 700;
   font-size: 80px;
   line-height: 100px;
-  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head KR", "Hyundai Sans Head", sans-serif;
 }
 
 .history-box .history-list li .text-area .title {
@@ -316,7 +316,7 @@
 }
 .about .class-info-box {
   padding-top: 160px;
-  padding-bottom:0;
+  padding-bottom: 0;
 }
 .about .class-info-box .tabs-wrap .tabs li a {
   min-width: 154px;
@@ -375,7 +375,7 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
-.card-wrap-list .card-list li a, 
+.card-wrap-list .card-list li a,
 .card-wrap-list .card-list li > div.card_type01 {
   min-width: 237px;
   height: 320px;
@@ -708,11 +708,11 @@
 
 @media screen and (max-width: 1800px) and (min-width: 1024px) {
   .class-info-box .tab-head.ty02 {
-    padding-left:80px;
-    padding-right:80px;
+    padding-left: 80px;
+    padding-right: 80px;
   }
 
-  .class-info-box .tab-content .conts-box-wrap > article, 
+  .class-info-box .tab-content .conts-box-wrap > article,
   .class-info-box .tab-content .conts-box-wrap > section {
     padding-left: 80px;
     padding-right: 80px;
@@ -848,7 +848,7 @@
     margin: 0 24px;
   }
   .conts-key-visual.ty02 .text-area .desc {
-    font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
+    font-family: "Hyundai Sans Text KR", "Hyundai Sans Text", sans-serif;
   }
   .about .conts-key-visual .text-area .desc {
     font-size: 20px;
@@ -1003,7 +1003,7 @@
 
   .class-info-box .tab-head.ty02 {
     padding-left: 24px;
-    padding-right:24px;
+    padding-right: 24px;
   }
 
   .class-info-box .tab-head.ty02 .tabs {
@@ -1012,9 +1012,9 @@
 
   .class-info-box .tab-content .conts-box-wrap > article,
   .class-info-box .tab-content .conts-box-wrap > section {
-    padding-left:24px;
-    padding-right:24px;
-  } 
+    padding-left: 24px;
+    padding-right: 24px;
+  }
   .class-info-box .tab-content .txt-area {
     margin-right: -24px;
   }
@@ -1095,7 +1095,7 @@
     font-size: 1rem;
   }
   .info-car-box .wrap-list .__bottom .wrap-lists .list-box:nth-child(2) p {
-    font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
+    font-family: "Hyundai Sans Head KR", "Hyundai Sans Head", sans-serif;
     font-size: 20px;
     line-height: 28px;
     padding-left: 0;

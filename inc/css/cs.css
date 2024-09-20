@@ -22,7 +22,7 @@
   border-bottom: 1px solid #000;
 }
 .inquiry_tit {
-  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head KR", "Hyundai Sans Head", sans-serif;
   font-size: 1.25rem;
   font-weight: 700;
   line-height: 140%;
@@ -44,7 +44,7 @@
   border-radius: 0.25rem;
 }
 .inquiry_popup_wrap p {
-  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head KR", "Hyundai Sans Head", sans-serif;
   font-size: 1.25rem;
   font-weight: 700;
   line-height: 140%;

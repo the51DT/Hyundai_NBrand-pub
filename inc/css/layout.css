@@ -319,7 +319,7 @@ body.fix {
 }
 
 .header__event-wrap .text-area h3 {
-  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head KR", "Hyundai Sans Head", sans-serif;
   font-size: 28px;
   font-weight: 500;
   line-height: 39.2px;
@@ -390,7 +390,7 @@ body.fix {
 .navigation-btn {
   color: #000;
   position: relative;
-  font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
+  font-family: "Hyundai Sans Text KR", "Hyundai Sans Text", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
@@ -434,7 +434,7 @@ body.fix {
   padding: 0 24px;
   text-align: left;
   height: 60px;
-  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head KR", "Hyundai Sans Head", sans-serif;
   font-size: 20px;
   font-weight: 700;
   line-height: 28px;
@@ -591,7 +591,7 @@ body.fix {
 }
 
 .gnb__tab-btn-wrap [class^="gnb__tab-btn"] {
-  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head KR", "Hyundai Sans Head", sans-serif;
   font-size: 20px;
   font-weight: 700;
   line-height: 28px;
@@ -693,14 +693,14 @@ body.fix {
 }
 
 .gnb-content__dep2 .text-area h3 {
-  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head KR", "Hyundai Sans Head", sans-serif;
   font-size: 28px;
   font-weight: 500;
   line-height: 39.2px;
   padding: 0 24px;
 }
 .gnb-content__dep2 .text-area p {
-  font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
+  font-family: "Hyundai Sans Text KR", "Hyundai Sans Text", sans-serif;
   font-size: 14px;
   font-weight: 500;
   line-height: 19.6px;
@@ -756,7 +756,7 @@ body.fix {
   width: 100%;
   text-align: left;
   height: 60px;
-  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head KR", "Hyundai Sans Head", sans-serif;
   font-size: 20px;
   font-weight: 700;
   line-height: 28px;
@@ -857,7 +857,7 @@ body.fix {
   margin-top: 16px;
 }
 .gnb__panel02 .text-area h3 {
-  font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
+  font-family: "Hyundai Sans Head KR", "Hyundai Sans Head", sans-serif;
   font-size: 20px;
   font-weight: 700;
   line-height: 28px;

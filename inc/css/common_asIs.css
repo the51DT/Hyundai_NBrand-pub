@@ -45,7 +45,7 @@
 }
 .c-modal__title {
   font-size: 19px;
-  font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
+  font-family: "Hyundai Sans Text KR", "Hyundai Sans Text", sans-serif;
   line-height: inherit;
   font-weight: 700;
 }
@@ -355,7 +355,7 @@
 }
 
 .common-text--bold {
-  font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
+  font-family: "Hyundai Sans Text KR", "Hyundai Sans Text", sans-serif;
   font-weight: 700;
 }
 
@@ -803,7 +803,7 @@ sup {
   font-weight: 500;
 }
 .heading__weight--bold {
-  font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
+  font-family: "Hyundai Sans Text KR", "Hyundai Sans Text", sans-serif;
   font-weight: 700;
 }
 
@@ -883,7 +883,7 @@ sup {
   font-style: italic;
   font-size: 4.44vw;
   font-weight: 700;
-  font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
+  font-family: "Hyundai Sans Text KR", "Hyundai Sans Text", sans-serif;
   line-height: 1.5;
 }
 .quotation__quote--regular {
@@ -1435,7 +1435,7 @@ sup {
   height: 3.5em;
   text-overflow: ellipsis;
   text-align: left;
-  font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
+  font-family: "Hyundai Sans Text KR", "Hyundai Sans Text", sans-serif;
   font-weight: 700;
   font-size: 5.28vw;
 }
@@ -1692,7 +1692,7 @@ body,
   top: 80%;
 } /* 220404 add */
 .key-visual__item .heading__area h2 {
-  font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
+  font-family: "Hyundai Sans Text KR", "Hyundai Sans Text", sans-serif;
   font-weight: 700;
 }
 .key-visual__item .heading__area span {
@@ -1784,7 +1784,7 @@ body,
 .key-visual__indicator li button {
   color: #fff;
   font-size: 16px;
-  font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
+  font-family: "Hyundai Sans Text KR", "Hyundai Sans Text", sans-serif;
   font-weight: 700;
 }
 /* //210322 : main KV admin */
@@ -2942,7 +2942,7 @@ body,
   color: #999;
 }
 .o-btn__type--tab span {
-  font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
+  font-family: "Hyundai Sans Text KR", "Hyundai Sans Text", sans-serif;
   font-size: 7.22vw;
 }
 .o-btn__type--tab:after {
@@ -3899,7 +3899,7 @@ body,
 .header__gnb--sticky-live .sticky__animation-text {
   position: relative;
   padding-left: 16px;
-  font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
+  font-family: "Hyundai Sans Text KR", "Hyundai Sans Text", sans-serif;
   font-size: 32px;
   animation: color-change 1.5s infinite;
 }
@@ -3926,7 +3926,7 @@ body,
   padding-right: 0;
 }
 #counter--sticky .unit-wrap strong {
-  font-family: "Hyundai Sans Text", "Hyundai Sans Text KR", sans-serif;
+  font-family: "Hyundai Sans Text KR", "Hyundai Sans Text", sans-serif;
   font-size: 26px;
   line-height: 1;
 }

@@ -51,7 +51,7 @@
     /* z-index: 1; */
   }
   .gnb__tab-btn-wrap [class*="gnb__tab-btn"] {
-    font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
+    font-family: "Hyundai Sans Head KR", "Hyundai Sans Head", sans-serif;
     width: 100%;
     font-size: 30px;
     font-weight: 700;
@@ -253,7 +253,7 @@
     padding: 20px 0 20px 56px;
     width: 100%;
     color: #000;
-    font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
+    font-family: "Hyundai Sans Head KR", "Hyundai Sans Head", sans-serif;
     font-size: 30px;
     font-weight: 700;
     text-align: left;
@@ -352,7 +352,7 @@
   }
   .gnb__panel02 .text-area h3 {
     font-size: 20px;
-    font-family: "Hyundai Sans Head", "Hyundai Sans Head KR", sans-serif;
+    font-family: "Hyundai Sans Head KR", "Hyundai Sans Head", sans-serif;
     font-size: 20px;
     font-weight: 700;
     line-height: 28px;
