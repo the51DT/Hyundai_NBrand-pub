@@ -7,7 +7,13 @@ body {
 }
 body.fix {
   overflow: hidden !important;
+  padding-right: 4px !important;
 }
+body.fix .header-wrap {
+  width: 100vw;
+  padding-right: 4px;
+}
+
 .ui-fctab-s {
   position: absolute;
   width: 1px;

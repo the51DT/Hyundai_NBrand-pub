@@ -336,6 +336,7 @@ var NbrandUI = {
 
     eventCont = $(com);
     eventParent = $(par);
+    dataScroll = 0;
 
     if (NbrandUI.windowSize()) {
       eventContH = $(window).height() - 70;
@@ -352,9 +353,9 @@ var NbrandUI = {
           NbrandUI.toggleBtn();
           eventParent.toggleClass("menu-on");
           NbrandUI.expandedAria(eventItem);
-
           if (eventItem.hasClass("on")) {
             //열때
+            dataScroll = $("body").scrollTop();
             Nbrand.uiFocusTab({
               selector: tparent,
               type: "hold",
@@ -382,10 +383,15 @@ var NbrandUI = {
             bodyControll(false);
             eventCont.stop().slideUp(100);
             tparent.find(".on").removeClass("on");
+            $("body").scrollTop(dataScroll);
+
             // $(".type-thumbnail, .gnb__tab-cont02 .gnb__tab02-btn01").addClass(
             //   "on"
             // );
             $(".header__event-wrap").show();
+            setTimeout(function () {
+              $(".header-wrap").removeClass("scroll-on");
+            }, 10);
             setTimeout(function () {
               if (!eventItem.hasClass("on")) {
                 eventCont.hide();

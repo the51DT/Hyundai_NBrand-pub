@@ -804,6 +804,21 @@ $(document).ready(function () {
     }
 
     btnNaviCheck();
+    if (
+      $(".navigation_bar-wrap .navigation-item02").length > 0 &&
+      $(window).width() < 1024
+    ) {
+      $(".wrap .content-area").css("padding-top", "96px");
+    } else if (
+      $(".btn-navi-wrap.mo-only button").length == 2 &&
+      $(window).width() < 1024
+    ) {
+      $(".wrap .content-area").css("padding-top", "88px");
+    } else if ($(".navigation_bar-wrap").length > 0) {
+      $(".wrap .content-area").css("padding-top", "48px");
+    } else {
+      $(".wrap .content-area").css("padding-top", "0");
+    }
   });
 
   // 07.03 추가 - models-wrap 클래스 존재하는 페이지 일 경우, 하단 img loading 속성 제거
@@ -2213,8 +2228,20 @@ window.onload = function () {
   CheckNextRaces();
 
   // 07.30 추가 - 모바일에서 navigation-bar 존재 시, 컨텐츠영역 상단 짤림 현상 방지
-  if ($(".navigation_bar-wrap").length > 0) {
+  if (
+    $(".navigation_bar-wrap .navigation-item02").length > 0 &&
+    $(window).width() < 1024
+  ) {
+    $(".wrap .content-area").css("padding-top", "96px");
+  } else if (
+    $(".btn-navi-wrap.mo-only button").length == 2 &&
+    $(window).width() < 1024
+  ) {
+    $(".wrap .content-area").css("padding-top", "88px");
+  } else if ($(".navigation_bar-wrap").length > 0) {
     $(".wrap .content-area").css("padding-top", "48px");
+  } else {
+    $(".wrap .content-area").css("padding-top", "0");
   }
 
   // Jira - 359 대응 : 관련된 컨텐츠 갯수에 따라 css 적용 (레이아웃 깨짐 방지)

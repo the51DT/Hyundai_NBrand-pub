@@ -1893,9 +1893,10 @@ article.info-bnr-wrap + article.info-video-wrap {
     height: 356px;
     align-items: flex-start;
   }
-  .gallery-box .ty02Swiper .swiper-slide .img-area {
+  .models-wrap .gallery-box .ty02Swiper .swiper-slide .img-area {
     height: 312px;
   }
+
   .models-wrap .gallery-box .conts-bnr-box {
     margin-bottom: 120px;
     padding: 0 24px;
