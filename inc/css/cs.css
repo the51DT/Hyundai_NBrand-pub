@@ -185,7 +185,7 @@
 /* 모바일 */
 @media screen and (max-width: 1023px) {
   /* 공통 */  
-  .content-top p:last-child {
+  .content-top p.tit-type03:last-child {
     font-size: 20px;
     line-height: 28px;
   }

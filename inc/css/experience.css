@@ -1,8 +1,13 @@
 @charset "utf-8";
 /* Experience  common */
 .content-top {
-  padding: 140px 0;
+  /* padding: 140px 0; */
+  height: 440px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  flex-direction: column;
   background: #fff;
 }
 .content-top p + p {
@@ -2925,9 +2930,9 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
 @media screen and (max-width: 1023px) {
   /* Experience  common */
   .content-top {
-    padding: 107px 24px;
+    height: 400px;
   }
-  .content-top p:last-of-type {
+  .content-top p.tit-type03:last-of-type {
     font-size: 20px;
     line-height: 28px;
   }
