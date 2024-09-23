@@ -848,6 +848,7 @@
                         </div>
                       </div>
 
+                      <!-- 이벤트 레이아웃 영역 -->
                       <section class="content-item06 bg-gray">
                         <div class="event-box">
                           <div class="conts-head ty02">
@@ -856,8 +857,8 @@
                             </h2>
                             <!-- selectbox 2개일 경우, 1번째 selectbox 선택 값에 따라 2번째 selectbox가 노출되는 구조로 변경 -->
                             <!-- 08.06 수정 : selectbox-group 추가 : 2번째 항목 값 케이스 일때 (2번째 selectbox 값 존재할 경우에만) -->
-                            <div class="selectbox-wrap select-type02 evtLayout-type">
-                              <!-- 1번째 selectbox만 존재할 경우 -->
+                            <div class="selectbox-wrap select-type02 evtLayout-type"> <!-- 클래스 정의 : select-type01 (select박스 1개일때 사용) / select-type02(select 박스 2개이상 일때 사용)-->
+                              <!-- 1번째 selectbox만 존재할 경우 selectbox-group 클래스 추가하지 않음 -->
                               <div>
                                 <button class="selectbox-trigger selectbox-js txt-type03 fw-type03"
                                   aria-haspopup="listbox" aria-expanded="false" aria-labelledby="typeSelect03">
@@ -873,11 +874,11 @@
                                   </li>
                                   <!-- 08.08 수정 : data-type 추가 필요 -->
                                   <li class="option option-click fw-type03 active" role="option" aria-selected="true"
-                                    data-type="1">
+                                    data-type="1"> <!-- data-type 값 evt-map-wrap 클래스와 동일하게 매핑 필요 -->
                                     A Paddock
                                   </li>
                                   <li class="option option-click fw-type03" role="option" aria-selected="false"
-                                    data-type="2">
+                                    data-type="2"> <!-- data-type 값 evt-map-wrap 클래스와 동일하게 매핑 필요 -->
                                     B Paddock
                                   </li>
                                 </ul>
@@ -952,10 +953,10 @@
                           -->
 
                             <!-- 08.08 수정사항 -->
-                            <!-- 활성화시 on 클래스 -->
+                            <!-- 맵 활성화시 on 클래스 필요 -->
                             <!-- active 클래스 : 상세맵 활성화시(+ 버튼 클릭시) active 클래스 추가 -->
 
-                            <!-- A Paddock 맵 정보 -->
+                            <!-- A Paddock 맵 정보 : 해당하는 selectbox의 값과 동일한 data-type 값 연결 필요 -->
                             <div class="evt-map-wrap on active" data-type="1">
                               <div class="btn-area">
                                 <div class="btn-wrap plus">
@@ -1017,7 +1018,7 @@
                               </div>
                             </div>
 
-                            <!-- B Paddock 맵 정보 -->
+                            <!-- B Paddock 맵 정보 : 해당하는 selectbox의 값과 동일한 data-type 값 연결 필요 -->
                             <div class="evt-map-wrap" data-type="2">
 
                               <div class="btn-area">
@@ -1445,35 +1446,6 @@
                             </div>
                           </div>
                         </div>
-                        <!-- <div class="track-guide-box">
-                          <div class="wrap-list list03">
-                            <div class="left imgwrap">
-                              <img src="../../inc/images/N_Festival/track/img-list-map.png" loading="lazy" alt="트랙 이미지" />
-                            </div>
-                            <div class="right descwrap">
-                              <h2 class="tit">Track Guide</h2>
-                              <h2 class="sub-tit">Inje SPEEDIUM (Short Course)</h2>
-                              <div class="list-trackinfo">
-                                <div class="inner">
-                                  <p class="txt-type03">Track Length</p>
-                                  <p class="txt-type03">2.577km</p>
-                                </div>
-                                <div class="inner">
-                                  <p class="txt-type03">Number of Corners</p>
-                                  <p class="txt-type03">12</p>
-                                </div>
-                                <div class="inner">
-                                  <p class="txt-type03">Track Width</p>
-                                  <p class="txt-type03">14m</p>
-                                </div>
-                                <div class="inner">
-                                  <p class="txt-type03">Standing Start Pole Position</p>
-                                  <p class="txt-type03">Right</p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div> -->
                       </section>
 
                       <section class="content-item09">

@@ -500,8 +500,7 @@
 .evtGuide .section_list {
   padding-bottom: 80px;
 }
-.subMain .content-item04,
-.evtGuide .content-item08 {
+.subMain .content-item04 {
   padding-top: 160px;
   padding-bottom: 160px;
 }
@@ -624,8 +623,7 @@
 }
 
 .event-box .btn-area .btn-wrap {
-  background: #000;
-  opacity: 0.3;
+  background: #434343;
   width: 60px;
   height: 60px;
   position: relative;
@@ -766,8 +764,7 @@
   .evtGuide .content-item03 {
     padding: 80px 24px 100px 24px;
   }
-  .subMain .content-item04,
-  .evtGuide .content-item08 {
+  .subMain .content-item04 {
     padding-top: 100px;
     padding-bottom: 100px;
   }

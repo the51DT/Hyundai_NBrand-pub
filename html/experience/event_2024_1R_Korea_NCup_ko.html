@@ -354,8 +354,10 @@
 
                       <div class="content-item05">
                         <div class="schedule-box" th:utext="${race.raceDetail}">
+                          <!-- 어드민 등록 영역 시작 : S -->
                           <div class="wrap-list list01">
                             <div class="tab-container">
+                              <!-- 탭 카테고리 영역 -->
                               <div class="tab-head">
                                 <h2 class="title">레이스 일정</h2>
                                 <div class="tabs-wrap">
@@ -372,6 +374,10 @@
                                   </ul>
                                 </div>
                               </div>
+                              <!-- 탭 컨텐츠 영역 (no-data 일경우 하단 마크업으로 등록)-->
+                              <!-- <p class="wrap-list-no-data">타임테이블은 향후 업데이트를 통해 안내될 예정입니다</p> -->
+
+                              <!-- 탭 컨텐츠 영역 (data 존재할 경우, 하단 마크업 등록) -->
                               <div class="tab-content on" id="tab1-011" role="tabpanel">
                                 <div class="__bottom">
                                   <div class="wrap-lists">
@@ -748,7 +754,7 @@
                                 </div>
                               </div>
                             </div>
-                          </div>
+                          </div><!-- //어드민 등록 영역 끝 : E -->
                         </div>
                       </div>
                       <!-- 08/28 수정 : evt-map-img 태그 내 각각 케이스별 이미지 컨텐츠 현행화 -->

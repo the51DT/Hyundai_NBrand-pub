@@ -69,12 +69,18 @@
                     </table>
                   </li>
                   <li>
-                    <p class="mypage-withdrawal-li-tit">Even after deleting your membership, the content you posted and participated in on the bulletin board service and the Nfluencer service will not be deleted.</p>
-                    <p class="mypage-withdrawal-li-text">
-                      Your activities on these services, such as posts, missions, N Community activities, and 1:1 inquiries are not automatically deleted when you delete your membership. <br />
-                      If you wish to delete any of those activities, please do so before deleting your membership. <br />
-                      Once you delete you membership, those activities cannot be deleted as there is no means to verify your identity as the owner of those activities.
+                    <!-- 09/23 수정 -->
+                    <p class="mypage-withdrawal-li-tit">
+                      Upon withdrawal, if you do not delete your posts or the participated posts in the bulletin board or in the Nfluencer services, your posts will NOT be deleted.
                     </p>
+                    <p class="mypage-withdrawal-li-text">
+                      Posts that you registered on posts, missions, rewards, N communities, etc. are not automatically deleted upon your withdrawal.<br />
+                      If you would like to delete all your activities, please check on the “Delete All Activities” box shown below.<br />
+                      If you delete all your activities, all your posts will be deleted, and any data deleted with the posts will not be recovered.<br />
+                      Once you delete your membership, your membership information will be deleted and we will not be able to verify your identity. <br/>
+                      For this reason, we won’t be able to delete the posts randomly, so please delete your posts before withdrawing your membership.
+                    </p>
+                    <!-- //09/23 수정 -->
                     <table summary="유지되는 항목 표" class="mypage-withdrawal-table">
                       <caption>Table of items maintained</caption>
                       <colgroup>
@@ -118,16 +124,25 @@
                     </table>
                   </li>
                 </ul>
-                <div class="mypage-withdrawal-checkbox-wrap">
-                  <p>
-                    After deleting your membership, you cannot re-join with the same nickname, and your data cannot be restored.<br />
-                    Content posted on the bulletin board service and the Nfluencer service are not deleted automatically and cannot be deleted once you delete your membership. 
-                  </p>
-                  <div class="mypage-withdrawal-checkbox">
-                    <input id="withdrawal-agree" name="withdrawal-agree" type="checkbox" />
-                    <label for="withdrawal-agree"><span>I have read and agree to the instructions.</span></label>
+                <!-- 09/23 수정 -->
+                <div class="mypage-checkbox-group">
+                  <div class="mypage-withdrawal-checkbox-wrap">
+                    <p>
+                      Withdrawing your account without deleting your posts will maintain all your posts in the bulletin board and in the Nfluencer services, and will not be able to delete them afterwards.
+                    </p>
+                    <div class="mypage-withdrawal-checkbox">
+                      <input id="withdrawal-agree2" name="withdrawal-agree2" type="checkbox" />
+                      <label for="withdrawal-agree2"><span>Delete All Activities</span></label>
+                    </div>
+                  </div>
+                  <div class="mypage-withdrawal-checkbox-wrap">
+                    <div class="mypage-withdrawal-checkbox">
+                      <input id="withdrawal-agree" name="withdrawal-agree" type="checkbox" />
+                      <label for="withdrawal-agree"><span>I have read and agree to the instructions.</span></label>
+                    </div>
                   </div>
                 </div>
+                <!-- //09/23 수정 -->
               </div>
             </div>
             <div class="btn-wrap-default btn-wrap-type1">

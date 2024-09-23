@@ -353,13 +353,17 @@
                       </div>
 
                       <div class="content-item05">
+                        <!-- 레이스 일정 영역 -->
                         <div class="schedule-box" th:utext="${race.raceDetail}">
+                          <!-- 어드민 등록 영역 시작 : S -->
                           <div class="wrap-list list01">
                             <div class="tab-container">
+                              <!-- 탭 카테고리 영역 -->
                               <div class="tab-head">
-                                <h2 class="title">Race Schedule</h2>
+                                <h2 class="title">Race Schedule</h2> <!-- 상단 타이틀 -->
                                 <div class="tabs-wrap">
-                                  <ul class="tabs ty-black" data-contents="탭카테고리">
+                                  <!-- 탭 카테고리 타이틀 -->
+                                  <ul class="tabs ty-black" data-contents="탭카테고리">              
                                     <li class="on">
                                       <a href="#" aria-controls="tab1-011" role="tab" aria-selected="true">Saturday</a>
                                     </li>
@@ -368,11 +372,16 @@
                                         Sunday
                                       </a>
                                     </li>
-                                  </ul>
+                                  </ul><!-- //탭 카테고리 타이틀 -->
                                 </div>
                               </div>
+                              <!-- 탭 컨텐츠 영역 (no-data 일경우 하단 마크업으로 등록)-->
+                              <!-- <p class="wrap-list-no-data">Events will be updated and made available in due time.</p> -->
+
+                              <!-- 탭 컨텐츠 영역 (첫번째 탭에 대한 탭 컨텐츠 내용)-->
                               <div class="tab-content on" id="tab1-011" role="tabpanel">
                                 <div class="__bottom">
+                                  <!-- 테이블 리스트 한줄 영역 : S -->
                                   <div class="wrap-lists">
                                     <div class="list-box">
                                       <p class="txt-type03">09:10 ~ 09:30</p>
@@ -385,7 +394,8 @@
                                     <div class="list-box">
                                       <p class="txt-type03">eN1</p>
                                     </div>
-                                  </div>
+                                  </div><!-- //테이블 리스트 한줄 영역 : E -->
+                                  <!-- 테이블 리스트 한줄 영역 : S -->
                                   <div class="wrap-lists">
                                     <div class="list-box">
                                       <p class="txt-type03">09:40 ~ 10:00</p>
@@ -398,7 +408,7 @@
                                     <div class="list-box">
                                       <p class="txt-type03">eN1</p>
                                     </div>
-                                  </div>
+                                  </div><!-- //테이블 리스트 한줄 영역 : E -->
                                   <div class="wrap-lists">
                                     <div class="list-box">
                                       <p class="txt-type03">10:10 ~ 10:30</p>
@@ -554,9 +564,11 @@
                                     </div>
                                   </div>
                                 </div>
-                              </div>
+                              </div><!-- //탭 컨텐츠 영역 -->
+                              <!-- 탭 컨텐츠 영역 (두번째 탭에 대한 탭 컨텐츠 내용)-->
                               <div class="tab-content" id="tab1-021" role="tabpanel">
                                 <div class="__bottom">
+                                  <!-- 테이블 리스트 한줄 영역 : S -->
                                   <div class="wrap-lists">
                                     <div class="list-box">
                                       <p class="txt-type03">09:10 ~ 09:30</p>
@@ -569,7 +581,8 @@
                                     <div class="list-box">
                                       <p class="txt-type03">N1</p>
                                     </div>
-                                  </div>
+                                  </div><!-- //테이블 리스트 한줄 영역 : E -->
+                                  <!-- 테이블 리스트 한줄 영역 : S -->
                                   <div class="wrap-lists">
                                     <div class="list-box">
                                       <p class="txt-type03">09:40 ~ 10:00</p>
@@ -582,7 +595,7 @@
                                     <div class="list-box">
                                       <p class="txt-type03">eN1</p>
                                     </div>
-                                  </div>
+                                  </div><!-- //테이블 리스트 한줄 영역 : E -->
                                   <div class="wrap-lists">
                                     <div class="list-box">
                                       <p class="txt-type03">10:10 ~ 10:40</p>
@@ -725,9 +738,10 @@
                                     </div>
                                   </div>
                                 </div>
-                              </div>
+                              </div><!-- //탭 컨텐츠 영역 -->
                             </div>
                           </div>
+                          <!-- 어드민 등록 영역 끝 : E -->
                         </div>
                       </div>
 
@@ -919,24 +933,16 @@
                       </section>
 
                       <div class="content-item07">
+                        <!-- 이벤트 타임테이블 영역 -->
                         <div class="schedule-box" th:utext="${race.eventDetail}">
+                          <!-- 어드민 등록 영역 시작 : S -->
                           <div class="wrap-list list02">
-                            <!-- 
-                              comment!
-                              ****************************************************************      
-                              1. tab-btn 전환 
-                              - tab 이벤트 클릭한 값 기준으로 이벤트 실행되도록 구조 변경 하였음
-
-                              2. tab 이벤트 실행 함수
-                              - tabBtnEvent("","") 
-                              //외부 호출 필요할 경우, 빈 값으로 실행 시켜주세요
-
-                              ****************************************************************
-                            -->
                             <div class="tab-container">
+                              <!-- 탭 카테고리 영역 -->
                               <div class="tab-head">
-                                <h2 class="title">Event Schedule</h2>
+                                <h2 class="title">Event Schedule</h2>  <!-- 상단 타이틀 -->
                                 <div class="tabs-wrap">
+                                  <!-- 탭 카테고리 타이틀 -->
                                   <ul class="tabs ty-black" data-contents="탭카테고리">
                                     <li class="on">
                                       <a href="#" aria-controls="tab2-011" role="tab" aria-selected="true">Saturday</a>
@@ -946,11 +952,16 @@
                                         Sunday
                                       </a>
                                     </li>
-                                  </ul>
+                                  </ul><!-- //탭 카테고리 타이틀 -->
                                 </div>
                               </div>
+                              <!-- 탭 컨텐츠 영역 (no-data) 일 경우, 하단 마크업으로만 적용 -->
+                              <!-- <p class="wrap-list-no-data">Events will be updated and made available in due time.</p> -->
+                              <!-- 탭 컨텐츠 영역 데이터 존재할 경우, 하단 마크업으로만 적용 -->
+                              <!-- 탭 컨텐츠 영역 (첫번째 탭에 대한 탭 컨텐츠 내용)-->
                               <div class="tab-content on" id="tab2-011" role="tabpanel">
                                 <div class="__bottom">
+                                  <!-- 테이블 리스트 한줄 영역 : S -->
                                   <div class="wrap-lists">
                                     <div class="list-box">
                                       <p class="txt-type03">12:40 ~ 13:10</p>
@@ -963,7 +974,7 @@
                                         N Lounge / On-site reception
                                       </p>
                                     </div>
-                                  </div>
+                                  </div><!-- //테이블 리스트 한줄 영역 : E -->
                                   <div class="wrap-lists">
                                     <div class="list-box">
                                       <p class="txt-type03">10:00 ~ 17:00</p>
@@ -1006,9 +1017,11 @@
                                     </div>
                                   </div>
                                 </div>
-                              </div>
+                              </div><!-- //탭 컨텐츠 영역 -->
+                              <!-- 탭 컨텐츠 영역 (두번째 탭에 대한 탭 컨텐츠 내용)-->
                               <div class="tab-content" id="tab2-021" role="tabpanel">
                                 <div class="__bottom">
+                                  <!-- 테이블 리스트 한줄 영역 : S -->
                                   <div class="wrap-lists">
                                     <div class="list-box">
                                       <p class="txt-type03">11:30 ~ 12:50</p>
@@ -1021,7 +1034,7 @@
                                     <div class="list-box">
                                       <p class="txt-type03">In front of Pit No.24 / All spectators</p>
                                     </div>
-                                  </div>
+                                  </div><!-- //테이블 리스트 한줄 영역 : E -->
                                   <div class="wrap-lists">
                                     <div class="list-box">
                                       <p class="txt-type03">11:30 ~ 11:50</p>
@@ -1076,17 +1089,30 @@
                                   </div>
 
                                 </div>
-                              </div>
+                              </div><!-- //탭 컨텐츠 영역 -->
+                              <!-- //탭 컨텐츠 영역 데이터 존재할 경우, 하단 마크업으로만 적용 -->
                             </div>
                           </div>
+                          <!-- 어드민 등록 영역 끝 : E -->
                         </div>
                       </div>
 
                       <section class="content-item08 bg-gray">
-                        <div class="track-guide-box">
+                        <!-- 
+                          * guide-wrap 클래스 정의 설명 
+                          - 각, 하단의 클래스별로 이미지와 내용 달라짐.
+                          - track-ty01 : Inje Speedium 
+                          - track-ty02 : Youngin SPEEDWAY (Short course)
+                          - track-ty03 : Yeongam Korea International Circuit
+                          - track-ty04 : Yongin SPEEDWAY
+                          -->
+                        <!-- 07.22 수정 : 마크업 변경 / Round detail page와 통일 -->
+                        <div class="guide_wrap track-ty01">
                           <div class="wrap-list list03">
                             <div class="left imgwrap">
-                              <img src="../../inc/images/content/track-ty05.png" loading="lazy" alt="트랙 이미지" />
+                              <div class="track-img">
+                                <span class="visually-hidden">Track Guide 트랙 이미지</span>
+                              </div>
                             </div>
                             <div class="right descwrap">
                               <!-- 09/03 문구변경 -->
