@@ -292,6 +292,9 @@
   padding-top: 120px;
   padding-bottom: 160px;
 }
+.intro-race-box .conts-head {
+  margin-bottom: 40px;
+}
 .aboutClass .content-item03 {
   padding-top: 160px;
   padding-bottom: 200px;
@@ -530,10 +533,13 @@
   margin: 0 auto;
   max-width: 100rem;
 }
-
 .evtGuide .content-item05,
-.evtGuide .content-item06,
 .evtGuide .content-item07 {
+  padding-top: 160px;
+  padding-bottom: 140px;
+}
+
+.evtGuide .content-item06 {
   padding-top: 160px;
   padding-bottom: 200px;
 }
@@ -761,6 +767,10 @@
     max-height: 640px;
   }
   /* component : end */
+  
+  .evtGuide .section_list {
+    padding-bottom: 0;
+  }
   .evtGuide .content-item03 {
     padding: 80px 24px 100px 24px;
   }
@@ -972,6 +982,10 @@
     padding-top: 80px;
     padding-bottom: 100px;
   }
+
+  .intro-race-box .conts-head {
+    margin-bottom: 28px;
+  }
   .intro-race-box .tit {
     text-align: center;
   }
@@ -1007,11 +1021,15 @@
     margin-top: 0;
   }
 
-  .class-info-box .tab-content .conts-box-wrap > article,
   .class-info-box .tab-content .conts-box-wrap > section {
     padding-left: 24px;
-    padding-right: 24px;
+    padding-right: 24px;    
   }
+
+  .class-info-box .tab-content .conts-box-wrap > article {
+    max-width: calc(100% - 48px) !important;
+  }
+
   .class-info-box .tab-content .txt-area {
     margin-right: -24px;
   }

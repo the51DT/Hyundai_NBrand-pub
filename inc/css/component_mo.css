@@ -703,7 +703,7 @@ min-width : 1024 css
     text-align: left;
     border: none;
     background: #f0f0f0;
-    padding: 24px 16px;
+    padding: 24px 16px 80px;
     margin-right: 12px;
     max-height: 100%;
     flex-direction: column;
@@ -711,13 +711,16 @@ min-width : 1024 css
   .wrap-list .__bottom .wrap-lists:last-child {
     margin-right: 0;
   }
+  .wrap-list .__bottom .wrap-lists .list-box {
+    display: block;
+  }
   .wrap-list .__bottom .wrap-lists .list-box:nth-child(1) {
     margin-bottom: 60px;
     margin-right: auto;
     max-width: 168px;
   }
   .wrap-list .__bottom .wrap-lists .list-box:nth-child(2) {
-    height: 100%;
+    /* height: 100%; */
   }
   .wrap-list .__bottom .wrap-lists .list-box:nth-child(2) p {
     padding: 0;
@@ -729,15 +732,15 @@ min-width : 1024 css
   .wrap-list .__bottom .wrap-lists .list-box:nth-child(3) {
     text-align: left;
     margin-top: 12px;
-    margin-bottom: 56px;
+    /* margin-bottom: 56px; */
   }
   .wrap-list .__bottom .wrap-lists .list-box:nth-child(3) p {
     font-weight: 500;
   }
 
   .wrap-list.list02 .__bottom .wrap-lists .list-box:nth-child(3) {
-    margin-top: 12px;
-    margin-bottom: 56px;
+    /* margin-top: 12px; */
+    /* margin-bottom: 56px; */
     max-width: 100%;
     width: 220px;
     margin-left: 0;
