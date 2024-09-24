@@ -363,6 +363,46 @@ var pubUi = {
 
     swiper4SlideEvt(); //swiper4 이벤트 실행
 
+    var swiper3 = new Swiper(".ty03Swiper.rankswiper", {
+      slidesPerView: 3,
+      spaceBetween: 24,
+      loop: true,
+      watchOverflow: true,
+      pagination: {
+        el: ".swiper-pagination-custom",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".ty03Swiper .swiper-button-next",
+        prevEl: ".ty03Swiper .swiper-button-prev",
+      },
+      on: {
+        slideChangeTransitionStart: function () {
+          if ($(".ty03Swiper .profile-open").length) {
+            NbrandUI.profileCloseOption($(".ty03Swiper .club-popup"));
+          }
+        },
+      },
+      breakpoints: {
+        360: {
+          slidesPerView: 1,
+          spaceBetween: 12,
+        },
+        400: {
+          slidesPerView: 1.2,
+          spaceBetween: 12,
+        },
+        768: {
+          slidesPerView: 1.5,
+          spaceBetween: 12,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 24,
+        },
+      },
+    });
+
     var swiper5 = new Swiper(".ty05Swiper", {
       slidesPerView: "auto",
       spaceBetween: 4,
