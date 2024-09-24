@@ -2931,6 +2931,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   /* Experience  common */
   .content-top {
     height: 400px;
+    padding: 0 24px;
   }
   .content-top p.tit-type03:last-of-type {
     font-size: 20px;
