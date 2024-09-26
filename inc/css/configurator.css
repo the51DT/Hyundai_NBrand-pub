@@ -167,7 +167,7 @@
 .configurator_list_swiper .configurator_car_wrap {
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 45%;
   transform: translate(-50%, -50%);
   width: 41vw;
   min-width: 26.3rem;
@@ -245,7 +245,7 @@
 .configurator_list_swiper .swiper-bottom-wrap,
 .configurator_swiper .swiper-bottom-wrap {
   left: 0;
-  bottom: 50%;
+  bottom: 55%;
   width: 100%;
 }
 .configurator_list_swiper .swiper-button-next.swiper-button-disabled,
@@ -865,7 +865,7 @@
     font-size: 1.125rem;
   }
   .configurator_list_swiper .configurator_car_wrap {
-    top: 50%;
+    top: 45%;
     transform: translate(-50%, -50%);
     width: 85.55%;
     min-width: 0;
@@ -890,7 +890,7 @@
     padding: 0 1.5rem;
   }
   .configurator_list_swiper .swiper-bottom-wrap {
-    bottom: 50%;
+    bottom: 55%;
   }
   .configurator_list_swiper .swiper-button-prev:after {
     background-image: url(../images/icon/icon-arrow-box-white_left_mo.svg);

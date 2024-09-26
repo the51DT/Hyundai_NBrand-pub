@@ -359,9 +359,10 @@ var pubUi = {
         },
       },
     });
+    
     swiper2SlideEvt(); //swiper2 이벤트 실행
-
     swiper4SlideEvt(); //swiper4 이벤트 실행
+    swiper12SlideEvt(); //swiper12 이벤트 실행
 
     var swiper3 = new Swiper(".ty03Swiper.rankswiper", {
       slidesPerView: 3,
@@ -516,51 +517,6 @@ var pubUi = {
       pagination: {
         el: ".merchandise_swiper .swiper-pagination-custom",
         clickable: true,
-      },
-    });
-    var swiper12 = new Swiper(".collection_swiper", {
-      slidesPerView: 1.15,
-      spaceBetween: 24,
-      watchOverflow: true,
-      // centeredSlides: true,
-      // slidesOffsetBefore: 24,
-      // slidesOffsetAfter: 24,
-      pagination: {
-        el: ".collection_swiper .swiper-pagination-custom",
-        clickable: true,
-      },
-      navigation: {
-        nextEl: ".collection_swiper .swiper-button-next",
-        prevEl: ".collection_swiper .swiper-button-prev",
-      },
-      breakpoints: {
-        360: {
-          slidesPerView: 1.13,
-          spaceBetween: 12,
-          // slidesOffsetBefore: 24,
-          // slidesOffsetAfter: 24,
-          centeredSlides: true,
-        },
-        400: {
-          slidesPerView: 1.1,
-          spaceBetween: 12,
-          // slidesOffsetBefore: 24,
-          // slidesOffsetAfter: 24,
-          centeredSlides: true,
-        },
-        550: {
-          slidesPerView: 1.07,
-          spaceBetween: 12,
-          // slidesOffsetBefore: 24,
-          // slidesOffsetAfter: 24,
-          centeredSlides: true,
-        },
-        1024: {
-          slidesPerView: 3,
-          spaceBetween: 24,
-          // slidesOffsetBefore: 0,
-          // slidesOffsetAfter: 0,
-        },
       },
     });
   },
@@ -808,6 +764,7 @@ $(document).ready(function () {
   btnNaviCheck();
   var ty02Swiper = $(".ty02Swiper");
   var ty04Swiper = $(".ty04Swiper");
+  var ty12Swiper = $(".collection_swiper");
 
   $(window).resize(function () {
     if ($(window).innerWidth() < 1024) {
@@ -835,12 +792,21 @@ $(document).ready(function () {
     } else {
       contsItemGridSizeChk();
     }
+
     // 08.09 추가 - EP010101 (N Festival 메인에 resize 시 발생하는 Next races 영역 결함 처리 위함 - destory 후 ty04Swiper 재호출)
     if (ty04Swiper.length > 0) {
       for (var i = 0; i < ty04Swiper.length; i++) {
         ty04Swiper[i].swiper.destroy();
       }
       swiper4SlideEvt();
+    }
+
+    // 09.25 추가 - BR050101 (운영 요구사항 처리 : resize할때 swiper 깨지는 문제 방지하기위해 destory 후 재호출 되도록 수정)
+    if (ty12Swiper.length > 0) {
+      for (var i = 0; i < ty12Swiper.length; i++) {
+        ty12Swiper[i].swiper.destroy();
+      }
+      swiper12SlideEvt();
     }
 
     btnNaviCheck();
@@ -870,6 +836,14 @@ $(document).ready(function () {
       contsImages[i].removeAttribute("loading");
     }
   }
+
+  // 09.25 추가 - BR050101 (운영 요구사항 처리 : 현대 N 컬렉션 영역 탭 눌러서 컨텐츠 변경 시 좌/우 네비게이션 버튼 간헐적으로 사라졌다가 나타남)
+  $(".merchandise-wrap .collectiontab-wrap .tab-head .tabs li").on("click", function () {
+    for (var i = 0; i < ty12Swiper.length; i++) {
+      ty12Swiper[i].swiper.destroy();
+    }
+    swiper12SlideEvt();
+  });
 
   // 08.20 수정 : 함수 형태로 구조 변경
   contsItemGridSizeChk();
@@ -1052,6 +1026,55 @@ function swiper4SlideEvt() {
         spaceBetween: 24,
         slidesOffsetBefore: leftSpaceVal,
         slidesOffsetAfter: 80,
+      },
+    },
+  });
+}
+
+// N Collection collection Swiper 분리
+function swiper12SlideEvt() {
+  var swiper12 = new Swiper(".collection_swiper", {
+    slidesPerView: 1.15,
+    spaceBetween: 24,
+    watchOverflow: true,
+    // centeredSlides: true,
+    // slidesOffsetBefore: 24,
+    // slidesOffsetAfter: 24,
+    pagination: {
+      el: ".collection_swiper .swiper-pagination-custom",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".collection_swiper .swiper-button-next",
+      prevEl: ".collection_swiper .swiper-button-prev",
+    },
+    breakpoints: {
+      360: {
+        slidesPerView: 1.13,
+        spaceBetween: 12,
+        // slidesOffsetBefore: 24,
+        // slidesOffsetAfter: 24,
+        centeredSlides: true,
+      },
+      400: {
+        slidesPerView: 1.1,
+        spaceBetween: 12,
+        // slidesOffsetBefore: 24,
+        // slidesOffsetAfter: 24,
+        centeredSlides: true,
+      },
+      550: {
+        slidesPerView: 1.07,
+        spaceBetween: 12,
+        // slidesOffsetBefore: 24,
+        // slidesOffsetAfter: 24,
+        centeredSlides: true,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 24,
+        // slidesOffsetBefore: 0,
+        // slidesOffsetAfter: 0,
       },
     },
   });

@@ -1053,9 +1053,9 @@
     object-fit: cover;
   }
 
-  .models-wrap:not(.brand) .content-top {
+  /* .models-wrap:not(.brand) .content-top {
     padding: 135px 24px;
-  }
+  } */
   .models-wrap .content-item02 .btn-groups {
     bottom: 12px;
     right: 12px;

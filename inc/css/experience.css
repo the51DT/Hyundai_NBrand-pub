@@ -3721,17 +3721,20 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
 
   .popup-wrapper .popup-body {
     padding: 40px 24px 60px 24px;
-    max-height: calc(100vh - 130px);
+    /* max-height: calc(100vh - 130px); */
     overflow-y: auto;
     display: grid;
     gap: 40px 0;
     position: relative;
     z-index: 6;
+    height: 100%;
+    max-height: calc(var(--vh, 1vh) * 100 - 130px);
   }
 
   .popup-wrapper .popup-body.height-longer-mobile {
     /* mission, reward popup in nfluencer, mypost popup in mypage */
-    max-height: calc(100vh - 190px);
+    /* max-height: calc(100vh - 190px); */
+    max-height: calc(var(--vh, 1vh) * 100 - 190px);
     z-index: 6;
     padding: 28px 24px 36px 24px;
   }
