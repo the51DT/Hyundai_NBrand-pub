@@ -79,6 +79,10 @@
 .content-box .paging {
   margin-left: 8px;
 }
+/* BR020104 DNA */
+.content-item03 + .content-item05 .conts-section-wrap.type-tab {
+  padding-top: 0;
+}
 
 .conts-section-wrap {
   padding-top: 200px;

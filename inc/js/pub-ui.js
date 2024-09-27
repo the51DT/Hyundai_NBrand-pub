@@ -223,10 +223,6 @@ var pubUi = {
       e.preventDefault();
       var scrollTarget = $(this).data("scroll");
 
-      // 08.09 수정 : 선택한 네비게이션 메뉴의 rending-btn 활성화
-      // $(this).parent().siblings().find("button").removeClass("on");
-      // $(this).addClass("on");
-
       pubUi.pageScrollChk(scrollTarget);
     });
 
@@ -240,36 +236,9 @@ var pubUi = {
         ".nflmain_wrap .content-item03 .banner-box .swiper-container .swiper"
       ).addClass("onlyone-swiper");
     }
-
-    //configurator 관련 함수 - 0820
-    // $(".configurator_summary_list .configurator_summary_list_top .btn:first-child").on("click", function (e) {
-    //     var target = $(this);
-    //     if (target.find(".btn-icon20").hasClass("icon-change-gray")) {
-    //       targetScrollConfig(target);
-    //     }
-    //   }
-    // );
   },
   swiperSlideEvent: function () {
     var self = this;
-    var slideInx = 1; // 현재 슬라이드 index 체크용 변수
-    var loopVal = "";
-    var touchFlag = "";
-    var autoplayVal = "";
-    var currentIndex = "";
-
-    if (self.typeChk.length > 0) {
-      //동영상 타입일 경우,
-      touchFlag = 1;
-      autoplayVal = false;
-    } else {
-      //이미지 타입일 경우,
-      touchFlag = 1;
-      autoplayVal = {
-        delay: 3000,
-        disableOnInteraction: false,
-      };
-    }
 
     var swiper1 = new Swiper(".ty01Swiper:not(.banner-swiper)", {
       slidesPerView: 1,
@@ -277,10 +246,6 @@ var pubUi = {
       initialSlide: 0,
       touchRatio: 1, // 드래그 X : 0 , 드래그 O : 1
       loop: true,
-      // autoplay: {
-      //   delay: 3000,
-      //   disableOnInteraction: false,
-      // },
       pagination: {
         el: ".swiper-pagination-custom",
         clickable: true,
@@ -288,6 +253,15 @@ var pubUi = {
       navigation: {
         nextEl: ".ty01Swiper .swiper-button-next",
         prevEl: ".ty01Swiper .swiper-button-prev",
+      },
+
+      a11y: {
+        // 웹접근성
+        enabled: false,
+        prevSlideMessage: "이전 슬라이드",
+        nextSlideMessage: "다음 슬라이드",
+        slideLabelMessage:
+          "총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 입니다.",
       },
       on: {
         init: function () {
@@ -302,14 +276,7 @@ var pubUi = {
             var videoIdEach = $(this).attr("id");
             var videoAll = document.querySelector(`#${videoIdEach}`);
             videoAll.currentTime = 0;
-            // videoAll.play();
-            // alert(videoAll.duration);
-            //  = 0;
             videoAll.pause();
-            // if (!$(".btn-play").hasClass("on")) {
-            //   videoAll.pause();
-            //   alert("d");
-            // }
           });
           if (
             $(".ty01Swiper:not(.swiper-banner) .swiper-slide")[

@@ -25,13 +25,55 @@ let timer = null;
 let $popDate = 0;
 let swiperConfigurator;
 let swiperProfile;
+let loopHidden = null;
+let loopHidden02 = null;
+let stack = 0;
+$("body").data("lastTag", "true");
+var lastTag = $("body").data("lastTag");
 
 $(window).resize(function () {
   $win_W = $(window).width();
   clearTimeout(timer);
   timer = setTimeout(resizeDone, delta);
 });
+function focusNonout(tparent) {
+  if (tparent.parent().data("lastTag")) {
+    clearInterval(loopHidden);
+    alert();
+  } else {
+    tparent = tparent.parent();
+    tparent.siblings("[aria-hidden = true]").each(function () {
+      $(this).attr("data-stack", 1);
+      if ($(this).attr("data-hide")) {
+        stack = $(this).attr("data-stack");
+        stack++;
+        $(this).attr("data-stack", stack);
+        stack = 0;
+      }
+      $(this).attr("data-hide", "true");
+    });
+    tparent.siblings().attr("aria-hidden", true);
+  }
+}
+function focusNonoutReset(tparent02) {
+  if (tparent02.parent().data("lastTag") == lastTag) {
+    clearInterval(loopHidden02);
+  } else {
+    tparent02 = tparent02.parent();
+    tparent02.siblings().removeAttr("aria-hidden");
+    tparent02.siblings("[data-hide = true]").each(function () {
+      $(this).attr("aria-hidden", true);
+    });
+  }
+}
 
+// loopHidden = setInterval(function () {
+//   focusNonout();
+// }, 1);
+
+// loopHidden02 = setInterval(function () {
+//   focusNonoutReset();
+// }, 1);
 function resizeDone() {
   if (NbrandUI.windowSize()) {
     NbrandUI.headerReset(".nav-btn", ".nav-wrap", ".header-wrap");
@@ -93,6 +135,7 @@ var NbrandUI = {
   popContOpen: function (obj, btn) {
     var openWrap = $(obj);
     var popClass = openWrap.attr("class");
+    bodyControll(true);
     // var popCheck = btn.parents(".popup");
     $popDate++;
     // zData = 1001;
@@ -197,6 +240,7 @@ var NbrandUI = {
     closeWrap.find(".ui-fctab-e").remove();
     openmodalClass = "open-btn1";
     openmodalBtn = $("." + openmodalClass + "[aria-expanded = true]");
+    bodyControll(false);
     $popDate--;
     // alert($popDate);
 
@@ -304,6 +348,7 @@ var NbrandUI = {
     resetTparent.find(".ui-fctab-e").remove();
     resetCont.hide();
     resetTparent.find(".on").removeClass("on");
+    resetCont.attr("aria-hidden", true);
     $(".header__event-wrap").show();
     // setTimeout(function () {
     //   if (!eventItem.hasClass("on")) {
@@ -352,6 +397,7 @@ var NbrandUI = {
           eventItem = $(this);
           NbrandUI.toggleBtn();
           eventParent.toggleClass("menu-on");
+          eventCont.attr("aria-hidden", false);
           NbrandUI.expandedAria(eventItem);
           if (eventItem.hasClass("on")) {
             //열때
@@ -369,12 +415,12 @@ var NbrandUI = {
               eventCont.slideDown(100);
             }
             $(".navigation_bar-wrap").hide();
-
-            // $(".type-thumbnail, .gnb__tab-cont02 .gnb__tab02-btn01").addClass(
-            //   "on"
-            // );
+            loopHidden = setInterval(function () {
+              focusNonout(eventParent);
+            }, 1);
           } else {
             //닫을때
+            eventParent.siblings().attr("aria-hidden", false);
             eventCont.attr("aria-hidden", "true");
             tparent.children(".ui-fctab-s").remove();
             tparent.children(".ui-fctab-e").remove();
