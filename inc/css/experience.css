@@ -853,6 +853,10 @@
   padding: 7.5rem 0;
   background-color: #f0f0f0;
 }
+.featured_wrap .ty02Swiper .swiper-button-next,
+.featured_wrap .ty02Swiper .swiper-button-prev {
+  margin-top: 0;
+}
 .featured_wrap .title_flex {
   box-sizing: content-box;
   padding: 0 5rem;
@@ -3529,7 +3533,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   }
   .featured_wrap .title_flex {
     padding: 0 1.5rem;
-  }
+  }  
   .video_wrap {
     padding: 5rem 1.5rem 10rem 1.5rem;
   }

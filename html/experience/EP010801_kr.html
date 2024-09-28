@@ -746,6 +746,11 @@
       </div>
     </header>
     <!-- //07.17 수정 : header 추가 -->
+    <!-- 
+      09/28 수정 사항 (공통 페이지 사항)
+      개발 페이지 로드 후, 웹접근성 관련 함수 재호출 필요 
+      webAccessibilityChk(); / webAccessAddTabindex(); 
+    -->
     <section class="content-wrap" id="container">
       <div class="content-area">
         <div class="content-item01 content-top">
@@ -863,19 +868,46 @@
               <div class="swiper ty02Swiper" aria-live="off">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
-                    <a href="#">
-                      <div class="img-ico"></div>
+                    <a href="#">                      
                       <div class="img-area">
-                        <img src="../../inc/images/img/conts_bg_img01.svg" alt="이미지 슬라이드1" />
-                        <!-- <video class="video" data-js="video" id="video1" playsinline autoplay muted style="width: 100%; height: 100%; object-fit: cover;">
-                              <source src="../../inc/videos/24hnbr24.mp4" type="video/mp4">
-                          </video> -->
-                      </div>
-                      <div class="text-area">
+                        <!-- 09/28 수정 사항 : img-ico 태그 삭제 / title 위치 변경 / 비디오 아이콘 노출 필요 시 img-ico-wrap 태그 감싸주어야 함 -->
+                        <!-- <div class="img-ico"></div> 
+                          09/28 수정 : video img-ico 마크업 제거 아이콘 css 처리로 변경 -->
+                        <div class="img-ico-wrap">
+                          <img src="../../inc/images/img/conts_bg_img01.svg" alt="이미지 슬라이드1" />
+                        </div>
+                        
+                        <!-- title 태그 위치 변경 : img-area 내부 (aboutN/motorsport 리스트 페이지 케이스와 통일)-->
                         <h4 class="title">
                           HYUNDAI N FESTIVAL N CUP – Round2 BEGINNER’S GUIDE
                           04.25.2024
                         </h4>
+                        <!-- //09/28 수정 사항 -->
+                      </div>
+                      <div class="text-area">                        
+                        <div class="date">04.30. 2024</div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#">
+                      <!-- <div class="img-ico"></div> -->
+                      <div class="img-area">
+                        <!-- 09/28 수정 사항 -->
+                        <!-- <div class="img-ico"></div> 
+                          09/28 수정 : video img-ico 마크업 제거 아이콘 css 처리로 변경 -->
+                        <div class="img-ico-wrap">
+                          <img src="../../inc/images/img/conts_bg_img01.svg" alt="이미지 슬라이드1" />
+                        </div>
+                        
+                        <!-- title 태그 위치 변경 : img-area 내부 (aboutN/motorsport 리스트 페이지 케이스와 통일)-->
+                        <h4 class="title">
+                          HYUNDAI N FESTIVAL N CUP – Round2 BEGINNER’S GUIDE
+                          04.25.2024
+                        </h4>
+                        <!-- //09/28 수정 사항 -->
+                      </div>
+                      <div class="text-area">
                         <div class="date">04.30. 2024</div>
                       </div>
                     </a>
@@ -884,12 +916,21 @@
                     <a href="#">
                       <div class="img-ico"></div>
                       <div class="img-area">
-                        <img src="../../inc/images/img/conts_bg_img01.svg" alt="이미지 슬라이드2" />
+                        <!-- 09/28 수정 사항 -->
+                        <!-- <div class="img-ico"></div> 
+                          09/28 수정 : video img-ico 마크업 제거 아이콘 css 처리로 변경 -->
+                        <div class="img-ico-wrap">
+                          <img src="../../inc/images/img/conts_bg_img01.svg" alt="이미지 슬라이드1" />
+                        </div>
+                        
+                        <!-- title 태그 위치 변경 : img-area 내부 (aboutN/motorsport 리스트 페이지 케이스와 통일)-->
+                        <h4 class="title">
+                          HYUNDAI N FESTIVAL N CUP – Round2 BEGINNER’S GUIDE
+                          04.25.2024
+                        </h4>
+                        <!-- //09/28 수정 사항 -->
                       </div>
                       <div class="text-area">
-                        <h4 class="title">
-                          2 – Round2 BEGINNER’S GUIDE 04.25.2024
-                        </h4>
                         <div class="date">04.30. 2024</div>
                       </div>
                     </a>
@@ -898,26 +939,21 @@
                     <a href="#">
                       <div class="img-ico"></div>
                       <div class="img-area">
-                        <img src="../../inc/images/img/conts_bg_img01.svg" alt="이미지 슬라이드1" />
+                        <!-- 09/28 수정 사항 -->
+                        <!-- <div class="img-ico"></div> 
+                          09/28 수정 : video img-ico 마크업 제거 아이콘 css 처리로 변경 -->
+                        <div class="img-ico-wrap">
+                          <img src="../../inc/images/img/conts_bg_img01.svg" alt="이미지 슬라이드1" />
+                        </div>
+                        
+                        <!-- title 태그 위치 변경 : img-area 내부 (aboutN/motorsport 리스트 페이지 케이스와 통일)-->
+                        <h4 class="title">
+                          HYUNDAI N FESTIVAL N CUP – Round2 BEGINNER’S GUIDE
+                          04.25.2024
+                        </h4>
+                        <!-- //09/28 수정 사항 -->
                       </div>
                       <div class="text-area">
-                        <h4 class="title">
-                          3 – Round2 BEGINNER’S GUIDE 04.25.2024
-                        </h4>
-                        <div class="date">04.30. 2024</div>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="swiper-slide">
-                    <a href="#">
-                      <div class="img-ico"></div>
-                      <div class="img-area">
-                        <img src="../../inc/images/img/conts_bg_img01.svg" alt="이미지 슬라이드1" />
-                      </div>
-                      <div class="text-area">
-                        <h4 class="title">
-                          4 – Round2 BEGINNER’S GUIDE 04.25.2024
-                        </h4>
                         <div class="date">04.30. 2024</div>
                       </div>
                     </a>

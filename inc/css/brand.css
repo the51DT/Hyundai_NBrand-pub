@@ -684,6 +684,12 @@ article.info-bnr-wrap + article.info-video-wrap {
   font-weight: 700;
   line-height: 140%;
 }
+
+.gallery-wrap .ty02Swiper .swiper-button-next, 
+.gallery-wrap .ty02Swiper .swiper-button-prev {
+  /* margin-top: initial; */
+}
+
 .brand .gallery-wrap.barnd-gallery {
   padding: 0;
 }
@@ -1808,6 +1814,9 @@ article.info-bnr-wrap + article.info-video-wrap {
   }
   .conts-section-wrap.type-tab .tabs-wrap .tabs {
     margin: 0 5px;
+  }
+  .conts-section-wrap.type-tab .tab-head.ty02 .tabs-wrap .tabs {
+    margin: 0;
   }
   .conts-section-wrap.type-tab .tabs-wrap .tabs li {
     width: 100%;

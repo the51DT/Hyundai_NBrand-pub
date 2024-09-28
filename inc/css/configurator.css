@@ -873,6 +873,7 @@
   }
   .configurator_list_swiper .configurator_detail_wrap {
     bottom: 6.88rem;
+    padding: 0 24px;
   }
   .configurator_list_swiper .configurator_detail {
     gap: 1rem;

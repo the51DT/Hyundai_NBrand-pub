@@ -19,16 +19,23 @@ min-width : 1024 css
   .mo-only {
     display: block;
   }
-  
+
   /*******
-   align   
+  style
+  **********/
+  .bdr_list:before {
+    margin: 100px 0;
+  }
+
+  /*******
+  align   
   **********/
   .txt-center-mo {
     text-align: center;
   }
 
   /*********
-    font
+  font
   **********/
 
   /* tit */
@@ -321,11 +328,14 @@ min-width : 1024 css
   .conts-box-wrap .bg-img-wrap .more_btn {
     position: absolute;
     top: revert;
-    width: calc(100% - 72px);
+    width: 100%;
     left: 50%;
     transform: translateX(-50%);
     bottom: 36px;
-    padding: 12px 16px;
+    padding: 12px 36px;
+  }  
+  .conts-box-wrap .bg-img-wrap .more_btn > .btn {
+    width: 100%;
   }
 
   .txt-list-wrap {
@@ -464,11 +474,9 @@ min-width : 1024 css
   .card_type01 .card_detail li span:last-of-type {
     font-size: 1.125rem;
   }
-  /* .card_type01 .card_more,
-  .card_type01 .card_more,
   .card_type01 .card_more {
-    display: none;
-  } */
+    font-size: 1.125rem;
+  }
 
   .grid_mo_drop .card_type01 {
     width: 100%;
@@ -1603,11 +1611,9 @@ min-width : 1024 css
     height: 234px;
   }
 
-  .ty02Swiper .swiper-slide .img-ico {
+  .ty02Swiper .swiper-slide .img-area .img-ico-wrap::after {
     width: 67px;
     height: 67px;
-    top: 81px;
-    transform: translateX(-50%);
   }
 
   .ty02Swiper .text-area {

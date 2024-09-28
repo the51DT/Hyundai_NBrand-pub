@@ -9,6 +9,18 @@
   display: none;
 }
 
+/*******
+  style
+  **********/
+.bdr_list:before {
+  content:'';
+  display: block;
+  width: 100%;
+  height: 1px;
+  margin: 160px 0;
+  background-color: #bbb;
+}
+
 /*********
     font
   **********/
@@ -2378,28 +2390,33 @@ button.card_detail:hover {
   width: 1196px;
 }
 
-.ty02Swiper .swiper-slide .img-area img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.ty02Swiper .swiper-slide .img-area .img-ico-wrap {
+  display: block;
+  position: relative;
 }
 
-.ty02Swiper .swiper-slide .img-ico {
-  display: block;
+.ty02Swiper .swiper-slide .img-area .img-ico-wrap::after {
   content: "";
+  display: inline-block;
   width: 138px;
   height: 138px;
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: url("../images/icon/icon-play-video.svg") no-repeat center top /
-    100%;
+  background: url("../images/icon/icon-play-video.svg") no-repeat center top / 100%;
   z-index: 10;
+
 }
 
-.ty02Swiper .swiper-slide a:hover .img-ico {
+.ty02Swiper .swiper-slide a:hover .img-area .img-ico-wrap::after {
   background-image: url("../images/icon/icon-play-video-hover.svg");
+}
+
+.ty02Swiper .swiper-slide .img-area img {
+  width: 100%;
+  height: 100%;  
+  object-fit: cover;
 }
 
 .ty02Swiper .text-area {
@@ -2446,7 +2463,7 @@ button.card_detail:hover {
 .ty02Swiper .swiper-button-prev {
   width: 80px;
   height: 80px;
-  top: 40%;
+  top: 50%;
   transform: translateY(-50%);
 }
 
@@ -5374,6 +5391,10 @@ input:checked + .slider:before {
   font-size: 32px;
   font-weight: 500;
   line-height: 44.8px;
+}
+
+.search-wrap .search-input-box .clear-text {
+  display: none;
 }
 
 .search-wrap .search-input-box .btn-wrap {
