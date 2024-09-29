@@ -243,6 +243,13 @@ var pubUi = {
     $(".lang-btn").on("click", function () {
       webAccessibilityChk();
     })
+
+    // selectbox keyboard 제어 옵션 엔터키 클릭 시,
+    $(".selectbox-options li.option").keydown(function (e) {
+      if (e.keyCode == 13) {
+        handleOptionClick(event);
+      }
+    });
   },
   swiperSlideEvent: function () {
     var self = this;
@@ -829,6 +836,22 @@ $(document).ready(function () {
   // 09.27 수정 : 웹접근성 처리용
   webAccessibilityChk();  
   webAccessAddTabindex();
+
+  // 09/29 추가 : dropdown-menu 관련 label 추가
+  $(".dropdown-menu input[type = checkbox], .dropdown-menu input[type = radio]").each(function () {
+    var addLabelTxtWrap = $(this)
+    if ($(this).siblings("label p").length == 0) {
+      labelTxt = $(this).siblings("label").html().replace(/(<([^>]+)>)/ig, "")
+    } else if ($(this).siblings("label p").length == 1) {
+      labelTxt = $(this).siblings("label p").html().replace(/(<([^>]+)>)/ig, "")
+    } else if ($(this).siblings("label p").length == 2) {
+      labelTxt = $(this).siblings("label p:first-child").html().replace(/(<([^>]+)>)/ig, "") + $(this).find(
+        "label p + p").html().replace(/(<([^>]+)>)/ig, "")
+    }
+    // alert(addLabelTxtWrap.attr("id"))
+    addLabelTxtWrap.attr("title", labelTxt)
+    $(this).siblings("label").attr("aria-hidden", true)
+  })
 });
 
 function btnNaviCheck() {
@@ -1110,6 +1133,7 @@ function handleSelectboxClick(event) {
             .closest(".selectbox-wrap>div")
             .find(".selectbox-trigger")
             .removeClass("active"); // close 버튼 클릭 시 모든 trigger의 active가 제거
+          $(this).closest(".selectbox-wrap>div").find(".selectbox-options").attr("aria-hidden", "true");
           $(this).closest(".selectbox-options").hide();
           $(".selectbox-overlay").hide();
         });
@@ -2631,7 +2655,8 @@ function webAccessibilityChk () {
   var swiperSoundBtn = $(".btn-sound");
   var modelVisualPlayBtn = $(".btn.play");
   var modelVisualSoundBtn = $(".btn.sound");
-  var popupPlayBtn = $(".box-video .btn");  
+  var popupPlayBtn = $(".box-video .btn");
+  
 
   // 국/영문 사이트 체크
   if(lang == "ko") {
@@ -2653,8 +2678,7 @@ function webAccessibilityChk () {
 }
 
 function webAccessAddTabindex () {
-  var selectboxWrap = $(".selectbox-wrap");
-  var tagList = $(".tag-list");
+  var selectboxWrap = $(".selectbox-wrap");  
   
   if(selectboxWrap.length > 0) {
     var selectOption = selectboxWrap.find(".selectbox-options li");
@@ -2662,15 +2686,5 @@ function webAccessAddTabindex () {
     for(var i = 0; i < selectOption.length; i++) {
       $(selectOption[i]).attr("tabindex", "0");
     }
-  }
-
-  if (tagList.length > 0) {
-    var tag = tagList.find("li");
-
-    for (var i = 0; i < tag.length; i++) {
-      $(tag[i]).find("label").attr("tabindex", "0");
-    }
-  }
-
-
+  }  
 }
