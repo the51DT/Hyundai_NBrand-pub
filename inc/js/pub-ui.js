@@ -250,6 +250,18 @@ var pubUi = {
         handleOptionClick(event);
       }
     });
+
+    $(".tag-list li input").keydown(function (e) {
+      var parentSelector = "";
+      if($(".search-container .tag-list").length > 0) {
+        parentSelector = $(this).closest(".search-container");
+      } else if ($(".wrap-inner-category").length > 0) {
+        parentSelector = $(this).closest(".wrap-inner-category");
+      }
+      if (e.keyCode == 13) {
+        keydownTagEvent(parentSelector, $(this));     
+      }
+    });
   },
   swiperSlideEvent: function () {
     var self = this;
@@ -515,7 +527,7 @@ var pubUi = {
     }
   },
   tagBtnEvent: function (e, list, param) {
-    var listItem = list.find("li");
+    var listItem = list.find("li");    
 
     //search input reset 클릭시, 하단 태그 초기화
     if (param == "reset") {
@@ -2678,7 +2690,7 @@ function webAccessibilityChk () {
 }
 
 function webAccessAddTabindex () {
-  var selectboxWrap = $(".selectbox-wrap");  
+  var selectboxWrap = $(".selectbox-wrap");
   
   if(selectboxWrap.length > 0) {
     var selectOption = selectboxWrap.find(".selectbox-options li");
@@ -2686,5 +2698,32 @@ function webAccessAddTabindex () {
     for(var i = 0; i < selectOption.length; i++) {
       $(selectOption[i]).attr("tabindex", "0");
     }
-  }  
+  }
+}
+
+function keydownTagEvent (parentSelector, el) {
+
+  if (el.attr("type") == "checkbox") {
+    if (el.prop("checked") == true) {
+      el.prop("checked", false);
+      el.closest("li").removeClass("on");
+      el.closest("li").find("label").attr("data-check", "false");
+    } else {
+      el.prop("checked", true);
+      el.closest("li").addClass("on");
+      el.closest("li").find("label").attr("data-check", "true");
+    }
+  } else if (el.attr("type") == "radio") {
+    
+    var cateInner = parentSelector;
+
+    cateInner.find(".tag-list li").removeClass("on");
+    cateInner.find(".tag-list li input").prop("checked", false);
+    cateInner.find(".tag-list li label").attr("data-check", "false");
+
+    el.closest("li").addClass("on");
+    el.prop("checked", true);
+    el.closest("li").find("label").attr("data-check", "true");
+  }
+
 }

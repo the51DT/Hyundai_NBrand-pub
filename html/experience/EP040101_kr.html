@@ -820,6 +820,7 @@
                     <div class="card_function btn-wrap-type5">
                       <div>
                         <button type="button" class="btn btn-only-icon-notbg" title="heart">
+                          <!-- 개발영역 웹접근성 처리시 참고사항, 하트 버튼 클릭시, visually-hidden 에 하트 버튼 클릭한 상태값 표시되도록 버튼이벤트에 따른 텍스트 제어 필요-->
                           <span class="visually-hidden">heart</span>
                           <!-- 0627 하트 버튼 클릭 기능 삭제 /  icon-heart  : 빈 하트 나옴 , icon-heart-red :  빨간색 하트 나옴 -->
                           <span class="btn-icon20 icon-heart-red" aria-hidden="true"></span>
@@ -832,6 +833,7 @@
                           <span class="btn-icon20 icon-share" aria-hidden="true"></span>
                         </button>
                         <button type="button" class="btn btn-only-icon-notbg" title="translation">
+                          <!-- 개발영역 웹접근성 처리시 참고사항, 번역 버튼 클릭시, visually-hidden 에 번역 버튼 클릭한 상태값 표시되도록 버튼이벤트에 따른 텍스트 제어 필요-->
                           <span class="visually-hidden">Translation</span>
                           <span class="btn-icon20 icon-trans" aria-hidden="true"></span>
                         </button>
@@ -876,7 +878,7 @@
                               <p class="pop-profile_club">i30N_Club</p>
                             </div>
                           </div>
-                          <div class="popup-body">
+                          <div class="popup-body" tabindex="0">
                             <div class="pop-gray">
                               <div>
                                 <p class="txt-left">랭킹</p>
@@ -1326,7 +1328,7 @@
                               <p class="pop-profile_club">i30N_Club</p>
                             </div>
                           </div>
-                          <div class="popup-body">
+                          <div class="popup-body" tabindex="0">
                             <div class="pop-gray">
                               <div>
                                 <p class="txt-left">랭킹</p>
@@ -2218,7 +2220,7 @@
                               <p class="pop-profile_club">i30N_Club</p>
                             </div>
                           </div>
-                          <div class="popup-body">
+                          <div class="popup-body" tabindex="0">
                             <div class="pop-gray">
                               <div>
                                 <p class="txt-left">랭킹</p>
