@@ -2166,12 +2166,14 @@ function configuratorEvent() {
       // configuratorImg();
 
       // 슬라이드 이미지 애니메이션
-      $(".configurator_swiper .swiper-slide img").hide();
       // $(".configurator_swiper .swiper-slide img").attr(
       //   "src",
       //   "../../inc/images/Configurator/NEN_EXT_XFB_LD_C003.jpg"
       // ); // 이미지 교체 확인용 임시 스크립트
-      $(".configurator_swiper .swiper-slide img").fadeIn(300);
+
+      // 이미지 변경하면 화면 깜빡임
+      // $(".configurator_swiper .swiper-slide img").animate({ opacity: 0.1 }, 200);
+      // $(".configurator_swiper .swiper-slide img").animate({ opacity: 1 }, 200);
     });
   });
 }
