@@ -295,32 +295,40 @@ var pubUi = {
             "<div class='seek-bar'></div>"
           );
         },
+        afterInit: function () {
+          // swiperAriaHidden($(".ty01Swiper:not(.banner-swiper)"));
+          swiperCtrlInert($(".ty01Swiper:not(.banner-swiper)"));
+        },
         slideChangeTransitionEnd: function () {
-          var currentIndex = swiper1.activeIndex;
           self.typeIdx = this.realIndex;
-          $(".ty01Swiper:not(.swiper-banner) video").each(function () {
+          var currentIndex = swiper1.activeIndex;
+
+          $(".ty01Swiper:not(.banner-swiper) video").each(function () {
             var videoIdEach = $(this).attr("id");
             var videoAll = document.querySelector(`#${videoIdEach}`);
             videoAll.currentTime = 0;
             videoAll.pause();
           });
           if (
-            $(".ty01Swiper:not(.swiper-banner) .swiper-slide")[
+            $(".ty01Swiper:not(.banner-swiper) .swiper-slide")[
               currentIndex
             ].querySelector("video")
           ) {
             pubUi.videoBulletChk(
-              ".ty01Swiper:not(.swiper-banner)",
+              ".ty01Swiper:not(.banner-swiper)",
               this.realIndex,
               "video"
             );
           } else {
             pubUi.videoBulletChk(
-              ".ty01Swiper:not(.swiper-banner)",
+              ".ty01Swiper:not(.banner-swiper)",
               this.realIndex,
               "image"
             );
-          }
+          }          
+
+          // swiperAriaHidden($(".ty01Swiper:not(.banner-swiper)"));
+          swiperCtrlInert($(".ty01Swiper:not(.banner-swiper)"));
         },
       },
     });
@@ -351,6 +359,14 @@ var pubUi = {
           //touchRatio: 1, // 드래그 O
         },
       },
+      on: {
+        afterInit: function () {
+          swiperAriaHidden($(".banner-swiper"));
+        },
+        slideChangeTransitionEnd: function () {
+          swiperAriaHidden($(".banner-swiper"));
+        },
+      },
     });
     
     swiper2SlideEvt(); //swiper2 이벤트 실행
@@ -371,10 +387,16 @@ var pubUi = {
         prevEl: ".ty03Swiper .swiper-button-prev",
       },
       on: {
+        afterInit: function () {
+          swiperAriaHidden($(".ty03Swiper.rankswiper"));
+        },
         slideChangeTransitionStart: function () {
           if ($(".ty03Swiper .profile-open").length) {
             NbrandUI.profileCloseOption($(".ty03Swiper .club-popup"));
           }
+        },
+        slideChangeTransitionEnd: function () {
+          swiperAriaHidden($(".ty03Swiper.rankswiper"));
         },
       },
       breakpoints: {
@@ -440,6 +462,14 @@ var pubUi = {
           spaceBetween: 80,
         },
       },
+      on: {
+        afterInit: function () {
+          swiperAriaHidden($(".onlyOneSwiper"));
+        },
+        slideChangeTransitionEnd: function () {
+          swiperAriaHidden($(".onlyOneSwiper"));
+        },
+      },
     });
     var swiper7 = new Swiper(".editor-box-wrap .swiper-container", {
       slidesPerView: 1,
@@ -466,6 +496,14 @@ var pubUi = {
           spaceBetween: 80,
         },
       },
+      on: {
+        afterInit: function () {
+          swiperAriaHidden($(".editor-box-wrap .swiper-container"));
+        },
+        slideChangeTransitionEnd: function () {
+          swiperAriaHidden($(".editor-box-wrap .swiper-container"));
+        },
+      },
     });
     var swiper8 = new Swiper(".configurator_list_swiper", {
       slidesPerView: 1,
@@ -479,6 +517,14 @@ var pubUi = {
           slidesPerView: 2,
         },
       },
+      on: {
+        afterInit: function () {
+          swiperAriaHidden($(".configurator_list_swiper"));
+        },
+        slideChangeTransitionEnd: function () {
+          swiperAriaHidden($(".configurator_list_swiper"));
+        },
+      },
     });
     var swiper10 = new Swiper(".wrc_swiper", {
       slidesPerView: 1,
@@ -490,6 +536,14 @@ var pubUi = {
       pagination: {
         el: ".wrc_swiper .swiper-pagination-custom",
         clickable: true,
+      },
+      on: {
+        afterInit: function () {
+          swiperAriaHidden($(".wrc_swiper"));
+        },
+        slideChangeTransitionEnd: function () {
+          swiperAriaHidden($(".wrc_swiper"));
+        },
       },
     });
     var swiper11 = new Swiper(".merchandise_swiper", {
@@ -506,6 +560,14 @@ var pubUi = {
       pagination: {
         el: ".merchandise_swiper .swiper-pagination-custom",
         clickable: true,
+      },
+      on: {
+        afterInit: function () {
+          swiperAriaHidden($(".merchandise_swiper"));
+        },
+        slideChangeTransitionEnd: function () {
+          swiperAriaHidden($(".merchandise_swiper"));
+        },
       },
     });
   },
@@ -569,21 +631,6 @@ var pubUi = {
       }
     }
   },
-  // masonryLayout: function () {
-  //   const masonry_item = document.querySelectorAll(".masonry_item");
-  //   if (masonry_item.length < 1) {
-  //     return;
-  //   }
-  //   const row_gap = 24;
-  //   masonry_item.forEach((el) => {
-  //     el.style.gridRowEnd = `
-  //         span ${Math.ceil(
-  //           el.querySelector(".masonry_con").scrollHeight + row_gap
-  //         )}
-  //       `;
-  //   });
-  // },
-
   masonryLayout: function () {
     const masonry_item = $(".masonry_item");
     if (masonry_item.length < 1) {
@@ -864,6 +911,7 @@ $(document).ready(function () {
     addLabelTxtWrap.attr("title", labelTxt)
     $(this).siblings("label").attr("aria-hidden", true)
   })
+
 });
 
 function btnNaviCheck() {
@@ -984,6 +1032,22 @@ function swiper2SlideEvt() {
         spaceBetween: 12,
       },
     },
+    on: {
+      afterInit: function () {
+        swiperAriaHidden($(".ty02Swiper"));
+      },
+      slideChangeTransitionEnd: function () {
+        var swiperSlide = $(".ty02Swiper .swiper-slide");
+
+        for (var i = 0; i < swiperSlide.length; i++) {
+          if (swiperSlide[i].classList.contains("swiper-slide-active")) {
+            swiperSlide[i].setAttribute("aria-hidden", "false");
+          } else {
+            swiperSlide[i].setAttribute("aria-hidden", "true");
+          }
+        }
+      },
+    },
   });
 }
 
@@ -1045,6 +1109,22 @@ function swiper4SlideEvt() {
         slidesOffsetAfter: 80,
       },
     },
+    on: {
+      afterInit : function() {
+        swiperAriaHidden($(".ty04Swiper"));
+      },
+      slideChangeTransitionEnd: function () {
+        var swiperSlide = $(".ty04Swiper .swiper-slide");
+
+        for (var i = 0; i < swiperSlide.length; i++) {
+          if (swiperSlide[i].classList.contains("swiper-slide-active")) {
+            swiperSlide[i].setAttribute("aria-hidden", "false");
+          } else {
+            swiperSlide[i].setAttribute("aria-hidden", "true");
+          }
+        }
+      }
+    },
   });
 }
 
@@ -1092,6 +1172,22 @@ function swiper12SlideEvt() {
         spaceBetween: 24,
         // slidesOffsetBefore: 0,
         // slidesOffsetAfter: 0,
+      },
+    },
+    on: {
+      afterInit: function () {
+        swiperAriaHidden($(".collection_swiper"));
+      },
+      slideChangeTransitionEnd: function () {
+        var swiperSlide = $(".collection_swiper .swiper-slide");
+
+        for (var i = 0; i < swiperSlide.length; i++) {
+          if (swiperSlide[i].classList.contains("swiper-slide-active")) {
+            swiperSlide[i].setAttribute("aria-hidden", "false");
+          } else {
+            swiperSlide[i].setAttribute("aria-hidden", "true");
+          }
+        }
       },
     },
   });
@@ -2726,4 +2822,34 @@ function keydownTagEvent (parentSelector, el) {
     el.closest("li").find("label").attr("data-check", "true");
   }
 
+}
+
+function swiperAriaHidden(swiperEl) {  
+  // swiper 웹접근성 처리용 aria-hidden 제어 함수 추가
+  var swiperElList = swiperEl.find(".swiper-slide");
+  if (swiperElList.length > 0) {
+    // console.log(swiperElList);
+    for (var i = 0; i < swiperElList.length; i++) {
+      if (swiperElList[i].classList.contains("swiper-slide-active")) {
+        swiperElList[i].setAttribute("aria-hidden", false);
+      } else {
+        swiperElList[i].setAttribute("aria-hidden", true);
+      }
+    }
+  }
+}
+
+function swiperCtrlInert(swiperEl) {  
+  // swiper 웹접근성 처리용 inert 제어 함수 추가
+  var swiperElList = swiperEl.find(".swiper-slide");
+  if (swiperElList.length > 0) {
+    // console.log(swiperElList);
+    for (var i = 0; i < swiperElList.length; i++) {
+      if (swiperElList[i].classList.contains("swiper-slide-active")) {
+        swiperElList[i].removeAttribute("inert");
+      } else {
+        swiperElList[i].setAttribute("inert", "");
+      }
+    }
+  }
 }
