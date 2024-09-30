@@ -383,16 +383,10 @@ var pubUi = {
         prevEl: ".ty03Swiper .swiper-button-prev",
       },
       on: {
-        afterInit: function () {
-          swiperCtrlInert($(".ty03Swiper.rankswiper"));
-        },
         slideChangeTransitionStart: function () {
           if ($(".ty03Swiper .profile-open").length) {
             NbrandUI.profileCloseOption($(".ty03Swiper .club-popup"));
           }
-        },
-        slideChangeTransitionEnd: function () {
-          swiperCtrlInert($(".ty03Swiper.rankswiper"));
         },
       },
       breakpoints: {
@@ -1105,22 +1099,6 @@ function swiper4SlideEvt() {
         slidesOffsetAfter: 80,
       },
     },
-    on: {
-      afterInit : function() {
-        swiperCtrlInert($(".ty04Swiper"));
-      },
-      slideChangeTransitionEnd: function () {
-        var swiperSlide = $(".ty04Swiper .swiper-slide");
-
-        for (var i = 0; i < swiperSlide.length; i++) {
-          if (swiperSlide[i].classList.contains("swiper-slide-active")) {
-            swiperSlide[i].setAttribute("aria-hidden", "false");
-          } else {
-            swiperSlide[i].setAttribute("aria-hidden", "true");
-          }
-        }
-      }
-    },
   });
 }
 
@@ -1168,22 +1146,6 @@ function swiper12SlideEvt() {
         spaceBetween: 24,
         // slidesOffsetBefore: 0,
         // slidesOffsetAfter: 0,
-      },
-    },
-    on: {
-      afterInit: function () {
-        swiperCtrlInert($(".collection_swiper"));
-      },
-      slideChangeTransitionEnd: function () {
-        var swiperSlide = $(".collection_swiper .swiper-slide");
-
-        for (var i = 0; i < swiperSlide.length; i++) {
-          if (swiperSlide[i].classList.contains("swiper-slide-active")) {
-            swiperSlide[i].setAttribute("aria-hidden", "false");
-          } else {
-            swiperSlide[i].setAttribute("aria-hidden", "true");
-          }
-        }
       },
     },
   });
@@ -1808,8 +1770,22 @@ function toggleFullscreen() {
   const container = document.querySelector(".fullscreenContainer");
 
   toggleFullscreenBtn.addEventListener("click", (e) => {
-    toggleFullScreen(container);
-    container.classList.toggle("full");
+    let user = navigator.userAgent;
+    if (
+      user.indexOf("iphone") > -1 ||
+      user.indexOf("ipad") > -1 ||
+      user.indexOf("ipod") > -1
+    ) {
+      if (toggleFullscreenBtn.hasClass("on")) {
+        iosExitFS();
+      } else {
+        iosStartFS();
+      }
+    } else {
+      alert(navigator.userAgent);
+      toggleFullScreen(container);
+      container.classList.toggle("full");
+    }
   });
 
   // const fullscreen = (element) => {
@@ -2849,5 +2825,31 @@ function swiperCtrlInert(swiperEl) {
         swiperElList[i].setAttribute("inert", "");
       }
     }
+  }
+}
+
+function iosStartFS(element) {
+  if (element.requestFullScreen) {
+    element.requestFullScreen();
+  } else if (element.webkitRequestFullScreen) {
+    element.webkitRequestFullScreen();
+  } else if (element.mozRequestFullScreen) {
+    element.mozRequestFullScreen();
+  } else if (element.msRequestFullscreen) {
+    element.msRequestFullscreen();
+  }
+}
+
+function iosExitFS(element) {
+  if (element.exitFullscreen) {
+    element.exitFullscreen();
+  } else if (element.cancelFullScreen) {
+    element.cancelFullScreen();
+  } else if (element.webkitCancelFullScreen) {
+    element.webkitCancelFullScreen();
+  } else if (element.mozCancelFullScreen) {
+    element.mozCancelFullScreen();
+  } else if (element.msExitFullscreen) {
+    element.msExitFullscreen();
   }
 }
