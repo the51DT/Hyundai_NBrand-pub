@@ -282,8 +282,6 @@ var pubUi = {
       },
 
       a11y: {
-        // 웹접근성
-        enabled: false,
         prevSlideMessage: "이전 슬라이드",
         nextSlideMessage: "다음 슬라이드",
         slideLabelMessage:
