@@ -2420,11 +2420,11 @@ window.onload = function () {
     }
   }
 
-  if (user.indexOf("iphone") > -1 || user.indexOf("ipad") > -1 || user.indexOf("ipod") > -1) {
-      $(".toggleFullscreenBtn").hide();
-    } else {
-      $(".toggleFullscreenBtn").show();
-    }
+  if (navigator.userAgent.indexOf("iphone") > -1 || navigator.userAgent.indexOf("ipad") > -1 || navigator.userAgent.indexOf("ipod") > -1) {
+    $(".toggleFullscreenBtn").hide();
+  } else {
+    $(".toggleFullscreenBtn").show();
+  }
 };
 
 function startTimer(slide, video, maxVideoW, type, targetIdx) {
