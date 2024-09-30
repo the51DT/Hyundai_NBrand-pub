@@ -1770,22 +1770,8 @@ function toggleFullscreen() {
   const container = document.querySelector(".fullscreenContainer");
 
   toggleFullscreenBtn.addEventListener("click", (e) => {
-    let user = navigator.userAgent;
-    if (
-      user.indexOf("iphone") > -1 ||
-      user.indexOf("ipad") > -1 ||
-      user.indexOf("ipod") > -1
-    ) {
-      if (toggleFullscreenBtn.hasClass("on")) {
-        iosExitFS();
-      } else {
-        iosStartFS();
-      }
-    } else {
-      alert(navigator.userAgent);
-      toggleFullScreen(container);
-      container.classList.toggle("full");
-    }
+    toggleFullScreen(container);
+    container.classList.toggle("full");
   });
 
   // const fullscreen = (element) => {
@@ -2433,6 +2419,12 @@ window.onload = function () {
       );
     }
   }
+
+  if (user.indexOf("iphone") > -1 || user.indexOf("ipad") > -1 || user.indexOf("ipod") > -1) {
+      $(".toggleFullscreenBtn").hide();
+    } else {
+      $(".toggleFullscreenBtn").show();
+    }
 };
 
 function startTimer(slide, video, maxVideoW, type, targetIdx) {
@@ -2825,31 +2817,5 @@ function swiperCtrlInert(swiperEl) {
         swiperElList[i].setAttribute("inert", "");
       }
     }
-  }
-}
-
-function iosStartFS(element) {
-  if (element.requestFullScreen) {
-    element.requestFullScreen();
-  } else if (element.webkitRequestFullScreen) {
-    element.webkitRequestFullScreen();
-  } else if (element.mozRequestFullScreen) {
-    element.mozRequestFullScreen();
-  } else if (element.msRequestFullscreen) {
-    element.msRequestFullscreen();
-  }
-}
-
-function iosExitFS(element) {
-  if (element.exitFullscreen) {
-    element.exitFullscreen();
-  } else if (element.cancelFullScreen) {
-    element.cancelFullScreen();
-  } else if (element.webkitCancelFullScreen) {
-    element.webkitCancelFullScreen();
-  } else if (element.mozCancelFullScreen) {
-    element.mozCancelFullScreen();
-  } else if (element.msExitFullscreen) {
-    element.msExitFullscreen();
   }
 }
