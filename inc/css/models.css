@@ -1417,7 +1417,7 @@
     max-width: 100%;
   }
   .models-wrap .tech-wrap .kona-tech-box > div {
-    flex: 0 0 100%;
+    width: 100%;
     gap: 28px;
   }
   .models-wrap .tech-wrap .kona-tech-box > div > div {
