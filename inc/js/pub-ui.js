@@ -294,7 +294,6 @@ var pubUi = {
           );
         },
         afterInit: function () {
-          // swiperAriaHidden($(".ty01Swiper:not(.banner-swiper)"));
           swiperCtrlInert($(".ty01Swiper:not(.banner-swiper)"));
         },
         slideChangeTransitionEnd: function () {
@@ -325,7 +324,6 @@ var pubUi = {
             );
           }          
 
-          // swiperAriaHidden($(".ty01Swiper:not(.banner-swiper)"));
           swiperCtrlInert($(".ty01Swiper:not(.banner-swiper)"));
         },
       },
@@ -359,10 +357,10 @@ var pubUi = {
       },
       on: {
         afterInit: function () {
-          swiperAriaHidden($(".banner-swiper"));
+          swiperCtrlInert($(".banner-swiper"));
         },
         slideChangeTransitionEnd: function () {
-          swiperAriaHidden($(".banner-swiper"));
+          swiperCtrlInert($(".banner-swiper"));
         },
       },
     });
@@ -386,7 +384,7 @@ var pubUi = {
       },
       on: {
         afterInit: function () {
-          swiperAriaHidden($(".ty03Swiper.rankswiper"));
+          swiperCtrlInert($(".ty03Swiper.rankswiper"));
         },
         slideChangeTransitionStart: function () {
           if ($(".ty03Swiper .profile-open").length) {
@@ -394,7 +392,7 @@ var pubUi = {
           }
         },
         slideChangeTransitionEnd: function () {
-          swiperAriaHidden($(".ty03Swiper.rankswiper"));
+          swiperCtrlInert($(".ty03Swiper.rankswiper"));
         },
       },
       breakpoints: {
@@ -462,10 +460,10 @@ var pubUi = {
       },
       on: {
         afterInit: function () {
-          swiperAriaHidden($(".onlyOneSwiper"));
+          swiperCtrlInert($(".onlyOneSwiper"));
         },
         slideChangeTransitionEnd: function () {
-          swiperAriaHidden($(".onlyOneSwiper"));
+          swiperCtrlInert($(".onlyOneSwiper"));
         },
       },
     });
@@ -496,10 +494,10 @@ var pubUi = {
       },
       on: {
         afterInit: function () {
-          swiperAriaHidden($(".editor-box-wrap .swiper-container"));
+          swiperCtrlInert($(".editor-box-wrap .swiper-container"));
         },
         slideChangeTransitionEnd: function () {
-          swiperAriaHidden($(".editor-box-wrap .swiper-container"));
+          swiperCtrlInert($(".editor-box-wrap .swiper-container"));
         },
       },
     });
@@ -517,10 +515,10 @@ var pubUi = {
       },
       on: {
         afterInit: function () {
-          swiperAriaHidden($(".configurator_list_swiper"));
+          swiperCtrlInert($(".configurator_list_swiper"));
         },
         slideChangeTransitionEnd: function () {
-          swiperAriaHidden($(".configurator_list_swiper"));
+          swiperCtrlInert($(".configurator_list_swiper"));
         },
       },
     });
@@ -537,10 +535,10 @@ var pubUi = {
       },
       on: {
         afterInit: function () {
-          swiperAriaHidden($(".wrc_swiper"));
+          swiperCtrlInert($(".wrc_swiper"));
         },
         slideChangeTransitionEnd: function () {
-          swiperAriaHidden($(".wrc_swiper"));
+          swiperCtrlInert($(".wrc_swiper"));
         },
       },
     });
@@ -561,10 +559,10 @@ var pubUi = {
       },
       on: {
         afterInit: function () {
-          swiperAriaHidden($(".merchandise_swiper"));
+          swiperCtrlInert($(".merchandise_swiper"));
         },
         slideChangeTransitionEnd: function () {
-          swiperAriaHidden($(".merchandise_swiper"));
+          swiperCtrlInert($(".merchandise_swiper"));
         },
       },
     });
@@ -1032,7 +1030,7 @@ function swiper2SlideEvt() {
     },
     on: {
       afterInit: function () {
-        swiperAriaHidden($(".ty02Swiper"));
+        swiperCtrlInert($(".ty02Swiper"));
       },
       slideChangeTransitionEnd: function () {
         var swiperSlide = $(".ty02Swiper .swiper-slide");
@@ -1109,7 +1107,7 @@ function swiper4SlideEvt() {
     },
     on: {
       afterInit : function() {
-        swiperAriaHidden($(".ty04Swiper"));
+        swiperCtrlInert($(".ty04Swiper"));
       },
       slideChangeTransitionEnd: function () {
         var swiperSlide = $(".ty04Swiper .swiper-slide");
@@ -1174,7 +1172,7 @@ function swiper12SlideEvt() {
     },
     on: {
       afterInit: function () {
-        swiperAriaHidden($(".collection_swiper"));
+        swiperCtrlInert($(".collection_swiper"));
       },
       slideChangeTransitionEnd: function () {
         var swiperSlide = $(".collection_swiper .swiper-slide");
@@ -2822,7 +2820,7 @@ function keydownTagEvent (parentSelector, el) {
 
 }
 
-function swiperAriaHidden(swiperEl) {  
+function swiperAriaHidden(swiperEl) {
   // swiper 웹접근성 처리용 aria-hidden 제어 함수 추가
   var swiperElList = swiperEl.find(".swiper-slide");
   if (swiperElList.length > 0) {

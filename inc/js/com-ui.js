@@ -838,6 +838,14 @@ var NbrandSwiper = {
         el: ".configurator_swiper .swiper-pagination-custom",
         clickable: true,
       },
+      on: {
+        afterInit: function () {
+          swiperCtrlInert($(".configurator_swiper"));
+        },
+        slideChangeTransitionEnd: function () {
+          swiperCtrlInert($(".configurator_swiper"));
+        },
+      },
     });
   },
   swiper3: function (obj) {
@@ -862,10 +870,16 @@ var NbrandSwiper = {
         prevEl: ".ty03Swiper .swiper-button-prev",
       },
       on: {
+        afterInit: function () {
+          swiperCtrlInert($(".ty03Swiper"));
+        },
         slideChangeTransitionStart: function () {
           if ($(".ty03Swiper .profile-open").length) {
             NbrandUI.profileCloseOption($(".ty03Swiper .club-popup"));
           }
+        },
+        slideChangeTransitionEnd: function () {
+          swiperCtrlInert($(".ty03Swiper"));
         },
       },
       breakpoints: {
