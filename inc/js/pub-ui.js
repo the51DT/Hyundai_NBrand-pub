@@ -2420,7 +2420,7 @@ window.onload = function () {
     }
   }
 
-  if (navigator.userAgent.indexOf("iphone") > -1 || navigator.userAgent.indexOf("ipad") > -1 || navigator.userAgent.indexOf("ipod") > -1) {
+  if (navigator.userAgent.indexOf("iPhone") > -1 || navigator.userAgent.indexOf("iPad") > -1 ) {
     $(".toggleFullscreenBtn").hide();
   } else {
     $(".toggleFullscreenBtn").show();
