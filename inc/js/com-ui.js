@@ -27,6 +27,8 @@ let swiperConfigurator;
 let swiperProfile;
 let loopHidden = null;
 let loopHidden02 = null;
+let $tparentFocus = null;
+let $tparentFocus02 = null;
 let stack = 0;
 $("body").data("lastTag", "true");
 var lastTag = $("body").data("lastTag");
@@ -36,44 +38,7 @@ $(window).resize(function () {
   clearTimeout(timer);
   timer = setTimeout(resizeDone, delta);
 });
-function focusNonout(tparent) {
-  if (tparent.parent().data("lastTag")) {
-    clearInterval(loopHidden);
-    alert();
-  } else {
-    tparent = tparent.parent();
-    tparent.siblings("[aria-hidden = true]").each(function () {
-      $(this).attr("data-stack", 1);
-      if ($(this).attr("data-hide")) {
-        stack = $(this).attr("data-stack");
-        stack++;
-        $(this).attr("data-stack", stack);
-        stack = 0;
-      }
-      $(this).attr("data-hide", "true");
-    });
-    tparent.siblings().attr("aria-hidden", true);
-  }
-}
-function focusNonoutReset(tparent02) {
-  if (tparent02.parent().data("lastTag") == lastTag) {
-    clearInterval(loopHidden02);
-  } else {
-    tparent02 = tparent02.parent();
-    tparent02.siblings().removeAttr("aria-hidden");
-    tparent02.siblings("[data-hide = true]").each(function () {
-      $(this).attr("aria-hidden", true);
-    });
-  }
-}
 
-// loopHidden = setInterval(function () {
-//   focusNonout();
-// }, 1);
-
-// loopHidden02 = setInterval(function () {
-//   focusNonoutReset();
-// }, 1);
 function resizeDone() {
   if (NbrandUI.windowSize()) {
     NbrandUI.headerReset(".nav-btn", ".nav-wrap", ".header-wrap");
@@ -136,9 +101,7 @@ var NbrandUI = {
     var openWrap = $(obj);
     var popClass = openWrap.attr("class");
     bodyControll(true);
-    // var popCheck = btn.parents(".popup");
     $popDate++;
-    // zData = 1001;
     if ($popDate == 1) {
       zData = 1001;
       btnAddName = "open-btn1";
@@ -326,6 +289,63 @@ var NbrandUI = {
     }
     NbrandUI.popContClose(closeWrap);
   },
+
+  focusNonout: function (target) {
+    let tparentFocus = target;
+    loopHidden = setInterval(function () {
+      tparentFocus.siblings("[aria-hidden = true]").each(function () {
+        if (
+          $(this).attr("data-hide") &&
+          $(this).attr("data-stack") === undefined
+        ) {
+          $(this).attr("data-stack", 1);
+        } else if (
+          $(this).attr("data-hide") &&
+          $(this).attr("data-stack") >= 1
+        ) {
+          $(this).attr(
+            "data-stack",
+            parseFloat($(this).attr("data-stack")) + 1
+          );
+        }
+        $(this).attr("data-hide", "true");
+      });
+      tparentFocus.siblings().attr("aria-hidden", true);
+      tparentFocus = tparentFocus.parent();
+      if (tparentFocus.data("lastTag")) {
+        clearInterval(loopHidden);
+      }
+    }, 1);
+  },
+  focusNonoutReset: function (target) {
+    tparentFocus02 = target;
+    loopHidden02 = setInterval(function () {
+      tparentFocus02.siblings("[aria-hidden = true]").each(function () {
+        // alert(tparentFocus02.attr("class"));
+        if ($(this).attr("data-hide") === undefined) {
+          tparentFocus02.siblings().removeAttr("aria-hidden");
+          // alert("d");
+        } else if ($(this).attr("data-stack") == 0) {
+          $(this).removeAttr("data-stack");
+          $(this).removeAttr("data-hide");
+          // alert("d");
+        } else if ($(this).attr("data-stack") !== undefined) {
+          $(this).attr("data-stack", parseInt($(this).attr("data-stack")) - 1);
+        }
+        // tparentFocus02.siblings().removeAttr("aria-hidden");
+      });
+      // tparentFocus02.siblings().attr("aria-hidden", true);
+
+      // tparentFocus02.siblings("[data-hide = true]").each(function () {
+      //   $(this).attr("aria-hidden", true);
+      // });
+
+      tparentFocus02 = tparentFocus02.parent();
+      if (tparentFocus02.data("lastTag") == lastTag) {
+        clearInterval(loopHidden02);
+      }
+    }, 1);
+  },
   /* headerNav */
   headerReset: function (obj, com, par) {
     resetCont = $(com);
@@ -397,15 +417,18 @@ var NbrandUI = {
           eventItem = $(this);
           NbrandUI.toggleBtn();
           eventParent.toggleClass("menu-on");
-          eventCont.attr("aria-hidden", false);
+          eventCont.attr("aria-hidden", false).attr("tabindex", 0);
           NbrandUI.expandedAria(eventItem);
           if (eventItem.hasClass("on")) {
             //열때
             dataScroll = $("body").scrollTop();
+            $tparentFocus = eventParent.find(".sitemap-wrap");
             Nbrand.uiFocusTab({
               selector: tparent,
               type: "hold",
             });
+            $(".header-wrap").siblings().attr("aria-hidden", true);
+            $(".skip-navigation").attr("aria-hidden", true);
             NbrandUI.headerDimdOn();
             if (NbrandUI.windowSize()) {
               eventContH = $(window).height() - 70;
@@ -415,13 +438,15 @@ var NbrandUI = {
               eventCont.slideDown(100);
             }
             $(".navigation_bar-wrap").hide();
-            loopHidden = setInterval(function () {
-              focusNonout(eventParent);
-            }, 1);
+            setTimeout(function () {
+              eventCont.focus();
+            }, 110);
           } else {
             //닫을때
-            eventParent.siblings().attr("aria-hidden", false);
+            $(".header-wrap").siblings().removeAttr("aria-hidden");
+            $(".skip-navigation").removeAttr("aria-hidden");
             eventCont.attr("aria-hidden", "true");
+            tparentFocus02 = eventParent.find(".sitemap-wrap");
             tparent.children(".ui-fctab-s").remove();
             tparent.children(".ui-fctab-e").remove();
             NbrandUI.headerDimdOff();
@@ -443,8 +468,6 @@ var NbrandUI = {
                 eventCont.hide();
               }
             }, 100);
-            if (NbrandUI.windowSize()) {
-            }
           }
         });
     }
@@ -544,6 +567,11 @@ var NbrandUI = {
           tparent.children(".ui-fctab-s").remove();
           tparent.children(".ui-fctab-e").remove();
           tparent.parent().hide();
+          // bakFocus = $(this).parents("gnb__tab-cont").index();
+          $(".gnb__tab02 .on")
+            .removeClass("on")
+            .attr("aria-selected", false)
+            .focus();
         });
       $(".gnb__tab02-wrap > .mo-gnb__back-btn")
         .off("click")
@@ -554,7 +582,8 @@ var NbrandUI = {
           tparent.children(".ui-fctab-e").remove();
           $(".gnb__tab-btn-wrap button.on")
             .removeClass("on")
-            .attr("aria-selected", false);
+            .attr("aria-selected", false)
+            .focus();
           $(".header__event-wrap").show();
         });
     }

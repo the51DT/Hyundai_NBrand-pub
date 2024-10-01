@@ -202,7 +202,7 @@ textarea::placeholder {
   font-family: "Hyundai Sans Text KR", "Hyundai Sans Text", sans-serif;
   font-size: 17px;
   font-weight: 400;
-  color: #b2b2b2;
+  color: #777;
 }
 
 [tabindex="-1"] {
@@ -263,4 +263,3 @@ button {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
 }
-

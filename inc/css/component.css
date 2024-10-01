@@ -13,7 +13,7 @@
   style
   **********/
 .bdr_list:before {
-  content:'';
+  content: "";
   display: block;
   width: 100%;
   height: 1px;
@@ -1290,7 +1290,7 @@ a:hover .icon-youtube-wh {
   background-color: #fff;
   background-image: none;
 }
-.standing_bottom .card_type01.card_team .card_profile { 
+.standing_bottom .card_type01.card_team .card_profile {
   background-color: #f0f0f0;
 }
 .card_type01.card_white .card_profile {
@@ -2098,11 +2098,12 @@ button.card_detail:hover {
   height: 4px;
   border-radius: 0;
   transition: width 0.3s;
-  opacity: 1;
+  opacity: 0.5;
   position: relative;
   background: transparent;
+  background: #000;
 }
-.swiper-pagination-bullet::after {
+/* .swiper-pagination-bullet::after {
   content: "";
   position: absolute;
   left: 0;
@@ -2112,7 +2113,8 @@ button.card_detail:hover {
   opacity: 0.5;
   background: #000;
 }
-.ty01Swiper .swiper-pagination-bullet::after {
+*/
+.ty01Swiper .swiper-pagination-bullet {
   background: #fff;
 }
 
@@ -2136,16 +2138,18 @@ button.card_detail:hover {
 }
 
 /* .swiper-pagination-custom .swiper-pagination-bullet{} */
-.swiper-pagination-custom .swiper-pagination-bullet-active {
-  width: 84px;
+.ty01Swiper .swiper-pagination-bullet-active {
+  /* width: 84px; */
   height: 4px;
   position: relative;
-  background: transparent;
-  /* opacity: 1; */
+  background: rgba(255, 255, 255, 0.5);
+  /* opacity: 0.5; */
 }
 
-.swiper-pagination-bullet-active::after {
+.swiper-pagination-bullet-active {
   background: #de3111;
+  opacity: 1;
+  width: 84px;
 }
 
 .swiper-pagination-custom .swiper-pagination-bullet-active .seek-bar {
@@ -2242,10 +2246,12 @@ button.card_detail:hover {
 .swiper-status-wrap .btn-wrap {
   display: flex;
   /* flex: 1; */
-  padding-left: 24px;
+  margin-left: 24px;
 }
 .swiper-status-wrap .btn-wrap .btn {
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 24px;
   height: 24px;
   background: #000;
@@ -2258,13 +2264,13 @@ button.card_detail:hover {
 
 .swiper-status-wrap .btn-wrap .btn::before {
   content: "";
-  display: inline-block;
+  display: block;
   width: 14px;
   height: 14px;
-  position: absolute;
+  /* position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
   background-size: contain;
 }
 
@@ -2405,9 +2411,9 @@ button.card_detail:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: url("../images/icon/icon-play-video.svg") no-repeat center top / 100%;
+  background: url("../images/icon/icon-play-video.svg") no-repeat center top /
+    100%;
   z-index: 10;
-
 }
 
 .ty02Swiper .swiper-slide a:hover .img-area .img-ico-wrap::after {
@@ -2416,7 +2422,7 @@ button.card_detail:hover {
 
 .ty02Swiper .swiper-slide .img-area img {
   width: 100%;
-  height: 100%;  
+  height: 100%;
   object-fit: cover;
 }
 
@@ -2492,7 +2498,7 @@ button.card_detail:hover {
 }
 .swiper:not(.ty01Swiper) .swiper-pagination-bullet-active {
   background: #de3111;
-  width: 84px;
+  /* width: 84px; */
 }
 .ty03Swiper .swiper-button-prev,
 .ty03Swiper .swiper-button-next {
@@ -5391,7 +5397,7 @@ input:checked + .slider:before {
   line-height: 44.8px;
 }
 .search-wrap .search-input-box input::placeholder {
-  color: #999;
+  color: #777;
   font-size: 32px;
   font-weight: 500;
   line-height: 44.8px;
@@ -5505,6 +5511,7 @@ input:checked + .slider:before {
 
 .tag-list-wrap [class^="tag-list"] li {
   margin-bottom: 8px;
+  position: relative;
 }
 
 .tag-list-wrap [class^="tag-list"] li:not(:last-child) {
@@ -5527,13 +5534,13 @@ input:checked + .slider:before {
   color: #fff;
 }
 
-.tag-list-wrap [class^="tag-list"] li.on .tag-item,
+/* .tag-list-wrap [class^="tag-list"] li.on .tag-item, */
 .tag-list-wrap [class^="tag-list"] li input:checked + .tag-item {
   background-color: #de3111;
   color: #fff;
 }
 
-.tag-list-wrap [class^="tag-list"][class*="ty02"] li.on .tag-item,
+/* .tag-list-wrap [class^="tag-list"][class*="ty02"] li.on .tag-item, */
 .tag-list-wrap [class^="tag-list"][class*="ty02"] li input:checked + .tag-item {
   color: #fff;
   background-color: #000;

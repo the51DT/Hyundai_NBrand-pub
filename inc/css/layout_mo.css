@@ -267,6 +267,7 @@
     line-height: 140%; /* 42px */
     background: #fff url(../images/icon/icon-gnb_back.svg) no-repeat left 24px
       top 28px;
+    z-index: 2;
   }
 
   /* .gnb__tab02-wrap {

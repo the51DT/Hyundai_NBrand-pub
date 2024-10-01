@@ -242,7 +242,7 @@ var pubUi = {
 
     $(".lang-btn").on("click", function () {
       webAccessibilityChk();
-    })
+    });
 
     // selectbox keyboard 제어 옵션 엔터키 클릭 시,
     $(".selectbox-options li.option").keydown(function (e) {
@@ -253,13 +253,13 @@ var pubUi = {
 
     $(".tag-list li input").keydown(function (e) {
       var parentSelector = "";
-      if($(".search-container .tag-list").length > 0) {
+      if ($(".search-container .tag-list").length > 0) {
         parentSelector = $(this).closest(".search-container");
       } else if ($(".wrap-inner-category").length > 0) {
         parentSelector = $(this).closest(".wrap-inner-category");
       }
       if (e.keyCode == 13) {
-        keydownTagEvent(parentSelector, $(this));     
+        keydownTagEvent(parentSelector, $(this));
       }
     });
   },
@@ -322,7 +322,7 @@ var pubUi = {
               this.realIndex,
               "image"
             );
-          }          
+          }
 
           swiperCtrlInert($(".ty01Swiper:not(.banner-swiper)"));
         },
@@ -364,7 +364,7 @@ var pubUi = {
         },
       },
     });
-    
+
     swiper2SlideEvt(); //swiper2 이벤트 실행
     swiper4SlideEvt(); //swiper4 이벤트 실행
     swiper12SlideEvt(); //swiper12 이벤트 실행
@@ -579,7 +579,7 @@ var pubUi = {
     }
   },
   tagBtnEvent: function (e, list, param) {
-    var listItem = list.find("li");    
+    var listItem = list.find("li");
 
     //search input reset 클릭시, 하단 태그 초기화
     if (param == "reset") {
@@ -807,8 +807,7 @@ $(document).ready(function () {
           swiper2SlideEvt();
           ty02Swiper[0].swiper.autoplay.stop();
         }
-      }            
-      
+      }
 
       //07.29 추가
       if ($(".evt-map-wrap").length > 0) {
@@ -872,36 +871,53 @@ $(document).ready(function () {
   }
 
   // 09.25 추가 - BR050101 (운영 요구사항 처리 : 현대 N 컬렉션 영역 탭 눌러서 컨텐츠 변경 시 좌/우 네비게이션 버튼 간헐적으로 사라졌다가 나타남)
-  $(".merchandise-wrap .collectiontab-wrap .tab-head .tabs li").on("click", function () {
-    for (var i = 0; i < ty12Swiper.length; i++) {
-      ty12Swiper[i].swiper.destroy();
+  $(".merchandise-wrap .collectiontab-wrap .tab-head .tabs li").on(
+    "click",
+    function () {
+      for (var i = 0; i < ty12Swiper.length; i++) {
+        ty12Swiper[i].swiper.destroy();
+      }
+      swiper12SlideEvt();
     }
-    swiper12SlideEvt();
-  });
+  );
 
   // 08.20 수정 : 함수 형태로 구조 변경
   contsItemGridSizeChk();
 
   // 09.27 수정 : 웹접근성 처리용
-  webAccessibilityChk();  
+  webAccessibilityChk();
   webAccessAddTabindex();
 
   // 09/29 추가 : dropdown-menu 관련 label 추가
-  $(".dropdown-menu input[type = checkbox], .dropdown-menu input[type = radio]").each(function () {
-    var addLabelTxtWrap = $(this)
+  $(
+    ".dropdown-menu input[type = checkbox], .dropdown-menu input[type = radio]"
+  ).each(function () {
+    var addLabelTxtWrap = $(this);
     if ($(this).siblings("label p").length == 0) {
-      labelTxt = $(this).siblings("label").html().replace(/(<([^>]+)>)/ig, "")
+      labelTxt = $(this)
+        .siblings("label")
+        .html()
+        .replace(/(<([^>]+)>)/gi, "");
     } else if ($(this).siblings("label p").length == 1) {
-      labelTxt = $(this).siblings("label p").html().replace(/(<([^>]+)>)/ig, "")
+      labelTxt = $(this)
+        .siblings("label p")
+        .html()
+        .replace(/(<([^>]+)>)/gi, "");
     } else if ($(this).siblings("label p").length == 2) {
-      labelTxt = $(this).siblings("label p:first-child").html().replace(/(<([^>]+)>)/ig, "") + $(this).find(
-        "label p + p").html().replace(/(<([^>]+)>)/ig, "")
+      labelTxt =
+        $(this)
+          .siblings("label p:first-child")
+          .html()
+          .replace(/(<([^>]+)>)/gi, "") +
+        $(this)
+          .find("label p + p")
+          .html()
+          .replace(/(<([^>]+)>)/gi, "");
     }
     // alert(addLabelTxtWrap.attr("id"))
-    addLabelTxtWrap.attr("title", labelTxt)
-    $(this).siblings("label").attr("aria-hidden", true)
-  })
-
+    addLabelTxtWrap.attr("title", labelTxt);
+    $(this).siblings("label").attr("aria-hidden", true);
+  });
 });
 
 function btnNaviCheck() {
@@ -994,6 +1010,14 @@ function swiper2SlideEvt() {
     navigation: {
       nextEl: ".ty02Swiper .swiper-button-next",
       prevEl: ".ty02Swiper .swiper-button-prev",
+    },
+    a11y: {
+      enabled: true,
+      prevSlideMessage: "이전 슬라이드",
+      nextSlideMessage: "다음 슬라이드",
+      slideLabelMessage:
+        "총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 입니다.",
+      paginationBulletMessage: "Go {{index}}",
     },
     breakpoints: {
       280: {
@@ -1191,7 +1215,10 @@ function handleSelectboxClick(event) {
             .closest(".selectbox-wrap>div")
             .find(".selectbox-trigger")
             .removeClass("active"); // close 버튼 클릭 시 모든 trigger의 active가 제거
-          $(this).closest(".selectbox-wrap>div").find(".selectbox-options").attr("aria-hidden", "true");
+          $(this)
+            .closest(".selectbox-wrap>div")
+            .find(".selectbox-options")
+            .attr("aria-hidden", "true");
           $(this).closest(".selectbox-options").hide();
           $(".selectbox-overlay").hide();
         });
@@ -1500,7 +1527,6 @@ function tabBtnEvent(target, tabContainer) {
   if (tabLabel != null) {
     for (let i = 0; i < tabList.length; i++) {
       tabList[i].classList.remove("on");
-
     }
 
     for (let i = 0; i < tabConts.length; i++) {
@@ -1510,7 +1536,10 @@ function tabBtnEvent(target, tabContainer) {
 
     target.parentNode.classList.add("on");
     target.parentNode.querySelector("a").setAttribute("aria-selected", "true");
-    targetListItem.closest(".tab-container").find(".tab-content")[targetIdx].classList.add("on");
+    targetListItem
+      .closest(".tab-container")
+      .find(".tab-content")
+      [targetIdx].classList.add("on");
   }
 
   // BR050101 : Brand_N Merchandise tab 배경 때문에 추가
@@ -2007,7 +2036,9 @@ function modelsVideoPlay() {
           videoPc.muted = false;
         }
         $(this).attr("title", "현재 사운드 켜진 상태, 사운드 끄기");
-        $(this).find(".visually-hidden").text("현재 사운드 켜진 상태, 사운드 끄기");
+        $(this)
+          .find(".visually-hidden")
+          .text("현재 사운드 켜진 상태, 사운드 끄기");
       } else {
         icon.attr("class", "btn-icon24 icon-soundoff-wh");
         if (window.innerWidth <= 1023) {
@@ -2016,7 +2047,9 @@ function modelsVideoPlay() {
           videoPc.muted = true;
         }
         $(this).attr("title", "현재 사운드 꺼진 상태, 사운드 켜기");
-        $(this).find(".visually-hidden").text("현재 사운드 꺼진 상태, 사운드 켜기");
+        $(this)
+          .find(".visually-hidden")
+          .text("현재 사운드 꺼진 상태, 사운드 켜기");
       }
     }
   );
@@ -2412,7 +2445,10 @@ window.onload = function () {
     }
   }
 
-  if (navigator.userAgent.indexOf("iPhone") > -1 || navigator.userAgent.indexOf("iPad") > -1 ) {
+  if (
+    navigator.userAgent.indexOf("iPhone") > -1 ||
+    navigator.userAgent.indexOf("iPad") > -1
+  ) {
     $(".toggleFullscreenBtn").hide();
   } else {
     $(".toggleFullscreenBtn").show();
@@ -2714,7 +2750,7 @@ function CheckNextRaces() {
 }
 
 // 웹접근성 초기 처리 실행 함수
-function webAccessibilityChk () {
+function webAccessibilityChk() {
   var lang = $("html").attr("lang");
   var langBtn = $(".lang-btn");
   var swiperPlayBtn = $(".btn-play");
@@ -2722,13 +2758,12 @@ function webAccessibilityChk () {
   var modelVisualPlayBtn = $(".btn.play");
   var modelVisualSoundBtn = $(".btn.sound");
   var popupPlayBtn = $(".box-video .btn");
-  
 
   // 국/영문 사이트 체크
-  if(lang == "ko") {
-    langBtn.attr("aria-label","현재 국문, 영문으로 변경하기");
+  if (lang == "ko") {
+    langBtn.attr("aria-label", "현재 국문, 영문으로 변경하기");
     langBtn.find("span").text("KO");
-  } else if(lang == "en") {
+  } else if (lang == "en") {
     langBtn.attr("aria-label", "현재 영문, 국문으로 변경하기");
     langBtn.find("span").text("EN");
   }
@@ -2736,27 +2771,30 @@ function webAccessibilityChk () {
   swiperSoundBtn.attr("title", "현재 사운드 꺼진 상태, 사운드 켜기");
   swiperPlayBtn.attr("title", "영상 재생 상태, 일시정지 하기");
   modelVisualSoundBtn.attr("title", "현재 사운드 꺼진 상태, 사운드 켜기");
-  modelVisualSoundBtn.find(".visually-hidden").text("현재 사운드 꺼진 상태, 사운드 켜기")
+  modelVisualSoundBtn
+    .find(".visually-hidden")
+    .text("현재 사운드 꺼진 상태, 사운드 켜기");
   modelVisualPlayBtn.attr("title", "영상 재생 상태, 일시정지 하기");
-  modelVisualPlayBtn.find(".visually-hidden").text("영상 재생 상태, 일시정지 하기")
+  modelVisualPlayBtn
+    .find(".visually-hidden")
+    .text("영상 재생 상태, 일시정지 하기");
   popupPlayBtn.attr("title", "영상 재생 상태, 일시정지 하기");
   popupPlayBtn.find(".visually-hidden").text("영상 재생 상태, 일시정지 하기");
 }
 
-function webAccessAddTabindex () {
+function webAccessAddTabindex() {
   var selectboxWrap = $(".selectbox-wrap");
-  
-  if(selectboxWrap.length > 0) {
+
+  if (selectboxWrap.length > 0) {
     var selectOption = selectboxWrap.find(".selectbox-options li");
 
-    for(var i = 0; i < selectOption.length; i++) {
+    for (var i = 0; i < selectOption.length; i++) {
       $(selectOption[i]).attr("tabindex", "0");
     }
   }
 }
 
-function keydownTagEvent (parentSelector, el) {
-
+function keydownTagEvent(parentSelector, el) {
   if (el.attr("type") == "checkbox") {
     if (el.prop("checked") == true) {
       el.prop("checked", false);
@@ -2768,7 +2806,6 @@ function keydownTagEvent (parentSelector, el) {
       el.closest("li").find("label").attr("data-check", "true");
     }
   } else if (el.attr("type") == "radio") {
-    
     var cateInner = parentSelector;
 
     cateInner.find(".tag-list li").removeClass("on");
@@ -2779,7 +2816,6 @@ function keydownTagEvent (parentSelector, el) {
     el.prop("checked", true);
     el.closest("li").find("label").attr("data-check", "true");
   }
-
 }
 
 function swiperAriaHidden(swiperEl) {
@@ -2797,7 +2833,7 @@ function swiperAriaHidden(swiperEl) {
   }
 }
 
-function swiperCtrlInert(swiperEl) {  
+function swiperCtrlInert(swiperEl) {
   // swiper 웹접근성 처리용 inert 제어 함수 추가
   var swiperElList = swiperEl.find(".swiper-slide");
   if (swiperElList.length > 0) {

@@ -71,13 +71,14 @@ if ($.isFunction("checkCommonJs")) {
         .attr("holde", true);
     } else {
       aR.prepend('<div class="ui-fctab-s" tabindex="0" holds="true"></div>');
+      aR.find(">div:not(.ui-fctab-s, .ui-fctab-e)").attr("tabindex", 0);
       aR.append('<div class="ui-fctab-e" tabindex="0" holde="true"></div>');
-      aN = aR.find(".ui-fctab-s, .ui-fctab-e");
+      aN = aR.find("> div");
     }
     clearTimeout(aT);
     aT = setTimeout(function () {
       !module ? aN.eq(0).focus() : "";
-    }, 0);
+    }, 100);
     aT = "";
     aR.find(".ui-fctab-s")
       .off("keydown.holds")
