@@ -477,7 +477,6 @@ min-width : 1024 css
   .card_type01 .card_more {
     font-size: 1.125rem;
   }
-
   .grid_mo_drop .card_type01 {
     width: 100%;
     height: 20rem;
@@ -1961,5 +1960,12 @@ min-width : 1024 css
   }
   .sub-text-list li:before {
     top: 9px;
+  }
+
+  .btn:active:focus .icon-heart-red {
+    background: url(../../inc/images/icon/icon-heart_red.svg);
+  }
+  .btn:active:focus .icon-heart {
+    background: url(../../inc/images/icon/icon-heart_red.svg);
   }
 }
