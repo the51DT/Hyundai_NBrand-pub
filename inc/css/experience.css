@@ -3716,7 +3716,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   .popup button.btn-only-icon-notbg.popup-close-btn-x span.icon-close {
     width: 100%;
     top: 0;
-    position: relative;
+    /* position: relative; */
   }
 
   .popup-wrapper .label-box h1 {
