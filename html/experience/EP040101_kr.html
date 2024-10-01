@@ -820,22 +820,25 @@
                     <div class="card_function btn-wrap-type5">
                       <div>
                         <!-- 웹접근성 처리시 참고사항 (개발 확인 필요) : 해당되는 공통 케이스 적용 필요 -->
-                        <!-- aria-label 말고 title에 "좋아요"로 값 넣기 -->
+                        <!-- p.125, 133 사항 : 좋아요/번역 버튼 상태 정보에 대한 텍스트 제공 없음 -->
+                        <!-- ★ aria-label 말고 title에 "좋아요"로 값 넣기 -->
                         <button type="button" class="btn btn-only-icon-notbg" title="좋아요">
-                          <!-- 개발영역 웹접근성 처리시 참고사항, 하트 버튼 클릭시, title 에 좋아요 상태를 나타낼 수 있는 상태값이 표시되도록  버튼이벤트에 따른 텍스트 제어 처리가 필요 (ex. 좋아요 활성화 상태 / default : 좋아요 )-->
+                          <!-- 개발영역 웹접근성 처리시 참고사항, 하트 버튼 클릭시, title 에 좋아요 상태를 나타낼 수 있는 상태값이 표시되도록  버튼이벤트에 따른 텍스트 제어 처리가 필요 (ex. 좋아요 선택됨 / default : 좋아요 )-->
                           <span class="visually-hidden">heart</span>
                           <!-- 0627 하트 버튼 클릭 기능 삭제 /  icon-heart  : 빈 하트 나옴 , icon-heart-red :  빨간색 하트 나옴 -->
                           <span class="btn-icon20 icon-heart-red" aria-hidden="true"></span>
                         </button>
                         <p class="txt-type03 fw-type03">3</p>
-                      </div>
+                      </div>                      
                       <div>
+                        <!-- ★ aria-label 말고 title에 "공유하기" 로 값 넣기 -->
                         <button type="button" class="btn btn-only-icon-notbg" title="공유하기">
                           <span class="visually-hidden">share</span>
                           <span class="btn-icon20 icon-share" aria-hidden="true"></span>
                         </button>
+                        <!-- ★ aria-label 말고 title에 "번역하기" 로 값 넣기 -->
                         <button type="button" class="btn btn-only-icon-notbg" title="번역하기">
-                          <!-- 개발영역 웹접근성 처리시 참고사항, 번역 버튼 클릭시, title 에 번역된 상태를 나타낼 수 있는 상태값이 표시되도록  버튼이벤트에 따른 텍스트 제어 처리가 필요 ex. 번역 활성화 상태 / default : 번역하기  --> 
+                          <!-- 개발영역 웹접근성 처리시 참고사항, 번역 버튼 클릭시, title 에 번역된 상태를 나타낼 수 있는 상태값이 표시되도록  버튼이벤트에 따른 텍스트 제어 처리가 필요 ex. 번역 기능 활성화 / default : 번역하기  --> 
                           <span class="visually-hidden">Translation</span>
                           <span class="btn-icon20 icon-trans" aria-hidden="true"></span>
                         </button>

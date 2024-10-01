@@ -1406,10 +1406,9 @@ a:hover .icon-youtube-wh {
   width: 100%;
   height: auto;
   padding: 0.81rem 1.5rem;
-  display: flex;
 }
 .card_type01 .card_more {
-  display: none;
+  display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #de3111;

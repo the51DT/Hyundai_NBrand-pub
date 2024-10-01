@@ -3343,6 +3343,7 @@ EP040401C01, EP040401C02, EP040401M02, EP040401M03, EP040401M04
   .guide_wrap .imgwrap .track-img {
     width: 312px;
     height: 312px;
+    flex: 1;
   }
   .visit_wrap {
     padding: 6.25rem 1.5rem 10rem 1.5rem;

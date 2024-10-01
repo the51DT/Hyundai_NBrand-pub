@@ -1027,15 +1027,7 @@ function swiper2SlideEvt() {
         swiperCtrlInert($(".ty02Swiper"));
       },
       slideChangeTransitionEnd: function () {
-        var swiperSlide = $(".ty02Swiper .swiper-slide");
-
-        for (var i = 0; i < swiperSlide.length; i++) {
-          if (swiperSlide[i].classList.contains("swiper-slide-active")) {
-            swiperSlide[i].setAttribute("aria-hidden", "false");
-          } else {
-            swiperSlide[i].setAttribute("aria-hidden", "true");
-          }
-        }
+        swiperCtrlInert($(".ty02Swiper"));
       },
     },
   });
