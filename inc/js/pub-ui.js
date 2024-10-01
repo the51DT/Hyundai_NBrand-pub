@@ -1017,7 +1017,8 @@ function swiper2SlideEvt() {
       nextSlideMessage: "다음 슬라이드",
       slideLabelMessage:
         "총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 입니다.",
-      paginationBulletMessage: "Go {{index}}",
+      paginationBulletMessage:
+        "총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 보기.",
     },
     breakpoints: {
       280: {
@@ -1199,13 +1200,13 @@ function handleSelectboxClick(event) {
     .resize(function () {
       if (window.innerWidth <= 1023) {
         if ($options.is(":visible")) {
-          $(".selectbox-options li.moclose-btn").show();
+          $(".selectbox-options .moclose-btn").show();
           $(".selectbox-overlay").show();
         } else {
           $(".selectbox-overlay").hide();
-          $(".selectbox-options li.moclose-btn").hide();
+          $(".selectbox-options .moclose-btn").hide();
         }
-        $(".selectbox-options li.moclose-btn button").click(function (event) {
+        $(".selectbox-options .moclose-btn button").click(function (event) {
           event.stopPropagation();
 
           if ($this.parents(".dropdown-menu").length) {
@@ -1223,7 +1224,7 @@ function handleSelectboxClick(event) {
           $(".selectbox-overlay").hide();
         });
       } else {
-        $(".selectbox-options li.moclose-btn").hide();
+        $(".selectbox-options .moclose-btn").hide();
         $(".selectbox-overlay").hide();
       }
     })
