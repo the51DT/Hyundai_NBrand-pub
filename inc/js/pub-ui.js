@@ -973,35 +973,16 @@ $(document).ready(function () {
   webAccessCardMoreBtn();
 
   // 09/29 추가 : dropdown-menu 관련 label 추가
-  $(
-    ".dropdown-menu input[type = checkbox], .dropdown-menu input[type = radio]"
-  ).each(function () {
-    var addLabelTxtWrap = $(this);
-    if ($(this).siblings("label p").length == 0) {
-      labelTxt = $(this)
-        .siblings("label")
-        .html()
-        .replace(/(<([^>]+)>)/gi, "");
-    } else if ($(this).siblings("label p").length == 1) {
-      labelTxt = $(this)
-        .siblings("label p")
-        .html()
-        .replace(/(<([^>]+)>)/gi, "");
-    } else if ($(this).siblings("label p").length == 2) {
-      labelTxt =
-        $(this)
-          .siblings("label p:first-child")
-          .html()
-          .replace(/(<([^>]+)>)/gi, "") +
-        $(this)
-          .find("label p + p")
-          .html()
-          .replace(/(<([^>]+)>)/gi, "");
-    }
-    // alert(addLabelTxtWrap.attr("id"))
-    addLabelTxtWrap.attr("title", labelTxt);
-    $(this).siblings("label").attr("aria-hidden", true);
-  });
+  inputLabelToTitle(
+    ".dropdown-menu input[type = checkbox], .dropdown-menu input[type = radio]",
+    "p"
+  );
+  // 10/02 추가 : 팝업 input title, label 수정
+  inputLabelToTitle(".popup .wrap-radio input", "span");
+  // 10/02 추가 : 회원가입(join) 체크박스 input title, label 수정
+  inputLabelToTitle(".join_form_checkbox input", "span");
+  // 10/02 추가 : 검색 영역 하단 태그 라디오 input title, label 수정
+  inputLabelToTitle(".search-container .tag-list input", "");
 });
 
 function btnNaviCheck() {
@@ -2976,4 +2957,35 @@ function activeCardMoreBtn(el) {
   $(el).find(".card_more").css("display", "flex");
   $(el).find(".card_more").attr("aria-label", "버튼 활성화됨");
   $(el).find(".card_more").attr("aria-expanded", "true");
+}
+
+// label 안에 있는 텍스트 input에 title로 넣기 / inputLabelToTitle(적용할 범위, label 안에 있는 태그(없으면 ""))
+function inputLabelToTitle(target, labelInnerTag) {
+  $(target).each(function () {
+    var addLabelTxtWrap = $(this);
+    if ($(this).siblings(`label ${labelInnerTag}`).length == 0) {
+      labelTxt = $(this)
+        .siblings("label")
+        .html()
+        .replace(/(<([^>]+)>)/gi, "");
+    } else if ($(this).siblings(`label ${labelInnerTag}`).length == 1) {
+      labelTxt = $(this)
+        .siblings(`label ${labelInnerTag}`)
+        .html()
+        .replace(/(<([^>]+)>)/gi, "");
+    } else if ($(this).siblings(`label ${labelInnerTag}`).length == 2) {
+      labelTxt =
+        $(this)
+          .siblings(`label ${labelInnerTag}:first-child`)
+          .html()
+          .replace(/(<([^>]+)>)/gi, "") +
+        $(this)
+          .find(`label ${labelInnerTag} + ${labelInnerTag}`)
+          .html()
+          .replace(/(<([^>]+)>)/gi, "");
+    }
+    // alert(addLabelTxtWrap.attr("id"))
+    addLabelTxtWrap.attr("title", labelTxt);
+    $(this).siblings("label").attr("aria-hidden", true);
+  });
 }
