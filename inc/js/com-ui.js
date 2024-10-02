@@ -184,6 +184,7 @@ var NbrandUI = {
       selector: tparent,
       type: "hold",
     });
+    tparent.removeAttr("aria-hidden").siblings().attr("aria-hidden", true);
   },
   popOpen: function (obj) {
     openmodalBtn = $(obj);
@@ -206,7 +207,6 @@ var NbrandUI = {
     bodyControll(false);
     $popDate--;
     // alert($popDate);
-
     if ($popDate == 3) {
       wrapZindexData = 1005;
       // alert($(".popup[data-zindex=" + wrapZindexData + "]").html());
@@ -214,6 +214,7 @@ var NbrandUI = {
         "z-index",
         wrapZindexData
       );
+      $(".popup[data-zindex=" + wrapZindexData + "]").removeAttr("aria-hidden");
       openmodalBtn = $(".open-btn4[aria-expanded = true]");
       openmodalClass = "open-btn4";
     } else if ($popDate == 2) {
@@ -222,6 +223,7 @@ var NbrandUI = {
         "z-index",
         wrapZindexData
       );
+      $(".popup[data-zindex=" + wrapZindexData + "]").removeAttr("aria-hidden");
       openmodalBtn = $(".open-btn3[aria-expanded = true]");
       openmodalClass = "open-btn3";
     } else if ($popDate == 1) {
@@ -230,9 +232,11 @@ var NbrandUI = {
         "z-index",
         wrapZindexData
       );
+      $(".popup[data-zindex=" + wrapZindexData + "]").removeAttr("aria-hidden");
       openmodalBtn = $(".open-btn2[aria-expanded = true]");
       openmodalClass = "open-btn2";
     } else {
+      closeWrap.siblings().removeAttr("aria-hidden");
       openmodalBtn = $(".open-btn1[aria-expanded = true]");
       openmodalClass = "open-btn1";
     }
