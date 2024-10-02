@@ -272,10 +272,10 @@ var pubUi = {
       });
       $(".card_type01 .card_more").blur((event) => {
         $(".card_type01 .card_more").css("display", "none");
-        $(".card_type01 .card_more").attr("aria-label", "자세히 보려면 더블 클릭하세요.");
+        $(".card_type01").attr("title", "자세히 보려면 더블 클릭하세요.");
         $(".card_type01 .card_more").attr("aria-expanded", "false");
       });
-    }    
+    }
   },
   swiperSlideEvent: function () {
     var self = this;
@@ -2067,7 +2067,6 @@ function modelsVideoPlay() {
           );
         }
         $(this).attr("title", "영상 재생 상태, 일시정지 하기");
-        $(this).find(".visually-hidden").text("영상 재생 상태, 일시정지 하기");
       } else {
         icon.attr("class", "btn-icon24 icon-play-wh");
         if (window.innerWidth <= 1023) {
@@ -2080,7 +2079,6 @@ function modelsVideoPlay() {
           pcPoster.hide();
         }
         $(this).attr("title", "영상 일시정지 상태, 재생 하기");
-        $(this).find(".visually-hidden").text("영상 일시정지 상태, 재생 하기");
       }
     }
   );
@@ -2106,9 +2104,6 @@ function modelsVideoPlay() {
           videoPc.muted = false;
         }
         $(this).attr("title", "현재 사운드 켜진 상태, 사운드 끄기");
-        $(this)
-          .find(".visually-hidden")
-          .text("현재 사운드 켜진 상태, 사운드 끄기");
       } else {
         icon.attr("class", "btn-icon24 icon-soundoff-wh");
         if (window.innerWidth <= 1023) {
@@ -2117,9 +2112,6 @@ function modelsVideoPlay() {
           videoPc.muted = true;
         }
         $(this).attr("title", "현재 사운드 꺼진 상태, 사운드 켜기");
-        $(this)
-          .find(".visually-hidden")
-          .text("현재 사운드 꺼진 상태, 사운드 켜기");
       }
     }
   );
@@ -2841,15 +2833,8 @@ function webAccessibilityChk() {
   swiperSoundBtn.attr("title", "현재 사운드 꺼진 상태, 사운드 켜기");
   swiperPlayBtn.attr("title", "영상 재생 상태, 일시정지 하기");
   modelVisualSoundBtn.attr("title", "현재 사운드 꺼진 상태, 사운드 켜기");
-  modelVisualSoundBtn
-    .find(".visually-hidden")
-    .text("현재 사운드 꺼진 상태, 사운드 켜기");
   modelVisualPlayBtn.attr("title", "영상 재생 상태, 일시정지 하기");
-  modelVisualPlayBtn
-    .find(".visually-hidden")
-    .text("영상 재생 상태, 일시정지 하기");
   popupPlayBtn.attr("title", "영상 재생 상태, 일시정지 하기");
-  popupPlayBtn.find(".visually-hidden").text("영상 재생 상태, 일시정지 하기");
 }
 
 function webAccessAddTabindex() {
@@ -2869,7 +2854,6 @@ function webAccessAddTabindex() {
     for (var i = 0; i < cardType01Box.length; i++) {
       $(cardType01Box[i]).attr("tabindex", "0");
     }
-    console.log("cardtype")
   }
 }
 
@@ -2927,35 +2911,32 @@ function swiperCtrlInert(swiperEl) {
   }
 }
 
-
-function webAccessCardMoreBtn () {
+function webAccessCardMoreBtn() {
   var cardType01Box = $(".card_type01");
 
   if (cardType01Box.length > 0) {
     if (pubUi.windowSize()) {
       // pc
       for (var i = 0; i < cardType01Box.length; i++) {
-        var moreBtnLabel = $(cardType01Box[i]).find(".card_more").attr("aria-label");
-        if(moreBtnLabel){
-          $(cardType01Box[i]).find(".card_more").removeAttr("aria-label");
+        var moreBtnLabel = $(cardType01Box[i]).attr("title");
+        if (moreBtnLabel) {
+          $(cardType01Box[i]).removeAttr("title");
           $(cardType01Box[i]).find(".card_more").removeAttr("tabindex");
         }
       }
     } else {
       // mobile
       for (var i = 0; i < cardType01Box.length; i++) {
-        $(cardType01Box[i]).find(".card_more").attr("aria-label", "자세히 보려면 더블 클릭하세요.");
+        $(cardType01Box[i]).attr("title", "자세히 보려면 더블 클릭하세요.");
         $(cardType01Box[i]).find(".card_more").attr("tabindex", "0");
       }
     }
-
-    
   }
 }
 
 function activeCardMoreBtn(el) {
   $(el).find(".card_more").css("display", "flex");
-  $(el).find(".card_more").attr("aria-label", "버튼 활성화됨");
+  $(el).attr("title", "하단 버튼 활성화");
   $(el).find(".card_more").attr("aria-expanded", "true");
 }
 
