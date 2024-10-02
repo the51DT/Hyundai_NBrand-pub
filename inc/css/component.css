@@ -385,6 +385,14 @@ input[type="radio"]:focus + label {
   color: #a1a1a1 !important;
   background-color: transparent !important;
 }
+/* 웹접근성 처리용 예외 케이스 추가 : Start */
+[class*="txt-btn00"] {
+  color: #000;
+}
+[class*="txt-btn00"] .icon-right-wh {
+  background: url(../../inc/images/icon/icon-arrow01_right.svg);
+}
+/* 웹접근성 처리용 예외 케이스 추가 : End */
 [class*="txt-btn01"] {
   color: #000;
 }
@@ -1135,13 +1143,13 @@ a:hover .icon-youtube-wh {
   color: #fff;
 }
 
-.conts-box-wrap .bg-img-wra02 {
+.conts-box-wrap .bg-img-wrap02 {
   width: 100%;
   max-width: 1440px;
   overflow: hidden;
 }
 
-.conts-box-wrap .bg-img-wra02 a {
+.conts-box-wrap .bg-img-wrap02 a {
   display: block;
 }
 .conts-box-wrap .bg-img-wrap .tit {
@@ -1195,6 +1203,12 @@ a:hover .icon-youtube-wh {
   font-weight: 500;
   line-height: 28px;
   margin-top: 12px;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1599px) {
+  .conts-box-wrap .bg-img-wrap {
+    min-height: 100%;
+  }
 }
 
 /* checkbox */

@@ -478,7 +478,6 @@ min-width : 1024 css
     font-size: 1.125rem;
   }
   .card_type01:hover .card_more,
-  .card_type01:active .card_more,
   .card_type01:focus .card_more {
     display: none;
   }
@@ -1967,10 +1966,12 @@ min-width : 1024 css
     top: 9px;
   }
 
-  .btn:active:focus .icon-heart-red {
+  .btn:active .icon-heart-red,
+  .btn:focus .icon-heart-red {
     background: url(../../inc/images/icon/icon-heart_red.svg);
   }
-  .btn:active:focus .icon-heart {
+  .btn:active .icon-heart,
+  .btn:focus .icon-heart {
     background: url(../../inc/images/icon/icon-heart_red.svg);
   }
 }

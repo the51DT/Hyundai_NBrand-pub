@@ -262,6 +262,20 @@ var pubUi = {
         keydownTagEvent(parentSelector, $(this));
       }
     });
+
+    if (pubUi.windowSize()) {
+      //pc
+    } else {
+      //mobile
+      $(".card_type01").on("click", function () {
+        activeCardMoreBtn($(this));
+      });
+      $(".card_type01 .card_more").blur((event) => {
+        $(".card_type01 .card_more").css("display", "none");
+        $(".card_type01 .card_more").attr("aria-label", "자세히 보려면 더블 클릭하세요.");
+        $(".card_type01 .card_more").attr("aria-expanded", "false");
+      });
+    }    
   },
   swiperSlideEvent: function () {
     var self = this;
@@ -282,10 +296,13 @@ var pubUi = {
       },
 
       a11y: {
+        enabled: true,
         prevSlideMessage: "이전 슬라이드",
         nextSlideMessage: "다음 슬라이드",
         slideLabelMessage:
           "총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 입니다.",
+        paginationBulletMessage:
+          "총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 보기.",
       },
       on: {
         init: function () {
@@ -355,6 +372,15 @@ var pubUi = {
           //touchRatio: 1, // 드래그 O
         },
       },
+      a11y: {
+        enabled: true,
+        prevSlideMessage: "이전 슬라이드",
+        nextSlideMessage: "다음 슬라이드",
+        slideLabelMessage:
+          "총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 입니다.",
+        paginationBulletMessage:
+          "총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 보기.",
+      },
       on: {
         afterInit: function () {
           swiperCtrlInert($(".banner-swiper"));
@@ -381,6 +407,15 @@ var pubUi = {
       navigation: {
         nextEl: ".ty03Swiper .swiper-button-next",
         prevEl: ".ty03Swiper .swiper-button-prev",
+      },
+      a11y: {
+        enabled: true,
+        prevSlideMessage: "이전 슬라이드",
+        nextSlideMessage: "다음 슬라이드",
+        slideLabelMessage:
+          "총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 입니다.",
+        paginationBulletMessage:
+          "총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 보기.",
       },
       on: {
         slideChangeTransitionStart: function () {
@@ -421,6 +456,15 @@ var pubUi = {
         el: ".swiper-pagination",
         clickable: true,
       },
+      a11y: {
+        enabled: true,
+        prevSlideMessage: "이전 슬라이드",
+        nextSlideMessage: "다음 슬라이드",
+        slideLabelMessage:
+          "총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 입니다.",
+        paginationBulletMessage:
+          "총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 보기.",
+      },
       on: {},
     });
     var swiper6 = new Swiper(".onlyOneSwiper", {
@@ -439,6 +483,15 @@ var pubUi = {
       navigation: {
         nextEl: ".onlyOneSwiper .swiper-button-next",
         prevEl: ".onlyOneSwiper .swiper-button-prev",
+      },
+      a11y: {
+        enabled: true,
+        prevSlideMessage: "이전 슬라이드",
+        nextSlideMessage: "다음 슬라이드",
+        slideLabelMessage:
+          "총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 입니다.",
+        paginationBulletMessage:
+          "총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 보기.",
       },
       breakpoints: {
         360: {
@@ -486,6 +539,15 @@ var pubUi = {
           spaceBetween: 80,
         },
       },
+      a11y: {
+        enabled: true,
+        prevSlideMessage: "이전 슬라이드",
+        nextSlideMessage: "다음 슬라이드",
+        slideLabelMessage:
+          "총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 입니다.",
+        paginationBulletMessage:
+          "총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 보기.",
+      },
       on: {
         afterInit: function () {
           swiperCtrlInert($(".editor-box-wrap .swiper-container"));
@@ -527,6 +589,15 @@ var pubUi = {
         el: ".wrc_swiper .swiper-pagination-custom",
         clickable: true,
       },
+      a11y: {
+        enabled: true,
+        prevSlideMessage: "이전 슬라이드",
+        nextSlideMessage: "다음 슬라이드",
+        slideLabelMessage:
+          "총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 입니다.",
+        paginationBulletMessage:
+          "총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 보기.",
+      },
       on: {
         afterInit: function () {
           swiperCtrlInert($(".wrc_swiper"));
@@ -550,6 +621,15 @@ var pubUi = {
       pagination: {
         el: ".merchandise_swiper .swiper-pagination-custom",
         clickable: true,
+      },
+      a11y: {
+        enabled: true,
+        prevSlideMessage: "이전 슬라이드",
+        nextSlideMessage: "다음 슬라이드",
+        slideLabelMessage:
+          "총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 입니다.",
+        paginationBulletMessage:
+          "총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 보기.",
       },
       on: {
         afterInit: function () {
@@ -792,6 +872,7 @@ $(document).ready(function () {
   var ty04Swiper = $(".ty04Swiper");
   var ty12Swiper = $(".collection_swiper");
   var playBtn = $(".btn-play");
+  var cardType01Box = $(".card_type01");
 
   $(window).resize(function () {
     if ($(window).innerWidth() < 1024) {
@@ -812,7 +893,7 @@ $(document).ready(function () {
       //07.29 추가
       if ($(".evt-map-wrap").length > 0) {
         scrollToCenter(".list-content.active .event-box .evt-map-img");
-      }
+      }      
     }
 
     if ($(window).innerWidth() < 600) {
@@ -858,6 +939,8 @@ $(document).ready(function () {
     } else {
       $(".wrap .content-area").css("padding-top", "0");
     }
+
+    webAccessCardMoreBtn();
   });
 
   // 07.03 추가 - models-wrap 클래스 존재하는 페이지 일 경우, 하단 img loading 속성 제거
@@ -887,6 +970,7 @@ $(document).ready(function () {
   // 09.27 수정 : 웹접근성 처리용
   webAccessibilityChk();
   webAccessAddTabindex();
+  webAccessCardMoreBtn();
 
   // 09/29 추가 : dropdown-menu 관련 label 추가
   $(
@@ -1116,6 +1200,11 @@ function swiper4SlideEvt() {
         slidesOffsetAfter: 80,
       },
     },
+    on : {
+      afterInit : function () {
+        // webAccessAddTabindex();
+      }
+    }
   });
 }
 
@@ -1196,8 +1285,7 @@ function handleSelectboxClick(event) {
     $options.css({ right: "0" });
   }
 
-  $(window)
-    .resize(function () {
+  $(window).resize(function () {
       if (window.innerWidth <= 1023) {
         if ($options.is(":visible")) {
           $(".selectbox-options .moclose-btn").show();
@@ -2453,7 +2541,7 @@ window.onload = function () {
     $(".toggleFullscreenBtn").hide();
   } else {
     $(".toggleFullscreenBtn").show();
-  }
+  }  
 };
 
 function startTimer(slide, video, maxVideoW, type, targetIdx) {
@@ -2785,6 +2873,7 @@ function webAccessibilityChk() {
 
 function webAccessAddTabindex() {
   var selectboxWrap = $(".selectbox-wrap");
+  var cardType01Box = $(".card_type01");
 
   if (selectboxWrap.length > 0) {
     var selectOption = selectboxWrap.find(".selectbox-options li");
@@ -2792,6 +2881,14 @@ function webAccessAddTabindex() {
     for (var i = 0; i < selectOption.length; i++) {
       $(selectOption[i]).attr("tabindex", "0");
     }
+    console.log("selectbox");
+  }
+
+  if (cardType01Box.length > 0) {
+    for (var i = 0; i < cardType01Box.length; i++) {
+      $(cardType01Box[i]).attr("tabindex", "0");
+    }
+    console.log("cardtype")
   }
 }
 
@@ -2847,4 +2944,36 @@ function swiperCtrlInert(swiperEl) {
       }
     }
   }
+}
+
+
+function webAccessCardMoreBtn () {
+  var cardType01Box = $(".card_type01");
+
+  if (cardType01Box.length > 0) {
+    if (pubUi.windowSize()) {
+      // pc
+      for (var i = 0; i < cardType01Box.length; i++) {
+        var moreBtnLabel = $(cardType01Box[i]).find(".card_more").attr("aria-label");
+        if(moreBtnLabel){
+          $(cardType01Box[i]).find(".card_more").removeAttr("aria-label");
+          $(cardType01Box[i]).find(".card_more").removeAttr("tabindex");
+        }
+      }
+    } else {
+      // mobile
+      for (var i = 0; i < cardType01Box.length; i++) {
+        $(cardType01Box[i]).find(".card_more").attr("aria-label", "자세히 보려면 더블 클릭하세요.");
+        $(cardType01Box[i]).find(".card_more").attr("tabindex", "0");
+      }
+    }
+
+    
+  }
+}
+
+function activeCardMoreBtn(el) {
+  $(el).find(".card_more").css("display", "flex");
+  $(el).find(".card_more").attr("aria-label", "버튼 활성화됨");
+  $(el).find(".card_more").attr("aria-expanded", "true");
 }
