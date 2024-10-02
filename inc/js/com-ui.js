@@ -889,7 +889,7 @@ var NbrandSwiper = {
         slideLabelMessage:
           "총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 입니다.",
         paginationBulletMessage:
-          "총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 보기.",
+          "{{index}}번째 슬라이드로 가기",
       },
       on: {
         afterInit: function () {
@@ -936,7 +936,7 @@ var NbrandSwiper = {
         slideLabelMessage:
           "총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 입니다.",
         paginationBulletMessage:
-          "총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 보기.",
+          "{{index}}번째 슬라이드로 가기",
       },
       breakpoints: {
         360: {

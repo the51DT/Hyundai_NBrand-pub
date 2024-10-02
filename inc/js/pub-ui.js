@@ -302,8 +302,7 @@ var pubUi = {
         nextSlideMessage: "다음 슬라이드",
         slideLabelMessage:
           "총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 입니다.",
-        paginationBulletMessage:
-          "총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 보기.",
+        paginationBulletMessage: "{{index}}번째 슬라이드로 가기",
       },
       on: {
         init: function () {
@@ -379,8 +378,7 @@ var pubUi = {
         nextSlideMessage: "다음 슬라이드",
         slideLabelMessage:
           "총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 입니다.",
-        paginationBulletMessage:
-          "총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 보기.",
+        paginationBulletMessage: "{{index}}번째 슬라이드로 가기",
       },
       on: {
         afterInit: function () {
@@ -415,8 +413,7 @@ var pubUi = {
         nextSlideMessage: "다음 슬라이드",
         slideLabelMessage:
           "총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 입니다.",
-        paginationBulletMessage:
-          "총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 보기.",
+        paginationBulletMessage: "{{index}}번째 슬라이드로 가기",
       },
       on: {
         slideChangeTransitionStart: function () {
@@ -463,8 +460,7 @@ var pubUi = {
         nextSlideMessage: "다음 슬라이드",
         slideLabelMessage:
           "총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 입니다.",
-        paginationBulletMessage:
-          "총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 보기.",
+        paginationBulletMessage: "{{index}}번째 슬라이드로 가기",
       },
       on: {},
     });
@@ -491,8 +487,7 @@ var pubUi = {
         nextSlideMessage: "다음 슬라이드",
         slideLabelMessage:
           "총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 입니다.",
-        paginationBulletMessage:
-          "총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 보기.",
+        paginationBulletMessage: "{{index}}번째 슬라이드로 가기",
       },
       breakpoints: {
         360: {
@@ -546,8 +541,7 @@ var pubUi = {
         nextSlideMessage: "다음 슬라이드",
         slideLabelMessage:
           "총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 입니다.",
-        paginationBulletMessage:
-          "총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 보기.",
+        paginationBulletMessage: "{{index}}번째 슬라이드로 가기",
       },
       on: {
         afterInit: function () {
@@ -596,8 +590,7 @@ var pubUi = {
         nextSlideMessage: "다음 슬라이드",
         slideLabelMessage:
           "총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 입니다.",
-        paginationBulletMessage:
-          "총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 보기.",
+        paginationBulletMessage: "{{index}}번째 슬라이드로 가기",
       },
       on: {
         afterInit: function () {
@@ -629,8 +622,7 @@ var pubUi = {
         nextSlideMessage: "다음 슬라이드",
         slideLabelMessage:
           "총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 입니다.",
-        paginationBulletMessage:
-          "총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 보기.",
+        paginationBulletMessage: "{{index}}번째 슬라이드로 가기",
       },
       on: {
         afterInit: function () {
@@ -1087,7 +1079,7 @@ function swiper2SlideEvt() {
       slideLabelMessage:
         "총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 입니다.",
       paginationBulletMessage:
-        "총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 보기.",
+        "{{index}}번째 슬라이드로 가기",
     },
     breakpoints: {
       280: {
@@ -2872,7 +2864,7 @@ function webAccessibilityChk() {
 
 function webAccessAddTabindex() {
   var selectboxWrap = $(".selectbox-wrap");
-  var cardType01Box = $(".card_type01");
+  var cardType01Box = $(".ty04Swiper .card_type01");
 
   if (selectboxWrap.length > 0) {
     var selectOption = selectboxWrap.find(".selectbox-options li");
@@ -2946,35 +2938,47 @@ function swiperCtrlInert(swiperEl) {
 }
 
 function webAccessCardMoreBtn() {
-  var cardType01Box = $(".card_type01");
+  var cardType01Box = $(".ty04Swiper .card_type01");
 
   if (cardType01Box.length > 0) {
     if (pubUi.windowSize()) {
       // pc
       for (var i = 0; i < cardType01Box.length; i++) {
-        var moreBtnLabel = $(cardType01Box[i]).attr("title");
-        if (moreBtnLabel) {
-          $(cardType01Box[i]).removeAttr("title");
-          $(cardType01Box[i]).find(".card_more").removeAttr("tabindex");
-          $(cardType01Box[i]).find(".card_more").attr("aria-hidden", "false");
-        }
+        $(cardType01Box[i]).find(".card_top").removeAttr("title");
+        $(cardType01Box[i]).find(".card_top").removeAttr("role");
+        $(cardType01Box[i]).find(".card_more").removeAttr("aria-hidden");
+        $(cardType01Box[i]).find(".card_more").removeAttr("aria-expanded");
       }
     } else {
       // mobile
       for (var i = 0; i < cardType01Box.length; i++) {
-        $(cardType01Box[i]).attr("title", "자세히 보려면 더블 클릭하세요.");
-        $(cardType01Box[i]).find(".card_more").attr("tabindex", "0");
-        $(cardType01Box[i]).find(".card_more").attr("aria-hidden", "true");
+        $(cardType01Box[i])
+          .find(".card_top")
+          .attr("title", "자세히 보기 버튼을 활성화 하려면 두번 탭하십시오");
+        $(cardType01Box[i]).find(".card_top").attr("role", "button");
+        $(cardType01Box[i]).find(".card_more").attr("aria-hidden", true);
+        $(cardType01Box[i]).find(".card_more").attr("aria-expanded", false);
       }
     }
   }
 }
 
 function activeCardMoreBtn(el) {
-  $(el).find(".card_more").css("display", "flex");
-  $(el).attr("title", "하단 버튼 노출");
-  $(el).find(".card_more").attr("aria-expanded", "true");
-  $(el).find(".card_more").attr("aria-hidden", "false");
+  var cardMoreBtn = $(el).find(".card_more");
+
+  cardMoreBtn.attr("aria-hidden", true);
+
+  for (var i = 0; i < cardMoreBtn.length; i++) {
+    if ($(cardMoreBtn[i]).attr("aria-expanded") == "true") {
+      $(cardMoreBtn[i]).attr("aria-expanded", "false");
+      $(cardMoreBtn[i]).attr("aria-hidden", true);
+      $(cardMoreBtn[i]).css("display", "none");
+    } else {
+      $(cardMoreBtn[i]).attr("aria-expanded", "true");
+      $(cardMoreBtn[i]).attr("aria-hidden", false);
+      $(cardMoreBtn[i]).css("display", "flex");
+    }
+  }
 }
 
 // label 안에 있는 텍스트 input에 title로 넣기 / inputLabelToTitle(적용할 범위, label 안에 있는 태그(없으면 ""))
