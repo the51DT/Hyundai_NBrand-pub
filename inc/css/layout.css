@@ -366,7 +366,9 @@ body.fix .header-wrap {
 .header__event-wrap .link-area a span.icon-link-wh {
   margin-top: -3px;
 }
-
+.sitemap-wrap .mo-title {
+  display: none;
+}
 /* navigation-bar */
 .navigation_bar-wrap {
   width: 100%;

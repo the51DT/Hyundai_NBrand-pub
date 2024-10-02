@@ -366,6 +366,7 @@ var NbrandUI = {
     $(".gnb__tab02-wrap").removeClass("thumbnail-ui");
     resetTparent.find(".ui-fctab-s").remove();
     resetTparent.find(".ui-fctab-e").remove();
+    resetTparent.find("[aria-hidden = true]").removeAttr("aria-hidden");
     resetCont.hide();
     resetTparent.find(".on").removeClass("on");
     resetCont.attr("aria-hidden", true);
@@ -503,6 +504,8 @@ var NbrandUI = {
               selector: gnb2depTarget,
               type: "hold",
             });
+            gnb2depTarget.siblings().attr("aria-hidden", true);
+            gnb2depTarget.parent().siblings().attr("aria-hidden", true);
           } else {
             $(".nav-wrap").stop().slideDown(100);
           }
@@ -547,6 +550,8 @@ var NbrandUI = {
               selector: gnb3depTarget,
               type: "hold",
             });
+            gnb3depTarget.siblings().attr("aria-hidden", true);
+            gnb3depTarget.parent().siblings().attr("aria-hidden", true);
           } else {
             $(".nav-wrap").stop().slideDown(100);
           }
@@ -572,6 +577,9 @@ var NbrandUI = {
             .removeClass("on")
             .attr("aria-selected", false)
             .focus();
+
+          tparent.siblings().removeAttr("aria-hidden");
+          tparent.parent().siblings().removeAttr("aria-hidden");
         });
       $(".gnb__tab02-wrap > .mo-gnb__back-btn")
         .off("click")
@@ -585,6 +593,9 @@ var NbrandUI = {
             .attr("aria-selected", false)
             .focus();
           $(".header__event-wrap").show();
+
+          tparent.siblings().removeAttr("aria-hidden");
+          tparent.parent().siblings().removeAttr("aria-hidden");
         });
     }
     init(dep2, dep2com, dep3, dep3com);
