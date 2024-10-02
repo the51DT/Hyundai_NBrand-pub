@@ -274,6 +274,7 @@ var pubUi = {
         $(".card_type01 .card_more").css("display", "none");
         $(".card_type01").attr("title", "자세히 보려면 더블 클릭하세요.");
         $(".card_type01 .card_more").attr("aria-expanded", "false");
+        $(".card_type01 .card_more").attr("aria-hidden", "true");
       });
     }
   },
@@ -875,6 +876,7 @@ $(document).ready(function () {
   var cardType01Box = $(".card_type01");
 
   $(window).resize(function () {
+    webAccessCardMoreBtn();
     if ($(window).innerWidth() < 1024) {
       if (ty02Swiper.length > 0) {
         for (var i = 0; i < ty02Swiper.length; i++) {
@@ -938,9 +940,7 @@ $(document).ready(function () {
       $(".wrap .content-area").css("padding-top", "48px");
     } else {
       $(".wrap .content-area").css("padding-top", "0");
-    }
-
-    webAccessCardMoreBtn();
+    }    
   });
 
   // 07.03 추가 - models-wrap 클래스 존재하는 페이지 일 경우, 하단 img loading 속성 제거
@@ -2921,6 +2921,7 @@ function webAccessCardMoreBtn() {
         if (moreBtnLabel) {
           $(cardType01Box[i]).removeAttr("title");
           $(cardType01Box[i]).find(".card_more").removeAttr("tabindex");
+          $(cardType01Box[i]).find(".card_more").attr("aria-hidden", "false");
         }
       }
     } else {
@@ -2928,6 +2929,7 @@ function webAccessCardMoreBtn() {
       for (var i = 0; i < cardType01Box.length; i++) {
         $(cardType01Box[i]).attr("title", "자세히 보려면 더블 클릭하세요.");
         $(cardType01Box[i]).find(".card_more").attr("tabindex", "0");
+        $(cardType01Box[i]).find(".card_more").attr("aria-hidden", "true");
       }
     }
   }
@@ -2935,8 +2937,9 @@ function webAccessCardMoreBtn() {
 
 function activeCardMoreBtn(el) {
   $(el).find(".card_more").css("display", "flex");
-  $(el).attr("title", "하단 버튼 활성화");
+  $(el).attr("title", "하단 버튼 노출");
   $(el).find(".card_more").attr("aria-expanded", "true");
+  $(el).find(".card_more").attr("aria-hidden", "false");
 }
 
 // label 안에 있는 텍스트 input에 title로 넣기 / inputLabelToTitle(적용할 범위, label 안에 있는 태그(없으면 ""))
