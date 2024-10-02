@@ -333,7 +333,7 @@ min-width : 1024 css
     transform: translateX(-50%);
     bottom: 36px;
     padding: 12px 36px;
-  }  
+  }
   .conts-box-wrap .bg-img-wrap .more_btn > .btn {
     width: 100%;
   }
@@ -1717,6 +1717,9 @@ min-width : 1024 css
     width: 100%;
     display: flex;
     justify-content: flex-end;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
   .moclose-btn [class*="btn-only-icon"] {
     width: 24px;
@@ -1745,6 +1748,7 @@ min-width : 1024 css
     bottom: 0;
     top: auto;
     width: 100%;
+    padding-top: 61px;
   }
   .selectbox-options .option {
     padding: 19px 48px 19px 24px;

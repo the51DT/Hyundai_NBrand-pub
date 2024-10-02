@@ -308,7 +308,7 @@ var pubUi = {
       on: {
         init: function () {
           $(".swiper-pagination-custom .swiper-pagination-bullet").html(
-            "<div class='seek-bar'></div>"
+            "<i class='seek-bar' aria-hidden='true'></i>"
           );
         },
         afterInit: function () {
@@ -842,13 +842,17 @@ $(document).ready(function () {
   $(".clear-text")
     .siblings('input[type="text"]')
     .on("propertychange change keyup paste input", pubUi.textReset);
-  $(".selectbox-js").click(function () {
-    $this = $(this);
-    handleSelectboxClick(event);
-  });
-  $(".option-click").click(function () {
-    handleOptionClick(event);
-  });
+  $(".selectbox-js")
+    .off("click")
+    .on("click", function () {
+      $this = $(this);
+      handleSelectboxClick(event);
+    });
+  $(".option-click")
+    .off("click")
+    .on("click", function () {
+      handleOptionClick(event);
+    });
   //hasTagFun();
   perforSlideMoveFun();
   footerScrollTop();
@@ -895,7 +899,7 @@ $(document).ready(function () {
       //07.29 추가
       if ($(".evt-map-wrap").length > 0) {
         scrollToCenter(".list-content.active .event-box .evt-map-img");
-      }      
+      }
     }
 
     if ($(window).innerWidth() < 600) {
@@ -1181,11 +1185,11 @@ function swiper4SlideEvt() {
         slidesOffsetAfter: 80,
       },
     },
-    on : {
-      afterInit : function () {
+    on: {
+      afterInit: function () {
         // webAccessAddTabindex();
-      }
-    }
+      },
+    },
   });
 }
 
@@ -1240,7 +1244,7 @@ function swiper12SlideEvt() {
 
 // [Start] : selectbox 컴포넌트
 function handleSelectboxClick(event) {
-  event.stopPropagation();
+  // event.stopPropagation();
   var $trigger = $(event.target).closest(".selectbox-trigger");
   var $options = $trigger.siblings(".selectbox-options");
   if ($this.parents(".dropdown-menu").length) {
@@ -1250,7 +1254,8 @@ function handleSelectboxClick(event) {
   $(".selectbox-trigger")
     .not($trigger)
     .removeClass("active")
-    .attr("aria-expanded", "false");
+    .attr("aria-expanded", "false")
+    .focus();
 
   $options.toggle().attr("aria-hidden", function (i, attr) {
     return attr === "true" ? "false" : "true";
@@ -1266,38 +1271,59 @@ function handleSelectboxClick(event) {
     $options.css({ right: "0" });
   }
 
-  $(window).resize(function () {
-      if (window.innerWidth <= 1023) {
-        if ($options.is(":visible")) {
-          $(".selectbox-options .moclose-btn").show();
-          $(".selectbox-overlay").show();
-        } else {
-          $(".selectbox-overlay").hide();
-          $(".selectbox-options .moclose-btn").hide();
-        }
-        $(".selectbox-options .moclose-btn button").click(function (event) {
-          event.stopPropagation();
-
-          if ($this.parents(".dropdown-menu").length) {
-            $(".dropdown-menu").removeClass("non-sticky");
-          }
-          $(this)
-            .closest(".selectbox-wrap>div")
-            .find(".selectbox-trigger")
-            .removeClass("active"); // close 버튼 클릭 시 모든 trigger의 active가 제거
-          $(this)
-            .closest(".selectbox-wrap>div")
-            .find(".selectbox-options")
-            .attr("aria-hidden", "true");
-          $(this).closest(".selectbox-options").hide();
-          $(".selectbox-overlay").hide();
+  function moSelectSize() {
+    if (window.innerWidth <= 1023) {
+      if ($options.is(":visible")) {
+        $(".selectbox-options").each(function () {
+          dataBtn = $(this).find(".moclose-btn");
+          $(this).find(".moclose-btn").remove();
+          $(this).append(dataBtn);
         });
+        $(".selectbox-options .moclose-btn").show();
+        $(".selectbox-overlay").show();
+        targetFocus = $options;
+        Nbrand.uiFocusTab({
+          selector: targetFocus,
+          type: "hold",
+        });
+        NbrandUI.focusNonout(targetFocus);
       } else {
-        $(".selectbox-options .moclose-btn").hide();
         $(".selectbox-overlay").hide();
+        $(".selectbox-options .moclose-btn").hide();
       }
-    })
-    .resize();
+      $(".selectbox-options .moclose-btn button").click(function (event) {
+        event.stopPropagation();
+
+        if ($this.parents(".dropdown-menu").length) {
+          $(".dropdown-menu").removeClass("non-sticky");
+        }
+        $(this)
+          .closest(".selectbox-wrap>div")
+          .find(".selectbox-trigger")
+          .removeClass("active")
+          .focus(); // close 버튼 클릭 시 모든 trigger의 active가 제거
+        $(this)
+          .closest(".selectbox-wrap>div")
+          .find(".selectbox-options")
+          .attr("aria-hidden", "true");
+        $(this).closest(".selectbox-options").hide();
+        $(".selectbox-overlay").hide();
+
+        // targetFocus = $options;
+        NbrandUI.focusNonoutReset(targetFocus);
+        targetFocus.find(".ui-fctab-s").remove();
+        targetFocus.find(".ui-fctab-e").remove();
+      });
+    } else {
+      $(".selectbox-options .moclose-btn").hide();
+      $(".selectbox-overlay").hide();
+    }
+  }
+  moSelectSize();
+  $(window).resize(function () {
+    moSelectSize();
+  });
+  // .resize();
 }
 
 function handleOptionClick(event) {
@@ -1321,6 +1347,20 @@ function handleOptionClick(event) {
       .hide()
       .attr("aria-hidden", "true");
   }
+  function moOptionSize() {
+    if (window.innerWidth <= 1023) {
+      $(".selectbox-overlay").hide();
+      $(".selectbox-options li.moclose-btn").hide();
+      targetFocus = $(event.target);
+      NbrandUI.focusNonoutReset(targetFocus);
+      targetFocus.find(".ui-fctab-s").remove();
+      targetFocus.find(".ui-fctab-e").remove();
+    }
+  }
+  moOptionSize();
+  $(window).resize(function () {
+    moOptionSize();
+  });
   $(event.target)
     .closest(".selectbox-options")
     .find(".option")
@@ -1332,15 +1372,8 @@ function handleOptionClick(event) {
     .closest(".selectbox-wrap>div")
     .find(".selectbox-trigger")
     .removeClass("active")
-    .attr("aria-expanded", "false");
-  $(window)
-    .resize(function () {
-      if (window.innerWidth <= 1023) {
-        $(".selectbox-overlay").hide();
-        $(".selectbox-options li.moclose-btn").hide();
-      }
-    })
-    .resize();
+    .attr("aria-expanded", "false")
+    .focus();
 
   if ($selectboxWrap.hasClass("evtLayout-type")) {
     var option1 = $(
@@ -2514,7 +2547,7 @@ window.onload = function () {
     $(".toggleFullscreenBtn").hide();
   } else {
     $(".toggleFullscreenBtn").show();
-  }  
+  }
 };
 
 function startTimer(slide, video, maxVideoW, type, targetIdx) {
@@ -2847,12 +2880,14 @@ function webAccessAddTabindex() {
     for (var i = 0; i < selectOption.length; i++) {
       $(selectOption[i]).attr("tabindex", "0");
     }
+    $(".moclose-btn").removeAttr("tabindex");
   }
 
   if (cardType01Box.length > 0) {
     for (var i = 0; i < cardType01Box.length; i++) {
       $(cardType01Box[i]).attr("tabindex", "0");
     }
+    $(".moclose-btn").removeAttr("tabindex");
   }
 }
 
