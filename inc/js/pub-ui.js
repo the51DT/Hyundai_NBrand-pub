@@ -270,7 +270,7 @@ var pubUi = {
       $(".card_type01").on("click", function () {
         activeCardMoreBtn($(this));
       });
-      $(".card_type01 .card_more").blur((event) => {
+      $(".card_type01 .card_more").focusout((event) => {
         $(".card_type01 .card_more").css("display", "none");
         $(".card_type01").attr("title", "자세히 보려면 더블 클릭하세요.");
         $(".card_type01 .card_more").attr("aria-expanded", "false");
@@ -2847,7 +2847,6 @@ function webAccessAddTabindex() {
     for (var i = 0; i < selectOption.length; i++) {
       $(selectOption[i]).attr("tabindex", "0");
     }
-    console.log("selectbox");
   }
 
   if (cardType01Box.length > 0) {
