@@ -34,7 +34,7 @@ var pubUi = {
     }
   },
   settings: function () {
-    var self = this;
+    var self = this;    
     self.$container = $(".container");
 
     // tab 관련 변수
@@ -267,16 +267,17 @@ var pubUi = {
       //pc
     } else {
       //mobile
-      $(".card_type01").on("click", function () {
+      // $(".ty04Swiper .swiper-slide").on("focusin mouseenter touchstart", function () {
+      //   $(this).siblings().find(".card_more").attr("aria-hidden", true);
+      //   $(this).siblings().find(".card_more").attr("aria-expanded", "false");
+      //   $(this).siblings().find(".card_more").css("display", "none");
+      // });
+
+      $(".ty04Swiper .swiper-slide .btn-arrow-down").on("click", function () {
         activeCardMoreBtn($(this));
-      });
-      $(".card_type01 .card_more").focusout((event) => {
-        $(".card_type01 .card_more").css("display", "none");
-        $(".card_type01").attr("title", "자세히 보려면 더블 클릭하세요.");
-        $(".card_type01 .card_more").attr("aria-expanded", "false");
-        $(".card_type01 .card_more").attr("aria-hidden", "true");
-      });
-    }
+      });      
+    }    
+
   },
   swiperSlideEvent: function () {
     var self = this;
@@ -872,7 +873,6 @@ $(document).ready(function () {
   var cardType01Box = $(".card_type01");
 
   $(window).resize(function () {
-    webAccessCardMoreBtn();
     if ($(window).innerWidth() < 1024) {
       if (ty02Swiper.length > 0) {
         for (var i = 0; i < ty02Swiper.length; i++) {
@@ -966,7 +966,6 @@ $(document).ready(function () {
   // 09.27 수정 : 웹접근성 처리용
   webAccessibilityChk();
   webAccessAddTabindex();
-  webAccessCardMoreBtn();
 
   // 09/29 추가 : dropdown-menu 관련 label 추가
   inputLabelToTitle(
@@ -1744,23 +1743,18 @@ document.addEventListener("DOMContentLoaded", () => {
         const nearVideo = btn.previousElementSibling;
         const iconInBtn = btn.querySelector(
           ".popup .wrap-video-func .box-video button span.btn-icon24"
-        );
-        const iconBtnSpan = btn.querySelector(
-          ".popup .wrap-video-func .box-video button span.visually-hidden"
-        );
+        );       
 
         if (nearVideo.paused) {
           nearVideo.play();
           iconInBtn.classList.remove("icon-play-wh");
           iconInBtn.classList.add("icon-pause-wh");
-          btn.setAttribute("title", "영상 재생 상태, 일시정지 하기");
-          iconBtnSpan.innerText = "영상 재생 상태, 일시정지 하기";
+          btn.setAttribute("title", "영상 재생 상태, 일시정지 하기");          
         } else {
           nearVideo.pause();
           iconInBtn.classList.remove("icon-pause-wh");
           iconInBtn.classList.add("icon-play-wh");
           btn.setAttribute("title", "영상 일시정지 상태, 재생 하기");
-          iconBtnSpan.innerText = "영상 일시정지 상태, 재생 하기";
         }
 
         // 모델 팝업이 닫혔을 때 스크롤, 영상 초기화 처리
@@ -2864,7 +2858,6 @@ function webAccessibilityChk() {
 
 function webAccessAddTabindex() {
   var selectboxWrap = $(".selectbox-wrap");
-  var cardType01Box = $(".ty04Swiper .card_type01");
 
   if (selectboxWrap.length > 0) {
     var selectOption = selectboxWrap.find(".selectbox-options li");
@@ -2873,14 +2866,7 @@ function webAccessAddTabindex() {
       $(selectOption[i]).attr("tabindex", "0");
     }
     $(".moclose-btn").removeAttr("tabindex");
-  }
-
-  if (cardType01Box.length > 0) {
-    for (var i = 0; i < cardType01Box.length; i++) {
-      $(cardType01Box[i]).attr("tabindex", "0");
-    }
-    $(".moclose-btn").removeAttr("tabindex");
-  }
+  }  
 }
 
 function keydownTagEvent(parentSelector, el) {
@@ -2937,47 +2923,29 @@ function swiperCtrlInert(swiperEl) {
   }
 }
 
-function webAccessCardMoreBtn() {
-  var cardType01Box = $(".ty04Swiper .card_type01");
+function activeCardMoreBtn(target) {
+  var btnMore = $(target);
+  var slide = $(target).closest(".swiper-slide");
+  var targetCardMoreBtn = slide.find(".card_more");
+  //var swiper4CardMoreBtn = slide.siblings().find(".card_more");
+  //var otherSlide = $(slide.siblings());
 
-  if (cardType01Box.length > 0) {
-    if (pubUi.windowSize()) {
-      // pc
-      for (var i = 0; i < cardType01Box.length; i++) {
-        $(cardType01Box[i]).find(".card_top").removeAttr("title");
-        $(cardType01Box[i]).find(".card_top").removeAttr("role");
-        $(cardType01Box[i]).find(".card_more").removeAttr("aria-hidden");
-        $(cardType01Box[i]).find(".card_more").removeAttr("aria-expanded");
-      }
-    } else {
-      // mobile
-      for (var i = 0; i < cardType01Box.length; i++) {
-        $(cardType01Box[i])
-          .find(".card_top")
-          .attr("title", "자세히 보기 버튼을 활성화 하려면 두번 탭하십시오");
-        $(cardType01Box[i]).find(".card_top").attr("role", "button");
-        $(cardType01Box[i]).find(".card_more").attr("aria-hidden", true);
-        $(cardType01Box[i]).find(".card_more").attr("aria-expanded", false);
-      }
-    }
-  }
-}
+  // swiper4CardMoreBtn.attr("aria-hidden", "true");
+  // swiper4CardMoreBtn.attr("aria-expanded", "false");
+  // otherSlide.removeClass("on");
 
-function activeCardMoreBtn(el) {
-  var cardMoreBtn = $(el).find(".card_more");
-
-  cardMoreBtn.attr("aria-hidden", true);
-
-  for (var i = 0; i < cardMoreBtn.length; i++) {
-    if ($(cardMoreBtn[i]).attr("aria-expanded") == "true") {
-      $(cardMoreBtn[i]).attr("aria-expanded", "false");
-      $(cardMoreBtn[i]).attr("aria-hidden", true);
-      $(cardMoreBtn[i]).css("display", "none");
-    } else {
-      $(cardMoreBtn[i]).attr("aria-expanded", "true");
-      $(cardMoreBtn[i]).attr("aria-hidden", false);
-      $(cardMoreBtn[i]).css("display", "flex");
-    }
+  if (btnMore.attr("aria-expanded") == "true") {
+    slide.removeClass("on");
+    btnMore.find(".dropdown-icon").removeClass("rotate");
+    btnMore.attr("aria-expanded", "false");
+    targetCardMoreBtn.attr("aria-expanded", "false");
+    targetCardMoreBtn.attr("aria-hidden", "true");
+  } else {
+    slide.addClass("on");
+    btnMore.find(".dropdown-icon").addClass("rotate");
+    btnMore.attr("aria-expanded", "true");
+    targetCardMoreBtn.attr("aria-expanded", "true");
+    targetCardMoreBtn.attr("aria-hidden", "false");
   }
 }
 

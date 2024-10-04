@@ -2540,6 +2540,9 @@ button.card_detail:hover {
   background-image: url("../images/icon/icon-arrow01_right_white.svg");
   background-position: top center;
 }
+.card_foot .btn-arrow-down {
+  display: none;
+}
 .swiper-card-type.ty05Swiper {
   width: 100%;
   height: 100%;
