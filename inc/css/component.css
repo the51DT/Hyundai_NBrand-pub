@@ -2563,7 +2563,7 @@ button.card_detail:hover {
 }
 
 .swiper-card-type .card_type01.bg-blue:hover {
-  background: #e6eff8;
+  background: #aacae6;
   color: #000;
 }
 
@@ -2668,6 +2668,7 @@ button.card_detail:hover {
   font-size: 16px;
   font-weight: 500;
   line-height: 22.4px;
+  letter-spacing: -0.1px;
   color: inherit;
 }
 

@@ -1689,29 +1689,34 @@ min-width : 1024 css
     padding-left: 24px;
     padding-right: 24px;
   }
-  .ty04Swiper .swiper-slide.on:hover .card_more,
+  .ty04Swiper .swiper-slide:hover .card_more,
   .ty04Swiper .swiper-slide.on .card_more {
     display: flex !important;
     clip-path: none;
     width: 100%;
     height: auto;
     padding: 0.81rem 1.5rem;
-  } 
+  }
   .card_foot {
     display: flex;
     justify-content: flex-start;
     align-items: center;
   }
   .card_foot .btn-arrow-down {
-    display: inline-block;    
+    display: inline-block;
     margin-left: 4px;
     width: 16px;
-    height :16px;
+    height: 16px;
   }
-  .card_foot .btn-arrow-down .dropdown-icon.rotate {
+  .ty04Swiper .swiper-slide:hover .card_foot .btn-arrow-down .dropdown-icon,
+  .ty04Swiper
+    .swiper-slide.on
+    .card_foot
+    .btn-arrow-down
+    .dropdown-icon.rotate {
     transform: rotate(180deg);
   }
-  
+
   /* select */
   .selectbox-wrap {
     display: flex;
