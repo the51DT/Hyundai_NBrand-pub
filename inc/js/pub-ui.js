@@ -834,17 +834,13 @@ $(document).ready(function () {
   $(".clear-text")
     .siblings('input[type="text"]')
     .on("propertychange change keyup paste input", pubUi.textReset);
-  $(".selectbox-js")
-    .off("click")
-    .on("click", function () {
-      $this = $(this);
-      handleSelectboxClick(event);
-    });
-  $(".option-click")
-    .off("click")
-    .on("click", function () {
-      handleOptionClick(event);
-    });
+  $(".selectbox-js").on("click", function () {
+    $this = $(this);
+    handleSelectboxClick(event);
+  });
+  $(".option-click").on("click", function () {
+    handleOptionClick(event);
+  });
   //hasTagFun();
   perforSlideMoveFun();
   footerScrollTop();
@@ -2852,6 +2848,14 @@ function webAccessibilityChk() {
   modelVisualSoundBtn.attr("title", "현재 사운드 꺼진 상태, 사운드 켜기");
   modelVisualPlayBtn.attr("title", "영상 재생 상태, 일시정지 하기");
   popupPlayBtn.attr("title", "영상 재생 상태, 일시정지 하기");
+
+  $(".option")
+    .off("keydown")
+    .on("keydown", (e) => {
+      if (e.key === "Enter") {
+        $(e.currentTarget).click();
+      }
+    });
 }
 
 function webAccessAddTabindex() {
