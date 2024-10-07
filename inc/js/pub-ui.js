@@ -34,7 +34,7 @@ var pubUi = {
     }
   },
   settings: function () {
-    var self = this;    
+    var self = this;
     self.$container = $(".container");
 
     // tab 관련 변수
@@ -275,9 +275,8 @@ var pubUi = {
 
       $(".ty04Swiper .swiper-slide .btn-arrow-down").on("click", function () {
         activeCardMoreBtn($(this));
-      });      
-    }    
-
+      });
+    }
   },
   swiperSlideEvent: function () {
     var self = this;
@@ -1244,16 +1243,18 @@ function handleSelectboxClick(event) {
   $(".selectbox-trigger")
     .not($trigger)
     .removeClass("active")
-    .attr("aria-expanded", "false")
-    .focus();
+    .attr("aria-expanded", "false");
 
   $options.toggle().attr("aria-hidden", function (i, attr) {
     return attr === "true" ? "false" : "true";
   });
 
-  $trigger.toggleClass("active").attr("aria-expanded", function () {
-    return $(this).hasClass("active") ? "true" : "false";
-  });
+  $trigger
+    .toggleClass("active")
+    .focus()
+    .attr("aria-expanded", function () {
+      return $(this).hasClass("active") ? "true" : "false";
+    });
 
   if ($trigger[0].classList.contains("selectbox-left")) {
     $options.css({ left: "0" });
@@ -1742,13 +1743,13 @@ document.addEventListener("DOMContentLoaded", () => {
         const nearVideo = btn.previousElementSibling;
         const iconInBtn = btn.querySelector(
           ".popup .wrap-video-func .box-video button span.btn-icon24"
-        );       
+        );
 
         if (nearVideo.paused) {
           nearVideo.play();
           iconInBtn.classList.remove("icon-play-wh");
           iconInBtn.classList.add("icon-pause-wh");
-          btn.setAttribute("title", "영상 재생 상태, 일시정지 하기");          
+          btn.setAttribute("title", "영상 재생 상태, 일시정지 하기");
         } else {
           nearVideo.pause();
           iconInBtn.classList.remove("icon-pause-wh");
@@ -2863,7 +2864,7 @@ function webAccessAddTabindex() {
       $(selectOption[i]).attr("tabindex", "0");
     }
     $(".moclose-btn").removeAttr("tabindex");
-  }  
+  }
 }
 
 function keydownTagEvent(parentSelector, el) {

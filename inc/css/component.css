@@ -2567,6 +2567,15 @@ button.card_detail:hover {
   color: #000;
 }
 
+.swiper-card-type .card_type01 .icon-down-wh {
+  opacity: 0.8;
+}
+
+.swiper-card-type .card_type01.bg-blue .icon-down-wh {
+  background: url(../../inc/images/icon/icon-arrow01_down.svg);
+  background-size: contain;
+}
+
 .swiper-card-type.ty05Swiper .card_type01:hover {
   background-color: #de3111 !important;
   color: #fff;
