@@ -936,7 +936,7 @@ $(document).ready(function () {
       $(".wrap .content-area").css("padding-top", "48px");
     } else {
       $(".wrap .content-area").css("padding-top", "0");
-    }    
+    }
   });
 
   // 07.03 추가 - models-wrap 클래스 존재하는 페이지 일 경우, 하단 img loading 속성 제거
@@ -1077,8 +1077,7 @@ function swiper2SlideEvt() {
       nextSlideMessage: "다음 슬라이드",
       slideLabelMessage:
         "총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 입니다.",
-      paginationBulletMessage:
-        "{{index}}번째 슬라이드로 가기",
+      paginationBulletMessage: "{{index}}번째 슬라이드로 가기",
     },
     breakpoints: {
       280: {
@@ -2843,10 +2842,8 @@ function webAccessibilityChk() {
   // 국/영문 사이트 체크
   if (lang == "ko") {
     langBtn.attr("aria-label", "현재 국문, 영문으로 변경하기");
-    langBtn.find("span").text("KO");
   } else if (lang == "en") {
     langBtn.attr("aria-label", "현재 영문, 국문으로 변경하기");
-    langBtn.find("span").text("EN");
   }
 
   swiperSoundBtn.attr("title", "현재 사운드 꺼진 상태, 사운드 켜기");
