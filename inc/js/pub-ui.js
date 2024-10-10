@@ -2849,7 +2849,7 @@ function webAccessibilityChk() {
   modelVisualPlayBtn.attr("title", "영상 재생 상태, 일시정지 하기");
   popupPlayBtn.attr("title", "영상 재생 상태, 일시정지 하기");
 
-  $(".option")
+  $(".option, .upload-btn")
     .off("keydown")
     .on("keydown", (e) => {
       if (e.key === "Enter") {

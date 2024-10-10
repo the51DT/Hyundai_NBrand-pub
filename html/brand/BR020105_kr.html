@@ -22,7 +22,11 @@
             <!-- 08.07 수정 : 동영상 으로 변경 (컨텐츠 현행화) -->
             <div class="video-wrap">
               <!-- 전달 받은 대체텍스트 엑셀 파일에 N People 페이지 내용 없음 -->
-              <div class="video-ir" tabindex="0">
+              <!-- 1010 수정 : pc / mobile 구분 -->
+              <div class="video-ir pc-only" tabindex="0">
+                N People 소개 영상
+              </div>
+              <div class="video-ir mo-only" tabindex="0">
                 N People 소개 영상
               </div>
               <video class="video pc-only" data-js="video" id="video1" playsinline="" autoplay="" muted=""
