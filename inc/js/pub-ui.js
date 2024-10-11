@@ -1336,12 +1336,13 @@ function handleOptionClick(event) {
   }
   function moOptionSize() {
     if (window.innerWidth <= 1023) {
+      // alert("d")
       $(".selectbox-overlay").hide();
       $(".selectbox-options li.moclose-btn").hide();
       targetFocus = $(event.target);
       NbrandUI.focusNonoutReset(targetFocus);
-      targetFocus.find(".ui-fctab-s").remove();
-      targetFocus.find(".ui-fctab-e").remove();
+      targetFocus.closest(".selectbox-options").find(".ui-fctab-s").remove();
+      targetFocus.closest(".selectbox-options").find(".ui-fctab-e").remove();
     }
   }
   moOptionSize();
@@ -1360,7 +1361,6 @@ function handleOptionClick(event) {
     .find(".selectbox-trigger")
     .removeClass("active")
     .attr("aria-expanded", "false")
-    .focus();
 
   if ($selectboxWrap.hasClass("evtLayout-type")) {
     var option1 = $(
