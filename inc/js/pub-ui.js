@@ -390,6 +390,29 @@ var pubUi = {
       },
     });
 
+    // 1015 수정 : 이미지 only 케이스 추가
+    var swiper1_2 = new Swiper(".onlyImg", {
+      slidesPerView: 1,
+      initialSlide: 0,
+      touchRatio: 1, // 드래그 X : 0 , 드래그 O : 1
+      a11y: {
+        enabled: true,
+        prevSlideMessage: "이전 슬라이드",
+        nextSlideMessage: "다음 슬라이드",
+        slideLabelMessage:
+          "총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 입니다.",
+        paginationBulletMessage: "{{index}}번째 슬라이드로 가기",
+      },
+      on: {
+        afterInit: function () {
+          swiperCtrlInert($(".onlyImg"));
+        },
+        slideChangeTransitionEnd: function () {
+          swiperCtrlInert($(".onlyImg"));
+        },
+      },
+    });
+
     swiper2SlideEvt(); //swiper2 이벤트 실행
     swiper4SlideEvt(); //swiper4 이벤트 실행
     swiper12SlideEvt(); //swiper12 이벤트 실행
