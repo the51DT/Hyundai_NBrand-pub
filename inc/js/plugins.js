@@ -67,7 +67,7 @@ if ($.isFunction("checkCommonJs")) {
       aN.parent()
         .find(".btn-close")
         .addClass("ui-fctab-e")
-        .attr("tabindex", 0)
+        // .attr("tabindex", 0)
         .attr("holde", true);
     } else {
       aR.prepend('<div class="ui-fctab-s" tabindex="0" holds="true"></div>');

@@ -47,15 +47,18 @@
               </div>
               <div class="configurator_header_menu_wrap">
                 <!-- .configurator_header_menu 에 .on 이 어디에 붙느냐에 따라 .configurator_area에 붙는 클래스가 달라짐 -->
-                <button type="button" class="configurator_header_menu configurator_menu_exterior on">
+                <button type="button" class="configurator_header_menu configurator_menu_exterior on" role="tab"
+                  aria-selected="true">
                   <span class="configurator_header_menu_step"><span class="visually-hidden">1</span></span>
                   <span class="configurator_header_menu_text">Exterior</span>
                 </button>
-                <button type="button" class="configurator_header_menu configurator_menu_interior">
+                <button type="button" class="configurator_header_menu configurator_menu_interior" role="tab"
+                  aria-selected="false">
                   <span class="configurator_header_menu_step"><span class="visually-hidden">2</span></span>
                   <span class="configurator_header_menu_text">Interior</span>
                 </button>
-                <button type="button" class="configurator_header_menu configurator_menu_summary">
+                <button type="button" class="configurator_header_menu configurator_menu_summary" role="tab"
+                  aria-selected="false">
                   <span class="configurator_header_menu_step"><span class="visually-hidden">3</span></span>
                   <span class="configurator_header_menu_text">Summary</span>
                 </button>
@@ -80,23 +83,24 @@
                       <div class="swiper-wrapper">
                         <div class="swiper-slide">
                           <!-- 차량 미리보기 슬라이드 이미지 alt 값 필요 / 예)차량 정면, 차량 후면 등, '이미지'라는 내용은 제외하고 제공 -->
-                          <img src="../../inc/images/Configurator/NEN_EXT_XFB_LD_C003.jpg" alt="IONIQ 5 N 차량 정면" />
+                          <img src="../../inc/images/Configurator/NEN_EXT_XFB_LD_C003.jpg" alt="IONIQ 5 N front view" />
                         </div>
                         <div class="swiper-slide">
                           <!-- 차량 미리보기 슬라이드 이미지 alt 값 필요 / 예)차량 정면, 차량 후면 등, '이미지'라는 내용은 제외하고 제공 -->
-                          <img src="../../inc/images/Configurator/NEN_EXT_XFB_LD_C003.jpg" alt="IONIQ 5 N 차량 정면" />
+                          <img src="../../inc/images/Configurator/NEN_EXT_XFB_LD_C003.jpg" alt="IONIQ 5 N side view" />
                         </div>
                         <div class="swiper-slide">
                           <!-- 차량 미리보기 슬라이드 이미지 alt 값 필요 / 예)차량 정면, 차량 후면 등, '이미지'라는 내용은 제외하고 제공 -->
-                          <img src="../../inc/images/Configurator/NEN_EXT_XFB_LD_C003.jpg" alt="IONIQ 5 N 차량 정면" />
+                          <img src="../../inc/images/Configurator/NEN_EXT_XFB_LD_C003.jpg" alt="IONIQ 5 N rear view'" />
                         </div>
                         <div class="swiper-slide">
                           <!-- 차량 미리보기 슬라이드 이미지 alt 값 필요 / 예)차량 정면, 차량 후면 등, '이미지'라는 내용은 제외하고 제공 -->
-                          <img src="../../inc/images/Configurator/NEN_EXT_XFB_LD_C003.jpg" alt="IONIQ 5 N 차량 정면" />
+                          <img src="../../inc/images/Configurator/NEN_EXT_XFB_LD_C003.jpg" alt="IONIQ 5 N top view" />
                         </div>
                         <div class="swiper-slide">
                           <!-- 차량 미리보기 슬라이드 이미지 alt 값 필요 / 예)차량 정면, 차량 후면 등, '이미지'라는 내용은 제외하고 제공 -->
-                          <img src="../../inc/images/Configurator/NEN_EXT_XFB_LD_C003.jpg" alt="IONIQ 5 N 차량 정면" />
+                          <img src="../../inc/images/Configurator/NEN_EXT_XFB_LD_C003.jpg"
+                            alt="IONIQ 5 N front-side view" />
                         </div>
                       </div>
                       <div class="swiper-bottom-wrap">
@@ -150,8 +154,8 @@
                           - 영역의 타이틀이 띄어쓰기가 들어가는 경우, 띄어쓰기 없이 붙여서 적용
                           ex) Car Mat : data-type="carmat"
                         -->
-                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger"
-                          aria-expanded="true" aria-controls="dropdown-menu" title="파츠 더보기" data-type="color">
+                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger" aria-expanded="true"
+                          aria-controls="dropdown-menu" data-type="color">
                           Color
                           <span class="btn-icon20 icon-down dropdown-icon rotate" aria-hidden="true">
                           </span>
@@ -231,8 +235,8 @@
                         </ul>
                       </div>
                       <div class="dropdown">
-                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger"
-                          aria-expanded="true" aria-controls="dropdown-menu" title="파츠 더보기" data-type="wheel">
+                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger" aria-expanded="true"
+                          aria-controls="dropdown-menu" data-type="wheel">
                           Wheel
                           <span class="btn-icon20 icon-down dropdown-icon rotate" aria-hidden="true">
                           </span>
@@ -242,8 +246,7 @@
                             <input id="IONIQ_wheel1" name="wheel" value="R20W" type="checkbox" />
                             <label for="IONIQ_wheel1" class="configurator_label_radio">
                               <div>
-                                <img src="../../inc/images/img/img_config_wheel_white.png" loading="lazy"
-                                  alt="" />
+                                <img src="../../inc/images/img/img_config_wheel_white.png" loading="lazy" alt="" />
                               </div>
                               <div>
                                 <p class="configurator_label_tit">
@@ -260,8 +263,7 @@
                             <input id="IONIQ_wheel2" name="wheel" value="R20B" type="checkbox" />
                             <label for="IONIQ_wheel2" class="configurator_label_radio">
                               <div>
-                                <img src="../../inc/images/img/img_config_wheel_balck.png" loading="lazy"
-                                  alt="" />
+                                <img src="../../inc/images/img/img_config_wheel_balck.png" loading="lazy" alt="" />
                               </div>
                               <div>
                                 <p class="configurator_label_tit">
@@ -278,8 +280,7 @@
                             <input id="IONIQ_wheel3" name="wheel" value="R21B" type="checkbox" />
                             <label for="IONIQ_wheel3" class="configurator_label_radio">
                               <div>
-                                <img src="../../inc/images/img/img_config_wheel_carbon.png" loading="lazy"
-                                  alt="" />
+                                <img src="../../inc/images/img/img_config_wheel_carbon.png" loading="lazy" alt="" />
                               </div>
                               <div>
                                 <p class="configurator_label_tit">
@@ -294,8 +295,8 @@
                         </ul>
                       </div>
                       <div class="dropdown">
-                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger"
-                          aria-expanded="true" aria-controls="dropdown-menu" title="파츠 더보기" data-type="towstrap">
+                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger" aria-expanded="true"
+                          aria-controls="dropdown-menu" data-type="towstrap">
                           Tow Strap
                           <span class="btn-icon20 icon-down dropdown-icon rotate" aria-hidden="true">
                           </span>
@@ -324,8 +325,8 @@
                     <div class="configurator_select_exterior ELANTRA" data-model="elantra">
                       <!-- data-model 추가 -->
                       <div class="dropdown">
-                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger"
-                          aria-expanded="true" aria-controls="dropdown-menu" title="파츠 더보기" data-type="color">
+                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger" aria-expanded="true"
+                          aria-controls="dropdown-menu" data-type="color">
                           Color
                           <span class="btn-icon20 icon-down dropdown-icon rotate" aria-hidden="true">
                           </span>
@@ -383,8 +384,8 @@
                         </ul>
                       </div>
                       <div class="dropdown">
-                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger"
-                          aria-expanded="true" aria-controls="dropdown-menu" title="파츠 더보기" data-type="wheel">
+                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger" aria-expanded="true"
+                          aria-controls="dropdown-menu" data-type="wheel">
                           Wheel
                           <span class="btn-icon20 icon-down dropdown-icon rotate" aria-hidden="true">
                           </span>
@@ -394,8 +395,7 @@
                             <input id="ELANTRA_wheel1" name="wheel" value="wheel1" type="checkbox" />
                             <label for="ELANTRA_wheel1" class="configurator_label_radio">
                               <div>
-                                <img src="../../inc/images/img/img_config_elantra_wheel1.png" loading="lazy"
-                                  alt="" />
+                                <img src="../../inc/images/img/img_config_elantra_wheel1.png" loading="lazy" alt="" />
                               </div>
                               <div>
                                 <p class="configurator_label_tit">
@@ -414,8 +414,7 @@
                             <input id="ELANTRA_wheel2" name="wheel" value="wheel2" type="checkbox" />
                             <label for="ELANTRA_wheel2" class="configurator_label_radio">
                               <div>
-                                <img src="../../inc/images/img/img_config_elantra_wheel2.png" loading="lazy"
-                                  alt="" />
+                                <img src="../../inc/images/img/img_config_elantra_wheel2.png" loading="lazy" alt="" />
                               </div>
                               <div>
                                 <p class="configurator_label_tit">
@@ -430,8 +429,8 @@
                         </ul>
                       </div>
                       <div class="dropdown">
-                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger"
-                          aria-expanded="true" aria-controls="dropdown-menu" title="파츠 더보기" data-type="brake">
+                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger" aria-expanded="true"
+                          aria-controls="dropdown-menu" data-type="brake">
                           Brake
                           <span class="btn-icon20 icon-down dropdown-icon rotate" aria-hidden="true">
                           </span>
@@ -456,8 +455,8 @@
                         </ul>
                       </div>
                       <div class="dropdown">
-                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger"
-                          aria-expanded="true" aria-controls="dropdown-menu" title="파츠 더보기" data-type="spoiler">
+                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger" aria-expanded="true"
+                          aria-controls="dropdown-menu" data-type="spoiler">
                           Spoiler
                           <span class="btn-icon20 icon-down dropdown-icon rotate" aria-hidden="true">
                           </span>
@@ -482,8 +481,8 @@
                         </ul>
                       </div>
                       <div class="dropdown">
-                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger"
-                          aria-expanded="true" aria-controls="dropdown-menu" title="파츠 더보기" data-type="sidemirror">
+                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger" aria-expanded="true"
+                          aria-controls="dropdown-menu" data-type="sidemirror">
                           Side Mirror
                           <span class="btn-icon20 icon-down dropdown-icon rotate" aria-hidden="true">
                           </span>
@@ -508,8 +507,8 @@
                         </ul>
                       </div>
                       <div class="dropdown">
-                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger"
-                          aria-expanded="true" aria-controls="dropdown-menu" title="파츠 더보기" data-type="rearmufflertip">
+                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger" aria-expanded="true"
+                          aria-controls="dropdown-menu" data-type="rearmufflertip">
                           Rear muffler tip
                           <span class="btn-icon20 icon-down dropdown-icon rotate" aria-hidden="true">
                           </span>
@@ -535,8 +534,8 @@
                         </ul>
                       </div>
                       <div class="dropdown">
-                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger"
-                          aria-expanded="true" aria-controls="dropdown-menu" title="파츠 더보기" data-type="towstrap">
+                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger" aria-expanded="true"
+                          aria-controls="dropdown-menu" data-type="towstrap">
                           Tow Strap
                           <span class="btn-icon20 icon-down dropdown-icon rotate" aria-hidden="true">
                           </span>
@@ -546,8 +545,7 @@
                             <input id="ELANTRA_towstrap" name="towstrap" value="towstrap" type="checkbox" />
                             <label for="ELANTRA_towstrap" class="configurator_label_radio">
                               <div>
-                                <img src="../../inc/images/img/img_config_towstrap_elantra.png" loading="lazy"
-                                  alt="" />
+                                <img src="../../inc/images/img/img_config_towstrap_elantra.png" loading="lazy" alt="" />
                               </div>
                               <div>
                                 <p class="configurator_label_tit">
@@ -567,8 +565,8 @@
                     <div class="configurator_select_interior IONIQ" data-model="ioniq">
                       <!-- data-model 추가 -->
                       <div class="dropdown">
-                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger"
-                          aria-expanded="true" aria-controls="dropdown-menu" title="파츠 더보기" data-type="color">
+                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger" aria-expanded="true"
+                          aria-controls="dropdown-menu" data-type="color">
                           Color
                           <span class="btn-icon20 icon-down dropdown-icon rotate" aria-hidden="true">
                           </span>
@@ -577,16 +575,15 @@
                           <li>
                             <input id="IONIQ_color_interior" name="color" value="blue" type="checkbox" />
                             <label for="IONIQ_color_interior" class="configurator_label_list">
-                              <img src="../../inc/images/img/img_config_color_interior.png" loading="lazy"
-                                alt="" />
+                              <img src="../../inc/images/img/img_config_color_interior.png" loading="lazy" alt="" />
                               <p>Black Monotone</p>
                             </label>
                           </li>
                         </ul>
                       </div>
                       <div class="dropdown">
-                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger"
-                          aria-expanded="true" aria-controls="dropdown-menu" title="파츠 더보기" data-type="transmission">
+                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger" aria-expanded="true"
+                          aria-controls="dropdown-menu" data-type="transmission">
                           Transmission
                           <span class="btn-icon20 icon-down dropdown-icon rotate" aria-hidden="true">
                           </span>
@@ -615,9 +612,8 @@
                         </ul>
                       </div>
                       <div class="dropdown">
-                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger"
-                          aria-expanded="true" aria-controls="dropdown-menu" title="파츠 더보기"
-                          data-type="alcantarapackage">
+                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger" aria-expanded="true"
+                          aria-controls="dropdown-menu" data-type="alcantarapackage">
                           Alcantara Package
                           <span class="btn-icon20 icon-down dropdown-icon rotate" aria-hidden="true">
                           </span>
@@ -643,10 +639,9 @@
                         </ul>
                       </div>
                       <div class="dropdown none">
-                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger"
-                          aria-expanded="true" aria-controls="dropdown-menu" title="파츠 더보기">
-                          Alcantara Package
-                          <span class="btn-icon20 icon-down dropdown-icon rotate" aria-hidden="true">
+                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger" aria-expanded="true"
+                          aria-controls="dropdown-menu" title Alcantara Package <span
+                          class="btn-icon20 icon-down dropdown-icon rotate" aria-hidden="true">
                           </span>
                         </button>
                         <ul class="dropdown-menu dropdown-on">
@@ -670,8 +665,8 @@
                         </ul>
                       </div>
                       <div class="dropdown">
-                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger"
-                          aria-expanded="true" aria-controls="dropdown-menu" title="파츠 더보기" data-type="carmat">
+                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger" aria-expanded="true"
+                          aria-controls="dropdown-menu" data-type="carmat">
                           Car Mat
                           <span class="btn-icon20 icon-down dropdown-icon rotate" aria-hidden="true">
                           </span>
@@ -696,8 +691,8 @@
                         </ul>
                       </div>
                       <div class="dropdown">
-                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger"
-                          aria-expanded="true" aria-controls="dropdown-menu" title="파츠 더보기" data-type="doorscuff">
+                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger" aria-expanded="true"
+                          aria-controls="dropdown-menu" data-type="doorscuff">
                           Door Scuff
                           <span class="btn-icon20 icon-down dropdown-icon rotate" aria-hidden="true">
                           </span>
@@ -722,8 +717,8 @@
                         </ul>
                       </div>
                       <div class="dropdown">
-                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger"
-                          aria-expanded="true" aria-controls="dropdown-menu" title="파츠 더보기" data-type="steeringwheel">
+                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger" aria-expanded="true"
+                          aria-controls="dropdown-menu" data-type="steeringwheel">
                           Steering Wheel
                           <span class="btn-icon20 icon-down dropdown-icon rotate" aria-hidden="true">
                           </span>
@@ -748,8 +743,8 @@
                         </ul>
                       </div>
                       <div class="dropdown">
-                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger"
-                          aria-expanded="true" aria-controls="dropdown-menu" title="파츠 더보기" data-type="seatbelt">
+                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger" aria-expanded="true"
+                          aria-controls="dropdown-menu" data-type="seatbelt">
                           Seat Belt
                           <span class="btn-icon20 icon-down dropdown-icon rotate" aria-hidden="true">
                           </span>
@@ -794,8 +789,8 @@
                     <div class="configurator_select_interior ELANTRA" data-model="elantra">
                       <!-- data-model 추가 -->
                       <div class="dropdown">
-                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger"
-                          aria-expanded="true" aria-controls="dropdown-menu" title="파츠 더보기" data-type="color">
+                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger" aria-expanded="true"
+                          aria-controls="dropdown-menu" data-type="color">
                           Color
                           <span class="btn-icon20 icon-down dropdown-icon rotate" aria-hidden="true">
                           </span>
@@ -804,16 +799,15 @@
                           <li>
                             <input id="ELANTRA_color_interior" name="color" value="blue" type="checkbox" />
                             <label for="ELANTRA_color_interior" class="configurator_label_list">
-                              <img src="../../inc/images/img/img_config_color_interior_2.png" loading="lazy"
-                                alt="" />
+                              <img src="../../inc/images/img/img_config_color_interior_2.png" loading="lazy" alt="" />
                               <p>Black one-tone</p>
                             </label>
                           </li>
                         </ul>
                       </div>
                       <div class="dropdown">
-                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger"
-                          aria-expanded="true" aria-controls="dropdown-menu" title="파츠 더보기" data-type="transmission">
+                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger" aria-expanded="true"
+                          aria-controls="dropdown-menu" data-type="transmission">
                           Transmission
                           <span class="btn-icon20 icon-down dropdown-icon rotate" aria-hidden="true">
                           </span>
@@ -844,9 +838,8 @@
                         </ul>
                       </div>
                       <div class="dropdown">
-                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger"
-                          aria-expanded="true" aria-controls="dropdown-menu" title="파츠 더보기"
-                          data-type="alcantarapackage">
+                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger" aria-expanded="true"
+                          aria-controls="dropdown-menu" data-type="alcantarapackage">
                           Alcantara Package
                           <span class="btn-icon20 icon-down dropdown-icon rotate" aria-hidden="true">
                           </span>
@@ -872,10 +865,9 @@
                         </ul>
                       </div>
                       <div class="dropdown none">
-                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger"
-                          aria-expanded="true" aria-controls="dropdown-menu" title="파츠 더보기">
-                          Alcantara Package
-                          <span class="btn-icon20 icon-down dropdown-icon rotate" aria-hidden="true">
+                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger" aria-expanded="true"
+                          aria-controls="dropdown-menu" title Alcantara Package <span
+                          class="btn-icon20 icon-down dropdown-icon rotate" aria-hidden="true">
                           </span>
                         </button>
                         <ul class="dropdown-menu dropdown-on">
@@ -899,8 +891,8 @@
                         </ul>
                       </div>
                       <div class="dropdown">
-                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger"
-                          aria-expanded="true" aria-controls="dropdown-menu" title="파츠 더보기" data-type="carmat">
+                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger" aria-expanded="true"
+                          aria-controls="dropdown-menu" data-type="carmat">
                           Car Mat
                           <span class="btn-icon20 icon-down dropdown-icon rotate" aria-hidden="true">
                           </span>
@@ -910,8 +902,7 @@
                             <input id="ELANTRA_carMat" name="carMat" value="carMat" type="checkbox" />
                             <label for="ELANTRA_carMat" class="configurator_label_radio">
                               <div>
-                                <img src="../../inc/images/img/img_config_elantra_mat.png" loading="lazy"
-                                  alt="" />
+                                <img src="../../inc/images/img/img_config_elantra_mat.png" loading="lazy" alt="" />
                               </div>
                               <div>
                                 <p class="configurator_label_tit">
@@ -926,8 +917,8 @@
                         </ul>
                       </div>
                       <div class="dropdown">
-                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger"
-                          aria-expanded="true" aria-controls="dropdown-menu" title="파츠 더보기" data-type="doorscuff">
+                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger" aria-expanded="true"
+                          aria-controls="dropdown-menu" data-type="doorscuff">
                           Door Scuff
                           <span class="btn-icon20 icon-down dropdown-icon rotate" aria-hidden="true">
                           </span>
@@ -937,8 +928,7 @@
                             <input id="ELANTRA_doorScuff" name="doorScuff" value="doorScuff" type="checkbox" />
                             <label for="ELANTRA_doorScuff" class="configurator_label_radio">
                               <div>
-                                <img src="../../inc/images/img/img_config_elantra_mat.png" loading="lazy"
-                                  alt="" />
+                                <img src="../../inc/images/img/img_config_elantra_mat.png" loading="lazy" alt="" />
                               </div>
                               <div>
                                 <p class="configurator_label_tit">
@@ -953,8 +943,8 @@
                         </ul>
                       </div>
                       <div class="dropdown">
-                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger"
-                          aria-expanded="true" aria-controls="dropdown-menu" title="파츠 더보기" data-type="seatbelt">
+                        <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger" aria-expanded="true"
+                          aria-controls="dropdown-menu" data-type="seatbelt">
                           Seat Belt
                           <span class="btn-icon20 icon-down dropdown-icon rotate" aria-hidden="true">
                           </span>
@@ -1398,8 +1388,7 @@
                             </div>
                             <div class="configurator_summary_list_bottom">
                               <img class="configurator_summary_img"
-                                src="../../inc/images/img/img_config_elantra_wheel2.png" loading="lazy"
-                                alt="" />
+                                src="../../inc/images/img/img_config_elantra_wheel2.png" loading="lazy" alt="" />
                               <div>
                                 <p class="configurator_summary_item">
                                   Black matte forged wheels
@@ -1606,23 +1595,21 @@
   <script type="text/javascript" src="../../inc/js/pub-ui.js"></script>
   <script>
     $(document).ready(function () {
-      $("#configurator .configurator_header_menu").click((el) => {
+      $(".configurator_header_menu").click((el) => {
         configuratorHeader(el);
       });
     });
     // [Start] : configurator_header_menu 확인용 스크립트 / 체크값 확인 후 넘어가기 필요
     function configuratorHeader(el) {
-      $("#configurator .configurator_header_menu").removeClass("on");
-
-      if (el) {
-        el.target.closest(".configurator_header_menu").classList.add("on");
-      }
+      $(".configurator_header_menu").removeClass("on").attr("aria-selected", false);
+      el.target.closest(".configurator_header_menu").classList.add("on")
+      el.target.closest(".configurator_header_menu").setAttribute("aria-selected", true);
       const menuName = ["exterior", "interior", "summary"];
       for (let i = 0; i < menuName.length; i++) {
         if ($(`.configurator_menu_${menuName[i]}`).hasClass("on")) {
-          $("#configurator").addClass(menuName[i]);
+          $(".configurator_area").addClass(menuName[i]);
         } else {
-          $("#configurator").removeClass(menuName[i]);
+          $(".configurator_area").removeClass(menuName[i])
         }
       }
     }

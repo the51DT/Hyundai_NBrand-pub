@@ -1536,6 +1536,18 @@ min-width : 1024 css
     display: none;
   }
 
+  .ty04Swiper.swiper .swiper-button-next,
+  .ty04Swiper.swiper .swiper-button-prev {
+    display: block;
+  }
+
+  .ty04Swiper.swiper .swiper-button-next {
+    right: 24px;
+  }
+  .ty04Swiper.swiper.swiper-card-type .swiper-button-prev {
+    left: 24px;
+  }
+
   .ty01Swiper .text-area,
   .key-visual-wrap .text-area {
     bottom: 80px;
@@ -1697,6 +1709,7 @@ min-width : 1024 css
     height: auto;
     padding: 0.81rem 1.5rem;
   }
+
   .card_foot {
     display: flex;
     justify-content: flex-start;
@@ -1708,7 +1721,7 @@ min-width : 1024 css
     width: 16px;
     height: 16px;
   }
-  .ty04Swiper .swiper-slide:hover .card_foot .btn-arrow-down .dropdown-icon,
+  /* .ty04Swiper .swiper-slide:hover .card_foot .btn-arrow-down .dropdown-icon, */
   .ty04Swiper
     .swiper-slide.on
     .card_foot
@@ -2004,6 +2017,18 @@ min-width : 1024 css
   }
   .btn:active .icon-heart,
   .btn:focus .icon-heart {
-    background: url(../../inc/images/icon/icon-heart_red.svg);
+    background: url(../../inc/images/icon/icon-heart.svg);
+  }
+
+  .btn:hover [class*="icon-trans"],
+  .btn:active [class*="icon-trans"] {
+    background: url(../../inc/images/icon/icon-trans.svg);
+    background-size: contain;
+  }
+
+  .btn .on[class*="icon-trans"],
+  .btn .on[class*="icon-trans"] {
+    background: url(../../inc/images/icon/icon-trans_red.svg);
+    background-size: contain;
   }
 }

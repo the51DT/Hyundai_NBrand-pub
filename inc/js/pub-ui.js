@@ -11,9 +11,15 @@ var pubUi = {
       scrollToCenter(".list-content.active .event-box .evt-map-img");
     }
 
-    if ($(".ty01Swiper:not(.banner-swiper)") != undefined && $(".ty01Swiper:not(.banner-swiper)").length > 0) {
+    if (
+      $(".ty01Swiper:not(.banner-swiper)") != undefined &&
+      $(".ty01Swiper:not(.banner-swiper)").length > 0
+    ) {
       var typeChk = "";
-      if ($(".ty01Swiper:not(.banner-swiper) .swiper-slide-active").find("img").length) {
+      if (
+        $(".ty01Swiper:not(.banner-swiper) .swiper-slide-active").find("img")
+          .length
+      ) {
         typeChk = "image";
         // 1015 추가 : 이미지 케이스 1개일 경우, bottom 영역 비노출 - S
         if ($(".ty01Swiper:not(.banner-swiper) .swiper-slide").length === 1) {
@@ -266,14 +272,14 @@ var pubUi = {
 
     if (pubUi.windowSize()) {
       //pc
+      $(".ty04Swiper.swiper-card-type")
+        .find(".card_more")
+        .attr("aria-hidden", false);
     } else {
       //mobile
-      // $(".ty04Swiper .swiper-slide").on("focusin mouseenter touchstart", function () {
-      //   $(this).siblings().find(".card_more").attr("aria-hidden", true);
-      //   $(this).siblings().find(".card_more").attr("aria-expanded", "false");
-      //   $(this).siblings().find(".card_more").css("display", "none");
-      // });
-
+      $(".ty04Swiper.swiper-card-type")
+        .find(".card_more")
+        .attr("aria-hidden", true);
       $(".ty04Swiper .swiper-slide .btn-arrow-down").on("click", function () {
         activeCardMoreBtn($(this));
       });
@@ -389,7 +395,7 @@ var pubUi = {
           swiperCtrlInert($(".banner-swiper"));
         },
       },
-    });    
+    });
 
     swiper2SlideEvt(); //swiper2 이벤트 실행
     swiper4SlideEvt(); //swiper4 이벤트 실행
@@ -1173,7 +1179,10 @@ function swiper4SlideEvt() {
     },
     on: {
       afterInit: function () {
-        // webAccessAddTabindex();
+        swiperCtrlInert($(".ty04Swiper"));
+      },
+      slideChangeTransitionEnd: function () {
+        swiperCtrlInert($(".ty04Swiper"));
       },
     },
   });
@@ -1281,7 +1290,6 @@ function handleSelectboxClick(event) {
       }
       $(".selectbox-options .moclose-btn button").click(function (event) {
         event.stopPropagation();
-
         if ($this.parents(".dropdown-menu").length) {
           $(".dropdown-menu").removeClass("non-sticky");
         }
@@ -1289,6 +1297,7 @@ function handleSelectboxClick(event) {
           .closest(".selectbox-wrap>div")
           .find(".selectbox-trigger")
           .removeClass("active")
+          .attr("aria-expanded", "false")
           .focus(); // close 버튼 클릭 시 모든 trigger의 active가 제거
         $(this)
           .closest(".selectbox-wrap>div")
@@ -1301,6 +1310,10 @@ function handleSelectboxClick(event) {
         NbrandUI.focusNonoutReset(targetFocus);
         targetFocus.find(".ui-fctab-s").remove();
         targetFocus.find(".ui-fctab-e").remove();
+        targetFocus
+          .closest(".selectbox-options")
+          .siblings(".selectbox-js")
+          .focus();
       });
     } else {
       $(".selectbox-options .moclose-btn").hide();
@@ -1344,6 +1357,10 @@ function handleOptionClick(event) {
       NbrandUI.focusNonoutReset(targetFocus);
       targetFocus.closest(".selectbox-options").find(".ui-fctab-s").remove();
       targetFocus.closest(".selectbox-options").find(".ui-fctab-e").remove();
+      targetFocus
+        .closest(".selectbox-options")
+        .siblings(".selectbox-js")
+        .focus();
     }
   }
   moOptionSize();
@@ -1361,7 +1378,7 @@ function handleOptionClick(event) {
     .closest(".selectbox-wrap>div")
     .find(".selectbox-trigger")
     .removeClass("active")
-    .attr("aria-expanded", "false")
+    .attr("aria-expanded", "false");
 
   if ($selectboxWrap.hasClass("evtLayout-type")) {
     var option1 = $(
@@ -1661,11 +1678,17 @@ function tabBtnEvent(target, tabContainer) {
 }
 
 // 드롭다운 아코디언
+let dropdownAccoChk = false;
 function dropdownAccordion() {
+  if (dropdownAccoChk) {
+    return;
+  }
+  dropdownAccoChk = true;
   const dropdownBtns = document.querySelectorAll(".dropdown .dropdown-trigger");
   if (!dropdownBtns) {
     return;
   }
+
   dropdownBtns.forEach((button) => {
     button.addEventListener("click", function () {
       const isExpanded = button.getAttribute("aria-expanded") === "true";
@@ -2918,9 +2941,11 @@ function swiperCtrlInert(swiperEl) {
     // console.log(swiperElList);
     for (var i = 0; i < swiperElList.length; i++) {
       if (swiperElList[i].classList.contains("swiper-slide-active")) {
+        swiperElList[i].setAttribute("aria-hidden", false);
         swiperElList[i].removeAttribute("inert");
       } else {
         swiperElList[i].setAttribute("inert", "");
+        swiperElList[i].setAttribute("aria-hidden", true);
       }
     }
   }
@@ -2941,13 +2966,11 @@ function activeCardMoreBtn(target) {
     slide.removeClass("on");
     btnMore.find(".dropdown-icon").removeClass("rotate");
     btnMore.attr("aria-expanded", "false");
-    targetCardMoreBtn.attr("aria-expanded", "false");
     targetCardMoreBtn.attr("aria-hidden", "true");
   } else {
     slide.addClass("on");
     btnMore.find(".dropdown-icon").addClass("rotate");
     btnMore.attr("aria-expanded", "true");
-    targetCardMoreBtn.attr("aria-expanded", "true");
     targetCardMoreBtn.attr("aria-hidden", "false");
   }
 }

@@ -39,15 +39,18 @@
               </div>
               <div class="configurator_header_menu_wrap">
                 <!-- .configurator_header_menu 에 .on 이 어디에 붙느냐에 따라 .configurator_area에 붙는 클래스가 달라짐 -->
-                <button type="button" class="configurator_header_menu configurator_menu_exterior on">
+                <button type="button" class="configurator_header_menu configurator_menu_exterior on" role="tab"
+                  aria-selected="true">
                   <span class="configurator_header_menu_step"><span class="visually-hidden">1</span></span>
                   <span class="configurator_header_menu_text">외장</span>
                 </button>
-                <button type="button" class="configurator_header_menu configurator_menu_interior">
+                <button type="button" class="configurator_header_menu configurator_menu_interior" role="tab"
+                  aria-selected="false">
                   <span class="configurator_header_menu_step"><span class="visually-hidden">2</span></span>
                   <span class="configurator_header_menu_text">내장</span>
                 </button>
-                <button type="button" class="configurator_header_menu configurator_menu_summary">
+                <button type="button" class="configurator_header_menu configurator_menu_summary" role="tab"
+                  aria-selected="false">
                   <span class="configurator_header_menu_step"><span class="visually-hidden">3</span></span>
                   <span class="configurator_header_menu_text">요약</span>
                 </button>
@@ -72,19 +75,19 @@
                         </div>
                         <div class="swiper-slide">
                           <!-- 차량 미리보기 슬라이드 이미지 alt 값 필요 / 예)차량 정면, 차량 후면 등, '이미지'라는 내용은 제외하고 제공 -->
-                          <img src="../../inc/images/Configurator/NEN_EXT_XFB_LD_C003.jpg" alt="IONIQ 5 N 차량 후면" />
-                        </div>
-                        <div class="swiper-slide">
-                          <!-- 차량 미리보기 슬라이드 이미지 alt 값 필요 / 예)차량 정면, 차량 후면 등, '이미지'라는 내용은 제외하고 제공-->
                           <img src="../../inc/images/Configurator/NEN_EXT_XFB_LD_C003.jpg" alt="IONIQ 5 N 차량 측면" />
                         </div>
                         <div class="swiper-slide">
                           <!-- 차량 미리보기 슬라이드 이미지 alt 값 필요 / 예)차량 정면, 차량 후면 등, '이미지'라는 내용은 제외하고 제공-->
-                          <img src="../../inc/images/Configurator/NEN_EXT_XFB_LD_C003.jpg" alt="IONIQ 5 N 차량 정면" />
+                          <img src="../../inc/images/Configurator/NEN_EXT_XFB_LD_C003.jpg" alt="IONIQ 5 N 차량 후면" />
                         </div>
                         <div class="swiper-slide">
                           <!-- 차량 미리보기 슬라이드 이미지 alt 값 필요 / 예)차량 정면, 차량 후면 등, '이미지'라는 내용은 제외하고 제공-->
-                          <img src="../../inc/images/Configurator/NEN_EXT_XFB_LD_C003.jpg" alt="IONIQ 5 N 차량 정면" />
+                          <img src="../../inc/images/Configurator/NEN_EXT_XFB_LD_C003.jpg" alt="IONIQ 5 N 차량 윗면" />
+                        </div>
+                        <div class="swiper-slide">
+                          <!-- 차량 미리보기 슬라이드 이미지 alt 값 필요 / 예)차량 정면, 차량 후면 등, '이미지'라는 내용은 제외하고 제공-->
+                          <img src="../../inc/images/Configurator/NEN_EXT_XFB_LD_C003.jpg" alt="IONIQ 5 N 차량 정측면" />
                         </div>
                       </div>
                       <div class="swiper-bottom-wrap">
@@ -130,7 +133,8 @@
                     <!-- exterior 파츠 선택 영역 / .configurator_menu_exterior on 시 노출 -->
                     <!-- .exterior.IONIQ -->
                     <div class="configurator_select_exterior IONIQ">
-                      <!-- 아코디언 기능 생성 실행 함수 - dropdownAccordion() -->
+                      <!-- 아코디언 기능 생성 실행 함수 - dropdownAccordion()
+                        페이지 생성 이후에 해당 함수 한번만 실행시켜 주십시오.  -->
                       <div class="dropdown">
                         <button class="wrap-dropdown-selected dropdown-btn dropdown-trigger" aria-expanded="true"
                           aria-controls="dropdown-menu">
@@ -973,7 +977,7 @@
                             <div class="configurator_summary_list_top">
                               <p class="configurator_summary_parts">색상</p>
                               <div>
-                                <button type="button" class="btn txt-btn" title="Change">
+                                <button type="button" class="btn txt-btn" title="변경하기">
                                   <span class="btn-icon20 icon-change-gray" aria-hidden="true"></span>
                                 </button>
                               </div>
@@ -993,7 +997,7 @@
                             <div class="configurator_summary_list_top">
                               <p class="configurator_summary_parts">색상</p>
                               <div>
-                                <button type="button" class="btn txt-btn" title="Change">
+                                <button type="button" class="btn txt-btn" title="변경하기">
                                   <span class="btn-icon20 icon-change-gray" aria-hidden="true"></span>
                                 </button>
                               </div>
@@ -1013,7 +1017,7 @@
                             <div class="configurator_summary_list_top">
                               <p class="configurator_summary_parts">색상</p>
                               <div>
-                                <button type="button" class="btn txt-btn" title="Change">
+                                <button type="button" class="btn txt-btn" title="변경하기">
                                   <span class="btn-icon20 icon-change-gray" aria-hidden="true"></span>
                                 </button>
                               </div>
@@ -1033,10 +1037,10 @@
                             <div class="configurator_summary_list_top">
                               <p class="configurator_summary_parts">휠</p>
                               <div>
-                                <button type="button" class="btn txt-btn" title="Change">
+                                <button type="button" class="btn txt-btn" title="변경하기">
                                   <span class="btn-icon20 icon-change-gray" aria-hidden="true"></span>
                                 </button>
-                                <button type="button" class="btn txt-btn" title="Delete">
+                                <button type="button" class="btn txt-btn" title="삭제">
                                   <span class="btn-icon20 icon-close-gray" aria-hidden="true"></span>
                                 </button>
                               </div>
@@ -1059,10 +1063,10 @@
                             <div class="configurator_summary_list_top">
                               <p class="configurator_summary_parts">휠</p>
                               <div>
-                                <button type="button" class="btn txt-btn" title="Change">
+                                <button type="button" class="btn txt-btn" title="변경하기">
                                   <span class="btn-icon20 icon-change-gray" aria-hidden="true"></span>
                                 </button>
-                                <button type="button" class="btn txt-btn" title="Delete">
+                                <button type="button" class="btn txt-btn" title="삭제">
                                   <span class="btn-icon20 icon-close-gray" aria-hidden="true"></span>
                                 </button>
                               </div>
@@ -1085,10 +1089,10 @@
                             <div class="configurator_summary_list_top">
                               <p class="configurator_summary_parts">휠</p>
                               <div>
-                                <button type="button" class="btn txt-btn" title="Change">
+                                <button type="button" class="btn txt-btn" title="변경하기">
                                   <span class="btn-icon20 icon-change-gray" aria-hidden="true"></span>
                                 </button>
-                                <button type="button" class="btn txt-btn" title="Delete">
+                                <button type="button" class="btn txt-btn" title="삭제">
                                   <span class="btn-icon20 icon-close-gray" aria-hidden="true"></span>
                                 </button>
                               </div>
@@ -1111,10 +1115,10 @@
                             <div class="configurator_summary_list_top">
                               <p class="configurator_summary_parts">휠</p>
                               <div>
-                                <button type="button" class="btn txt-btn" title="Change">
+                                <button type="button" class="btn txt-btn" title="변경하기">
                                   <span class="btn-icon20 icon-change-gray" aria-hidden="true"></span>
                                 </button>
-                                <button type="button" class="btn txt-btn" title="Delete">
+                                <button type="button" class="btn txt-btn" title="삭제">
                                   <span class="btn-icon20 icon-close-gray" aria-hidden="true"></span>
                                 </button>
                               </div>
@@ -1153,7 +1157,7 @@
                             <div class="configurator_summary_list_top">
                               <p class="configurator_summary_parts">카매트</p>
                               <div>
-                                <button type="button" class="btn txt-btn" title="Delete">
+                                <button type="button" class="btn txt-btn" title="삭제">
                                   <span class="btn-icon20 icon-close-gray" aria-hidden="true"></span>
                                 </button>
                               </div>
@@ -1175,7 +1179,7 @@
                             <div class="configurator_summary_list_top">
                               <p class="configurator_summary_parts">카매트</p>
                               <div>
-                                <button type="button" class="btn txt-btn" title="Delete">
+                                <button type="button" class="btn txt-btn" title="삭제">
                                   <span class="btn-icon20 icon-close-gray" aria-hidden="true"></span>
                                 </button>
                               </div>
@@ -1197,7 +1201,7 @@
                             <div class="configurator_summary_list_top">
                               <p class="configurator_summary_parts">카매트</p>
                               <div>
-                                <button type="button" class="btn txt-btn" title="Delete">
+                                <button type="button" class="btn txt-btn" title="삭제">
                                   <span class="btn-icon20 icon-close-gray" aria-hidden="true"></span>
                                 </button>
                               </div>
@@ -1219,7 +1223,7 @@
                             <div class="configurator_summary_list_top">
                               <p class="configurator_summary_parts">카매트</p>
                               <div>
-                                <button type="button" class="btn txt-btn" title="Delete">
+                                <button type="button" class="btn txt-btn" title="삭제">
                                   <span class="btn-icon20 icon-close-gray" aria-hidden="true"></span>
                                 </button>
                               </div>
@@ -1241,7 +1245,7 @@
                             <div class="configurator_summary_list_top">
                               <p class="configurator_summary_parts">카매트</p>
                               <div>
-                                <button type="button" class="btn txt-btn" title="Delete">
+                                <button type="button" class="btn txt-btn" title="삭제">
                                   <span class="btn-icon20 icon-close-gray" aria-hidden="true"></span>
                                 </button>
                               </div>
@@ -1263,7 +1267,7 @@
                             <div class="configurator_summary_list_top">
                               <p class="configurator_summary_parts">카매트</p>
                               <div>
-                                <button type="button" class="btn txt-btn" title="Delete">
+                                <button type="button" class="btn txt-btn" title="삭제">
                                   <span class="btn-icon20 icon-close-gray" aria-hidden="true"></span>
                                 </button>
                               </div>
@@ -1285,7 +1289,7 @@
                             <div class="configurator_summary_list_top">
                               <p class="configurator_summary_parts">카매트</p>
                               <div>
-                                <button type="button" class="btn txt-btn" title="Delete">
+                                <button type="button" class="btn txt-btn" title="삭제">
                                   <span class="btn-icon20 icon-close-gray" aria-hidden="true"></span>
                                 </button>
                               </div>
@@ -1332,10 +1336,10 @@
                             <div class="configurator_summary_list_top">
                               <p class="configurator_summary_parts">휠</p>
                               <div>
-                                <button type="button" class="btn txt-btn" title="Change">
+                                <button type="button" class="btn txt-btn" title="변경하기">
                                   <span class="btn-icon20 icon-change-gray" aria-hidden="true"></span>
                                 </button>
-                                <button type="button" class="btn txt-btn" title="Delete">
+                                <button type="button" class="btn txt-btn" title="삭제">
                                   <span class="btn-icon20 icon-close-gray" aria-hidden="true"></span>
                                 </button>
                               </div>
@@ -1359,7 +1363,7 @@
                                 Spoiler
                               </p>
                               <div>
-                                <button type="button" class="btn txt-btn" title="Delete">
+                                <button type="button" class="btn txt-btn" title="삭제">
                                   <span class="btn-icon20 icon-close-gray" aria-hidden="true"></span>
                                 </button>
                               </div>
@@ -1386,7 +1390,7 @@
                             <div class="configurator_summary_list_top">
                               <p class="configurator_summary_parts">카매트</p>
                               <div>
-                                <button type="button" class="btn txt-btn" title="Delete">
+                                <button type="button" class="btn txt-btn" title="삭제">
                                   <span class="btn-icon20 icon-close-gray" aria-hidden="true"></span>
                                 </button>
                               </div>
@@ -1437,7 +1441,7 @@
                           <p class="configurator_price_total">
                             ₩ <span>0</span>
                           </p>
-                          <button type="button" class="btn btn-only-icon-notbg" title="reset">
+                          <button type="button" class="btn btn-only-icon-notbg" title="초기화">
                             <span class="btn-icon36" aria-hidden="true"></span>
                           </button>
                         </div>
@@ -1545,14 +1549,15 @@
     });
     // [Start] : configurator_header_menu 확인용 스크립트 / 체크값 확인 후 넘어가기 필요
     function configuratorHeader(el) {
-      $(".configurator_header_menu").removeClass("on");
-      el.target.closest(".configurator_header_menu").classList.add("on");
+      $(".configurator_header_menu").removeClass("on").attr("aria-selected", false);
+      el.target.closest(".configurator_header_menu").classList.add("on")
+      el.target.closest(".configurator_header_menu").setAttribute("aria-selected", true);
       const menuName = ["exterior", "interior", "summary"];
       for (let i = 0; i < menuName.length; i++) {
         if ($(`.configurator_menu_${menuName[i]}`).hasClass("on")) {
           $(".configurator_area").addClass(menuName[i]);
         } else {
-          $(".configurator_area").removeClass(menuName[i]);
+          $(".configurator_area").removeClass(menuName[i])
         }
       }
     }

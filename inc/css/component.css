@@ -774,6 +774,7 @@ a:hover .icon-youtube-wh {
   background: url(../../inc/images/icon/icon-trans.svg);
   background-size: contain;
 }
+.btn .on[class*="icon-trans"],
 .btn:hover [class*="icon-trans"],
 .btn:active [class*="icon-trans"] {
   background: url(../../inc/images/icon/icon-trans_red.svg);
@@ -1415,13 +1416,20 @@ a:hover .icon-youtube-wh {
 }
 .card_type01:hover .card_more,
 .card_type01:active .card_more,
-.card_type01:focus .card_more {
+.card_type01:focus .card_more,
+.ty04Swiper .card_type01:hover .card_more,
+.ty04Swiper .card_type01:active .card_more,
+.ty04Swiper .card_type01:focus .card_more,
+.ty04Swiper .card_type01 .card_more:hover,
+.ty04Swiper .card_type01 .card_more:active,
+.ty04Swiper .card_type01 .card_more:focus {
   clip-path: none;
   width: 100%;
   height: auto;
   padding: 0.81rem 1.5rem;
   display: flex;
 }
+
 .card_type01 .card_more {
   display: none;
   justify-content: space-between;
@@ -1438,6 +1446,23 @@ a:hover .icon-youtube-wh {
   clip: rect(1px, 1px, 1px, 1px);
   clip-path: inset(50%);
 }
+.ty04Swiper .card_type01 .card_more {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #de3111;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 140%;
+  overflow: hidden;
+  border: 0;
+  width: 0.063rem;
+  height: 0.063rem;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+}
+
 .card_type01 .card_more::after {
   content: "";
   display: block;
