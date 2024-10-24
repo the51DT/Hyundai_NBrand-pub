@@ -95,7 +95,7 @@ var pubUi = {
         if ($(this).hasClass("on")) {
           // console.log("정지버튼 클릭!");
           $(this).removeClass("on");
-          $(this).attr("title", "영상 일시정지 상태, 재생 하기");
+          $(this).attr("title", "일시정지 상태, 재생 하기");
           if (videoChk.length > 0) {
             videoChk[0].pause();
             videoChk[0].currentTime = 0;
@@ -106,7 +106,7 @@ var pubUi = {
         } else {
           // console.log("재생버튼 클릭!");
           $(this).addClass("on");
-          $(this).attr("title", "영상 재생 상태, 일시정지 하기");
+          $(this).attr("title", "재생 상태, 일시정지 하기");
           if (videoChk.length > 0) {
             videoChk[0].play();
             pubUi.videoBulletChk(
@@ -765,12 +765,14 @@ var pubUi = {
 
     contentActiveItem.forEach((evt, idx) => {
       contentActiveItem[idx].setAttribute("data-scroll", idx + 1); // 각 콘텐츠에 data-scroll 생성
-
+      contentActiveItem[idx].setAttribute("tabindex", 0); // 각 콘텐츠에 data-scroll 생성
       if (evt.dataset.scroll == dataScroll) {
         //nav data-scroll과 값비교 후 동일 대상 체크
         var offsetTopVal =
           evt.getBoundingClientRect().top - navBarHeight - 150 + scrllNow;
-        // alert(evt);
+        setTimeout(function () {
+          evt.focus();
+        }, 500);
       }
 
       $("body").animate({ scrollTop: offsetTopVal }, 300);
@@ -1769,12 +1771,12 @@ document.addEventListener("DOMContentLoaded", () => {
           nearVideo.play();
           iconInBtn.classList.remove("icon-play-wh");
           iconInBtn.classList.add("icon-pause-wh");
-          btn.setAttribute("title", "영상 재생 상태, 일시정지 하기");
+          btn.setAttribute("title", "재생 상태, 일시정지 하기");
         } else {
           nearVideo.pause();
           iconInBtn.classList.remove("icon-pause-wh");
           iconInBtn.classList.add("icon-play-wh");
-          btn.setAttribute("title", "영상 일시정지 상태, 재생 하기");
+          btn.setAttribute("title", "일시정지 상태, 재생 하기");
         }
 
         // 모델 팝업이 닫혔을 때 스크롤, 영상 초기화 처리
@@ -2105,7 +2107,7 @@ function modelsVideoPlay() {
             false
           );
         }
-        $(this).attr("title", "영상 재생 상태, 일시정지 하기");
+        $(this).attr("title", "재생 상태, 일시정지 하기");
       } else {
         icon.attr("class", "btn-icon24 icon-play-wh");
         if (window.innerWidth <= 1023) {
@@ -2117,7 +2119,7 @@ function modelsVideoPlay() {
           moPoster.hide();
           pcPoster.hide();
         }
-        $(this).attr("title", "영상 일시정지 상태, 재생 하기");
+        $(this).attr("title", "일시정지 상태, 재생 하기");
       }
     }
   );
@@ -2327,6 +2329,7 @@ function scrollIndicator(obj) {
   contentItem.forEach((evt, idx) => {
     if (contentItem[idx].querySelector(".blue-title")) {
       contentItem[idx].classList.add("active");
+      contentItem[idx].focus();
     }
     contentItem[idx].setAttribute("data-scroll", idx + 1); // 각 콘텐츠에 data-scroll 생성
     sectionItem[idx] =

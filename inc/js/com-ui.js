@@ -738,11 +738,11 @@ var NbrandUI = {
           swiperEvent.find(".btn-play").removeClass("on");
         }
         openWrap.addClass("on").stop().fadeIn(200);
-        tparent = openWrap;
-        Nbrand.uiFocusTab({
-          selector: tparent,
-          type: "hold",
-        });
+        // tparent = openWrap;
+        // Nbrand.uiFocusTab({
+        //   selector: tparent,
+        //   type: "hold",
+        // });
         openWrap
           .find(closeObj)
           .off("click")
@@ -888,8 +888,7 @@ var NbrandSwiper = {
         nextSlideMessage: "다음 슬라이드",
         slideLabelMessage:
           "총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 입니다.",
-        paginationBulletMessage:
-          "{{index}}번째 슬라이드로 가기",
+        paginationBulletMessage: "{{index}}번째 슬라이드로 가기",
       },
       on: {
         afterInit: function () {
@@ -935,8 +934,7 @@ var NbrandSwiper = {
         nextSlideMessage: "다음 슬라이드",
         slideLabelMessage:
           "총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 입니다.",
-        paginationBulletMessage:
-          "{{index}}번째 슬라이드로 가기",
+        paginationBulletMessage: "{{index}}번째 슬라이드로 가기",
       },
       breakpoints: {
         360: {

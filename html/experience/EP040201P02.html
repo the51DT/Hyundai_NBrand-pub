@@ -115,6 +115,7 @@
           </div>
 
           <div class="wrap-form textarea">
+
             <!-- editor area: placeholder에 Please Describe.를 넣어주세요 -->
             <!-- 09/03 문구변경 -->
             <textarea placeholder="Please Describe."></textarea>
@@ -139,13 +140,16 @@
         <!-- 10/10 추가 : 썸네일 이미지 설명 항목 추가 : 번역본 최신 버전 아니라 추후 문구 수정 필요 -->
         <div class="popup-body-innerbox">
           <div class="wrap-form label-tit-type02">
-            <label for="username"> <!-- 1010 수정 : required 클래스 제거 -->
+            <label for="username">
+              <!-- 1010 수정 : required 클래스 제거 -->
               <span>Thumbnail image description</span>
             </label>
           </div>
 
           <div class="wrap-form textarea">
-            <textarea placeholder="Please enter a thumbnail image description." title="Please enter a thumbnail image description"></textarea>
+            <p class="visually-hidden">Please enter a thumbnail image description</p>
+            <textarea placeholder="Please enter a thumbnail image description."
+              title="Please enter a thumbnail image description"></textarea>
 
             <div class="wrap-form-bottom comment-type02">
               <div class="comment-type02-1">

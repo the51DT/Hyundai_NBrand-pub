@@ -29,6 +29,7 @@
 }
 .inquiry_edit {
   margin: 0.5rem 0;
+  position: relative;
 }
 .inquiry_wrap .btn-wrap-type2 {
   margin-top: 3.75rem;
@@ -184,7 +185,7 @@
 
 /* 모바일 */
 @media screen and (max-width: 1023px) {
-  /* 공통 */  
+  /* 공통 */
   .content-top p.tit-type03:last-child {
     font-size: 20px;
     line-height: 28px;
